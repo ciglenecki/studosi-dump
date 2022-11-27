@@ -1,0 +1,1022 @@
+{
+  "title": "[STRUCE1] 6. laboratorijska vježba - 2021/2022",
+  "creator": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+  "slug": "struce1-6-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Strojno učenje 1",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "265343": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": ">3.e) Proučite funkciju cov te izračunajte ML-procjenu za kovarijacijsku matricu za skup Iris. Usporedite pristranu i nepristranu procjenu. Pokažite da se **razlika (srednja apsolutna i kvadratna)** smanjuje s brojem primjera (npr. isprobajte za  𝑁/4  i  𝑁/2  i  𝑁  primjera).\n\nRazlika čega?",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265352": {
+      "poster": "Tinx (pingvin)",
+      "content": "Jel imao itko ovaj problem?\n\n![](assets/2021-12-18/00003.png)",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265353": {
+      "poster": "Unity (Sgt. Forge)",
+      "content": "@\"pingvin\"#p265352 koristi google collab i izvrsi naredbu !pip install pgmpy",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265355": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Sgt. Forge\"#p265353 pocelo mi je to skidat preko gigu podataka, ocekivano?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265373": {
+      "poster": "Bananaking",
+      "content": "@\"pingvin\"#p265352 Kada upalis anacondu nemoj otvoriti neki file,  imas gore desno new -> terminal i upisi conda install -c ankurankan pgmpy\n\nsource: https://pypi.org/project/pgmpy/ provjerio i radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265377": {
+      "poster": "branimir1999",
+      "content": "u 2.b), koja je formula za ovu drugu vjerojatnost u umnosku? Prva je ocito funkcija izlgednosti s pocetka, ali gdje da nadem ovu P(mu|a,b)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265380": {
+      "poster": "snowman",
+      "content": "@\"branimir1999\"#p265377 mozes koristi beta.pdf(mi, a, b) isto kao u a) dijelu zadatka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265381": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Precious Bodily Fluids\"#p265343 Ja sam to shvatio kao razlika kovarijacijskih matrica i onda samo racunas sumu svih elemenata u modulu i sumu svih elemenata kvadrirano",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265382": {
+      "poster": "branimir1999",
+      "content": "@\"snowman\"#p265380 Ovo me zbunjuje: https://youtu.be/w6gWzWM1gWw?t=3413\n\nja pretpostavljam da nesto krivo shvacam, ali ne znam kako beta.pdf(mu,a,b) moze biti jednako tom izrazu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265383": {
+      "poster": "tomekbeli420",
+      "content": "mislim da taj pgmpy uopće nije ni potreban za ovaj labos",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Daho_Cro",
+          "cajaznun",
+          "gladiator",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265385": {
+      "poster": "branimir1999",
+      "content": "@\"sheriffHorsey\"#p265381 Meni konacni izlaz bude matrica s jednim redom i cetiri stupca koji predstavljaju znacajke, a trebao bi biti jedan broj pa mi nije jasno? Uzmem podskup dataseta prema trazenim brojevima primjera, stavim podskup u cov s rowvar = False zastavicom i onda oduzmem pristranu i nepristranu matricu te podijelim s njihovim brojem primjerka. Time dobivam gore navedeni konacni izlaz. Trebamo li naci mean i od tih konacnih znacajki ili nesto krivo radim?",
+      "votes": {
+        "upvoters": [
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265389": {
+      "poster": "sheriffHorsey",
+      "content": "@\"branimir1999\"#p265385 Da nisam to spomenuo, ja sam radio mean svega toga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265466": {
+      "poster": "Zero",
+      "content": "Jel bi razlika u 3.e) trebala biti veca s vise primjera ili obrnuto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265474": {
+      "poster": "Rene",
+      "content": "@\"Zero\"#p265466 manja, razlika ti dolazi od onog faktora: pristrani procjenitelj se mnozi s [imath]\\frac{1}{N}[/imath], a nepristrani s [imath]\\frac{1}{N-1}[/imath]. Kako N raste razlika izmedju N i N-1 postaje zanemariva",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265490": {
+      "poster": "maraska",
+      "content": "Kako vam izgleda graf u 2.b)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265496": {
+      "poster": "Daeyarn",
+      "content": "@\"maraska\"#p265490 meni ovako, ne znam jel to ok \n\n![](assets/2021-12-19/00012.png)",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)",
+          "Sulejman",
+          "bodNaUvidima",
+          "maraska",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265498": {
+      "poster": "wesley",
+      "content": "koji vam je ispis u 3.c i 3.e?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265500": {
+      "poster": "bodNaUvidima",
+      "content": "@\"wesley\"#p265498\n\n3.c)\n\n ![](assets/2021-12-19/00013.png)\n\nZa primjere označene sa 2.",
+      "votes": {
+        "upvoters": [
+          "Sulejman",
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265503": {
+      "poster": "marvin",
+      "content": "e kako korisite ovaj norm u 3.b)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265506": {
+      "poster": "bodNaUvidima",
+      "content": "@\"marvin\"#p265503 iz dretve od prošle godine za ovaj labos:\n\n`sum(norm(mi, sigma).logpdf(x))`",
+      "votes": {
+        "upvoters": [
+          "marvin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265518": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p265496 Možda imam niski iq, ali zašto su ti na x-osi ovi brojevi? Nije mu varijabla po kojoj funkcije idu?",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265521": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p265518 dada, varijabla je mu, meni pisu drugaciji brojevi jer sam zaboravio predati x-os vrijednosti u funkciju plot: ![](assets/2021-12-19/00018.png)\n\n(interval je varijabla koja ima vrijednost np.linspace(0, 1) tj. ima 50 članova, pa je funkcija plot uzela za x-os indexe elemenata iz intervala)\n\nkad dodam interval kao prvi argument u plt.plot\n\n![](assets/2021-12-19/00019.png)\n\nonda su na x-osi dobre vrijednosti\n\n![](assets/2021-12-19/00020.png)\n\nnisam uopce skuzio da krivo pise ispod, hvala ti😄",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265530": {
+      "poster": "Daeyarn",
+      "content": "još kome slično izgleda graf u 2.c)?\n\n![](assets/2021-12-19/00023.png)",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265537": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"Daeyarn\"#p265530 dobar",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265538": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p265530 ![](assets/2021-12-19/00024.png)\n\nZbunjuje me razlika u zajedničkoj vjerojatnosti na drugoj polovici grafa kod tebe i mene.\n\nOvdje se vidi zadnjih nekoliko vrijednosti L i u ovoj listi vrijednosti zajedničke vjerojatnosti koje ja dobijem.\n\n![](assets/2021-12-19/00025.png)\n\nVidi se da je L monotono padajuća i, ak sam dobro skužila, samo se treba množiti s vrijednostima beta-distribucije, koja je na drugoj polovici isto monotono padajuća, pa mi je i logično da zajednička vjerojatnost pada na tom dijelu.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Lukak",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265539": {
+      "poster": "hellvetica",
+      "content": "@\"Aimée\"#p265538 i meni graf tako izgleda",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Lukak",
+          "[deleted]",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265540": {
+      "poster": "[deleted]",
+      "content": "@\"hellvetica\"#p265539 Ko kod kolege ili ko kod mene? 😆",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265541": {
+      "poster": "hellvetica",
+      "content": "@\"Aimée\"#p265540 kod tebe ![](assets/2021-12-19/00026.png)\n\nNe vidi se bas al tjt",
+      "votes": {
+        "upvoters": [
+          "Lukak",
+          "[deleted]",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265542": {
+      "poster": "[deleted]",
+      "content": "![](assets/2021-12-19/00027.png)\n\ntakođer ekipa, kakvi su vam ispisi na 3.c?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265544": {
+      "poster": "hellvetica",
+      "content": "@\"bodNaUvidima\"#p265500 @\"Aimée\"#p265542 meni je isto ovako ispalo\n\n![](assets/2021-12-19/00029.png)\n\nza primjere s oznakom 2",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265545": {
+      "poster": "hellvetica",
+      "content": "Also 3(d) sa oznakom 2?\n\n![](assets/2021-12-19/00030.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265549": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p265542 izglednosti \n\n![](assets/2021-12-19/00033.png)\n\n@\"hellvetica\"#p265545 3.d) s oznakom 2 isto\n\n![](assets/2021-12-19/00034.png)\n\n@\"Aimée\"#p265538 pokusavam skuziti zasto mi je aposteriori drugacija, ovak ju racunam inace\n\n![](assets/2021-12-19/00035.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265550": {
+      "poster": "[deleted]",
+      "content": "@\"Aimée\"#p265542 da, zaboravila sam napomenuti da je ovo za razred 0 :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265551": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p265549 a kak ti izgleda L? Jer ja imam isto ovak za aposteriori",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265552": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p265551 ![](assets/2021-12-19/00036.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265553": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p265552 isto tak, onda nezz",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265554": {
+      "poster": "Bananaking",
+      "content": "Nije mi jasno što treba napraviti u 3. zadatku sa ovim data iz load_iris. Kako ga scatterate?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265555": {
+      "poster": "steker",
+      "content": "@\"hellvetica\"#p265545 isto mi je",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265556": {
+      "poster": "[deleted]",
+      "content": "@\"Bananaking\"#p265554 ideš po svim kombinacijama parova atributa (ima ih 6) i napraviš scatter gdje za svaku os uzmeš jedan od ta dva atributa\n\nja sam još dok sam odvajala primjere iz klase koju sam odabrala radila posebnu listu za svaki atribut i u nju stavljala vrijednost tog atributa za svaki primjer, pa da samo te liste proslijedim za argumente u scatter()",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265557": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p265553\n\n ![](assets/2021-12-19/00037.png)\n\nzaboravio sam dati funkciji N=10 i m=1 pa je ostao default value m=9, sad je oke\n\nhvala ti:D",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265559": {
+      "poster": "Daeyarn",
+      "content": "@\"Daeyarn\"#p265549 ispravak 3.c) je ovako\n\n![](assets/2021-12-19/00038.png)\n\nedit: tj. jel se u sum(norm(mi, sigma).logpdf(x)) zadaje varijanca ili korijen varijance",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265565": {
+      "poster": "123 (FERella)",
+      "content": "@\"Aimée\"#p265542 meni je za klasu 0 drugačije ispalo\n\n![](assets/2021-12-19/00039.png)",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Ducky",
+          "Joskica",
+          "karla_cd (ocd)",
+          "sheriffHorsey",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265567": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p265559 ja sam prije varijancu ali sad sam promijenila na korijen, piše u dokumentaciji da je sigma stddev\n\n@\"FERella\"#p265565 \n\n![](assets/2021-12-19/00040.png)\n\nKak ti zgleda ovo?",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265568": {
+      "poster": "Ducky",
+      "content": "@\"Aimée\"#p265567 ![](assets/2021-12-19/00041.png)",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265570": {
+      "poster": "123 (FERella)",
+      "content": "@\"Aimée\"#p265567 ja sam raspisivala onu formulu iz skripte",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265571": {
+      "poster": "123 (FERella)",
+      "content": "Je li itko rješio 6. zadatak s ispita mrni ispada 0.59 nekužim baš kako se to rješava",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265574": {
+      "poster": "steker",
+      "content": "Neko napise sta je dobio u 3 e) ak ima 2 klasu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265575": {
+      "poster": "[deleted]",
+      "content": "@\"Ducky\"#p265568 ti isto imaš 3.c ko u \n\n@\"FERella\"#p265565 ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265576": {
+      "poster": "Daeyarn",
+      "content": "@\"steker\"#p265574 \n\n![](assets/2021-12-19/00042.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265578": {
+      "poster": "BillIK",
+      "content": "@\"FERella\"#p265570 jel ovu formulu: `(-((N/2)*log(2*pi))-(N*log(sigma))-((sum(x-mi)**2)/(2*sigma**2)))`",
+      "votes": {
+        "upvoters": [
+          "123 (FERella)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265580": {
+      "poster": "Ducky",
+      "content": "@\"Aimée\"#p265575 da",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265582": {
+      "poster": "hellvetica",
+      "content": "@\"Daeyarn\"#p265552 probaj zagrade stavit mislim da ti mozda zadnji eksponent ide na sve\n\n![](assets/2021-12-19/00043.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265583": {
+      "poster": "blast",
+      "content": "jel netko moze mi objasnit kako se racuna Apriorna vjerojatnost jer sam uvrstio tu formulu iz skripte i dobijem jako cudne brojeve",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265584": {
+      "poster": "Daeyarn",
+      "content": "@\"hellvetica\"#p265582 bilo je sa zagradama prvo ali i ovako je ok, bio je problem u ovome https://fer.studosi.net/d/6302-struce1-6-laboratorijska-vjezba-20212022/40\n\nhvala svejedno:DD",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265586": {
+      "poster": "Ducky",
+      "content": "jel ima itko da mu 3.d nece ispisat?\n\nEDIT: treba opet napisat funkciju combinations jer zbog nekog razloga nemože zapamtit tu varijablu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "steker"
+        ]
+      }
+    },
+    "265587": {
+      "poster": "Joskica",
+      "content": "@\"FERella\"#p265571 imas rijeseno negdje u docsu pod moodle kvizovi\n\nhttps://docs.google.com/document/d/15drigevvwo3wOvZ3uFZgCAO2hgEHdCUa-a1DTMWV7_k/edit#",
+      "votes": {
+        "upvoters": [
+          "123 (FERella)",
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265590": {
+      "poster": "hellvetica",
+      "content": "Moze neko pojasnit postupak za 3(e)? sa np.cov dobijam matrice od podataka sa bias=True za pristranu i False za nepristranu. Jel bi onda trebao oduzet jednu od druge kvadrirat/uzet abs vrijednost i podijelit sa n? I onda uzet avg od izlazne matrice?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265591": {
+      "poster": "Bananaking",
+      "content": "Može netko napisati koliko mu iznose sigma2 u 3 c) zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265594": {
+      "poster": "hellvetica",
+      "content": "@\"Daeyarn\"#p265576 Kako si rjesio ovo? Dobijam drugi rezultat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265598": {
+      "poster": "Daeyarn",
+      "content": "@\"hellvetica\"#p265594 ovako kako si napisao bio ovdje \n\n@\"hellvetica\"#p265590 \n\nznaci dobijes dvije kovarijacijske matrice, oduzmes ih i \n\na) za srednju apsolutnu pogresku uzmes apsolutnu vrijednost te matrice(razlike), zbrojis elemente i podijelis sa brojem elemenata\n\nb)za srednju kvadratnu kvadriras svaki element te matrice(razlike), zbrojis elemente i podijelis sa brojem elemenata\n\ntako sam ja napravio, e i pritom pazi da uz bias = True/False toj funkciji uvijek i das rowvar = False, ja sam zaboravio predati taj argument pa su mi se razlike povecale kako se broj primjera povecavao, a ne padale kako bi trebalo biti",
+      "votes": {
+        "upvoters": [
+          "hellvetica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265599": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "FYI nadam se da racunate cov na stupcima, a ne na retcima",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265600": {
+      "poster": "Sulejman",
+      "content": "@\"Daeyarn\"#p265559 ja sam isto prvo stavio varijancu, ali mislim da je kolegica u pravu i trebala bi ic std: https://stackoverflow.com/questions/12412895/how-to-calculate-probability-in-a-normal-distribution-given-mean-standard-devi#:~:text=This%20uses%20the%20formula%20found%20here%3A\n\nTakođer me zanimalo zašto su negativne vrijednosti (tldr; zbog log funkcije):\n\nhttps://stats.stackexchange.com/questions/346720/can-log-likelihood-function-be-negative",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "[deleted]",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265602": {
+      "poster": "hellvetica",
+      "content": "@\"Daeyarn\"#p265598 super, tako sam i slozio. hvala!",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265603": {
+      "poster": "Daeyarn",
+      "content": "@\"Sulejman\"#p265600 dada, stavio sam sqrt od varijance na kraju, hvala ti :D",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265605": {
+      "poster": "maraska",
+      "content": "Koja je razlika kod računanja pristrane i nepristrane procjene za 3.e? Kako koju računam?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265607": {
+      "poster": "Bananaking",
+      "content": "@\"FERella\"#p265565 vezano uz ovo, malo mi ovo moje sumnjivo izgleda 🤔\n\n![](assets/2021-12-19/00046.png)\n\nkoristim return log(prod(norm.pdf(x, loc=mi, scale=sigma))) za L_gauss",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265609": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"Bananaking\"#p265607 Mozda korijen?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265615": {
+      "poster": "[deleted]",
+      "content": "@\"Bananaking\"#p265607 meni je izbacivalo slične brojeve jer sam slala krive podatke na temelju kojih računa, sad mi ispada dobro\n\nEDIT: u L_Gauss moraš osim mi i sigma slati i listu s vrijednostima tog atributa za sve primjere",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265618": {
+      "poster": "Bananaking",
+      "content": "@\"Aimée\"#p265615 saljem D = data[:, znacajka] gdje je data povratak iz load_iris a znacajka in range(4), isti D koristim za racunanje sigma i mi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

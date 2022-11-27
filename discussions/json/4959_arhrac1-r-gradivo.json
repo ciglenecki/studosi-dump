@@ -1,0 +1,106 @@
+{
+  "title": "[ARHRAC1-R] Gradivo",
+  "creator": "Bioxed",
+  "slug": "arhrac1-r-gradivo",
+  "tags": [
+    "FER",
+    "Arhitektura računala 1R"
+  ],
+  "posts": {
+    "230560": {
+      "poster": "Bioxed",
+      "content": "Koja je razlika ovog aktivna razina i maske ? Što radi što nije mi kliknulo baš još..\n\n![](assets/2021-08-16/00013.png)\n15. prezentacija, primjeri s GPIO",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253323": {
+      "poster": "yuniK",
+      "content": "riješila sam zadatak te kad provjeravam rješenja su ispravna, ali ako pri provjeri korsitim \n\n```asm\nMOV R0, #0X500 ; početna adresa izvorišnog bloka\nORG 500\nBLOK DW ...\numjesto\nMOV R0, #BLOK ; početna adresa izvorišnog bloka\nORG 500\nBLOK DW ...\n```\n\nuopce se ne ucitavaju podatci iz bloka. Jesam li krivo upisala adresu (ovo #0x500)? trebala bi biti  500(16",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253329": {
+      "poster": "macaklin",
+      "content": "@\"yuniK\"#p253323 vau ode neko nešto piše :O\n\nradiš li ldr nakon te mov r0, #0x500 naredbe?",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253340": {
+      "poster": "yuniK",
+      "content": "@\"macaklin\"#p253329 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253341": {
+      "poster": "macaklin",
+      "content": "@\"yuniK\"#p253340 nađoh grešku\n\ntribaš pisat `org 0x500`, a ne samo 500",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253411": {
+      "poster": "yuniK",
+      "content": "@\"macaklin\"#p253341 nije do toga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253439": {
+      "poster": "macaklin",
+      "content": "@\"yuniK\"#p253411 onda nemam pojma šta bi moglo bit\n\njavi ako skužiš",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "title": "[NEUMRE] 2. laboratorijska vježba - 2021/2022",
+  "creator": "tre_besty (luk)",
+  "slug": "neumre-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Neuronske mreže",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "250639": {
+      "poster": "tre_besty (luk)",
+      "content": "Jel netko napravio zadnji zadatak u Lab4 notebooku? Meni ona suma profita uvijek bude negativna za razne kombinacije i, N i max_num_iter.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250693": {
+      "poster": "tonkec",
+      "content": "@\"markarian\"#p250639 imao sam isti problem jer sam zaboravio dodati uglate zagrade oko `data` kada konstruiraš labele, odnosno `y` vektor",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250733": {
+      "poster": "tre_besty (luk)",
+      "content": "@\"tonkec\"#p250693 meni je `y = np.array([data[day-i+1 : day+1]])`  i za npr `N = 70` i `i = 50` dobijam `A.shape = (70, 50)` i `y.shape = (1, 50)` sto mi se cini u redu i dobro mi plota mrezu na podacima za treniranje:\n\n![](https://i.ibb.co/7CK5MYh/Screenshot-from-2021-11-07-10-41-44.png)\n\nPa mi nije jasno zasto mi je onda profit negativan.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250737": {
+      "poster": "tonkec",
+      "content": "@\"markarian\"#p250733 ja imam isto tako i radi mi oke, jel možda oduzimaš krivo greške?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251608": {
+      "poster": "BillIK",
+      "content": ">Constructs the matrix  𝐀  in which each column vector represents the  𝐚𝑖  for the previous day\n\nKako se ovo napravi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251693": {
+      "poster": "marvin",
+      "content": "je li imao tko jucer labos da kaze sto je bilo",
+      "votes": {
+        "upvoters": [
+          "rolotex (brr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251751": {
+      "poster": "marvin",
+      "content": "e i moze li netko malo pojasniti kako otprilike dobiti ovo u  zadnjem zadatku  u Lab4, bas neke nebuloze dobivam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251799": {
+      "poster": "at5611",
+      "content": "@\"BillIK\"#p251608 U for petlji zoves funkciju memory(data, day, N) koja ti vraca cijene zadnjih N dana (ne ukljucuje se dan na indexu day), i to radis za zadnjih i dana",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251805": {
+      "poster": "at5611",
+      "content": "@\"marvin\"#p251751 Koliko san skuzija mi usporedujemo nase predikcije cijene sa strategijom u kojoj pretpostavljamo da ce cijena sutra ostat ista kao i danas. Ako pretpostavimo da ce cijena ostat ista onda je pogreska za odreden dan ovo njihovo err_oo (samo prominis varijablu day), a ako radis predikciju cijene sa istreniranim neuronom onda je pogreska za odreden dan err_nn (prominis varijablu day i tezine W, ovisno koji neuron koristis), i moguci profit je err_oo - err_nn, sad samo moras za svaki dan na kojem je istreniran neuron izracunat profit varijablu i sumirat ih, i to napravit za svih 6 kombinacija parametara (one koje si mora odabrat proizvoljno i istrenirat), nadan se da je jasnije i da nisan ja negdi falija haha",
+      "votes": {
+        "upvoters": [
+          "marvin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251806": {
+      "poster": "Ollie",
+      "content": "@\"BillIK\"#p251608 \n\nOvak sam ja to riješila jučer kasno u noć, sam mozda treba popravit razmake  ak kopiras\n```\n    def memory(N,index):\n         a = np.array(N)\n         a = data[index-N:index]\n         return a\n```\n\n```\n    def memorize(data,day,N,i):\n        A = np.zeros((N,i),float)\n        for j in range(0,i):\n             column = memory(N,day-j)\n             for k in range(0,N):\n                  A[k][j] = column[k]\n        return A\n```",
+      "votes": {
+        "upvoters": [
+          "BillIK",
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251896": {
+      "poster": "BillIK",
+      "content": "@\"Ollie\"#p251806  ma riješio sam to, glupost je bila problem \n\nHvala svakako. \n\nZanima me samo kako ti izgleda graf koji dobiješ? Meni je prečudno da mi je za p pravac vrijednosti 10",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251904": {
+      "poster": "BillIK",
+      "content": "@\"BillIK\"#p251896 Nevermind, još jedna glupost",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ollie"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251907": {
+      "poster": "Ollie",
+      "content": "@\"BillIK\"#p251896 \n\nOvo je prvi graf u 4.2, plavo je tocna vrijednost, a crveno je predikcija (nez zas njima u notebooku piše obrnunto za boje kad u kodu za listu predikcija p doslovno piše color = red)\n\n![](assets/2021-11-09/00043.jpg)",
+      "votes": {
+        "upvoters": [
+          "BillIK",
+          "krokodil"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

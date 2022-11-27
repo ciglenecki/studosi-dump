@@ -1,0 +1,458 @@
+{
+  "title": "[DUBUCE] 1. laboratorijska vježba - 2020/2021",
+  "creator": "neZnamNista",
+  "slug": "dubuce-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Duboko učenje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "155383": {
+      "poster": "neZnamNista",
+      "content": "je li predaja 1. labosa do cetvrtaka 25.3?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155452": {
+      "poster": "login",
+      "content": "@neZnamNista#155383 Je.\n\n\"Studenti na provjeru trebaju donijeti otisnuti izvorni kod koji treba biti identičan kodu koji se predaje u Ferku do sljedećeg četvrtka do kraja dana.\"",
+      "votes": {
+        "upvoters": [
+          "neZnamNista"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155530": {
+      "poster": "Yasuke (Bono)",
+      "content": "U drugom zadatku kad radimo klasifikaciju kako se izračuna dijagonalna matrica koja je Jakobijan zglobnice i koje se komponente gledaju kad je računamo? Tu je uputa ali nisam bas skuzio iz nje.\n\n![](assets/2021-03-19/00020.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155628": {
+      "poster": "tonkec",
+      "content": "@Yasuke#155530 uzmeš jedan redak matrice s (s_i) i oni elementi koji su pozitivni u tom retku postaju jedinice u dijagonalnoj matrici, a inače su nule",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155846": {
+      "poster": "tre_besty (luk)",
+      "content": "@tonkec#155628 Kolike su dimenzije te diagonalne matrice onda? Jel za svaki redak matrice s1 stvaramo diagonalnu matricu ili imamo samo jednu diagonalnu matricu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155944": {
+      "poster": "tonkec",
+      "content": "@tre_besty#155846 piše ti u formuli da je parcijalno L po parcijalno s_i što znači da moraš za svaki redak imati posebnu matricu, a ona je dimenzija koliko i redak matrice s, vidiš da iz množenja matrice W_2 i diag mora biti dimenzija koliko W_2 ima stupaca kako bi matrični račun imao smisla",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155950": {
+      "poster": "InCogNiTo124",
+      "content": "@tonkec#155944 tako je, potvrdujem\n\nInace tips&tricks ne morate zaista konstruirat dijagonalnu matricu, jer kad budete generalizirali na batch_size >1 dobit cete tenzor treceg reda (ko matrica ali u kocku) i pogubit cete se\n\nRadije to implementirajte po definiciji kao elementwise mnozenje: tamo di je je aktivacija bila veca od nule, tamo gradient prolazi, odnosno dL_ds = (P-Y)•W_2*(s > 0), di je • matrix product a * elementwise (ilitiga hadamard)",
+      "votes": {
+        "upvoters": [
+          "Miskina666",
+          "Vrba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156046": {
+      "poster": "orange",
+      "content": "mićo je u labosu napisao `grad_loss_wrt_weights_1 = np.mean(x.T @ grad_loss_wrt_hidden, axis=0)` kod računanja gradijenta što daje vektor Hx1, u pripremi piše da se radi o matrici dimenzija HxD, a tako sam i ja implementirao. Zanima me ima li neki povod napraviti mean jer mi se čini da daje bolje rezultate?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156078": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@orange#156046 mean ti daje manji gradijent (od npr. sum) koji je neovisan o veličini batcha\n\nSuma u nekim slučajevima može dovesti do brže konvergencije ali to je bolje hendlati s adaptivnim stopama učenja, gradijent je koristan više manje samo za smjer kretnje\n\nAko taj gradijent ne odgovara shapeu weightova onda sam ja nešto sjebo xD, to mi je bio prvi susret s numpyjem i već vidim da ne bih ovak baš stvari napisao danas. Svakako bi shape svakog gradijenta trebao biti jednak shapeu težina.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "orange"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156993": {
+      "poster": "login",
+      "content": "Zanima me jedna stvar vezana uz prvi zadatak. Ako je to logisticka regresija koju implementiramo i dodajemo neki regularization loss, u strojnom ucenju smo i taj regularization loss derivirali kod trazenja gradijenata i ugradili ga u optimizacijski postupak. Sad kod neuronskih mreza ne znam kako bi to interpretirao. Pretpostavljam da ga ne treba ugradit u gradijente, al opet mi nije jasno kaj nam on tu tocno predstavlja, osim da ce ukupna greska bit tim veca sto je norma tezina veca",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157009": {
+      "poster": "tonkec",
+      "content": "@login#156993 pa što nije ugrađen kad računaš korak unazad kroz one sve matrice?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157038": {
+      "poster": "login",
+      "content": "Pa tipa ako gledamo ove izvode iz 1. labosa i ako na taj nacin racunamo greske, mislim da nije, il mi je nesto promaklo:\n\n![](assets/2021-03-23/00008.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157107": {
+      "poster": "BigD",
+      "content": "Jel itko zna odgovore na ona teorijska pitanja u 6.? Koji može primiti više parametara i koji daje garantirano bolju performansu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157121": {
+      "poster": "[deleted]",
+      "content": "@login#156993 [imath]L_1[/imath] i [imath]L_2[/imath] regularizacija, odnosno općenito [imath]L^p[/imath] regularizacija, vuku svoje motivacije iz opažanja da pretrenirani modeli imaju veliku amplitudu/normu slobodnih parametara (parametara koje treniraš) [Bishop 2006.]. Budući da ne želimo pretrenirane modele, onda ima smisla u gubitak dodati normu vektora slobodnih parametara (bez vektora pristranosti). Dakle, kada deriviraš gubitak po vektorima parametara onda uzimaš i gradijente po normi u obzir (jer se oni nalaze u gubitku), odnosno moraš ih uključiti u gradijent jer se oni nalaze u gubitku.\n\nP.S. Nema razlike između algoritma logističke regresije između kolegija strojnog učenja i dubokog učenja, to su isti algoritmi. Imaju istu funkciju pogreške, isti skup hipoteza (model) i isti optimizacijski postupak.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "login",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157160": {
+      "poster": "MJ3",
+      "content": "jel može netko napisat kakva su prošlih godina otprilike bila pitanja na blicu, jesu više vezana za računanje ili se traže objašnjenja i analize rezultata?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157170": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@MJ3#157160 Nije bilo prošlih godina blica, sve je bila demonstracija + pitanje asistenata",
+      "votes": {
+        "upvoters": [
+          "Fran_- (random_trooper)",
+          "InCogNiTo124",
+          "MJ3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157327": {
+      "poster": "BigD",
+      "content": "Kod MNIST skupa treba li konvertirati ulazne podatke 29x29 u vektore 1x784, ili ima neki bolji način?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157337": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@BigD#157327 možeš i ne moraš\n\nnpr. ako imaš 1x29x29 matricu, i na nju lupiš linearni sloj od 64 neurona, dobit ćeš shape (1, 29, 64). Tek ćeš na kraju za klasifikaciju trebati spljošćivati stvari, a kako ćeš to tad raditi, bog zna\n\nNpr. arhitektura tipa\n\n```\nLinear(29, 64)\nReLU\nLinear(64, 10)\nSum(axis=1)\nSoftmax(axis=-1)\n```\n\nje totalno validna. Ako spljoštiš matricu u vektor na početku imat ćeš više parametara i nećeš trebati lupiti akumulacijsku funkciju da izgubiš jednu os tenzora.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157350": {
+      "poster": "BigD",
+      "content": "S obzirom da svi bodovi dolaze od blica i programskog zadatka, ima li veze ako ne riješimo sve podzadatke ili nam nešto ne radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157870": {
+      "poster": "[deleted]",
+      "content": "@BigD#157350 Moglo bi eventualno doći nadopuniti svoj kod u nekom zadatku (tako je bilo jucer na oblikovnima), ali mislim da je vjerojatnije da to bude baš da implementaciju nečega nego za podzadatke gdje ispituješ ponašanje",
+      "votes": {
+        "upvoters": [
+          "Vrba",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158169": {
+      "poster": "Sharich",
+      "content": "kako ste rjesili u 7. zadatku ovaj train val split ? jedio sto sam nasao je ovako nesto ali mi onda pretvara u torch.utils.data.dataset.Subset i pol funkcija mi vise ne rade jer nije vise torch.tensor\n\n`x_train, x_val = utils.data.random_split(x_train, [N-N_val, N_val], generator=torch.Generator().manual_seed(42))\n\ny_train, y_val = utils.data.random_split(y_train, [N-N_val, N_val], generator=torch.Generator().manual_seed(42))\n`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158215": {
+      "poster": "orange",
+      "content": "@Sharich#158169 `  idx = torch.randperm(X.size()[0])\n\n        X = X[idx]`",
+      "votes": {
+        "upvoters": [
+          "Sharich"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158353": {
+      "poster": "moji_prsti_prsti_klize_po_njoj",
+      "content": "Na koji način da sredimo izgled labosa? U smislu da organiziramo slike, odgovore i zaključke u jupiter biljeznicu ili mozda ko neko izvijesce.pdf? tribamo li uopce to radit😂 il mogu ostavit u PyCharmu pa ako triba rjesenja onda runnan program?💀",
+      "votes": {
+        "upvoters": [
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158357": {
+      "poster": "[deleted]",
+      "content": "@moji_prsti_prsti_klize_po_njoj#158353 nigdje ne pise da treba rezultate isprintati tako da  mislim da ce samo proletit kroz kod koji doneses isprintan i vidit jesi li sve rijesio i otprilike ima li to smisla.",
+      "votes": {
+        "upvoters": [
+          "ls_123 (KimuraKong)",
+          "member",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158358": {
+      "poster": "moji_prsti_prsti_klize_po_njoj",
+      "content": "@maki#158357 pff zast ja razbijan glavu s ovin 😂 tenks ♥",
+      "votes": {
+        "upvoters": [
+          "Watson (112)",
+          "member",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158686": {
+      "poster": "Vrba",
+      "content": "Jel trebamo zip na ferku nazvati odredenim imenom ili je svejedno?",
+      "votes": {
+        "upvoters": [
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158710": {
+      "poster": "Ziher",
+      "content": "@BigD#157350 Nije da je 2.5 kod, 2.5 ovo sutra?\n\nNemojte mi reci da sam bezveze glancao kod...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "moji_prsti_prsti_klize_po_njoj",
+          "sane_insane"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158715": {
+      "poster": "member",
+      "content": "@Ziher#158710 Ja sam shvatila kao da su svi bodovi blic",
+      "votes": {
+        "upvoters": [
+          "Ziher",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158899": {
+      "poster": "BigD",
+      "content": "@member#158715 2.5 bodova blic, 2.5 bodova neki zadatci koje cemo morati rjesavati na papiru",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161650": {
+      "poster": "neZnamNista",
+      "content": "nisam bio na prvom labosu, pa moze li netko opisati kakva je procedura na labosu? je li istina da kod koji je poslan na ferko ne treba za rjesavanje zadataka na papiru?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161739": {
+      "poster": "tonkec",
+      "content": "@neZnamNista#161650 mogao se koristiti isprintan kod na blicu/testu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

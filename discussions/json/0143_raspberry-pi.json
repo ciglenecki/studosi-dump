@@ -1,0 +1,107 @@
+{
+  "title": "Raspberry Pi",
+  "creator": "DuckItUp",
+  "slug": "raspberry-pi",
+  "tags": [
+    "Opušteno"
+  ],
+  "posts": {
+    "4355": {
+      "poster": "DuckItUp",
+      "content": "Naručio sam konačno Raspberry Pi 4 da se imam s čim zajebavati. Pretpostavljam da ga dosta vas ima pa pišite za što ga koristite, kakve projekte imate s njim, itd.\n\nMene zanima koliko jako se grije, koji OS koristite i ako netko možda vrti par docker containera kakva su iskustva s tim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4435": {
+      "poster": "Markicak",
+      "content": "Ja sam uzeo ovakvo kuciste ( https://www.ebay.com/itm/Custom-Huge-Aluminum-Heatsink-Dual-Cooling-Fan-Cooler-for-Raspberry-Pi-4-model-B/273961063204?hash=item3fc95a1324:g:BLMAAOSwq05dTStN ) i s njim mi je bez ventilatora temperatura na otprilike \\~50 stupnjeva. Kad ukljucim ove ventilatore spusti se na nekih \\~42 stupnja. Na njemu uglavnom vrtim postgre bazu, web aplikaciju u docker containeru i qbittorrent za skidanje/seedanje torrenta. Sam po sebi se dosta grije, ako se ne varam znalo je bit nekih \\~70 stupnjeva dok je bio idle, ali se je mogao underlockat pa bi se to normaliziralo. Na njemu je trenutno Ubuntu 19.10  32 bit-a. Nisam siguran više zašto sam stavljao 32-bitni os, vjerojatno je bilo više zafrkancije sa 64-bitnim os-om, ali pošto ima 4GB rama nije da gubim puno. Koristi oko 450 MB RAM-a dok se sve navedeno vrti. Jedini upgrade koji bi volio napravit je instalirat neki SSD disk - kupio sam već neki adapter za SSD ali adapter sam po sebi nije radio uopce a nije mi se dalo do ducana reklamirat pa je stalo na tome za sad. SD Kartica sama po sebi nije baš brza ali prolazno je za sad.\n\nScreen sa glances-a : https://prnt.sc/roqzv8",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4436": {
+      "poster": "MordorGuy",
+      "content": "Ja sam prvo slagao NAS i torrent server, to je funkcioniralo dost dobro al mi je bilo previše klikanja oko dodavanja torrenta pa sam odustao.\n\nZatim sam složio server za 3d printanje i udaranje timelapseova (Octoprint) jer mi je printer u drugoj sobi, to vec dugo vremena funkcionira odlicno\n\nIgrao sam se nešto i sa touchscreenom za kontrolu CNC-a al to je bilo dost trzavo pa sam odustao",
+      "votes": {
+        "upvoters": [
+          "MarokMarsci (Collapse Enjoyer)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Markicak"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263313": {
+      "poster": "G-bear",
+      "content": "Btw, da li se tko igrao s Raspberry PI-em? Razmisljao sam kako implementirati ono [Pi hole](https://pi-hole.net/) rjesenje da maknem reklame i sa chipa. Ide mi na kurac kad moram ic pisat pa cekat reklame da prodju, a stave one po 5 sekundi koje ne mozes preskocit kao na Youtubeu. Pa rekoh, bar u vlastitoj kuci da me ne jebu s tim.",
+      "votes": {
+        "upvoters": [
+          "HeadlessFPy (HeadlessPy)",
+          "Hrvoje (Hrvoje45)",
+          "InCogNiTo124",
+          "MarokMarsci (Collapse Enjoyer)",
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Hrvoje (Hrvoje45)",
+          "MarokMarsci (Collapse Enjoyer)",
+          "feel_d_boot (iNut)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263420": {
+      "poster": "Hrvoje (Hrvoje45)",
+      "content": "> @\"G-bear\"#p263313 Pa rekoh, bar u vlastitoj kuci da me ne jebu s tim\n\nosobno se nisam bavio, al znam lika koji si je digo vpn (openvpn/wireguard) na raspberriju pa si sav promet routa preko kućne mreže i u kombinaciji s piholeom ima blokirane reklame gdje god da je\n\npotrebna je javna ip adresa i valjda kombinirati sa cloudflerom za dns",
+      "votes": {
+        "upvoters": [
+          "G-bear"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263505": {
+      "poster": "helot",
+      "content": "@\"G-bear\"#p263313 \n\nja sam držao na pi zero W godinu dana bez problema, sada konfiguriram kućni server pa ću dignuti u proxmox containeru sličnu stvar. \n\nSuper je kaj blokira reklame na mobilcima (probaj npr otvoriti neki freeware game koji spama reklamama, sad tog nema) te nestane spam od Avasta na pcu te možeš pratiti točno koje aplikacije i tko te pokušava pratiti i slati telemetriju. \n\n@\"DuckItUp\"#p4355 \n\nPi 4 ima problema otkad je izašao pogotovo s thermalsima.\n\nNa RPI3 sam vrtio debian/raspbian neku varijaciju te stavio Lorawan server/mqtt broker i RAK 2245 hat gore bez problema, makar nisam koristio docker jer tada nisam bio toliko upućen, ako ima image ne vidim razloga zkj nebi radilo.\n\nTemp na rpi3 su niže nego na rpi4, ali uvijek je preporučeno uzeti one male hladnjake i barem jedan pošteni ventilatorčić da ne throttleaš. \n\nOstali projekti su bili za Ardupilot onboard računalo koji je vrtio ROS/Opencv i slično. RPI3 koristim sada isključivo kao Lora Gateway, pi zero skuplja prašinu jer je prestao raditi kao pi hole i vjerojatno će otići na octoprint ili ga možda prihaklam na printer da imam network connectivity.",
+      "votes": {
+        "upvoters": [
+          "G-bear"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

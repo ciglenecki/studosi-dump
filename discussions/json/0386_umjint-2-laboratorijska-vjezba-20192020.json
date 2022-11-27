@@ -1,0 +1,872 @@
+{
+  "title": "[UMJINT] 2. laboratorijska vježba - 2019/2020",
+  "creator": "sekiro",
+  "slug": "umjint-2-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Umjetna inteligencija",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "13447": {
+      "poster": "sekiro",
+      "content": "Moze li neko dati prijedlog kako spremati izraze kad ih iscitamo iz datoteke?\n\nPokusao sam sa matricama, tj. 2D listom, ali je malo nespretno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13537": {
+      "poster": "Dekan",
+      "content": "Ja sam radio sa tuple(set, set) ali mi se poslije nakon sto sam napisao vecinu koda to pokazalo dosta nezgodno.\n\nCini mi se da bi mi bilo bolje da sam napravio klasu koja u sebi ili ima 2 seta ili ima set parova(literal, bool) pa onda u klasi mozes i pamtiti iz kojih si klauzula izveo trenutnu za onaj verbose ispis. Takoder mozes lakse napravit napravit konverziju u string pri ispisu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13767": {
+      "poster": "Emma63194",
+      "content": "Stigne li se ovo u dva dana?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "Sele"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13769": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@Emma63194#13767 Sve se moze kad se hoce!",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14068": {
+      "poster": "member",
+      "content": "Bi li mi mogao neko pokazat ovaj opširniji ispis izvođenja \"ai.txt\" da provjerim jer mi jedino on ne radi od danih primjera?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14073": {
+      "poster": "Stubla",
+      "content": "Kako bi se trebao ispisivati neki složeniji negirani cilj? Npr. za cilj\"-Olive_oil v -Pasta v -Chicken v -Alfredo_sauce v Chicken_alfredo\", negacija je \"Olive_oil  ^ Pasta ^ Chicken ^ Alfredo_sauce ^ -Chicken_alfredo\".\n\nHoće li ispis negiranog cilja u tom slučaju biti:\n\n\"==============\"\n\nn. Olive\n\nn+1. Pasta\n\nn+2. Chicken\n\nn+3. Alfredo_sauce\n\nn+4. -Chicken_alfredo\n\n?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14074": {
+      "poster": "in1",
+      "content": ">! spoiler\n\n>test: ai.txt                                     \n1. prolaz_labosi v ~lab1\n2. prolaz_labosi v ~lab2\n3. prolaz_labosi v ~lab3\n4. prolaz_labosi v ~lab4\n5. mi_prolaz v ~mi_pismeni v ~mi_teorija\n6. zi_prolaz v ~zi_pismeni v ~zi_teorija\n7. prolaz_kontinuirano v ~mi_prolaz v ~prolaz_labosi v ~zi_prolaz\n8. prolaz_kontinuirano v prolaz_rok v ~ispitni_rok1 v ~prolaz_labosi\n9. prolaz_rok v ~ispitni_rok2 v ~prolaz_labosi\n10. prolaz_predmeta v ~prolaz_kontinuirano\n11. prolaz_predmeta v ~prolaz_rok\n12. lab1\n13. mi_teorija\n14. ~mi_pismeni\n15. ~zi_teorija\n16. zi_pismeni\n17. ispitni_rok1\n\n===========================\n18. ~prolaz_predmeta\n\n===========================\n19. ~prolaz_rok (18,11)\n20. ~prolaz_kontinuirano (18,10)\n21. prolaz_kontinuirano v ~ispitni_rok1 v ~prolaz_labosi (19,8)\n22. ~ispitni_rok1 v ~prolaz_labosi (20,21)\n23. ~prolaz_labosi (22,17)\n24. ~lab1 (23,1)\n25. nil (24,12)\n\n===========================\n\nprolaz_predmeta is true\n\nEDIT:Latex se pali pa ovo izgleda loše, evo u normalnom obliku: https://pastebin.com/raw/GNhztWMg",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14105": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jel moze neki savjet kako pamtiti roditeljske klauzule za ispis?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14128": {
+      "poster": "in1",
+      "content": "@Yasuke#14105 Imaš u svakoj klauzuli polje od dvije klauzule iz koje je ona izvedena, ili null ukoliko je to ulazna ili ciljna klauzula.",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14148": {
+      "poster": "member",
+      "content": "Znači za autograder jel ja samo predam kod s linijama:\n\n`file = open(sys.argv[1], 'r',encoding=\"utf-8\")`\n\ni onda normalno klasika sve ostalo...`for line in file.readlines()`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14198": {
+      "poster": "Johnny_Bravo (a beautiful and unique snowflake)",
+      "content": "@Yasuke#14105 ili kao idiot (ja) pamtis int kao dio strukture klazuzule.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14214": {
+      "poster": "FICHEKK",
+      "content": "@in1#14074 Kako tako brzo pronađeš rješenje? Kako biraš koje ćeš spajati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14215": {
+      "poster": "Emma63194",
+      "content": "Da li se možda nekome malo pojasniti ovaj algoritam, cijeli dan pokušavam napisati kod, ali stvarno mi ne ide jer ne kužim kako stvar funkcionira.\n\nAko sam dobro shvatila, krećemo od negiranog cilja. Provjeravam ima li negdje komplement i ako ima, onda sve te klauzule zapišemo u onaj set new. Onda provjeravamo po setu new koji literal ima komplement, i onda tu klauzulu zapisujemo u new, itd. \n\nKada treba radit onu provjeru postoji li podskup pa onda izbrisati nadskup? Jel to stalno treba raditi dok dodajemo nove klauzule u set new? Radimo li to samo nad setom new ili i nad onim početnim setom?\n\nTreba li tu provjeru napraviti na samom početku, na premisama međusobno?\n\nU slučaju da recimo ništa novo nismo dodali u set new, tu program terminira i vraća false?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14223": {
+      "poster": "Dekan",
+      "content": "@FICHEKK#14214 Mozes to tretirati kao pretrazivanje prostora stanja, nesto slicno prvom labosu. NIL mozes dobiti jedino ako imas dvije klauzule koje imaju samo jedan literal i to da je jedan komplementaran drugom. Dakle kada biras koji par klauzula zelis razrjesiti prvo rjesavaj one koje imaju manje literala.",
+      "votes": {
+        "upvoters": [
+          "FICHEKK"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14226": {
+      "poster": "sekiro",
+      "content": "za sta nama sluzi strategija brisanja, ne vidim ni jednu klauzulu koja je tautologija ili da je redundantna osim ovih u autocnf al oni su za dodatni zadatak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14238": {
+      "poster": "in1",
+      "content": "@FICHEKK#14214 Iskodirao sam algoritam sa slajdova. Ako ti brzo znači da izvedem malo klauzula dok ne dokažem, ja ispisujem samo sva ulazna stanja + negirani cilj + samo ona izvedena stanja koja su mi bila potrebna da dokažem negirani cilj, ne ispisujem ostale izvedene klazule.\n\n\n> @Emma63194#14215 Kada treba radit onu provjeru postoji li podskup pa onda izbrisati nadskup?\n\nJa sam u selectClauses uklonio redundantne i nevažne klauzule te tamo odabrao koje ću klauzule upariti preko SOS-a. To se izvršava svaki put kod traženja novih klauzula za razriješiti.\n\n> @Emma63194#14215 Treba li tu provjeru napraviti na samom početku, na premisama međusobno?\n\nMislim da je odgovorio asistennt da možemo raditi provjeru na ulaznim klauzulama.\n\n> @Emma63194#14215 U slučaju da recimo ništa novo nismo dodali u set new, tu program terminira i vraća false?\n\nDa, ovisno o tome gdje pišeš, containsAll() ti pojednostavljuje takva ispitivanja.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "FICHEKK"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14242": {
+      "poster": "Emma63194",
+      "content": "> @in1#14238 Ja sam u selectClauses uklonio redundantne i nevažne klauzule te tamo odabrao koje ću klauzule upariti preko SOS-a. To se izvršava svaki put kod traženja novih klauzula za razriješiti.\n\nHvala puno na odgovoru!\n\nSamo bih te još zamolila, možeš li možda objasniti malo taj selectClauses? \n\nMeni osobno je to u programu da iteriram po sos-u pa pokušam upariti dva iz sos-a,  a nakon toga jedan iz sos-a, jedan iz početnog skupa premisa. \n\nJel onda svaki put kad dobijemo neki rezolvent, onda treba po oba seta (premise i sos) proći i provjeriti da naš rezolvent nije nadskup?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14243": {
+      "poster": "in1",
+      "content": "@Emma63194#14242 U selectClauses se mora implementirati strategijaBrisanja (uklanjanje redudantnih + nevažnih klauzula) i upravljacka strategija skupa potpore. \n\n`\tprivate Set<ParKlauzula> selectClauses(Set<Klauzula> clauses) {\n\n\t\t//da ne modificiram originalne klauzule\n\n\t\tSet<Klauzula> klauzule = new HashSet<>(clauses);\n\n\t\t//strategija brisanja = uklanjanje redudantnih + nevažnih\n\n\t\tthis.strategijaBrisanja(klauzule);\n\n\t\t//odabir skup parova\n\n\t\treturn this.upravljackaStrategijaSkupaPotpore(klauzule);\n\n\t}\n\n\tprivate void strategijaBrisanja(Set<Klauzula> klauzule) {\n\t\tthis.uklanjanjeRedudantnihKlauzula(klauzule);\n\t\tthis.uklanjanjeNevaznihKlauzula(klauzule);\n\t}`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14244": {
+      "poster": "in1",
+      "content": "@Emma63194#14242 U selectClauses se mora implementirati strategijaBrisanja (uklanjanje redudantnih + nevažnih klauzula) i upravljacka strategija skupa potpore. To u kodu izgleda ovako:\n>! sl\n\n>![](assets/2020-04-25/00003.png)\n\nDovoljan uvjet kod iteriranja u SOS-u je da obje klauzule ne smiju biti ulazne.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14365": {
+      "poster": "svemia (bearyn)",
+      "content": "Je li potrebno radit provjeru redundancije i tautologije i nad skupom setOfSupport? Zbunjuje me taj dio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14369": {
+      "poster": "sekiro",
+      "content": "@svemia#14365  u sos spremamo sve nove klauzule da bi ih mogli rezolvat sa onim pocetnim, tako da mislim da ih sve treba provjerit. Neka me netko ispravi ako nisam u pravu jer ni meni bas nije jasan taj dio sto tocno moramo raditi sa sos-om ali bih reko da sve treba provjeriti. Mislim da bi trebalo provjeriti redundanciju svih klauzula zajedno svaki put kad dobijemo novi set klauzula.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14429": {
+      "poster": "Emma63194",
+      "content": "@sekiro#14369 Mislim da treba svaki put provjeriti je li rezolvent nevažeći ili redundantan (ovo sam 100% sigurna) te postoji li neka prije zapisana klauzula koja je sada redundantna zbog ovog rezolventa (ovo nisam 100% sigurna je li nužno, ali ja to radim u kodu i sve mi je dobro).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14454": {
+      "poster": "Johnny_Bravo (a beautiful and unique snowflake)",
+      "content": "@svemia#14365 idealno bi provjeru napravio odmah nakon sto generiras klauzulu. Tipa mozes odmah provjeriti koliko postoji zajednickih literala i ako je >1, ne trebas spremiti klauzulu\n\nSto se tice redundancije, ja bi prosao kroz set svih sos klauzula i provjerio da li ima neka koja je sada redundanta zbog nove, ali nije mi to mijenjalo brzinu izvodenja nesto puno",
+      "votes": {
+        "upvoters": [
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14475": {
+      "poster": "zara",
+      "content": "Jel mi netko molim vas moze objasniti sto tocno trebam napraviti da se dobro pokrene ovaj testni nacin rada?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14480": {
+      "poster": "Emma63194",
+      "content": "@zara#14475 Trebaš kao argumente predati cooking_test cooking_examples/ime_filea.txt cooking_examples/ime_filea_input.txt. \n\nU kojem jeziku radiš labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14486": {
+      "poster": "zara",
+      "content": "@Emma63194#14480 U pythonu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14490": {
+      "poster": "Emma63194",
+      "content": "Onda u terminalu samo napišeš npr. \n\npython solution.py cooking_test cooking_examples/coffee.txt cooking_examples/coffee_input.txt\n\n(moraš bit u folderu gdje ti je solution.py, a i istom folderu trebaju bit svi oni folderi resolution_examples, cooking_examples)\n\nAko slučajno radiš u PyCharmu, odeš gore desno i klikneš na solution -> Edit Configurations, u Parameters upišeš npr. cooking_test cooking_examples/coffee.txt cooking_examples/coffee_input.txt i samo pokreneš.\n\nNadam se da to odgovara tvoje pitanje.",
+      "votes": {
+        "upvoters": [
+          "san"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14496": {
+      "poster": "DesignatedDriver",
+      "content": "Može li netko uploadat verbose output za sve primjere? Ima i par dodatnih primjera na slacku u `testRunner.zip`.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14508": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jel mi moze neko pomoci kako se izvede NIL za onaj novi primjer coffee_or_tea. Nesto sam stvarno previdio, radi mi za sve ostale primjere. Evo stavit cu tu i premise.\n\nWater\n\nHeater\n\nTea_bag\n\nCoffee_powder\n\n~ Water V ~ Heater V Hot_water\n\n~ Coffee_powder V ~ Hot_water V Coffee\n\n~ hot_water V Tea_bag V Tea\n\nOvo je ulaz: Coffee v Tea",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14526": {
+      "poster": "in1",
+      "content": "@Yasuke#14508 https://pastebin.com/raw/XNjZDaB6\n\nOd izvedenih klauzula su prikazne samo one koje je bilo potrebno koristiti da dođemo do nil",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14530": {
+      "poster": "Emma63194",
+      "content": "@Yasuke#14508 Meni je ovo ispis:\n1. water \n2. heater \n3. tea_bag \n4. coffee_powder \n5. \\~water v \\~heater v hot_water \n6. coffee v \\~hot_water v \\~coffee_powder \n\n=============\n7. \\~coffee \n8. \\~tea \n\n=============\n9. \\~hot_water v \\~coffee_powder (6, 7)\n10. \\~hot_water (4, 9)\n11. \\~water v \\~heater v \\~coffee_powder (5, 9)\n12. \\~heater v \\~water (5, 10)\n13. \\~heater (1, 12)\n14. \\~water (2, 12)\n15. NIL (2, 13)\n\n=============\n\ncoffee v tea is true",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14532": {
+      "poster": "svemia (bearyn)",
+      "content": "Naredbe - i + se izvode nad početnim skupom premisa, a naredba ? nad premisama koje su dobivene prethodnim dodavanjem ili oduzimanjem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14538": {
+      "poster": "in1",
+      "content": "@Yasuke#14508 \n\nOvo je moj ispis, ispisujem sve ulazne i sve ciljne klauzule.\n\nhttps://pastebin.com/raw/F8ZNcvGK\n\n@svemia#14532 \n\nNaredbe + i - se izvode nad trenutnim skupom premisa, dakle ako dodas A i nakon toga dodajes B, B dodajes u skup klauzula u kojem se nalazi A. S ? ispitujes trenutni skup klauzula (koji moze sadržavati  dodane/uklonjenje klauzule)",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14545": {
+      "poster": "svemia (bearyn)",
+      "content": "@in1#14538 A ako nakon te ? naredbe koja se izvede nad skupom koji sad ima A i B, slijedi ponovo + ili -, jel se one onda izvode nad početnim premisama, ili ponovo nad skupom koji ima A i B?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14554": {
+      "poster": "in1",
+      "content": "@svemia#14545 Pogledaj primjer na kraju stranice 3 (hrvatske upute). Ako dodaš nešto u set, onda to stoji u setu do kraja izvođenja programa (osim ako to ne ukloniš iz seta). Sve naredbe izvodiš nad promjenjenim setom. Dakle, ako izvedeš ? nad A i B te onda izvršiš naredbu + ili - onda dodaješ/uklanjaš element iz skupa u kojem su A i B.",
+      "votes": {
+        "upvoters": [
+          "san",
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14561": {
+      "poster": "svemia (bearyn)",
+      "content": "@in1#14554 Hvala puno 😊",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14590": {
+      "poster": "sekiro",
+      "content": "jel smijemo iz pocetnih premisa uklanjat klauzule? Tipa ako ne prode tautologiju ili redundanciju. Ili ako kad dodamo u sos nove klauzule ova iz pocetnog skupa postane redundantna?",
+      "votes": {
+        "upvoters": [
+          "jazzMassive"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14645": {
+      "poster": "jazzMassive",
+      "content": "@in1#14074 ovaj primjer mi nikako ne ispada tocan. Kada korisimo cilj dva puta(npr. u 19. i 20. liniji), a kada ne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14650": {
+      "poster": "Emma63194",
+      "content": "@sekiro#14590 Ja sam to tako radila. Sve je dobro prošlo na autograderu.",
+      "votes": {
+        "upvoters": [
+          "sekiro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14781": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "Ima li jos koji heroj da je u 11:55 predao kod koji ima compile error, a osim toga rade oba zadatka i sta ocekivat premda nadoknada vise nema? SMH",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15093": {
+      "poster": "Bisolvon",
+      "content": "Jeli se javila kome mozda *kolegica* za usmeni iz 2lab?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15185": {
+      "poster": "milanista",
+      "content": "Ima netko da mu se nisu javili oko odgovaranja labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15188": {
+      "poster": "Amon",
+      "content": "@milanista#15185 Ma javit će se kad tad",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15190": {
+      "poster": "milanista",
+      "content": "@Amon#15188 ma znam, ali dobio sam mail da sam izabran za ispitivanje i da će tokom dana mi se javiti za termin pa provjeravam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15244": {
+      "poster": "Johnny_Bravo (a beautiful and unique snowflake)",
+      "content": "@Bisolvon#15093 jel ona asistent koji radi na faksu, ili nas zbilja sada ispituju za ocjenu demosi.\n\nJer mislim da mi ocjena ovisi o nekom tko ima nula uciteljski kompetencija i odabran je na temelju toga da zna strebati gradivo, mi se ne cini imalo logicnim ili postenim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15270": {
+      "poster": "member",
+      "content": "@Johnny_Bravo#15244 Mene je prošli labos  ispitivala demosica koja je imala pripremljena pitanja i nema tu filozofije, il si odgovorio na pitanje ili ne. Međutim, bila je darežljiva s bodovima.",
+      "votes": {
+        "upvoters": [
+          "Johnny_Bravo (a beautiful and unique snowflake)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15292": {
+      "poster": "svemia (bearyn)",
+      "content": "Previše testova mi je palo zbog provjere  za unknown (dobijem false, a ne unknown). U kojem se to točno dijelu provjerava?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15316": {
+      "poster": "Emma63194",
+      "content": "@svemia#15292 Pa šta nije da smo trebali ispisati samo true ili unknown u ovom osnovnom dijelu labosa? Nema tu false, to je mislim u jednom od onih dodatnih zadataka.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15319": {
+      "poster": "svemia (bearyn)",
+      "content": "@Emma63194#15316 Aha, izgleda da sam krivo shvatio taj dio jbg... Hvala :)",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15338": {
+      "poster": "Johnny_Bravo (a beautiful and unique snowflake)",
+      "content": "Može netko objasniti zasto je rezultat unknown, a ne false? Logički.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15363": {
+      "poster": "FICHEKK",
+      "content": "@Johnny_Bravo#15338 Točno identično pitanje sam i ja imao, pa sam pitao Martina, ovo je odgovor:\n\n![](assets/2020-04-28/00014.png)",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "ink",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15385": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Johnny_Bravo#15244 Kolega, nije baš lijepo da obezvrjeđujete kolegicu (za koju mislim da možda i čita ovo). Nije zadnji put da nekog na faksu ispituje demos, neki put zna biti malo nepravedno (u smislu da su neki demosi predarežljivi dok su drugi normalni), ali ona je svoje mjesto zaslužila vjerojatno dobrom ocjenom na predmetu, tako da u pogledu labosa ne bi trebalo biti nekih problema.\n\nOpćenito na Umjetnoj inteligenciji i Strojnom učenju nisam doživio da su demosi sprdačina kao što su znali biti na E predmetima.\n\nEDIT: Da klarificiram, nije to obično do studenata, već do vodstva predmeta. Šnajder i ekipica ima dobru reputaciju u pogledu toga.",
+      "votes": {
+        "upvoters": [
+          "Mrcina (Yoso)",
+          "MsBrightside",
+          "member",
+          "miki123",
+          "nickname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15475": {
+      "poster": "Johnny_Bravo (a beautiful and unique snowflake)",
+      "content": "@micho#15385 1) Sto je točno optužba? Koliko znam stjecanje učiteljskih kompetencija nije dio nastave na FERu, a znam da je kolegica jos nije diplomirala tako da sumnjam da ih je stekla. Moja kritika nije do 'strogosti' nego vjerovanja da netko tko nije učitelj, i jos k tome tko ima razinu socijalnih sposobnosti prosječenog ferovca (jer ovdje ju tretiram kao prosječnog ferovca, cast iznimka etc) nije sposoban izvoditi objektivna, kvalitetna, usmena ispitivanja*. Takoder, pretpostavljam da je uvjet bivanja demosom, kao na velikom broju fakultetima, ocjena pet u relevatnim predmetima. Ako je to kriterij, to ne smatram uopce dobrim kriterijem za radom u nastavanom kapacitetu.\n\n    2) 'Napad', ako je to bio,  bio je na kriterije zapošljavanja na fakultetu. Ako fakultet ima problema s nalaženjem novca za zapošljavanje dovoljno _kvalificiranog_ osoblja da ispituje svoje studente, onda bi fakultet trebao preispitati na sto trosi novce  i prima li vise studenta po godini nego sto im moze pruziti kvalitetnu edukaciju.\n\n    3) Kolegicu sam spomenuo imenom jer znam da je ona jos uvijek student. Druge ne znam, pa koliko znam svi bi mogli biti profesori.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15479": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @Johnny_Bravo#15475 Moja kritika nije do ‘strogosti’ nego vjerovanja da netko tko nije ucitelj, i jos k tome tko ima razinu socijalnih sposobnosti prosječenog ferovca (jer ovdje ju tretiram kao prosjecnog ferovca) nije sposoban izvoditi objektivan usmena ispitivanja\n\nJa bih vam argumentirao da ne postoji ljudsko biće koje je sposobno izvoditi objektivna usmena ispitivanja. Ne znači da bi ispitivanje trebali ostaviti strojevima.\n\n> @Johnny_Bravo#15475 ‘Napad’, kakav je i bio,  bio je na kriterije zaposljavanja na fakultetu. Ako fakultet ima problema s nalazenjem novca za zapošljavanje dovoljno kvalificiranog osoblja da ispituje svoje studente, onda bi fakultet trebao preispitati na sto trosi novce i prima li vise studenta po godini nego sto im moze pruziti kvalitetnu edukaciju.\n\nUopće nije problem u novcu, Šnajder i ekipa imaju ovakav sustav zato što dozvoljava profesorima, asistentima i demosima da se više posvete pojedinom studentu. Isto tako, na taj način se ljude pokušava zadržati u akademskoj zajednici. Uopće nije pitanje u novcu jer čak i da novca ima beskonačno, većinu ljudi niti ne zanima akademija, niti su sposobni za nju. Prvi primjer ja (u oba slučaja).\n\n> @Johnny_Bravo#15475 Kolegicu sam spomenuo imenom jer znam da je ona jos uvijek student. Druge ne znam, pa koliko znam svi bi mogli biti profesori.\n\nA moje pitanje vama je zašto se niste obratili voditeljima predmeta, nego radite scene na forumu? Ne znam što vam je namjera, ali ispadate privilegirani šupak ovako. Ajde da ste imali loše iskustvo s njom, ali onda bi opet bio način da joj se privatno obratite ili popričate s voditeljima predmeta. Ako trebate mailove, slobodno vam ih dam.",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "sekiro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15480": {
+      "poster": "sekiro",
+      "content": "@Johnny_Bravo#15475 pa nije ovo ispit pa da treba bit ne znam koliko pametna, sto vjerujem da je ako su je postavili za demosa, doslovno ces dobit jedno il dva teorijska pitanja di nema previse filozofije, ili znas ili ne znas, a onda opet ako su je postavili za demosa sigurno dovoljno dobro razumije kod da moze vidjeti koje su greske u njemu jednako kao i asistent, a ko zna mozda i bolje",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15487": {
+      "poster": "Johnny_Bravo (a beautiful and unique snowflake)",
+      "content": "@micho#15479 \n>Ja bih vam argumentirao da ne postoji ljudsko biće koje je sposobno izvoditi objektivna usmena ispitivanja. Ne znači da bi ispitivanje trebali ostaviti strojevima.\n \nStrawman, nikada nisam rekao da sve trebaju ocjenjivati racunala.\n\nSto se tice da nitko ne moze izvoditi apsolutno objektivno ispitivanje, ne ne moze, i to ne postoji. Da li bi da te ispituje profesor predmeta u kojem jesi, ili neki srednjoskolac ? Ako priznas da zelis jedno vise nego drugo, znaci priznajes da postoji razlika u kvaliteti ispitivanja. Za mene, je razlika izmedu nekog tko je toboze kvalificiran tipa asistent, profesor, i demosa koji je student na godini iznad mene, znacajna, zbog razloga koje sam naveo. (iako sumnjam da i asistente na fakultetu traze da imaju uciteljske kompetencije prije nego sto ispituju, odnosno znam da ne traze)\n\n>Šnajder i ekipa imaju ovakav sustav zato što dozvoljava profesorima, asistentima i demosima da se više posvete pojedinom studentu\n \nMozda. Ne znam koliko je osoba na mjesto kad FER otvori svoje natjecaje tako da ne mogu komentirati da li postoji visak ili manjak potencijalnog osoblja.\n\nS ostatkom se slazem, nisu svi za akademiju, ali ne vidim kako je to relevantno za ono sto sam rekao.\n\nA 'posveta' tako da nas demos ispituje mi je bas upravo znak 'neposvecivanja'.\n\n>A moje pitanje vama je zašto se niste obratili voditeljima predmeta, nego radite scene na forumu? Ne znam što vam je namjera, ali ispadate privilegirani šupak ovako. Ajde da ste imali loše iskustvo s njom, ali onda bi opet bio način da joj se privatno obratite ili popričate s voditeljima predmeta.\n \n Pitao sam jer sam hito znati da mozda nije zaposlena kao asistent, i da je moja premisa kriva. Komentirao sam na isto.\n\nHah, sto sam tocno trebao 'prokomentirati' s voditeljima? Ne bi se nista promjenilo sto god ja rekao, niti ocekujem da se promjeni. Ti si onaj koji ovdje white knighta nekog koga uopce nisam vrijedao i stvara scenu gdje scene nema. Ti jos mene tu vrijedas i onda kazes da ja stvaram scenu. Vrhunsko kolega. Tu se preseravas sa _vi_ da ispadnes toboze profinjen, ali me onda nazivas supkom\n \n I po 2i put, spomenuo sam nju jer jedino znam da je ona studentica. Sad ja ne znam je li ona tvoja cura da ti ju moras ovoliko braniti jer ti si brate onaj koji drami.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15489": {
+      "poster": "Johnny_Bravo (a beautiful and unique snowflake)",
+      "content": "@sekiro#15480 ma naravno, ako je to sablonsko i oni nemaju puno slobode u ocjenjivanju onda njena uloga nije bitna/velika\n\nDoduse onda ostaje pitanje zasto ne postoji minitest za svaki labos umjesto ispitivanja.\n\nto sto se ispiti shvaćaju ozbiljnije nego sama primjena gradiva (ie labosi) i je problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15492": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @Johnny_Bravo#15487 Da li bi da te ispituje profesor predmeta u kojem jesi, ili neki srednjoskolac ? Ako priznas da zelis jedno vise nego drugo, znaci priznajes da postoji razlika u kvaliteti ispitivanja. Za mene, je razlika izmedu nekog tko je toboze kvalificiran tipa asistent, profesor, i demosa koji je student na godini iznad mene, znacajna, zbog razloga koje sam naveo. (iako sumnjam da i asistente na fakultetu traze da imaju uciteljske kompetencije prije nego sto ispituju, odnosno znam da ne traze)\n\nBruh svejedno mi je tko me ispituje, ja sam na ispitivanju da pokažem znanje a ne da pratim kakve su čije kompetencije. Ako imam problem, prijavit ću ga nadređenima i tu je gotova stvar. Nema tu ničeg osobnog.\n\n> @Johnny_Bravo#15487 ali ne vidim kako je to relevantno za ono sto sam rekao.\n\nInsinuirao si kao da je problem u novcu. Ja sam ti htio pokazati da problem nije karakterističan za FER.\n\n> @Johnny_Bravo#15487 Pitao sam jer sam hito znati da mozda nije zaposlena kao asistent, i da je moja premisa kriva. Komentirao sam na isto.\n\nPa isto si mogao pitati nositelje predmeta, oni će sigurno znati bolje nego ljudi koji su samo na predmetu 😂 \n\n> @Johnny_Bravo#15487 Hah, sto sam tocno trebao ‘prokomentirati’ s voditeljima? Ne bi se nista promjenilo sto god ja rekao, niti ocekujem da se promjeni.\n\nD'uradi nešto!!!!!!\n\nInače vrlo je žalosno čuti ovakav stav kad su Šnajder i Čupić jedni od najvećih zagovaratelja studenata. Hell, postoje glasine da je Šnajder pričao o odlasku s faksa ako situacija ostane ovoliko loša. A ti sad, totalno neupućen i bez da si pokušao sav njihov trud bacaš u vodu, dok su na R-u uz npr. Đereka i Goluba jedni od rijetkih profesora koji bi te pokušali shvatiti i pomoći ti.\n\nMislim sve u svemu žao mi je da si uz ovoliku defenzivu išao izokrenut ovo u nekakvo whiteknightanje. Žensku ni ne znam, nisam ni siguran jel moja generacija ili starija, samo sam htio ukazati da netko tko se poziva toliko na razum s njim definitivno nema veze. Znaš ono, spot the bullshit.\n\nPrijatno :)",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": [
+          "Johnny_Bravo (a beautiful and unique snowflake)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15498": {
+      "poster": "Johnny_Bravo (a beautiful and unique snowflake)",
+      "content": "@micho#15492 ako si ti uvjeren da je tvoje znanje (u cemu god) dovoljno jako da nadjača bilo kakve problematicne faktore u tome tko je tvoj isptivac, sretno ti. Naučiti ces suprotno u trenutku kad ti bude sef netko tko zna manje od tebe.",
+      "votes": {
+        "upvoters": [
+          "markoo321 (Grinch)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      }
+    },
+    "15500": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Johnny_Bravo#15498 A gle, ako si ti uvjeren da su ispitivači na labosu tu da te zakinu na bodove, nadam se da ćeš osjetiti što je to toplina ljudskog zagrljaja.",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "SergeantPepper (Chet)",
+          "Vrba",
+          "feel_d_boot (iNut)",
+          "in1",
+          "member",
+          "mesojed (sofronijevicevPrst)",
+          "mikimoj",
+          "miss_anthropocene (neunist.iva)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "title": "[NEINR] 4. domaća zadaća - 2020/2021",
+  "creator": "ReyKenobi",
+  "slug": "neinr-4-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Neizrazito, evolucijsko i neuro računarstvo",
+    "Zadaće"
+  ],
+  "posts": {
+    "91261": {
+      "poster": "ReyKenobi",
+      "content": "Zna li možda netko koliko precizno parametri algoritma moraju biti podešeni? Ako mi u 10 pokretanja algoritma rješenje u 2-3 slučajeva zapne u nekom lošijem lokalnom minimumu, smatra li se to očekivanim ponašanjem? Nije baš precizirano u uputama što je prihvatljivo rješenje pa nisam sigurna koliko da to još podešavam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91265": {
+      "poster": "ssbb",
+      "content": "@ReyKenobi#91261 je, to je prihvatljivo. Genetski algoritmi ne pronalaze u svakoj iteraciji bolju jedinku (od prethodne najbolje). Ima par grafova u skripti di vidis kroz vrijeme kako fitness najbolje jedinke skokovito skace kroz vrijeme (izgleda ko stepenice).",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91292": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Kod genetskih algoritama ti je ionako bitno na početku naći nešto dobro. Kasnije nema poboljšanja bez povećavanja stope mutacije. Isto tako, kako nemaš nikakvu memoriju nikad ti nije ni zagarantirano da ćeš pronaći dobar minimum uz sve ostale metode.",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91298": {
+      "poster": "Joji",
+      "content": "@ReyKenobi#91261 Ako želiš neke lude rezultate implementiraj operator križanja BLX-[imath]\\alpha[/imath] koji je opisan [ovdje](http://java.zemris.fer.hr/nastava/pioa/knjiga-0.1.2013-12-30.pdf) na stranici 24. Nisam siguran jesu li ga spomenuli na predavanju ili u skripti. Za prvi dataset s generacijskim genetskim algoritmom s elitizmom koji koristi BLX-[imath]\\alpha[/imath] križanje uz [imath]\\alpha = 0.5[/imath], jednostavnu Gaussovu mutaciju sa [imath]\\sigma = 0[/imath] (znači efektivno bez mutacije), klasičnu troturnirsku selekciju i veličinu populacije od 100 jedinki dobijem u manje od 500 iteracija pogrešku (mean squared error) reda veličine [imath]10^{-34}[/imath]. Na drugom datasetu dobijem oko [imath]10^{-2}[/imath]. Za drugi dataset mi je sve isto osim što je sad za mutaciju [imath]\\sigma = 0.01[/imath].",
+      "votes": {
+        "upvoters": [
+          "FICHEKK",
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91301": {
+      "poster": "ssbb",
+      "content": "@Joji#91298 brutalni rezultati, svaka cast :) Koliki ti ispadnu koeficijenti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91305": {
+      "poster": "Joji",
+      "content": "@ssbb#91301 \n\n0.371,  0.122, 3.517, 1.318, -1.326. Ovakvi koeficijenti budu i kad je pogreška oko [imath]10^{-6}[/imath] a za pogreške manje od toga se koeficijenti razlikuju na ko zna kojoj decimali.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91307": {
+      "poster": "ssbb",
+      "content": "@Joji#91305 za nulti ja dobivam -3.513074, ostali su mi isti. Also upravo implementirah BLX-alfa, ovo je crna magija. Tisucu iteracija i greska mi je vec < 1e-6 . U prezentacijama na slajdu 21 (na ferku) ima ovaj simulirani binarni crossover, ali nisam siguran jel to ista stvar ko i ovaj BLX.\n\nedit:\n\nsad odjednom za nulti koeficijent dobivam 2.77, a greska je jos uvijek nistarija. Cini mi se da nulti koeficijent ne igra veliku ulogu u rezultatu.\n\nedit2:\n\nustvari igra veliku ulogu, ali ocito dobivamo rjesenja ofssetana za 2pi radi sinusa :)",
+      "votes": {
+        "upvoters": [
+          "Joji"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91309": {
+      "poster": "Joji",
+      "content": "@ssbb#91307 Da za prvi i ja nekad dobivam tako. To je i okej jer je [imath]\\beta_0[/imath] fazni pomak u sinus članu funkcije pa je više vrijednosti prihvatljivo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91492": {
+      "poster": "milanista",
+      "content": "Koliko vam se dugo izvodi recimo troturnirska selekcija za populaciju veličine 100 i broj evaulacija 1000? Konkretno me za python zanima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91496": {
+      "poster": "Joji",
+      "content": "@milanista#91492 Oko 10 sekundi. Koristio sam numpy gdje god je bilo moguće.",
+      "votes": {
+        "upvoters": [
+          "milanista"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91521": {
+      "poster": "prodanacro (oat)",
+      "content": "@Joji#91496 \n\nŠto smatraš jednom evaluacijom u troturnirskom ga? Odnosno, koliko jedinki mijenjaš u svakoj evaluaciji (jednu/sve/...)?",
+      "votes": {
+        "upvoters": [
+          "Dekan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91530": {
+      "poster": "Joji",
+      "content": "@prodanacro#91521 10 sekundi mi traje cijeli generacijski ga. Znači u svakoj od 1000 iteracija se radi selekcija, križanje, mutacija, evaluacija za svih 100 jedinki.",
+      "votes": {
+        "upvoters": [
+          "prodanacro (oat)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91562": {
+      "poster": "Yasuke (Bono)",
+      "content": "Kako ste radili selekciju kod generacijskog algoritma?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91576": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Yasuke#91562 Roulette-Wheel Selection",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91685": {
+      "poster": "Daorson",
+      "content": "kako ste računali dobrotu kod generacijskog algoritma?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91687": {
+      "poster": "Joji",
+      "content": "@Daorson#91685 negativna srednja kvadratna pogreška",
+      "votes": {
+        "upvoters": [
+          "Daorson"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91709": {
+      "poster": "moji_prsti_prsti_klize_po_njoj",
+      "content": "![](assets/2020-11-12/00035.png)\n\nOvo je graf dobrote po iteracijama dobiveno generacijskim genetskim algoritmom bez elitizma. Jel taj graf ima smisla.\n\nGraf za dobrotu uz elitizam konvergira u maximalnu vrijednost dobrote.\n\nJednostavnije receno jel okej ako bez eiltizma ovako divergira 💀",
+      "votes": {
+        "upvoters": [
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91735": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@moji_prsti_prsti_klize_po_njoj#91709 Genetski algoritmi nisu deterministički bez puno pretpostavki tak da je odgovor - možda je, možda nije.\n\nFiksiraj seed i vidi jel netko tko je siguran da mu je rješenje dobro može reproducirati rezultate.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92026": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jel zna neko možda zašto imam problem kad radim proporcionalnu selekciju? Prvo nađem vrijednost funkcije kazne za najlošiju jedinku i onda dalje kad mi je potrebna dobrota nju računam kao (funkcija kazne*-1) + vrijednost kazne za najlošiju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92045": {
+      "poster": "Emma63194",
+      "content": "@Yasuke#92026 Ja sam to napravila tako da sam \"izračunala dobrotu\" tako da je ona vrijednost funkcije kazne najlošije jedinke minus vrijednost promatrane jedinke, s time da onda kod najlošije jedinke to ispadne 0 pa da baš ne izbacim odmah tu najlošiju dodajem neku sitnu vrijednost na sve to.\n\nZa roulette wheel dalje ima primjer koda u knjizi.",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92051": {
+      "poster": "Yasuke (Bono)",
+      "content": "@Emma63194#92045 Hvala. Koliko ti na kraju otprilike bude vrijednost kazne za najbolju jedinku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92059": {
+      "poster": "Emma63194",
+      "content": "@Yasuke#92051 Misliš baš kazne ili kada izračunam sve ovo?\n\nAko govoriš o baš kazni, to bude svaki put drugačije. Nekad mi u prvoj populaciji bude jedinka koja ima kaznu oko 0.4, nekad je najbolje što u prvoj populaciji dobijem oko 1.1\n\nEDIT: My bad, nisam dobro pročitala. Pogreška na kraju mi bude red veličine 10^-7, a najbolje što mi ponekad ispadne je 10^-9. Jedino kad pokrenem generacijski GA bez elitizma bude baš loše, oko 0.01.\n\nTo sve naravno ovisi i o populaciji i o broju iteracija i o algoritmu. Konkretno, ove brojke sam dobila za vel_pop = 30, a max_iter = 100000 (eliminacijski GA, makar vjerujem da se može dobiti i za manji broj iteracija isto), tj. max_iter = 10000 (generacijski GA, koji je osjetno sporiji u mojoj implementaciji).",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

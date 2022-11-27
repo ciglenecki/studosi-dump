@@ -1,0 +1,854 @@
+{
+  "title": "[PARPRO] 2. laboratorijska vježba - 2019/2020",
+  "creator": "pero122 (teslaFan)",
+  "slug": "parpro-2-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Paralelno programiranje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "24571": {
+      "poster": "pero122 (teslaFan)",
+      "content": "Kad je rok za ovo? \n\nNa ferku piše \"2020-06-15 07:00\" , ali budući da se sve pomaknulo je li to i dalje točan datum? \n\nNisam vidio nikakvu obavijest u vezi 2.lab vježbe",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24581": {
+      "poster": "xeqte",
+      "content": "Mislim da je za max broj bodova jos uvijek 25.5 ![](assets/2020-05-14/00010.png)",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25077": {
+      "poster": "Stark",
+      "content": "Da li je netko krenuo raditi? Koliko posla ima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27538": {
+      "poster": "ALovelace",
+      "content": "Pomaknut je rok što je objavljeno na stranicama i evo još službeno od asistenta: \n\n![](assets/2020-05-20/00015.png)",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "Gwidoc",
+          "HerrOttoFlick1",
+          "Paula13 (p13)",
+          "tranquility"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28452": {
+      "poster": "Erinon",
+      "content": "Kako računate ubrzanje i učinkovitost? Za ubrzanje ima Amdahlov zakon, ali koliki su tu slijedni i paralelni udjeli? Učinkovitost nisam našao nigdje.",
+      "votes": {
+        "upvoters": [
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29221": {
+      "poster": "Bobicki",
+      "content": "U kojem jeziku pišete labos? Može li se labos normalno napraviti u C# ili Javi, s obzirom na obavijest s ferweba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29348": {
+      "poster": "xeqte",
+      "content": "![](assets/2020-05-24/00006.png)\n\nNa koji način postižemo dijeljenje pri većoj dubini za ujednačavanje opterećenja?",
+      "votes": {
+        "upvoters": [
+          "addisonRae"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29612": {
+      "poster": "YenOfVen",
+      "content": "Koje cjeline iz skripte treba proci?",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29647": {
+      "poster": "Red_Baron",
+      "content": "@Bobicki#29221 riješio sam u Pythonu, ali, koliko se sjećam, piše da su C, C++ i Python preporuke, pa valjda ne bi trebao imati problema ni sa jednim od tih dva. U najgorem slučaju kontaktirat će te da podijeliš ekran i pokreneš da vide.\n\n@YenOfVen#29612 preporučio bih 5. čitavu i prvo predavanje iz 6. cjeline. Meni je dosta olakšalo rješavanje, tbh",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "Stark",
+          "YenOfVen",
+          "talos"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29849": {
+      "poster": "tranquility",
+      "content": "Je li itko proveo mjerenja na racunalu s 2 jezgre? Kakve su vam otprilike vrijednosti ubrazanja i ucinkovitosti, tj. jel vidite neko znacajnije poboljsanje od 1 procesa? Vidim da je njihov primjer na ferwebu za 4 jezgre dao ubrzanje oko 5 puta, a meni ne prelazi 2 pa ne znam jel do lose implementacije ili loseg racunala 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29870": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@tranquility#29849 Ako su za 4 jezgre (tj. 4 dretve) dobili ubrzanje od 5 puta, to znači da im nešto ne štima sa algoritmom za 1 jezgru.\n\nU principu nikad ne bi trebali dobiti isto ubrzanje ko sa prvom jezgrom, uvijek nešto manje (zbog overheada), i uvijek bi logičke dretve trebale raditi sporije od fizičkih.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29888": {
+      "poster": "jitser",
+      "content": "@tranquility#29849 ja sam na računalu s dvojezgrenim procesorom (podržava 4 dretve) dobio mjerenje s 1 procesom workerom oko 8500ms dok sa bilo kojim većim brojem (od 2 do 8) procesa workera između 5000 i 6000ms.. jel to uredu ili nešto ne štima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29908": {
+      "poster": "tranquility",
+      "content": "@micho#29870 Zar nije da se ove godine mjerenja odrađuju na stalnom broju jezgri (i to se samo gledaju fizičke)? Meni se u tom slučaju njihova mjerenja čine smislena (eventualno je pitanje jel se za 2 MPI procesa ubrza ili uspori zbog količine komunikacije).\n\n@jitser#29888 U prijevodu maksimalno ubrzanje ti je oko 1.7? Ne mogu ti reći jel to u redu jer je to i bilo moje pitanje... Jedino ako ćemo dvoje ljudi (tebe i mene) gledati ko referentnu skupinu, onda možemo reći da su nam rezultati dobri hahaha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29909": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @tranquility#29908 Zar nije da se ove godine mjerenja odrađuju na stalnom broju jezgri (i to se samo gledaju fizičke)? Meni se u tom slučaju njihova mjerenja čine smislena (eventualno je pitanje jel se za 2 MPI procesa ubrza ili uspori zbog količine komunikacije).\n\nJezgre nise nisu puno drukčije od čipa s jednom jezgrom. Ako za 4 jezgre imas 5x performanse, to bi značilo da u prosječnom slučaju jedna jezgra ima 1.25x performanse jedne jezgre. Onda je očito da ili algoritam za jednu jezgru nije optimalan, ili da se koristi više od 4 jezgre.\n\nIz osobnog iskustva optimalno implementirani višedretveni programi imaju oko 0.95x performanse optimalne single core implementacije po jezgri. Tih 5% se obično troši na sinkronizaciju.\n\nE sad, taj pojam optimalne implementacije ne mora značiti da će isti jednodretveni program uvijek imati gubitke kad ga se pretvori u višedretveni. To samo znači da ako se to dogodi, jednodretveni program nije optimalan jer kad bi prebacili taj isti višedretveni mehanizam na jednu fizičku dretvu, on bi morao imati 1.25x performansa algoritma za jednu dretvu, što je optimalnije.\n\n**tl;dr** Sve je okej dok imaš znatno ubrzanje, ne mora biti kao njihovo.",
+      "votes": {
+        "upvoters": [
+          "tranquility"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30081": {
+      "poster": "allien",
+      "content": "@xeqte#29348 za dubine stabla >=2 podijelis stablo na 49 zadataka tako da svaki zadatak pretražuje podstablo jednog od čvorova druge razine (49 čvorova na drugoj razini -> 49 zadataka).",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30092": {
+      "poster": "pero122 (teslaFan)",
+      "content": "Može mi netko objasnit šta znači ovaj crveni tekst? Također, zašto oni kažu u tom crvenom tekstu \"7 zadataka (radnika)\" pa zar nisu \n\nradnici -> broj CPU jezgri tj. onaj parametar s kojim pokrenem program\n\nzadaci -> broj čvorova\n\nPo njihovom bi to bilo isto ili ?\n\n![](assets/2020-05-25/00041.png)",
+      "votes": {
+        "upvoters": [
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30098": {
+      "poster": "Jahac_Rumene_Kadulje (JahacRumeneKadulje)",
+      "content": "Jel moguce pasti ovaj predmet ako predam zadacu koja ne radi kako spada i iz koje bi npr. dobio nula bodova? Ne znam kakvi su uvjeti tocno jer se sjecam da je spominjao nesto na predavanju sto nije bilo na slajdovima pa ono...",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "pero122 (teslaFan)",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30103": {
+      "poster": "Bobicki",
+      "content": "@allien#30081 Da li uvijek dijelimo na 49 zadataka, neovisno koliko smo MPI procesa pozvali?",
+      "votes": {
+        "upvoters": [
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30104": {
+      "poster": "xeqte",
+      "content": "@Jahac_Rumene_Kadulje#30098 mislim da ako se za zadacu dobije 0 bodova, smatra se kao da nije predana i trebalo bi ju predati do sljedeceg roka za manje max bodova. ako se ne preda do krajnjeg roka onda fali uvjet za prolaz da su predane sve zadace.",
+      "votes": {
+        "upvoters": [
+          "Jahac_Rumene_Kadulje (JahacRumeneKadulje)",
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30115": {
+      "poster": "allien",
+      "content": "@Bobicki#30103 da. s promjenom broja mpi procesa se samo mijenja broj zadataka koji će pojedini proces riješiti, a sam broj zadataka može biti fiksiran na 49. možeš naravno osmisliti i neku svoju kompliciraniju podjelu zadataka, ali za dobit sve bodove ti je najjednostavnija opcija fiksirat da bude uvijek 49 zadataka.",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "pero122 (teslaFan)",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30178": {
+      "poster": "prodanacro (oat)",
+      "content": "@jitser#29888  za koju ti je to dubinu (i kako gledaš što ti je dubina)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30201": {
+      "poster": "Jahac_Rumene_Kadulje (JahacRumeneKadulje)",
+      "content": "@xeqte#30104 sljedeci rok je 1.6.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30203": {
+      "poster": "xeqte",
+      "content": "@Jahac_Rumene_Kadulje #30201 prema onom rasporedu da, ali mozda pomaknu rok kao sto su i ovaj. a na ferku pise rok za upload 15.6 ali neznam sto to tocno znaci.",
+      "votes": {
+        "upvoters": [
+          "Jahac_Rumene_Kadulje (JahacRumeneKadulje)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30205": {
+      "poster": "Stark",
+      "content": "Da li jedan zadatak podrazumijeva potez igrač + potez računalo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30250": {
+      "poster": "YenOfVen",
+      "content": "Sto je s onom specifikacijom, jel to znaci da moramo fiksirat velicinu ploce na 7x7 s obzirom na format ispisa koji su zadali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30251": {
+      "poster": "jitser",
+      "content": "@prodanacro#30178 dubina = 8, 1. razina (root) je sljedeći cpu potez, pa kreiram 49 zadataka i zatim procesi workeri odrade ručno 2 koraka pa (ako nije gameover) odu u funkciju evauate s dubinom postavljenom na 5.  Dakle, dubina je jedan potez igrača ili cpu-a, pa dubina 8 označava 4 poteza računala i 4 poteza cpu-a.",
+      "votes": {
+        "upvoters": [
+          "prodanacro (oat)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30257": {
+      "poster": "Paula13 (p13)",
+      "content": "Znači li ova rečenica u specifikaciji da naš program mora raditi za 1 MPI proces ili zapravo mora raditi za minimalno 2 MPI procesa, gdje je 1 voditelj, a drugi je radnik? \n\n> prvi zapis u retcima 2-4 predstavlja vrijednost za 1 MPI proces (tj. za jednog radnika u paralelnom algoritmu)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30264": {
+      "poster": "username11",
+      "content": "Je li ima možda netko ideju zašto mi duže traje izvođenje pojedinog zadatka (i pritom ne mislim na nikakvu uključenu razmjenu poruka nego samo na izračunavanje rekurzivne metode) kada postoji npr 8 radnika (obzirom na npr. 1 radnika). Vrijeme izračunavanja istog zadatka mi zna trajat i po 10 puta duže...",
+      "votes": {
+        "upvoters": [
+          "jitser"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30277": {
+      "poster": "tranquility",
+      "content": "@YenOfVen#30250 Da, tako je rekao na zadnjim konzultacijama",
+      "votes": {
+        "upvoters": [
+          "Paula13 (p13)",
+          "YenOfVen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30282": {
+      "poster": "Bobicki",
+      "content": "Može li netko napisati ideju kako implementirati master-worker u ovom labosu? Ne znam kako ga uklopiti u ovaj rekurzivni poziv evaluate() metode.",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30292": {
+      "poster": "Stark",
+      "content": "@Bobicki#30282 Mene muči isti dio. Ako netko može objasniti, pomoglo bi. Hvala!",
+      "votes": {
+        "upvoters": [
+          "Bobicki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30310": {
+      "poster": "MaIv",
+      "content": "@Bobicki#30282 Master stvori 49 zadataka koji salje workeru na zahtjev, pojedini worker dobije zadatak npr koji se sastoji od poteza racunala i poteza covjeka, worker ispituje ima li pobjednika s ta dva poteza iz zadatka, ako pobjednika nema krece u rekurzivnu funkciju evaluate() ispitujuci u dubinu poteze. Nakon sto je izvrsen evaluate() rezultat worker vraca masteru, master zatim sumira rezultate za pojedine stupce i odredi koji je max.",
+      "votes": {
+        "upvoters": [
+          "Bobicki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30342": {
+      "poster": "Bobicki",
+      "content": "@MaIv#30310 \n1. Što znači \"stvoriti zadatak\" u smislu MPI funkcija koje koristimo?\n2. Gdje se stvara tih 49 zadataka (prije vanjskog evaluate() poziva, u evalutate() prije rekurzivnog poziva ili u evalutate() poslije rekurzivnog poziva)?\n3. Da li se ti zadaci dodjeljuju samo na 2. razini ili i dublje se isto moraju raditi podjele?",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "YenOfVen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30474": {
+      "poster": "talos",
+      "content": "Kako trebamo napravit rad s jednim MPI procesom? Odvojeno napišemo sekvencijalni program?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30480": {
+      "poster": "Paula13 (p13)",
+      "content": "@talos#30474 Napisao je asistent na teamse da ako imamo voditelj-radnik arhitekturu da se onda pod tim 1 proces misli na jedan proces voditelj i jedan proces radnik, tj. da je bazni slučaj 2 procesa zapravo, dakle ne moraš napraviti da radi samo s jednim procesom",
+      "votes": {
+        "upvoters": [
+          "talos"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30585": {
+      "poster": "HerrOttoFlick1",
+      "content": "Treba li izvorne kodove i mjerenja predati u zip datoteci?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30586": {
+      "poster": "Erinon",
+      "content": "Kak onda računate učinkovitost i ubrzanje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30587": {
+      "poster": "Paula13 (p13)",
+      "content": "@Erinon#30586 Ja sam računala prema formulama sa 45. stranice u skripti, nadam se da je to dobro...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30590": {
+      "poster": "Erinon",
+      "content": "Nisam to ni vidio, mislio sam da je nešto sa onim Amdahlovim zakonom u 1. poglavlju haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30591": {
+      "poster": "Erinon",
+      "content": "@Paula13#30587 trebalo bi biti dobro, onaj primjer u obavijesti ispada isto po tim formulama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30593": {
+      "poster": "Paula13 (p13)",
+      "content": "Jedino me mučilo, ako je nama bazni slučaj s 2 procesa, jel mi onda za ovaj P zapravo uvijek uvrštavamo za 1 manje proces, tj. uvrštavamo broj radnika ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30594": {
+      "poster": "talos",
+      "content": "@Paula13#30587 \n\n@Erinon#30591 \n\nJa evo upravo isto gledam kako to računat i gledam njihove brojeve. (nadam se da su doslijedni u račuanju)\n\nI oni u onom primjeru ne rade formulu za učinkovitost kao i u knjizi...\n\n![](assets/2020-05-27/00006.png)\n\n\nradio sam 7496/(3954*4) itd...\n\nnjihovi rezultati su:\n\n      1 0.948 0.892 0.782 0.764 0.714 0.687 0.632\n\nAli ubrzanje im je \"dobro\".\n\nEDIT: popravio sam brojeve u slici no jošuvijek se ne poklapa, izgleda oni rade nekakvo sklairanje.",
+      "votes": {
+        "upvoters": [
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30595": {
+      "poster": "Paula13 (p13)",
+      "content": "@talos#30594 Zar mi za ovaj P ne uvrštavamo broj procesa?",
+      "votes": {
+        "upvoters": [
+          "talos"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30598": {
+      "poster": "talos",
+      "content": "@Paula13#30595 \n\nIma smila 🙃",
+      "votes": {
+        "upvoters": [
+          "Paula13 (p13)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30600": {
+      "poster": "xeqte",
+      "content": "@talos#30594 zar nije da u drugom stupcu formula ide 7496/(3954*2) jer je tu p=2 pa ispada tocno 0.948",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30601": {
+      "poster": "HerrOttoFlick1",
+      "content": "Ako je bazni slučaj 2 za arhitekturu voditelj - radnik. Da li je prva vrijednost efikasnosti  vrijemeIzvođenjaS2procesa/2*vrijemeIzvođenjaS2procesa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30606": {
+      "poster": "talos",
+      "content": "@HerrOttoFlick1#30601 \n\nKoliko sam skužio, da.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30607": {
+      "poster": "talos",
+      "content": "@HerrOttoFlick1#30601 \n\nKoliko sam skužio bazni slučaj za voditelj - radnik je \n\nvrijemeIzvođenjaprocesa_0/P*vrijemeIzvođenjaprocesa_T\n\nGdje je P broj radnika, a ne ukupno broj procesa.\n\nTako da: vrijemeIzvođenjaprocesa_0/1*vrijemeIzvođenjaprocesa_0",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30617": {
+      "poster": "Marquisio",
+      "content": "Jel netko mozda radio u C-u i koristio double funkciju za izracun ocjene ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30618": {
+      "poster": "pero122 (teslaFan)",
+      "content": "Ovaj .zip koji uplodamo... treba li imati neko posebno ime ili je svejdno? Ne mogu naći ništa u obavijesti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30627": {
+      "poster": "HerrOttoFlick1",
+      "content": "Kada se pronađe pobjednik da li treba prekinuti program?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30629": {
+      "poster": "talos",
+      "content": "@HerrOttoFlick1#30627 \n\nJa sam tako napravio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30630": {
+      "poster": "talos",
+      "content": "Kada ste radili mjerenja jeste li radili mjerenja s dubinom stabla 4 (tj ukupno 8.) ili s dubinom koja je najbliža njihovim vremenima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30641": {
+      "poster": "Bobicki",
+      "content": "@pero122#30618 Proizvoljno ime, tako je bilo i za 1. dz.",
+      "votes": {
+        "upvoters": [
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30658": {
+      "poster": "talos",
+      "content": "@Bobicki#30641 \n\n\"Unaprijed upozoravam da će uputa za 2. domaću zadaću biti koriginirana na način da će biti definirano *ime datoteke* i kojoj je ulazna točka u program, specifikacija izlaza na ekran i u datoteku te posebna specifikacija datoteke mjernih rezultata.\"\n\nhttps://www.fer.unizg.hr/predmet/parpro/obavijesti?@=2rvhi#news_24710\n\nali mislim da su zaboravili na to...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30659": {
+      "poster": "Bobicki",
+      "content": "@talos#30658 S obzirom kako svako malo korigiraju upute za labos, ne bi me čudilo da se sad sjete i to napisati.",
+      "votes": {
+        "upvoters": [
+          "Paula13 (p13)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Red_Baron",
+          "Stark",
+          "talos"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "35933": {
+      "poster": "Reyovski",
+      "content": "Ima netko kakve detalje kada će biti ispravljen 2. lab? Posto je rok za predaju za 4b u pon",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38457": {
+      "poster": "Masli",
+      "content": "Može li mi netko dumb downat mjerenja? Skriptu ne posjedujem i iz predavanja mi nisu jasne ni formule ni notacija",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38590": {
+      "poster": "Bobicki",
+      "content": "@Masli#38457 Uzmimo njihov primjer s ferweb obavijesti kao referencu.\n\n4\n\n7496 3954 2802 2398 1963 1750 1559 1482\n\n1 1.896 2.675 3.126 3.818 4.284 4.807 5.055\n\n1 0.948 0.892 0.782 0.764 0.714 0.687 0.632\n\nUbrzanja (3. red) se računaju ovako:\n\n**trajanje_za_1_proces / trajanje_za_x_procesa**\n\nNpr. 7496 / 7496 = **1**, 7496 / 3954 = **1.896**,...\n\nUčinkovitosti (4. red) se računaju ovako:\n\n**(trajanje_za_1_proces * 1) / (trajanje_za_x_procesa * x)**\n\nNpr. (7496 * 1) / (7496 * 1) = **1**, (7496 * 1) / (3954 * 2) = **0.948**,...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

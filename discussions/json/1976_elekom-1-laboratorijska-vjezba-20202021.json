@@ -1,0 +1,166 @@
+{
+  "title": "[ELEKOM] 1. laboratorijska vjezba - 2020/2021",
+  "creator": "Bobinator",
+  "slug": "elekom-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Elektroničke komunikacije",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "84390": {
+      "poster": "Bobinator",
+      "content": "Ima netko matlab 2020 da samo onu njihovu shemu spremi u obliku za matlab 19 da se ne jebem sa instalacijom samo zbog 5 min posla? Unaprijed hvala",
+      "votes": {
+        "upvoters": [
+          "DukeFiction",
+          "GranAutismo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84660": {
+      "poster": "verratti (Rom Jova (Željezo/bakar))",
+      "content": "Jel zna netko kako bi isla modulacija kada prijenosni signal moduliramo sa 2 modulacijska signala istovremeno?\n\n![](assets/2020-10-27/00015.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84823": {
+      "poster": "Makrovalni_Hladnjak",
+      "content": "@verratti#84660  Briyem da ti je to superpozicija toga kad moduliraš samo sa prvim pa samo sa drugim.",
+      "votes": {
+        "upvoters": [
+          "Medo (m1212)",
+          "verratti (Rom Jova (Željezo/bakar))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84984": {
+      "poster": "DukeFiction",
+      "content": "@Bobinator#84390 Ima na repozitoriju za starije inačice, stavili su",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85140": {
+      "poster": "LaraL",
+      "content": "Jel na konzultacijama rečeno kako se onda radi modulacija signala s dva modulacijska signala istovremeno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85159": {
+      "poster": "GranAutismo",
+      "content": "@LaraL#85140 Ak sam dobro skužio, signale treba samo zbrojit i njihov zbroj tretirat kao jedan modulacijski signal i ubacit u formulu. Nisam siguran pa nek me netko ispravi ak to nije točno.",
+      "votes": {
+        "upvoters": [
+          "LaraL"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85271": {
+      "poster": "MrChicky (Helianthus)",
+      "content": "@GranAutismo#85159 kad tako napravim faktor modulacije mi ne ispadne u redu kad ga racunam sa slike al kad napravim modulaciju s jednim signalom pa modulaciju s drugim i onda ih zbojim na kraju ispadne dobro taj fakstor, al se sjecam da je predavac rekao ovak kako si ti napisao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85281": {
+      "poster": "Klembuksna",
+      "content": "![](assets/2020-10-29/00021.png)\n\nkako izračunati bočne komponente?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85295": {
+      "poster": "DukeFiction",
+      "content": "@Klembuksna#85281 Nek me ispravi netko ako griješim, ali ovako golim okom bih očitao da bočne komponente iznose -7.5 dBm pa ih ni ne bih računao. Za a) dio zadatka bih u formulu [imath]P[dBm]=10log(P[mW])/(1mW)[/imath] što znači da je [imath]P[mW]= 10^(P[dBm]/10)[/imath] i onda uvrstiš prvo da je P[dBm] = 0 (kaj je 1 po defaultu) i dobiješ snagu prijenosnog signala, onda uvrstiš P[dBm] = -7.5 da dobiješ snagu bočnih komponenti. Podijeliš snagu prijenosnog sa snagom bočnih komponenti i gotovo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85311": {
+      "poster": "Klembuksna",
+      "content": "@DukeFiction#85295 i ja sam mislio isto, ali eto zanimalo me je li postojao način da se izračunaju bočne komponente osim \"odokativnom\" metodom.  Hvala svakako !",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85343": {
+      "poster": "DukeFiction",
+      "content": "Kako riješiti taj 4. koji je kolega naveo? Kada idem superpozicijom, zapetljam se u adicijskim formulama za kosinuse. Ako bi netko mogao slikati graf i postupak ili objasniti, bio bih mu vrlo zahvalan\n\nI kako bi izgledala shema u simulinku? Sumiramo li samo izvor podešen na zadane parametre postojećem modelu ili moramo sumirati uz izvor umnožak s konstantom indeksa modulacije uvećan za 1?\n\n@verratti#84660",
+      "votes": {
+        "upvoters": [
+          "rolotex (brr)",
+          "verratti (Rom Jova (Željezo/bakar))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

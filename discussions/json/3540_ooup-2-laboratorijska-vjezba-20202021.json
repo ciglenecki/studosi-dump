@@ -1,0 +1,1918 @@
+{
+  "title": "[OOUP] 2. laboratorijska vježba - 2020/2021",
+  "creator": "at5611",
+  "slug": "ooup-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Oblikovni obrasci u programiranju",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "163801": {
+      "poster": "at5611",
+      "content": "Jesu rekli mozda kad ce bit 2. labos i oce li biti isto na faksu kao i prvi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163810": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@at5611#163801 trebao bi imati termin upisan u kalendaru, meni pise 13.4. u 16:00. Rok za predaju ce vjj biti sljedeci tjedan u ponedjeljak",
+      "votes": {
+        "upvoters": [
+          "at5611"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163857": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "http://www.zemris.fer.hr/~ssegvic/ooup/ooup2lab.shtml\n\nSamo otvaram temu, danas krecem rjesavati pa nemam bas pitanja. Ako ima tko da je rijesio vec slobodno dajte neki savjet :D",
+      "votes": {
+        "upvoters": [
+          "Mikki",
+          "Tone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163944": {
+      "poster": "AK10 (endyyyy)",
+      "content": "Do kojeg gradiva treba nauciti da bi se radila vjezba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163952": {
+      "poster": "Vonj",
+      "content": "@AK10#163944 \n\nObserver iliti promatrac ukljucivo.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Fica (Prof)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "FERonja"
+        ],
+        "tuga": []
+      }
+    },
+    "164110": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "1. zadatak: kako bi ja trebao hendlat to sto funkcija mymax prima argument \"size\" koji govori koliki je element polja (u bajtovima), a moramo moci naci max od polja:\n\n`const char *arr_str[] = {\n\n        \"Gle\", \"malu\", \"vocku\", \"poslije\", \"kise\",\n\n        \"Puna\", \"je\", \"kapi\", \"pa\", \"ih\", \"njise\"};`\n\n u kojem je svaki element proizvoljne velicine?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164124": {
+      "poster": "sheriffHorsey",
+      "content": "@Uchenikowitz#164110 Ja sam tu slao sizeof(char*), ali to s proizvoljnom velicinom mozes rijesit u gt_str funkciji tak da castas argumente u char** i onda ih jednom dereferenciras kod pozivanja strcmp",
+      "votes": {
+        "upvoters": [
+          "Kennedy",
+          "LLL",
+          "Stoja_9 (Bije_san_u_autobusu)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164422": {
+      "poster": "steker",
+      "content": "Moze ko objasnit ovaj 0. Zadatak sta se misli pod translacijski pomak određen argumentima, sta tu treba napravit ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164438": {
+      "poster": "Kennedy",
+      "content": "@steker#164422 Samo na Point x i y zbrojis argumente funkcije moveShapes(int x, int y)",
+      "votes": {
+        "upvoters": [
+          "sheriffHorsey",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164439": {
+      "poster": "faboche (him)",
+      "content": "@steker#164422 Ja nisam siguran je li treba pravu funkcionalnost ostvariti ili je dovoljno samo neki print kao kod draw metoda.",
+      "votes": {
+        "upvoters": [
+          "Cubi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164483": {
+      "poster": "Venki",
+      "content": "Pitanje za 1. zadatak\n\nKako doci do neke vrijednosti od \"const void *\" u funkciji mymax?\n\nnpr. da je base int, base[0]",
+      "votes": {
+        "upvoters": [
+          "cile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164506": {
+      "poster": "Kennedy",
+      "content": "@Venki#164483 castaj base u char * i onda da dodes do nekog elementa na i-tom mjestu zoves *(base_char + i * size)",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)",
+          "LLL",
+          "Stoja_9 (Bije_san_u_autobusu)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164508": {
+      "poster": "bodNaUvidima",
+      "content": "Je li konačno rješenje nultog zadatka koje treba doniti isprintano da napravimo objektno orijentiranu implementaciju? Ne shvaćam što pjesnik želi reći zadnjom rečenicom: \n\n> Konačno, implementirajte rješenje s predavanja, i komentirajte njegova svojstva.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165206": {
+      "poster": "nikace (AeIoU)",
+      "content": "@bodNaUvidima#164508 mislim da da, ali moguce da su obe implementacije potrebne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165344": {
+      "poster": "flicka",
+      "content": "koji su oblikovni obrasci u 5. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165360": {
+      "poster": "at5611",
+      "content": "@flicka#165344 Prvo je strategija a drugo promatrac al mozda san u krivu pa neka neko jos potvrdi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165368": {
+      "poster": "flicka",
+      "content": "@at5611#165360 mozes mozda pojasnit zakaj strategija a ne okvirna metoda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165377": {
+      "poster": "at5611",
+      "content": "@flicka#165368 Isa san logikon da je klasa SlijedBrojeva kontekst, i ta klasa sadrzi kolekciju brojeva i pokazivac na klasu izvor(sta je base klasa strategije), i onda klase TipkovnickiIzvor i DatotecniIzvor nasljeduju klasu Izvor, i kada kreiran objekt SlijedBrojeva posaljen pokazivac na odredenu implementaciju izvora. Na kraju u metodi kreni() u klasi SlijedBrojevi poziva se generiranje brojeva sa izvora preko pokazivaca na strategiju. Nadan se da ovo ima smisla",
+      "votes": {
+        "upvoters": [
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165381": {
+      "poster": "at5611",
+      "content": "Je li se za 6. zadatak moze koristit i strategija i promatrac? Ili nijedan od ova dva?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166173": {
+      "poster": "dora (AE)",
+      "content": "Za 3. zadatak kako ostvariti ovo \n\n![](assets/2021-04-09/00022.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166178": {
+      "poster": "Vonj",
+      "content": "@at5611#165381 \n\nJa sam koristio i strategiju i observer.",
+      "votes": {
+        "upvoters": [
+          "at5611"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166326": {
+      "poster": "Venki",
+      "content": "@Vonj#166178 \n\nKoji dio u 6. si koristio kao strategiju?",
+      "votes": {
+        "upvoters": [
+          "JoKing",
+          "Kennedy",
+          "cile",
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166429": {
+      "poster": "IdemNecu",
+      "content": "Kako pristupiti rjesavanju 4. zadatka, tj. sto sve klasa DistributionTester treba imati ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166430": {
+      "poster": "IdemNecu",
+      "content": "@dora#166173 \n\n`maxdicitonary = mymax(D, key = D.get)`",
+      "votes": {
+        "upvoters": [
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166443": {
+      "poster": "Me1 (Me)",
+      "content": "@IdemNecu#166429 https://refactoring.guru/design-patterns/strategy ja sam po ovom pseudokodu, DisrtibutionTester mi je context koji ima dvije obitelji strategija, jedna je ovaj generator brojeva, a druga je odredivanje percentila",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "IdemNecu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166449": {
+      "poster": "IdemNecu",
+      "content": "@Me1#166443 Jel možes molim te pokazat kako bi ispis trebao izgledati ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166483": {
+      "poster": "flicka",
+      "content": "moze neko pojasnit kak bi trebalo implementirati 6. zadatak, nije mi bas najjasnije",
+      "votes": {
+        "upvoters": [
+          "Urmum (mamaRu)",
+          "nikace (AeIoU)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166486": {
+      "poster": "Me1 (Me)",
+      "content": "@IdemNecu#166449 nisam jos do kraja taj zadatak",
+      "votes": {
+        "upvoters": [
+          "IdemNecu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166511": {
+      "poster": "Vonj",
+      "content": "@Venki#166326 \n\nZa izracun operacije. U zadatku, zbog jednostavmosti, treba samo zbrajanje dva broja, ali da bi tipa kasnije program nadogradio bez previse prtljanja, treba ti strategija.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166700": {
+      "poster": "fer999",
+      "content": "@at5611#165377 Iako ovo naravno nije krivo, mislim da je u ovom slučaju bolje koristiti okvirnu metodu. Jer možeš odmah u klasi \"Izvor\" napisati okvirno kako bi metoda čitanja sljedećeg broja radila (npr. ovo čekanje od 1 sekunde), a zatim onaj dio posla koji se tiče samog čitanja (iz datoteke ili tipkovnice) ostaviti kao dio koji konkretan razred mora nadopuniti. To je neka moja ideja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166702": {
+      "poster": "faboche (him)",
+      "content": "@fer999#166700 Zar nebi u tom slučaju trebao imati izvedeni razred za svaku kombinaciju čitača i kalkulatora percentila?\n\nEDIT: nvm, pročitao sam kao da želiš SlijedBrojeva oblikovati pomoću okvirne metode",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166720": {
+      "poster": "steker",
+      "content": "moze li neko okvirno objasnit 6 zad kako da izvedemo",
+      "votes": {
+        "upvoters": [
+          "Urmum (mamaRu)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166722": {
+      "poster": "Jaster111",
+      "content": "Može li netko dat hint za prvi zadatak? Napisao sam gt funkcije ali uopće ne znam kako bi baratao sa svim onim const void pointerima u mymax funkciji i kako bi mymax funkcija trebala vraćat različite tipove podataka ovisno o tome što smo ubacili da uspoređujemo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166733": {
+      "poster": "stic",
+      "content": "@Jaster111#166722 \n\nCastaj const void* u char* i onda ti se dalje svodi samo na baratanje pokazivačima u polju. Imaš početak polja (prvi objekt), sljedeći objekt dobiš kao početak + 1xsize, sljedeći početak + 2xsize itd...",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166736": {
+      "poster": "Jaster111",
+      "content": "@stic#166733 a kod pozivanja compare funkcije, onda opet taj char* moramo pretvorit u const void* ?",
+      "votes": {
+        "upvoters": [
+          "stic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166750": {
+      "poster": "steker",
+      "content": "u 3. zadatku sta je tocno key?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166805": {
+      "poster": "at5611",
+      "content": "@steker#166750 Mislin da je to bezimena funkcija pomocu koje onda usporedujes elemente, dali su i primjer kako napravit bezimenu funkciju (ovaj f je zapravo taj key)",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166836": {
+      "poster": "flicka",
+      "content": "kako rijesit 3 zadatak ovaj dio s osobama ako moze neki hint",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166837": {
+      "poster": "Jaster111",
+      "content": "Kako pozivate mymax funkciju nad setom u 2. zadatku? Baca mi neke nepostojeće konverzije.",
+      "votes": {
+        "upvoters": [
+          "samurai (samuraj)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166849": {
+      "poster": "steker",
+      "content": "@Jaster111#166837 ja sam metla:  auto set=mymax( s.begin(), s.end(), ..",
+      "votes": {
+        "upvoters": [
+          "Jaster111",
+          "Tinx (pingvin)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166854": {
+      "poster": "JoKing",
+      "content": "@flicka#166836 Ako u pythonu imaš listu gdje su svi elementi tupleovi koji se sastoje od (ime, prezime) onda da sortiraš po prezimenu zoveš funkciju sa `mymax(osobe, key=lambda x: x[1])`",
+      "votes": {
+        "upvoters": [
+          "Darla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166855": {
+      "poster": "steker",
+      "content": "@JoKing#166854 a kako da se prvo provjeri ime pa prezime",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166858": {
+      "poster": "JoKing",
+      "content": "@steker#166855 Ako hoćeš i ime i prezime onda:\n\nAko prvo ime pa prezime - `mymax(osobe, key=lambda x: x)`\n\nAko prvo prezime pa ime - `mymax(osobe, key=lambda x: x[1::-1])`",
+      "votes": {
+        "upvoters": [
+          "Darla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166859": {
+      "poster": "flicka",
+      "content": "da ali kak da to postignem s jednim pozivom, ocito imam krivo strukturiran mymax, mozes okvirno objasnit kak treba izgledat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166870": {
+      "poster": "JoKing",
+      "content": "@flicka#166859 mymax okvirno izgleda:\n\nprva i zadnja linija prepisane iz uputa, a for petlja kaže `ako je key(x) najveći -> ažuriraj max_x i max_key` iz čega slijedi:\n```\nif max_x is None or key(x) > max_key:  # ako je key(x) najveći\n    max_x = x                            # ažuriraj max_x\n    max_key = key(x)                     # ažuriraj max_key\n```",
+      "votes": {
+        "upvoters": [
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166882": {
+      "poster": "fer999",
+      "content": "@faboche#166702 Dada, o 5. zadatku je riječ, gdje nema računanja percentila. Naravno, da se u zadatku prije koristi strategija.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166888": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@JoKing#166870 za sta nam sluzi uopce max_key ?  zas moramo to koristit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166889": {
+      "poster": "steker",
+      "content": "kako da cacheiram value u javi u 6 zadatku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166893": {
+      "poster": "flicka",
+      "content": "Gdje u zadnjem zadatku treba koristit observer?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166895": {
+      "poster": "Jale (čakijale)",
+      "content": "@Tompa007#166888 Jer usporedujes po vrijednosti funkcije key, pa moras znati koja je najveca vrijednost koju je funkcija key vratila do sad",
+      "votes": {
+        "upvoters": [
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166900": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@Jale#166895 al to sve mogu pamtit u max_x samo upisem najvecu vrijednost koju je key vratila prolaskom kroz sve elmeent i onda samo returnam to ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166922": {
+      "poster": "Jaster111",
+      "content": "`error: invalid cast from type 'std::_Rb_tree_const_iterator<int>' to type 'const void*'\n\n         if (pred((const void*) first, (const void*) max)) {`\n\n Je li se netko susreo sa ovime i ako da jel zna kako riješit problem?",
+      "votes": {
+        "upvoters": [
+          "samurai (samuraj)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166926": {
+      "poster": "Jale (čakijale)",
+      "content": "@Tompa007#166900 Mislis pamtit za koji je x funkcija key vratila najvecu vrijednost (jer moras vratit x ne key(x))? Mozes i tako valjda, al cini mi se da je ako pamtis i max_x i max_key malo preglednije + ne moras svaki put pri usporedivanju zvat funkciju key dva puta",
+      "votes": {
+        "upvoters": [
+          "JoKing",
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166934": {
+      "poster": "dinosaur1",
+      "content": "@Jaster111#166922 Probaj pozivat pred(...) s adresama dereferenciranih iteratora.\n\n&(*it)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Darla",
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166947": {
+      "poster": "Jaster111",
+      "content": "@dinosaur1#166934 blagoslovio te bog",
+      "votes": {
+        "upvoters": [
+          "dinosaur1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166951": {
+      "poster": "flicka",
+      "content": "kaj spremamo u varijablu value u zadnjem zadatku? cemu nam sluzi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166955": {
+      "poster": "Rene",
+      "content": "@flicka#166951 stvarnu (brojčanu) vrijednost\n\nAko je ćelija samo \"5\", onda 5, ali ako je ćelija A1-A2 onda zadnju izračunatu vrijednost tog izraza. Poanta je napravit da se ćelije updateaju tako da se promjenom vrijednosti u A1 automatski refresha taj value u ćelijama koje ju referenciraju",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166960": {
+      "poster": "Rope (Rops)",
+      "content": "Zna li netko kako postici 'automatsko prosljeđivanje izmjena kroz proizvoljno dugačke lance ovisnosti' u 6. zadatku? Koristi li se tu observer obrazac?",
+      "votes": {
+        "upvoters": [
+          "HARAmara (decko_sa_balkana)",
+          "Kennedy",
+          "LLL"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167041": {
+      "poster": "HARAmara (decko_sa_balkana)",
+      "content": "Za koga trebamo pisati promatrač u 6. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167213": {
+      "poster": "ana (anci)",
+      "content": "U 4. zad, nije mi bas jasno kako se zadaju parametri za npr generiranje brojeva (granice, broj elemenata, parametri distribucije...). Nema mi smisla u metodu strategije za generiranje brojeva slati parametre, jer svaka konkretna strategija ima drugi broj parametara, a opet cudno mi je slati kontekst, jer bi onda distribution tester trebao imati parametre od svih strategija, sto opet krsi nacela nbp.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167214": {
+      "poster": "ferball",
+      "content": "@ana#167213 rekao bih da je dobro da to konkretne strategije primaju u konstruktoru",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "ana (anci)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167219": {
+      "poster": "Kennedy",
+      "content": "@HARAmara#167041 Za Šegvića <3 \n\nJokes aside mislim da ide na cell i kad se promjeni njemu vrijednost da sve njegove promatrace updatea itd",
+      "votes": {
+        "upvoters": [
+          "HARAmara (decko_sa_balkana)",
+          "LLL",
+          "Rope (Rops)",
+          "gladiator",
+          "ivan",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "Gulbash",
+          "HARAmara (decko_sa_balkana)",
+          "Rope (Rops)",
+          "Zk6dO73 (burw0r)",
+          "gladiator",
+          "sheriffHorsey"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167247": {
+      "poster": "ikerkaferkass",
+      "content": "Što znači u 3. zadatku da se \n\n> kao kriterij koristi uređaj elemenata pobrojivog objekta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167316": {
+      "poster": "Vonj",
+      "content": "@ikerkaferkass#167247 \n\nU slučaju ako key nije zadan, koristis poredak tog uredaja(iterable), sto znaci da se koristi obican if(a > b).\n\nTipa imas polje integera, posaljes funkciji to polje bez keya, i funkcija to treba odraditi koristeci prirodni poredak kako je vec u pythonu to napravljeno za odredene tipove podataka.",
+      "votes": {
+        "upvoters": [
+          "ikerkaferkass"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167350": {
+      "poster": "cloudies",
+      "content": "Je li ok koristiti apstraktnu klasu umjesto sučelja za strategiju ako konkretne strategije imaju zajedničke članove?",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167398": {
+      "poster": "at5611",
+      "content": "U 4. zadatku jednom kad izgeneriramo niz brojeva, koji je pravilan nacin za poslat to u DistributionTester, je li DistributionTester moze imat metodu setNiz(), pa da mozemo u klasi za generiranje samo postavit novi niz,  ili klasa za generiranje vraca niz generiranih brojeva, ili nesto trece? Pitam jer nisan siguran je li se krsi neko pravilo ako radin na jedan od ova dva nacina",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167402": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@at5611#167398 ja imam jednu metodu u testeru generateNumbers koja mi prima instancu na sučelje i onda tamo pošaljem instancu razreda koji mi implementiraju to sučelje(fibonnaci , normalD  , sequential) i u toj metodi samo pozovem nad tom instancom sucelja metodu generate koja je nadjacana u navedenim razredima",
+      "votes": {
+        "upvoters": [
+          "at5611"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167403": {
+      "poster": "Jaster111",
+      "content": "@at5611#167398 \n\nmeni DistributionTester ima atribut \"nums\" koji je zapravo prazna lista prilikom inicijalizacije.\n\nOve klase generatora mi imaju metodu generate u kojoj vraćaju listu generiranih brojeva i onda samo prilikom inicijalizacije DistributionTestera u njegovu \"nums\" varijablu spremim poziv metode generate od upisane klase jednog od tri generatora.",
+      "votes": {
+        "upvoters": [
+          "at5611"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167404": {
+      "poster": "fer999",
+      "content": "Je li u 6. zadatku nužno da ćelija \"imena\" A1 bude na poziciji cells[0][0]? Ne razumijem kako bi trebali inicijalizirati tablicu ćelija, treba li postaviti odmah svim ćelijama prilikom njene inicijalizacije vrijednosti poput A1,A2,B3...?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167405": {
+      "poster": "Jaster111",
+      "content": "Koji onda obrazac se koristi u 5. zadatku? Jel koristimo i strategiju i promatrača ili sam fulao poantu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167408": {
+      "poster": "fer999",
+      "content": "@Jaster111#167405 Ja bih rekao okvirna metoda i promatrač, ali sigurno se može ostvariti i strategijom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167410": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@cloudies#167350 Da, zapravo bi najtočnija formulacija bila da se strategije ostvaruju nadklasama, a sučelja i apstraktne klase su samo podskupovi nadklasa\n\nMeđutim to ne znači da ne postoji sučelje - strategija služi kako bi se dalo sučelje s metodama, a onda može postojati neka apstraktna klasa koja implementira to sučelje, i onda prava klasa koja implementira sve što nije implementirano. Fora je u tome da bi strategija uvijek samo trebala pružati **metode**. Viši koncepti kao članovi se handleaju drukčije, dakle u apstraktnim i običnim klasama.",
+      "votes": {
+        "upvoters": [
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167411": {
+      "poster": "stic",
+      "content": "@HARAmara#167041 \n\nJa sam rješio tako da mi je Cell i promatrač i subjekt. \n\n@Rope#166960 \n\nMislim da ne treba poseban obrazac za to, bar ga ja nisam koristio.",
+      "votes": {
+        "upvoters": [
+          "HARAmara (decko_sa_balkana)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167416": {
+      "poster": "SuperSaiyano",
+      "content": "@fer999#167404 Evo i  ja se isto pitam, zadatak se dodatno komplicira tim zahtjevom što čini obični zadatak gdje se primjenjuje observer dosta komplikovanijim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167420": {
+      "poster": "fer999",
+      "content": "@SuperSaiyano#167416 Ja zasad imam ostvareno kao da ćelija A1 stvarno odgovara poziciji [0,0]. Pomoću neke metode koja iz tog stringa koji označava adresu vadi stvarnu adresu u 2D polju, ali nije mi jasno zašto bi se to tako zadavalo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167433": {
+      "poster": "SuperSaiyano",
+      "content": "@fer999#167420 kontao sam i ja tako nešto napraviti, da li si ograničio veličinu 2D polja (kao da bude max [20][20] ili sl.) zbog ograničenog broja slova? Mislio sam napraviti metodu koja od slova A-Z mapira u index u polju zajedno sa brojem koji dođe uz slovo. \n\nTakođer, da li napraviti fiksnu tablicu 5x5?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167442": {
+      "poster": "[deleted]",
+      "content": "Koliko vremena treba za rijesiti ovaj labos?",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167446": {
+      "poster": "fer999",
+      "content": "@SuperSaiyano#167433 Nisam ograničavao veličinu polja, nego u slučaju da dođe neko slovo ili broj veći od mog Sheet-a, samo u catch bloku hvatam IndexOutOfBounds i upozorim na to korisnika. Preko ASCII vrijednosti ovog velikog slova sam ostvario pronalaz kojem to indeksu odgovara (A=65 itd.)",
+      "votes": {
+        "upvoters": [
+          "SuperSaiyano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167450": {
+      "poster": "SuperSaiyano",
+      "content": "@fer999#167446 Tako sam i ja mislio, hvala.",
+      "votes": {
+        "upvoters": [
+          "fer999"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167453": {
+      "poster": "fer999",
+      "content": "Jel netko zna može li u 6. zaadatku doći u ćeliji vrijednost poput \"A1+3\"?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167455": {
+      "poster": "samurai (samuraj)",
+      "content": "Jeste li u 4. zadatku koristili genericse kod strategija za generiranje niza brojeva i računanje percentila(da se može raditi s Integerima i npr. Doubleovima)? Čini mi se da ne doprinose u konkretnom use case-u zadatka, ali možda je poboljšavaju kvalitetu rješenja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167460": {
+      "poster": "samurai (samuraj)",
+      "content": "Može ih se i u DistributionTester staviti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167468": {
+      "poster": "fer999",
+      "content": "@samurai#167455 Ja nisam jer piše da je riječ o cijelim brojevima ako se ne varam, ali inače bi to bio dobar pristup svakako.",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)",
+          "samurai (samuraj)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167491": {
+      "poster": "JoKing",
+      "content": "@samurai#167455 Laughs in Python",
+      "votes": {
+        "upvoters": [
+          "Wayk",
+          "bodNaUvidima",
+          "gladiator",
+          "samurai (samuraj)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Wayk",
+          "gladiator",
+          "tomekbeli420"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167509": {
+      "poster": "Jaster111",
+      "content": "Što se tiče 5. zadatka, jel se treba implementirat multithreading? Jer ne razumijem ovaj dio gdje korisnik unosi broj i nakon svake sekunde ga program pohranjuje negdje. Kako bi implementirali to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167510": {
+      "poster": "Fica (Prof)",
+      "content": "@Jaster111#167509 Ja sam napravio tako da se iz klase SlijedBrojeva zove funkcija izvora koja dohvaća broj i tamo se odvija ovo čekanje npr. ispiše se unesi broj i čeka dok korisnik ne upiše na tipkovnici i onda samo u glavnoj klasi kad se sve to obavi i broj pohrani radim time.sleep(1).",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167511": {
+      "poster": "Wayk",
+      "content": "Nisam vidio nigdje zabranu za external librarije tipa numpy...\n\nNadam se da je oke u trecem samo delegirat normalnu razdiobu da to numpy fino rijesi, di cu se ja s tim zajebavat.\n\nIma netko da je to tako rijesio?",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "gladiator",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167513": {
+      "poster": "Jaster111",
+      "content": "@Wayk#167511 \n\nfrom scipy.stats import norm -> možeš koristit ako hoćeš bez numpya",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167516": {
+      "poster": "faboche (him)",
+      "content": "Kako bi mogli osigurati nadogradnju bez promjene u 6.zdk bez da mijenjamo potpis metode set na način da klijent postavlja strategiju izračuna vrijednosti iz stringa. Čini mi se da ovako Sheet sam mora provjeravati uvjete za string vrijednost Cella kako bi znao evaluirati Cell, a to bi bio problem da tipa ubacimo mogučnost da je vrijednost npr. sinus neke drugog Cella.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167525": {
+      "poster": "Jaster111",
+      "content": "Jel smijemo u pythonu koristit watchdog biblioteku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167554": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Cek u ovom 6 zadataku 'A3' oznacava prvi redak i 3 stupac , jel onda za drugi redak koristimo 'B3' ili se sve ide preko 'AX' ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167555": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Jaster111#167525 Za što će ti to točno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167573": {
+      "poster": "ferball",
+      "content": "@Tompa007#167554 dobro pitanje, ne kuzim cemu 2D polje kad ne znamo unaprijed dimenzije. To se moze jednostavno rijesit dinamickim dodavanjem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167619": {
+      "poster": "Retard00",
+      "content": "Jel u 6. zadataku kao subjekt treba stavljat samo na `Sheet` ili svaki `Cell` može biti i subjekt i observer?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167693": {
+      "poster": "[deleted]",
+      "content": "@Kennedy#164506 \n\n@stic#166733 \n\n\nZnaci li ovo da onda u arr_int ne smijemo stavljati cijele brojeve vece od 2^7 - 1 tj mozemo ali ce se overflowati. Meni radi funkcija dobro ako stavim brojeve od 0 do 127.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167723": {
+      "poster": "at5611",
+      "content": "Jel ima neko tip kako da provjeravan kruznu ovisnost u 6. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167730": {
+      "poster": "Kennedy",
+      "content": "@abcdefgh#167693 Ne znaci, char * koristimo samo kako bi si omogucili pomicanje pointera to nema nikakve veze sa vrijednosti ni tipom na koju on pokazuje",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)",
+          "[deleted]",
+          "stic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167759": {
+      "poster": "Kennedy",
+      "content": "@at5611#167723 Neki DFS u kojem provjeravas jesi li usao u ciklus",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "gladiator"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167781": {
+      "poster": "Retard00",
+      "content": "@at5611#167723 Ja sam napisao dodatnu funkciju getAllRefs koja radi bez rekurzija\n\nPseudokod je ovakav:\n```\nSet<Cell> getAllRefs(Cell c): \n\tcurrent = getrefs(c) ///vraca Set<Cell>\n\tdone = Set<Cell>()\n\tdone.add(c)\n\tchecks = current.count()\n\twhile(checks != 0):\n\t\tCell co = current.differenceWith(done).pop()\n\t\tnewCells = getrefs(co)\n\t\tchecks = checks + newCells.differenceWith(current).count()\n\t\tcurrent = current.unionWith(newCells)\n\t\tdone.add(co)\n\t\tcurren.remove(co)\n\t\tchecks = checks - 1\n\treturn current\n```\nTo izvrtim prije evaluiranja novog izraza i ak se taj Cell nalazi u tom vraćenom setu onda bacim exception da je novi izraz za Cell ovisan o tom samom Cell-u i vratim vrijednost izraza tog Cell-a na staru.\n\nMožda se ovo može i kraće/bolje napisat al kod mene radi pa ni ne želim dirat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167794": {
+      "poster": "nikace (AeIoU)",
+      "content": "Moze neki hint  u 6. ako je Cell promatrac i subjekt, kako on neovisno o Sheetu promijeni vrijednost samo na temelju oznake ref npr \"A1\"?  Osim ako mozda Cell zna za postojanje Sheeta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167874": {
+      "poster": "bodNaUvidima",
+      "content": "@nikace#167794 Cell mora znati kojem Sheetu pripada za izračun value.",
+      "votes": {
+        "upvoters": [
+          "nikace (AeIoU)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168168": {
+      "poster": "fer999",
+      "content": "@Retard00#167619 Mislim da je ovo drugo ideja, da svaki Cell bude i subjekt i observer.",
+      "votes": {
+        "upvoters": [
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168185": {
+      "poster": "Venki",
+      "content": "Jesu li komentirali možda na konzultacijama jel trebamo opet printati kod?",
+      "votes": {
+        "upvoters": [
+          "cile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168195": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@Venki#168185 https://www.fer.unizg.hr/predmet/ooup_a/obavijesti?@=2tkry#news_121593",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168211": {
+      "poster": "Venki",
+      "content": "@Uchenikowitz#168195 \n\nUuu nisam vidio, hvala hvala :D",
+      "votes": {
+        "upvoters": [
+          "Uchenikowitz (Učečuču)",
+          "cile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168273": {
+      "poster": "flicka",
+      "content": "u javi kako se implementira strategija, a kako okvirna metoda? ak sam dobro skuzila strategija bi bio interface, a okvirna abstract class ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168278": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@flicka#168273 tako je",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168279": {
+      "poster": "flicka",
+      "content": "@AK10#168278 a tipa za strategiju, je li ok raditi unutar interfaca npr static array<> Fibbonaci() pa onda pozivati to sa ImeInterfacea.Fibbonaci() ili se bas trebaju raditi klase koje implementiraju to sucelje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168281": {
+      "poster": "Rope (Rops)",
+      "content": "@flicka#168279 Za svaku konkretnu implementaciju generiranja slijeda brojeva imat ces zasebnu klasu koja implementira to sucelje",
+      "votes": {
+        "upvoters": [
+          "Kennedy",
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168389": {
+      "poster": "at5611",
+      "content": "Koji je odgovor na pitanje na kraju 2. zadatka. \n\n> Komentirajte prednosti i nedostatke ove implementacije u odnosu na implementaciju iz prethodnog zadatka.\n\nKoji su tocno nedostaci?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168410": {
+      "poster": "stic",
+      "content": "@at5611#168389 \n\nImaš na slajdovima NBP + statički polimorfizam pa pogledaj prednosti i nedostatke",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168422": {
+      "poster": "stic",
+      "content": "@flicka#168279 \n\nStrategija bi trebala zapravo definirati pravila koje bi sve konkretne strategije trebale slijediti pa onda nema baš puno smisla stavljat statičku metodu unutar abstraktne strategije, koja se odnosi samo na jednu konkretnu strategiju. \n\n@flicka#168273 \n\nInterface ti je zapravo abstract class bez privatnih članova, u C++-u recimo ne postoje kao takva. Dodana su u Javi zato jer nije omogućeno višestruko nasljeđivanje tako da ti je zapravo nebitno da li će ti ispred abstraktne strategije pisati class ili interface. :D",
+      "votes": {
+        "upvoters": [
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168437": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "@fer999#167453 Jel moze?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168438": {
+      "poster": "steker",
+      "content": "Kako da napravimo strategiju u 6 zadatku? Mislila sam za svaki operator napravit posebnu ali onda svejedno moram ispitivati koji je operator da bi mogla pozvat njegovu klasu strategije , a to mi se cini losa ideja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168443": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@steker#168438 Konkretno za ovaj labos će ti biti dovoljno stvoriti strategiju za binarni operator, npr.\n\n```\nclass BinaryOp:\n    def apply(self, _1, _2):\n        raise NotImplementedError\n\nclass OpAdd(BinaryOp):\n    def apply(self, _1, _2):\n        return (0 if _1 is None else _1) + (0 if _2 is None else _2)\n```\n\nslično kao i što je u uputama. A to što te brine što ćeš morati provjeravati što je koji operator je nebitna stvar, jer ta provjera se svodi na parsiranje. Ne moraš provjeravati koji je operator ako se držiš uputa u labosu da samo implementiraš zbrajanje, jer onda odmah kad vidiš da ti je čvor binarna operacija pukneš zbrajanje - iako je tad strategija sasvim redundantna.\n\nJedino što ti može biti elegantnije je lookup preko dicta, npr.\n\n```python\nops = {\n    \"+\": OpAdd,\n    \"-\": OpSub,\n    \"*\": OpMul,\n    \"/\": OpDiv,\n}\n```",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168444": {
+      "poster": "flicka",
+      "content": "Jel u zadnjem zadatku radimo s int ili double ili nebitno?",
+      "votes": {
+        "upvoters": [
+          "samurai (samuraj)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168446": {
+      "poster": "Retard00",
+      "content": "Jel za implementaciju observer-a baš moram radit interface i onda ga implementirat ili mogu pošto radim u C#-u jednostavno koristit `delegate`-e?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168466": {
+      "poster": "stic",
+      "content": "@Retard00#168446 \n\nNisam baš radio u C#-u, ali ako implementiraš interface, klijent ne mora znati koje sve vrste promatrača postoje. Kako bi inače implementirao polje promatrača u subjektu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168477": {
+      "poster": "Retard00",
+      "content": "@stic#168466 pa sama varijabla tipa delegate je ujedno i polje (tj. može pozivati više funkcija od različitih objekata koji su na nju preplačeni), sve što traži je da funkcije budu navedenog oblika po delegatu.",
+      "votes": {
+        "upvoters": [
+          "stic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168488": {
+      "poster": "branimir1999",
+      "content": "Je li oni zapravo ocjenjuju nas labos ili nam je cijeli labos samo pomoc pri pisanju ovog ispita?\n\nNpr. ako ne napravim python zadatak, a nekom magijom rijesim sve tocno na ispitu, hocu li dobiti sve bodove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168494": {
+      "poster": "Joji",
+      "content": "@branimir1999#168488 Ako si točno riješio zadatak iz ispita neće ti nitko gledati kod, bar ja neću (demos sam, a demosi ispravljaju ispite iz labosa).",
+      "votes": {
+        "upvoters": [
+          "BrownPerson (Bambi)",
+          "Gulbash",
+          "HARAmara (decko_sa_balkana)",
+          "Vasili (Fasili)",
+          "cloudies",
+          "gladiator",
+          "indythedog",
+          "netbitan11 (netbitan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168517": {
+      "poster": "Jaster111",
+      "content": "@Joji#168494 a šta ako krivo riješimo zadatak na blicu? 🤔",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168521": {
+      "poster": "branimir1999",
+      "content": "@Joji#168494 Dakle, nije 100% nuzno da implementiramo svaki detalj (npr. kao bacanje iznimke za kruznu ovisnost), nego ovaj labos radimo za sebe?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168539": {
+      "poster": "Joji",
+      "content": "@Jaster111#168517 Dobiješ bodova ovisno o tome koliko krivo ga riješiš, a kod ti može pomoći da dobiješ više bodova nego inače. U principu gledamo samo ovo što piše na papiru. Tu i tamo bacimo pogled na kod ako nešto nije jasno u ovome na papiru. \n\n@branimir1999#168521  Da, tako sam i ja to shvatio. Općenito je Šegvićeva politika da su labosi priprema za ispit pa zato i daje malo bodova na njima.",
+      "votes": {
+        "upvoters": [
+          "Darla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168543": {
+      "poster": "fer999",
+      "content": "@Dlaid#168437 Ne znam, ali nisam uzeo da se može.",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)",
+          "samurai (samuraj)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168886": {
+      "poster": "nikace (AeIoU)",
+      "content": "da im rješenja u javi isto samo ubacimo u zip kao npr zad2.cpp i cell.java, sheet.java da svi budu na istom mjestu?",
+      "votes": {
+        "upvoters": [
+          "Wayk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168888": {
+      "poster": "bufus",
+      "content": "@nikace#168886 ja cu ih ostavit u folderima koji imaju src u sebi i tako sve zipat",
+      "votes": {
+        "upvoters": [
+          "nikace (AeIoU)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170626": {
+      "poster": "blablajar",
+      "content": "moze netko podijelit kod za 6. zadatak?",
+      "votes": {
+        "upvoters": [
+          "LucidDreamer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "180750": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "Jel samo meni nisu upisani bodovi 2. Vjezbe ili jos nisu ispravili?",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)",
+          "HARAmara (decko_sa_balkana)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "180768": {
+      "poster": "blablajar",
+      "content": "@Dlaid#180750 nisu jos ispravili",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "184590": {
+      "poster": "Giovanni",
+      "content": "Došli su bodovi iz 2. vježbe",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)",
+          "blablajar",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

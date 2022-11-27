@@ -1,0 +1,175 @@
+{
+  "title": "[FIZ2-E] 2. domaća zadaća - 2020/2021",
+  "creator": "thelonewanderer (Du är inte min chef!)",
+  "slug": "fiz2-e-2-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Fizika 2",
+    "Zadaće"
+  ],
+  "posts": {
+    "83715": {
+      "poster": "thelonewanderer (Du är inte min chef!)",
+      "content": "Evo da i ja nes doprinesem.\n\nZadatak sa trkacim automobilom:\n\n![](assets/2020-10-23/00023.png)\n\nPy code (bacite u bilo koji online interpreter)\n\n```\n# Zadatak sa trkacim automobilom\n\nl = 2.5     # u metrima\nw = 1.5      # u metrima\nh0 = 0.029      # paziti - prebaciti u metre!\nh = 0.025      # prebaciti u metre!\nv1 = 29     # m/s\nRz = 1.21      # gustoca zraka, kg/m kubni\np1 = 101325     # atmosf. tlak u Pa\n\n# Potrebne formule\nS1 = h0*w\nS2 = h*w\n# S1*v1 = S2*v2\n# p1+(Rz/2)*v1**2 = p2+(Rz/2)*v2**2\nA = l*w\nv2 = (S1/S2)*v1\np2 = p1+(Rz/2)*(v1**2 - v2**2)\ndelta_p = p1-p2\n# delta p je takoder F/A, zato:\nF = delta_p*A\n\nprint(\"v2 = \" + str(v2) + \" [m/s]\")\nprint(\"p2 = \" + str(p2) + \" [Pa]\")\nprint(\"Delta p = \" + str(delta_p) + \" [Pa]\")\nprint(\"F = \" + str(F) + \" [N] == konacno rjesenje!\")\n```",
+      "votes": {
+        "upvoters": [
+          "LookAtThatBooty (Đurđeva bizarna avantura)",
+          "RedJohn (Angela Martin)",
+          "ZvonkoSisoje",
+          "[deleted]",
+          "aCroEn",
+          "arm7 (DulaPeep)",
+          "topla_hladetina"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84739": {
+      "poster": "aCroEn",
+      "content": "Zna netko ovaj?\n\n![](assets/2020-10-27/00026.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84749": {
+      "poster": "thelonewanderer (Du är inte min chef!)",
+      "content": "@aCroEn#84739 \n\nFluid se nalazi u homogenom polju gs,\n\nfluid nije stlaciv, a temp mu je svuda jednaka,\n\nu fluidu nisu prisutne viskozne sile\n\ntok fluida zadovoljava jednadzbu kontinuiteta\n\nmislim da je to sve",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "aCroEn",
+          "arm7 (DulaPeep)",
+          "topla_hladetina"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84974": {
+      "poster": "aCroEn",
+      "content": "@thelonewanderer#84749 hvala ti :)",
+      "votes": {
+        "upvoters": [
+          "thelonewanderer (Du är inte min chef!)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85383": {
+      "poster": "Lindo",
+      "content": "@aCroEn#84739  šablona je uvijek ista označi sve i klikni da ispravi onda ti označi krive i točne i odznačis krive i za izgubljen 0,1 imas rjesen zadatak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85436": {
+      "poster": "kixx",
+      "content": "![](assets/2020-10-29/00035.png)\n\nmozee pomoc?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85444": {
+      "poster": "arm7 (DulaPeep)",
+      "content": "@kixx#85436 ![](assets/2020-10-29/00036.png)\n\njedino sto bi se trebalo googlat je ovaj dynamic viscosity za vodu, ubacis u formulu sve podatke (jer promjer i brzina su zadani) i vidis koliki dobijes reynoldsov broj. iskreno nisam bas neki najbolji fizicar, ovo sam dosl rijesila tako sto sam googlala laminar flow, vidjela ovu dolje sliku i onda sam nasla formulu za Re. hocu rec nadam se da je sve oke s postupkom i da nisam na neku foru uspjela sve zbrljat i unatoc tome dobro odgovoriti, ako nes nije ok sori, nije namjerno :(((\n\nps. samo pazi na mjerne jedinice da su sve ock",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85462": {
+      "poster": "kixx",
+      "content": "@arm7#85444  niisam uspjela, ali hvala ti puno!🙂, odg je da nije moguce odrediti",
+      "votes": {
+        "upvoters": [
+          "arm7 (DulaPeep)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85466": {
+      "poster": "Lindo",
+      "content": "@kixx#85462  meni je na takav zadatak bila brzina 0,2 i bilo je turbulentno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85472": {
+      "poster": "arm7 (DulaPeep)",
+      "content": "@kixx#85462 ajoj, stvarno sori 😭 mozda ce netko pametniji od mene imati volje tocno objasniti :')",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85549": {
+      "poster": "tux",
+      "content": "https://www.omnicalculator.com/physics/reynolds-number#laminar-vs-turbulent-flow-laminar-flow-reynolds-number-turbulent-flow-reynolds-number\n\nEvo kalkulator za taj zadatak ako nekome pomogne sa svim osnovnim informacijama vezanim uz tip strujanja i reynolda.\n\nLinearna karketeristika kugle je vaš 2R.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "arm7 (DulaPeep)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

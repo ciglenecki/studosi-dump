@@ -1,0 +1,564 @@
+{
+  "title": "[NRPPZW] 4. projekt - 2021/2022",
+  "creator": "strole55 (Sokol)",
+  "slug": "nrppzw-4-projekt-20212022",
+  "tags": [
+    "FER",
+    "Napredni razvoj programske potpore za web"
+  ],
+  "posts": {
+    "270274": {
+      "poster": "strole55 (Sokol)",
+      "content": "U četvrtom samo treba pokrenut tri testa i poslat rezultate?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270657": {
+      "poster": "mrkva",
+      "content": "kako spremiti rezultate iz svih Listenera u istu JMX datoteku? kada napravim file -> save ne spreme mi se podaci iz listenera.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270735": {
+      "poster": "fer999",
+      "content": "@\"mrkva\"#p270657 \n\nI mene je to mučilo. Moraš dodati taj file u koji želiš spremati kao \"odredišni\" file za sva 3 listenera. Na slici ispod je primjer za jednog listenera. \n\n![](assets/2022-01-14/00011.png)\n\nI onda kad pokreneš ponovno sa Start sve će biti zapisano u taj isti file.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270810": {
+      "poster": "Bisolvon",
+      "content": "@\"fer999\"#p270735 Ispratio sam ovo napisano i uporno su mi listeneri prazni kad ponovo otvorim jmx. Mozes li napisat mini tut. za to jer vec 2h vrtim sve kombinacije i nikako da se spremi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270850": {
+      "poster": "fer999",
+      "content": "@\"Bisolvon\"#p270810 \n\nZapravo, ni meni se ne zapisuju sad, jednom sam uspio to dobiti, ali više ne, a ne sjećam se točno što sam tad napravio...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271035": {
+      "poster": "Gocc (***)",
+      "content": "jel itko uspio išta spremiti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271083": {
+      "poster": "reygrep",
+      "content": "jel vam ovak izgledaju csv fileovi ![](assets/2022-01-16/00016.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271088": {
+      "poster": "reygrep",
+      "content": "@\"anaa\"#p271035 meni se spremilo, koraci su bili ovak ne znam koji dio je uspio\n1. napravila sam test plan sa svim ovim graphs i reports\n2. pokrenula test\n3. skuzila da sam mozda trebala definirat filename\n4. definirala svima isti jmx file\n5. pokrenula test opet  \n6. probala zatvorit jmeter i ponovno otvorit\n7. morala sam otic u file open i otvorit taj spremljeni file jer je samo neki prazni test plan bio lijevo\n8. otvaranjem tog jmx sve se otvorilo onak kak je bilo samo nije bilo grafova\n\neksli jel ovo dobro popunjena jmx datoteka?\n``` \ntimeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect\n1642340280702,310,HTTP Request,200,OK,Thread Group 1-1,text,true,,15281,119,1,1,http://www.google.com/,298,0,67\n1642340281022,201,HTTP Request,200,OK,Thread Group 1-1,text,true,,15227,119,1,1,http://www.google.com/,197,0,0\n1642340281225,219,HTTP Request,200,OK,Thread Group 1-1,text,true,,15205,119,1,1,http://www.google.com/,212,0,0\n1642340281446,201,HTTP Request,200,OK,Thread Group 1-1,text,true,,15294,119,2,2,http://www.google.com/,195,0,0\n1642340281577,242,HTTP Request,200,OK,Thread Group 1-2,text,true,,15325,119,2,2,http://www.google.com/,220,0,26\n1642340281649,194,HTTP Request,200,OK,Thread Group 1-1,text,true,,15361,119,2,2,http://www.google.com/,186,0,0\n1642340281845,203,HTTP Request,200,OK,Thread Group 1-1,text,true,,15237,119,2,2,http://www.google.com/,189,0,0\n1642340281824,224,HTTP Request,200,OK,Thread Group 1-2,text,true,,15261,119,2,2,http://www.google.com/,210,0,0\n1642340282050,194,HTTP Request,200,OK,Thread Group 1-1,text,true,,15285,119,2,2,http://www.google.com/,188,0,0\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271094": {
+      "poster": "reygrep",
+      "content": "@\"reygrep\"#p271088 pardon fali mi 3.1\n\n3.1. desni klik na test plan i save selection as ... isti dokument koji sam stavila u filename svim listenerima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271097": {
+      "poster": "reygrep",
+      "content": "well nvm, zaboravite sve ovo gore, isto to na drugoj domeni ne radi uopce",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "AntonioB25 (Pleteni miš)"
+        ]
+      }
+    },
+    "271166": {
+      "poster": "Kennedy",
+      "content": "> Traženi rezultati testiranja za jednog poslužitelja su Apache JMeter (JMX) datoteka, PNG slika grafa i CSV datoteka sa sadržajem tablice s numeričkim vrijednostima performansi testiranog poslužitelja.\n\nJa sam interpretirao to ovako:\n\nHTTP Request_<DNS ADRESA POSLUŽITELJA>.jmx -> desni klik na Test plan save selection as \n\nAggregate Graph_<DNS ADRESA POSLUŽITELJA>.png -> slika grafa \n\nstatistics_<DNS ADRESA POSLUŽITELJA>.csv -> u sva 3 listenera isti .csv definirati preko onog browse prozora (nisam siguran al mislim da nije pamento samo copy paste putanje zbog mogucih bugova tako da otvorite svaki posebno i unesite/odaberite istu datoteku)\n\nTestirao sam radi li tako da sam nakon sto sam zavrsio sa testom ugasio pa upalio jmeter i otvorio taj .jmx file nakon cega sam ponovo ucitao sve podatke preko browse gumba/funkcije i ako bi se pojavio graf/podaci to je valjda onda dobro",
+      "votes": {
+        "upvoters": [
+          "FERonja",
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271172": {
+      "poster": "Avendo",
+      "content": "@\"Kennedy\"#p271166 Zašto test plan save selection as, a ne samo save",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "FERonja"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271175": {
+      "poster": "Kennedy",
+      "content": "@\"Avendo\"#p271172 tako mi je radilo, al pretpostavljam da ce i save raditi ako sprema u jmx datoteku",
+      "votes": {
+        "upvoters": [
+          "FERonja",
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271183": {
+      "poster": "Avendo",
+      "content": "@\"Kennedy\"#p271175 I kako ti izgleda jmx datoteka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "FERonja"
+        ],
+        "tuga": []
+      }
+    },
+    "271189": {
+      "poster": "Avendo",
+      "content": "@\"reygrep\"#p271088 Kako si uspio dobiti ovakvu jmx datoteku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271190": {
+      "poster": "Avendo",
+      "content": "@\"reygrep\"#p271088 Jesi siguran da ovako treba izgledati jmx datoteka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271193": {
+      "poster": "mrkva",
+      "content": "@\"Kennedy\"#p271166 aha znaci u csv idu podaci svih listenera, a ne samo iz aggregate graph. Ja kad ponovno ucitam podatke iz csv datoteke ne dobijem isti graf, odnosno vrijednosti svih listenera nisu jednake onima koje dobijem testiranjem.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271195": {
+      "poster": "mrkva",
+      "content": "@\"Kennedy\"#p271166 kako ti izgleda csv datoteka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271199": {
+      "poster": "reygrep",
+      "content": "@\"Avendo\"#p271190 ne, napravila sam ticket na kraju \n\novako treba izgledat ![](assets/2022-01-16/00027.png)\n\nono gore je spremljen test plan zapravo sto sam ja pasteala",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Avendo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271217": {
+      "poster": "Kennedy",
+      "content": "@\"mrkva\"#p271195 \n\nOvako mi izgleda csv\n\n    timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect\n    1642348510359,513,HTTP Request,200,OK,Thread Group 1-1,text,true,,15125,116,1,1,http://www.google.hr/,481,0,57\n    1642348510873,289,HTTP Request,200,OK,Thread Group 1-1,text,true,,15147,116,1,1,http://www.google.hr/,273,0,0\n    1642348511162,279,HTTP Request,200,OK,Thread Group 1-1,text,true,,15198,116,2,2,http://www.google.hr/,269,0,0\n    1642348511442,291,HTTP Request,200,OK,Thread Group 1-1,text,true,,15213,116,2,2,http://www.google.hr/,268,0,0\n    1642348511360,374,HTTP Request,200,OK,Thread Group 1-2,text,true,,15163,116,2,2,http://www.google.hr/,316,0,42\n    1642348511738,338,HTTP Request,200,OK,Thread Group 1-2,text,true,,15192,116,2,2,http://www.google.hr/,285,0,0\n    1642348511736,425,HTTP Request,200,OK,Thread Group 1-1,text,true,,15162,116,2,2,http://www.google.hr/,417,0,0\nZa ovo @\"mrkva\"#p271193 iskreno nisam siguran meni je bio isti graf, moguce da neki su postojali vec neki podaci pa se samo appendalo na taj file. Kad sam isao testirat sam izbrisao .csv datoteku za test koji sam isao radit jer moguce da ako se appenda onda on prikaze podatke samo od zadnjeg testa pa kad se cijeli csv ucita drugaciji je graf",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)",
+          "mrkva",
+          "strole55 (Sokol)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271222": {
+      "poster": "Kennedy",
+      "content": "@\"Avendo\"#p271183 ovako nekako\n\nhttps://pastebin.com/NFsVXLHM",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271235": {
+      "poster": "Kennedy",
+      "content": "> @\"Kennedy\"#p271166 statistics_<DNS ADRESA POSLUŽITELJA>.csv -> u sva 3 listenera isti .csv definirati preko onog browse prozora (nisam siguran al mislim da nije pamento samo copy paste putanje zbog mogucih bugova tako da otvorite svaki posebno i unesite/odaberite istu datoteku)\n\nCitajuci jos jednom tekst zadatka izgleda da je ovo krivo... Moguce da se to treba rijesiti preko aggregate graph listenera i opcije \"Save table data\" jer tamo vec predlaze datoteku \"statistics.csv\"... Dignuo sam ticket pa napisem sta odgovore",
+      "votes": {
+        "upvoters": [
+          "Kaladonter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271242": {
+      "poster": "Kennedy",
+      "content": "@\"Kennedy\"#p271235 Odgovorili su na ticket za ovaj statistics treba samo “Save table data” iz Aggregate graph listenera",
+      "votes": {
+        "upvoters": [
+          "AnamarijaM (MA)"
+        ],
+        "downvoters": [
+          "FERonja"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271243": {
+      "poster": "FERonja",
+      "content": "@\"Kennedy\"#p271242 E jesi me sjebo opako",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "sheriffHorsey"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Kaladonter",
+          "Kennedy"
+        ]
+      }
+    },
+    "271438": {
+      "poster": "MrPeanutButter",
+      "content": "Jel zna netko koliko bodova će ovo nositi ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271441": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"MrPeanutButter\"#p271438\n\nmislim da 10 bodova",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271459": {
+      "poster": "VelikiMarko",
+      "content": "@\"Kennedy\"#p271242 Ja sam pitao u ticketu u vezi toga i ovo je odgovor:\n\n![](assets/2022-01-17/00037.png)\n\nSad, moguće je da taj Aggregate graph listener napravi upravo to što sam ja pitao.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271978": {
+      "poster": "Gocc (***)",
+      "content": "jel ima netko da mu se nista ne dogodi kada odabere \"save selection as\" ili \"browse\" ili \"open\" i tako neke gumbove",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272056": {
+      "poster": "Stubla",
+      "content": "Evo ekipa ako netko ima problema sa spremanjem možda je do ovoga, kolko god smješno zvuči treba se promijeniti tema JMeter-a, Options>Look and Feel>Windows Classic, meni je pomoglo\n\nhttps://programmerah.com/jmeter-cant-open-and-save-files-how-to-solve-29451/",
+      "votes": {
+        "upvoters": [
+          "Kennedy",
+          "Rope (Rops)",
+          "cosko10"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Bisolvon",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "272762": {
+      "poster": "cosko10",
+      "content": "Jel ikog mučio ovaj display graph?\n\nGraph results i summary report izgledaju kak treba\n\nSve napravim, poklikčem kvačice, stisnem display graph i prazno......\n\npls help",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272773": {
+      "poster": "reygrep",
+      "content": "@\"cosko10\"#p272762 meni je bio prazan kad sam jednom slucajno zaboravila stavit thread groupu, pa je mozda do toga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272903": {
+      "poster": "cosko10",
+      "content": "@\"reygrep\"#p272773 a nije nažalost, sve sam stavio i sve ostalo izgleda ispravno osim te slike\n\nčak su i osi dobro popunjene, samo se ne iscrtavaju vrijednosti na grafu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273033": {
+      "poster": "Lusy (MGJ)",
+      "content": "@\"cosko10\"#p272903 Jesi uspio popravit? Meni je isprve sve radilo i nakon nekoliko pokusaja odjednom mi se graf ne prikazuje za www.bing.com",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273040": {
+      "poster": "anon00",
+      "content": "@\"MGJ\"#p273033 \n\nJa sam napravio i nisam imao problema\n\nOno sto sam radio mozda drugacije je: \n\nSva 3 grafa/reporta (kako god ih nazvati) sam stavio da pisu u istu datoteku - Postoji ono polje \"Write resutlts to file / Read from file\" i tu bi kliknuo browse na sva 3 i odabrao istu .jmx datoteku i na sva 3 bi napravio CTRL+S. \n\nNakon tog bi zapravo pobrisao tu jmx datoteku i onda kad kliknes Run izade ona poruka da Appendas to existing file - to kliknes, izletit ce 3 puta pa treba 3 put kliknut (kako su i oni u uputama napisali). \n\nMalo je cudo da izleti ta poruka kad je datoteka pobrisana, ali on ju sam stvori pa je okej\n\nKod zamijene domene bi opet ctrl+s na HTTP request i opet bi pobrisao onu jmx datoteku na koju sva 3 gledaju tako da bi me kod RUN-a opet pitalo \"Append to existing\" - kliknes 3 puta i pokrene se test\n\n\nPojma nemam je li ista od ovog ima utjecaja, ja sam to radio cisto zato sto sam prvo procitao tu kako se mucite sa ovim stvarima pa sam radio ove gluposti - mozda je to na kraju i pomoglo jer ja nisam imao problema. \n\nTakoder, vidim da se graf ne prikazuje ako ne odaberes sve columne u column setting pod \"Columns to display\" - mozda je i do tog",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273042": {
+      "poster": "Lusy (MGJ)",
+      "content": "@\"anon00\"#p273040 hvala puno, uspilo je na kraju nakon nekoliko gasenja, paljenja JMetera",
+      "votes": {
+        "upvoters": [
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273074": {
+      "poster": "fraki",
+      "content": "@\"cosko10\"#p272762 Ja sam promijenio Look and Feel sa Nimbus na Windows i prikazalo mi je graf, ne znam jel popravilo to ili restart ali vrijedi probat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273260": {
+      "poster": "anon00",
+      "content": "Eo su publishali video gdje prakticki oni odrade labos :D \n\nTako da tko god sve dvoumio na intranetu u materijalima imate video pa samo popratite \n\nTaj JMeter samo skinete, unzip-ate i pokrenete tako da kliknete na .jar file koji se nalazi u bin mapi \n\nNakon tog sljedite video i upute sa edgara \n\nu 30ak minuta bi trebalo biti gotovo bez znoja",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)",
+          "Svudec"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273358": {
+      "poster": "cosko10",
+      "content": "ma evo radio sam po tim video uputama od A do Ž, klik po klik\n\nza domene google.com i google.hr mi se ne nacrta graf\n\na za bing.com se nacrta\n\nisti koraci isto sve\n\nrestarto sam JMeter, na kraju i reinstaliro, ništa, sve isto\n\nnakon nekih 15 ponovnih pokretanja testova sam poludio i predo tak kak je\n\noh well...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273448": {
+      "poster": "alp (monte)",
+      "content": "@\"cosko10\"#p273358 Također imala isti problem, sve sam probala da bi na kraju uspjelo na drugom kompjuteru iz prve",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

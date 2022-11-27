@@ -1,0 +1,478 @@
+{
+  "title": "[RGKIK] 1. laboratorijska vježba - 2021/2022",
+  "creator": "mrki",
+  "slug": "rgkik-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Raspodijeljene glavne knjige i kriptovalute",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "249314": {
+      "poster": "mrki",
+      "content": "Što upisujem za Wallet Address na https://bujica.zemris.fer.hr/faucet ? Probao sam i hash i sve moguće adrese koje mi je izbacio printAdress() test, pojavljuje se greška \"Please choose a Testnet Wallet address.\"\n\n\nEDIT. predzadnja linija ispisa printAdress(). Ako netko bude imao isti problem.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249496": {
+      "poster": "Louverture (Žuti Kišobran)",
+      "content": "Trebamo li u drugom zadatku provjeravati vrijednosti x i y ili je dovoljno samo provjeriti jesu li logički ekvivalentne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249497": {
+      "poster": "Rene",
+      "content": "Jel se samo meni crasha program kad pokrenem ovo za dobit adresu Walleta? Baca mi Expected the service to be RUNNING, but the service has FAILED?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249501": {
+      "poster": "Louverture (Žuti Kišobran)",
+      "content": "@\"Rene\"#p249497 Vjerojatno koristiš verziju Jave koja nije 1.8, spusti verziju do 1.8 i trebalo bi raditi normalno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249514": {
+      "poster": "Rene",
+      "content": "@\"Žuti Kišobran\"#p249501 Evo spustio sam i dalje isti error, javlja da fali neka metoda:\n\nException in thread \"WalletAppKit STOPPING\" java.lang.NoSuchMethodError: 'sun.misc.Cleaner sun.nio.ch.DirectBuffer.cleaner()",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249538": {
+      "poster": "Rene",
+      "content": "@\"Rene\"#p249514 EDIT: nemam pojma, ponovo instalirao 1.8 i sad radi 🙃",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249562": {
+      "poster": "Gocc (***)",
+      "content": "@\"Rene\"#p249538 mozes mozda malo detaljnije objasnit što si sve radio \n\n![](assets/2021-11-03/00016.png)\n\n istva stvar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249578": {
+      "poster": "Jokke",
+      "content": "@\"anaa\"#p249562 Ako koristis IntelliJ: File -> Project Structure -> Projekt SDK -> Add SDK -> Download SDK. Verziju stavis na 1.8 (vendor koji god)",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "lovro (l123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249580": {
+      "poster": "Jokke",
+      "content": "Kad pokrecem test jedan po jedan radi normalno, ali kad probam više testova jedan za drugim baca mi error \"Cannot call until startup is complete\". Pretpostavljam da je do sinkronizacije blockchaina i da će oni runnat jedan po jedan, moze utješna potvrda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250496": {
+      "poster": "Ducius",
+      "content": "Bili se trebao i zašto nakon svake transakcije koju napravimo sa paytopubkeyhash, promijeniti nas receive address?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250578": {
+      "poster": "ana (anci)",
+      "content": "Jel kuzi netko u 3. zadatku od kud bi mi trebali racunati C. Msm kuzim da ih mogu izracunati iz Ra i Rb iz unlocking skripte, ali nije mi pretjerano jasno s cim to moram provjeriti, tj sto su oni exactly mislili ovom recenicom \"1. Osigurati da RA i RB odgovaraju redom CA i CB.\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250585": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"anci\"#p250578 Piše ti da je to Hash160 od R, i onda samo provjeriš da je H\\(R) jednak C, ~~koji~~ gdje će R biti na stogu\n\nObrati samo pozornost na redoslijed R-ova iz unlocking skripte, jer moraš onda obrnutim redoslijedom provjeravati jednakost.",
+      "votes": {
+        "upvoters": [
+          "ana (anci)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250587": {
+      "poster": "ana (anci)",
+      "content": "@\"BDSMićo\"#p250585 to sam mislila ali pise da nije C na stogu nego Ra i Rb",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250592": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"anci\"#p250587 C izračunaš\n\nEDIT: aha vidim da sam to napisao zbunjujuće, jedan R je na stogu, hashiraš ga i on ti i ostane tamo, zatim staviš hashirani R kojeg znaš na stog (to se računa van stoga i tih operacija) i usporediš to dvoje.\n\nDakle jedno radiš s `OP_HASH160`, drugo s `Utils.sha256hash160`",
+      "votes": {
+        "upvoters": [
+          "ana (anci)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250594": {
+      "poster": "viliml",
+      "content": "@\"anci\"#p250587 Ne treba biti na stogu.\n\nTrebaš provjeriti pašu li [imath]R_A[/imath] koji je na stogu i [imath]C_A[/imath] kojeg znaš unaprijed, i isto za B.",
+      "votes": {
+        "upvoters": [
+          "ana (anci)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250597": {
+      "poster": "ana (anci)",
+      "content": "@\"BDSMićo\"#p250592 \n\n@\"viliml\"#p250594 Znaci ako sam dobro skuzila, usporedujem dal je jednak C koji dobijem hashiranjem R koji je pohranjen kao clanska varijabla razreda i C dobiven hashiranjem R sa stoga (tako za a i b), naravno tu usporedbu radim na stogu. Ako da, onda mi nije jasno zasto se odmah ne provjeravaju jesu li jednaki R sa stoga i R kao clanska varijabla nego ih se hashira?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250598": {
+      "poster": "jobi (azex)",
+      "content": "kako provjeriti potpis na kraju? sto mi je javni kljuc? kad stavim hash noncea ili nonce i napravim OP_CHECKSIG ne radi mi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250600": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"anci\"#p250597 Tako je\n\n> Ako da, onda mi nije jasno zasto se odmah ne provjeravaju jesu li jednaki R sa stoga i R kao clanska varijabla nego ih se hashira?\n\nProvjeravaš ih jer ne želiš da jedna osoba zna što je druga glasala. Možda ti se čine da su sve ove stvari poznate drugima ali u stvarnosti Alice i Bob samo šalju svoje C-ove jedan drugome, R-ovi se ne vide, ali R-ove \"zna\" sustav.",
+      "votes": {
+        "upvoters": [
+          "ana (anci)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250603": {
+      "poster": "Luka14 (Kekec)",
+      "content": "Sto tocno treba u 2. zadatku?\n\nIspitat jesu li x i y unutar skupa {0,1} i jeli x == y ?",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "vuk172"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250617": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@\"anci\"#p250597 Mislim da je ovo ideja:  \n- Alice i Bob na početku međusobno razmijene samo C-ove (iz njih ne mogu skužiti jel onaj drugi izabrao 0 ili 1). \n- Onda u locking skripti iskoriste te C-ove za provjeru jel neki igrač promijenio odabir. U locking skripti još provjere tko je pobjednik koristeći R-ove i onda zaključaju te novčiće samo za pobjednika. \n- Nakon kaj su napravili tu prvu transakciju, onda tek razmijene R-ove pa ih iskoriste u unlocking skripti. Tu oni već na temelju R-ova znaju ko je pobjednik, ali kad naprave tu drugu transakciju onda tek mogu biti sigurni da netko od njih nije lagao (rekao npr. 1 umjesto 0) i na taj način htio pobjediti, jer će se u locking skripti provjeriti jel hash R-ova koje su naknadno razmijenili isti kao onaj kojeg su na početku izračunali (public commitment).",
+      "votes": {
+        "upvoters": [
+          "Kikyy99",
+          "adidas",
+          "ana (anci)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250623": {
+      "poster": "viliml",
+      "content": "@\"anci\"#p250597 @\"Števo\"#p250617 \n\nSam program je dosta drugačiji od onoga kako bi se to izvršilo u stvarnosti.\n\nZapravo nikoji entitet ne bi smio znati oba noncea (niti uopće oba 0/1 broja) prije nego što se novac prebaci na locking skriptu.\n\nU našem programu kad generiramo locking skriptu mi ćemo izračunati commitmente iz nonceova, ali u stvarnosti bi program trebao znati samo same commitmentove.",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "Kikyy99",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250635": {
+      "poster": "Gocc (***)",
+      "content": "@\"viliml\"#p250623 uglavnom mi se u locking skripti trebamo praviti da ne vidimo nonce, samo ga trebamo iskoristit da izračunamo C, ali ga nigdje ne smijemo samostalno koristiti da je vidljiv u skripti, jesam dobro shvatila?",
+      "votes": {
+        "upvoters": [
+          "viliml"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250648": {
+      "poster": "ana (anci)",
+      "content": "a kako je najpametnije dobiti N iz R? jel postoji neka LENGTH funkcija koja vraca broj bajtova od R, ili da nekako maskam R sa 16 bajtova pa da provjerim dal je jednako 0 ili kako?\n\nEDIT: nvm skuzila sam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250668": {
+      "poster": "vuk172",
+      "content": "Što sve trebamo zipati kod predaje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250677": {
+      "poster": "adidas",
+      "content": "Mogu li se u Scriptu koristiti samo cijeli brojevi (integer)? Ne može se staviti tipa 7.2 na stack?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250678": {
+      "poster": "adidas",
+      "content": "@\"Kekec\"#p250603 Tako sam ja shvato. Provjeriti jesu li X i Y iz skupa {0,1} ( da netko ne uvali druge brojeve). I onda provjeriti jesu isti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250682": {
+      "poster": "ana (anci)",
+      "content": "@\"vuk172\"#p250668 pretpostavljam src i pom.xml kao i obicno",
+      "votes": {
+        "upvoters": [
+          "vuk172"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250718": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"adidas\"#p250677 Ne možeš nativno, možeš vjv ručno kao bazični podatak pa to nekako sam hendlati.",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250927": {
+      "poster": "Kikyy99",
+      "content": "@\"viliml\"#p250623 \n\n@\"Števo\"#p250617 \n\nVasa 2 komentara mi se cine malo konfliktna sto se tice toga sto bi locking skripta trebala znati. Gdje se/tko vrti locking i unlocking skripte? Gdje je novac/blok uopce za kojega se kladi?\n\nNije mi bas jasno sto se dogada, tko pije a tko placa. Nekakve bitcoin skripte, zakljucas otkljucas ali ne razumijem intuitivno i abstraktno sta se zapravo dogada i u kojem vremenskom poretku\n\nOva 4. prezentacija je vlado sruk level shit, ono na pocetku zeljkocoin i brankocoin full lagano i logicno i odjednom cijeli sustav in your face fuck you, evo vam i tweaking Merkel stabala koji omogucuju nekakve grupnjake u transakcijama(????????)\n\n\\rant",
+      "votes": {
+        "upvoters": [
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250949": {
+      "poster": "viliml",
+      "content": "@\"Kikyy99\"#p250927 Locking skripta je \"adresa\" na koju se šalje novac. Unlocking skripta je dokaz da ti imaš pravo potrošiti taj novac.\n\nPrvo Alice i Bob (ili treća stranka) prebace novac na locking skriptu, zatim pobjednik igre prebaci novac van iz nje u svoj novčanik.\n\nLocking skripta treba biti takva da samo pobjedniku igre dopusti da prebaci novac iz nje.\n\nSvatko može pročitati locking skriptu iz blockchaina.\n\nTko je odabrao koji broj mora ostati tajna sve do kraja igre.\n\nZato se u locking skripti ne smiju pojavljivati [imath]N[/imath] niti [imath]R[/imath], samo [imath]C[/imath].\n\nPobjednik dokaže da je pobijedio tako što potpiše transakciju svojim privatnim ključem.\n\nLocking skripta sadrži i Alicin i Bobov javni ključ, i odabere kojim će provjeriti potpis ovisno o tome tko je pobijedio igru.",
+      "votes": {
+        "upvoters": [
+          "Kikyy99"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252964": {
+      "poster": "Jere",
+      "content": "ej ljudi, moze li mi netko gurnit novcice na wallet adresu: mfZ4Sg8WCyeMCGFM9iiJf24BJp1K4uQ3Zp\n\nmoj jmbag ne radi iz nekog razloga (: (https://bujica.zemris.fer.hr/faucet)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252981": {
+      "poster": "keykey",
+      "content": "@\"Jere\"#p252964 ne radi ni meni.. mislim da im se opet nesto skrsilo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Jere"
+        ]
+      }
+    },
+    "253010": {
+      "poster": "Jere",
+      "content": "@\"keykey\"#p252981 bruhh",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

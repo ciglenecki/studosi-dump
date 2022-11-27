@@ -1,0 +1,318 @@
+{
+  "title": "Priručnik za kategorizaciju",
+  "creator": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+  "slug": "prirucnik-za-kategorizaciju",
+  "tags": [
+    "Službeno"
+  ],
+  "posts": {
+    "272452": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Kako je tijekom prošlih međuispita došlo do znatnog konflikta radi kategorizacije koja je nekima nejasna, bilo je obećano da će se sastaviti priručnik kako bi se lakše shvatio sustav kategorizacije, a nadam se i manje griješilo.\n\nTijekom ispita se događa najviše premještaja jer se aktiviraju korisnici koji rjeđe koriste stranicu pa nisu upućeni u sustav rada. Velika većina, doduše, super prati gdje stvari postati i kako - u principu meni najveća zamjerka je što se ljudi iz nekog razloga boje ili im se ne da otvarati nove rasprave kad ispravna ne postoji. Ovaj priručnik je i za njih, ako je razlog za to bio da ne znaju kako bi stvari označili.\n\n## Temeljni princip\n\nTemeljni princip se zasniva na hijerarhiji specifičnosti teme. Dakle, postate nešto. Kategorizacija toga bi trebala uzimati u obzir sadržaj i kontekst posta. Neki post može biti jako specifičan (npr. zadatak X iz labosa Y godine Z), a može i biti jako generalan (jel ima ko pitanja za danas). U tom pogledu, **postoje 3 razine specifičnosti**, sortirano od najspecifičnijeg do najgeneralnijeg:\n\n- `godina - komponenta - predmet`\n    - podrazina: `godina - komponente - predmet`\n    - podrazina: `godina - predmet`</LI>\n- `(komponenta) - predmet`\n- `gradivo`\n\n### Godina - komponenta - predmet\n\nOva skupina se odnosi na postove koji se odnose na nešto u nekoj godini, o specifičnoj komponenti (npr, zadaća, labos, projekt itd.) i za specifičan predmet. Ovakvi postovi trebali bi ići u rasprave forme `[KRATICA] (i.)  komponenta - godina`, gdje je i(i.) neobavezni član koji predstavlja broj komponente; npr. **1.** laboratorijska vježba.\n\n#### Podkomponenta: Godina - komponente - predmet\n\nU nekim slučajevima pitanje može biti vezano za neku godinu i predmet, ali radi se o više komponenta. Kako se to tretira ovisi o kontekstu komponenata.\n\nAko se post odnosi na komponente neodvojive prirode, onda bi oni trebali ići u rasprave forme `[KRATICA] ID1, ID2, ... i IDN komponenta - godina`, primjer za to je `[MAIS] 3. i 4. domaća zadaća - godina` jer su labosi strukturirani da se te zadaće osim odgovaranja i predaju u komadu.\n\nNa NEINR-u se zadaće također odgovaraju u komadu, ali se predaju zasebno; iz tog razloga za svaku zadaću postoji različita tema. Prag za razlikovanje ovo dvoje je jako malen ali trenutno se ovakvi scenariji mogu razlikovati. Tako bi trebalo biti i za slične predmete - ako su teme odvojive posta se u zasebne rasprave, a ako je pitanje usmjereno na obje komponente, onda bi ti postovi trebali ići u `[KRATICA] Izvedba - godina`. Npr. \"Koliko bodova nose 5. i 6. vježba\" se ne može smisleno smjestiti ni u raspravu za 5. ni 6. vježbu.\n\n#### Podkomponenta: Godina - predmet\n\nKad neki post govori o specifičnoj godini na predmetu, tj. kad u to nije uključena komponenta sadržajno, onda bi te stvari trebale ići u `[KRATICA] Izvedba - godina`. Jasan primjer toga su stvari vezana uz predavanja - iako predavanja u sebi sadrže **gradivo** i iako se na njima može pričati o postojećim komponentama kao što su labosi, ispiti itd., te stvari pripadaju Izvedbi. Isto vrijedi za pitanja koja se odnose na organizaciju komponenti: primjerice \"Hoće li biti međuispita\", \"Koliko je asistenata na labosima\" i sl. Postoje teme koje mogu pripadati i Izvedbi i određenoj komponenti, npr. \"Koliko bodova nosi 3. labos\". U tom slučaju bi smisleno bilo prebaciti postu temu za 3. laboratorijsku vježbu, međutim stvari mogu biti sročene na način da opet pripadaju u izvedbu, npr. \"Što su rekli na predavanju koliko bodova nosi 3. labos\". Tu postoji konflikt tema; s jedne strane pita se o predavanjima, a s druge strane pita se o konkretnom labosu. U tom slučaju post će biti ostavljen u raspravi u koju je inicijalno objavljen ako je ona potencijalno ispravna (daje se prednost namjeri autora), a ako je u krivoj temi prebacit će se u najspecifičniji (u ovom slučaju temu za labos).\n\n### (Komponenta) - predmet\n\nU slučajevima kad se post odnosi na neki predmet nevezano uz godinu, a potencijalno i na neku komponentu (ali ne nužno), onda bi takvi postovi trebali ići u `[KRATICA] O predmetu`. Ovo će uglavnom biti dojmovi o predmetu, ali i odgovori o **trenutnoj godini** koja se baziraju na iskustvu **s prošlih godina**. Primjerice, osoba može pitati u Izvedbi \"Kakav je profesor X\". Potom mu osoba odgovori s \"Imao sam profesora X prošle godine, radio je to i to\". Odgovor će završiti u \"O predmetu\". Iako bi semantički nešto moglo pripadati i Izvedbi te, starije godine, tu postoje problemi s otvaranjem nove rasprave samo radi takvog retroaktivnog odgovora. Zato je odlučeno da se to sve stavlja u O predmetu, jer očito nije bilo izneseno dok je trajala izvedba nekog predmeta.\n\n### Gradivo\n\nNakon što su se kategorizirale stvari vezane uz komponente ili održavanje predmeta, ostaje još negdje staviti sadržaj koji je djelomično vezan uz predmet. Takve stvari spadaju u gradivo. Primjerice, ako postoji post o nekom specifičnom sadržaju o kojem fali informacija, npr. \"Kako riješiti ovaj zadatak\", iako bi sadržaj mogao biti vezan uz specifičnu komponentu i godinu, sadržaj će, ukoliko je krivo sortiran na početku, biti premješten u `[KRATICA] - Gradivo`.\n\nAko se naknadno klarificira čemu to pripada moderatoru, on će to premjestiti u odgovarajuću raspravu, ili načiniti novu primjerenu sadržaju. Međutim, na predmetu često postoje komponente koje nema previše smisla kategorizirati - primjerice zadatci za vježbu, ogledni ispiti. Takve stvari bit će u **gradivu** ako ne postoji razlog kategorizirati to u zasebnu temu ili ako je sadržaj toga dio već postojećih tema sadržajno, ali ne i semantički; npr. na Strojnom učenju zadatci s ispita znaju **sadržajno** biti s postojećih ispita, ali semantički pripadaju zadatcima s ispita - to će završiti u gradivu.\n\nOvo je osobito vezano uz vježbu za ispite. Naime, dosta ljudi ima mišljenje da bi vježba za X ispit trebala biti u raspravi za taj ispit. Ovo samo uvodi nepotreban šum, a nema razloga zašto ne bi trebalo biti u gradivu. Stvari su pogotovo očito kad se vježba za rokove - postovi mogu završiti u do 4 različite rasprave (zimski, ljetni, jesenski i dekanski), iako se radi o totalno istom gradivu i potencijalno pitanjima oko već riješenih zadataka.\n\nKonačno, postovi o **materijalima na predmetu** spadaju u **Gradivo**. Iako je u redu postati ispit u temu za ispit, to bi trebalo biti na materijalima, no sama pitanja oko materijala trebaju ići u **Gradivo**, ako već moraju.\n\n## Rješavanje konflikata\n\nPonekad se dogodi da post pripada u više tema. Postoje stvari koje se ne mogu najljepše odvojiti. Primjerice, ljudi znaju u jednom postu navesti stvari koje pripadaju različitim temama. TO se često događa kad se više ljudi odgovara u jednom postu. U tom slučaju prioritet ima ono što je ranije navedeno. Npr. \"Odgovor na 3. pitanje međuispita je C. Jel zna netko što ide u završni?\" ići će u temu za taj međuispit (ili gradivo) jer je ta tematika došla prije ove druge, konfliktne.\n\nTakođer, ako postoje teme za neki post različite specifičnosti, gleda se da post završi u što specifičnijoj raspravi; npr. pitanje o bodovima na međuispitu, iako je vezano uz izvedbu te godine, ići će u temu za međuispit, jer je specifičnija tema od Izvedbe.\n\n## Specifični slučajevi\n\nKako neki ljudi ne mogu generalizirati nad informacijama, ovaj odjeljak koristit će za izričita rješenja kategorizacije u nadi da se kategorizacija može naštrebati:\n\n>! []()\n\n> - odnos s administracijom predmeta (npr. @\"Emma63194\"#p274026): Izvedba\n\n>     - radi se o podkategoriji Godina - predmet</LI>\n\n----\n\nAko postoji kakva nejasnoća, prijedlog, ili ako vidite neku grešku slobodno prokomentirajte.",
+      "votes": {
+        "upvoters": [
+          "General_Kenobi (Aborteur)"
+        ],
+        "downvoters": [
+          "Emma63194",
+          "FSMonster ([KAJ] FSM)",
+          "Grdobina2000 (Grdobina)",
+          "MarokMarsci (Collapse Enjoyer)",
+          "Pranjo (Pranjo_Suđman)",
+          "So_Done",
+          "[deleted]",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272535": {
+      "poster": "Dootz",
+      "content": "Umjesto premještanja razmisli o dupliciranju postova, kao što crossposting postoji na redditu. Nek završi na oba mjesta ako ima konflikt, ako se tiče i ispita i gradiva, nek bude na oba i riješen problem. Pobrat ćeš i manje hate-a kad napraviš neku glupost.",
+      "votes": {
+        "upvoters": [
+          "BigBoi",
+          "Cubi",
+          "DukeFiction",
+          "ErnestHemingway (Alfetta)",
+          "FSMonster ([KAJ] FSM)",
+          "I3loodHound",
+          "Jale (čakijale)",
+          "Mioch",
+          "Omnitron ((-_-) )",
+          "cajaznun",
+          "iNavy (mornar Ica)",
+          "jarza",
+          "kauc_u_predvorju (OVOG KORISNIKA OPSJEDA DŽIN)",
+          "macaklin",
+          "matt (Matt)",
+          "member"
+        ],
+        "downvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272555": {
+      "poster": "kauc_u_predvorju (OVOG KORISNIKA OPSJEDA DŽIN)",
+      "content": "puno teksta da kazes da si autistican, umjesto da stavis samo kako je i na skoro svim forumima ili kako ljudi zele umjesto da izvodis nekakvu mentalnj gimnastiku oko konteksta jedne recenice u postu",
+      "votes": {
+        "upvoters": [
+          "BillIK",
+          "Bog (Charlie Brown)",
+          "BrkMateaBeusana (Umarell)",
+          "DukeFiction",
+          "Emma63194",
+          "FERonja",
+          "FSMonster ([KAJ] FSM)",
+          "Ferkonja (Ferkonja         ‮ajnokreF )",
+          "Grdobina2000 (Grdobina)",
+          "I3loodHound",
+          "Jale (čakijale)",
+          "Log3 (Jahač Kali Yuge)",
+          "MarokMarsci (Collapse Enjoyer)",
+          "Mioch",
+          "MordorGuy",
+          "Pranjo (Pranjo_Suđman)",
+          "SinanSuckich (Yelena)",
+          "Stark",
+          "StefBaustelic",
+          "SuperSjajan3",
+          "Svudec",
+          "a_ko_si_ti",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)",
+          "cajaznun",
+          "hejhoj (vdvd)",
+          "jarza",
+          "member",
+          "mesojed (sofronijevicevPrst)",
+          "miss_anthropocene (neunist.iva)",
+          "mrleongalaxyum (Neovlašteni serviser)",
+          "pitroid",
+          "rija",
+          "spampers (majmunska boginja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272848": {
+      "poster": "[deleted]",
+      "content": "Bold of u to assume da netko cita tvoje baljezgarije",
+      "votes": {
+        "upvoters": [
+          "FERonja",
+          "FSMonster ([KAJ] FSM)",
+          "Hrvoje (Hrvoje45)",
+          "Jale (čakijale)",
+          "Log3 (Jahač Kali Yuge)",
+          "MarokMarsci (Collapse Enjoyer)",
+          "Pranjo (Pranjo_Suđman)",
+          "STAGGER_LEE",
+          "StefBaustelic",
+          "__builtin_popcount (std::popcount)",
+          "a_ko_si_ti",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)",
+          "kix7 (Fish99)",
+          "mrleongalaxyum (Neovlašteni serviser)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon",
+          "FSMonster ([KAJ] FSM)",
+          "Filemon",
+          "Hrvoje (Hrvoje45)",
+          "InCogNiTo124",
+          "Jale (čakijale)",
+          "LanaRelej (Lana Relej)",
+          "MarokMarsci (Collapse Enjoyer)",
+          "McKovalski",
+          "MsBrightside",
+          "Rene",
+          "StefBaustelic",
+          "Svudec",
+          "Widlar",
+          "__builtin_popcount (std::popcount)",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)",
+          "jarza",
+          "kix7 (Fish99)",
+          "member",
+          "mesojed (sofronijevicevPrst)",
+          "tata (NISAM ASISTENT)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272856": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"msus\"#p272848 Neki su tražili ovo, nekima će to bit jasnije, neki će se i dalje inatit, ja nisam hormon rasta da promijenim te ljude :)",
+      "votes": {
+        "upvoters": [
+          "General_Kenobi (Aborteur)"
+        ],
+        "downvoters": [
+          "FERonja",
+          "HelloWorld137",
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273014": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "tl;dr?",
+      "votes": {
+        "upvoters": [
+          "ink",
+          "mrleongalaxyum (Neovlašteni serviser)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273018": {
+      "poster": "Amon",
+      "content": "@\"std::popcount\"#p273014 Mislim da ti je ovo tl;dr, a pravi post je roman od 200 stranica",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "Emma63194",
+          "Ferkonja (Ferkonja         ‮ajnokreF )",
+          "Hrvoje (Hrvoje45)",
+          "InCogNiTo124",
+          "Jale (čakijale)",
+          "Log3 (Jahač Kali Yuge)",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "ink",
+          "rija",
+          "spampers (majmunska boginja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "BrkMateaBeusana (Umarell)",
+          "Emma63194",
+          "Ferkonja (Ferkonja         ‮ajnokreF )",
+          "HeHe (Direktor života)",
+          "InCogNiTo124",
+          "Jale (čakijale)",
+          "Log3 (Jahač Kali Yuge)",
+          "McKovalski",
+          "__builtin_popcount (std::popcount)",
+          "a_ko_si_ti",
+          "ink",
+          "jarza",
+          "member",
+          "rija",
+          "spampers (majmunska boginja)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273137": {
+      "poster": "ink",
+      "content": "Daj premjesti ovo pod \"Sudnica\"",
+      "votes": {
+        "upvoters": [
+          "StefBaustelic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "brbrbr"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273251": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "Jel se mogu, barem na materijalima, umjesto kratica predmeta koristit cijeli nazivi?",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273257": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Heklijo\"#p273251 Ne, jer bi u nekim slučajevima došlo do problema s limitacijom duljine pathova. Ionako je dosta lagano premapirati naziv predmeta u kraticu, zapravo je to bila i cijela poanta sistematizacije kratica.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273258": {
+      "poster": "Filemon",
+      "content": "@\"Mićo poslednji klovn\"#p273257 U tom slučaju, vrijeme je za povratak .md-a na https://github.com/studosi/fer/ di su abecedno po nazivima predmeta linkovi na svaki repo, ako mi daš staru verziju, mogu ja popravit što treba i dodat nove predmete",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Svudec",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273266": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Filemon\"#p273258 Ma riješit ću ja minimalniji sustav nakon srijede, odustalo se na kraju od većeg povlačenja statsa s FERovih stranica pa će se vjv napisati manja skripta koja samo gleda git materijale",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

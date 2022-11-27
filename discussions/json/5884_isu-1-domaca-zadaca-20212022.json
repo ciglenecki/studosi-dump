@@ -1,0 +1,421 @@
+{
+  "title": "[ISU] 1. domaća zadaća - 2021/2022",
+  "creator": "lincthesinc17",
+  "slug": "isu-1-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Inteligentni sustavi upravljanja",
+    "Zadaće"
+  ],
+  "posts": {
+    "250540": {
+      "poster": "lincthesinc17",
+      "content": "jel počeo ko ovo radit i jel zna kako to funkcionira?",
+      "votes": {
+        "upvoters": [
+          "Ak08 (obama)",
+          "Kuhar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250720": {
+      "poster": "Kuhar",
+      "content": "Jel neko uopce ima predodžbu kako odrediti intervale za e i delta(e) za regulator?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250969": {
+      "poster": "Reznox",
+      "content": "Ima netko da je uspjesno risia?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251193": {
+      "poster": "Vuk99",
+      "content": "Ja sam se jučer cijeli dan mucio s time i nekako mislim da se parametri PIDa ne mogu dobit izračunom da pašu nadvisenju od tri posto i tm 70. Mislim da se to mora tunat bar smo mi svoje pID regulatore radili na projektu tako. A do fuzzya od muke nisam ni doso.",
+      "votes": {
+        "upvoters": [
+          "Kuhar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251194": {
+      "poster": "lincthesinc17",
+      "content": "jel se prijenosna funkcija regulatora dobije izracunavanjem wn i onog koeficijenta? pa u brojniku bude wn^2 a dole s^2 itd",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251205": {
+      "poster": "Vuk99",
+      "content": "@\"lincthesinc17\"#p251194 \n\npa da to bi tako trebalo biti bar ja mislim, samo ja ne kuzim kaj njima znaci n(s)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251206": {
+      "poster": "Reznox",
+      "content": "@\"Vuk99\"#p251205 Vjerojatno samo označava da se u brojniku nalazi jednadžba ovisna o s. S obzirom da je nama zapravo bitan samo nazivnik",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251208": {
+      "poster": "lincthesinc17",
+      "content": "kako diskretizirat tu prijenosnu funkciju regulatora tj kak iskoristi Td=0.1",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251209": {
+      "poster": "Reznox",
+      "content": "@\"lincthesinc17\"#p251208 https://www.mathworks.com/help/control/ref/lti.c2d.html;jsessionid=ecdfcbcce15026bde1a5cf6d2cab",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251211": {
+      "poster": "lincthesinc17",
+      "content": "@\"Reznox\"#p251209  a taj H(s) nam je Gr*Gp/(1+Gr*Gp) ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251235": {
+      "poster": "Reznox",
+      "content": "@\"lincthesinc17\"#p251211 Si",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251236": {
+      "poster": "lincthesinc17",
+      "content": "@\"Reznox\"#p251235    mi nemamo zadan ts (samples), sta si koristio tu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251239": {
+      "poster": "Visnja",
+      "content": "Zna li netko od kud krećemo s projektiranjem fuzzy regulatora? Ja sam deginirala fukncije izglednosti za e i de ali nisam sigurna od kud do kud idu. I nakon kaj te inpute definiram moram pravila definirati? I na koji nacin ta pravila definiram?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251241": {
+      "poster": "lincthesinc17",
+      "content": "@\"Visnja\"#p251239 jel mozes poslat kako ti izgledaju parametri kont i disk regulatora u a) i b) zadatku. nisam sigruan jel samo tu prijenosnu funkc regulatora diskretiziramo ili cijelog zatvorenog kruga (reg. s procesom)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251244": {
+      "poster": "Visnja",
+      "content": "Ja sam samo izracnala te parametre Kp i Ki i kada se ubaci u simulaciju dobijem dobar odziv. Evo ovako sam to rijesila:\n\n![](assets/2021-11-08/00010.jpg)\n\nNadam se da se vidi 😅",
+      "votes": {
+        "upvoters": [
+          "Reznox",
+          "Vuk99"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251247": {
+      "poster": "lincthesinc17",
+      "content": "@\"Visnja\"#p251244   hvala, znaci nisi uopce koristila one formule nadvisenja i tm, ja sma preko tog kao dobio regulator prijenosnu, al nije mi ko tvoja, u brojniku mi nema \"s\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251248": {
+      "poster": "Visnja",
+      "content": "@\"lincthesinc17\"#p251247 \n\nKoristila sam kasnije omega_n i zetu jer sam morala usporedivati ove koeficijente u brojniku. Za prijenosnu funkciju regulatora posto imas samo PI regulator uzmes da je njegocva prijenosna funkcija Kp + Kp*1/(Ti*s) i onda s tim dalje racunas i na kraju samo usporedis koeficijente iz nazivnika zatvorenog kruga sa koeficijentima iz nazivnika Gz (Gz su oni dali).",
+      "votes": {
+        "upvoters": [
+          "Reznox",
+          "lincthesinc17"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251250": {
+      "poster": "Reznox",
+      "content": "@\"lincthesinc17\"#p251236 Nisam imao nigdje ts u formuli hm",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251251": {
+      "poster": "Kuhar",
+      "content": "@\"Visnja\"#p251239 \n\nJa sam sa scopom gledao od kud do kud mi se krecu e, deltae i izlaz kod diskretnog regulatora i po tome postavio granice. A pravila sam probao postavit kao i ovdje samo sto su oni tu koristili 3 funkcije pripadnosti : \n\n![](assets/2021-11-08/00012.jpg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251254": {
+      "poster": "lincthesinc17",
+      "content": "@\"Visnja\"#p251244  hvala hvala, i sad ovaj dio dalje ne znas?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251257": {
+      "poster": "Reznox",
+      "content": "Ima neko savjete za R-ovca koji nije bio u kontaktu sa Matlabom do sada kako dalje nakon što sam otkrio koeficijente i prijenosne funkcije 😅",
+      "votes": {
+        "upvoters": [
+          "funky_funghi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251259": {
+      "poster": "lincthesinc17",
+      "content": "@\"Reznox\"#p251250 iz ovog sto si mi poslo, u matlab kodu koriste Ts i Td za prijelaz u diskretno. hd=hc2d(h,Ts) a mi ga nemamo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251270": {
+      "poster": "Visnja",
+      "content": "@\"Kuhar\"#p251251\n\nHvala ti. Budem tako probala. Možeš li poslati link od te stranice?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251272": {
+      "poster": "Visnja",
+      "content": "@\"Reznox\"#p251257\n\nOtvori ono što su nam dali za taj spremnik (closed_loop se zove) i izbacit će ti simulink. Tamo otvori Discrete PID Controller i upiši konstante koje si dobio. Kada to simuliraš (staviš stop time na 1000) otvoriš scope (ona zadnja komponenta) i tamo bi ti trebao biti odziv. I provjeri samo dal dobar odziv dobijes, nadvisenje i tm.",
+      "votes": {
+        "upvoters": [
+          "funky_funghi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251280": {
+      "poster": "lincthesinc17",
+      "content": "@\"Visnja\"#p251272 jel trebamo prikazivati uopce step(G) odziv",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251284": {
+      "poster": "Visnja",
+      "content": "@\"lincthesinc17\"#p251280 \n\nNisam baš sigurna koje je tvoje pitanje jer ne razumijem što je G. Je li to zatvoreni krug? I na kraju trebaš samo prikazati taj odziv ništa drugo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251291": {
+      "poster": "Reznox",
+      "content": "@\"Visnja\"#p251272 Moram li ista radit sa ovim FuzzyControllerom dolje vec? Vidim da mi on baca error za name variable",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251295": {
+      "poster": "Reznox",
+      "content": "@\"Visnja\"#p251272 Zanemari ovo iznad my bad",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251299": {
+      "poster": "Visnja",
+      "content": "@\"Reznox\"#p251291\n\nmozes ga comment out-at. desni klik i comment out pa ti nece javit error nego ce ga samo zanemarit",
+      "votes": {
+        "upvoters": [
+          "Reznox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251345": {
+      "poster": "Kuhar",
+      "content": "@\"Visnja\"#p251270 \n\nhttps://www.mathworks.com/help/fuzzy/implement-fuzzy-pid-controller-in-simulink-using-lookup-table.html",
+      "votes": {
+        "upvoters": [
+          "Visnja"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

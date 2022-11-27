@@ -1,0 +1,146 @@
+{
+  "title": "[SBP] 9. laboratorijska vježba - 2019/2020",
+  "creator": "EthanCarter",
+  "slug": "sbp-9-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Sustavi baza podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "26387": {
+      "poster": "EthanCarter",
+      "content": "> Povijest treba biti takva da dovodi do potpunog zastoja ako SUBP ne koristi U-ključeve, a ne dovodi do potpunog zastoja ako SUBP koristi U-ključeve.\n> \nZar ne treba ovo biti obrnuto, ne kuzim kako da napravim potpuni zastoj bez ključeva.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26395": {
+      "poster": "EthanCarter",
+      "content": "Pomijesao sam malo lockove, moze se https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide?view=sql-server-ver15#update",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26529": {
+      "poster": "Paula13 (p13)",
+      "content": "U 5. zadataku za razinu izolacije xlevel = READ UNCOMMITTED mi SQL Server za svaku naredbu iz transakcije T2 postavi ključ na cijelu relaciju test, umjesto na pojedine n-torke, jel to okej ponašanje? Nije li ona naredba `ALTER TABLE test SET (LOCK_ESCALATION=DISABLE);` iz skripte za kreiranje baze trebala spriječiti da se to događa ili sam nešto krivo shvatila?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26570": {
+      "poster": "TentationeM",
+      "content": "Pa u skladu s MGL protokolom uvijek će stavljat ključ na cijelu relaciju, sad koji ovisi od operacije i od toga jel postoji indeks ili ne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26598": {
+      "poster": "Paula13 (p13)",
+      "content": "@TentationeM#26570 da, kuzim to, ali recimo ako imam select naredbu za n-torku sa šifrom 5, on meni postavi S ključ nad cijelom tablic test umjesto samo nad tom n-torkom, to mi je malo čudno? Zar ne bi trebao postaviti IS ključ na tablicu i S ključ na tu n-torku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26646": {
+      "poster": "TentationeM",
+      "content": "Ako postoji indeks za atribut sifra onda ne bi smio, probaj rekreirat cijelu bazu.",
+      "votes": {
+        "upvoters": [
+          "Paula13 (p13)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26653": {
+      "poster": "tranquility",
+      "content": "@Paula13#26598 Meni i je takvo stanje. Recimo nakon 2. naredbe iz T2 (select na element sa sifrom 8) za READ UNCOMMITTED dobijem ovo:\n\n![](assets/2020-05-18/00004.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Paula13 (p13)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27152": {
+      "poster": "jitser",
+      "content": "@Paula13#26598 Meni se dešava isto to ali u b) dijelu zadatka kada obrišemo indeks.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27260": {
+      "poster": "HerrOttoFlick1",
+      "content": "Može li netko objasniti kako da prouzročim deadlock u četvrtom zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27627": {
+      "poster": "gatsby",
+      "content": "Koje prezentacije bi bilo dobro proc prije izrade ovog labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

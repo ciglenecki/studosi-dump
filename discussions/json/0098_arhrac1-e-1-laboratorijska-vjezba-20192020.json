@@ -1,0 +1,435 @@
+{
+  "title": "[ARHRAC1-E] 1. laboratorijska vježba - 2019/2020",
+  "creator": "Visnja",
+  "slug": "arhrac1-e-1-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Arhitektura računala 1E",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "2621": {
+      "poster": "Visnja",
+      "content": "Pozz! Ima li netko da je riješio 1. labos iz ARH1E? Ako je može li mi provjeriti dali je ovakav oblik rješenja dobar ili moram to negdje drugdje pospremiti ili što već...?\n\n![](assets/2020-03-24/00014.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2639": {
+      "poster": "007",
+      "content": "Zna netko kako se došlo do ove sume, kad zbrojim sve neparne podatke ispada nešto drugo?\n\n![](assets/2020-03-24/00020.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2684": {
+      "poster": "Visnja",
+      "content": "1. - citas redom iz memorije u dva registra viši i niži dio 32-bitnog broja (to napravis u petlji sa pokazivačem na adresu bloka + u toj petlji provjeravas je li broj jednak 0x80000000 i je li paran ) (u ta dva registra su u tom trenu pospremljeni 16 - bitni podaci prošireni na 32 - bitne)\n2. - ja sam napravila dodatna dva registra u koja sam zbrajala vise i niže djelove (nize djelove zbrajas s naredbom adds, a vise s naredbom adc)\n3. -  na kraju samo pospremiš u REZL i REZH ta dva registra\n\n(nisam sigurna je li dobro rješenje jer nezz kako moraju biti pospremljeni)",
+      "votes": {
+        "upvoters": [
+          "007",
+          "netflix (seximan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2686": {
+      "poster": "Semofcanec",
+      "content": "@007#2639 \n\nprovjeri jos jenput i ignoriraj ove tocke kod brojeva.Dobro se dobije kad se svi neparni zbroje",
+      "votes": {
+        "upvoters": [
+          "007"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2698": {
+      "poster": "007",
+      "content": "Sad mi dobro ispada, ja sam preskakao svaki drugi broj, a treba provjeravati parnost broja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Visnja"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2891": {
+      "poster": "netflix (seximan)",
+      "content": "@Visnja#2684 jesi koristila LDRH za podjelu na visi i nizi dio?",
+      "votes": {
+        "upvoters": [
+          "Visnja"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2899": {
+      "poster": "Visnja",
+      "content": "@netflix#2891 daa, a trebala sam samo LDR, to mi je krivo, hvala punoo!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2908": {
+      "poster": "Semofcanec",
+      "content": "kak nakraju treba izgledati memview?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2909": {
+      "poster": "netflix (seximan)",
+      "content": "moze neki hint kako bih trebao nakon ucitavanja s LDR podijeliti 32bitni podatak na 2 16 bitna pa njih zbrajat sa ADDS i ADC?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2910": {
+      "poster": "Visnja",
+      "content": "@netflix#2909 Ipak ga ne trebaš dijelit na dva 16 bitna. Nego zbrajas 32 bitne podatke ko i inače samo napravis još jedan registar u koji zbrajas prijenosne (carry) oprostite ljudi moja greška krivo sam shvatila zadatak",
+      "votes": {
+        "upvoters": [
+          "netflix (seximan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2911": {
+      "poster": "netflix (seximan)",
+      "content": "@Visnja#2910 i ja sam isto mislio pa vec neko vrijeme pa sam trazio nacin za to a da ne bude krivo,hvala na info",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2915": {
+      "poster": "Visnja",
+      "content": "@Semofcanec#2908 ![](assets/2020-03-25/00008.png)\n\nOVAKO BI TREBAO IZGLEDATI",
+      "votes": {
+        "upvoters": [
+          "Semofcanec"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2939": {
+      "poster": "ante38",
+      "content": "Jel mozda samo neko zna kako ja uspijen dobiti da mi donji dio rezultata bude tocan(u REZL bude upisano 3F4BCEA0), a u gornji dio mi se upise 4, a ne 1.. nez kako to uspijen dobiti, inace pokusavan san na manjin brojevima sve radi, zbraja samo neparne zaustavlja se na terminirajuci znak samo ne radi ovaj gornji dio podatka kad pokusan s njihovin brojevima\n\n![](assets/2020-03-25/00018.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2945": {
+      "poster": "Semofcanec",
+      "content": "@ante38#2939 \n\nzato jer povecavas R1 cijelo vrijeme za taj carry (svaki put dok zbrojis dva broja).\n\nbitan ti je samo trenutačni carry,netrebas ih zbrajati sa ostalima",
+      "votes": {
+        "upvoters": [
+          "ante38"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2969": {
+      "poster": "Visnja",
+      "content": "@ante38#2939\n\nJa sam provjeravala negativne brojeve, jer kada bi npr broj -5 prosirili sa 32 bita (0xFFFFFFFB) na 64 bita (0xFFFFFFFFFFFFFFFB) morali bi vise bitove prosiriti jedinicama, ali posto su nama registri postavljeni na nulu on ce izgledati ovako 0x00000000FFFFFFFB sto vise nije broj -5.\n \n ![](assets/2020-03-25/00027.png)",
+      "votes": {
+        "upvoters": [
+          "ante38"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2982": {
+      "poster": "ante38",
+      "content": "@Visnja#2969 da u pravu si, hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3016": {
+      "poster": "Upforpslone",
+      "content": "@Visnja#2969 Sta si onda napravila s negativnim brojevima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3043": {
+      "poster": "Visnja",
+      "content": "@Upforpslone#3016 \n\nRadila sam s 4 registra, npr:\n\nR0 i R1 su registri konacno rjesenje\n\nR2 i R3 su reistri za učitavanje brojeva koji su ti potrebni u petlji.\n\n1.ucitam broj iz bloka u R3\n\n2.ako je broj negativan R2 postavljam sve u jedinice (0xFFFFFFFF, to možete s nekim aritmetičkim pomakom), a ako je broj pozitivan R2 postavljam u nula\n\n3.zbrajam R3 u R1 (ADDS, OSVJEŽAVANJE ZASTAVICA)\n4. zbrajam R2 u R0 (ADC, JER JE MOŽDA DOŠLO DO PRIJENOSA)\n\nR1 su nizi, a R0 visi bitovi rezultata u ovom slucaju",
+      "votes": {
+        "upvoters": [
+          "BMF",
+          "BigBoi",
+          "Upforpslone",
+          "ante38",
+          "netflix (seximan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3379": {
+      "poster": "netflix (seximan)",
+      "content": "Moze mi netko objasnit kako stavljam bajtove na svaku od 4 lokacija u REZL,ja sam jedino uspio to s 4 rotacije konacnog zbroja po 2 bajta i onda upisom na adresu oblika 0x72375827 koju sam izvukao iz memviewa ali sumnjam da je to dobar nacin",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3455": {
+      "poster": "Trava",
+      "content": "Kako se provjerava parnost broja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3467": {
+      "poster": "Visnja",
+      "content": "@netflix#3379 ne moras nista posebno nego samo rezerviras u memoriji 4 bajta s naredbom DS, ili sa naredbom DW upises na tom mjestu 0, i onda kad zelis u njih nesto napisati samo naredbom STR R0, REZL pospremis",
+      "votes": {
+        "upvoters": [
+          "netflix (seximan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3471": {
+      "poster": "Visnja",
+      "content": "@Trava#3455 broj je paran ako je na najnizem bitu NULA,\n\nmozes s AND pobrisati sve bitove osim zadnjeg iz podatka (AND R1, R2, #1) i onda taj broj usporedivati s nulom (CMP R1, #0), ako je to tocno mozes uvjetnom naredbom se vratiti na petlju BEQ LOOP",
+      "votes": {
+        "upvoters": [
+          "Trava"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3511": {
+      "poster": "Trava",
+      "content": "Kako mogu produžit sa jedinicama broj",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3588": {
+      "poster": "ecco",
+      "content": "@Visnja#3043 jesi sigurna da to treba tak, u prez pise da je zbrajanje u dvostrukoj preciznosti isto za NBC i 2'k, pa bi trebalo ispast dobro bez provjeravanja negativnih. Mi ne prosirujemo -5 na 64 bita nego zbrajamo u 32, pa carry spremamo u novih 32. Ja nisam provjeravao negativne br niti prosirivao jedinicama i ispalo mi je dobro rjesenje.",
+      "votes": {
+        "upvoters": [
+          "Semofcanec",
+          "Visnja",
+          "netflix (seximan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3647": {
+      "poster": "Semofcanec",
+      "content": "@Trava#3511 \n\nNaredbama LDRSH i LDRSB (kao signed) dok loadas.Automatski predznacno prosiruju podatak.\n\nNegativne prosiruju sa jedinicama,a pozitivne sa nulama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3653": {
+      "poster": "Visnja",
+      "content": "@ecco#3588 da to sam i ja razmisljala ali sam pokusavala bez toga i nije mi radilo pa sam nasla ovo rjesenje. ako ti radi odlicno. mozda smo koristili neko drugacije pospremanje u registre ili nesto drugo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3680": {
+      "poster": "Trava",
+      "content": "@ecco#3588 al ja mislim da ti to vrijedi sam za pozitivne brojeve",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3708": {
+      "poster": "ecco",
+      "content": "@Visnja#3653 rjesenje mi je slicno kao anti38 gore samo sam stavio za prijenos da zbraja #0 i jedan registar koji je inicijaliziran na 0 i ne mijenjam ga i to spremam u registar za 32 visa bita. (to rijesi problem koji je on imao da mu gornji dio ispadne 4)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3711": {
+      "poster": "ecco",
+      "content": "@Semofcanec#3647 to je samo za citanje 16, odnosno 8 bitova, al u zadatku moramo citat 32",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3759": {
+      "poster": "Semofcanec",
+      "content": "@ecco#3711 \n\npa onda ga ni nema smisla prosirivati kad je 32-bitni podatak ,a ARM radi\n\nsa max 32-bitnim podacima?Zato valjda i nema naredbe za 32bita i zkj radimo\n\novo zbrajanje u dvostrukoj preciznosti.\n\nCak i radi za ovaj testni primjer ako npr rascjepas\n\npodatak na 2 16 bitna od kojih nizi s LDRSH i onda zbrajas nizi s ADDS,a\n\nvisi s ADC.cudno",
+      "votes": {
+        "upvoters": [
+          "Visnja"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

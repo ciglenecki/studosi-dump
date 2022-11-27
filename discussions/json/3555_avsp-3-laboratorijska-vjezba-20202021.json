@@ -1,0 +1,1097 @@
+{
+  "title": "[AVSP] 3. laboratorijska vježba - 2020/2021",
+  "creator": "tonkec",
+  "slug": "avsp-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Analiza velikih skupova podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "164596": {
+      "poster": "tonkec",
+      "content": "Može netko napisati kakve sličnosti dobije za zadnji upit iz uputa za lab. vježbu. Radi nekog razloga su mi sve negativne.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164634": {
+      "poster": "harry_pointer",
+      "content": "@tonkec#164596 Po redu: 0.3077, -0.3333, -0.6667, 0.3333, 1",
+      "votes": {
+        "upvoters": [
+          "tonkec"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164661": {
+      "poster": "tonkec",
+      "content": "@harry_pointer#164634 Na koji način dobiješ tablicu za user-user? Kao i za item-item pa transponiraš i onda koristiš normalno kao za item-item ili nekako drukčije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164818": {
+      "poster": "Amon",
+      "content": "@harry_pointer#164634 Čisto da se zna kada budete radili labos, ako je sličnost 0 ili manje onda se ta vrijednost ne gleda\n\nČak i ako vam je kardinalitet recimo 3, a vi imate samo 2 pozitivne sličnosti, opet ćete uzeti samo te 2\n\nPS ovu jedinicu probajte izbjegavati da stavite u listu sličnih jer ćete onda trebati provjeravati na kraju jel to vaš primjer, najbolje je preskočiti taj index retka odnosno stupca altogether pa ćete imati manje posla",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Klokan",
+          "Vrba",
+          "in1",
+          "neZnamNista",
+          "tito",
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164970": {
+      "poster": "Harweyy",
+      "content": "Isto jako bitno, ako vam je tipa kardinalnost 10 i ujedno nekolicina tih 10 najblizih u slicnosti za npr item-item algoritam vam u tom stupcu koji promatrate vam nema vrijednost vec je neocjenjen odnosno 'X', taj cete preskociti i uzeti sljedeci u kardinalnost. Isto big tip za ovaj labos je napraviti item-item prvo ( tak sam ja ) , te onda samo ulaznu matricu transponirate i zamjenite iz I_J_K_T ulaznog upita I te J i gledate I kao J a J kao I, te s istom funkcijom/metodom kojom rijesavate item-item mozete i izracunat user-user",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "Emma63194",
+          "ImJustAKid (lumity)",
+          "Njet",
+          "PrisonMike (Števo)",
+          "Simpy",
+          "Vrba",
+          "a_ko_si_ti",
+          "in1",
+          "neZnamNista",
+          "tito",
+          "toni98",
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166823": {
+      "poster": "brbrbr",
+      "content": "@Harweyy#164970 Kako je onda moguce dobiti 2.560 za 3. upit u primjeru koji je dan u uputama? \n\nPostoji samo jedan user za koji je slicnost veca od 0, a bas taj user nema ocjenu za trazeni item, tj. ima X.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166856": {
+      "poster": "marvin",
+      "content": "Zna li netko koristi li se ista formula za izracun ovog finalnog rejtinga koji se trazi i u matrici iz pripreme (ova mala 5x5) i u testnom primjeru s vecom matricom? kada pokrenem dobivam dobro rjesenje za matricu iz pripreme, a krivo za testni primjer pa mi nije bas jasno sto se moglo dogoditi",
+      "votes": {
+        "upvoters": [
+          "Klokan",
+          "joc"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166878": {
+      "poster": "Murin",
+      "content": "Jeste li implementirali svoj pearson ili ste koristili neki lib?\n\nJa sam preko numpy-a dobio ove vrijednosti slicnosti za querije iz primjera\n\n```\n[(1.0, 0), (0.31782086308186414, 1), (-0.12989718332941094, 2), (0.16854996561581057, 3), (-0.5010319928420137, 4)]\n\n[(0.16854996561581057, 0), (0.7071067811865476, 1), (-0.9633432944855655, 2), (1.0, 3), (-0.27524094128159016, 4)]\n\n[(-0.38238744638284555, 0), (0.31142054945152486, 1), (0.27743547601154706, 2), (-0.9342616483545746, 3), (1.0, 4)]\n```\n\nPrvi broj je korelacija, drugi broj indeks retka",
+      "votes": {
+        "upvoters": [
+          "brbrbr"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166885": {
+      "poster": "marvin",
+      "content": "@marvin#166856  sada radi,  rjesenje je zapravo ovo s kardinalnoscu sto je prethodno spomenuto u komentaru od @Harweyy !",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166894": {
+      "poster": "brbrbr",
+      "content": "Jel itko kuzi koja je logika formule na slajdu 36? Ne kuzim kak mozemo s desne strane racunat s rxi ako to upravo trazimo (li se misli na rxj?)\n\n![](assets/2021-04-10/00032.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166899": {
+      "poster": "Harweyy",
+      "content": "@brbrbr#166894 zanemari to, otvori zbirku zadatak i odi na 20. zadatak, te pogledaj taj primjer tamo i sve ti je objasnjeno. ali ugl prilikom ucitavanja racunaj srednju vrijednost retka, onda napravi nad svakim retkom te oduzmi srednju vrijednost tamo gdje postoje vrijednosti. Nakon toga napravi 1- distance.cosine( redak koji te zanima, svi ostali), te si to spremi u neku pomocnu listu ili nesto. a ove kardinalnosti koje sam prije spomenuo imaj u nekoj drugoj listi ali takoder imaj i dodatnu listu za odbacivanje kardinalnosti za one retke gdje ne postoji vrijednost u tom stupcu koji promatras vec je 'X'. I to tako funkcionira za item-item, dok za user-user samo transponiraj ulaznu matricu i gledaj I kao J odnosno J kao I, easy zadatak 50 linija koda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166901": {
+      "poster": "Harweyy",
+      "content": "@Murin#166878 Ja sam u pythonu koristio 1 - distance.cosine sto je zapravo cosine.similarity a prethodno sam svakome retku oduzeo njegov mean, te to vraca tuple ( similarity koji nas zanima, neki drugi broj ) uzimaj samo ovaj prvi broj, pokusao sam pearsona s libom  implementirati ali mi nije uspjelo jer se nisu poklapala rijesenja zasto ne znam, tako da koristi njihov postupak",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "brbrbr"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166903": {
+      "poster": "Harweyy",
+      "content": "@brbrbr#166894 to ne koristimo u labosu",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166905": {
+      "poster": "brbrbr",
+      "content": "@Harweyy#166903 sto onda koristimo? nigdje nije napisano o kojoj formuli se radi edit: sad vidim gore",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166907": {
+      "poster": "brbrbr",
+      "content": "@Harweyy#166901 Ali kako je onda moguce da se dobije u primjeru koji je u uputama npr 2.56 za zadnji primjer? Jedini primjer koji ima slicnost vecu od 0 niti nema ocjenu koja se trazi i to onda znaci da je rezultat 0.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166911": {
+      "poster": "Harweyy",
+      "content": "@brbrbr#166907 zadnji primjer u uputama ti je user-user upit zbog vrijednosti varijable T, tako da tu zapravo radis suprotan postupak nego u prva da. Promatras transponiranu matricu nad kojom izvodis item-item postupak ili naravno mozes samo raditi postupak po redovima umjesto po stupcima ali onda trebas dvije varijante koda",
+      "votes": {
+        "upvoters": [
+          "brbrbr"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166914": {
+      "poster": "brbrbr",
+      "content": "@Harweyy#166911 dakle oni su nama ustvari zadali item-user matricu, a ne user-item?",
+      "votes": {
+        "upvoters": [
+          "Klokan",
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166915": {
+      "poster": "Murin",
+      "content": "@Harweyy#166901 \n\nprobao sam na jednostavnom primjeru i dobijem iste udaljenosti na taj i moj nacin\n\njel bi mogao ispisati ovako ko ja koje `Sim_xy` dobijes za ona tri querya?\n\n@brbrbr#166914 \n\ndap , zadali su item(retci) user(stupci)",
+      "votes": {
+        "upvoters": [
+          "brbrbr"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166920": {
+      "poster": "Harweyy",
+      "content": "@Murin#166915 \n\n```\n[1.0, 0.9734894474315846, 0.42146361521176234, 0.37169597083751404, -0.07079923254047893]\n[(1, 0.9734894474315846)]\n3.000\n[1.0, 0.6299407883487121, 0.42146361521176234, 0.2519763153394847, 0.06299407883487118]\n[(2, 0.6299407883487121), (0, 0.42146361521176234)]\n2.198\n[1.0, 0.33333333333333304, 0.3077287274483317, -0.33333333333333304, -0.6666666666666665]\n[(3, 0.33333333333333304), (0, 0.3077287274483317)]\n2.560\n```\n\nprva lista u svakom upitu je sortirana lista silazno od svih slicnosti, dok je druga lista ona u kojoj su izbacene negativne vrijednosti, vrijednost 1 ( sam sa samim sobom) te izbaceni oni koji nemaju unesenu ocjenu ali spadaju u kardinalnost",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166953": {
+      "poster": "brbrbr",
+      "content": "@Murin#166878 Ja isto identicno dobijem neovisno o tome koristim li lib za pearsona ili distance.cosine",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166989": {
+      "poster": "brbrbr",
+      "content": "@harry_pointer#164634 Koju formulu za udaljenost si koristio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167024": {
+      "poster": "harry_pointer",
+      "content": "@brbrbr#166989 _Cosine_ iz zbirke (20. zadatak):\n\n[math]cos(M_{k}, M_{j}) = \\frac{\\sum_{i=1}^{N}r_{ik} \\cdot r_{ij}}{\\sqrt{\\sum_{i=1}^{N}r_{ik}^2 \\cdot \\sum_{i=1}^{N}r_{ij}^2}}[/math]",
+      "votes": {
+        "upvoters": [
+          "brbrbr"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167043": {
+      "poster": "Murin",
+      "content": "Moze netko tko ima dobro rjesenje potvrdit/ispraviti?\n\nza retke x i y\n\n1. ostavimo samo one elemente koji su ocijenjeni kod oba usera\n2. od njih napravimo prosjek za x array-prosjek (elementwise) , isto tako za y\n3.  1- distance.cos(x,y)\n\nili\n\n1.dio sa prosjekom ali na svim elementima\n2. eliminacija elemenata\n3. distance",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167049": {
+      "poster": "harry_pointer",
+      "content": "@Murin#167043 Ja sam na ovaj način:\n\n1. računamo prosjek za svaki red\n2. normalizacija ocjena za svaki red (oduzmemo prosjek, onima koji nemaju ocjenu stavljamo 0)\n3. sličnost\n4. traženje skupa sličnih\n\nTo je za _Item-Item_, a za _User-User_ samo prije treba transponirati matricu.",
+      "votes": {
+        "upvoters": [
+          "Klokan",
+          "Murin",
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167050": {
+      "poster": "brbrbr",
+      "content": "@Murin#167043 Meni je proradilo upravo, mislim da imamo istu gresku. Treba radit ovo prvo sto si naveo, tj.\n\n1. ostavit samo ocijenjene i od njih racunat srednju vrijednost\n2. oduzet srednju vrijednost od ocijenjenih (jos ne dirat ovo gdje je 'X')\n3. sve gdje je 'X' gledat kao 0 i izracunat pearsona (na koji god nacin) \n\nvidi slajdove 26, 27, 28",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167066": {
+      "poster": "Murin",
+      "content": "@harry_pointer#167049 \n\n@brbrbr#167050 \n\nhvala ekipa, greska je bila sto sam oduzimao prosjek i od neocijenjenih (tretirao sam ih kao nule)",
+      "votes": {
+        "upvoters": [
+          "brbrbr",
+          "harry_pointer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167461": {
+      "poster": "Klokan",
+      "content": "@Harweyy#164970 ovaj prvi dio si uzasno objasnio, mozes li citljivije to napisat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "FICHEKK"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167495": {
+      "poster": "brbrbr",
+      "content": "@Klokan#167461 Mislim da je kolega na ovo mislio: ako je npr. K=10 i zadan je user-user pristup, onda ces uzeti u obzir 10 najslicnijih usera koji **imaju** ocjenu za trazeni item. Ako netko nije ocjenio trazeni item, njega ces preskociti i neces ga brojati u tih 10.",
+      "votes": {
+        "upvoters": [
+          "in1",
+          "lucija (luc)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167546": {
+      "poster": "MyKnee",
+      "content": "Dobivam dobro rjesenje za item-item, al user-user mi je malo drugaciji, treba li jos sto napraviti osim transponiranja?",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167572": {
+      "poster": "Harweyy",
+      "content": "@MyKnee#167546 zamjeniti uloge i,j",
+      "votes": {
+        "upvoters": [
+          "MyKnee",
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167613": {
+      "poster": "MyKnee",
+      "content": "@Harweyy#167572 ayy, tenks, to je bilo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167907": {
+      "poster": "Audaces",
+      "content": "Jeste sigurni da se ulazna matrica samo transponira i onda salje samo I kao J i J kao I? \n\nMeni radi Item-item dobro pa bi prema vasemu s transponiranom trebalo vrijediti za user-user... ugl i onda sam samo transponirao matricu (jer u onom primjeru u vjezbi je 5x5 tako da je svejedno tu I ili J) i dobijem ispis: \n\n![](assets/2021-04-11/00049.png)",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168206": {
+      "poster": "a_ko_si_ti",
+      "content": "@Audaces#167907 Tesko vidit bez koda, al jesi li nanovo izračunao normaliziranu matricu?\n\nJa sam samo transponirao i zamijenio i odmah je radilo.\n\nA i moras zamijenit, I i J svakako, bez obzira sto je kvadratna matrica.",
+      "votes": {
+        "upvoters": [
+          "Audaces"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168215": {
+      "poster": "Audaces",
+      "content": "@a_ko_si_ti#168206 Ma stavio sam sliku ukoliko je nekome isto bilo 6.416 u nekom trenutku pa možda zna šta je napravio..\n\nUgl, aha treba transponirat matricu s dodanim nulama na prazna mjesta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168220": {
+      "poster": "Harweyy",
+      "content": "@Audaces#168215 moraš paziti s tim nulama na praznim/neocjenjenim mjestima iz razloga što ih ne želis uzimati u prosjek retka, te onda taj isti prosjek ne želiš oduzeti od tih 0.",
+      "votes": {
+        "upvoters": [
+          "Audaces",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168222": {
+      "poster": "Audaces",
+      "content": "@Harweyy#168220 \n\nMa pazim, ne gledam ja ta mjesta, ne bi mi ni item-item radio. tj ja sam stavio -1 na ta mjesta pa ih kao preskacem (cisto da  mi Integer matrica moze biti bez 'X'). Nema veze, skuzit cu valjda sta je problem, samo me zanima u kojem trenutku treba transponirati tu matricu",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168324": {
+      "poster": "Klokan",
+      "content": "jel ima da nekom ne prolazi test 100x100, a prolazi ovaj manji 5x5?\n\nkako ste racunali cos_sim? `v1.dot(v2)/[norm(v1)*norm(v2)]` je li ovako?",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "Daorson",
+          "Ducius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168383": {
+      "poster": "Klokan",
+      "content": "@Harweyy#164970 \n\n> preskociti i uzeti sljedeci u kardinalnost\n\njel to znaci da npr ako imamo kardinalnost 5 i onda 2 od tih 5 nema ocjenu na toj poziciji, onda moramo od preostalih \n\nnadoknaditi ta 2 (sljedeca 2 po sortiranoj listi prema prioritetu) da bu ih bilo ukupno 5 ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168416": {
+      "poster": "Klokan",
+      "content": "@Klokan#168383 da, tako treba, provjerio sam s rjesenjima",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168453": {
+      "poster": "lucija (luc)",
+      "content": "@Klokan#168324 meni isto ne prolazi 100x100. Nekih random 5-10 upita mi je po malo krivo, probala sam na razne nacine racunat slicnost pa mislim da nije u tome problem, ali ne znam u cemu je",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168485": {
+      "poster": "Ducius",
+      "content": "@lucija#168453 kad okrenes matricu kod user-user nacina, moras pazit da zamjenis I i J ili ovisi kako vec racunas ugl pazi na I i J. Jer pretpostavljam da ti radi u 5x5 jer je tamo u user-user nacinu I=J",
+      "votes": {
+        "upvoters": [
+          "lucija (luc)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168486": {
+      "poster": "saitama",
+      "content": "Kolko vam se vremenski izvodi ovaj njihov primjer 100 x 100? u pythonu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168511": {
+      "poster": "lucija (luc)",
+      "content": "@saitama#168486 između 0.2 i 1 sekunde",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168513": {
+      "poster": "lucija (luc)",
+      "content": "@saitama#168486 meni je između 0.2 i 1 sekunde",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168545": {
+      "poster": "saitama",
+      "content": "@lucija#168513 jesi za pearsona koristila np.corrceof ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168546": {
+      "poster": "WhiteMamba",
+      "content": "@saitama#168545 Ja to koristim i svi primjeri mi prolaze, samo pazi jer  `np.corrceof` vraca 2D matricu pa treba uzeti element [0,1] iz tog 2d arraya",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168557": {
+      "poster": "saitama",
+      "content": "@WhiteMamba#168546 meni iz nekog razloga sve stvari fulava na 2 decimali",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168601": {
+      "poster": "adidas",
+      "content": "Koja je težina labosa?",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168625": {
+      "poster": "Amon",
+      "content": "@adidas#168601 (težinaPrvog + težinaDrugog)/2",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Emma63194",
+          "adidas",
+          "moukie",
+          "whatTheHel"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168764": {
+      "poster": "moukie",
+      "content": "kako je potrebno naći slične usere/iteme, po Pearson ili Cosine sličnosti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168831": {
+      "poster": "a_ko_si_ti",
+      "content": "@moukie#168764 Ako sam dobro skuzio koristi se Pearson, al nakon sto normaliziraš matricu, to se pretvori u racunanje po Cosine formuli iz prezentacija. Kao što je neki kolega gore napisao, mozes pratit korak po korak zadatak 20. u zbirci zadataka, sve je isto.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168994": {
+      "poster": "moukie",
+      "content": "@a_ko_si_ti#168831 \n\nDakle racunam Cosine sličnost redaka iz normalizirane matrice sto je zapravo isto sto i Pearson sličnost redaka iz obicne matrice?\n\nUzimam li u izračunu **sličnosti** u obzir elemente koji mi u nisu ocijenjeni, tj. za koje ću u normaliziranoj matrici imati 0\n\n(uvrštavam li 0 iz normalizirane matrice u formulu za Cosine sličnost)?\n\nNormaliziranu matricu dobijem tako da u svakom retku obicne matrice od svakog elementa oduzmem prosjek tog retka i rezultat mi je onda element na istoj poziciji u normaliziranoj matrici (a ako mi je element u obicnoj matrici neocjenjen u normaliziranu na tu poziciju samo upisem 0)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169037": {
+      "poster": "MyKnee",
+      "content": "@lucija#168453 Jesi mozda nasla problem? Meni je isto kod par rezultata greska od oko 0.1 il 0.2 i ne mogu skuziti zasto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169046": {
+      "poster": "MyKnee",
+      "content": "@MyKnee#169037 rjeseno, gresku sam imao da sam gledao ako red nema ocjenu tako da sam provjeravao ako je 0 nakon oduzimanja prosjeka, pa je na par slucajeva izostavilo redak, jer se bas poklopi da je ocjena jednaka prosjeku.",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "Mirko_",
+          "Urmum (mamaRu)",
+          "in1",
+          "lucija (luc)",
+          "peaceko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169206": {
+      "poster": "Audaces",
+      "content": "Treba li svaki put kada dobijemo novi rate izračunavati i normalizirati matricu, te ponovno te sličnosti računati zbog nove vrijednosti ili stalno koristimo početnu matricu? Da bar ima neki link koji opisuje 2 puna koraka lijepo, a ne sve stane na 1 pa me dovodi u bunilo zasto mi nije tocno ovo moje (ja sam svaki put ispocetka normalizirao i ostalo..)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169227": {
+      "poster": "netko_tamo",
+      "content": "@Audaces#169206 ja nisam nikakav novi rate izračunavao jer mi nismo sigurni koju je ocjenu user stavio za taj film npr, nego mi samo procjenjujemo tako da te procjene ne uzimamo u obzir prilikom drugih procjena",
+      "votes": {
+        "upvoters": [
+          "Audaces"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169228": {
+      "poster": "Audaces",
+      "content": "E pa to pitam, ne mislim da je to novi rate, nego kao predikcija, samo sam mislio da onda i to uzimamo u obzir dalje pri izracunu... Hvala na odgovoru! Lp",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169361": {
+      "poster": "moukie",
+      "content": "ovi testovi s gita nisu releventni vise?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169957": {
+      "poster": "a_ko_si_ti",
+      "content": "@moukie#168994 1. točno\n2.  uvrštavaju se i nule, da\n3.  točno, znači izračuna se prosjek svih ocjenjenih elemenata te se oduzme od trenutačne lokacije i upiše na istu u novoj matrici, a za ostale se u nju upise 0",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170265": {
+      "poster": "Noname",
+      "content": "Meni računa dobro primjer iz pripreme dok su mi rezultati za testne primjere skroz krivi. ima li netko sličan problem?",
+      "votes": {
+        "upvoters": [
+          "Patak007"
+        ],
+        "downvoters": [
+          "_xXx_Matej_xXx_ (Mateejj)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170273": {
+      "poster": "Patak007",
+      "content": "Glupo pitanje ali pobogu koju matricu treba transponirati za user-user... Je li to pocetna matrica s ocjenama od 1 do 5 ili je to kasnija normalizirana matrica... Što jos treba napraviti osim transponirati tu matricu da bi use-user radio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170276": {
+      "poster": "Njet",
+      "content": "@Patak007#170273 Treba transponirati početnu matricu s ocjenama od 1 do 5 i onda normalizirati itd. i također trebaš zamijeniti i i j.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Patak007"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171333": {
+      "poster": "Patak007",
+      "content": "@Noname#170265 Meni je sad ista stvar, doslovno nema veze s vezom... Ako rijesis problem daj pls javi u cemu je bio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171401": {
+      "poster": "Patak007",
+      "content": "@Patak007#171333 Rijesio: problem je bio sto nisam postavio if (ratingMatrix[][] != 0) tj. ova recenica je doosta bitna ![](assets/2021-04-15/00067.png)",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Noname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171817": {
+      "poster": "svemia (bearyn)",
+      "content": "@Noname#170265 Imam isti problem, radi mi za primjer iz pripreme, ali za druge testne primjere mi je pogreška u 0.1-0.3 decimale... Gledam vec satima i ne kuzim, a cak imam ovaj dio di se provjerava je li ocjena različita od 0, izgleda mi sve okay. Jesi i ti rijesio problem kao i @Patak007#171401 ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171930": {
+      "poster": "Cvija",
+      "content": "@svemia#171817 \n\nMoguće da je skroz neka druga pogreška, nevezano za kolegine, ja ću se dolje raspisati koja je moja greška bila zbog krive implementacije skroz treće stvari, možda si isto radila pa pomogne\n\nJa sam imao sličnu grešku kao kolege iznad, ali skroz druga stvar mi je bila kriva... Kad sam računao koji elementi ulaze u skup K, napravio sam polje **temp** u koje sam kopirao sve iz polja **_sličnost_**, onda sam provjeravao koja je maksimalna sličnost u tom polju **temp** i taj index sam ubacio u polje _k_set_.. Nakon ubacivanja indexa u polje _k_set_, bi samo izbrisao taj maksimalni element iz **temp** polja i onda bi tako ponavljao postupak dok mi ne bi našao K elemenata\n\nProblem je bio u tome što sam zaboravio da kad izbacim element iz polja **temp**, onda nemam isti broj elemenata kao originalno polje **_sličnost_** i indexi se poremete te mi se u skup indeksa (_k_set_) ubace krivi indeksi. To se lako da popraviti tako da provjeriš koji je index elementa koji ćeš izbaciti u originalnom polju _**sličnost**_ i onda taj indeks iz polja **_sličnost_** ubaciš u polje _k_set_, ali ga i dalje izbaciš iz polja **temp**",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171931": {
+      "poster": "Noname",
+      "content": "@svemia#171817 Ja sam uspjela popraviti, ovo što je kolega napisao je bitno.\n\n> Mislim da je kolega na ovo mislio: ako je npr. K=10 i zadan je user-user pristup, onda ces uzeti u obzir 10 najslicnijih usera koji imaju ocjenu za trazeni item. Ako netko nije ocjenio trazeni item, njega ces preskociti i neces ga brojati u tih 10.",
+      "votes": {
+        "upvoters": [
+          "Mirko_"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171951": {
+      "poster": "Noname",
+      "content": "@Noname#171931 \n\n Točnije, postavila sam vrijednosti u listi sličnosti na negativnu vrijednost na onim indeksima na kojima nema ocjene u listi ocjena",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172815": {
+      "poster": "Emma63194",
+      "content": "@harry_pointer#164634 Kako točno dobiješ te brojke?\n\nJa sam išla računati tako da matricu transponiram prije i predam u item-item (kako je već netko sugerirao na forumu).\n\nDobijem ovu matricu nakon transponiranja (isprike što je malo nepregledno):\n>! ![](assets/2021-04-17/00045.png)\n\nNakon toga idem po onoj formuli.\n\nUzmem svaki redak i redak u kojem se nalazi vrijednost koju moramo izračunati (ovdje je to zadnji redak).\n\nU brojniku umnožak prvi element puta prvi plus drugi puta drugi... a u nazivniku korijen iz onog umnoška suma kvadrata svakog retka.\n\nMeni ni na papiru ne ispadne kao tebi tu. \n\nGdje sam fulala, vidi li možda netko?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172846": {
+      "poster": "harry_pointer",
+      "content": "@Emma63194#172815 Koliko vidim, ti prvo normaliziraš matricu pa onda transponiraš, right?\n\nTrebalo bi ići: transponiraj (ako je u pitanju _User-User_) -> pronađi prosjeke -> normaliziraj pomoću nađenih prosjeka.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172848": {
+      "poster": "Emma63194",
+      "content": "@harry_pointer#172846 Yup, u tome je bila stvar, hvala!",
+      "votes": {
+        "upvoters": [
+          "harry_pointer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173011": {
+      "poster": "Joshko",
+      "content": "> Kako je onda moguce dobiti 2.560 za 3. upit u primjeru koji je dan u uputama?\n\nPostoji samo jedan user za koji je slicnost veca od 0, a bas taj user nema ocjenu za trazeni item, tj. ima X.\n\nJe li možda netko zna odgovor na ovo pitanje, pošto vidim da mi kod radi za 100 njihovih primjera, međutim u tim primjerima se ne pojavljuje slučaj kao u \"oglednom\" u uputama za labos, gdje nam niti jedan red ne odgovara...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173017": {
+      "poster": "Emma63194",
+      "content": "@Joshko#173011 Meni ispadne da ima sličnost veću od nule s dva retka (1. i 4. redak). Treba transponirati matricu prije jer je ovdje user-user.\n\nA i piše u uputama: \"Svi ulazni primjeri jamče da će se preporuke uvijek moći izračunati makar i na temelju samo jedne vrijednosti u matrici\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173027": {
+      "poster": "Joshko",
+      "content": "@Emma63194#173017 U pravu si, greška bila u postupku. Hvala.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

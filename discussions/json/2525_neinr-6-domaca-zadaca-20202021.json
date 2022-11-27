@@ -1,0 +1,1367 @@
+{
+  "title": "[NEINR] 6. domaća zadaća - 2020/2021",
+  "creator": "Yeltneb",
+  "slug": "neinr-6-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Neizrazito, evolucijsko i neuro računarstvo",
+    "Zadaće"
+  ],
+  "posts": {
+    "110237": {
+      "poster": "Yeltneb",
+      "content": "Znam da je Ćupić na početku semestra rekao da se moraju predati sve zadaće i da moramo barem nešto implementirati. \n\nŠto ja moram implementirati da dobijem 0 bodova jer mi se stvarno ne da više rješavat ove zadaće? 😫",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Franksta",
+          "MrHead (vandal)",
+          "Ruleta",
+          "Simpy",
+          "[deleted]",
+          "jazzMassive",
+          "lucija (luc)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110306": {
+      "poster": "in1",
+      "content": "@Yeltneb#110237 Možeš odgoditi patnju ako bi ti ovo bila prva dz koju ne bi predao pa dobiti do 50% kada ju predaš",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Yeltneb"
+        ]
+      }
+    },
+    "110351": {
+      "poster": "Cvija",
+      "content": "Imamo pravilo:\n\n[math]R_i : Ako\\space x\\space je\\space A_i\\space I\\space y\\space je\\space B_i\\space tada\\space z=p_ix+q_iy+r_i[/math]\n\nto znači da trebamo odrediti kako naučiti parametre [math]a_i, b_i, c_i, d_i,p_i,q_i,r_i[/math]\n\nJel tako ili sam nešto zaboravio?\n\nStvar je da je u ovom zadatku sa slike zadano isto pravilo, ali treba izračunati 8 parametara (predzadnji slajd, zadnje uploadane prezentacije na ferko)\n\n![](assets/2020-12-14/00031.png)\n\nČemu služi ova varijabla [math]z_i",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110360": {
+      "poster": "Atem",
+      "content": "Inače se koristi ova funkcija pogreške ![](assets/2020-12-14/00032.png)\n\n, ali u 6. točki u uputama za labos piše \"Funkcija pogreške uzorka δ(x, y) je definirana kao razlika između vrijednosti koji neuro-fuzzy sustav daje na izlazu za točku (x, y) i stvarne vrijednosti koju zadana funkcija poprima u točki (x, y); primijetite da to odstupanje može biti pozitivno ili negativno.\"\n\nZnači li to da onda u labosu koristimo funkciju pogreške \"Ek = dobiveno rješenje - točno rješenje\" ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110365": {
+      "poster": "Atem",
+      "content": "Koju funkciju pripadnosti koristimo za neizrazit skup B?\n\nJa sam shvatio da je to ista funkcija kao i za A ( sigmoida) ![](assets/2020-12-14/00033.png)\n\nMože li mi netko potvrditi da sam dobrio shvatio. I ako jesam, onda ne moramo računati a,b,c,d nego samo a,b jer je a=c i b=d zar ne?",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110385": {
+      "poster": "doakes",
+      "content": "Do kada je predaja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110399": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Atem#110360 Jedno je funkcija gubitka, drugo je funkcija pogreške. Markec treba poraditi malo na tim terminima.\n\nSve u svemu optimira se funkcija gubitka (srednja kvadratna pogreška) jer minimum funkcije pogreške (razlika) divergira. Funkcija pogreške može se koristiti za druge stvari, ali u ovom slučaju ne i za optimizaciju (s obzirom na to da naš cilj uopće nije u nekom optimumu funkcije razlike)",
+      "votes": {
+        "upvoters": [
+          "Atem"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110403": {
+      "poster": "Cvija",
+      "content": "@doakes#110385 Do petka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110432": {
+      "poster": "Cvija",
+      "content": "@Cvija#110351 Greška je ta varijabla, odgovorio mi Čupić",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110433": {
+      "poster": "Cvija",
+      "content": "@Atem#110365 Jesi li zaključio da je a==c i b==d zato što su x i y definirani na istom intervalu ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110434": {
+      "poster": "Atem",
+      "content": "@Cvija#110433 Nisam po tome gledao nego zato što oboje imaju istu funkciju pripadnosti. Samo što se za neizrazit skup A koriste parametri \"a i \"b\" , a za neizrazit skup B \"c\" i \"d\". Ali parametar \"a\" stoji na istom mjestu kao i parametar \"c\", i \"b\" stoji na istom mjestu kao parametar \"d\". Pa onda kad parcijalno deriviramo \"a\", to bi trebalo biti kao da smo derivirali parametar \"c\". Tako bar ja mislim. Ali još uvijek nisam siguran u to pa zato pitam.\n\n![](assets/2020-12-15/00000.png)\n\nOvo je funkcija i ako sam u pravu oba neizrazita skupa ju koriste ( i A i B ). \n\nE da BIG NOTE: nisam mislio da je  \"a==c \" i \"b==d\"  nego da  parcijalna derivacija po \"a\" ista ko i parcijalna derivacija po \"c\" , i da je parcijalna derivacija po \"b\" ista ko parcijalna derivacija po \"d\".",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110485": {
+      "poster": "Cvija",
+      "content": "@Atem#110434 Aha aha, parcijalne jesu iste da, tu si u pravu. Drugačije sam to protumačio isprva",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110510": {
+      "poster": "login",
+      "content": "Jel mozda uspio netko napisat ovo cudo? Ja sam uspio nes sklepat al ne znam koliko dobro ovo mora radit. Stohasticka varijanta mi dodje do greske od 1400 cca, a gresku sam racunao kao sumu kvadratnih pogresaka po svim primjerima iz dataseta. Vjerujem da ovo nije rezultat koji bi trebali dobit ali tako mi ispada, pa ako je netko slucajno isprobao nek napise tu rezultat.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110526": {
+      "poster": "Cvija",
+      "content": "Kako ažurirate težinu ai? Jel ovako?\n\n[math] a_i(t+1) = a_i(t) + \\eta \\cdot (z_k - o_k) \\cdot \\frac{\\sum_{j=1, j\\ne i}^{m}\\alpha_j(z_i - z_j)}{\\sum_{j=1}^{m}\\alpha_j} \\cdot \\mu_{B_i} \\cdot b_i \\cdot (1 - \\mu_{A_i}) \\cdot \\mu_{A_i}[/math]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110532": {
+      "poster": "login",
+      "content": "Da, a za p, q i r sam izveo ovako:\n\n[imath]p_i(t+1) = p_i(t) + \\eta \\cdot (z_k - o_k) \\cdot \\frac{\\alpha_i}{\\sum_{j=1}^{m}\\alpha_j} \\cdot x[/imath]\n\n[imath]q_i(t+1) = q_i(t) + \\eta \\cdot (z_k - o_k) \\cdot \\frac{\\alpha_i}{\\sum_{j=1}^{m}\\alpha_j} \\cdot y[/imath]\n\n[imath]r_i(t+1) = r_i(t) + \\eta \\cdot (z_k - o_k) \\cdot \\frac{\\alpha_i}{\\sum_{j=1}^{m}\\alpha_j}[/imath]\n\nNeka me netko ispravi ako sam fulao nes.",
+      "votes": {
+        "upvoters": [
+          "AromaticConfusion (VrloZbunjen)",
+          "Cvija",
+          "Simpy",
+          "Zogen",
+          "[deleted]",
+          "happysun",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110538": {
+      "poster": "dirtyharry",
+      "content": "Nisam popratio predavanje, a u vježbi se cijeli tekst bavi izradom tog nekog izvještaja... Jel to naš stvarni zadatak za ovu vježbu ili programiramo kao do sada? Ako da, što?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110540": {
+      "poster": "in1",
+      "content": "@dirtyharry#110538 Sve što piše u vježbi moraš napraviti, isprogramirati i napisati izvještaj.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "dirtyharry"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110562": {
+      "poster": "Cvija",
+      "content": "@Cvija#110526 Pošto ne mogu editat, krivo sam bio napisao gornju jednadžbu, ovako bi trebala izgledati\n\n[imath]a_i(t+1) = a_i(t) + \\eta \\cdot (z_k - o_k) \\cdot \\frac{\\sum_{j=1, j\\ne i}^{m}\\alpha_j(z_i - z_j)}{\\left(\\sum_{j=1}^{m}\\alpha_j\\right)^2} \\cdot \\mu_{B_i} \\cdot b_i \\cdot (1 - \\mu_{A_i}) \\cdot \\mu_{A_i}[/imath]",
+      "votes": {
+        "upvoters": [
+          "Hus",
+          "Zogen",
+          "in1",
+          "login",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110718": {
+      "poster": "[deleted]",
+      "content": "@in1#110540 jel izvjestaj isto treba uploadat na ferka, u uputi pise da je samo potrebno predati u terminu labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110735": {
+      "poster": "in1",
+      "content": "@msus#110718 Iz ovog se čini da ne bi trebalo:\n\n![](assets/2020-12-15/00032.png)",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110829": {
+      "poster": "neja_negoti",
+      "content": "![](assets/2020-12-15/00038.png)\n\nmislim da zaboravljas da buduci da imamo 2 ulaza nemas samo alfe, nego bi trebao uvesti npr neki Wi koji je t-norma alfe i bete i onda u ovim gornjim formulama umjesto alfi koristis taj Wi",
+      "votes": {
+        "upvoters": [
+          "sphera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110840": {
+      "poster": "saitama",
+      "content": "Jel ulazne podatke sami opet moramo generirati ili ih dobivamo od negdje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110844": {
+      "poster": "DodgeCharger",
+      "content": "@saitama#110840 Sami generiramo. Piše na kraju uputa što i kako generirat.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111043": {
+      "poster": "Franksta",
+      "content": "kako inicijaliziramo parametre ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111050": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "Ja sam inicializirao sve na Gauss random osim r koji su nule",
+      "votes": {
+        "upvoters": [
+          "Franksta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111124": {
+      "poster": "Cvija",
+      "content": "@neja_negoti#110829 \n\n@Cvija#110562 \n\nStvar je u tome da sam tako mislio, samo sam označio drugačije.. Evo ovako možda\n\nz_k je stvarni izlaz funkcije\n\no_k je izlaz koji daje neuro fuzzy sustav\n\nalpha_i je t-norma između [math]\\mu_{A_i} \\cdot \\mu_{B_i}[/math]\n\ntj. umnožak toga dvoga, gdje je\n\n[math]\\mu_{A_i}(x) = \\frac{1}{1 + e^{b_i \\cdot (x - a_i)}}[/math]\n\n[math]\\mu_{B_i}(y) = \\frac{1}{1 + e^{d_i \\cdot (y-c_i)}}[/math]\n\nz_i je zapravo f_i (opet glupost s oznakama), a f_i = p_i * x + q_i * y + r_i\n\nz_j je onda ekvivalentno f_j\n\nStvar je u tome što sam ružno oznake uveo pa se na prvu zbuni, ali konzultirao sam se s jednim kolegom i on je rekao da je ovako nešto dobio, tako da mislim da je dobro.. Ako i dalje ima greška koju sam predvidio, neka netko kaže",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111139": {
+      "poster": "sphera",
+      "content": "@Cvija#110562 \n\ni ja sam ovako nešto dobio, ovo je onda za stohastičku varijantu, tj online učenje, ali kako onda ide verzija za pravi gradijent (grupno) učenje, ili sam ja nešto krivo shvatio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111141": {
+      "poster": "[deleted]",
+      "content": "Zna li netko gdje bi se ovo moglo lako nacrtati iz datoteke da izgleda [ovako](https://www.google.com/url?sa=i&url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F13305743%2Fprobability-surface-plot-matplotlib&psig=AOvVaw2aSb3U3kdD8uFGnd5rWlDz&ust=1608220956986000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjX6Yjw0u0CFQAAAAAdAAAAABAN)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111142": {
+      "poster": "Cvija",
+      "content": "@sphera#111139 Ja sam stavio samo sumu ispred svega i ažuriram parametre nakon što prođem kroz sve primjere. Znači za svaki parametar svakog pravila izračunam greške koji čine svi primjeri i onda u svakoj od npr. 10000 iteracija ažuriram svaki parametar svakog pravila\n\n[math]a_i(t+1) = a_i(t) + \\eta \\cdot \\sum_{i=1}^{N}\\left((z_k - o_k) \\cdot \\frac{\\sum_{j=1, j\\ne i}^{m}\\alpha_j(f_i - f_j)}{\\left(\\sum_{j=1}^{m}\\alpha_j\\right)^2} \\cdot \\mu_{B_i} \\cdot b_i \\cdot (1 - \\mu_{A_i}) \\cdot \\mu_{A_i}\\right)",
+      "votes": {
+        "upvoters": [
+          "sphera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111149": {
+      "poster": "Atem",
+      "content": "@Cvija#111142 Oprosti ali fali li ti možda još \"kroz N\" kod ove vanjske sume",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111152": {
+      "poster": "Cvija",
+      "content": "@Atem#111149 Moguće, ili se to apsorbira u etu\n\nSad sam pokrenuo kod s 1/N i sporije mi je konvergirao nego bez toga, ali to opet ovisi o tome koji sam eta uzeo",
+      "votes": {
+        "upvoters": [
+          "Atem"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111156": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jel se ikome dogodilo da parametri a i b kod fuzzy funkcija narastu preko 100? Sigurno je neki problen kod azuriranja al ne mogu nikako nac sta je.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111157": {
+      "poster": "Cvija",
+      "content": "@Yasuke#111156 Za parametar a možda uzimaš preveliku etu. Profesor je na predavanju napomenuo da etu za parametar a i c uzmemo što manju\n\nŠto se tiče parametra b, provjeri si jel ti ide b(t+1) = b(t) - eta * nanana",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111161": {
+      "poster": "Yasuke (Bono)",
+      "content": "@Cvija#111157 Hvala puno, pomoglo je.",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111179": {
+      "poster": "Yeltneb",
+      "content": "Jel može netko objasnit sloj po sloj kako ANFIS funkcionira jer meni uopce nije jasno",
+      "votes": {
+        "upvoters": [
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111188": {
+      "poster": "mankiboss",
+      "content": "Može li mi netko pomoći jesam li dobro shvatio ovaj ANFIS:\n- Prvi sloj na svoj izlaz stavlja samo rezultat funkcije pripadnosti pojedinom skupu.\n- Drugi sloj računa t-normu odgovarajućih neurona prvog sloja.\n- Na slici je wi oznaka izlaza i-tog neurona drugog sloja, a ne(!) težina prema trećem sloju.\n- Treći sloj radi komplement. (Jesu li onda one strelice što idu u križ pogrešne? komplement je unarna operacija)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111201": {
+      "poster": "Franksta",
+      "content": "@mankiboss#111188 \n\ntreci sloj ne radi komplement (oznake navode na krivi put.), nego racuna tezine izlaza svakog neurona drugog sloja u odnosu na sve izlaze drugog sloja; prouci izraz f na slici 1.a) u tekstu zadatka.",
+      "votes": {
+        "upvoters": [
+          "mankiboss"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111209": {
+      "poster": "Cvija",
+      "content": "@Yeltneb#111179 Čupić je rekao da u ovom zadatku izbjegavamo objektno orijentiranu paradigmu.\n\nE sad, izlaze sustava računaš prema formuli:\n\n[math]o = \\frac{\\sum_{i=1}^{m}\\alpha_i \\cdot f_i}{\\sum_{i=1}^{m}\\alpha_i}[/math]\n\ngdje ti je m broj pravila koje imaš, alpha ti je umnožak funkcija pripadnosti (to ti je ono sa sigmoidom) varijable x i varijable y, a f_i ti je ono p_i * x + q_i * y + r_i\n\nZnači unaprijedni prolaz bi ti bio taj da uvrstiš u ovu gore formulu (za o)\n\nNakon toga radiš ažuriranje težina, (a_i, b_i, c_i, d_i, p_i, q_i i r_i) na dva načina, stohastički i batch (svako posebno), kako doći do formula za ažuriranje možeš naći u prezentacijama s predavanja i tu u threadu imaju neke izvedene, samo pazi što je što\n\nI onda to sve radiš kroz nekoliko tisuća iteracija",
+      "votes": {
+        "upvoters": [
+          "Cubii",
+          "PrisonMike (Števo)",
+          "Simpy",
+          "Yeltneb",
+          "in1",
+          "ls_123 (KimuraKong)",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111222": {
+      "poster": "koode7",
+      "content": "jel ima netko snimke starih predavanja?",
+      "votes": {
+        "upvoters": [
+          "miki123"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111230": {
+      "poster": "Yeltneb",
+      "content": "@Cvija#111209 Hvala ti puno, sad mi je skroz jasno 😄",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111248": {
+      "poster": "dante_zu",
+      "content": "Koliko bi nam trebala biti pogreška nakon ucenja da bi to bilo kao \"okej\"(mslim na kvadratno odstupanje)?",
+      "votes": {
+        "upvoters": [
+          "Daorson"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111353": {
+      "poster": "ssbb",
+      "content": "@Cvija#110562 a na koji nacin izgleda za batch learning? Dakle kada vise ovih o_k uzimamo u obzir",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111389": {
+      "poster": "Cvija",
+      "content": "@ssbb#111353 https://fer.studosi.net/d/2525-neinr-6-domaca-zadaca-20202021/29\n\nTu sam napisao, prolaziš samo po svim primjerima i zbrajaš, nakon što si prošao po svim primjerima ažuriraš parametar",
+      "votes": {
+        "upvoters": [
+          "ssbb"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111392": {
+      "poster": "Cvija",
+      "content": "@dante_zu#111248 evo, meni na primjer, za stohastičko sa 10 pravila greška padne na nekih 70, 80, nakon 1000 iteracija i onda oko toga divergira\n\nDok za batch padne još više pa onda divergira\n\nValjda tako treba biti, ima mi smisla, za konkretne brojeve nisam siguran",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111416": {
+      "poster": "mankiboss",
+      "content": "@Franksta#111201 Pa ja još gledam kako su došli iz te formule do komplementa.. Znači to je samo omjer težine jednog i sume težina sviju. Ok, hvala ti puno.",
+      "votes": {
+        "upvoters": [
+          "Franksta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111481": {
+      "poster": "Atem",
+      "content": "Hoćete li predavati izvješće ili nećete? Ako hoćete lajkajte, a ako nećete dislajkajte",
+      "votes": {
+        "upvoters": [
+          "AromaticConfusion (VrloZbunjen)",
+          "Dekan",
+          "Ruleta",
+          "Simpy",
+          "carrieb",
+          "lucija (luc)",
+          "mankiboss"
+        ],
+        "downvoters": [
+          "Dammir (Kajropraktour)",
+          "in1"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111491": {
+      "poster": "antesha",
+      "content": "@Cvija#111209 \n\nŠta nije Čupić spominjo da modeliramo [imath]f_i[/imath] kao konstantu samo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111492": {
+      "poster": "carrieb",
+      "content": "@Atem#111481 sto da kliknem za \"nadam se\"?\n\ne i da, koja je \"bas prikladna\" stopa ucenja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ruleta",
+          "miki123"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111496": {
+      "poster": "Cvija",
+      "content": "@antesha#111491 Koliko se sjećam, to je spominjao dok je rješavao onaj zadatak. Rekao je da smo u tom zadatku uzeli fi kao konstantu\n\n![](assets/2020-12-17/00010.png)\n\nI ovdje u labosu piše da se uzme z=pi * x + qi * y + ri\n\nTaj z je meni f\n\nZeznute su oznake, ne znam jesam li krivo nešto ili ne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111523": {
+      "poster": "mankiboss",
+      "content": "@Cvija#111496 I meni jedino ima smisla da je z == f",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111529": {
+      "poster": "ssbb",
+      "content": "@Cvija#111496 zeznuo je Cupko dosta te oznake, htio je da se poklapa sa kasnijim gradivom pa je ispalo zbunjujuce, i sam je rekao na predavanju.\n* W postaje alfa, i to je umnozak pripadnosti iz ulaznog sloja (jos dodatno i po potrebi normiran u implementaciji).\n* f postaje z, i to je iznos funkcije, tj funkcija z(x,y) = px + qy + r\n* finalni izlaz mreze (tezinska suma po alpha*z) postaje Ok.\n\nMislim da je to to ako sam dobro shvatio.",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111544": {
+      "poster": "[deleted]",
+      "content": "@carrieb#111492 meni za gradijentni najbolje radi s 0.001, a za stohasticki s 0.01",
+      "votes": {
+        "upvoters": [
+          "carrieb",
+          "ls_123 (KimuraKong)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111549": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @carrieb#111492 e i da, koja je “bas prikladna” stopa ucenja?\n\nZa ovo nemaš baš egzaktan odgovor, najbolje bi ti bilo fiksirati random seed i onda izvrtiti trening za svaki red veličine stope učenja (npr. 10, 1, 0.1, 0.01, ..., [imath]10^{-8}[/imath]), i onda sortirati to prvo silazno po točnosti na validacijskom skupu, a onda uzlazno po broju epoha.\n\nRealniji rezultat bi dobila da tipa vrtiš 50-100 puta za svaku stopu učenja, al to nije potrebno za ovaj labos. Varijancu ćeš svakako dosta smanjiti ako imaš dobru inicijalizaciju težina.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "peaceko"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111571": {
+      "poster": "sphera",
+      "content": "kako treba funkcionirat grupni, jel bi on trebao uvijek konvergirat prema rješenju ili nekada i divergira?  \n\ntakođer mi nije jasno kako funkcionira grupni, updateam li parametre kada prođem kroz cijeli dataset jedanput ili imam kao što je kolega Cvija rekao 10000 prolazaka kroz dataset (batch) i onda update svih parametara?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111582": {
+      "poster": "[deleted]",
+      "content": "@sphera#111571 Prođeš dataset, za svaki uzorak updejtas derivaciju, i kad prodes svih 81 uzoraka na temelju sume derivacija updejtas parametre. Mislim da bi uz ispravnu stopu ucenja trebao uvijek konvergirati, meni divergira za preveliku stopu",
+      "votes": {
+        "upvoters": [
+          "ls_123 (KimuraKong)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "sphera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111583": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@sphera#111571 Grupni nikad ne divergira (ako loss funkcija, hiperparametri, inicijalne težine i dataset štimaju), ali generalno ne konvergira (u globalni minimum), samo je stabilniji. U većini slučajeva težine kod kojih se zaustavi su dobre za generalizaciju, ali nemaš gotovo nikakve garancije da su to optimalne težine, to nikad nemaš.\n\nE da, s tim da specifično u slučaju za ANFIS možda takvo ponašanje nije jako uočljivo, jer ANFIS je užasno nestabilna mreža zbog svoje natjecateljske (adversarial) prirode, tak da ona je dosta osjetljiva na male neoptimalnosti, ali opet ćeš imati stabilniji tijek učenja s većim batch sizeom, samo jbg puno više šanse za divergenciju bez da ti je batch size cijeli dataset.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "peaceko"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111597": {
+      "poster": "[deleted]",
+      "content": "@micho#111583 zasto zbunjujes ljude ovakvim postovima, odgovori na pitanje ili nemoj ffs",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "Franksta",
+          "ReyKenobi",
+          "Vamonos (Idemo)",
+          "[deleted]",
+          "[deleted]",
+          "carrieb",
+          "koBASA (hackerman)",
+          "niks",
+          "peaceko",
+          "sphera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Franksta",
+          "Juren",
+          "Yeltneb"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111606": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@msus#111597 Ovo je odgovor na pitanje, jer odgovor nije toliko jednostavan. Ljudi će pomisliti da su stvari crno bijele a zapravo nisu, pogotovo ne kod ANFIS-a.\n\nOdgovor je - ako sve štima, onda možda konvergira. Kod gradijentnih metoda konvergencija u pravi minimum uopće nije zagarantirana. Jedina garancija grupnog učenja je da je trening stabilniji jer ubijaš šum. AKO nemaš smeće od podataka i ako sve ostalo štima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Vamonos (Idemo)",
+          "peaceko"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111609": {
+      "poster": "[deleted]",
+      "content": "@micho#111606 pa ljudi se susrecu prvi put s ovim i pisu labos zadnji dan, ne zanima ih teorijska rasprava o svojstvima neuronskih mreza nego kako da osposobe labos",
+      "votes": {
+        "upvoters": [
+          "Juren",
+          "ReyKenobi",
+          "in1",
+          "sphera",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111617": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@msus#111609 odgovorio sam na ovo pitanje\n\n> kako treba funkcionirat grupni, jel bi on trebao uvijek konvergirat prema rješenju ili nekada i divergira?\n\na na ostatak nisam kad si ti već odgovorila ispravno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111686": {
+      "poster": "Cvija",
+      "content": "Kako vam izgledaju funkcije pripadnosti u 5om zadatku?\n\n![](assets/2020-12-17/00024.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111696": {
+      "poster": "Ruleta",
+      "content": "jeste stvarno koristili gnuplot ili ima nešto ljepše za koristiti?",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111702": {
+      "poster": "Cvija",
+      "content": "@Ruleta#111696 Koristio sam gnuplot... Nije teško za shvatiti, imaš točke i ubaciš datoteku u program i iscrta ti\n\nhttps://www.youtube.com/watch?v=wtuo3xECreM&t=40s&ab_channel=easyedu\n\nhttp://lowrank.net/gnuplot/plot3d2-e.html\n\nhttps://stackoverflow.com/questions/10339733/gnuplot-draw-two-plots-on-the-same-graph-with-single-column-data\n\nEvo par linkova koji su mi bili korisni",
+      "votes": {
+        "upvoters": [
+          "Juren",
+          "Ruleta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111704": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Ruleta#111696 probaj matplotlib ak ti je lakše. Onda iscrtavati funkcije pripadnosti možeš s funkcijom `plot_trisurf`. Njoj predaješ trojku - `x, y, z`, tj. x ti reprezentira listu ikseva, y listu ipsilona itd. Primjer kak to izgleda je [ovdje](https://github.com/Yalfoosh/NENR/blob/master/DZ/DZ6/DZ6.ipynb) (zadatak 5)\n\n![](assets/2020-12-17/00026.png)\n\nkeep in mind da meni nije najbolje radila ova vježba zbog nekog previda u implementaciji, pa pravi rezultati vjv neće ovako izgledati.",
+      "votes": {
+        "upvoters": [
+          "Ruleta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111719": {
+      "poster": "[deleted]",
+      "content": "Omogucen je upload, treba i izvjestaj",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "MrHead (vandal)",
+          "Satanael",
+          "Zogen",
+          "in1",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Juren",
+          "Satanael",
+          "Simpy",
+          "Svenchi",
+          "happysun",
+          "in1",
+          "ls_123 (KimuraKong)",
+          "miki123",
+          "sane_insane",
+          "sunceko"
+        ]
+      }
+    },
+    "111932": {
+      "poster": "mankiboss",
+      "content": "Koliko bi primjera za učenje bilo dovoljno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111939": {
+      "poster": "mankiboss",
+      "content": "I ima li itko kakav savjet kako namjestiti početne vrijednosti parametara?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111945": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Cvija#111702 koju si naredbu koristio da iscrta površinu od točki koje su u datoteci, a ne da samo te točke iscrta?",
+      "votes": {
+        "upvoters": [
+          "Vamonos (Idemo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111950": {
+      "poster": "Franksta",
+      "content": "@mankiboss#111932 pod 1.1 na zadnjoj stranici ti pise koliko je primjera : 81, domena je [-4, 4], dakle 9 cijelih brojeva za x i 9 cijelih brojeva za y i ukupno ima 81 kombinacija x i y",
+      "votes": {
+        "upvoters": [
+          "mankiboss"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111951": {
+      "poster": "mankiboss",
+      "content": "@Franksta#111950 Znači tu stranicu uopće nisam skužio. Hvala ti puno!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111970": {
+      "poster": "peaceko",
+      "content": "kako funkcionira kasni upload? nigdje ne vidim mjesto za naknadni upload 5. zadace\n\nEDIT: i ne postoji rok i za naknadni upload kao na nekim predmetima, npr. 1 tj od originalnog roka? (osim krajnjeg roka - 1. tjedan ZI kao sto je receno na uvodnom predavanju)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111984": {
+      "poster": "peaceko",
+      "content": "@peaceko#111970 ok ne trebam vise odgovor, nasao sam sve info na jednoj od obavijesti, i na teamsima je napisao cupic",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111997": {
+      "poster": "Cvija",
+      "content": "@PrisonMike#111945 link ispod YouTube videa, drugi set naredbi, tu ti piše.. ovo splot",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111998": {
+      "poster": "Vamonos (Idemo)",
+      "content": "@ljudi koji spominju batch izvodenje, gdje pise da to treba napraviti? Koliko vidim moramo implementirati samo \"pravi\" gradijent i stohasticko",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112008": {
+      "poster": "prodanacro (oat)",
+      "content": "@Vamonos#111998 pravi gradijent je batch",
+      "votes": {
+        "upvoters": [
+          "Vamonos (Idemo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112011": {
+      "poster": "sphera",
+      "content": "kako se crtaju fje pripadnosti, jel to znači da za K pravila treba nacrtat 2*K fja pripadnosti, za svaki a i b, c i d u parovima?",
+      "votes": {
+        "upvoters": [
+          "Juren"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112013": {
+      "poster": "Juren",
+      "content": "@sphera#112011 Ja sam tako... s time da sam crtao po 2 f-je pripadnosti na istom grafu (jedna za A i druga za B dio antecendenta)",
+      "votes": {
+        "upvoters": [
+          "Franksta",
+          "sphera"
+        ],
+        "downvoters": [
+          "JoKing"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112072": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Jel zna netko koji postotak bodova nosi ovaj izvještaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112184": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "@Vamonos#111998 Ono na što ti misliš je mini-batch što nije jednako kao i batch",
+      "votes": {
+        "upvoters": [
+          "Vamonos (Idemo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112366": {
+      "poster": "Vamonos (Idemo)",
+      "content": "@AromaticConfusion#112184 Da, hvala, pomjesao ih",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "128983": {
+      "poster": "Marenix",
+      "content": "Kako se određuje prikladan broj pravila? Ja sam pretpostavio da je 9, pa da onda svako pravilo označuje neko područje oko svakog cijelog broja, al sad crtam funkcije pripadnosti i uopće ne ispada tak. Postoji neka logika koju ne mogu vidjet?",
+      "votes": {
+        "upvoters": [
+          "Watson (112)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "129979": {
+      "poster": "Marenix",
+      "content": "@Marenix#128983 Anyone?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130062": {
+      "poster": "Cvija",
+      "content": "@Marenix#128983 Ne znam je li odgovor na tvoje pitanje, ali ja sam broj pravila shvatio na sljedeći način\n\nZnači, što više pravila imaš to se tvoja mreža može bolje prilagoditi funkciji koju trebaš aproksimirati. Sad ako želiš odrediti neki optimalan broj pravila, napraviš neku for petlju koja ide od 1 do m (neki broj pravila) i uzmeš najmanje rješenje koje je prihvatljivo\n\nBtw kad sam ja odgovarao labos, meni je prihvatljivo bilo 20 pravila, što je nekako puno, ali asistent mi nije ništa rekao tako da mislim, dok god ti broj pravila dobro aproksimira funkciju (greška između dobivene vrijednosti i prave vrijednosti premala), u redu je\n\nNadam se da ti ovo ima smisla\n\n[Edit] I da, meni su funkcije pripadnosti previše čudno ispale, a asistent mi je rekao da su trebale kao sinusoide ispast, ne znam kako, ali nije mi bodove na tome uzeo",
+      "votes": {
+        "upvoters": [
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130119": {
+      "poster": "Marenix",
+      "content": "@Cvija#130062 Aha, thanks. Ma mene zbunilo što su napisali u labosu \"prikladnog broja pravila (što znači prikladno?)\" pa sam mislio da ima možda neko logično objašnjenje. Al da, ovo ima smisla.\n\nKolko ti je min MSE bio na kraju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130127": {
+      "poster": "Cvija",
+      "content": "Sporo mi je radio program, pa mi je greška bila manja od 100 nakon 1000 iteracija, tako nešto\n\nOvakav graf sam dobio\n\n![](assets/2021-01-26/00042.png)",
+      "votes": {
+        "upvoters": [
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130129": {
+      "poster": "Marenix",
+      "content": "@Cvija#130127 Hmmmmmmm. Možda sam ja nešt krivo implementirao onda, jer meni greška zna malo padat, pa onda poraste, pa opet malo pada... 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130138": {
+      "poster": "Cvija",
+      "content": "@Marenix#130129 Ne mora značiti da si krivo implementirao, nego možda si krive ete uzimao, evo za referencu, moje ete\n\netaa=1e-9, etab=1e-4, etac=1e-9, etad=1e-4, etap=1e-2, etaq=1e-2, etar=1e-2\n\nAli opet, možda neke druge ovise o tvojoj implementaciji.. I pripazi na ovo\n\n@Cvija#111157",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130161": {
+      "poster": "Marenix",
+      "content": "@Cvija#130138 ![](assets/2021-01-26/00050.png)\n\nOvo mi dolazi kao greška kroz 1000000 epoha xD. Moguće da nisam dobro naštimao ete, to ću još probat. \n\nAl za sve parametre ide par(t+1) = par(t) + eta * nananana, ne? Mislim, ako deriviramo 1/2(y-o)^2, dobimo ispred -, i onda to izvadimo van pa je + ispred ete. Ili sam krivo derivirao za b, pa još negdje dođe minus?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130167": {
+      "poster": "Cvija",
+      "content": "@Marenix#130161 Za b_i sam ovako dobio\n\nažuriranje parametra b_i stohastički\n\n[math]b_i(t+1) = b_i(t) - \\eta \\cdot (z_k - o_k) \\cdot \\frac{\\sum_{j=1, j\\ne i}^{m}\\alpha_j(f_i - f_j)}{\\left(\\sum_{j=1}^{m}\\alpha_j\\right)^2} \\cdot \\mu_{B_i} \\cdot (x - a_i) \\cdot (1 - \\mu_{A_i}) \\cdot \\mu_{A_i}[/math]\n\nS potpunim gradijentom\n\n[math]b_i(t+1) = b_i(t) - \\eta \\cdot \\sum_{i=1}^{N}\\left((z_k - o_k) \\cdot \\frac{\\sum_{j=1, j\\ne i}^{m}\\alpha_j(f_i - f_j)}{\\left(\\sum_{j=1}^{m}\\alpha_j\\right)^2} \\cdot \\mu_{B_i} \\cdot (x - a_i) \\cdot (1 - \\mu_{A_i}) \\cdot \\mu_{A_i}\\right)[/math]\n\nZa oznake se možeš referencirati ovdje\n\n@Cvija#111124 \n\n[Edit] Isto je i za d_i, još negdje dođe minus tijekom derivacije, pa zbog toga je ovaj minus kod b_i i d_i",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130177": {
+      "poster": "Marenix",
+      "content": "@Cvija#130167 Dap, sjebao sam kad sam sigmoidu derivirao po b...\n\nA i čini se da je to bila greška, jer graf izgleda normalno sad haha\n\n![](assets/2021-01-26/00051.png)\n\nPuno hvala!",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

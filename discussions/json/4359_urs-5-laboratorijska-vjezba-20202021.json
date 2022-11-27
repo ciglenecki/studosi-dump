@@ -1,0 +1,110 @@
+{
+  "title": "[URS] 5. laboratorijska vježba - 2020/2021",
+  "creator": "BigZ1",
+  "slug": "urs-5-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Ugradbeni računalni sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "204295": {
+      "poster": "BigZ1",
+      "content": "Nakon što sam riješio asembler i to compile riješio da prođu sve greške, Vivado (prelijepi) mi baca error vezano za top module i zanima me zna li netko riješiti ovaj problem.\n\n launch_simulation\n\nERROR: [Common 17-70] Application Exception: Top module not set for fileset 'sim_1'. Please ensure that a valid value is provided for 'top'. The value for 'top' can be set/changed using the 'Top Module Name' field under 'Project Settings', or using the 'set_property top' Tcl command (e.g. set_property top <name> [current_fileset]).\n\ntakođer pitanje,buduci da brojeve zbrajam u registar koje primam nije mi jasno kako on rijesi problem overflova? jel on onda koristi samo registar iz drugog registarskog bloka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204331": {
+      "poster": "Mikki",
+      "content": "@BigZ1#204295 Ovo mi zvuci kao da si postavio samo top module u design sources, ali ne i u simulation sources ( u sources odes pod simulation sources -> sim_1 i postavis zeljeni modul kao top), alternativno probaj napraviti ovo sta pise u erroru, ako ni to ne uspije onda ćorak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204335": {
+      "poster": "BigZ1",
+      "content": "@Mikki#204331 msm nisam nista postavio vec samo pokrenuo onu njihovu skriptu,no budem probao kasnije.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205834": {
+      "poster": "Upforpslone",
+      "content": "Jel bi htio neko poslat tocno rjesen lab4, ja ga nisam uspio rijesit a lab5 se nastavlja na lab4",
+      "votes": {
+        "upvoters": [
+          "Ak08 (obama)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205864": {
+      "poster": "Ak08 (obama)",
+      "content": "na sto se misli pod ovim da su adrese movavg4 0x00, 0x01, 0x02?",
+      "votes": {
+        "upvoters": [
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206335": {
+      "poster": "Mikki",
+      "content": "@Ak08#205864 znaci da ako se nesto outputa ili inputa na te adrese da ce se referencirati vanjska jedinica movavg4, znaci ako napises OUTPUT sX, 00 ce se podatak iz sX postaviti na port_out od procesora ( koji je spojen na port_in od movavg4), postavit ce se port_id na 00 i podici write_strobe, na sto bi trebala reagirati vanjska jedinica onako kako je opisano u proslom labosu, tj upisati podatak u one registre. Ako napises INPUT sX, 01 onda ce se port_id postaviti na 01, podici ce se read_strobe i movavg4 ce izbaciti podatak na svoj port_out (koji je spojen na port_in od procesora) i taj podatak ce se spremiti u sX\n\n[ovdje ](https://www1.hs-bremerhaven.de/kmueller/VHDL/PB_Instr_Ref.pdf)ima detaljno objašnjeno i nacrtano kako input i output funkcioniraju",
+      "votes": {
+        "upvoters": [
+          "Ak08 (obama)",
+          "Elle"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206428": {
+      "poster": "Vitez-slavonske-ravni (Željko)",
+      "content": "Koliko otprilike linija koda treba za ovaj labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

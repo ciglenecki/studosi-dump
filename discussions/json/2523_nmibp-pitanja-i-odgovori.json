@@ -1,0 +1,1211 @@
+{
+  "title": "[NMIBP] Pitanja i odgovori",
+  "creator": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+  "slug": "nmibp-pitanja-i-odgovori",
+  "tags": [
+    "FER",
+    "Napredni modeli i baze podataka"
+  ],
+  "posts": {
+    "110163": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "Jesam ja jedina kojoj ovaj upit vraća hrpu stvari iako piše da ne bi trebalo? :D Da se nije nešto krivo importalo? Vidim da u jsonu imaju float brojeve u power poljima, ali pratila sam njihove upute za import pa ne znam da li je import kriv ili sam ja negdje fulala.\n\n![](assets/2020-12-14/00018.png)",
+      "votes": {
+        "upvoters": [
+          "Amon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110428": {
+      "poster": "Amon",
+      "content": "@janeromero#110163 Meni je isto tako, objasnio sam si to tako da su upute iz 2018 (iirc tada su stvoreni neki od podataka), a tada se to nije moglo, ali vjerojatno je došao neki update pa se omogućilo i necijelobrojno uspoređivanje\n\nugl everything is fine, samo prati upute i idi dalje",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112367": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Amon#110428 si mozda vec krenuo na zadatke na Edgaru (dz4)? \n\nRadim u powershellu zadatke i dobim tocan rezultat, ubacim u Edgara i vraca mi same nullove svugdje i uopce nemrem skuzit zasto se to desava",
+      "votes": {
+        "upvoters": [
+          "Amon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112415": {
+      "poster": "Amon",
+      "content": "@janeromero#112367 Da, i meni se zna dogodit da se pojave neki null stringovi i nemam pojma koji je vrag s time. Na 2 od 3 zadatka sam uspio promijeniti upite malo pa mi se više ne pojavljuju, ali trebalo mi je dosta vremena da se pozabavim s time (nisam u powershellu radio tho, mislio sam da ja nešto krivo radim pa mi se nullovi pojavljuju). Evo sad sam se sjetio da možeš probati u onom forEach dijelu u 2. funkciji napraviti null check pa da onda jednostavno ništa ne returnaš ili returnaš prazni string or sth da se ne vidi da je null tamo",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112419": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Amon#112415 Isprobavam provjere sa nullovima doslovno svugdje, i skužila sam da mi uvijek prvi par key value bude (undefined, undefined) po jednom za svaki key. Al cak i ako stavim ovu provjeru, bude krivi rezultat jer msm da fale onda neke vrijednosti, di se poavio undefined. (sta je cudno jer sam copy pasteala iz shella 2 zadatka, 1 radi tocno, a na tom drugom se javljaju nullovi, a na vise manje istu foru su). ak uskoro ne rijesim saljem mail jer gubim sve zivce na ovaj zadatak hahha tnx za prijedloge :)",
+      "votes": {
+        "upvoters": [
+          "Amon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113287": {
+      "poster": "Arfit",
+      "content": "Uploadao sam source datoteku programa u prvom zadatku projekta na edgaru, pojavi mi se taj file tamo na zelenoj podlozi i izgleda sve ok ..\n\nAli onda udem u edgar u projekt ponovo kasnije (ne rjesavam sve odjednom) i nema vise te datoteke tamo. Tako svaki put.\n\nIma netko takav slucaj ? Jel bi onda trebao uploadat file neposredno prije nego ću submitat ? 😀",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113308": {
+      "poster": "mentally_disturbed_llama",
+      "content": "@Arfit#113287 Dogodila mi se ista stvar, pretpostavljam da je onda najsigurnije uploadat kad sve ostalo bude rješeno.",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113624": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Arfit#113287 ista situacija dosl wtf, al slazem se sa llamom.\n\nmoje pitanje : u 5. zadatku, prvi dio gdje treba pronaci sve proizvode koji imaju više cijena moj upit zasad je : \n\n`db.collection.aggregate([ {$group: { _id: {ID: \"$product.productId\"}, uniquePrices: {$addToSet: \"$product.price\"}, count: {$sum:1}}}, {$match: {count: {\"$gt\":1}}}]);`\n\ni to daje listu (product) id-a, listu različitih cijena + broj dokumenata istog id-a (isto product id). i ovaj match ubiti vraća rezultate di postoji više od jednog dokumenta s istim ID-jem. Zna li netko kako da usporedim veličinu uniquePrices seta i dobijem zapise sa više od 1 cijene? je li uopće moguće u ovom upitu? druga opcija mi je neka for petlja pa pamtit varijable i to, al čini mi se da je ovo blizu ali ne mogu skužit kako da obavim ovu provjeru length/size ništa ne daje a nisam našla nikakve slične primjere zasada online.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "114751": {
+      "poster": "Patak007",
+      "content": "![](assets/2020-12-28/00000.png)\n\njel imao netko ovaj problem prateci upute za naredbu docker-compose up... koliko sam shavatio cijela stvar bi se treba odvrtiti sama od sebe ali me pita konekciju... Na netu su sva rjesenja vezana uz skidanje mongo db sto mi je apsurdno posto skidam preko dockera",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115462": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Patak007#114751 na kojem djelu uputa ti se to desava?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115771": {
+      "poster": "cavlic",
+      "content": "7. zadatak u uputama ... zna li netko gdje griješim?\n\n![](assets/2020-12-31/00009.png)\n\n![](assets/2020-12-31/00010.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115782": {
+      "poster": "cavlic",
+      "content": "@cavlic#115771 treba pokrenut mongo --port 27018 unutar kontejnera rs0",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116456": {
+      "poster": "Ducius",
+      "content": "@Patak007#114751 ja imam isti problem, jesi uspio rjesit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116634": {
+      "poster": "moukie",
+      "content": "Ucitao sam one 3 .json kolekcije u kontejneru i kada udem u mongo i 'napisem db.cards.find()' ili za bilo koju drugu kolekciju ne dobivam nista\n\nVidi li tko u cemu je problem?\n\nAko pokusam opet ucitat u kontejneru iste kolekcije baca mi conflict, pise mi da vec postoje kolekcije sa istim kljucevima, sto valjda znaci da su stvorene.\n\nAli kada udem u ovaj mongo CLI kao da ih nema\n\n![](assets/2021-01-03/00025.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116640": {
+      "poster": "DuckItUp",
+      "content": "@moukie#116634 \n\nfali ti \"use nmbp\" naredba",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116641": {
+      "poster": "moukie",
+      "content": "@DuckItUp#116640 hvala ti!!!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116656": {
+      "poster": "moukie",
+      "content": "Koja je fora s ovime?\n\nKakvu ulogu ovdje ima BSON?\n\n![](assets/2021-01-03/00026.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116736": {
+      "poster": "jazavci",
+      "content": "@Patak007#114751 jesi uspio to rijesiti? meni isto nikako neće",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116754": {
+      "poster": "stoper5",
+      "content": "Pitanje vezano za drugi projekt. Vrijedi li pogledati nosql predavanja prije rješavanja ili ću brže riješiti ako se odma bacim na rješavanje zadataka? Vidim da traju po dva i pol sata videi pa neznam dal vrijedi 10 sati potrosit na to",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116800": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@stoper5#116754 ja mislim da ne treba. ja sam pogledala sve prezentacije/snimljena predavanja i sve sto je trebalo za projekt sam nalazila online kako se radi, ovo je vise teorija sta se predaje. jedino kaj se tice mongoa (za dz trenutno ako ces rjesavat) vrijedi prouciti map/reduce i combinable reducer poglavlja u prezama/videu, to inace ne treba za projekt (barem meni nije trebalo). sretnoo :)",
+      "votes": {
+        "upvoters": [
+          "stoper5"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116817": {
+      "poster": "moukie",
+      "content": "kako mogu vidjeti ispis iz printova koji su mi u reduce funkciji ako radim ovo preko Dockera?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116831": {
+      "poster": "moukie",
+      "content": "@moukie#116817 ok, samo treba jos jedan prozor imat otvoren u kojem se radi docker compose \n\nnvm 😅",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116846": {
+      "poster": "Patak007",
+      "content": "@jazavci#116736 znaci sve je okej, tako i treba biti... Ono kj se treba napraviti kada dođe taj prozor je otvoriti novi, drugi cmd u folderu gdje je otvoren i ovaj prvi tako da budu oba otvorena i onda na ovom novom cmd-u dalje radi po uputama... Ugl ovaj prvi sluzi samo za stvaranje baze i paljenje docker kontainera koliko sam skuzio. kasnije (realno ako te pita za konekciju vec i sad) ne moras otvarati dvije ljuske nego samo pokreni u dockeru taj container i rokaj po uputama od docker ps linije",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116848": {
+      "poster": "DudeUrNuts",
+      "content": "@janeromero#116800 Nisam siguran od kud da počnem s rješavanjem projekta. U smislu što da pogledam, koji guide da pratim, u kojem jeziku da radim. Imaš neki savjet ili usmjerenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116883": {
+      "poster": "cavlic",
+      "content": "jel se tko uspio spojit prek pymonga il nekog drugog drivera na replica set u drugom dijelu projekta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116931": {
+      "poster": "Patak007",
+      "content": "U kojem obliku treba biti datum koji cemo pohraniti u bazu podataka... Pretpostavljam da ovaj unix time treba pretvoriti u date, a kako radim u javi deafult date format mi je tipa \"Tue Aug 23 02:00:00 CEST 2011\"... Jel to ok ili treba biti godina-mjesec-dan i na to mozda i satii-minute... ugl koji je format?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116960": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@DudeUrNuts#116848 Proci vjezbu mongo koja se nalazi u folderu vjezba na stranici nmbp. za 1 dio projekta radis do 11 strane, a od 11 do kraja za drugi dio. dobar uvod u projekt, al stvarno ostatak je (za mene) bio guglanje, neki su mi bili tezi a neki laksi zadaci. sretnoooo :)\n\n@Patak007#116931 Ne znam jesi li ubacivao/ubacivala kolekcije iz mongo tutoriala koji su stavili na stranice predmeta, ali ja sam pogledala kako tamo u njihovim JSONima izgleda datum pa sam tako i ja formatirala svoj i nakon ubacivanja cim sam izvrsila neke naredbe koje ukljucuju datum dobro je radilo. Iako to ne znaci da tako i traze posto nigdje nisu naveli :D",
+      "votes": {
+        "upvoters": [
+          "DudeUrNuts"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116961": {
+      "poster": "DocHoc",
+      "content": "moze pomoc sa prvim zadatkom? proso sam one mongo upute al ne znam kako jednu od kolekcija ucitati u bazu, jel ima neki lagan nacin da se kolekcija Arts.txt prevede u json pa bi ih učitavo kao one iz uputa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116978": {
+      "poster": "mentally_disturbed_llama",
+      "content": "@DocHoc#116961 Koliko sam ja shvatila, ne smijemo prebaciti u JSON nego baš treba biti programski kod kojim se .txt datoteka ubacuje u bazu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116982": {
+      "poster": "Ljubica",
+      "content": "Od čega se računaju prosječna vrijednost i standardna devijacija u prvom zadatku u drugom dijelu? Kako vam ispadaju ti rezultati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117021": {
+      "poster": "DocHoc",
+      "content": "ako je netko radio ucitavanje u javi, treba mi pomoc sa pravilnim ukljucivanjem jar-ova u projekt, guglanje satima ne pomaze",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117066": {
+      "poster": "DocHoc",
+      "content": "@DocHoc#117021 nvm",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117076": {
+      "poster": "stoper5",
+      "content": "![](assets/2021-01-05/00022.png)\n\nZna li netko kako postaviti upit za ovu zadnju točku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117081": {
+      "poster": "stoper5",
+      "content": "@stoper5#117076 EDIT mi nije dopušten pa evo. Ovo je odgovor: 'reviews.text':{$regex:\".*wonderful.*\"} (zvijezdice oko riječi)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117087": {
+      "poster": "sose",
+      "content": "ima netko da je u pythonu uspio ovo ucitati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117091": {
+      "poster": "DudeUrNuts",
+      "content": "Jel mi može netko objasniti kako točno dođem do adrese svoje baze?\n\nKoristim docker i ne razumijem di mogu naći svoju bazu. Ne prikazuje se ni s Robo 3T ni s MongoDBCompassom na adresi localhost:27017, već mi tu budu samo neke dummy baze. Također kad pokušavam s python skriptom nešto upisati, stavim da mi je\n\nclient = pymongo.MongoClient(\"mongodb://localhost:27017/\"), \n\nali nikakve promjene ne vidim kada gledam u mongo shellu.\n\nEdit: ok, ispada da baza koju pokrenem s docker-compose uopće nije na localhost:27017 (i dalje ne znam di je), već je na localhost:27017 opet neka mongo baza ali nema veze s tim docker-compose-om.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117093": {
+      "poster": "AN5A",
+      "content": "@sose#117087 ja sam uspjela",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117143": {
+      "poster": "DaL",
+      "content": "Kako ste obavili ovaj dio iz uputa? Stalno dobivam grešku da ne prepoznaje naredbe![](assets/2021-01-05/00031.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117185": {
+      "poster": "DaL",
+      "content": "@Ljubica#116982 Jesi nasao/la odgovor?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117209": {
+      "poster": "moukie",
+      "content": "Sta raditi s ovim vremenima cudnim?\n\nKonvertirao sam to po onom snippetu kao na onom linku i dobivam sva vremena u 70-ima.\n\nRadim u javi. Moze netko tko je takoder radio u javi kazati kako je on to pretvorio u human readable format?\n\n![](assets/2021-01-05/00034.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117225": {
+      "poster": "narval13068 (Dima)",
+      "content": "Je li se jos kome dogodilo da je nakon pokretanja drugog dijela projekta prvi dio se pretvorio u neki cudan \n\ntest od samo dva pitanja umjesto onih 11 (sreca spremio sam sve upite u .txt file za svaki slucaj....-.-)![](assets/2021-01-06/00000.png)",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117230": {
+      "poster": "Patak007",
+      "content": "Jel mi može netko objasniti kako pobogu da u 6. zadatku nakon map/reduce funkcije s productId i rewiew atributima u novu kolekciju dodam još i cijenu svakog specificnog proizvoda... Koliko znam map/reduce ne može uzeti kao argument i 3. vrijednost a ne znam ni kako referencirati jednu kolekciju iz druge",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117277": {
+      "poster": "Ljubica",
+      "content": "@DaL#117185 nisam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117310": {
+      "poster": "korisnik1",
+      "content": "@narval13068#117225 meni se to desi kad imam vise edgar tabova",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117311": {
+      "poster": "korisnik1",
+      "content": "@Patak007#117230 napravi jos jedan upit nakon MR, nigdje ne pise da sve mora biti napravljeno samo s jednim upitom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117313": {
+      "poster": "korisnik1",
+      "content": "@narval13068#117225 meni se to desi kad imam vise edgar tabova\n\n@Patak007#117230 napravi jos jedan upit nakon MR, nigdje ne pise da sve mora biti napravljeno samo s jednim upitom\n\n@Ljubica#116982 @DaL#117185  10 puta izvrtis insert s minimalnim write concerneom, mjeris kolko je trajalo, izracunas avg, izracunas stddev (ja sam sve to u excelu), isto tako za maksimalni\n\novako mi ispalo:\n\nminimalni write concern:\n\navg: 24124.1ms\n\nsddev: 6115.0ms\n\nmakismalni write concern:\n\navg: 42193.7ms\n\nstddev: 2625.4ms\n\n@moukie#117209 na temelju mojeg iskustva s javom, rekao bih da koristis krivi konstruktor ili tako nesto\n\n@DudeUrNuts#117091 mozda imas lokalno neku bazu na 27017, ne u dockeru, probaj u `docker-compose.yml` za taj kontejner dodati \n\n```\nports: \n   - 27018:27017 // ili neki drugi broj, samo da je s jedne strane neki tvoj port koji nije zauzet na localhostu, a s druge 27017 (mozda treba 27017:27018, nisam siguran za sintaksu)\n```\n\ni onda se spoji na localhost:27018",
+      "votes": {
+        "upvoters": [
+          "Ljubica",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117334": {
+      "poster": "NoName3",
+      "content": "Ne mogu enableati Hyper-V na windows 10. Jel imo neko takav problem? One upute iz dokumenta mi ne pomažu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117348": {
+      "poster": "zokonil",
+      "content": "![](assets/2021-01-06/00009.png)\n\nbilo koji kod da upisem u edgar mi vraca samo error occured on server, jos nekome?",
+      "votes": {
+        "upvoters": [
+          "DaL",
+          "kivu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117351": {
+      "poster": "burek",
+      "content": "Vjerojatno glupo pitanje, ali trebamo li kod importa baze ugnijezditi sve reviewove za svaki product?  ili ih jednostavno učitavamo onako kako su u txt file-u",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117352": {
+      "poster": "AN5A",
+      "content": "@Patak007#117230 Možeš pomoću agregacije dobiti novu kolekciju. Dovoljan je jedan upit gdje koristiš $group, $project i $out, primjer je u prvom odgovoru ovdje: https://stackoverflow.com/questions/49061043/can-i-make-mongo-map-reduce-count-multiple-values-of-an-object",
+      "votes": {
+        "upvoters": [
+          "Patak007"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117353": {
+      "poster": "AN5A",
+      "content": "@burek#117351 Kao txt file (dakle svaki dokument ima sve one fieldove), tek se u petom ili šestom zadatku upitom review-ovi ugnijezde u product.",
+      "votes": {
+        "upvoters": [
+          "burek"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117399": {
+      "poster": "NoName3",
+      "content": "Molim pomoć, hvala![](assets/2021-01-06/00014.webp)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117421": {
+      "poster": "moukie",
+      "content": "Kako bismo trebali koristiti ovaj \"batch insert\" kad punimo bazu podacima iz programa?\n\nNije mi jasno, zar nije to naredba za mongo cli?\n\n![](assets/2021-01-06/00017.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117438": {
+      "poster": "DocHoc",
+      "content": "@NoName3#117399 provjeri jel ti pokrenut Docker Desktop",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117454": {
+      "poster": "NoName3",
+      "content": "@DocHoc#117438 \n\nje\n\n![](assets/2021-01-06/00019.webp)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117476": {
+      "poster": "DocHoc",
+      "content": "@NoName3#117454 nezz imo sam slican problem i tako sam ga rijesio, upalio docker, probaj dobar stari \"ugasi pa upali\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117480": {
+      "poster": "AN5A",
+      "content": "@moukie#117421 koliko sam ja shvatila trebamo u korištenom jeziku koristiti opciju za insert_many umjesto insert_one, ali nisam 100% sigurna.",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117648": {
+      "poster": "aKul (Vili Beroš)",
+      "content": "@NoName3#117454 Piše u donjem lijevom kutu \"Docker failed to start\" tako je i meni bilo jer mi hyper-v nije bio upaljen kod instaliranja dockera.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117686": {
+      "poster": "gunaman",
+      "content": "ovo je dosta vague pitanje u zadnji cas, no hate pls 😄 al sto bi mi tocno trebali skuzit u projektu kod map/reduce dijela? neznam jel to zato sta koristim Robo 3T al meni se cini da mi i prvi query sasvim dobro racuna? kako bi trebao skuzit da je ispis pogresan?\n\n![](assets/2021-01-06/00048.png)\n\n![](assets/2021-01-06/00049.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117752": {
+      "poster": "zokonil",
+      "content": "1 zadatak pita Jesu li te zadnje vrijednosti iste i zašto?\n\nkoji je odgovor na ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117754": {
+      "poster": "421blazeitfgt",
+      "content": "Nisu iste pogle si collstats ili tak nes\n\ni onda ti pise u bajtovima valjda, a na disku pogledas u folderu tom di ti je ili properties ili sta vec ugl meni je jedno duplo vece od drugog sta ja znam koji su razlozi replikacija i takve stvari mozda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117755": {
+      "poster": "421blazeitfgt",
+      "content": "@gunaman#117686 ne gledas siru sliku znaci taj zadatak bi trebao brojati koliko se puta pojavi neki subtype i ugl prije nego sto provjeris dal je taj atribut undefined dobis vrijednosti tipa nan ili 1.7, a cijelobrojne vrijednosti zbrajas",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117767": {
+      "poster": "AN5A",
+      "content": "@421blazeitfgt#117754 \n\n@zokonil#117752 \n\nIf collection data is compressed (which is the default for WiredTiger), the storage size reflects the compressed size and may be smaller than the value returned by db.collection.dataSize(). (https://docs.mongodb.com/manual/reference/method/db.collection.storageSize/)",
+      "votes": {
+        "upvoters": [
+          "421blazeitfgt"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117768": {
+      "poster": "421blazeitfgt",
+      "content": "e kako se mjeri vrijeme (nemam robo3t)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117778": {
+      "poster": "aKul (Vili Beroš)",
+      "content": "@421blazeitfgt#117768 .explain(\"executionStats\")",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117779": {
+      "poster": "421blazeitfgt",
+      "content": "db.system.profile",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123498": {
+      "poster": "DaL",
+      "content": "Je li netko krenuo sa zadnjim projektom? Nije mi jasno trebamo li izrađivati vlastitu ontologiju budući da prvo tako piše, a zatim da možemo uzeti gotovu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123521": {
+      "poster": "mentally_disturbed_llama",
+      "content": "@DaL#123498 Radiš svoju, gotovu dodaš na to svoje (ili svoje dodaš u gotovu).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123528": {
+      "poster": "trubadur",
+      "content": "Kako predajemo svoja rješenja?\n\nU zadatku piše: \"Dokumentaciju postaviti u vlastiti direktorij LaboratorijPIiIS1\\P2 na FTP serveru\".\n\nMože netko pojasnit? :D\n\nJel moramo napravit svoj FTP server il šta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123554": {
+      "poster": "AN5A",
+      "content": "@trubadur#123528 Našla sam negdje upute kako to postaviti na FTP server, ali toga uopće nema u ovogodišnjem folderu pa možda bolje poslati mail. Ne znam je li Moodle povezan s tim or what not.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123555": {
+      "poster": "AN5A",
+      "content": "Koliko to mora biti smisleno? Jer zbilja ne znam smisliti nešto gdje pametno mogu iskoristiti sve što su rekli.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123572": {
+      "poster": "trubadur",
+      "content": "@AN5A#123555 Mora bit smisleno da bi reasoner mogao donijeti dodatne zaključke na temelju poznatih činjenica. Probaj nać neku ontologiju koja ima hijerarhiju, ili na koju možeš dodat neku svoju hijerarhiju, jer ćeš onda moć dodat hrpu podklasa i podtipova i olakšat si izmišljanje klasa :D. Ali pazi da možeš ostvarit sve one uvjete iz zadatka.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123588": {
+      "poster": "AN5A",
+      "content": "@trubadur#123572 Well, zasad tema igara sasvim dobro radi jer postoji mogućnost podklasa, ali treba ipak smisliti za refleksiju i uniju. Jer zasad imaju 4 podklase podžanrova akcijskih igara koje se stvaraju uniju akcijskih igara obzirom da nisam mogla smisliti ništa što bi bilo jednostavno kao Parent je unija Mother and Father. 😂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123631": {
+      "poster": "trubadur",
+      "content": "@AN5A#123554 Odgovorila mi je profesorica da je to krivo i da treba pisat da se rješenje uploada na Moodle. Kao da je to ostalo od prošlih godina.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123639": {
+      "poster": "trubadur",
+      "content": "@AN5A#123588 Hahah a dobro, nisam ni ja bio puno kreativniji. Isto mi je unija unija podklasa :D. Moja ontologija je o organizacijama i njihovim članovima/radnicima. Meni je npr. refleksija Post (pozicija) worksWith Post - Programer može raditi zajedno za Programerom, Managerom... To mi je bilo najteže smislit. Zapravo ni ne radi kako bi trebalo, ali nadam se da će se izgubit u mnoštvu ostalih predikata :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AN5A"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123656": {
+      "poster": "Tratarira",
+      "content": "Jel bas treba koristiti neku vanjsku ontologiju ili mozemo samo napraviti sami cijelu koja ce zadovoljavati te uvjete koji su oni naveli?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123802": {
+      "poster": "AN5A",
+      "content": "@Tratarira#123656 Nisam 100% sigurna, ali sigurno bi i bez druge bilo bodova (ipak je najvažnije pokazati što smo naučili iz toga), no uvijek možeš nešto full jednostavno i općenito ubaciti. Ja sam uzela s ove stranice https://www.dublincore.org/specifications/dublin-core/dcmi-terms/ zbog dvije klase i property-a.",
+      "votes": {
+        "upvoters": [
+          "Tratarira"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123825": {
+      "poster": "Tk123",
+      "content": "Ako sam ja dobro skužio upute, mi trebamo napisati ontologiju sličnu onoj iz zadataka za vježbu i onda toj ontologiji dodat neku drugu, a tu drugu dodamo tak da napišemo klase i predikate u fajl ove naše?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123989": {
+      "poster": "NoName3",
+      "content": "nije mi baš jasno kako mergamo našu ontologiju s ontologijom s interneta.. pokliko sam sve na linkeddata, ali nisam skuzio kako se koristi stranica i linkovi na njoj.. pa ako moze neko kratko objasnjenje :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124069": {
+      "poster": "trubadur",
+      "content": "@NoName3#123989 Možeš kliknut na neki od onih kružića na početnoj stranici ili ić gore na Vocabs pa onda nać šta te zanima. Kad nešto nađeš, vidiš njegov URI/namespace. Taj URI moraš ubacit u svoj .owl file kao prefix, npr. za ontologiju geo: `@prefix geo: <URI> .`. I još treba importat geo ontologiju - dodat `owl:imports geo: ;` u onaj početni dio odmah ispod prefixa, di definiraš da je tvoj custom URI tipa ontologije, label svoje ontologije...",
+      "votes": {
+        "upvoters": [
+          "NoName3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124215": {
+      "poster": "jazavci",
+      "content": "kad radimo klase s intersection of npr, jel to mora bas biti kao intersection of druge dvije klase ili mozemo stavljati predikate? npr: Man -> Person and Mammal, ii može npr Man -> Person and hasGenderMale",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124248": {
+      "poster": "Frootek",
+      "content": "Rješavam zadatke za vježbu prije projekta, ne prolazi mi ni jedan SPARQL upit kojeg su stavili u rješenjima, tojest ne vraća mi nikakav rezultat. Zna netko u čemu je problem?",
+      "votes": {
+        "upvoters": [
+          "Tratarira"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124529": {
+      "poster": "NoName3",
+      "content": "Ima li neko problem da mu se svaka klasa i svaki object property upisuje u individuals?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124911": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "U vježbi piše : \n\n> Zadatak 1. Definirajte predikate: \n > -  hasAunt (ima tetu/ujnu/strinu) \n> -  hasUncle (ima tetka/ujaka/strica) \n> -  hasNiece (ima nećakinju) \n> - hasNephew (ima nećaka) \n> \n> kao predikate čija je domena klasa Person, a poprima vrijednosti (ima range) iz klase Woman odnosno Man (ovisno o značenju).\n\nJel se to radi u onom fileu što smo ga morali ubacit u Protege ili se može negdje u alatu to (onako kako je u vježbi napisano, onaj silni \"kod\")?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124951": {
+      "poster": "AN5A",
+      "content": "@janeromero#124911 Može u Protegeu: https://www.youtube.com/watch?v=wCsP36wFxdA",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "mini_batman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126925": {
+      "poster": "Polifem",
+      "content": "Jesu nekome upisani bodovi za 1.lab profila ? Vidim da su za 2. upisali",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126953": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Polifem#126925 Meni je odavno upisano.. ali mi se bodovi nalaze pod Labos predmetom, a ne u bazama.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "138486": {
+      "poster": "mini_batman",
+      "content": "Je li na roku dolaze zadatci iz baza koje su se koristile na mi i zavrsnom ili ce biti neka nova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

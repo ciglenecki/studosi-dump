@@ -1,0 +1,303 @@
+{
+  "title": "[SBP] 8. laboratorijska vježba - 2019/2020",
+  "creator": "Systematic (Firecracker)",
+  "slug": "sbp-8-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Sustavi baza podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "22460": {
+      "poster": "Systematic (Firecracker)",
+      "content": "Jel zna netko kako se otvaraju sjednice ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22468": {
+      "poster": "neytiri",
+      "content": "@Systematic#22460 samo stisnes New Query.\n\novo su ti neke pocetne naredbe i nakon njih mozes krenut s transakcijama:\n```\nuse labprof8 -- da ti se obavlja nad bazom labprof8\nset context_info 7; -- da ti oni njihovi pomocni upiti rade\nselect @@spid -- id sjednice\n```",
+      "votes": {
+        "upvoters": [
+          "Systematic (Firecracker)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22473": {
+      "poster": "Systematic (Firecracker)",
+      "content": "@neytiri#22468 Činilo se prejednostavno da bi bilo istina, hvala :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22808": {
+      "poster": "tranquility",
+      "content": "Kak ste testirali proceduru iz 3. zadatka? Jel se moze nekak kroz Server management studio ili se treba u Javi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23275": {
+      "poster": "Systematic (Firecracker)",
+      "content": "@tranquility#22808 bilo je i u proslim labosima to, ja sam to napravila samo nekoliko poziva procedure s različitim parametrom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23317": {
+      "poster": "tranquility",
+      "content": "@Systematic#23275 Iz jedne ili vise sjednica? Znam kak se inace testiraju procedure, al ne uspijevam proizvesti ovu pogresku \"Privremeno zakljucano...\" (a pretpostavljam da je to poanta price)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23569": {
+      "poster": "TentationeM",
+      "content": "Je li netko uspio riješiti zadatak s potpunim zastojem da uputi u kojem pravcu razmišljati?\n\nNe kužim kako iz T4 prouzročiti zastoj preostale 3 transakcije, a da ona sama ne sudjeluje u zastoju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23611": {
+      "poster": "Paula13 (p13)",
+      "content": "@tranquility#23317 Ja sam iz dvije sjednice, u jednoj sjednici bi pokrenula transakciju i iz nje s odgovarajućim naredbama zaključala neke zapise i onda iz druge sjednice pokrenula proceduru",
+      "votes": {
+        "upvoters": [
+          "tranquility"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23612": {
+      "poster": "Paula13 (p13)",
+      "content": "@TentationeM#23569 ako sam ja dobro shvatila zadatak, mislim da nije poanta da iz T4 prouzročiš zastoj, nego da T4 mora čekati na neku od ostale 3 transakcije, a da su te ostale tri transakcije u potpunom zastoju u kojem T4 ne sudjeluje",
+      "votes": {
+        "upvoters": [
+          "TentationeM",
+          "tranquility"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23620": {
+      "poster": "tranquility",
+      "content": "@Paula13#23611 Hvala, uopce se nisam sjetila uopce se nisam sjetila da bi trebala koristit neku naredbu osim exec prc3 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23694": {
+      "poster": "Systematic (Firecracker)",
+      "content": "Može netko ukratko napisat šta se treba napravit u trećem i četvrtom, jer se mučim već par dana s time, a nikako da skužim ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23745": {
+      "poster": "tranquility",
+      "content": "@Systematic#23694 U trecem treba napisati tu proceduru s 1 transakcijom i 3 update naredbe kako i pise u uputama. Ono sto je bitno u cijeloj prici je redoslijed update onosno set lock_timeout naredbi jer se one obavljaju. Npr. ako za prvu stavis timeout -1, ona ce cekati kolko god, ali iduca naredba se se izvest odmah nakon nje (i to ce shvatiti kao da je cekala 0 ms), ali to nije ispravno jer je realno ona cekala jednako kolko i prva naredba. Znaci predati ih da to vrijeme cekanja bude realno. I na kraju testirati kako je kolegica gore napisala.\n\nZa cetvrti napominjem da nisam skroz sigurna (nek me netko ispravi ak je krivo), ali mislim da bi trebala zakljucat neki element iz transakcije Tx i probat mu pristupit iz T4. Onda Zakljucat neki drugi element iz Ty i probat mu pristupit iz Tx. I na kraju \"zatvoris krug\" s transakcijom Tz koja ti je ostala. Tako da u biti Tx, Ty i Tz cekaju jedna drugu, a T4 samo Tx.",
+      "votes": {
+        "upvoters": [
+          "Systematic (Firecracker)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23871": {
+      "poster": "Paula13 (p13)",
+      "content": "Zašto u zadatku 6.1., koji su oni kao primjer u uputama riješili, u grafu povijesti koji je konzistentan s produciranom redoslijedom izvršavanja ne ide strelica od c2 prema w1[x] nego ide od w2[x] prema w1[x] ?\n\n![](assets/2020-05-13/00032.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23913": {
+      "poster": "loo",
+      "content": "Je li može netko napisati kako je riješio 5.d)? Nije mi jasno koje sve strelice moramo staviti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23941": {
+      "poster": "tranquility",
+      "content": "@Paula13#23871 Prema primjerima s predavanja mi se čini da nikad ne stavljaju strelice iz c (pretpostavljam da je to zato što se commit odnosi na cijelu transakciju, a ne samo na jedan zaključani element)",
+      "votes": {
+        "upvoters": [
+          "Paula13 (p13)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24130": {
+      "poster": "TentationeM",
+      "content": "@Paula13#23871 Zato jer je u tom zadatku poanta producirati izgubljenu izmjenu. Mora se omogućiti potvrđivanje T2 iako je w1[x] u međuvremenu prepisao izmjenu koju je obavio w2[x].",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24160": {
+      "poster": "Paula13 (p13)",
+      "content": "@TentationeM#24130 zar nije da graf producirane povijesti predstavlja ono što se zapravo dogodilo kad smo pokrenuli naredbe te dvije transakcije? tj., SQL Server neće dozvoliti da se dogodi izgubljena izmjena, nego će se sve odviti kako treba i mi onda to prikazujemo tim grafom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24224": {
+      "poster": "TentationeM",
+      "content": "@Paula13#24160 Da u pravu si, možda da pitaš Zakošeka, bilo bi zanimljivo saznati odgovor.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24388": {
+      "poster": "Paula13 (p13)",
+      "content": "@TentationeM#24224 evo poslala sam mu mail, odgovorio mi je ovo:\n\n> Pokušat ću s kratkim odgovorom, pa ako to ne bude dovoljno, možemo krenuti u daljnje objašnjavanje.\n\n> Ovim grafom je npr. zabranjeno da se w1[x] obavi prije w2[x], ali nije zabranjeno da se c2 obavi prije w1[x] jer c2 i w1[x] grafom nisu poredani. Može li se producirana povijest dobiti topološkim poretkom iz ovog grafa? Čini mi se da može. To znači da je ovo graf povijesti koji je konzistentan s produciranom poviješću (mislim na povijest prikazanu u obliku niza operacija).",
+      "votes": {
+        "upvoters": [
+          "TentationeM",
+          "tranquility"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24558": {
+      "poster": "Systematic (Firecracker)",
+      "content": "Kako provjerimo predugo čekanje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24565": {
+      "poster": "TentationeM",
+      "content": "Zaključaš iz druge transakcije neki element i držiš ga zaključanim duže od 5 sekundi (ne napraviš rollback/commit).",
+      "votes": {
+        "upvoters": [
+          "Systematic (Firecracker)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

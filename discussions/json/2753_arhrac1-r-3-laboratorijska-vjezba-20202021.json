@@ -1,0 +1,357 @@
+{
+  "title": "[ARHRAC1-R] 3. laboratorijska vježba - 2020/2021",
+  "creator": "Worly",
+  "slug": "arhrac1-r-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Arhitektura računala 1R",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "121511": {
+      "poster": "Worly",
+      "content": "Pozdrav kolege,\n\nnisam siguran jesam li ja nesto pogrijesio ili propustam neku kljucnu informaciju, ali cini mi se da nisu postavljeni ulazni podaci u memoriji za prvi zadatak 3. lab vjezbe (vjezba5). U zadatku pise da se podaci nalaze od adrese 100(16), ali meni su tamo sve same nule. Moze li netko potvrditi da ima isti problem prije nego sto pokusam kontaktirati profesora?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121524": {
+      "poster": "pero",
+      "content": "@Worly#121511 mislim da trebas sam definirati podatke na toj adresi sa DW",
+      "votes": {
+        "upvoters": [
+          "Worly",
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122463": {
+      "poster": "wajdo",
+      "content": "jel mi moze neko objasnit kak se simulira prekid na vanjskoj jedinici u compasu? ne mogu istestirat 6. zadatak jer ne kuzim kak se to radi.. ili ak me moze neko uputit di je to objasnjeno? imam ukljucene traceove koji su spomenuti u uputama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122468": {
+      "poster": "Eugene",
+      "content": "@wajdo#122463 \n\nNisam siguran na što točno misliš...\n\nKako bi se dogodio prekid, u programu moraš omogućit prihvaćanje prekida brisanjem bita 7 u CPSR registru.  Također moraš omogućit postavljanje prekida sklopa RTC upisom jedinice na lokaciju RTC+10.\n\nAko si to napravio i ostatak koda ti je dobar, uključivanjem navedenih traceova bi trebao dobiti dobru simulaciju.\n\nProbaj isključit trace za registre da dobiješ preglednije kad ulazis/izlazis iz prekida.",
+      "votes": {
+        "upvoters": [
+          "wajdo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122475": {
+      "poster": "wajdo",
+      "content": "@Eugene#122468 \n\nhvala, sad kad su traceovi za registre iskljuceni mi je jasno da sve radi, zbunila me hrpa ispisa.. cinilo mi se ko da se samo vrtim u onoj beskonacnoj petlji, al sve radi ok",
+      "votes": {
+        "upvoters": [
+          "Eugene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122579": {
+      "poster": "yuniK",
+      "content": "nez jel mozda radim nesto krivo ali kad idem provjerit rjesenje petog nema nista posli adrese 200 jel moze neko rec kako bi tribala nac adresu 400",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122608": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "disp -> component -> array -> mem -> u begin upises 400 -> ok",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122610": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "@yuniK#122579 disp -> component -> array -> mem -> u begin upises 400 -> ok",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122668": {
+      "poster": "bb8 (zaza)",
+      "content": "jel sad za kraj programa koristimo isključivo SWI 123456 ili može i HALT?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122853": {
+      "poster": "jobi (azex)",
+      "content": "@bb8#122668 iskljucivo HALT, ovo drugo mi nije radilo",
+      "votes": {
+        "upvoters": [
+          "Bioxed",
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122859": {
+      "poster": "Archie54",
+      "content": "U 5. zadatku treba kao brinut o predznacima, tj. treba osigurat da potprogram radi i za negativne brojeve, ima netko ideju kako to odradit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122916": {
+      "poster": "Eugene",
+      "content": "@Archie54#122859 \n\nMozes provjerit predznak prvog broja i ako je negativan pretvoris ga u pozitivan i u neki registar zapamtis njegov predznak. Onda isto napravis za drugi broj. Sad imas dva pozitivna broja s kojima obavis div normalno, a ako su predznaci brojeva bili razliciti pomnozis rezultat s -1.\n\nDa vidis jesu predznaci razlici najlakse ti ih je xorat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123023": {
+      "poster": "mihamih",
+      "content": "jel jos nekome ne radi extension u vscodeu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123041": {
+      "poster": "schiz",
+      "content": "@mihamih#123023 probaj saveati kod s .s ekstenzijom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123042": {
+      "poster": "mihamih",
+      "content": "@schiz#123041 ma rijeseno vec ali hvala, bio mi je u konfliktu s nekom drugom ekstenzijom pa sam samo tu drugu iskljucio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123045": {
+      "poster": "bb8 (zaza)",
+      "content": "u prvom mi javlja \"error in file: line is not terminated\" iako imam prazak redak na kraju datoteke, isto tako jos jednu gresku mi javlja \"error in reading file with program\" jel zna netko do ceg bi moglo bit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123048": {
+      "poster": "mihamih",
+      "content": "meni za svaki redak di definiram rijec npr. DW 123 javlja incorrect number format, ne mogu shvatit u cem je problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123074": {
+      "poster": "schiz",
+      "content": "@bb8#123045 malo se zajebavaj s tim... nemoj zaboraviti da je najsigurnije kod pisat u vm-u a ne na windowsima\n\n@mihamih#123048 posalji screenshot tog dijela koda",
+      "votes": {
+        "upvoters": [
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123164": {
+      "poster": "Bioxed",
+      "content": "jel #100 isto ko #1<8 ?\n\ni jel u prvom ide ovako definiranje podataka ?\n\nORG 100\n\n\t\tDW 0, 3, 5, -1, -6, 80000000",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123166": {
+      "poster": "Bioxed",
+      "content": "Oce netko prodat drugi zad?\n\nP.S. necu debilno prepisat 😅",
+      "votes": {
+        "upvoters": [
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "iNavy (mornar Ica)"
+        ]
+      }
+    },
+    "123195": {
+      "poster": "bb8 (zaza)",
+      "content": "@Bioxed#123164 #1<8 je ja mislim bolje i da tak ide definiranje podataka (samo kaj je 6 a ne 5 da ne bi razbijao glavu ak ti ne ispisuje ko njima) osim sto negativne zapisi u hex, znaci -1 je 00FFFFFFFF, a -6 je 0FFFFFFFA",
+      "votes": {
+        "upvoters": [
+          "Bioxed"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125381": {
+      "poster": "yuniK",
+      "content": "jel vi vidite aktivnost na moodleu kratka provjera znanja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125403": {
+      "poster": "wajdo",
+      "content": "@yuniK#125381 jos uvijek ne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125787": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "Jesu ikome ucitani bodovi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125807": {
+      "poster": "mihamih",
+      "content": "@Michael#125787 ne jos",
+      "votes": {
+        "upvoters": [
+          "Michael (Michael Scarn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

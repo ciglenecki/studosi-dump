@@ -1,0 +1,547 @@
+{
+  "title": "[DUBUCE] 3. laboratorijska vježba - 2019/2020",
+  "creator": "Kristijan",
+  "slug": "dubuce-3-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Duboko učenje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "26673": {
+      "poster": "Kristijan",
+      "content": "Jeli možda netko ima također problema sa 2. i 3. zadatkom? (vezano uz točnost samoga modela). Konkretno, meni onaj _baseline_ model ima maksimalnu točnost do 68%, a implementacija rnn-a uz korištenje _\"vanilla RNN\"_ čelije ima još lošiji rezultat , tipa 60-ak %. Prvi zadatak pretpostavljam da mi je točan sudeći po onim kontrolnim ispisima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26678": {
+      "poster": "NekocBraca",
+      "content": "@Kristijan#26673 Ja ostvarujem jos losije rezultate, jedva iznad 50%. Isto su mi oni ispisi u prvom tocni.\n\nMeni nije najjasniji ovaj dio s avg_pool i eliminiranjem vremenske dimenzije. Nisam uspio skuziti kako bi tu iskoristio `torch.nn.AvgPool2d` s obzirom da je ulaz varijabilne dimenzije. Ja sam onda rucno implementirao sloj koji samo racuna `torch.mean` po `dim=1`. Jel to mozda krivo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26700": {
+      "poster": "Kristijan",
+      "content": "@NekocBraca#26678 Ja sam isto išao ručno implementirat (pretpostavljam da je to i cilj, a i ne znam kak bi se to napravilo pomoću AvgPool ). Mislim da bi tvoje rješenje trebalo bit točno. Kolko sam ja skužio da se svaka instanca, tj. svaka ona lista indeksa, prvo pretvori u vektorske reprezentacije (koje su dimenzionalnosti 300). Dobije se lista dim= (duljina_instance x 300). Onda se te reprezentacije zbroje i uzme se sredina kako bi se svaka instanca predstavila samo jednim vektorom dim=(1 x 300). I to se radi za svaku instancu batch-a, i na kraju se dobije batch dim=(10 x 300)  koji ide u mrežu.  _Jedina promjena_  koju sam ja napravio je da nisam uzeo _mean_ nego sam dijelio sa _izvornom duljinom_ instance (one se dobiju kod _DataLoader-a_ zbog one pad_collate_fn).  Ali koliko vidim, nije baš previše pomoglo.",
+      "votes": {
+        "upvoters": [
+          "NekocBraca"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26752": {
+      "poster": "antunmod",
+      "content": "@Kristijan#26700 \n\nMožeš koristiti AdaptiveAvgPool2d((1, 300)).\n\nI meni su rezultati Valid accuracy jedva iznad 50%..",
+      "votes": {
+        "upvoters": [
+          "Kristijan",
+          "NekocBraca"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27245": {
+      "poster": "Jimothy",
+      "content": "![](assets/2020-05-19/00018.png)\n\nS obzirom da je za numerikalizaciju texta i labela potrebno znati vokabulare, treba li onda nakon stvaranja dataseta i vokabulara predati  tom datasetu vokabulare za text i label? Ili je bolje to riješiti na neki drugi način?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27257": {
+      "poster": "Kristijan",
+      "content": "@Jimothy#27245  Ja sam tako riješio. Prvo sam napravio vokabular iz train datoteke. Onda sam napravio _Dataset_ objekt i predo mu vokabular pa sam u _getitem()_ koristio onaj \"_.encode()_\" od vokabulara.",
+      "votes": {
+        "upvoters": [
+          "Jimothy",
+          "Satanael"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27376": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Jimothy#27245 Iz prakse - tako se to radi. Uz model ti uvijek ide i datoteka vokabulara, jer bez toga ne možeš mreži predati ispravne podatke. Ovakve stvari **spremaš uz model**, tj., to su ti u neku ruku parametri modela. Najlakše je napraviti neki json, s obzirom da su te stvari najobičniji rječnici.\n\nOno što se u praksi jako često radi je da se kvantizacija tokena radi po nekoj shemi. Npr. popularan je poredak riječi po frekvenciji (češće riječi, manji ID). Onda će ti svaki dokument uvijek dati isti rječnik. U tom slučaju ne trebaš snimiti taj rječnik dok god imaš originalan tekst po kojem si izvlačio riječi, jer do njega dođeš opet na jednoznačan način.",
+      "votes": {
+        "upvoters": [
+          "Jimothy",
+          "NekocBraca"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28079": {
+      "poster": "antunmod",
+      "content": "U 3. zadatku podatke imamo u formatu *batch_size x batch_text_max_length x embedded_dim*, npr. 10x30x300. Kaže da bi podatke trebalo transponirati u \"time-first\" format, pretpostavljam 30x10x300.\n\nZa mrežu sam stavio {RNN(300, 150, 2), RNN(150, 150, 2), Linear(150, 150), Linear(150,1)}. Na izlazu mreže dobijam podatak 30x10x1 i ne vidim kako bih sad tu trebao izračunati gubitak za koji imam samo 10 vrijednosti, po jednu po primjeru. Može li me netko uputiti gdje griješim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28090": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@antunmod#28079 To ti ovisi o tipu mreže. Ako očekuješ izlaz 10 x 1, onda ili trebaš layer koji će kao ulaz imati sve time stepove i pretvarati to u konačan rezultat (time su ti RNN-ovi i linearni layeri ekstraktori značajki), ili uzimaš samo zadnji time step (`[-1, :, :]`). Preporučam ovaj drugi pristup.",
+      "votes": {
+        "upvoters": [
+          "antunmod"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28163": {
+      "poster": "talos",
+      "content": "Ja sam za baseline napravio s nn.AdaptiveAvgPool1d(1) i torch.mean() i dobivam iste rezultate. \n\nJedva dobivam iznad 50% na validation i test acc. Jel netko može potvrdit da je dobio njihove rezultate?",
+      "votes": {
+        "upvoters": [
+          "Jimothy",
+          "brzisha"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28344": {
+      "poster": "InCogNiTo124",
+      "content": "@talos#28163 evo meni isprve ovako radi\n\n![](assets/2020-05-21/00030.png)\n\ni dost je consistent izmedu runnova čak\n\npazi da ako koristis `BCEWithLogitsLoss` da ne stavljas sigmoidu na kraj, to je mene mučilo prije",
+      "votes": {
+        "upvoters": [
+          "Jimothy",
+          "talos"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28357": {
+      "poster": "Jimothy",
+      "content": "@InCogNiTo124#28344 \n\nI ja dobivam otprilike takve rezultate, s tim da za neke vrijednosti seeda se accuracy kreće oko 70%, a za neke oko 77%.\n\nTako da mislim da acc dosta ovisi o seedu pa probajte više seedova ako vam se čini da vam je acc nizak.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28358": {
+      "poster": "talos",
+      "content": "@InCogNiTo124#28344 \n\nTnx, sigmoida je na mjestu.\n\nNašao sam problem.\n\nPretvarao sam dimenzije unosa(s transpose) prije torch.mean i pogriješio tamo. Treba jednostavno torch.mean(tensor, dim=DIMENZIJA_VREMENA).",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28361": {
+      "poster": "InCogNiTo124",
+      "content": "@Jimothy#28357 ja ni ne koristim fiksni seed, svaki tun mi je drukciji, al su vrijednosti uvijek tu negdje (i generalno se penju)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28515": {
+      "poster": "Jimothy",
+      "content": "Recimo da postoji ova linija output, hn = model.rnn(input).\n\nJe li još netko primjetio da mu model koji koristi Vanila RNN radi dobro (test_acc >= 0.75) ako u prvi fully connected layer pošalje hn[0], a model s GRU i LSTM radi dobro ako se pošalje hn[-1] (što i je očekivano ponašanje)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28531": {
+      "poster": "InCogNiTo124",
+      "content": "@Jimothy#28515 ja sam samo lstm koristio, ali ne treba li slat h[0]?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28538": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@InCogNiTo124#28531 Nema previše smisla izvoditi ikakvu vrstu RNN-a ako ćeš uzimati rezultat nakon prvog vremenskog koraka\n\n@Jimothy \n\nA razlog zašto RNN lošije radi za `hn[-1]` je cijeli razlog zašto su nam potrebni LSTM i GRU - klasičan RNN drastično gubi na performansama što je dublji i što je sekvenca dulja. Prvi vremenski korak ti ima najkvalitetnije podatke, ali nema osjećaj za \"vrijeme\", tj. to ti je praktički samo potpuno povezani sloj. Mislim da će se najbolje performanse dobiti ako se kod RNN-a predaju prvih par slojeva, ajmo reći prva 3. U svakom slučaju bi kod RNN-a bilo smisleno uzeti bar `hn[1]` jer u suprotnom imaš više manje samo potpuno povezani sloj. Možda probam ako ću imati vremena ovo s uzimanjem prvih `n` koraka kao ulaz.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28539": {
+      "poster": "InCogNiTo124",
+      "content": "> @micho#28538 Nema previše smisla izvoditi ikakvu vrstu RNN-a ako ćeš uzimati rezultat nakon prvog vremenskog koraka\n\nJa sam dakle potpuno misinterpretiro dimenzije izlaza `nn.LSTM`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "28544": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@InCogNiTo124#28539 Nisam baš siguran na što je kolega mislio, ali vidim da on hovori o `h_n`, tj. skrivenim stanjima. Ak se ne varam sve RNN varijante u pytorch vraćaju par `(output, h_n)`, pa bi onda output `nn.lstm` na 0. indeksu bio output, tj. to bi bilo pravilno. Ali ako pričamo o izlazima skrivenih slojeva, onda je logično uzimati zadnje.\n\nTak da ovisi o čemu se priča, ja uzimam `nn.lstm(x)[0]`, al to nisu skrivena stanja `h_n`, to je cijeli izlaz po vremenu xD\n\nOpet, ak si ti mislio na `h_n[0]`, onda to štima samo ako imaš jednoslojne RNN-ove. U suprotnom, kaj, morao bi Šegviću objašnjavati da je to tvoja luda distilacijska ideja gdje model učiš na n slojeva a koristiš skrivena stanja samo prvog 😂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28662": {
+      "poster": "InCogNiTo124",
+      "content": "@micho#28544 oke primjenio sam ali jos uvijek mi rezultati sa lstm nisu znacajno bolji, mozda 2-3%, ne znam jel  tak i ostalima\n\nedit okej nvm ako se procita zadatak do kraja, prva recenica u 4. podzadatka to potvrduje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28680": {
+      "poster": "antunmod",
+      "content": "Zašto su riječi u csv datotekama podijeljene? Npr. zašto je *doesn't* zapisano kao *does n't*? Je li to zbog toga da se u vokabular zapisuju korijeni riječi? I kako nam onda ovaj ostatak *n't* koristi kasnije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28707": {
+      "poster": "antunmod",
+      "content": "Jel u zadnjem zadatku zamišljeno da mi za svaki od 5 hiperparametara napravimo cross product sa svakim drugim (3^5 kombinacija) ili uzmemo najbolje hiperparametre iz prethodnih testiranja i onda mijenjamo samo jedan hiperparametar po testu (3*5 kombinacija). Ovo prvo mi se čini suludo, no tako mi zvuči iz teksta zadatka.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28719": {
+      "poster": "InCogNiTo124",
+      "content": "@antunmod#28680 doesn't nosi skroz drukciju informaciju od does, zato jer ne zapravo spojeni does not. Taj n't se koristi ko not i enkodira se tako (ja mislim)\n\n@antunmod#28707 doslovno pise `Način na koji ćete kombinirati te vrijednost je potpuno na vama (iscrpna rešetkasta pretraga je vremenski previše zahtjevna)`. Meni grid search samo za lstm traje preko sat vremena",
+      "votes": {
+        "upvoters": [
+          "antunmod"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28742": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@antunmod#28707 Samo napravi random search\n\nRandom search unutar intervala se trenutno smatra najboljom pretragom, a postojeći pretraživaći hiperparametara ionako nude samo to i grid search (grid search je smeće)",
+      "votes": {
+        "upvoters": [
+          "antunmod"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28908": {
+      "poster": "talos",
+      "content": "Što se tiče izlaznih dimenzija LSTM-a i RNN-ova. Nisam skužio koji je zadnji sloj unatražnog puta kada je bidirekcijski a koji je zadnji sloj unaprijednog.\n\nZa LSTM:\n\n(output, (h_n, c_n)) - gdje je h_n (broj_slojeva * 2, ...)\n\nTražio sam po internetu i našao samo jedan odgovor da je h_n[0] zadnji sloj unaprijedne, a h_n[-1] zadnji sloj unatražnog. Zna li netko možda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28942": {
+      "poster": "talos",
+      "content": "Našao sam odgovor na pitanje:\n\nhttps://discuss.pytorch.org/t/last-hidden-state-in-bidirectional-stacked-gru/57971/2\n\nSad sve testove ispočetka 🙃",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29192": {
+      "poster": "sth",
+      "content": "@NekocBraca#26678 Jesi uspio mozda nekako popraviti accuracy?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29273": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@sth \n\n@NekocBraca \n\nProvjerite da ispravno stvarate embedding matrice. Mislim da u uputama labosa piše zavaravajuće da bi se prilikom stvaranje embedding matrice trebale predavati liste riječi: ja sam jedva našao taj bug i po meni je bolji pristup sljedeći:\n\n- stvorite vokabular\n- vokabular mora mapirati redom sve riječi u cijele brojeve (ne smijete imati šupljina)\n- predajte funkciji vokabular:\n\n```python\ndef get_embedding_matrix(vocabulary,\n                         file_path: str = None,\n                         vector_length: int = None,\n                         separate_unk: bool = True) -> np.ndarray:\n    ...\n    words = [x[0] for x in sorted(vocabulary.stoi.items(), key=lambda x: x[1])]\n    embedding_matrix = np.random.normal(loc=0,\n                                        scale=1,\n                                        size=(len(words), vector_length))\n    ...\n```\n\novim ćete garantirati da imate ispravnu embedding matricu. Bez ovog nisam mogao proći 67% točnosti. Sad bez problema imam 73-80% na validacijskom setu, ovisno o seedu. BTW, meni je ovaj `vocabulary.stoi` property koji vraća objekt tipa `Dict[str, int]`, tj. mapira riječi u indekse.\n\nLjudi koji ne mogu proći 50% imaju negdje problem s učenjem (tj. ažuriranjem parametara). Pobrinite se da ADAMu predajete parametre za treniranje:\n\n```python\nclass Baseline(torch.nn.Module):\n    def __init__(units=(300, 150, 150, 1)):\n        ...\n        self.fc = list()\n        \n        for i, unit in enumerate(units[:-1]):\n            self.fc.append(torch.nn.Linear(unit, units[i + 1]))\n            \n        ...\n\n    def get_trainable_parameters(self):\n        parameters = list()\n\n        for fc in self.fc:\n            parameters.extend(fc.parameters())\n\n        return parameters\n\n    def fit(learning_rate, ...):\n        ...\n        optimizer = torch.optim.Adam(self.get_trainable_parameters(),\n                                     lr=learning_rate,\n                                     weight_decay=1e-5)\n        ...\n```",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "NekocBraca",
+          "sth"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29281": {
+      "poster": "NekocBraca",
+      "content": "@sth#29192 jesam malo. Jedna greska mi je bila da sam stvarao posebni vokabular za svami set podataka (ovo jasno pise u uputi da ne treba raditi, al mi se potkralo). Druga da nisam ukljucio parametre embedding matrice u parametre za treniranje.\n\n@micho#29273 Kod ovih `get_trainable_parameters`, ti ne ukljucujes parametre embedding matrice ili njih zasebno ucis?\n\nI nije mi bas jasno zasto moras imati ti metodu, ja sam shvatio (ali jako moguce da sam krivo shvatio) da kad nasljedis nn.module i u konstruktoru postavljas slojeve s nn.{Linear|Rnn|whatever} da ce pytoch sam povuci te sve parametre kad pozoves `Baseline.parameters()`",
+      "votes": {
+        "upvoters": [
+          "sth"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29347": {
+      "poster": "InCogNiTo124",
+      "content": "> @NekocBraca#29281 I nije mi bas jasno zasto moras imati ti metodu, ja sam shvatio (ali jako moguce da sam krivo shvatio) da kad nasljedis nn.module i u konstruktoru postavljas slojeve s nn.{Linear|Rnn|whatever} da ce pytoch sam povuci te sve parametre kad pozoves Baseline.parameters()\n\nDobro si shvatio, samo pobacas atribute u initu i dalje ih torch sam zna pokupit sve. Mozda kolega zeli vecu fleksibilnost haha",
+      "votes": {
+        "upvoters": [
+          "NekocBraca"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29373": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@NekocBraca#29281 Koliko sam ja skužio parametri embedding matrice se ne bi trebali učiti: kad ih učitavaš freeze se stavlja na True, i oni su već naučeni (ovi iz glovea). Druga stvar, učenje embeddinga na tako jednostavnom problemu nema baš smisla.\n\nPyTorch ne detektira automatski parametre za liste modula, koliko mi je poznato. + kao što je kolega rekao, ovako na relativno jednostavan način mogu implementirati zamrzavanje slojeva.\n\nPrije je bilo `self.parameters()` a ja učitavam potpuno povezane slojeve u listu, pogodi kako sam saznao da mi optimizator ne dobiva parametre modela :)",
+      "votes": {
+        "upvoters": [
+          "NekocBraca"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "InCogNiTo124"
+        ]
+      }
+    },
+    "29387": {
+      "poster": "NekocBraca",
+      "content": "@micho#29373 Ja sam bio kod Tuteka na konzultacijama i on mi je rekao da se embeddinzi trebaju uciti. Da su oni jedni od kljucnih parametara modela i da se zato moraju uciti, a mi radimo inicijalizaciju samo zato da ne bi trebali uciti od nule. Ti predtrenirani embedinzi su nauceni na nekom vecem skupu podataka pa ih onda mi fine tuneamo na nas skup. Ali s obzirom na rezultate koje si napisao da ostvarujes, ocito u ovom konkretnom slucaju (ne) treniranje njih ne radi veliku razliku.\n\nKuzim, ovo za parametre mi sada ima smisla.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29404": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@NekocBraca#29387 E al u ovom ti je stvar, tj. to ja nekako zaključujem kao netko tko radi NLP: Ti imaš klasifikacijski problem na jako shitnom zadatku i jako shitnim modelima. Shitni zadatak će ti ubiti generalizaciju vektorskih reprezentacija (jer glove je treniran na težem zadatku), shitni model će ih prenaučiti.\n\nMožda je za 3. i 4. zadatak taj pristup okej, ali svejedno ak ne piše neću to raditi, jer znam iz iskustva da te stvari ubijaju generalizaciju. Te glove reprezentacije su ionako jako dobre same po sebi, uz attention se vjerojatno mogu dobiti dosta dobri rezultati.\n\nAl isto kao što ne piše da se trebaju učiti reprezentacije, ne piše ni da se ne smiju pa ko voli nek izvoli.\n\nEDIT: Probao sam taj 2. s treniranjem embeddinga, puno lakše se dođe do njihovih rezultata (konzistentnije). Jedino što se dogodi da trening dosta uspori. Evo što mi se izgenerira za validacijski skup:\n\n```json\n{\n  \"loss\": [\n    0.6725784797939477,\n    0.5880095641374719,\n    0.5589046775803731,\n    0.5660436120189067,\n    0.575928290472261\n  ],\n  \"acc\": [\n    0.7512355848434926,\n    0.7957166392092258,\n    0.7907742998352554,\n    0.8017572762218561,\n    0.8088962108731467\n  ],\n  \"pr\": [\n    0.7597597092279733,\n    0.7971042864173348,\n    0.80222869529874,\n    0.8081634941721897,\n    0.8114399820932852\n  ],\n  \"re\": [\n    0.7513841844710787,\n    0.7956599936309421,\n    0.7906136008337676,\n    0.8016382230328296,\n    0.808821507150715\n  ],\n  \"f1\": [\n    0.7555487361495901,\n    0.796381485193515,\n    0.796378799109374,\n    0.8048876336310777,\n    0.8101286287872813\n  ]\n}\n```\n\nRezultati treninga su:\n\n```json\n{\n  \"loss\": [\n    0.5571036715469608\n  ],\n  \"acc\": [\n    0.9033236994219653\n  ],\n  \"pr\": [\n    0.9030456655838686\n  ],\n  \"re\": [\n    0.9033738942681876\n  ],\n  \"f1\": [\n    0.9032097501062476\n  ]\n}\n```\n\nModel nije overfittao pa su onda valjda htjeli da treniramo i embeddinge kao što je kolega @NekocBraca sugerirao. Pretpostavljam da poboljšanja idu iz toga što se glove rječnik i ovaj koji mi imamo ne poklapaju u potpunosti, pa onda bez treniranja ovisimo o tome da se riječi koje fale u gloveu dobro inicijaliziraju normalnom razdiobom. Moja iskustva su sa embeddinzima koji su istrenirani za specifičan zadatak, pa onda nemamo takav slučaj, zato samo i testirao ovo.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "NekocBraca"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29598": {
+      "poster": "InCogNiTo124",
+      "content": "@micho#29373 https://pytorch.org/docs/master/generated/torch.nn.ParameterList.html",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29666": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@InCogNiTo124#29598 Zaboravio sam na ovo jer sam se žurio, nisam uspio ni cijeli 4. predati xD",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "34823": {
+      "poster": "InCogNiTo124",
+      "content": "Za buduce generacije, sto su vas pitali prosli tjedan ako se itko sjeca?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "34939": {
+      "poster": "NekocBraca",
+      "content": "@InCogNiTo124#34823 odnos broja parametara izmedju lstm i drugih mreza, sto znace parametri dropout, bidirectional, malo pokazati po kodu i komentirati ona \"istrazivanja\"",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

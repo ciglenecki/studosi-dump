@@ -1,0 +1,549 @@
+{
+  "title": "[RASSUS] Gradivo",
+  "creator": "ljama_glama",
+  "slug": "rassus-gradivo",
+  "tags": [
+    "FER",
+    "Raspodijeljeni sustavi"
+  ],
+  "posts": {
+    "246631": {
+      "poster": "ljama_glama",
+      "content": "Jel moze netko pliz odg na ovo?\n\n![](assets/2021-10-25/00046.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246762": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"ljama_glama\"#p246631 ~~4 socketa su vezana uz port 10000, prvo imas listener socket koji ceka da se klijent spoji na taj port, zatim se stvara zasebni socket za svakog klijenta kad dode novi zahtjev na listener i taj socket postoji dok postoji tcp veza. dakle imat ces listener, sockete za prvog, drugog i treceg klijenta~~\n\n mislim da ce se tog treceg klijenta staviti na backlog na listeneru jer moze stvoriti samo jos dva nova threada pretpostavljam",
+      "votes": {
+        "upvoters": [
+          "ljama_glama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256986": {
+      "poster": "Cvija",
+      "content": "![](assets/2021-11-23/00029.png)\n\nZar je u ovom zadatku pretpostavka da sva tri računala znaju da poruke putuju minutu ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257759": {
+      "poster": "ljama_glama",
+      "content": "> **Zadatak 1.4** \n\nOpišite okruženje Interneta stvari. Na jednom primjeru usluge navedite ulogu\n\nsvakog dionika u ostvarenju usluge.\n\nJel se pod tim misli na ovaj slajd pa onda dati neki svoj primjer IoT-a?\n\n![](assets/2021-11-24/00024.png)\n\nIli se misli na ovaj model?\n\n![](assets/2021-11-24/00025.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257777": {
+      "poster": "MsBrightside",
+      "content": "@\"Cvija\"#p256986 u knjizi se spominje samo da upravitelj se koristi sa tz to jest vremenom potrebnim za slanje poruke. Barem sta se Berkleya tiče, tako da mislim da nije važno znaju li ostali.",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257857": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Zna li netko odgovore na:\n\n6.3, 5.4., 4.1 i 2.6?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257900": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "Kakvi bi se problemi pojavili kada bi se više repliciranih poslužitelja weba priključilo na mrežu izravno, a ne posredstvom zastupnika (proxy)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257911": {
+      "poster": "laranotreallycroft",
+      "content": "@\"NISAM ASISTENT\"#p257900 rekla bi da nije ocuvana replikacijska transparentnost jer im klijent onda razlicito pristupa",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "in1",
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257917": {
+      "poster": "ljama_glama",
+      "content": "@\"Cvija\"#p256986 Zasto se u koraku 2 koristi npr -00:09:00, a u koraku 3 +00:10:00? Zasto nije oboje 10?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257926": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@\"ljama_glama\"#p257917\n\nU koraku 2 **p** šalje kolika je razlika između njegovog vremena i dobivenog timestampa sa **c** (-9 minuta jer zaostaje 9 minuta za dobivenim ts-om, ts na **c** je bio 3:12, poruka je putovala 1 minutu i u vrijeme primitka poruke ts na **p** je bio 3:03).\n\nPut poruke od **p** do **c** je opet 1 minuta i taj odgovor iz koraka 2 **c** prima u 3:14. C očitava koliko p kasni i onda još u obzir vrijeme putovanja poruke, pa **c** porukom u koraku 3 govori  **p**-u da sat mora pomaknuti za 10 minuta (+10) kako bi uskladili svoje lokalne satne mehanizme.",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "ljama_glama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257968": {
+      "poster": "ljama_glama",
+      "content": "@\"Ibracadabra\"#p257857 Imas [ovdje](https://github.com/studosi-fer/RASSUS/tree/master/vjezba/pitanja-za-provjeru/2011-12) sve rijeseno, samo je drugi redoslijed pa treba traziti pitanja",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257981": {
+      "poster": "netko_tamo",
+      "content": "@\"ljama_glama\"#p257968 cekaj i ovaj drugi ciklus predavanja isto ulazi u scope naseg MI?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257982": {
+      "poster": "MsBrightside",
+      "content": "@\"netko_tamo\"#p257981 samo jedan dio pitana, jer neka pitanja u prvom ciklusu su dio sta nismo radili jos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257983": {
+      "poster": "netko_tamo",
+      "content": "@\"MsBrightside\"#p257982 e pa da, okej zato i gledam, reko nije valjda da sam pol toga preskocio hahaha, tenks :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257988": {
+      "poster": "Cvija",
+      "content": "@\"netko_tamo\"#p257981 Pogledaj oba ciklusa (naravno ne sve), jer koliko sam primijetio, nije isti redoslijed obrađivanja gradiva kao prethodnih godina.\n\nZnači, odgovori na neka pitanja koja smo mi dobili, postoje u rješenjima koja su za drugi cilkus.",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263143": {
+      "poster": "Atem",
+      "content": "Zna li netko koja gradiva iz skripte pokriva 8. prezentacija?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273677": {
+      "poster": "Erpeg",
+      "content": "kako\n\novo\n\nnaučt\n\nza\n\ndan\n\nipo\n\ntutorial",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+          "in1",
+          "narval13068 (Dima)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273725": {
+      "poster": "RogerRoger",
+      "content": "@\"Erpeg\"#p273677 prolazi po jednu prezentaciju i onda gradivo u knjizi koje pokriva, knjiga je dosta dobro napisana i primjeri su bolje objašnjeni nego na prezentacijama, ali nije up to date pa na prezama ima nekih info kojih nema u knjizi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273731": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "@\"Erpeg\"#p273677 good day sir you answer questions at the end presentation, best wishes good sir",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273809": {
+      "poster": "Cvija",
+      "content": "Zna li netko odgovor na ovo pitanje?\n\n![](assets/2022-01-26/00009.png)\n\n\nJasno mi je da to se koristi kada ima smisla odvojiti čitanje i pisanje, ali je li dovoljno samo to napisati?\n\nBtw, nema odgovora u onoj datoteci, a ni u knjizi nisam našao.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273899": {
+      "poster": "sphera",
+      "content": "![](assets/2022-01-26/00032.png)\n\nima netko rješenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273900": {
+      "poster": "Cvija",
+      "content": "@\"sphera\"#p273899 ima na materijalima\n\nhttps://github.com/studosi-fer/RASSUS/blob/master/vjezba/pitanja-za-provjeru/2011-12/RASSUS_2011-12_pitanja-za-provjeru_ciklus-2_rjesenja.pdf",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274051": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "kak se iz prve tablice dobije ova druga?\n\n![](assets/2022-01-26/00046.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274054": {
+      "poster": "Cvija",
+      "content": "@\"NISAM ASISTENT\"#p274051 Ne možeš nikako iz prve dobiti drugu, moraš znati jedan međukorak koji nedostaje tu na slajdu, a taj međukorak je koliko iznosi srednja vrijednost grupe G1365 za veličinu(kB) i  broj zahtjeva,  srednja vrijednost grupe G47 za veličinu(kB) i  broj zahtjeva te srednja vrijednost grupe G2 za veličinu(kB) i  broj zahtjeva ...\n\nKad je poznat taj korak napraviš sljedeće, a to je 10 ^ taj broj\n\nIz prvog koraka sa slajda 63. piše da se radi logaritam po bazi 10 od veličine i logaritam po bazi 10 od broja zahtjeva\n\nGrupa G2 je \"ostala od početka do kraja\" i sa slajda 63 vidiš da je vrijednost G2 2.18 za veličinu u kB\n\n![](assets/2022-01-26/00048.png)\n\nstavi 10 ^ 2.18 i dobiješ približno 151 kB (što se vidi u drugoj tablici koju si naveo u postu), to je taj međukorak koji nije na slajdovima",
+      "votes": {
+        "upvoters": [
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274099": {
+      "poster": "Nocna_smjena",
+      "content": "@\"NISAM ASISTENT\"#p274051 sumnjam da ce ovakav zadatak doc jer bi nam trebao kalkulator za ovo (a kalkulator nije dopusten na provjerama znanja afaik)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274210": {
+      "poster": "PrisonMike (Števo)",
+      "content": "![](assets/2022-01-27/00018.png)\n\n\n![](assets/2022-01-27/00019.png)\n\nOvo je krivi odgovor, jelda? \n\nZadnji popravak je za i=4, lookup(21-2^4)=lookup(5)=B, znači tablica od A se neće ni dirati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274216": {
+      "poster": "Cvija",
+      "content": "@\"Števo\"#p274210 Mislim da nije krivi odgovor. Treba gledati tablicu od A, a ne od G\n\nza i=4, lookup(0 + 2^4) = lookup(16) = 21 što je čvor G\n\nTablica od A će se promijeniti\n\nOvo što si ti napisao je lookup za tablicu usmjeravanja čvora G",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274221": {
+      "poster": "Cvija",
+      "content": "@\"Števo\"#p274210 Mislim da si gledao krivi algoritam, ovo je sa slajda 54\n\n![](assets/2022-01-27/00021.png)\n\ni to se koristi kad se doda novi čvor u mreži, kojim redoslijedom ažurirati tablice susjeda\n\nAli u ovom pitanju se traži kako će izgledati ažurirana tablica od čvora A, a to samo ponovno provedeš postupak tablice usmjeravanja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274224": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@\"Cvija\"#p274221 E da, po tom algoritmu sam radio\n\nGdje piše ovo da se se samo ponovno izračunaju tablice kad dođe novi čvor? Jer ako gledam po prezi baš se čini kao da su jedina ažuriranja tablica za te čvorove koje pobere taj algoritam. \n\n![](assets/2022-01-27/00022.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274261": {
+      "poster": "Nocna_smjena",
+      "content": "Moze meni neko pojasnit kod chordovog prstena kako mi dobivamo ovaj m? Procitao sam iz prezentacija i udzebnika ali i dalje mi nije jasno. Cini mi se ko da to mora biti unaprijed zadano tj oni nam moraju odredit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274262": {
+      "poster": "tidabudibuda",
+      "content": "@\"Nocna_smjena\"#p274261 Da, bude unaprijed zadano",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276696": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Učim za zimski ispitni rok, isplati li se učiti po udžbeniku ili gledati predavanja/čitati preze?\n\nAlso, ulazi li cijelo gradivo udzbenika u ispitni rok?",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)"
+        ],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276712": {
+      "poster": "MsBrightside",
+      "content": "@\"IdeGas\"#p276696 Mislim da su ti prezentacije holy grail jer na mi-ju neke stvari nisu u knjizi, tako da mislim da je najbolje ić po prezama i onda pogledat udžbenik za neke stvari da sve stavi u perspektivu. Bar je to meni plan",
+      "votes": {
+        "upvoters": [
+          "WP_Deva (IdeGas)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "278517": {
+      "poster": "Gussy (huba buba)",
+      "content": "Prolaženje po ovim pitanjima na kraju lekcije, korisno ili da ne gubim vrijeme na njih?\n\nI jel ima itko kakve starije ispite?",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "278547": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "@\"huba buba\"#p278517 Ja upravo odgovaram na ta pitanja. Kad smo kod toga, zna li itko odgovor na:\n\nPoslužitelj je implementiran pomoću socketa TCP na portu 10000 s\n\nograničenjem NUMBER_OF_THREADS=2. Objasnite detaljno operacije\n\nprilikom dolaska prvog klijentskog zahtjeva na poslužitelj. Što se događa kada\n\nstigne drugi, pa treći klijentski zahtjev, a prve dvije konekcije su još uvijek\n\naktivne? Koliko socketa je vezano uz port 10000?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "278551": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"IdeGas\"#p278547 pretpostavljam se da ovaj NUMBER_OF_THREADS na max broj novih threadova koji se mogu stvoriti i da ne uzima u obzir listener thread, ugl. moci ce se spojiti 1. i 2. klijent i za svakog ce se stvoriti zasebni socket na portu 10000 za komunikaciju, treći će morati čekati da se prekine jedna od ove dvije prethodne veze. Ukupno su tri socketa vezana za port 10000\n\na ako se number_of_threads odnosi i na listener thread, onda ce se samo ovaj prvi moci spojiti",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "278558": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "@\"huba buba\"#p278551 i mislio sam da je tako, tnx!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "279464": {
+      "poster": "Anonimity (BoJack)",
+      "content": "Otkud uciti za usmeni?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

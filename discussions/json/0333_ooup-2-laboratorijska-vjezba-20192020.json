@@ -1,0 +1,381 @@
+{
+  "title": "[OOUP] 2. laboratorijska vježba - 2019/2020",
+  "creator": "member",
+  "slug": "ooup-2-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Oblikovni obrasci u programiranju",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "10764": {
+      "poster": "member",
+      "content": "Koji bi obrazac ovdje primijenili i kako bi se očitovala ta primjena?  Pretpostavljam da je Naredba  jer ne moramo objektima delegirati nikakve dodatne vrijednosti za što bi bio pogodan Dekorator. Ali ako stvarno jest Naredba, onda ne znam što bi mi bilo Invoker i kako bi se konkretna naredba predala Invokeru. Pa evo ako neko ima neku ideju...\n\n![](assets/2020-04-17/00031.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10879": {
+      "poster": "in1",
+      "content": "@member#10764 Mislim da možeš opet raditi Promatrač. Iako u ovom slučaju bi ti Cell bio i izdavač i pretplatnik, no nisam siguran koliko to ima smisla.\n\nUpdate metoda bi ti služila da izračunaš vrijednost ćelije nakon što se promjenila vrijednost neke ćelije o kojoj ona ovisi, a notify bi koristio da obavijestiš druge ćelije da se promjenila tvoja vrijednost.",
+      "votes": {
+        "upvoters": [
+          "cajaznun",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10881": {
+      "poster": "Ziher",
+      "content": "5. zadatak: \"Ako izvoru treba više vremena za generiranje broja, preuzimanje sljedećeg broja potrebno je obaviti jednu sekundu nakon završetka prethodnog čitanja, ma koliko ono trajalo.\"\n\nJel mi moze netko objasniti sto tocno ovo znaci i mozda kako to implementirati okvirno? Treba li mi dretva spavati random sekundi? Treba li onda druga dretva zavrsiti posao? Nekako mi je recenica mindf*** nez",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10884": {
+      "poster": "Ziher",
+      "content": "@member#10764 i ja mislim da je promatrac:) ![](assets/2020-04-17/00054.png)",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10897": {
+      "poster": "in1",
+      "content": "@Ziher#10881 \n\nŽele reći da ako zatražiš izvor da ti generira broj i njemu treba _puno_ vremena da ga generira, ti nećeš nakon 1s zatražiti novo generiranje broja već ćeš sačekati da dobiješ odgovor na prvi request, a kada dobiješ odgovor ćeš sačekati 1s (od dobivanja odgovora) i zatražiti novi broj.\n\n`Timer timer = new Timer();`\n\n`\ttimer.schedule(new TimerTask() {\n\n\t\t\t@Override\n\n\t\t\tpublic void run() { ... }}, 0, 1000);`\n\nsa: https://stackoverflow.com/a/12908477/6819162",
+      "votes": {
+        "upvoters": [
+          "Watson (112)",
+          "Ziher",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11296": {
+      "poster": "Yasuke (Bono)",
+      "content": "Kako se u 3. zadatku salje key i kako se onda on uopce koristi u mymax funkciji? Ako može neki hint ili bilo kakva pomoć. Hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11562": {
+      "poster": "Ziher",
+      "content": "@Yasuke#11296 slijedi pseudokod koji ti vec pise. Key ti je neki apstraktni kljuc koji definiras u tom trenutku kao neku lambda funkciju (opisano ti je i kak to napraviti). Key vraca neku vrijednost, broj ili string, ovisi sta ti treba. On odredjuje kako ces tretirati vrijednosti kroz koje iteriras u svojem iterable elementu. Dok on vrati vecu vrijednost od trenutnog max_keya, taj element je novi max (po kriterijima koje si mu poslao). Tu mozes definirati i nesto slozenije, tipa napises si pomocnu funkciju f(x) i kazes key = lambda x:f(x) i posaljes taj key u mymax.",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11784": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "U petom je Promatrač?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11811": {
+      "poster": "in1",
+      "content": "@Heklijo#11784 Da",
+      "votes": {
+        "upvoters": [
+          "Heklijo (Geralt of Rivia)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13301": {
+      "poster": "Carlito22",
+      "content": "Izmijenite zaglavlje funkcije mymax tako da omogućite njeno pozivanje sa samo jednim argumentom te neka se u tom slučaju kao kriterij koristi uređaj elemenata pobrojivog objekta. \n\nZna li iko sta oni misle pod ovim kriterijem , bolje bi razumio da su na kineskom",
+      "votes": {
+        "upvoters": [
+          "Gulbash",
+          "bob"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13334": {
+      "poster": "Ziher",
+      "content": "@Carlito22#13301 Moras postaviti \"default\" vrijednost parametra u definiciji funkcije i onda ga ne moras navoditi dok pozivas funkciju\n\nJa sam shvatio da u tom slucaju ides po prirodnom poretku kroz iterable i tako racunas max jel",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13401": {
+      "poster": "macan",
+      "content": "U zadatku broj 1. kaze:\n\n\"Pokažite da vaša funkcija može pronaći najveće elemene sljedećih nizova\" \n\nUspio sam napisati funkcije i da ispisuje index u odredenoj list (integera,charova, stringova)... na koji nacin ispisati vrijednost najveceg clana polja, ako imam adresu a u jednom slucaju int, drugom char i trecem char[]?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13477": {
+      "poster": "in1",
+      "content": "@macan#13401 Mislim da je uredu ispisati to u mainu \"hardkodiranjem\", tj. ako pozoveš sa intom da ispisuješ povratnu vrijednost funkcije preko %d itd.",
+      "votes": {
+        "upvoters": [
+          "macan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "macan"
+        ]
+      }
+    },
+    "13555": {
+      "poster": "Haki",
+      "content": "Jel moze netko pojasnit sto bi trebali biti promatraci u 5. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13574": {
+      "poster": "Haki",
+      "content": "@Haki#13555\n\nne treba skuzio sam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14830": {
+      "poster": "Ziher",
+      "content": "Jel itko ovo odgovarao, zna kako izgleda ispitivanje?",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14832": {
+      "poster": "in1",
+      "content": "Pitanja\n\n**1. labos**\n\n1. zadatak \n  -  objasni kako je izveden polimorfizam preko virtualnih tablica (zamjerka što kod konstrukcije Cat/Dog nisam pozvao konstruktor Animal)</LI>\n\n\n - 3. zadatak\n  - objasni razliku u veličini CoolClass i PlainOldClass \n      -    CoolClass je veći jer mu treba pokazivač na vtable, a ostalo je do paddinga kompajlera</LI>\n\n\n 4. zadatak\n  - što se brže izvodi poc.set ili pb->set i zašto? \n      -    poc.set jer se pri kompajlanju zna koja metoda će se izvesti</LI>\n  - **napraviti strojni kod i DETALJNO objasniti što koja linija radi**\n\n\n 5. zadatak\n  - objasniti tih par linija koda što se događa, tj. gdje se što nalazi u memoriji</LI>\n\n**2.labos**\n\n1. zadatak \n - objasni kod\n -  što ako bi htjeli da računamo minimalne vrijednosti (a da ne mjenjamo funkciju mymax) \n      -   promjenili bi znak > u < u funkcijama</LI>\n -    što ako bi htjeli imati usporedbu po duljini niza? \n        -        implementirali bi metodu koja ide po tom nizu dok ne dođe do \\0</LI>\n -    kojem oblikovnom obrascu je slican kod\n       -    strategiji</LI>\n -    nacrtaj opcenito UML dijagram za strategiju, što se nalazi u kojem razredu i sučelju, **treba znati imena tih (defaultnih) sučelja i koja strelica šta znači u UML dijagramu**\n\n\n4. zadatak\n - koji oblikovni obrazac sam koristio (strategija) & pokreni kod</LI>\n\n\n6. zadatak\n - koje oblikovne obrasce sam koristio (strategija + promatrač) & gdje sam uporabio koji i zašto?\n - kada sam pretplaćivao ćelije i kada sam ih odjavljivao\n - što rade metode add,delete,update, notify\n - kako sam parsirao podatke unutar ćelije </LI>\n\n@Ziher#14830",
+      "votes": {
+        "upvoters": [
+          "Darla",
+          "PrisonMike (Števo)",
+          "Quentin",
+          "Watson (112)",
+          "Yasuke (Bono)",
+          "Ziher",
+          "cajaznun",
+          "chuuya (temari)",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15004": {
+      "poster": "chuuya (temari)",
+      "content": "> @in1#14832 napraviti strojni kod i DETALJNO objasniti što koja linija radi\n\nBaš svaka linija? 😥\n\nKakvo je ocjenjivanje, jesu strogi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15012": {
+      "poster": "in1",
+      "content": "@chuuya#15004 Konkretno pitanje je bilo da pokažem gdje se konstruira Linear u strojnom kodu i onda da objasnim što se **bitno** događa u njemu (poziv Unary_Function) i šta je ovih 10ak push/mov/movsd naredba ispred.\n\n![](assets/2020-04-27/00022.png)\n\n\nEDIT: A za ocjenjivanje izgleda ovisi od ispitivača do ispitivača, kao i uvijek.",
+      "votes": {
+        "upvoters": [
+          "Darla",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15343": {
+      "poster": "Haki",
+      "content": "kako se pridruzujemo pozivu na temsu, jel trebamo dobiti neki kod od ispitivaca?",
+      "votes": {
+        "upvoters": [
+          "Darla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15351": {
+      "poster": "member",
+      "content": "@Haki#15343 on te nazove, ti samo budi online",
+      "votes": {
+        "upvoters": [
+          "Haki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15506": {
+      "poster": "Joji",
+      "content": "Imao sam Čupića danas u 15:40. Bilo je dosta ugodno iskustvo. Nisam znao baš sve odmah,  ali mi je dao sve bodove.\n\nPitao me sljedeće:\n - 1. labos - 4. zadatak - Išao je liniju po liniju i ispitivao me što se događa. Npr. gdje se alociraju objekti (stog ili heap), koji su pozivi polimorfni (`poc.set` nije polimorfan, dok je `pb->set` polifmorfan). Koja je veličina pojedinog objekta u bajtovima. Koje sve parametre prima funkcija `pb->set` (osim 42 parametar funkcije je i pokazivač na objekt).\n- 2. labos - 5. zadatak - Pitao me koje oblikovne obrasce sam koristio u ovom zadatku. Trebao sam opisati strategiju i u kodu pokazati koji dio mog koda odgovara kojem sudioniku strategije. Na kraju je trebalo navesti što sve spada u logička načela oblikovanja (SOLID, dakle nadogradnja bez promjene, Liskovin princip supstitucije itd.) i objasniti u skladu s kojim načelima se ponaša strategija (inverzija ovisnosti, nadogradnja bez promjene, jedinstvena odgovornost).\n\nNije provjeravao rješenja ostalih zadataka.",
+      "votes": {
+        "upvoters": [
+          "Darla",
+          "Ziher"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16090": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jel zna neko kako skuziti bar dio stvari koje se dogadaju u strojnom kodu?",
+      "votes": {
+        "upvoters": [
+          "Ziher"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18902": {
+      "poster": "SudokuMaster",
+      "content": "jesu li još nekome unijeti bodovi na ferku samo za LAB1 gdje je max 5 bodova, a za LAB2 piše niste pristupili provjeri? predao sam i odgovarao 1. i 2. lab. vježbu pa mi je ovo malo čudno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19398": {
+      "poster": "member",
+      "content": "@SudokuMaster#18902 meni za obe piše da nisam pristupila",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,779 @@
+{
+  "title": "[POSINT] 2. domaća zadaća - 2021/2022",
+  "creator": "PiqueBlinders (zisku)",
+  "slug": "posint-2-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Poslovna inteligencija",
+    "Zadaće"
+  ],
+  "posts": {
+    "253577": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "Samo da potvrdim, trebamo pisati SQL upit samo za prva 3 zahtjeva?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254125": {
+      "poster": "Yasuke (Bono)",
+      "content": "@\"PiqueBlinders\"#p253577 Ovako piše u edgaru: \n\n\"Napisati SQL upite za zadnji mjesec poslovanja za prva tri upita gore\"\n\nKoliko dimenzijskih tablica treba biti? Jer u dProducts bi se ja mislim trebalo stavit i suppliers i categories",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254190": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "@\"Bono\"#p254125 ja jednostavno ne znam di bi poceo s ovim.\n\n\njel postoji jedinstveno tocno rjesenje ili se moze na vise nacina?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254207": {
+      "poster": "Yasuke (Bono)",
+      "content": "@\"PiqueBlinders\"#p254190  Ne znam, ni ja se ne snalazim bas.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254265": {
+      "poster": "cajaznun",
+      "content": "Najlakse krenuti tako da prvo importate nortwind bazu na server i onda kreirate svoju praznu Northwind_inicijali_SP. Potom kreirate dimenzijske tablice (dCustomer, dDiscount, dShipper, dProduct, dDate,dTime...) koje zatim popunjavate sa podacima iz izvorne baze (koristite pr. FROM Northind2015.dbo.Customer) - paziti na null vrijdnosti i nezaboravite dodati redatk sa 'Nepoznato' vrijednostima. Neke stupce mozete izostaviti u skladistu podataka tipa image i slicno. Onda kreirate cinjenicne tablice - cOrder i onda cOrderItem na koje nakacite strane kljuceve na dimenzijske tablice. Pa nakon toga popunjavate te cinjenicne tablice  - paziti na ID-jeve i spajanje sa retkom koji u sebi sadrzi vrijednosti 'Nepoznato'. Ja sam spojio sql server na Datagrip (IDE za baze podataka od jetBrainsa) na kojem je to kreiranje tablica automatizirano samo upisujete ime stupca, type, i odabirate primarne i strane kljuceve, not null, unique redove. Kod inserta savjet: umjesto switch case postoji naredba IIF koja sluzi kao ternarni operator npr. IIF((Title is NULL), 'Nepoznato', Title) pa ce vam kod biti pregledniji.\n\nJa ukupno imam 9 dimenzijskih i 2 cinjenicne tablice, ali taj broj dimenzijskih tablica moze varirati.\n\nKad sve to napravite napravite dijagram (samo desni klik i odabete diagram) i na kraju kreirate ona tri sql upita.",
+      "votes": {
+        "upvoters": [
+          "Mirko_",
+          "hejhoj (vdvd)",
+          "matt (Matt)",
+          "mmmmDa (Ban Levačić)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254288": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "@\"cajaznun\"#p254265 \n\nthx, proucio sam ono rjesenje na materijalima i kako mi se cini tvoje je dosta slicno.\n\nnajvise me bunilo postoji li vise nacina na koji bi odredili cinjenicne tablice. \n\nne znam koliko su strogi kad zakljucuju da je zadaca prepisana pa se dobiju negativni bodovi...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255024": {
+      "poster": "Skaxen",
+      "content": "Par pitanja jer mi se neda failat i raditi pola toga iz pocetka:\n\nIma li smisla grupirati Supliers zajedno sa Products i Categories ili je Supliers bolje ostaviti kao svoju dimenziju?\n\nIma li smisla staviti posebni \"Nepoznato\" zapis u dProduct dimenziju ili je to samo nesto sto bi bas bas uvijek trebao raditi za apsolutno svaku dimenziju?\n\nAko neka dimenzija ima ID na neku drugu tablicu, npr kao sto Suppliers ima CItyID na City, ali u originalnoj bazi nisu povezani sa foreign key-om ima li smisla ako npr napravim dimenziju dSupplier osim CityID jos u dimenziju ubaciti i atribute iz City?\n\nU ovom zadnjem slucaju specificno sam primijetio da postoje neki CityID kljucevi u Suppliers kojih nema u City pa jel to znaci da mozemo pretpostavljati da te dvije tablice nisu nes posebno vezane?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255069": {
+      "poster": "adidas",
+      "content": "_**3.Kojem prijevozniku su isplaćeni najveći honorari?**_\n\nNe vidim nigdje honorare za prijevoznike.\n\nJedina cijena koju vidim je _UnitPrice_ u _OrderItems_ koja mi izgleda kao cijena prodaje svakog proizovda, a ne cijena/honorar prijevoza proizvoda.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255077": {
+      "poster": "Yasuke (Bono)",
+      "content": "@\"adidas\"#p255069 Jel bi to možda bio onaj Freight kojeg imamo u Orders?",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255112": {
+      "poster": "adidas",
+      "content": "@\"Bono\"#p255077 Mislim da je. U smislu brodarina / honorar.",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255114": {
+      "poster": "adidas",
+      "content": "Jel trebamo dDate i dTime za obje činjenične tablice? Ili je dovoljno samo dDate?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255176": {
+      "poster": "hejhoj (vdvd)",
+      "content": "jel koristimo dDate i dTime iz 1.zadace ili nove generiramo iz northwind?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255204": {
+      "poster": "Doktor0807",
+      "content": "@\"hejhoj\"#p255176 Iz prve zadaće. Datumska se nikad ne uzima iz ulaza nego se generira uvijek sa strane.",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)",
+          "shade"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255293": {
+      "poster": "hejhoj (vdvd)",
+      "content": "ne mogu se odluciti da stavim u cinjenicnoj tablici primarni surogatni kljuc ili kompozitni od dimenzijskih surogatnih, jel ima ko savjet?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255351": {
+      "poster": "Doktor0807",
+      "content": "pa kao što piše na prezentaciji, ako misliš da ti load neće puknut ili ako se dosta brzo izvrti load nema potrebe kreirati primarni surogatni ključ, sad o broju podataka ovisi hoćeš li kreirati kompozitni ključ od dimenzijskih ili ćeš ostaviti činjeničnu tablicu bez primarnog ključa i ubrzati upite kreiranjem indeksa na pojedinom stranom ključu (koliko sam čitao SQL Server ne kreira indeks automatski za foreign key), ali vjerujem da možeš koristit kompozitni ključ",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255398": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"Doktor0807\"#p255351 puno ti hvala🙂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255473": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "Tko dostavlja proizvode koji se najviše prodaju?\n\nmisli li se na supplier ili shippers",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255484": {
+      "poster": "Elendur19 (Zagor)",
+      "content": "Jeste li atribute kao sta su UnitPrice, Quantity, Discount stavili u cOrderItem tablicu ili ste ih stavili u neku dimenzijsku ? Nisam siguran jer vidim da se u prezentacijama spominje da u atribute cinjenicnih tablica ulaze uglavnom rezultati agregatnih funkcija. Treba li staviti u tu tablicu i CustomerID ili cemo samo povezati OrderID sa OrderID-om tablice cOrder?",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255630": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "Obratiti pozornost na iste dimenzije u više uloga (ovo će utjecati na ocjenu)\n\njedino ste datume koristili u vise uloga?",
+      "votes": {
+        "upvoters": [
+          "Doktor0807",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255633": {
+      "poster": "Rudee",
+      "content": "se to meni cini ili na prezentaciji pise da je rok 22.11. u 8h a na edgaru imamo vremena do 21.11. u 8h?",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255635": {
+      "poster": "svemia (bearyn)",
+      "content": "@\"Rudee\"#p255633 To sam i ja skuzila. Na predavanju je rekao da ce biti taj rok s prezentacije, sad ne znam sta se dogada...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255640": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"PiqueBlinders\"#p255630 ja da!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255641": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"bearyn\"#p255635 ja sam se isto malo razocarala, reka je i da meduispit nece bit u 8 ujutro nego 6 popodne pa evo..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255650": {
+      "poster": "Doktor0807",
+      "content": "@\"Zagor\"#p255484 prezentacija 6 slajd 16, ja bih vjerovao ovom i ostavio to u činjeničnoj\n\nŠto se drugog pitanja tiče, staviti customerID u u tu činjeničnu(štp bo značilo da ćeš imati customerID u jednoj i drugoj činjeničnoj) -> prezentacija 6 slajd 15 ti govori baš o tome kako stavit atribute ako imaš ovako povezane tablice",
+      "votes": {
+        "upvoters": [
+          "Elendur19 (Zagor)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255702": {
+      "poster": "mikimoj",
+      "content": "Odgovorio je profesor da je greška i da je prepravljen rok, 22.11 u 8:00",
+      "votes": {
+        "upvoters": [
+          "Doktor0807",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255753": {
+      "poster": "adidas",
+      "content": "**_Tko dostavlja proizvode koji se najviše prodaju?_**\n \nKako gledati koji proizvod se najviše prodaje? Da zbrajam Quanitity u cOrderItem ili je jedan OrderItem zapis1 proizvod?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255756": {
+      "poster": "adidas",
+      "content": "@\"PiqueBlinders\"#p255473 Ili ship 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255757": {
+      "poster": "adidas",
+      "content": "@\"PiqueBlinders\"#p255630 \n\nMislim da u u SQL upitima treba stvoriti aliase za dDate i dTime. Druga opcija je stvoriti VIEW za svaku sifru za datum/vrijeme u cinjenicnoj tablici.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255758": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "@\"adidas\"#p255753 \n\nma ne znam, ja sam poslao vec, s tim da sam za taj zadatak stavio vise upita i objasnio sto se radi u kojem. \n\nkad su tako kripticni...",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255759": {
+      "poster": "adidas",
+      "content": "@\"Zagor\"#p255484 Meni je ovo pomoglo da skužim di šta treba staviti.\n\n- Činjenična tablica predstavlja neki proces koji se prati. U našem slučaju to je narudžba proizvoda.\n\n- Dimenzijska tablica je kao detaljniji opis toga procesa. Dobar trik je da dimenzijske tablice imaju značenje same za sebe bez da se spoje sa drugim tablicama. Npr. nama je dimenzija kupac. Tablica kupac može postojati sama za sebe i značiti nešto. \n\n- Mjere su najčešće numeriče vrijednosti koje opisuju proces. Same ne znače ništa. Npr. imamo samo činjeničnu tablicu i Quantity. To nam ne znači pretjerajno jer ne znamo ni koji kupac je to kupio, ni koji je proizvod to itd.\n\nIdeja je da se mjera korisit u agregatnim funkcijama kada se činjenična tablica spoji sa jednom ili više dimenzija. Npr. spojimo dimenziju dShippedDate i dProduct. Gledamo kako se mjera TotalPrice kreće za najprodavanije proizvode zadnji mjesec.\n\nSada UnitPrice, Quantity i Discount bi bile mjere u cOrderItem jer one opisiju Narudžbu (proces).",
+      "votes": {
+        "upvoters": [
+          "Elendur19 (Zagor)",
+          "Mirko_",
+          "hejhoj (vdvd)",
+          "matt (Matt)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255760": {
+      "poster": "adidas",
+      "content": "@\"PiqueBlinders\"#p255758 Te upite pasteamo u Edgar direktno u dio za kod?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255761": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "@\"adidas\"#p255760 ja jesam, da",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255774": {
+      "poster": "Noname",
+      "content": "Jeli potrebno imati i dDate i dTime?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255802": {
+      "poster": "Doktor0807",
+      "content": "@\"Noname\"#p255774 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255804": {
+      "poster": "Doktor0807",
+      "content": "@\"adidas\"#p255753 ja sam countao Ordere u kojima se pojavljuje",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255805": {
+      "poster": "Doktor0807",
+      "content": "@\"Noname\"#p255774 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255872": {
+      "poster": "hejhoj (vdvd)",
+      "content": "mozda glupo pitanje, al zasto u punjenju cOrders moram stavit GROUP BY i sta tocno onda ide u tu listu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255906": {
+      "poster": "Sele",
+      "content": "jel za zadnji mjesec traže slučaj da od danas gledam mjesec dana unazad, ili zadnji datum u tablici mjesec dana unazad?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255915": {
+      "poster": "Doktor0807",
+      "content": "@\"Sele\"#p255906 pa zadnji podaci za OrderDate su ti iz 08.2008. pa ne znam baš hoćeš li dobit nešto računajući zadnjih mjesec dana od danas :P",
+      "votes": {
+        "upvoters": [
+          "Sele"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255966": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jeste uspjeli smanjit arhivu baze na manje od 10MB? Napravio sam sve što piše na Edgaru, ali je 14MB.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255984": {
+      "poster": "Doktor0807",
+      "content": "@\"Bono\"#p255966 predaj samo kao zip, same here",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)",
+          "cajaznun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256018": {
+      "poster": "Yasuke (Bono)",
+      "content": "@\"Doktor0807\"#p255984 Kao napravim zip od ove .bak datoteke koju dobijem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256038": {
+      "poster": "Doktor0807",
+      "content": "@\"Bono\"#p256018 da",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256154": {
+      "poster": "hejhoj (vdvd)",
+      "content": "jel neko imao problem da mu je kod punjenja cOrderItem javljalo grešku da se pokusalo unijeti duplikate primary key (idOrder,idProduct)? ne znam na koji nacin uopce dobijem duplikate..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256254": {
+      "poster": "Doktor0807",
+      "content": "@\"hejhoj\"#p256154 makneš primary key constraint i riješio si problem :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256275": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"Doktor0807\"#p256254 hahahah a evo uspila sam nac gresku al trebala sam odma tako ustedila bi dosta vremena 😅 tnx!",
+      "votes": {
+        "upvoters": [
+          "Doktor0807"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256282": {
+      "poster": "hejhoj (vdvd)",
+      "content": "jesu rezultati ovih upita trebali biti kao liste iz kojih iscitamo sta nam vec treba (tj napisani sa group by) ili je trebalo dobiti bas taj jedan redak kao odgovor? cisto da znam radi meduispita..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256284": {
+      "poster": "mikimoj",
+      "content": "@\"hejhoj\"#p256282 ja sam ispisao sortirane liste, ne vjerujem da ce radit probleme oko toga ako je sve ostalo okej",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256348": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"mikimoj\"#p256284 da to je samo jos plus TOP 1 u SELECTu.. 👍",
+      "votes": {
+        "upvoters": [
+          "Doktor0807"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289992": {
+      "poster": "laranotreallycroft",
+      "content": "Posto trebamo izbjegavati snowflake model, znaci li to da npr sve atribute iz City trebamo staviti u Customers, odnosno ne stvarati zasebnu City dimenziju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290004": {
+      "poster": "laranotreallycroft",
+      "content": "Jel netko uspio referenceati view za foreign key?  Za iste dimenzije u više uloga.\n\nNez kak su oni mislili da se to napravi jer meni ssms baca error da se to ne moze",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290131": {
+      "poster": "matt (Matt)",
+      "content": "@\"laranotreallycroft\"#p289992 Mislim da bi korištenje potporne tablice `City` bilo opravdano jer se koristi u više od 3 dimenzijske tablice. Sutra ću pitati prof.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290164": {
+      "poster": "cosko10",
+      "content": "Jel može netko plizz poslat tu skripte za punjenje dDate i dTime iz prošlog labosa, da ne trošim vrijeme još i na to...",
+      "votes": {
+        "upvoters": [
+          "mmmmDa (Ban Levačić)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290257": {
+      "poster": "mmmmDa (Ban Levačić)",
+      "content": "Jel raspon za dDate i dTime od 2000. do 2012.? Nemam tekst prve zadace",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290398": {
+      "poster": "matt (Matt)",
+      "content": "@\"Ban Levačić\"#p290257 [2000, ova_godina_zadnji_dan]. Ali mislim da ti za dz2 treba samo [2005, 2009] (nisam detaljno provjeravao)",
+      "votes": {
+        "upvoters": [
+          "mmmmDa (Ban Levačić)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

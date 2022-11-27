@@ -1,0 +1,83 @@
+{
+  "title": "[SBP] 3. laboratorijska vježba - 2020/2021",
+  "creator": "adidas",
+  "slug": "sbp-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Sustavi baza podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "160373": {
+      "poster": "adidas",
+      "content": "**3.8**. Kojom naredbom se može uništiti objekt sa statističkim podacima koji je kreiran istovremeno kad je kreiran indeks\n\nu točki 3.7? Uništite taj objekt.\n\nJel jedini način da se izbriše cijeli indeks i onda se i statistika obriše?\n\nProbao sam sa DROP STATISTICS, ali nije dopušteno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160408": {
+      "poster": "Process",
+      "content": "@adidas#160373 Da, u tom slučaju se statistika ne može eksplicitno uništiti već se uništava dropanjem indeksa.",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160670": {
+      "poster": "hejhoj (vdvd)",
+      "content": "u 5.4. kako tocno usporediti trosak izvrsavanja upita? jel se gleda estimated opereator cost ili i/o ili samo postoci ili sta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160721": {
+      "poster": "adidas",
+      "content": "@hejhoj#160670\n\n Ja sam gledao Estimated Subtree Cost nad select. Subtree Cost je kumulativan ( zbrajaju se costovi svih prijašnih koraka) + trošak select-a. Pa je zapravo Esimate Cost cijelog upita.",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160733": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@adidas#160721 ahaa tnx, gledala sam to samo u index seek-u i rid lookup-u jer su isti brojevi na operator cost-u al da trebalo bi napisati i ukupni trosak na selectu.",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

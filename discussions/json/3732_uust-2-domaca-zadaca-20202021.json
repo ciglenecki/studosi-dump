@@ -1,0 +1,235 @@
+{
+  "title": "[UUST] 2. domaća zadaća - 2020/2021",
+  "creator": "Goliathus",
+  "slug": "uust-2-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Uvod u svemirske tehnologije",
+    "Zadaće"
+  ],
+  "posts": {
+    "172987": {
+      "poster": "Goliathus",
+      "content": "Uploadana je 2. zadaća na Moodle. Rok je do petka 7. svibnja 2021. u 23:59.\n\nEvo python kod za računanje traženih vrijednosti:\n[code]\nimport numpy as np\nimport math\n\n\nb_i = np.array([22.2, 1.7, 42.7])\nn = np.array([8.0, 6.0, 2.0])\nalpha_deg = 19.0\nalpha_rad = math.radians(alpha_deg)\n\nn_magnitude = np.linalg.norm(n)\n# 1.\nprint(\"\\n\")\nprint(f\"|n| = {n_magnitude:.3f}\")\n\nn_normalized = n / n_magnitude\n# 2.\nprint(\"\\n\")\nprint(f\"n = {n_normalized[0]:.3f}i + {n_normalized[1]:.3f}j + {n_normalized[2]:.3f}k\")\n\nq1 = math.cos(alpha_rad/2)\nq2 = n_normalized[0] * math.sin(alpha_rad/2)\nq3 = n_normalized[1] * math.sin(alpha_rad/2)\nq4 = n_normalized[2] * math.sin(alpha_rad/2)\n\nq = np.array([q1, q2, q3, q4])\nq_magnitude = np.linalg.norm(q)\nq_normalized = q / q_magnitude\n# 3.\nprint(\"\\n\")\nprint(f\"q = {q_normalized[0]:.3f} + {q_normalized[1]:.3f}i + {q_normalized[2]:.3f}j + {q_normalized[3]:.3f}k\")\n\nq_magnitude = np.linalg.norm(q)\n# 4.\nprint(\"\\n\")\nprint(f\"|q| = {q_magnitude:.3f}\")\n\nr11 = q1*q1 + q2*q2 - q3*q3 - q4*q4\nr12 = 2 * (q2*q3 + q1*q4)\nr13 = 2 * (q2*q4 - q1*q3)\nr21 = 2 * (q2*q3 - q1*q4)\nr22 = q1*q1 - q2*q2 + q3*q3 - q4*q4\nr23 = 2 * (q3*q4 + q1*q2)\nr31 = 2 * (q2*q4 + q1*q3)\nr32 = 2 * (q3*q4 - q1*q2)\nr33 = q1*q1 - q2*q2 - q3*q3 + q4*q4\n\npsi = math.atan2(r12, r11)\ntheta = math.asin(-r13)\nphi = math.atan2(r23, r33)\npsi_deg = math.degrees(psi)\ntheta_deg = math.degrees(theta)\nphi_deg = math.degrees(phi)\n# 5.\nprint(\"\\n\")\nprint(f\"psi = {psi_deg:.3f} deg\")\nprint(f\"theta = {theta_deg:.3f} deg\")\nprint(f\"phi = {phi_deg:.3f} deg\")\n\nR_i_to_b = np.array([\n    [r11, r12, r13],\n    [r21, r22, r23],\n    [r31, r32, r33]])\n# 6.\nprint(\"\\n\")\nprint(f\"r11 = {r11:.3f}\")\nprint(f\"r12 = {r12:.3f}\")\nprint(f\"r13 = {r13:.3f}\")\nprint(f\"r21 = {r21:.3f}\")\nprint(f\"r22 = {r22:.3f}\")\nprint(f\"r23 = {r23:.3f}\")\nprint(f\"r31 = {r31:.3f}\")\nprint(f\"r32 = {r32:.3f}\")\nprint(f\"r33 = {r33:.3f}\")\n\nb_b = np.dot(R_i_to_b, b_i)\n# 7.\nprint(\"\\n\")\nprint(f\"b_b = {b_b[0]:.3f}i + {b_b[1]:.3f}j + {b_b[2]:.3f}k\")\n\nb_i_magnitude = np.linalg.norm(b_i)\nb_b_magnitude = np.linalg.norm(b_b)\n# 8.\nprint(\"\\n\")\nprint(f\"|b_i| = {b_i_magnitude:.3f}\")\nprint(f\"|b_b| = {b_b_magnitude:.3f}\")\n\n[/code]\n\n![](assets/2021-04-18/00002.png)",
+      "votes": {
+        "upvoters": [
+          "5ani (5af)",
+          "Aloko (Ardeo)",
+          "Andy",
+          "Artemis",
+          "DAC",
+          "Daeyarn",
+          "Fica (Prof)",
+          "GranAutismo",
+          "JeleeII",
+          "Joskica",
+          "Kaiba (sour)",
+          "Kaladonter",
+          "Klembuksna",
+          "Krisle",
+          "Melania",
+          "PikachuOnAcid (Kaneki kun)",
+          "Sans",
+          "SonGoku (~~~~~~~~)",
+          "Viks",
+          "aerius",
+          "cosko10",
+          "gad_gadski",
+          "grga_it_is (it_is_what_it_is)",
+          "ice",
+          "ivan",
+          "jocelyn",
+          "kix7 (Fish99)",
+          "mare99 (mare_)",
+          "nairobi (light_grandma)",
+          "netflix (seximan)",
+          "niknik",
+          "potemkin (meriMerino)",
+          "srni-vilenjak",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Nocna_smjena",
+          "Sans"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173913": {
+      "poster": "anon00",
+      "content": "Kod predaje postupka stoji \"Ovdje predajte fotografiju postupka (ili ispis koda)...\" \n\nJe li to znaci da mozemo predati i kod kojeg smo napisali kao sto je napravio @Goliathus#172987  ? \n\nJesu li ikome priznali, a da je predao kod/ispis koda? Također je li potreban i kod ili samo ispis?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173934": {
+      "poster": "Nocna_smjena",
+      "content": "@anon00#173913 pod ispis koda mislim da se referiraju na source kod ali opet ne steti attachat i fotku rezultata kojeg kod generira (just to be safe)",
+      "votes": {
+        "upvoters": [
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173971": {
+      "poster": "kix7 (Fish99)",
+      "content": "Jesu vama upisani bodovi iz prve dz? Kao sluzbeno na ferwebu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173984": {
+      "poster": "GranAutismo",
+      "content": "@kix7#173971 Nisu",
+      "votes": {
+        "upvoters": [
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "177843": {
+      "poster": "zvonkoBogdan",
+      "content": "@anon00#173913 ja sam samo predao ispis, znaci bez source koda i dobio sam sve bodove. Trebalo je samo ispisat sve rezultate i sve medurezultate",
+      "votes": {
+        "upvoters": [
+          "anon00",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182101": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "jel ima netko postupak na papiru mozda ?",
+      "votes": {
+        "upvoters": [
+          "Viks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186265": {
+      "poster": "Portus",
+      "content": "@Goliathus#172987 meni ovaj kod za moje brojeve vraca negativne kutove za psi, theta i phi. Zna li itko je li to ok?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186302": {
+      "poster": "Portus",
+      "content": "@Portus#186265 ok je, prihvatilo je",
+      "votes": {
+        "upvoters": [
+          "Kaladonter",
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192211": {
+      "poster": "tetak",
+      "content": "jel kome ocijenjen postupak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192946": {
+      "poster": "netflix (seximan)",
+      "content": "@tetak#192211 nope",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203521": {
+      "poster": "Daeyarn",
+      "content": "moje pitanje je kad ce ispraviti 2. dz",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203530": {
+      "poster": "Nocna_smjena",
+      "content": "@Daeyarn#203521 Vjv tijekom završnih ispita",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

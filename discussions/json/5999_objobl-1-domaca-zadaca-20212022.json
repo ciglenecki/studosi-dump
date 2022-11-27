@@ -1,0 +1,182 @@
+{
+  "title": "[OBJOBL] 1. domaća zadaća - 2021/2022",
+  "creator": "YenOfVen",
+  "slug": "objobl-1-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Objektno oblikovanje",
+    "Zadaće"
+  ],
+  "posts": {
+    "253988": {
+      "poster": "YenOfVen",
+      "content": "Evo par dodatnih testova iz lanjske teme i par simple rubnih slucajeva koje sam na prvu predvidjela:\n\n\n>! []()\n\n>```csharp\n       [TestMethod]\n        public void CheckDisplay_CrazyOperation()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('2');\n            calculator.Press('+');\n            calculator.Press('I');\n            // Ovaj slučaj je već pokriven (ispisuje se 0.5, ali pri izračunu se pamti 2)\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0,5\", displayState);\n\n>            calculator.Press('5');\n            calculator.Press('6');\n            calculator.Press('Q');\n            calculator.Press('P');\n            // Kvadriranje broja 56, spremanje rezultata u memoriju te potom čišćenje display-a\n            calculator.Press('C');\n            calculator.Press('3');\n\n>            calculator.Press('-');\n            calculator.Press('2');\n            // Uzastopno mijenjanje predznaka\n            calculator.Press('M');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"-2\", displayState);\n            calculator.Press('M');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"2\", displayState);\n            calculator.Press('Q');\n\n>            calculator.Press('*');\n            calculator.Press('2');\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"2\", displayState);\n            // Primjer iz docx-a: 2 + 3 - 2^2 * 2 = 2\n\n>            // Dohvat memorije (gornji 'C' je obrisao samo ekran, nije dirao memoriju)\n            calculator.Press('G');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"3136\", displayState);\n\n>            // Kvadriranje dohvaćenog broja\n            calculator.Press('Q');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"9834496\", displayState);\n\n>            // Operacija s dobivenim rezultatom\n            calculator.Press('*');\n            // Unos decimalne točke odmah nakon binarnog operatora\n            calculator.Press(',');\n            calculator.Press('7');\n            calculator.Press('S');\n            calculator.Press('=');\n            // Decimalni broj rezultata je '266', nije '268'\n            // '268' bi bilo da se sinus ne zaokružuje na 10 decimala\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"6335556,266\", displayState);\n        }\n\n>        /// <summary>\n        /// Provjera operacija s istim brojem (2*= --> 2*2)\n        /// Provjera operacija s istim brojem (2-= --> 2-2)\n        /// Provjera operacija s istim brojem (2/= --> 2/2)\n        /// </summary>\n        [TestMethod]\n        public void CheckDisplay_PressEqualAfterAny()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('2');\n            calculator.Press('-');\n            calculator.Press('=');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n\n>            calculator = Factory.CreateCalculator();\n            calculator.Press('2');\n            calculator.Press('/');\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"1\", displayState);\n\n>            calculator = Factory.CreateCalculator();\n            calculator.Press('2');\n            calculator.Press('*');\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"4\", displayState);\n        }\n\n>        /// <summary>\n        /// Provjera promjena predznaka\n        /// </summary>\n        [TestMethod]\n        public void CheckDisplay_SignChange_Stationary()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('M');\n            calculator.Press('M');\n            calculator.Press('M');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n            calculator.Press(',');\n            calculator.Press('M');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0,\", displayState);\n            calculator.Press('2');\n            calculator.Press('M');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"-0,2\", displayState);\n        }\n\n>        /// <summary>\n        /// Provjera rada memorije\n        /// </summary>\n        [TestMethod]\n        public void CheckDisplay_MemoryCheck()\n        {\n            calculator = Factory.CreateCalculator();\n\n>            calculator.Press('2');\n            calculator.Press(',');\n            calculator.Press('2');\n            calculator.Press('P');\n            calculator.Press('2');\n            calculator.Press('P');\n            calculator.Press('G');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"2,22\", displayState);\n        }\n\n>        [TestMethod]\n        public void CheckDisplay_DecimalValue()\n        {\n            calculator = Factory.CreateCalculator();\n\n>            calculator.Press('2');\n            calculator.Press(',');\n            calculator.Press('0');\n            calculator.Press('+');\n\n>            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"2\", displayState);\n        }\n\n>        [TestMethod]\n        public void CheckDisplay_Empty_BinaryOperation()\n        {\n            calculator = Factory.CreateCalculator();\n\n>            calculator.Press('+');\n            calculator.Press('=');\n\n>            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n        }\n\n>        [TestMethod]\n        public void CheckDisplay_Empty_UnaryOperation()\n        {\n            calculator = Factory.CreateCalculator();\n\n>            calculator.Press('+');\n            calculator.Press('=');\n            calculator.Press('Q');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n\n>            calculator.Press('I');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"-E-\", displayState);\n        }\n\n>        [TestMethod]\n        public void CheckDisplay_Empty_MemoryOperation()\n        {\n            calculator = Factory.CreateCalculator();\n\n>            calculator.Press('P');\n            calculator.Press('G');\n\n>            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n        }\n\n>        [TestMethod]\n        public void CheckDisplay_Empty_MemoryOperation2()\n        {\n            calculator = Factory.CreateCalculator();\n\n>            calculator.Press('G');\n\n>            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n        }\n\n>        [TestMethod]\n        public void CheckDisplay_Minus()\n        {\n            calculator = Factory.CreateCalculator();\n\n>            calculator.Press('-');\n            calculator.Press('5');\n            calculator.Press('6');\n\n>            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"56\", displayState);\n        }\n\n>        [TestMethod]\n        public void CheckDisplay_Minus_Equals()\n        {\n            calculator = Factory.CreateCalculator();\n\n>            calculator.Press('-');\n            calculator.Press('5');\n            calculator.Press('6');\n            calculator.Press('=');\n\n>            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"-56\", displayState);\n        }\n\n>        [TestMethod]\n        public void CheckDisplay_Error_Sqrt()\n        {\n            calculator = Factory.CreateCalculator();\n\n>            calculator.Press('5');\n            calculator.Press('M');\n            calculator.Press('R');\n\n>            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"-E-\", displayState);\n        }\n```\n\nI pro tip koji mi je dosta pomogao pri izradi -> ako ste u dilemi kako se calc treba ponasati oko nekih slucajeva, prof je spomenuo da usporedujemo s onim na windowsima, ideja je da se ponasa kao taj",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255079": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@\"YenOfVen\"#p253988 \n```\n [TestMethod]\n        public void CheckDisplay_DecimalValue()\n        {\n            calculator = Factory.CreateCalculator();\n\n           calculator.Press('2');\n            calculator.Press(',');\n            calculator.Press('0');\n            calculator.Press('+');\n\n           string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"2\", displayState);\n        }\n```\n\novaj test se krsi s onim iz profesorovog templatea. treba se prikazati 2,0 a ne 2. Nakon znaka = treba biti 2. \n\nprofesorov test: CheckDisplay_PressBinaryOperatorAfterNumber_Number",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Noggenfogger (dammitimmad)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255081": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "```\n[TestMethod]\n        public void CheckDisplay_SignChange_Stationary()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('M');\n            calculator.Press('M');\n            calculator.Press('M');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n            calculator.Press(',');\n            calculator.Press('M');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0,\", displayState);\n            calculator.Press('2');\n            calculator.Press('M');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"-0,2\", displayState);\n        }\n```\n\nsto se ovog iznad testa tice windowsov kalkulator se ne ponasa tako, nego ovako kako je ispod\n\n ```\n[TestMethod]\n        public void CheckDisplay_SignChange_Stationary()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('M');\n            calculator.Press('M');\n            calculator.Press('M');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n            calculator.Press(',');\n            calculator.Press('M');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"-0,\", displayState);\n            calculator.Press('2');\n            calculator.Press('M');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0,2\", displayState);\n        }\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255510": {
+      "poster": "BigD",
+      "content": "Nisam bio na uvodnom predavanju, je li ima kakvih pragova na labosima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255751": {
+      "poster": "RogerRoger",
+      "content": "> Kalkulator koristi decimalni zarez, a ne decimalnu točku. Decimalni zarez ispisuje se odmah na ekranu (znači, '2' ',' prikazuje „2,“). PRI TOME OBAVEZNO PAZITI NA POSTAVLJENI \"Culture\"!!!\n\nŠto je Culture?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255989": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@\"RogerRoger\"#p255751 npr. kad parsas string u double i obrnuto treba postaviti odreden culture da bi zarez bio interpretiran kao decimalna tocka. mozes i replace-at \",\" sa \".\", ali ovo je ljepse. provrti ovaj kod ispod na https://www.w3schools.com/cs/trycs.php?filename=demo_helloworld\n\n```\nusing System;\n\nnamespace HelloWorld\n{\n  class Program\n  {\n    static void Main(string[] args)\n    {\n      System.IFormatProvider cultureUS =\n      new System.Globalization.CultureInfo(\"en-US\");\n\n      System.Globalization.CultureInfo cultureFr =\n         new System.Globalization.CultureInfo(\"fr-FR\");\n\n      double duration = double.Parse(\"0.125\", cultureUS);\n      double length = double.Parse(\"2,51415\", cultureFr);\n      \n      Console.WriteLine(\"us:\"); \n      Console.WriteLine(duration);\n      Console.WriteLine(duration.ToString());\n      Console.WriteLine(duration.ToString(cultureUS));\n      \n      Console.WriteLine(\"fr\"); \n      Console.WriteLine(length); \n      Console.WriteLine(length.ToString());\n      Console.WriteLine(length.ToString(cultureFr));  \n    }\n  }\n}\n```",
+      "votes": {
+        "upvoters": [
+          "RogerRoger"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255992": {
+      "poster": "YenOfVen",
+      "content": "@\"dammitimmad\"#p255079 Rekao je na predavanju da je taj test pogresan, treba biti 2",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255994": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@\"YenOfVen\"#p255992 ima li jos koji pogresan iz njegovog template-a?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256237": {
+      "poster": "YenOfVen",
+      "content": "@\"dammitimmad\"#p255994 Ostali bi trebali biti ok, samo je za taj naglasio",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256427": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "evo jos par testova. ako nadete jos kakvih cudesa, javite\n\n>!```\n[TestMethod]\n        public void CheckDisplay_Result_To_Ans()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('5');\n            calculator.Press('+');\n            calculator.Press('2');\n            calculator.Press('=');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"7\", displayState);\n            calculator.Press('+');\n            calculator.Press('1');\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"8\", displayState);\n        }\n        [TestMethod]\n        public void CheckDisplay_Sth()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('2');\n            calculator.Press('-');\n            calculator.Press('+');\n            calculator.Press('3');\n            calculator.Press('Q');\n            calculator.Press('=');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"11\", displayState);\n            calculator.Press('C');\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"9\", displayState);\n            calculator.Press('+');\n            calculator.Press('1');\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"10\", displayState);\n        }\n        [TestMethod]\n        public void CheckDisplay_Remember_Second_Number_Unary()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('5');\n            calculator.Press('+');\n            calculator.Press('3');\n            calculator.Press('=');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"8\", displayState);\n            calculator.Press('Q');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"64\", displayState);\n            calculator.Press('=');\n            // 64 + 3 =\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"67\", displayState);\n        }\n        [TestMethod]\n        public void CheckDisplay_Remember_Second_Number_Press()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('5');\n            calculator.Press('+');\n            calculator.Press('3');\n            calculator.Press('=');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"8\", displayState);\n            calculator.Press('6');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"6\", displayState);\n            calculator.Press('=');\n            // 6 + 3 =\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"9\", displayState);\n        }\n        [TestMethod]\n        public void CheckDisplay_Remember_Second_Number_EqualsInRow()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('5');\n            calculator.Press('+');\n            calculator.Press('3');\n            calculator.Press('=');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"8\", displayState);\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"11\", displayState);\n        }\n        [TestMethod]\n        public void CheckDisplay_Remember_Second_Number_EqualsInRow_Clear_OnOff()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('5');\n            calculator.Press('+');\n            calculator.Press('3');\n            calculator.Press('=');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"8\", displayState);\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            // 8 + 3 =\n            Assert.AreEqual(\"11\", displayState);\n            calculator.Press('C');\n            calculator.Press('=');\n            // 0 + 3 =\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"3\", displayState);\n            calculator.Press('O');\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n        }\n        [TestMethod]\n        public void CheckDisplay_Remember_Second_Number_Clear_Unary()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('5');\n            calculator.Press('+');\n            calculator.Press('3');\n            calculator.Press('=');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"8\", displayState);\n            calculator.Press('C');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n            calculator.Press('Q');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n            calculator.Press('=');\n            // 0 + 3 =\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"3\", displayState);\n            calculator.Press('=');\n            // 3 + 3 =\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"6\", displayState);\n            calculator.Press('=');\n            // 6 + 3 =\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"9\", displayState);\n        }\n        [TestMethod]\n        public void CheckDisplay_Operation_Without_First_Number()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('+');\n            calculator.Press('1');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"1\", displayState);\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"1\", displayState);\n        }\n        [TestMethod]\n        public void CheckDisplay_Division_Error()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('/');\n            calculator.Press('=');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"-E-\", displayState);\n        }\n```",
+      "votes": {
+        "upvoters": [
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258051": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "sto mislite kako bi se ovaj slucaj trebao ponasati?  (prof. mi ne odogvara na mail) \n\n ```\n            calculator = Factory.CreateCalculator();\n            calculator.Press('1');\n            calculator.Press('P');\n            calculator.Press('P');\n            calculator.Press('2');\n            calculator.Press('P');\n\n            calculator.Press('G');           // Get  (na display-u je broj iz memorije...)\n\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"12\", displayState);\n\n            calculator.Press('3');           // Unos znamenke nakon Get\n            calculator.Press('4');\n\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"1234\", displayState);                               // je li točan output \"1234\"\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"34\", displayState);                                   // ili je točan output \"34\"\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258093": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@\"dammitimmad\"#p258051 odgovor: neka bude ovaj drugi slucaj \"34\"",
+      "votes": {
+        "upvoters": [
+          "Sanjaaa"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

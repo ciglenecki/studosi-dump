@@ -1,0 +1,27 @@
+{
+  "title": "[OEIHV] 1. laboratorijska vježba - 2021/2022",
+  "creator": "Joseph",
+  "slug": "oeihv-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Osnove električnih i hibridnih vozila"
+  ],
+  "posts": {
+    "300570": {
+      "poster": "Joseph",
+      "content": "Evo ja dijelim program koji sam napravio kako bi napravio labos.\n\nProgram napravi sve osim kaže jeli se radi o pražnjenju ili punjenju i koja je metoda.\n\nProgram se koristi tako da se napravi .txt file data i u njega se stavi samo ono gomila brojeva iz zadanog fila.\n\nI treba se paziti jeli vam struja pozitivna ili negativna meni je bila negativna i u nekim formulama sam morao promijeniti predznak.\n\nKod je u pythonu.\n```\nimport matplotlib.pyplot as pp  # plots\nimport numpy as np              # mat operacije\nimport scipy.integrate as intg  # za integrale\n\ndata = np.loadtxt(fname=\"data.txt\", delimiter='\\t')\ntime = data[:, 0]\ncurrent = data[:, 1]\nvoltage = data[:, 2]\npower = data[:, 3]\ntemperature = data[:, 4]\n\nfor i in range(len(time)):\n    if current[i] != 0:\n        start = i\n        break\n\ni = start\nwhile i < len(time):\n    if current[i] == 0:\n        end = i\n        break\n    i += 1\n\nprint(\"Trajanje mjerenja: {:0.2f} minuta\".format((end - start) / 60))\n\nkapacitet = intg.trapz(-current, time / 3600) # Trapezni integral (ako je struja pozitivna maknut -)\nprint(\"Kapacitet: {:0.2f} mAh\".format(kapacitet * 1000))\n\nenergija = intg.trapz(-current * voltage, time / 3600) # Trapezna integracija (isto ako je struja pozitivna maknut -)\nprint(\"Energija: {:0.2f} Wh\".format(energija))\n\nmaximum = temperature[0]\nminimum = temperature[0]\nfor i in range(len(temperature)):\n    if temperature[i] > maximum:\n        maximum = temperature[i]\n    if temperature[i] < minimum:\n        minimum = temperature[i]\nprint(\"Raspon temperatura: od {:0.2f} do {:0.2f}\".format(minimum, maximum))\n\n# Struja\npp.figure(1, dpi=150)\npp.xlabel(\"Time / s\")\npp.ylabel(\"Current / A\")\npp.xlim(start, end)\npp.xticks(range(start, end, 1000))\npp.plot(time, current, 'b')\n\n# Napon\npp.figure(2, dpi=150)\npp.xlabel(\"Time / s\")\npp.ylabel(\"Volage / V\")\npp.xlim(start, end)\npp.xticks(range(start, end, 1000))\npp.plot(time, voltage, 'orange')\n\n# Snaga\npp.figure(3, dpi=150)\npp.xlabel(\"Time / s\")\npp.ylabel(\"Power / W\")\npp.xlim(start, end)\npp.xticks(range(start, end, 1000))\npp.plot(time, power, 'g')\n\n# Temperatura\npp.figure(4, dpi=150)\npp.xlabel(\"Time / s\")\npp.ylabel(\"Temperature / °C\")\npp.xlim(start, end)\npp.plot(time, temperature, 'r')\npp.show()\n```",
+      "votes": {
+        "upvoters": [
+          "EstebanVihaio",
+          "shenki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

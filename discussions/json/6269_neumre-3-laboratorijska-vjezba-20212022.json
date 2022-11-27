@@ -1,0 +1,147 @@
+{
+  "title": "[NEUMRE] 3. laboratorijska vježba - 2021/2022",
+  "creator": "BillIK",
+  "slug": "neumre-3-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Neuronske mreže",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "264256": {
+      "poster": "BillIK",
+      "content": "Je li netko uspio pokrenuti njihov kod za treci labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264282": {
+      "poster": "tonkec",
+      "content": "@\"BillIK\"#p264256 to ti je pisano za prethodnu verziju TF-a, za novu (2.0) moraš napraviti raditi preinake ili instalirati staru pa koristiti ovo što su oni napisali",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264293": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"BillIK\"#p264256 ako koristiš v2 tf-a ima par stvari koje treba napravit ukoliko ne želiš instaliravat stariju verziju.\n\nna početku notebook-a:\n\n```\nimport tensorflow.compat.v1 as tf\ntf.disable_eager_execution()\n```\n\nza zadnji zadatak skineš primjere, više nema onih tutorials u examples ili koristiš neki dataset iz primjera. nisam sad siguran koji je.\n\nhttps://github.com/uroosehar1/tensorflow-uroo/blob/main/mnist.zip\n\ni ovo staviš na početak zadnjeg, ostale importe izbrišeš.\n\n```\nimport sys\nsys.path.append(\"/path/to/input_data.py\")\nimport input_data\n```",
+      "votes": {
+        "upvoters": [
+          "Sulejman",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264582": {
+      "poster": "Baksuz",
+      "content": "Koje feature i kernel funkciju treba koristiti za najbolje rezultate ako imamo samo 1 feature i ako imamo samo 2 featurea? Kako uopće doći do tog rezultata osim iscrpnom pretragom? Mislim na wine dataset.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264604": {
+      "poster": "SuperSaiyano",
+      "content": "@\"Baksuz\"#p264582 Ja sam išao iscrpnom pretragom, neke se kombinacije značajki ističu od drugih ali pri ponovnom pokretanju dobijem neke od tih istaknutih značajki, nekad istu a nekad drugu. Ne znam je li problem ali mi se rezultati točnosti ne razlikuju zavisno o odabiru modela.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264614": {
+      "poster": "Sulejman",
+      "content": "@\"Olive Oil\"#p264293 Hvala legendo...\n\nJeste ovo dobili u zadnjem? (lab5)\n\n![](assets/2021-12-14/00011.png)",
+      "votes": {
+        "upvoters": [
+          "Baksuz"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264630": {
+      "poster": "SuperSaiyano",
+      "content": "@\"Olive Oil\"#p264293 Možeš li pojasniti kako misliš skinuti sve primjere, da ih ručno skinem i stavim u direktorij ili šta? Dataset mogu učitati preko onog linka što su dali za tf2 ali onda nema one metode potrebne za ostatak zadatka.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264637": {
+      "poster": "Sulejman",
+      "content": "@\"SuperSaiyano\"#p264630 skines taj zip, i sve fajlove stavis u trenutni direktorij i pokrenes. onda bi ti input_data.py trebao sam dohvatit sve primjere.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264639": {
+      "poster": "SuperSaiyano",
+      "content": "@\"Sulejman\"#p264637 Ne radi mi to, desi mi se ModuleNotFoundError: No module named 'tensorflow.examples'.\n\nEDIT: Problem je bio što mi je __init__.py također zvao tensorflow.examples koji tf2 ne podržava, samo sam zakomentirao dva importa iz __init__.py i proradilo mi je.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265321": {
+      "poster": "BillIK",
+      "content": "šta treba napraviti u 6.1 zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

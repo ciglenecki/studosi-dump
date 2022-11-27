@@ -1,0 +1,1185 @@
+{
+  "title": "[STRUCE] 1. laboratorijska vježba - 2020/2021",
+  "creator": "member",
+  "slug": "struce-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Strojno učenje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "79465": {
+      "poster": "member",
+      "content": "1. labos, 3.c\n\n  Jel y_train/y_test generiram s make_labels(X_train/X_test, f, sigma) ili s train_test_split()?\n\n  Jer mi na liniji di je make_labels() baca  error _'numpy.ndarray' object is not callable_.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79502": {
+      "poster": "tito",
+      "content": "@member#79465 prvo generiraš izlazne vrijednosti y = make_labels(X, f, sigma) pa onda splitaš data                        \n\n     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=42),   ako sam dobro shvatio problem",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79505": {
+      "poster": "tito",
+      "content": "zapravo nemojte koristiti random_state u train_test_split-u, zato jer on služi za mješanje podataka, a mi kod regresije koristimo lijepo raspoređene podatke po krivulji",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80110": {
+      "poster": "Murin",
+      "content": "Treba li u 3.a  zadatku prikazati 5 grafova ili sve na jednom? Ima mi vise smisla jedan graf za svaki stupanj polinoma, ali ne mogu nikako dobiti da ne crta sve na jedan pa me zanima kako pravilo napraviti subplotove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80175": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @Murin#80110 kako pravilo napraviti subplotove\n\n```python\nfig, ax = plt.subplots(visina, širina)\n```\n\nOnda ti `fig` reprezentira grafove u cjelini, a `ax` je ako se ne varam `arraylike` po kojem možeš iterirati i zasebno crtati.\n\nJa bih to onda pozvao ovako\n\n```python\nfig, ax = plt.sublots(5, 1, figsize=(16, 30), sharex=True)\nax[0].plot(...)\nax[1].plot(...)\n...\nfig.tight_layout()\n```",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80202": {
+      "poster": "Noname",
+      "content": "Koju regularizaciju trebamo koristiti u 5. zadatku? Pretpostavljam L2 ali nije navedeno",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80252": {
+      "poster": "basketbaler (Burek sa sirom)",
+      "content": "Kojih dimenzija treba biti matrica dizajna u 2.a?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80364": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jel ima itko problema s L1 regularizacijom u 7.b) zadatku? Meni stalno javlja ConvergenceWarning: Objective did not converge.",
+      "votes": {
+        "upvoters": [
+          "vidraKida (Ζ ε ύ ς)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80388": {
+      "poster": "Ziher",
+      "content": "Kako se na temelju onog grafa s lambdom može zaključiti nešto o prenaučenosti ili podnaučenosti modela?\n\n@Yasuke#80364 ja sam morao povećati broj iteracija, recimo na 1500",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80391": {
+      "poster": "cotfuse",
+      "content": "@Ziher#80388 \n\nOvako ti nekako treba izgledati graf\n\nhttps://en.wikipedia.org/wiki/Overfitting#/media/File:Overfitting_svg.svg\n\ngdje je crveno test error, a plavo train.\n\nLijevo ti je sitan lambda sto znaci da regularizacija nije jaka sto znaci da se model lako moze previse prilaogditi skupu za treniranje, odnosno je prenaucen je. Desno ti je regularizacija prejaka pa se kapacitet modela smanjio do razine gdje se ne moze prilagoditi podacima, odnosno undelying funkciji, taj model je podnaucen.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80392": {
+      "poster": "member",
+      "content": "7.a) Zašto mi ovako plota? \n\n![![](assets/2020-10-15/00005.jpeg)\n](src)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80393": {
+      "poster": "member",
+      "content": "7.a) zašto mi ovako plota\n\n![![](assets/2020-10-15/00006.png)\n](src)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80429": {
+      "poster": "member",
+      "content": "@Ziher#80388 \n\nA jesi ovako dobio/la `grades_X_fixed = scaler.fit_transform(grades_X.reshape(-1, 1))` ?\n\nJer mi baca ValueError: Found input variables with inconsistent numbers of samples: [1000, 500] za liniju `rig= Ridge(alpha = lamb).fit(grades_X_fixed, grades_y_fixed)`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80461": {
+      "poster": "Longclaw",
+      "content": "Trebamo li uopće koristiti skup za testiranje u 6. pod a? U zadatku kaže da trebamo izračunati L-norme vektora težina w, a taj vektor dobijemo koristeći skup za treniranje, pa mi nije baš jasno što trebam sa skupom za testiranje, jer mi se čini da se zadatak može rješiti bez korištenja skupa za testiranje.",
+      "votes": {
+        "upvoters": [
+          "TheCrimsonChin",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80484": {
+      "poster": "Ziher",
+      "content": "@member#80429 Eeee dobro pitanje\n\nTaj zadatak mi je cudesan, nemam pojma\n\nProvjerio sam s frendom i sve ostalo bi trebalo biti ok do 7. i 8., taj reshape nisam nikad koristio\n\nJedino me trazilo da ga koristim za grades_y_fixed i onda sam kao rezultat za tezine Ridge modela dobio 2D array...\n\nUglavnom sutra idem na konzultacije za to pa javim ako nekog zanima",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "Emma63194",
+          "Noggenfogger (dammitimmad)",
+          "chuuya (temari)",
+          "member",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80511": {
+      "poster": "cotfuse",
+      "content": "@member#80429 \n\nNe trebas reshapeati X. Svaki primjer ima dvije znacajke i tako ti mora ulaziti i u model nakon skaliranja.",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80512": {
+      "poster": "member",
+      "content": "@cotfuse#80511 ali kad ne reshapeam grades_X i grades_y dobijem:\n\nExpected 2D array, got 1D array instead:  array=[3.81442145 1.43966204 ...... ]\n\nReshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80515": {
+      "poster": "cotfuse",
+      "content": "@member#80512 y ima single feature",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80665": {
+      "poster": "Ziher",
+      "content": "@member#80512 grades_X bi trebalo vec biti 2d array jer imas >1 znacajki, a sto se tice grades_y nemas, to je 1D array\n\nS reshape(-1,1) pretvaras to u 2d array samo\n\nA sto se tice tezina coef_ u 2d arrayu, to je sve ok navodno\n\nAko imas jos pitanja, javi se u dm",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80887": {
+      "poster": "TheCrimsonChin",
+      "content": "@Longclaw#80461 To i mene zanima, jesi možda saznao odgovor?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80954": {
+      "poster": "pepelko",
+      "content": "Moze li netko staviti grafove iz 7. i 8. zad da usporedimo rjesenja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80962": {
+      "poster": "Yasuke (Bono)",
+      "content": "Kako se dobije grades_y_fixed?",
+      "votes": {
+        "upvoters": [
+          "Noname",
+          "Ruleta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80999": {
+      "poster": "Bravos (Supraman)",
+      "content": "Trebamo li postavljati fit_intercept na true ili false? Kako se fit_intercept uklapa s PolynomialFeatures?",
+      "votes": {
+        "upvoters": [
+          "Ruleta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81253": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Može netko slikat 3.c kak bi trebali ispasti grafovi otprilike?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81296": {
+      "poster": "pepelko",
+      "content": "@PrisonMike#81253 ![](assets/2020-10-18/00001.jpeg)\n\nMislim da bi trebalo ispast ovako nekako..",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81300": {
+      "poster": "a_ko_si_ti",
+      "content": "Jeli mozemo sada predati prvu verziju na ferko, i onda nakon dorade prebrisati tu verziju s novom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81301": {
+      "poster": "Vrba",
+      "content": "@a_ko_si_ti#81300 da, ako ne zakljucas...a pise da ne treba zakljucavati",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81316": {
+      "poster": "Emma63194",
+      "content": "Postoji li neki format naziva kako trebamo predati tu bilježnicu? Tipa, _jmbag_.ipynb?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81318": {
+      "poster": "chuuya (temari)",
+      "content": "@Emma63194#81316 S Ferka: \"Datoteku imenujte kao: SU-2020-LAB01-<JMBAG>.ipynb (zamijenite <JMBAG> vlastitim JMBAG-om).\"",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "Emma63194",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81321": {
+      "poster": "Emma63194",
+      "content": "@chuuya#81318 Tnx, nisam bila pogledala tamo jer još dovršavam taj lab :D. Ne moramo zaključati to, jel da?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81322": {
+      "poster": "chuuya (temari)",
+      "content": "@Emma63194#81321 Nope! 😊",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81368": {
+      "poster": "Noname",
+      "content": "Kako se dobije grades_x_fixed i grades_y_fixed?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81369": {
+      "poster": "vidraKida (Ζ ε ύ ς)",
+      "content": "@Yasuke#80364 \n\nMeni je slican problem ali na 6.b \n\nJel ti ovako izgleda?\n\n![](assets/2020-10-18/00012.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81381": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "kako u zadnjem zad generirati slučajno 50 elemenata matrice ?? loš sam s pythonom 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81394": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@khm19#81381 \n\n```python\nnp.random.normal(0, 1, 50)\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81396": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@micho#81394 \n\npotrebno je generirati iz skupa tj matrice grades_X_colinear, ne znam kako to generirati",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81403": {
+      "poster": "Yasuke (Bono)",
+      "content": "@vidraKida#81369 \n\nJe bilo mi je tako. Radio sam na krivom skupu podataka. Treba uzet onaj skup iz 2. i 3. zadatka s 50 primjera i onda radi dobro, barem meni. Prije toga sam računao sa skupom od 1000 primjera iz prethodnog zadatka.",
+      "votes": {
+        "upvoters": [
+          "vidraKida (Ζ ε ύ ς)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81407": {
+      "poster": "vidraKida (Ζ ε ύ ς)",
+      "content": "@khm19#81396 \n\nja gledam u numpy-ju neke metode, probaj s insertom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81411": {
+      "poster": "vidraKida (Ζ ε ύ ς)",
+      "content": "@Yasuke#81403 \n\nje vidim sada Hvala ti puno",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81415": {
+      "poster": "knjklj",
+      "content": "2.a) nakon što napravim X = make_instances, jel mogu/trebam lupiti np.reshape zato što make_instances napravi 2D array, a treba mi 1D?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81422": {
+      "poster": "toni98",
+      "content": "@Noname#81368 i mene zanima :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81423": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "koliki postotak vam je ispao u 6.a? meni je 0, izgleda mi jako sumnjivo...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81430": {
+      "poster": "Rudee",
+      "content": "je li netko shvatio kako treba 7.a i 7.b zadatak napraviti? Konkretno, nije mi jasno što su mislili s ovime:\n\n![](assets/2020-10-18/00016.png)\n\nStandardScaler mi ne radi za grades_y, a na stackoverflowu kazu da se to koristi samo za ulazne varijable. Kad pokrenem to samo na ulaznim varijablama graf je isti ko i bez toga xD",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81439": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "Jel treba pisati odgovore na ova njihova pitanja što su Q: Objasni... ili je to više nešto što će nas oni pitat pa da usmeno to samo znamo reći?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81441": {
+      "poster": "Joji",
+      "content": "@ImJustAKid#81439 \n\nIz uvodnog teksta:\n> Ispod nekih zadataka možete naći i pitanja koja služe kao smjernice za bolje razumijevanje gradiva (**nemojte pisati** odgovore na pitanja u bilježnicu).",
+      "votes": {
+        "upvoters": [
+          "ImJustAKid (lumity)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81443": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "@Joji#81441 U prvom zadatku d) ima Q: .... Pokažite na primjeru",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81445": {
+      "poster": "cotfuse",
+      "content": "@Rudee#81430 \n\nU principu je stack overflow u pravu i nema smisla skalirati y jer je to ono što se predviđa i skaliranjem ocjena sa 0-5 na 0-1 samo dobiješ da ti weightovi budu 5x manji.\n\nMeđutim to je ono što traže, pa kako bi scaler bio sretan, trebaš y pretvoriti u 2D matricu koja je zapravo vektor stupac i to radiš s onim reshape(-1, 1)",
+      "votes": {
+        "upvoters": [
+          "mn4 (mm)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81447": {
+      "poster": "Joji",
+      "content": "@ImJustAKid#81443 Mislim da to \"pokažite na primjeru\" znači da samo trebaš navesti primjer u kojem bi preslikavanje funkcioniralo i primjer u kojem ne bi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81478": {
+      "poster": "Rudee",
+      "content": "@cotfuse#81445 hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81509": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Noname#81368 \n\n@toni98#81422 \n\nJa sam ovak:\n\nscaler = StandardScaler()\n\ngrades_X_fixed = scaler.fit_transform(grades_X)\n\ngrades_y_fixed = scaler.fit_transform(grades_y)\n\nili moguce ovo ak jos niste prije reshapeali:\n\ngrades_y_fixed = scaler.fit_transform(grades_y.reshape(-1,1))",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81510": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "Jel bi u 7a trebale bit ovakve slike?\n\n![](assets/2020-10-18/00024.png)",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "mn4 (mm)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81512": {
+      "poster": "cotfuse",
+      "content": "@-Ivan-#81510 da",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81513": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "@cotfuse#81512 Tenkju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81517": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "Kada u 7b želimo dobiti matricu dizajna, samo dodajemo dummy jedinice tj. stupanj je 1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81525": {
+      "poster": "tre_besty (luk)",
+      "content": "Ima itko sutra ispitivanje preko teamsa da kaze otprilike sto pitaju?",
+      "votes": {
+        "upvoters": [
+          "megi7 (someone7)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81542": {
+      "poster": "InCogNiTo124",
+      "content": "@tre_besty#81525 nas su prosle godine pitali vecinom po gradivu a manje po kodu, tak da obavezno uci teoriju, koncepte i kako se oni manifestiraju u labosu",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Emma63194",
+          "in1",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81548": {
+      "poster": "Ziher",
+      "content": "@johndoe12#81423 Ako je to onaj s normama, i trebao bi ti ispasti 0% rijedak model \n\nRazlog tome je zato sto koristis L2 regularizaciju (ridge) koja nikad nece rezultirati rijetkim modelima. Dok sam iskoristio Lasso imao sam 50% rijedak model (ako ne racunas w0, to nisam gledao)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81558": {
+      "poster": "Emma63194",
+      "content": "@johndoe12#81423 Sorry, kakav postotak? Ne vidim nigdje da se to traži u zadatku pa sam malo zbunjena.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81559": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@Emma63194#81558 \n\nTo je pod pitanjima za taj zadatak",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81560": {
+      "poster": "Emma63194",
+      "content": "@khm19#81559 A, hvala puno, promaklo mi skroz!\n\nTreba li na njih odgovarati tako da sad to u kodu napišem ili samo teorijski prokomentirati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81561": {
+      "poster": "Ziher",
+      "content": "@Emma63194#81560 ne odgovaras na to, to je vise da promislis o tome malo i mozda ce te to i pitati na labosu, ili nesto na tu foru",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81614": {
+      "poster": "knjklj",
+      "content": "Razlika klasifikacije i regresije\n\nobjasni PolynomialFeatures, zašto ju koristimo\n\nRazumijeti grešku učenja i grešku ispitivanja (objasniti 3.b)\n\nŠta je šum, kako nastaje (krivi podaci, loše unešeni podaci...), zašto je bitan broj ulaznih primjera\n\n4.b) zašto su drugačiji brojevi (odg: zbog w0, koja je konstanta, ali je u 4.a) računata zbog lambda * I matrica)\n\nsve u svemu razumijeti šta radiš i šta pokušavaš dobiti.",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Cvija",
+          "Daorson",
+          "Emma63194",
+          "FICHEKK",
+          "Joji",
+          "Njet",
+          "Quentin",
+          "Stark",
+          "Vrba",
+          "[deleted]",
+          "bunjee",
+          "chuuya (temari)",
+          "in1",
+          "joc",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81615": {
+      "poster": "Ziher",
+      "content": "Labos u 8 ujutro:\n\nSto su klasifikacija i regresija te objasni na primjerima?\n\nZasto u E(h|D) koristimo 1/2, a ne 1/N, te koja je realnija?\n\nNa 3.a) zadatku, koji model ima najmanju pogresku ucenja te mozemo li odabrati najbolji model samo prema tim podacima?\n\n3 nacina regularizacije koje smo spomenuli na predavanjima (norme), njihova svojstva, koja je najbolja? Zasto koristimo regularizaciju? Kako se to ocituje u hipotezi?",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Daorson",
+          "Emma63194",
+          "FICHEKK",
+          "Joji",
+          "Njet",
+          "Quentin",
+          "Stark",
+          "Vrba",
+          "[deleted]",
+          "bunjee",
+          "chuuya (temari)",
+          "in1",
+          "joc",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81621": {
+      "poster": "_xXx_Matej_xXx_ (Mateejj)",
+      "content": "Labos:\n\nKoje su 3 komponente algoritma strojnog ucenja ?\n\nZašto koristimo kvadratni gubitak a ne samo (hx-y) ?\n\nGrafovi u 3.zad - objasniti prenaucenost\n\nZasto koristimo L2 regularizaciju ? Objasniti one grafove u 5. i 6. zad\n\nZasto skaliramo podatke u 7. i koji su problemi kod multikolinearnosti ?",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Daorson",
+          "Emma63194",
+          "FICHEKK",
+          "Joji",
+          "Njet",
+          "Quentin",
+          "Stark",
+          "TheManFromEarth",
+          "Vrba",
+          "[deleted]",
+          "bunjee",
+          "chuuya (temari)",
+          "in1",
+          "joc",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81823": {
+      "poster": "TheManFromEarth",
+      "content": "Labos:\n\n1) za što služi dummy jedinica u prvom zadatku\n\n1) 3 Komponente algoritma strojnog učenja\n\n2) na grafu između pogreške train i test primjer objasnit koje je najbolji model za uzet(Pogreška test primjera najmanja)\n\n3) Što je regularizacija? Razlika L1 i L2 regularizacije.\n\n4) Što je multkolinearnost ? 2 mogucnosti (isti stupaci, isti redci) , kako se rijesava?",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Vrba",
+          "bunjee",
+          "in1",
+          "joc"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81984": {
+      "poster": "Vrba",
+      "content": "@_xXx_Matej_xXx_#81621 Koji je odgovor na pitanje zasto skaliramo podatke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "MrHead (vandal)"
+        ]
+      }
+    },
+    "82033": {
+      "poster": "cotfuse",
+      "content": "@Vrba#81984 koliko ja znam, kako se radilo u labosu, gdje se rješenje dobiva u zatvorenoj formi, skaliranje samo služi kako bi težine imale više smisla, da značajnija značajka ima veću težinu.\n\nU modelima koje ćemo kasnije raditi, recimo gdje se optimizacija radi gradijentnim spustom, skaliranje pomaže optimizaciji.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Vrba",
+          "_xXx_Matej_xXx_ (Mateejj)",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82113": {
+      "poster": "megi7 (someone7)",
+      "content": "Pitanja danas u 8\n\nProlazi po svakom zadatku i pita nesto\n\nKoje vrste strojnog ucenja znamo i koja je ralika\n\nKoji su tri komponente strojnog ucenja\n\nZasto smo uzeli kvadrat reziduala\n\nZasto dodajemo dummy jedinice\n\nZasto koristimo pseudoinverz\n\nKako nazivamo parametar d(stupanj polinoma) odg je hipperparametar jer pomocu njega prvo pretrazujemo familiju modela\n\nZasto uvodimo sum, sto se dogada s nasim modelom kad imamo sum\n\nKoji model je najoptimalniji iz treceg zadatka\n\n3b koji bi model odbrala s obzirom na graf \n\n3c objasnite grafove i zasto je to tako \n\nZasto uvodimo regularizaciju, kako izgleda matrica lambdaI, zasto je na nultom elementu nula\n\n5 sto se dogada s nasom funkcijom kada je regulariziramo(postaje glada, ispeglamo je)\n\nKoje vrste regularizacije imamo, sto je koja, opisi norme, koju najvise koristimo, koja daje rijetke modele, sto su rijetki modeli, hoce li l1 i l2 ikad doci do nule, zasto neće\n\nKoji je problem sa znacajkama razlicitih skala \n\nKako smo ga rijesili\n\nKoji je problem s multikolinearnoscu\n\nDa imate dvije matrice kako bi odlucili koja je nestabilna\n\nKako sprijecavamo multikolinearnost\n\nSasvim okej ispitivac i ugodan razgovor!",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Bananaking",
+          "Emma63194",
+          "FICHEKK",
+          "PrisonMike (Števo)",
+          "Quentin",
+          "Ruleta",
+          "Vrba",
+          "[deleted]",
+          "chuuya (temari)",
+          "in1",
+          "magikarp (level90magikarp)",
+          "member",
+          "narval13068 (Dima)",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82129": {
+      "poster": "Vrba",
+      "content": "Koliko bodova nosi svaki labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82147": {
+      "poster": "member",
+      "content": "@Vrba#82129 Na kraju se sve skupa skalira na 30, a 4 su labosa, svaki po 5.",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "Vrba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82722": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@member#82147 vidjela sam u arhivi da je prosle god bilo 5, to su promijenili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82734": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Noggenfogger#82722 Da",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82735": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@micho#82734 jel znas u kojim ce sve tjednima bit rokovi za predaju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82738": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Noggenfogger#82735 Ne, to je fleksibilno, a i ne znam kako bih znao kad je ovo prva godina s 4 labosa, ne znam ni kako su sad rasporedili labose kad je i prije bilo dosta gusto s gradivom, nisu sve stvari išle u labose.",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82911": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "kako to da se ovaj lab skalira na 8 bodova? \n\n30b je max, 4 je labosa, trebalo bi bit svaki 7.5 zar ne? osim ako ovaj nije nosio nesto sitno vise od ostalih",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82912": {
+      "poster": "Amon",
+      "content": "@johndoe12#82911 Moguće da su samo zaokružili na višu decimalu",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83424": {
+      "poster": "tito",
+      "content": "pitanja kojih se sječam su bila \n- što je linearna regresija, koja je njegova funkcija gubitka, kako se određuju težine\n- što je regularizacija, koje smo koristili u vježbama i koje su njihove prednosti\n- zašto radimo pseudoinverz, i kada možemo napraviti inverz matrice\n- zašto skaliramo vrijednosti u labosu (odgovor: kako bi lakše vidjeli omjere težina w)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83458": {
+      "poster": "Svarog (Veles)",
+      "content": "- razlika između klasifikacije i regresije\n- zašto se koristi PolynomialFeatures i koja je njegova svrha općenito\n- zašto se koristi kvadratno odstupanje, a ne apsolutno ili samo razlika očekivane oznake i dobivene oznake\n- drugo pitanje iz 3.b\n- gdje se na grafu iz 3.b vidi prenaučenost, odnosno podnaučenost\n- kako se regularizacija matematički izvodi, koji su parametri\n- zašto se ne regularizira slobodni član vektora težina\n- izrazi za L1 i L2, koja norma je veća\n- koje su prednosti i mane LASSO regresije\n- bonus pitanje: što je elastic net\n- što je se htjelo pokazati 7. zadatkom općenito\n- što je multikolinearnost, zašto nastaje, koje su njene posljedice i kako regularizacija pomaže kod multikolinearnosti",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

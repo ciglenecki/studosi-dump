@@ -1,0 +1,3088 @@
+{
+  "title": "[UUUI] 3. laboratorijska vježba - 2020/2021",
+  "creator": "Sicsile",
+  "slug": "uuui-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Uvod u umjetnu inteligenciju",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "189553": {
+      "poster": "Sicsile",
+      "content": "Koje prezentacije ulaze u 3. Lab vjezbu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189570": {
+      "poster": "snowman",
+      "content": "@Sicsile#189553  10. Strojno učenje",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "Ducky",
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189669": {
+      "poster": "Lyras",
+      "content": "Kada nam je information gain za sve potencijalne feature 0, onda samo odaberemo onaj dependent variable value koji je prvi po abecedi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190723": {
+      "poster": "Nocna_smjena",
+      "content": "Jel neko krenuo s ovim labosom? Jel hrv verzija ID3-a korigirana ili se i dalje moramo oslanjati na eng verziju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190858": {
+      "poster": "ana (anci)",
+      "content": "@Nocna_smjena#190723 cini mi se da su hrv i eng verzija iste na slajdovima.  napravila sam labos po tome, jedino sto sam izmjenila je da se kod prvog if(D = prazno), ne vrati ovo sto pise u algoritmu nego null i onda se ta grana ne sprema u stablo. zapravo nije velika razlike hoce li se to spremit ili ne (predikcija ce dati isti rezultat, samo je pitanje hoce li se racunati najcesca oznaka tijekom testiranja ili predikcije), ali u autograderu se ne spremaju te grane pa eto",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190939": {
+      "poster": "vjeva",
+      "content": "U autograderu je ovo naveden kao correct output:\n\n_1:sex=male 2:cabin_letter=B 3:fare=75_to_100 4:age=old yes\n\n1:sex=male 2:cabin_letter=B 3:fare=75_to_100 4:age=young_adult 5:passenger_class=upper_class no_\n\na pada mi test: titanic_train_categorical.csv titanic_heldout_categorical.csv \n\nza primjer: _upper_class,male,adult,75_to_100,B,no_\n\n Po logici koju su objasnili u uputama, ako ne prepoznaje feature value, a ovdje je to age=adult, treba pogledati koje sve labele postoje za druge vrijednosti featurea i vratiti onu koja se najčešće pojavljuje što je ovdje {'yes': 1, 'no': 1} pa se uzima abecedno manja tj '_no_'.  Autograder očekuje izlaz '_yes_'. Jesam li ja nešto krivo shvatila ili da pričekam par dana da se autograder update-a?",
+      "votes": {
+        "upvoters": [
+          "mini (Earthling)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190951": {
+      "poster": "Diego",
+      "content": "@vjeva#190939 Ista stvar i meni pada",
+      "votes": {
+        "upvoters": [
+          "mini (Earthling)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191548": {
+      "poster": "zvonkoBogdan",
+      "content": "sta u slucaju da imamo razlicite ciljne varijable za iste varijable?\n\nnpr\n\nlower_class,male,adult,under_10,U,no\n\nlower_class,male,adult,under_10,U,yes",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191653": {
+      "poster": "Ducky",
+      "content": "Oce se ljutit ak stavim dva argumenta u fit i predict umjesto jednog?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192125": {
+      "poster": "BillIK",
+      "content": "kako čitati csv datoteke? kad koristim csv.DictReader ne budu stupci uvijek dobrim redoslijedom učitani",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192132": {
+      "poster": "Joskica",
+      "content": "@BillIK#192125 obican reader iz csv lib\n\nhttps://docs.python.org/3/library/csv.html",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192221": {
+      "poster": "Edrudo",
+      "content": "Jeli potrebno znati modeliranje neizvjesnosti da bi se rijesio lab?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192227": {
+      "poster": "ana (anci)",
+      "content": "@Edrudo#192221 trebas znat samo iz strojnog ucenja zadnju temu vezanu za stabla odluke",
+      "votes": {
+        "upvoters": [
+          "Edrudo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192497": {
+      "poster": "BillIK",
+      "content": "može netko objasniti kako se dode do predviđanja? imam izgrađeno stablo i što dalje? ne shvaćam upute nimalo",
+      "votes": {
+        "upvoters": [
+          "Artemis",
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192681": {
+      "poster": "ana (anci)",
+      "content": "@BillIK#192497 Za svaki od testnih primjera trebas raditi:\n\npogledaj koji ti je feature u rootu stabla, pogledaj koja je vrijednost za taj feature u tom testnom primjeru i onda se spusti tom granom u sljedeci node, i to ponavljaj dok ne dodes do listova ili pronades vrijednost znacajke koja ne postoji u stablu (u tom slucaju umjesto vrijednosti iz lista, uzmi najzastupljeniji label iz primjera za treniranje iz prethodnog nodea stabla), i dok prolazis kroz stablo samo ispisuj gdje prolazis (ili pamti u nekom stringbuilderu). Samo pazi da ispitujes predikcije primjera redom kojim su zapisani u datoteci",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)",
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192708": {
+      "poster": "HARAmara (decko_sa_balkana)",
+      "content": "je li potrebno znanje iz bilo koje osim 10. prezentacije za ovaj labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192711": {
+      "poster": "Kaladonter",
+      "content": "@HARAmara#192708 Ne",
+      "votes": {
+        "upvoters": [
+          "HARAmara (decko_sa_balkana)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193078": {
+      "poster": "lovro (l123)",
+      "content": "Kak je najpametnije spremit podatke za train set i test set?",
+      "votes": {
+        "upvoters": [
+          "Tone",
+          "swish41 (PlavušaSFilozofskog)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193119": {
+      "poster": "Marko",
+      "content": "@Nocna_smjena#190723 Koliko ja znam u hrvatskim prezentacijama je uvijek bila ispravna verzija, samo kod hrvatskih snimaka je krivo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193137": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@lovro#193078 isto kao što ih i dobiješ, u CSV formatu\n\na ako misliš kako to ostvarit, s `csv` modulom\n\nMOD EDIT: Eksterna inteligencija mi je dojavila da možda pitaš kako učitat podatke u memoriju, pa ništa posebno, čitaš ih s `csv.reader` i onda ih staviš u npr. listu. Samo vjerojatno želiš izbaciti prvi red iz te liste kad su prvi red labele, a ne podatci",
+      "votes": {
+        "upvoters": [
+          "lovro (l123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193153": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@micho#193137 je li pametnije napraviti klasicni reader ili dict_reader?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193155": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@ErnestHemingway#193153 kako god ti je lakše",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193242": {
+      "poster": "Fikalo",
+      "content": "kad pokrenem autograder javlja mi ovo, jel zna neko mozda zasto\n\n![](assets/2021-05-19/00043.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193243": {
+      "poster": "Fikalo",
+      "content": "ako dodam lab kao argument kaze ovo\n\n![](assets/2021-05-19/00044.png)\n\nstruktura projekta mi je po predlosku, i sve sam radio kao za prosli labos sto se tice pakiranja projekta i stavljaljanja u direktorij u autograderu, te pokretanje autogradera",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193244": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Fikalo#193242 Mislim da su sjebali kod argparsea, pa pokušaj upisati `python3 autograder.py lab3`",
+      "votes": {
+        "upvoters": [
+          "Darla",
+          "Fikalo",
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193248": {
+      "poster": "Fikalo",
+      "content": "jel ima u javi neki bezbolni nacin da ispisuje double sa tockom umjesto zarezom\n\n![](assets/2021-05-19/00045.png)\n\nili moram razdjelit u dva dijela, pa isprintat prvi dio+ tocka + drugi dio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193260": {
+      "poster": "Extended_mix",
+      "content": "@Fikalo#193248 \n \n```java\nSystem.out.format(Locale.UK, \"formt npr. %.1f\", brojKojiZelisIspist);\n```",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193261": {
+      "poster": "Fikalo",
+      "content": "@Extended_mix#193260 fala, tho vec sam napravio tako da sam splito u dva djela pa ispisivo svaki s tockom izmedu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193289": {
+      "poster": "HARAmara (decko_sa_balkana)",
+      "content": "jel se tko uspio prebaciti u drugu grupu, poslao sam zahtjev za grupu u kojoj ima mjesta prije dosta vremena, ali me još nisu prebacili (nema konflikata niti ista)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193322": {
+      "poster": "Fikalo",
+      "content": "OK nije mi jasno. Program mi radi za sve primjere osim za titanic. Kod ispisa entropija je sve dobro, ali branchevi mi nisu isti kao njima, i onda mi na kraju prediction bude razlicit za tri slucaja. Recimo kod prvog brancha di je fare 10_to_20, kad algoritam dode do cabin_letter, meni za cabin_letter ostane samo U\n\n![](assets/2021-05-20/00005.png)\n\ndok bi po njima trebala bit sva slova\n\n![](assets/2021-05-20/00006.png)\n\ni iso sam korak po korak kolko sam mogo, jer ipak je to 700 linija dataseta, i nisam bas naso neke nepravilnosti. Onda sam iso gledat u train dataset, u u tom datasetu nema ni jedna linija koja bi se podudarala sa lower_class,female,adult,10_to_20,A\n\n![](assets/2021-05-20/00007.png)\n\nnego sve linije koje se podudaraju sa \n\nlower_class,female,adult,10_to_20, za cabin_letter imaju samo U, sto moj programi i kaze \n\n![](assets/2021-05-20/00008.png)\n\n![](assets/2021-05-20/00009.png)\n\nTo znaci da algoritam nikako nebi za lower_class,female,adult,10_to_20 kao cabin_letter trebo imat A. Sad il sam ja nesto krivo shvatio sa algoritmom, sto mi opet nema smisla jer mi nije jasno kako mi je za sve ostale primjere dobro, il nesto kod njih ne drzi vodu il sam zbilja napokon prosviko, tak da ako neko zna do cega je bio bi zahvalan.",
+      "votes": {
+        "upvoters": [
+          "JBear"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193351": {
+      "poster": "nikace (AeIoU)",
+      "content": "@HARAmara#193289 za koju grupu se mijenjaš?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193361": {
+      "poster": "Kaladonter",
+      "content": "@Fikalo#193322 Znači imao sam isti problem, pa sam pitao na course assisstance, pa ni tamo čovjek nije bio skroz siguran zašto je to tako, ali uglavnom bez obzira što u datasetu ne postoji lower_class,female,adult,10_to_20 kao cabin_letter, A, B ili C itd, moraš isprobat sve te moguće opcije i dobiti izlaz po algoritmu s predavanja (to bi ti ti trebao rješiti onaj prvi if koji gleda parent dataset)\n\nEDIT: da bolje objasnim, ako ti napravis branch lower_class,female,adult,10_to_20, A to će algoritmu predat prazan dataset, i onda to zbog toga treba napravit da uhvati onaj prvi if u algoritmu s predavanja",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193365": {
+      "poster": "Fikalo",
+      "content": "@Kaladonter#193361 ali to eksuli nema nikakvog smisla, jer algoritam to nije radio u ostalim primjerima, ispisi brancheva su bili ok i nije bilo ispisa za svaki feature cak i ako nepostoji, takoder ni nema smisla jer po algoritmu s prezentacija (ne kod nego bas primjer kako to funkcionira) ne gleda nista osim one opcije kaje sadrze tu opciju za taj feature. Na taj nacin i ako vidi da su svi završni znakovi za taj feature isti npr yes, odma moze odlucit da je yes. Ako moram provjeravat i za one koje nepostoje, sta moram stavit da je njihov zavrsni znak onda. Kao najcesci, al najcesci od cega? i sta ja onda moram pamtit sve feature za svaki naziv tog featura kroz cjeli program? to bi se onda moralo pogledat i pamtit na samom pocetku programa i propagirat kroz svaki korak, da kad bi taj feature bio zadnji mogo ispisat za svaku njegovou opciju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193369": {
+      "poster": "Fikalo",
+      "content": "@Fikalo#193365 Ok sad sam pogledo taj razgovor u teamsu, i kuzim sta hoce rec trebali bi onda sam uzet najcesci zavrsni od cvora roditelja, al opet to nema smisla jer tako nije po algoritmu u prezentacijama, i nije mi jasno kako je moguce da mi je u ispisu brancheva za sve ostale primjere isto ko i njima, ako mi fali citav taj dio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193374": {
+      "poster": "Kaladonter",
+      "content": "@Fikalo#193369 da ni ja bas ne kuzim kako mi sve drugo radi, al čini mi se da su takve situacije provjeravali samo u tom titanic primjeru pa je zato tako ispalo. Al da, kad smo pitali na course assisstance on je rekao da prošle godine nisu morali ovako ispis raditi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193380": {
+      "poster": "Fikalo",
+      "content": "@Kaladonter#193374 Jesi ti implementira da ti radi to u svakom primjeru onda, ili si napravio da ti to radi samo za titanic",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193384": {
+      "poster": "Kaladonter",
+      "content": "@Fikalo#193380 napravio sam za svaki da tako radi, samo sam stavio da mi pregledava uvijek sve moguće vrijednosti za svako svojstvo (znači za cabin_letter da pregledava svako slovo) i tako grana algoritam, pa makar to  ako npr za cabin_letter  i slovo A rezultira praznim skupom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193392": {
+      "poster": "Fikalo",
+      "content": "@Kaladonter#193384 mislim nije meni problem to implementirat, mislim dodo sam i sad radi sve kak su htjeli, sam ono nema mi bas smisla",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193393": {
+      "poster": "Fikalo",
+      "content": "@Kaladonter#193384 al svejedno fala na pomoci, pomogo si mi da skuzim u cem je problem i sta zele",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193405": {
+      "poster": "gladiator",
+      "content": "kad pokrenem autograder dobijem sljedeću grešku:\n\n\"value = value[0] if field == 'ACCURACY' else ' '.join(value) \n\nIndexError: list index out of range\"\n\nZna li netko o čemu se radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193408": {
+      "poster": "Rene",
+      "content": "@gladiator#193405 jel ispisujes vrijednost tocnosti u istom retku kao [ACCURACY]:",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193420": {
+      "poster": "gladiator",
+      "content": "@Rene#193408 u tome je bio problem, hvala ti",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193458": {
+      "poster": "Ducky",
+      "content": "Autograder mi izbacuje da imam krive rezultate, a na Inteliju mi izbacuje ove iste ko expected. Jel imo iko isti problem ili  može pomoć? \n\n- Failed test: java -cp target/classes -Dfile.encoding=UTF-8 ui.Solution volleyball.csv volleyball_test.csv\n- Mismatch with field: ACCURACY\n\n-> Obtained output:\n\n1.0000\n\n-> Expected output:\n\n0.57895\n- Mismatch with field: BRANCHES\n\n-> Obtained output:\n\n-> Expected output:\n\n- Mismatch with field: CONFUSION_MATRIX\n\n-> Obtained output:\n\n5 0\n\n0 9\n\n-> Expected output:\n\n4 7\n\n1 7\n- Mismatch with field: PREDICTIONS\n\n-> Obtained output:\n\nno no yes yes yes no yes no yes yes yes yes yes no\n\n-> Expected output:\n\nyes yes yes yes no yes yes yes no yes yes no yes no no yes yes yes yes\n\n--> Complete obtained output:\n\nIG(humidity)=0.1518 IG(temperature)=0.02922 IG(weather)=0.2467 IG(wind)=0.04813 \n\nIG(humidity)=0.01997 IG(temperature)=0.01997 IG(wind)=0.9710 \n\nIG(humidity)=0.9710 IG(temperature)=0.5710 IG(wind)=0.01997 \n\n\n\n[BRANCHES]:\n\n1:weather=cloudy yes\n\n1:weather=rainy 2:wind=strong no\n\n1:weather=rainy 2:wind=weak yes\n\n1:weather=sunny 2:humidity=high no\n\n1:weather=sunny 2:humidity=normal yes\n\n\n\n[PREDICTIONS]: no no yes yes yes no yes no yes yes yes yes yes no\n\n\n\n[ACCURACY]: 1.0000\n\n\n[CONFUSION_MATRIX]:\n\n5 0 \n\n0 9\n\n--> Complete expected output:\n\n...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193519": {
+      "poster": "dobro",
+      "content": "@Ducky#193458 mozda nisi buildao project nego si ga samo saveao, prije nego sto si ga ubacio u autograder",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193539": {
+      "poster": "Ducky",
+      "content": "@dobro#193519 ma glup sam, dvaput sam čitao train",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193576": {
+      "poster": "flicka",
+      "content": "kak najbezbolije ovaj ispis stabla dobit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193582": {
+      "poster": "Ducky",
+      "content": "> predikciju treba vratiti **najčešću** vrijednost ciljne varijable u podskupu podataka za treniranje u tom čvoru\n\nŠta to znači?\n\nNajčešće se ponavlja u stablu, ali u tom podskupu? Najčešće se ponavlja u train_datasetu a da je također u tom podskupu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193601": {
+      "poster": "gladiator",
+      "content": "@flicka#193576 Neka interface A nudi metodu print_tree().\n\nNeka klase Leaf i Node implementiraju sučelje A.\n\nImplementacija metode print_tree() za klasu Leaf neka bude ispis predviđanja (True/False)\n\nNeka implementacija metode print_tree() za klasu Node jednostavno proslijedi ispis objektima na koje čuva referencu (podstabla - ona implementiraju interface A, može biti ili Leaf ili Node)\n\nprotip: spuštanjem do listova i prolazeći kroz čvorove gradiš string i šalješ ga kao argument.",
+      "votes": {
+        "upvoters": [
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193612": {
+      "poster": "gladiator",
+      "content": "Može li mi netko objasniti test primjer heldout_unseen_featurevalue ?\n\n\nŠto radim kad se pojavi nepoznati feature value? Samo ispišem \"maybe\" ili ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193613": {
+      "poster": "Fikalo",
+      "content": "@gladiator#193612 ako se pojavi nepoznati feature, ispises najcesci zavrsni znak ispod te grane",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193615": {
+      "poster": "Fikalo",
+      "content": "@Fikalo#193613 tj udes tolko duboko kolko mozes, a kad nemozes vise dalje rekurzivno prebrojis sve zavrsne kji su ispod i ispises najcesci, tj abecedno ako imaju isti broj pojavljivanja",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193756": {
+      "poster": "Erpeg",
+      "content": "Jel moze neko pomoc\n\nKako da dalje prosirim ili sta vec da napravim ako sam sve atribute prosirio i dalje imam 55 no 10 yes\n\nSta krivo radim\n\n![](assets/2021-05-20/00082.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193776": {
+      "poster": "Fikalo",
+      "content": "@Erpeg#193756 ako sam dobro skuzio pitanje, ako sisve prosirio, i zadnje ti je U, i za u imas 55 no i 10 yes, onda prebrojis kolko imas no i kolko yes i odaberes kao zavrsni onaj koji je cesci",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193777": {
+      "poster": "Erpeg",
+      "content": "@Fikalo#193776 Hvala ti",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193801": {
+      "poster": "Sicsile",
+      "content": "jel imao netko slucaj da mu prolazi sve osim titanic_train_categorical.csv titanic_test_categorical.csv.\n\nja dobijem 156 grana, a oni 477. Imamo sve vrijednosti informacijske dobiti iste. Koji korak algoritma bi mogao biti krivi?",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193817": {
+      "poster": "laranotreallycroft",
+      "content": "@Sicsile#193801 pogledaj si na kojim ti slucajevima pada\n\nMene je zezao onaj neki infant koji se kategorizirao po klasi a trebao se po price rangeu. Oba slucaja imaju iste vrijednosti kod racunanja, ali se onda gleda abecedno koji je prvi\n\nAk nije do tak neceg, probaj generirati vise cvorova. Basically oni u cvoru generiraju grane za sve moguce vrijednosti tog cvora, a ne samo one koje  postoje u trenutnom filtriranom testnom skupu",
+      "votes": {
+        "upvoters": [
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193843": {
+      "poster": "dora (AE)",
+      "content": "Nije mi jasno, ulazi li label u ovaj skup D?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193873": {
+      "poster": "Fikalo",
+      "content": "@dora#193843 ako dobro shvacam taj pseudo kod, labeli ti idu u X, a kad fiksiras neki label i sad rjesavas jednu po jednu njegovu vrijednost, prvo fiksiras jednu od njegovih vrijednosti i u iduci rekurzivni poziv saljes skup svih znacajki, bez znacajke koju trenutno gledas(to je u pseudokodu oznaceno sa X/{x}), a u datasetu saljes dalje samo one linije koje za taj label sadrze vrijednost koju trenutno gledas, bez retka za tu znacajku(to je u pseudokodu oznaceno sa Dx=v). Taj pseudo kod je dosta konfuzno napisan, ja bi ti iskreno preporucio da rades gledas po primjeru sta ID3 treba radit, i onda sam smisljas, tak sam ja jer isto nisam mogo citat taj njihov pseudo kod. Za ovo sto si ti pitao, mislim da ti je dobro objasnjenje na slajdu 77. Tu se fiksira label Vrijeme, i njegova vrijednost Suncano, i onda ako usporedujes tablicu koja je sad efektivna sa tablicom sa slajda 68, vidit ces da su u novoj tablici su samo linije di je u orginalnoj tablici suncano, bez samog retka od vremena.",
+      "votes": {
+        "upvoters": [
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193908": {
+      "poster": "Gocc (***)",
+      "content": "![](assets/2021-05-21/00026.png)\n\njel netko koristio ovaj \"y\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193967": {
+      "poster": "viliml",
+      "content": "@Gocc#193908 Ovisi kako postaviš svoje strukture podataka, može biti implicitan. Ja sam ga koristio.",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194128": {
+      "poster": "Gocc (***)",
+      "content": "@viliml#193967 pa u onom njihovom pseudokodu nisam vidjela da je presudan, ugl radi sve i bez toga tako da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194167": {
+      "poster": "boban_rajovic (ravindrababu ravula)",
+      "content": "Ako je netko radio u javi , kako ste spremali stablo odluke",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194171": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@boban_rajovic#194167 ja sam napravio klase Node i Leaf koje implementiraju sučelje Value. Sučelje je prazno a implementiraju ga i Node i Leaf tako da ID3 algoritam vraća Value. ID3 će ti uvijek vratiti korijen. Taj korijen je Value (znači ili Leaf ili Node) a to ispituješ sa if(root instanceof Node) ili if(root instanceof Leaf)",
+      "votes": {
+        "upvoters": [
+          "boban_rajovic (ravindrababu ravula)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194173": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "Kako bi se algoritam trebao ponašati ako je train set prazan? Npr ima samo header a nema niti jednog primjera u datoteci. Što bi onda trebalo vratiti? (Pitam zato što u labosu piše da provjerimo sve rubne slučajeve pa da ne bi ovako nešto uvalili na svojim primjerima)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194188": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "Jedno stablo mi \"krivo\" iscrta, tj. krive grane ali sve predikcije su točne... Ima tko ideju u čemu je problem? Jel moguće da sam nešto krivo sortirao kad se tražilo abecedno pa da je drugim redoslijedom čvorove ispitivao i zbog toga je drugačiji ispis iako stablo dobro radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194198": {
+      "poster": "faboche (him)",
+      "content": "@TheNubKiller#194188 U kojem primjeru ti se to pojavilo? Imao sam slicnu situaciju, problem je bio da su mi grane medusobno dijelile listu neiskoristenih znacajki, ali slucajno se dogodilo da mi je vracalo ispravne predikcije.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194201": {
+      "poster": "wesley",
+      "content": "Kako da odredim \"najčešću\" vrijednost kod ograničavanja dubine stabla?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194202": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@faboche#194198 - Failed test: java -cp target/classes -Dfile.encoding=UTF-8 ui.Solution heldout_logic_f2_train.csv heldout_logic_f2_test.csv\n\ntaj, vidim da u ispisu se u nekoliko navrata pojavljuje isti IG za par značajki pa mi je to sumnjivo, ali ako imaš alternativu, bio bih jako zahvalan.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194204": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@wesley#194201 ja sam napravio rekurzivnu funkciju koja prima listu oznaka i čvor. i onda samo ide kroz subtrees. Ako je vrijednost Leaf onda dodaš 1, ako je vrijednost node onda ponovno pozoveš funkciju. Efektivno ide razinu po razinu od zadanoga čvora i prebroajva listove (naravno, prebrojene vrijednosti moraš negdje spremiti)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194205": {
+      "poster": "wesley",
+      "content": "@TheNubKiller#194204 mozes molim te objasniti na volleyball primjeru iz uputa za labos, gdje su stavili dubinu 1\n\nmeni kao rezultat dolazi ovako:\n\n1:weather=cloudy yes\n\n1:weather=rainy no\n\n1:weather=sunny no\n\nne kuzim kako se tim postupkom dobiva yes za weather=rainy",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194208": {
+      "poster": "faboche (him)",
+      "content": "@TheNubKiller#194202 Meni se u istom primjeru dogodilo. A se granao na True i B, B se granao na D i C. Kada sam isao granati C, s obzirom da su mi grane dijelile neiskoristene znacajke, u cvoru C vise nije bilo neiskoristenih znacajki (iako je D neiskoristen u toj grani) tako da je algoritam vratio najcescu klasu iz podskupa u cvoru. Nadam se da ti je relevantno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194210": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@faboche#194208 aha, mislio sam da pitaš za ono sa nepoznatom značajkom. Zanemari prošli odgovor onda. To sam lako riješio. Pogledaj pseudokod prezentacije. Taman prije nego što se zove argmaxX, samo stavi uvjet:\n\nif(depth == 0){\n\nreturn new Leaf(v);  //v je argmaxV koji se prije zvao\n\n}",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194211": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@faboche#194208 JE. TAKO MI SE GRANA. Kako si popravio pliz?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194212": {
+      "poster": "faboche (him)",
+      "content": "@TheNubKiller#194211 Ako radis u javi, u rekurzivnom pozivu kao argument posalji `new ArrayList<>(activeFeatures) ` umjesto `activeFeatures.` Pazi da prije rekurzivnog poziva uklonis upravo obradenu znacajku iz `activeFeatures`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194214": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@faboche#194212 Ček što je activeFeatures? Jel to ovaj X u pseudokodu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194216": {
+      "poster": "faboche (him)",
+      "content": "@TheNubKiller#194214 Da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194217": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@faboche#194216 Probat ću. Tenks! Jel to kojim slučajem popravilo i titanic? 😂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194218": {
+      "poster": "faboche (him)",
+      "content": "@TheNubKiller#194217 Ne, imam i ja problema s njim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194219": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@faboche#194218 osim ovoga što mi ne radi, titanic mi ne radi za 2 primjera:\n- Failed test: java -cp target/classes -Dfile.encoding=UTF-8 ui.Solution titanic_train_categorical.csv titanic_test_categorical.csv\n\nFailed test: java -cp target/classes -Dfile.encoding=UTF-8 ui.Solution titanic_train_categorical.csv titanic_heldout_categorical.csv\n\nJel ti bar za jedan radi? \n\n- edit: btw, nez na koju foru ono radi sa array list ali to sam dodao i nekim čudom proradilo... Tako da ti hvala puno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194223": {
+      "poster": "faboche (him)",
+      "content": "@TheNubKiller#194219 Ne, sva 3 titanica mi imaju razlike u granama pa za dio primjera daje krivi prediction",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194224": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@faboche#194223 meni titanic sa ograničenom dubinom radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194225": {
+      "poster": "wesley",
+      "content": "kako da u javi podesim da mi decimalni broj ispisuje s točkom, a ne sa zarezom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194230": {
+      "poster": "Fikalo",
+      "content": "@wesley#194225 ako si u javi, gore je neko posto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194238": {
+      "poster": "wesley",
+      "content": "@TheNubKiller#194204  tebi prolazi volleyball primjer u autograderu?",
+      "votes": {
+        "upvoters": [
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194239": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@wesley#194238 prolazi sve osim titanic (točno stablo nacrta ali malo krive predikcije)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194240": {
+      "poster": "Reznox",
+      "content": "Moze li netko opisati kako je implementirao predict funkciju. Ne uspjeva mi za dosta primjera.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194242": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "U titanicu trainset izraz: lower_class,male,unknown,under_10,U,no se pojavljuje 53 puta, a isti izraz za klasu no se pojavljuje par puta. Možda je u tome problem sa titanicom? Nisu ništa spominjali za ovakve slučajeve, dakle wtf",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194244": {
+      "poster": "Fikalo",
+      "content": "@Reznox#194240 Uzmes root cvor drveta, pogledas u trenutnoj uzetoj liniji za test koji je value za taj feature iz tog svora, ides dalje po grani koja ima taj value, sad si u iducem cvoru i radis isto, gledas u test datasetu koji je value za taj feature, udes u tu granu, i tako dok ne dodes do zavrsnog znaka i vratis ga. A ako se u test datasetu pojavi za neki feature value za koji nemas granu jer taj value nije postojao u train setu, onda tu stanes i rekurzivno prebrojis sve zavrsne znakove koji su u stablu ispod cvora u kojem si trenutno, i vratis onaj koji je najcesci.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194250": {
+      "poster": "faboche (him)",
+      "content": "@TheNubKiller#194219 Bilo bi smijesno da bi nam je opet isti uzrok problema.. Ja sam primjere za treniranje spremao kao `Set<List<String>>` i pohranjivao ih je samo 256 od 700injak. Proradilo je kad sam pretvorio u `List<List<String>>`.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194251": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@faboche#194250 sumnjam jer ja sam to skroz drugačije spremao ali kad sam tvoje sa arraylist stavio, radi mi i stablo. Dobro mi je stablo ali neke predikcije ne valjaju a ne znam zašto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194255": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@faboche#194250 ček tebi sada sve radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194258": {
+      "poster": "wesley",
+      "content": "@Fikalo#194244 dal se gledaju SVI završni znakovi koji su u razinama ispod tog čvora, ili završni znakovi njegovog podstabla?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194259": {
+      "poster": "Fikalo",
+      "content": "@wesley#194258 kad sam reko svi završni znakovi ispod njega, mislio sam kao baš njegovo podstablo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194260": {
+      "poster": "wesley",
+      "content": "@Fikalo#194259 mislim da ja opcenito nesto ne kuzim jer mi nije jasno kako je njihov volleybal s dubinom 1 tocan, kako je moguce da su dobili 1:weather=rainy yes, a ne 1:weather=rainy no?\n\njer je u njegovom podstablu (yes) jednom i (no) jednom, nebi onda po abecednom poretku trebalo ispasti no?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194261": {
+      "poster": "Fikalo",
+      "content": "@wesley#194260 Onaj odgovor gore je bio za predict funkciju. Za ogranicenu dubinu 1 za volleyball dakle prvo se izracunaju sve te entropije, odabere se weather i sad se ude u weather. Posto je sad dubina-- == 0, nece vise dalje ulazit u podcvorove, nego ce odabirat vrijednosti za weather i njih rjesavat. Opcije su cloudy, rainy i sunny i za sve radi isti postupak kao na primjeru za rainy. Znaci fiksiras rainy, i onda gledas koji su najcesci zavrsni za dataset koji sadrzi rainy, a to su podcrtani\n\n![](assets/2021-05-21/00079.png)\n\nTu ima 3 yes i 2 no, i zato se odabire za rainy yes",
+      "votes": {
+        "upvoters": [
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194262": {
+      "poster": "Fikalo",
+      "content": "@Fikalo#194261 A za preditct, jednostavno gledas koja je u test datasetu opcija za weather, ako je cloudy vratis yes, rainy isto yes i za sunny no, a ako bi weather imo neku novu vrijednost tipa semi-cloudy, onda bi vratio najcesci zavrsni ispod cvora weather a posto je tu 2 yes i 1 no, uvjek ce vracat yes za nove vrjednosti weather",
+      "votes": {
+        "upvoters": [
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194268": {
+      "poster": "wesley",
+      "content": "@Fikalo#194262 hvala!!!",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194280": {
+      "poster": "JayOhAit",
+      "content": "@TheNubKiller#194219 To ti se desava jer je Java \"pass by reference\" za liste, pa svaka iteracija algoritma pokazuje na isti x/activeFeatures. Zato je stvaranje nove liste rijesilo problem, [ovdje ](https://medium.com/swlh/java-passing-by-value-or-passing-by-reference-c75e312069ed) imas fino objasnjenje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194291": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "Ipak mi grane krivo ispisuje za titanic. Iz nekog razloga prebrojava mi 156 listova, a treba ih biti 400+ . Ima tko ideju u čemu je problem? Radi za sve ostalo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194295": {
+      "poster": "wesley",
+      "content": "@TheNubKiller#194242 bila je neka rasprava vezana uz to na teams CourseAssistance, kod sam prilagodila tome sto je asistent rekao (maknula sam rekurziju jer je brisala te dupliće, a cini me se da su oni nuzni za odredivanje \"najvjerojatnije\" vrijednosti)\n\nal opet, jos uvijek mi ne radi, jedino mi se iz confusion matrix cinilo da je bolje razvrstalo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194297": {
+      "poster": "wesley",
+      "content": "plus, jos sam promijenila da se train set pohrani u listu - da se ne obrisu te duple vrijednosti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194300": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@wesley#194297 ako radiš kao ja i imaš ispis 156 grana, onda je to točno, ipak su odlučili to priznati, znači meni se autograder ne buni za grane ali buni za predictions, vjv sam to krivo napisao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194304": {
+      "poster": "Nocna_smjena",
+      "content": "Dal se isplati rjesavat ovaj labos ako smo kratki s vremenom? Imam vec prag iz labosa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194306": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "Ovisi koliko brzo možeš programirati i koliko ti se da u jednom danu napraviti. Meni je osobno ovaj labos 3 puta teži od prva dva.",
+      "votes": {
+        "upvoters": [
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194322": {
+      "poster": "Nocna_smjena",
+      "content": "@TheNubKiller#194306 onda bolje ne hahaha. Hvala na odg",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194355": {
+      "poster": "AK10 (endyyyy)",
+      "content": "Koliko je vremena potrebno za ovaj labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194357": {
+      "poster": "wesley",
+      "content": "@TheNubKiller#194300 sad sam provjerila, meni ispisuje premalo grana, nigdje nemam 156 ili više\n\nkoji su mogući razlozi da mi kod \"treniranja\" modela preskoci neke grane? ima nekih graničnih slučajeva koji su stavljeni u titanic?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194367": {
+      "poster": "wesley",
+      "content": "@wesley#194357 radi :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194379": {
+      "poster": "Fikalo",
+      "content": "@Nocna_smjena#194322 mislim ovisi kako kome, meni je osobno ovaj jos bio najlaksi i najbrzi za napravit, s ostala dva sam se dost pakljo. Ak ti treba bodova uvjek mozes krenut pa sam procjenit, al ak si reko da imas prag i nije ti prisa mos ga preskocit i guess",
+      "votes": {
+        "upvoters": [
+          "bdel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194395": {
+      "poster": "Nocna_smjena",
+      "content": "@Fikalo#194379 Koliko h si radio ovaj labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194404": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "Jel ima neko ideju zasto nmgu importat LinkedHashMap u javi? Sve ostale kolekcije normalno rade.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194405": {
+      "poster": "Fikalo",
+      "content": "@Nocna_smjena#194395 Tesko mi je rec jer sam pola napravio pred 10 dana, a pola prekjuce, al sta ja znam jedno 5 sati plus minus",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "netbitan11 (netbitan)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194406": {
+      "poster": "Fikalo",
+      "content": "@LongArmedJohhny#194404 nisam ziher do cega je tocno da nemozes importat, al ak ne uspijes rjesit, kao workaround mozes dodavat u obican HashMap, pa onda sortirat keySet kad iterirars kroz mapu, ako ti je linked zbog sorta bitan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194407": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "@Fikalo#194406 Bitno mi je da bude poredak ocuvan da, al ak sortiram key set dobit cu s tim ucinak TreeMap or?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194408": {
+      "poster": "Fikalo",
+      "content": "@LongArmedJohhny#194407 reko sam da je taj workaround ako ti je bitan poredak jer spremas vec soritrano, jer sam ja nes slicno radio, al nez ak ti treba pored iz nekog drugog razloga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194415": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "![](assets/2021-05-22/00007.png)\n\njel zna neko kak ovo sredit ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194416": {
+      "poster": "wesley",
+      "content": "@Tompa007#194415 \n\n1.provjeri si strukturu direktorija po uputama za lab\n2. ako je ok, provjeri dal imas main funkciju u Solutions.java  (ili klasu Solutions.java jer se od nje izvrsava)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194417": {
+      "poster": "wesley",
+      "content": "Meni su accuracy, matrix i predviđanja dobra, ali mi nesto s granama ne stima, treba ispis grana bit jednak njihovom? meni ispisuje 155 grana (za titanic primjere)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194428": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@wesley#194416 imam to sve sredeno , nes je do grajdera jer mi ne zeli ni starije labose bar pokrenut i bacit iznimku  a neznam sta bi moglo bit , umirem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "wesley"
+        ]
+      }
+    },
+    "194454": {
+      "poster": "boki8 (kerovac)",
+      "content": "Je li se mozda netko susreo sa ovakvom greskom? Radi se o primjeru \"titanic_train_categorical.csv titanic_test_categorical.csv\". Grane su u redu, ali kod predikcije imam ova dva \"no\" umjesto \"yes\".\n\n![](assets/2021-05-22/00012.png)",
+      "votes": {
+        "upvoters": [
+          "mrkva"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194458": {
+      "poster": "wesley",
+      "content": "@boki8#194454 kako odredujes vrijednost izlaza ako se pojavi neviđena vrijednost nekog featura? (neka koja nije bila u train set) meni je tu bio problem jer sam rekurzivno pretrazivala stablo za odredivanje najcesce vrijednosti, a treba se gledati po train set-u (ali nisam 100% sigurna da je ta modifikacija popravila ovo)",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194459": {
+      "poster": "boki8 (kerovac)",
+      "content": "> @wesley#194458 a treba se gledati po train set-u\n\nMozes ovo malo pojasniti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194463": {
+      "poster": "wesley",
+      "content": "@boki8#194459 evo ovo je odgovor za to s teams-a:\n\nTrebali biste brojati pojavljivanje vrijednosti ciljne varijable u primjerima iz podskupa podataka za treniranje, ne koliko je listova s nekom vrijednošću ciljne varijable (pretpostavljam da to radite iz screenshota u dokumentu).\n\nKonkretno za prvi primjer (heldout), za slučaj \"1:sex=male 2:cabin_letter=B 3:fare=75_to_100\" postoje tri primjera u skupu za treniranje, dva su označena s \"yes\", jedan s \"no\". Nijedan nema age=adult, pa se primjer iz heldout seta klasificira prema najčešćoj vrijednosti u čvoru \"3:fare=75_to_100\" (u ovoj grani), a to je yes.",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194474": {
+      "poster": "Diego",
+      "content": "Za predikciju ulaza upper_class,male,child,over_100,B,yes\n\n![](assets/2021-05-22/00015.png)\n\nza correct_output_less_branches treba bit no\n\nza correct_output  trebalo bi biti yes\n\nJel ja to krivi vidim ili za dva sluzbena rjesenja za isti ulaz dobije se različita rjesenja?",
+      "votes": {
+        "upvoters": [
+          "Tone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194477": {
+      "poster": "benac (caneb)",
+      "content": "jel bitno kojim ce redosljedom algoritam prolazit kroz vrijednosti znacajke(npr ako prvo ulazi u rainy,pa sunny, pa couldy)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194480": {
+      "poster": "funky_funghi",
+      "content": "@benac#194477 Nije bitno koju granu ispišeš prije, a koju kasnije. Bitno je da ih sve ispišeš",
+      "votes": {
+        "upvoters": [
+          "benac (caneb)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194483": {
+      "poster": "miran (mirko)",
+      "content": "Jesu li mijenjali nacin koristenja autogradera?\n\nKad pokrenem autograder Python file ne generira mi nikakav ispis.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194484": {
+      "poster": "funky_funghi",
+      "content": "@miran#194483 Komanda koju treba pokrenuti je: `python autograder.py lab3`",
+      "votes": {
+        "upvoters": [
+          "miran (mirko)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194493": {
+      "poster": "bernard (macabrus)",
+      "content": "@miran#194483 kakvo je to uopće pitanje? pa naravno! nekonzistentni su i apsolutno svaki labos ima drugačiji API za autograder tak da imamo posla (oni koji to rade ko ja) zajebavat se z dorađivanjem auto-autograder skripte.\n\nautizam.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194503": {
+      "poster": "funky_funghi",
+      "content": "@Diego#194474 Ne. Možeš na dva načina pristupiti rješavanju: ili ćeš iz zadnjeg čvora (age) povući samo one vrijednosti koje si vidio, a negdje sa strane u tom čvoru upisati što vratiti u slučaju vrijednosti koju nisi vidio, ili možeš povući sve moguće vrijednosti iz tog čvora i ono što bi pisao sa strane upisati u njih.\n\nZa primjer koji si naveo je vrijednost koja bi pisala sa strane (u slučaju \"less_branches\"), tj. piše u umjetno dodanim listovima (u datoteci s više grana) je \"yes\" zato što se češće pojavljuje u **podatcima za treniranje** (dakle ne nužno u vrhovima grana!):\n\n![](assets/2021-05-22/00017.png)",
+      "votes": {
+        "upvoters": [
+          "Diego"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194539": {
+      "poster": "Diego",
+      "content": "@funky_funghi#194503 Hvala ti vec me tjedan dana to muci",
+      "votes": {
+        "upvoters": [
+          "funky_funghi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194570": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "Na koju foru je ovo \"yes\" za titanic?:\n\n(passenger_class)=upper_class (sex)=male (age)=child (fare)=over_100 (cabin_letter)=B   (to je testni primjer)\n\nŠto trebam vratiti ako stablo ide npr (sex) - (passenger_class) i dalje stane? Koju vrijednost trebam vratit? Govorim za testne primjere jer mi je stablo dobro\n\novo su dvije grane kojima stablo može ići:\n\n1:sex=male 2:cabin_letter=B 3:fare=over_100 4:age=young_adult no\n\n1:sex=male 2:cabin_letter=B 3:fare=over_100 4:age=adult yes\n\nali primjer je age=child, pa kako yes? \n\nedit: verzija sa less branches",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194615": {
+      "poster": "funky_funghi",
+      "content": "@TheNubKiller#194570 To je \"yes\" zato što ta grana stabla ide:\n\n> 1:sex=male 2:cabin_letter=B 3:fare=over_100 4:age\n\n... a za sljedeći čvor (age) u tom tvom testnom primjeru imaš vrijednost \"child\" koja se nije pojavila u podatcima za treniranje za tu granu (slika u mojem prošlom komentaru prikazuje sve podatke za treniranje uz zadane vrijednosti prethodnih čvorova, tj. u toj grani).\n\nKad ti se to dogodi, uzimaš onu završnu vrijednost koja se najčešće pojavljivala u podatcima za treniranje u toj grani, a to je u ovom slučaju \"yes\".",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194618": {
+      "poster": "funky_funghi",
+      "content": "Dakle nemoj zaboraviti da se ne broje grane nego podatci za treniranje jer tako piše u uputama za izradu vježbe:\n\n> Pri predikciji (metoda predict), ako se model u nekom čvoru susretne s vrijednošću\n\nznačajke koju dosad nije vidio, kao predikciju treba vratiti najčešću vrijednost ciljne\n\nvarijable u podskupu podataka za treniranje u tom čvoru.",
+      "votes": {
+        "upvoters": [
+          "TheNubKiller (Lumpy)",
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194638": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@funky_funghi#194618 HVALA!!!!!!!!!!!!!!! Sad sve radi 100% :)",
+      "votes": {
+        "upvoters": [
+          "funky_funghi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194704": {
+      "poster": "Jale (čakijale)",
+      "content": "@funky_funghi#194618 zna li netko u cemu bi mogao biti problem ako vec radim ovo a krivo 2 predikcije su mi krive i generira neke grane pogresno u oba titanic primjera",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194848": {
+      "poster": "Jale (čakijale)",
+      "content": "@wesley#194417 jesi uspjela popravit mozda u meduvremenu, imam isti problem",
+      "votes": {
+        "upvoters": [
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194851": {
+      "poster": "Nocna_smjena",
+      "content": "J*bala ih ova 4 ectsa. Ajme kako mi zivce svaki put proradi kad cujem u glavi Snajderove rijeci s pocetka semestra: \"Ovaj predmet je adekvatnog opterecenja s obzirom na broj dodjeljenih ects-a\" -.-'",
+      "votes": {
+        "upvoters": [
+          "5ani (5af)",
+          "Anavi",
+          "Diego",
+          "Erpeg",
+          "Fikalo",
+          "HARAmara (decko_sa_balkana)",
+          "Haki",
+          "JayOhAit",
+          "JoKing",
+          "Lusy (MGJ)",
+          "Retard00",
+          "Rope (Rops)",
+          "Sicsile",
+          "ZliDule",
+          "bdel",
+          "boban_rajovic (ravindrababu ravula)",
+          "cloudies",
+          "neksi (filip)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194884": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "![](assets/2021-05-23/00000.png)\n\novo su dva redka u train-u , u testu dolazi \n\n\"upper_class,female,adult,20_to_30,D,yes\" , njihova predikcija kaze da je \"no\" , mene zanima kako i zasto je to tako ? kaj nebi trebali abecedno uzet i stim uzimamo granu B i to je \"yes\" ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194886": {
+      "poster": "Fikalo",
+      "content": "@Tompa007#194884 ako postoji upper_class,female,adult,20_to_30,D onda uzmes njegov zavrsni, ili ako imas vise upper_class,female,adult,20_to_30,D preborjis sve zavrsne za njih pa uzmes najcesci, a ako sam dobro shvatio i nepostoji upper_class,female,adult,20_to_30,D onda uzmes sve upper_class,female,adult,20_to_30 koji postoje i uzmes najcesci zavrsni od njih, znaci i C i B, i ako u ovom slucaju postoje samo dva retka, jedan zavrsava s no, a drugi yes, posto imaju isti broj pojavljivanja (1-1), onda gledas zavrsne znakove abecedno, a n dolazi prije y pa odaberes no",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194887": {
+      "poster": "Retard00",
+      "content": "Kak bi trebo izgledat ispis u [BRANCHES] ako je on samo npr. za volleyball odgovor \"yes\" ili \"no\"?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194913": {
+      "poster": "funky_funghi",
+      "content": "@Retard00#194887 Ako sam dobro skužio pitanje: Kad su sve vrijednosti izlaza jednake, tj. kad je dubina stabla 0, samo ispiši tu vrijednost izlaza, tj. list koji je ujedno korijen stabla (kao u 3. primjeru ispisa - str. 8 u uputama za LV)",
+      "votes": {
+        "upvoters": [
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194918": {
+      "poster": "wesley",
+      "content": "@Jale#194848 nisam :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194920": {
+      "poster": "funky_funghi",
+      "content": "@Jale#194704 Na temelju ovih informacija mi je teško skužit di je problem. Ako si provjerio da ti kôd radi baš po onom pseudokodu i da ovakav argmax koristiš i u onom if-u kad je D prazan i u onom izvan kad nije, onda još baci oko jel ti traži minimum po abecednom poretku (osim u spomenutim argmaxovima) i u argmax-u za informacijsku dobit (makar ne piše izričito u uputama)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194938": {
+      "poster": "Jale (čakijale)",
+      "content": "@funky_funghi#194920 hvala na odgovoru, problem je bio sto sam se nesto glupo zabunio i stavljao u list neku glupu vrijednost umjesto najcesce oznake klase u tom cvoru\n\n@wesley#194918 skuzio sam sto mi je bilo krivo, kad trazim najvecu informacijsku dobit, u if naredbi gdje provjeravam je li trenutni IG veci od do tada najveceg IG sam zaboravio na slucaj gdje je IG == max_IG, a varijabla u kojoj cuvam najdiskriminativniju znacajku do sad nije postavljena (kad je postavljena usporeduje se abecedno), mozda je tebi nesto slicno kad je isti problem. Hope it helps",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "cloudies",
+          "nikace (AeIoU)",
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194945": {
+      "poster": "wesley",
+      "content": "@Jale#194938 hvala! prolazi sve testove 🤗",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195066": {
+      "poster": "DazedAndConfused",
+      "content": "Jel može netko pomoć, stablo dobivam u ovom obliku dictionaryja:\n\n`{'weather': {'cloudy': 'yes',\n\n             'rainy': {'wind': {'strong': 'no', 'weak': 'yes'}},\n\n             'sunny': {'humidity': {'high': 'no', 'normal': 'yes'}}}}`\n\ni to je kako mi se čini točno, ali nemam pojma kako da to pretvorim u ovaj njihov ispis po granama. Jel netko gradio stablo na sličan način da mi može malo pomoć?",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195129": {
+      "poster": "funky_funghi",
+      "content": "@DazedAndConfused#195066 U grubim crtama: Rekurzivna funkcija koja prima trenutni čvor i listu s prethodnim čvorovima i bridovima (dodaješ čvorove i bridove pri ulasku u funkciju, a mičeš pri izlasku). Terminalni slučaj je kad ti je trenutni čvor list stabla i onda ispisuješ listu. Inače za svaki brid iz trenutnog čvora rekurzivno ideš u tu funkciju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195150": {
+      "poster": "MantisToboggan",
+      "content": "jel se još nekom krivo gradilo stablo za heldout_unseen_featurevalue_train.csv i za titanic_train_categorical? pratim sve upute sa teamsa i sve sortiram abecedno, nemam vise ideja sta bi jos moglo biti krivo. svi ostali primjeri rade normalno(cak i ovi za titanic sa ogranicenjem), dok se ovi razlikuju od tocnog rjesenja za 5-10 brancheva",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195152": {
+      "poster": "wesley",
+      "content": "@MantisToboggan#195150 @Jale i ja smo imali problem s tim, pogledaj gore u threadu mozda je ista greska",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195153": {
+      "poster": "MantisToboggan",
+      "content": "@wesley#195152 nije ni to 😥",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "wesley"
+        ]
+      }
+    },
+    "195169": {
+      "poster": "Krisle",
+      "content": "Sljedeći problem za titanic primjera dva, ostali mi svi rade:\n\nUpadne mi u beskonačnu rekurziju, tj. ne može prepoznat da je stigao do Leafa i da se treba vratiti (radim DFS)\n\nIndikativno je što je to uvijek kad dođe do neke passenger_class featurea, u debuggeru vidim da mu ostane grana npr. \"upper_class\" kao atribut i tu upadne u beskonačnu rekurziju jer Leaf provjeravam tako da nema tih grana ispod.\n\nTakođer IG-ovi svi ispadaju 0\n\nne znam, mozda se netko susreo ili ovako intuitivno kuzi koji je problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195185": {
+      "poster": "Daeyarn",
+      "content": "@MantisToboggan#195150 jel provjeravas abecedno kod svih usporedbi?(argmaxIG, argmax, kad trazis najcescu vrijednost labela)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195191": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "Treba IG biti sortiran u ispisu ili prolazi autograder i bez sorta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195192": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "@LongArmedJohhny#195191 glup sam, ne treba se ispisivati uopce to",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195212": {
+      "poster": "benac (caneb)",
+      "content": "@LongArmedJohhny#195192 hej! ne govori to! nisi glup!!",
+      "votes": {
+        "upvoters": [
+          "5ani (5af)",
+          "AK10 (endyyyy)",
+          "BrownPerson (Bambi)",
+          "Daeyarn",
+          "Diego",
+          "Erpeg",
+          "Gulbash",
+          "JayOhAit",
+          "Lusy (MGJ)",
+          "Sicsile",
+          "Tone",
+          "WickyWinslow",
+          "blablajar",
+          "fraki",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195241": {
+      "poster": "dobro",
+      "content": "treba li mi na autograderu prolaziti ijedan primjer ako nemam accuracy, confusion matrix i podrezivanje stabla implementirano?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195242": {
+      "poster": "Daeyarn",
+      "content": "@dobro#195241 ne bi trebao\n\nEDIT: za podrezivanje stabla je isti ispis kao i za nepodrezivanje stabla, trebas imat ispisano branches, accuracy i confusion matrix, tako da ako nemas podrezivanje stabla primjeri u kojima se ne podrezuje bi trebali proci",
+      "votes": {
+        "upvoters": [
+          "dobro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195243": {
+      "poster": "fer999",
+      "content": "Jel imao netko problema samo s 3 slučaja vezana uz titanic, a da je greška bila izračun Info gaina? Na ostalim testovima točne vrijednosti dobivam, dok mi na ta 3 testa pada upravo zbog krivih vrijednosti ig-a (onda to vuče krive odabire node-ova).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195244": {
+      "poster": "Daeyarn",
+      "content": "@fer999#195243 nisam provjeravao IG ali titanic mi nije radio i dobivao sam krive grane, problem kod mene je bio sto kod argmaxIG kad usporedujem dva IG nisam uzeo u obzir da kada su jednaki da tada prednost ima onaj koji je prije po abecedi",
+      "votes": {
+        "upvoters": [
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195245": {
+      "poster": "Jaster111",
+      "content": "Kako napraviti abecedni odabir IG ako se nađu neki sa istom vrijednosti?\n\nKoristim trenutno `max(IGs, key=lambda k: IGs[k])`, ali ta funkcija radi samo po valuesima, pa me zanima kako bi ju mogao izmijeniti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195249": {
+      "poster": "nnn (dinoo)",
+      "content": "@Jaster111#195245 jesi probao sortirat abecedno prije nego sto zoveš `max`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195263": {
+      "poster": "branimir1999",
+      "content": "Rade mi svi primjeri osim titanic_test_categorical.csv + titanic_heldout_categorical.csv. Accuracy mi je netocan, ispada da je oko 86%, a treba biti 78.22%. Confusion matrix mi je:\n\n`-> Obtained output:\n\n59 6\n\n8 28\n\n-> Expected output:\n\n56 9\n\n13 23`\n\nImam u oba argmax implementirano ovo za abecedno (brisajuci i dodavajuci u argmax_IG i argmax za ciljne podatke mi mijenja tocnost za samo par posto, ne puno). Kaze da mi nedostaju grane i da sam kreirao visak. Predict radi dobro; koristi podatke za treniranje kada ne moze naci.\n\nItko ima ideje gdje je problem ovdje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195265": {
+      "poster": "MT09 (mt09)",
+      "content": "@Sicsile#193801 Jesi možda riješio ovo? Isto mi se događa, a ne vidim grešku...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195266": {
+      "poster": "Sicsile",
+      "content": "@MT09#195265 ovo mi je pomoglo\n\n![](assets/2021-05-23/00033.png)",
+      "votes": {
+        "upvoters": [
+          "MT09 (mt09)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195268": {
+      "poster": "Jaster111",
+      "content": "Zna li netko zašto kada čitam datoteku preko komandne linije dobivam ovaj error:\n\n`File \"./datasets/logic_small.csv\", line 1, in <module>\n\n    A,B,C,D,F\n\nNameError: name 'A' is not defined`\n\nDok sam hardkodirao input je sve radilo normalno.\n\nSada input dobivam kao `data = readCsv(sys.argv[1])`, a prije sam kao argument predavao string koji je put do datoteke.\n\nEvo odlomak koda koji otvara datoteku:\n\n`def readCsv(fileName):\n\n    file = open(fileName, 'r')\n\n    csvFile = csv.reader(file)`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195269": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Jaster111#195268 Izgleda kao da pokušavaš CSV file pokrenuti kao python skriptu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195452": {
+      "poster": "Mikki",
+      "content": "Ispitivanje - Marko Križmančić:\n\nobjasniti ID3 algoritam, koji je čest problem sa stablima - overfitting, kako se ponaša accuracy na training setu i na testnom setu ovisno o kompleksnosti stabla, objasniti kako ste implementirali limitanje dubine, što je accuracy, kakva želimo da bude confusion matrix - dijagonalna,  jel id3 uvijek točno klasificira već viđene primjere - da, mogu li se stabla generalno koristiti za regresiju - da, koje tipove učenja imamo i objasniti supervised learning.",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "BigZ1",
+          "BrownPerson (Bambi)",
+          "Crotta (Točak)",
+          "Daorson",
+          "Ducky",
+          "Fica (Prof)",
+          "Han",
+          "Hrvoje (Hrvoje45)",
+          "JayOhAit",
+          "Sicsile",
+          "Uchenikowitz (Učečuču)",
+          "WickyWinslow",
+          "blablajar",
+          "cloudies",
+          "indythedog",
+          "laranotreallycroft",
+          "madoxx",
+          "nikace (AeIoU)",
+          "oneTwo",
+          "ppooww (pp)",
+          "steve (Mr_mr)",
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195479": {
+      "poster": "lucylu",
+      "content": "ispitivanje kod Medića\n\nmalo objasniti fit algoritam, razlika između klasifikacije i regresije, vrste strojnog učenja, vrste nenadziranog učenja\n\nmatrica konfuzije i točnost – kakva je matrica kad je točnost 100% a kakva kad je 0%, kada je bolje pogledati u matricu konfuzije nego se osloniti samo na točnost\n\ninformacijska dobit kako se računa – sto znači kad je inform. dobit 0\n\nsto je prenaučenost, kakva je prenaučenost u stablu odluke, kako spriječiti prenaučenost u stablima \n\nonda entropija što je, da ide izmedu 0 i 1, što znaci kad je 0, a što kad je 1",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "BigZ1",
+          "Daorson",
+          "DazedAndConfused",
+          "Ducky",
+          "JayOhAit",
+          "KitKat (H(x))",
+          "Marko",
+          "Sicsile",
+          "Uchenikowitz (Učečuču)",
+          "blablajar",
+          "gladiator",
+          "indythedog",
+          "laranotreallycroft",
+          "madoxx",
+          "ppooww (pp)",
+          "steve (Mr_mr)",
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195519": {
+      "poster": "mini (Earthling)",
+      "content": "@lucylu#195479 Koji bi bio odgovor na pitanje \"kada je bolje pogledati u matricu konfuzije nego se osloniti samo na točnost?\"\n\nJe li odgovor uvijek ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195524": {
+      "poster": "Extended_mix",
+      "content": "Martin Tutek\n\nobjasniti implementaciju id3 algoritma, sta je informacijska dobit i sta nam ona govori, koje su vrste strojnog ucenja, koji su problemi stabla odlucivanja, koja su dva nacina sprjecavanja prenaucenost\n\nsvaki test koji padne oduzimaju 0.5 boda",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Ducky",
+          "KitKat (H(x))",
+          "Marko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195526": {
+      "poster": "Rene",
+      "content": "@mini#195519 kada algoritam bolje predviđa za neku vrijednost oznake klase",
+      "votes": {
+        "upvoters": [
+          "mini (Earthling)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195648": {
+      "poster": "Daeyarn",
+      "content": "@Extended_mix#195524 jel bilo novih primjera ili samo onih 16 koje su nam dali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195676": {
+      "poster": "bufus",
+      "content": "@DazedAndConfused#195066 jesi uspio ovo rijesiti? ja ne mogu dobiti ispis kakav su oni zadali, a imam isto strukturirano kao i ti",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "KitKat (H(x))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195683": {
+      "poster": "DazedAndConfused",
+      "content": "@bufus#195676 Jesam, pošaljem ti kod u dm.",
+      "votes": {
+        "upvoters": [
+          "Jaster111",
+          "bufus"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195684": {
+      "poster": "ana (anci)",
+      "content": "@Daeyarn#195648 26 primjera testiraju ako se dobro sjecam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195692": {
+      "poster": "Nocna_smjena",
+      "content": "Is it just me ili oni iskoristavaju ova \"4 ectsa\" do plafona? Usmeni na labosima, labosi i gradivo koji zahtjevaju povise vremena, ispiti gdje vecina ljudi ima manje od 50% rijesenosti...\n\nNezzz za vas ali meni ovaj predmet u trenutnoj formi mora imati BAREM 6 ects-a",
+      "votes": {
+        "upvoters": [
+          "BillIK",
+          "Daorson",
+          "DazedAndConfused",
+          "Diego",
+          "ErnestHemingway (Alfetta)",
+          "Erpeg",
+          "Fikalo",
+          "HARAmara (decko_sa_balkana)",
+          "JoKing",
+          "KitKat (H(x))",
+          "Lusy (MGJ)",
+          "Lyras",
+          "MiqeloS",
+          "Suki7",
+          "Tinx (pingvin)",
+          "Uchenikowitz (Učečuču)",
+          "bdel",
+          "bufus",
+          "cloudies",
+          "feudalac",
+          "ink",
+          "lucylu",
+          "nnn (dinoo)",
+          "oneTwo",
+          "steker",
+          "steve (Mr_mr)",
+          "zmei"
+        ],
+        "downvoters": [
+          "M0zak"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195700": {
+      "poster": "Lyras",
+      "content": "@Nocna_smjena#195692 Ye, Šnajder i ECTS ograničenja... Good luck with that one.",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "Fikalo",
+          "Nocna_smjena",
+          "dobro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "1vq",
+          "Nocna_smjena",
+          "in1"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195708": {
+      "poster": "kix7 (Fish99)",
+      "content": "@Lyras#195700 ne kužim, imao si šnajdera na nekom predmetu već prije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195709": {
+      "poster": "Lyras",
+      "content": "@kix7#195708 Opće je poznato da su njegovi predmeti redovito opterećeniji od službenog opterećenja, pitaj ostale starije kolege.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195853": {
+      "poster": "Jaster111",
+      "content": "@Daeyarn#195648 meni su testirali samo onih 16 koje su nam dali",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "DazedAndConfused"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "jobi (azex)"
+        ],
+        "tuga": []
+      }
+    },
+    "195991": {
+      "poster": "kix7 (Fish99)",
+      "content": "@Extended_mix#195524 Oduzimaju 0.5 boda od onih 7.5 il od 24?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196001": {
+      "poster": "Jaster111",
+      "content": "@kix7#195991 ma od 24",
+      "votes": {
+        "upvoters": [
+          "Urmum (mamaRu)",
+          "blablajar",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196011": {
+      "poster": "PostarLakogSna (snedul)",
+      "content": "Zna li itko jesmo li mi obavezni predati nešto na moodle makar i prazan zip?",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196050": {
+      "poster": "Daorson",
+      "content": "@PostarLakogSna#196011 ako nisi napravio labos mislim da ne trebas nista",
+      "votes": {
+        "upvoters": [
+          "PostarLakogSna (snedul)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196072": {
+      "poster": "Extended_mix",
+      "content": "@Daeyarn#195648 \n\n@kix7#195991 Kao sto je vec receno sve, ima 26 testova i oduzimaju 0.5 od 24 i jos je danas stigao neki mail od Medica \"Zbog propusta u uputi za laboratorijsku vježbu u kojoj nije bilo navedeno na koji način odabrati značajku u slučaju više značajki s istim iznosom informacijske dobiti, odlučili smo izbaciti testove u kojima se to dogodi iz evaluacije u autograderu.\" tako da ce biti nesto manje testova, meni su 3 pala, ne nuzno zbog toga",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196198": {
+      "poster": "flicka",
+      "content": "Jel se bilo kome dogodilo da je zaboravio na svoj termin za odgovaranje i nije se pojavio ili se to samo meni može dogoditi😤 sta sad uopce mogu ocekivati? ....",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196208": {
+      "poster": "Fikalo",
+      "content": "@flicka#196198 ima jos termina, posalji mail vjerojatno te mogu prebacit u neki drugi",
+      "votes": {
+        "upvoters": [
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196256": {
+      "poster": "Nocna_smjena",
+      "content": "![](assets/2021-05-25/00045.png)\n\nTbh briem da su veznjaci imali relativno mali utjecaj na ovo. Vjv kad su vidjeli da dosta ljudi uopce nije ni predalo 3.lab ni nakon kasne predaje (rok je istekao prije 2h) su odlucili spustit kriterije. Ovo obavijest je objavljenja 2h nakon ponoci ako nije ocito iz prethodne poruke",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "oneTwo",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196259": {
+      "poster": "Hrvoje (Hrvoje45)",
+      "content": "@Nocna_smjena#196256 \n\nDa, i?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196260": {
+      "poster": "Nocna_smjena",
+      "content": "@Hrvoje#196259 kako su napisali zvuci ko da su to jos otprije mislili napraviti. I have some doubts about that lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196261": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@Nocna_smjena#196260 lol kako bi moj mucav frend pitao \"ppaa zzzzzar jjje ttooooo bbbbitno?\"",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "1vq",
+          "Bucc (Olive Oil)",
+          "Ducky",
+          "Jale (čakijale)",
+          "Lyras",
+          "Nocna_smjena",
+          "feel_d_boot (iNut)",
+          "swish41 (PlavušaSFilozofskog)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196289": {
+      "poster": "Giovanni",
+      "content": "Imao sam labos u ponedjeljak i još mi nisu uneseni bodovi. Ima li netko još da mu nisu upisani bodovi?",
+      "votes": {
+        "upvoters": [
+          "Valentino",
+          "boki8 (kerovac)",
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196340": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@Giovanni#196289 \n\nMislim da u drugom tjednu upisuju bodove.\n\nJa sam prošli labos imao prvi tjedan u utorak, ali su bodovi unešeni tek u drugom tjednu. \n\nMislim da je i za prvi labos tako bilo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196362": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@Giovanni#196289 ja sam imao danas u 12, i evo vec su mi upisani",
+      "votes": {
+        "upvoters": [
+          "Giovanni",
+          "WickyWinslow"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196446": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "Što nam točno govori confusion matrix? Koja je svrha toga uopće? Npr za volleyball:\n\n4 7\n\n1 7\n\nšto iz toga mogu zaključiti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196482": {
+      "poster": "JBQ",
+      "content": "@TheNubKiller#196446 \n\nmatrica ti izgleda\n\n      no    yes\n\nno   4      7\n\nyes  1      7\n\niz nje vidis da je 4 primjera koji su trebali biti no i jesu no, a da 7 koji su trebali biti no je tvoj program klasificirao u yes itd",
+      "votes": {
+        "upvoters": [
+          "TheNubKiller (Lumpy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196612": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "@Mikki#195452 Koji je odgovor na ovo kako se ponasa accuracy?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196683": {
+      "poster": "lucylu",
+      "content": "@LongArmedJohhny#196612 to ti je otprilike onaj graf u prezentaciji na slajdu 40",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196686": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "Jel moze netko napisat sto su ga pitali danas ako je vec ispitan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196703": {
+      "poster": "Ardura (Maddy)",
+      "content": "Jelena Tabak\n\nPita detaljno po kodu, pogotovo funkciju fit, pita što je entropija, što IG, što postižemo  kad imamo ograničenje u dubinu, jako kratko i jednostavno ispitivanje",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)",
+          "Ducky",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196734": {
+      "poster": "KitKat (H(x))",
+      "content": "Josip Jukić\n\nPitao me puno po kodu, kako radim confusion Matrix tj koji data set koristim (to je ono s unakrsnom provjerom), zašto Max entropija, kako gradim stablo, što je information gain, koju metodu za izbjegavanje overfittinga ja koristim u kodu\n\nPomalo sam zažalila što sam koristila autistični c++ bez using namespace std, ngl. Al dobro, skoro svi bodovi na kraju",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197135": {
+      "poster": "Sicsile",
+      "content": "![](assets/2021-05-27/00044.png)",
+      "votes": {
+        "upvoters": [
+          "1vq",
+          "Arbeit123",
+          "Artemis",
+          "BigZ1",
+          "Bioxed",
+          "Cubi",
+          "Daeyarn",
+          "Daorson",
+          "Deks",
+          "Ducky",
+          "Erpeg",
+          "Fica (Prof)",
+          "Hrvoje (Hrvoje45)",
+          "JBQ",
+          "Jale (čakijale)",
+          "Joskica",
+          "Kaladonter",
+          "Kennedy",
+          "Krisle",
+          "LucidDreamer",
+          "Lusy (MGJ)",
+          "Lyras",
+          "MT09 (mt09)",
+          "Rope (Rops)",
+          "Snorlax (Bacva)",
+          "Sulejman",
+          "Tinx (pingvin)",
+          "Uchenikowitz (Učečuču)",
+          "Urmum (mamaRu)",
+          "WickyWinslow",
+          "aerius",
+          "cloudies",
+          "dobro",
+          "feel_d_boot (iNut)",
+          "grga_it_is (it_is_what_it_is)",
+          "ice",
+          "indythedog",
+          "kix7 (Fish99)",
+          "laranotreallycroft",
+          "madoxx",
+          "miran (mirko)",
+          "neksi (filip)",
+          "oneTwo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198881": {
+      "poster": "KitKat (H(x))",
+      "content": "Jel ima još netko da mu još nisu upisali bodove s 3. labosa?",
+      "votes": {
+        "upvoters": [
+          "Artemis",
+          "JBQ",
+          "Rene",
+          "idontwannabemyself",
+          "indythedog",
+          "lucylu",
+          "sheriffHorsey",
+          "tempest"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201053": {
+      "poster": "Rene",
+      "content": "@KitKat#198881 jesu ti upisali?",
+      "votes": {
+        "upvoters": [
+          "KitKat (H(x))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201064": {
+      "poster": "Bioxed",
+      "content": "nisu ni meni ni frendovima chillll",
+      "votes": {
+        "upvoters": [
+          "JBQ",
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201506": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "Valjda ovisi o asistentu, meni su bodovi upisani isti dan.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202053": {
+      "poster": "KitKat (H(x))",
+      "content": "@Rene#201053 jesu u srijedu, ja mislim",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

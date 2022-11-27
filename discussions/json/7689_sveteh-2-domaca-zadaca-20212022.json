@@ -1,0 +1,460 @@
+{
+  "title": "[SVETEH] 2. domaća zadaća - 2021/2022",
+  "creator": "Kuhar",
+  "slug": "sveteh-2-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Svemirske tehnologije",
+    "Zadaće"
+  ],
+  "posts": {
+    "303780": {
+      "poster": "Kuhar",
+      "content": "Jel ima neko ideju od kojeg vremena pocinjemo onu simulaciju, odnosno gdje se moze dobiti taj pocetak nastanka TLE zapisa? Koliko sam ja skuzio u TLE zapisu se nalazi trenutno vrijeme u godini i godina kad je lansiran. Ja sam za nekli starlinkov satelit uzeo kao vrijeme pocekta simulacije, pocetak ove godine ali orbita je cudna. Nakon toga sam stavio pocetal 6 mj i orbita se cini okej, sad neznam...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "303940": {
+      "poster": "tb153",
+      "content": "U TLE podacima se nalazi vrijeme ocitanja tih orbitalnih podataka, to ti je polazisna tocka za simulaciju.\n\nPrimjerice ako imas 22165.27648740 u TLE setu, znaci da se radi o 2022 godini (prve 2 znamenke), dok ti 165.27648740 predstavljaju dan u godini i vrijeme.",
+      "votes": {
+        "upvoters": [
+          "Kuhar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "303941": {
+      "poster": "tb153",
+      "content": "Najjednostavnije ti je TLE podatke spremit u .txt datoteku i pustit da ti matlab izracuna orbitalne podatke, pa tako i to vrijeme koje trazis..\n\nsat = satellite(sc,\"tle.txt\");\n\nele = orbitalElements(sat);",
+      "votes": {
+        "upvoters": [
+          "Kuhar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "303947": {
+      "poster": "Kuhar",
+      "content": "@\"tb153\"#p303940 to sam i radio al cini se da se ta TLE datoteka mijenja jako cesto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304000": {
+      "poster": "tb153",
+      "content": "TLE se azurira jednom, cak i dva put dnevno.. ali mislim da za ovu zadacu treba uzet TLE podatke u trenutku rjesavanja zadace i drzat se njih",
+      "votes": {
+        "upvoters": [
+          "Kuhar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304178": {
+      "poster": "dontc4m4pc",
+      "content": "Zna netko kako rješit 1. e, f, g i h?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304183": {
+      "poster": "steker",
+      "content": "@\"dontc4m4pc\"#p304178 kak izracunat c i d uopxe :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304187": {
+      "poster": "steker",
+      "content": "@\"steker\"#p304183 ah nvm rijeseno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304194": {
+      "poster": "steker",
+      "content": "u 1. e) mozemo samo izracunat trajanje intervala u prva dva dana i trajanje u sljedeca tri dana i uzet minimum od toga i pomnozit sa 20 ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304201": {
+      "poster": "steker",
+      "content": "Za racunanje udaljenosti od satelita i zemaljske postaje mozemo koristit parametar range iz aer?",
+      "votes": {
+        "upvoters": [
+          "sheepstick"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304209": {
+      "poster": "sheepstick",
+      "content": "Bok svemirci,\n\nIma li netko locked and ready teorijski dio zadace? Iskrenosti radi, samo sam prelijen ctrl f preze pa ako ima netko quick fix (u krajnjem slucaju barem tldr di je koji odg) \n\nFala lepa",
+      "votes": {
+        "upvoters": [
+          "sheepstick"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304211": {
+      "poster": "steker",
+      "content": "Kak izracunat gusenje ak nemamo frekvenciju/valnu duljinu? Takodjer kako rjesit ovaj zadatak sa sabirnicom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304222": {
+      "poster": "Kuhar",
+      "content": "@\"steker\"#p304211 Mene isto buni to sa gusenjem a nemamo frekvenciju ja sam samo uzeo 20Mbit/s kao 20 Mhz al ono vjv je krivo hahaha. Ovaj f sa sabirnicom mozda da uzmes iz e) podzadatka tu velicinu memorije odnosno velicinu senzorskih podataka i podijelis sa trajanjem intervala u kojem skupljas te podatke.. bar sam ja tako",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304228": {
+      "poster": "steker",
+      "content": "@\"Kuhar\"#p304222 fala!!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304259": {
+      "poster": "Kuhar",
+      "content": "@\"Kuhar\"#p304222 mislim da za frekvenciju treba googlat i vidjet kako odabrani satelit komunicira sa zemljom ( kojom frekvencijom ).",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304316": {
+      "poster": "BK-",
+      "content": "Koja je formula za gušenje u 1.h?",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304322": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"Kuhar\"#p304222 jel ne bi onda ovaj f) uvijek bio 20 ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304323": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"steker\"#p304201 sto je aer?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304329": {
+      "poster": "steker",
+      "content": "@\" 🤡 \"#p304323 https://www.mathworks.com/help/satcom/ref/matlabshared.satellitescenario.satellite.aer.html",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304334": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "od kud ste na 5. odgovorili? \n\nJe li to nešto iz 12. prezentacije 7. slajd?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304335": {
+      "poster": "zeroth",
+      "content": "@\"Pleteni miš\"#p304334 11 slajd",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304337": {
+      "poster": "BillIK",
+      "content": "Može li netko podijeliti taj prvi zadatak za ove što nemru korisiti matlab jer je 100GB?",
+      "votes": {
+        "upvoters": [
+          "JogaBonito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304341": {
+      "poster": "tpulj",
+      "content": "@\"BillIK\"#p304337 skini samo Aerospace pakete, to je cca 3GB",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304353": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "je li imao tko slučaj da mu je popis intervala prazan.\n\nOvako mi izgleda simulacija:\n\n![](assets/2022-06-17/00024.jpg)\n\nali mi se ova zelena linija čini čudna (kako simulacija prolazi malo se pomiče lijevo-desno ali to je to)\n\n```\nstartTimeString = \"2022-06-15 14:25:59\"\nstartTime = datetime(startTimeString,'InputFormat','yyyy-MM-dd HH:mm:ss');\nsampleTime = 60;\nstopTime = startTime + days(5);\n\nsc = satelliteScenario(startTime,stopTime,sampleTime);\nsat = satellite(sc,\"tledatoteka.txt\");\n\nlat = 50.8476;\nlon = 4.3572;\ngs = groundStation(sc,\"Name\",\"Bruxelle\", ...\n    \"Latitude\",lat,\"Longitude\",lon);\n\n%ovdje možda problem?\npointAt(sat,'nadir');\nantenna = conicalSensor(sat,\"MaxViewAngle\",75);\nac = access(antenna,gs);\nt = accessIntervals(ac);\n\nfieldOfView(antenna);\nshow(sat);\nplay(sc);\n\n```\novo je kod\n\nEDIT:\n\npopravljeno, uzeo sam drugi satelit koji nije tako daleko",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304359": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"steker\"#p304194 \n\nMozes li objasniti zasto mislis da ide tako?\n\nJa sam mislio da ide tako da izracunamo koliko on u ta tri dana moze poslat podataka i da mu je to maksimum koji moze snimit u prva dva dana, jer ako snimi vise od toga ne stigne ih poslat.",
+      "votes": {
+        "upvoters": [
+          "abc"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304360": {
+      "poster": "steker",
+      "content": "@\"Pleteni miš\"#p304359 ma to je to zabrijala sam bila nes",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304371": {
+      "poster": "strole55 (Sokol)",
+      "content": "Jeli iko uspija dobit udaljenost u g) zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304374": {
+      "poster": "MOXY",
+      "content": "jel samo meni ovo presporo i nemoguce za pokrenut, matlab kod mi se vrti tri godine. moze li mi netko napisati kako opcenito izgleda odgovor na c i d da nes napisem, jer kod je dobar sigurno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304381": {
+      "poster": "Kuhar",
+      "content": "mozda kasno ali probajte koristit matlab online ak imate problema sa ovim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304383": {
+      "poster": "JogaBonito",
+      "content": "@\"MOXY\"#p304374 \n\nMeni pod c) izgleda ovako: \n\n1.interval -> Početak: 19-Jun-2022 16:14:41, Kraj: 19-Jun-2022 16:16:41, Trajanje: 120 sec. \n\n2.interval -> Početak: 20-Jun-2022 06:16:41, Kraj: 20-Jun-2022 06:17:41, Trajanje: 60 sec.\n\n3.interval -> Početak: 20-Jun-2022 16:20:41, Kraj: 20-Jun-2022 16:21:41, Trajanje: 60 sec.\n\n4.interval -> Početak: 21-Jun-2022 06:21:41, Kraj: 21-Jun-2022 06:23:41, Trajanje: 120 sec.\n\npod d) samo zbrojis sva 4",
+      "votes": {
+        "upvoters": [
+          "MOXY"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304385": {
+      "poster": "JogaBonito",
+      "content": "@\"JogaBonito\"#p304383 \n\npod e) uzmes trajanje komunikacije od zadnja 3 dana u sekundima i pomnozis sa 20Mbit/s",
+      "votes": {
+        "upvoters": [
+          "MOXY"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "306883": {
+      "poster": "steker",
+      "content": "Evo za buduce generacije zadaca ( dobila 19/20)\n\n>! ![](assets/2022-06-30/00012.jpg)\n\n![](assets/2022-06-30/00013.jpg)\n\n![](assets/2022-06-30/00014.jpg)\n\n![](assets/2022-06-30/00015.jpg)\n\n![](assets/2022-06-30/00016.jpg)\n\n![](assets/2022-06-30/00017.jpg)\n\n![](assets/2022-06-30/00018.jpg)",
+      "votes": {
+        "upvoters": [
+          "joj (poni)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

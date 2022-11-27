@@ -1,0 +1,206 @@
+{
+  "title": "[KOMMRE] 1. domaća zadaća - 2020/2021",
+  "creator": "[deleted]",
+  "slug": "kommre-1-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Komunikacijske mreže",
+    "Zadaće"
+  ],
+  "posts": {
+    "175175": {
+      "poster": "[deleted]",
+      "content": "DZ zadatak 3\n>Koliko iznosi TTL u paketu koji prenosi ICMP-poruku Echo Request kada paket stigne na\n\nodredište (PC 4)?\n\nMisli li se ovdje nakon sto ga PC 4 dekrementira za 1, ili prije nego ga dekrementira?\n\n>Koliko iznosi TTL u paketu koji prenosi ICMP-poruku Echo Reply nakon obrade u usmjeritelju\n\nRouter 2 (pri prolasku kroz sučelje eth 0 usmjeritelja Router 2)?\n\nPretpostavljamo da Echo Reply ide sa ttl = 64 ? Barem je tako kad u IMUNES-u simuliram, no nisam siguran sto oni pretpostavljaju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175261": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "@abcdefgh#175175  TTL su ti zadnje 2 znamenke JMBAG-a u oba podzadatka, a ne 64. Mislim da PC4 ne dekrementira kod Echo-Request-a, isprobaj u IMUNES-u.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175276": {
+      "poster": "[deleted]",
+      "content": "@Michael#175261 \n\nAha ok, no kod Echo Reply-a ttl je 64, jer -m zastavicom ne utjeces na njegov ttl vec na ttl Echo Requesta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175705": {
+      "poster": "Abcdef",
+      "content": "Koliko otprilike treba vremena da se rijesi zadaca?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175709": {
+      "poster": "[deleted]",
+      "content": "@Abcdef#175705 \n\n20-30ak minuta",
+      "votes": {
+        "upvoters": [
+          "Abcdef",
+          "BrkMateaBeusana (Umarell)",
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "179915": {
+      "poster": "BillIK",
+      "content": "kako saznam mtu sučelja na nekom čvoru?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "180009": {
+      "poster": "[deleted]",
+      "content": "@BillIK#179915 \n\nDesni klik na ćvor i Configure -> Interfaces, te ti ovdje pise MTU\n\n\n![](assets/2021-04-27/00060.png)",
+      "votes": {
+        "upvoters": [
+          "BillIK",
+          "tb153"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "181108": {
+      "poster": "Sicsile",
+      "content": "Do kad je rok za ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "181114": {
+      "poster": "batman3000",
+      "content": "@Sicsile#181108 3.5. u 12:00",
+      "votes": {
+        "upvoters": [
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "181123": {
+      "poster": "mp99",
+      "content": "Jel moze netko napisati postupak za prvi zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "181155": {
+      "poster": "BanankoKojiLebdi",
+      "content": "@mp99#181123 imas na prošlogodišnjoj temi za ovaj domaći postupak i diskusiju za 1.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183082": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Jesu li fragmenti ove linije između requesta i replyja?\n\nI koji je ovdje offset drugog fragmenta? Je li to u mom slučaju 1128?\n\n![](assets/2021-05-01/00015.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183104": {
+      "poster": "jobi (azex)",
+      "content": "@BrkMateaBeusana#183082 fragmenti su svi bijeli prije i finalni ljubicasti, dakle 9 fragmenata i offset koji si reka, 1128",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183650": {
+      "poster": "JetaisUneErreur",
+      "content": "Ako imam 1 fragment, tj.samo Echo reply, trebam li kao offset drugog fragmenta staviti x ili 0?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

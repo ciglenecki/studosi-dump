@@ -1,0 +1,417 @@
+{
+  "title": "[RIS] 4. domaća zadaća - 2019/2020",
+  "creator": "TentationeM",
+  "slug": "ris-4-domaca-zadaca-20192020",
+  "tags": [
+    "FER",
+    "Razvoj informacijskih sustava",
+    "Zadaće"
+  ],
+  "posts": {
+    "14550": {
+      "poster": "TentationeM",
+      "content": "Može ako je netko već položio ili sada sluša malo pojasniti kako treba izgledati rješenje te 4. domaće zadaće i kako na kraju krajeva oni pokreću našu aplikaciju koju isporučimo i boduju to? \n\nPretpostavljam da možemo koristiti bazu podataka i frontend/backend tehnologiju i framework po izboru, treba li prilagati onda nekakva uputstva za instalaciju i pokretanje?",
+      "votes": {
+        "upvoters": [
+          "mn4 (mm)",
+          "pero122 (teslaFan)",
+          "xeqte",
+          "zeleni_caj123"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14641": {
+      "poster": "fduma (FDuma1)",
+      "content": "Kada je uopće predaja četvrte zadaće? Za tjedan dana (3.5) ili kad piše po planu u excelu (11.5)?\n\nEDIT: Preracunao sam se, 11.5 bi trebalo biti i dalje",
+      "votes": {
+        "upvoters": [
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21563": {
+      "poster": "aKul (Vili Beroš)",
+      "content": "Sta znaci: \"ugraditi mogućnost odabira vrijednosti stranog ključa putem padajuće liste u oba dijela, zaglavlju i detaljima\"?\n\nI postoji li negdje još nekih informacija o ovoj zadaći jer ono sta su oni napisali u RIS-zadaci su dvije recenice i sad na temelju toga mi moramo napravit cijeli projekt?",
+      "votes": {
+        "upvoters": [
+          "DeA11 (princezA)",
+          "pero122 (teslaFan)",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21626": {
+      "poster": "xeqte",
+      "content": "@fduma#14641 Zar nije predaja do nedjelje u tjednu zadavanja zadace, a da je taj datum 11.5 kad je zadana? Pa bi onda predaja bila 18.5.",
+      "votes": {
+        "upvoters": [
+          "Bobicki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21828": {
+      "poster": "Bobicki",
+      "content": "@xeqte#21626 Da, predaja je uvijek do kraja tjedna  u kojem se zadaje zadaća.",
+      "votes": {
+        "upvoters": [
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21897": {
+      "poster": "pero122 (teslaFan)",
+      "content": "A moramo li mi radit u nekoj specifičnoj tehnologiji ili možemo u bilo čemu?",
+      "votes": {
+        "upvoters": [
+          "AlejaGovana",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22080": {
+      "poster": "aKul (Vili Beroš)",
+      "content": "Evo poslao sam mail profesoru sa nekim pitanjima pa da podijelim ovdje da ga ne gnjavimo svi sa slicnim pitanjima.\n\nMoja tehnicka pitanja su bila:\n\n![](assets/2020-05-10/00022.jpeg)\n\n\n\nA njegov odgovor sa dodatnim informacijama:\n\nImate rok do nedjelje 17.5. Tijekom tjedna ćete dobiti tablicu s rasporedom prezentacija koje će početi od ponedjeljka 18.5. Uvjet da se upišete za termin u tablicu će biti da ste na portal isporučili zadaću. Sama demonstracija rješenja će biti preko Zooma, a po potrebi uz TeamViewer ako bude potrebe za interakciju s naše strane.\n\n \n\nŠto se tiče tehničkih pitanja, evo ukratko odgovora i na njih\n\n1.   Ne morate nužno koristiti CSLA-u, ali ako želite svih 7 bodova morate imati rješenje u kojem su slojevi jasno odvojeni i trebali bi moći podržati sljedeće scenarije\n\na.   Moguće je imati podatke spremljene u više različitih izvora (npr. baza podataka, tekstualna datoteka, vanjski servis, …)\n\nb.   Poslovnu logiku upotrijebiti neovisno o vrsti aplikacije (web-app ili desktop app)\n\nNapomena: ne znači da ove scenarije morate izvesti, nego da je vaša arhitektura rješenja spremna na takve promjene u smislu da se ne raspadne cijeli projekt ako morate agregirati podatke iz više izvora\n\n2.   Smijete. Jasno, bodovi ovise u kontekstu. Ako na prezentacijskom sloju koristite modele iz EF-a onda u principu imate debeli klijent ili dvoslojno rješenje, jer vam promjena tehnologije pristupa podacima mijenja i prezentacijski sloj što se s višeslojnom arhitekturom želi izbjeći. Ako Vam je EF u podatkovnom sloju, onda je to sasvim ok.\n\n3.   Može kombinacija WebAPI + neki frontend, ali vrijede iste opaske. Rezultat iz WebAPI ne bi smio biti ovisan o načinu pristupa podacima\n\n4.   Znači da kad treba unijeti vrijednost stranog ključa da je nećete kucati u textbox, nego ćete izabrati jednu od mogućih vrijednosti iz padajuće liste. To vrijedi za podatke koji u masteru, kao i u svakom od detalja vezanih uz taj master (npr. master može biti student, a detalji npr. položeni predmeti). U detaljima iz padajuće liste birate predmet (a povezuje se s id-om predmeta preko stranog ključa), a u zaglavlju npr. student dolazi iz nekog mjesta za koje opet imate padajuću listu.",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "Mony",
+          "pero122 (teslaFan)",
+          "termodinamika",
+          "zeleni_caj123"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22840": {
+      "poster": "ivchi",
+      "content": "jel mi trebamo implementirat sve kaj smo napisali u zahtjevima ili samo izradit taj master-detail i to je to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22910": {
+      "poster": "allien",
+      "content": "@ivchi#22840 zahtjeve koje si napisao zanemari, implementiraš samo ono što se traži u pojedinoj zadaći",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25436": {
+      "poster": "pero122 (teslaFan)",
+      "content": "Jel moramo mi napravit \"pagination\" ili mozemo sve u jednoj listi prikazivati...?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25447": {
+      "poster": "allien",
+      "content": "@pero122#25436 ne moraš radit pagination",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25748": {
+      "poster": "pero122 (teslaFan)",
+      "content": "E jos jedno pitanje, kaj znaci sljedeci zahtjev\n\n\"ugraditi mogućnost odabira vrijednosti stranog ključa putem padajuće liste u oba dijela, **zaglavlju i detaljima**\"\n\n\nNajviše me mući ovaj dio o zaglavlju i detaljima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25757": {
+      "poster": "ALovelace",
+      "content": "@allien#25447 jesi siguran/a da ne treba paginaciju? piše da treba ugraditi mogućnost navigacije podacima, nije li to zapravo paginacija ili sam zabrijala?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25837": {
+      "poster": "allien",
+      "content": "@ALovelace#25757 nisam napomenuo, ja sam RIS imao prošle godine, ali su zadaće godinama iste pa pišem na temelju iskustva iz prošle godine: nisam napravio paginaciju i nitko nije ni spominjao paginaciju i dobio sam sve bodove. u toj je zadaći doslovno najbitnija stvar broj slojeva arhitekture koje ti rješenje ima i to će ti odlučivati o broju bodova iz te zadaće, tako da se ne moraš brinuti oko paginacije i sličnih nebitnih detalja koji se eksplicitno ne traže jer ti oni neće imati utjecaj na bodove.\n\nbtw čisto da bude sigurno da nisu nešto ove godine promijenili, iskopao sam prošlogodišnji dokument sa zadacima i evo što je navedeno za 4.DZ:\n\n![](assets/2020-05-16/00036.png)",
+      "votes": {
+        "upvoters": [
+          "ALovelace",
+          "Bobicki",
+          "TentationeM",
+          "pero122 (teslaFan)",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26126": {
+      "poster": "Bobicki",
+      "content": "@allien#25837 Da li znaš trebamo li predati sve zadaće ili je dovoljno samo skupiti 15/30 bodova ukupno iz zadaća? Nigdje nije navedeno, tako da je moja pretpostavka da ne trebamo predati sve zadaće.",
+      "votes": {
+        "upvoters": [
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26163": {
+      "poster": "allien",
+      "content": "@Bobicki#26126 prošle godine nije trebalo predati sve (većina ljudi nije predala ni petu ni šestu zadaću) pa ako nigdje nije navedeno, onda očito i dalje vrijedi to da nije obavezno predati sve zadaće.",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26169": {
+      "poster": "Dell",
+      "content": "@allien#26163 Kako je izgledala obrana? Koliko su strogi i koliko detaljno sve gledaju? Nekako mi je 7 bodova malo za ovakvu zadaću.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26175": {
+      "poster": "allien",
+      "content": "@Dell#26169 pokreneš aplikaciju, pokažeš da radi. pita te koliko slojeva arhitekture imaš, moraš pokazati kako si u implementaciji podjelio slojeve i koji sloj čemu služi (npr. prezentacijski sloj, sloj poslovne logike, itd.) i možda još nešto pita i ako ti sve radi, dobiješ bodove ovisno o broju slojeva arhitekture (kao što je navedeno u zadatku, za 7 bodova moraš imati višeslojnu arhitekturu). dakle, nisu strogi i ne gledaju detalje.",
+      "votes": {
+        "upvoters": [
+          "ALovelace",
+          "Bobicki",
+          "Dell"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27340": {
+      "poster": "termodinamika",
+      "content": "može li netko napisati kako je izgledalo ispitivanje danas/jucer iz ovoga?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27342": {
+      "poster": "xeqte",
+      "content": "@termodinamika#27340 \n\ndosta ležerno, kao što je kolega @allien rekao, zanima ih samo master-detail i broj slojeva..",
+      "votes": {
+        "upvoters": [
+          "Bobicki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187687": {
+      "poster": "adidas",
+      "content": "Ako napravim aplikaciju u dot netu kao na RPPP-u koliko bodova ću dobiti? Je li to verzija za 5 bodova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187845": {
+      "poster": "moukie",
+      "content": "Je li gdje dobro objašnjeno kako nam ti slojevi trebaju izgledat odnosno koliko ih mora biti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189339": {
+      "poster": "DaL",
+      "content": "Moze li netko poblize objasniti sto se ocekuje od nas na ovoj zadaci? Nije mi bas jasan taj master-detail",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189380": {
+      "poster": "DaL",
+      "content": "@DaL#189339 Tocnije, zanima me moze li master biti lista bilo kojeg objekta iz moje aplikacije, recimo lista profesora ili lista studenata pa izaberem koji cu prikazati za ovu zadacu ili je to nesto drugo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190508": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "Jel ima negdje na youtubeu kakav tutorial za ovo šta oni žele, jućer cijeli dan sam pokušavao, ali nisam uspio niš substancionalno napravit, želim sam 3 boda.",
+      "votes": {
+        "upvoters": [
+          "Tratarira",
+          "adidas",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192816": {
+      "poster": "moukie",
+      "content": "Moze li tko napisati sto su ga sve pitali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193075": {
+      "poster": "tito",
+      "content": "@moukie#192816 prvo su mi pogledali je li imam master detail na aplikaciji, pa su malo pogledali koje funkcionalnosti u aplikaciji imam, zatim su mi malo pogledali kod na backenu i pitao me što radi controller, service, repository i malo mi je čirnuo kod na frontendu",
+      "votes": {
+        "upvoters": [
+          "Tratarira",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

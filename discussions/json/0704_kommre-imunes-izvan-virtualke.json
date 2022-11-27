@@ -1,0 +1,78 @@
+{
+  "title": "[KOMMRE] IMUNES izvan virtualke",
+  "creator": "viliml",
+  "slug": "kommre-imunes-izvan-virtualke",
+  "tags": [
+    "FER",
+    "Komunikacijske mreže",
+    "Alati"
+  ],
+  "posts": {
+    "27416": {
+      "poster": "viliml",
+      "content": "Uputama za instalaciju IMUNES sustava kažu, i citiram,\n\n> Simulator/emulator IMUNES nužno mora biti pokrenut unutar operacijskog sustava (OS) FreeBSD.\"\n\nTo, dragi moji kolege, nije ništa drugo nego bezobrazna LAŽ.\n\nJedan pogled na [GitHub repozitorij](https://github.com/imunes/imunes) kazuje nam da je IMUNES sustav kompatibilan s GNU/Linux operativnim sustavima još od verzije 2.0, izdane davne godine gospodnje 2015.\n\nTo kao izravnu posljedicu ima činjenicu da svaki student koji ima GNU/Linux operativni sustav na svom računalu može instalirati i pokrenuti IMUNES izravno iz svog operativnog sustava, slijedeći jednostavne upute navedene u README dokumentu GitHub repozitorija.\n\nAli, siguran sam da se nekolicina vas sad pita: što je s Windows Podsustavom za Linux (WSL)?\n\nTo je već teže pitanje, ali odgovor je ponovno \"DA\", uz napomenu da je toliko komplicirano da to ne preporučam nikomu osim samom sebi, koji sam potrošio cijeli jučerašnji dan na upravo tom problemu. Ukoliko se neki mazohisti među vama uistinu žele ubiti na tome, dostupan sam za pomoć preko privatnih poruka, samo od vas tražim duhovnu spremnost na instaliranje beta verzije Windowsa i vlastoručno kompajliranje nove Linux jezgre.\n\nTakođer, sve nepogode u instalaciji IMUNES sustava na Windows Podsustavu za Linux proizlaze iz bugova u trenutnoj beta verziji WSL2 koje treba zaobići. Jednom kad se ti bugovi riješe, napokon ćemo ući u utopijsku budućnost gdje svaki student s bilo Windows bilo GNU/Linux operativnim sustavom može lagano i jednostavno instalirati IMUNES na svoje računalo bez virtualke.\n\nKad bi barem isto vrijedilo i za ATLAS...",
+      "votes": {
+        "upvoters": [
+          "Valentino",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "gladiator",
+          "ink",
+          "slip"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "slip"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27419": {
+      "poster": "[deleted]",
+      "content": "> @viliml#27416 To, dragi moji kolege, nije ništa drugo nego bezobrazna LAŽ.\n\nna prvi pogled, ali problem je u ovome\n\n![](assets/2020-05-20/00004.png)",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27429": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@viliml#27416\n\nMeni su glavne prednosti virtualke su mnogo lakša instalacija i potpuno uklanjanje. Mislim da prosječnom studentu neće trebati ni IMUNES, ni većina njegovih dependencyja kad/ako polože kolegij.\n\nNisam bio siguran želim li instalirati IMUNES u nevirtualizirani OS. Mislio sam da instalira neke svoje drivere ili nešto za mrežu, pa me bio strah da mi ne potrga konfiguraciju u OS-u. No, kad pogledam repo vidim da koriste Docker. Za njega sam samo čuo, ali mi se čini da to onda znači da je svako simulirano računalo u IMUNES-u virtualizirano i da mi IMUNES ne bi smio moći potrgati konfiguraciju za spajanje na mrežu.\n\nZa razliku od one virtualke s Puppyjem, ovu rado koristim, puno se bolje integrira s VirtualBoxom. Ne razumijem se previše u Linux, pa ne znam do čega je to, možda xfce-a? Za razliku od one Puppy virtualke, kad promijenim veličinu prozora VirtualBoxa, virtualka detektira novu rezoluciju. U ovoj sam mogao instalirati VirtualBox Guest Additions i dijeliti clipboard između hosta i virtualke. Jedino nisam uspio upogoniti drag-and-drop datoteka.\n\n----\n\n> @viliml#27416 Kad bi barem isto vrijedilo i za ATLAS…\n\nProšli semestar sam instalirao ATLAS u Ubuntu. Morao sam instalirati neke 32-bitne verzije libraryja, ali kad sam našao koje točno moram instalirati nije bilo teško. Malo je samo problem što su neki putevi hardkodirani u nekim shell skriptama, pa to treba prepraviti ako se ne instalira u direktorij _/usr/local/lib/atlas_.\n\nOvaj semestar se na AR1E umjesto ATLAS-a koristi SSPARCSS. Toplo se nadam da će se koristiti i u idućem na AR1R i da će ATLAS biti u potpunosti napušten. Nisam previše upućen u povijest SSPARCSS-a, ali koliko se sjećam iz razgovora s kolegom koji je na njemu radio, to je prošli semestar bio projekt kod Bascha. Radi na Windowsima i Linuxu. Za Mac ga još nisu bili uspjeli osposobiti dok smo pričali.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27720": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Da nadodam, ja sam napravio konkretni guide na starom forumu za instalaciju ATLASa na ubuntuu ali čini mi se da ljude nije bilo previše briga",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

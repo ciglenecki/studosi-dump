@@ -1,0 +1,222 @@
+{
+  "title": "[SUI] 1. laboratorijska vježba - 2021/2022",
+  "creator": "Murin",
+  "slug": "sui-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Sigurnost u Internetu",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "245787": {
+      "poster": "Murin",
+      "content": "Je li netko imao problem da mu image ne posjeduje sui@sui.hr public key, kako do njega doci? (za enkripciju u 4. podzadatku)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245825": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@\"Murin\"#p245787 paa kaj nebi to trebao bit key.gpg? piše u opisu da je to javni ključ (za provjeru potpisa), a u 4. piše da koristimo javni ključ koji smo dobili ,ili sam ja totalno krivo skužila \n\nI jel itko uspio rješit 6.b) ? Nakon ovog stvaranja ključeva nemrem nigdje nać folder di su spremljeni ni koristit ih.. Kako ste uspjeli to?",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245855": {
+      "poster": "moukie",
+      "content": "zna li tko kako postaviti ovu tipkovnicu na hrvatski? \n\nkad udemo u ovaj ubuntu virtual machine mislim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245856": {
+      "poster": "moukie",
+      "content": "@\"moukie\"#p245855 \n\ndesni klik->applications->settings->keyboard->layout->staviti na hrvatski->označiti use system default \n\nmozda bude nekome od pomoci ✌🏿",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245857": {
+      "poster": "theimprobableone",
+      "content": "@\"moukie\"#p245856 ili naredba \"setxkbmap -layout hr\", puno je lakse",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "TheCrimsonChin"
+        ]
+      }
+    },
+    "245858": {
+      "poster": "theimprobableone",
+      "content": "@\"𝙎𝙖𝙧𝙖𝙝 𝘽𝙤𝙣𝙞𝙩𝙤\"#p245825 Folder si sama zadas pri kreiranju kljuceva, a kljuceve koristis na nacin da javni kljuc naredbom \"ssh-copy-id -i /putanja/do/public/kljuca/public_kljuc.pub ip12345@mrepro.tel.fer.hr\" kopiras na mrepro server. Time ces se moci spojiti na mrepro.tel.fer.hr bez unosenja lozinke na nacin da kod logiranja predas privatni kljuc naredbom \"ssh -i /putanja/do/privatnog/kljuca/privatni_kljuc ip12345@mrepro.tel.fer.hr\"",
+      "votes": {
+        "upvoters": [
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245883": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@\"theimprobableone\"#p245858 hvala, nisam to znala 🙏🙏🙏",
+      "votes": {
+        "upvoters": [
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245986": {
+      "poster": "moukie",
+      "content": "kako pokrenuti ovaj video?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245996": {
+      "poster": "DuckItUp",
+      "content": "@\"moukie\"#p245986 \n\nPrebaciš kod sebe na host računalo, staviš mp4 nastavak i pokreneš",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246194": {
+      "poster": "moukie",
+      "content": "Gdje nam se stvori ova datoteka sui.db?\n\nPise mi \"Kreirana datoteka ~/sui.db\", ali je nigdje ne mogu pronaci\n\nGdje mjerimo promet s wiresharkom na virtualci ili na nasem racunalu? Sto treba setapati sve u wiresharku da mozemo mjeriti promet?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246202": {
+      "poster": "in1",
+      "content": "> @\"moukie\"#p246194 Gdje nam se stvori ova datoteka sui.db?\n\n> Pise mi “Kreirana datoteka ~/sui.db”, ali je nigdje ne mogu pronaci\n\n Na njihovom serveru\n\n> @\"moukie\"#p246194 Gdje mjerimo promet s wiresharkom na virtualci ili na nasem racunalu? Sto treba setapati sve u wiresharku da mozemo mjeriti promet?\n\nWireshark je instaliran na našem računalu, ništa ne trebaš postavljati",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246203": {
+      "poster": "alfajastog",
+      "content": "Zna neko kako se snima promet od virtualke Wiresharkom sa windowsa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246213": {
+      "poster": "moukie",
+      "content": "@\"in1\"#p246202 \n>Wireshark je instaliran na našem računalu, ništa ne trebaš postavljati\n\nznaci koristimo ovaj wireshark s ubuntu virtualke?\n\n>ništa ne trebaš postavljati\n\nmislim sto trebam uciniti u wiresharku kako bi poceo hvatiti ssh promet?\n\npokusavam tu upisati credentialse, ali mi javlja neki error stalno\n\nalso kako da prebacim ovu datoteku sui.db sa servera na lokalno?\n\n![](assets/2021-10-24/00015.png)",
+      "votes": {
+        "upvoters": [
+          "Maglica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246235": {
+      "poster": "in1",
+      "content": "> @\"moukie\"#p246213 znaci koristimo ovaj wireshark s ubuntu virtualke?\n\nne, koristiš wireshark koji je instaliran izvan virtualke, na tvom računalu\n\n> @\"moukie\"#p246213 mislim sto trebam uciniti u wiresharku kako bi poceo hvatiti ssh promet?\n\n> pokusavam tu upisati credentialse, ali mi javlja neki error stalno\n\nnisam to koristio, samo sam otvorio wireshark, odabrao mrežni adapter i filtrirao ssh promet\n\n> @\"moukie\"#p246213 also kako da prebacim ovu datoteku sui.db sa servera na lokalno?\n\n> []()\n\nscp aa11111@mrepro.tel.fer.hr:~/sui.db /put/na/disku/u/virtualki/sui.db",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246492": {
+      "poster": "svemia (bearyn)",
+      "content": "Pokusavam uhvatit SSH pakete u Wiresharku (na Windowsima), ali nista mi ne hvata kad lupam naredbe u virtualci. Jel bi trebalo nesto dodatno napravit? Mislim vidim da ljudi samo pokrenu i stave u filtar 'ssh' i tjt...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

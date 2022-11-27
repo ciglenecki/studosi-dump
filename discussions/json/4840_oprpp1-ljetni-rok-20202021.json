@@ -1,0 +1,99 @@
+{
+  "title": "[OPRPP1] Ljetni rok - 2020/2021",
+  "creator": "blablajar",
+  "slug": "oprpp1-ljetni-rok-20202021",
+  "tags": [
+    "FER",
+    "Odabrana poglavlja razvoja programske potpore 1",
+    "Ispiti"
+  ],
+  "posts": {
+    "222156": {
+      "poster": "blablajar",
+      "content": "moze netko poslat danasnji rok?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "222281": {
+      "poster": "BaboYaro",
+      "content": "@blablajar#222156 ====================================\nTEORIJSKI DIO ISPITA\n=====================================\n\n1.Zadatak\n--------------------------------------\nImate definarnu dva razreda:\n\n```\npublic S{ \n\tString a; \n\tint b ;\n\t\n\tpublic S(String a, int b){ \n\t\tthis.a = a; \n\t\tthis.b = b;\n\t}\n}\n\npublic class R{ \n\tS s;\n\tint c;\n\t\n\tpublic R(S s, int c){ \n\t\tthis.s = s; \n\t\tthis.c = c;\n\t}\t\n\n}\n```\n\nZadan je program main i prikažite stanje u memoriji do komentara xxxxxxxxxx:\n\n```\npublic void main(){\n\tS s = new S(\"aaa\", 13);\n\tR[] arr = {new R(new S(\"bbb\",12),5), new R(new S(\"ccc\", 14), 6)};\n\tarr[1] = s;\n\t//xxxxxxxxxx\n\t//ostatak koda....\n}\n```\n\n2.Zadatak\n--------------------------------------\nZadan je razred Par koji sadrži 2 string(s1 i s2) atributa te metode min i max.\n\nU nastavku je dan pokazni primjer:\n\n```\nmain(){\nPar p = new Par(\"Krapina\", \"Zagreb\");\nSystem.out.println(p.min()); //vraća Krapina zbog prirodnog leksikografskog poretka\nSystem.out.println(p.max()); //vraća Zagreb zbog prirodnog leksikografskog poretka\n\n}\n```\n\nZadatak je napisati napisati novu implementaciju klase Par koja će omogućiti rad s \n\nbilo kakvim objektima a ne samo s Stringovima.(hint:Parametrizacija klase)\n\n3.Zadatak\n--------------------------------------\nZamislimo da imamo nekakav posao kojeg treba obaviti nad datotekama u podstablima nekog direktorija.\n\nKako takav posao možemo obaviti ako nam je na raspolaganju u prvom slučaju objekti i metode iz paketa java.io,\n\na kako ako su nam u drugom slučaju dostupni objekti i metode iz paketa java.nio.file.Napišite demonstracijski primjer,\n\ni objasnite koja je prednost u drugom slučaju u odnosu na prvi slučaj?\n\n4.Zadatak\n--------------------------------------\nZamislite da imate polje objekata R(1.zadatak), sljedeće zadatke riješite pomoću tokovnog API:\n\n1. Izračunajte sum svih b-ova(oprez!!)?\n2. Lista koja sadrži b-ove, ali takve da atribut a započinje sa slovom b.\n3. Objasnite razliku između metoda .map i .flatMap te demostrirajte na primjeru.\n\n5.Zadatak\n---------------------------------------\nZadatak je ispisati sumu brojeva dvije liste(sum=lista1+lista2) od kojih svaka sadrži 10 slučajno generiranih brojeva.\n\nListe se pune paraleleno, odnosno modelirajte dodvanje brojeva u listu kao posao.\n\n(Hint:Višedretvenost s predavanja, sučelje Runnable, nove dretve...).Napišite cijeli program\n\n\n==================================================================================================\nPRAKTIČNI DIO ISPITA\n==================================================================================================\n-Napravite novi Eclipse projekt\n\n-u njemu napravite sljeće razrede:\n\nrazred Knjiga - ima dva svojstva author i title, konstruktor(author, title), te SAMO GETERE za ta dva svojstva - ovaj razred ne smijete mijenjati prilikom rješavanja zadatka\n\nrazred BazaKnjiga - ima listu knjiga, konstruktor(), te metode addBook(k),count(),getBook(index);\n\nmetoda addBook:\n```\npublic int addBook(Knjiga k){\n\t\tint size = knjige.size();\n\t\tknjige.add(knjiga);\t\t\n\t\treturn size;\n\t\t}\n```\nmetoda count:\n```\npublic int count(){\n\t \treturn knjige.size();\n\t\t}\n```\nmetoda getBook:\n```\npublic Knjiga getBook(int index){\n\t \treturn knjige.get(index);\n\t\t}\n```\n\nNapraviti GUI aplikaciju koja će sadržavati sljedeće:\n\n\t* na lijevoj strani prozora Tablicu(Redni broj knjige, Autor, Naslov knjige)\n\n\t* na desnoj strani prozora Listu(Autor:Naslov knjige <- String)\n\n\t* pri dnu prozora će imati gum Dodaj kojim će se moći dodavati nova knjiga\n\nprilikom pokretanja programa(metode main) obavlja se sljedeće:\n\nBazaKnjiga baza = new BazaKnjiga();\n\nbaza.addBook(new Knjiga(\"J.K.Rowling\",\"Harry Potter and the Philosopher's Stone\"));\n\nbaza.addBook(new Knjiga(\"F. Dostoevsky\", \"Crime and punishment\"));\n\npokretanje prozora....\n\nklikom na gumb Dodaj obavlja se sljedeći kod kojeg NE SMIJETE MIJANJATI prilikom izrade zadatka:\n\nKnjiga nova = new Knjiga(randomString(), randomString());\n\nbaza.addBook(nova);\n\nrandomString metodu implementirajte najednostavnije tako da vrati nekakav random String\n\nZADACI:\n1. Napravite prethodno navedene razrede\n2. Napravite GUI aplikaciju koja ispunjava prethodno zadane uvjete (uvjeti *)\n3. S obzirom da ne smijete mijenjati razred Knjiga te kod koji se izvrašava prilikom klika \n\n  na gumb Dodaj, ali smijete dodavati kod u BazaKnjiga razmislite kako ispravno implementirati taj dio zadatka\n\n  kako bi komponente Tablica i Lista ispravno prikazivali novedodane knjige.Također ako se poželi u budućnosti \n\n  dodati nova komponenta u GUI koja će prikazivati knjige koje su sadržane u bazi knjiga, kod u klasi \n\n  BazaKnjiga se neće smijeti naknadno mijenjati zbog tako novododane komponente.   \n4. Napravite novi izbornik Save koji će omogućiti da se korisnika pita gdje želi spremiti bazu knjiga.\n\n Svaki redak datoteke sadrži jednog autora te naslov knjige. Autor i knjiga su odvojeni tabulatorom.\n5. Napravite vlastiti LayoutManager koji će razmjestiti komponente tako da je širina Tablice zauzima \n\n  80% širine prozora, dok širina Liste zauzima 20%.\n\nNe mogu postaviti txt file pa sam ovako napiso",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena",
+          "blablajar",
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "222332": {
+      "poster": "jobi (azex)",
+      "content": "@BaboYaro#222281 jesu li bile potrebne zadace za rijesiti ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "222400": {
+      "poster": "Nocna_smjena",
+      "content": "@jobi#222332 pa vidis citajuci ispit da ne trebaju zadace.\n\n@BaboYaro#222281 koliko vas je bilo na ispitu?",
+      "votes": {
+        "upvoters": [
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "222540": {
+      "poster": "BaboYaro",
+      "content": "@Nocna_smjena#222400 Bilo nas je dvoje samo\n\n@jobi#222332 Nisu bile potrebne zadaće",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena",
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "222635": {
+      "poster": "PostarLakogSna (snedul)",
+      "content": "Ako planira ovakav jesenski napravit, ovo je prolazno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

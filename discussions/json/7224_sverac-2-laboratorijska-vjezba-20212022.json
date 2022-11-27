@@ -1,0 +1,191 @@
+{
+  "title": "[SVERAC] 2. laboratorijska vježba - 2021/2022",
+  "creator": "KiflaKiflic",
+  "slug": "sverac-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Sveprisutno računarstvo",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "290455": {
+      "poster": "KiflaKiflic",
+      "content": "Napravio sam potporu za DHT22 senzor, no cijelo vrijeme mi vraca vrijednosti 0, tj kada cekam DHT22 da mi posalje LOW i HIGH signale od 80us, oni ispadnu uvijek isti, low 13, a high 0. Ima li itko slican problem?\n\n![](assets/2022-04-12/00022.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290481": {
+      "poster": "Leonardo",
+      "content": "@\"KiflaKiflic\"#p290455  Simulator je malo limitiran kao što piše u dokumentaciji.  Probaj svoju implementaciju usporedit s ovime (to bi trebalo radit na wokwi): https://github.com/UncleRus/esp-idf-lib/tree/master/components/dht  \n\nUživo na DHT22 bi ti vjerojatno radilo kako treba.\n\n![](assets/2022-04-12/00024.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290486": {
+      "poster": "maverick",
+      "content": "@\"Leonardo\"#p290481 prof je rekao da možemo iskoristit gotov library za DHT ako ga uspijemo upogoniti zar ne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290495": {
+      "poster": "Jokke",
+      "content": "@\"maverick\"#p290486 Reko je da mozemo uzet gotovi library i predat taj library ako nam radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290631": {
+      "poster": "DariolaVremenskiPutnik",
+      "content": "Zna li netko kako da upogonim vanjski library u ovom IDF-u u VS codu? Konkretno, ovaj lib: https://esp-idf-lib.readthedocs.io/en/latest/index.html\n\nZnam da pišu nekakve upute ali se ne razumijem baš u ove Makefile-ove i slično, a ovo njihovo mi ne radi baš, pa ako bi netko mogao objasniti na primjeru ovoga s čim smo već radili, tipa onaj defaultni blink projekt bio bih veoma zahvalan.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290702": {
+      "poster": "maverick",
+      "content": "@\"Jokke\"#p290495 Je, samo trebamo znat kako radi to u libraryju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290703": {
+      "poster": "maverick",
+      "content": "@\"DariolaVremenskiPutnik\"#p290631 ja sam samo kreiro nove dht.c i dht.h i prekopiro kod u njih\n\ni jos moras negdje(ne znam tocno di al tamo gdje ti pise INCLUDE_SCRS(\"app_main.c\")) dodati \"dht.c\"",
+      "votes": {
+        "upvoters": [
+          "DariolaVremenskiPutnik"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290726": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "Jel itko napravio ovaj labos da napise neke kratke upute ili nesto pls?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290728": {
+      "poster": "Nocna_smjena",
+      "content": "Za računanje temperature prek NTC-a, oni su očekivali da prek simulatora zapišemo par temperatura koje dobijemo od DHT22 i da ujedno zapišemo i raw vrijednost NTC-a (koji je pretpostavljam otpor) i prek toga izračunamo A, B i C i te brojke uvrstimo u kod?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290730": {
+      "poster": "DariolaVremenskiPutnik",
+      "content": "@\"Nocna_smjena\"#p290728 \n\nJa sam iskoristio formulu s wokwi-a za ntc i racunanje temperature, saml malo prilagodio. Nemam pojma kak bih izracunao taj A, B i C. Ova formula radi jako dobro pa se necu s ovim ni mucit.",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290732": {
+      "poster": "BK-",
+      "content": "@\"Peter Jordanson\"#p290726 \n\nJa sam koristio sljedeće linkove za lab. Malo se treba modificirat, nije ni meni jasno, ali može se natjerat da radi.\n\nhttps://github.com/espressif/esp-idf/blob/master/examples/peripherals/adc/single_read/adc/main/adc1_example_main.c\n\nhttps://github.com/UncleRus/esp-idf-lib/tree/master/components/dht",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290761": {
+      "poster": "Nocna_smjena",
+      "content": "@\"DariolaVremenskiPutnik\"#p290730 ja sam malo istrazivao. Ugl formula je za fahrenheite. Trebaju se uzeti tri mjerenja temperature i otpora i onda to uvrstit u matricni zapis da se izracuna A, B i C i onda convertat iz fahrenheit u celsius. Ne znam sto ce nam onaj datasheet sto nam ga je dao",
+      "votes": {
+        "upvoters": [
+          "DariolaVremenskiPutnik"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290784": {
+      "poster": "maverick",
+      "content": "Ja sam uspio iz ADC-a izvuc otpor koji se dobije na NTC otporu i onda izračunao pomoću: https://www.thinksrs.com/downloads/programs/therm%20calc/ntccalibrator/ntccalculator.html koeficijente A, B i C s vrijednostima iz tablice koju su nam dali te uvrstio sve u formulu i donekle radi (zna bit odstupanje od 0.1 celzijus do 1 i nes sitno celzijusa al tak i treba vjer)",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

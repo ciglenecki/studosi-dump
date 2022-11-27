@@ -1,0 +1,494 @@
+{
+  "title": "[DISMATe1] 2. laboratorijska vježba - 2020/2021",
+  "creator": "psiho",
+  "slug": "dismate1-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Diskretna matematika 1",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "106638": {
+      "poster": "psiho",
+      "content": "Aj pls ak neko krene rjesavat 2.labos sad skoro, nek samo tu baci slike kakvi su mu zadaci dosli na moodle pitalici...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106751": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "![](assets/2020-12-07/00010.png)\n\nJel zna netko gdje je greška? Izbaci mi duljinu 9",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106796": {
+      "poster": "pero",
+      "content": "@psiho#106638 \n```\n9\n\n0 1 0 0 0 0 1 1 0\n1 0 1 0 0 0 0 0 0\n0 1 0 1 0 0 0 0 0\n0 0 1 0 1 0 0 0 1\n0 0 0 1 0 1 0 0 0\n0 0 0 0 1 0 1 0 0\n1 0 0 0 0 1 0 0 0\n1 0 0 0 0 0 0 0 0\n0 0 0 1 0 0 0 0 0\nrjesenje: 7\n\n8\n\n0 0 0 1 0 0 0 1 \n0 0 0 0 0 1 0 0 \n0 0 0 0 0 0 1 1 \n1 0 0 0 1 0 1 0 \n0 0 0 1 0 0 1 0 \n0 1 0 0 0 0 1 0 \n0 0 1 1 1 1 0 0 \n1 0 1 0 0 0 0 0 \nrjesenje: 6\n\n9\n\n0 0 0 0 1 0 0 0 0 \n0 0 0 0 0 0 0 0 0 \n0 0 0 0 1 1 0 1 0 \n0 0 0 0 1 0 0 0 0 \n1 0 1 1 0 0 0 0 1 \n0 0 1 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 \n0 0 1 0 0 0 0 0 0 \n0 0 0 0 1 0 0 0 0 \nrjesenje: 0\n\n8\n\n0 1 1 1 1 1 1 1\n1 0 1 1 1 1 1 1\n1 1 0 1 1 1 1 1\n1 1 1 0 1 1 1 1\n1 1 1 1 0 1 1 1\n1 1 1 1 1 0 1 1\n1 1 1 1 1 1 0 1\n1 1 1 1 1 1 1 0\nrjesenje: 8",
+      "votes": {
+        "upvoters": [
+          "BanankoKojiLebdi",
+          "psiho"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106812": {
+      "poster": "13pedeset",
+      "content": "@Michael#106751 tako sam i ja mislio rijesit, al onda sam skuzio da nemozes samo pogledat najkracu duljinu do tocke to racunat kao prvu \"polovicu\" duljine ciklusa (govorim o liniji najdulji=duljina[susjed]+duljina[trenutni]+1), nego treba uzeti sto duzu putanju do odredene tocke (sto znaci da to nije udaljenost do te tocke) i onda nazad bez da se prode kroz iste tocke. Tako da je po mom misljenju to kriv pristup rijesavanju, iako ni ja jos nisam dosao do rjesenja.",
+      "votes": {
+        "upvoters": [
+          "Michael (Michael Scarn)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106952": {
+      "poster": "schiz",
+      "content": "@pero#106796 jesi li confident u tocnost rijesenja? jer ako jesi onda je moj program kriv 😁",
+      "votes": {
+        "upvoters": [
+          "pero"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106953": {
+      "poster": "pero",
+      "content": "@schiz#106952 moodle kaze da su tocna",
+      "votes": {
+        "upvoters": [
+          "schiz"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106979": {
+      "poster": "schiz",
+      "content": "@pero#106953 hmm, ne kuzim. Radim breath first search s pocetkom u svakom vrhu i tijekom svakog stepa bfs-a spremam duljinu setnje ako je trenutacni vrh povezan s pocetnim, pa na kraju printam najvecu duljinu, ali mi su mi rijesenja osim na zadnjem drugacija od tvojeg, a ne radi se o one-off erroru.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107107": {
+      "poster": "schiz",
+      "content": "@schiz#106979 nvm direktni bfs ili bilokakav search tu ne radi osim ak ne radis fancy matematicke transformacije grafa u edgegraf, rijesio s permutacijama",
+      "votes": {
+        "upvoters": [
+          "pero"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107146": {
+      "poster": "pero",
+      "content": "@schiz#107107 Ja sam rijesio preko DFS. Za ostale koji ne znaju odakle poceti, neka si pogledaju [ovaj kod](https://www.geeksforgeeks.org/cycles-of-length-n-in-an-undirected-and-connected-graph/), ja sam po tome radio.",
+      "votes": {
+        "upvoters": [
+          "Michael (Michael Scarn)",
+          "delrey (nana)",
+          "if------",
+          "klukas",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107169": {
+      "poster": "delrey (nana)",
+      "content": "@pero#107146 Da ali kako da radi kada je graf nepovezan?haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107192": {
+      "poster": "pero",
+      "content": "@delrey#107169 Stavio sam da se vrti za sve vrhove, a ne samo za V - (n - 1) vrhova. Po nekoj mojoj logici to bi trebalo rijesiti problem, ali ne znam je li ispravno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107206": {
+      "poster": "delrey (nana)",
+      "content": "@pero#107192 U ovoj funkciji countCycles()? Meni ne radi za nepovezani graf kad stavim samo V umjesto V - (n - 1).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107209": {
+      "poster": "Kamen",
+      "content": "Jel na ovom testu kad dobijem 0, tj da graf nije ciklus, trebam upisati 0 ili NaN?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107210": {
+      "poster": "Kamen",
+      "content": "@Kamen#107209 0 je tocno, nez kad bi se koristio NaN",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107235": {
+      "poster": "klukas",
+      "content": "@Kamen#107209 traži se duljina najduljeg ciklusa, a ukoliko graf nema ciklusa, duljina najduljeg ciklusa je 0, pa je ispravno ispisati 0",
+      "votes": {
+        "upvoters": [
+          "Kamen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107243": {
+      "poster": "pero",
+      "content": "@delrey#107206 Sad sam testirao za jedan nepovezani graf i radi. Ako skuzis u cemu je tocno problem javi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107265": {
+      "poster": "BanankoKojiLebdi",
+      "content": "evo 3 linka za ideje za dfs riješenje ako kome trebaju [link1](https://www.geeksforgeeks.org/product-of-lengths-of-all-cycles-in-an-undirected-graph/?ref=rp) , [link2](https://www.geeksforgeeks.org/print-all-the-cycles-in-an-undirected-graph/), [link3](https://stackoverflow.com/questions/12367801/finding-all-cycles-in-undirected-graphs)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107546": {
+      "poster": "noobcamper",
+      "content": "ove primjere sam ja dobio na moodlu:\n\n9\n\n0 1 0 0 1 0 0 0 0\n\n1 0 1 0 0 0 0 0 0\n\n0 1 0 1 0 0 0 0 0\n\n0 0 1 0 1 0 0 0 0\n\n1 0 0 1 0 0 0 0 0\n\n0 0 0 0 0 0 1 0 0\n\n0 0 0 0 0 1 0 0 0\n\n0 0 0 0 0 0 0 0 1\n\n0 0 0 0 0 0 0 1 0\n1. rjesenje:5 \n\n8\n\n0 0 0 0 0 0 0 1 \n\n0 0 1 0 0 1 0 0 \n\n0 1 0 0 0 0 1 1 \n\n0 0 0 0 0 0 0 0 \n\n0 0 0 0 0 0 0 1 \n\n0 1 0 0 0 0 0 1 \n\n0 0 1 0 0 0 0 0 \n\n1 0 1 0 1 1 0 0 \n\n2.rjesenje:4\n\n8\n\n0 0 0 0 0 0 0 0 \n\n0 0 0 0 1 0 0 0 \n\n0 0 0 0 0 0 0 0 \n\n0 0 0 0 0 0 0 0 \n\n0 1 0 0 0 0 0 1 \n\n0 0 0 0 0 0 0 0 \n\n0 0 0 0 0 0 0 0 \n\n0 0 0 0 1 0 0 0 \n\n3.rjesenje:0\n\n9\n\n0 1 0 0 1 1 0 0 0\n\n1 0 1 0 0 0 1 0 0\n\n0 1 0 1 0 0 0 0 1\n\n0 0 1 0 1 0 0 0 0\n\n1 0 0 1 0 0 0 0 0\n\n1 0 0 0 0 0 1 0 0\n\n0 1 0 0 0 1 0 1 0\n\n0 0 0 0 0 0 1 0 1\n\n0 0 1 0 0 0 0 1 0\n\n4.rjesenje:8\n\ni evo link da vam nacrta graf po matrici susjedstva: https://graphonline.ru/en/create_graph_by_matrix",
+      "votes": {
+        "upvoters": [
+          "Michael (Michael Scarn)",
+          "krampus",
+          "psiho"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107584": {
+      "poster": "JBQ",
+      "content": "jel moze samo neko objasnit kako imlementirat da se ne smije vracat preko istog vrha? u testnom primjeru koji smo dobili ode za vrh 1 mi ode preko 0 i racuna pa se opet vrati preko 0, moze neko pomoc kako da to rjesim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107672": {
+      "poster": "miljac (LordStark)",
+      "content": "@JBQ#107584 ja sam spremao u listu cijeli put pa onda lagano provjeris jesi li vec bio u nekom vrhu; spremat cijelu putanju je skupo memorijski no zadano je da je n<15, a nisam se sjetio ničeg pametnijeg",
+      "votes": {
+        "upvoters": [
+          "JBQ"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108010": {
+      "poster": "Wolf7 (matrix)",
+      "content": "@klukas#107235 Ja nažalost ovo tek sad vidim nakon testiranja i predaje, ali opet zar to nije malo besmisleno s obzirom na to da je najmanja duljina ciklusa 3, a ako ciklus u grafu ne postoji onda je odgovor da ne postoji a ne nula, jer ako kažemo da je nula to automatski implicira da postoji ciklus duljine nula što nije slučaj 🤷‍♀️(moja nekakva logika)",
+      "votes": {
+        "upvoters": [
+          "klukas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108039": {
+      "poster": "klukas",
+      "content": "@Wolf7#108010 Ja se slažem da je to logičan način razmišljanja, i meni je bio, ali sam se sreo više puta s tim da su oni rekli da ako graf nema ciklus, \"da je svaki ciklus duljine nula\". Sad konkretno sam našao u skripti na str. 118., Zadatak 6.2, citiram \"Kako je svaki ciklus u stablu parne duljine...\", a stablo je po definiciji graf bez ciklusa. Dakle, očito je uobičajeno za graf bez ciklusa govoriti da je duljina najduljeg ciklusa i ujedno svakog ciklusa jednaka 0.",
+      "votes": {
+        "upvoters": [
+          "Wolf7 (matrix)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108317": {
+      "poster": "delrey (nana)",
+      "content": "Jel trebamo predati i datoteku graf.txt ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108327": {
+      "poster": "Nimikod (Gremlin)",
+      "content": "@delrey#108317 ne",
+      "votes": {
+        "upvoters": [
+          "delrey (nana)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108392": {
+      "poster": "krampus",
+      "content": "Za svaki slučaj, ima li još test primjera koja mogu testirati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108459": {
+      "poster": "zlac",
+      "content": "@krampus#108392 \n\nMeni je doslo ovo, jedan zadatak mi je bio isti kao jedan od 4 gore\n\n10\n\n0 0 0 0 0 0 1 1 0 0 \n\n0 0 0 0 0 1 0 0 0 0 \n\n0 0 0 1 1 1 1 0 1 0 \n\n0 0 1 0 0 1 0 0 0 0 \n\n0 0 1 0 0 1 0 1 1 0 \n\n0 1 1 1 1 0 0 0 0 1 \n\n1 0 1 0 0 0 0 0 1 0 \n\n1 0 0 0 1 0 0 0 1 1 \n\n0 0 1 0 1 0 1 1 0 0 \n\n0 0 0 0 0 1 0 1 0 0 \n\nRjesenje: 9\n\n9\n\n0 0 0 0 0 0 1 0 0 \n\n0 0 0 1 0 0 0 1 0 \n\n0 0 0 1 0 0 0 0 1 \n\n0 1 1 0 0 0 1 1 1 \n\n0 0 0 0 0 0 0 1 0 \n\n0 0 0 0 0 0 1 0 1 \n\n1 0 0 1 0 1 0 0 0 \n\n0 1 0 1 1 0 0 0 0 \n\n0 0 1 1 0 1 0 0 0 \n\nRjesenje: 5\n\n8\n\n0 1 1 1 1 1 1 1\n\n1 0 1 0 0 0 0 1\n\n1 1 0 1 0 0 0 0\n\n1 0 1 0 1 0 0 0\n\n1 0 0 1 0 1 0 0\n\n1 0 0 0 1 0 1 0\n\n1 0 0 0 0 1 0 1\n\n1 1 0 0 0 0 1 0\n\nRjesenje: 8",
+      "votes": {
+        "upvoters": [
+          "krampus"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108766": {
+      "poster": "psiho",
+      "content": "ove primjere sam ja dobio->\n\n7\n\n0 1 0 1 1 0 0\n\n1 0 1 0 0 1 0\n\n0 1 0 1 0 0 1\n\n1 0 1 0 0 0 0\n\n1 0 0 0 0 1 0\n\n0 1 0 0 1 0 1\n\n0 0 1 0 0 1 0\n\nrjesenje:6\n\n9\n\n0 1 0 1 0 0 0 0 0 \n\n1 0 0 1 0 0 0 1 0 \n\n0 0 0 0 0 0 0 0 1 \n\n1 1 0 0 1 0 0 0 0 \n\n0 0 0 1 0 0 0 0 1 \n\n0 0 0 0 0 0 0 1 0 \n\n0 0 0 0 0 0 0 0 0 \n\n0 1 0 0 0 1 0 0 0 \n\n0 0 1 0 1 0 0 0 0 \n\nrjesenje:3\n\n9\n\n0 0 0 0 1 0 0 0 0 \n\n0 0 0 0 0 0 0 0 0 \n\n0 0 0 0 1 1 0 1 0 \n\n0 0 0 0 1 0 0 0 0 \n\n1 0 1 1 0 0 0 0 1 \n\n0 0 1 0 0 0 0 0 0 \n\n0 0 0 0 0 0 0 0 0 \n\n0 0 1 0 0 0 0 0 0 \n\n0 0 0 0 1 0 0 0 0 \n\nrjesenje:0\n\n9\n\n0 1 0 0 1 1 0 0 0\n\n1 0 1 0 0 0 1 0 0\n\n0 1 0 1 0 0 0 0 1\n\n0 0 1 0 1 0 0 0 0\n\n1 0 0 1 0 0 0 0 0\n\n1 0 0 0 0 0 1 0 0\n\n0 1 0 0 0 1 0 1 0\n\n0 0 0 0 0 0 1 0 1\n\n0 0 1 0 0 0 0 1 0\n\nrjesenje:8",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108855": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "Jel moze netko samo provjerit jesu li dobra rjesenja\n\n9\n\n0 1 0 0 0 0 1 1 0\n\n1 0 1 0 0 0 0 0 0\n\n0 1 0 1 0 0 0 0 0\n\n0 0 1 0 1 0 0 0 1\n\n0 0 0 1 0 1 0 0 0\n\n0 0 0 0 1 0 1 0 0\n\n1 0 0 0 0 1 0 0 0\n\n1 0 0 0 0 0 0 0 0\n\n0 0 0 1 0 0 0 0 0\n\nrjesenje: 7\n\n8\n\n0 0 0 0 0 0 0 1 \n\n0 0 0 0 0 0 0 1 \n\n0 0 0 0 0 1 0 0 \n\n0 0 0 0 0 1 0 1 \n\n0 0 0 0 0 1 0 1 \n\n0 0 1 1 1 0 0 0 \n\n0 0 0 0 0 0 0 0 \n\n1 1 0 1 1 0 0 0 \n\nrjesenje: 4\n\n9\n\n0 1 0 0 1 1 0 0 0\n\n1 0 1 0 0 0 0 0 0\n\n0 1 0 1 0 0 0 0 1\n\n0 0 1 0 1 0 0 0 0\n\n1 0 0 1 0 0 0 0 0\n\n1 0 0 0 0 0 1 0 0\n\n0 0 0 0 0 1 0 1 0\n\n0 0 0 0 0 0 1 0 1\n\n0 0 1 0 0 0 0 1 0\n\nrjesenje: 8\n\n10\n\n0 0 0 0 0 0 1 1 0 0 \n\n0 0 0 0 0 1 0 0 0 0 \n\n0 0 0 1 1 1 1 0 1 0 \n\n0 0 1 0 0 1 0 0 0 0 \n\n0 0 1 0 0 1 0 1 1 0 \n\n0 1 1 1 1 0 0 0 0 1 \n\n1 0 1 0 0 0 0 0 1 0 \n\n1 0 0 0 1 0 0 0 1 1 \n\n0 0 1 0 1 0 1 1 0 0 \n\n0 0 0 0 0 1 0 1 0 0 \n\nrjesenje: 9",
+      "votes": {
+        "upvoters": [
+          "Ko9a"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108865": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "Jel itko prosli labos pokusao upisat drugaciju  vrijednost nego sto mu izbacuje program i da su mu priznali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108866": {
+      "poster": "Ko9a",
+      "content": "@Michael#108855 Dobro sve",
+      "votes": {
+        "upvoters": [
+          "Michael (Michael Scarn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109296": {
+      "poster": "Fortius",
+      "content": "> @noobcamper#107546 8\n> \n> 0 0 0 0 0 0 0 1 \n\n> 0 0 1 0 0 1 0 0 \n\n> 0 1 0 0 0 0 1 1 \n\n> 0 0 0 0 0 0 0 0 \n\n> 0 0 0 0 0 0 0 1 \n\n> 0 1 0 0 0 0 0 1 \n\n> 0 0 1 0 0 0 0 0 \n\n> 1 0 1 0 1 1 0 0 \n\n> 2.rjesenje:4\n\nmoze li mi netko objasniti kak je tu rjesenje 4 kad iz nultog verteksa ide samo u 7. zar nije da taj graf onda nema ciklus tj 0 je rjesenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109370": {
+      "poster": "aconita",
+      "content": "@Michael#108865 \n\nja sam najbliže onome što sam dobila stavila na jednom i nije bilo problema",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109387": {
+      "poster": "Ko9a",
+      "content": "@Fortius#109296 ![](assets/2020-12-12/00016.jpeg)\n\nEvo iz grafa ti se vidi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109406": {
+      "poster": "Fortius",
+      "content": "@Ko9a#109387 thx shvatila sam kasnije da nije bitno da je graf cijeli povezan",
+      "votes": {
+        "upvoters": [
+          "noobcamper"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,2492 @@
+{
+  "title": "[PARPRO] 2. laboratorijska vježba - 2021/2022",
+  "creator": "wolfs_123 (wLkR-74159)",
+  "slug": "parpro-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Paralelno programiranje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "294766": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "Ima netko generalnu ideju kako ovo isprogramirati?\n\nU uputama piše da se radi u obliku stabla i da broj zadataka mora biti veći od 7.\n\nKako definirati zadatak? Mogu li napraviti da je jedan proces = jedan zadatak?\n\nAko krenem sa tim da je jedan proces = jedan zadatak - što da radim ako se pokrene sa više od 7 procesa?\n\nNpr. 16, 32 - tada će ostali pocesi biti nezaposleni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294816": {
+      "poster": "viliml",
+      "content": "@\"wLkR-74159\"#p294766 Imaš na materijalima primjer rješenja gdje se procesi koriste kao 1 master i N-1 slaveova; master ima queue zadataka koje šalje slaveovima na obradu.\n\nDrugi način je da se procesi granaju po stablu, prvih N/7 procesa ode u prvi potez, drugih N/7 u drugi itd., na određenoj dubini ostane samo jedan proces koji odradi svoje podstablo, i na kraju kad se ude unatrag po rekurziji se porukama pozbroje.",
+      "votes": {
+        "upvoters": [
+          "wolfs_123 (wLkR-74159)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294828": {
+      "poster": "Daeyarn",
+      "content": "@\"viliml\"#p294816 jel bi pod ovaj prvi nacin spadalo da master podijeli 7 mogucih sljedecih stanja izmedu procesora i onda svaki procesor svoja stanja obraduje slijedno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294981": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "Konceptualno:\n\n1) Master - slave: master dodijeljuje zadatke slave procesima, ali sto mi je zapravo zadatak? Postoji formula po kojoj se racuna kakvoca poteza - to uzim. Radim simulaciju za prvi prolaz - stavim prvih 7 žetona (od strane računala), ali onda bi na redu trebao biti čovjek - kako da to simuliram?\n\n2) Stablo: Kako obaviti podjelu zadataka po procesima? Sto je zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295056": {
+      "poster": "Spuk",
+      "content": "Jel ima plag scan na labosima s obzirom da cemo ocito svi gledat taj python kod koji ima na gitu?",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Bisolvon",
+          "pingvinka"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295142": {
+      "poster": "Bisolvon",
+      "content": "@\"Spuk\"#p295056 Mislim da ima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Spuk"
+        ]
+      }
+    },
+    "295204": {
+      "poster": "indythedog",
+      "content": "Ima netko neki savjet kako izmjeriti performanse sa 8 procesora ako nemamo komp sa 8 (fizičkih) procesora? Nešto je Jakobović spominjao da pokrenemo na 2 računala, ali nisam siguran kako to napraviti, postoje negdje neke upute možda? I je li to uopće nužno, tj inzistiraju li na ispitivanju da smo testirali i taj slučaj ili im je ok 4 jezgre i 8 threadova recimo?",
+      "votes": {
+        "upvoters": [
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295205": {
+      "poster": "indythedog",
+      "content": "I još jedno pitanje, je li nekome za npr. ovaj primjer ulazne igre\n\n![](assets/2022-05-08/00023.png)\n\ngdje bi očito najbolji potez računala bio prvi stupac (jer njim odmah pobjeđuje), algoritam izbacuje da su stupci 1, 2, 3 i 5 jednako vrijedni, pa random odabere nekog od njih kao sljedeći potez? Ne znam je li to neki bug meni u kodu ili očekivano ponašanje ovog algoritma, jer čak i kad sam testirao na onoj (slijednoj) implementaciji koju su nam oni dali, dobivam basically istu stvar.\n\n(EDIT: računalo je indeks 2 jel)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295229": {
+      "poster": "BillIK",
+      "content": "u kojem točno file-u je definiran zadatak, postoji više njih koji se zovu 2.domaća zadaća i različit im je sadržaj?",
+      "votes": {
+        "upvoters": [
+          "TheCrimsonChin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295263": {
+      "poster": "indythedog",
+      "content": "@\"BillIK\"#p295229 Ovo je zadatak koji je linkan na ferku na mjestu uploada https://www.fer.unizg.hr/_download/repository/lab2[11].pdf, pa je to valjda \"točniji\" od ta dva, iako mislim da su razlike minimalne",
+      "votes": {
+        "upvoters": [
+          "BillIK"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295283": {
+      "poster": "Spuk",
+      "content": "Jel smijemo koristiti borad.cpp i borad.h i main.cpp iz onog primjera koji su nam dali sa slijednim algoritmom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295521": {
+      "poster": "TheCrimsonChin",
+      "content": "@\"Spuk\"#p295283 ovo i mene zanima, pretpostavljam da smijemo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295547": {
+      "poster": "Lukak",
+      "content": "@\"indythedog\"#p295204 Bas to i je ideja da se vidi kakva su mjerenja kada se procesi mogu fizicki razdvojiti, a kakva su kada kada se uvode novi threadovi iako nema fizicke podrske",
+      "votes": {
+        "upvoters": [
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295578": {
+      "poster": "indythedog",
+      "content": "@\"Lukak\"#p295547 Jesi siguran? Ovo mi zvuči kao da očekuju da imamo 8 fizičkih jezgri:\n\n ![](assets/2022-05-11/00013.png)\n\nJoš su naglasili da se hyperthreading ne broji :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295607": {
+      "poster": "Daeyarn",
+      "content": "@\"indythedog\"#p295578 što ako nemamo 8 fizičkih jezgri 🤗",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295612": {
+      "poster": "indythedog",
+      "content": "@\"Daeyarn\"#p295607 Točno to se i ja pitam :D \n\nKao u onim videima je Jakobović nešto spominjao da pokrenemo program na 2 računala u isto vrijeme, pa da to bude ukupno 8 fizičkih jezgri, ali nemam pojma kako to napraviti, niti sam našao neke upute za to",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Kennedy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295618": {
+      "poster": "Daeyarn",
+      "content": "@\"indythedog\"#p295612 mozda se moze tipa kao, pola stabla na prvom, a pola na drugom, pa uzmemo vece od ta dva vremena\n\nali onda opet, sto ako nemamo dva racunala, i ako imamo, ne bi li trebali procesori biti jednaki/slični da bi to imalo smisla? osim ako se ne moze distribuirano pokretati preko neke platforme na internetu ili nesto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295620": {
+      "poster": "indythedog",
+      "content": "@\"Daeyarn\"#p295618 Hm to mi se čini malo nespretno ali sve je moguće\n\nMožda mu sutra pošaljem mail u vezi toga, pa javim što kaže",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295621": {
+      "poster": "Daeyarn",
+      "content": "@\"indythedog\"#p295620 moze, hvala ti",
+      "votes": {
+        "upvoters": [
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295641": {
+      "poster": "anon00",
+      "content": "@\"indythedog\"#p295612 Spomenuo je to da pokrenemo na 2 računala (bez objašnjenja kako), ali je  i spomenuo da računala u labaratoriju imaju 8 jezgri pa se možemo dogovoriti. \n\nNezz kako je to mislio s nama koji planiramo raditi labos 3h i 20minuta prije predaje",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "BaboTrojka",
+          "Daeyarn",
+          "Jaster111",
+          "Tone",
+          "__builtin_popcount (std::popcount)",
+          "angello2",
+          "feel_d_boot (iNut)",
+          "indythedog",
+          "steker",
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Artemis",
+          "Bucc (Olive Oil)",
+          "Daeyarn",
+          "Fica (Prof)",
+          "Jaster111",
+          "Kikyy99",
+          "Rope (Rops)",
+          "__builtin_popcount (std::popcount)",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "indythedog",
+          "miss_anthropocene (neunist.iva)",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295815": {
+      "poster": "anon00",
+      "content": "Ima li netko tko je voljan napisati kako konceptualno riješiti ovaj labos?\n\nProfesor je kolegici napisao \"Jedan zadatak je jedan cvor stabla tj provjera jednog stanja ploce, s rezultatom je li netko pobijedio. Zbog aglomeracije sva podstabla ispod neke dubine (npr 2) smatramo jednim zadatkom koji se prolazi slijedno rekurzivno. Na dubini 2 je 47 takvih zadataka i to se onda rasporedi po radnicima\" \n\nMoja konceptualna ideja je da je vrh stabla trenutno stanje na ploči. Zatim (ako je ploča 7x7) imamo 7 čvorova djece i svaki taj čvor predstavlja stanje ploče koje bi bilo da smo kružić bacili na i-to mjesto (prvi čvor - prvo mjesto). Tad provjerimo da li je neki od njih pobjenički - ako je automatski njega odabiremo. Zatim, svaki od tih čvorova ima svojih 7 deca koji opet predstavljaju 7 mogućih opcija gdje je neprijatelj mogao baciti kružić - ako je neki od njih pobjednički automatski nam je to poraz i samim tim i čvor roditelj predstavlja poraz (jer ako mi odigramo taj korak neprijatelj će sigurno odigrati onaj koji mu nosi sigurno pobjedu). \n\nI tako idemo dok ne prođemo čitavo stablo s tim da ne idemo više u dubinu ako smo naišli na pobjedu/poraz. \n\nKad smo na svaki čvor stavili -1 i 1 onda računamo one razlomke i odaberemo jedan od onih prvotnih 7 čvorova u prvoj razini koji ima najveći koeficijent. \n\nI tako se ponavlja kod svakog poteza. \n\nOsim 100 dodatnih pitanja koje imam - mene najviše zanima odakle ovo profesorovo da ima 47 čvorova u 2. razini? Nezz je li _zatipak_ i zapravo je mislio 49 ili sam ja totalno krivo postavio zadatak?",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "mgd",
+          "mmmmDa (Ban Levačić)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295817": {
+      "poster": "Daeyarn",
+      "content": "@\"anon00\"#p295815 tako sam nekako ja rjesavao, znaci kada mi odigramo neki potez, racunalo ima 7 mogucih opcija tj. sljedecih stanja\n\nTa stanja rasporedi po procesorima tako da svaki dobije jednak broj tih \"prvih\" mogucih stanja\n\nI svaki proces zapravo izvrsava slijedni algoritam ocjene poteza do neke dubine kako bi izracunao dobrotu onih stanja za koja ga je glavni procesor zaduzio\n\nOvako kako sam ja radio, zapravo svaki procesor moze sam skuziti po svojem ranku i ukupnom broju procesora za koja je stanja zaduzen pa mu ne treba to reci glavni procesor\n\nJos mi program nije dovoljno pametan pri ocjenjivanju stanja, ali radi za najvise 7 radnika, ako ih je vise onda ovaj ostatak nista ne radi\n\nI na drugoj razini bi trebalo biti 49 stanja, da...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295819": {
+      "poster": "Daeyarn",
+      "content": "@\"Daeyarn\"#p295817 zapravo mislim da ni ne treba raditi za vise od 8 procesora(7 radnika) kad mjerenja moramo napraviti za najvise 8 procesora? Jedino ne znam jel bi ova ideja prekrsila ono njihovo \"rjesenja sa stalnim brojem od najvise 7 zadataka(radnika) se nece priznavati\"?\n\nJel to ogranicenje znaci da procesor mora raditi za broj radnika = 1,2,3,4,5,6,7, ili na sto se to odnosi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295851": {
+      "poster": "Artemis",
+      "content": "Zna netko do kad je otvorena burza grupa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295853": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Artemis\"#p295851 zadnji put je bila do roka predaje labosa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295856": {
+      "poster": "anon00",
+      "content": "@\"Daeyarn\"#p295819 Ako se ne varam da je ideja da se problem podijeli na zadatke koji se dinamicki dodijeljuju procesoru pa tako ne ovisis o broju procesora - u tom slucaju je svejedno imao ih 4 i 8 ili 16. \n\nPretpostavljam da su s tom recenicom mislili da upravo to ne smijemo napraviti tj. da ce svaki od 8 procesora preuzeti onaj zadatak koji odgovara njegovom indexu jer ce u tom slucaju raditi samo za iskljucivo 8 procesora",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295857": {
+      "poster": "Daeyarn",
+      "content": "@\"anon00\"#p295856 ee ali ne radi mi samo za 7 radnika nego i za jednog(on mora sva stanja obradivati), za dva(prvi dobije 4 stanja, drugi 3), za tri(prvi dobije 3, drugi dobije 2,treci 2) itd.\n\nPa zato nisam siguran jel ok na taj nacin ili ne 🤔",
+      "votes": {
+        "upvoters": [
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295860": {
+      "poster": "anon00",
+      "content": "@\"Daeyarn\"#p295857 Iskreno, posalji mail profesoru pa javi da i mi znamo jer nije ni meni najjasnije je li to okej ili ne",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295861": {
+      "poster": "Daeyarn",
+      "content": "@\"anon00\"#p295860 will do",
+      "votes": {
+        "upvoters": [
+          "mgd"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295870": {
+      "poster": "Fikalo",
+      "content": "A jel neko doznao kaj da radimo za tih 8 jezgri?",
+      "votes": {
+        "upvoters": [
+          "mmmmDa (Ban Levačić)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295872": {
+      "poster": "indythedog",
+      "content": "@\"Fikalo\"#p295870 Sad sam poslao Jakoboviću mail, nisam stigao jučer\n\nPa javim kad mi odgovori",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Fikalo",
+          "mgd"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295875": {
+      "poster": "Spuk",
+      "content": "@\"Precious Bodily Fluids\"#p295853 Kad je rok predaje labosa? nmg nac nigdje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295876": {
+      "poster": "Daeyarn",
+      "content": "@\"Daeyarn\"#p295861 \n\n@\"Daeyarn\"#p295817 \n\n@\"anon00\"#p295860 \n\nposlao sam mail profesoru, profesor kaze da to rjesenje nije bas prihvatljivo jer je neucinkovita podjela na \\~8 procesora, i da treba doci barem do dubine 2 gdje je 49 stanja i njih podijeliti medu radnicima",
+      "votes": {
+        "upvoters": [
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295903": {
+      "poster": "Retard00",
+      "content": "Jel burza grupa na kojoj treba prijavit labos pod nazivom \"Lab 3\"?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295905": {
+      "poster": "MsBrightside",
+      "content": "@\"Retard00\"#p295903 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295914": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Spuk\"#p295875 jesi probao na ferku xd?\n\n17.5. 12:00",
+      "votes": {
+        "upvoters": [
+          "Spuk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295916": {
+      "poster": "Spuk",
+      "content": "@\"Precious Bodily Fluids\"#p295914 sto je najtuznije jesam, al me ferko zbunjuje. Tnx na info.",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295923": {
+      "poster": "Ardura (Maddy)",
+      "content": "Kako saljete u cpp zadatke radnicima? Mislila sam slati stanje ploce, ali ne znam kako to poslati preko MPI.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295927": {
+      "poster": "Daeyarn",
+      "content": "@\"Maddy\"#p295923 ja saljem stanje u obliku dva integera koji predstavljaju stupce, prvi oznacava potez racunala, a drugi oznacava potez covjeka",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295929": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Ima li netko da je uspija pokreniti onaj njihov exe na lunuxu, nedamisezajebavat s ovim labosom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295956": {
+      "poster": "indythedog",
+      "content": "@\"indythedog\"#p295872 Evo odgovora\n\nNa pitanje možemo li doći isprobati na računalima na faksu koja imaju >8 jezgri, kaže da se može doći ali da imaju samo Windows 7/linux i mpich, tj. pretpostavljam da ovo znači da podržavaju samo C/C++ jer kad sam ga pitao podržavaju li Python kaže da ne. Drugim rječima tough luck za nas koji smo radili u Pythonu/nekom drugom jeziku\n\nNa pitanje kako pokrenuti na više računala, kaže na isti način na koji je pokazao za 1. labos - pokrenemo više procesa na različitim računalima, a da točan način ovisi o konkretnoj MPI implementaciji. Kaže da npr. za microsoft mpi prilikom pokretanja se koristi mpiexec i njegove opcije, pa se u argumentima navedu čvorovi na kojima se pokreće kao IP ili mrežno ime.\n\nJedino što sam ja mogao naći u vezi toga je ovako nešto https://stackoverflow.com/questions/39709877/mpi-execute-program-on-more-than-one-computer, sama naredba je jednostavna ali se čini da prije toga treba napraviti dosta podešavanja, pa se ovo čini kao jako zeznut način\n\ntldr: tko nije radio u C/C++ i nema komp sa 8 jezgri je u problemima",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295958": {
+      "poster": "mmmmDa (Ban Levačić)",
+      "content": "@\"iNut\"#p295929 sudo apt install wine i onda sam wine x.exe",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295966": {
+      "poster": "Daeyarn",
+      "content": "koji bi bio postupak ako posaljemo labos a mjerili smo na racunalu gdje procesor nema 8 jezgri, jel to samo manje bodova ili nam kazu da dodemo u sljedeci termin za pola bodova ili kak\n\njer nejde mi se sutra u subotu na faks iz drugog grada samo da napravim mjerenja na 8 jezgri",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295970": {
+      "poster": "Retard00",
+      "content": "@\"Daeyarn\"#p295966 napraviš labos sa onolko jezgri kolko imaš i bok. Ak pogledaš na ferku, na predaji zadatka, nikakva mjerenja uopće ni ne treba predat.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295972": {
+      "poster": "indythedog",
+      "content": "@\"indythedog\"#p295956 \n\nEvo nešto što bi trebalo radit:\n\nhttps://stackoverflow.com/questions/15903408/specify-the-machines-running-program-using-mpi, u kombinaciji sa https://www.cyberciti.biz/faq/ubuntu-linux-install-openssh-server/\n\nJedina fora je da taj 2. komp na koji se spajate mora imat Linux, ali to se da zaobić korištenjem npr. wsl-a na windowsima ili slično",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295974": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"indythedog\"#p295956 \n\n![](assets/2022-05-13/00015.jpg)",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Jokke",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Daeyarn",
+          "Jokke",
+          "SuperSaiyano",
+          "indythedog"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295977": {
+      "poster": "anon00",
+      "content": "Pošaljite mi svoj labos, pokrenem ga na 8 jezgri pa vam pošaljem rezultate 😏",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)",
+          "indythedog",
+          "madoxx",
+          "steker",
+          "zmaj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ardura (Maddy)",
+          "Baksuz",
+          "Bucc (Olive Oil)",
+          "Daeyarn",
+          "Extended_mix",
+          "Nocna_smjena",
+          "Reznox",
+          "Spuk",
+          "SuperSjajan3",
+          "Svudec",
+          "Tone",
+          "Uchenikowitz (Učečuču)",
+          "Veki",
+          "__builtin_popcount (std::popcount)",
+          "djeno",
+          "feel_d_boot (iNut)",
+          "in1",
+          "indythedog",
+          "nnn (dinoo)",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296003": {
+      "poster": "Nocna_smjena",
+      "content": "Koliko vremena treba za ovaj labos ako neznam sto radim?",
+      "votes": {
+        "upvoters": [
+          "Kikyy99",
+          "mgd"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296013": {
+      "poster": "viliml",
+      "content": "@\"Maddy\"#p295923 U MPI možeš slati niz brojeva - tome služi `size` poruke. Znači možeš poslati svih `N x M` brojeva koji predstavljaju ploču, samo ih treba postaviti sekvencijalno u buffer.\n\nJa sam kako bih smanjio volumen poruka slao samo niz poteza (indeksa stupaca). Svi procesi na početku pročitaju datoteku sa stanjem ploče i onda kad zaprime novi zadatak odsimuliraju taj prvi dio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296014": {
+      "poster": "viliml",
+      "content": "@\"iNut\"#p295929 \n```bash\nrm connect4.exe\ng++ -o connect4 main.cpp board.cpp\n./connect4\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296015": {
+      "poster": "mmmmDa (Ban Levačić)",
+      "content": "@\"Nocna_smjena\"#p296003 najgori dio je shvatit sta se tocno trazi tak da procitaj ovu i prethodne dvije teme za labos i pogledaj 5. i 6. poglavlje u skripti",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296020": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p295966 pa kaj nije rok do 17.?",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296030": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p296020 mislio sam da je sutra dok nije dosla obavijest, my bad",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296070": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "U kojem dijelu treba paralelizirati ovo? Nije mi skroz jasno, jel bi mi zadatak trebao biti provjera dali je trenutno stanje pobjeda odnosno provjera tog stanja na temelju igraca i sljedecih stanja ili kao doslovna provjera dal je ta trenutna tablica pobjednik, i u kojem dijelu treba to paralelizirat?\n\nRecimo ako gradimo stablo do n dubine jel onda gradnja dtabla treba biti paralelizirana ili tek prolazak od dolje do gore treba biti paraleliziran temeljno po dubini, ili negdje skroz drugdje, jel neko pls skuzio kaj se trazi u zadatku nije mi nikako jasno",
+      "votes": {
+        "upvoters": [
+          "Svudec",
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+          "angello2",
+          "feel_d_boot (iNut)",
+          "sheriffHorsey"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296085": {
+      "poster": "Spuk",
+      "content": "Sta ce se provjeravat kad mi dodjemo na termin labosa? Ocemo tamo morat to izvrtit ili komentirat kod ili sta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296086": {
+      "poster": "Fikalo",
+      "content": "@\"Spuk\"#p296085 vjerojatno to a i ove ostale stvari koje su napisane u tekstu zadatka, dokumetacija koja opisuje faze razvoja i grafove ubrzanja i učinkovitosti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Spuk"
+        ]
+      }
+    },
+    "296087": {
+      "poster": "Spuk",
+      "content": "@\"Fikalo\"#p296086 sta ce onda ispitivat jednu osobu pol sata da prodju korz to sve. Pa di je kraj ovom maltretiranju vise",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296088": {
+      "poster": "anon00",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p296070 \n\nPogledaj ovaj odgovor u mailu sto je profesor napisao @\"anon00\"#p295815  \n\nPo tom bi ja rekao da treba napraviti ovako (pa nek me netko ispravi ako je krivo) \n\nGlavni proces uzme trenutno stanje ploce i za njega krene raditi stablo. Na vrhu stabla je čvor koji sadrži trenutno stanje ploce i onda u sljedecoj razini stoji 7 mogucih koraka koje racunalo moze napraviti, a za svaki od tih 7 mogucih koraka ima jos 7 mogucih koraka koje nakon tog covjek moze napraviti (ovo je sad 2. razina stabla). Ovo se vrtilo u glavnom procesu slijedno i sad imas stablo koje ima 2 razine, a u toj drugoj razini imas 49 cvorova - to ces pretvoriti u 49 zadataka koje ces dodjeljivati radnicima, a svaki radnik ce u jednom zadatku **slijedno** dalje za sebe napraviti podstablo do one razine koja mu je određena parametrom (npr do razine 7). \n\nDakle glavni proces pocinje kreirati stablo do druge razine gdje ima 49 cvorova - to pretvoris u zadatke i paraleliziras i daš radnicima da za svaki od tih zadataka slijedno izvrše algoritam (prakticki samo trebaju pokrenuti onaj njihov c++ primjer) i vrate ti najbolji rezultat (onaj decimalni broj). \n\nKad se na toj 2. razini svih 49 radnika izvrši i vrate tu ocjenu onda valjda (slijedno, samo glavni proces) treba odrediti koji je potez najbolji.\n\nMoguce da sam totalno u krivo, ali mi ovo jedino ima smisla\n\n\n@\"Spuk\"#p296085 Pretpostavljam kao i prosli labos - pokreni program i pokazi da radi, zatim komentiraj kod i sto si gdje napravio i zbog cega i jos ce trebati pokazati ona dva grafa (ubrzanje i ucinskovitost)",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Fica (Prof)",
+          "Svudec",
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296089": {
+      "poster": "Fikalo",
+      "content": "@\"anon00\"#p296088 a kaj s ovim \n\n![](assets/2022-05-14/00018.png)\n\nnisam vidio drugdi da se to spomnje, na ferku se spominju samo grafovi s mjerenjima, je briemo da se i to treba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296093": {
+      "poster": "MsBrightside",
+      "content": "@\"Fikalo\"#p296089 mislim da im ovo mozes i zakomentirat u kodu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296094": {
+      "poster": "BillIK",
+      "content": "> @\"anon00\"#p296088 Dakle glavni proces pocinje kreirati stablo do druge razine gdje ima 49 cvorova - to pretvoris u zadatke i paraleliziras i daš radnicima da za svaki od tih zadataka slijedno izvrše algoritam (prakticki samo trebaju pokrenuti onaj njihov c++ primjer) i vrate ti najbolji rezultat (onaj decimalni broj).\n\nšta je stvarno ta njihova Evaluate metoda ekvivalentna ovome ((broj_pobjeda_u_dubini_n - broj_poraza_u_dubini_n)/(broj_mogućih_poteza) što nas traži?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296114": {
+      "poster": "anon00",
+      "content": "@\"BillIK\"#p296094 Koliko ja kuzim njihov kod - da.\n\nAli cak i da nije - napisali su u skripti da moze i neki drugi algoritam samo da bolje ocjenjuje\n\nEdit: moje pitanje je postoji li kakva komunikacija izmedu paralelnih zadataka?",
+      "votes": {
+        "upvoters": [
+          "BillIK"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296117": {
+      "poster": "Spuk",
+      "content": "sta meni taj program na kraju treba ispisivat? \n\nmjerenja kao radimo na početku, jel to znaci da racunam do kraja igre i pretpostavljam kako ce igrac odigrat ili samo racunam za prvi potez za racunalo ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296124": {
+      "poster": "Daeyarn",
+      "content": "@\"anon00\"#p296114 kolko sam ja skuzio izmedu njih nema, samo izmedu glavnog i radnika\n\n@\"Spuk\"#p296117 treba ispisat stanje ploce nakon poteza racunala(koje se izracuna)\n\na za mjerenja pise u pripremi da se radi mjerenje jednog poteza racunala na pocetku igre ako se ne varam?",
+      "votes": {
+        "upvoters": [
+          "Spuk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296137": {
+      "poster": "Lukak",
+      "content": "@\"indythedog\"#p295956 Ja sam odgovarao Lab prosli tjedan. Racunalo mi ima 4 jezgre i nisam nista ekstra radio (jednostavno pokrenuo 8 procesa na 4 jezgre). Prof je pogledao mjerenja, skuzio da nakon 4 nema nekog napretka pa i prokomentirao da ocito imam 4 jezgre i tjt, dobio sve bodove, nisam imao nikakvog problema",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Spuk",
+          "angello2",
+          "anon00",
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296145": {
+      "poster": "anon00",
+      "content": "@\"Lukak\"#p296137 Mozes li samo pls komentirati je li postupak koji sam komentirao gore dobar ili sam nesto propustio?",
+      "votes": {
+        "upvoters": [
+          "Spuk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296174": {
+      "poster": "Lukak",
+      "content": "@\"anon00\"#p296145 nisam baš siguran oko dijela kada si spomenuo/la 49 radnika. Ostalo je dobro, ideja je da glavni program napravi 49 zadataka i onda šalje zadatke radnicima neovisno o tome koliko je radnika, odnosno svaki radnik mora rjesiti vise zadataka. Ima vise nacina kako se to moze rasporediti po radnicima, ali bilo bi dobro da se dinamicki zadaju zadatci radnicima kako bi postupak bio sto optimiraniji (ne da svaki radnik nuzno dobiva 7 zadataka nego, ovisno o tome koliko je brz i koliko su zadatci lagani, obavi vise/manje)",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Rope (Rops)",
+          "Svudec",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296186": {
+      "poster": "anon00",
+      "content": "@\"Lukak\"#p296174 Tnx\n\nKrivo sam se izrazio, nisam mislio 49 radnika vec kad se 49 čvorova izracuna, ali sad nmg editati da ispravim.",
+      "votes": {
+        "upvoters": [
+          "Lukak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296243": {
+      "poster": "indythedog",
+      "content": "@\"Lukak\"#p296137 Predobro, hvala na informaciji kolega :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296352": {
+      "poster": "Ardura (Maddy)",
+      "content": "@\"Lukak\"#p296174 Je li ovo onda znači da ako se radnici sami javljaju kad su spremni da je ok da jedan napravi više posla nego drugi? Jer kad sam pokretala njihov primjer cpi.c  događalo bi mi se da jedan obavi nekad i 100% posla. Trenutno imam podjelu da svaki obavi podjednako zad, al ne znam je li to ok kad su neki sporiji od drugih.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296358": {
+      "poster": "Fikalo",
+      "content": "@\"Maddy\"#p296352 lako je moguce da se dogodi da jedan napravi vise nego drugi, ali nebi se smjelo dogadati da napravi i 100% posla, naravno osim ako je jedini radnik",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296363": {
+      "poster": "Krpa1 (Janez)",
+      "content": "Što se događa kad pokrenete program na jednom procesoru? Meni master nema kome slati zadatke i ne događa se ništa. Kako to srediti? Ili da napišem poseban program za slijedni algoritam pa tamo izmjerim vrijeme?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296371": {
+      "poster": "Daeyarn",
+      "content": "@\"Janez\"#p296363 ja sam napravio if uvjet da kad je size == 1 da onda master procesor radi sve slijedno, a kad ih je vise on ce dijeliti izmedu svojih radnika a on nece raditi nista. kad je size == 2 onda opet samo jedan procesor radi sve ali je to ovaj put radnik, pa su mi vremena za 1 procesor i 2 procesora jako slicna(razlika je samo nekoliko stotina milisekundi)",
+      "votes": {
+        "upvoters": [
+          "Krpa1 (Janez)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296384": {
+      "poster": "anon00",
+      "content": "@\"Daeyarn\"#p296371 Je li onda uopce nuzno za 1 procesor? Bas zbog tog slucaja se cini dosta redundantno",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296388": {
+      "poster": "Daeyarn",
+      "content": "@\"anon00\"#p296384 mislim da zapravo nije, ali kad u pripremi kaze da treba napraviti mjerenja za P = 1, ..., 8 procesora sam napravio da moze funkcionirati program i ako pokrenemo sa samo jednim procesorom u slucaju da me profesor pita da pokrenem sa jednim procesorom",
+      "votes": {
+        "upvoters": [
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296389": {
+      "poster": "Lukak",
+      "content": "@\"anon00\"#p296384 ja nisam napravio specijalni slucaj i krenuo sam od mjerenja s P = 2 i bilo je ok",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Fica (Prof)",
+          "Fikalo",
+          "Rope (Rops)",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296394": {
+      "poster": "Haki",
+      "content": "jel smijemo koristit ovo njihovo slijedno rjesenje u c++ za plocu i pretragu il moramo svoje napisat?\n\nako smijemo onda mi se cini da nema previse posla za ovaj labos",
+      "votes": {
+        "upvoters": [
+          "Lukak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296397": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"anon00\"#p296088 Kolega, VELIKO Hvala",
+      "votes": {
+        "upvoters": [
+          "anon00"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296399": {
+      "poster": "Lukak",
+      "content": "@\"Haki\"#p296394 smijemo, ali mozes implementirati i svoje",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Haki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296420": {
+      "poster": "dora (AE)",
+      "content": "Koliko vam otprilike treba da komp napravi potez?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296427": {
+      "poster": "Daeyarn",
+      "content": "@\"AE\"#p296420 za P=1, 2 mi je \\~12 sekundi",
+      "votes": {
+        "upvoters": [
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296452": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "> Osim same implementacije, potrebno je empirijski utvrditi ubrzanje i učinkovitost algoritma\n\n> (definicija na predavanju)\n\nKoje su formule za ovo ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296453": {
+      "poster": "Daeyarn",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p296452 \n\n![](assets/2022-05-15/00013.png)",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296470": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Kak izmjerit za 1 procesor? Ako idem skroz slijedno nezeli mi se izvrsit program uopce, java heap space error mi baca, dok sa 8,9,10 procesora sve okej radi i dost brzo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296526": {
+      "poster": "Fikalo",
+      "content": "@\"Daeyarn\"#p296427 apsolutno mi nije jasno kako, do koje dubine si radio za workere? Ja sam radio sve skupa do dubine 4 i potez mi traje doslovno 0.1 sekundu, tak da ne znam sta mozda krivo radim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296529": {
+      "poster": "Fica (Prof)",
+      "content": "@\"Fikalo\"#p296526 ako staviš na 8,9 barem onda bi ti se trebala vidjeti razlika",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296530": {
+      "poster": "Fikalo",
+      "content": "@\"Prof\"#p296529 a od tih dubine 8, koliko tebi obavi voditelj a kolko taskova se napravi? jer ovak kak trenutno imam da voditelj napravi 2 dubine a radnik 2 kazem traje mi dosl 0.1s pa i manje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296545": {
+      "poster": "Spuk",
+      "content": "sta da radimo onda ako nemamo 8 jezgri ili drugo racunalo koje bi mogli spojit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296548": {
+      "poster": "Spuk",
+      "content": "Koliko dugo vam traje izvodjenje programa na 4 jezgre?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296563": {
+      "poster": "zvonkoBogdan",
+      "content": "@\"Fikalo\"#p296530 Ovisno o implementaciji; ako imas onaj klasicni pristup da producer radi 49 taskova onda su to 2 razine koje je on obavio, a ostale, u tvom slucaju 6 od 8, obavljaju produceri",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296567": {
+      "poster": "Diego",
+      "content": "\"Rezultate mjerenja NIJE POTREBNO prilagati u arhivu.\" Jel treba predat dokumentirane 4 faze onda ili samo kod?",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296569": {
+      "poster": "Daeyarn",
+      "content": "@\"Fikalo\"#p296526 oh wow to je brzo xD, mislim da mi je do 6. razine stablo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296593": {
+      "poster": "Lukak",
+      "content": "@\"Fikalo\"#p296530 mala ti je dubina. U zadatku se spominje dubina od 7 pa probaj povecati. Na 4 se do 4og poteza ni ne moze doci do konkluzivnog rezultata",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296600": {
+      "poster": "Fikalo",
+      "content": "@\"Lukak\"#p296593 je digo sam na 8 razina i sad mi traje 14 sekundi tak da je ok",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Daeyarn",
+          "Lukak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296667": {
+      "poster": "Spuk",
+      "content": "@\"Diego\"#p296567 Di to pise ?\n\nSTa na kraju onda treba predat kod i onu dokumentaciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296669": {
+      "poster": "Spuk",
+      "content": "@\"Lukak\"#2315  sta su te jos ispitivali osim sto si pokrenuo i pogledali su mjerenja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296670": {
+      "poster": "Lukak",
+      "content": "@\"Spuk\"#p296669 samo pokrenut, objasnit kako radi kod i zasto su mjerenja takva kakva jesu",
+      "votes": {
+        "upvoters": [
+          "Spuk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296680": {
+      "poster": "Reznox",
+      "content": "Kako shvatit zasto mi za n=2 najbrze radi (0.0165), zatim za n=3 (0.035), n=4 (0.37) i ista vise od n=4 je iznad 1 sekunde cisto jer nemam vise od 4 jezgre haha...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296681": {
+      "poster": "Fikalo",
+      "content": "@\"Spuk\"#p296667 pise ti na ferku di predajes da treba samo kod",
+      "votes": {
+        "upvoters": [
+          "Spuk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296682": {
+      "poster": "Fikalo",
+      "content": "@\"Reznox\"#p296680 nisam siguran, jer sto je veci n to bi obrnuto proporcionalno se trebalo smanjivat vrijeme koje je potrebno",
+      "votes": {
+        "upvoters": [
+          "Reznox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296685": {
+      "poster": "Reznox",
+      "content": "@\"Fikalo\"#p296682 Shvatio sam na kraju, dubina mi je postavljena na 7 bila, to bi mi nekako sjebavalo sve, koristeći dubinu 4 i 5 imam vidljivo ubrzanje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296686": {
+      "poster": "Spuk",
+      "content": "@\"Fikalo\"#p296681 Oni i njihov ferko. Prije postavljanja pitanja, pregledan ferko i svejedno nema te informacije. Opet se ne snalazim na ferku. Ok onda samo kod bez onog dokumenta koji opisuje program? koji klinac onda pisemo taj dokument???",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296687": {
+      "poster": "Fikalo",
+      "content": "@\"Spuk\"#p296686 \n\n![](assets/2022-05-16/00015.png)",
+      "votes": {
+        "upvoters": [
+          "Spuk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296688": {
+      "poster": "Spuk",
+      "content": "Btw kad ste racunali ubrzanje i ucinkovitost sta ste koristili za T1 (vrijeme sekvencijalnog programa)?? Jer kad pokrneem njihov program koji je navodno sekvencijalni na istoj ploci i dubini mi je brzi od paralelnog na 6 jezgri.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296689": {
+      "poster": "Spuk",
+      "content": "@\"Fikalo\"#p296687 Ma vjerujem ti. Samo ja i ferko se ocito ne mozemo poslozit. Ima sto informacija na sto mjesta i aj ti nadji ono sto tebi treba.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296755": {
+      "poster": "anon00",
+      "content": "Zna li netko je li moguce u C++-u poslati citavu istancu custom klase preko MPI poruka? \n\nOni u primjeru imaju klasu Board i sad me zanima je li ja mogu jednostavno \n\nMPI_Send(&currentBoard, sizeof(currentBoard), MPI_Datatype, dest, tag, MPI_COMM_WORLD);\n\nOno sto me muci je ovaj MPI_Datatype, ali sam vidio da postoji workaround kao [ovo](https://www.open-mpi.org/doc/v1.5/man3/MPI_Type_contiguous.3.php) i [ovo](https://www.open-mpi.org/doc/v1.5/man3/MPI_Type_create_struct.3.php)\n\nE sad... Da ne bi slucajno krenuo tim putem pa nakon X sati skuzim da to ipak ne radi - zanima me je li tko pokusao na ovako neki nacin?\n\nEdit: \n\nZnam da je malo kompliciranje - koristim njihov kod pa pokusavam sto manje ga izmjenjivati. Workaround mi je da saljem 2d array stanja ploce pa napravim custom funkciju load koja nece loadati iz txt file-a kako oni imaju vec is tog array-a popuniti sve podatke iz Board klase",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296818": {
+      "poster": "mariak (kaiak)",
+      "content": "ima li tko ideju zasto mi nista ne ispisuje kad pokrenem program iz terminala na windowsu, a na linuxu sve normalno radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "neksi (filip)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296838": {
+      "poster": "MsBrightside",
+      "content": "@\"kaiak\"#p296818 sys.stdout.flush() dodaj nakon printa možda, ako si u pythonu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296855": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "Jel onda okay uzet 7 workera i dat im svakom po jedan zadatak? S tim da je zadatak stanje ploce nakon 1 od 7 mogucih poteza (radim infinite height plocu) Ili bas zahtjevaju da to bude nesto dinamicki  dodjeljeno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296863": {
+      "poster": "Daeyarn",
+      "content": "@\"DnkCkv\"#p296855 meni je prof rekao da bi trebalo doci do barem druge razine gdje je 49 stanja pa njih dijeliti radnicima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296872": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@\"Daeyarn\"#p296863 hm, znaci  master simulira 7 mogucih poteza racunala, za svaki od njih po 7 mogucih poteza covjeka --> 7*7 stanja, i onda workeri simuliraju od tih stanja dalje pocevsi sa pc potezom?",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296879": {
+      "poster": "anon00",
+      "content": "@\"DnkCkv\"#p296872 Upravo tako \n\nMaster treba stvoriti minimalno 49 zadataka i onda to dijeliti radnicima. Kad svi budu gotovi treba rezultate svakog podstabla pozbrojiti i podijeliti da se dobije ocjena za roditelja (onih 7 iz prve razine) i onda jos treba pogledati koji je od tih 7 najbolji rezultat pa taj potez napraviti. \n\nMene zanima nesto drugo: \n\nProfesor je komentirao da mozemo imati fixno 8 radnika i onda pokretati na 1,2,4,8 procesora. Znam da je na satu nesto brzinski pokazivao u task manageru da se moze za program odrediti na koliko procesora ce se vrtiti - je li to to ili kako je zamišljeno to pokretanje na razlicitom br. proc. ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296907": {
+      "poster": "Reznox",
+      "content": "El moze netko pojasnit pisanje ove dokumentacije sto traze? Shvacam da moramo usporedivat brzine mjerenja, ali ovo ostalo mi je nejasno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296908": {
+      "poster": "MrDREDD",
+      "content": "Što uzeti za T1 kod izračuna, ako program radi samo za >2 procesora(master samo dijeli zadatke radnicima i prikuplja rjesenja)? Nerazumno mi je uzet vrijeme izvođenja slijednog programa koji je za iste uvjete brži od paralelnog na 8 procesora.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296910": {
+      "poster": "Reznox",
+      "content": "@\"MrDREDD\"#p296908 To i mene zanima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296954": {
+      "poster": "yabk",
+      "content": "Jel se stigne ovo napraviti do roka veceras ako nisam jos ni poceo? 😅",
+      "votes": {
+        "upvoters": [
+          "rolotex (brr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296976": {
+      "poster": "Lukak",
+      "content": "@\"yabk\"#p296954 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296977": {
+      "poster": "Lukak",
+      "content": "@\"MrDREDD\"#p296908 vec je komentirano iznad",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296984": {
+      "poster": "[deleted]",
+      "content": "da provjerim - kad zadamo 49 zadataka, onda je svako od tih 49 podstabala jedan jedini zadatak, bez obzira koliko još zadamo da se njegovih razina izgradi?",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297003": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p296984 da, tih 49 stanja se dijeli medu radnicima i svako podstablo je kao 1 zadatak\n\naa moje pitanje je treba li predavati ikakav dokument, posto u labosu pise da treba dokument u kojem su opisane 4 faze razvoja programa + mjerenja, a na ferku pise da mjerenja ne treba. treba li onda ove faze razvoja dokumentirati ako mjerenja ne treba?",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297006": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p297003 kolko sam ja skužila predaješ samo izvorni kod, a dokumentaciju valjda ispitivaču na zahtjev",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297015": {
+      "poster": "angello2",
+      "content": "![](assets/2022-05-17/00019.png)\n\nkak to da mi ubrzanje ide sve do 12 procesa ako imam 6 jezgri i 12 threadova? kaj ne bi trebalo rast do 6 (odnosno 5 na grafu ovdje jer je jedan master)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297017": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"angello2\"#p297015 Može rast i dalje, ovisi o zadatku, implementaciji, platformi na kojoj se izvršava itd.\n\nOno što ti se smanji nakon 5 je razlika u ubrzanju, pogledaj nagib",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297022": {
+      "poster": "marta7575 (user7575)",
+      "content": "jel zna netko zasto mi je ubrzanje na pocetku blize eksponencijalnom nego linearnon?\n\n![](assets/2022-05-17/00021.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297027": {
+      "poster": "reygrep",
+      "content": "jel imao netko problema s pythonom i ispisom ploce? ma kolko god flushala ne zeli mi se ispisat u 90% slucajeva",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297037": {
+      "poster": "anon00",
+      "content": "Kako napraviti master/slave sa MPI porukama u c++, a da ne dode do deadlock-a?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297040": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"reygrep\"#p297027 Da izbjegneš zajebanciju i istraživanje jesu li ti i kako MPI procesi povezani s glavnim procesom, možda bi ti bilo bolje na početku u glavnom procesu stvoriti neki daemon kojem će ostali slati u Queue poruke koje on onda printa. U tom slučaju ti je za printanje zaslužan samo jedan proces (a ne proizvoljan broj koje MPI stvara), pa će ti u najmanju ruku biti lakše debuggati.\n\nTaj proces može doslovno biti sljedeća metoda:\n\n```\nfrom multiprocessing import Queue\n\ndef print_process(input_queue: Queue):\n    for command, message in input_queue.get():\n        if command == \"stop\":\n            return\n        elif command == \"print\":\n            print(message)\n    return\n```\n\n(šalješ mu tuple (naredba, poruka), pa ga možeš i ugasiti ako mu pošalješ `stop` naredbu)\n\nU svakom slučaju flush ti nije baš naredba nego više *sugestija*, moja pretpostavka je da za što god je zaslužen bi ti se ispisalo tek na kraju posla, a ne kad mu narediš, i da to lakše riješiš procesom zasluženim za printanje koji manje serucka oko \"naredbi\" i ima jasniji graf roditelja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297236": {
+      "poster": "Reznox",
+      "content": "Jesam jedini kojem nema termina za labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297238": {
+      "poster": "matt (Matt)",
+      "content": "@\"Reznox\"#p297236 Meni je sve uredno. Jesi li odabrao termin na ferku? Rok je bio do utorka u 23:59",
+      "votes": {
+        "upvoters": [
+          "Reznox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Reznox"
+        ]
+      }
+    },
+    "297239": {
+      "poster": "Reznox",
+      "content": "@\"Matt\"#p297238 Covik zaboravia lol, leti mail jakobovicu 🙃🙃",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "__builtin_popcount (std::popcount)"
+        ]
+      }
+    },
+    "297303": {
+      "poster": "LLL",
+      "content": "na predaji tražili da se pokažu grafovi i pitali kako se određuju zadaci i paralelizira obrada, i još kako se određuje je li došlo do pobjede",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Haki",
+          "Jale (čakijale)",
+          "Kasperinac",
+          "Kennedy",
+          "Retard00",
+          "SuperSaiyano",
+          "matt (Matt)",
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297346": {
+      "poster": "anon00",
+      "content": "Jesu li ikog pitali teoriju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297353": {
+      "poster": "whatTheHel",
+      "content": "@\"anon00\"#p297346 nope, samo pokazat grafove ucinkovitosti i ubrzanja, i pitanja: kako se salje stanje ploce, kako se provjerava pobjeda, kako radnici znaju da je igra gotova",
+      "votes": {
+        "upvoters": [
+          "Haki",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297412": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Zasto ucinkovitost pada ? Koji je loicki zakljucak iz toga ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297414": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p297412 pa  ima smisla, proizlazi iz toga da kako povecavamo broj procesora mi efektivno ne dobimo P puta bolji algoritam (amdahlov zakon), pa učinkovitost pada",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297463": {
+      "poster": "blast",
+      "content": "di je pisalo da se program mora zavrsit, zasto asistenti skidaju bodove na gluposti. zasto je ovaj predmet smece i zlato u isto vrijeme.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Bucc (Olive Oil)",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "indythedog",
+          "mini (Earthling)",
+          "sheriffHorsey",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297512": {
+      "poster": "Skenk",
+      "content": "Kad je krajnji rok na kojem se moze predat ovaj labos za smanjeni broj bodova? I postoji li opcenito krajnji rok za predaju prije kraja semestra?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298104": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@\"Skenk\"#p297512 https://www.fer.unizg.hr/predmet/parpro/ispiti tu su ti svi rokovi i moguci bodovi",
+      "votes": {
+        "upvoters": [
+          "Skenk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298109": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Jel itko imao problema pri kompajliranju onog njegovog koda što je dao za program? Moja verzija g++-a je 11.2. te mi poizbaciva pun k pogrešaka pa da ih sad ne nabrajam, mogu li ljudi koji imaju tu verziju pomoć jer frend s verzijom 9.4.0 može uredno izkompajlirat i pokrenut program, dok ja i kad sam proba s g++-9, izkompajlira bez greške, al javi segfault.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298117": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"viliml\"#p296014 koja ti je verzija g++ kompajlera jer meni ovaj tvoj način izbaciva pun k grešaka, neuk sam na ovom polju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298124": {
+      "poster": "anon00",
+      "content": "@\"iNut\"#p298117 Nisam radio tako rucno, ali meni je jedan od razloga nekompajlanja bio onaj njihov \"data\" type gdje su napravili \"typedef data int\" kako bi s jednom linijom mogao zamijeniti je li ti stanje ploce int ili string. \n\nSamo ctrl+f i svaki data zamijeni sa int ili string\n\nTakoder, nemam pojma kako ces naknadno sa g++ kompajlati MPI program tj kad ga paraleliziras - zbog tog sam ja radio u visual studio i pratio one njhivoe upute za postavljanje visual studio okoline",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298212": {
+      "poster": "Baksuz",
+      "content": "Jel se ikome dogodilo da jedan proces dominira s izvršavanjem zadataka? npr. da drugi naprave po jedan,dva zadatka a on napravi 40ak zadataka? Ako da, znate li kako to popraviti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298218": {
+      "poster": "Baksuz",
+      "content": "@\"Baksuz\"#p298212 Za sve kojima se dogodi ista stvar, ako radite move potez na ploči u workeru, da napravite i undo. Ne znam na koji je način povezano to, ali sad mi radi okej.",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298245": {
+      "poster": "DAC",
+      "content": "Jel potrebno implementirat serijski ovo kad je samo 1 procesor u pitanju ili mogu samo skipati to i napraviti graf za od 2 do 8 procesora?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298246": {
+      "poster": "SuperSjajan3",
+      "content": "@\"DAC\"#p298245 Mozes skipat, ja sam napravio graf od 1 do 8, ali sam naglasio da se to odnosi na broj radnika ajmo reć tj. da je zapravo taj graf onda od 2 do 9",
+      "votes": {
+        "upvoters": [
+          "DAC"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298496": {
+      "poster": "faboche (him)",
+      "content": "Netko tko je radio u C++ s MS-MPI, kako ste compileali i pokretali kod?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298744": {
+      "poster": "dora (AE)",
+      "content": "@\"faboche\"#p298496 `mpiexec -n 5 connect4.exe ploca.txt 6`  gdje je 6 dubina pretrazivanja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298780": {
+      "poster": "faboche (him)",
+      "content": "@\"AE\"#p298744 Kojom naredbom stvoris exe",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298785": {
+      "poster": "neksi (filip)",
+      "content": "![](assets/2022-05-26/00015.png)\n\nkako rijesit ovaj problem, javlja mi da je data \"ambiguous\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298787": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"filip\"#p298785 \n\nzamijeni data s int i izbriši typedef koji piše iznad defnijicija HUMAN i CPU.",
+      "votes": {
+        "upvoters": [
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298788": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"faboche\"#p298780 \n\nja stvorim s mpic++ main.cpp\n\nali ja sam sve iz board.cpp pribacija u main.cpp  jer mi nije iz nekog razloga radilo\n\nNAPOMENA: radim na linuxu i tako sam stvorija iz terminala, ali ne bi trebalo biti drukčije na Windowsu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298792": {
+      "poster": "dora (AE)",
+      "content": "@\"faboche\"#p298780 u visualu pokrenem build solution",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299034": {
+      "poster": "neksi (filip)",
+      "content": "jeste koristili MPI_Reduce u ovom labosu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299035": {
+      "poster": "faboche (him)",
+      "content": "@\"filip\"#p299034 Ne",
+      "votes": {
+        "upvoters": [
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299154": {
+      "poster": "--- ( 🤡 )",
+      "content": "ovo je najgori labos na svijetu",
+      "votes": {
+        "upvoters": [
+          "AnamarijaM (MA)",
+          "Bisolvon",
+          "Dlaid (Peter Jordanson)",
+          "MOXY",
+          "Nocna_smjena",
+          "Parazit",
+          "Rene",
+          "Uchenikowitz (Učečuču)",
+          "Veki",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "iva7740 (Mica Trofrtaljka)",
+          "mini (Earthling)",
+          "niknik",
+          "spampers (majmunska boginja)",
+          "steker",
+          "tomekbeli420",
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300751": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "kako najlakse objasniti graf ucinkovitosti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300929": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p299154 ajde, barem je lab3.. puno gori",
+      "votes": {
+        "upvoters": [
+          "mini (Earthling)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "MsBrightside"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301025": {
+      "poster": "spampers (majmunska boginja)",
+      "content": "ajmo hipotetski reć da mi kod ne radi\n\nono\n\nneće ni da krene\n\nrecimo hipotetski\n\nkolka je šansa da će me oborit na labosu čak i ako mu sve lieeeepo objasnim i dam mu ideju iza algoritma\n\nhvala LP MB",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "Bucc (Olive Oil)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301045": {
+      "poster": "Svudec",
+      "content": "@\"majmunska boginja\"#p301025 Ovisi o asistentu",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "--- ( 🤡 )"
+        ]
+      }
+    },
+    "301091": {
+      "poster": "steker",
+      "content": "Kolko detaljno pitaju po kodu, od  600-700 linija i 10 razlicitih verzija vise ne znam koji sam kursc radila svugdje lmao",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301108": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@\"steker\"#p301091 kako je izvedena paralelizacija, kolko ima zadataka i što svaki zadatak predstavlja, i tipa kako se određuje je li igra gotova",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301151": {
+      "poster": "spampers (majmunska boginja)",
+      "content": "dobra večer, labos napokon proradio 🐵",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Bisolvon",
+          "Daeyarn",
+          "Uchenikowitz (Učečuču)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301259": {
+      "poster": "Bisolvon",
+      "content": "Jesu li trazili da se skida kod s ferka pri demostraciji ili mogu realno predat kod koji ne radi pa tipkat do termina?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "shoshakis (teshna)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301266": {
+      "poster": "cowboy",
+      "content": "predaja za 2. labos na ferku je do danas u ponoc, jeli to neka greska?",
+      "votes": {
+        "upvoters": [
+          "feudalac"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301273": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@\"Bisolvon\"#p301259 ne traze da se preuzima s ferka, bar nisu u mom terminu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301282": {
+      "poster": "steker",
+      "content": "@\"Bisolvon\"#p301259 mene nisu trazili",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "title": "[SZRUSV] Završni ispit - 2021/2022",
+  "creator": "Dlaid (Peter Jordanson)",
+  "slug": "szrusv-zavrsni-ispit-20212022",
+  "tags": [
+    "FER",
+    "Sustavi za rad u stvarnom vremenu",
+    "Ispiti"
+  ],
+  "posts": {
+    "272368": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "jel u zavrsni ulazi gradivo prvog ciklusa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272375": {
+      "poster": "[deleted]",
+      "content": "@\"Peter Jordanson\"#p272368 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273452": {
+      "poster": "member",
+      "content": "U ovom zadatku iz završnog... Kako je moguće da se dretve raspoređuju po 2 različita kriterija?\n\nKako funkcionira raspoređivanje kad D3 dođe u sustav u 10. sekundi? \n\nIspada da se rasporede po SCHED_RR od D2\n\n![](assets/2022-01-25/00014.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273518": {
+      "poster": "Lujonlu (Gannicus)",
+      "content": "@\"member\"#p273452 siguran sam da ce svaki takav zadatak imat ta dva kriterija u kombinaciji. FIFO će uvijek kad dode na red izvršit svoj zadatak do kraja, RR mijenja nakon kvanta vremena, nastavlja samo ako nema dretve istog ili višeg prioriteta. Ovdje u 10. sekundi  je dretvi 2 istekao kvant vremena i sada pošto je dretva 3 istog prioriteta dretva 2 se miče u pripravne a D3 postaje aktivna, s time da je ona FIFO pa će se izvršit do kraja. Nakon toga opet dolazi D2 na red jer je većeg prioriteta od D1, i zbog prioriteta (D2>D1) nakon isteka svakog kvanta vremena D2 i dalje ostaje sve dok ne zavrsi",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

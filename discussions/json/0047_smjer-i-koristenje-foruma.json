@@ -1,0 +1,53 @@
+{
+  "title": "Smjer i korištenje foruma",
+  "creator": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+  "slug": "smjer-i-koristenje-foruma",
+  "tags": [
+    "Službeno"
+  ],
+  "posts": {
+    "716": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Prevođenjem jezgre foruma na hrvatski, završena je inicijalna faza postavljanja foruma. Do kraja tjedna bi i sve ekstenzije trebale biti prevedene, a sada slijedi ono što sam trebao napisati na samom početku\n\n# Materijali\n\nKao što sam već tisuću puta rekao, materijali su dostupni na [sljedećoj poveznici](https://www.github.com/studosi?tab=repositories). Već sam dobio nekoliko upita oko pomoći, i do sad sam svima odgovorio da je prioritet srediti materijale.\n\n## Što je problem\n\nPrimarni problem je što su neki materijali krivo sortirani. Onda je problem što materijali imaju redundantne nazive. Dio ovog će se rješavati skriptom, zatim opet, po potrebi, ručno. Posljednji problem je što je velik dio materijala redundantan - npr. labosi. Ovo se planira riješiti u posljednjoj fazi, stapanjem svih takvih u jedan, supermaterijal. Za labose bi to bili superlabosi (detaljno dokumentirani labosi bez pogrešaka). Za literaturu bi to bile super skripte - studentski izrađeni dokument koji obrađuje sve što bi i službena literatura, na pristupačniji način. Za rješenja zadataka, ispite i sl. to bi bila superzbirka zadataka - kompilacija svih zadataka i rješenja, indeksirano i uređeno.\n\n### Što zasad treba napraviti\n\nTrenutno treba riješiti klasifikaciju materijala.\n\nNa najosnovnijem nivou, to je zapravo popisivanje materijala i njihove lokacije koji su krivo smješteni u foldere. Kao dodatan korak, bilo bi lijepo kad bi se uz to napravio pull request s popravljenom strukturom. Međutim, i sami popis bit će dosta - materijale imam lokalno i sav posao bi se svodio na to da ih premjestim u pravi folder - nešto što se da napraviti unutar jednog dana\n\n# Korištenje foruma\n\nTrenutno forum ima pregršt zanimljivih proširenja. Ono što je vama korisno je sljedeće:\n\n## Privatni razgovori\n\nMoguće je pokrenuti privatni razgovor tako da se ode na profil korisnika s kojim želite razgovarati, klikom na gumb `Privatne rasprave` (trenutno nije prevedeno pa se zove `Private discussions`), pa klikom na `Nova privatna rasprava` (trenutno iz istog razloga `New Private Discussion`).\n\n## Ugradnja sadržaja\n\nMožda ste skužiti da kad stavite goli link u objavu, nekako vam se stvori YouTube player, ili Facebook player itd. To sve sve automatizirano ugrađuje, ima toliko ugradnji da ih vjerojatno ne znam ni napamet, ali svaki podržani servis za koji je napisan đavoskript embedder vjerojatno postoji. Čak i reddit postove možete ugraditi. Sve u svemu, __ne trebate__ se siliti pravilno označiti sliku ili youtube video - samo ju kopirajte u uređivač teksta, a on će za vas učiniti ostatak posla.\n\n## Skice\n\nObjave i rasprave moguće je spremiti kao skice (zapamtiti, ali ne objaviti). Ovo možete klikom na disketu koja se nalazi u gornjem desnom kutu uređivača teksta (ovo s čim pišete objave).\n\n## Praćenje oznaka\n\nKategorizacija se na forumu svodi na oznake. Ovo je puno jednostavniji i moćniji sustav od kategorija. Analogija predmetnih pretplata bi, dakle, bilo praćenje oznaka. Pratiti oznaku možete tako da odete na stranicu oznake (svaka oznaka ima svoju stranicu), te da kliknete na `Prati` (trenutno nije prevedeno pa se zove `Follow`). Primjer jedne od stranice oznaka može se pronaći [na sljedećoj poveznici](https://forum.studosi.net/t/mrepro). Kad krenete pratiti oznaku, dobit ćete obavijest kad se nešto objavi pod tom oznakom. Ako vam je to preopćenito (npr. želite pratiti samo labose nekog predmeta), nativno možete pratiti rasprave klikom na sličan gumb unutar neke rasprave (nalazi se desno).\n\n## Ignoriranje korisnika\n\nAko vam netko smeta, ili ga jednostavno ne želite gledati, možete ga ignorirati. Ovo možete učiniti tako da odete na profil spornog korisnika, kliknite na `Upravljanje`, spustit će vam se menu na na kojem imate opciju `Ignoriraj`. Ignorirati možete sve osim donova i konsiljera, ali vjerujem da njih nećete imati potrebu ignorirati.\n\nObjave osoba koje ignorirate neće vam se prikazati, a i te osobe neće moći započeti privatni razgovor s vama.\n\n## Ankete\n\nTrenutno je moguće dodati anketu prilikom otvaranja rasprave, a to se može gumbom `Dodaj anketu` (tj. trenutno `Add Poll`).\n\n## Direktorij korisnika\n\nNajlakše je pretraživati korisnike pomoću Direktorija korinsika. On se može pronaći s lijeve strane na naslovnici.\n\n## Hashtagovi\n\nOsim objava, moguće je hashtagati izraze. Klikom na hashtag pokreće se pretraga, pa su takvi koncepti korisni kad netko nešto treba pretražiti na forumu - kao neki Let me Google that for you, ali studosi.net verzija. Primjer ovoga je npr. ovo: #spam\n\n## Markdown\n\nForum koristi Markdown za oblikovanje. Neke osnovne koncepte možete proučiti [ovdje](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).\n\nOsim toga, dodani su npr. spoileri, koji se mogu postaviti s `|| inline spoiler ||` i `>! višelinijski spoiler`. Višelinijski spoiler se može i zatvoriti s `!<`, čime degenerira u ovaj prvi. Inline spoiler može biti na više linija, trenutno ne sakriva emojije, ali pull request je već prihvaćen i bit će dostupan za nešto manje od mjesec dana kad bude izdana nova verzija forumskog softvera.\n\n## LaTeX\n\nPostoji ekstenzija koja displaya LaTeX. Postoje block i inline verzija -> block verzija se navodi opasavanjem s `b$`, dok se inline verzija dobiva opasavanjem s `i$`. Inače, to je malo nespretno, možda u budućnosti forkam plugin pa to napravim s klasičnim znakovima. Osim tih oznaka, latex se može dodati s BBCode tagovima `math` i `imath`.\n\n## Spominjanje\n\nKorisnike s može spomenuti tako da se njihovom nadimku ili korisničkom imenu stavi prefiks `@`. Dakle, ako želite spomenuti mene, upišete @micho . Ponekad će vam se spomenuto ime promijeniti, i to je u redu - to samo znači da ta osoba nema nadimak isti kao i korisničko ime.\n\n# Planovi za dalje\n\nKao što i opis stranice kaže, plan je koncept FER3 proširiti na cijelu RH. Inicijalno je bila ideja imati to sve na istoj stranici, ali sada sve više vidim nemogućnost toga. Međutim, ne želim dijeliti studente. Trenutno su ovo moje misli:\n\n- uz FER pokušati izgraditi stabilnu zajednicu kojoj ne trebaju više nova proširenja i koja ima jasno definirano hijerarhiju i norme\n- dok se gradi FER, dopustiti srodnim fakultetima da pokušaju razviti isto - korisno bi bilo gledati na stvari i s druge strane, jer naše rješenje treba biti kompatibilno sa svim fakultetima, treba  davati dovoljno slobode da ne guši individualnost, a opet biti dovoljno dobro strukturirana, dovoljno jake kičme, da se ne uruši kad ključna osoba ode, kao što je bila stvar s bivšim forumom.\n- jednom kad stvari krenu rasti, svaki fakultet bi trebao imati svoju poddomenu i svojeg dona, konsiljere i kapoe - međutim, svi oni su kao sluge, oni nisu forum, već su to korisnici\n  - ako neko od njih najednom nestane, mora postojati mehanizam koji će spriječiti urušavanje, a takvo što se može ostvariti da se znatan dio zajednice ostavi samim članovima\n  - iz toga proizlazi činjenica da moderatori ne bi trebali brinuti da su članovi u skladu s očekivanjima, već **forum**, a članovi se brinu o zajednici jer su oni ta zajednica</LI>\n- kako će sve to biti na različitim poddomenama i mašinama (jer je **nemoguće** pokriti cijelu hrvatsku na **jednoj** mašini, a konkurentni sustavi su prekomplicirani, barem za mene), postojat će i neki mehanizam da netko s drugog faksa najnormalnije pristupi nekom drugom - o ovome više kasnije, ali takvo što će se dati riješiti bez nekih većih kompromisa\n\n# Planovi specifični za FERovski odsječak\n\nKako je sve ovo jako dugo, održat ću ovo što kraćim mogu - nema planova uvoditi članarine, ali vjerujem da će ova odluka biti zasebna za donove svakog fakulteta. Međutim, i to je upitno, jer postoje neki planovi kako možemo monetizirati naš rad na forumu i time održavati forum, a i više.\n\nMeđutim, čisto da bude jasno, dok nemamo status neprofitne udruge, ja dolazni novac ne primam, jednostavno ne treba mi to u životu.\n\nPlan nije imitirati stari forum, no plan je primijeniti sve ono korisno što je on imao. Jedan primjer toga su materijali. Vjerujem i da se neformalna interakcija studenata isto može poboljšati. Bilo bi jako lijepo kad bi, npr., mogli imati cross-faks OČRT meeting, ali to je trenutno na razini snova.\n\nŠto se tiče starih objava i materijala, ja ću sutra, na nagovor bliskih osoba, razgovarati s rovokopom. Čuo sam da postoje određene miskoncepcije i da on čeka da dođe netko vrijedan toga kome bi predao stare objave i zadnje materijale. Oni koji su vidjeli moj manifest znaju da ja nakon svega izrečenog možda i nisam u poziciji pitati za to - no ono što sam rekao, a oko toga sam se trudio, je bila istina. Ja ću pojesti kakvo god govno morao da te materijale dobijem, ali naravno, to nije do mene.\n\nViše informacija oko ovoga dat ću sutra ili u narednim danima, ovisno kad ću moći razgovarati s rovom.\n\n# Finalno\n\nAko imate kakvih pitanja, slobodno mi pošaljete poruku tu, ili upit na info@studosi.net, ili napravite neku raspravu, tipa naziva \"Voditelji pitanja i odgovori\" pa me pitate tamo, i ja ću vam kad stignem odgovoriti.",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "BrkMateaBeusana (Umarell)",
+          "Darla",
+          "Filemon",
+          "Franksta",
+          "Galke",
+          "GranAutismo",
+          "Longclaw",
+          "Mars (mars_)",
+          "Mike (Klaud Konzultanta)",
+          "Mikki",
+          "Murin",
+          "Njet",
+          "PrisonMike (Števo)",
+          "Suki7",
+          "Svarog (Veles)",
+          "UkiseljeniKrastavac",
+          "Urmum (mamaRu)",
+          "ZvonkoSisoje",
+          "[deleted]",
+          "[deleted]",
+          "iNavy (mornar Ica)",
+          "in1",
+          "indythedog",
+          "ink",
+          "member",
+          "moose (sugar BoOo!!)",
+          "rija",
+          "triespe"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

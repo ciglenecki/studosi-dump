@@ -1,0 +1,303 @@
+{
+  "title": "[DOIAS] 2. laboratorijska vježba - 2021/2022",
+  "creator": "feel_d_boot (iNut)",
+  "slug": "doias-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Digitalna obrada i analiza slike",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "289263": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Jel netko rišija 3.3.1 zadatak s propuštanjem slike kroz filtere? \n\nKako se taj zadatak uopće riješi jer ne želim copy pasteat i kurca ne razumit s ovim labosima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289277": {
+      "poster": "daer",
+      "content": "Ja sam to napravio na način da sam low pass filter prepisao od onog što su dali. High pass filter bi trebao biti originalna slika - slika koja je provučena kroz low pass, međutim ja sam radio svoj high pass filter na način da zamijenim nule i jedinice, ali ne u potpunosti. Nakon svega sam računao band stop filter kao high pass filter + low pass filter i na kraju band pass filter koji je onda originalna slika - band stop filter.\n\nNapomena za high pass filter: ovaj način ne funkcionira ako u potpunosti zamijenis nule i jedinice u odnosu na low pass filter, jer onda je high pass + low pass = originalna slika što bi trebalo bit band stop. Isto tako onda je band pass = originalna slika - originalna slika i to daje totalno crnu sliku(sve nule).",
+      "votes": {
+        "upvoters": [
+          "BaboTrojka",
+          "Uchenikowitz (Učečuču)",
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289646": {
+      "poster": "Upforpslone",
+      "content": "> @\"iNut\"#p289263 jer ne želim copy pasteat\n\nOd kud mogu copy pasteat?",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Lukak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "--- ( 🤡 )",
+          "Emma63194",
+          "InCogNiTo124",
+          "Nina1712 (pocahontas)",
+          "Tone",
+          "blablajar",
+          "indythedog",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "oneTwo"
+        ],
+        "wtf": [],
+        "tuga": [
+          "feel_d_boot (iNut)"
+        ]
+      }
+    },
+    "289675": {
+      "poster": "Baksuz",
+      "content": "Kako vam uopće izgledaju slike nakon tih filtera iz zadatka 3.3.1?",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289686": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Za 3. bilježnicu, jel netko rišija zadnji zadatak s kvantizacijom koeficijenata? Kakva crna kvantizacija lmao",
+      "votes": {
+        "upvoters": [
+          "SuperSaiyano",
+          "nekoIme"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289748": {
+      "poster": "Artemis",
+      "content": "3.2 zadnji podzadatak...možemo li iz faze spektra reći gdje u matrici se nalazi slika? Može netko objasniti ovaj zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289866": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@\"iNut\"#p289686 Ni ja to ne razumijem jer pod 3.5 pise:\n\n> Then, for each block DCT is calculated and and the coefficients are quantized. Quantized coefficients are are then coded with Huffman algorithm.\n\nSto bi znacilo da su koeficijenti vec kvatizirani?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289867": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@\"Artemis\"#p289748 procitao sam izvjestaj labosa iz 2011-12 koji imamo na materijalima, tamo pise da se moze reci gdje se nalazi slika, ali ne pise ni zasto ni kako",
+      "votes": {
+        "upvoters": [
+          "Artemis",
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289900": {
+      "poster": "Upforpslone",
+      "content": "@\"daer\"#p289277 Kako tebi izgleda HP filtar? Ja sam probo ovako ali slika je skoro ista kao i orginal![](assets/2022-04-08/00016.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289912": {
+      "poster": "dora (AE)",
+      "content": "Kako bi se trebali riješiti zadaci pod 4.3.1 u cetvrtoj vjezbi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290049": {
+      "poster": "BillIK",
+      "content": "@\"iNut\"#p289686 jesi li uspio išta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290053": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@\"AE\"#p289912 \n\nZnaci ja sam u 4.3.1.1 doslovno kopirao njihovo i gdje pise:\n\n`norm.ppf(result, loc = 0, scale = 10)` \n\nsam stavio:\n\n`logistic.ppf(result, loc = 0, scale = 100)`\n\n`scale = 100` sam stavio da se lijepo vidi logisticka funkcija na histogramu, nije obavezno:\n\n![](assets/2022-04-09/00008.png)\n\nU 4.3.1.2 sam opet kopirao njihovo i samo stavio sliku auta unutra i vide se brojevi na tablici:\n\n![](assets/2022-04-09/00009.png)",
+      "votes": {
+        "upvoters": [
+          "Nina1712 (pocahontas)",
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290061": {
+      "poster": "daer",
+      "content": "@\"Upforpslone\"#p289900 \n\nIsta je u potpunosti, to sam napisao napomenu. Ne radi kad HP filtar proglasi kao 1 - LP filtar. Ja sam ručno dizajniro HP filtar onako kako je dano za LP filtar samo sam izmijenio nule i jedinice i malo promijenio oblik tog ispunjenja da ne ispadne opet 1 - LP.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290116": {
+      "poster": "sssr",
+      "content": "Jel mi može netko reci kako ide ovaj cijeli dio sa shiftom koji bi odgovori na ova pitanja trebala bit?",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290122": {
+      "poster": "Emma63194",
+      "content": "U 3.3.1, desi li se ikome da proba high pass filter napraviti kao originalna slika - slika provučena kroz low pass filter, ali da rezultat ne bude filter nego opet ista slika?\n\nNe mogu shvatiti gdje je greška. U teoriji bi trebalo tako raditi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "InCogNiTo124"
+        ]
+      }
+    },
+    "290203": {
+      "poster": "Upforpslone",
+      "content": "U 4.5.1. kada dodajemo derivacije da zaostrimo sliku meni nema razlike u slikama uopce? \n\nRadio sam po ovoj formuli zaostrena_slika = img + sobel_v(img)",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "nimble"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290299": {
+      "poster": "Ryder (Pepper)",
+      "content": "Može li netko napisati što ispituju na labosu",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "oneTwo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290450": {
+      "poster": "Daeyarn",
+      "content": "@\"Pepper\"#p290299 labos ponedjeljak, pitao me u koje skupove brojeva preslikavaju fourierova transformacija i kosinus transofrmacija(ft kompleksni, kosinus realni), koja je razlika izmedu cirkularne i linearne konvolucije(koje su dimenzije izlaza ako slika dim m×n i h dim x×y, dim izlaza za linearnu je (m+x-1)×(n+y-1), za cirkularnu je max(m, x)×max(n, y)), pitao me kako rade median filter i averaging filter i koji je bolji za koju vrstu šuma(za s&p je bolji median filter, za gaussian šum je bolji averaging filter)",
+      "votes": {
+        "upvoters": [
+          "Nina1712 (pocahontas)",
+          "Upforpslone",
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290746": {
+      "poster": "--- ( 🤡 )",
+      "content": "Jel itko saznao zašto je iz faznog spektra moguće zaključiti gdje se nalazi slika?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,1383 @@
+{
+  "title": "[RASSUS] 2. domaća zadaća - 2020/2021",
+  "creator": "petar19",
+  "slug": "rassus-2-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Raspodijeljeni sustavi",
+    "Zadaće"
+  ],
+  "posts": {
+    "103205": {
+      "poster": "petar19",
+      "content": "Da li itko kuži na koji točno način treba detektirati da paket nije primljen?\n\nU kodu koji su nam dali samo klijentski socket postavi timeout parameter pa pretpostavljam da bi trebao poslati mjerenje preko klijentskog socketa, pozvati receive pa kad timeout prođe (dogodi se exception) ponovno poslati i tako dok ne dobijemo potvrdu.\n\nOno što mi nije jasno je da u tekstu zadatka piše da **Čvor za primanje potvrda i dolaznih očitanja susjeda koristi ista vrata odnosno potrebno je na aplikacijskoj razini implementirati logiku koja prepoznaje radi li se o potvrdi ili o očitanju te ispravno obraditi takav paket** što koliko ja shvaćam znači da poslužiteljski socket koji koristimo za primanje dolaznih očitanja trebamo koristiti i za primanje potvrda. No kako u tom slučaju na poslužitelju, koji nema definiran timeout, detektirati da nismo primili određenu potvrdu u pravom vremenu?\n\nJedino što mi pada na pamet je da svaki put kad pošaljemo mjerenje preko klijentskog socketa, napravimo timer koji nakon isteka vremena provjerava da li je potvrda prihvaćena (npr. koristeći nekakvu mapu/listu u koju poslužiteljski socket zapisuje primljene potvrde). No takvo rješenje mi se čini kao nepotrebno kompliciranje jer možemo jednostavno koristiti već ugrađeni mehanizam za timeout u klijentskom socketu.",
+      "votes": {
+        "upvoters": [
+          "WallStreetBets"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103239": {
+      "poster": "moukie",
+      "content": "@petar19#103205 \n\nJa sam to implementirao kao neku 'backLog' kolekciju u koju spremam mjerenja za koja nisam dobio odgovor i onda ta mjerenja svakih n sekundi ponovno saljem iz zasebne dretve\n\nJednom kad primi potvrdu za neko mjerenje na serveru micem taj zapis iz te 'backLog' kolekcije i tako dalje\n\nNe znam je li to korektno?",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "WallStreetBets"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103241": {
+      "poster": "moukie",
+      "content": "Može li se događadati da nam vrijeme koje vraca ovaj 'EmulatedSystemClock' ide u nazad?\n\nTj da nam svaki put vrati sve manje i manje vrijeme?",
+      "votes": {
+        "upvoters": [
+          "WallStreetBets"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103287": {
+      "poster": "moukie",
+      "content": "Moramo li uopce pri izradi vjezbe koristiti oba ona konstruktora od 'SimpleSimulatedDatagramSocket'?\n\nJa sam korstio samo onaj preko u kojeg se definira broj porta(vrata). Tj. samo tu instancu koristim i za slanje i za primanje paketa u zasebnim dretvama.",
+      "votes": {
+        "upvoters": [
+          "Krama13",
+          "WallStreetBets",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104498": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@moukie#103241 \n\nto se i meni desi da currenttime vraca random malo vrijeme unazad haha. pa valjda je oke ak su oni to tak napisali (bitno da znamo sortirat po tome mjerenja i slicno). kaj se tice konstruktora msm da je stvarno svejedno, ovisi kak koristis, bitno da radi. \n\na mene je najvise zanimalo ovo kako se prate/cuvaju mjerenja bez potvrde, tj kako najefikasnije spremit koje se nisu poslale za ponovno slanje.. razmisljala sam dal da napravim mapu, al onda me zanima koje podatke da cuvam. npr <datagram, lista portova koji su mi odg?>  pa dal da onda tak svaki \"frame\" prodem po tome i posljem ove koje nemaju sve portove i brisem ove kaj imaju? ne mogu smislit nesto optimalnije/s vise smisla atm xD",
+      "votes": {
+        "upvoters": [
+          "Ma97"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105033": {
+      "poster": "petar19",
+      "content": "@janeromero#104498 ja za svako slanje pokrenem novu dretvu koja pošalje mjerenje pa za par sekundi provjeri da li je primljeno (preko globalne mape primljenih), ako nije primljeno onda ponovno šalje pa čeka pa provjerava i tako... (u while petlji).\n\nŠto se tiče EmulatedSystemClocka, testirao sam i u otprilike 40% slučajeva se vrijeme krenulo smanjivati (iako radim u pythonu pa je moguće da nisam dobro implementirao). U nekim slučajevima čak krene od negativnog.\n\nPrimjeri:\n\n![](assets/2020-12-03/00017.png)![](assets/2020-12-03/00018.png)![](assets/2020-12-03/00019.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105055": {
+      "poster": "InCogNiTo124",
+      "content": "@petar19#105033 to je zato sto je funkcija vremena otprilike `x * (1+a)^x` (ignoriram nebitne konstante) gdje je a neki broj izmedu `[-0.2, 0.2]` a `x` broj proteklih sekundi\n\nkad je `a<0`, sto je u 50% slucajeva (bio si blizu haha), onda ti se desi taj bulging jer je onda eksponent manji od 1 \\:))",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105080": {
+      "poster": "petar19",
+      "content": "@InCogNiTo124#105055 da, ne znam kako nisam u testiranju skužio da samo kod negativnog jittera dolazi do problema. Čak mi i grafovi u imenu datoteke imaju jitter lol.\n\nPitanje je da li je to željeno ponašanje ili su oni nešto zeznuli.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105081": {
+      "poster": "InCogNiTo124",
+      "content": "@petar19#105080 mislim da je zeljeno, imam i teoriju zasto\n\nzato jer udp nema neku perzistentnu putanju kroz mrezu i moze se desit da na isto mjesto posaljes prvi paket pa drugi, ali da prvi ide duzim putem pa dode kasnije nego drugi to se simulira tim padanjem vremena ja bih rekao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105134": {
+      "poster": "petar19",
+      "content": "@InCogNiTo124#105081 zar nije za to dovoljno ispuštanja paketa i delay koji imamo prije slanja svakog paketa?\n\nDa primjerice to simulirano vrijeme stalno pada-raste (kao da imas linearnu fju + neki random oko nje) imalo bi smisla ali ovako kao da senzor šalje podatke unazad.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105160": {
+      "poster": "korisnik1",
+      "content": "Kako bi trebalo funkcionirati sortiranje po vremenu? Nije li da se koristi ili skalarno ili vektorsko vrijeme? Pretpostavljam da ce svako malo biti kontradikcije izmedu tog dvojeg, pogotovo s cinjenicom da vrijeme nekad ide i u minus",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105162": {
+      "poster": "petar19",
+      "content": "@korisnik1#105160 u zadatku piše:\n\n> Sortiranje je potrebno provesti koristeći obje oznake vremena te pojedinačno ispisati svaki sortirani skup.\n \n Pretpostavljam da prvo sortiraš koristeći skalarne, ispišeš pa sortiraš preko vektorskih pa ispišeš, barem sam ja tako napravio.",
+      "votes": {
+        "upvoters": [
+          "korisnik1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105163": {
+      "poster": "InCogNiTo124",
+      "content": "@korisnik1#105160 \"sortiranje je potrebno provesti koristeci obje oznake vremena te pojedinacno ispisati svaki sortirani skup\"\n\nDakle sortiras po skalarima, isprintas, sortiras po vektorima, isprintas",
+      "votes": {
+        "upvoters": [
+          "korisnik1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105164": {
+      "poster": "korisnik1",
+      "content": "@petar19#105162 @InCogNiTo124#105163 e hvala, nisam primijetio ovaj dio da se odvojeno radi",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106015": {
+      "poster": "Kiflica",
+      "content": "do kada treba predat labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106019": {
+      "poster": "InCogNiTo124",
+      "content": "@Kiflica#106015 \"Rok za predaju domaće zadaće (programski kod) putem sustava Moodle je ponedjeljak 14.12.2020. u 23:59.\"",
+      "votes": {
+        "upvoters": [
+          "Kiflica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106021": {
+      "poster": "Kiflica",
+      "content": "@InCogNiTo124#106019 ahahahah nekad treba samo procitat sta pise, ty",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106229": {
+      "poster": "InCogNiTo124",
+      "content": "uzasno me buni ova skalarna oznaka vremena. moze netko lijepo linearno objasnit sta treba s time? jel to ono kao iz lamportovog algoritma gdje povecavamo logicki na max+1? i ako je, gdje tu dolazi ovaj emulatedsystemclock? nema bas primjera u prezama za to...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106233": {
+      "poster": "Dell",
+      "content": "@InCogNiTo124#106229 Mislim da ni oni ne znaju šta su htjeli s time. Ja sam prošle godine to napravio da bi stavio trenutno vrijeme + 1 ako bi došlo da kašnjenja.  (Ako se dobro sjećam, nisam siguran) \n\nI nisu mi prigovarali.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107018": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "Da li kada čvor primi poruku (skalarna oznaka, vektorska oznaka i mjerenje) stavlja takvu poruku u listu primljenih i sortira ju sa **primljenjim** oznakama ili prvo ažurira oznake, te sa **ažuriranim** oznakama sortira mjerenje kod ispisa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107031": {
+      "poster": "InCogNiTo124",
+      "content": "@janeromero#107018 ja radim sa primljenim a ne azuriranim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107229": {
+      "poster": "moukie",
+      "content": "Je li tko imao ovaj exception?\n\nBaca mi ga jer pristupam istoj kolekciji za nepotvrđene pakete iz razlicitih dretvi paralelno prepostavljam\n\nDogodi mi se kad tek pokrenem svaki proces(čvor) na svakom čvoru\n\n![](assets/2020-12-08/00018.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107231": {
+      "poster": "InCogNiTo124",
+      "content": "@moukie#107229 probaj `ConcurrentHashMap`",
+      "votes": {
+        "upvoters": [
+          "RS7",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107382": {
+      "poster": "adidas",
+      "content": "Kako ste implementirali statičnu konfiguraciju mreže?\n\nMislio sam svakom čvoru hardkodirati neki port i  zapisati sve portove u datoteku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107413": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@adidas#107382 Tak sam i ja. samo osim hardkodiranog porta sam si hardkodirala redni broj porta iz datoteke al same thing",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107420": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "@adidas#107382 možeš i hardkodirat u samom razredu",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107423": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "@InCogNiTo124#106229 jesi li doznao?\n\ni mene to buni jer nije baš objašnjeno\n\nmislim da je ideja da, pošto nemamo unaprijed određen korak 'd' između vrijednosti skalarnog sata,\n\nsvaku 'iduću' vrijednost dohvaćamo s `currentTimeMillis` pa radimo usporedbu nešto kao\n\n`nextValue = max(received + 1, currentTimeMillis())`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107424": {
+      "poster": "InCogNiTo124",
+      "content": "@SergeantPepper#107423 jesam doznao sam\n\nNaime to sve pise u onoj skripti na materijalima, strana 122 (u pdfu je strana 129). I ispada na kraju da je to tocno kao lamport \\:))",
+      "votes": {
+        "upvoters": [
+          "SergeantPepper (Chet)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107794": {
+      "poster": "Kiflica",
+      "content": "Odakle krenuti s ovom zadacom for dummys? Ima li na predavanjima da se nesto objasni?",
+      "votes": {
+        "upvoters": [
+          "basketbaler (Burek sa sirom)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107802": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Kiflica#107794 Copy paste prosle i zamijeniti TCP sa UDP 😅 ja sam ugl krenula sa https://www.fer.unizg.hr/_download/repository/RS-2020_02.pdf (drugom) prezentacijom, tamo imaju nešto sitno koda ali dovoljno za početak + rade sa dretvama u tom primjeru tako da je to ubiti sve što mi je trebalo da napravim ovu DZ, ostatak je obicna logika",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Kiflica",
+          "basketbaler (Burek sa sirom)",
+          "mentally_disturbed_llama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107823": {
+      "poster": "adidas",
+      "content": "Sa istog porta se šalju očitanja ostalima, primaju potvrde za ista i primaju očitanja od ostalih?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107827": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "ja sam napravio da se s razlicitih portova šalju očitanja (to je klijentska strana), dok server na fiksnom portu prima očitanja/potvrde",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107839": {
+      "poster": "adidas",
+      "content": "@SergeantPepper#107827 Pošaljem očitanje s  čvora X na čvor Y sa nekog porta. Kako onda znam na koji port od čvora X trebam slati potvrdu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107851": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "@adidas#107839 a ja sam u datagram ubacio ID čvora pošiljatelja, a svaki čvor ima mapu koja za ID čvora daje njegov serverski port pa onda preko ID-ja zna gdje poslati potvrdu",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107882": {
+      "poster": "InCogNiTo124",
+      "content": "@SergeantPepper#107827 ja sam napravio da mi je svaki node na svom portu te klijent i server dijele socket",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107903": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@adidas#107823 Da vrlo je lako to ostvariti. Inace ces imat po 2 porta za svaki cvor i vjj ce bit komplicirano bezveze. Ja sam stavila da mi jedna dretva slusa zahtjeve i ima metodu za slanje paketa koju sam pozivam iz druge dretve svake sekunde\n\n@adidas#107839 definiras potvrdu kako god zelis, moja potvrda sastoji se od porta koji je primio mjerenje + timestamp (da znam koje mjerenje ne trebam ponavljat za taj port)",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107949": {
+      "poster": "tt98",
+      "content": "Meni jos uvijek nije bas jasno ovo za skalarnu oznaku vremena. Ajmo rec da cvor primi skalarnu oznaku vecu od svoje, zapamti ju i sta onda radi s njom kad salje poruku? Povecava se za 1, ili se mora jos i usporediti opet s onim emuliranom satom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107984": {
+      "poster": "InCogNiTo124",
+      "content": "@tt98#107949 ostavljeno studentu na implementaciju xD\n\nJa kad primim poruku usporedujem emulirani clock i primljeno, a kad saljem samo povecavam za jedan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108229": {
+      "poster": "pina_be",
+      "content": "Kakav je ovaj labos u odnosu na prvi? Koliko cca treba vremena?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108244": {
+      "poster": "Ma97",
+      "content": "@InCogNiTo124#107984 Pri slanju povećaš emulirani sat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108245": {
+      "poster": "Ma97",
+      "content": "@pina_be#108229 Meni osobno je trebalo malo manje, rekao bih da je tu i tu vremenski zahtjevno",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108250": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@Ma97#108245 \n\nStigne li se do ponedjeljka ako nisam jos krenuo?haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108255": {
+      "poster": "InCogNiTo124",
+      "content": "@khm19#108250 ceka te jedan vatreni vikend, ali mislim da se stigne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108257": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@InCogNiTo124#108255 \n\nVidim da ima nesto na materijalima pa se da malo pripomoc  s tim haha",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108260": {
+      "poster": "adidas",
+      "content": "@InCogNiTo124#107984 Jasan mi je dio kada čvor primi poruku koja ima veći timestamp od njegovog clocka. Onda uzme primljeni timestamp + 1. Sad me zbunjuje šta se događa dalje. Treba li onda svoj clock prilagoditi. Jer ako ne napravi ništa i ide slati poruku sa svojim clockom onda neće biti konzistentne oznake vremena.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108262": {
+      "poster": "InCogNiTo124",
+      "content": "@adidas#108260 imas dva atributa klase, jedan je EmultedClock, drugi je `logicalClock` i kad primis poruku `this.logicalClock = max(Emulated, recieved)+1;`\n\nSad tog logical koristis za slanje poruka i azuriras ga +1 za svaku akciju",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "adidas"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109149": {
+      "poster": "zuza (jose)",
+      "content": "Moze li netko slikati ispise da usporedim sort",
+      "votes": {
+        "upvoters": [
+          "khm19 (ajmemeni5)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109173": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "Kod ostvarivanja statične konfiguracije mreže jesu li mislili da mi izaberemo neke random portove koje čitamo iz datoteke pri pokretanju ili da nekom random metodom u kodu izaberemo port i upišemo ga u datoteku iz koje ćemo kasnije čitati za slanje itd. ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109333": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@khm19#109173  Realno nitko ne zna što su mislili, možeš ih pitat to na Teamsu il gdjegod. Ali zasad mislim da su ljudi ili hardkodirali u kod portove, ili stavili portove u file pa čitaju iz čvora. Sad kako će tebi koji čvor znati koji je njegov port kad dobi tu listu portova je na tebi.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109991": {
+      "poster": "Audaces",
+      "content": "Kako ste retransmisiju radili? Kad prođe vrijeme određeno bez potvrde šaljete ponovno datagram ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110044": {
+      "poster": "InCogNiTo124",
+      "content": "@Audaces#109991 da, ja sam samo imao listu nepotvrdenih poruka i onda bi svake sekunde slao sve dok se ne bi potvrdile. Doduse treba pazit na sinkronizirani pristup listi",
+      "votes": {
+        "upvoters": [
+          "SergeantPepper (Chet)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110063": {
+      "poster": "zavrskina",
+      "content": "Kako ste hendlali ispadanje jednog od peerova iz mreže?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110070": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@zavrskina#110063 Ja nemam neki posebni postupak. i dalje mu saljem datagrame, ali tu listu nepotvrdnih cistim svako malo da se u slucaju neaktivnog cvora ne cuvaju svi paketi ikad. Mozda ima i bolji nacin od tog.",
+      "votes": {
+        "upvoters": [
+          "zavrskina"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110077": {
+      "poster": "moukie",
+      "content": "@zavrskina#110063 \n\npise li gdje eksplicitno da se moramo brinuti o tome?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110078": {
+      "poster": "pepelko",
+      "content": "Sto mislite oce li nam dati dio bodova ako implementiramo samo komunikaciju UDP-om, ali ne i sinkronizaciju skalarnim i vektorskim oznakama?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110085": {
+      "poster": "zavrskina",
+      "content": "@moukie#110077 Nema nigdje napomena, ali mi je na prošlom labosu zbog toga asistent skinuo bodove pa čisto da provjerim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110094": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@pepelko#110078 sigurno hoce, meni je na proslom labosu falilo dosta toga pa sam i dalje dobila bodove (iako nesto sitno)",
+      "votes": {
+        "upvoters": [
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110105": {
+      "poster": "RS7",
+      "content": "@zavrskina#110085 Je li ti to rekao jer ti je pukao exception kad bi peer uslijed komunikacije izasao i nisi uhvatio/la taj exception ili zbog neceg drugog? Ako je ovo prvo, msm da nije potrebno nista raditi jer se koristi UDP koji je nespojni, pa nije bitno ako ispadne.\n\nNek netko potvrdi ili opovrgne pls",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110114": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "Nema smisla da _treba_ obraditi ispad procesa jer to nigdje nije specificirano. Formalno gledano, treba implementirati samo ono sto je specificirano u zadaći. Ako nije specificirano, ne treba implementirati. Je li dobra praksa obraditi ispad? Apsolutno. Je li specificirano (kao u DZ1)? Apsolutno nije",
+      "votes": {
+        "upvoters": [
+          "Audaces",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "member",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110125": {
+      "poster": "[deleted]",
+      "content": "Jel moze neko objasniti postupak sa skalarnom oznakom, ili barem linkat ako ima igdje objasnjeno, postupak sa vektorskim kuzim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110138": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "Moze netko objasniti kako se sortira na kraju ispis ocitanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110170": {
+      "poster": "InCogNiTo124",
+      "content": "@ElitePer#110125 skripta predmeta, na materijalima na ferwebu, strana 122 (u pdfu je 129)",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110173": {
+      "poster": "MaIv",
+      "content": "Jel treba povećat skalarne i vektorske oznake prilikom primanja i slanja potvrda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110198": {
+      "poster": "Maglica",
+      "content": "Kako trebamo slati sva mjerenja klijentu iz mjerenja.csv?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110232": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "Kako misliš sva mjerenja? Šalje se samo stupac za CO",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Maglica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110234": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Maglica#110198 u uputama piše:\n> Mjerenje senzora će se emulirati dohvaćanjem vrijednosti samo za ugljični monoksid (CO) iz ulazne datoteke (mjerenja.csv) koja je dostupna na stranici predmeta (Domaće zadaće> 2. DZ> mjerenja.csv).\n\ndakle u svakoj poruci nalazi se samo jedno mjerenje i to od nasumično (po uputama) izabranog CO.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110253": {
+      "poster": "Maglica",
+      "content": "Da ali ta mjerenja učitamo u Mainu pa prosljedimo ili što?\n\nOnda ono što piše da ih srotiraju po vremenu, to svaki client kod sebe zasebno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110263": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Maglica#110253 Ja kod svakog generiranja novog mjerenja imam scanner i čitam iz .csv datoteke koja mi se nalazi u projektu.\n\ni da, svaki klijent za sebe ispisuje svakih 5 sekundi sva mjerenja koja je primio i generirao tih prošlih 5 sekundi",
+      "votes": {
+        "upvoters": [
+          "Maglica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110265": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "@Maglica#110253 ma mozes i hardkodirat vrijednosti iz csv datoteke u neku varijablu/razred, bitno je samo da index kojim pristupaš tim vrijednostima bude izračunat prema formuli napisanoj u zadatku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110269": {
+      "poster": "Maglica",
+      "content": "Pitam jer mi je kolega koji je prošle godine na labosu bio rekao da je izgubio bodove jer nije poslao datoteku nego je direkto iz csv filea čitao, pa mi to baš nije jasno...  :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110288": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "@Maglica#110269 kakve su to idiotarije s njihove strane, pa jesmo li na predmetu raspodijeljeni sustavi di se uče raspodijeljeni algoritmi/protokoli ili smo na predmetu učitavanje csv datoteka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110291": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "@Maglica#110269 kakve su to idiotarije s njihove strane, pa jesmo li na predmetu raspodijeljeni sustavi di se uče raspodijeljeni algoritmi/protokoli ili smo na predmetu učitavanje csv datoteka",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Maglica",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "johndoe",
+          "pepelko"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110294": {
+      "poster": "tuka",
+      "content": "Imam problem da mi samo prvi čvor koji pokrenem prima potvrde i sortira, ostali cvorovi samo primaju od tog prvog, njemu salju potvrde i svoja ocitanja, ali do njih nikad ne dode potvrda niti sortiraju ista. Jel zna netko mozda u cemu je problem? \n\nU mainu imam 3 dretve - jednu za klijenta (ocitanje, slanje i cekanje potvrde), jednu za server (cekanje ocitanja i slanje potvrde) i jednu za sortiranje i racunanje srednje vrijednosti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110299": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@tuka#110294 Fakat teško ovako na prvu znati gdje bi bila greška. Koristiš po 2 porta na svakom čvoru? ili imaš jedan port koji koristiš u dvije dretve svakog čvora?",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110318": {
+      "poster": "InCogNiTo124",
+      "content": "@tuka#110294 jel znaju svi cvorovi za sve druge cvorove ili znaju samo za prvog?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110332": {
+      "poster": "tuka",
+      "content": "@janeromero#110299 \n\nImam po jedan port u svakom čvoru \n\n@InCogNiTo124#110318 \n\nisla sam sad provjeriti, mislim da je problem u tome sto za svaki izgeneriram random port, zapisem ga u datoteku i onda drugi cvorovi citaju iz te datoteke pa ne procitaju ove koji su poslije njih uneseni",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110336": {
+      "poster": "Maglica",
+      "content": "Dakle ok je u Mainu pročitat csv i poslat listu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110353": {
+      "poster": "tuka",
+      "content": "Je li normalno da kad koristim ovaj packet.getPort() da saznam otkud je dosao paket na server, ispise mi se neki random port kojeg ja nisam pridodijelila ni jednom cvoru?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110355": {
+      "poster": "tuka",
+      "content": "@Maglica#110336 mislim da da, ja tako radim",
+      "votes": {
+        "upvoters": [
+          "Maglica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110356": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "@tuka#110353 Možda čvorovima dodjeljuješ poslužiteljski port koji je fiksan, dok je klijentski port nasumično odabran?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110357": {
+      "poster": "johndoe",
+      "content": "@Maglica#110336 ko sto je kolega reko, jesmo na predmetu ucitavanje csv ili raspodijeljeni? ja sam ucito cijeli csv i radio dalje s tom listom, sam da vidim da mi netko proba uzet bodove zbog toga",
+      "votes": {
+        "upvoters": [
+          "Maglica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110359": {
+      "poster": "tuka",
+      "content": "@SergeantPepper#110356 i serveru i klijentu dodijelim isti port koji je random. Jel bi trebala kreirat socket u serveru i klijentu odvojeno ili jedan socket za jedan cvor?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110361": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "@tuka#110359 Možeš na oba načina.. Ja sam odvojio klijenta i servera s tim da je serverski port svima poznat i *fiksan* je, ne generiram ga random, dok se klijentski na random generira\n\nako ti je na poslužiteljskoj strani teško doznati odakle je stigao datagram, možeš u sam datagram zapisati indeks (ID) čvora pošiljatelja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110363": {
+      "poster": "tuka",
+      "content": "@SergeantPepper#110361 znaci ti imas drugaciji port za server i klijenta na istom cvoru?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110364": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "@tuka#110363 točno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110367": {
+      "poster": "tuka",
+      "content": "@SergeantPepper#110364  \"Čvor za primanje potvrda i dolaznih očitanja susjeda koristi\n\nista vrata odnosno potrebno je na aplikacijskoj razini implementirati logiku koja prepoznaje radi li se\n\no potvrdi ili o očitanju te ispravno obraditi takav paket.\" - kaj ne znaci ovo da bi trebao biti isti port za server i klijenta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110368": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "Kod mene server prima potvrde i dolazna očitanja, znači radi se o istim vratima\n\na iz sadržaja datagrama određujem radi li se o očitanju ili potvrdu",
+      "votes": {
+        "upvoters": [
+          "tuka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110401": {
+      "poster": "pepelko",
+      "content": "Kad ce biti obrana domace zadace?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110402": {
+      "poster": "Maglica",
+      "content": "@pepelko#110401 Vjerojatno tokom ovog tjedna",
+      "votes": {
+        "upvoters": [
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110994": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "Moze netko napisati sto su ga pitali na obrani domace?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111000": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@khm19#110994 \n\nMene je lik pitao da objasnim kako funkcinoiraju vektorske i skalarne oznake, koja je bolja i da pokažem kako i kada u kodu koristim koju. Također me pitao kako na istom portu znam radi li se o potvrdi ili mjerenju kada dođe nova poruka na port. I pitao je da objasnim značajke UDP komunikacije u mojem kodu te kad sam spomenula onaj njihov datagram razred me pitao da i to malo objasnim.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "MaIv",
+          "WallStreetBets",
+          "ardi (sprut)",
+          "khm19 (ajmemeni5)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111005": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "- Kako pokrećeš čvorove, jesu li u zasebnim procesima?\n- Kako sortiraš vektorske i skalarne oznake?\n- Kako je implementirana različita obrada primanja potvrda i podataka?\n- Kako je implementirano ažuriranje logičkog sata?",
+      "votes": {
+        "upvoters": [
+          "MaIv",
+          "ardi (sprut)",
+          "khm19 (ajmemeni5)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111200": {
+      "poster": "InCogNiTo124",
+      "content": "Dosta pitaju po sorsu, pokazi gdje azuriras sat, kako hendlas potvrde paketa i tako",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111207": {
+      "poster": "hobbit",
+      "content": "Jel netko koristio idejno onaj kod na materijalima od prošle godine? Jel taj kod uopće dobar?\n\nTrebam pomoć hitno pa ako ima netko malo vremena da pomogne bio bih stvarno zahvalan...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111213": {
+      "poster": "bestik",
+      "content": "oce skuzit ak smo malo modificirali kod nakon predaje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111405": {
+      "poster": "johndoe",
+      "content": "- Nije trazio skidanje s Moodla jer se nema vremena za to, sto je svejedno jer preporucujem da imate isti kod za nedaj boze. Ja sam mu reko sta sam jos mislio implementirat i popravit\n- Reko da pokrenem i pitao me kak vektor clock treba izgledat kad se sve izvrti\n- Pitao me kako u kodu razlikujem potvrdu od ocitanja (ja sam samo nazad slao isti objekt koji sam primio, al oni su trazili da bude jednostavnijeg formata (npr neki unique id))\n- Zadao mi 2 para vektora i da ih usporedim koristeci moj algoritam\n- Reko mi da mu pokazem gdje sortiram, gdje incrementam vremena\n- Kako sam implementirao retransmisiju i da poracunam kolicinu prometa koju generira moj kod (3x vise od predvidenog jer sam HC hehe)\n\nAll in all, dosta ide kroz kod i pita tu i tamo nesto, ako nesto ne razumije nemojte ga se bojat prosvjetlit. Npr, ja vrtim server i klijent u svom threadu, on je rekao da je bilo zadano u zadatku eksplicitno da se ne koriste threadovi, a ja sam ga ispravio i reko da i dalje peerove pokrecem kao zaseban proces, threadovi su samo za klijent i server. Ispricao se.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "MaIv",
+          "WallStreetBets",
+          "ardi (sprut)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

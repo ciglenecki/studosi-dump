@@ -1,0 +1,517 @@
+{
+  "title": "[UMJINT] 3. laboratorijska vježba - 2019/2020",
+  "creator": "sekiro",
+  "slug": "umjint-3-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Umjetna inteligencija",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "30561": {
+      "poster": "sekiro",
+      "content": "Jel moze neko samo dat neki tip kako krenut sa ovim labosom, tj koji je najbolji nacin za spremanje ovih vrijednosti odvojenih zarezom jel?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30569": {
+      "poster": "Emma63194",
+      "content": "@sekiro#30561 Dobro prouči teoriju za početak. Preporučam onu Čupićevu skriptu za strojno učenje. Labos nije baš lagan kao ostala dva.\n\nŠto se tiče spremanja podataka, to je na tebi. Ovisi kako im želiš pristupati kasnije u programu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30612": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@sekiro#30561 CSV (ili TSV)\n\nNa raspolaganju su ti klasične n-torke (ili liste), a naprednija struktura bi bila Pandasov DataFrame",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30949": {
+      "poster": "Ziher",
+      "content": "![](assets/2020-05-27/00051.png)\n\nIspisi na prva dva primjera su tocni, ali na Titanicu mi ispada ovako. Ima li mozda netko ideju zasto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31018": {
+      "poster": "Emma63194",
+      "content": "@Ziher#30949 Čini mi se da si uzeo krivi skup podataka. Sigurno si stavio kao drugu datoteku onaj test skup?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31036": {
+      "poster": "Ziher",
+      "content": "@Emma63194#31018 ma jesam da\n\nNajgore je svaki put dok pokrenem, ispis je drukciji...\n\nKoristim python inace",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31041": {
+      "poster": "Emma63194",
+      "content": "@Ziher#31036 U kojem smislu drugačiji? Nekad ti točno pročita datoteku, nekad krivo ili kad pokreneš s točnom datotekom, dobiješ drugačije brojeve svaki put?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31094": {
+      "poster": "Ziher",
+      "content": "@Emma63194#31041 S istim datotekama pokrenem i dobijem drukcije sve nakon prve razine\n\nI brojevi su drukciji isto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31114": {
+      "poster": "Emma63194",
+      "content": "@Ziher#31094 Baš svaki put ispadne drugačiji ispis?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31135": {
+      "poster": "Ziher",
+      "content": "@Emma63194#31114 Ima par slucajeva izmedju kojih alternira, ali da\n\nNikakvu izmjenu ne napravim, samo ponovno pokrenem kod, a kod debuggiranja mi u istim koracima pokazuje razlicite rezultate za IG odgovarajucih vrijednosti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31175": {
+      "poster": "Ziher",
+      "content": "Evo, restartao sam VS i sad je ispis ovakav\n\n![](assets/2020-05-27/00068.png)\n\nSto mi se cini ko dobar ispis na prvu, ali kod debuggiranja mi ne da dublje pogledati u strukturu stabla od \"fare\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31222": {
+      "poster": "Emma63194",
+      "content": "@Ziher#31175 Prvi redak ti nije dobar ispis (pogledaj kak su oni napravili u uputama). Matrica konfuzije kao i accuracy ti isto nisu dobro.\n\nPreporučam da napraviš diff check između tvojeg ispisa predikcija (ovi yes/no) i njihovog. Nakon toga vidi u kojim uzorcima ti se razlikuje ispis i probaj pratit program od tog uzorka i vidi što ti se događa (npr. fula ti u 10. uzorku, staviš si u program neki brojač i breakpoint na to kad ti brojač bude 10 pa gledaš što se dešava).\n\nCijelo stablo ići pratiti kako se gradi bi za ovaj primjer s titanikom bilo ludilo, previše je toga.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31264": {
+      "poster": "Ziher",
+      "content": "@Emma63194#31222 da, nije dobar, ali izgleda kao da ide u dobrom smjeru\n\nTo bi sve imalo smisla da se izlaz ne mijenja svaki put nakon sto pokrenem kod. \n\nCini mi se ko fool's errand rn, gledam cijeli dan u kod i sve bi logicki trebalo stimat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31604": {
+      "poster": "Bisolvon",
+      "content": "Koje su finese na titaniku, ima li nekih rubnih slucajeva, ono s abecednim poredkom i te stvari?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31671": {
+      "poster": "Emma63194",
+      "content": "@Bisolvon#31604 Ako dobro napišeš algoritam (dobro napisani uvjeti terminacije rekurzije i sama rekurzija) i paziš da su ti, što je ono bilo, atributi? (piše mislim u uputama), u abecednom poretku, ne bi trebalo biti nikakvih problema. \n\nNIsam osobno naletila ni na kakve rubne slučajeve.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31756": {
+      "poster": "tintintintin",
+      "content": "e sto vi napisete da dobijete te yes i no? tocnije pokrenete li isti algoritam na setu testnih promjera pa pogasite neke stvari ili za dobiveno stablo nekak testirate?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31769": {
+      "poster": "FICHEKK",
+      "content": "@Ziher#31135 Različiti ispisi su ti iz razloga što ne koristiš poredanu kolekciju. Pretpostavljam da koristiš `set` negdje, te kada iteriraš njime svaki puta će ti biti drugačiji poredak. Da je poredak `set`-a svaki puta drugačiji, možeš se lagano uvjeriti, samo isprobaj ovaj kod:\n\n```\nfruits = set([\"Apple\", \"Banana\", \"Strawberry\", \"Pear\"])\n\nfor fruit in fruits:\n    print(fruit)\n\n```",
+      "votes": {
+        "upvoters": [
+          "Ziher"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31795": {
+      "poster": "Murin",
+      "content": "Koliku točnost dobijete za titanic test?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32176": {
+      "poster": "Bisolvon",
+      "content": "Onaj kontrolni ispis kod titanika za IG kao i ono stablo 0:sex... mi dode identicno kao i njima, no kod predkicije mi je ispis drugaciji, znaci li to da je greska nuzno u kodu koji radi predikciju?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32314": {
+      "poster": "svemia (bearyn)",
+      "content": "Izgradnja stabla mi radi dobro i ispisuju se značajke i njihove dubina kako je zadano u uputama, ali na autograderu mi za svaki test piše features: wrong!   None . Ne razumijem gdje bi mogao biti problem, ako mi lokalno radi dobro? Ne koristim ništa izvan standardnog paketa libraryja, učitavanje argumenata je preko konzule gdje se prima path do csv i congif fileova (3 argumenta).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32429": {
+      "poster": "koode7",
+      "content": "trazim pomoc oko ovog labosa, nudim izdasnu svotu. javite se u PM ak ste zainteresirani.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32443": {
+      "poster": "koode7",
+      "content": "potrebna je pomoc oko debuggiranja, radi sve za volleyball i small logic i za 60-70% titanika",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32461": {
+      "poster": "Icy",
+      "content": "Kako se dobivaju predikcije za primjere testnog skupa (onaj drugi redak u ispisu)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32496": {
+      "poster": "chuuya (temari)",
+      "content": "@Bisolvon#32176 Ne, meni je bila greška u predikcijama (a ispis stabla je bio ok) jer je u fit metodi bila greška u onom kad vraća Leaf(v).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32664": {
+      "poster": "FICHEKK",
+      "content": "Jesam li ja lud ili id3 na Šnajderovom videu nije isti kao id3 na prezentaciji?\n\nEDIT: OMG JA SAM 10 SATI TRAŽIO BUG, A BUG JE U VIDEU!!! 🤬",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "in1",
+          "markoo321 (Grinch)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32677": {
+      "poster": "Zabe",
+      "content": "moze neki prijedlog kako cuvati vrijednosti iz csv tj. kako cuvati vrijednosti za D iz onog algoritma?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32679": {
+      "poster": "sekiro",
+      "content": "ja sam isao preko listi, tocnije nested lists.",
+      "votes": {
+        "upvoters": [
+          "Zabe"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32700": {
+      "poster": "MJ3",
+      "content": "kako spremati subtrees? i gdje pamtiti razinu na kojoj se čvor nalazi?",
+      "votes": {
+        "upvoters": [
+          "Daorson"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32750": {
+      "poster": "in1",
+      "content": "@FICHEKK#32664 Na engleskoj verziji prezentacije je objašnjavao na ispravnom kodu algoritma",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32933": {
+      "poster": "sekiro",
+      "content": "jel postoji kakva vjerojatnost za nadoknadu za nas specijalce koji ne skupimo dovoljno bodova?",
+      "votes": {
+        "upvoters": [
+          "latica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33118": {
+      "poster": "Zabe",
+      "content": "jel imao itko problema sa ispisom stabla kod titanika? za ostala dva primjera mi radi dobro sve. Neki tips koji treba pripazit mozda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33138": {
+      "poster": "Bisolvon",
+      "content": "@Zabe#33118 Koji tocni problem imas, imao sam ja dosta.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33305": {
+      "poster": "Ziher",
+      "content": "Jel ima jos tko problema oko predikcije sa 7. i 13. primjerom za Titanic? Cini mi se da je logika dobra, ali ta dva primjera ispadaju krivo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "34093": {
+      "poster": "MsBrightside",
+      "content": "Što predlažete za pripremu za ispitivanje labosa? samo prezu strojnog učenja ili još nešto?",
+      "votes": {
+        "upvoters": [
+          "Conrad",
+          "Daorson",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "34268": {
+      "poster": "MsBrightside",
+      "content": "@MsBrightside#34093 prošlo ispitivanje, pitanja sasvim okej, općenito o strojnom učenju, nabrojit vrste, koji je najveći problem strojnog učenja, po kodu kako sam implementirala, kako možemo rješit prenaučenost, malo o skupu za treniranje, provjeru i testiranje, u biti samo treba znat i razumjet općenito sa prezentacije i dio vezan za stabla odluke.",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "34280": {
+      "poster": "Njet",
+      "content": "@MsBrightside#34268  Koga si imala na ispitivanju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "34289": {
+      "poster": "MsBrightside",
+      "content": "@Njet#34280 Adrian Komadina",
+      "votes": {
+        "upvoters": [
+          "Njet",
+          "mesojed (sofronijevicevPrst)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

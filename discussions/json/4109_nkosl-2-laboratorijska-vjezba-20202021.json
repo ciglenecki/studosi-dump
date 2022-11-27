@@ -1,0 +1,221 @@
+{
+  "title": "[NKOSL] 2. laboratorijska vježba - 2020/2021",
+  "creator": "Erinon",
+  "slug": "nkosl-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Napredno korištenje operacijskog sustava Linux",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "164619": {
+      "poster": "Erinon",
+      "content": "Kako funkcionira DB_HOST environment varijabla u 2. labosu? Kad pokrećem taj container sa appom mi je uvijek error vezan za host name, a ne prolazi mi ništa što sam probao.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165237": {
+      "poster": "Ma97",
+      "content": "Dolazi li nekome stalno ovaj problem prilikom slanja zahtjeva? Aplikacija i baza se pokrenu uspiješno.\n\n```\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py\", line 134, in handle\n    self.handle_request(listener, req, client, addr)\n  File \"/usr/local/lib/python3.7/site-packages/gunicorn/workers/sync.py\", line 175, in handle_request\n    respiter = self.wsgi(environ, resp.start_response)\nTypeError: module() argument 1 must be str, not dict\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165292": {
+      "poster": "Erinon",
+      "content": "@Ma97#165237 Probaj sa python 3.9 kao u uputi.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165302": {
+      "poster": "Ma97",
+      "content": "@Erinon#165292 Riješio sam, hvala :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165308": {
+      "poster": "Erinon",
+      "content": "@Ma97#165302 Ništa. A kako si povezao aplikaciju i bazu? Stalno mi nešto sa DB_HOST ne radi ako se ne varam.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165671": {
+      "poster": "ferball",
+      "content": "koji je očekivani rezultat 1. zadatka? Welcome to nginx page, nakon što izađemo iz containera?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165861": {
+      "poster": "viliml",
+      "content": "@Erinon#164619 Mislim da bi trebalo nešto kao\n1. postavi DB_HOST na localhost\n2. mapiraj port 5432 od containera aplikacije na neki port svog kompjutera\n3. mapiraj port 5432 od containera baze na neki drugi port svog kompjutera\n4. preko iptables preusmjeri promet s prvog na drugi port\n\nAli meni to nije proradilo (možda jer sam na WSL) pa sam ih samo povezao preko defaultne bridge mreže (https://docs.docker.com/network/network-tutorial-standalone/#use-the-default-bridge-network).",
+      "votes": {
+        "upvoters": [
+          "ferball"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165865": {
+      "poster": "Dekan",
+      "content": "@Erinon#165308 Kad radis preko host mreze, onda ukucaj `docker inspect <ime_containera>` i tamo negdje procitaj koji je ip tog containera, tako sam ja.\n\nKad ih spojis na mrezu koju si napravio s `docker network create` onda ih mozes adresirati po imenu containera. [source](https://docs.docker.com/network/bridge/)",
+      "votes": {
+        "upvoters": [
+          "Cubii",
+          "Erinon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165911": {
+      "poster": "ferball",
+      "content": "@viliml#165861 \n\njel znas mozda u cemu je tu problem, mapirao sam containerov port 5432 na host-ov 5432 za bazu, stavio localhost pod DB_HOST i 5432 pod DB_PORT i kad pokrenem app dobivam ovaj error: \n\n_Connection refused\n\n\tIs the server running on host \"localhost\" (127.0.0.1) and accepting\n\n\tTCP/IP connections on port 5432?_",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165977": {
+      "poster": "InCogNiTo124",
+      "content": "@ferball#165911 rjesenje je sljedece:\n\nkad startas kontejner baze, ona se po defaultu spoji na dockerovu bridge mrezu. Inspectaj mrezu sa `docker network inspect bridge` i vidi na kojoj ip adresi je vidljiv bazin kontejner. Ta ip adresa ti je host",
+      "votes": {
+        "upvoters": [
+          "Trolololica",
+          "ferball"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166023": {
+      "poster": "Ma97",
+      "content": "Meni je bilo dovoljno da nakon što se pokrene baza da aplikacija sluša na mreži  `host`",
+      "votes": {
+        "upvoters": [
+          "ferball"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166087": {
+      "poster": "ferball",
+      "content": "na koji route ste mapirali target od docker volume-a? Kad mi se prvi put pokrene baza pa app onda štima, kad ugasim bazu i opet upalim ne može više pronaći posts relation",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166159": {
+      "poster": "Erinon",
+      "content": "Kako dobijete `host` u `docker-compose.yml`? Napravim mrežu u compose, spojim na nju i app i bazu, `service` od baze mi je `postgres`, stavim `postgres` kao `host` i ne radi.\n\nEDIT: Stavio sam link postgres:postgres i sad je ok, mislio sam da je to automatski linkano na točno ime.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166286": {
+      "poster": "InCogNiTo124",
+      "content": "@Erinon#166159 Zanimljivo, ja sam samo postavio u `.env` datoteci i meni radi ootb\n\n@ferball#166087 ja sam jednostavno stvorio lokalni direktorij i pod `volumes` naveo `./nkosl-db:/var/lib/postgresql/data` i radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187521": {
+      "poster": "Bananaking",
+      "content": "Jel imao netko problema pri pokretanju app kontejnera?\n```\ndocker run -e FLASK_APP=nkosl-blog.py drugi_lab \nUsage: flask db upgrade [OPTIONS] [REVISION]\n\nError: Could not import \"nkosl-blog\".\n```\nPropuštam još neke environment varijable postaviti? Također, opcija -p 80:80 vrati error da je 80 dodijeljen",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

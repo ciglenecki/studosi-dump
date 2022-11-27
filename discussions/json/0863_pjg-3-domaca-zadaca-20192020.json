@@ -1,0 +1,360 @@
+{
+  "title": "[PJG] 3. domaća zadaća - 2019/2020",
+  "creator": "iNavy (mornar Ica)",
+  "slug": "pjg-3-domaca-zadaca-20192020",
+  "tags": [
+    "FER",
+    "Programski jezik Go",
+    "Zadaće"
+  ],
+  "posts": {
+    "33273": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "rok za predaju je nedjelja 7.6. u 23:59\n\nje li obavezno predati sve zadatke zadaće i što ako ne predamo jedan od zadataka",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)",
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33275": {
+      "poster": "idontwannabemyself",
+      "content": "cudno mi je kak su nam za onu prvu zadacu dali 2 tjedna, a za ovo tjedan 😶\n\nsad kad razmislim, mislim da smo i za drugu imali vise od tjedan dana jer tko zna kad su zapravo objavili drugu zadacu na fergu",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Koalefant",
+          "Lenobius",
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Lenobius",
+          "Suki7",
+          "vidaxis"
+        ]
+      }
+    },
+    "33281": {
+      "poster": "Suki7",
+      "content": "Za prvu smo imali 2 tjedna jer sam ja jagustu posla mail da imamo meduispite pa ako moze produzit rok hahahahah\n\nMoga bi opet i za ovu trecu 😅",
+      "votes": {
+        "upvoters": [
+          "dinosaur1",
+          "idontwannabemyself"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "idontwannabemyself"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37432": {
+      "poster": "dinosaur1",
+      "content": "Zna li itko je li ovo dobar sadrzaj zaglavlja 1. zadatka:\n\n`package someRandomPackage\n\nimport (\n\n\t\"testing\"\n\n\t\"errors\"\n\n\t\"main\"\n\n)`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37434": {
+      "poster": "dinosaur1",
+      "content": "Zna li tko je li ovo dobar sadrzaj zaglavlja 1. zadatka:\n\npackage someRandomPackage\n\nimport (\n\n\t\"testing\"\n\n\t\"errors\"\n\n\t\"main\"\n\n)\n\n?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37519": {
+      "poster": "viliml",
+      "content": "@dinosaur1#37434 ja imam samo testing",
+      "votes": {
+        "upvoters": [
+          "dinosaur1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37591": {
+      "poster": "dinosaur1",
+      "content": "@viliml#37519 a kako dohvatis funkciju TotalCost ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37673": {
+      "poster": "kolega_kolega",
+      "content": "@dinosaur1#37434 Meni je \"fmt\" i \"testing\". funkcija ti se dohvaća tako da su ti u istom folderu main.go i main_test.go. i onda pokrenes sa: go test",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "Vonj",
+          "dinosaur1",
+          "viliml"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37807": {
+      "poster": "Suki7",
+      "content": "Jesu oni mozda u prvom zad zaboravili koristiti ToExpensiveLimit u TotalCostu hahahahaha",
+      "votes": {
+        "upvoters": [
+          "kolega_kolega"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38595": {
+      "poster": "IdemNecu",
+      "content": "```\npackage someRandomPackage_test\n\nimport(\n\t\"testing\"\n\t\"errors\"\n)\n\nfunc TestTotalCost(t *testing.T){\n\ttype testCase struct {\n\t\tNamePro\t\tstring\n\t\tPricePro\tint\n\t\tTypePro\t\tstring\n\t\tQuanPro\t\tint\n\t\tExpError\terror\n\t}\n\n\tcases := []testCase{\n\t\t{\n\t\t\tNamePro: \"Kruh\",\n\t\t\tPricePro: 5,\n\t\t\tTypePro: \"Prehrana\",\n\t\t\tQuanPro: 3,\n\t\t\tExpError: nil, \n\t\t},\n\t\t{\n\t\t\tNamePro: \"Sir\",\n\t\t\tPricePro: 30,\n\t\t\tTypePro: \"Prehrana\",\n\t\t\tQuanPro: 1,\n\t\t\tExpError: errors.New(\"Too expensive item\"),\n\t\t},\n\t\t{\n\t\t\tNamePro: \"Cokolada\",\n\t\t\tPricePro: 18,\n\t\t\tTypePro: \"Prehrana\",\n\t\t\tQuanPro: 3,\n\t\t\tExpError: errors.New(\"Too expensive item\"),\n\t\t},\n\t\t{\n\t\t\tNamePro: \"Voda\",\n\t\t\tPricePro: 2,\n\t\t\tTypePro: \"Pice\",\n\t\t\tQuanPro: 1,\n\t\t\tExpError: errors.New(\"Item not allowed\"),\n\t\t},\n\t}\n\n\tfor _, tc := range cases {\n\t\tsource := mockShopping{\n\t\t\tName: tc.NamePro,\n\t\t\tPrice: tc.PricePro,\n\t\t\tType: tc.TypePro,\n\t\t\tQuantity: tc.QuanPro,\n\t\t}\n\n\t\tmockCost, err := someRandomPackage.TotalCost(source)\n\t\n\t\tif err != nil{\n\t\t\tif err == tc.ExpError{\n\t\t\t\tt.Errorf(\"case: %s\", err)\n\t\t\t}\n\t\t}\n\t}\n}\n\ntype mockShopping struct{\n\tName string\n\tPrice int\n\tType string\n\tQuantity int\n}\n```\n\nAko može pomoć molim vas stvarno ne znam vise sto je greska ugl \"someRandomPackage\" not imported stalno izbacuje. Ili ako je ovo krivi pristup da mi date neke smjernice",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38599": {
+      "poster": "Suki7",
+      "content": "@IdemNecu#38595 Probaj samo staviti za package someRandomPackage\n\nMakni _test",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38600": {
+      "poster": "IdemNecu",
+      "content": "@Suki7#38599 Probo sam to vec opet ista stvar",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38623": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@IdemNecu#38595 1. jesu li ti zadana funkcija (koju su nam dali u tekstu zadatka) i taj test u jednom, zasebnom direktoriju (meni nije radilo dok to nisam napravio)\n2. kao što je kolega rekao da staviš ono za package\n\nako ni to ne proradi javi pa možda nađem neko drugo rješenje za taj problem",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38628": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "može li netko dati hint kako riješiti drugi zadatak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38661": {
+      "poster": "idontwannabemyself",
+      "content": "@iNavy#38628 \n\n- u svakoj fji pokusas izvuc n i onda provjeravas jesi li uopce uspio ista izvuc - ako ne, vracas 400\n- onda provjeravas je li to sto si izvukao broj (dovoljno samo int jer je u structu number int)  - ako ne, vracas 400\n- zatim idu provjere toga sto se trazi u svakoj fji, imas dva slucaja sto moze vratit response i to zapises u onu strukturu `webResponse___ `koju su dali \n- pokusas to pretvorit u JSON - ja sam tu jos provjeravala vraca li error ili ne pa sam stavila jos jedno vracanje 400, ali mozda ne treba\n- i onda vratis taj JSON u odgovoru kao sto se vracalo u prosloj zadaci, putem w.Write",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Koalefant",
+          "Suki7",
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38710": {
+      "poster": "IdemNecu",
+      "content": "@iNavy#38623 u zasebnom su direktoriju oba programa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38721": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@idontwannabemyself#38661 da, to mi je otprilike jasno, no kako točno iskoristiti onaj middleware paket koji su nam dali s githuba",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38724": {
+      "poster": "idontwannabemyself",
+      "content": "@iNavy#38721 oni se koriste u mainu, svi ovi use i get su od toga, a u samim fjama koje mi pisemo ne trebaju ni za sto",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Suki7",
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38826": {
+      "poster": "JBear",
+      "content": "Jel rečeno koliko bodova trebamo skupiti iz zadaća za prolaz?",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "pez (ip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "39085": {
+      "poster": "Suki7",
+      "content": "@JBear#38826 Mislim da im nije ni bitno to toliko. Opustena su ekipa pa ako vide da si ulozio bar malo truda u svaku zadacu proci ces. Bar sam ja to tako dozivio",
+      "votes": {
+        "upvoters": [
+          "JBear",
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "39101": {
+      "poster": "helenic",
+      "content": "Mislim da treba imati >= 50% potpuno točno riješenih i sve zadatke predane",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "39587": {
+      "poster": "Jale (čakijale)",
+      "content": "@helenic#39101 Jel sigurno ovo da moramo predati sve zadatke uvjet?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "39598": {
+      "poster": "helenic",
+      "content": "@Jale#39587 \n\nDa citiram prof,  \"očekuje se da predaš sve tri zadaće i skupiš bar 50% točnih zadataka\", s tim da će se možda korigirati s obzirom da se ove godine predaje prvi put i bila je online nastava",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

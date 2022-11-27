@@ -1,0 +1,2328 @@
+{
+  "title": "[NOS] 1. laboratorijska vježba - 2020/2021",
+  "creator": "Yeltneb",
+  "slug": "nos-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Napredni operacijski sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "153910": {
+      "poster": "Yeltneb",
+      "content": "Ovo je pseudokod procesa auto:\n\n`\nProces Auto(registarska_oznaka, smjer) {\n\n   // smjer = 0 ili 1\n\n   // registarska oznaka je redni broj automobila u sustavu\n\n   spavaj Z milisekundi; // Z je slučajan broj između 100 i 2000\n\n   pošalji zahtjev za prijelaz mosta i ispiši(\"Automobil registarska_oznaka čeka na prelazak preko mosta\");\n\n   po primitku poruke \"Prijeđi\" ispiši(\"Automobil registarska_oznaka se popeo na most\");\n\n   po primitku poruke \"Prešao\" ispiši(\"Automobil registarska_oznaka je prešao most.\");\n\n}\n`\n\nKod ove poruke “Prijeđi” i “Prešao” jel smijem ja slati “Prijeđi 1” i “Prešao 2” gdje su ovi brojevi registarska oznaka automobila?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154025": {
+      "poster": "PrisonMike (Števo)",
+      "content": "jel napravio netko drugi zadatak možda? jel bi nam u tom zadatku bilo dosta N cjevovoda, ako je N broj procesa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154945": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "ponavljaci, po cemu se razlikuje ovaj labos od proslogodisnjeg?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155518": {
+      "poster": "RogerRoger",
+      "content": "Lab se ne čini strašan, realno koliko bi vremena bilo potrebno za ovo implementirati u C-u?\n\nMislim postoje ovi primjeri kirk.c i spock.c, valjda nije grozno...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155675": {
+      "poster": "Vamonos (Idemo)",
+      "content": "Je prof rekao kada ce se otvoriti predaja na Ferku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155676": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Vamonos#155675 kolko vidim otvorena je? pod Domaće zadaće",
+      "votes": {
+        "upvoters": [
+          "Vamonos (Idemo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155677": {
+      "poster": "Vamonos (Idemo)",
+      "content": "![](assets/2021-03-20/00001.png)\n\n@PrisonMike#155676 Radim nes krivo?\n\nUsput, moramo ovo raditi na Linuxu ili mozemo koristiti MSMQ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155678": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Vamonos#155677 Hmm, zanimljivo...\n\n![](assets/2021-03-20/00002.png)",
+      "votes": {
+        "upvoters": [
+          "Vamonos (Idemo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155679": {
+      "poster": "Vamonos (Idemo)",
+      "content": "Vjerojatno je do toga sto sam naknadno upisao predmet. Posaljem mail. Hvala",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155684": {
+      "poster": "Murin",
+      "content": "Trebam preporuku za neku kombinaciju virtualke i tog mrtvog linuxa, skinuo sam virtual box i ubuntu ali bome mi se ne programira na 800x400 piksela, potrosio sam sat i pol samo pokusavajuci namjestiti screen.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155685": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Vamonos#155677 to bi kao trebalo raditi crossplatform, ali su govorili da ako želimo raditi s named pipeovima da onda nije bitno što neće na windowsu radit (jer windowsi navodno nemaju tu funkcionalnost)\n\nkonkretno ne mislim da je to pravilo ikad enforceano",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155687": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Murin#155684 uvijek vmware, nikad virtualbox\n\nal mislim ne vidim zašto samo ne bi pokrenuo WSL ak si na windowsu. Rekao bih ionako ti ne treba grafika, al i to ima\n\nInače ti ne treba linux za ovaj labos, rade te stvari i na windowsu :P",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155688": {
+      "poster": "Murin",
+      "content": "@micho#155687 \n\nslabo se razumijem u te stvari ali koliko sam shvatio ti neki c librariji niti ne postoje na windowsu tipa <sys/msg.h>, i ne radi fork(), nit znam kako bi postavio varijablu ljuske itd itd",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155689": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Murin#155688 Istina, nema fork, ali postoje ekvivalenti, tzv. spawn funkcije\n\nista stvar i za pipeove\n\nA ako programiraš u nekom višem jeziku, npr. Pythonu, nema razlike, npr. `os.pipe` radi normalno, kao i `multiprocessing` i `threading`\n\ne sad je opet pitanje dal se želiš zajebavat s winapi ili pythonom, ak ne, mislim da ti je WSL najlakši za složit od svega",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155708": {
+      "poster": "RogerRoger",
+      "content": "Malo mi je nejasan ovaj prvi zadatak. Dakle treba napisati proces semafor koji ima neki početni smjer i čeka zahtjeve za prolaz. Kad se skupe tri zahtjeva u jednom smjeru (trenutnom), on tim automobilima pošalje (u isto vrijeme?) odgovor \"prijeđi\". Isto se to dogodi ako prođe između 0.5 i 1 sekunde (nasumično), što god da dođe prije. Nakon ispunjenja jednog od ta dva uvjeta, mijenja se smjer i opet provjerava uvjete. Je li ovo točno?\n\nKod za auto generira N auta različitih registracija s nasumičnim smjerovima. Pretpostavljam da bi to značilo da se izvodi onaj pseudokod za svaki auto koji se generira, dakle sleep(0.1-2 sekunde), pošalje zahtjev za prelazak u cjevovod, kad primi odgovor \"prijeđi\" printa, čeka odgovor \"prešao\" i printa odgovarajući tekst.\n\nDakle, kad semafor omogući autu da pređe, semafor šalje \"prijeđi\", sebe sleepa na 0.1-2 sekunde i onda šalje \"prešao\"? I tako x puta za x auta koji trenutno prelaze (max 3)? Ne koristi se fork() na ovome, jel da?\n\nOsim toga, proces auto generira aute i šalje zahtjeve, al tu bi se trebao koristiti fork(), što ne? Generiraju se auti i onda se za svakog od njih stvori thread koji radi sleep(), šalje zahtjev i čeka dva odgovora?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155757": {
+      "poster": "shade",
+      "content": "Kako u drugom zadatku s cjevovodima napraviti N procesa i cjevovode izmedu svakog od njih?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155772": {
+      "poster": "Emma63194",
+      "content": "Treba li zaključati predaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155775": {
+      "poster": "Amon",
+      "content": "@Emma63194#155772 Da",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155813": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "jeste li kod prvog prijelaza mosta pazili da ako se ne stigne ucitati 3 auta u smjeru T kroz zadano vrijeme X da pusti recimo samo jedan auto i prede na drugi smjer. ili ste to vrijeme X gledali samo na kraju kad vise nema dovoljno auta za taj smjer.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155832": {
+      "poster": "TheCrimsonChin",
+      "content": "@PiqueBlinders#155813 ja sam stavio da odbrojava od početka tj. tijekom cijelog vremena",
+      "votes": {
+        "upvoters": [
+          "Longclaw"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155835": {
+      "poster": "TheCrimsonChin",
+      "content": "@PrisonMike#154025 to i mene zanima, ja sam nekom sumnjivom matematikom došao do brojke od N*(N-1)/2 cjevovoda za N procesa",
+      "votes": {
+        "upvoters": [
+          "Longclaw"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155843": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Mislim da smo prošle godine utvrdili da je dovoljno i 2N cjevovoda ako se postave cirkularno (ili N, ako su dvosmjerni). Samo onda se mora pisati logika prosljeđivanja u krug.\n\nNpr s 4 procesa, treba 8 cjevovoda:\n\n0 in, 0 out, 1 in, 1 out, 2 in, 2 out, 3 in, 3 out. Kad proces 0 želi odaslati poruku svima, šalje poruku susjednom većem cjevovodu, npr. 0 out -> 1 in, 1 out -> 2 in, 2 out -> 3 in, 3 out -> 0 in. Kad poruka dođe do instance koja ju je poslala, ona se ignorira i uništava.\n\nProblem kod ovog pristupa je što svaka instanca mora biti svjesna gdje je, tj. održava se kao neka poredana linked lista. I druga stvar je što bi cijeli jedan broadcast trebao biti u jednom velikom kritičnom odsječku kad se ne mogu dodavati ili micati procesi, jer inače se može potrgati ta komunikacija.\n\nEDIT: I dobro, može se koristiti i par cjevovoda po svakom procesu pa se dijele. Međutim ako već tako ciganimo vjerojatno se sve može s 2 cjevovoda i simulacijom reda poruka, ali mislim da to nije cilj vježbe.",
+      "votes": {
+        "upvoters": [
+          "TheCrimsonChin"
+        ],
+        "downvoters": [
+          "peaceko"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155847": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@TheCrimsonChin#155835 ja sam čini mi se uspio napravit s N cjevovoda, svaki proces čita samo sa svog cjevovoda, a piše samo na druge",
+      "votes": {
+        "upvoters": [
+          "TheCrimsonChin",
+          "feel_d_boot (iNut)",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155878": {
+      "poster": "TheCrimsonChin",
+      "content": "@PrisonMike#155847 aha, ima smisla. A može li se onda dogoditi da više procesa pokuša odjednom pisati na isti pipeline? Imam osjećaj da bi to mogao biti problem",
+      "votes": {
+        "upvoters": [
+          "Longclaw"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155894": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@TheCrimsonChin#155878 moguće da bi mogao biti problem, ali nisam baš previše upućen u gradivo pa ako možda netko drugi zna?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155899": {
+      "poster": "TheCrimsonChin",
+      "content": "@PrisonMike#155894 evo, ako sam dobro shvatio [ovaj odgovor](https://unix.stackexchange.com/questions/68146/what-are-guarantees-for-concurrent-writes-into-a-named-pipe), ne bi trebao biti problem jer ima buffer",
+      "votes": {
+        "upvoters": [
+          "Longclaw",
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155983": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "jel prof ista govorio jel 2.lab isti ko prosle godine, digitalna omotnica i ta kriptiranja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155986": {
+      "poster": "JustinCase",
+      "content": "U drugom zadatku, kada proces ude u K.O. zasto 5 puta mora azurirat logicki sat i broj ulazaka? Te vrijednosti se ne bi trebale mijenjati dok je u K.O. Ili se to misli da svaki proces ulazi 5 puta u K.O.?",
+      "votes": {
+        "upvoters": [
+          "ALovelace",
+          "Murin",
+          "TheCrimsonChin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155989": {
+      "poster": "Murin",
+      "content": "@JustinCase#155986 \n\nMislim da su se lose izrazili jer to nema smisla, cini mi se da i je ideja zadataka da neki proces pokusa 5 puta uci u kriticni odsjecak",
+      "votes": {
+        "upvoters": [
+          "JustinCase"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156036": {
+      "poster": "Murin",
+      "content": "Kod Lamporta- kako bi se najbolje implementirao taj neki red cekanja i samo slanje raznih vrsta poruka (zahtjev, odgovor,izlazak)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156113": {
+      "poster": "member",
+      "content": "@JustinCase#155986 Znam da je logično, ali svejedno sam pitala pa evo odgovor asistenta: \"Svaki proces treba 5 puta ući u kritički odsječak, doradit ćemo tekst zadatka da bude jasnije.\"",
+      "votes": {
+        "upvoters": [
+          "Juren",
+          "JustinCase"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156186": {
+      "poster": "ardi (sprut)",
+      "content": "kako ste u pythonu rijesili shared memory u zadatku s bazom podataka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156274": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@ardi#156186 imaš shared_memory u multiprocessing\n\na na najprimitivnijem nivou možeš napraviti jednu datoteku pa to koristiti ko memoriju. Tipa neki json pa ga je onda lako koristiti kao bilo kakvu memoriju. I ako misliš da je to dosta klošarski, well, tak ti više manje rade nosql baze podataka XD",
+      "votes": {
+        "upvoters": [
+          "ardi (sprut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156532": {
+      "poster": "Vamonos (Idemo)",
+      "content": "Tko su asistenti na ovom predmetu? Na FERwebu su navedeni samo profesori :s",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156563": {
+      "poster": "member",
+      "content": "@Vamonos#156532 Petar Paradžik i Iva Jurković sastavljaju labos",
+      "votes": {
+        "upvoters": [
+          "Vamonos (Idemo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156597": {
+      "poster": "Murin",
+      "content": "Ima netko da je kroz pipe slao strukture (da je enkapsulirao oznake) ?\n\nMeni nekad dolazi do greske gdje kad citam `read(pipe[0],buffer,sizeof(PipeMessage));` dobijem jedan byte koji je nula sto mi naravno pokvari daljni tijek programa, sto mi je cudno jer uvijek saljem u pipe samo `sizeof(PipeMessage)` bajtova aka trebalo bi ili procitati normalno ili zapeti u cekanju da netko pise?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156650": {
+      "poster": "Murin",
+      "content": "@Murin#156597 \n\nPro tip ako cete koristiti strukture, pazite da svugdje gdje pisete/citate koristite sizeof(struct ime_strukture) ili typedef ako to koristite, da vam se ne omakne ko meni na jednom mjestu da sizeof(pointer_na_strukturu)\n\nIsto tak preporucam da dio napravite u c++ stilu sa std::set kao redom poruka i da overloadate operatore ==,!= i < za te strukture.",
+      "votes": {
+        "upvoters": [
+          "TheCrimsonChin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156670": {
+      "poster": "BigD",
+      "content": "Kako bi semafor trebao istovremeno čitati poruke i odbrojavati vrijeme?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156673": {
+      "poster": "Amon",
+      "content": "@BigD#156670 Ja sam napravio novi thread koji samo služi za brojanje vremena (sleep od 3 sekunde or sth like that) pa kad završi postavi stop zastavicu koja se gleda u semaforu i onda thread završi. I onda tako svaki put kad se zamijeni strana se stvara taj novi thread",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156674": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@BigD#156670 bez master entiteta koji dojavljuje vrijeme, radno čekanje uz sleep",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156725": {
+      "poster": "ReyKenobi",
+      "content": "@Amon#155775 znači treba samo prije termina bit zaključano, jel?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156731": {
+      "poster": "in1",
+      "content": "@ReyKenobi#156725 da",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156824": {
+      "poster": "Carmichael (Charm)",
+      "content": "kolko dugo vam traje prvi zadatak za N=100? (Python)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156858": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@BigD#156670 Ja sam stavila da je čitanje iz reda neblokirajuće ako je prazan, i onda u svakom prolasku u while petlji pozbrojim vrijeme (petlja je nešo kao while(auti< 3 && vrijeme<čekanje))",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156977": {
+      "poster": "Ziher",
+      "content": "@BigD#156670 imas kao funkciju setitimer koja javlja SIGALRM prekid nakon postavljenog vremena, relativno jednostavno za postaviti, ali onda trebas hendlat dobro kaj se dogodi ako te prekida",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157126": {
+      "poster": "JustinCase",
+      "content": "Imao sam labos danas pa evo pitanja:\n1.  zadatak:\n\nPokazi gdje inicijaliziras redove poruka\n\nSto se salje u porukama\n2.  zadatak:\n\nKoji cjevovod koristis\n\nPokazi gdje inicijaliziras cjevovod\n\nRazlika izmedu Lamport i Ricard/Agrawal",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Carmichael (Charm)",
+          "Cvija",
+          "Dammir (Kajropraktour)",
+          "Ellie",
+          "Emma63194",
+          "Njet",
+          "PudingIzMenze",
+          "ReyKenobi",
+          "Watson (112)",
+          "WhiteMamba",
+          "Ziher",
+          "ardi (sprut)",
+          "feel_d_boot (iNut)",
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157137": {
+      "poster": "RogerRoger",
+      "content": "\"Prijelazak mosta se omogućuje kada se zabilježi 3 zahtjeva za prijelaz u trenutnom smjeru ili prođe X milisekundi\" što ovo znači?\n\nDakle kužim da se smjer semafora mijenja kad prođe određeno vremena, ali što je ovo s 3 zahtjeva?\n\nZnači li to: puštam aute u ovom početnom smjeru, kad mi na queue za suprotni smjer dođe 3 auta mijenjam smjer (i čekam da trenutni siđu s mosta prije puštanja sljedećih) itd.? U tom slučaju, ako imam npr. 8 auta u smjeru A i pustim 3, ostaje mi 5 auta, a u smjeru B imam 3 auta, jel onda puštam 3 po 3 izmjenično?\n\nMožda sam nespretno napisao, ali što ako i u A i u B imam >>>3 auta, jel onda pustim 3 iz A, promijenim smjer, pustim 3 iz B, promijenim smjer opet i pustim 3 iz A i tako dok god ih ima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157139": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@RogerRoger#157137 mijenjaš smjer nakon što auti prođu most (ne mora bit 3 auta., zbog vremenskog ograničenja te idleanja autiju kad se stvore, ili negdje pri kraju kad ni nećeš imat 3 auta u istom smjeru). ali da, ako imaš više od 3 zahtjeva za trenutni smjer, pustiš 3, promjeniš smjer, pa nakon što iz suprotnog smjera prođu most, opet se vraćaš i puštaš sljedeće zahtjeve preko mosta.",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "Klokan",
+          "Mars (mars_)",
+          "RogerRoger",
+          "ardi (sprut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157191": {
+      "poster": "Vamonos (Idemo)",
+      "content": "Sto je raspodijeljeni centralizirani protokol? Fraza ne postoji ni u slajdovima ni u knjizi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157192": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Vamonos#157191 \n\nTo ti je ovo. Netko je čak i na predavanju pitao isto pitanje kao i ti i profesor je potvrdio da se radi o ovome.\n\n![](assets/2021-03-23/00031.png)",
+      "votes": {
+        "upvoters": [
+          "Vamonos (Idemo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157354": {
+      "poster": "ReyKenobi",
+      "content": "Ljudi koji su radili u pythonu, što ste koristili kao implementaciju procesa? Ja koristim `multiprocessing`, ali naišla sam na problem da mi se ne ispisuju kad printam u stvorenim procesima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157407": {
+      "poster": "chuuya (temari)",
+      "content": "@ReyKenobi#157354 Isto `multiprocessing` i normalno mi printa u stvorenim procesima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157561": {
+      "poster": "_xXx_Matej_xXx_ (Mateejj)",
+      "content": "@ReyKenobi#157354 \n\nMeni je bilo isto pa sam dodao sys.stdout.flush() nakon svake print metode u stvorenim procesima.",
+      "votes": {
+        "upvoters": [
+          "Klokan",
+          "ReyKenobi",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157738": {
+      "poster": "pushPop",
+      "content": "Kako se u 1. zadatku stvore procesi koji se izvode paralelno? Probao sam N puta unutar for-a:\n```\nswitch (fork()) {\n\n   case -1:\n      printf(\"Ne mogu kreirati novi proces\\n\");\n      break;\n\n   case 0:\n      execl(\"./atuo\",\"auto\",...parametri za auto..., NULL);\n      exit(1);\n\n   default:\n      wait(NULL);\n\n}\n```\n\nAli to mi stvori procese koji čekaju jedan na drugog. Npr. ako unutar procesa Auto napišem while(1)\n\nonda mi već 1. proces zablokira i ostali se ne mogu startati.\n\nHvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157746": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@pushPop#157738 makni wait(NULL) iz defaulta i stavi ga izvan switch petlje, možda to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157753": {
+      "poster": "pushPop",
+      "content": "@janeromero#157746 \n\nProcesi mi se normalno startaju tj. ulaze u case 0 tako da mi to ne mijenja. Samo npr. kad postavim while(1) u kojem Auto čeka poruku \"Pređi\" od Semafora, onda taj 1. Auto zablokira sam proces Semafor koji ne može stvoriti ostale procese Auto.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157768": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@pushPop#157753 Aha znači ti u mainu stvoriš semafor, a u semaforu stvaraš aute?\n\nJa stvorim posebno semafor a posebno aute u mainu, doslovno na isti način kao i ti i radi mi normalno. Ovako na prvu ne znam gdje bi još mogao biti problem. Probaj u mainu tak možda napravit pa vidi jel onda radi?",
+      "votes": {
+        "upvoters": [
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157769": {
+      "poster": "pushPop",
+      "content": "@janeromero#157768 \n\nAha kuzim, hvala! Probat cu tako",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157826": {
+      "poster": "WhiteMamba",
+      "content": "Pitanja s danasnjeg odgovaranja labosa:\n\n**1. zadatak:** koliko redova koristim i gdje ih inicijaliziram, kako izgleda poruka koja se salje, brzi prolaz kroz kod da objasnim kako sve funkcionira i kako sam ja sve ostvario\n\n**2. zadatak:** koliko poruka se izmjeni Lamportovim algoritmom (odg: 3 * (N-1)), koje su to poruke (odg: zahtjevi za ulazak u K.O., dozvole i izlasci iz K.O.), brzi prolaz kroz kod da objasnim kako sve funkcionira i kako sam ja sve ostvario\n\nSveukupno je ispitivanje trajalo oko 5 minuta i ispitivac nije ulazio u detalje niti postavljao podpitanja. Pitanja se uglavnom temelje na kodu i malo se teorije dotakne",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "Njet",
+          "PrisonMike (Števo)",
+          "RIsta",
+          "ReyKenobi",
+          "Watson (112)",
+          "chuuya (temari)",
+          "in1",
+          "joc"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157849": {
+      "poster": "Amon",
+      "content": "Pitanja:\n1. zadatak: Pokazati u kodu gdje je semafor i gdje čita iz reda poruka. Kako semafor javlja autima da smiju proći? Pokazati kako je implementiran timeout (ono brojanje sekunde ako nemamo 3 auta)\n2. zadatak: Kako funkcionira Lamportov algoritam? Gdje pokazati gdje se i kada ažurira logički sat.\n\nugl ništa teško i bilo je gotovo za par minuta...\n\nSretno svima",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "Njet",
+          "RIsta",
+          "ReyKenobi",
+          "Watson (112)",
+          "chuuya (temari)",
+          "in1",
+          "joc"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157866": {
+      "poster": "netko_tamo",
+      "content": "Radim u c++, kako ste implementirali ovaj logički sat, doslovno kao counter koji za svaki proces ide od 0 ili možda neki timestamp(GetSystemTime) u trenutku stvaranja procesa pa povećavati za 1 ako se neki event dogodi? I jel je uopće bitan taj dio implementacije? hahah",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158187": {
+      "poster": "RogerRoger",
+      "content": "Za Ricart-Agrawala, malo sam se zbunio po pitanju logičkog sata. Inkrementira li se samo kad se pristupa bazi?\n\nAko je tako, što kad smo na početku i svi imaju log. sat na 0, šalju zahtjeve svima ostalima i čekaju, ali nijedan ne odgovara? Ili inicijaliziram logičke satove za npr. 5 procesa kao 0, 1,... 4 prema redoslijedu kako su se forkali?",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158200": {
+      "poster": "login",
+      "content": "@RogerRoger#158187 Ako se ne varam, logicki sat inicijaliziras na random vrijednost iz nekog intervala.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158213": {
+      "poster": "Amon",
+      "content": "@login#158200 A ni to ne moraš, ja sam ih sve imao na 0 i nije bilo problema",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158383": {
+      "poster": "Emma63194",
+      "content": "@TheCrimsonChin#155835 Ja sam došla do iste brojke potrebnih cjevovoda.\n\n@PrisonMike#155847 Nije li onda da kada imamo samo N cjevovoda, ta struktura zapravo gubi smisao? Ako više procesa piše na isti kraj, nije li to zapravo onda red?",
+      "votes": {
+        "upvoters": [
+          "Koalalica (zaba)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158406": {
+      "poster": "Carmichael (Charm)",
+      "content": "@RogerRoger#158187 odgovorit ce jer ako imaju procesi isti iznos logickog sata gleda se po indeksu procesa koji ce prvi uc (manji indeks prvi), bar mislim da je tako receno na predavanju.. znaci u ovom slucaju proces P1 ce uvijek prvi uci u KO..",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "RogerRoger"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158481": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Emma63194#158383 ne znam jel gubi smisao, ovako mi se činilo puno lakše za implementirat\n\na ako proces čita s više cjevovoda i provjerava ih sve slijedno, na neki način je i to red, bar mislim",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158512": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "Može netko pojasniti redove poruka za 1.zadataka tj. ima li neki broj koliko redova poruka treba biti ili postoji više mogućnosti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158513": {
+      "poster": "Emma63194",
+      "content": "@PrisonMike#158481 Mislim, to da, ali ja sam shvatila da je cjevovod struktura kojoj je jedan proces na jednom kraju, drugi na drugom kraju i to je to, kraj priče.\n\nOvo što kažeš za slijedno čitanje je filozofija sada haha. \n\nMislim, meni osobno ima više smisla za ovaj zadatak koristiti red, ali kad su oni u uputama naglasili cjevovod da mora biti. \n\nPython dokumentacija ovo kaže za cjevovod: \n> The two connection objects returned by Pipe() represent the two ends of the pipe. Each connection object has send() and recv() methods (among others). Note that data in a pipe may become corrupted if two processes (or threads) try to read from or write to the same end of the pipe at the same time. Of course there is no risk of corruption from processes using different ends of the pipe at the same time.",
+      "votes": {
+        "upvoters": [
+          "Koalalica (zaba)",
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158514": {
+      "poster": "Emma63194",
+      "content": "@Zuzu#158512 Ja sam shvatila da možeš koristiti koliko god želiš, tj. koliko god ti treba.",
+      "votes": {
+        "upvoters": [
+          "Zuzu (Coffe123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158525": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Emma63194#158513 Fora je u tome da pipeovi, kao i svaki dio softvera, ima svoje use caseove, a ima i abuse caseove. Da, možeš koristiti jedan opisnik datoteke za više procesa, i kod pipeova se to generalno neće sjebati jer nisu jako primitivni (dok ne kreneš pumpati ogromne poruke, za koje pipeovi nisu stvoreni), za razliku od datoteka podnose konkurentno pisanje i čitanje prilično dobro (jer je u ovom slučaju u kritičnom odsječku).\n\nAli isto si u pravu si kad kažeš da bi svaki proces trebao imati posebno otvore za pisanje i za čitanje, jer to je filozofija cijela.\n\nNa labosu se baš toliko ne provjerava koliko je tvoja filozofija ispravna dok god je implementacija logički smislena i radi. Ali isto tako valjda je svima jasno da što se više filozofira oko implementacije to ju je teže obraniti.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159161": {
+      "poster": "Ellie",
+      "content": "Jeste koristili multiprocessing.Semaphore u pythonu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159162": {
+      "poster": "Ellie",
+      "content": "U biti me zbunjuje ovaj dio teksta iz pripreme za zadatak: \n> Red poruka može poslužiti kao semafor: stavljanje poruke u red je ekvivalentno otvaranju semafora, a uzimanje poruke iz reda ekvivalentno je zatvaranju semafora. Poziv za uzimanje poruke se normalno zablokira ako je red prazan što odgovara stanju kada je semafor na nuli.\n\nPo ovome mi se cini da mi semafor niti ne treba. \n\nTako da ako bi mi samo netko mogao reci treba li ili ne, pa da stignem prepraviti kod, to bi bilo super.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159163": {
+      "poster": "Koalalica (zaba)",
+      "content": "@Ellie#159162 ne treba ti semafor, samo redovi.",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "Klokan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159180": {
+      "poster": "Klokan",
+      "content": "koja je vremenska estimacija za slozit labos u pythonu?",
+      "votes": {
+        "upvoters": [
+          "hi_doggy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159198": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "može savjet za taj 1.zadatak, kako da semafor zna koji auto mora pustiti, što je u poruci kako bi on to znao, ili na neki drugi način zna od kojeg auta je dobio zahtjev? vjerojatno ima neka sitnica koju sam propustila",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159201": {
+      "poster": "Klokan",
+      "content": "@Zuzu#159198 procitaj poruke iznad, pise dosta toga oko propustanja autiju, te da semafore nije potrebno rucno implementirati jer se semafori implicitno \"koriste\" kod citanja i pisanja u red",
+      "votes": {
+        "upvoters": [
+          "Zuzu (Coffe123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159249": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Klokan#159180 ako znaš python, 2 sata\n\nMOD EDIT: Čisto da klarificiram što ovo znači da ne bi bilo rejđa, dobro znati python znači da je jedina nepoznanica za nekog u ovom labosu `multiprocessing` modul. Bez toga se ovisno o sposobnosti autora labos može protegnuti do cijelog dana, ali kvantitativno ovaj, kao i labosi prošlih godina su kumulativno 150-200 linija koda",
+      "votes": {
+        "upvoters": [
+          "Klokan",
+          "MsBrightside"
+        ],
+        "downvoters": [
+          "Emma63194",
+          "[deleted]",
+          "orange",
+          "peaceko"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "in1"
+        ],
+        "tuga": []
+      }
+    },
+    "159262": {
+      "poster": "Yasuke (Bono)",
+      "content": "Kako ste u c-u napravili redove zahtjeva kod sinkronizacije za drugi zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159280": {
+      "poster": "[deleted]",
+      "content": "@micho#159249 mislim da malo pretjerujes, sad kad gledas retropektivno ti se sigurno cini tako malo,. Realno treba malo vise vremena za skuzit sto se dogadja i kak, tak da bih rekla dan, dan i pol realisticno. Samo ce se ljudi osjecat nekompetentno ako im treba vise od 2 sata, a treba",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Conrad",
+          "Cvija",
+          "Emma63194",
+          "JustinCase",
+          "Klokan",
+          "Longclaw",
+          "PeroPerica",
+          "Quentin",
+          "Simpy",
+          "WhiteMamba",
+          "Yeltneb",
+          "aKul (Vili Beroš)",
+          "cajaznun",
+          "chuuya (temari)",
+          "hi_doggy",
+          "in1",
+          "member",
+          "mentally_disturbed_llama",
+          "mikimoj",
+          "miss_anthropocene (neunist.iva)",
+          "narval13068 (Dima)",
+          "orange",
+          "pepelko",
+          "sane_insane",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159287": {
+      "poster": "Emma63194",
+      "content": "Treba li zaključati na Ferku predaju dan prije nego što odgovaramo labos ili prije nego što počne tjedan u kojem odgovaramo (što bi bilo ili sutra ili pon, znam da u pon nema termina za odgovaranje)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159289": {
+      "poster": "Klokan",
+      "content": "@Emma63194#159287 prije termina na ferku, dakle ako je u 10h, onda u 9:59:59",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Emma63194",
+          "hi_doggy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159292": {
+      "poster": "Emma63194",
+      "content": "@Klokan#159180 Evo, ako ti išta znači, ja sam taj labos pisala kroz 5 dana (ne po cijele dane, već svaki dan po par sati). \n\nZnam Python od prije, ali nikad nisam koristila taj multiprocessing library pa mi je trebalo vremena da poručim s čime točno raspolažem (a Pythonova dokumentacija stvarno nije najdeskriptivnija).\n\nTrebalo mi je nešto vremena da shvatim kako točno rade neki algoritmi, bilo je detalja koje su me mučili, za neke stvari sam slala i mail asistentu s pitanjima (recimo, u 1.b) kad povećavaš logički sat, kada primiš \"zahtjev\", radiš to po onom pravilu globalnog logičkog sata, a kada primiš \"odgovor\", samo inkrementaš za 1).  \n\nDalje, po meni najteži dio je bio složiti neku logiku da ti cijeli kod radi kako treba i sve što treba. Naime, ima stvarno, stvarno puno slobode tu i koliko je i dobro to, u jednom trenu se možeš osjećati izgubljeno jer ne znaš kako neki problem riješiti, a nemaš nikakav guide.\n\nSure, samo kucanje Python koda mi vjerojatno nije uzelo više od 2 sata, ali sve ovo što sam navela plus još debuggiranje nekih glupih greški, well, to je trajalo...",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Klokan",
+          "Simpy",
+          "chuuya (temari)",
+          "in1",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "moji_prsti_prsti_klize_po_njoj",
+          "orange",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159293": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@msus#159280 a mislim, meni je toliko trebalo tad kad sam to pisao, a razlike u zadacima nisu značajne (1. je malo teži, 2. je malo lakši). Mislim da je tu veći problem da su ljudi u zabludi koliko dobro znaju jezik, u mojem slučaju je to bilo godinu i pol korištenja jezika, pa eto, možda je uz tu informaciju neka realnija slika.\n\nNa kraju krajeva dalo bi se i izračunati vremenski koliko to traje, ali prerasti će u fleksanje tko ima najdulji pypenis pa bolje ne. Nekom će trebat više, nekom manje, 2 sata je samo neko očekivanje uz relativno stroge uvjete, svašta još može utjecati na vrijeme.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Simpy"
+        ],
+        "downvoters": [
+          "peaceko"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159316": {
+      "poster": "tera",
+      "content": "Koja je ideja za izvesti ovo u prvoj vježbi da se čeka ili 3 zahtjeva za prijelaz ili x ms? Ne postoji mehanizam za cancellati `msgrcv` koji blokira, a jedino drugo što mi pada na pamet je da čitam sa `IPC_NOWAIT` pa sleep na neko manje vrijeme ako je neuspješno, ali to mi nema puno smisla.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159321": {
+      "poster": "Emma63194",
+      "content": "@tera#159316 Pa ideja ima puno, ako pogledaš na početku threada, pisalo se o tome već bilo.\n\nAli evo, možeš recimo dohvatiti trenuto vrijeme, uvećati ga za onaj X i nakon toga onda recimo u while petlji provjeravati je li broj autiju 3 ili je li trenutno vrijeme jednako onoj sumi prijašnjeg vremena i X-a (tako sam ja to napravila).",
+      "votes": {
+        "upvoters": [
+          "Mars (mars_)",
+          "MsBrightside",
+          "moji_prsti_prsti_klize_po_njoj",
+          "tera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159330": {
+      "poster": "Ziher",
+      "content": "@tera#159316 \n\nImas moj prosli komentar, dobri stari prekidići iz OS:\n\n@Ziher#156977 \n\nKonkretno, mozes dodat biblioteku errno.h i hendlat ovako:\n```\nif (msgrcv(qid, (struct car_msgbuf*)&buf, sizeof(buf) - sizeof(long), 0, 0) == -1) {\n                        if(errno!=EINTR) perror(\"msgrcv\");\n                        //else prekinut si, radi nesto drugo...\n                }\n```\n   Ovim putem zelim samo poruciti kolegama koji jos nisu poceli raditi labos da nek ne rade u C-u, mozda nije tolko tesko kolko je naporno i vremenski zahtjevno debugging-wise i garbage collection-wise. 2. zadatak sam pisao u pythonu i razlika je dramaticna",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Emma63194",
+          "Vrba",
+          "peaceko",
+          "tera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159368": {
+      "poster": "chuuya (temari)",
+      "content": "Ljudi koji su radili u pythonu, kako ste povezali procese cjevovodima, i kako ste podijelili bazu podataka među njima? Pokušavam nać neki jednostavan način, postoji li uopće haha? Nije mi funkcioniralo sa Queue i sličnim stvarima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159373": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@chuuya#159368 \n\nKaj se tice djeljene baze, kao u uputama :\n> Za dijeljenje baze podataka između procesa koristiti zajednički spremnik (sustavski pozive mmap ili shmat).\n\nZnaci ja sam koristila shmat, ful ful jednostavno, mislim da 3-4 linije koda i onda svugdje u kodu mogu samo pozvat tu strukturu i mijenjat bilosta po njoj iz bilokojeg procesa kak je zadano.\n\nJa sam napravila N cjevovoda, svaki proces(i) cita sa cjevovod\\[i], a salje na cjevovod[j!=i] (imam listu u koju spremam sve cjevovode kad ih stvorim)",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159396": {
+      "poster": "[deleted]",
+      "content": "Radim u pythonu i u drugom zadatku uporno dobivam:\n\n`TypeError: cannot serialize '_io.TextIOWrapper' object`\n\nMislim da je problem u pipeu, guglanje mi uglavnom kaze da trebam promijeniti verziju pythona, ali ne pomaze. Jel se netko mozda slucajno susreo s ovim? Vec polako sijedim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159408": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@msus#159396 čisto informativno, Python 3.7+ imaš? Jer jedan kolega mi se javio s istim problemom na mojem labosu koji radi na 3.6",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159411": {
+      "poster": "[deleted]",
+      "content": "@micho#159408 probala sam sve od 3.6 do 3.9\n\nEdit: Kolega je imao problem na 3.6 ili na 3.7+?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159413": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@msus#159411 hmmm to je jako čudno, rekao bih ti da probaš što raniju verziju 3.6 (dakle ono 3.6.1 potencijalno), ali takve promjene koje bi potrgale programe ne bi smjele biti introduceane u minor verziji\n\nmislim u svakom slučaju je problem što pokušavaš serijalizirati tok, a tokovi se ne mogu serijalizirati. To se vjerojatno događa kada objekt predaješ procesu, jer ta predaja nije injekcija memorije nego se objekt serijalizira tj. pretvori u tekst i onda se otpakira jednom kad se proces pokrene.\n\nPrvo bi trebalo vidjeti gdje se to događa (moja pretpostavka su ulazni cjevovodi), i kad otkriješ u čemu je problem treba vidjeti kako se s njim nositi. To je najlakše vidjeti tako da zakomentiraš objekt po objekt pa s debuggerom gledaš kad će ti proći stvaranje procesa.\n\nNekakvo generalno rješenje je da se objekt može serijalizirati. Za to ima puno raznih rješenja, ali da ne ulazimo u detalje, kod cjevovoda bi rješenje bilo da se on ne otvara dok se ne preda procesu. Dakle, otvarala bi cjevovod kad započneš nešto u procesu, jer do tada će ti on biti put do opisnika datoteke, u generalnom slučaju to je int (a intovi su serializable).\n\nU najgorem slučaju problem nije u ovom što sam rekao (al mislim, više ni ne mogu znat od ovog errora), ali onda barem znaš da treba tražit dalje. Kad ne bi bilo to s tipom podataka, sljedeći korak je gledati što se događa s ovom dijeljenom memorijom, jer tu zna bit problema ako npr. stvari imaju konflikt u nazivu.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159415": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "@janeromero#159373 Jesi shmat koristila preko `sysv_ipc` paketa ili nekak drukcije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159454": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "ima li netko tekst proslogodisnjeg labosa_",
+      "votes": {
+        "upvoters": [
+          "hi_doggy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159460": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Emma63194#159321 \n\nkako da ovo napravim u pythonu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Emma63194",
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159464": {
+      "poster": "Emma63194",
+      "content": "@chuuya#159368 Imaš u multiprocessing libraryju Manager i možeš preko njega inicijalizirati neku zajedničku strukturu i onda to predati procesima. \n\nNapravi cjevovoda koliko ti treba i predaj svaki kraj cjevovoda (onaj Connection object) onom procesu koji ga treba imati i možeš sve te konekcije čuvati u nekoj strukturi podataka.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159465": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@AromaticConfusion#159415 https://docs.python.org/3/library/multiprocessing.shared_memory.html\n\ndoslovno kao u dokumentaciji copy paste koda",
+      "votes": {
+        "upvoters": [
+          "AromaticConfusion (VrloZbunjen)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159474": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "koristin JoinableQueue za 1.a\n\nporuka = str(red_poruka_auto_sm0.get())\n\novdje mi program stane kada imam manje od 3 auta s tim smjerom.. zna li netko kako maknuti tu blokadu ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159499": {
+      "poster": "Emma63194",
+      "content": ".zip arhiva koja se bilo kako zove i u njoj izvorni kod koji se isto bilo kako zove, jel da?\n\nTako treba predati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159501": {
+      "poster": "Amon",
+      "content": "@Emma63194#159499 yes",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159535": {
+      "poster": "PrisonMike (Števo)",
+      "content": "jel bitno da auti koji su prvi poslali zahtjev za prijelaz (za isti smjer) i prvi prođu? \n\ntj. jel bitno da semafor u odgovoru točno specificira koji auto može proć?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159542": {
+      "poster": "Emma63194",
+      "content": "@PrisonMike#159535 Pa iskreno, ne znam odgovor, ali s obzirom na to da nigdje nije eksplicitno naglašeno to što pitaš, rekla bih da to pitanje spada u ono \"implementirajte kako hoćete\". \n\nAko netko slučajno ima drugačiju informaciju, ispravite me onda. \n\nAko želiš baš biti siguran, pošalji mail asistentima (koliko sam shvatila, asistentica je zadužena za prvi zadatak, a asistent za drugi).",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159590": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "Sto tocno znaci ovaj dio kada se ude u KO, \"U bazi podataka, ažurira svoju vrijednost logičkog sata trenutnom\" .",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159648": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "je li netko koristio u pythonu 1.b ShareableList. ja napravim listu objekata kao bazu i pokusam tu listu gurnut u ShareableList ali ne ide. ima li netko drugu ideju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159651": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "zna li netko kako u pythonu gledam lokalni sat za 1b?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159654": {
+      "poster": "Emma63194",
+      "content": "@johndoe12#159648 Nisam koristila navedeno. Pogledaj u multiprocessing libraryju, imaš tamo onaj shared memory i imaš Manager preko kojeg možeš napraviti neku zajedničku strukturu pa što god ti je draže.\n\n@Zuzu#159651 Kako misliš? Pitaš kako ga računaš ili?",
+      "votes": {
+        "upvoters": [
+          "Zuzu (Coffe123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159656": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@johndoe12#159648 Kao što sam već par puta spomenuo, najlakše je kao dijeljenu memoriju koristiti datoteku. JSON ili Pickle, ovisno možeš li sve u tom objektu serijalizirati JSON-om.\n\nČitaš s npr.\n\n```python\nwith open(\"put/do/datoteke.json\", encoding=\"utf8\", errors=\"replace\") as f:\n    obj = json.load(f)\n```\n\nPišeš s npr.:\n\n```python\nwith open(\n    \"put/do/datoteke.json\",\n    mode=\"w+\",\n    encoding=\"utf8\",\n    errors=\"replace\"\n) as f:\n    obj = json.load(f)\n\n    # Radiš nešto s obj\n\n    json.dump(obj, f)\n```",
+      "votes": {
+        "upvoters": [
+          "ardi (sprut)",
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159657": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "@Emma63194#159654 da mislim kako implementiram taj  logički sat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159659": {
+      "poster": "Emma63194",
+      "content": "@Zuzu#159657 Aha, ma doslovno neku varijablu uzmeš, kao neki counter, ajmo reći. Ništa posebno to sada nije.",
+      "votes": {
+        "upvoters": [
+          "Zuzu (Coffe123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159660": {
+      "poster": "Emma63194",
+      "content": "> @micho#159656 najlakše je kao dijeljenu memoriju koristiti datoteku\n\nFakat nije najlakše. Imaš bezveze gnjavažu s čitanjem i pisanjem u file.\n\nOvo je po meni dosta lakše za koristiti:\n>! ![](assets/2021-03-28/00016.jpeg)",
+      "votes": {
+        "upvoters": [
+          "hi_doggy"
+        ],
+        "downvoters": [
+          "ardi (sprut)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159666": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Emma63194#159660 Lakše je koristiti to samo dok radi, a kad prestane raditi gubiš vrijeme na dešifriranje užasno loše napisanih errora u cijelom `multiprocessing` modulu...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Emma63194"
+        ]
+      }
+    },
+    "159898": {
+      "poster": "glider (toblerone)",
+      "content": "@Emma63194#159659 dakle taj counter bi povecavala svaki put kada primi odgovor +1, a kada primim zahtjev po pravilu globalnog logickog sata? jel pocetna vrijednost countera odnosno logickog sata onda 0 ili ?",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159928": {
+      "poster": "Emma63194",
+      "content": "> @glider#159898 dakle taj counter bi povecavala svaki put kada primi odgovor +1, a kada primim zahtjev po pravilu globalnog logickog sata?\n\nDa, tako je.\n\n> @glider#159898 jel pocetna vrijednost countera odnosno logickog sata onda 0 ili ?\n\nTo je na tebi, kako želiš. Mozeš staviti da je svima 0, možeš staviti da je neki random broj.",
+      "votes": {
+        "upvoters": [
+          "glider (toblerone)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159956": {
+      "poster": "MyKnee",
+      "content": "Kako tocno sinkronizirati citanje/pisanje izmedu procesa u c/cpp programu ako se koristi N named pipeova, tj da svaki proces ima svoj pipe i onda u njega pisu ostali. Mucim se vec par dana i nikako da radi bez blokiranja u nekim slucajevima. Trenutno sam najblize rjesenju s ne blokirajucim pisanjem i citanjem, pa se vrti petlja i salje se poruka kad se pogodi da su oba procesa otvorena ali to mi se ne cini bas reliable. I kad u kriticni odsjecak dodam sleep onda se samo sve zablokira lol\n\nkoristim ricart agrawal protokol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159982": {
+      "poster": "pushPop",
+      "content": "Imam problem s read() funkcijom za pipeove - stalno mi vraca -1 tj u sljedecem minimalnom primjeru koda svi procesi zapnu beskonacno u whileu i ispisuju \"cant read\".\n\nZamolio bi za bilo kakvu ideju...\n\nHvala!\n\nEvo minimalni primjer koda\n\n`  \n\nvoid child_loop(pid_t pid_c, int br_c) {\n\n\tint *pipe_this = pipes[br_c];\n\t\n\tclose(pipe_this[1]);\n\tfor (int i=0; i<N; i++) {\n\t\tif (i==br_c)\n\t\t\tcontinue;\n\t\tint *pipe_i = pipes[i];\n\t\tclose(pipe_i[0]);\n\t}\n\n\tchar buf_w[7]=\"\";\n\tsprintf(buf_w, \"%06d\", pid_c);\n\n\n\tfor (int j=0; j<N; j++) {\n\t\tif (br_c == j) continue;\n\t\n\t\twrite(pipes[j][1], buf_w, 7);\n\t\t\n\t\tprintf(\"Proces %d (pid: %d) poslao poruku %s\\n\", br_c, pid_c, buf_w);\n\t}\n\n\n\tchar buf_r[7]=\"\";\n\t\n\tint cr;\n\twhile ((cr = read(pipe_this[0], buf_r, 7)) == -1)\n\t{\n\t\tprintf(\"cant read %d\\n\", br_c);   // svi tu zapnu zauvijek!!!\n\t};\n\tprintf(\"cr = %d\\n\", cr);\n\tprintf(\"Proces %d (pid: %d) primio poruku %s\\n\", br_c, pid_c, buf_r);\n\n}`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160008": {
+      "poster": "korisnickoime",
+      "content": "@_xXx_Matej_xXx_#157561 \n\nJel ima ko da ima problema s printanjem i uz korištenje  sys.stdout.flush()?\n\nAko debugiram program ispis se prikazuje, ali kad runnam program nista.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160009": {
+      "poster": "Emma63194",
+      "content": "> @MyKnee#159956 svaki proces ima svoj pipe i onda u njega pisu ostali\n\nNe znam koliko je pametno da ti više procesa piše na jedan kraj cjevovoda. \n\nAko baš želiš imati N cjevovoda, možeš recimo napraviti još jedan proces i onda je svih tvojih N procesa povezano s tim glavnim procesom preko cjevovoda i onda taj glavni koordinira kome se šalje koja poruka.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160067": {
+      "poster": "Tonek (Bila Pitura)",
+      "content": "jel se zahtjevi šalju drugim procesima svaku iteraciju u for-u, odnosno jel svaki proces šalje zahtjeve 5 puta, ili samo jednom pa se onda međusobno samo odgovori šalju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160111": {
+      "poster": "MyKnee",
+      "content": "@Emma63194#160009 \n\nAj uspio sam rjesit, skroz ispocetka napisao program, sad saljem poruke u novom threadu, a citam u glavom. Sve radi konacno:)\n\nA to za pisanje u cjevovode mislim da ima neki unutarnji sistem di se sinkronizira kad vise procesa pise u jedan jer mi to nije stvaralo probleme.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160119": {
+      "poster": "MJ3",
+      "content": "@Tonek#160067 svaki šalje 5 zahtjeva",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160516": {
+      "poster": "Ducius",
+      "content": "Jos nekome sa Ricartovim algoritmom da nikad zadnji proces ne ude zadnji put u KO, ali samo kad vise puta moraju ulazit procesi u KO? Ako samo jednom ulaze u KO onda zavrse.... Znaci ako svaki proces mora uc 5 puta u KO, zadnji ce uc 4...",
+      "votes": {
+        "upvoters": [
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160531": {
+      "poster": "DodgeCharger",
+      "content": "@Ducius#160516 Meni se to događalo i sa Lamportom. Moraš pazit da prekineš procese tek kad pošalju SVE odgovore, a ne kad izađu iz KO taj zadnji put.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160549": {
+      "poster": "Ducius",
+      "content": "@DodgeCharger#160531 Nazalost nije to, nego mi nekako taj zadnji proces ne bude na listi cekanja od bar jednog procesa i onda ne dobije sve odgovore.... a bas ne znam kako se to dogodi....",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160554": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Ducius#160549 jel ti svaki par procesa ima vlastiti par cjevovoda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160555": {
+      "poster": "Ducius",
+      "content": "@micho#160554 nope, imam N cjevovoda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160562": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Ducius#160555 Ako ne pišeš i čitaš iz njih u kritičnom odsječku, ne možeš očekivati da će ispravno raditi. Hence uopće ideja o [imath]2n(n - 1)[/imath] cjevovoda.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160566": {
+      "poster": "[deleted]",
+      "content": "@micho#160562 N cjevovoda radi i optimalno je. Svaki proces pise na N-1 ostalih cjevovoda, a cita sa svoga. Ako ti je poruka manja od 4096 B, nema data raceova kod konkurentnih writeova. https://unix.stackexchange.com/questions/68146/what-are-guarantees-for-concurrent-writes-into-a-named-pipe",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160567": {
+      "poster": "Tonek (Bila Pitura)",
+      "content": "@Ducius#160516 Meni je bio slučaj da proces dobi 2 odgovora, jedan je vraćen na zahtjev a drugi je dobiven jer je proces prije izašao iz K.O. Pa poništim jedan odgovor jer je već potvrđeno i radilo je super",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160569": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@maki#160566 dobro, i?  Čitanje nije atomično, ne kužim što hoćeš reći?\n\nZa tvrdnje da je sigurno pisati i čitati na iste cjevovode smo još prošle godine utvrdili da je (((their))) trick radi raznih razloga. Primarno da gotovo ni jedan linux distro nije u potpunosti POSIX compliant i da se programeri ne bi trebali oslanjati na praktički hackove ako postoje ispravni načini kako nešto riješiti.\n\nA da i pisanje nije atomično imao bi dodatnih problema s korupcijom, kojih nema, iz onoga što je kolega napisao.\n\nDa se razumijemo, ja ne vjerujem da je nužno problem u tome, no ova nekonzistencija gdje radi kad jednom ulaze u KO, a ne više puta ukazuje da nije logički problem, nego nedefinirano ponašanje. Prvo treba osigurati da problem nije u tome, a onda loviti logičke probleme.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "peaceko"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160578": {
+      "poster": "[deleted]",
+      "content": "@micho#160569 oprosti mi done sto cu vjerovati kredibilnijim ljudima, iskustvo mi je pokazalo da ti imas jako snazna misljenja o stvarima koje nuzno ne poznajes dobro (prijevod: jako puno seres), lp",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+          "[deleted]",
+          "[deleted]",
+          "deleted",
+          "in1",
+          "korisnickoime",
+          "lucija (luc)",
+          "narval13068 (Dima)",
+          "orange",
+          "peaceko",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160582": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@maki#160578 Evo ti onda kredibilniji ljudi kad nemaš već prste sam proučiti neke stvari, ili bar radnog iskustva da znaš o čemu pričam\n\n[Rationale, Input and Output, paragraf 2](https://pubs.opengroup.org/onlinepubs/9699919799/functions/read.html)\n\n[Python: is os.read() / os.write() on an os.pipe() threadsafe?](https://stackoverflow.com/a/1186161)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160586": {
+      "poster": "sphera",
+      "content": "kad se na kraju inkrementira lokalni sat, kad dobijem zahtjev, kad dobijem odgovor i kad dobijem izlazak pretpostavlljam?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160596": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@sphera#160586 tako je, tako je i u https://www.fer.unizg.hr/_download/repository/NOS_aud_zad_10.1.pdf\n\nSvaki put kad dobiš nešto \"izvana\"\n\nEDIT: Iako sad gledam malo svoj kod, ja čak nisam ažurirao na odgovoru sat i radilo je, a nisu ni oni skužili xD",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160604": {
+      "poster": "[deleted]",
+      "content": "@micho#160582 i sto onda ako read nije atomican? to bi onda teoretski bio problem i da imas cjevovod za svaki par procesa, u praksi nije. da citiram taj link \"You're guaranteed to get all data that was written, and in the correct order, but that's it.\" good, that's all I need.\n\nalso, bold of you to assume da nemam prste za prouciti stvari, a ni ne znas tko sam :')",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160609": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @maki#160604 da citiram taj link “You’re guaranteed to get all data that was written, and in the correct order, but that’s it.” good, that’s all I need.\n\nDa si bar pročitao prvotno pitanje i skužio da problem nikad nije bio redoslijed i ukupnost podataka...\n\n> @maki#160604 also, bold of you to assume da nemam prste za prouciti stvari, a ni ne znas tko sam :')\n\n[multiaccounting te izdao](https://www.myinstants.com/media/sounds/oh-no-no-no-no-laugh.mp3)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160611": {
+      "poster": "[deleted]",
+      "content": "@micho#160609 \n\nprocitao sam i jasno mi je da ovaj labos mogu rijesiti s N cjevovoda\n\ndodaj me na linkedinu, poyy",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "member",
+          "narval13068 (Dima)",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160844": {
+      "poster": "moji_prsti_prsti_klize_po_njoj",
+      "content": "Pitanja:\n\n1. Koliko redova koristin u prvom zadatku i na koji nacin?\n2. di u kodu semafor salje autima dozvolu da mogu na most? Kakva je struktura poruke?\n3. Pokaza san cjevovode s 3 procesa i pitala kakvi su mi pocetni clockovi od procesa?\n4. koji ce proes prvi onda uc u kriticni odsjecak ako su im svi clockovi na pocetku isti? - uc ce prvi zbog uvjeta - prioriteta indexa\n5. di azuriran clockove u kodu?\n\nNikakvi ostali detalji hahaha gud luck♥💀",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "in1",
+          "ls_123 (KimuraKong)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167359": {
+      "poster": "ivona_075 (Adri)",
+      "content": "@sphera#160586 moze netko na ovo odgovariti, mene je isto zbunilo sto se na prezama uvecava samo kad primi zahtjev, a u zadacima i kad primi poruke odgovar i izlazak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167379": {
+      "poster": "Vrba",
+      "content": "Jel imao netko problem sa shared_memory u pythonu... napravim strukturu [1, 2, 3] i kada ju pokusam ispisati u nekom procesu ispisuje mi se [8589934593, 3, 0]? Koristio sam copy paste koda s linka https://docs.python.org/3/library/multiprocessing.shared_memory.html",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168309": {
+      "poster": "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+      "content": "Kako u pythonu u prvom zadatku implementirat da promjenim smjer ako je prošlo X milisekundi?\n\nAko netko može pomoći",
+      "votes": {
+        "upvoters": [
+          "Longclaw"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168313": {
+      "poster": "Rasa",
+      "content": "ako mislis kako mjeriti vrijeme, imas modul time u pythonu i onda u varijablu stavis pocetno vrijeme u varijablu start (start = time.time()), a u uvjet u if-u stavis (time.time() - start > X) npr.\n\nDakle, time.time() ti vraca trenutno vrijeme",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168314": {
+      "poster": "Rasa",
+      "content": "@Zlatan_Ibrahimovic#168309 \n\nako mislis kako mjeriti vrijeme, imas modul time u pythonu i onda u varijablu stavis pocetno vrijeme u varijablu start (start = time.time()), a u uvjet u if-u stavis (time.time() - start > X) npr.\n\nDakle, time.time() ti vraca trenutno vrijeme",
+      "votes": {
+        "upvoters": [
+          "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+          "post"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168316": {
+      "poster": "post",
+      "content": "@Rasa#168314 \n\nJe li onda the way to go napraviti petlju u kojoj u svakom koraku provjeravaš a) je li došlo 3 zahtjeva b) je li prošlo X milisekundi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168371": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@post#168316 možeš, ali kvaliteta rada ovisi o tome hoće li dretva doći na red dovoljno brzo\n\nnajelegantniji način je implementirati master dretvu, a ove ostale su slušači. I onda ta master dretva zapravo pazi na vrijeme i dopušta da prođu zahtjevi ako ih je manje od 3. To će biti lakše debuggirati, isto.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168390": {
+      "poster": "post",
+      "content": "@micho#168371\n\nU zadatku ne radimo s dretvama već s procesima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168408": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@post#168390 distinkcija nije problem, može se primijeniti i na procese, sve je to komunikacija između neovisnih\\* programa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168741": {
+      "poster": "post",
+      "content": "Za 1. zadatak: Ako radite u Pythonu i program vam šteka pri dohvaćanjem poruke iz reda (`queue.get()`), provjerite duljinu reda s `.qsize()` jer je moguće da je tako zato što jer je red prazan.\n\nSource: debug ovoga mi je ukrao sat vremena života",
+      "votes": {
+        "upvoters": [
+          "Smolaa"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169754": {
+      "poster": "eaypeasy (easypeasy)",
+      "content": "Može netko objasnit kakva je struktura poruke u prvom zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169759": {
+      "poster": "post",
+      "content": "@eaypeasy#169754 \n\nKakva želiš da bude, ali treba sadržavati registraciju/broj auta, smjer i vrstu poruke, npr. (registracija = 3, smjer = 1, vrsta = prijeđi).",
+      "votes": {
+        "upvoters": [
+          "eaypeasy (easypeasy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169812": {
+      "poster": "Smolaa",
+      "content": "Neki savjet za drugi zadatak u pythonu. Koje pipove koristit i kako povezat procese njima ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169955": {
+      "poster": "vidraKida (Ζ ε ύ ς)",
+      "content": "@maki#160611 Nije da kurim al ja bi ti dodo kurac u staru, a ne dodo te na in-u :P",
+      "votes": {
+        "upvoters": [
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "tonkec"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169958": {
+      "poster": "post",
+      "content": "Kolika treba biti veličina shared memorya za N procesa (radim u Pythonu) i kako pohraniti strukturu podataka baze u nju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169997": {
+      "poster": "[deleted]",
+      "content": "@vidraKida#169955 mico je cudna biljka, ne bih se cudio da me je stvarno dodao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170220": {
+      "poster": "Smolaa",
+      "content": "Da li je na kraju u onoj sheranoj memoriji kod svih procesa jednaka vrijednost logičkog sata ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185508": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Jel normalno da za a) zadatak s autima ispisivanje koje auto prelazi i nije baš najsmooth, tj da zna ispisvati po par auta normalno što god da rade, onda zastane na par sekundi i ispise sljedeci desetak auta tipa auto x je presao, auto y prelazi i tako dalje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185514": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@feel_d_boot#185508 Hmmm ne bi trebalo biti super smooth bez sleepova od 50-100ms, ali ne bi trebalo ni hangati na par sekundi. Prvo se pobrini da flushaš nakon svakog print poziva. Ako to ne popravi situaciju debuggaj pa vidi jel da ne zapinje negdje.\n\nZnam da su prošle godine neki ljudi imali identičan problem, ali ponašanje se mijenjalo ovisno o mašini.",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

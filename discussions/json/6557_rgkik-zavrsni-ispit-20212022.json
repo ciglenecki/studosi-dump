@@ -1,0 +1,151 @@
+{
+  "title": "[RGKIK] Završni ispit - 2021/2022",
+  "creator": "boogie_woogie (nika_1999)",
+  "slug": "rgkik-zavrsni-ispit-20212022",
+  "tags": [
+    "FER",
+    "Raspodijeljene glavne knjige i kriptovalute",
+    "Ispiti"
+  ],
+  "posts": {
+    "271994": {
+      "poster": "boogie_woogie (nika_1999)",
+      "content": "Jel postoji prag na zavrsnom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272088": {
+      "poster": "Doktor0807",
+      "content": "@\"nika_1999\"#p271994 ne",
+      "votes": {
+        "upvoters": [
+          "boogie_woogie (nika_1999)",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272128": {
+      "poster": "batman94 (hitman94)",
+      "content": "što sve ulazi u ispit?",
+      "votes": {
+        "upvoters": [
+          "Tinx (pingvin)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272264": {
+      "poster": "Rene",
+      "content": "@\"batman94\"#p272128 kaze kostanjcar drugi ciklus",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272339": {
+      "poster": "boogie_woogie (nika_1999)",
+      "content": "@\"batman94\"#p272128 @\"Rene\"#p272264 Rekao je da ce biti naglasak na drugom ciklusu koliko se sijecam, sad shvatite to kako hocete haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273140": {
+      "poster": "Rene",
+      "content": "Sta je u 5. bilo rjesenje?\n\nAko sam dobro skuzio prvi napad moze se proizvoljan iznos uplatit preko tog selfdestruct a u drugome nastane \"petlja\" gdje withdraw zove fallback od attack ugovora a on opet zove withdraw dok ga ne isprazni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273148": {
+      "poster": "Svarog (Veles)",
+      "content": "@\"Rene\"#p273140 Da, tako sam i ja shvatio napade. Prvi fix je implementirati receive ili fallback metodu koja će zanemariti ili proslijediti uplaćena sredstva negdje dalje. Drugi fix je provjeriti koliko je ta adresa uplatila prije nego se vrati ether",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273172": {
+      "poster": "madoxx",
+      "content": "može se fixat i ako trackas balance u zasebnoj varijabli, npr. current_amount.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273187": {
+      "poster": "Gocc (***)",
+      "content": "@\"Veles\"#p273148 \n\nprovjeriti koliko je ta adresa uplatila prije nego se vrati ether - zar se to ne provjeri u withdraw funkciji, tamo ima dvije provjere provjera da je 1 eth zatrazen,  i provjera da ko je pokrenuo tu funkciju ima toliko uplaceno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273190": {
+      "poster": "Svarog (Veles)",
+      "content": "@\"anaa\"#p273187  meni je nekako po sjećanju da je prva provjera da je 1 eth, a za drugu nisam siguran. Ja mislim da je druga provjera da uopće postoji mapping za tu adresu, zato je ugovor morao prvo uplatiti, da se upiše u mapping, pa je onda mogao skidati koliko god je htio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

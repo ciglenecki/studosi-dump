@@ -1,0 +1,837 @@
+{
+  "title": "[IRG] 3. laboratorijska vježba - 2019/2020",
+  "creator": "Cvija",
+  "slug": "irg-3-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Interaktivna računalna grafika",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "16817": {
+      "poster": "Cvija",
+      "content": "Je li itko počeo pisati?\n\nKakve oni to datoteke spominju iz kojih trebamo čitati očište, gledište i vrhove poligona?\n\nJe li to sami zadajemo ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16828": {
+      "poster": "MsBrightside",
+      "content": "@Cvija#16817 mislim da sami zadajemo, samo treba paziti na ove uvjete tipa da ne bude unutar objekta, sad kako se to radi nemam pojma",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16856": {
+      "poster": "member",
+      "content": "@Cvija#16817 Za prvi možeš probat recimo s T1(0,0,0), T2(1,0,0), T3(1,1,0), T4(0,1,0) i valjda predloženim očištem i gledištem. Mislim da bi trebalo bit okej",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17198": {
+      "poster": "Ziher",
+      "content": "E jel zna itko kako napraviti da inkrementiramo koordinate ocista i gledista (ok za keyboard func, ali kako da mi se ponovno iscrtava to, neki reshape ili ponovni display)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17211": {
+      "poster": "[deleted]",
+      "content": "@Ziher#17198 Samo ponovno zoveš funkciju kojom si uvijek radio crtanje. Samo dodaj brisanje rastera na početak te funkcije inače će se novi crtež nacrtati povrh starog. Meni je taj dio u myDisplay(), tako da samo njega pozovem nakon što promijenim očište ili gledište.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17253": {
+      "poster": "Cvija",
+      "content": "Kako vam izgleda iscrtani poligon za tijelo iz prethodne vježbe?",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17385": {
+      "poster": "member",
+      "content": "Ne znam jel mi nešto promaklo, al ne kužim šta traže pod \"Dobiveni postupak upotrijebiti za određivanje putanje očišta u prethodnoj vježbi\". Tj kakva putanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17441": {
+      "poster": "Vrba",
+      "content": "@Cvija#17253 pod \"tijelo iz prethodne vjezbe\" se misli na tijelo koje smo iscrtali u zadnjem koraku nakon translacije i skaliranja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17495": {
+      "poster": "Emma63194",
+      "content": "5. zadatak (A inačica labosa), treba li to raditi i za ona konkavna tijela ili samo za ona dva konveksna što smo imali u prošloj vježbi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17500": {
+      "poster": "Cvija",
+      "content": "@Vrba#17441 Ili na onu kocku i tetraedar? Haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17509": {
+      "poster": "MsBrightside",
+      "content": "@gentleman#17211 moze snimka kako to izgleda za jedan od objekata?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17510": {
+      "poster": "Amon",
+      "content": "@member#17385 Kad mi se dogodi da ne razumijem što traži neki dio zadatka iz ovih labosa, sjetim se da su rekli da se zadatak može modificirati pa si to nekako tumačim kao priliku da napišem kako mislim da treba/kako mi je lakše, a nekad čak i preskočim taj dio zadatka. U kranjem slučaju je ocjenjivanje labosa (tj onoga što program pokazuje) jako chill (barem meni bilo) i najvažnije je da se zna matematika iza toga. Nije bitno koje će se tijelo uzet kao primjer i hoće li se demonstrirati primjer na 2 tijela ili na jednom, hoće li se gledište uzimat iz datoteke ili će već pisat u programu, itd.",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Emma63194",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17514": {
+      "poster": "Emma63194",
+      "content": "@Amon#17510 Jel onda oke uzet samo kocku i tetraedar za demonstraciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17516": {
+      "poster": "Amon",
+      "content": "@Emma63194#17514 Ja sam uzeo kocku za sve zadatke u svim labosima gdje se tražilo tijelo, tetraedar je literally the same thing, nema potrebe da uzimaš 2 stvari.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17551": {
+      "poster": "Cvija",
+      "content": "Možda malo glupo pitanje, ali kad uzmeš kocku u obzir, s koordinatama kako su zadane u datoteci kocka.obj, kad provedeš sve zadane transformacije, dobiješ točke koje su manje od 1, a da bi se iscrtale u prozoru, potrebne su točke čije su koordinate cjelobrojne i ovise o pikselima ekrana (bar u pythonu je tako), jesi li dodatno skalirao to sve, da se dobije veća slika ili?\n\n@Amon#17516",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17562": {
+      "poster": "Amon",
+      "content": "@Cvija#17551 Ne koristim python, ali ne vidim razlog zašto ne bi proveo transformaciju i onda samo skalirao točke da se mogu nacrtat. Ti slobodno reci kad te budu pitali da se drugačije ne može nacrtati, a transformaciju si napravio kako se od tebe i tražilo.\n\nJoš jednom - nemojte se pokoravati uputama, glavno je da se vidi da znate kako sve to funkcionira, nema potrebe da slijepo pratite svaku rečenicu koja se nalazi u uputama.",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Daorson",
+          "Emma63194",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17713": {
+      "poster": "MJ3",
+      "content": "jel još nekome ne radi dobro ovaj način određivanja skrivenih poligona pomoću normala u 6.vježbi? Meni dobro sakrije pozadinske strane ali onda fali jedan njihov brid koji bi se trebao vidjet",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17714": {
+      "poster": "MJ3",
+      "content": "@MJ3#17713 edit: dobro je, trebam koristit gl_line_loop za crtanje poligona a ne gl_line_strip, zato je falio taj brid poveznica između trećeg i prvog vrha",
+      "votes": {
+        "upvoters": [
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17733": {
+      "poster": "Yasuke (Bono)",
+      "content": "Na što se misli u 6. vježbi kad kaže da dobiveni postupak (za računanje točaka krivulje) upotrijebimo za određivanje putanje očišta u prethodnoj vježbi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17748": {
+      "poster": "chuuya (temari)",
+      "content": "@Yasuke#17733 Ja sam to izvela tak da se očište giba po putanji krivulje, tj. da ga mijenjaš idući po točkama na njoj koje si odredio sa t. Ne znam jesu li točno na to mislili tho",
+      "votes": {
+        "upvoters": [
+          "Conrad",
+          "Yasuke (Bono)",
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17794": {
+      "poster": "chuuya (temari)",
+      "content": "Jel netko uspio uklonit stražnje poligone u 6. vježbi? Di uopće idu one naredbe za uklanjanje toga? Di god da ih stavim i dalje se vide svi poligoni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17856": {
+      "poster": "Emma63194",
+      "content": "A inačica, smijemo li u 5. zadatku kod crtanja koristiti gluLookAt?",
+      "votes": {
+        "upvoters": [
+          "Watson (112)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17870": {
+      "poster": "Dekan",
+      "content": "@chuuya#17794 Kad crtas trebas za svaki face (trokut) testirat pa odlucit crtas li ga ili ne",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17899": {
+      "poster": "[deleted]",
+      "content": "moze netko dati primjer koordinata poligona za koje racunamo bezierovu krivulju da animacija iz 6. zadatka radi kak spada?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17928": {
+      "poster": "Emma63194",
+      "content": "U 5. zadatku, kako računate matricu transformacije?\n\nIdem po onim uputama, ali mi ne ispada točno (recimo, na primjeru u B inačici, 30. stranica).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17952": {
+      "poster": "Cvija",
+      "content": "@III#17899\n\no 0 0 3\n\ng 0 0 0\n\nv 0 0 0\n\nv 1 1 0\n\nv 2 0 0\n\nv 3 1 0\n\no je očište, g je gledište, a v je vrh\n\nS tim da ovo nije klasičan poligon, ovo je ovdje otvoren poligon (ne spajaš prvu i zadnju točku) čije rješenje bi trebalo izgledati kao na slici u vježbama 6 (Slika 1.)",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17963": {
+      "poster": "[deleted]",
+      "content": "@Cvija#17952 hvala, kuzim to, ali zar ne trebamo i za objekte to raditi? odnosno npr unutar kocke? ili sam ja krivo shvatio nesto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18003": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "Radi li tko u pygletu? kad crtam poligon, npr tetrahedron, ako idem GL_LINES i po vrhovima gl_vertex3f, ako stavim z=0 narcta se a cim su z-ovi u igri ne crta se apsolutno nista. Sta ja trebam tu napravit jos? slabo se snalazim i noob sam koji je jedva proso prosli labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18041": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@DankJakov#18003 Eliminiraj `z`, samo crtaj po `x` i `y`. Isto tako, imaš i `GL_TRIANGLES`, pa ne trebaš crtati liniju po liniju. Nisam 100% siguran zašto sa `z` ne radi jer bih trebao pogledati malo dokumentaciju, ali sam 99% siguran da je to zato što se `z` toliko blizak kameri clippa.",
+      "votes": {
+        "upvoters": [
+          "DankJakov (DnkCkv)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18091": {
+      "poster": "Murin",
+      "content": "Kako ste za zadnji zadatak modificirali algoritam da ociste prati beziera(u 3d)?\n\nMoja ideja je bila da se postave oni p.x,y,z na ociste.x,y,z i onda se vrti to , kasnije se doda jos p . z += b ∗ p oi n t s [ j ] z;\n\nI ako netko koristi JOGL kako napraviti da gluLookAt funkcija proradi,kada postavim novo ociste nista se ne dogodi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18095": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@micho#18041 jel mi ima onda zadatak smisla, promjena gledista i ocista ako crtam samo u xy",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18100": {
+      "poster": "MsBrightside",
+      "content": "može li se dobit 50% na ovom labosu ako samo prvi zadatak radi potpuno a drugi samo iscrtava krivulju na temelju točki bez obilaska tijela",
+      "votes": {
+        "upvoters": [
+          "DankJakov (DnkCkv)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18111": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@MsBrightside#18100 za prvi lsb sam bio cheeky i rijesio tocno 50% pripreme, da bi zavrsio na nadoknadi jer \"nemam najbitnije stvari i matematika mi se ni ne broji kao da sam nesto napravio jer koristim biblioteke\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18113": {
+      "poster": "Emma63194",
+      "content": "@DankJakov#18111 Postoje nadoknade labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18114": {
+      "poster": "Emma63194",
+      "content": "@Murin#18091 Ne znam baš OpenGL, ali ja sam nešto u prvom zadatku radila stim gluLookAt i proradilo mi je nakon što sam dodala glFrustum.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18117": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@Emma63194#18113 mozda ne official, ali eto ja sam bio (receno mi je da nije dovoljan lab i da ce me pitat opet za 3 dana) tako da postoje, i odgovaraju se za 50% bodova",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18126": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@DankJakov#18095 Da jer ti crtaš samo `x` i `y` (ekran nema 3 dimenzije), ali transformacije radiš na cijelom modelu (samo u zadnjem koraku, nakon svih translacija i rotacija, izignoriraš `z`)",
+      "votes": {
+        "upvoters": [
+          "DankJakov (DnkCkv)",
+          "koode7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18130": {
+      "poster": "Vrba",
+      "content": "Jel u ZIP koji predajemo trebamo stavit i datoteke iz kojih citamo koordinate?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18133": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "Jesam ja jedini ili tocke iscrtane sa Bezierovom krivuljom su unutar modela? Bar za kocku i tetrahedron",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18137": {
+      "poster": "[deleted]",
+      "content": "@AromaticConfusion#18133 jel mozes dat koordinate koje koristis za bezierovu krivulju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18181": {
+      "poster": "tuka",
+      "content": "u 6. zadatku kad dodemo do ovog 5. dijela i imamo npr kocka.obj, sto bi tu trebali uzet kao kontrolni poligon? cijelu kocku ili samo jedan poligon ili kak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18336": {
+      "poster": "Maroje",
+      "content": "Jel može netko objasniti kako se računa ta bezierova krivulja, meni nakon transformacije ispadne da je svih 100 točaka na istoj koordinati (razlika među točkama je na 6. decimali)",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18435": {
+      "poster": "chuuya (temari)",
+      "content": "@Dekan#17870 Evo probah sve i ne iscrtava nikako kak treba pa da ponovo pitam, kako točno izračunam normale i onaj vektor za usporedbu i kako ih trebam transformirati? Uvijek iscrtava kao da se radi o ortografskoj projekciji",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18454": {
+      "poster": "FICHEKK",
+      "content": "@tuka#18181 Kontrolni poligon nema nikakve veze s objektom koji crtaš, već je to skup vrhova koji definira kako će izgledati Bezierova krivulja. Pogledaj u Čupićevoj IRG knjizi stranicu 154, tamo je kontrolni poligon definiran točkama T0, T1, T2 i T3.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18481": {
+      "poster": "FICHEKK",
+      "content": "@chuuya#18435 Moguće da ti je problem da prvo napraviš projekciju točaka, pa onda ideš gledati koji trokut nije vidljiv, što će ti dati krivi rezultat budući da će projekcijska matrica Z koordinate vrhova preslikat u 0. Iz tog razloga ja prije bilo kakvih transformacija pogledam za svaki trokut je li vidljiv, zapamtim taj podatak, te tek onda napravim transformacije. Onda kada na kraju ideš crtati objekt, kada iteriraš po trokutima samo pogledaš je li vidljiv, te ako nije, proskočiš ga i to je to.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18497": {
+      "poster": "chuuya (temari)",
+      "content": "@FICHEKK#18481 To sam sad probala i svejedno ih prikazuje kao da se radi o ortografskoj projekciji \\:|\n\nAko je netko uspio s onim naredbama iz knjige (glFrontFace itd.) nek pls kaže",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18532": {
+      "poster": "FICHEKK",
+      "content": "@chuuya#18497 Ja nisam koristio nikakve naredbe, već sam iskoristio kod iz prošlog labosa gdje gledaš je li točka unutar objekta tako da pogledaš je li zadana točka ispod svih ravnina koje čine to tijelo. E pa istu stvar napraviš i ovdje: za svaki trokut pogledaš odnos očišta i ravnine u kojoj se nalazi taj trokut. Ako je očište ispod te ravnine, trokut nije vidljiv, ako je iznad ravnine onda je vidljiv. Spremiš tu informaciju i napraviš ono što sam ti gore napisao.",
+      "votes": {
+        "upvoters": [
+          "Maroje",
+          "bob",
+          "chuuya (temari)"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18600": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Jel još nekom ispada naopako slika ak koristi Tz matricu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18728": {
+      "poster": "koode7",
+      "content": "jel ima netko ideju zašto mi python ništa ne crta?\n\novo je dio koda (bez transformacije) prvog zadatka 3. vježbe. do sad sam crtao u CPPu i sve je išlo normalno.\n\nhttps://pastebin.com/8aGyH4g8",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18734": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "Imam problem ako netko moze pomoci, naime matrice T i P dobro racunam, i kad pokrenem kocku sa  o(3,2,2) i gledistem g(0,0,0) dobro se prikaze. Radim na nacin da funkcija ide po vrhovima i svaku tocku mnozi sa te dvije matrice, stim da se matrice updateaju pri pritiskom na odredjeni key, zatim crta linije od tih izracunatih tocki.Ali kad pokusam promijeniti tipkom ociste te racunam nove matrice s kojima se mnoze sve tocke, iako mi draw funkcija javi da koristi te nove matrice i dalje ostaje jedno te ista slika ![](assets/2020-05-03/00059.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18765": {
+      "poster": "FICHEKK",
+      "content": "@DankJakov#18734 Možda ti fali poziv glFlush? Ili poziv metode swapBuffers (ne znam kako je u Pythonu ta metoda) ako koristiš 2 buffera.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18773": {
+      "poster": "koode7",
+      "content": "nije mi jasno, ako uzmem određeni vrh, čija je matrica oblika [x  y  z  1], nju pomnožim sa T15 koja je 4x4 i onda s matricom projekcije koja je 1x4, čak i ako reversam matricu projekcije, i dalje dobijem matricu 1x1, tj jednu brojku.\n\ngdje griješim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18780": {
+      "poster": "FICHEKK",
+      "content": "@koode7#18773 Od kud ti da je matrica projekcije 1x4. Matrica projekcije je 4x4:\n\n![](assets/2020-05-03/00062.png)",
+      "votes": {
+        "upvoters": [
+          "koode7"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18798": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@FICHEKK#18765 probao sam clear() pozvati, sada se nakon prvog pressa tipkr up ekran samo zacrni i vise ne slika nista. A ako stavim initial matrice kao nakon pressa up, dobro nacrta i nakon up ista stvar. Znaci dobro racuna tocke, ali ih ne zeli ponovno crtati kao initial",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18821": {
+      "poster": "koode7",
+      "content": "što znači točno ovaj dio \"gledati u središte objekta\" u drugom zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18823": {
+      "poster": "Maroje",
+      "content": "@koode7#18821 postavi gledište u sredinu objekta , znači ne mora se mijenjati dok se crta nego je dovoljno samo na početku odrediti središte , recimo za one koordinate kocke to je 0.5,0.5,0.5",
+      "votes": {
+        "upvoters": [
+          "koode7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18825": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@DankJakov#18798 Ako želiš u pythonu updateati ekran, onda će ti najlakši način biti da stvoriš `Batch` klasu, u nju trpaš stvari s `add` i brišeš s `VertexList.delete`. Prouči pyglet dokumentaciju malo detaljnije.",
+      "votes": {
+        "upvoters": [
+          "DankJakov (DnkCkv)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18842": {
+      "poster": "koode7",
+      "content": "jos kad bi bilo nekog pojasnjivog razloga zasto kocku normalno crta, a tetrahedron ne.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

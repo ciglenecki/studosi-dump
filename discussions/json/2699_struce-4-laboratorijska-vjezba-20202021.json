@@ -1,0 +1,1009 @@
+{
+  "title": "[STRUCE] 4. laboratorijska vježba - 2020/2021",
+  "creator": "RogerRoger",
+  "slug": "struce-4-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Strojno učenje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "119981": {
+      "poster": "RogerRoger",
+      "content": "Ne uspijeva mi instalirati pgmpy ni preko anaconda shella, niti pipa. Ima li još netko ovaj problem?\n\nPip prekine instalaciju pri instalaciji PyTorcha uz grešku \"ModuleNotFoundError: No module named 'tools.nnwrap'\", za koju mi nijedno rješenje sa StackOverflowa ne pomaže, a conda uporno baca \"LibArchive: could not unlink...\" što sam probao riješiti preko conda clean --all, manualnim brisanjem tarballa i rješenjima sa StackOverflowa, ali nisam uspio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119989": {
+      "poster": "[deleted]",
+      "content": "@RogerRoger#119981 Probaj napravit običan[ virtual env ](https://docs.python-guide.org/dev/virtualenvs/)i u njemu instalirati, ja nisam imao nikakvih poteškoća.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119997": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "Ja sam pokrenuo 'CMD.exe Prompt' u anacoda navigatoru. I u njemu upisao 'pip install pgmpy'. \n\nTo mi je jedino radilo, isto sam svašta drugo pokušao.",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Carmichael (Charm)",
+          "bob",
+          "neja_negoti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120007": {
+      "poster": "adidas",
+      "content": "Zadatak 1.(h) \n\n( Treba izracunati log izglednost za ulazni X i normalnu distribuciju )\n\nŠto kada je izglednost nula? Da vratim samo 0?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120019": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@adidas#120007 log(0) je najtočnije NaN, ali u praksi se ponekad da napisati i kao -inf (ako gledaš to kao log(x), x->0). Konkretno nije potreban nikakav poseban tretman kod implementacije, nikakvi if-elseovi zaboga, direktna formula samo.",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120105": {
+      "poster": "RogerRoger",
+      "content": "Riješio sam problem, čini se da sam imao instaliranu 32-bitnu verziju Pythona, a PyTorch koji je prerequisite za pgmpy je pisan za 64-bitnu pa eto ako netko ima takav problem možda je u ovome stvar.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120137": {
+      "poster": "layla",
+      "content": "Mijenjam termin u ponedjeljak u 8:00 (L-4-1) za neki kasniji u utorak/srijedu/cetvrtak.",
+      "votes": {
+        "upvoters": [
+          "post"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120224": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "zna netko na koju tocno formulu iz skriptica misle u 1.h zadatku, odnosno kako iskoristiti ovaj 'norm'",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)",
+          "[deleted]",
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121866": {
+      "poster": "Ruleta",
+      "content": "@PiqueBlinders#120224 \n\nsum(norm(mi, sigma).logpdf(x))",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "PiqueBlinders (zisku)",
+          "gamigugi",
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121867": {
+      "poster": "Ruleta",
+      "content": "![](assets/2021-01-15/00009.png)\n\nzna li netko kako se riješiti ovog nepotrebnog ispisa kod query-a u 2. a) tako da mi samo ispiše tablice?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121872": {
+      "poster": "DodgeCharger",
+      "content": "@Ruleta#121867 postaviš 'show_progress' na False",
+      "votes": {
+        "upvoters": [
+          "Erinon",
+          "PrisonMike (Števo)",
+          "Ruleta",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121928": {
+      "poster": "saitama",
+      "content": "u 1.k jeste li postavili u fuknciji cov zastavicu rowvar na false ili ste ostavljali default?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122168": {
+      "poster": "cotfuse",
+      "content": "@saitama#121928 False, redovi su primjeri, stupci su varijable",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "saitama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122242": {
+      "poster": "Ziher",
+      "content": "Bi li ovo mogao biti tocan ispis za randov indeks?\n\n![](assets/2021-01-16/00002.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122281": {
+      "poster": "Yasuke (Bono)",
+      "content": "@Ziher#122242 Ja sam dobio ovako\n\n![](assets/2021-01-16/00013.png)\n\nsad ne znam kod koga je greška u 3. modelu haha\n\nJel možda neko radio zaključivanje na papiru za 2.a zadatak pa ako bi mogao stavit bio bih jako zahvalan.",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "in1",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122287": {
+      "poster": "Erinon",
+      "content": "@Yasuke#122281 meni je otprilike isto tako ispalo, kako u kojem pokretanju, ali tu negdje",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122315": {
+      "poster": "TentationeM",
+      "content": "Jel vam u 1.b i 1.f kad na jednom grafu sve crtate zbog razlika u y-skali neki plotovi budu slabo vidljivi pri dnu grafa? Je li to tako ok?",
+      "votes": {
+        "upvoters": [
+          "AromaticConfusion (VrloZbunjen)",
+          "Erinon",
+          "Murin",
+          "frle10 (Frle)",
+          "narval13068 (Dima)",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122324": {
+      "poster": "saitama",
+      "content": "Jel moze netko samo staviti rijesenje bayesa?",
+      "votes": {
+        "upvoters": [
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122415": {
+      "poster": "ajkula",
+      "content": "1.H\n\nNije mi jasan ovaj norm, može mi netko možda potvrditi izgleda li ovako return statement:\n\n-len(x)/2*log(2*pi)-len(x)*log(sqrt(sigma))-sum(norm(mi,sigma)).logpdf(x)/(2*sigma)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122429": {
+      "poster": "gamigugi",
+      "content": "@ajkula#122415 mislim da ne.\n\novako:\n> @Ruleta#121866 sum(norm(mi, sigma).logpdf(x))",
+      "votes": {
+        "upvoters": [
+          "ajkula"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122436": {
+      "poster": "Stark",
+      "content": "Koji bi bio odgovor na pitanje: \"Koji su problemi pristupa analize siluete?\" \n\nDa možemo dobiti loša grupiranja (gledamo po onoj prosječnoj vrijednosti siluete)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122900": {
+      "poster": "Zabe",
+      "content": "Moze li netko podijeliti odgovore na sva pitanja u labosu, puno bi pomoglo za neke nejasnoce",
+      "votes": {
+        "upvoters": [
+          "Conrad",
+          "Cubii",
+          "Emma63194",
+          "Ruleta",
+          "Stark",
+          "Svarog (Veles)",
+          "member",
+          "narval13068 (Dima)",
+          "pepelko",
+          "saitama",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122983": {
+      "poster": "[deleted]",
+      "content": "@Zabe#122900 [Ovdje](https://www.notion.so/etvrta-vje-ba-96b66c731d1d49868bfcd9862ed711a8) su neki moji odgovori, ali nisu baš najsretniji, stavio sam da se mogu ostavljati komentari pa pišite ako je nešto krivo ili može bolje",
+      "votes": {
+        "upvoters": [
+          "Conrad",
+          "Cvija",
+          "Emma63194",
+          "Njet",
+          "PrisonMike (Števo)",
+          "Ruleta",
+          "Svarog (Veles)",
+          "TentationeM",
+          "Zabe",
+          "Zogen",
+          "[deleted]",
+          "chuuya (temari)",
+          "fimm",
+          "frle10 (Frle)",
+          "in1",
+          "member",
+          "narval13068 (Dima)",
+          "setuid0",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123033": {
+      "poster": "guzmanov_brk (aybe)",
+      "content": "![](assets/2021-01-17/00027.png)\n\nMože li tko objasniti kako da tu izračunam pristranu/nepristranu procjenu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123037": {
+      "poster": "frle10 (Frle)",
+      "content": "@guzmanov_brk#123033 Misli se na razliku između povratne vrijednosti funkcije cov kada ima parametar bias postavljen na True, odnosno False. To će ti dati različite matrice i njih treba usporediti.",
+      "votes": {
+        "upvoters": [
+          "guzmanov_brk (aybe)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123038": {
+      "poster": "guzmanov_brk (aybe)",
+      "content": "@frle10#123037 Hvala slatkice",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "koBASA (hackerman)"
+        ],
+        "wtf": [
+          "AromaticConfusion (VrloZbunjen)",
+          "Stark",
+          "Svarog (Veles)",
+          "frle10 (Frle)",
+          "in1",
+          "lucija (luc)",
+          "member",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "123061": {
+      "poster": "chuuya (temari)",
+      "content": "Može netko potvrdit/ispravit brojeve za efekt objašnjavanja?\n[code]\n+------+----------+\n| S    |   phi(S) |     --> posterior_p = infer.query(['S'], evidence={'W':1, 'R':1})\n+======+==========+\n| S(0) |   0.0675 |\n+------+----------+\n| S(1) |   0.9325 |\n+------+----------+\n+------+----------+\n| S    |   phi(S) |     --> posterior_p = infer.query(['S'], evidence={'W':1})\n+======+==========+\n| S(0) |   0.0621 |\n+------+----------+\n| S(1) |   0.9379 |\n+------+----------+\n[/code]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123064": {
+      "poster": "Stark",
+      "content": "@gentleman#122983 Da li je možda lakše Google Docs pa da svi mogu uređivati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123068": {
+      "poster": "[deleted]",
+      "content": "@Stark#123064 Mogu i ovdje staviti da svi mogu uređivati, nažalost ne mogu to prenijeti na Google jer je pisano u markdownu\n\nEDIT: samo dodajte naznaku da ste editali",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123082": {
+      "poster": "frle10 (Frle)",
+      "content": "@chuuya#123061 Za prvi query (infer S, evidence W i R) S(1) = 0.194499, za drugi query (infer S, evidence W) S(1) = 0.429764, što je u skladu s efektom objašnjavanja. Provjeri još jednom svoju Bayesovu mrežu, možda si u krivom redoslijedu naveo vjerojatnosti ili nešto. That is, ako je moje točno. :)",
+      "votes": {
+        "upvoters": [
+          "Erinon",
+          "chuuya (temari)",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123179": {
+      "poster": "pepelko",
+      "content": "![](assets/2021-01-17/00038.png)\n\nJel moze netko mozda potvrditi jel ovo dobro postavljeno jer mi se cini da rezultat nije bas okej a tu ne mogu nac gresku :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123192": {
+      "poster": "frle10 (Frle)",
+      "content": "@pepelko#123179 ![](assets/2021-01-17/00042.jpeg)\n\nNije nažalost. :( Ali nista zato, evo kratko objasnjenje. Pogledaj na ovoj slici kako sam napisao tablice. Brojevi moraju biti navedeni u tom istom redoslijedu u kodu, redak po redak.\n\nNpr. za ovu zadnju tablicu, ovako bi naveo vjerojatnosti:\n\n[[1, 0.1, 0.1, 0.01],\n\n[0, 0.9, 0.9, 0.99]]\n\nIsto tako sa svima ostalima.",
+      "votes": {
+        "upvoters": [
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123193": {
+      "poster": "Zabe",
+      "content": "```\n1. značajka: -145.9785998602527\n2. značajka: -125.46850995593098\n3. značajka: -715.7254432335061\n4. značajka: -2116.8735046208308\n   ```\n   Jel ovo točno za 1. i) uz X jednak primjerima iz prve klase?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123194": {
+      "poster": "frle10 (Frle)",
+      "content": "@Zabe#123193 Ja imam te iste vrijednosti pa se nadam da je točno. :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123206": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@frle10#123192 jesu ovo dobri rezultati za 2.b), 100% da ce raditi prskalica ako je trava mokra i ako ne pada kisa, neovisno o oblacnosti?\n\n![](assets/2021-01-17/00043.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "frle10 (Frle)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123217": {
+      "poster": "Carmichael (Charm)",
+      "content": "koje su pretpostavke narušene u 3.d) i e)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123234": {
+      "poster": "frle10 (Frle)",
+      "content": "@Noggenfogger#123206 Da, probao sam kod sebe i dobijem isto tako. :)",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123258": {
+      "poster": "Erinon",
+      "content": "@Zabe#123193 norm funkcija prima standardnu devijaciju, a mislim da ti ovdje šalješ varijancu. Možda sam u krivu, ali ja sam slao korijen iz varijance u funkciju tako da je rezultat drugačiji.",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "ReyKenobi",
+          "Zabe",
+          "frle10 (Frle)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123266": {
+      "poster": "Zabe",
+      "content": "@Erinon#123258 istina, uz ispravku onda dobivam:\n```\n1. značajka: -18.305163312803863\n2. značajka: -21.939396526466606\n3. značajka: 17.089786091159766\n4. značajka: 42.06460979129481\n   ```",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "frle10 (Frle)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123285": {
+      "poster": "Noname",
+      "content": "Koji mu predajete funkciji L u 1.b?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123309": {
+      "poster": "Gendo",
+      "content": "@Carmichael#123217 \n\nhttps://www.r-bloggers.com/2017/08/exploring-assumptions-of-k-means-clustering-using-r/\n\nOvdje imaš neke primjere pa čak i identičan našem d.)",
+      "votes": {
+        "upvoters": [
+          "Carmichael (Charm)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123330": {
+      "poster": "Noname",
+      "content": "Kako vam izgledaju grafovi u 1.b?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123334": {
+      "poster": "FICHEKK",
+      "content": "@Noname#123330 Meni ovako:\n\n![](assets/2021-01-17/00050.png)",
+      "votes": {
+        "upvoters": [
+          "Noname",
+          "Zabe"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123339": {
+      "poster": "Noname",
+      "content": "@FICHEKK#123334 Hvala, i meni je isto tako",
+      "votes": {
+        "upvoters": [
+          "FICHEKK"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123448": {
+      "poster": "ReyKenobi",
+      "content": "Je li netko možda već odgovarao da podijeli dojmove? :)",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123449": {
+      "poster": "chuuya (temari)",
+      "content": "@ReyKenobi#123448 Evo ja kod Alagića. Bilo je ok, dosta pitanja je bilo šta je koja distribucija i MLE i MAP kako se dolazi do njih i dosta o tome kako funkcioniraju k-algoritmi i Gaussova mješavina i koje su razlike/prednosti/nedostatci (sve na onim grafovima). Također se dosta zadržao na grupiranju i onim prekršenim pretpostavkama i suprisingly dugo na Randovom indeksu. Bayesove mreže je najmanje pitao, efekt objašnjavanja nije ni spominjao.\n\nNije se baš držao onih pitanja ispod zadataka lol, ali je dao sve bodove na kraju iako sam imala par dugih tišina lmao",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Conrad",
+          "Daorson",
+          "Emma63194",
+          "Joji",
+          "Louverture (Žuti Kišobran)",
+          "Murin",
+          "ReyKenobi",
+          "Ruleta",
+          "Stark",
+          "Svarog (Veles)",
+          "[deleted]",
+          "[deleted]",
+          "carrieb",
+          "frle10 (Frle)",
+          "gamigugi",
+          "in1",
+          "joc",
+          "member",
+          "moji_prsti_prsti_klize_po_njoj",
+          "narval13068 (Dima)",
+          "pepelko",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123453": {
+      "poster": "Stark",
+      "content": "@chuuya#123449 Sjećaš se možda što je toliko puno pitao za Randov indeks?",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123456": {
+      "poster": "post",
+      "content": "@chuuya#123449\n\nIsto sam bio kod Alagića, mene nije ispitivao o Randovom indeksu i kršenju postupaka ali trebao sam detaljno objasniti korake algoritma k-sredina te ga usporediti s k-medoida. Ono što je tražio a može se lako preskočiti jest kako odabrati početne sredine za postupak k-sredina (vidi 3.3 u skriptici).",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Louverture (Žuti Kišobran)",
+          "Stark",
+          "chuuya (temari)",
+          "gamigugi",
+          "in1",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123459": {
+      "poster": "chuuya (temari)",
+      "content": "@Stark#123453 Ma nije ništa sad ekstremno detaljno, pitao je da objasnim kako funkcionira i kao zašto ne možemo samo uspoređivat y_gold i y_predict i tako to, zašto njega baš koristimo. Samo me malo iznenadilo jer je to bio samo jedan podzadatak",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "in1",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123608": {
+      "poster": "svemia (bearyn)",
+      "content": "@chuuya#123449  koliko detaljno je trebalo znat za gaussovu mjesavinu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123616": {
+      "poster": "chuuya (temari)",
+      "content": "@svemia#123608 Najviše je pitao zašto ona radi bolje od k-meansa (koja je razlika u postupcima i kako to utječe na uspješnost) i kako to da uspije/ne uspije pravilno grupirati, ovisno o podzadatku.",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123671": {
+      "poster": "Ruleta",
+      "content": "@chuuya#123616  možeš molim te napisati i odgovor za ovo pitanje?",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123682": {
+      "poster": "chuuya (temari)",
+      "content": "@Ruleta#123671 To je bila jedna od navedenih dugih tišina 😅 \n\nIako, mislim da sam na kraju rekla neš u stilu da k-means samo gleda najbliži centroid i zato u onom jednom grafu uža grupa uzima dio primjera od šire grupe, dok gauss konstruira, well, gaussa koji će za užu grupu imat manju varijancu a za širu veću i onda ih može lijepo odvojiti i to je kao bio ok odgovor uz malo back-and-fortha. Kod onog krafnastog primjera je on rekao da bismo *teoretski* mogli postić odvajanje tako da napravimo 2 gaussa sa istim [imath]\\mu[/imath], tako da jedan bude ful uzak, a jedan jako širok, ali kao da to ne funkcionira u praksi or sth. Bilo je još tog al se ne mogu sjetit baš\n\nAli da, nisam baš osoba koja to može najbolje objasnit haha",
+      "votes": {
+        "upvoters": [
+          "Ruleta",
+          "gamigugi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123730": {
+      "poster": "ReyKenobi",
+      "content": "Evo kolege, nadam se da će nekome pomoći!\n\nPitanje: Objasniti MLE na primjeru s kovanicom, koji je problem? \n\n- Odgovor: Problem je prenaučenost (recimo za 10 bacanja padnje 10 puta glava, MLE procjena će biti 1 makar bi trebala biti 0.5). Problem se smanjuje s brojem primjera (za npr. 10000 bacanja će se pokazati da u 50% slučajeva bude glava, u 50% pismo).\n\nPitanje: Objasniti MAP. Zašto je MAP dobar?\n\n- Odgovor: Maksimizira se umnožak funkcije izglednosti i apriorne vjerojatnosti. Dobar je jer mogućuje ugradnju apriornog znanja.\n\nPitanje: Zašto koristimo beta distribuciju s bernoullijevom izglednošću?\n\n- Odgovor: Zato što kad se pomnoži beta distribucija s bernoullijevom izglednošću dobijemo opet beta distribuciju, a i jednostavno je baratati s parametrima alfa i beta i tako ugraditi apriorno znanje.\n\nPitanje: Što je to pristranost i kakav je to nepristrani procjenitelj? \n\n- Odgovor: Nepristrani procjenitelj je onaj čije je očekivanje jednako pravom parametru. Pristranost je odstupanje (razlika) tog očekivanja od pravog parametra. \n\nPitanje: Objasniti naivni Bayesov klasifikator.\n\n- Odgovor: U njega se uvode pretpostavke o uvjetnoj nezavisnosti varijabli, odnosno p(xk|x1,x2,...,xk-1,y) = p(xk|y). Dakle, pretpostavlja se da su sve varijable međusobno nezavisne. To je dobro jer se smanjuje broj parametara i omogućava se generalizacija, ali loše ako neke varijable stvarno jesu zavisne.\n\nPitanje: Iščitati iz Bayesove mreže zajedničku vjerojatnost.\n\n- Odgovor: U skriptici je ispisano. \n\nPitanje: Kakvi su to MAP upiti, a kakvi aposteriorni?\n\n- Odgovor: MAP samo zanima koje varijable su najvjerojatnije, a aposteriorne zanima aposterirna distribucija vjerojatnosti za varijable upita.\n\nPitanje: Objasniti što je funkcija J u algoritmu K-sredina i kako se ponaša kroz iteracije.\n\n- Odgovor: Kriterijska funkcija, označava sumu svih kvadratnih udaljenosti primjera od odgovarajucih centroida. Smanjuje se kroz iteracije.\n\nPitanje: Koja je razlika kod algoritma K-medoida?\n\n- Odgovor: Umjesto euklidske udaljenosti se koristi funkcija sličnosti pa se može raditi s nevektorskim primjerima. Umjesto centroida su medoidi koji moraju biti neki od postojećih primjera. Također je vremenski složeniji od K-sredina (kvadratna umjesto linearne složenosti).",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Antuunn",
+          "Broono (Burućuh)",
+          "Conrad",
+          "Cubii",
+          "Cvija",
+          "Daorson",
+          "Ducius",
+          "Ellie",
+          "Emma63194",
+          "Erinon",
+          "FICHEKK",
+          "ImJustAKid (lumity)",
+          "Joji",
+          "Juren",
+          "Louverture (Žuti Kišobran)",
+          "Luka1112 (Akul1112)",
+          "Njet",
+          "Noggenfogger (dammitimmad)",
+          "PiqueBlinders (zisku)",
+          "PrisonMike (Števo)",
+          "PudingIzMenze",
+          "Quentin",
+          "Red_Baron",
+          "Smolaa",
+          "Stark",
+          "Svarog (Veles)",
+          "Vrba",
+          "Yeltneb",
+          "Ziher",
+          "Zogen",
+          "[deleted]",
+          "[deleted]",
+          "a_ko_si_ti",
+          "cajaznun",
+          "carrieb",
+          "chuuya (temari)",
+          "gamigugi",
+          "hi_doggy",
+          "in1",
+          "joc",
+          "johndoe12 (enaiks)",
+          "koBASA (hackerman)",
+          "koode7",
+          "member",
+          "mikimoj",
+          "moji_prsti_prsti_klize_po_njoj",
+          "pepelko",
+          "sane_insane",
+          "setuid0",
+          "sunceko",
+          "svemia (bearyn)",
+          "tito",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124144": {
+      "poster": "Broono (Burućuh)",
+      "content": "Samo ukratko pitanja sa labosa u 10:\n1. MLE i MAP da objasnim svaki i razlike.\n2. Objasni za p(theta|D) = p(D|theta)*p(theta) tko je komu konjugatan i zašto, čije distribucije su jednake i naposljetku što nam to omogućuje (online učenje). Sve to se može pročitati u skriptici 14 na stranicama 10 i 11. Čak sam mu trebao opisati dvije iteracije korištenja te formule.\n\n   P(theta_1|D_1) = P(D_1|theta_1) * P(theta_0)\n\n   P(theta_2|D_2) = P(D_2|theta_2) * P(theta_1|D_1)\n3.  Koje metode osim metode lakta koristimo za određivanje broja grupa K. Tehnike su nabrojane i opisane u skriptici 19 od 11. do 15. stranice.\n4.  Kako se računa silueta. To je također u skriptici 19 na 12. strani\n5.  Naivan Bayesov klasifikator. Trebalo ga je objasniti. Hvala kolegi @ReyKenobi što mi je spasio čitavi bod na tom pitanju jer ja sam taj dio gradiva zaobišao u širokom luku lol (život je prekratak).\n\nUgl sori ako nisam bio detaljan sa odgovorima, ali slobodno me pitajte pa ću pokušati odgovoriti. Kao što možete vidjeti nije me baš pitao ona pitanja ispod zadataka. Sretno svima koji još nisu odgovarali.",
+      "votes": {
+        "upvoters": [
+          "Conrad",
+          "Daorson",
+          "Ellie",
+          "Emma63194",
+          "FICHEKK",
+          "ImJustAKid (lumity)",
+          "Juren",
+          "Louverture (Žuti Kišobran)",
+          "Luka1112 (Akul1112)",
+          "PrisonMike (Števo)",
+          "ReyKenobi",
+          "Smolaa",
+          "Stark",
+          "Svarog (Veles)",
+          "Yeltneb",
+          "Zogen",
+          "[deleted]",
+          "[deleted]",
+          "gamigugi",
+          "in1",
+          "joc",
+          "member",
+          "pepelko",
+          "saltybitch"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124785": {
+      "poster": "[deleted]",
+      "content": "Od nespomenutog:\n\nAko je kovarijanca varijabli 0, jesu li one nezavisne? Nisu, samo su liearno nezavisne, ne znači da su i općenito.\n\nKoja je distribucija konjugatna Dirichletovoj? Multinoullijeva.\n\nKako pristranu procjenu za varijancu pretvoriti u nepristranu? Pomnožiti s N/(N-1).",
+      "votes": {
+        "upvoters": [
+          "Conrad",
+          "Ellie",
+          "Juren",
+          "PrisonMike (Števo)",
+          "Smolaa",
+          "Yeltneb",
+          "in1",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124805": {
+      "poster": "johndoe",
+      "content": "ima netko od danas da napise pitanja? aha vidim da je kolega napisao, nije mi ucitalo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

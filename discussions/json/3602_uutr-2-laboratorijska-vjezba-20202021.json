@@ -1,0 +1,134 @@
+{
+  "title": "[UUTR] 2. laboratorijska vježba - 2020/2021",
+  "creator": "Letov",
+  "slug": "uutr-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Uvod u teoriju računarstva",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "167352": {
+      "poster": "Letov",
+      "content": "S kojim algoritmom (2 ili 3) se najbezbolnije odradi uklanjanje istovjetnih stanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167354": {
+      "poster": "gladiator",
+      "content": "@Letov#167352 ja sam to napravio 2. algoritmom jer mi se činio poprilično _straight-forward_. Piši kod pažljivo jer imaš jako puno ugniježđenih petlji što je noćna mora za debagirati",
+      "votes": {
+        "upvoters": [
+          "Letov",
+          "zvucnik"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170576": {
+      "poster": "mihamih",
+      "content": "![](assets/2021-04-15/00015.png)\n\nda je ovdje u tablici za p7+d stajalo p3 umjesto p2 ne bi se ništa promijenilo? algoritam kaže da stanja p i q ostaju u istoj grupi ako postoji (dakle barem jedan) ulazni znak za koji p i q prelaze u istu grupu, u ovom slučaju to vrijedi za stanja p6 i p7 i znak c što znaci da čak i da promijenimo prijelaze za znak d stanja p6 i p7 će svejedno ostat u istoj grupi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170680": {
+      "poster": "mihamih",
+      "content": "@mihamih#170576 \n\nupdate: ne treba, skužio o čemu je riječ, u knjizi je algoritam zbunjujuć",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172160": {
+      "poster": "JeleeII",
+      "content": "Može li mi netko objasniti zašto se u testu 2 iz labosa minimizira stanje 3?\n\nRadim po drugom algoritmu i po njemu, koliko sam shvatila, svaki put kad je prijelaz između 2 stanja koja uspoređujemo u drugačijoj grupi ta dva stanja treba razdvojiti (jedno ostavit u provjeravanoj grupi drugo prebacit u novu). Po tome test_2 za stanje 2 i 3 i prijelaz b ide u dva različita stanja (2,b -> 1 (što je neprihvatljivo stanje), a 3,b->3(što je prihvatljivo stanje)). Nije li onda logika da se jedno stanje ostavlja u toj grupi a drugo prelazi u drugu grupu i time dobijemo 3 grupe po 1 stanje i nema potrebe za minimizacijom?\n\nMože biti da sam krivo shvatila algoritam ali trenutno ne kužim kako minimiziraju to stanje 3 u testu_2",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172351": {
+      "poster": "miljac (LordStark)",
+      "content": "@JeleeII#172160 što se tiče alg2, u pravu si. Ali stanje 3 otpada jer ne nedohvatljivo, pa ono neće zapravo ni ulaziti u taj alg2.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173407": {
+      "poster": "Jaki",
+      "content": "zasto u testnom primjeru test13 izbacujemo stanje p7 ?\n\nKada trazim nedohvatljiva stanja ne nalazi mi se tamo\n\nKada radim algoritam3, p7 je prihvaceno stanje te ga odmah oznacavam u tablici sto znaci da nece biti istovjetan s nijednim drugim stanjem\n\nJedino posto je p7 pocetno stanje i prihvaceno stanje ima nekakve veze u algoritmu 3, kako onda postupam?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173410": {
+      "poster": "Jaki",
+      "content": "@Jaki#173407 \n\n skuzio, bolje citati iz knjige nego samo pogledati jedan primjer predavanja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173412": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "@Jaki#173407 Meni je p7 istovjetno s p6 pa kako su rekli da se treba ocuvat leksikografski poredak zamijenio sam i pocetno stanje njegovim istovjetnim stanjem nakon sto sam izbacio istovjetna stanja iz skupa stanja, prihvatljivih stanja i prijelaza, radio sam isto s algoritmom 3.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

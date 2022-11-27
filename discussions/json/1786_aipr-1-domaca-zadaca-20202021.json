@@ -1,0 +1,937 @@
+{
+  "title": "[AIPR] 1. domaća zadaća - 2020/2021",
+  "creator": "Atem",
+  "slug": "aipr-1-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Analiza i projektiranje računalom",
+    "Zadaće"
+  ],
+  "posts": {
+    "79122": {
+      "poster": "Atem",
+      "content": "Smije li se koristiti python numpy biblioteka?",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79126": {
+      "poster": "Red_Baron",
+      "content": "Njene strukture podataka - da.\n\nOperacije nad matricama uključujući ispis - ne.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79197": {
+      "poster": "member",
+      "content": "\"Implementirati metode  za  zbrajanje,  oduzimanje,  množenje  i  transponiranje  matrica,  te  metode  koje  obavljaju  C operatore \"+=\" i \"-=\". **Preporuča se da budu implementirane kao nadgrađeni operatori.**\"\n\nJel ima ko ideju kako to napravit u pythonu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79203": {
+      "poster": "Svarog (Veles)",
+      "content": "@member#79197 za nadjačavanje operatora moraš nadjačati `__add__`, `__sub__`, `__mul__`, neki unarni operator za transponiranje (najlogičniji izbor bi bio ~, odnosno `__invert__`), `__iadd__` i `__isub__` metode, redom, prilikom definicije klase",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "in1",
+          "member",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79446": {
+      "poster": "MsBrightside",
+      "content": "mogu li matricu kao rjecnik u pythonu implementirat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79450": {
+      "poster": "Cvija",
+      "content": "Vidite li vi svoj termin ispitivanja ove domaće zadaće u kalendaru?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79454": {
+      "poster": "Erik",
+      "content": "Za Javu, pišu li se obične članske metode za zbrajanje, oduzimanje itd, budući da nema overloada operatora?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79470": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Erik#79454 Nema ograničenja na dizajn koda, pišeš kako hoćeš i možeš. Ako ti je lakše možeš sve napisati kao skup makronaredbi xD",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Erik",
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79525": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@member#79197 \n\nsto to znaci za Javu? ako radim svoju klasu Matrix, nemam sto overrideati??",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79548": {
+      "poster": "Amon",
+      "content": "@johndoe12#79525 Možeš samo overrideatu equals metodu da ti == može usporediti matrice, ali ne možeš napraviti ni razliku ni umnožak matrica pomoću operatora nego ti trebaju metode za oduzimanje, množenje, itd",
+      "votes": {
+        "upvoters": [
+          "in1",
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79604": {
+      "poster": "Emma63194",
+      "content": "Kad se napravi LU i LUP dekompozicija nad istom matricom, treba li L iz LU dekompozicije biti isti kao L iz LUP dekompozicije? (Isto pitanje i za U-ove).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79607": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Emma63194#79604 Ne, jer je u LUP priči permutacijska matrica, a u LU nije.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79610": {
+      "poster": "Emma63194",
+      "content": "@micho#79607 Na koju foru onda napraviti izračun determinante preko LUP dekompozicije (kako je opisano u uputama)? Našla sam na netu da je determinanta umnožak dijagolana L i U matrica samo ako je riječ o matrici nad kojoj je provedena LU dekompozicija. Oni u uputama tvrde da se može preko LUP, ali zaista ne vidim kako.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79613": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Emma63194#79610 Može se i kod LUP, samo trebaš dobiti i P determinantu.\n\n[Proof na liniji 1012](https://github.com/Yalfoosh/APR/blob/d299a466d3b499dc003aeef53e9e0e85575080d9/LAB1/Matrix.h#L1012)",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79615": {
+      "poster": "Emma63194",
+      "content": "@micho#79613 Nije sada dokaz, ali ajde XD. Hvala u svakom slučaju, ispada da je bio neki glupi bug razlog zašto su mi ispadale čudne vrijednosti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79616": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Emma63194#79615 Pa je dokaz zato što je bilo točno rješenje kad sam prošle godine odgovarao ovu vježbu i dobio sve bodove lol\n\nIsto tako, to je i rekao Jakobović na predavanju. Čuo sam ga dok sam prao suđe.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79620": {
+      "poster": "Emma63194",
+      "content": "@micho#79616 Ma kad si rekao dokaz, očekivala sam link na neku stranicu na kojoj je opisan baš matematički dokaz toga.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79668": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "jel netko pisao labos u Javi? Što treba s matlabom napraviti? Kako se integriraju java i matlab, i treba li to uopce raditi\n\n? help",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79701": {
+      "poster": "Amon",
+      "content": "@johndoe12#79668 Nikakav matlab ne trebaš, taj dio se samo ignorira\n\nTo njima stoji još od prije par godina kad se to trebalo raditi, a očito su bili prelijeni da to maknu",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80073": {
+      "poster": "Ziher",
+      "content": "U Javi, koje odstupanje se za double može iskoristiti, a da veličine budu prihvatljivo blizu i da se sve može izračunati normalno? Tj. koja je otprilike ta mala vrijednost blizu nuli koja zezne račun kod LU dekompozicije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80183": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Ziher#80073 [imath]10^{-13}[/imath]\n\nDouble ima preciznost od 15 decimalnih znamenaka, ali ja obično ostavim još 2 reda veličine za akumulaciju greške kad god radim s matricama, konvolucijama i slično. Realno gledajući, [imath]10^{-13}[/imath] je dovoljno malo da ionako bude zanemarivo.\n\nOdabir epsilona je ovisan o problemu, moraš gledati koliko uzastopnih operacija imaš. Greška kod uzastopnih operacija nije omeđena odozgo, tako da odabir epsilona ovisi o procjeni broja operacija nekog algoritma. Prošle godine sam odabrao ovaj epsilon i ni u jednom labosu nisam imao problema s floating point greškama.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80285": {
+      "poster": "Bravos (Supraman)",
+      "content": "Smiju li se u C++-u koristiti vektori za pohranu matrice?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80318": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Bravos#80285 Smiješ koristiti što god hoćeš za pohranu podataka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80330": {
+      "poster": "Bananaking",
+      "content": "Jesu ovakvi ispisi ok ili to treba nekako formatirati?\n\n![](assets/2020-10-14/00037.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80444": {
+      "poster": "Bananaking",
+      "content": "Ok, imam sve osim funkcije za inverziju i determinantu. Kako točno treba izgledati funkcija za inverziju, ne kužim ovaj dio n puta unaprijed n puta unatrag\n\nImam matricu A i tražim njen inverz:\n```\nLU, P = LUP(A)\nnow what?\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80452": {
+      "poster": "Emma63194",
+      "content": "@Bananaking#80444 Pa znači n puta (neka for petlja npr.) pozivaš neku funkciju koja ti računa supstituciju unaprijed i potom taj rezultat preda funkciji koja računa supstituciju unatrag (ili kako si već implementirao). Kaže na predavanju profesor/ima u knjizi kako izgleda onaj vektor s kojim radiš supstituciju unaprijed (ona neka matrica identiteta pa potom uzimaš i-ti redak (ili stupac, nez više) iz nje za svaku iteraciju).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80454": {
+      "poster": "svemia (bearyn)",
+      "content": "Ako koristim python, sta bi znacilo da koristim isti memorijski prostor za spremanje L i U prilikom LU dekompozicije? Posto u pythonu nema inace brige oko memorije, zbunjuje me taj dio. Jel se moze implementirat tako da objekt klase Matrica ima 3 atributa - pocetna matrica, L matrica i U matrica, di ce L i U bit inicijalno prazne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80463": {
+      "poster": "svemia (bearyn)",
+      "content": "Nvm, shvatio koja je poanta i na sta se misli, ali ne znam kako obrisat objavu (ne vidim opciju nigdje)...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80465": {
+      "poster": "Bananaking",
+      "content": "@svemia#80463  Inače kad nešto pitaš pa shvatiš dobra praksa je napisati odgovor, možda netko drugi bude listao temu s istim pitanjem kasnije",
+      "votes": {
+        "upvoters": [
+          "FICHEKK",
+          "Svarog (Veles)",
+          "in1",
+          "member",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80466": {
+      "poster": "svemia (bearyn)",
+      "content": "@Bananaking#80465  Imas pravo, cinilo mi se pitanje malo glupo na kraju pa je bacen ignore. Ugl, prvotno mi nije bilo jasno sta se tocno trazi kod tog dijela zadatka. Zakljucak mi je da L-matrica i U-matrica trebaju bit pohranjeni zajedno, na istom mjestu. Napravi se dekompozicija, a rezultat bude jedna matrica u kojoj su sadrzani L i U. Nije bas neko pitanje, trebalo mi je jedno 5 citanja i prolaz kroz teoriju da skuzim otprilike na sta se misli.",
+      "votes": {
+        "upvoters": [
+          "FICHEKK"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80470": {
+      "poster": "Bananaking",
+      "content": "@svemia#80466 Da. i mislim da je stvar u tome što su algoritmi dani na stranici predmeta napisani sa pretpostavkom da su u istom memorijskom prostoru pa imaš ono A[i, j] -= ... inače bi malo drugačije dohvaćao i spremao",
+      "votes": {
+        "upvoters": [
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80499": {
+      "poster": "Bananaking",
+      "content": "@Bananaking#80444 Da povedem primjerom, imao sam sve rješeno i provjereno usput da radi do funkcije inverza.\n\nKad tražimo inverz riješavamo sustav\n\nA * A^-1 = E\n\ngdje je A^-1 inverz a E je matrica identiteta ili jedinična matrica (jedinice na dijagonali)\n\nDo tada sam LUP provjeravao jel mi valja na zadacima tipa A * x = b, gdje je x traženi vektor a b zadani slobodni vektor a kod inverza toga nema\n\nE, kod inverza nije samo vektor nego cijela matrica E, što je skup vektora i taj \"n puta\" je dimenzija n, za svaki uzeti jedan stupac iz tablice E i to nam je sada taj slobodni vektor b. Riješiti i dobit traženi vektor x koji je opet jedan stupac u traženoj matrici (inverzu). Ponovi to n puta tako da prođeš kroz sve stupce matrice E i postaviš sve stupce matrice A^-1 i to je to. Valjda.\n\nSad još samo determinantu 😄",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "ImJustAKid (lumity)",
+          "carrieb"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80510": {
+      "poster": "Bananaking",
+      "content": "Jel rješio netko 6. zadatak\n\n> Rješavanje sljedećeg sustava moglo bi zadati problema vašoj implementaciji. O čemu to ovisi? \n\nKoje rješenje bi trebalo biti?\n\nAlso, koje je rješenje 5. zadatka? Da provjerim jel mi dobar output",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80552": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @Bananaking#80510 Koje rješenje bi trebalo biti?\n\nTrebaš prvo normalizirati vrijednosti jer imaš prevelike razlike u redovima veličina. IIRC asistent je rekao da bi prvo sve brojeve trebalo dovesti u domenu [-1, 1] dijeljenjem sustava jednadžbi (tamo su najgušći floatovi), i onda riješiti sustav. Ako radiš s Decimalom od 96+ bita onda vjerojatno nećeš imati problema ni bez te pretvorbe radi njegove uniformne gustoće u cijeloj domeni.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80802": {
+      "poster": "MJ3",
+      "content": "jel se prilikom LU i LUP treba mijenjat izvorna matrica A na kojoj se radi dekompozicija? ili se misli da se L i U pohranjuju na isto mjesto ali u nekoj novoj matrici?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80868": {
+      "poster": "Ziher",
+      "content": "@MJ3#80802 Onaj pojednostavljeni algoritam ti je napravljen tako da i L i U budu spremljeni na isto mjesto u memoriji, tj. varijablu u kojoj je prije bila pocetna matrica A (rest in peace kako matrici A tako nacelima programiranja s preddiplomskog). Samo nakon dekompozicije mozes iscitati L i U obzirom na glavnu dijagonalu.\n\nNaravno ti mozes to nekako drukcije napraviti, napraviti deepcopy matrice ili nesto, sacuvati za uspomenu",
+      "votes": {
+        "upvoters": [
+          "MJ3",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81055": {
+      "poster": "Ducius",
+      "content": "\"Osim toga potrebno je priložiti i „readme.txt“ datoteku u kojoj su\n\nistaknute upute za pokretanje programa (koji je prevoditelj korišten ili razvojno okruženje\n\nkoje je korišteno, naredba za kompajliranje sa svim argumentima, dakle sve što je potrebno\n\nda se predano rješenje može prevesti i izvesti na nekom drugom računalu)\". Jel potrebno ovo pisat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81096": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Ducius#81055 Prošle godine nisu gledali jer si vrtio to pred njima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81114": {
+      "poster": "chuuya (temari)",
+      "content": "Nema nikakvog pdf-a domaće zadaće za 2020/21 right? Glavne zadatke vadimo iz prošlogodišnjeg, a funkcionalnosti su iste?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81125": {
+      "poster": "Amon",
+      "content": "@chuuya#81114 Zadaci su isti, ali su očito zaboravili promijeniti godinu na dokumentu. Na stranici na ferwebu sa zadaćama piše dobra godina tho tak da bi to trebalo biti to",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81235": {
+      "poster": "member",
+      "content": "@Ducius#81055 di si to pročitao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81245": {
+      "poster": "Amon",
+      "content": "@member#81235 Na stranici gdje su zadaće sa strane imaš i datoteku upute za zadaće i tamo ti piše. Doduše sumnjam da će to itko ikad gledati, pogotovo kad ćeš ti vrtit labos, a njima predaješ datoteke samo na provjeru plagijata.",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81431": {
+      "poster": "member",
+      "content": "A jel ima ko rješenja tih 10 zadataka da provjerim",
+      "votes": {
+        "upvoters": [
+          "Carmichael (Charm)",
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81472": {
+      "poster": "Emma63194",
+      "content": "U 5. zadatku, što bismo mi trebali dobiti kao x, a što bi trebalo biti točno rješenje?",
+      "votes": {
+        "upvoters": [
+          "happysun",
+          "luna_lovegood"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81522": {
+      "poster": "Zogen",
+      "content": "kada računamo determinantu da li je determinanta za L uvijek jednaka 1",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81524": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Zogen#81522 Da",
+      "votes": {
+        "upvoters": [
+          "Zogen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81537": {
+      "poster": "Emma63194",
+      "content": "@micho#80552 Kako dovesti brojeve do te domene?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81541": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Emma63194#81537 Dijeljenje i množenje redaka\n\nVjerojatno je moguće i nešto s logaritmima, ali tu treba biti oprezan i ne znam napamet kako bi se riješilo, a gubi se na preciznosti sigurno.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81543": {
+      "poster": "Bananaking",
+      "content": "U 2. zadatku za matricu A i slobodni vektor (12, 12, 1) dobijem rješenje LUP dekompozicijom (3, 1, -1) a vidim da su neki rekli da je nerješivo? Kod LU dekompozicije dođe do dijeljenja s nulom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81544": {
+      "poster": "Emma63194",
+      "content": "> @micho#81541 Dijeljenje i množenje redaka\n\nMože malo detaljnije?\n\nProbala sam normalizirati preko jedne formule, ali nije upalilo. Ne kužim kako onda dovesti to na taj interval, a da nekako ostane sačuvano to koliko su na početku bili brojevi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81545": {
+      "poster": "InCogNiTo124",
+      "content": "@Zogen#81522 @micho#81524 u biti ne bas, ili je 1 ili -1. to ovisi o poretku jedinica po njoj. Rule od the thumb je da je `det(P) == 1` ako je ucinjen paran broj zamjena redaka/stupaca (0 je paran broj) a -1 ako je neparan.\n\nPrimjer, [[0 1][1 0]] ima `det == -1` jer se dogodio jedan swap, dok npr [[0 1 0][0 0 1][1 0 0]] ima `det == 1` jer su se desila dva swapa (1 <-> 3, 3 <-> 2)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81549": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@InCogNiTo124#81545 To o čemu pričaš je vezano uz permutacijsku matricu i računa se odvojeno (računanjem ciklusa preko permutacijske matrice P), a \"determinanta\" L matrice u smislu produkta njegove dijagonale je uvijek 1 jer je dijagonala pravilno permutirane L matrice jedinični vektor.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81550": {
+      "poster": "InCogNiTo124",
+      "content": "@micho#81549 izgleda da sam iz L uspio procitat P, mozda je vrijeme za nove naocale",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81551": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Emma63194#81544 Pa podijeliš neke jednadžbe konstantom i to je to. Nema tu ničeg detaljnog, doslovno si samo reskalirala jednadžbu da prilikom rješavanja ne ode u nepreciznije područje IEEE floatova.\n\nZa logaritmiranje se treba razviti posebna metoda LUP gdje se drukčije tretiraju operatori, npr.\n\n```python\ndef add_log(x, y):\n    return log(exp(x) + exp(y))\n\ndef mul_log(x, y):\n    return x + y\n```\n\nI još sto raznih čuda. Možda je bolje remapirati u tanh, pošto tu ne bi bilo transformacija u pozitivne brojeve, ali tu više nema prečaca kod operacija.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81619": {
+      "poster": "Bananaking",
+      "content": "Pitaju složenosti postupaka, teoriju, kako se uspoređuju matrice i prođete kroz zadatke gdje pita stvari poput \"Kako si to dobio, LU ili LUP dekompozicijom? Zašto?\"",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "Emma63194",
+          "PrisonMike (Števo)",
+          "Quentin",
+          "chuuya (temari)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81624": {
+      "poster": "Arfit",
+      "content": "@Bananaking#81619 oni se nama prvi jave u teamsu ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81625": {
+      "poster": "Bananaking",
+      "content": "@Arfit#81624 Da, samo dobiješ poziv, javiš se i dalje 1 na 1",
+      "votes": {
+        "upvoters": [
+          "Arfit",
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82126": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "jeste vi dodijeljeni u neku posebnu grupu za ovaj prvi labos? meni je na teamsu samo APR general, a imam danas lab",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82128": {
+      "poster": "Zabe",
+      "content": "@johndoe12#82126 pise ti doslovno post iznad, budes u to vrijeme aktivan i oni ti se jave jesi li spreman za predaju",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82160": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "je li imao netko labos pa da podijeli iskustva?",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82209": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "koja su teoretska pitanja?",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82217": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "sto je LU a sto LUP dekompozicija\n\nKolike su slozenosti LU, LUP, supst unatrag i unaprijed, inverz matrice, determinanta\n\nKako se racuna i kolko iznosi determinatnta L matrice, P matrice... itd\n\nznat objasnit zasto neke jdbe mozemo rjesiti s LU a neke ne i zasto se koristi LUP\n\nchill.",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Cvija",
+          "Daorson",
+          "Emma63194",
+          "PrisonMike (Števo)",
+          "Quentin",
+          "Svarog (Veles)",
+          "Zuzu (Coffe123)",
+          "chuuya (temari)",
+          "in1",
+          "joc",
+          "korisnickoime",
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82218": {
+      "poster": "Zabe",
+      "content": "Asistent Marko Đurasević:\n\nZašto se u 3. zadatku ne može rješiti sustav?\n\nMogu li se sve ne singularne matrice rješiti LU dekompozicijom i kako se to sa LUP rješava?\n\nKako dobiti matricu A iz L i U?\n\nObjasniti kako se dobiva inverz pomoću LUP?\n\nKako računamo determinantu i koje su vrijednosti determinanti L, U, P? \n\nUglavnom je pitao generalno kako, nije ga zanimala tvoja implementacija, pogleda samo rješenja i to je to.",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Cvija",
+          "Daorson",
+          "Emma63194",
+          "PrisonMike (Števo)",
+          "Quentin",
+          "Zuzu (Coffe123)",
+          "chuuya (temari)",
+          "in1",
+          "joc",
+          "korisnickoime",
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

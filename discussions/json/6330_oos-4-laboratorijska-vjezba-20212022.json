@@ -1,0 +1,198 @@
+{
+  "title": "[OOS] 4. laboratorijska vježba - 2021/2022",
+  "creator": "ikirai",
+  "slug": "oos-4-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Osnove obradbe signala",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "266020": {
+      "poster": "ikirai",
+      "content": "Pozdrav, je li netko riješio zadnji zadatak s nulama da mi kaže kak se trebaju izračunat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266044": {
+      "poster": "wesley",
+      "content": "Ja sam stavila roots(h), gdje je h impulsni odziv filtra za kojeg trazis nule, taj impulsni odziv za filtar je vec izracunat u kodu. Nisam sigurna da je to ispravan postupak :)\n\n ![](assets/2021-12-21/00014.png)",
+      "votes": {
+        "upvoters": [
+          "2more (Shooshur)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266045": {
+      "poster": "wesley",
+      "content": "Moze netko screenat jediničnu kružnicu s nulama u zadnjem zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266143": {
+      "poster": "ikirai",
+      "content": "@\"wesley\"#p266044 E to sam i napravio ali sam za prva dva dobio dvije cudne tocke, za zadnja dva mi se cini da je dobro.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266157": {
+      "poster": "wesley",
+      "content": "@\"ikirai\"#p266143 ![](assets/2021-12-22/00002.png)\n\novako je meni doslo, to ok?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266165": {
+      "poster": "ikirai",
+      "content": "@\"wesley\"#p266157 A jebeno hahahahah, prema onom sta sam googleo tak nekak i treba izgledat al meni nije ispalo tak :( ahahahahah",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266166": {
+      "poster": "wesley",
+      "content": "@\"ikirai\"#p266165 ![](assets/2021-12-22/00004.png)\n\nuzeo si ovo u obzir? trebas jako male vrijednosti h stavit na nulu ako su manje od praga kojeg su napisali. Uz to sam za nule u minmax lowpass filtru dobila neke ogromne vrijednosti (-40 i +20) pa sam te vrijednosti isto na nulu stavila",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266168": {
+      "poster": "wesley",
+      "content": "@\"wesley\"#p266157 ali mislim da ovo nije dobro jer bi nule za lowpass filter trebale na velikim frekvencijama bit direktno na kruznici :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266169": {
+      "poster": "wesley",
+      "content": "@\"wesley\"#p266157 ovo nije bilo dobro, sad sam popravila, svi lowpass bi ovak trebali izgledat, a highpass zrcalno ovome\n\n![](assets/2021-12-22/00005.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266170": {
+      "poster": "ikirai",
+      "content": "![](assets/2021-12-22/00006.png)\n\nJa sam dobio ovo i ne znam kak da ove gore popravim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266171": {
+      "poster": "ikirai",
+      "content": "Al filteri su mi dobri pa ne kuzim kaj krivo radim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266172": {
+      "poster": "ikirai",
+      "content": "@\"wesley\"#p266166 \n\nA cek nisam ovo vidio uopce, budem probo tnx",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266175": {
+      "poster": "Lyras",
+      "content": "@\"wesley\"#p266169 što si točno izmjenila da ti ovako izgleda sada? Meni izgleda kao u @\"wesley\"#p266157",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266184": {
+      "poster": "wesley",
+      "content": "@\"Lyras\"#p266175 treba bit abs(h) < finfo(float).eps, ja sam racunala prije h < finfo(float).eps",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

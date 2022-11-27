@@ -1,0 +1,1150 @@
+{
+  "title": "[BAZPOD] 4. laboratorijska vježba - 2019/2020",
+  "creator": "Aquaman",
+  "slug": "bazpod-4-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Baze podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "32304": {
+      "poster": "Aquaman",
+      "content": "jel itko zna kako ce izgledati zadaci sa sql-om?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32453": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@Aquaman#32304 rekli su kao u zadaci",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32625": {
+      "poster": "Rene",
+      "content": "Ima netko ideju kako ovo napravit bez privremene tablice?![](assets/2020-05-30/00004.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32629": {
+      "poster": "Rene",
+      "content": "@Rene#32625 Evo čini mi se da može ovako:\n```sql\nselect ROUND(AVG(ispit1.ocjena),2) maxOcj, ROUND(AVG(ispit2.ocjena),2) minOcj\nfrom polozeniIspit ispit1,polozeniIspit ispit2\ngroup by ispit1.sifPred, ispit2.sifPred\nhaving (AVG(ispit1.ocjena) >= ALL (SELECT AVG(ocjena) FROM polozeniIspit GROUP BY sifPred)) AND \n\t(AVG(ispit2.ocjena) <=ALL (SELECT AVG(ocjena) FROM polozeniIspit GROUP BY sifPred))\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32751": {
+      "poster": "grga_it_is (it_is_what_it_is)",
+      "content": "ulazi li 19. predavanje u ovaj labos, po njihovom ulazi, samo mi nije jasno kako su oni to smislili ako jos jedan tjedan imamo kakti nastave? ako netko zna...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32766": {
+      "poster": "SpekuraDebela (Šćap)",
+      "content": "od koje do koje lekcije ulazi labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32769": {
+      "poster": "Sicsile",
+      "content": "@grga_it_is#32751 \n\n@SpekuraDebela#32766 \n\n![](assets/2020-05-30/00012.png)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Gulbash",
+          "Njet",
+          "Pranjo (Pranjo_Suđman)",
+          "SpekuraDebela (Šćap)",
+          "gladiator",
+          "grga_it_is (it_is_what_it_is)",
+          "ink",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32789": {
+      "poster": "Jomi",
+      "content": "Na prezentacijama pise da je min prag za izac na rok 8 bodova, a na stranici predmeta pise 6. \n\nJel iko pita vec koji je tocan izvor?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32793": {
+      "poster": "TamTam (foobar)",
+      "content": "@Jomi#32789 Rekli su da je spusten prag na 6",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32794": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "@Jomi#32789 \n\n8 je prag za izaci na zavrsni, a 6 za rok.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32797": {
+      "poster": "grga_it_is (it_is_what_it_is)",
+      "content": "@Jomi#32789 \n\n![](assets/2020-05-30/00015.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32798": {
+      "poster": "Sicsile",
+      "content": "zasto ovdje ne ide CREATEUSER\n\n![](assets/2020-05-30/00016.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32800": {
+      "poster": "zplusplus (gasaf)",
+      "content": "@tata#32794 šta nije da nema praga na labosima za kontinuiranu?",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "alp (monte)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32833": {
+      "poster": "SpekuraDebela (Šćap)",
+      "content": "@Sicsile#32769 Zahvaljujem kolega",
+      "votes": {
+        "upvoters": [
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32852": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "Jel ulazi i ER?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32927": {
+      "poster": "Jomi",
+      "content": "@tata#32794 vjerujem da nisi asistent, cim govoris ovakve gluposti ![](assets/2020-05-30/00028.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32928": {
+      "poster": "Jomi",
+      "content": "![](assets/2020-05-30/00029.png)\n\n![](assets/2020-05-30/00030.png)\n\nko god da je tu lud, sigurno ne treba 8 bodova iz labosa za izac na zavrsni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32929": {
+      "poster": "Jomi",
+      "content": "@grga_it_is#32797  aha super, nisam ovaj vidia dok sam odgovara jbg",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32969": {
+      "poster": "steker",
+      "content": "Moze li se ovo gradivo naucit u jedan dan ako znamo samo er modele",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "viliml"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32970": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@steker#32969 Ne\n\nMožeš probat naučiti jedan dio ali jedan ciklus u danu? Nah dude lmao. S 2-3 dana već imaš više šanse. Ne naučit, ali naštrebat svakako. Tako da možda all nighter?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32972": {
+      "poster": "steker",
+      "content": "@micho#32970 all nighter it is... nemam sta za izgubit",
+      "votes": {
+        "upvoters": [
+          "JoKing",
+          "__builtin_popcount (std::popcount)",
+          "alp (monte)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33137": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@Sicsile#32798 role i user su sinonimi, tako da mozda i createrole, i create user takodjer znace isto",
+      "votes": {
+        "upvoters": [
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33139": {
+      "poster": "Rene",
+      "content": "@ruza0001#33137 mislim da role i user nisu sinonimi. Po primjeru sa slajdova, role moze biti \"nastavnik\", a istu tu ulogu moze imati vise usera: \"Pintar\", \"Brkic\"...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33146": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@Rene#33139 ovo pise u rjesenjima zadataka za vjezbu 13 \n\n`--postgres:\n\nCREATE ROLE horvat LOGIN PASSWORD 'horvat'; --ROLE i USER su sinonimi\n\nCREATE ROLE kolar LOGIN PASSWORD 'kolar';\n\nCREATE ROLE novak LOGIN PASSWORD 'novak';`",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33149": {
+      "poster": "Rene",
+      "content": "@ruza0001#33146 Mea culpa onda, krivo sam to shvatio",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33193": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@Rene#33149 al super mi je sto taj podatak ne pise nit je spomenut nigdje u predavanju",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Michael (Michael Scarn)",
+          "Rene",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33207": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@ruza0001#33193 Tehnički je razlika da ako želiš da se korisnik može prijaviti s rolom trebaš dodat LOGIN atribut u CREATE ROLE, dok je za CREATE USER podrazumijevan. \n\nUseri i role nisu bili sinonimi do Postgresql-a 8.1, možda im je zato koncept u prezentacijama ostao nepromijenjen i nisu to naglašavali, ali opet 8.1 je izašao 2005. godine.",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Fica (Prof)",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33419": {
+      "poster": "Fortius",
+      "content": "ak su rekli da ce biti kao na zadaci onda ulaze i indexi kao sql zadatak? ali to nije gradivo drugog ciklusa? Nista mi nije jasno haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Kasperinac",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33429": {
+      "poster": "howe892 (dado)",
+      "content": "jel na kraju ima neg bodova iz abc?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33430": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@howe892#33429 ima, piše u tablici na obavijesti\n\n![](assets/2020-06-01/00009.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33431": {
+      "poster": "howe892 (dado)",
+      "content": "@iNavy#33430  pisalo je i za prvu pa je na kraju pintar u chatu za 1.lv bio odg da nema",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33433": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@howe892#33431 Mislim da se to odnosilo na to da ako ti na kraju ukupni bodovi iz pitalica na tom labosu budu u minusu, da dobijes samo 0 iz pitalica. Ali neka netko jos provjeri nisam siguran",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)",
+          "Urmum (mamaRu)",
+          "alp (monte)",
+          "howe892 (dado)",
+          "iNavy (mornar Ica)",
+          "indythedog",
+          "niknik"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33435": {
+      "poster": "niknik",
+      "content": "@KingGeedorah#33433 Da, tako je.",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33442": {
+      "poster": "ink",
+      "content": "![](assets/2020-06-01/00010.png)\n\ntočno rješenje je 30. ak će netko htjet objasnit koji kurac znači ovaj \"D < 200\", hvala. jer V(D,r)=50 znači da ima 50 različitih vrijednosti, ali nisu nam dali domenu?? ak je domena od 1 do 50 onda je \"vjerojatnost\" 100%, ak je domena od 201 do 251 onda je 0%, nije mi to uopće jasno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33445": {
+      "poster": "Rene",
+      "content": "@ink#33442 Optimizator ne provjerava toliko specificno, nego samo uvjete X<x uzme da su ostvareni u trećini n-torki.\n\nTome dodaš uvjet C=2 koji se (po formuli) ostvari u 90 slučajeva => 1/3 * 90 = 30",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33446": {
+      "poster": "tetak",
+      "content": "![](assets/2020-06-01/00011.png)\n\nzna neko?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33447": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "![](assets/2020-06-01/00012.jpeg)\n\n zasto ovo nije dobro o.O",
+      "votes": {
+        "upvoters": [
+          "MiqeloS"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33448": {
+      "poster": "lucylu",
+      "content": "@SonGoku#33447 \n\njer si stavio da ozngrupa ne smije pocinjati sa A, a treba napraviti to za ozndvorana",
+      "votes": {
+        "upvoters": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33449": {
+      "poster": "Kniwy00 (DoktorZnanosti)",
+      "content": "@SonGoku#33447 trazi te prvo slovo oznake dvorane a ne grupe",
+      "votes": {
+        "upvoters": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33452": {
+      "poster": "DazedAndConfused",
+      "content": "![](assets/2020-06-01/00013.png)\n\nJel netko mozda ovaj dobio?",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33455": {
+      "poster": "SuperSjajan3",
+      "content": "@tetak#33446 jesi uspio ovaj, imam isti taj i grd je",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33457": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@SonGoku#33447 \n\nnezz i dalje ako spojim grupa i predmetgrupa i odradim substring preko ozndvorana ne valja i dalje hlpp",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33459": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "@DazedAndConfused#33452 jesi uspio, imam isti, jebem se već 10 min s njm?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33461": {
+      "poster": "Sans",
+      "content": "Kako provjeriti da se nastava nije održala?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33462": {
+      "poster": "Bazul",
+      "content": "@Sans#33461 not in select koji odabire one koji su se odrzali",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33464": {
+      "poster": "tetak",
+      "content": "![](assets/2020-06-01/00014.png)\n\nvidi n![](assets/2020-06-01/00015.png)\n\neko gresku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33466": {
+      "poster": "MiqeloS",
+      "content": "Ne kužim kao niti kolege iznad zašto ovo nije dobro...\n\n![](assets/2020-06-01/00017.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33470": {
+      "poster": "[deleted]",
+      "content": "@MiqeloS#33466 \n\n@SonGoku#33447 \n\nja sam to ovako riješio \n\n```sql\nSELECT akgodina, ozngrupa, kapacitet \nFROM predmetgrupa\nNATURAL JOIN dvorana\nNATURAL JOIN grupa\nWHERE kapacitet = 20\nAND akgodina = 2019\nAND ozngrupa NOT IN (SELECT ozngrupa FROM grupa g2 WHERE ozngrupa LIKE '%A%')\n```\n\nI bilo mi je točno",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33473": {
+      "poster": "Fica (Prof)",
+      "content": "@MiqeloS#33466 oznaka dvorane treba u where umjesto oznake grupe",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33477": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "Zadatak:\n\n>Ispisati akademsku godinu, oznaku grupe i kapacitet za grupe kapaciteta **30** iz akademske godine **2019./2020.** kojima se te godine nastava **niti jednom nije** održavala u **B** zgradi (prvo slovo oznake dvorane određuje zgradu u kojoj se nalazi, npr. **A**101 je u **A** zgradi, **B**4 je u **B** zgradi, itd.).\n\n>Primjer rezultata:\n<TABLE><THEAD><TR>|<TH>akgodina</TH>|<TH>ozngrupa</TH>|<TH>kapacitet</TH>|</TR></THEAD>\n|----|----|----|\n<TBODY><TR>|<TD>2019</TD>|<TD>D-E1</TD>|<TD>30</TD>|</TR>\n<TR>|<TD>2019</TD>|<TD>D-F1</TD>|<TD>30</TD>|</TR>\n<TR>|<TD>...</TD>|<TD>...</TD>|<TD>...</TD>|</TR></TBODY></TABLE>\n\n>*Dakle, grupi \"D-E1\" kapaciteta 30 iz 2019./2020. akademske godine se nastava te godine nije održavala u B zgradi, itd.*\n\n----\n\nRadio sam privremenu tablicu, pokušavao nešto s njom, ali ne priznaje rješenje makar mi se čini da bi moglo biti dobro.\n\nOnda sam slučajno otkrio da mi priznaje ovo:\n```SQL\nSELECT * FROM grupa\n  WHERE akgodina = 2019\n  AND kapacitet = 30;\n```\n\nPa da vas pitam, tko tu koga jebe?",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)",
+          "Galke",
+          "JoKing",
+          "MiqeloS",
+          "Sicsile",
+          "Sveti_Ilija (Sveti Ilija)",
+          "Tinx (pingvin)",
+          "bb8 (zaza)",
+          "boki8 (kerovac)",
+          "indythedog",
+          "jobi (azex)",
+          "krokodil",
+          "laranotreallycroft",
+          "luka6 (ugrijaniRadijator)",
+          "lup",
+          "mihamih",
+          "neksi (filip)",
+          "steker",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Bucc (Olive Oil)",
+          "Galke",
+          "Gulbash",
+          "Hrvoje (Hrvoje45)",
+          "JeleeII",
+          "Njet",
+          "bb8 (zaza)",
+          "iNavy (mornar Ica)",
+          "krokodil",
+          "mbaki",
+          "mini (Earthling)",
+          "ruza0001 (rozy)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33478": {
+      "poster": "mihamih",
+      "content": "@Fica#33473 ja sam u where bio stavio oznaku dvorane kako kazes, ali svejedno mi nisu priznali",
+      "votes": {
+        "upvoters": [
+          "Tinx (pingvin)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33479": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "@__builtin_popcount#33477 ček, ozbiljno??",
+      "votes": {
+        "upvoters": [
+          "MiqeloS"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33481": {
+      "poster": "MiqeloS",
+      "content": "@__builtin_popcount#33477 \n\nW\n\nT\n\nF\n\n?",
+      "votes": {
+        "upvoters": [
+          "Aquaman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33483": {
+      "poster": "djeno",
+      "content": "@__builtin_popcount#33477 \n\nOvo nije fer nimalo s obzirom da nema povratka na prijasnje zadatke a rjesavas krivo postavljeni zadatak. Da su fer trebali bi ponovit taj labos za vas koji ste imali taj zadatak (ili ga priznat svima). Mislim da trebao netko tko je imao taj zadatak napisat poruku u Teams.",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)",
+          "MiqeloS",
+          "Njet",
+          "Petar420",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33485": {
+      "poster": "idontwannabemyself",
+      "content": "@__builtin_popcount#33477 \n\nmislim da se tocno poklopilo, ovo gore je tvoje, a moje dolje (lijevi nacin je provjereno tocan)\n>! ![](assets/2020-06-01/00029.png)\n\n![](assets/2020-06-01/00030.png)",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)",
+          "Joskica",
+          "Koalefant",
+          "MiqeloS",
+          "Tinx (pingvin)",
+          "__builtin_popcount (std::popcount)",
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "__builtin_popcount (std::popcount)"
+        ]
+      }
+    },
+    "33486": {
+      "poster": "JoKing",
+      "content": "@djeno#33483\n\n>  Ovo nije fer nimalo s obzirom da nema povratka na prijasnje zadatke\n  \nOdUsTaNiTe KoNaČnO oD pRiGoVaRaNjA nA nEmOgUćNoSt VrAćAnJa Na PrEtHoDnE zAdAtKe. KaD sE s TiM pOmIrItE bIt Će VaM lAkŠe.",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "Jale (čakijale)",
+          "Lenobius",
+          "MiqeloS",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "krokodil",
+          "mesojed (sofronijevicevPrst)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "Crotta (Točak)",
+          "blablajar",
+          "brol (Mason Mount me)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33489": {
+      "poster": "niknik",
+      "content": "@idontwannabemyself#33485 Kolko na kraju treba ispasti  n-torki na kapacitet 20?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33491": {
+      "poster": "steker",
+      "content": "bit sad innit",
+      "votes": {
+        "upvoters": [
+          "Lenobius",
+          "swish41 (PlavušaSFilozofskog)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      }
+    },
+    "33496": {
+      "poster": "Joskica",
+      "content": "Jel itko planira napisat poruku na teams ili mail?\n\nJa ne mogu na teams jer sam muteana, ali ako nitko nece onda saljem mail.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33498": {
+      "poster": "Nocna_smjena",
+      "content": "Ne znam za ostale ali nemrem se ovaj put složit dae bilo teško. I dalje sam protiv ideje da nema vraćanja. Fulao sam samo jednu ABC pitalicu a nisam se strgo od učenja tbh",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "AnamarijaM (MA)",
+          "Gulbash",
+          "Lyras",
+          "__builtin_popcount (std::popcount)",
+          "at5611",
+          "lucylu",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33503": {
+      "poster": "idontwannabemyself",
+      "content": "@niknik#33489 ako imaš zadatak s A i 20, onda ovako kako je dolje lijevo -> 5",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Koalefant"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33524": {
+      "poster": "blablajar",
+      "content": "![](assets/2020-06-01/00031.png)\n\njel uspio neko rijesit ovo đubre od zadatka?",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Suki7",
+          "Vonj"
+        ]
+      }
+    },
+    "33593": {
+      "poster": "viliml",
+      "content": "@blablajar#33524 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33606": {
+      "poster": "indythedog",
+      "content": "@blablajar#33524 ![](assets/2020-06-01/00037.png)\n\nja sam ovako stavio, moguće da ima neko elegantnije rješenje al i ovo radi",
+      "votes": {
+        "upvoters": [
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33620": {
+      "poster": "viliml",
+      "content": "@indythedog#33606 Zašto viewevi lol?\n\n```sql\nSELECT imeNastavnik, prezimeNastavnik, nazPredmet, AVG(ocjena)\n    FROM upisanPredmet NATURAL JOIN predmet NATURAL JOIN predmetGrupa NATURAL JOIN nastavnik\n    WHERE akGodina = 2019\n    GROUP BY sifNastavnik, imeNastavnik, prezimeNastavnik, sifPredmet, nazPredmet\n    HAVING AVG(ocjena) > (\n        SELECT AVG(ocjena)\n            FROM upisanPredmet AS cijelaGeneracija\n            WHERE cijelaGeneracija.sifPredmet = upisanPredmet.sifPredmet\n                AND cijelaGeneracija.akGodina = 2019\n    )\n```",
+      "votes": {
+        "upvoters": [
+          "blablajar",
+          "pez (ip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33623": {
+      "poster": "gladiator",
+      "content": "@MiqeloS#33466 imam isti zadatak kao kolega i nije mi jasno zasto mi ovo nije proslo\n\nselect grupa.akgodina, grupa.ozngrupa, grupa.kapacitet\n\nfrom grupa natural join predmetgrupa natural join dvorana\n\nwhere ozndvorana <> 'A%' AND grupa.kapacitet = 20 and grupa.akgodina = 2019",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33624": {
+      "poster": "idontwannabemyself",
+      "content": "@gladiator#33623 \n\n@idontwannabemyself#33485 ovaj dolje lijevo je isti taj",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Koalefant",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33640": {
+      "poster": "viliml",
+      "content": "@gladiator#33623 Svaka grupa ima više predmeta i za svaki predmet može biti druga dvorana",
+      "votes": {
+        "upvoters": [
+          "Njet",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33689": {
+      "poster": "Fica (Prof)",
+      "content": "Je li itko slao mail za onaj zadatak sa kapacitetom i dvoranama?",
+      "votes": {
+        "upvoters": [
+          "Vonj"
+        ],
+        "downvoters": [
+          "viliml"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "viliml"
+        ],
+        "tuga": []
+      }
+    },
+    "34514": {
+      "poster": "viliml",
+      "content": "@Fica#33689 Zašto? Želiš da se skinu bodovi onima koji su pogodili slučajno kao @__builtin_popcount#33477 ?",
+      "votes": {
+        "upvoters": [
+          "Gulbash",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "mesojed (sofronijevicevPrst)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "34522": {
+      "poster": "Me1 (Me)",
+      "content": "Zna li netko kakva je situacija sa onim zadatkom gdje je trebalo osigurati integritet, koji je tokom provjere bio priznat,  a kasnije nije. Treba li slati zaseban mail pošto u teamsu nisu ništa konkretno napisali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "34550": {
+      "poster": "steve (Mr_mr)",
+      "content": "Meni su sad priznali taj zadatak na kojem mi je pisalo \"Correct well done\" pa si pogledajte u Edgaru.",
+      "votes": {
+        "upvoters": [
+          "Me1 (Me)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "34554": {
+      "poster": "Me1 (Me)",
+      "content": "@steve#34550 da evo sad je priznato, hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

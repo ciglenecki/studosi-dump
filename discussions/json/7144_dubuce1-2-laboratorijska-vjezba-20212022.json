@@ -1,0 +1,1075 @@
+{
+  "title": "[DUBUCE1] 2. laboratorijska vježba - 2021/2022",
+  "creator": "indythedog",
+  "slug": "dubuce1-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Duboko učenje 1",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "287636": {
+      "poster": "indythedog",
+      "content": "@\"Mićo konjoser Čehinja\"#1 jel možeš možda objasniti zašto si u ovim svojim rješenjima 2. zadataka (s materijala) kvadrirao dobivenu L2 normu? Jer sam ja prvo rješio bez kvadriranja, tipa ovak neš  `loss = 0.5 * self.weight_decay * (np.linalg.norm(self.weights.flatten(),ord=2)` i dobijem da mi je greška koju računa ona njihova check_grad.py skripta 0.97. Onda sam pogledao kako je u tvojim rješenjima i vidio da si ti kvadrirao normu, i kad to napravim onda mi je greška 10^-5.  Pa možeš samo pliz objasnit zašto nije samo dovoljno izračunat L2 normu, kad je to basically sve što traže u zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287703": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"indythedog\"#p287636 Vjerojatno zato što je `np.linalg.norm` [imath]\\sqrt{...}[/imath], a izraz za L2 regularizaciju nema korijen.",
+      "votes": {
+        "upvoters": [
+          "indythedog",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287929": {
+      "poster": "Lyras",
+      "content": "Pogledajte jesu li vam termin promjenili. Meni jesu...",
+      "votes": {
+        "upvoters": [
+          "Upforpslone",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "error",
+          "indythedog",
+          "rolotex (brr)",
+          "spampers (majmunska boginja)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "oneTwo"
+        ],
+        "tuga": [
+          "ErnestHemingway (Alfetta)",
+          "samo_vagabundo",
+          "steker"
+        ]
+      }
+    },
+    "287952": {
+      "poster": "dora (AE)",
+      "content": "zna li netko kako riješiti error: `unable to find vcvarsall.bat`  kad idem prevest cython modul u pycharmu",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)",
+          "Krpa1 (Janez)",
+          "SuperSaiyano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287962": {
+      "poster": "ana (anci)",
+      "content": "Jel netko imao problem \"ModuleNotFoundError: No module named 'im2col_cython'\"? Prevela sam tu datoteku s onom naredbom u uputama.",
+      "votes": {
+        "upvoters": [
+          "SuperSaiyano",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287966": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"anci\"#p287962 koji ti je cwd",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287993": {
+      "poster": "SuperSaiyano",
+      "content": "@\"AE\"#p287952 Meni se ista greška pojavljuje, pokušao sam svašta ali nikako da uklonim grešku.",
+      "votes": {
+        "upvoters": [
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288045": {
+      "poster": "tomekbeli420",
+      "content": "jesam to samo ja glup ili još netko dobiva nezanemarive greške za gradijente biaseva kod potpuno povezanog sloja (FC) u prvom zadatku?\n\n`Check biases:\n\nRelative error =  1.0\n\nError norm =  20.00940868444218\n`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288126": {
+      "poster": "Sinusan",
+      "content": "@\"AE\"#p287952 \n\n@\"SuperSaiyano\"#p287993 \n\nMeni je proradilo kad sam instalirao Visual Studio Community - Desktop development with C++.\n\nAko već imate VS možete modifyat instalaciju i uključiti Desktop development with C++.",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)",
+          "SuperSaiyano",
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288162": {
+      "poster": "Daeyarn",
+      "content": "@\"anci\"#p287962 jesi spremila im2col_cython bas kao .pyx ili kao .py?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288173": {
+      "poster": "dora (AE)",
+      "content": "@\"Sinusan\"#p288126  super, radi sada. Kako si definirao .pyd file type posto mi nikako ne zeli prepoznat taj file koji nastane?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288174": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"Sinusan\"#p288126 @\"Mićo konjoser Čehinja\"#1 daj neki megahvala za ovo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288219": {
+      "poster": "ana (anci)",
+      "content": "@\"Daeyarn\"#p288162 kao .pyx\n\n@\"Mićo konjoser Čehinja\"#p287966 jednak kao i datoteka",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288220": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "Možda nekom bude korisno. U 1. zadatku treba prvo pokrenuti check_grads i tek onda napraviti onaj setup. Meni ne radi ako ne zamijenim redoslijed tih radnji.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288226": {
+      "poster": "dora (AE)",
+      "content": "@\"Alfetta\"#p288220 Zar se pokretanjem check_grads ne koriste funkcije iz im2col_cython?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288227": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"AE\"#p288226 trebale bi, ali meni ih nije htjelo povući",
+      "votes": {
+        "upvoters": [
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288232": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @\"anci\"#p288219 jednak kao i datoteka\n\nDa, ali skripta koja to importa mora biti u cwd-u, kao i .pyx, kao i rezultantni c file i .so binary. Provjeri da je to slučaj, i provjeri da ti se išta izgeneriralo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288261": {
+      "poster": "ana (anci)",
+      "content": "@\"Mićo konjoser Čehinja\"#p288232 sve mi je u tome, nemam binary od .c filea (jel to treba uopce?), jer mi javlja Python.h: No such file or directory",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288274": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @\"anci\"#p288261 jel to treba uopce?\n\nPa to je cijela poanta, to ti se pokrene kad importaš, znači tebi Cython kompilacija stvori c file koji onda trebaš kompajlirati s C kompajlerom (al to sve radi ovaj setup za tebe)\n\nProbaj ovo ako si na debian linuxu npr. `sudo apt-get install python3-dev`, pa ponovno pokreni setup.\n\nAko radiš na Windowsu i mingw64 mislim da su ljudi već spominjali da mingw64 **ne radi** s Pythonom pa ćeš trebati malo promijeniti okolinu. Ugl., ako nemaš `.so` file (ili `.dll ` na Windowsu) kompilacija ti nije uspjela i taj modul ti neće raditi. Ako znaš nekog kome je uspjela na istoj platformi koju koristiš možeš si probati skopirati njihov `.so` ili `.dll` file, ovak ti izgleda za linux:\n\n![](assets/2022-03-30/00009.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288403": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "Kako treba izgledati backward_inputs u ReLU? Probao sam tako da negativne vrijednosti stavim u 0,  a pozitvne na 1, ali dobivam krivo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288442": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Geralt of Rivia\"#p288403 Jer bi pozitivni trebali ostati kakvi jesu, a ne 1. Kad ih postaviš u 1 praktički si odsjekao mrežu ispod ReLU sloja i pretpostavio da ti je svaki pozitivni izlaz iz ReLU-a 1.",
+      "votes": {
+        "upvoters": [
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288445": {
+      "poster": "Asdf",
+      "content": "Može netko malo pojasniti šta radi funckija backward_inputs i koje gradivo da pogledam da to riješim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288448": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Asdf\"#p288445 To nije u gradivu, nego dio labosa, CTRL+F daje sljedeće:\n\n> Metoda `backward_inputs` računa gradijent s obzirom na ulazne podatke ([imath]\\frac{\\partial L}{\\partial \\mathbf{x}}[/imath] gdje je [imath]\\mathbf{x}[/imath] ulaz u sloj).\n\nhttps://dlunizg.github.io/lab2/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288450": {
+      "poster": "neksi (filip)",
+      "content": "Jel ovaj labos teži od prvog?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288453": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"filip\"#p288450 prva dva top kek zadaci, treci i cetvrti ne bas top kek",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Emma63194",
+          "InCogNiTo124",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288515": {
+      "poster": "tomekbeli420",
+      "content": "@\"Alfetta\"#p288453 jel top kek dobro il loše? xd",
+      "votes": {
+        "upvoters": [
+          "Darla",
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288526": {
+      "poster": "ppooww (pp)",
+      "content": "Koliko vam ispada velicina receptivnog polja? Prema [ovom odgovoru](https://datascience.stackexchange.com/a/99587) ja dobijem 19, a vidim da je na materijalima u labosu 14.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288590": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"tomekbeli420\"#p288515 top kek je ez",
+      "votes": {
+        "upvoters": [
+          "tomekbeli420"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288641": {
+      "poster": "Asdf",
+      "content": "Je imao netko error Cannot open include file: 'io.h': No such file or directory\n\nProbao sam reinstalirat anacondu i sve ono za visual studio, i cak nesto drkao po configovima anaconde za mingw 32 ali onda mi baci error za njihov kod?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288644": {
+      "poster": "Upforpslone",
+      "content": "Gdje se mogu naci izvodi za funkcije forward, backward_inputs i backward_params koje trebamo nadopuniti u FC, Relu i SoftmaxCrossEntropyWithLogits klasama? (1. zadatak)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288648": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Asdf\"#p288641 Python 3.4+ ne rade s mingw, tak da moraš koristiti MSVC, a to ti je najlakše instalirati preko Visual Studija\n\nOvo izgleda kao da nemaš Windows SDK instaliran",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288649": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Upforpslone\"#p288644 U layers.py",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288710": {
+      "poster": "Upforpslone",
+      "content": "@\"Mićo konjoser Čehinja\"#p288649 Mislio sam bas na postupak kako se doslo do tih izraza",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288712": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Upforpslone\"#p288710 Forward su definicije funkcija, a backward metode su gradijenti funkcije gubitka po ulazu/parametrima, kao što i piše u uputama za labos.",
+      "votes": {
+        "upvoters": [
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288789": {
+      "poster": "bernard (macabrus)",
+      "content": "jel neko uspio prevesti taj cython modul na mac osu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288832": {
+      "poster": "n_p_zagi (nicrosc)",
+      "content": "može li pomoć za cython na windowsu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288836": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"nicrosc\"#p288832 \n\n@\"Sinusan\"#p288126",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288840": {
+      "poster": "helenic",
+      "content": "Imao netko ovaj problem kada pokrene njihov train.py?\n\n`ValueError: operands could not be broadcast together with remapped shapes [original->remapped]: (4,2)  and requested shape (0,2)`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288871": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "jel moze neko kome radi na windowsima poslat .dll file, meni ga ne izgenerira i ne radi mi modul",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288878": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "![](assets/2022-04-03/00005.png)\n\nmoze mala pomoc?\n1. povucem projekt\n2. pokrenem setup\n3. pokrenem check_grads , ne radi\n\novo mi je 7 put da povlacim projekt ispocetka, isprobo sve kombinacije, zasto ovo ne radi ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288883": {
+      "poster": "Ryder (Pepper)",
+      "content": "@\"ḰටḰටš\"#p288878 meni je proradilo kad sam promijenio python interpreter u pycharmu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288886": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"ḰටḰටš\"#p288878 ak je neko u slicnom problemu\n\nimport pyximport\n\npyximport.install(\"include_dirs\":numpy.get_include()}, reload_support=True)",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288887": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Pepper\"#p288883 meni nije :I",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288906": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "jel neko ovo nacrto mozda ? \n\n![](assets/2022-04-03/00010.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288934": {
+      "poster": "Daeyarn",
+      "content": "koliko vam se izvršava softmax entropija i kolika vam je greška?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288964": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"ḰටḰටš\"#p288906 \n\nhttps://github.com/Yalfoosh/DUBUCE/blob/master/LAB2/LAB2.ipynb",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289002": {
+      "poster": "n_p_zagi (nicrosc)",
+      "content": "jel nekome batch_loss bude nan u prvom zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289013": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"nicrosc\"#p289002 Meni se dogadalo, ali se nazalost vise ne sjecam zasto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "n_p_zagi (nicrosc)"
+        ]
+      }
+    },
+    "289055": {
+      "poster": "indythedog",
+      "content": "Labos danas u 2\n\n80% pitanja s blica bila su vezana uz kod iz layers.py, npr koja metoda se nalazi u konvolucijskom sloju, koji je izraz za racunanje unakrsne entropije u klasi softmaxWithLogits i sve na tu foru, tako da si dobro ponovite kod iz te klase i sto koja metoda radi, pogotovo ono sto smo mi trebali implementirati\n\nOstala pitanja su bila ez, npr. koje su dimenzije ulaza za cifar (32x32x3) itd\n\nIspitivanje ugodno i chill, kao i prosli put, treba znat gdje si sto implementirao i to, al nista strasno.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Ryder (Pepper)",
+          "matt (Matt)",
+          "snowman",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289056": {
+      "poster": "Vonj",
+      "content": "@\"indythedog\"#p289055 \n\nDa se nadovezem vamo\n\nDimenzija slike na ulazu koja je u boji-> 32,32,3\n\nDimenzija slike na ulazu al tenzor-> ja sam stavio torch.tensor([1,3,5,5])\n\nKljucni korak u MaxPool.backward (nisam siguran) -> ja sam stavio nadopunjavanje mape znacajki nulama al nisam siguran\n\nKljucni korak u CrossEntropyWithLogits.backward koji izraz se moze naci -> (probs - y) / X.shape[0]\n\nUlazna mapa je velicine 4, kernel je 3x3, izlazna je 4, koliko parametara ima model -> ja sam stavio 148, bilo je jos ponudeno 12,16, i vise od 1000\n\nKoji izraz se koristi CrossEntropyWithLogits.forward-> sum(logprobs * y)\n\nIzraz u l2regularizer.backward -> 2 * wd * w\n\nIzraz u Relu.backward -> grads[self.input <=0] = 0\n\nKoliki je kernel koristen u labosu -> 5x5\n\nMetode backward mogu biti backward.input ili backward.params, al nisam vise siguran gdje je koja.\n\nTL;DR; Proučite layers.py tj ono sto se trebalo implementirati u labosu, većinom su te stvari.\n\nIspitivanje chill",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Ryder (Pepper)",
+          "Upforpslone",
+          "cajaznun",
+          "krokodil",
+          "snowman",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289059": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "> @\"Vonj\"#p289056 ja sam stavio torch.tensor([1,3,5,5])\n\nNisam siguran oko ovoga. To pitanje je doslo i meni, ali mislim da je tocno ono s randomom jer ovdje dajes listu kao podatke, a randomu dajes shape koji ti treba",
+      "votes": {
+        "upvoters": [
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289062": {
+      "poster": "Vonj",
+      "content": "@\"Alfetta\"#p289059 \n\nMoguce da je razlika u pitanju. Ja sam imao koja dimenzija slika, znaci input",
+      "votes": {
+        "upvoters": [
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289063": {
+      "poster": "Dootz",
+      "content": "Može li netko objasniti što su to filteri? Prošao sam predavanje ali nisam se susreo s tim terminom, i vidim da ima argument num_filters u layers.convolution",
+      "votes": {
+        "upvoters": [
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289071": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Dootz\"#p289063 msm da je filter sinonim za konvolucijsku jezgru",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289079": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"Vonj\"#p289062 Meni je bilo kao što može biti input",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289107": {
+      "poster": "yabk",
+      "content": "@\"Dootz\"#p289063 \n\nPise u tekstu labosa, drugi paragraf:\n\n> Težine konvolucijskih slojeva obično nazivamo filtrima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289132": {
+      "poster": "Sulejman",
+      "content": "@\"Pepper\"#p288883 na koji način si ga promijenio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289149": {
+      "poster": "Ryder (Pepper)",
+      "content": "@\"Sulejman\"#p289132 u cmdu sam napisao 'where python' pa sam postavio interpreter na to sto je vratilo, ali jedan kolega je napravio isto to i njemu ne radi tak da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289150": {
+      "poster": "Me1 (Me)",
+      "content": "@\"ḰටḰටš\"#p288886 di tocno s tim linijama?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289159": {
+      "poster": "InCogNiTo124",
+      "content": "@\"Me\"#p289150 na pocetku fajla skroz gore",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Me1 (Me)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289204": {
+      "poster": "garica",
+      "content": "ima li smisla ostajat na drugom djelu vjezbe sa samo prva dva zadatka i to oba polovicno, jel se mogu tu neki bodovi ocekivat (znanje isto polovicno blago receno 😅 )",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289205": {
+      "poster": "Jaster111",
+      "content": "@\"garica\"#p289204 u svakom slučaju jedan labos možeš nadoknadit koliko ja znam, tako da ne bi trebao imat problema ni da ne dođeš",
+      "votes": {
+        "upvoters": [
+          "garica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289221": {
+      "poster": "djeno",
+      "content": "termin u 9 isto chill bilo \n\nuz pitanja koje su naveli gore bilo je jos najbitnije naredbe za FC.backward_inputs i FC.backward_params i bilo je zadano kao u 4. zadatku arhitektura mreze i jedan FC sloj u sredini i koliko on ima parametara",
+      "votes": {
+        "upvoters": [
+          "branimir1999"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289232": {
+      "poster": "[deleted]",
+      "content": "Je li još netko imao problem s msilib (ModuleNotFoundError: No module named 'msilib')?\n\nKad kliknem na import izbacuje ovaj file ![](assets/2022-04-05/00003.png)\n\npa pretpostavljam da nekaj postoji.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289258": {
+      "poster": "garica",
+      "content": "Blic nova pitanja su bila koja naredba pomaze da se predje iz konvolucijskog u sljedeci sloj, takodjer nesto u stilu sto se moze vidjeti u skrivenom sloju sad nez jel u racunanju ulaza ili izlaza. Ispitivanje dosta ugodno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289273": {
+      "poster": "ana (anci)",
+      "content": "@\"Sinusan\"#p288126 napravila sam opet po ovome, i pokrenula onu naredbu za generiranje i prevodenje c datoteke ali mi i dalje dolazi \"No module named 'im2col_cython'\". Ovakav mi je cwd ![](assets/2022-04-05/00004.png)\n\nNemam pojma vise sta mogu napraviti. Radim na windowsima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "steker"
+        ]
+      }
+    },
+    "289292": {
+      "poster": "ana (anci)",
+      "content": "@\"anci\"#p289273 dobivam hrpu nekakvih ovakvih errora ![](assets/2022-04-05/00006.png)\n\npa ako netko zna o cemu se radi, ili bi mi bio volja podijeliti svoju .dll / .pyd datoteku (nez sta se tocno generira) bila bih jako zahvalna :)",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289322": {
+      "poster": "garica",
+      "content": "@\"anci\"#p289273 \n\nZnaci python3 setup_cython.py build_ext --inplace kad pokrenes dobijes te errore?",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289429": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@\"ḰටḰටš\"#p288886 ovo mi baca syntax error? Help",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289503": {
+      "poster": "Ducky",
+      "content": "@\"DnkCkv\"#p289429 pyximport.install(setup_args={\"include_dirs\": np.get_include()}, reload_support=True)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289524": {
+      "poster": "GetSchwifty (_2D_)",
+      "content": "Labos danas u 9,\n\nblic uz sva pitanja navedena gore, nova su bila kako glasi funkcija koja računa vrijednost skrivenog sloja, još neko s funkcijom (nešto u stilu koji je izraz argument funkcije softmax?) te je opisana mreža po slojevima i traži se broj parametara fully connected sloja.\n\nIspitivanje koda - tražio me da otvorim file train.py i tamo smo gledali strukturu mrežu te sam na temelju toga trebala napisati za svaki sloj dimenzije i broj parametara. Pitao me po layers.py fileu malo i koje su dimenzije varijable \"grads\" u backward_param/input slojevima.",
+      "votes": {
+        "upvoters": [
+          "WickyWinslow"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289539": {
+      "poster": "Daeyarn",
+      "content": "jel asistenti samo pitaju po kodu ili treba kod i pokretati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289545": {
+      "poster": "Upforpslone",
+      "content": "@\"Daeyarn\"#p289539 Mene su pitali da pokrenem train.py",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Heklijo (Geralt of Rivia)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

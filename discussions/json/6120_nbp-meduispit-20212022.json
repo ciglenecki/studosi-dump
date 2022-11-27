@@ -1,0 +1,523 @@
+{
+  "title": "[NBP] Međuispit - 2021/2022",
+  "creator": "Abcdef",
+  "slug": "nbp-meduispit-20212022",
+  "tags": [
+    "FER",
+    "Napredne baze podataka",
+    "Ispiti"
+  ],
+  "posts": {
+    "258253": {
+      "poster": "Abcdef",
+      "content": "Jesu rekli hoce li se meduispit pisati na faksu ili online?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258324": {
+      "poster": "anon00",
+      "content": "@\"Abcdef\"#p258253 I jedno i drugo 😁 \n\nUzivo je na faksu, dodes sa svojim laptopom i pises na edgaru",
+      "votes": {
+        "upvoters": [
+          "Abcdef",
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258348": {
+      "poster": "Gocc (***)",
+      "content": "@\"anon00\"#p258324 je li moguce koristit prezentacije ili moramo biti u fokusu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258361": {
+      "poster": "anon00",
+      "content": "@\"anaa\"#p258348 S obzirom na to da su nam dali službene šalabahtere na kojima imamo \"sve što nam treba\" moja pretpostavka je da moramo biti u fokusu",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260066": {
+      "poster": "n_p_zagi (nicrosc)",
+      "content": "što ulazi sve u MI? jel receno sto na predavanjima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260081": {
+      "poster": "anon00",
+      "content": "@\"nicrosc\"#p260066 Koliko ja znam sve do NoSQL-a (on ulazi u 2. ciklus nakon MI)",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260642": {
+      "poster": "prx_xD",
+      "content": "jel mi moze netko rec sta sam fulao nikako da dobijem dobar rez\n```SQL\nwith recursive igre(cid, cname, supcid, fid) as (\n    select category.categoryid, categoryname, supcategoryid, fightid\n    from fight natural join game natural join category\n    group by category.categoryid, categoryname, supcategoryid, fightid\n    union \n    select category.categoryid, categoryname, supcategoryid, fid\n    from category, igre\n    where category.categoryid = supcid\n    group by category.categoryid, categoryname, supcategoryid, fid\n)\nselect cid as categoryid, cname as categoryname, count(*) as noOfFights,\nrow_number() over (order by count(*) desc) as rang\nfrom igre\nwhere supcid is null\ngroup by cid, cname\n```\nzadatak \n\n![](assets/2021-12-01/00000.png)\n\nmoj rez\n\n![](assets/2021-12-01/00001.png)\n\nps. moje rjesenje se uopce ne poklapa s njihovim",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260646": {
+      "poster": "prx_xD",
+      "content": "@\"prx_xD\"#p260642 \n\nnvm pronasao sam sta je bilo krivo falilo mi je \n\n`where teamwinnerid is not null` u rekurziji",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260737": {
+      "poster": "MrPeanutButter",
+      "content": "jesu li oni krivo rekli broj bodova za mi (25)?\n\nNa uvodnoj prezi i na online stranici pise 20% udio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260739": {
+      "poster": "TamTam (foobar)",
+      "content": "mislim da da, hoce netko pitat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260746": {
+      "poster": "Process",
+      "content": "Kakva organizacija kad se dan prije javlja da se koristi posebna wifi mreža i da bi bilo poželjno doć na faks testirat jel se možeš spojit",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Sicsile",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260754": {
+      "poster": "anon00",
+      "content": "@\"Process\"#p260746 Mreza ima obicnu sifru tako da je se vjv radi o normalnoj wi-fi mrezi s kojom ne bi trebalo biti problema\n\nBtw mreza vjv sluzi za suporedbu IP adresa koji su pristupili ispitu sa IP adresama koje su na faksu, ali moguce da ce i gledati promet preko mreze pa si ugasite discord i sl. gluposti da ne bi bilo problema",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260769": {
+      "poster": "anon00",
+      "content": "@\"MrPeanutButter\"#p260737 Evo ispravili su",
+      "votes": {
+        "upvoters": [
+          "MrPeanutButter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260815": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"anon00\"#p260754 Mreža je, po tome što se pričalo na FV, takva da blokira sadržaj. Ako vam bude nešto radilo vjerojatno se prati.",
+      "votes": {
+        "upvoters": [
+          "anon00"
+        ],
+        "downvoters": [
+          "Rope (Rops)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260961": {
+      "poster": "Svudec",
+      "content": "@\"anon00\"#p260754 \n\n@\"Mićo pl. Flajšu\"#p260815 Bila su fakultetska računala spojena na tu mrežu jučer za jedan ispit. Doslovno je sve blokirano osim fer.hr domene.\n\nEDIT: I naravno carnet da se može prijavit na edgara s aai@edu.hr",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260971": {
+      "poster": "niknik",
+      "content": "Možemo si napraviti i kratak opis druge baze (za geoprostorne upite) i koristiti na ispitu.![](assets/2021-12-01/00047.png)",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Rope (Rops)",
+          "Svudec",
+          "anon00",
+          "huhu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261019": {
+      "poster": "sekiro",
+      "content": "Kako izvuc maks bodova iz ovog ako sad krenem ucit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261022": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"sekiro\"#p261019 \n\nkolega, mislim da ste malo zakasnili\n\nispit je bio jučer \n\n(možda je pitanje bilo namijenjeno za NBP)",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ink"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261023": {
+      "poster": "anon00",
+      "content": "Kad vec spammam: \n\nNe vidim nigdje da su naglasili da ce nam dati pristup struji, a pisemo na vlastitim laptopima 2h - wtf \n\nNPR ja sam u 202 gdje nema utičnice na svakom stolu (ako se ne varam ima samo na jednoj strani zida) \n\nTako da preporuka da si ponesete produžne za svaki slucaj - bolje nego racunati na njih",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261024": {
+      "poster": "sekiro",
+      "content": "@\"AntonioB25\"#p261022 je 😂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AntonioB25 (Pleteni miš)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261026": {
+      "poster": "sekiro",
+      "content": "Kako izvuć maks  bodova iz ovog ako sad krenem ucit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261029": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@\"anon00\"#p261023 Donest će oni produžnih koliko treba, bar su tako na NASP-u napravili.",
+      "votes": {
+        "upvoters": [
+          "MrPeanutButter",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261128": {
+      "poster": "anon00",
+      "content": "Gledam ove vremenske baze podataka i nije mi bas jasno kako ce njih ispitati u ove 2 baze koje imamo na MI\n\nIma li netko ideju? \n\nJedino sto mi pada na pamet je: Svi korisnici koji su gledali film u periodu od 2.12 20-22h \n\nIma li jos nesto iz tog sto moze doci ili bi to bilo manje vise sve?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261240": {
+      "poster": "Cubi",
+      "content": "@\"anon00\"#p261128 Napravit tablicu s temporalnim kljucevima ko sto je bilo na proslogodisnjem MI. Mozda nesto u tom stilu za streamService",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261397": {
+      "poster": "sekiro",
+      "content": "jel se jos nekom dogodilo da mu edgar nije uopce spremio napisan kod? Odmah sam imao problem sa mrezom, al je onda izgledalo kao da je proradilo i kad sam nakon sat vremena stisnuo submit 3 minute je vrtilo submit i na kraju se pola ispita samo spremilo, a druga polovica nije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261400": {
+      "poster": "reygrep",
+      "content": "@\"sekiro\"#p261397 zato sam opsesivno stiskala save 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261401": {
+      "poster": "sekiro",
+      "content": "@\"reygrep\"#p261400 stisko sam i ja, al se ocito savealo samo do neke tocke i onda je puknuo internet bez da sam skuzio i jedan dio se nije spremio tako da se predala samo polovica\n\nbtw jel zna neko kome da saljem mail za ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261402": {
+      "poster": "anon00",
+      "content": "@\"sekiro\"#p261401 Odi na edgar -> NBP -> My previus exams i lijevo imas MI pa klikni na njega i tamo imaš logove koje i oni vide - ako si stitskao save onda ce se tvoj kod tamo negdje viditi i to je okej - samo ako dobijes 0 bodova ima kazes sto se dogodilo pa ce pogledati (ili mozes vec sad poslat mail)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261407": {
+      "poster": "sekiro",
+      "content": "@\"anon00\"#p261402\n\n![](assets/2021-12-02/00029.png)\n\nevo dva loga u razmaku 35 minuta, nije logalo punih 35 minuta mojeg pisanja i saveanja, nije zabiljezilo ni klikove mišem na druga pitanja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261418": {
+      "poster": "anon00",
+      "content": "@\"sekiro\"#p261407 ![](https://i.kym-cdn.com/entries/icons/original/000/032/425/Screen_Shot_2020-01-14_at_10.34.57_AM.jpg)\n\nŠalji mail",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261420": {
+      "poster": "sekiro",
+      "content": "@\"anon00\"#p261418 na koji?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261422": {
+      "poster": "[deleted]",
+      "content": "rok prika",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261424": {
+      "poster": "anon00",
+      "content": "@\"sekiro\"#p261420  ljiljana.brkic@fer.hr i guess, ona je šetala pa pretpostavljam da je i sastavljala ispit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261434": {
+      "poster": "sekiro",
+      "content": "@\" ℵ₀-male\"#p261422 ma jok, na zavrsnom ce mi ako dobro odradim zadnju lab vjezbu trebat samo prag, ali ide mi na zivce ovakva organizacija ispita di ljudima od pocetka ne radi internet i ne mogu normalno uc u ispit, a meni eto radi od pocetka i rikne usred ispita",
+      "votes": {
+        "upvoters": [
+          "MrPeanutButter",
+          "[deleted]",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261506": {
+      "poster": "MrPeanutButter",
+      "content": "nerazumijem uopce potrebu ove ekstra wifi mreze kad ovak i onak imamo full focus u edgaru...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261530": {
+      "poster": "anon00",
+      "content": "@\"MrPeanutButter\"#p261506\n\nNpr ukljucis teamviewer i netko ti od doma uz sav moguci internet rjesava tvoj ispit. \n\nNisam testirao pa nmg potvrditi da to nebi izgubilo fokus, ali mi se cini kao moguc nacin varanja \n\nTakoder da edgar otvoris u virtualci na fullscreen, a kad minimaliziras virtualku neces izgubiti fokus niti fullscreen na edgaru i onda bi mogao varati i na taj nacin",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

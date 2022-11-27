@@ -1,0 +1,890 @@
+{
+  "title": "[STRUCE1] 4. laboratorijska vježba - 2021/2022",
+  "creator": "gladiator",
+  "slug": "struce1-4-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Strojno učenje 1",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "254245": {
+      "poster": "gladiator",
+      "content": "Koliko vama traje izvršavanje u 3. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Kasperinac",
+          "tomekbeli420"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254298": {
+      "poster": "maraska",
+      "content": "Zna li itko kako plotati ove grafove u 2. zadatku? Postavljam fig, axs = plt.subplots(3,3, figsize=(15,15)) i zatim npr axs[0,0] = njihova_plot_fja i na kraju nakon svih 9 opcija sibnem plt.show(), ali mi prikazuje rešetku 3X3 i samo ovaj zadnji graf, ostali su prazni. U čemu je stvar, kako popraviti to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254299": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"maraska\"#p254298 probaj axs[i,j].show",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254304": {
+      "poster": "viliml",
+      "content": "@\"gladiator\"#p254245 \n```python\ndef better_plot_2d_svc_problem(X, y, svc=None):\n    '''\n    Plots a two-dimensional labeled dataset (X,y) and, if SVC object is given, \n    the decision surfaces (with margin as well).\n    '''\n    assert X.shape[1] == 2, \"Dataset is not two-dimensional\"\n    if svc!=None : \n        # Create a mesh to plot in\n        num = 200  # mesh resolution\n        x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1\n        y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1\n        xx, yy = np.meshgrid(np.linspace(x_min, x_max, num),\n                             np.linspace(y_min, y_max, num))\n        XX=np.c_[xx.ravel(), yy.ravel()]\n        Z = better_svc_predict(svc, XX)\n        # Put the result into a color plot\n        Z = Z.reshape(xx.shape)\n        plt.contourf(xx, yy, Z, cmap=plt.cm.Pastel1)\n\n    # Plot the dataset\n    plt.scatter(X[:,0],X[:,1], c=y, cmap=plt.cm.Paired, marker='o', s=50)\n\ndef better_svc_predict(svc, X) : \n    h = svc.decision_function(X)\n    h[((h >= -1) & (h < -0.03)) | ((h > 0.03) & (h <= 1))] = 0.5\n    np.clip(h, -1, 1, out=h)\n    h[np.isclose(h, 0, atol=0.03)] = 5\n    return h\n```",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "SuperSaiyano",
+          "gladiator",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ducky",
+          "gladiator"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254616": {
+      "poster": "maraska",
+      "content": "@\"Alfetta\"#p254299 e nije to radilo (axs nema taj atibut), ali popravila sam\n\nAko kome bude trebalo: prvo se napravi plt.figure() i onda za svaki graf plt.subplot(3,3,broj_grafa) i pozvati funkciju njihovu za crtanje.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Ollie",
+          "fer999",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254922": {
+      "poster": "fer999",
+      "content": "Zna li netko što treba predati kao prvi argument (err) funkciji \"plot_error_surface(err, c_range, g_range)\" u 3.B zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254926": {
+      "poster": "Joskica",
+      "content": "@\"fer999\"#p254922 error matricu koju ti vrati grid_search funkcija kad stavis error_surface=True",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254969": {
+      "poster": "WickyWinslow",
+      "content": "`ValueError: The number of FixedLocator locations (5), usually from a call to set_ticks, does not match the number of ticklabels (4).`\n\nJe li itko imao ovaj exception kod poziva njihove metode `plot_error_surface()`?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254976": {
+      "poster": "Joskica",
+      "content": "@\"WickyWinslow\"#p254969 downgrade matplotlib na 3.3.2",
+      "votes": {
+        "upvoters": [
+          "WickyWinslow"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254985": {
+      "poster": "maraska",
+      "content": "Je li ok u 4.d) dobiti da je za min max najmanja točnost? Koliko god puta pokrenem, uvijek su obična i standardno skalirana tu negdje, a min max najmanji.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255008": {
+      "poster": "Reznox",
+      "content": "Moze neko pojasnit sto su tocno \"Dualni koeficijenti\". Risia sam zadatak i printam ih al ne mogu shvatit sto su tocno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255010": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"Reznox\"#p255008 U skripti su označeni s alfa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255011": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"maraska\"#p254985 Ako generiraš na isti način kao i oni na početku 4. najlošiji bi trebao biti s običnim značajkama jer je velika razlika u skali x0 i x1",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255012": {
+      "poster": "Reznox",
+      "content": "@\"Alfetta\"#p255010 Aha znaci zapravo su to dualne varijable, mislio sam da ovaj algoritam koji koristimo ima jos neke dodatne izracunate parametre.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255027": {
+      "poster": "maraska",
+      "content": "@\"Alfetta\"#p255011 Yes, taj dio s generiranjem i podjelom u train/test sam kopirala njihovo. :/\n\nJe li možda problem u ovim linijama:\n\n```\nmodel_min_max.fit(scaler_min_max.fit_transform(X_train),y_train)\naccuracy_score(y_test, model_min_max.predict(scaler_min_max.transform(X_test))\n```\n\nNez jesam li krivo shvatila kako je trebalo fittati model.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255034": {
+      "poster": "Rene",
+      "content": "@\"maraska\"#p255027 vjerojatno ti je ostalo u metodi make_classification onaj random state cime uvijek generiras isti skup podataka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255057": {
+      "poster": "Zero",
+      "content": "Što trebamo koristiti kao pogrešku u 3.a)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255065": {
+      "poster": "maraska",
+      "content": "@\"Rene\"#p255034 Evo sad je dobro, neskalirano ima najmanju točnost. Sigurno je u tome bio problem, hvala ti. ❤️",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255067": {
+      "poster": "fer999",
+      "content": "@\"Joskica\"#p254926 To sam i pokušao napraviti, s time da vraćam 2 matrice (za train i test). Ali mi baca error: `\"TypeError: unsupported operand type(s) for -: 'int' and 'list'\"`. Kako si definirao te matrice u metodi grid_search? Ja sam samo lijepio u njih na odgovarajuća mjesta zero_one_losses.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255091": {
+      "poster": "sheriffHorsey",
+      "content": "@\"fer999\"#p255067 vjerojatno ti se to događa jer nisi poslao np.array nego običnu listu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255249": {
+      "poster": "viliml",
+      "content": "@\"Reznox\"#p255008 @\"Reznox\"#p255012 Primarnih koeficijenata ima [imath]n[/imath], dualnih ima [imath]N[/imath]. To je jedina konzistentna razlika.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255445": {
+      "poster": "Sulejman",
+      "content": "Jel i vama ispadnu svi histogrami ovak:\n\n![](assets/2021-11-19/00012.png)\n\njedino kaj se mijenja su vrijednosti na osima... Ak da ne kužim šta oni misle pod \"Dobiveni histogrami su vrlo slični.\"",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255456": {
+      "poster": "Ducky",
+      "content": "Kako koristit mlutils.plot_error_surface?\n\nIzbacuje mi: \n\nAttributeError: module 'mlutils' has no attribute 'plot_error_surface' \n\nRjesio: treba maknut mlutils",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255460": {
+      "poster": "Ducky",
+      "content": "Kolko vam ispadaju C i gamme u 3.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255464": {
+      "poster": "Sulejman",
+      "content": "@\"Ducky\"#p255460 ![](assets/2021-11-19/00015.png)",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255500": {
+      "poster": "[deleted]",
+      "content": "ima netko ideju zasto bi mi 1. i 3. ispali ovako? ne čini mi se baš ok:\n\n![](assets/2021-11-19/00023.png)",
+      "votes": {
+        "upvoters": [
+          "Ollie"
+        ],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255519": {
+      "poster": "Daeyarn",
+      "content": "@\"Todd Chavez\"#p255500 tako je i meni",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Ollie",
+          "angello2",
+          "bodNaUvidima",
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255653": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p255519 a jel ikom jasno zašto je tako? 😅",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255666": {
+      "poster": "[deleted]",
+      "content": "jel itko dobivao ovakve grafove u 3.?\n\n![](assets/2021-11-20/00009.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255681": {
+      "poster": "bodNaUvidima",
+      "content": "@\"Todd Chavez\"#p255653 Zbog jačine regularizacije. Za linearan model koji je ionako već preograničen za ove primjere regularizacija ga onesposobi do kraja. Isto se dogodi kod rbf-a kojeg preograniči da uspije pronaći parametre koji bi nešto odvojili.",
+      "votes": {
+        "upvoters": [
+          "Ollie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255716": {
+      "poster": "tomekbeli420",
+      "content": "Funkcija treba vratiti optimalne hiperparametre [imath] (C^*,\\gamma^*) [/imath], tj. one za koje na skupu za provjeru model ostvaruju najmanju pogrešku.\n\nNa koju pogrešku se ovo misli? Hinge? 0-1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255718": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"tomekbeli420\"#p255716 Pretpostavljam 0-1 jer matrice  pogrešaka koriste taj",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255720": {
+      "poster": "[deleted]",
+      "content": "@\"tomekbeli420\"#p255716 mislim da se moze i sa accuracy_score posto je i on importan u tom dijelu labosa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255722": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Todd Chavez\"#p255720 mislim da to, bar u ovom labosu, dode na isto kao 0-1",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255866": {
+      "poster": "Ardura (Maddy)",
+      "content": "Je li 4.zad treba ispasti ovako nekako?\n\n![](assets/2021-11-20/00040.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255869": {
+      "poster": "angello2",
+      "content": "@\"Maddy\"#p255866 trebalo bi bit dosta manje za neskalirane skupove",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255870": {
+      "poster": "bodNaUvidima",
+      "content": "@\"Maddy\"#p255866 Trebala bi bit veca razlika kod skupa za ucenje i skupa za provjeru za sva 3 (ne)skalirana slucaja, to je onako prvo sto mozda ne valja.\n\nI trebala bi biti manja greska kod skaliranih modela nego kod neskaliranog.\n\n![](assets/2021-11-20/00042.png)\n\nMeni ispada ovako u prosjeku kad koristim onaj hinge loss iz ranijih zadataka.",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255880": {
+      "poster": "Ardura (Maddy)",
+      "content": "@\"angello2\"#p255869 \n\n@\"bodNaUvidima\"#p255870 \n\nTreba li biti manja greska na skaliranim ili ne? 🤔😞",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255881": {
+      "poster": "[deleted]",
+      "content": "@\"Maddy\"#p255880 greska manja, tocnost veca heh",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "steker"
+        ],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255889": {
+      "poster": "steker",
+      "content": "u 4. jel ovo ok rezultat? \n\nTočnost na skupu za učenje:\n \nbez skaliranja= 0.7736000000000001 \n\nstandardizirano= 0.9513333333333331\n\nmin-max= 0.9455999999999999\n\nTočnost na skupu za ispitivanje:\n \nbez skaliranja= 0.7529333333333333 \n\nstandardizirano= 0.9426666666666667 \n\nmin-max= 0.9390666666666667",
+      "votes": {
+        "upvoters": [
+          "Sulejman",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255900": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"steker\"#p255889 +1 za rezultate.\n\nBtw kako lijepo u grid smjestit plotove generirane njihovim funkcijama?",
+      "votes": {
+        "upvoters": [
+          "kix7 (Fish99)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255909": {
+      "poster": "Ardura (Maddy)",
+      "content": "@\"Maddy\"#p255866  Ako netko jos ima problem da mu je neskalirani tocniji od drugih  u make_classification  treba maknuti random_state!!!",
+      "votes": {
+        "upvoters": [
+          "BillIK",
+          "Daeyarn",
+          "JayOhAit",
+          "MsBrightside",
+          "gad_gadski",
+          "miss_anthropocene (neunist.iva)",
+          "sheriffHorsey",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255916": {
+      "poster": "BillIK",
+      "content": "Može netko reći što krivo radim pa mi neskalirano daje ovakve vrijednosti: \n\nSKUP ZA UČENJE:\n\nProsječna točnost modela za neskalirane značajke:  0.9902666666666666\n\nSKUP ZA ISPITIVANJE\n\nProsječna točnost modela za neskalirane značajke:  0.9936\n    \n\n    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5)\n    \n    #bez skaliranja\n    model_no_scaler = SVC().fit(X_train, y_train)\n    h_no_scaler_train = model_no_scaler.predict(X_train)\n    h_no_scaler_test = model_no_scaler.predict(X_test)\n    acc_no_scaler_train.append(accuracy_score(y_train, h_no_scaler_train))\n    acc_no_scaler_test.append(accuracy_score(y_test, h_no_scaler_test))`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255931": {
+      "poster": "Edrudo",
+      "content": "@\"Precious Bodily Fluids\"#p255900 \n\nizvan for-a:\n\n```\nf, axarr = plt.subplots(3, 3)\nf.set_size_inches(10, 10)\ni=0\n```\n\nu for-u:\n\n```\ni+=1\nplt.subplot(3,3,i)\nplot_2d_svc_problem(unsep_X, unsep_y, clf)\nplt.title(f'{kernel}, C={c}')\n```\n\nplus `plt.show()` nakon svega",
+      "votes": {
+        "upvoters": [
+          "Sulejman",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256126": {
+      "poster": "plavisnajper",
+      "content": "Za 3. zad, jel se u predavanjima negdje spominje \\gamma?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256149": {
+      "poster": "Daeyarn",
+      "content": "@\"Maddy\"#p255909 meni je sve bilo jako blizu jer sam zaboravio dodati ovaj dio hehe \n\n![](assets/2021-11-21/00039.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Ardura (Maddy)"
+        ]
+      }
+    },
+    "264186": {
+      "poster": "Me1 (Me)",
+      "content": "Q: Bi li bilo dobro kada bismo funkciju fit_transform primijenili na cijelom skupu podataka? Zašto? Bi li bilo dobro kada bismo tu funkciju primijenili zasebno na skupu za učenje i zasebno na skupu za ispitivanje? Zašto?\n\nzadnje pitanje na labosu, zna neko odgovor?",
+      "votes": {
+        "upvoters": [
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264187": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Me\"#p264186 Ja bih u oba rekao ne jer unosiš pristranost u model tj. model ti već nešto zna o testnom skupu",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264197": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @\"Me\"#p264186 Bi li bilo dobro kada bismo funkciju fit_transform primijenili na cijelom skupu podataka?\n\nNe\n\n> @\"Me\"#p264186 Zašto?\n\nJer onda test skup gubi svoj smisao, imaš takozvani data leak.\n\n> @\"Me\"#p264186 Bi li bilo dobro kada bismo tu funkciju primijenili zasebno na skupu za učenje i zasebno na skupu za ispitivanje?\n\nTo ovisi što želiš postići, ali generalno ne.\n\n> @\"Me\"#p264186 Zašto?\n\nAko se to radi sekvencijalno, 2. primjena će rezultirati tzv. katastrofalnih zaboravljanjem. Uz testiranje nad testnim skupom možda se može dati procjena koliko su srodna ta 2 skupa, ali postoje bolje metode za to i konkretno ocjena performansi tog modela neće biti nepristrana, kao i u 1. slučaju.",
+      "votes": {
+        "upvoters": [
+          "Me1 (Me)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264281": {
+      "poster": "SuperSjajan3",
+      "content": "Jel zna neko objasnit i interpretirat one spigane crno bijele grafove kad se trazi optimalan C i gamma?",
+      "votes": {
+        "upvoters": [
+          "SuperSaiyano",
+          "iva7740 (Mica Trofrtaljka)",
+          "swish41 (PlavušaSFilozofskog)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264301": {
+      "poster": "sheriffHorsey",
+      "content": "@\"SuperSjajan3\"#p264281 Sto ti je svijetlija boja na grafu to ti oznacava manju pogresku, sto je tamnija to je pogreska veca. Tipa na ovom  @\"Sulejman\"#p255464 gornjem lijevom grafu sto je veci c i gama, model je slozeniji pa je i pogreska manja/podrucje svjetlije (gornji desni kut tog grafa). Na test setu tj. gornjem desnom grafu je za isti taj c i gama ocekujes nesto tamniju boju za te iste hiperparametre tj. vecu pogresku na test setu. Podnaucenost onda bude tamo gdje je podrucje crno i za test i za train graf tj. pogreska je velika na oba, a prenaucenost tamo gdje je na train grafu svjetla boja tj. mala pogreska i na test grafu sve tamnija boja tj. veca pogreska. Ja sam tako nekako interpretirao i bilo je u redu.\n\novo su jos neka pitanja za svm koja su me pitali:\n\nsto su potporni vektori?\n\nkako outlier utjece na svm?\n\nkako se linearni svm nosi s nelinearnim podacima?\n\nkoliko potpornih vektora ima na zadnjem plot u 1.c?\n\nkako hiperparametar c utjece na slozenost modela?\n\nobjasni graf u 3.b, jeli povrsina pogreske razlicita i gdje je pod/prenaucenost na tom grafu?\n\nsto radi minmax scaler i kako se nosi s outlierom?\n\nsto radi standard scaler?",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Daho_Cro",
+          "Gulbash",
+          "MsBrightside",
+          "SuperSaiyano",
+          "SuperSjajan3",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "cloudies",
+          "matej1423",
+          "netko_tamo",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264492": {
+      "poster": "MsBrightside",
+      "content": "Ima li netko odgovore na pitanja iz labosa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264493": {
+      "poster": "Me1 (Me)",
+      "content": "@\"MsBrightside\"#p264492 https://github.com/studosi-fer/STRUCE/blob/master/labosi/lab-3/2015-16/by_unknown/STRUCE_2015-16_lab-3_odgovori.pdf",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "SuperSaiyano",
+          "blablajar",
+          "indythedog",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264548": {
+      "poster": "lovro (l123)",
+      "content": "@\"Todd Chavez\"#p255500 jel zna neko objasnit šta se tu događa na prvom i trećem grafu u prvom retku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265178": {
+      "poster": "Arya",
+      "content": "Moze netko pliz pojasniti pitanja za nebitne znacajke kod knn-a?\n\n>  Q: Je li algoritam k-najbližih susjeda osjetljiv na nebitne značajke? Zašto?\n\n> Q: Je li ovaj problem izražen i kod ostalih modela koje smo dosad radili (npr. logistička regresija)?\n\n> Q: Kako bi se model k-najbližih susjeda ponašao na skupu podataka sa značajkama različitih skala? Detaljno pojasnite.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265179": {
+      "poster": "Arya",
+      "content": "@\"Arya\"#p265178 \n\nRekla bih da je ovo odgovor, ako netko moze potvrditi :D :\n\n- knn je osjetljiv na nebitne znacajke jer ih ne razlikuje- nema tezina, sve jednako sudjeluju u odluci\n- kod ostalih modela nije izrazen problem jer su parametarski modeli i nebitne znacajke imaju manju tezinu\n- na skupu podataka sa znacajkama razlicitih skala knn radi lose jer one s vecim vrijednostima utjecu jace na odluku i potrebno je standardizirati znacajke",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265180": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Arya\"#p265179 Mislim da je 1. i 3. tocno, ali za 2. mi se cini da obicnoj logistickoj regresiji jednako smetaju nebitne znacajke. Pokusaj u tom zadatku promijeniti model iz KNN u LogisticRegression pa pogledaj kako se mijenja pogreska. Mislim da je tu bila ideja da se treba sjetit da na logisticku regresiju mozes nalijepit L1 regularizaciju pa iz toga dobiti odabir značajki pa tek onda nebitne znacajke nece utjecat.",
+      "votes": {
+        "upvoters": [
+          "Arya",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265181": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"sheriffHorsey\"#p265180 LogReg i ostali modeli s tezinama ce za znacajke koje su nebitne njihove tezine pritegnuti prema 0 jer nece imati utjecaj na klasifikaciju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265222": {
+      "poster": "Rene",
+      "content": "Jel ima netko sad labos u 12 da nije dodan u privatni kanal? Možete li napisat da pogledaju u obrascu, javio sam im se upravo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

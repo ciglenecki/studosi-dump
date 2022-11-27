@@ -1,0 +1,676 @@
+{
+  "title": "[AVSP] 6. laboratorijska vježba - 2020/2021",
+  "creator": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+  "slug": "avsp-6-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Analiza velikih skupova podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "202830": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "Poz ekipa, ima netko da je već rješio labos? meni kad predam na sprut ne prođe provjeru i ovako izgleda\n\n![](assets/2021-06-08/00026.png)\n\nono većina oke, i onda random neki broj ne valja. Ne znam gdje bi mogao biti problem, ako je netko imao sličan problem pa uspio rješit ili samo ima ideju za ovo please help :) Napravila sam korake kao oni u prezentaciji i računanje radim prema uputama u pdfu, imala sam neke ideje i probala promijenit malo kod al nisam uspjela da proradi 100%\n\ntakođer dobrodošlo ako bi netko mogao skrinati stanje bucketa u svakoj iteraciji do moje prve greške (3. upit) prilikom svakog novog reda ulaznog toka -  msm da je to 14 iteracija) ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202845": {
+      "poster": "Sipa31",
+      "content": "@janeromero#202830 mislim da sam imao sličan neispravan ispis kao ti. U mom slučaju, kada bi došo novi bit, ažurirao bi vremenske oznake bucketa i izbrisao bi bucket koji se nalazio izvan prozora širine N. Nakon toga bi ubacio bit u stream (izračunao novu raspodjelu bucket-a). Problem sam riješio tako da sam prvo ubacio bit u stream i odredio novu raspodjelu bucket-a, pa tek nakon izbacio bucket koji je izvan prozora. \n\nDrugim riječima, samo sam izmijenio redoslijed poziva mojih funkcija \"removeBuckets\" i \"updateBuckets\" u mom kodu, tak da je sad \"removeBuckets\" nakon \"updateBuckets\".",
+      "votes": {
+        "upvoters": [
+          "PudingIzMenze",
+          "Simpy",
+          "Watson (112)",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Watson (112)"
+        ],
+        "tuga": []
+      }
+    },
+    "202871": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Sipa31#202845 hvala ti puno ovo mi nikad ne bi palo napamet. al zapravo sam maloprije skuzila problem je bio preglup, kad bih racunala sumu zadnjih k bucketa, trazila sam i onaj gdje je vrijeme bucketa >= trenutno vrijeme -k , umjesto da je samo > bez jednakosti... smh my head",
+      "votes": {
+        "upvoters": [
+          "Mars (mars_)",
+          "Simpy",
+          "Sipa31",
+          "burek",
+          "ikerkaferkass"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203026": {
+      "poster": "Noname",
+      "content": "Jesu li dodatni primjeri sa materijala tocni?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203042": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Noname#203026 onaj jedan primjer sa stranice predmeta je primjer i na ferko, meni tam prolazi ok, pretpostavljam da je dobar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203066": {
+      "poster": "Noname",
+      "content": "@janeromero#203042 da, ali u ovim dodatnim primjerima ima jedan sa 100000 upita, pa me zanima hoce li biti takvih i na sprutu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203071": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Noname#203066 disi našla dodatni primjer?",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203089": {
+      "poster": "Noname",
+      "content": "@janeromero#203071 Na gitu, pod labosima, lab-3",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203105": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Noname#203089 Aha okej hvala ti. ja sam skinula sad i nemam vremena trenutacno sve ih provjeravat al sam probala prvi i imam tipa 4 greske u ispisu. a onaj na sprutu mi je okej, moguce da se slucajno poklopilo, kasnije cu i za ostale primjere provjerit.  jel ti imas greske u nekim primjerima ?",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203115": {
+      "poster": "Noname",
+      "content": "@janeromero#203105 Prvo sam imala neke greške, ali to sam popravila zamijenom > sa >= kod brisanja i zbrajanja. pa mi je ispis sad jednak primjerima. I taj zadnji primjer mi se vrti skoro minutu (Python) pa nisam sigurna hoće li biti tako velikih primjera.",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203133": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Noname#203115 Opaa evo sad sam zamijenila kod brisanja pretinca to što i ti, i nemam nijednu grešku u tom, hvala na ideji ne znam jel bih se inače sjetila samo po sprut primjeru 🙏🙏🙏\n\nIsla sam pokrenut sad ovaj najveci i traje mi 4.7751339s (bez ispisa  4.33641). Nisam radila u Pythonu pa ti nemrem bas pomoc s optimizacijom, Java ima stvarno savrsenu klasu za implementaciju ovog algoritma, da nema ne znam jel bi mi bilo tak brzo.",
+      "votes": {
+        "upvoters": [
+          "Noname",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203154": {
+      "poster": "tonkec",
+      "content": "@janeromero#203133 bi li mogla staviti ispis bucketa za prvih nekoliko querija?",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203234": {
+      "poster": "tonkec",
+      "content": "@janeromero#203133 ipak ne treba",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203333": {
+      "poster": "Hooloovoo",
+      "content": "Kak vam se čini labos, treba puno vremena za odradit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203467": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Hooloovoo#203333 iskreno, dosta lagan zapravo. Trebalo mi je malo da ga skuzim prvo, i cak dok sam isla prvi put pisat labos sam po putu skuzila da mi ideja ima dosta rupa pa sm isla ispocetka, ali npr u odnosu na prosli labos ovaj je 1000 puta laksi. Opcenito jedan od laksih labosa na predmetu ja bih rekla.",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203588": {
+      "poster": "a_ko_si_ti",
+      "content": "@janeromero#203133 Koliko redaka je imao taj najveći kojeg si probala? jer vidim jednog od 100 000 querya, i ne vjerujem da mi nam bas takve dali",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203611": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@a_ko_si_ti#203588 650221, da to je taj od 100000 queryja",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203612": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@janeromero#203611, da to je taj od 100000 queryja",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203623": {
+      "poster": "Noname",
+      "content": "@a_ko_si_ti#203588 mislim da taj nece biti, u uputama pise da ulazna datoteka nece imati vise od 10^5 redaka",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203824": {
+      "poster": "stoper5",
+      "content": "Gdje ste pronašli testove za 6.labos? Gledao sam na GitHub na materijale i pronašao samo za prvih 5.\n\nEDIT: lab-3/testovi se zove file. Sad sam vidio gore da je netko napisao.",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203865": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Hooloovoo#203333 \n\nOvaj labos je jako lagan, tak da riješite ga svi koji se premišljate",
+      "votes": {
+        "upvoters": [
+          "Mars (mars_)",
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204160": {
+      "poster": "_xXx_Matej_xXx_ (Mateejj)",
+      "content": "E je li skužio tko zašto je u primjeru u uputama odgovor na drugi upit (q 3) 0 ? Zar ne bi odgovor trebao biti 1 budući da je predzadnji bit 1 ?",
+      "votes": {
+        "upvoters": [
+          "Simpy",
+          "Watson (112)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204167": {
+      "poster": "DuckItUp",
+      "content": "@_xXx_Matej_xXx_#204160 \n\nu zadnjih 3 bita ulazi samo taj 1 bucket veličine 1, querya se na način da zadnjem bucketu koji se gleda se uzima veličina/2 zaokruženo na manju vrijednost, znači imaš onda 0.5 kaj se zaokruži na 0",
+      "votes": {
+        "upvoters": [
+          "Simpy",
+          "_xXx_Matej_xXx_ (Mateejj)",
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204175": {
+      "poster": "_xXx_Matej_xXx_ (Mateejj)",
+      "content": "@DuckItUp#204167 \n\nAhaa, ja sam bio pretpostavio da se veličina/2 uzima samo za zadnji blok ako mu prvi bit ne ulazi u N, a zadnji ulazi. Hvala!",
+      "votes": {
+        "upvoters": [
+          "Simpy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204385": {
+      "poster": "zuza (jose)",
+      "content": "Može li mi netko objasniti zašto nam treba log2N veličina blokova? Recimo za N = 1 to ne vrijedi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205352": {
+      "poster": "saitama",
+      "content": "Nije mi najjasnije kako se radi ovo krajnje zbrajanje, pa ako bi netko mogao mi poblize objasniti  ? Znaci npr  imamo 1 koji ima neke oznake zatim 2 koji ima neke oznake, zatim 4 koji ima neke oznake i 8 koji ima neke oznake i npr trazeni k je izmedu 4 i 8 kako bi se to onda pozbrajalo ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205391": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@saitama#205352  znaci npr dode oznaka k = 20 i npr tvoj current timestamp je 650, dakle zadnji bucket koji ti ulazi u zbrajanje je bucket s timestampom 650  - k +1 znaci 621. Sad ides po listi bucketa i provjeris je li timestamp (najnoviji) tog bucketa >= 621 ak je zbrojis ga, ak nije, gotova pretraga. Pazis na to koji je zadnji bucket i onda do njega sve buckete zbrojis, a zadnji  dijelis sa 2 i dodas u sumu.",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "saitama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205393": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "Ovo +1 je zato jer i trenutni timestamp  ulazi u zadnjih k vremenskih jedinica",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "saitama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205395": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "Znaci ak je timestamp izmedu 4 i 8 zbrajas 1+1+2+ 4/2 (jer 8 ne ulazi, a 4 je zadnji kojibulazi u proslih k trenutaka)",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "saitama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205767": {
+      "poster": "Atem",
+      "content": "![](assets/2021-06-12/00016.png)\n\nAko bi netko mogao pojasniti, zanima me ako se uzme prvi redak '1010101101' da li se kao prvi bit (timestamp 0) gleda prvi s ljeva ili prvi s desna. Npr bi li onda 4. bit bio 0 ili 1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205796": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Atem#205767 \n\n@Atem#205767 1010101101 znaci brojke dolaze s lijeva na desno. Kad u kodu npr krenes citat ova skroz lijevo jedinica ti je orva. Njezin timestampp je 0. I to je bucket velicine 1, timestamp 0. Zatim dode 0, timestamp je 1 ali se ne radi nista. Zatim dode 1, timestamp 2, i to je bucket velicine 1 timestampa 2. Zatim oprt 0, timestamp 3. Zatim dode treca jedinica po redu, timestampa 4 i to je bucket velicine 1 timestampa 4 (i sad krece spajanje itd..)",
+      "votes": {
+        "upvoters": [
+          "Atem",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205951": {
+      "poster": "koode7",
+      "content": "po kojim materijalima ste sve radili labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206031": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@koode7#205951 snimljeno predavanje Data streams oba ali msm sa mozes i samo 2., i malo youtubea iako nism bas nigdje nasla da netko objasnjava kako se tocno zbrajaju jedinice kad dode query, s tim sam se sama malo pomucila haha al nije strasno",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206044": {
+      "poster": "Atem",
+      "content": "Ako imamo samo 1 bucket, da li da onda uzmemo pola njegove duljine ili cijelu duljinu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206063": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Atem#206044 pola, znaci 0",
+      "votes": {
+        "upvoters": [
+          "Atem",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206472": {
+      "poster": "Atem",
+      "content": "![](assets/2021-06-13/00010.png)\n\nJe li imao tko ovakav ispis (slika 1 )\n\nili ovakav (slika 2 )\n\n![](assets/2021-06-13/00011.png)\n\nMože li mi netko slikati ispis veličine svih bucketa NAKON desetog upita (drugi 'q 94' po redu)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206617": {
+      "poster": "Mirko_",
+      "content": "Što znači da je timestamp kraj bucketa? Je li to index najnovijeg bita ili najstarijeg? \n\nI kad se bucket briše? Kad cijeli bucket postane obsolete ili ijedan njegov element?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206655": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Mirko_#206617 timestamp bucketa je vrijeme najnovije jedinice koju taj bucket sadrži. bucket se briše kada je njegov timestamp >( trenutno vrijeme - veličina prozora(N)). za svaki bucket pamtiš samo jedni vrijeme, ne vrijeme svake jedinice koju sadrži",
+      "votes": {
+        "upvoters": [
+          "Mirko_",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206660": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Atem#206472 \n\nBuckets for query : 94, line : 36\n\n\tBucket info : value - 1, timestamp - 1996\n\n\tBucket info : value - 2, timestamp - 1995\n\n\tBucket info : value - 4, timestamp - 1993\n\n\tBucket info : value - 8, timestamp - 1989\n\n\tBucket info : value - 8, timestamp - 1978\n\n\tBucket info : value - 16, timestamp - 1967\n\n\tBucket info : value - 32, timestamp - 1947\n\n\tBucket info : value - 32, timestamp - 1906",
+      "votes": {
+        "upvoters": [
+          "Atem",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206666": {
+      "poster": "Mirko_",
+      "content": "> @janeromero#206655 bucket se briše kada je njegov timestamp >( trenutno vrijeme - veličina prozora(N)).\n\nmozes objasniti sto znaci velicina prozora(N)? pretpostavljam da je to velicina trenutnog bucketa ali mi taj cijeli izraz djeluje malo cudno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206667": {
+      "poster": "Svarog (Veles)",
+      "content": "6\\. laboratijska vježba -  Algoritam Datar-Gionis-Indyk-Motwani, iliti ga, kako se koji kurac koriste modularni timestampovi",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Mirko_"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Emma63194",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206668": {
+      "poster": "Svarog (Veles)",
+      "content": "@Mirko_#206666 moja logika je: za svaki učitani bit, ako je trenutni timestamp == timestamp najstarijeg bucketa, odbaci ga",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206670": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Mirko_#206666 ne ne, veličina prozora je onaj prvi redak u input datoteci koji kaže koliko daleko u prošlost pamtimo podatke. znači ako je N = 100, znači da od trenutnog timestampa u listi bucketa trebaš imati samo one buckete čiji je najnoviji element timestampa X > current_timestamp - 100.\n\nveličina bucketa ti je neka potencija broja 2, aka broj jedinica koje \"čuva\"",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206705": {
+      "poster": "Mirko_",
+      "content": "odustajem, dobio sam tri živčana sloma i dalje ne kužim što sam fulao. znam da je jednostavno ali mi rezultati ispadaju off u 40% slucajeva",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Amon",
+          "Svarog (Veles)",
+          "a_ko_si_ti",
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "saitama"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "title": "[DOIAS] 4. laboratorijska vježba - 2021/2022",
+  "creator": "Emma63194",
+  "slug": "doias-4-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Digitalna obrada i analiza slike",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "297427": {
+      "poster": "Emma63194",
+      "content": "Može neki hint za 8.1.1., prvi zadatak?\n\nSlike nisu iste veličine. Što treba napraviti u tom slučaju? Paddati manju sliku ili resizeati veću?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297435": {
+      "poster": "SuperSaiyano",
+      "content": "@\"Emma63194\"#p297427 Nisam siguran koji je to zadatak (nisam pri laptopu) ali zar to nije poenta da template (croppana slika auta) bude manja u onoj funkciji?",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297470": {
+      "poster": "dora (AE)",
+      "content": "Kako treba rijesit 7.5.1 zadatak pod 3 sa energijom? Kad oduzmem mean od slike dobijem negativne vrijednosti koje funkcija greycomatrix ne priznaje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297472": {
+      "poster": "Emma63194",
+      "content": "@\"SuperSaiyano\"#p297435 Je, da. Nije mi na prvu bilo skroz jasno što se tu dešava, ali sada mi je jasnije. Hvala na odgovoru!",
+      "votes": {
+        "upvoters": [
+          "SuperSaiyano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297476": {
+      "poster": "Daeyarn",
+      "content": "jel postoji burza grupa za 4. labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297477": {
+      "poster": "Emma63194",
+      "content": "Kako ste u 8. bilježnici, 8.1.1., 6. zadatak riješili `ValueError: Image must be larger than template.`?\n\nZadane slike su iste veličine. Probala sam ovu koja treba biti template malo smanjiti, ali dobivam isti error i dalje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297506": {
+      "poster": "SuperSaiyano",
+      "content": "@\"Emma63194\"#p297477 ja sam paddao jednu od slika (ona koja će biti veća u fji):\n\n`padded_img1 = np.zeros((500, 500))`\n\n`padded_img1[:img1.shape[0],:img1.shape[1]] = img1`",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297619": {
+      "poster": "BillIK",
+      "content": "Kako nacrtati krivulju u 8.1.1.,6. zadataka? Za svaku matricu posebno ili sve na isti graf? To je ipak 360 matrica  \n\nili crtamo samo za max vrijednost svakoj zasebnoj matrici?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297626": {
+      "poster": "Ryder (Pepper)",
+      "content": "@\"BillIK\"#p297619 samo za max vrijednost",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297632": {
+      "poster": "--- ( 🤡 )",
+      "content": "> \n\n    For the same image display the results if you select a threshold t+0.2 or t−0.2 instead of threshold t selected before. Describe what happened.\n\nJel nije ovo malo premala razlika da bi se išta značajno dogodilo?",
+      "votes": {
+        "upvoters": [
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297635": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p297632 ili tu možda misle na 20%?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297647": {
+      "poster": "--- ( 🤡 )",
+      "content": "sta ste uzeli kao low_sigma param za DoG operator?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297653": {
+      "poster": "--- ( 🤡 )",
+      "content": "jel vam Max u 8.1.1. 2) ispadnu (293, 40)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297658": {
+      "poster": "Emma63194",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p297635 Ne znam jesam li dobro shvatila taj dio, ali ja sam uzela 20% od max vrijednosti (255) i to ispadne 51 pa plus/minus to.\n\n@\"😎🚬😎🚬😎🚬\"#p297647 Ne znam što je to, stavila sam mislim samo vrijednost 1. Opet, ne znam jel to točno.\n\n@\"😎🚬😎🚬😎🚬\"#p297653 Da, toliko mi ispadne.",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297659": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"Emma63194\"#p297658 jel ti mozda graf u 8. ispadne ovak? ![](assets/2022-05-21/00008.png)",
+      "votes": {
+        "upvoters": [
+          "SuperSaiyano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297660": {
+      "poster": "--- ( 🤡 )",
+      "content": "kak vizualizirati optical flow u zadnjem zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297704": {
+      "poster": "dora (AE)",
+      "content": "kako ste upogonili imrotate funkciju? sta god napisem baca mi error",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297709": {
+      "poster": "Emma63194",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p297659 Nisam taj još riješila, imala sam neke errore. Sutra ću dovršiti pa javim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297721": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"AE\"#p297704 koliko sam skuzio imrotate je deprecated, koristio sam samo rotate umjesto toga i radi mi oke",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297826": {
+      "poster": "bjunolulz",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p297660 +1",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297862": {
+      "poster": "Emma63194",
+      "content": "@\"SuperSaiyano\"#p297506 Jel ideja da tu veću sliku rotiramo ili je svejedno koju uzmemo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297871": {
+      "poster": "Emma63194",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p297659 Ovako sam dobila:\n\n>! ![](assets/2022-05-22/00012.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297879": {
+      "poster": "SuperSaiyano",
+      "content": "@\"Emma63194\"#p297862 Nisam siguran da je bitno, ja sam dobio graf kao @\"😎🚬😎🚬😎🚬\"#p297659",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297887": {
+      "poster": "Emma63194",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p297660 Možda doslovno kao sliku? Tipa, ovak neš:\n\n>!  ![](assets/2022-05-22/00013.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297892": {
+      "poster": "Emma63194",
+      "content": "@\"AE\"#p297470 Bump. Isto pitanje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298215": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Što pitaju na obrani? Za 7. bilježnicu me najviše zanima s obzirom da 8. nisam taknija",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

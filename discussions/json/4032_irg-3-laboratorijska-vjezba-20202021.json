@@ -1,0 +1,525 @@
+{
+  "title": "[IRG] 3. laboratorijska vježba - 2020/2021",
+  "creator": "benac (caneb)",
+  "slug": "irg-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Interaktivna računalna grafika",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "190408": {
+      "poster": "benac (caneb)",
+      "content": "Izračunao sam matrice transformacije pogleda(T1,T2,T3,T4,T5) i projekcije(P), šta sada radim s njima?? U Čupićevoj knjizi on ih uopće ne koristi nego koristi openGL-ove funkcije koje same rade te transformacije ili šta??",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190464": {
+      "poster": "angello2",
+      "content": "nakon sto dobijete ove sve matrice transformacija i projekcije, kako iscrtavate poligon? sto jos treba napravit s tim tockama da bi ih mogo samo ubacit u GL_LINE_LOOP? uzeo sam objekt kocka iz proslog labosa i dobim neko cudo, ovako izgleda za O(0,0,0) i G(1,1,3)\n\n![](assets/2021-05-15/00039.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190478": {
+      "poster": "sekiro",
+      "content": "@benac#190408 pomnozi sa svakom tockom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190479": {
+      "poster": "benac (caneb)",
+      "content": "@sekiro#190478 I kad pomnozim onda sam dobio točke koje samo trebam iscrtati na ekran?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190587": {
+      "poster": "sekiro",
+      "content": "@benac#190479 da, spojit ih treba naravno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190706": {
+      "poster": "batman3000",
+      "content": "a jel se smije koristiti i opengl u vježbi, a sastrane transformacije računati? jer sam s tim napravila labos pa da ne prepravljam bzvz",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190895": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@batman3000#190706 Ako samo ubacuješ izračunate stvari u iscrtavanje ne bi trebalo biti problema, problem su OpenGL-ove ugrađene funkcije koje to sve rade za tebe",
+      "votes": {
+        "upvoters": [
+          "batman3000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191308": {
+      "poster": "benac (caneb)",
+      "content": "jel GL_TRIANGLES crta pune ili prazne trokute?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191365": {
+      "poster": "benac (caneb)",
+      "content": "Kako da implementiram promjenu koordinata očišta preko tipkovnice? Ako me netko može samo uputiti što da koristim za to pošto pojma nemam odakle da krenem.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191369": {
+      "poster": "Retard00",
+      "content": "@benac#191308 pune, za prazne trebaš GL_LINES",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191370": {
+      "poster": "Retard00",
+      "content": "@benac#191308 pune, za prazne trebaš GL_LINES\n\n@benac#191365 Pa valjda ko u igricama, WSAD za micanje po XZ osima, te još tipa Q za -Y i E za +Y.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191444": {
+      "poster": "benac (caneb)",
+      "content": "@Retard00#191370 hvala ti na odgovoru, ali me zanima pomoću koje metode se to radi, a ne koje tipke da koristim hahaha\n\nedit: u Javi radim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191452": {
+      "poster": "JoKing",
+      "content": "@benac#191444 Evo tipa u Pythonu prvo inicijaliziraš funkciju koja je zadužena za obrađivanje evenata sa tipkovnice pomoću funkcije glutKeyboardFunction(ime_funkcije_u_kojoj_se_obrađuju_tipke). A oblik funkcije u kojoj se obrađuju tipke je sljedeći. Kao argumente prima tipku koja je pritisnuta, x poziciju miša i y poziciju miša. A tipke se obrađuju na način da testiraš \n\nif tipka == b'tipka': \n\n    napravi_nesto\n\n Znači na kraju kod bi ti izgledao ovako nekako\n\n U main metodi: `glutKeyboardFunc(self.tipkovnica)`\n\n a tipkovnica izgleda:\n ```\n def tipkovnica(self, tipka, x, y):\n     if tipka == b'w':\n         self.ociste.z += 0.1\n ```\nedit: Evo vidim nakon što sam napisao da radiš u javi, ali princip bi trebao biti više manje identičan (jer i ovo u pythonu je praktički ista stvar kao u C OpenGL",
+      "votes": {
+        "upvoters": [
+          "Darla",
+          "Retard00",
+          "benac (caneb)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191520": {
+      "poster": "Retard00",
+      "content": "Kak da znam jel moje rješenje dobro?\n\nJel ovaj program ([OrbitCamera.zip](https://songho.ca/opengl/files/OrbitCamera.zip) iz https://songho.ca/opengl/gl_mvc.html) dovoljno dobar za test valjanosti tak da uspoređujem rezultate?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191932": {
+      "poster": "Haki",
+      "content": "Kako se dobiva perspektivna projekcija?\n\nJa svaku točku množim sa matricom\n\n[[1, 0, 0, 0],\n\n [0, 1, 0, 0],\n\n [0, 0, 0, 1/H],\n\n [0, 0, 0, 0]]\n\n ali kad nacrtam te točke dobijem opet paralelnu projekciju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192063": {
+      "poster": "angello2",
+      "content": "jeste u petom ista radili sa onim glMatrixMode ili glLookAt ili slicno, ili ste samo uzeli vrhove poligona, direktno transformirali kao sto je zadano i onda tocno te koordinate crtali? ne znam jel mi dobro ispada, i je li trebalo radit ikakva skaliranja objekta na [-1,1] ili takvo nes.\n\nIsto pitanje za sesti, jel se treba igrat s tim model view matrixima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192158": {
+      "poster": "mbeno2358 (doug345)",
+      "content": "Kako tocno dobiti te tocke krivulje u 6.?\n\nMeni je na par random mjesta gomila tocaka pa ispada kao da je samo par tocaka nacrtano.",
+      "votes": {
+        "upvoters": [
+          "Darla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192176": {
+      "poster": "Retard00",
+      "content": "Jel bi u 6. (A varijanta) krivulja zadana točkama `(0, 0, 0), (0.4, 0.4, 0), (0.8, 0, 0)` trebala ovak izgledat:\n\n![](assets/2021-05-18/00031.png)\n\n\nil sam je neš zbrljao?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192185": {
+      "poster": "Retard00",
+      "content": "@mbeno2358#192158 Ovak nekak valjda:\n\n\n    Vector3 dohvatiTocku(float t) {\n        Vector3 rezultat = (0, 0, 0);\n        for (int i = 0; i < kontrolneTocke.size; i++) {\n            rezultat += kontrolneTocke[i] * b(i, kontrolneTocke.size, t);\n        }\n        rezultat += kontrolneTocke[kontrolneTocke.size- 1] * B(kontrolneTocke.size, kontrolneTocke.size, t);\n        return rezultat;\n    }\nOnda imaš nešto tipa:\n\n     for(float t = 0.01; t <= 1.0; t += 0.01)\n         GLDrawLine(krivulja.dohvatiTocku(t-0.01), krivulja.dohvatiTocku(t))",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192207": {
+      "poster": "mbeno2358 (doug345)",
+      "content": "@Retard00#192185 Mislim da je meni nest problem sto mi sve zaokruzuje na cijele brojeve na prikazu... al nezz gdje, zasto i kak promjenit.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192209": {
+      "poster": "mbeno2358 (doug345)",
+      "content": "@Retard00#192185 Nvm, koristio sam vertex3i 😂",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)",
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192214": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Kako odredit  [imath]r_k[/imath], tj. vjerojatno [imath]r_0, r_1[/imath] i [imath] r_2[/imath] u 6. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192229": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "@BrkMateaBeusana#192214 ili trebamo pomoću inputa zadati te točke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192232": {
+      "poster": "Tootha",
+      "content": "@BrkMateaBeusana#192229 Pomoću inputa ako misliš na točke kontrolnog poligona, odnosno njihove radij-vektore",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192233": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "@Tootha#192232 da, ok, hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192282": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@Haki#191932 Mene isto zanima ovo 😅. \n\nTakoder jer ostavljamo u 5. zadatku transformaciju i skaliranje iz prethodnog zadatka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192692": {
+      "poster": "Sicsile",
+      "content": "može netko napisat pitanja s usmenog danas",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192706": {
+      "poster": "Daorson",
+      "content": "postoji li nadoknada?",
+      "votes": {
+        "upvoters": [
+          "buyer",
+          "feel_d_boot (iNut)",
+          "latica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192781": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@Daorson#192706 \n\nProšli labos sam loše napravio pa mi je na kraju usmenog profa rekla da će me nazvat za 3 dana i da do tada napravim lab kak spada. \n\nA oće li bit nadoknade na kraju semestra, nemam pojma.",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "__builtin_popcount (std::popcount)",
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192790": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "Lijudi jel bi se meni objekt trebao umanjivat što više udaljavam očište od njega? Kad mjenjam očište kocka mi je iste veličine, samo mi se mjenja kut iz kojeg je gledam...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192974": {
+      "poster": "batman3000",
+      "content": "@Sicsile#192692 pitao me Fulir samo prvu vježbu drugu nije niti dotaknuo. Dosta pita matrice transformacije, orijentacije sustava, dobro treba znati svaki korak transformacije itd, objasni sve kaj ne znaš. Također prepoznati lijevi vs desni sustav.",
+      "votes": {
+        "upvoters": [
+          "KiflaKiflic",
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192986": {
+      "poster": "Sicsile",
+      "content": "1. Što je matrica skaliranja?\n\t• Matrica koja uvećava ili umanjuje vrijednosti koordinata neke točke\n\t2. Koja od 5 matrica je matrica sklairanja, a koja rotiranja?\n\t• T5 je matrica skaliranja, dok su matrice T2, T3, T4 rotacije. \n\t• Matrica T2 rotira z os oka tako da z os oka legne u xz ravninu sustava scene to radimo zato što znamo vektor z oka pa mozemo napraviti rotaciju, rotira se oko z osi scene,\n\t• Matrica T3 rotira oko y osi scene tako da se z os scene i oka poklope\n\t• matrica T4 rotira za 90 oko z osi tako da se poklope y osi i nakon toga nam ostaje jos zrcalit x os oka da se poklope sve to radimo s T5\n\t• Moram opaziti da z osi u startu nisu vec podaudarene\n\t3. Što je H u perspektivnoj projekciji?\n\t• Udaljenost ravnine projekcije od očišta, računa se kao udaljenost dvije točke odnosno tu su točke očišta i gledišta.\n\t4. Objasniti postupak za crtanje bezierove krivulje (bernsteinov postupak)\n\t• Bernsteinov postupak je zapravo niz uzastopnih lineranih interpolacija. Ako imamo kontrolni poligon od 4 točke i spojimo ih slijedno. Bezierova krivulja je krivulja koja prati vrijednost parametra t između raznih lineranih interpolacija. Između T1 i T2, T2 i T3, T3 i T4. onda izmedu T1 T2 i T3 te T2 T3 i T4.\n\t5. Hoće li se igdje poklapati bezierova krivulja i kontrolni poligon?\n\t• Da, poklapat će se u početnoj i završnoj točki krivulje\n\t6. Objasni kako funkcionira brisanje stražnjih poligona?\n\t• Položaj promatrača odnosno očisšte možemo uvrstiti u jednadžbu ravnine koja sadrži pojedini poligon. Ako je točka promatrača iznad taj poligon je vidlj, a ako je ispod poligon nije vidljiv\n\t7. Napisati funkciju beziera sa tezinskim funkcijama od bernsteina, objasnit sve u formuli\n\t• P(t) su točke na krivulji(Vektorski zapis x(t), y(t), z(t))\n\t• ri vrhovi kontrolnog poligona(točke koje zadajemo)\n\t• bi,n bazne(težinske) funkcije stupnja n gdje je n broj točaka koje definiraju poligon. One zapravo prate vrijednosti pascalovog trokuta\n\t• t je vrijednost između 0 i 1\n\t8. Detaljno objasnit transformaciju pogleda, što je to zapravo\n\t• Transformacija pogleda je transformacija koja točku iz koordinatnog sustava scene pretvara u točku koordinatnog sustava kamere. Tražimo matricu 4x4 takvu da se množenjem proizvoljne točke i te matrice dobije točka s koordinatama koje bi origanlna točka imala kada bismo je promatrali iz drugog sustava.\n\t9. Koje transformacije se koriste, pobrojat ih i pokazat u kodu\n\t• Translacija, rotacija, skaliranje\n\t10. Je li bitan redoslijed mnozenja matrica\n\t• Bitan je zato što operacije nad matricama nisu komutativne\n\t11. Kakva vrsta bresenhamovog algoritma je u bezijeru(aproksimacijska ili interpolacijska)?\n\t• aproksimacijska\n\t12. Kojeg reda je navedena krivulja?\n\t• N+1 točka određuje aproksimacijsku bezierovu krivulju n-tog stupnja koja je linerna interpolacija između dvije aproksimacijske krivulje n-1og reda\n\t13. Sto sve trebamo napraviti i kojim redoslijedom da iz niza zadanih tocaka i poligona dobijemo 2D prikaz.\n\t• Prvo skaliranje točaka na zaslon. Onda trebamo napraviti transformaciju pogleda, to je transormacija kojm točke iz koordinatnog sustava scene prebacujemo u koordinatni sustav kamere. Nakon što sve točke imamo u koordinatnom sustavu kamere onda te točke trebamo projicirati na projekcijsku ravninu. Taj postupak naziva se projekcija koja se obavlja množenjem točaka s projekcijskom matricom.\n\t14. Što predstavlja T1 i što se njome dobiva?\n\t• T1 predstavlja matricu translacije. Njome se koordinatni sustav oka prebacuje u ishodište koordinatnog sustava scene. Radimo matricu kojoj je zadnji redak -koordinateOčišta\n\t15. Zašto rotiramo z os na kraju\n\t• To je pitanje iz prvog nacina rjesavanja\n\t• Zato što globalni sustav desni, a sustav scene lijevi, moramo z os zrcalit jer pokazuju u suprotnim smjerovima\n\t16. Možemo li prvo napraviti množenje rotacijskom a onda t1 matricom i zašto ne?\n\t• Ne zato što operacije matrica nisu komutativne. Da to napravimo ne bi preslikali dobro koordinatne sustave.\n\t17. Bezier zašto zadajemo 4 točke\n\t• hmm\n\t18. Kako se zove polinom onaj t^i i (1-t)^i?\n\t• Bernsteinov polinom\n\t19. Kako provjeravamo je li poligon zadnji?\n\t• Položaj promatrača odnosno očisšte možemo uvrstiti u jednadžbu ravnine koja sadrži pojedini poligon. Ako je točka promatrača iznad taj poligon je vidlj, a ako je ispod poligon nije vidljiv\n\t• S koeficijentima i jednadzbom ravnine\n\t• Treba znat i postupak s normalama\n\t20. Zašto smo kod T4 uzeli kut od 90? Mora li uvijek taj kut bit 90?\n\t• Ne mora to smo dogovorno uzeli\n\t• Hmm\n\t21. Kako bi izgledala bezierova krivulja da smo uzeli samo dvije točke?\n\t• Bila bi ravna linija\n\t22. Kako bi izgledao prvi dio bezierove krivulje da smo zadnju točku pomaknuli malo gore ili dolje?\n\t• Ne bi bila ista kao bez pomicanja\n\t• Hmm\n\t23. Afine transformacije?\n\t• Čuvaju paralelnost pravaca\n\t• Nejednoliko skaliranje\n\t• Zrcaljenje\n\t• Smik\n\t• Zadnji stupac u matrici je 0 0 1\n\t24. Kako izgleda tijelo bez da množimo s perspektivnom projekcijom?\n\t• Izgledalo bi pravilno iz kojeg god kuta da je gledamo dok kod perspektivne imamo dojam prostora i dubine\n\nScena desni, ekran lijevi\n\nDesni koordinatni sustav - palac desne ruke smjer x osi, y rotacija prema z smjer prstiju\n\nLijevi koordinatni sustav -  palac lijeve ruke smjer x osi, y rotazija prema z smjer prstiju\n\nTada se odluka je li poligon prednji ili stražnji može donijeti na temelju kuta što ga normala poligona zatvara s vektorom usmjerenim prema gledatelju.\n\nPotrebno je promatrati kut što ga zatvara vektor normale poligona i vektor iz središta poligona prema promatraču",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "Daorson",
+          "Darla",
+          "Diego",
+          "Gulbash",
+          "Haki",
+          "KiflaKiflic",
+          "Retard00",
+          "batman3000",
+          "benac (caneb)",
+          "kjkszpj",
+          "latica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194103": {
+      "poster": "Haki",
+      "content": "@bodilyfluids#192790 Jel uspio ovo netko postić i kako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194133": {
+      "poster": "Retard00",
+      "content": "@Haki#194103 Jesi podijelio koordinate točke koju projiciraš sa njenom komponentom w (homogena koordinata) nakon množenja s matricom P (matricom perspektivne projekcije)?",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194334": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@Haki#194103 Radio sam sljedece. Mnozio koordinate objekta matricom T1_5, pa s matricom P i na kraju za svaku tocku radio sljedece;\n\nx = x / h\n\ny = y / h\n\nz = 0\n\nh = 1\n\ni nakon svega ovoga sam i dalje dobivao ortogonalnu projekciju, tj objekt je uvijek bio iste velicine bez obzira na udaljenost. Proradilo je kad sam dodatno koordinate x i y podjelio s H, tj udaljenoscu ocista od gledista.\n\nProfa je rekla da je zadovoljna rjesenjem iako ne znam jel skroz kako treba.",
+      "votes": {
+        "upvoters": [
+          "Haki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195043": {
+      "poster": "buyer",
+      "content": "Ima li netko tko mi može objasniti 3. labos iz predmeta interaktivna racunalna grafika?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

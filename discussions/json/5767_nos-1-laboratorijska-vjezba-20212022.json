@@ -1,0 +1,2518 @@
+{
+  "title": "[NOS] 1. laboratorijska vježba - 2021/2022",
+  "creator": "Jaster111",
+  "slug": "nos-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Napredni operacijski sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "247800": {
+      "poster": "Jaster111",
+      "content": "Posjeduje li netko neke razumljivije i bolje resurse za rješavanje ovog labosa za razliku od onih koje smo dobili? Pokušavam u C-u napravit prvi zadatak, ali nemam nikakav uvid jel to što radim uopće na dobrom tragu...",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248549": {
+      "poster": "tomekbeli420",
+      "content": "jesam li ja retardiran ili je ovaj pseudokod koji je dan uz zadatak s vrtuljkom rješenje sa raspodijeljenim centraliziranim protokolom, a nema veze sa protokolom sa putujućom značkom?",
+      "votes": {
+        "upvoters": [
+          "gad_gadski"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "gad_gadski"
+        ]
+      }
+    },
+    "248562": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"tomekbeli420\"#p248549 Je, valjda zato što pola studenata ima taj zadatak, a pseudokod postoji barem otkad sam ja imao predmet, prije godinu i pol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248564": {
+      "poster": "viliml",
+      "content": "@\"tomekbeli420\"#p248549 Ozbiljno? Ja sam implementirao protokol s putujućom značkom paralelno uz to. \n\nKao, to se izvršava po tom pseudokodu i oni izmjenjuju te poruke, ali onda još imam u dijeljenoj memoriji brojač koliko je ljudi na vrtuljku i čitanje ili pisanje u tu varijablu se radi u kritičnom odsječku koji je implementiram putujućom značkom.\n\nMožda sam ja to samo autistično prekomplicirao.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248566": {
+      "poster": "Vonj",
+      "content": "U prezentacijama, protokol s putujucom znackom je objasnjen jednako kao i centralizirani protkol, samo sto vamo centralni salje 'znacku', a u centraliziranom salje specificne poruke odgovor, a posjetitelj onda salje izlaz. U knjizi je protokol s znackom objasnjen potpuno drugacije i bez centralnog cvora. Sta pratiti od toga dvoje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248576": {
+      "poster": "Nocna_smjena",
+      "content": "Jel neko pokusao ovaj labos rijesiti sa execve ili necim slicnim? Meni javlja gresku da imam vise main funkcija sto mi ima i smisla jer execve (i slicni) pozivaju main iz tog novog fajla. Ak ist znaci u istom direktoriju su fajlovi posjetitelj i vrtuljak. Gledao sam na net-u i vidim da ljudi imaju isto vise main funkcija kad barataju sa ovim execve i slicnim funkcijama. Kad upisem u google error _multiple definition of 'main'_ ljudi govore da samo moram imat jedan main u cijelom projektu sto je kontradiktorno ovomu iz prosle recenice",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248579": {
+      "poster": "Nocna_smjena",
+      "content": "@\"Vonj\"#p248566 ja sam isao na nacin da centralni cvor (tj vrtuljak) \"nikad\" nema znacku. Prilikom inicijaliziranja dadnem prvom posjetitelju znacku pa ju on dadne nekom drugom posjetitelju ak njemu ne treba odmah (tj. vrtuljak samo u pocetku ima znacku dok ne napravi prvog posjetitelja i nikad vise ne dobije znacku nazad). Kad 4 posjetitelja sjednu i krenu silazit sa vrtuljka cekam da se broj posjetitelja na vrtuljku prvo spusti na 0 pa onda dopustam ponovni ulazak na vrtuljak,",
+      "votes": {
+        "upvoters": [
+          "Vonj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248584": {
+      "poster": "viliml",
+      "content": "@\"Nocna_smjena\"#p248576 Svaki program koji ima main() moraš kompajlirati zasebno, ne sve odjednom. Pretpostavljam da si pokušao nešto kao `gcc prog1.c prog2.c prog3.c`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248587": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Vonj\"#p248566 Na prezentacijama su opisane dvije vrste centralnog protokola, jedan s porukama a drugi sa značkom. Dodatno postoji i protokol s putujućom značkom.\n\nCentralizirani protokol sa značkom je više manje isti kao i centralizirani protokol s porukama, ali kako ime kaže, u jednom se koristi red poruka a u drugom značka koji je priča za sebe. \n\nProtokol s putujućom značkom nema centralni čvor već postoji neki predodređeni raspored kako se značka kreće od čvora do čvora.\n\nAko rješavaš zadatak centaliziranim protokolom vjerojatno možeš koristiti bilo koju varijantu s obzirom da su slične. Ako ti je zadan protokol s putujućom značkom moraš bez centralnog čvora.",
+      "votes": {
+        "upvoters": [
+          "Vonj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248589": {
+      "poster": "Nocna_smjena",
+      "content": "@\"viliml\"#p248584 men iskrenuo glupo kaj nema neko prakticnije rjesenje za ovo. Mogli su stavit opciju da ti odredis koji main je uistinu glavni main. Ovak mi se cini ko dupliciranje posla a i potencijalno teze debuggiranje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248592": {
+      "poster": "viliml",
+      "content": "@\"Nocna_smjena\"#p248589 Sve je savršeno dobro i praktično dizajnirano, ti to samo pokušavaš krivo koristiti.\n\nOvdje je najbolje zaboraviti na exec i jednostavno koristiti obične funkcije unutar jednog programa.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248595": {
+      "poster": "Nocna_smjena",
+      "content": "@\"viliml\"#p248592 I kaj. Tvoja solucija je da napravim vise projekata za u biti jedan projekt?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248596": {
+      "poster": "viliml",
+      "content": "@\"Nocna_smjena\"#p248595 Ako baš inzistiraš na to da koristiš exec, da, tako to moraš raditi.\n\nTo je doslovno što exec radi: poziva drugi projekt.\n\nAli nitko te ne tjera da koristiš exec. Možeš to riješiti normalno u jednom projektu.",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248599": {
+      "poster": "Retard00",
+      "content": "Jel bi se ovaj labos trebo radit na UNIX/linux-u?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248601": {
+      "poster": "tomekbeli420",
+      "content": "@\"viliml\"#p248564 dijeljena memorija bruh what kaj smijemo to imati? Što da su procesi na različitim računalima?\n\nKuzis kod ovog pseudokoda posjetitelji uopce ne komuniciraju jedan s drugim, samo sa vrtuljkom, a vrtuljak s njim i to je to\n\n@\"Retard00\"#p248599 \" upute su dane za unix, a ako hoces na drugom os-u ili drugom jeziku mislim da smiješ al onda si prepušten sebi za proučavanje apija",
+      "votes": {
+        "upvoters": [
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248603": {
+      "poster": "viliml",
+      "content": "@\"tomekbeli420\"#p248601 ![](assets/2021-11-01/00004.png)\n\n😉",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Lyras",
+          "tomekbeli420"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248605": {
+      "poster": "viliml",
+      "content": "@\"Retard00\"#p248599 Sve upute su napisane za Linux i profesor daje konzultacije za Linux, ali možeš to samoinicijativno iskemijati npr u Pythonu cross-platformno ako baš znaš i hoćeš.",
+      "votes": {
+        "upvoters": [
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248610": {
+      "poster": "steker",
+      "content": "Mi moramo rijesiti oba zadatka? Cini mi se da je neko spominjo da dio studenata dobiva jedan a dio drugi, al ne mogu to nigdje nac",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248615": {
+      "poster": "viliml",
+      "content": "@\"steker\"#p248610 Ako misliš na vrtuljak i filozofe, svatko treba riješiti (jednu varijantu) svakog zadatka.\n\nVarijante su \"rješavaju studenti čija je (pred)zadnja znamenka JMBAG (ne)parna\"",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248618": {
+      "poster": "Sulejman",
+      "content": "Značka je cancer",
+      "votes": {
+        "upvoters": [
+          "pingvinka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "tomekbeli420"
+        ]
+      }
+    },
+    "248619": {
+      "poster": "tomekbeli420",
+      "content": "@\"Sulejman\"#p248618 feelsbad neparna zadnja znamenka jmbag geng nisu dobili pseudokod ko parni",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Haki",
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248682": {
+      "poster": "Avendo",
+      "content": "Može netko tko je riješio značku napisati pseudokod za to... trebamo li koristiti forkove, mutexe itd...",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248693": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"tomekbeli420\"#p248619 dodat ću si jedan jmbagu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ardura (Maddy)",
+          "Daeyarn",
+          "Nocna_smjena",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248766": {
+      "poster": "Sulejman",
+      "content": "Značka be like: ![](assets/2021-11-01/00033.png)\n\n@\"Avendo\"#p248682 Ko što možeš vidit nema baš pseudokoda za ovak neš, al evo hint ti je da ti treba fork, a mutex ti ne treba jer je red poruka blokirajući",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Bucc (Olive Oil)"
+        ]
+      }
+    },
+    "248785": {
+      "poster": "viliml",
+      "content": "@\"Avendo\"#p248682 Taj protokol sa putujućom značkom je najjednostavniji mogući\n```\nfunkcija uđi_u_kritični():\n    primi poruku\n\nfunkcija izađi_iz_kritičnog():\n    pošalji poruku procesu [indeks procesa] + 1\n```\n\nJedino moraš paziti da kad sleepaš ili čekaš drugačije ne-značka poruke, ako slučajno uđeš u kritični onda odmah izađeš.",
+      "votes": {
+        "upvoters": [
+          "Krpa1 (Janez)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248815": {
+      "poster": "Avendo",
+      "content": "@\"viliml\"#p248785 Index proces mi dodje kao pid ? I gdje ja pratim indekse procesa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248817": {
+      "poster": "Krpa1 (Janez)",
+      "content": "@\"viliml\"#p248785 Što se događa ako se dobije poruka dok posjetitelj spava? Kako proslijedi značku slijedećem posjetitelju ili vrtuljku (do koga je već došlo) ako spava? Mislio sam možda napraviti da spava u for petlji pa stalno provjerava treba li proslijediti značku dalje, ali čini mi se da bi to produljilo vrijeme spavanja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248818": {
+      "poster": "Avendo",
+      "content": "Nije mi jasno što točno misle pod značka ? Što mi to u kodu predstavlja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248953": {
+      "poster": "viliml",
+      "content": "@\"Janez\"#p248817 Možeš tako ako je bitno da odmah proslijedi. Ako nije prebitno, samo provjeri nakon spavanja. Možeš pozvati msgrcv sa zastavicom IPC_NOWAIT tako da ne čeka ako nema poruke, samo ti da poruku ak ju već imaš. Tako možeš proslijediti značku ako ti ne treba.",
+      "votes": {
+        "upvoters": [
+          "Krpa1 (Janez)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248956": {
+      "poster": "viliml",
+      "content": "@\"Avendo\"#p248818 Značka je apstraktni koncept, nema je u kodu kao takve.\n\nTrebalo bi u teoriji pojednostaviti intuitivno shvaćanje algoritma.\n\nPoruke su ti u ovo slučaju kao prenošenje značke.\n\nSlažem se da je malo glupo objašnjeno.",
+      "votes": {
+        "upvoters": [
+          "KiflaKiflic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249092": {
+      "poster": "Sulejman",
+      "content": "@\"viliml\"#p248785 Pa ti si genije.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249169": {
+      "poster": "Lyras",
+      "content": "sanity check: purgajte si message queue nakon svakog executanja koda. Sve poruke koje ste poslali a niste konzumirali OSTAJU ako ne pozovete msgctl (recimo ako vam se program sruši).\n\nt. čovjek koji više nema sanity nakon ne rađenja istoga.\n\nmožete to napraviti pomoću naredbe u bashu:\n\nipcrm -Q <key>",
+      "votes": {
+        "upvoters": [
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249182": {
+      "poster": "Vonj",
+      "content": "@\"Lyras\"#p249169 \n\nIli ako nemate nijednih drugih poruka na OS-u, mozete ipcrm --all da obrisete odmah sve.",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249189": {
+      "poster": "Krpa1 (Janez)",
+      "content": "@\"viliml\"#p248956 \n\nZnaci znacke nema nigdje u kodu? Ja sam shvatio da se u kodu treba slati poruka koja kruzi po svim procesima koja je zapravo znacka. I onda ako treba uci u KO, moze se samo ako je znacka trenutno u tom procesu, inace treba cekati dok znacka ne dode do tog procesa. Napravio sam tako i nije mi radilo, onda sam uklonio sav kod koji predstavlja kruzenje znacke i sad mi radi. Jedino sto mi se u ispisu dogada da se vrtuljak pokrene prije nego sto su svi sjeli. Pretpostavljam da je to zato sto sjedanje treba biti u KO...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249201": {
+      "poster": "viliml",
+      "content": "@\"Janez\"#p249189 Poruka predstavlja prijenos značke, poruka nije značka.\n\nKad proces primi poruku, poruke više nema, ali on ima značku.\n\nMoglo bi se reći da je poruka anti-značka, jer između vremena kad jedan proces pošalje poruku i drugi ju primi, dok poruka postoji, nitko nema značku...\n\nPoanta je ovo: \"značka\" je metafora, treba iskodirati *nešto* što se ponaša *kao* da neka značka kruži kroz procese.",
+      "votes": {
+        "upvoters": [
+          "Arbeit123",
+          "Krpa1 (Janez)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249250": {
+      "poster": "KiflaKiflic",
+      "content": "Kada bismo u vrtuljku trebali ispitivati da li je proces posjetitelj zavrsio? Prilikom primitka svake poruke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249256": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"KiflaKiflic\"#p249250 To bi ti proces posjetitelj trebao javiti vrtuljku. Ispitivanje budnosti procesa nije najsjajnija ideja, tako da to obično procesi javljaju glavnom procesu, ili imaš neki proces koji ih prati i komunicira s glavnim procesom.\n\nE sad, kako ćeš to točno implementirati ovisi o zadatku koji imaš. Sa značkom je malo teže, ali da se.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249298": {
+      "poster": "Daeyarn",
+      "content": "odakle najbolje krenut uciti za ovaj labos hehe",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249303": {
+      "poster": "viliml",
+      "content": "@\"Daeyarn\"#p249298 od osnovne škole",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "HARAmara (decko_sa_balkana)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249382": {
+      "poster": "Sulejman",
+      "content": "@\"viliml\"#p249303 kako si smiješan",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Baksuz",
+          "Cubi",
+          "Daeyarn",
+          "Jaster111",
+          "Nocna_smjena",
+          "Tinx (pingvin)",
+          "ZliDule",
+          "iva7740 (Mica Trofrtaljka)",
+          "pingvinka",
+          "tomekbeli420"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249411": {
+      "poster": "Lyras",
+      "content": "Kako ste vi mislili rješiti ovaj cjevovod za Lamporta? Ja sam mislio imati neki centralni čvor koji će primiti poruku od filozofa i i onda odašiljati svim ostalim filozofima. Kanio sam napraviti da svaki filozof prvo zatraži desni štapić, osim jednog ljevorukog, koji će zatražiti lijevi štapić, da spriječim deadlock. Postoji li neko elegantnije rješenje?\n\nEDIT: vidim da su oni napisali da nam filozofi uzimaju najprije lijevi, pa desni te onda jedu, što uništava ovaj cijeli moj deadlock solving. Neke ideje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249430": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Lyras\"#p249411 Samo napraviš dvije faze, jedna je rezervacija, druga je uzimanje. Rezervirati isti štapić može više filozofa, kad si uspiju rezervirati oba šalju istim protokolom poruku da uzimaju štapiće. Ne trebaš ovo gledati kao rezervaciju u doslovnom smislu, što bi poremetilo zadatak, nego više kao neku misao filozofa. Oni će svejedno uzeti lijevi pa desni štapić, ali će to napraviti tek kad budu mogli uzeti oba, što spada pod ovo što nije \"spomenuto\" u zadatku.\n\nDa je zadatak formuliran da to rade naslijepo, onda bi trebalo vraćati štapiće nakon nekog timeouta ili tako nešto.\n\nEDIT: S tim da s obzirom na to da je provjera dostupnosti štapića lokalna, možeš imati kružnu topografiju, dakle, 5 in i out cjevovoda, i onda jedan čvor treba komunicirati samo sa svojim lijevim i desnim susjedom. Ako trebaš globalni sat, imat ćeš kružnu komunikaciju, ako ne, imat ćeš 5 satova (za svaki štapić).",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249582": {
+      "poster": "Ardura (Maddy)",
+      "content": "Trebamo li riješiti 1.zad s procesima ili dretvama? U opisu zadatka su procesi, u pseudokodu dretve..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249583": {
+      "poster": "Nocna_smjena",
+      "content": "@\"Maddy\"#p249582 svaki proces ima barem jednu dretvu, svaka dretva mora imat svoj proces. Vise dretvi moze pripadat jednom procesu. Drugim rijecima, tvoj kod uvijek izvrsava dretva i ta dretva mora pripadat nekom procesu. Nemres imat proces bez barem jedne dretve (koja njemu pripada). Svaki proces ima svoju memoriju dok dretve unutar istog procesa dijele njegovu memoriju. Sa procesima se ovdje oce simulirati vise racunala tj komunikaciju izmedu njih",
+      "votes": {
+        "upvoters": [
+          "Cubi"
+        ],
+        "downvoters": [
+          "Ardura (Maddy)",
+          "joj (poni)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249599": {
+      "poster": "Retard00",
+      "content": "Jel kod pozivanja `msgrcv` uvijek samo jedan proces može uzet poruku?\n\nIsta tako i za `msgsnd`, ako više procesa odjednom želi poslat neku poruku dal se išta može zbrljat (osim redosljeda poruka koji će tad predpostavljam biti random)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249609": {
+      "poster": "Nocna_smjena",
+      "content": "@\"Retard00\"#p249599 za `msgrcv` da. Samo ce jedan posjetitelj uzet jednu poruku (pod uvjetom da on trazi takav tip poruke i da velicina poruke/strukture koja je zapisana u jezgri tj kernelu tj message queue-u manja ili jednaka od one velicine koju si definirao kao treci argument u `msgrcv` (forumula za izracunavanje velicine: `sizeof(buf) - sizeof(buf.mtype) + 1`). Takoder u message queue-u mozes imat vise poruka sa istim tipom i onda ce vise posjetitelja moc povuc te poruke iz message queue-a (koliko poruka sa trazenim tipom ima toliko posjetitelja ih moze povuc). `msgrcv` je po defaultu blokirajuci tako da ce ti se posjetitelj blokirati dok ne dobije poruku. Sto se tice `msgsnd` nemas frke. Sam rokaj (za slanje u queue koristis istu formulu za izracunavanje velicinu koju sam maloprije napisao). Redoslijed ti jedino ima utjecaja ako predas u `msgrcv` da trazis tip 0 (u tom slucaju se uzima najstarija poruka iz queuea). Ak trazis poruku s nekim tipom vecim od 0 onda se trazi najstarija poruka sa tim trazenim tipom.",
+      "votes": {
+        "upvoters": [
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249611": {
+      "poster": "viliml",
+      "content": "@\"Lyras\"#p249411 @\"BDSMićo\"#p249430\n\nJa sam se s time mučio nekoliko dana, ali onda sam shvatio.\n\nU samom zadatku nigdje ne piše niti 'c' od cjevovoda.\n\nNadalje, u zadatku piše \"Sve što u zadatku nije zadano, riješiti na proizvoljan način.\"\n\nU zadatku nije bilo zadano kako prenositi poruke (kontekst? implikacije? ne znam ja to), pa sam ja iskoristio redove poruka isto kao za prvi zadatak.\n\nAsistent nije niti gledao kod, dobio 10/10 bodova bez problema.",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249613": {
+      "poster": "viliml",
+      "content": "> @\"Nocna_smjena\"#p249609 (forumula za izracunavanje velicine: sizeof(buf) - sizeof(buf.mtype) + 1)\n\nZašto +1?\n\nIz manpagea:\n\n```\n       The msgp argument is a pointer to a caller-defined structure of the following general form:\n\n           struct msgbuf {\n               long mtype;       /* message type, must be > 0 */\n               char mtext[1];    /* message data */\n           };\n\n       The  mtext  field  is  an  array  (or other structure) whose size is specified by msgsz, a nonnegative integer\n       value.  Messages of zero length (i.e., no mtext field) are permitted.\n```\n\n`msgsz` je točno veličina polja `mtext`, što je točno `sizeof(buf) - sizeof(buf.mtype)`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249619": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"viliml\"#p249611 Isto bi s redovima poruka imao potencijalni deadlock kad su oni načelno implementirani kao cjevovodi. Problem deadlocka ne proizlazi iz implementacije nego iz formulacije problema.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249825": {
+      "poster": "BillIK",
+      "content": "Može li netko napisati dobar pseudokod za ovaj zadatak s putujucom znackom? Nije mi jasno def kako s njom baratati",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249897": {
+      "poster": "Lyras",
+      "content": "@\"viliml\"#p249611 je li vidio da si koristio red poruka, a ne cjevovod?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249911": {
+      "poster": "KiflaKiflic",
+      "content": "Prilikom svakog pokretanja zadatka s vrtuljkom mi je drugaciji ispis, ponekad je skroz neispravan. Jel to zato sto je red pun ili? Ne kuzim kako bi ocistio red, probao sam u terminalu s ipcrm i za sigint sam stavio msgctl no ne rijesava problem. 🙄",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249985": {
+      "poster": "viliml",
+      "content": "@\"Lyras\"#p249897 Nije opće gledao izvorni kod.",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250072": {
+      "poster": "[deleted]",
+      "content": "neki tips & tricks za ovaj labos? trebam li proc neko gradivo u knjizi ili su dosta dane pripreme?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250143": {
+      "poster": "KiflaKiflic",
+      "content": "Zadatak s vrtuljkom mi se ponekad ne ugasi kada su procesi gotovi, jel itko imao slican problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250155": {
+      "poster": "Baksuz",
+      "content": "Jel labos treba pisati u virtualki ili možemo i na OS-u domaćina?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250156": {
+      "poster": "Retard00",
+      "content": "@\"Baksuz\"#p250155 Ja u WSL-u sve radim (samo je bitno da je WSL verzija 2 jer verzija 1 ne podržava system V za redove poruka)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250212": {
+      "poster": "steker",
+      "content": "jel ja smijem u vrtuljku kad posjetitelj siđe s vrtuljka poslat poruku vrtuljku da je sišao, radim raspodijeljeni centralizirani protokol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250218": {
+      "poster": "Me1 (Me)",
+      "content": "prepourka u kojem jeziku radit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250225": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"steker\"#p250212 yes",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250226": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Me\"#p250218 Kojeg god najviše znaš, obično su C(++) ili Python u igri",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250273": {
+      "poster": "BillIK",
+      "content": "Jel smijemo imati više redova poruka? Imam ovaj sa značkom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250305": {
+      "poster": "Retard00",
+      "content": "Jel ima neko neki pseudokod za 2. zad, lamport?",
+      "votes": {
+        "upvoters": [
+          "Lyras",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250318": {
+      "poster": "steker",
+      "content": "u prvom zad kako fino randomizirat ovaj sleep u c-u, metnula sam srand(getpid()) za svaki proces, al opet nekako dolaze skoro isti brojevi u isto vrijeme na vrtuljak, eventualno ako se jedna/dvije znamenke promjeni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250324": {
+      "poster": "tomekbeli420",
+      "content": "@\"steker\"#p250318 bojim se da onda stalno dobiveš iste process ID-jeve\n\nobično je kuharica staviti ``srand(time(NULL));``, ali da ne bi svi procesi generirali iste brojeve treba nekako i to riješiti\n\nstack overflow predlaže ``srand(getpid() * time(NULL));``",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250487": {
+      "poster": "pingvinka",
+      "content": "kak da obrišem poruke iz reda? ili mozda obrisat cijeli red? jer nakon 1 pokretanja programa ostanu neke poruke valjda u redu i onda iduci put kad pokrenem program je sve nesto krivo i do sad mi je jedino radilo \"ugasi upali virtualku\" (probala sam ipcrm -Q id, al nakon tog se vise ne zele slat poruke)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250572": {
+      "poster": "Baksuz",
+      "content": "Kako bi naš vrtuljak trebao znati kojem procesu poslati poruku sjedni? Ako npr. vrtuljak radi msgrcv od posjetitelja za poruke \"želim sjest\", kako bi on trebao znat koji proces je poslao tu poruku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250577": {
+      "poster": "viliml",
+      "content": "@\"Baksuz\"#p250572 identitet procesa može biti dio poruke",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250582": {
+      "poster": "Baksuz",
+      "content": "@\"viliml\"#p250577 što misliš pod identitet?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250588": {
+      "poster": "viliml",
+      "content": "@\"Baksuz\"#p250582 Tko je. Koji je on proces. Na primjer redni broj, ili PID ili whatever.",
+      "votes": {
+        "upvoters": [
+          "Baksuz"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250609": {
+      "poster": "carrieb",
+      "content": "smiju li procesi (za putujucu znacku) komunicirati jednim redom poruka ili mora svaki imati svoj red?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250614": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"carrieb\"#p250609 Dobra je praksa koristiti različite redove. U slučaju gdje svi koriste isti red svaki proces bi morao uzeti poruku, provjeriti je li za njega, a ako nije, vratiti je u red. Ovo narušava raznorazna svojstva i redoslijed poruka, a potencijalno ćeš imati deadlock (stohastički).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250675": {
+      "poster": "Daeyarn",
+      "content": "@\"BDSMićo\"#p250614 koliko bi redova poruka onda trebalo biti u zadatku s putujucom znackom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250683": {
+      "poster": "Retard00",
+      "content": "@\"Daeyarn\"#p250675 Ja sam samo jedan koristio",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250695": {
+      "poster": "Ardura (Maddy)",
+      "content": "@\"Daeyarn\"#p250675  ja ih imam 9, povezala sam \"ukrug\" po id-u sve dretve. Ne znam je li to ok kad imamo značku da ona samo ide u krug uvijek istim redoslijedom tho",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250716": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Daeyarn\"#p250675 Idk, ovisno o shemi, minimalno n in-out redova (ciklička topografija), ali može i [imath]n \\choose 2[/imath] (svi povezani sa svima).",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250723": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Maddy\"#p250695 mislim da je tako i zamišljeno da se napravi",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250787": {
+      "poster": "Rene",
+      "content": "Nekoliko pitanja za putujuću značku:\n\nJel' značka kruži samo između visitora, vrtuljak je nezavisan i samo čeka poruke \"Želim na vrtuljak\"?\n\nJel' uredu za ključeve reda poruka koristit npr index visitora, tako da je jednostavno dohvatit red poruka nekog visitora?\n\nKako bi vrtuljak trebao znat od kojeg visitora mu je došao zahtjev za sjest, jel to napišem u poruci pa vadim iz charova ili preko tipa poruke?",
+      "votes": {
+        "upvoters": [
+          "Cubi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250836": {
+      "poster": "flicka",
+      "content": "može neko pojasniti kako koristit cjevovod u zadatku s filozofima i kao radit prema protokolu Ricarta i Agrawala",
+      "votes": {
+        "upvoters": [
+          "Portus",
+          "ZliDule",
+          "matej1423"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250842": {
+      "poster": "SuperSjajan3",
+      "content": "Jel imao neko problem da mu msgrcv ne zablokira proces? Dok vrtuljak radi, ostali procesi mi se samo izvrte dalje u for petlji i zavrse bez da su bile uopce na vrtuljku. msgflag mi je postavljen na 0.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250857": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "Koja je razlika između key-a i identifikatora prilikom inicijalizacije reda poruka?\n\nJel key označava konkretan red poruka, a identifikator je pristupna točka tom redu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250858": {
+      "poster": "steker",
+      "content": "znaci filozofe bi isto smjeli rijesiti preko reda poruka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250869": {
+      "poster": "Lyras",
+      "content": "@\"steker\"#p250858 ja sam rješio pomoću cjevovoda tako da i-ti filozof ima svoj read otvor i write otvore (i + 1)-og i (i-1)-og filozofa. Piše na te otvore, a poruke mu dolaze na njegov otvor. Imam \"direction\" zastavicu u poruci da se zna je li neku pojedinu poruku primio od lijevog ili od desnog filozofa. Deadlock sam rješio tako da ako filozof nema oba štapića, on briše obje svoje poruke iz 2 priority queua (lijeva i desna ruka) i šalje poruku izlazak(i, Ti), iako nije jeo. Samo ako su mu obje njegove zahtjev(i,Ti) poruke na vrhu priority queuea on jede.\n\n>! Da, želim počiniti suicid nakon ovog labosa, hvala na pitanju.",
+      "votes": {
+        "upvoters": [
+          "Retard00",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Bucc (Olive Oil)",
+          "iva7740 (Mica Trofrtaljka)",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250888": {
+      "poster": "carrieb",
+      "content": "@\"Rene\"#p250787 \n\nja sam u potpunosti zanemarila vrtuljak, nema bas neku svrhu ako koristimo putujucu znacku, eventualno da mu proces koji zadnji sjedne na vrtuljak posalje poruku da su svi spremni (ako bas zelis po uputama napraviti i proces vrtuljak)\n\nmislim da si otezavas stvar npotrebno na druge nacine, samo salji znacku kroz posjetitelje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250921": {
+      "poster": "flicka",
+      "content": "@\"Lyras\"#p250869 je li lakse s imenovanim ili neimenovanim cjevovodima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250924": {
+      "poster": "Lyras",
+      "content": "@\"flicka\"#p250921 ja sam napravio s neimenovanim. Mislim da nebi bilo lakše s imenovanim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250966": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "3 sata briješ da ti rješenje  ne radi, razbijaš glavu sa svim mogućim fixevima, i onda skužiš da nisi obriso redove poruka nakon prvog pokretanja.\n\n>! Sad radi\n\n\n>! 😃",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Lyras",
+          "steker"
+        ]
+      }
+    },
+    "250985": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "kakav vam je izlaz s vrtuljkom sa značkom? meni idu uvijek po redu 0, 1, 2, 3 pa 4, 5, 6, 7 i tak tri puta. nisam siguran jel treba nekad preskočit nekog il ne",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250990": {
+      "poster": "viliml",
+      "content": "@\"Daeyarn\"#p250675 @\"BDSMićo\"#p250716 \n\nČak I ako su svi povezani sa svima, gotovo uvijek je dovoljno N redova.\n\nSvatko čita iz svojeg i piše u onaj koji pripada onom komu šalje.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251000": {
+      "poster": "Retard00",
+      "content": "Kakva pitanja pitaju u terminima labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251029": {
+      "poster": "Rene",
+      "content": "Može pomoć s Ricart-Agrawalom? Kako vam izgledaju poruke koje šaljete u cjevovod?  Ne kužim baš kako samo preko string poruka ovo ostvarit bez da bude užasno naporno",
+      "votes": {
+        "upvoters": [
+          "matej1423"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251043": {
+      "poster": "Lyras",
+      "content": "@\"Lyras\"#p249169  @\"Precious Bodily Fluids\"#p250966 kolega, pa sunce mu jebem haha (i know your pain)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251126": {
+      "poster": "viliml",
+      "content": "@\"Rene\"#p251029 Protip: ne moraju biti string poruke. Može biti doslovno bilo što. Možeš imati intove i doublove i structove i što god ti srce želi, dokle god su trivijalno memorijski kopijabilni (ne sadrže pointere). Samo trebaš njihovu zajedničku veličinu (+ eventualni alignment) predati kao msgsz argument.\n\nNe znam zašto je dokumentacija takvo sranje (`char mtext[1]` lmao), System V i POSIX developeri mi se čine kao teži autisti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251127": {
+      "poster": "viliml",
+      "content": "@\"Rene\"#p251029 Možeš poruke scanfati iz tekstualnog cjevovoda, ili možeš imati binarni cjevovod pa njime slati podatake koje hoćeš. Samo bi neke flagove trebalo namjestiti. Ili je možda čak po defaultu read i write preko file descriptora uvijek binarni i tek kad se opena i radi preko FILE pointera onda je tekstualni ili binarni? Nisam siguran.",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251197": {
+      "poster": "flicka",
+      "content": "@\"Lyras\"#p250869 Kak provjeris dal su oba njegova zahtjeva na vrhu? i kak brises obje poruke iz 2 priority queua?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251214": {
+      "poster": "Lyras",
+      "content": "@\"flicka\"#p251197 koristio sam C++. Napravio sam klasu Message i definirao operatore <, > i == nad tom klasom. Onda sam iskoristio std::set za dodavanje u pojedini red (metoda seta \"begin\" daje min, odnosno \"rbegin\" daje max vrijednost unutar seta). Onda sam koristio metodu seta \"erase\" da izbrišem pojedini element.",
+      "votes": {
+        "upvoters": [
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251216": {
+      "poster": "Ardura (Maddy)",
+      "content": "@\"Olive Oil\"#p250985 I meni, tako treba",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251361": {
+      "poster": "Me1 (Me)",
+      "content": "@\"Lyras\"#p250869 jesi siguran da se može to tako, kaj nije da ovako fiksiraš svakog filozofa na jedno mjesto za stolom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251411": {
+      "poster": "Lyras",
+      "content": "@\"Me\"#p251361 I da i ne. To se može realno i protumačiti kao \"Došao je nepoznati filozof na mjesto i i jede\", a kada ode može se protumačiti kao \"Otišao je neki nepoznati filozof x i sada misli\".",
+      "votes": {
+        "upvoters": [
+          "Me1 (Me)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251421": {
+      "poster": "Rene",
+      "content": "@\"Lyras\"#p251411 \n\n@\"Me\"#p251361\n\nZar i ne bi trebali bit fiksirani da susjedi ne mogu istovremeno jest?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251428": {
+      "poster": "Rene",
+      "content": "@\"Rene\"#p251421 Tj. jel treba omogućit da maksimalan broj filozofa jede istovremeno, ili samo jedan? Ovaj dio s prilaženjem stolu me zbunio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251444": {
+      "poster": "Lyras",
+      "content": "@\"Rene\"#p251428 Filozofi i mjesto na stolu nemaju ikakve veze jedno s drugim. Filozof k i filozof j su zamjenjivi. Omogućuješ da maksimalni broj filozofa jede istovremeno. Prilaženje stolu je potpuno nebitno",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251472": {
+      "poster": "ana (anci)",
+      "content": "Imam dva pitanja (vjv su glupa al eto):\n1. koliko redova poruka trebam imati u centraliziranom protokolu u vrtuljak zadatku (tipa dal svaki posjetitelj treba imati svoj il sta?)\n2. kako vrtuljak zna da su svi procesi zavrsili, tj kad bi on trebao ispitivati ako mu je u red poruka dosla poruka o zavrsetku posjetitelja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251474": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @\"anci\"#p251472 koliko redova poruka trebam imati u centraliziranom protokolu u vrtuljak zadatku (tipa dal svaki posjetitelj treba imati svoj il sta?)\n\nKoliko god ti treba, najmanje će to biti in-out po posjetitelju.\n\n> @\"anci\"#p251472 kako vrtuljak zna da su svi procesi zavrsili, tj kad bi on trebao ispitivati ako mu je u red poruka dosla poruka o zavrsetku posjetitelja?\n\nProcesi mu dojave ili možda ima informaciju nekog objekta o stanju procesa. Nakon što završi s vrtnjom treba čekati da se svi skinu, pa tad ispituje.",
+      "votes": {
+        "upvoters": [
+          "ana (anci)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251513": {
+      "poster": "Baksuz",
+      "content": "Jel zna netko kako bismo mogli riješiti lamporta za 2. zadatak? Kakvu vrstu strukture bi trebali koristiti? Jel koristimo redove poruka ili cjevovod?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251523": {
+      "poster": "Daeyarn",
+      "content": "@\"Baksuz\"#p251513 \n\nmislim da bi trebalo koristiti cjevovod za drugi zadatak, bar tak pise za b)\n\n![](assets/2021-11-08/00031.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251525": {
+      "poster": "Lyras",
+      "content": "@\"Lyras\"#p250869 kolega, lamport zapravo uistinu rješava deadlock. Ne trebaju nikakvi random sleepovi. Ako slijediš ispravno algoritam, doći ćeš do toga da će svi recimo imati u svom desnom redu svoju poruku na prvom mjestu, no razlika će se dogoditi upravo između 0. i 4. (ili 1. i 5., ovisi odakle započinješ brojanje) filozofa. Naime, oni će si međusobno poslati zahtjeve (istovremeno, po njihovim satovima), no prevladati će 0. filozof, jer on ima manji id, (odnosno i). Napraviš while petlju koja će biti istinita sve dok se oba zahtjeva filozofa ne pojave na vrhu njegovog reda. On čita poruke svojih susjeda sve dok se taj uvjet u while petlji ne ispuni. Ako uđe u lock u readu, nema veze, jer će zasigurno primiti poruku izlazak svojeg susjeda eventualno. Postupak jedenja se dogodi tek onda kada ima oba štapića na raspolaganju i isključivo samo tada.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251526": {
+      "poster": "Baksuz",
+      "content": "@\"Daeyarn\"#p251523 a to sam i pretpostavio, al ne vidim gdje ih uopće koristim. Btw, jel se može implementirati zadatak tako da glavni proces provjerava cjevovode za tih 5 štapića (u koje procesi koji dijele taj štapić šalju zahtjeve), te onda da glavni proces šalje poruke onom procesu koji smije koristiti taj štapić (ima manji Ci od susjeda)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251530": {
+      "poster": "Ardura (Maddy)",
+      "content": "Koristim mkfifo za cjevovode i imam problem jer mi nijedan proces ne može krenuti pisati dok na drugoj strani netko ne krene čitati. Mogu li pri pokretanju programa odlučiti tko će prvi pisati/čitati od filozofa  ili ima neki bolji način?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251573": {
+      "poster": "ZliDule",
+      "content": "Moraju li nam oba zadatka biti skroz funkcionalna da zadovoljimo uvjet za izlazak na ispit? Malo mi je nejasno ovo što im piše na stranici labosa, kažu:\n\n\"Uvjet za izlazak na ispit: ostvareni su SVI zadaci obje vježbe, postavljeni su svi izvorni tekstovi programa u sustav ferko i predane su sve vježbe, tj. sve su vježbe pokazane nastavniku u terminima labosa.\"\n\nOstavlja li to mogućnost da dođem tamo s polufunkcionalnim filozofima, pokupim neke polovicne bodove i ostvarim izlazak na ispit?",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "feudalac",
+          "matej1423"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251649": {
+      "poster": "jobi (azex)",
+      "content": "@\"Maddy\"#p251530 ukljuci zastavicu no_delay pri otvaranju za citanje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251688": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "Kako je izgledalo ispitivanje? Jel problem ako dobro implmentiram algoritam putujuce znacke, al sam hackovo vrtuljak? Vrtuljak mi nije zaseban proces nego ga simuliram brojem zauzetih mjesta zapisanih u datoteci... Toj datoteci pristupaju procesi visitori kad imaju znacku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251690": {
+      "poster": "viliml",
+      "content": "@\"Precious Bodily Fluids\"#p251688 Mislim da je ok koristiti falj jer to nije specificirano kako treba, ali vrtuljak ipak ima svoju ulogu.\n\nTko ti ispisuje \"vrtuljak počinje\" i \"vrtuljak završava\"? Kako posjetitelji znaju kad se vrte i kad stoje?\n\nNe vjerujem da se zbilja uspio riješiti zadatak bez vrtuljka.\n\nShvaćaš da se onaj pseudokod odnosi na sve, ne samo na centralizirani? Značka se koristi samo za pristup dijeljenoj memoriji (kod tebe fajlu), sve ostalo su poruke. Osim poruka za sinkronizaciju kritičnog odjeljka imaju te poruke opisane u pseudokodu, sve treba zajedno",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251732": {
+      "poster": "Daeyarn",
+      "content": "@\"Maddy\"#p251216 \n\novo je ok izlaz onda za putujucu znacku? \n\n![](assets/2021-11-09/00009.png)\n\n![](assets/2021-11-09/00010.png)",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251733": {
+      "poster": "Daeyarn",
+      "content": "@\"Baksuz\"#p251526 e ne znam, nisam jos dosao do filozofa 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251735": {
+      "poster": "viliml",
+      "content": "@\"Olive Oil\"#p250985  @\"Daeyarn\"#p251732 Ja bih dodao neki random sleep na početku da ne budu uvijek baš po redu",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251772": {
+      "poster": "gad_gadski",
+      "content": "Za ove s neparnim jmbagom, vezano za cjevovod i protokol Ricarta i Agrawala, sto nije po tom protokolu da će moć u kritični odsječak filozofi ulazit samo jedan po jedan? Jer po onim njihovim pravilima za taj protokol u prezi proces može uć u krit. ods. samo kad dobije odgovore od svih ostalih procesa, a dok je u kritičnom odsjecku, proces ne može poslati odgovor na zahtjeve drugih procesa. Ako sam ja dobro shvatio, to znači da ako je jedan protokol u kritičnom odsječku (jede), i ako neki drugi proces želi u K.O., on će morati čekati ovog da završi pošto čeka njegov odgovor.",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251775": {
+      "poster": "Rene",
+      "content": "@\"gad_gadski\"#p251772 to i meni nije bilo jasno, pa sam napravio fiksno da sjede za stolom i cekaju potvrdu samo od svojih susjeda\n\nNe znam jel tako zamisljeno al s obzirom da pise da napravis kako zelis valjda je okej, nema deadlocka i nikad ne jedu dva susjeda istovremeno",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251818": {
+      "poster": "Spuk",
+      "content": "Moze netko napisat kako izgleda ispitivanje. Gore je netko napisao da se kod nije ni gledo pa sta onda ispituju tih pol sata?",
+      "votes": {
+        "upvoters": [
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251848": {
+      "poster": "KiflaKiflic",
+      "content": "Za protokol Ricarta i Agrawala,  povecavamo li logicki sat ako filozof primi odgovor? Ili samo na primitak poruke zahtjev?",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251874": {
+      "poster": "Haki",
+      "content": "Jel se sigurno smiju radit labosi u Pythonu? Cini mi se da je poprilicno lakse od C-a za kojeg su pisane upute",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251915": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @\"Haki\"#p251874 Cini mi se da je poprilicno lakse od C-a za kojeg su pisane upute\n\nDa\n\nIonako je rješenje u pythonu samo omotani C kod, ispod haube ti je isto, samo imaš više tog implementirano za lakoću korištenja",
+      "votes": {
+        "upvoters": [
+          "Haki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252104": {
+      "poster": "KiflaKiflic",
+      "content": "Mogu li djeca (filozofi) komunicirati medusobno preko pipelinea ako u parentu stvorim sve pipovei samo posaljem fd-ove? I jel moramo zatvoriti opisnike u pojedinom filozofu prije nego mu saljemo? Oce li to zatvoriti te opisnike i za druve childove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252139": {
+      "poster": "Daeyarn",
+      "content": "ima netko kome je burza grupa jos uvijek zatvorena za sljedeci tjedan?",
+      "votes": {
+        "upvoters": [
+          "123 (FERella)",
+          "Baksuz",
+          "Ryder (Pepper)",
+          "blablajar",
+          "leab",
+          "magla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252146": {
+      "poster": "KiflaKiflic",
+      "content": "Ako mi jedna vjezba ne radi ispravno do kraja, mogu li dobiti neke bodove za tu vjezbu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252148": {
+      "poster": "ana (anci)",
+      "content": "Moze li se u ovom problemu filozofa pretpostaviti da svaki filozof ima \"svoje mjesto za stolom\" i ne moze sjesti na neko drugo mjesto. Tipa ako sokrat i aristotel sjede jedan do drugoga, nikada nece moci jesti u isto vrijeme jer im treba isti stapic, ili se treba omoguciti da ako je prazan stol i oboje zele jesti da mogu (nece sjediti jedan do drugoga). Cini mi se da ta druga opcija dosta komplicira stvari pa zato pitam.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252149": {
+      "poster": "KiflaKiflic",
+      "content": "@\"anci\"#p252148 Moze se pretpostaviti  jer sve sto nije definirano mozes rijesiti na proizvoljan nacin",
+      "votes": {
+        "upvoters": [
+          "ana (anci)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252151": {
+      "poster": "Me1 (Me)",
+      "content": "Sad imao ispitivanje, prvo se pokrene program i malo se komentira ispis, zatim se ide po kodu gdje sam objasnjavao kaj sam di radio i cijelo vrijeme nqbaci neko teorijsko pitanje(sve iz prezentacije 3.predavanje)",
+      "votes": {
+        "upvoters": [
+          "KiflaKiflic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252155": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"anci\"#p252148 Iako ne izričito, problem 5 filozofa (ili generalnije Dining philosopher problem) se i definira tako. Problem se obično opisuje kao da ti filozofi uvijek sjede ali iz nekog razloga trebaju 2 vilice da bi jeli. Problem je inače lakši za riješiti ako filozofi mogu birati gdje će sjesti.",
+      "votes": {
+        "upvoters": [
+          "ana (anci)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252158": {
+      "poster": "Jaster111",
+      "content": "Ispitivanje u 12 danas. Prolazi se kroz jedan i drugi kod i pitao me samo da objasnim kod. Pokrenuli smo kod i za jedan i za drugi zadatak i koliko sam shvatio nije ih pretjerano briga (barem ovog asistenta) za to kolko je ispis točan, dokle god ti je ideja iza programa bila dobra. Tipa meni u drugom zadatku nije baš bio točan ispis skroz, ali mi je rekao da je to samo vjerojatno jer sam zaboravio clock postavit na nekom dijelu. \n\nŠto se tiče teorijskih pitanja: zašto koristimo redove, koja je glavna razlika izmedu lamporta i agrawale i to je manje više to.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252184": {
+      "poster": "ana (anci)",
+      "content": "@\"Jaster111\"#p252158 se kodovi trebaju skinuti direkt s ferka ili ne? zanima me mogu li jos nesto popraviti prije labosa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252194": {
+      "poster": "gad_gadski",
+      "content": "Gdje se predaju datoteke? Na ovom ferku sam prevrito svaku opciju i nisam nasao nista gdje bih mogao uploadat bilo sto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252195": {
+      "poster": "KiflaKiflic",
+      "content": "@\"gad_gadski\"#p252194 Domace zadace",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252197": {
+      "poster": "gad_gadski",
+      "content": "@\"KiflaKiflic\"#p252195 Pomoc molim\n\n![](assets/2021-11-10/00007.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252201": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"gad_gadski\"#p252197 Evo kolega sad cemo hackovati ferko i omoguciti ti pristup, ili mozda bolje da posaljes mail nekom s predmeta?",
+      "votes": {
+        "upvoters": [
+          "gad_gadski",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252202": {
+      "poster": "Jaster111",
+      "content": "@\"anci\"#p252184 ma mozes s kompjutera pokazat, nikakav download",
+      "votes": {
+        "upvoters": [
+          "KiflaKiflic",
+          "ana (anci)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252275": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@\"ZliDule\"#p251573 ja danas isao, vrtuljak mi je radio, filozofe nisam bas rijesio dobro jer deadlockaju nakon nekog vremena, ali sreca rekao mi je da prekinem ispis (savjet: ispisuj dosta toga da mu se ne da to gledat). Objasni po kodu sve, pricaj stalno, ne daj da dode do rijeci. Ja dobio 8/10. Takoder pise da moras predat labos najkasnije 24 sata prije prijavljenog termina, ja sam kasnio i nije bio problem.",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "ZliDule",
+          "indythedog",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252299": {
+      "poster": "branimir1999",
+      "content": "kako ste napravili cjevovode? Dva cjevovoda (read/write) po susjedna filozofa? Ovo s cjevovodima se cini nepotrebno komplicirano",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252343": {
+      "poster": "123 (FERella)",
+      "content": "Ako drugi zadatak ne znamo riješit mžemo li doć na labos za pola bodova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252345": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @\"branimir1999\"#p252299 Ovo s cjevovodima se cini nepotrebno komplicirano\n\nje a kak bi drukčije riješio komunikaciju između procesa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252346": {
+      "poster": "jobi (azex)",
+      "content": "@\"branimir1999\"#p252299 ja sam ima ukupno 16 cjevovoda, svaki ima r/w za lijevog i desnog susjeda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252387": {
+      "poster": "branimir1999",
+      "content": "Radim Lamportov algoritam i cini mi se da sam ga dobro implementirao, ali mi zakoci algoritam s 5 filozofa. Kada stavim 3 filozofa, onda mi prode par rundi i onda zablokira. Cime ovo moze biti uzrokovani? Ako prvo provjeravam lijevi cjevovod, pa desni, je li moguce da je zapeona lijevom cjevovodu koja nikada nece doci ili se radi o necem drugom ovdje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252533": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"branimir1999\"#p252387 Imaš deadlock i to je upravo primjer koji ilustrira mogućnost toga uz sinkronizaciju, skrolaj gore jer smo pričali o rješenjima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252627": {
+      "poster": "ana (anci)",
+      "content": "Meni se u lamportu dogada deadlock zato sto zapne na read funkciji jer nije non blocking. Jel zna netko kako napraviti da ili bude non blocking ili da mogu provjeriti jel postoji nesto u cjevovodu jer ja vec sat vremena googlam i nisam s nicim jos to uspjela rijesiti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252646": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"anci\"#p252627 https://www.geeksforgeeks.org/non-blocking-io-with-pipes-in-c/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253203": {
+      "poster": "Baksuz",
+      "content": "Što ako filozof n šalje zahtjev filozofu lijevo od sebe, a ovaj je u fazi razmišljanja? Hoće li naš filozof n morati čekati da lijevi filozof poželi jesti da bi mu ovaj poslao odgovor? Jer koliko sam skužio za vrijeme razmišljanja filozofi nemaju interakciju jedni a drugima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253219": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Baksuz\"#p253203 Upravo u vremenu razmišljanja mu i jedino može odgovoriti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253222": {
+      "poster": "Baksuz",
+      "content": "@\"MićoTechTips\"#p253219 što nije da je vrijeme razmišljanja kao sleep funkcija, a dio kada jede je zapravo dio kada se  bori za svoje štapiće i naposljetku jede? Možda sam ja krivo shvatio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253224": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Baksuz\"#p253222 Ne znam kako si to shvatio jer to uopće nije definirano u zadatku, to se rješava proizvoljno. Iz perspektive sustava, vrijeme razmišljanja je idleanje, no to može biti i jedenje. Meni je logičnije da kad jedeš ne odgovaraš na nikakve zahtjeve za vilicama, a filozofiranje je lako prekinuti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253243": {
+      "poster": "tomekbeli420",
+      "content": "@\"Baksuz\"#p253203 da tak sam ja riješio, imao sam Ricarta i Agrawalu\n\nDakle filozof šta radi je\n\nspava (misli)\n\nKad odspava svoje, onda gleda koje poruke koje je dobio i reagira na njih (reagira kao da on još ne želi uzimati štapće/ulaziti u kritični odsječak.)\n\nTek kad nema nikakvih poruka za njega, e tek onda on odluči poslati zahtjev susjednim filozofima da hoće štapiće (hoće u KO), i onda čeka poruke\n\nKad mu se osiguraju uvjeti za ulazak u KO onda opet odspava (dakle baš sleep, ne gleda šta mu dolazi u porukama)\n\nNakon izlaska obavi sta treba za izlazak (za Ricarta i Agrawalu salje odgovore samo onima koji cekaju na njega)\n\nI onda opet na početak (spavanje/razmišljanje)\n\nI onda na početak (ope",
+      "votes": {
+        "upvoters": [
+          "Baksuz",
+          "Valentino"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253244": {
+      "poster": "Baksuz",
+      "content": "@\"tomekbeli420\"#p253243 e tako sam i ja mislio riješit. Hvala na info.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253675": {
+      "poster": "[deleted]",
+      "content": "na koji način ste provjerili da treba ubit vrtuljak proces? (centralni čvor varijanta)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253677": {
+      "poster": "tomekbeli420",
+      "content": "@\"Todd Chavez\"#p253675 sa ``wait(NULL)`` sačekaš da proces dijete (posjetitelj u kontekstu ovog zadatka) završi.\n\nPozoveš to onoliko puta koliko ima djece. Nakon što mu svi procesi djeca završe, tek onda završi glavni proces. Imaš primjere korištenja [ovdje](http://www.zemris.fer.hr/predmeti/os/pripreme/upute/visezadacnirad.html)",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253682": {
+      "poster": "Baksuz",
+      "content": "Na koji način ste obavili sinkronizaciju između 2 susjedna filozofa? S obzirom da samo 2 filozofa dijele štapić u određenom trenutku, imam osjećaj da je redundatno da stalno šalju zahtjeve, pa odgovore pa izlazak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253683": {
+      "poster": "tomekbeli420",
+      "content": "@\"Baksuz\"#p253682 ako ćeš sinkronizirati dva susjedna to nije dobro jer ti se može dogoditi stanje u kojem svaki filozof drži jedan štapić i ne može do drugog, što je deadlock. Da bi neki filozof išta napravio sa bilo kojim štapićem pokraj sebe, mora dobiti odobrenje od **oba** susjedna filozofa.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254197": {
+      "poster": "[deleted]",
+      "content": "moze netko pojasnit ovaj dio s filozofima, procitao sam o Lamportu, ali mi nije jasno kakve to veze ima s cjevovodima te kako se to ukljucuje u cijelu pricu? pogotovo jer se u udzbeniku cijelo vrijeme spominju redovi poruka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254454": {
+      "poster": "anon00",
+      "content": "Moze li mi tko reci je li ovo okej ispis za Ricarta i Agrawalu?\n\n![](assets/2021-11-16/00001.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254639": {
+      "poster": "flicka",
+      "content": "moze neko napisat šta ispituju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254700": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@\"flicka\"#p254639 \n\nmalo po kodu, i razlika izmedu ricarta i agrawala  i lamporta te o tim algoritmima malo ispita i tjt",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254746": {
+      "poster": "Daeyarn",
+      "content": "@\"endyyyy\"#p254700 jel veliki problem/jel provjeravaju \"tocnost\" implementacije algoritma u kodu ili nije velik naglasak na to(za cjevovode)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254775": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Daeyarn\"#p254746 Što znači točnost? Ako ti rješenje nije fer to nije problem. Ako ti je rješenje konceptualno krivo onda da, skidaju za to, čak i ako ti se čini da dobro radi. Npr. meni su prošle godine skinuli bod za jedan previd. Sve je to radilo ali je konceptualno bila greškica",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254779": {
+      "poster": "Daeyarn",
+      "content": "@\"MićoTechTips\"#p254775 maa ovo ako je konceptualno kriv(ili polukriv) jedan zadatak, jel se dogodi da samo skinu bodove za taj zadatak ili ne priznaju vjezbu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254781": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Daeyarn\"#p254779 Eh to ovisi koliko je krivo ali definitivno ne poništavaju vježbu. Ne mogu govoriti izvan vlastitog slučaja, nit imam neki uvid kako su drugi riješili vježbu, ali bili su objavili tablice s ljudima koji im se trebaju javiti i otprilike je to bilo 2-3.5/5, ne tipa 0/5. 5 bodova jer su gledali zasebno zadatak po zadatak.\n\nJa se, npr., za takvu grešku usprkos koje stvar naizgled rade nisam morao javiti na uvide, to sam otišao sam čisto da vidim di sam sjebao.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254787": {
+      "poster": "Daeyarn",
+      "content": "@\"MićoTechTips\"#p254781 aha kuzim, hvala ti\n\nbtw jos jedno pitanje, jel mozemo pokrenut na svom laptopu kod ili moramo na racunalu u ucionici?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254788": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Daeyarn\"#p254787 Ne bih znao, oni su za nas to sve izvrtili, vjerujem da je sad drukčije. Poznavajući osoblje na tom predmetu trebali bi dati da se izvrti i na vlastitom računalu. Pogotovo kad ta na faksu možda ni nemaju instalirane sve potrebno za izvršavanje.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254794": {
+      "poster": "Daeyarn",
+      "content": "@\"MićoTechTips\"#p254788 ok, hvala ti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254863": {
+      "poster": "gad_gadski",
+      "content": "U kojoj ucionici je predaja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254866": {
+      "poster": "steker",
+      "content": "@\"gad_gadski\"#p254863 pise ti na ferku, pretpostavljam neki pclab",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254873": {
+      "poster": "anon00",
+      "content": "@\"gad_gadski\"#p254863 Meni je PCLAB2, to je C zgrada, prizemlje, u sredini",
+      "votes": {
+        "upvoters": [
+          "gad_gadski"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262654": {
+      "poster": "[deleted]",
+      "content": "zna netko zas bi mi ispis izgledao ovako:\n```\n3. filozof poslao: odgovor 3 72. filozof primio: zahtjev 1 1\n\n4. filozof poslao: odgovor 4 8\n3. filozof poslao: odgovor 3 7\n4. filozof poslao: odgovor 4 82. filozof primio: zahtjev 3 3\n\n4. filozof poslao: odgovor 4 8\n3. filozof primio: odgovor 0 5\n2. filozof primio: zahtjev 4 44. filozof poslao: odgovor 4 8",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262667": {
+      "poster": "Jokke",
+      "content": "@\"Todd Chavez\"#p262654 Ak mislis na newline mozes sa lockovima osigurat print",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264159": {
+      "poster": "aerius",
+      "content": "Pozdrav,\n\nšto se tiče ricard agrawala u zad s cjevovodima, da bi procesi mogli komunicirati cjevovodima oni moraju bit u nekakvoj roditelj-dijete vezi, jel to znači da bi trebao u mainu pozvati fork funkciju i da onda to dijete (odnosno filozof) stvori sebi dijete i to dijete onda sebi dijete itd. jer to mi se čini malo glupavo, ili bi main trebo bit kao neki centralni čvor preko kojeg svaki filozof komunicira s ostalim filozofima, odnosno susjedima? Ili sam skroz sve fulao?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264168": {
+      "poster": "MT09 (mt09)",
+      "content": "@\"aerius\"#p264159 Preporuka: koristi imenovane cjevovode. Rješenje je jednako dobro, a puno je lakše raditi s njima jer ne procesi ne moraju biti u srodstvu",
+      "votes": {
+        "upvoters": [
+          "aerius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264227": {
+      "poster": "aerius",
+      "content": "a kako bi inače stvaro cjevovode da radim s običnim cjevovodima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "jobi (azex)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271603": {
+      "poster": "bjunolulz",
+      "content": "@\"mt09\"#p264168 stavim O_NONBLOCK ili O_NDELAY u open() i svejedno mi hanga na citanju. znas li ti ili neko drugi fix?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271877": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "jel oni ispituju ista za 0 bodova ako nadoknadujemo prvu vjezbu ili moramo nes znat za 0 bodova",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272182": {
+      "poster": "rolotex (brr)",
+      "content": "Pitaju i za 0\n\n@\"Peter Jordanson\"#p271877",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

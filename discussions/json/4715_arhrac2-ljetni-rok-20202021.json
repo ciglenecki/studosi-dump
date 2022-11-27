@@ -1,0 +1,82 @@
+{
+  "title": "[ARHRAC2] Ljetni rok - 2020/2021",
+  "creator": "Mihael",
+  "slug": "arhrac2-ljetni-rok-20202021",
+  "tags": [
+    "FER",
+    "Arhitektura računala 2",
+    "Ispiti"
+  ],
+  "posts": {
+    "217717": {
+      "poster": "Mihael",
+      "content": "kako se najbolje pripremiti za rok? Da prođem ultimate pack ili da prolazim kroz knjigu i zbirku? Jesu li zadaci iz ultimate packa/knjige/zbirke dobra priprema za zadatke na ispitu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "217761": {
+      "poster": "menace_master",
+      "content": "@Mihael#217717  na početku učenja sam prošla kroz preze da ponovim teoriju, generalno sam dosta pratila predavanja kroz semestar pa mi je to bilo dovoljno. zadatke sam vježbala samo po onima s materijala, ali pazi jer ih ima krivo riješenih, pa ako ti nekaj ne drži vodu vjerojatno si u pravu.\n\nosobno nisam koristila knjigu ni zbirku, ali ako se ne varam, knjiga je dosta okej pa dijelove gradiva koji su ti slabiji možeš tamo pojačati",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Mihael"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "221596": {
+      "poster": "hlfdef (bismuth_lord)",
+      "content": "ima li neko neki savjet kako naučiti ove zadatke sa višedretvenosti sa ovim kvadratićima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "221777": {
+      "poster": "menace_master",
+      "content": "@hlfdef#221596 ovo je slika iz udžbenika Građa računala: \n\n![](assets/2021-07-12/00030.png)\n\nmislim da ima neka ljepša na prezama, ali nemam pristup tako da ću probat pojasnit uz pomoć ove slike. \n\nuglavnom,  obični superskalarni procesori izvode istodobno veći broj instrukcija koje pripadaju istoj dretvi sve do trenutka kada nastupi dulji zastoj, u tom se trenutku prospaja kontekst dretvi i nastavlja se s izvođenjem druge dretve. to je prvi stupac, idu prvo svi skroz puni kvadratići od dretve1, pa ovi s malo bijelih točkica itd. - dretve idu jedna po jedna do kraja ili dok se ne dogodi greška. \n\ndrugi slučaj je MT tj. višedretvenost - u tom slučaju se dretve ciklički izmjenjuju po periodima takta. u prvom redu su instrukcije za prvu dretvu, pa za drugu itd. i tako se pokušavaju izbjeć potencijalni dulji zastoji koji se mogu dogodit s prvim pristupom. \n\ntreći slučaj je SMT tj. simultana višedretvenost. ovdje se dinamičkim raspoređivanjem izdaje istodobno više instrukcija iz nezavisnih dretvi u istoj periodi signala vremenskog vođenja. znači, ukoliko dretva1 treba dvije protočne strukture, a dretva2 jednu, u istom periodu (tj. retku) možeš izvršiti sve 3 instrukcije.",
+      "votes": {
+        "upvoters": [
+          "hlfdef (bismuth_lord)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "234604": {
+      "poster": "dinosaur (Ruasonid)",
+      "content": "jel je bio usmeni na ljir-u?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

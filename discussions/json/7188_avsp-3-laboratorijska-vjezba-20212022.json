@@ -1,0 +1,194 @@
+{
+  "title": "[AVSP] 3. laboratorijska vježba - 2021/2022",
+  "creator": "feel_d_boot (iNut)",
+  "slug": "avsp-3-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Analiza velikih skupova podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "289555": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Da se ja nadovežem ove godine lol\n\nDakle imam isti problem kao neki kolege ovdje a taj je da mi radi program za dani primjer iz PDF-a labosa i iz zbirke, no ni najednom iz testa danog mi ne radi, odnosno pogreška je u 0.1 do 0.3 vrijednosti, ali za svaki upit.\n\nJel netko imao sličan problem?\n\nKoristite li zaokruživanja u postupku ili zaokruživate tek na kraju kad treba isprintati predviđeni rating itema/usera?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289564": {
+      "poster": "dh333",
+      "content": "@\"iNut\"#p289555  Imala sam sličnu stvar, greška mi je bila ono što je već spomenuto u ranijim postovima, u skup k najsličnijih korisnika su mi ulazili i korisnici koji nisu dali ocjenu za traženi item (ista stvar za najsličnije iteme).\n\nZaokruživala sam samo predviđanje na kraju.",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289654": {
+      "poster": "Kupine",
+      "content": "Nije mi nikako jasno kako da izvedem računanje pearsonovog koeficijenta, kako god da okrenem krivo mi ispadne...\n\nJel bi mogao netko ispisati korelacijske koeficijente za 2. query iz primjera u uputama, to jest '4 1 0 2'. Dakle koja dva itema ulaze u procjenu i koliki su njihovi korelacijski koeficijenti. Bio bi jako zahvalan :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289659": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"dh333\"#p289564 \n\nIsti mi je problem pa sam te htio pitati možeš li mi kopirati ispis svih sličnosti za prvi i zadnji upit u oglednom primjeru kojeg su nam dali na stranicama ppredmeta taman pred računanje predikcije. Dakle to je nakon što si izbacila sve one iteme/usere koji nisu ocijenjeni.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289667": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"iNut\"#p289659 \n\nDa se nadovežem na ovo svoje, naravno da je problem bio kao što je kolegica gori navela i kao što su mnogi drugi naveli u labosu od prošle godine, pisao sam u Pythonu. Za listu sličnosti sam koristio list comprehension kojemu su elementi bili parovi (cosine(x, y), indeks usera/itema) a ta je lista bila složena tako da sam unutar list comprehensiona to sve stavio unutar sorted funkcije te joj predao zastavicu `reverse=True` da bi mi ispisalo po opadajućoj vrijednosti sličnosti da mogu odmah izbaciti element sa sličnošću 1.0 (to je taj za kojeg tražimo rejting)  te bi se element dodao ako je sličnost veća od nule. \n\nSljedeće sam provjeravao po listi po elementima indekse te sam gledao u originalnoj matrici koje ocjene user nije dao odnosno item ih nema (ovisno o pristupu). \n\nNa kraju sam ispisao predviđanje.\n\n**Moja pogreška:**\n\nNapravio sam sve kako sam rekao za inicijalnu listu sličnosti, no nisam izbacio elemente koji nemaju ocjenu za promatranog usera/itema nego sam prvo uzeo prvih K vrijednosti (pošto su najveće) pa sam ih onda izbacivao.\n\nDakle klasična greška za ovaj labos. Dico čuvajte si živce i poštedite nepoznate kolege koje uče s vama na hodniku vaših psovki na glas.",
+      "votes": {
+        "upvoters": [
+          "Mikki",
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289688": {
+      "poster": "Kupine",
+      "content": "@\"Kupine\"#p289654 Moj problem je bio u tome što sam pratio formulu pearsonovog koeficijenta sa slajdova u kojem se iterira po skupu u kojem se samo nalaze rejtinzi koji postoje za oba itema/usera. Zapravo treba računati pearsonov koeficijent punih vektora no nedostajuće vrijednosti se zamjene srednjom vrijednosti odgovarajućih vektora.",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290570": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "kod pearsona srednje vrijednosti redaka se računaju zanemarujući nedostajuće vrijednosti ili su one 0?\n\ntj dijelimo li s brojem postojećih vrijednosti ili brojem svih usera/itema?\n\nmislim na izračun ovih vrijednosti\n\n![](assets/2022-04-13/00003.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290573": {
+      "poster": "Urmum (mamaRu)",
+      "content": "@\"mornar Ica\"#p290570 zanemaruješ nedostajuće vrijednosti i dijeliš samo s brojem postojećih.",
+      "votes": {
+        "upvoters": [
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290574": {
+      "poster": "DnaRam77 (son)",
+      "content": "@\"mornar Ica\"#p290570 srednja vrijednost dotad postojećih ratinga koje je taj korisnik dao (dakle bez nedostajućih vrijednosti)",
+      "votes": {
+        "upvoters": [
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290579": {
+      "poster": "gladiator",
+      "content": "Pearson? Meni sve normalno radi s kosinusnom mjerom sličnosti...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290580": {
+      "poster": "Lyras",
+      "content": "@\"gladiator\"#p290579 pearson i je kosinusna mjera sličnosti u nekom vektorskom prostoru između dva vektora",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290581": {
+      "poster": "gladiator",
+      "content": "@\"Lyras\"#p290580 hvala kolega",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290754": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@\"Kupine\"#p289688 koja je točno razlika između ta dva pristupa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

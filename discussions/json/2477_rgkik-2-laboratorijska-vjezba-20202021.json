@@ -1,0 +1,574 @@
+{
+  "title": "[RGKIK] 2. laboratorijska vježba - 2020/2021",
+  "creator": "InCogNiTo124",
+  "slug": "rgkik-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Raspodijeljene glavne knjige i kriptovalute",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "107884": {
+      "poster": "InCogNiTo124",
+      "content": "Jel postoje negdje primjeri za ovo? Malo tog mi je jasno šta se mora točno radit",
+      "votes": {
+        "upvoters": [
+          "ALovelace",
+          "Jimothy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      }
+    },
+    "108607": {
+      "poster": "najsgrgutin",
+      "content": "@InCogNiTo124#107884 solidity dokumentacija ima primjere dobrih praksi i obrazaca (https://docs.soliditylang.org/en/v0.4.24/common-patterns.html), također postoje tutoriali na webu kao što je recimo ovaj https://medium.com/upstate-interactive/what-you-need-to-know-about-msg-global-variables-in-solidity-566f1e83cc69. Dosta za riješit prvi zadatak",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "zeleni_caj123"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109586": {
+      "poster": "Marquisio",
+      "content": "2.zadatak - Gdje su spremljeni ovi bidovi kupaca ? Kad se poziva settle() ili refund() ne znam od kud da šaljem te novce",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109605": {
+      "poster": "InCogNiTo124",
+      "content": "@Marquisio#109586 u globalnu varijablu `msg`, ona ima atribute kao sto su `.sender` i `.value`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Jimothy",
+          "tt98"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109610": {
+      "poster": "sengula",
+      "content": "Do kad je rok za predaju?",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109614": {
+      "poster": "Marquisio",
+      "content": "@InCogNiTo124#109605 da, ali msg.value nema nikakvu vrijednost. Svi testovi ne uključuju postavljanje nekog bida.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109779": {
+      "poster": "CodeMonkey",
+      "content": "@Marquisio#109586 Koristi `address(this).balance` jer prebacujes valutu koja se nalazi na ugovoru",
+      "votes": {
+        "upvoters": [
+          "Jimothy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109856": {
+      "poster": "peaceko",
+      "content": "Je li itko možda dobio odgovor na pitanje koje je kolega u chatu pitao u vezi 5. zadatka - konkretno, je li prisutan neki bug u zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109896": {
+      "poster": "luna_lovegood",
+      "content": "Može li netko potvrditi da radim ovo dobro... U prvom zadatku dobijemo sučelje timer i usporedujemo ga sa endTimeStamp. Ja ga usporedujem ovako (timer.getTime() < endTimeStamp) u invest funkciji, ali iz nekog razloga mi to ne prolazi test. Može pomoć?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109994": {
+      "poster": "france_is_bacon",
+      "content": "@luna_lovegood#109896 Ako koristis `require(timer.getTime() < endTimestamp)`  (s malim s u stamp), trebalo bi biti dobro\n\nkoji error ti izbacuje test?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110171": {
+      "poster": "InCogNiTo124",
+      "content": "Za ljude koji ne citaju detaljno pa se iznenade, kao npr ja, ovaj labos izgleda ima obaveznu obranu preko teamsa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ALovelace",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110178": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@InCogNiTo124#110171 Da nisam pročitao što točno piše i da je predaja 16. umjesto 20., pao bih predmet, ty",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110220": {
+      "poster": "prodanacro (oat)",
+      "content": "@InCogNiTo124#110171 \n\nGdje to piše? :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110226": {
+      "poster": "Ma97",
+      "content": "@prodanacro#110220 Rečeno je i na predavanjima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110230": {
+      "poster": "prodanacro (oat)",
+      "content": "@Ma97#110226 \n\nAha, nisam bila na predavanju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110236": {
+      "poster": "InCogNiTo124",
+      "content": "@prodanacro#110220 kad predajes na teamsima xD",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "prodanacro (oat)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110371": {
+      "poster": "cavcija_stina",
+      "content": "U 3. zadatku mi ne prolaze svi testovi, a nije mi jasno što radim krivo... Pa ako neka dobra duša može dati hint :D\n\n![](assets/2020-12-14/00034.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110383": {
+      "poster": "Jimothy",
+      "content": "Jeste pozivali u 3. i 4. zadatku negdje finishAuction funkciju?",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110547": {
+      "poster": "peaceko",
+      "content": "@Jimothy#110383 Ja nisam, i uspio sam uz relativno jednostavna rjesenja da mi svi testovi prolaze. Ali to i mene muci, trebamo li pozivati finishAuction? Implementirana je, a nigdje drugdje nisam vidio da se poziva...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110583": {
+      "poster": "Jimothy",
+      "content": "@peaceko#110547 \n\nDoslovno ista situacija je i kod mene.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110610": {
+      "poster": "QuintusTullius (DundoMaroje)",
+      "content": "@cavcija_stina#110371 Hint: sredstva su već na računu aukcije, ne treba ih prebacivati",
+      "votes": {
+        "upvoters": [
+          "Gwidoc",
+          "cavcija_stina"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110733": {
+      "poster": "data",
+      "content": "Šta stvarno treba Python 2 za ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110742": {
+      "poster": "InCogNiTo124",
+      "content": "@data#110733 ja sam uspio bez, al ja sam na linuxu",
+      "votes": {
+        "upvoters": [
+          "data"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110996": {
+      "poster": "Vamonos (Idemo)",
+      "content": "Jesu oni skratili rok za ovo? Uvjeren sam da je negdje u nekom trenutku pisalo da je rok 20.12.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111008": {
+      "poster": "Ma97",
+      "content": "@Vamonos#110996 Na teamsu je assignment stavljen da zavrsava 20og, ali kada ga otvoris pise rok do 16og, pa si mozda vidio tamo",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Vamonos (Idemo)",
+          "bebich",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111206": {
+      "poster": "mica",
+      "content": "jel uspio netko treasure hunt?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111212": {
+      "poster": "Vamonos (Idemo)",
+      "content": "Ako je jos netko poceo na vrijeme, khm khm, i malo se boji da nece stici guglajte Solidity Crowdfunding. Postoji step-by-step tutorial. Mislim da fali dio gdje vlasnik projekta na kraju moze claimati novce, ali to mi se ne cini prekomplicirano.",
+      "votes": {
+        "upvoters": [
+          "prle"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111236": {
+      "poster": "Vamonos (Idemo)",
+      "content": "Uhm, jel dobivao tko nesto ovako kada je samo pokusao pokrenuti kod koji je dobio od profesora? Ocekujem fail testova, ne compile time error...\n\n![](assets/2020-12-16/00032.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      }
+    },
+    "111251": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Vamonos#111236 To nije iz njihovog koda\n\nprovjeri da si sve dobro instalirao, meni je prošlo vrlo bezbolno na Ubuntu 20.04",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111258": {
+      "poster": "InCogNiTo124",
+      "content": "@Vamonos#111236 provjeri da nisi nest slucajno obriso",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111265": {
+      "poster": "Vamonos (Idemo)",
+      "content": "Provjerio, msm da je problem u verziji trufflea koju imam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111289": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@mica#111206 Well Python kaže da je odgovor ||42 (duh)||, ali ne prolazi mi test.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111291": {
+      "poster": "Vamonos (Idemo)",
+      "content": "Jel bi se dalo nekome napisati verziju trufflea koju koriste? Namjestio sam kompajler u truffle configu na 0.4.24, ali msm da on negdje interno to prebaci na defaultni 0.5.xx i eksplodira",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111292": {
+      "poster": "Erinon",
+      "content": "@micho#111289 Jer se u onom dijelu kad stvaraju objekt PlayerGuess i postavljaju playerGuess.sender = msg.sender, prebriše vrijednost secret i u nju upiše msg.sender. PlayerGuess ulazi u storage na blockchain. Ako staviš na tom mjestu PlayerGuess memory playerGuess; onda bude dobro, jer memory je memorija trenutnog programa, ne ide u blockchain. Zapravo je onda secret = msg.sender, ali s obzirom da je ona solution funkcija pure, ne može se dohvatit msg uopće.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111293": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Erinon#111292 Aaaaaaaaaaaaaaaaaa I see, zanimljivo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113072": {
+      "poster": "InCogNiTo124",
+      "content": "Dojmovi s usmenih?",
+      "votes": {
+        "upvoters": [
+          "ALovelace",
+          "Jimothy",
+          "MaIv"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113167": {
+      "poster": "prodanacro (oat)",
+      "content": "@InCogNiTo124#113072 \n\nLabos nije potrebno skidat s teams-a, nego samo pokrenut testove, onda me pitao jesam li sve riješila, pogledali smo prolaze li testovi i nakon toga malo po kodu i teorije. Što znači ključna riječ payable, mijenja li se globalno stanje nakon require/revert (i još malo o tome) i sve o gasu (što je, gdje je definiran, tko ga definira, što ako ga nema dovoljno / ima previše...). Uglavnom je to bilo to, možda još koje podpitanje. Ništa posebno.",
+      "votes": {
+        "upvoters": [
+          "ALovelace",
+          "InCogNiTo124",
+          "Jimothy",
+          "MaIv",
+          "Miki",
+          "WallStreetBets",
+          "[deleted]",
+          "a_ko_si_ti",
+          "cavcija_stina",
+          "data",
+          "jitser"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113618": {
+      "poster": "antunmod",
+      "content": "Ista pitanja kao i u prethodnom postu, osim toga jos ovo:\n\nO cemu ovisi koliki je ukupni trosak izvrsavanja ugovora? O predefiniranim potrosnjama osnovnih funkcija i trenutnom stanju mreze\n\nKako funkcionira metoda transfer()?\n\nAko se iz jednog ugovora salje novac na drugi ugovor, sto je drugacije nego kad se salje drugoj osobi? Poziva se jos i fallback funkcija",
+      "votes": {
+        "upvoters": [
+          "jitser"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

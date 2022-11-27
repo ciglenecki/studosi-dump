@@ -1,0 +1,53 @@
+{
+  "title": "**[FIZ]** 6. domaća zadaća - 2021/2022",
+  "creator": "VrelaKosilica",
+  "slug": "fiz-6-domaca-zadaca-20212022",
+  "tags": [
+    "Zadaće"
+  ],
+  "posts": {
+    "295170": {
+      "poster": "VrelaKosilica",
+      "content": "6. domaća zadaća",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295171": {
+      "poster": "VrelaKosilica",
+      "content": "![](assets/2022-05-08/00014.png)\n\n![](assets/2022-05-08/00015.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295172": {
+      "poster": "VrelaKosilica",
+      "content": "Brzina elektrona\n\n![](assets/2022-05-08/00016.png)\n```python\nimport math\n\nu = 860  # napon u kV\nE_keV = 511  # energija(mₑc²) u keV\n\n# NE MIJENJAJ\nU = u*1000\nE_J = E_keV/6.2415e+15\nW = 1.6e-19 * U\nc = 300000000\nm = 9.11e-31\n\np = math.sqrt(W*(2*E_J + W))\nv = math.sqrt((p**2)/(((m**2) * (c**2))+(p/c)**2))\n\nprint(\"Brzina elektrona je \", v/c, \"c\")\n```\nKoličina gibanja elektrona\n\n![](assets/2022-05-08/00017.png)\n```python\nimport math\n\nu = 510  # napon u kV\nE_keV = 511  # energija(mₑc²) u keV\n\n# NE MIJENJAJ\nU = u*1000\nE_J = E_keV/6.2415e+15\nW = 1.6e-19 * U\nc = 300000000\n\np = math.sqrt(W*(2*E_J + W))\np *= 6.2415e+15\n\nprint(\"Količina gibanja elektrona je \", p, \"keV/c\")\n```\nBrzina čestice u sustavu\n\n![](assets/2022-05-08/00018.png)\n```py\nimport math\n\nfrom sympy import *\n\nc = symbols(\"c\")\n\n# sustav S' u odnosu na sustav S:\nv = 0.886*c  # (u smjeru x-osi)\n\n# gibanje čestice unutar sustava S'\nu = 0.842*c  # (okomito na smjer relativnog gibanja jednog sustava na drugi)\n\n# NE DIRAJ!\nux = v\nuy = (u-(v*ux*u/c**2))/(math.sqrt(1-(v/c)**2))\nU = math.sqrt((ux/c)**2 + (uy/c)**2)\nprint(\"Iznos brzine te čestice u sustavu S je \", U,\"c\")\n```\nSvemirski brod\n\n![](assets/2022-05-08/00019.png)\n```python\nfrom sympy import *\n\nc = symbols(\"c\")\n\n# sustav S vezan uz svemirsku postaju:\nv = 0.648*c  # brzina svemirskog broda u odnosu na svemirsku postaju\n\n# sustav S' vezan uz brod:\nu = -0.785*c  # brzina projektila u odnosu na svemirski brod\n\n# NE MIJENJAJ!\n# brzina projektila u sustavu S:\n𝕧 = (u + v)/(1+(u*v)/c**2)\n\nprint(\"Iznos brzine projektila u odnosu na postaju je \", abs(𝕧/c),\"c\")\n```\nTangens kuta tgφ\n\n![](assets/2022-05-08/00020.png)\n```python\nimport math\n\nfrom sympy import *\n\nc = symbols(\"c\")\n\n# sustav S' u odnosu na sustav S:\nv = 0.761*c  # (u smjeru x-osi)\n\n# gibanje čestice unutar sustava S'\nu = 0.568*c  # (okomito na smjer relativnog gibanja jednog sustava na drugi)\n\n# NE DIRAJ!\nux = v\nuy = (u-(v*ux*u/c**2))/(math.sqrt(1-(v/c)**2))\nprint(\"tgφ = \", uy/ux)\n```",
+      "votes": {
+        "upvoters": [
+          "Ferkonja (Ferkonja         ‮ajnokreF )",
+          "[deleted]",
+          "strujkan (drizzy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

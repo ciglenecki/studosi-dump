@@ -1,0 +1,303 @@
+{
+  "title": "[SKRJEZ] 2. laboratorijska vježba - 2019/2020",
+  "creator": "ivona_075 (Adri)",
+  "slug": "skrjez-2-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Skriptni jezici",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "13840": {
+      "poster": "ivona_075 (Adri)",
+      "content": "može neki pro tip za 3. zadatak kako odvojiti citanje 2 datoteke ako citamo sa \"<>\",  posto perl kad cita iz naredbenog retka cita datoteke kao jednu, a ne 2 odvojene 😐",
+      "votes": {
+        "upvoters": [
+          "Gussy (huba buba)",
+          "ThiccDicc (Impostor)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13878": {
+      "poster": "Amon",
+      "content": "@ivona_075#13840 Postoji ti varijabla $ARGV u kojoj ti se nalazi argument (u ovom slučaju datoteka) koja se trenutno čita pa si možeš spremiti $ARGV i na početku while(<>) petlje ga možeš usporediti s trenutnim $ARGV i ako je drugačije znači da si na drugom argumentu (tj drugoj datoteci)",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "mentally_disturbed_llama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14494": {
+      "poster": "Emma63194",
+      "content": "Treba li u drugom zadatku tražiti korisnika da upiše niz brojeva ili to treba pročitati iz datoteke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14558": {
+      "poster": "chuuya (temari)",
+      "content": "@Emma63194#14494 Stavi `@niz_brojeva = <>;` pa ti je svejedno. \n\nJel u 4. možemo računat da su labosi na puni sat uvijek, a ne tipa 8:30?",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14565": {
+      "poster": "angello2",
+      "content": "@chuuya#14558 ja sam racuno ko da su uvijek na puni sat pa jbg kak bude bude, u primjeru je uvijek puni",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14571": {
+      "poster": "FICHEKK",
+      "content": "@chuuya#14558 Vjerojatno ih nije briga, no stvarno nije teško napraviti da radi za bilo koji sat i minutu (pa čak i sekundu):\n1. Pogledaj je li datum labosa i datum zaključavanja isti. Ako nije, loše je vrijeme predaje. Ako je, idemo na sljedeće korake.\n2. Izračunaj na kojoj sekundi počinje labos: sekunda + minuta * 60 + sat * 3600\n3. Izračunaj na kojoj sekundi je zaključan labos: ista formula kao i iznad\n4. Pogledaj da je njihova razlika (vrijemePredaje - vrijemePočetkaLabosa) u intervalu od [0, 3600]. Ako je u intervalu, dobra je predaja, ako nije loša je.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14589": {
+      "poster": "Emma63194",
+      "content": "@FICHEKK#14571 Ima i gotovih funkcija za rad s vremenom u Perlu. Nije potrebno sve to ručno računati 😃",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14592": {
+      "poster": "Pranjo (Pranjo_Suđman)",
+      "content": "Kada napišem export LC_ALL=hr_HR.UTF-8 kao što je navedeno u 6. zadatku i pokrenem skriptu, perl mi izbaci ovaj error:\n\nperl: warning: Setting locale failed.\n\nperl: warning: Please check that your locale settings:\n\n        LC_ALL = \"hr_HR.UTF-8\",\n\n        LANG = \"en_GB.UTF-8\"\n\n    are supported and installed on your system.\n\nperl: warning: Falling back to the standard locale (\"C\").\n\nZna li netko kako riješiti taj error? (Koristim Cygwin)",
+      "votes": {
+        "upvoters": [
+          "Gulbash"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Gulbash"
+        ]
+      }
+    },
+    "14593": {
+      "poster": "Emma63194",
+      "content": "> @chuuya#14558 Stavi @niz_brojeva = <>; pa ti je svejedno.\n\nJel istu foru trebamo koristiti u 3. i 4. gdje kaže da ako ne čita iz datoteke, da čita iz stdin-a?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14600": {
+      "poster": "chuuya (temari)",
+      "content": "@Emma63194#14593 Da",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14611": {
+      "poster": "chuuya (temari)",
+      "content": "Jel netko uspio sortirat prefikse u 6. zadatku? Meni se \"čelo\" i \"žari\" i dalje pojavljuju na dnu iako koristim `use locale` i normalno ispisuje sve dijakritičke znakove.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14613": {
+      "poster": "Dekan",
+      "content": "@Pranjo#14592 Jesu li ti instalirani navedeni locale? Trazi na google kako instalirati ako nisu.\n\n`locale -a` ti ispisuje sve instalirane",
+      "votes": {
+        "upvoters": [
+          "Pranjo (Pranjo_Suđman)",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14614": {
+      "poster": "Dekan",
+      "content": "@chuuya#14611 Meni radi normalno. Jesi li napravio sve korake koji pisu pri kraju zadatka? \n\nU shellu u kojem pokreces skriptu trebas napravit `export LC_ALL=<ime locale>`. Moguce da ti se hr locale ne zove isto kao u uputama, meni je bio malo drugaciji. To provjeri sa naredbom `locale -a` i napisi isto kako ti pise tamo. Zatim stavis one 2 linije na pocetak skripte.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14642": {
+      "poster": "plavisnajper",
+      "content": "u 3. zad, jel vama radi ako na stdin upišete localhost_access_log*.txt, meni ne interpretira *, jel imao netko problema s tim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14724": {
+      "poster": "Gulbash",
+      "content": "Jel bi trebali dodat:\n\nuse open ':locale';\n\nuse locale;\n\ni u 4. i 5. zadatak, jer u primjeru njihovih datoteka ima naših slova?",
+      "votes": {
+        "upvoters": [
+          "Pranjo (Pranjo_Suđman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14839": {
+      "poster": "nickname",
+      "content": "Ja sam 4. i 5. zadatak rjesavala normalno s while(<>) i isprobavala sam na .txt datotekama u kojima su zapisi onakvi kakve su stavili u pripremi. Sad sam tek skužila da su datoteke u pripremi bile .csv. Koliko će me to zeznut ili će Perl to uspjet pročitat?\n\nI je li svejedno jesmo li na početku koda stavili #!perl ili #!usr/bin/perl?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14904": {
+      "poster": "Emma63194",
+      "content": "@nickname#14839 Ne brini, Perl će ti to pročitat normalno, nije trebalo niša posebno pisati za .csv datoteke.\n\nNije bitan taj redak u skripti jer će se ocjenjivati tako da se pozove: perl zadatak{n}.pl, a ovaj shebang na početku skripte ti je bitan samo za Unix okolinu.\n\nZaboravila sam ga napisati u prva dva zadatka pa sam slala mail i potvrdio mi je profesor da nema problema što se toga tiče. :)",
+      "votes": {
+        "upvoters": [
+          "nickname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15395": {
+      "poster": "Emma63194",
+      "content": "Ima li igdje primjer bliceva za 2. labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15901": {
+      "poster": "plavisnajper",
+      "content": "jel nekome na ferku nema linka za predaju rjesenja izlaznog testa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15903": {
+      "poster": "BillIK",
+      "content": "@plavisnajper#15901 nema ga",
+      "votes": {
+        "upvoters": [
+          "AromaticConfusion (VrloZbunjen)",
+          "plavisnajper"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

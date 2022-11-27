@@ -1,0 +1,576 @@
+{
+  "title": "[OPESUS] 1. laboratorijska vježba - 2020/2021",
+  "creator": "KitKat (H(x))",
+  "slug": "opesus-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Operacijski sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "154011": {
+      "poster": "KitKat (H(x))",
+      "content": "Mozda sam malo tudum, ali imam par pitanja\n\n1. Oni kao imaju tu detekciju plagijata, ali su nam doslovno dali pseudokod?  Frendica koja je polagala to u nekorona razdoblju kaže da su njima rekli da baš zbog toga kao prvu vježbu ne gledaju baš, ali ja sam paranoična jer se uz sljeđenje te c-pseudokod šablone ovo valjda može napisati na ravno 3 načina (osim ako namjerno sereš kvake po kodu samo da bude drugačije)\n\n2. Jesam ja glupa ili se još ne može prijavljivati termin na ferko?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154018": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@KitKat#154011 Mislim da se plagijati gledaju tek nakon svih predanih vjezbi. Prvo gledaju trecu i cetvrtu vjezbu jer su one valjda najteze i najvise je potrebno samostalno raditi, a ako tu bude podudaranja onda provjeravaju i prve dvije. Neka me netko ispravi ako sam u krivu... Uglavnom mislim da nemas problema ako stvarno budes samostalno radila.",
+      "votes": {
+        "upvoters": [
+          "KitKat (H(x))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154019": {
+      "poster": "gladiator",
+      "content": "Provjeravaju ti labose ako su im 3. i 4. sumnjivi iirc, a što se tiče pseudokoda, samo po njemu šibaš",
+      "votes": {
+        "upvoters": [
+          "KitKat (H(x))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154058": {
+      "poster": "tomekbeli420",
+      "content": "@KitKat#154011 Uvijek se možeš opravdati na činjenicu da je pseudokod dan. Njega se zapravo očekuje da pratiš, još mislim da je za svaki labos my man Jelenković napravio dodatne tutorijale i upute kako to prožvakati, tako da stvarno ne bi smjeli puno zajebavati oko toga, a i ja nisam čuo da je netko fasovao iz takvih razloga.",
+      "votes": {
+        "upvoters": [
+          "KitKat (H(x))",
+          "__builtin_popcount (std::popcount)",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": [
+          "kix7 (Fish99)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154145": {
+      "poster": "krampus",
+      "content": "znanje kojih lekcija je potrebno za rješavanje labosa? jeli 3. dovoljna ili treba i 4.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154545": {
+      "poster": "Worly",
+      "content": "Otvorili su burzu grupa na Ferku za prvi lab i uz svaku grupu pise A209, jel to znaci da moramo doci tamo? U prezentaciji O predmetu pise da se provjera labosa odvija na Teamsu:\n\n![](assets/2021-03-17/00004.png)\n\nHelp pls, ne zelim proci pola Hrvatske da bi mi neko postavio par pitanja :/",
+      "votes": {
+        "upvoters": [
+          "slip"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154637": {
+      "poster": "Worly",
+      "content": "@krampus#154145 ne treba 4.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154764": {
+      "poster": "Wolf7 (matrix)",
+      "content": "@Worly#154545 jutros je na konzultacijama profesor rekao da se sve održava udaljeno, znači preko Teamsa",
+      "votes": {
+        "upvoters": [
+          "Worly"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154885": {
+      "poster": "Worly",
+      "content": "@Wolf7#154764 Odlicno, hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155068": {
+      "poster": "Wolf7 (matrix)",
+      "content": "![](assets/2021-03-18/00015.png)\n\nprilikom prevođenja programa itimer_primjer.c javlja mi ovo upozorenje, a ne znam kako da to popravim, pa ako netko zna pls help",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155099": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "@Wolf7#155068 sigset je zastarjela funkcija. Ovo nije error, samo warning,al napisi prve dvije linije -\n\n#define _XOPEN_SOURCE\n\n#define _XOPEN_SOURCE_EXTENDED\n\ni to makne upozorenje.",
+      "votes": {
+        "upvoters": [
+          "1vq",
+          "BanankoKojiLebdi",
+          "KitKat (H(x))",
+          "Wolf7 (matrix)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155475": {
+      "poster": "Bisenberg (DonaldPump)",
+      "content": "Na ferku ne vidim opciju da odaberem termin, trebam li prvo predati domaću zadaću da bih mogao rezervirati termin, ima li još tko takvu situaciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155478": {
+      "poster": "Daeyarn",
+      "content": "jel jos nekom nestao opsus na teamsu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155543": {
+      "poster": "Wolf7 (matrix)",
+      "content": "@Daeyarn#155478 da",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155625": {
+      "poster": "samsung12",
+      "content": "jel ima netko neki savjet kak napravit ovaj labos (ili inace za labose iz os-a), pogledao sam sva predavanja i upute za 1. labos al doslovno nemam pojma od kud krenut jer mi nije bas jasna priprema",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155636": {
+      "poster": "delrey (nana)",
+      "content": "Nije jos otvorena burza grupa za predaju 1. labosa onaj tjedan nakon iduceg?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155671": {
+      "poster": "Wolf7 (matrix)",
+      "content": "ima li još netko problema sa onom funkcijom za izračun prostih brojeva, točnije da mu izbaciva \"undefined reference to 'sqrt'\", mislim lako se ta funkcija zamijeni drugom i sve radi ok, ali zanima me i šta treba u kodu funkcije popraviti da radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155699": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Wolf7#155671 \n\nKompajlaš li s `-lm` zastavicom? Po defaultu se math library ne linka, pa povezivač ne zna naći `sqrt`.",
+      "votes": {
+        "upvoters": [
+          "Wolf7 (matrix)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155765": {
+      "poster": "Daeyarn",
+      "content": "@Wolf7#155543 natrag je",
+      "votes": {
+        "upvoters": [
+          "Wolf7 (matrix)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155785": {
+      "poster": "Wolf7 (matrix)",
+      "content": "@__builtin_popcount#155699 da u tome je bio problem, nisam to pisala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155822": {
+      "poster": "delrey (nana)",
+      "content": "Jel jos nekome terminal ignorira SIGQUIT? Tj. kad stisnem Ctrl+\\  ne dogodi se nista, glavni program ide i dalje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155830": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "@delrey#155822 ![](assets/2021-03-20/00010.png)",
+      "votes": {
+        "upvoters": [
+          "delrey (nana)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156808": {
+      "poster": "Sulejman",
+      "content": "@KitKat#154011 @gladiator#154019 @tomekbeli420#154058  \n\nImao sam priliku saznat kak se padne na plagijatu prošle godine pa evo kak je to meni ispalo... Njima je jasno da zbog pseudokodova postoji velika sličnost u kodovima studenata zato su stavili prag za jako visoko (konkretno mislim da je iznad 95% sličnosti plagijat) tako da se ne moraš brinut da ćeš past na plagijatu ako sama radiš. \n\nProblem je što nikako nebi trebali napravit ctrl+c ctrl+v jer tu dolazi problem čak i ako su vam to oni \"dali\". Ja sam to napravio i bio sam neugodno iznenađen kad sam pokupio -8 bodova iz 2. labosa (tako da ne vrijedi ni to da ne gledaju samo 3. i 4.), a tad još nisam znao zbog čega. Ugl, poslao sam mail gdje sam rekao da želim da mi pokažu s kim sam imao navodnu 98% sličnost u kodu. Pozvali su me na faks gdje mi je asistent pokazao sličnost s još ~ 5 ljudi (btw, tih 5 ljudi je imalo 100% sličnost međusobno, a moj kod se razlikovao od njihovog zbog tipa 2 razmaka) na što sam još više bio iznenađen jer sam počeo sumnjat da sam prepiso sa nekih materijala od prošlih godina. Fakat mi nije bilo jasno kaj se događa i kad sam došo doma sam probao nać od kud sam \"prepisao\" [kod](http://www.zemris.fer.hr/~leonardo/os/fer/primjeri-koda/02-dretve-i-procesi/dretve/dretve.c) i našao sam ga na pod \"[primjeri-koda](http://www.zemris.fer.hr/~leonardo/os/fer/)\" od prof. Jelenkovića. \n\nUpravo sad sam išao pogledat dal su to maknuli sa tih materijala, al evo očito nisu. Naravno da sam se išao opravdati u stilu: kakav je ovo trap, rekli ste da možemo koristit materijale, a i da nećete sankcionirat ako nismo plagirali 3. i 4. lab, na što sam dobio [odgovor](https://fer.studosi.net/d/193-opesus-pitanja-i-odgovori/175). Korigirali su na -4 boda svima kojima je bila sporna ta datoteka tako da sam neke spasio od pada predmeta... \n\nPoanta priče; dap, možete imat plagijat i sa profesorom.\n\nTL;DR; nemojte kopi pejstat **ništa** jer ćete dobit negativne, a to ne želite",
+      "votes": {
+        "upvoters": [
+          "1vq",
+          "gladiator",
+          "slip"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Filemon",
+          "KitKat (H(x))",
+          "__builtin_popcount (std::popcount)",
+          "jobi (azex)",
+          "turunturu (Cement)"
+        ],
+        "tuga": []
+      }
+    },
+    "157128": {
+      "poster": "brol (Mason Mount me)",
+      "content": "Može li mi netko samo potvrditi, da labos predajemo u ferku na ovoj dz1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "iNavy (mornar Ica)"
+        ]
+      }
+    },
+    "157204": {
+      "poster": "KitKat (H(x))",
+      "content": "@delrey#155822 probaj Ctrl + Y",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157589": {
+      "poster": "kix7 (Fish99)",
+      "content": "Jel netko odgovorio mozda na ona pitanja koja kao mogu doc na labosu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157662": {
+      "poster": "krampus",
+      "content": "@kix7#157589  imaš ovo (http://www.zemris.fer.hr/~leonardo/os/fer/Primjeri-pitanja-za-laboratorijske-vjezbe.txt), ali to je direktno od neprijatelja tako da nikad ne znaš. Mene više zanima kako to izgleda . Trebam li imati upaljenu kameru, teams skinuti na linux i slično",
+      "votes": {
+        "upvoters": [
+          "slip"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157702": {
+      "poster": "noobcamper",
+      "content": "Da li pitaju samo ova pitanja ili još nešto ?Da li pitaju samo pokretanje programa ili pitaju da treba nešto promijeniti i što? I da li kada se odgovora osim toga da se podijeli svoj ekran treba li i upaliti kameru? I kako asistent proziva, da li se svojevoljno javlja ili asistent bira po kojem će se redoslijedu odgovarati? Može li netko zapravo tko je imao taj labos opisati svoje dojmove?",
+      "votes": {
+        "upvoters": [
+          "slip"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157710": {
+      "poster": "zvonkoBogdan",
+      "content": "@noobcamper#157702 Pitaju i druga pitanja osim onih navedenih tamo te im ta tamo sloze kao orijentir (rekao je tako Golub u predavanju). Medu tim pitanjima postoje i pitanja koja se odnose na sitne izmjene u programu tako da se moze i tako nesto ocekivat.",
+      "votes": {
+        "upvoters": [
+          "noobcamper"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157751": {
+      "poster": "kix7 (Fish99)",
+      "content": "@zvonkoBogdan#157710 kakve izmjene otprilike?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157757": {
+      "poster": "zvonkoBogdan",
+      "content": "@kix7#157751 \n\nprvi zad.\n1. Što bi se dogodilo kad bi se maknuo sigset (SIGALRM, periodicki_posao) iz programa?\n2. Što bi se dogodilo kad bi umjesto pause(); ostavili samo ; ?\n\ndrugi zad.\n4. Što kad bi makli \"omogući prekidanje;\" i \"zabrani prekidanje\"? Bi li program radio isto? Obrazložiti.\n\nta pitanja su dostupna na http://www.zemris.fer.hr/~leonardo/os/fer/Primjeri-pitanja-za-laboratorijske-vjezbe.txt kao sto sam gore i naveo. Za ocekivat je onda i pitanja slicnog karaktera makar nema bas sto se i pitat mimo ovog sto je tamo zadano",
+      "votes": {
+        "upvoters": [
+          "noobcamper"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157784": {
+      "poster": "krampus",
+      "content": "asistent ti pošalje mail ili preko teamsa?",
+      "votes": {
+        "upvoters": [
+          "slip"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157790": {
+      "poster": "pero",
+      "content": "Evo ja sam danas imao labos pa da podijelim kako to izgleda. Treba samo biti online na teamsu u to vrijeme, asistentica me zvala direktno. Kameru ne treba imati, jedino trebas podijeliti ekran. Pitanja su bila jako slicna ovim objavljenima (npr. za sta sluzi koji signal, tko sve moze slati signale, sto radi funkcija kill itd.) Nije me pitala da nesto promijenim, jedino da pokrenem programe i posaljem par signala da se vidi da radi.",
+      "votes": {
+        "upvoters": [
+          "noobcamper"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157839": {
+      "poster": "kix7 (Fish99)",
+      "content": "Jel moze netko objasnit kako tocno treba funkcionirat ovaj prvi sa prostim brojevima? meni na signal pauze ne zaustavi nego mi nastavi ispisivat onaj zadnji broj i onda ponovno na signal nastavi raditi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157851": {
+      "poster": "kix7 (Fish99)",
+      "content": "tj. događa mi se ovo isto što i njemu na 15:22\n\n https://www.youtube.com/watch?v=ZPrma_Xok8Y&ab_channel=LeonardoJelenkovi%C4%87",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157863": {
+      "poster": "Kamen",
+      "content": "Koja je kazna ako nebudem prisutan na svom terminu sutra, pise u uputama negativan bod, jel to to? Mogu onda prijaviti za drugi tjedan?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157867": {
+      "poster": "turunturu (Cement)",
+      "content": "Isto sam imao prvi labos danas, osim sto me pitao da demonstriram rad koda (i posaljem neke signale iz druge ljuske), pitao me neka straightforward pitanja:\n1. sto radi funkcija sigset(...)\n2. sto rade sighold(...) i sigrelse(...), cemu sluze u okviru ovog labosa\n3. u prosti_brojevi.c , sto se dogodi kad u mainu iskomentiras poziv funkcije pause()\n4.  cemu sluzi polje PRIOR[N] ili PRIORITET[N]",
+      "votes": {
+        "upvoters": [
+          "Anrob (Trippy)",
+          "Letov",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158590": {
+      "poster": "Letov",
+      "content": "@kix7#157839  U uputama piše \"Na signal SIGINT privremeno zaustaviti rad na idućim brojevima\". Meni se čini da je ok to što si ti napisao i što se događa profesoru u ovom videu (periodički se ispisuje trenutno stanje varijable \"zadnji\" -> SIGINT (ili Ctrl + C) zaustavlja računanje prostih brojeva, ali ne i periodički ispis -> isti signal nastavlja računanje prostih brojeva)\n\nNe piše eksplicitno da treba zaustaviti periodički rad (ispisivanje statusa), pa po meni ne bi trebali raditi frku oko toga.",
+      "votes": {
+        "upvoters": [
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159231": {
+      "poster": "mkovac25",
+      "content": "Može li mi netko pomoći sa ovim prvim dijelom, prosti brojevi?\n\nProgram mi sve radi kako treba sve dok ne pošaljem sigint, onda pauzira izračun novih prostih brojeva i nastavlja periodički ispis što nije problem ali kada opet pošaljem sigint da nastavi izračun prostih brojeva program mi to ignorira i ne nastavlja računati nove proste brojeve?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

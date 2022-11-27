@@ -1,0 +1,125 @@
+{
+  "title": "[APIUW] Gradivo",
+  "creator": "Lusy (MGJ)",
+  "slug": "apiuw-gradivo",
+  "tags": [
+    "FER",
+    "Arhitektura, protokoli i usluge weba"
+  ],
+  "posts": {
+    "273328": {
+      "poster": "Lusy (MGJ)",
+      "content": "Je l itko rijesio 12. zadatak iz ovog zavrsnog?\n\nhttps://github.com/studosi-fer/RZNU/blob/master/ispiti/zi/2020-21/RZNU_2020-21_zi.pdf",
+      "votes": {
+        "upvoters": [
+          "SuperSaiyano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273917": {
+      "poster": "SuperSaiyano",
+      "content": "@\"MGJ\"#p273328 i mene isto zanima kako to uraditi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273937": {
+      "poster": "SuperSaiyano",
+      "content": "@\"SuperSaiyano\"#p273917 nvm ne mogu editovati ovo gore, ali jedino je pooling drugaciji jer klijenti salju zahtjev svakih 5 odnosno 10 sekundi pozive na poslužitelj gdje im on šalje samo zadnju zapaćenu poruku prije tog zahtjeva.",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273938": {
+      "poster": "Ellie",
+      "content": "Da i cini se po raspravi od prosle godine, da je vise ljudi rijesilo tako i da nisu ni sami bili sigurni jel im to ok ili ne",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)",
+          "SuperSaiyano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273953": {
+      "poster": "anon00",
+      "content": "@\"MGJ\"#p273328  Dosta je jednostavan zadatak, samo ga treba bolje predočiti \n\nMalo teorije: \n\n**Short polling** funkcionira ovako: Klijent periodički (npr svakih 5s) šalje GET zatjev i što dobije dobije. Ako ima poruke on ce je dohvatiti, ako nema onda dobiva prazan odgovor. \n\nZbog toga na nekim mjestima stoji X jer ta poruka nikad nije došla - neka druga, novija, poruka je u meduvremenu dosla i zapisala se u varijabu \"zadnjaPoruka\"\n\n(U praksi se ovo ne koristi jer je ostvarivanje veze sa serverom tj onaj handshake zapravo najskuplji dio)\n\n**Long polling** funkcionira ovako: Klijent posalje GET zahtjev i taj zahtjev ostaje otvoren na serveru dokle god mu server ne posluži odgovor. Kad klijent dobije odgovor onda opet radi novi GET zahtjev za iducom porukom pa ceka odgovor na nju . Zbog toga u rj. zadatka vrijeme kad klijent dobije poruku = vrijeme kad je drugi klijent poslao tu poruku \n\n(Ovaj nacin smanjuje nepotrebne zahtjeve na server, bolje ali ne idealno)\n\n**WebSocket** : Izmedu klijenta i servera se otvara TRAJNA veza putem TCP-a. To je duplex sto znaci da se kroz tu vezu moze razgovarati u oba smjera istovremeno. Tu ce isto biti  vrijeme kad klijent dobije poruku = vrijeme kad je drugi klijent poslao tu poruku  \n\nOno sto u zadatku pise je da se pamti samo jedna ZADNJA poruka. Dakle kod short pollinga - ako klijent 2 svakih 10s pošalje GET zahtjev za porukom, a klijent 1 u tom vremenu je poslao 3 poruke (\"3\",\"5\" i \"6\") onda ce klijent2 dobiti samo onu zadnju tj \"6\" \n\nEo mali dijagram da je jasniji taj short polling. Mislim da ova druga dva nemam sto objasnjavati.\n\n![](assets/2022-01-26/00037.jpg)",
+      "votes": {
+        "upvoters": [
+          "BakardiKola",
+          "Ellie",
+          "Lusy (MGJ)",
+          "MrHead (vandal)",
+          "Smolaa",
+          "SuperSaiyano",
+          "neZnamNista"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273957": {
+      "poster": "Lusy (MGJ)",
+      "content": "@\"anon00\"#p273953 Hvala punoo!",
+      "votes": {
+        "upvoters": [
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273994": {
+      "poster": "anon00",
+      "content": "Sad sam skuzio da je u njihovom rj. poruka 7 za short polling kriva i trebalo bi stajati 40, a ne 30 \n\nPoruku koja je poslana u 31. sekundi klijent2 ce dobiti tek u 40-toj sekundi. Logicno, ali bolje napisati",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)",
+          "MrHead (vandal)",
+          "SuperSaiyano",
+          "neZnamNista"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

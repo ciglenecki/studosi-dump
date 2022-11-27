@@ -1,0 +1,1381 @@
+{
+  "title": "[STRUCE1] 1. laboratorijska vježba - 2021/2022",
+  "creator": "Heklijo (Geralt of Rivia)",
+  "slug": "struce1-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Strojno učenje 1",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "244189": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "![](assets/2021-10-16/00001.png)\n\nNa koji nacin se moze definirati ovaj izraz f kao funkcija parametra x?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244196": {
+      "poster": "tomekbeli420",
+      "content": "@\"Heklijo\"#p244189 \n\n```python\nf = lambda x: 5 + x - 2*x**2 - 5*x**3\n```",
+      "votes": {
+        "upvoters": [
+          "Heklijo (Geralt of Rivia)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244207": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Heklijo\"#p244189 Ovo što kaže kolega @\"tomekbeli420\"#225 , a isto možeš i samo da definiraš funkciju s `def`. To je i preporučeno osim ako ti iz nekog razloga nije apsolutno potrebno imati manje linija koda radi stila pisanja, a i vjv je jednostavnije debuggirati. Moguće da za neke stvari dekoratori ne rade za lambde, a za definicije da, iako se s tim nećeš susretati na predmetu vjv.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244210": {
+      "poster": "InCogNiTo124",
+      "content": "@\"Heklijo\"#p244189 na stranu sto je rjesenje cursed:\n\nsta je najbolje, ovo ti ne prolazi samo iz razloga sto nisi stavio znak `*` izmedu zagrade i brojeva i x-eva\n\n@\"BDSMićo\"#p244207 uhm poprilicno sam siguran da dekoratori ni ne rade za lambde zbog sintaksne pogreske",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244211": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @\"InCogNiTo124\"#p244210 uhm poprilicno sam siguran da dekoratori ni ne rade za lambde zbog sintaksne pogreske\n\nNe radi sintaksni šećer s `@` onda, ali radi ak ju pozoveš ko funkciju, to sam siguran. No eto, valjda neće raditi numba jit na novom strojnom xD",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244213": {
+      "poster": "InCogNiTo124",
+      "content": "@\"BDSMićo\"#p244211 aha dobro to oke lol\n\n> @\"BDSMićo\"#p244211 valjda neće raditi numba jit na novom strojnom xD\n\nAk uvedu ponovo se apliciram na faks",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244325": {
+      "poster": "m21",
+      "content": "Kada je rok za predaju vježbe?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244399": {
+      "poster": "cloudies",
+      "content": "@\"m21\"#p244325 Sljedeću nedjelju u ponoć. Inače, svi rokovi vezano uz labose i zadaće su napisani u ovoj [google docs tablici](https://docs.google.com/spreadsheets/d/1Bzj0C3hlBcU84td0a0EF3QV4tKbdU7_85Jpq2OK5Ziw/edit#gid=0).",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)",
+          "m21",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244647": {
+      "poster": "BillIK",
+      "content": "![](assets/2021-10-18/00002.png)\n\nNe bi li size od y trebao biti 50, kao i x? Ako da, što bi bilo krivo u kodu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244670": {
+      "poster": "sheriffHorsey",
+      "content": "@\"BillIK\"#p244647 probaj koristit X.shape koji ti vraća tuple s dimenzijama matrice pa samo izvuci koja ti treba",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244708": {
+      "poster": "gladiator",
+      "content": "Nije mi jasno zašto bi offset_ kod klase LinearRegression ikad bio različit od onog kojeg smo ručno izračunali.\n\nZna li netko?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244736": {
+      "poster": "InCogNiTo124",
+      "content": "@\"gladiator\"#p244708 prvi nacin bi mogao biti recimo numericka nepreciznost, razliciti postupci daju razlicita rjesenja koja su dovoljno blizu al su ipak razliciti\n\ndrugi, malo gluplji razlog, je da recimo feature matrix mozes augmentirat sa konstantom znacajkom koja nije stalno 1 vec je tipa 2 ili neki drugi broj, sto ce onda dakako skalirati i `.offset_`",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244754": {
+      "poster": "Reznox",
+      "content": "@\"BillIK\"#p244647 Size(X) ce ti postaviti 50x50 matricu, postavi to u (50,1) i radit ce, barem je to meni popravilo",
+      "votes": {
+        "upvoters": [
+          "BillIK"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244909": {
+      "poster": "ppooww (pp)",
+      "content": "koliko ste dobili za E(h|D) u 1. zadatku pod c)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244919": {
+      "poster": "kix7 (Fish99)",
+      "content": "@\"pp\"#p244909 2.042857142857143",
+      "votes": {
+        "upvoters": [
+          "Dootz",
+          "Sulejman",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244920": {
+      "poster": "kix7 (Fish99)",
+      "content": "![](assets/2021-10-19/00008.png)\n\nJel ima smisla ovaj graf pogreške učenja i ispitne pogreške? Učenje je plavi graf, testiranje je narancasti, u oba su uzete np.log() vrijednosti pogreške",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244924": {
+      "poster": "bodNaUvidima",
+      "content": "@\"Fish99\"#p244920 ima smisla da",
+      "votes": {
+        "upvoters": [
+          "kix7 (Fish99)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244951": {
+      "poster": "Reznox",
+      "content": "![](assets/2021-10-19/00010.png)\n\nMoze li netko pojasniti na koji nacin misle ovo? Kao kopiramo x_train i x_test 3 puta i samo za svaki napravimo labele sa šumom ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244981": {
+      "poster": "wesley",
+      "content": "![](assets/2021-10-19/00012.png)\n\novo je moj graf pogreške učenja i ispitne pogreške, graf učenja je crven, ovo dobro?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245045": {
+      "poster": "dora (AE)",
+      "content": "Sto je potrebno napraviti u 2.a da y bude polje od 50 elemenata a ne matrica 50x50?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245051": {
+      "poster": "kix7 (Fish99)",
+      "content": "@\"AE\"#p245045 probaj zamotat svoj vektor X u np.ravel(X) gdje ga vec koristis u onoj funkciji koja ti treba generirat y i trebalo bi ti ispast dobro",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245052": {
+      "poster": "kix7 (Fish99)",
+      "content": "@\"wesley\"#p244981 nisam bas siguran da pogreska moze bit - vrijednost?",
+      "votes": {
+        "upvoters": [
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245053": {
+      "poster": "dora (AE)",
+      "content": "@\"Fish99\"#p245051 Proradilo, hvala!",
+      "votes": {
+        "upvoters": [
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245129": {
+      "poster": "lovro (l123)",
+      "content": "Jel razumije neko kako točno treba podijelit podatke u 3.c?![](assets/2021-10-20/00002.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245130": {
+      "poster": "wesley",
+      "content": "@\"Fish99\"#p245052 mislila sam da je negativna vrijednost jer je trebalo uzet logaritam od pogreške?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245151": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Reznox\"#p244951 \n\n@\"l123\"#p245129 \n\n- generirajte 1000 ulaznih podataka\n\nSad imate 1 dataset\n\n- podijelite ih na 2 skupa (trening i testni)\n\nSad imate 2 dataseta\n\n- svaki od njih klonirajte 2 puta, tj.  napravite još 2 kopije od svakog\n\nSad imate 6 dataseta\n\n- pojedinačno im pridružite labele s različitim šumom \n- stavite sa strane vaš izvor i napravite listu s novi datasetovima, neka je prazna\n- od svakog od 6 datasetova koje imate nasumično odaberite 1/3 unosa i stavite ih u listu\n- od svakog od 6 datasetova koje imate nasumično odaberite 2/3 unosa i stavite ih u listu\n- i na kraju, listi dodajte tih izvornih 6 datasetova\n\nVaša lista bi sad trebala sadržavati 18 datasetova.",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro",
+          "ErnestHemingway (Alfetta)",
+          "Jale (čakijale)",
+          "Lyras",
+          "cloudies",
+          "indythedog",
+          "kix7 (Fish99)",
+          "lovro (l123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245206": {
+      "poster": "dora (AE)",
+      "content": "Kolike vam ispadnu težine u 4.a?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245398": {
+      "poster": "angello2",
+      "content": "![](assets/2021-10-20/00022.png)\n\njel ovo ima ikakvog smisla? jel samo meni dosta cesto ispada greska na test setu (narancasto) manja od greske na train setu? kak bi trebo ovo interpretirat? grafovi se skroz promijene ako ponovo pokrenem\n\nnoise ide po stupcima (1. stupac noise = 100, 2. stupac noise = 200...)\n\nsample size ide po redovima (1. red je trecina sampleova. 2. red dvije trecine...)",
+      "votes": {
+        "upvoters": [
+          "2more (Shooshur)",
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245515": {
+      "poster": "steker",
+      "content": "@\"AE\"#p245206 [ 4.         -5.91666667  3.375      -0.45833333]\n\n[ 3.05696145 -0.69079365 -0.2831746   0.1445805 ]\n\n[ 2.49444184 -0.15897295 -0.13423067  0.0815601 ]",
+      "votes": {
+        "upvoters": [
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245526": {
+      "poster": "steker",
+      "content": "@\"steker\"#p245515 \n\nu b) zadatku dobijem\n\n[ 4.         -5.91666667  3.375      -0.45833333] \n\n[ 1.79567372 -0.24729075 -0.0175289   0.07014758] \n\n[0.43312265 0.11060671 0.13827839 0.03093411] \n\nto isto dobijem i u a) zadatku kada ostavim prvi element jedinicne matrice 1, tj. ne koristim λI =diag(0, λ, . . . , λ) vec diag(λ, λ, . . . , λ). Nije mi jasno koje od toga dvoje bi trebalo biti tocno ili mi se omako neki parametar u sklearn.linear_model.Ridge?",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245542": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "Jel u 3.c koristimo skup podataka iz 2. zadatka? dakle 1000 primjera iz [-5,5], dobivenih s make_instances (tj provedemo kroz f(x) i dodamo sum)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245550": {
+      "poster": "indythedog",
+      "content": "Također za 3.c), jel šum pridružujemo samo labelama primjera za treniranje, ili svim labelama? Nekako mi je logičnije da pridružujemo samo labelama za treniranje pa onda gledamo koja je razlika kad primijenimo dobivenu regresiju na oznake za testiranje bez šuma, al ne čini mi se da tako piše u zadatku?",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245555": {
+      "poster": "tomekbeli420",
+      "content": "@\"steker\"#p245526 jesi prilikom preslikavanja u prostor značajki u (b) dijelu izostavio dummy jedinice?\n\nmeni kod izgleda ovako:\n```python\n# potrebni importi\nlambdas = [0, 1, 10]\nphi = PolynomialFeatures(degree=3, include_bias=False).fit_transform(X)\nfor l in lambdas:\n    ridge = Ridge(alpha=l)\n    ridge.fit(phi, y)\n    print(\"lambda={}, w0={}, w={}\".format(l, ridge.intercept_, ridge.coef_))\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245573": {
+      "poster": "steker",
+      "content": "@\"tomekbeli420\"#p245555 dap to je problem, hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245626": {
+      "poster": "[deleted]",
+      "content": "@\"Fish99\"#p244919 ima netko ideju zašto dobijem duplu ovoliko? da, dijelim s dva na kraju :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245692": {
+      "poster": "tomekbeli420",
+      "content": "@\"Todd Chavez\"#p245626 \n\nZato što ta greška koju je kolega dobio i koja se traži je ona dobivena funkciojom ``sklearn.metrics.mean_squared_error`` koji vraća **srednju** kvadratnu pogrešku, dakle dijeli se sa [imath]N[/imath] ([imath]N = 4[/imath] u prvom zadatku), a eto to se taman je to duplo manje nego kad se dijeli sa  [imath]\\frac{1}{2}[/imath] kod one pogreške hipoteze kod koje se traži minimizator.",
+      "votes": {
+        "upvoters": [
+          "Arya",
+          "InCogNiTo124",
+          "Ollie",
+          "[deleted]",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245705": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"indythedog\"#p245550 Ovo bi i meni imalo više smisla, pretpostavljam da neće skidat bodove ako napraviš na bilo koji od 2 načina, dok god je implementacija dobra i imaš obrazloženje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245728": {
+      "poster": "[deleted]",
+      "content": "@\"tomekbeli420\"#p245692 \n\nhvala! nije mi bilo jasno jer u zadatku piše da se koristi izraz: ![](assets/2021-10-22/00004.png) pa sam radio ručno ne koristeći MSE.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245821": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "Koja predavanja su potrebna za ovu vjezbu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Ollie",
+          "miss_anthropocene (neunist.iva)"
+        ],
+        "tuga": []
+      }
+    },
+    "245830": {
+      "poster": "mbeno2358 (doug345)",
+      "content": "@\"Peter Jordanson\"#p245821 Do (ukljucujuci) regresija 2",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245870": {
+      "poster": "Baksuz",
+      "content": "![](assets/2021-10-22/00016.png)\n\nJel kuži tko što treba u b dijelu 2. zadatka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245890": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "@\"steker\"#p245526 \n\nJel točno onda \n\n[ 4.          -5.91666667  3.375      -0.45833333]                                    \n\n[ 1.79567372 -0.24729075 -0.0175289   0.07014758]                         \n\n[0.43312265 0.11060671 0.13827839 0.03093411]`\n\nili \n\n[ 4.         -5.91666667  3.375      -0.45833333]                           \n\n[ 3.05696145 -0.69079365 -0.2831746   0.1445805 ]                           \n\n[ 2.49444184 -0.15897295 -0.13423067  0.0815601 ]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245934": {
+      "poster": "[deleted]",
+      "content": "jel u 2.b) zadatku MSE ispadne dosta velik, > 40 000?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245944": {
+      "poster": "[deleted]",
+      "content": "također, ima netko da mu u 3. b) graf ispada ovako?\n\n![](assets/2021-10-23/00006.png)\n\nnisam siguran što krivo radim, raniji grafovi na tom datasetu imaju smisla i dobro izgledaju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245951": {
+      "poster": "steker",
+      "content": "@\"Heklijo\"#p245890 valjda taj drugi koji si napiso, ali je valjda ok ako dobijes razlictio u 4.a i 4.b samo moras znat objasnit otkud ta razlika",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245953": {
+      "poster": "steker",
+      "content": "@\"Todd Chavez\"#p245934 meni da, kako koji put kad ponovno pokrenem, ali tu se sve vrti oko 30-45 tisuca",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245959": {
+      "poster": "Ollie",
+      "content": "@\"Todd Chavez\"#p245934 \n\nda, meni ispadne oko 35 000\n\njel itko zna objasnit zasto je tak velik MSE?",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245960": {
+      "poster": "Kasperinac",
+      "content": "El itko mozda ima ikakvu ideju zas mi ovak izgledaju grafovi u 3.c. Svako pokretanje mi izgleda vrlo slicno ovim grafovima.\n\n![](assets/2021-10-23/00008.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245963": {
+      "poster": "tomekbeli420",
+      "content": "@\"Heklijo\"#p245890 Ja sam u oba dobio ovo drugo\n\n@\"steker\"#p245951 ? kako bi objasnio dobivanje drukčijih težina?\n\n@\"Todd Chavez\"#p245944 ispitna pogreška bi trebala rasti, meni ovako izgleda\n\n![](https://i.imgur.com/onxtOhB.png)\n\n@\"Baksuz\"#p245870 ovo treba\n\ndakle nacrtati točke iz ulaznog skupa primjera (1 značajka) zajedno sa njihovim oznakama, to je ovo plavo\n\novo crveno je hipoteza sa natreniranim parametrima\n\n![](https://i.imgur.com/sgoftiN.jpg)",
+      "votes": {
+        "upvoters": [
+          "Baksuz"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245978": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Ollie\"#p245959 Slaba korelacija nad stvarnom funkcijom i velike brojke u kodomeni. Tebi nije toliko bitan iznos, nego da si u minimumu.\n\nMislim da je  to dosta lagano vidljivo na grafu kolege @\"tomekbeli420\"#p245963 , vidiš kolike su udaljenosti točaka od linije, i onda još svaku kvadriraj.",
+      "votes": {
+        "upvoters": [
+          "Ollie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245984": {
+      "poster": "[deleted]",
+      "content": "\"Kako bi simulirali veličinu skupa podataka, od tih dobivenih 6 skupova podataka uzorkujte trećinu, dvije trećine i sve podatke. Time ste dobili 18 skupova podataka -- skup za učenje i za testiranje za svaki od devet grafova.\"\n\novo zapravo ne radimo s `train_test_split` već samo trebamo uzet (1/2/3) trećinu iz ovih gornjih 6 skupova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245985": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Todd Chavez\"#p245984 Da, `train_test_split` je samo lagani wrapper za tu namjenu, ovo ćeš vjv raditi s `numpy.random.choice`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245989": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "![](assets/2021-10-23/00013.png)\n\njel ovo ima smisla za 3.c) sto se tice pogresaka?",
+      "votes": {
+        "upvoters": [
+          "sheriffHorsey"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245991": {
+      "poster": "angello2",
+      "content": "@\"Tompa007\"#p245989 tak nekak je i meni ispalo, pogledaj gore moj post, i dalje ne kuzim zas je tak cesto ispitna pogreska manja od pogreske ucenja al eto",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246009": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "Jel 4.d ovakav graf?\n\n![](assets/2021-10-23/00018.png)\n\nNa početku je kao složeniji model, pa je zato pogreška učenja najmanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246010": {
+      "poster": "Dootz",
+      "content": "@\"Heklijo\"#p245890 Ja sam isto tako dobivao gornji na 4.a i donji na 4.b, ali kad sam u 4.b dodao argument  fit_intercept=False kod ridgea, i tu sam dobio ovaj gornji. Pretpostavljam da je to jer već dodaješ dummy jedinicu kad radiš preslikavanje u veći dimenziju, nisam ziher tho",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246034": {
+      "poster": "Ducky",
+      "content": "@\"Todd Chavez\"#p245944 meni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246038": {
+      "poster": "Ducky",
+      "content": "@\"Ducky\"#p246034 \n\n@\"Todd Chavez\"#p245984 \n\nBio mi je problem sta sam treniro i test i train model, a trebo sam samo train.\n\nh_test = np.dot(phi_test, w_train)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246048": {
+      "poster": "Baksuz",
+      "content": "@\"Heklijo\"#p246009 meni je ovako ispalo. ![](assets/2021-10-23/00029.png)",
+      "votes": {
+        "upvoters": [
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246077": {
+      "poster": "[deleted]",
+      "content": "@\"steker\"#p245951 jel možeš objasniti od kud je razlika?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246082": {
+      "poster": "[deleted]",
+      "content": "@\"Todd Chavez\"#p246077 jel se tu zapravo o razlici uključivanja dummy varijable?",
+      "votes": {
+        "upvoters": [
+          "kix7 (Fish99)",
+          "sheriffHorsey"
+        ],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246088": {
+      "poster": "rolotex (brr)",
+      "content": "![](assets/2021-10-24/00007.png)\n\n4.c) jel vidi netko zasto dobivam ove pravce kad iscrtavam x i h1",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246110": {
+      "poster": "Upforpslone",
+      "content": "Kako ste uzorkovali pola i trecinu u 3.c?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246117": {
+      "poster": "fer999",
+      "content": "Može li netko objasniti zašto se razlikuju dobivene težine u zadacima 4.a i 4.b  i kako bismo mogli prilagoditi da nema te razlike?",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246120": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Dootz\"#p246010 kaj ti nije onda w0 = 0 ako tako stavis, ne kuzim zasto s erazlikuju rezultati ako se radi nad istim skupom podataka, u jednom i drugom slucaju je matrica dizajna dimenzije 3 sa dummy znacajkom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246122": {
+      "poster": "Diego",
+      "content": "@\"fer999\"#p246117 Možda si u 4.a koristio dijagonalnu matricu koja ima sve λ na dijagonali umjesto da ti je prvi element na dijagonali 0 a ostali λ -> diag(0,λ,...,λ)",
+      "votes": {
+        "upvoters": [
+          "zastozato (studoš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246128": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"fer999\"#p246117 Imao sam razliku i popravio je tako da u argument metode Ridge dodam opcionalan pararmetar fit_intercept=false. U 4.a sam koristio λ*I, bez da sam micao prvi element.\n\nNezz iskreno sto je tocno ali ovako sam dobio iste brojeve.\n\nEdit: ako se dobro sjećam fit_intercept, odnosno brisanje prvog elementa λ matrice centrira skup podataka tako da elementi budu bliže ishodištu. Ako koji kolega razumije bolje bilo bi super da pojasni zašto λ matrica to radi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246129": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Baksuz\"#p246048  meni isto, znas mozda koji je zakljucak za ovakav graf",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246130": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Precious Bodily Fluids\"#p246128 \n\n![](assets/2021-10-24/00010.png)\n\ntreba maknut prvi element , al vjerovatno dode na isto ako kasnije dodas fit_intercept = false",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246133": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Baksuz\"#p246048 \n\n@\"Tompa007\"#p246129 Mislim da ima smisla graf, probajte ga nekoliko puta generirat i dobit će se različiti rezultati.\n\nRegularizacija smanjuje prenaučenost tako da obuzdava složenost naučenog modela. Npr. prenaučeni model bit će polinom visokog stupnja, koji će u sridu predviđati oznake primjera za učenje, ali će se izvan njih ponašati jako kaotično \n\nKako povećavaš faktor λ pri regularizaciji, model postaje sve jednostavniji (polinom manjeg stupnja), i zato neće moći pogoditi sve primjere učenja, ali će bolje generalizirati (tj. predviđati neviđene primjere).\n\n\nPogledaj Regresija 2, slike na str 6 i 8.   \n\nPretpostavljam da se za velike λ graf prestaje mjenjati jer je model već gotovo pa linearan.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246134": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Precious Bodily Fluids\"#p246133 ahaaa ima smisla, hvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246179": {
+      "poster": "gladiator",
+      "content": "koji je format predaje? nešto tipa JMBAG.ipynb ili ime-prezime.ipynb ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246180": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @\"Precious Bodily Fluids\"#p246128 Ako koji kolega razumije bolje bilo bi super da pojasni zašto λ matrica to radi.\n\nGledaj na lambde kao multiplikatore gubitka. Pošto ti minimiziraš gubitak, svi članovi koji ti imaju nenul koeficijent će ti utjecati na gubitak. Pozitivne lambde će pokušati smanjiti normu parametara, negativni povećati je.\n\nAko je koeficijent na nekom polju dijagonale 0, onda taj član nije regulariziran jer ne ulazi u izraz za gubitak. Drugim riječima, zbog toga što je 0, u procesu učenja ga se ignorira u pogledu regularizacije, jer se njegov doprinos gubitku množi s 0.\n\nInače je moguće složiti i regularizaciju koja ima drukčije parametre izvan dijagonale. Time se mogu modelirati kompleksniji odnosi, ali u isto vrijeme se unosi neko znanje o značajkama (jer se time modelira interakcija značajki). Dijagonala predstavlja množenje sa skalarom, najjednostavniji slučaj, a micanjem faktora za 0. član, tj. intercept samo kažete da je on drukčijih od ostalih članova, tj. da nema istu ulogu u zadatku za učenje kao i ostali.",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246185": {
+      "poster": "nnn (dinoo)",
+      "content": "Treba li stavljat šum u 4.d? Ako da koliki ili nije bitno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246198": {
+      "poster": "[deleted]",
+      "content": "@\"gladiator\"#p246179 mislim da nije definirano",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246200": {
+      "poster": "MOXY",
+      "content": "meni u 2b h(x) ima vrijednosti od 0-nadalje na xosi, kako da h(x) namjestim da dobiva vrijednosti iz [-5,5]?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246229": {
+      "poster": "Arya",
+      "content": "Koje je objasnjenje za 1.d)?\n\n> Zašto je to slučaj? Bi li se problem mogao riješiti preslikavanjem primjera u višu dimenziju? Ako da, bi li to uvijek funkcioniralo, neovisno o skupu primjera D? Pokažite na primjeru.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246257": {
+      "poster": "Daeyarn",
+      "content": "na pitanja u biljeznici ne treba odgovarati right? i treba li imenovati file nekak posebno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246274": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Daeyarn\"#p246257 Ne treba, zapravo oni kažu da ni ne smiješ, jer te to pitanju na ispitivanju.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246318": {
+      "poster": "Fica (Prof)",
+      "content": "Labos danas u 8: chill asistenti, prolaze po kodu i pitaju više manje po onim pitanjima. Mene je pitala tri komponente algoritma strojnog učenja, zašto koristimo PolyinomialFeatures, zašto koristimo pseudoinverz, razlika između PolyinomialFeaturesa u 1. i 2. zadatku, je li model i dalje linearan u 2. zadatku, objasniti one grafove sa šumom, zašto koristimo train_test_split, zašto ne regulariziramo w0  i što možemo napraviti da smijemo regularizirati w0, pokazati podnaučenost i prenaučenost na zadnjem grafu i pokazati gdje je model složeniji.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Bananaking",
+          "BrownPerson (Bambi)",
+          "Bucc (Olive Oil)",
+          "Daeyarn",
+          "Daho_Cro",
+          "Ducky",
+          "Haki",
+          "Jale (čakijale)",
+          "JeleeII",
+          "JoKing",
+          "Retard00",
+          "Svarog (Veles)",
+          "Upforpslone",
+          "Valentino",
+          "[deleted]",
+          "angello2",
+          "cloudies",
+          "gladiator",
+          "indythedog",
+          "jobi (azex)",
+          "joj (poni)",
+          "kix7 (Fish99)",
+          "krokodil",
+          "neksi (filip)",
+          "plavisnajper",
+          "rolotex (brr)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246448": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "Meni je i dalje omoguceno uredjivanje uploada iako je rok prosao, jel uzimaju bodove za kasnu predaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246452": {
+      "poster": "Bananaking",
+      "content": "@\"DnkCkv\"#p246448 ja se ne bi baš s time zezao ako si prije roka nešto uploadao prezentiraj to što jesi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246480": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"DnkCkv\"#p246448 Uzimaju, ne sjećam se točno principa, ali mislim da je 50%.\n\nRađe ako si nešto sitno ispravljao dođi s tim na labos, nekim asistentima ne smetaju sitne prepravke, neki će srat da priznaju samo uploadano, ali bar neće bit -50% bodova",
+      "votes": {
+        "upvoters": [
+          "DankJakov (DnkCkv)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246531": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "@\"DnkCkv\"#p246448 Neki traže da preuzmeš predanu zadaću pred njima, neke boli briga, tak da moj tip je da sam držiš zadaću s prepravcima otvorenu kad dođe do tebe, a ako te traži da skineš pred njim jbga skineš i pokazuješ tu verziju.",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro",
+          "DankJakov (DnkCkv)",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246881": {
+      "poster": "netko_tamo",
+      "content": "@\"Prof\"#p246318 sto mozemo napraviti da smijemo regularizirati w0?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246885": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"netko_tamo\"#p246881 U skripti nijesam našao riječi o tome osim da se skup podataka može centrirati u odnosu na ishodište i onda je w0 = 0, al nebi to nazvao regularizacijom, nego kako sam već rekao, centriranjem skupa podataka.",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247017": {
+      "poster": "BillIK",
+      "content": "_Uvjerite se da za primjere iz  D  težine  𝐰  ne možemo naći rješavanjem sustava  𝐰=𝚽−1𝐲 , već da nam doista treba pseudoinverz.\n\nQ: Zašto je to slučaj? Bi li se problem mogao riješiti preslikavanjem primjera u višu dimenziju? Ako da, bi li to uvijek funkcioniralo, neovisno o skupu primjera  D ? Pokažite na primjeru._\n\nMože netko objasniti ovo s preslikavanjem u višu dimenziju? Može li se?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247018": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"BillIK\"#p247017 ako napravis preslikavanje s odgovarajucim polinomnim stupnjem mozes eobiti kvadratnu matricu, ciji inverz se moze racunati, al opet imas problem ako ta matrica nije punog ranga",
+      "votes": {
+        "upvoters": [
+          "BillIK",
+          "kix7 (Fish99)",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247020": {
+      "poster": "Retard00",
+      "content": "@\"Precious Bodily Fluids\"#p247018 Jel se može to objasnit i pomoću determinante koja će bit 0?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247141": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Retard00\"#p247020 mislim da da. Jeri ako matrica nije punog ranga (tj broj linearno nezavisnih redaka nije jednak dimenziji matrice) onda joj je determinanta 0",
+      "votes": {
+        "upvoters": [
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247172": {
+      "poster": "Valentino",
+      "content": "Kako izgleda odgovaranje DZ na terminu labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247174": {
+      "poster": "[deleted]",
+      "content": "@\"Valentino\"#p247172 meni je danas lik samo pogledao i ništa nije pitao",
+      "votes": {
+        "upvoters": [
+          "Valentino",
+          "sheriffHorsey"
+        ],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247177": {
+      "poster": "steker",
+      "content": "@\"Valentino\"#p247172 meni je asistentica iz svake zadace dala da objasnim jedan zadatak",
+      "votes": {
+        "upvoters": [
+          "Valentino"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

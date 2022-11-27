@@ -1,0 +1,1473 @@
+{
+  "title": "[STRUCE] 3. laboratorijska vježba - 2020/2021",
+  "creator": "Stark",
+  "slug": "struce-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Strojno učenje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "103662": {
+      "poster": "Stark",
+      "content": "Kako vam ispada prvi a)? \n\nMeni je tu nešto čudno, zar ne bi trebala biti margina između ova dva područja?\n\n ![](assets/2020-12-01/00016.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "[deleted]",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103711": {
+      "poster": "Erinon",
+      "content": "Kako se iscrta margina? Meni je u svakom zadatku iscrtana samo granica.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103780": {
+      "poster": "Ziher",
+      "content": "I meni, ma dobro je, njihova je funkcija pa je valjda ok\n\nJel ima tko gresku na 3. b) zadatku koja glasi \"ValueError: The number of FixedLocator locations (5), usually from a call to set_ticks, does not match the number of ticklabels (4).\"",
+      "votes": {
+        "upvoters": [
+          "Lujonlu (Gannicus)",
+          "MrHead (vandal)",
+          "Murin",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104069": {
+      "poster": "DudeUrNuts",
+      "content": "![](assets/2020-12-02/00002.png)\n\nNisam siguran treba li ovdje po 100 vektora u svakoj dimenziji i onda iskoristiti funkciju za svaku od dimenzija? Pa svaka dimenzija bude točka na x-osi, a prosjek udaljenosti y-os?\n\nIli možda 100 vektora koji randomly imaju neku od navedenih dimenzija i onda vidjeti udaljenosti? Ali onda ne znam kako bi to trebalo izgledati na grafu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104070": {
+      "poster": "Ziher",
+      "content": "@DudeUrNuts#104069 ja sam napravio 100 random vektora za svaku dimenzionalnost od ponudjenih i onda to stavis u pairwise_distances, dobijes matricu i izracunas prosjek\n\nI od prosjeka za svaku dimenzionalnost na kraju imas listu vrijednosti s kojom iscrtas graf na kraju",
+      "votes": {
+        "upvoters": [
+          "DudeUrNuts",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104092": {
+      "poster": "Ziher",
+      "content": "> @Ziher#103780 Jel ima tko gresku na 3. b) zadatku koja glasi “ValueError: The number of FixedLocator locations (5), usually from a call to set_ticks, does not match the number of ticklabels (4).”\n\nOk, rijesio sam ovo i rjesenje je bilo da novi matplotlib ne sljaka\n\nTocnije, za kolege koje koriste anacondu: pip install matplotlib==3.2.0 u anaconda prompt",
+      "votes": {
+        "upvoters": [
+          "ImJustAKid (lumity)",
+          "MrHead (vandal)",
+          "chuuya (temari)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104227": {
+      "poster": "Erinon",
+      "content": "Iscrtava li vam se sada granica po ispravljenom labosu? Meni se vidi samo margina.\n\nEDIT: A i iscrtavanje sada traje dosta dugo.",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "PiqueBlinders (zisku)",
+          "Skaxen",
+          "Vrba",
+          "ajkula",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104338": {
+      "poster": "Sharich",
+      "content": "Kako su vam ispale prosjecne tocnosti u 4.d), jer nema mi smisla da neskalirani dataset ima 99% tocnost i da je tocniji od skaliranog...\n\nprosjecna tocnost neskaliranog skupa je: 0.9917333333333332\n\nprosjecna tocnost MinMax skaliranog skupa je: 0.9802666666666668\n\nprosjecna tocnost standardno skaliranog skupa je: 0.9897333333333334",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Broono (Burućuh)",
+          "Ducius",
+          "Longclaw",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104344": {
+      "poster": "lucija (luc)",
+      "content": "Mene zanima u 4.b) skaliramo li cijeli X (znaci x0 i x1 zajedno) ili odvojeno x0 i x1? Kad skaliram cijeli X grafovi su mi prakticki isti kao u 4.a)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104499": {
+      "poster": "MJ3",
+      "content": "@Sharich#104338 i meni slično tako,ne znam u čemu je stvar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104504": {
+      "poster": "Skaxen",
+      "content": "@Sharich#104338  ja sam pormijenio random_state zastavicu u make_classification() i sad mi je neskalirani na 0.483 a MinMax i standard su oko 0.5, tako da probajte s time. Ja sam odlucio biti jednako fellow kids funny koliko i snajder pa stavio 420 i dobio ove normalnije rezultate (doduse 1337 daje jednako lose rezultate tako da nemojte to)",
+      "votes": {
+        "upvoters": [
+          "Sharich",
+          "happysun",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Noggenfogger (dammitimmad)",
+          "hi_doggy"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104737": {
+      "poster": "moji_prsti_prsti_klize_po_njoj",
+      "content": "kako tribaju izgledat grafovi u 3. zadatku",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104851": {
+      "poster": "[deleted]",
+      "content": "@moji_prsti_prsti_klize_po_njoj#104737 ovako nest valjda\n\n![](assets/2020-12-02/00046.png)",
+      "votes": {
+        "upvoters": [
+          "Kupus",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104979": {
+      "poster": "Stark",
+      "content": "Meni ispadne ovako. Zna netko objasniti kako treba i koje je točno?\n\n![](assets/2020-12-03/00013.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104980": {
+      "poster": "[deleted]",
+      "content": "Kako koristiti `mlutils.plot_error_surface`? Pokušao sam `pip install mlutils` ali taj paket nema metodu `plot_error_surface`.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104982": {
+      "poster": "bob",
+      "content": "@Stark#104979 \n\nvjerojatno si napravio istu gresku kao i ja (dobivao sam iste takve grafove).\n\nkad u funkciji grid_search upisujes izracunatu pogresku u matrice pogreski, kao indekse redaka i stupaca ne smijes koristit trenutne iteratore za vrijednosti C i gamma nego ti trebaju posebni brojaci za redak i stupac koji krecu od 0.",
+      "votes": {
+        "upvoters": [
+          "Carmichael (Charm)",
+          "Cvija",
+          "Daorson",
+          "Ellie",
+          "Gendo",
+          "Stark",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104988": {
+      "poster": "Red_Baron",
+      "content": "@gentleman#104980 mlutils je prošle godine bio modul u kojeg su oni stavili svoje funkcije za iscrtavanje. Makni \"mlutils.\" i dobar si.",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)",
+          "[deleted]",
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105000": {
+      "poster": "[deleted]",
+      "content": "@Red_Baron#104988 Hvala ti, očito mi je umro kernel u međuvremenu pa ga nije prepoznavao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105012": {
+      "poster": "Vrba",
+      "content": "![](assets/2020-12-03/00015.png)\n\nJel ovako trebaju ispasti grafovi u 2.?",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Sanjaaa",
+          "[deleted]",
+          "happysun",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105020": {
+      "poster": "moji_prsti_prsti_klize_po_njoj",
+      "content": "tako meni ispadaju isto 😌",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Sanjaaa",
+          "Vrba",
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105056": {
+      "poster": "Erinon",
+      "content": "@lucija#104344 Ja mislim da tako i treba biti, jer ti histogram da koliko brojeva je u kojem intervalu. Znači te frekvencije pojavljivanja će biti iste, ali se mijenja samo x os, jer su ti intervali drugačiji za drugačije skale.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105058": {
+      "poster": "Erinon",
+      "content": "@Skaxen#104504 Zašto bi ovdje stavili random_state? Ako želimo prosjek točnosti na recimo 30 pokretanja, ako se postavi random_state uvijek će se dobiti isti dataset, tako da je ista stvar kao i da samo jednom pokrenemo.",
+      "votes": {
+        "upvoters": [
+          "Dekan",
+          "[deleted]",
+          "a_ko_si_ti",
+          "bob",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105265": {
+      "poster": "Murin",
+      "content": "@bob#104982 \n\nJel mozes objasniti zasto je to tako,? Meni ima smisla ako idemo po i za svaki C te po j za svaki gamma, da kad izracunamo train/valid errore da samo ubacimo u te matrice na [i][j] koordinatu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105271": {
+      "poster": "bob",
+      "content": "@Murin#105265 \n\nzato jer C i gamma poprimaju negativne vrijednosti (krecu od -5 i -15 u konkretnom zadatku), a matrice nemaju negativne koordinate nego krecu od 0.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105277": {
+      "poster": "Murin",
+      "content": "@bob#105271 \n\nAha razumijem, dobro ja imam nekakvu drukciju gresku gdje mi na kraju sva polja budu ista i velicine 2 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105335": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "@Vrba#105012 kako si uspio dobiti ovu granicu? imas li je i u prvom zadatku, jer meni ne iscrtava a skinuo sam njihovu novu verziju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105338": {
+      "poster": "Vrba",
+      "content": "@PiqueBlinders#105335 Dva puta su azurirali biljeznicu pa probaj ponovno skinuti, trebala bi biti",
+      "votes": {
+        "upvoters": [
+          "PiqueBlinders (zisku)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105341": {
+      "poster": "ajkula",
+      "content": "Kako izgleda ovaj graf u 7. zadatku, nisam bas siguran da je meni tocan.\n\n![](assets/2020-12-04/00005.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Emma63194",
+          "Red_Baron",
+          "a_ko_si_ti",
+          "cajaznun",
+          "hi_doggy",
+          "setuid0"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105359": {
+      "poster": "[deleted]",
+      "content": "@ajkula#105341 Meni je ovako ispalo![](assets/2020-12-04/00010.png)",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "Noggenfogger (dammitimmad)",
+          "Svarog (Veles)",
+          "[deleted]",
+          "ajkula"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105396": {
+      "poster": "InCogNiTo124",
+      "content": "@ajkula#105341 kolega, nesto vam je transponirano negdje u pozivu plotanja",
+      "votes": {
+        "upvoters": [
+          "ajkula"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105400": {
+      "poster": "ajkula",
+      "content": "@InCogNiTo124#105396 \n\nMa ja sam uzimao sve udaljenosti između parova vektora, umjesto srednju vrijednost. Kad se uzme srednja vrijednost onda se dobije lijep graf, također zamijenjene su x i y os.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105558": {
+      "poster": "neja_negoti",
+      "content": "@Sharich#104338 \n\njesi mozda uspio ovo rjesit? da imaju smisla brojevi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105665": {
+      "poster": "Noname",
+      "content": "Sto tocno znaci uputa u 4.d zadatku:\n\n \"Na skupu za učenje treba najprije izračunati parametre skaliranja te zatim primijeniti skaliranje (funkcija fit_transform), dok na skupu za ispitivanje treba samo primijeniti skaliranje s parametrima koji su dobiveni na skupu za učenje (funkcija transform)\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105672": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Noname#105665 Znači da za test ne skaliraš podatke po uzoru na testni skup, već po uzoru na skup za učenje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105708": {
+      "poster": "in1",
+      "content": "@Sharich#104338  Jesi možda zaboravio nakon generacije novih podataka dodati:\n\n`X[:,1] = X[:,1]*100+1000` jer bez toga skaliranje nema nekog efekta.\n\nEDIT: Sa time mi konzistentno za skaliranje ispada veća točnost (između 5% i 50%).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105747": {
+      "poster": "Stark",
+      "content": "@msus#104851 \n\nKolike bi ovdje trebale ispasti optimalne vrijednosti?\n\nMeni ispada ovako:\n\nOptimal C:  16 [n=2]\n\nOptimal gamma:  0.0078125 [n=2]\n\nOptimal c:  2 [n=200]\n\nOptimalni gamma:  0.0078125 [n=200]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105841": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Jel još netko u trećem za ovaj skup s n = 100 dobije crne grafove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105843": {
+      "poster": "knjklj",
+      "content": "@PrisonMike#105841 Ne, dobivam slično kao https://fer.studosi.net/d/2375-struce-3-laboratorijska-vjezba-20202021/15\n\nKod mene je bila pogreška gdje sam za gornju i donju granicu od gamma čitao vrijednosti iz c_range",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106098": {
+      "poster": "Bananaking",
+      "content": "\"1. b) uvjerite se da je rezultat identičan onome koji biste dobili primjenom ugrađene funkcije metrics.hinge_loss\"\n\nMeni nije ? Prosječan gubitak SVM-a: 0.666667, hinge_loss: 0.5001139, jel to ok ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106099": {
+      "poster": "Erinon",
+      "content": "@Bananaking#106098 Meni su isti pa pretpostavljam da bi trebao biti.\n\naverage_loss = 8.37053571429079e-05",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106115": {
+      "poster": "[deleted]",
+      "content": "@Bananaking#106098 Zar ne bi oba trebala dati 0, radi se o linearno odvojivim podatcima a hinge loss bismo trebali implementirati kao [imath]L(y, h(\\mathbf{x})) = max(0, 1 - y * h(\\mathbf{x}))[/imath]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106117": {
+      "poster": "Bananaking",
+      "content": "@gentleman#106115 nemam pojma, evo moje pa probaj ili mi reci ako nešto ne valja\n\n```python\nprimjeri_X = np.array([[3.5, 2], [3, 2], [4, 2]])\nprimjeri_y = np.array([1, 1, -1])\n\npred_decision = clf.decision_function(primjeri_X)\nhinge_loss(primjeri_y, pred_decision)\n\nOut: 0.5001139322916662\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106134": {
+      "poster": "[deleted]",
+      "content": "```python\nmodel.decision_function()\nGubitak za x2:  0.00019531249999893419\nGubitak za x1:  0.5000488281249984\nGubitak za x3:  1.0000976562500012\nProsječni gubitak na skupu seven:  8.37053571429079e-05\nHinge-loss na skupu seven:  8.37053571429079e-05\n```\n\n```python\nmodel.predict()\nGubitak za x2:  0\nGubitak za x1:  0\nGubitak za x3:  2\nProsječni gubitak na skupu seven:  0.0\nHinge-loss na skupu seven:  0.0\n```\n\nOvisi o tome koju funkciju odabereš, ja sam uzeo predict jer je u skripti pod gubitak zglobnice napisan oblik koji koristi [imath]h(\\mathbf{x})[/imath]",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106196": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jel može neko malo pojasnit za zadnji zadatak sa kosinusnom i euklidskom udaljenosti što bi bilo bolje koristiti i zašto?",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106235": {
+      "poster": "[deleted]",
+      "content": "Napisao sam si [bilješke](https://drive.google.com/file/d/1XrmU7-lfpf2wz19d6iiXTQxuyAQHpnZf/view?usp=sharing) za labos, uglavnom odgovori na pitanja iz bilježnice, pa ako netko ima kakve nadopune i ispravke javite",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Bato (Morski Pas)",
+          "Broono (Burućuh)",
+          "Emma63194",
+          "ImJustAKid (lumity)",
+          "Murin",
+          "Njet",
+          "PrisonMike (Števo)",
+          "Quentin",
+          "Vrba",
+          "Yasuke (Bono)",
+          "[deleted]",
+          "[deleted]",
+          "bob",
+          "carrieb",
+          "chuuya (temari)",
+          "hi_doggy",
+          "in1",
+          "korisnickoime",
+          "luba",
+          "lucija (luc)",
+          "member",
+          "narval13068 (Dima)",
+          "pepelko",
+          "sane_insane",
+          "sphera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106531": {
+      "poster": "Bananaking",
+      "content": "U 4. zadatku bi se accuracy_score trebao povećavati ili smanjivati sa skaliranjem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106539": {
+      "poster": "member",
+      "content": "@Bananaking#106531 a trebala bi se povećavat točnost jer je to i svrha skaliranja, al meni ispada kao i @Sharich#104338",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106589": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@member#106539 probaj maknut random_state ako već nisi",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Kupus",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106618": {
+      "poster": "sphera",
+      "content": "@Vrba#105012 \n\nkako tako složiš grafove ako koristiš njihovu funkciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106625": {
+      "poster": "Erinon",
+      "content": "@gentleman#106134 model.predict() za svaki primjer vraća klasu u koju ga smjesti, znaći -1 ili 1, a model.decision_function() vrati izlaz h(x). Ne možeš izračunati gubitak na temelju stvarne i predviđene klase, moraš dobiti neku pouzdanost da bi izračunao gubitak, odnosno u hinge_loss() trebaš poslati stvarnu klasu i izlaz modela h(x). Ako šalješ model.predict() rezultat nema smisla.",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi",
+          "[deleted]",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106668": {
+      "poster": "luba",
+      "content": "maknuo sam u 4.d)  random_state i opet mi prosječna točnost za sva 3  ispadne oko  0.74\n\nGdje može biti greška?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106675": {
+      "poster": "Ellie",
+      "content": "Jel se nekom dogodilo da mu jupyter notebook ima 4mb? (Ogranicenje je 2mb)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106677": {
+      "poster": "Ellie",
+      "content": "EDIT: Trebalo je samo otici na Edit -> Clear all outputs",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106756": {
+      "poster": "in1",
+      "content": "pitanja anyone?",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Dammir (Kajropraktour)",
+          "Emma63194",
+          "MsBrightside",
+          "ReyKenobi",
+          "Stark",
+          "[deleted]",
+          "korisnickoime",
+          "member",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106935": {
+      "poster": "in1",
+      "content": "@in1#106756 \n\n1. zadatak\n - općenito o svmu, kako smo definirali problem, koje smo pretpostavke uveli, kakve formulacije imamo, koji su parametri u obje formulacije i koliko ih ima, što su potporni vektori, koliko najmanje potpornih vektora možemo imati, utječe li outlier na svm, što su meka i tvrda margina</LI>\n\n1. zadatak\n\n - kako smo riješili problem nelinearnosti, što je jezgrin trik, zašto je koristan</LI>\n\n1. zadatak\n -  objasni grid_search kako funkcionira i što njime dobivamo,kada C i gamma rastu model postaje..., što se događa s grafom kada imamo više dimenzija</LI>\n\n1. zadatak\n - objasniti problem s različitim skalama tj. zašto skaliramo značajke, objasniti oba skaliranja + formula za oba skaliranja, što je problem s minmax skaliranjem (pitanje ciljano na dodani primjer `X[0,1] = 3000`)</LI>\n\n1. zadatak\n\n - ništa, samo je provjerio je li algoritam ispravno implementiran tj. dođe li ista točnost za obje implementacije</LI>\n\n2. zadatak\n\n - ako k raste model postaje..., za k = N se događa da..., ako imamo manje informativnih značajki vidimo da greška raste pa možemo li to popraviti (ne), koje područje na grafu odgovara podnaučenosti/prenaučenosti</LI>\n\n7. zadatak \n\n - što je prokletstvo dimenzionalnosti, što vidimo na grafu, koje su formule za udaljenosti, što mjeri kosinusna udaljenost (kut) </LI>",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Conrad",
+          "Cubii",
+          "Dammir (Kajropraktour)",
+          "Ellie",
+          "Emma63194",
+          "Erinon",
+          "Hus",
+          "ImJustAKid (lumity)",
+          "Juren",
+          "MrHead (vandal)",
+          "MsBrightside",
+          "Murin",
+          "PrisonMike (Števo)",
+          "ReyKenobi",
+          "Ruleta",
+          "Stark",
+          "WhiteMamba",
+          "[deleted]",
+          "basic919 (byk)",
+          "bob",
+          "carrieb",
+          "hi_doggy",
+          "joc",
+          "johndoe12 (enaiks)",
+          "korisnickoime",
+          "login",
+          "luba",
+          "lucija (luc)",
+          "member",
+          "narval13068 (Dima)",
+          "sane_insane",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107194": {
+      "poster": "ReyKenobi",
+      "content": "> @in1#106935 što je problem s minmax skaliranjem (pitanje ciljano na dodani primjer X[0,1] = 3000)\n\nŠto je ovdje očekivani odgovor? Da je većina skaliranih značajki između 0 i 0.2, a samo ta jedna je na rubu s vrijednosti 1 pa da to predstavlja problem? \n\nTakođer ako netko zna malo detaljnije objasniti 3. zadatak sa pogreškama (je li pogreška veća za primjere od 100 dimenzija zbog prokletstva dimenzionalnosti i ono zadnje pitanje o povećanju game i smanjenju C).\n\nI u zadatku 6. c) pitanje za nebitne značajke: _Je li ovaj problem izražen i kod ostalih modela koje smo dosad radili (npr. logistička regresija)?_  - je li odgovor da bismo učenjem modela logističke regresije samo sveli težine uz te značajke na manje vrijednosti pa ne bi predstavljalo problem kao u algorimu knn?",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107205": {
+      "poster": "carrieb",
+      "content": "@ReyKenobi#107194 \n1. rekla bih da da, minmax se krivo ponaša zbog te jedne - da ne postoji bi se rasporedile po cijelom rasponu od 0-1, ovako su restriktirane na [0,0.2]\n2. nisam sigurna\n3. da me to pitaju bi odgovorila da nebitne značajke uvijek predstavljaju problem, ali ovisi kako se nosimo s njim - regularizacija taj problem rješava, no bez regularizacije je jednako bitan i ostalima kao i knn (možda ne u istoj mjeri, ali svejedno utječe na rezultate/stabilnost)",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107211": {
+      "poster": "carrieb",
+      "content": "@ReyKenobi#107194 \n1. rekla bih da da, minmax se krivo ponaša zbog te jedne (s obzirom na to da uzima donju i gornju granicu svih vrijednosti) - da ne postoji bi se rasporedile po cijelom rasponu od [0,1], ovako su ogranicene na [0,0.2], dok je rubna znacajka skoro na 1\n2. nisam sigurna\n3. da me to pitaju bi odgovorila da nebitne značajke uvijek predstavljaju problem, ali ovisi kako se nosimo s njim - regularizacija taj problem rješava, no bez regularizacije je jednako bitan i ostalima kao i knn (možda ne u istoj mjeri, ali svejedno utječe na rezultate/stabilnost)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107215": {
+      "poster": "Emma63194",
+      "content": "> @ReyKenobi#107194 Što je ovdje očekivani odgovor? Da je većina skaliranih značajki između 0 i 0.2, a samo ta jedna je na rubu s vrijednosti 1 pa da to predstavlja problem?\n\nDa, zbog te jedne značajke. Ako pogledaš formulu za minmax skaliranje, u nazivniku je xmax - xmin i onda taj stršeći primjer sve tako pomakne prema lijevo.\n\n> @ReyKenobi#107194 Također ako netko zna malo detaljnije objasniti 3. zadatak sa pogreškama (je li pogreška veća za primjere od 100 dimenzija zbog prokletstva dimenzionalnosti\n\nDa, točno to. Veće su udaljenosti i one više nisu diskriminativne. Fora je u tome da ako ovdje sada imamo visok gamma, mi inzistiramo na tome da primjeri budu bliži kako bismo ih tretirali kao slične, a to ćemo teško postići u prostoru više dimenzije.\n\n> @ReyKenobi#107194 i ono zadnje pitanje o povećanju game i smanjenju C).\n\nNa koje misliš?\n\n> @ReyKenobi#107194 I u zadatku 6. c) pitanje za nebitne značajke: Je li ovaj problem izražen i kod ostalih modela koje smo dosad radili (npr. logistička regresija)?  - je li odgovor da bismo učenjem modela logističke regresije samo sveli težine uz te značajke na manje vrijednosti pa ne bi predstavljalo problem kao u algorimu knn?\n\nYup, točno to. Svi ti modeli koje smo prije radili ne ovise o primjerima i lako regulariziramo težine, no kNN ovisi u primjerima (neparametarski model) i te nebitne značajke utječu na njega. (ako sam dobro ovdje shvatila pitanje?)",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "ReyKenobi",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107221": {
+      "poster": "[deleted]",
+      "content": "@Emma63194#107215 @ReyKenobi#107194 Ja sam na odgovaranju rekao da KNN nema mogućnost regularizacije kao parametarski niti ima bilo kakvu mogućnost ocjene koliko su koje značajke bitne, budući da je jedina mjera sličnosti udaljenost koja svim \"osima\" odnosno značajkama daje istu važnost",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "ReyKenobi",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107241": {
+      "poster": "Ellie",
+      "content": "> @in1#106935 koliko najmanje potpornih vektora možemo imati\n\nJel na ovo odgovor nula? Tj pretpostavljam da se tu misli na svm koji pretpostavlja linearnu odvojivost, pa zapravo ako su linearno neodvojivi onda bi bilo 0 potpornih vektora.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107248": {
+      "poster": "Hus",
+      "content": "- zadatak 1:\n\n         opisivanje SVM-a i procesa odabira maksimalne margine\n\n- zadatak 2:  preskočio\n\n- zadatak 3:",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Hus"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107251": {
+      "poster": "in1",
+      "content": "@Ellie#107241 pitanje je bilo vezano uz neki od dobivenih grafova pa je prihvaćeni odgovor bio 2 (jedan za svaku klasu)",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107256": {
+      "poster": "Hus",
+      "content": "- zadatak 1:\n\n         opisivanje SVM-a i procesa odabira maksimalne margine\n         \n- zadatak 2:\n\n  Zašto je margina vijugava u drugom stupcu? Kako izgleda polinomijalna jezgrena funkcija? U SVM jezgrena funkcija se nalazi u primarnoj ili u dualnoj fomulaciji? (ako odgovorite u primarnoj što je očito krivi odgovor) Zašto ne možemo imat jezgrenu funkciju u primarnoj formulaciji problema?\n  \n- zadatak 3:\n\n  Što predstavlja C? Što predstavlja gamma? Gdje imamo složenije modele na grafu? Kako gamma utjeće na zvono gaussove funkcije?\n\n- zadatak 4:\n\n Kako radi MinMax skaliranje? Koliko vrijednosti koristimo za skalirat svih ostalih vrijednosti u min Max? Kako radi standardno skaliranje? Koliko vrijednosti koristimo za skalirat svih ostalih vrijednosti u stadnardnoj? Pokažite mi srednju vrijednost na desnom grafu kod standardnog skaliranja. Kolika je standardna devijacija u desnom grafu kod standardnog skaliranja?\n\n- zadatak5 5:\n\n preskočio\n\n- zadatak 6:\n\n Kako značajke sa različitim skalama utjeću na KNN?\n\n- zadatak 7:\n\n Što je prokletstvo dimenzionalnosti? Što se događa u ovom grafu? Zašto je povečanje euklidske udaljenosti problem kod KNN-a?",
+      "votes": {
+        "upvoters": [
+          "Conrad",
+          "Ellie",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107257": {
+      "poster": "Hus",
+      "content": "@Hus#107248 \n\nNe mogu ovo obrisat ili editat",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": [
+          "Hus"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Watson (112)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107267": {
+      "poster": "[deleted]",
+      "content": "@Ellie#107241 Minimalno su 2 potprona vektora, svaki iz jedne klase",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "InCogNiTo124",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107269": {
+      "poster": "Bananaking",
+      "content": "@Hus#107256 Može netko napisati odgovore?",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107270": {
+      "poster": "Ellie",
+      "content": "> @Hus#107256 Zašto je povečanje euklidske udaljenosti problem kod KNN-a?\n\nJel odgovor na ovo zato sto smanjuje slicnost dva primjera? Tj teze ih je klasificirati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107310": {
+      "poster": "Bananaking",
+      "content": "Sad sam odgovarao ali kako nisam baš super spreman bio nisam puno zapamtio osim (od nazad):\n\nJel kNN parametarski ili ne (nije), jel SVM parametarski ili ne (ovisno o formulaciji), kada je bolji parametarski a kada ne\n\nKako radi mimax a kako standardno skaliranje\n\nŠto je hiperparametar C i kako utječe na SVM\n\nKako rješavamo problem nelinarnosti, što je jezgreni trik, što je jezgrena funkcija, koji uvjet mora jezgrena funkcija ispunjavati da bi bila jezgrena (nešto odvojivost)\n\nSVM, meka margina, što su potporni vektori, kako krivo klasificirani vektor utječe",
+      "votes": {
+        "upvoters": [
+          "member",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107312": {
+      "poster": "Ellie",
+      "content": "> @Bananaking#107310 el SVM parametarski ili ne (ovisno o formulaciji)\n\nJel mi mozes objasniti ovaj dio ovisno o formulaciji? Zar nije da i u dualnoj ima alfa i beta ili se oni ne racunaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107315": {
+      "poster": "Ellie",
+      "content": "> @Bananaking#107310 koji uvjet mora jezgrena funkcija ispunjavati da bi bila jezgrena (nešto odvojivost)\n\nMozda da mora ostvariti linearnu odvojivost primjera?",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107317": {
+      "poster": "Bananaking",
+      "content": "@Ellie#107312 Nažalost ne mogu 😄 Nešto sam promrmljao nakon čega je ispitivač rekao da u primarnoj formulaciji jeste parametarski a u dualnoj nije i objasnio zašto ali ne sjećam se. Uglavnom dualna je neparametarska.\n\n@Ellie#107315 mislim da si u pravu",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ellie"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107324": {
+      "poster": "Ellie",
+      "content": "> @Hus#107256 Kako značajke sa različitim skalama utjeću na KNN?\n\npotencijalno glupo pitanje ali jesu skale zapravo k?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107326": {
+      "poster": "Emma63194",
+      "content": "@Ellie#107324 Ma ne, to ti je red veličine značajki primjera. Je li npr. primjer ima značajke [1, 1] ili [10 000, 10 000].",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107328": {
+      "poster": "Ellie",
+      "content": "@Emma63194#107326 \n\nAhaa pretpostavljam da je lakse kad ima manje znacajki nego kad ima vise, jer je lakse postici slicnost?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107329": {
+      "poster": "Emma63194",
+      "content": "@Ellie#107312 Ako imaš primarnu formulaciju, parametar je w i to je parametarski model. \n\nAko imaš dualnu formu, parametri su alfa i beta i to je neparmetarski model.",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Ellie",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107347": {
+      "poster": "carrieb",
+      "content": "evo nekih pitanja, sve u svemu dosta detaljno, pogotovo SVM pa ono moje preporuke - pripremite se dosta dobro za ovo, vjerojatno to znate ali ste zaboravili \n\nSVM:\n   - sto je SVM, kako funkcionira, koja je matematicka formulacija (sto minimiziramo / maksimiziramo), koja su ogranicenja koja smo pretpostavili (da postoji linearna odvojivost i da su najblizi margini udaljeni za 1), utjecu li strsece vrijednosti/nelinearnost (strsece ne, nelinearnost da)\n   - koji su potporni u nasem primjeru, koji je alfa za primjere koji nisu potporni (0)\n   - koja ogranicenja imamo u SVM, jednakosti/nejednakosti/oboje? (nejednakosti, parametar alfa)\n   - koja su 2 nacina da se nosimo s linearnom neodvojivosti u SVM (meka margina i jezgra)\n   - sto su jezgrene funkcije, koji je uvjet da je nesto jezgrena fja (ona 3 uvjeta), kakve su RBF fje. kako se jezgra uklapa u SVM, koji su nacini za racunanje udaljenosti (euklidska i mahalanobisova)\n   - kako C i gamma utjecu na SVM i kako medusobno funkcioniraju (za jedno i drugo s porastom raste i slozenost), na onom grafu pokazati gdje je model najslozeniji (gornji desni kut, C i gamma su najveci)\n\nSKALIRANJE:\n- kako funkcionira MinMaxScaler\n\nkNN\n- kako funkcionira, sto bi bilo da je k veci od broja primjera (isto kao i za k= 100 graf), kako k utjece na slozenost i zasto (porastom k pada slozenost)\n- koja je razlika izmedu parametarskih i neparametarskih metoda (neparametarske imaju parametre, no ne pretpostavljaju nikakvu distribuciju)\n- zasto je problem kad imamo puno primjera (dugo traje racunanje), kako to ubrzati (local sensitive hashing, ball tree)\n  \n\nProkletstvo dimenzionalnosti\n  - samo sto je to (vec mu je bilo dosta lagano hahahha)\n  \n\nSretno!",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Ellie",
+          "Emma63194",
+          "Noggenfogger (dammitimmad)",
+          "PrisonMike (Števo)",
+          "[deleted]",
+          "chuuya (temari)",
+          "joc",
+          "luba",
+          "member",
+          "pepelko",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107401": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Jel bi znao netko objasnit što se točno događa na ovim slikama?\n\n![](assets/2020-12-08/00026.png)![](assets/2020-12-08/00027.png)![](assets/2020-12-08/00028.png)![](assets/2020-12-08/00029.png)",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107404": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Ellie#107324 je li odgovor: nikako jer skaliranje znacajki ne utjece na udaljenost medu primjerima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107430": {
+      "poster": "Ellie",
+      "content": "@Noggenfogger#107404 \n\nUh, ovako nekako, i slobodno neka netko uskoci ako ima bolje ili tocnije rjesenje\n\nMene je najvise mucio pojam skala jer mozda sam snoozala na tom predavanju ali ne prepoznajem ga \n\ni tu su dvije opcije za sad: \n1. ako se mislilo na skaliranje, onda se slazem s tobom - ali ne bih ocekivala to pitanje\n2. ako se nije mislilo na skaliranje nego na broj dimenzija - jer ovo je pitanje koje bih ocekivala - onda sto imamo vise dimenzija to nam tocke postaju sve rasirenije po prostoru i teze je napraviti grupe od njih (ovo je profesor objasnio bolje na predavanju pa baci oko na to ako ti treba detaljnije objasnjenje)",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107435": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Ellie#107430 a premda pita za znacajke razlicitih skala, a ne razlicit broj znacajki ja bi odgovorila ovo 1., ali da ovisi sta je tocno pitanje jer sto se knn-a tice ovo 2. ima vise smisla da se postavi",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107454": {
+      "poster": "[deleted]",
+      "content": "@Noggenfogger#107404 @Ellie#107430 Pitanje se odnosi na različitost proporcija pojedinačnih značajki, a ne na njihov broj. Ako se radi recimo o primjerima sa 2 značajke i jedna je veličine 0-1, a druga je 0-1000, ova druga je značajka veće skale i zbog toga puno značajnije utječe na model, odnosno \"guši\" značajku koja je manje skale. To je osobito značajno za KNN algoritam jer on nema mogućnost regularizacije, pa će zaglaviti s time da ima značajku koja nadvladava neku drugu i time gubimo informaciju koju ta nadjačana značajka nosi.",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "Noggenfogger (dammitimmad)",
+          "glider (toblerone)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108034": {
+      "poster": "PudingIzMenze",
+      "content": "Danas labos u 13h:\n1. Sta je SVM objasni malo i kakve formulacije postoje i koja je onda razlika između tih formulacija\n\nKlasifikacijski i regresijski algoritam. Problem maksimalne margine malo o tome bacaš krafne pa me pitala sta je margina i da ju pokazem. Postoje primarna i dualna formulacija podpitanje koji su parametri u kojoj( w u primarnoj, alfa i beta u dualnoj) po cemu se razlikuju je da je primarna formulacija parametarska a dualna neparametarska. Pokazat potporne vektore na nekom od nacrtanih primjera iz 1. zad. Još kako stršeće vrijednosti utječu na SVM i kako nam se nosio model sa linearno neodvojivim(ona zadnja slika jedan primjer nam je otisao u marginu, iako strogo tehnicki da imam implementiranu tvrdu marginu crashalo bi se al sklearn interno radi sa mekom marginom pa nije crashalo i onda pitala jos da objasnim sta znaci meka i tvrda margina, tjt za prvi\n2. i 3. Koji je bio hiperparametar u nelienarnom. Kako smo došli na ideju da rješimo nelinearno samo nasereš za kernel function nešto. Onda je pitala šta je kernel da ga objasnim. Kako C i gamma utjecu na slozenost? I onda na jednoj od slika ne sjecam se kojoj me pitala da pokazem gdje je prenaucen model i gdje je podnaucen u biti gornji desni kut pre, donji lijevi podnaucen, za sta je gamma tocno(za preciznost). Kaj je tocno grid search i za sta sluzi? Kao da nades najoptimalniji model. Jos pod 3b) opet pokazat podnaucenost i prenaucenost\n4. Meni nije bas dobro crtalo minmax x-os mi je cudna bila al u biti objasnit minmax i standard scaler kako rade...ovaj min stavi na 0 max na 1 i ostale skalira po tome, a ovaj standard od x oduzme srednju vrijednost i podijeli sa standardnom devijacijom i to kad sam onda rekao je uzela prvi iscrtani graf u tom standScaler i pitala koja je srednja vrijednost nakon skaliranja(odg je 0, vidis i na grafu) i kolika je stand devijacija(odg je 1 jer si sve podijelio s time vec)\n5. nisam rjesio pa je preskocila al sam i na studosima vidio da su to dosta preskakali\n6. Za kaj nam sluzi k, kako utjece taj k na slozenost(veci k manja slozenost), pokazat pod i prenaucenost na 6b) i kako smo nasli najbolji k na ovim grafovima(u biti ono gledas da imas sto manju gresku izmedu na rezultata sa primjera za testiranje i ucenje). Onda kako   nebitne znacajke utjecu na kNN? u biti u regresijama si imao tezine da skuzis, a ovdje imas samo udaljenosti pa se sjebes s time i nemres popravit neke stvari\n7. prokletstvo dimenzionalnosti bacat krafne i tjt",
+      "votes": {
+        "upvoters": [
+          "Conrad",
+          "Ellie",
+          "Stark",
+          "joc",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108246": {
+      "poster": "Stark",
+      "content": "@PrisonMike#107401 Zna netko objasniti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108450": {
+      "poster": "Stark",
+      "content": "@carrieb#107347 \n\nMožeš li objasniti ovo\n\n**koja ogranicenja imamo u SVM, jednakosti/nejednakosti/oboje? (nejednakosti, parametar alfa)**\n\nNa koja se to ograničenja misli? Generalno, tipa kao da SVM nema probabilistički izlaz? I zašto je parametar alfa ograničenje? A ovo kad kažeš nejednakosti, misli li se tu na primarnu formulaciju problema?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108475": {
+      "poster": "[deleted]",
+      "content": "@Stark#108450 Kod optimizacijskog problema SVMa, cilj ti je minimizirati 1/2 * |w|^2 uz ogranicenje da je y * (wT  * x + w0) >= 1, to je dakle ogranicenje nejednakosti. Pogledaj si to u skripti",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Stark",
+          "carrieb"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108518": {
+      "poster": "Stark",
+      "content": "@msus#108475 Ahaaa, ja čitam ograničenja kao u smislu zašto nije dobar kao izbor algoritma 😆",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108533": {
+      "poster": "Stark",
+      "content": "Kako ovdje vidimo koji je prenaučen a koji podnaučen?\n\n![](assets/2020-12-10/00018.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108559": {
+      "poster": "cotfuse",
+      "content": "@Stark#108533 Vidis gdje gore desno imas 0.060, to je to malo podrucje na kojem postizes minimalan gubitak na test skupu. Generalno zelis uzeti taj model. \n\nSlozenost modela ti ide od dolje lijevo za manje slozen do gore desno od slozeniji. To vidis i kao u kojem se smjeru na train skupu smanjuje gubitak. Na mjestu gdje na train skupu postizes gubitak 0, na test skupu postizes vise od minimuma na test skupu pa je to prenaucen model.  S druge strane test minimuma je model podnaucen.",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108561": {
+      "poster": "ajkula",
+      "content": "@Stark#108533 Crno područje predstavlja modele na kojima postoji pogreška, a bijela područja su ona na kojima model točno klasificira sve primjere, tj nema pogreške. U višoj dimenziji je lako prenaučiti model. Ukoliko pogledaš ova dva donja grafa vidiš na lijevom grafu da je područje desno gore bijelo to znači da na skupu za učenje nema pogreške, dok na skupu za ispitivanje to cijelo područje predstavlja modele na kojima postoji pogreška. Ukratko, model smo prenaučili na skupu za učenje, zato ne generalizira dobro na skupu za ispitivanje i zato je to područje crno. Dakle prenaučeni modeli su desno gore. A podnaučeni modeli su lijevo dolje, tj ona područja na kojima postoji pogreška na skupu za učenje i na skupu za ispitivanje.",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108679": {
+      "poster": "glider (toblerone)",
+      "content": "Može mi netko pls pojasniti 4. zadatak ( min-max i opcenito zakljucak tog zadatka)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

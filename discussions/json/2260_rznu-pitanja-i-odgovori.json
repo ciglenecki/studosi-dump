@@ -1,0 +1,716 @@
+{
+  "title": "[RZNU] Pitanja i odgovori",
+  "creator": "Elendur19 (Zagor)",
+  "slug": "rznu-pitanja-i-odgovori",
+  "tags": [
+    "FER",
+    "Računarstvo zasnovano na uslugama"
+  ],
+  "posts": {
+    "95184": {
+      "poster": "Elendur19 (Zagor)",
+      "content": "![](assets/2020-11-18/00046.png)\n\nU ovom prvom vraća li cache klijentu 200 OK ili isto 304 Not Modified ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95193": {
+      "poster": "Dell",
+      "content": "@Elendur19#95184 Po meni 200 OK, jer je klijent poslao zahtjev za resurs. To što cache sam mora provjeriti je li \n\nresurs različit nego onaj kojeg on ima spremljenog ne zanima klijenta.",
+      "votes": {
+        "upvoters": [
+          "Elendur19 (Zagor)",
+          "neZnamNista"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95194": {
+      "poster": "neZnamNista",
+      "content": "@Elendur19#95184 Mislim da je 200 OK jer nije klijenta briga je li dobije s cache ili sa servera, cache se brine je li mu verzija valjana",
+      "votes": {
+        "upvoters": [
+          "Elendur19 (Zagor)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95201": {
+      "poster": "Elendur19 (Zagor)",
+      "content": "@Dell#95193 \n\n@neZnamNista#95194  Hvala na odgovoru! ![](assets/2020-11-18/00049.png)\n\nJel vama ima smisla da su ova 2 URL-a zamijenjena ili je svejedno, oba su dobra ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95210": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Elendur19#95201 To će ti server reći jel dobar request il ne. Može i ne mora biti dobro. Što se tiče URL-a sintaksa štima, iako u praksi vjerojatno ne bi to tak implementirao nego s npr. `?nastavnik=3&predmet=1` queryjem",
+      "votes": {
+        "upvoters": [
+          "Elendur19 (Zagor)",
+          "neZnamNista"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95217": {
+      "poster": "Dell",
+      "content": "@Elendur19#95201 Da, ja bih ih zamijenio ako pratimo onaj redoslijed gore.",
+      "votes": {
+        "upvoters": [
+          "Elendur19 (Zagor)",
+          "Sicsile",
+          "mentally_disturbed_llama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95429": {
+      "poster": "Maci",
+      "content": "Jel netko zna objasniti ovakav tip zadatka? Konkretno zanimaju me ovi dijelovi zadatka gdje moramo objasniti \"Koji od ratia daje bolju procjenu troska?\"![](assets/2020-11-18/00068.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95432": {
+      "poster": "TrashMan",
+      "content": "@Maci#95429 Također mislim da je krivo napisano gore kako se računa trošak. Mislim da cijeli izračun treba u zagradu pa da se cijeli dio množi sa M/1000, po ovom se samo dio sa broj_NEpodcrtanih * 2 * header množi s tim",
+      "votes": {
+        "upvoters": [
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95521": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Maci#95429 Pa gledaš koji ratio ti daje veći troška, realno je očekivati gori od njih kao pravi trošak.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95538": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@TrashMan#95432 Evo ajmo tu napisati formule\n\n[math]\n\\begin{aligned}\nX \\equiv & \\text{ svi requestovi} \\\\\nX_h \\equiv & \\text{ podcrtani requestovi (hitovi)} \\\\\nX_m \\equiv & \\text{ nepodcrtani requestovi (missevi)} = X \\setminus X_h\\\\\nH \\equiv & \\text{ veličina zaglavlja (u B)} \\\\\nP \\equiv & \\text{ trošak obrade na poslužitelju} \\\\\nM \\equiv & \\text{ trošak prijenosa 1000B preko mreže} \\\\\\\\\nR_{H} \\equiv & \\text{ hit ratio} \\\\\nR_{BH} \\equiv & \\text{ byte hit ratio} \\\\\nC \\equiv & \\text{ trošak} \\\\\nC_P \\equiv & \\text{ miss trošak} \\\\\nC_M \\equiv & \\text{ byte miss trošak} \\\\\\\\\n\\end{aligned}\n[/math]\n\n[math]\n\\begin{aligned}\nR_{H} = & \\frac{card(X_h)}{card(X)} \\\\\nR_{BH} = & \\frac{\\sum_{i = 1}^{card(X_h)}{(length(X_{h_{i}}) + H)}}{\\sum_{i = 1}^{card(X)}{(length(X_{i}) + H)}} \\\\\\\\\nC_P = & card(X_m) \\cdot P \\\\\nC_M = & \\frac{\\sum_{i = 1}^{card(X_m)}{(length(X_{m_{i}}) + 2H)}}{1000} \\cdot M \\\\\\\\\nC = & C_P + C_M\n\\end{aligned}\n[/math]\n\nI sad lijepo možemo zadatak po zadatak:\n- **a)** odgovor je [imath]R_H[/imath]\n- **b)** odgovor je [imath]R_{BH}[/imath] (ne znam kakva bi to bila caka s headerima)\n- **c)** odgovor je [imath]C_M[/imath]\n- **d)** bolji je byte hit ratio jer nam hit ratio govori krivo kad je trošak neovisno o učestalosti cache misseva 0\n- **e)** odgovor je [imath]C_P[/imath]\n- **f)** bolji je cache hit ratio jer nam byte hit ratio govori krivo kad je trošak neovisno o količini podataka koje prođu kroz mrežu 0\n- **g)** odgovor je [imath]C[/imath] (ukoliko su troškovi pravilno uravnoteženi, ali to je pretpostavka u zadatku jer nema mjernih jedinica)\n- **h)** bolju procjenu daje manji omjer: imamo troškove jednakih vrijednosti svake od komponenata, pa će nam omjeri govoriti o recipročnom odnosu misseva po učestalosti i po količini podataka - veći hit omjer znači manji miss omjer - mi tražimo mjeru koja bolje dočarava ukupni trošak, to je mjera koja dočarava veći od ta 2 troška, a to je manji omjer (jer manji omjer modelira VIŠE misseva, a njih gledamo kod troška, ne hitove).\n\nPrimijetiti: [imath]card(\\cdot)[/imath] označava funkciju kardinaliteta skupa, tj. vraća broj članova skupa. Funkcija [imath]length(\\cdot)[/imath] vraća duljinu bodyja u bajtovima.\n\nKomentar zašto je [imath]C_M[/imath] takav kakav je - moramo uračunati u trošak mreže i sve headere GET-a koje šaljemo kad nemamo cache hit - pretpostavljena metoda je GET koja nema body, pa ona ima samo veličinu headera.",
+      "votes": {
+        "upvoters": [
+          "Ego",
+          "anakonda",
+          "bob"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95566": {
+      "poster": "Ego",
+      "content": "@micho#95538 po ovom brojniku iz Rbh formule je: suma_veličina_podcrtanih + header umjesto onoga kako piše u međuispitu suma_veličina_podcrtanih + broj_podcrtanih * header?",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95568": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Ego#95566 Ma joj, ne vidi se da su i brojnik i nazivnik cijeli u sumi, prepravit ću, trenutak.\n\nEDIT: Prepravljeno.",
+      "votes": {
+        "upvoters": [
+          "Ego"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95596": {
+      "poster": "pushPop",
+      "content": "1. Koliko ste na ispiti dobili u zad s cacheom hit rate, jel: 5/11 I 8/11?\n\n2. U tablici nije bio nijedan RH?\n\nHvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95599": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@pushPop#95596 Well I am actually retarded napisao sam da 11 -3 = 7, al da, 8/11 za drugi.\n\nI da, po meni isto nema RH.",
+      "votes": {
+        "upvoters": [
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95602": {
+      "poster": "pushPop",
+      "content": "@micho#95599 5/11 za prvi ti je isto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95603": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@pushPop#95602 Yep",
+      "votes": {
+        "upvoters": [
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95605": {
+      "poster": "pushPop",
+      "content": "@micho#95603 I ako mogu još pitat - jel po tebi sustav za cache radio dobro?\n\nSumnjivo mi je bilo pitanje, al ja sam rekao da je sve OK jer radi normalno cm, ch, rm, rh?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95609": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@pushPop#95605 Rekao sam ne, tj. može se poboljšati boljom predikcijom Expires vrijednosti. Po meni se RM nikad ne bi trebao dogoditi, sustav je preoptimističan.",
+      "votes": {
+        "upvoters": [
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95612": {
+      "poster": "TentationeM",
+      "content": "Fulaš pod a), fulo si 1/3 ispita",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95617": {
+      "poster": "occam",
+      "content": "![](assets/2020-11-19/00007.png)\n\nevo od prosle godine doslovno isti zadatak kao danas, s materijala je file",
+      "votes": {
+        "upvoters": [
+          "mentally_disturbed_llama",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "95620": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "well fuk\n\nmožda sam trebao riješiti i poneki zadatak 😂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "andiamo"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "occam"
+        ]
+      }
+    },
+    "113996": {
+      "poster": "Skaxen",
+      "content": "Jel profesor rekao nes korisno u vezi labosa jucer na predavanju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122338": {
+      "poster": "Skaxen",
+      "content": "jel ove linkove na kraju prezentacija koje je napravio Klemo mozemo smatrati kao materijalima za pripremu za ispit ili ima neka druga literatura?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122401": {
+      "poster": "AN5A",
+      "content": "@Skaxen#122338 Na kraju predavanja (zadnjih 10-15 minuta) govori što treba pročitati, samo nisam sigurna je li to za sve linkove ili samo za link kod Thrifta.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123673": {
+      "poster": "DaL",
+      "content": "Predavanje 23.12 nije snimano ili nešto krivo gledam?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123680": {
+      "poster": "Skaxen",
+      "content": "@DaL#123673 Nope, nije bilo snimano",
+      "votes": {
+        "upvoters": [
+          "DaL"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124882": {
+      "poster": "Jim",
+      "content": "piše li se u završnom cijela godina ili samo drugi ciklus?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124907": {
+      "poster": "hobotnica",
+      "content": "Jel zna netko hoće li objaviti predavanje od prošlog tjedna na teams, čini mi se da je bilo snimano",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124935": {
+      "poster": "Skaxen",
+      "content": "@hobotnica#124907 jos uvijek ti je dostupno da si ga skines iz [chata predavanja](https://teams.microsoft.com/l/message/19:79c7562847644c61afbcea2d670a1a41@thread.tacv2/1610542925157?tenantId=ca71eddc-cc7b-4e5b-95bd-55b658e696be&groupId=5b943a37-02c6-4e2e-abb6-c375e0dd6ed7&parentMessageId=1602004146310&teamName=%5BUNIZG-FER-RZNU%5D%20Ra%C4%8Dunarstvo%20zasnovano%20na%20uslugama%20(86518)&channelName=Predavanja&createdTime=1610542925157)",
+      "votes": {
+        "upvoters": [
+          "hobotnica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126246": {
+      "poster": "hobotnica",
+      "content": "Postoje li negdje završni od prethodnih 2,3 godine?",
+      "votes": {
+        "upvoters": [
+          "Luka1112 (Akul1112)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126247": {
+      "poster": "hobotnica",
+      "content": "@Jim#124882 Prof je rekao kompletno gradivo s naglaskom na drugi ciklus",
+      "votes": {
+        "upvoters": [
+          "Jim"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "TheShtok (nickname123)",
+          "andiamo"
+        ]
+      }
+    },
+    "127978": {
+      "poster": "DostDobroIme",
+      "content": "Jel mi se cini ili fali snimka predavanja mikroservisa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "129110": {
+      "poster": "Kristijan",
+      "content": "@DostDobroIme#127978 Jep, nije se snimalo.",
+      "votes": {
+        "upvoters": [
+          "DostDobroIme"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "129690": {
+      "poster": "peaceko",
+      "content": "Je li prag za kontinuiranu nastavu 20/40 iz labosa i 30/60 iz oba ispita, ili svaki ispit jos ima zasebno 50% prag a da mi je to negdje promaklo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "129691": {
+      "poster": "hobotnica",
+      "content": "@peaceko#129690 ukupno 50% iz ispita",
+      "votes": {
+        "upvoters": [
+          "peaceko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "129821": {
+      "poster": "glider (toblerone)",
+      "content": "Postoje li igdje neki zadaci koji dolaze u  završnom, ili teorija, anything ? \n\nNe mogu naći u materijalima baš :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "129830": {
+      "poster": "Klokan",
+      "content": "sta sve ulazi u zavrsni?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "129859": {
+      "poster": "pushPop",
+      "content": "@Klokan#129830 \n\nsve (cijelo gradivo semestra)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "129941": {
+      "poster": "svemia (bearyn)",
+      "content": "Jel zna netko koji su binarni, a koji tekstualni protokoli za RPC?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "129945": {
+      "poster": "Murin",
+      "content": "@svemia#129941 \n\nbinarni-CORBA, DCOM, Java RMI,Protobufs,Thrift\n\ntekstualni- XML,SOAP,JSON",
+      "votes": {
+        "upvoters": [
+          "DostDobroIme",
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130001": {
+      "poster": "Luka1112 (Akul1112)",
+      "content": "@glider#129821 Imas u pdf-u od mi 2019-20 samo scrollaj malo dolje",
+      "votes": {
+        "upvoters": [
+          "glider (toblerone)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130180": {
+      "poster": "Ego",
+      "content": "![](assets/2021-01-26/00052.png)\n\nJe li rjesavao mozda netko ovaj ispit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130184": {
+      "poster": "Ego",
+      "content": "I ima li itko možda ideju za kakav bi mogao doći zadatak u ispitu za koji nam treba kalkulator?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130188": {
+      "poster": "DudeUrNuts",
+      "content": "@Ego#130184 Vjerojatno nešto kao u pdf-u mi 2019/2020, prvi zadatak pod \"Ostalo\".",
+      "votes": {
+        "upvoters": [
+          "Ego",
+          "hobotnica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130697": {
+      "poster": "DuckItUp",
+      "content": "Danas a grupa zadnji zadatak, jesu zadnja 2 stupca doslovno bili samo prepisati vrijeme slanja ili ja nekaj nisam skužil dobro",
+      "votes": {
+        "upvoters": [
+          "Elendur19 (Zagor)",
+          "Ledeni56 (Jusuf)",
+          "Patak007",
+          "Svarog (Veles)",
+          "bestik",
+          "cajaznun",
+          "chuuya (temari)",
+          "hi_doggy",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130702": {
+      "poster": "chuuya (temari)",
+      "content": "@DuckItUp#130697 Ja sam isto tako i bilo mi je ful sumnjivo",
+      "votes": {
+        "upvoters": [
+          "DuckItUp",
+          "Ledeni56 (Jusuf)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130738": {
+      "poster": "layla",
+      "content": "Jel netko zapamtio/prepisao pitanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130743": {
+      "poster": "svemia (bearyn)",
+      "content": "@DuckItUp#130697 ja sam isto tako i zivim s nadom da je dobro inace me rok ceka...",
+      "votes": {
+        "upvoters": [
+          "DuckItUp",
+          "cajaznun",
+          "chuuya (temari)",
+          "hobotnica",
+          "pepelko",
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

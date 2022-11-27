@@ -1,0 +1,943 @@
+{
+  "title": "[OOUP] Gradivo",
+  "creator": "TheManFromEarth",
+  "slug": "ooup-gradivo",
+  "tags": [
+    "FER",
+    "Oblikovni obrasci u programiranju"
+  ],
+  "posts": {
+    "37194": {
+      "poster": "TheManFromEarth",
+      "content": "Jeli moze netko tko je odgovarao 3 i 4 vjezbu reci koja su otprilike bila pitanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37242": {
+      "poster": "in1",
+      "content": "@TheManFromEarth#37194 Na početku o onom u C-u šta radi koja funkcija i kako to funkcionira. U labosu je bio onaj primjer u odabranom jeziku pa me pitao što radi svaka metoda i kako bi umjesto konstruktora pozvao neku funkciju. Onda me pitao što bi se dogodilo da staviš da Cat ne nasljeđuje Animal - odgovor je da bi program puknuo u trenutku castanja i da bi se to dogodilo prilikom izvršavanje jer program tijekom kompajliranja ne zna što će pročitati. O notepadu su bila pitanja koje obrasce sam gdje upotrebio i zašto, koja sučelja sam gdje implementirao. Trebalo je objasniti kako je izveden undo manager.",
+      "votes": {
+        "upvoters": [
+          "TheManFromEarth"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37275": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "@TheManFromEarth#37194  Za četvrtu me pitao koje obrasce sam koristio i gdje i kako, pitao me za svakog posebno koje klase su sta u tom obrascu, cak me nije ni trazio da demonstriram program",
+      "votes": {
+        "upvoters": [
+          "TheManFromEarth",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173079": {
+      "poster": "faboche (him)",
+      "content": "Postoji li neka posebna veza za prikazivanje implementiranja sučelja u ovim dijagramima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173165": {
+      "poster": "cloudies",
+      "content": "Ne mogu nikako skužiti o kojem se oblikovnom obrascu ovdje radi. Neki hint možda? \n\n![](assets/2021-04-18/00015.png)",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173173": {
+      "poster": "Jaster111",
+      "content": "@cloudies#173165 da nije dekorator?",
+      "votes": {
+        "upvoters": [
+          "cloudies",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173244": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@cloudies#173165 dekorator/dependency injection",
+      "votes": {
+        "upvoters": [
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173295": {
+      "poster": "Rene",
+      "content": "@Jaster111#173173\n\n@micho#173244 \n\nZar nebi dekoratori trebali nasljeđivat osnovnu komponentu i pozivat se preko istog sučelja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173301": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Rene#173295 Izvedba dekoratora je stvarno proizvoljna, generalno su to samo ukrasi na neku funkcionalnost. Kakvu - nebitno. Kako je to implementirano - nebitno.\n\nE sad, moglo bi se isto tako reći da je klasa G implementacija okvirne metode klase E, i da onda C kojoj je injektirana ovisnost o F ima metodu `o()` koja poziva okvirnu metodu. Međutim onda bi se moglo opet pričati o tome da E baš ne radi to što je u prezentacijama tj. da implementacija G ne mijenja skroz ponašanje nego samo \"ukras\" na kraju `n()`, i zato bih ja prije rekao da je ovo dekorator nego okvirna metoda.\n\nDoduše ima i argument protiv dekoratora, u smislu da dekorator nadograđuje stvari s određenom hijerarhijom, hence **dekor**ator. Ovdje nema takvog nadograđivanja, nego se samo uređuje jedan korak, što bi odgovaralo okvirnoj metodi.",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173309": {
+      "poster": "Rene",
+      "content": "@micho#173301 Ne znam, Šegvić je na predavanju naglasio da je bitna ta rekurzivna kompozicija kod dekoratora i gdje god sam pogledao (pa i na refactoring guru), Dekorator nasljeđuje komponentu. Zbunjujuć mi je zadatak s obzirom da mi se ne uklapa baš ni u jedan obrazac u potpunosti, npr. E i G su Okvirna metoda 1/1, ali onda jedino što mi pada na pamet je da C bude kontekst, F neka apstraktna strategija pa nekakva kombinacija Strategije i Okvirne metode, al ni to mi ne izgleda baš bajno.\n\nEDIT: da vidim da si slično napisao u editu, to mi ima smisla.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173316": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Rene#173309 Da, zajebano je, zato i treba prosuđivanje na to što se zapravo radi.\n\nA ovo za nasljeđivanje je stvarno ovisno o jeziku. Generalno ono što ti postižeš dekoratorom jer \"nadograđuješ\" neku komponentu da ima neke dodatne obveze. Nitko ti ne kaže da ti onda sučelje mora ostati isto:\n\n```python\nclass Component:\n    def get(self, text: str):\n        raise NotImplementedError\n\nclass Text(Component):\n    def get(self, text: str):\n        return text\n\nclass Sentence:\n    def __init__(self, component: Component):\n        self._component = component\n\n    def get(self, text: str, delimiter: str = \".\"):\n        return self._component.get(text).split(delimiter)\n```\n\nvidiš da u dinamičkom jezikom nit trebaš nasljeđivati komponentu, nit imati isto sučelje. Naravno, da se to u praksi ne bi tak radilo, jer je generalno korisno da `instanceof` na objekt tipa `Sentence` i tip `Text` vrati `True`.\n\nIskreno bih napisao ta razmišljanja, možeš dobiti puno bodova na tome. Ja bih napisao da strukturalno najviše odgovara okvirnoj metodi ali da funkcionalno sliči dekoratoru. F ti nije apstraktna strategija, nego čini mi se nekakva podatkovna klasa, to se da komotno ignorirati. Možda su je tak definirali da zbune ljude da je dekorator.",
+      "votes": {
+        "upvoters": [
+          "Rene",
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173712": {
+      "poster": "Fica (Prof)",
+      "content": "Ima li netko riješen 5. zadatak iz MI19?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173718": {
+      "poster": "Marko",
+      "content": "Kako ste nacrtali graf ovisnosti u mi2017 zadatak 4?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173780": {
+      "poster": "cloudies",
+      "content": "@Fica#173712 Možda ako ti ove moje bilješke s auditornih nešto znače\n\n![](assets/2021-04-19/00011.png)",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)",
+          "Gulbash",
+          "Jale (čakijale)",
+          "Tinx (pingvin)",
+          "Tone",
+          "pingvinka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173783": {
+      "poster": "nikace (AeIoU)",
+      "content": "5. zad MI19\n\nNeke bilješke s konzultacija (ako vidite neke krive info ispravite me plizz):\n\n_Što se sve uočava analizom strojnog koda?_\n\nIz strojnog koda razreda Identity vidimo da poziva konstruktor razreda Unary_Function (zaključujemo da Identity nasljeđuje Unary_Function)\n\nUnary_Function u sebi sadrži virtualne metode, a ispod prvog poziva operatora new u strojnom kodu uočavamo poziv nevirtualne metode (redak 8) -> zaključujemo da se u metodi main prvo stvara primjerak razreda Square (koji nema virtualne metode).\n\nInstrukciji call na neki način trebamo prenijeti argumente. Argumenti mogu biti preneseni samo preako registara i taj argument ide preko registra 'edi'. Za prvi poziv operatora new taj argument je 1, a za drugi 8.\n\n_Zašto se šalje 1, a zašto 8?_\n\nRazred uvijek uzme 1 bajt kada nema nikakvih podatkovnih članove. Takav je slučaj razred Square. A za Identity se alocira 8 bajtova. Također može se uočiti da je strojni kod pisan za 64bitnu arhitekturu, to se vidi po tome što se za pointer zauzima 8 bajtova.\n\n(a)\n\nArgument je ebroj bajtova koje treba zauzeti, a povratna vrijednost je pokazivač na taj memorijski prostor.\n\n(b)\n\nprvo je razred Square, zatim Identity : public Unary_Function\n\nu mainu se prvo stvara Square f1 = new Square(), a zatim Unary_Function (ili Identity) f2 = new Identity()\n\n(c)\n\nMetoda ima jedan argument, **ali** funkcijski poziv metode onda treba imati dva arugmenta (skriveni argument = this, int). Taj this se prenosi u registru rdi.\n\n(d)\n\n**6** u rax je ono što vrati operator new (pokazivač na objekt nad kojim se poziva metoda -> f1)\n\n**17** u rax se sprema pokazivač na objekt identity -> f2\n\n**18** u rax se nalazi adresa prvog člana objekta f2, a to je pokazivač na virtualnu tablicu\n\n**19** zbog toga što za pointer treba 8 bajtova, povećanjem za 8 bajtova pomičemo se na drugi član virutalne tablice a to je adresa metode neg_value_at\n\n**20** rax sada pokazuje na funkciju neg_value_at razreda Unary_Function (jer je Identity nije implementirala)\n\n(e)\n\n**main 19** strojni kod 2-4 (alocira se mjesto za objekt; ne pozove se konstruktor zato što taj konstruktor nije zadan u kodu; novi objekt se spremi na rbp-24 adresu)\n\n**main 20** strojni kod 5-8 (lokalna varijabla se povuče u rax= this; 5 se spremi u esi; rax se spremi u rdi, pozove se metoda)\n\n**main 21** strojni kod 9-15 (ovdje nije samo da se alocira memorija, već se i poziva konstruktor; 15ti redak pohranjuje novi objekt u lokalnu varijablu)\n\n**main 22** strojni kod 16-23 (21.redak 3 se sprema u esi)\n\n(f)\n\ntrik pitanje = taj konstruktor se ne poziva\n\nTo znači da ga nema, a to znači da nije potreban -> ne treba naštimavati pokazivač na virtualnu tablicu.\n\n(g)\n\nSquare ima potpuno isto sučelje kao Unary_Function -> Square bi trebao naslijediti Unary_Function\n\nMože li netko možda objasniti onaj zadatak s labosa? Unaprijed hvala 😀",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Fica (Prof)",
+          "Gulbash",
+          "JBear",
+          "Suki7",
+          "Tinx (pingvin)",
+          "Tone",
+          "Urmum (mamaRu)",
+          "indythedog",
+          "pingvinka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173888": {
+      "poster": "Me1 (Me)",
+      "content": "može neko podijelit rješenja od ostalih ispita ako je rješavao",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "DazedAndConfused",
+          "Gulbash",
+          "Ryder (Pepper)",
+          "Urmum (mamaRu)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173912": {
+      "poster": "fer999",
+      "content": "Može li netko tko ima screenshotove rješenja MI s konzultacija objaviti tu sve?",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "Urmum (mamaRu)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "174303": {
+      "poster": "[deleted]",
+      "content": "@micho#174287 \n\nU kojem smislu gola strategija? Dijagram razreda se cini mrvicu kompleksniji od strategija,",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "174321": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @abcdefgh#174303 Dijagram razreda se cini mrvicu kompleksniji od strategija,\n\nHence zašto su dijagrami razreda (((njihov))) trik",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175191": {
+      "poster": "faboche (him)",
+      "content": "Kako znamo hoćemo li u dijagramu koristiti agregaciju ili obicno referenciranje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175193": {
+      "poster": "zastozato (studoš)",
+      "content": "može li netko objasniti rješenje iz 1. blica zadatak sa strojnim kodom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175214": {
+      "poster": "flicka",
+      "content": "moze neko objasnit dijagram iz 2. zad, iz mi19 rjesavanog na konzultacijama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175230": {
+      "poster": "Rene",
+      "content": "@zastozato#175193  Evo objašnjenje liniju po liniju:\n\n`mov rdi, QWORD PTR -8[rbp]` u registar *rdi* dohvati prvi argument funkcijskog poziva.\n\n`call _ZN4BaseC2Ev` pozovi konstruktor razreda Base.\n\nZaključuješ da Base ima konstruktor koji ima samo jedan argument, a pošto mora imati skriveni argument this, to je onda i jedini argument.\n\n`lea rdx, _ZTV6Client` dohvati adresu virtualne tablice za razred Client u registar *rdx* (hint: LEA = Load Effective Address)\n\n`mov rax, QWORD PTR -8[rbp]` - u *rax* stavi prvi argument, za koji smo zaključili da je skriveni argument *this*\n\n`mov QWORD PTR[rax], rdx` - tamo gdje pokazuje *rax* upiši sadržaj registra *rdx* u kojemu smo spremili adresu virtualne tablice. Ovime si postavio pokazivač na VTABLE na prvo mjesto u objektu.\n\n`mov rax, QWORD PTR -16[rbp]` stavi drugi argument funkcijskog poziva u *rax*\n\n`mov rax, QWORD PTR[rax]` dereferenciraj *rax*.\n\nOvdje zaključuješ da je drugi argument pokazivač na neki objekt. Prvo u *rax* staviš taj pokazivač, onda ga dereferenciraš i sad je u *rax* prvi član tog objekta, tj. pokazivač na virtualnu tablicu.\n\n`mov rdx, QWORD PTR[rax]` u *rdx* stavljaš ono na što pokazuje *rax* - sada je to pokazivač na prvu funkciju virtualne tablice.\n\n`mov rdi, QWORD PTR -16[rbp]` - drugi argument funkcije, onaj objekt čiju si virtualnu tablicu upravo dohvatio, stavljaš u *rdi*\n\n`call rdx` pozovi funkciju čiji se  pokazivač nalazi u *rdx*.\n\nIz svega ovoga zaključuješ:\n\nPozvao si konstruktor od Base, a dobivenom objektu postavio virtualnu tablicu od razreda Client dakle Client nasljeđuje Base. Konstruktor Clienta prima dva argumenta, skriveni *this* i pokazivač na neki objekt koji ima virtualnu metodu, u službenom rješenju to je Worker. Virtualna metoda tog razreda prima samo jedan argument, skriveni *this*.\n\nI iz toga složiš onakvo rješenje u C++ ili nešto slično.",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Cubi",
+          "Jale (čakijale)",
+          "Stoja_9 (Bije_san_u_autobusu)",
+          "[deleted]",
+          "blablajar",
+          "cloudies",
+          "dora (AE)",
+          "gladiator",
+          "indythedog",
+          "zastozato (studoš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175472": {
+      "poster": "indythedog",
+      "content": "@faboche#175191 Okej, objasniti ću na primjeru iz MI-2019, 3. zadatak.\n\n![](assets/2021-04-21/00022.jpeg)\n\nVidimo da nam npr. klasa Svemirski brod ima agregaciju prema klasi Potisnik. To je zato što u zadatku kaže da svaki svemirski brod ima najmanje jedan potisnik.\n\nS druge strane, klasa Teretni (brod) referencira klasu Vozilo, jer u zadatku kaže da svaki teretni brod može prevoziti više vozila.\n\nOkej, zašto je jedno onda referenca, a drugo agregacija? Zato što agregaciju koristimo kad želimo naznačiti da je objekt koji se agregira - u ovom primjeru potisnik, dio agregatora (svemirskog broda). S druge strane, kad teretni brod prevozi druga vozila, ona nisu njegov ključni dio, nego ih on samo prevozi, pa eto mora imati referencu na njih da zna koja točno vozila prevozi.\n\nSlično i u ovom primjeru s prezentacije:\n\n![](assets/2021-04-21/00023.png)\n\nznamo da su gume jedna od komponenata od kojih se kamion sastoji, pa to označavamo agregacijom.\n\nŠegvić je još na konzultacijama dodao da je razlika i u tome što kod agregacije, objekt koji se agregira (potisnik) ne može postojati bez roditeljskog objekta (svemirskog broda), odnosno da to ne bi imalo smisla. Ja se baš ne slažem s tim, jer iako u ovom primjeru to ima smisla, ako pogledamo prezentaciju o OO Dekorator:\n\n![](assets/2021-04-21/00024.png)\n\nvidimo da je označeno da dekorator agregira component. Istina je da je component ključni dio dekoratora, no meni nema niakakvog smisla da component ne može postojati bez dekoratora. Rekao bi da je ovo na što je Šegvić mislio kompozicija, a ne agregacija. Možda sam u krivu, no u svakom slučaju ja bi se samo držao definicije da agregaciju koristimo kad želimo naznačiti da se klasa A (agregat) **sastoji** od nekih instanci klase B, i to bi trebalo biti točno.",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "dora (AE)",
+          "nikace (AeIoU)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175485": {
+      "poster": "steker",
+      "content": "Moze neko rjesit ovo(2017 mi) ![](assets/2021-04-21/00026.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175626": {
+      "poster": "fer999",
+      "content": "ima li netko rješen 4. zadatak iz MI 2018/2019?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175703": {
+      "poster": "faboche (him)",
+      "content": "@indythedog#175472 Hvala puno na pojasnjenju. Ima mi smisla.\n\n> @indythedog#175472 Šegvić je još na konzultacijama dodao da je razlika i u tome što kod agregacije, objekt koji se agregira (potisnik) ne može postojati bez roditeljskog objekta\n\nSjecam se tog dijela, mislim da se zbunio i da je mislio na kompoziciju.",
+      "votes": {
+        "upvoters": [
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207106": {
+      "poster": "fer999",
+      "content": "Može li mi netko ukratko reći što je točno \"generička tvornica\"? Koliko sam shvatio, to nije oblikovni obrazac.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207152": {
+      "poster": "Jaster111",
+      "content": "Jel netko rješavao 1. zadatak iz ZI 2019?\n\nZanima me specifično kako osigurati prenosivost na različite operacijske sustave?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207158": {
+      "poster": "Rene",
+      "content": "@Jaster111#207152 čudan mi je zadatak i ne znan šta je kazalo, ali rekao bih da se to adapterom radi\n\nKlijent preko sučelja PathWatcher dobija eventove, a adapter za svaki pojedini OS mapira to na metode OSa",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207176": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@Rene#207158 \n\n@Jaster111#207152  ako je netko uradio prvi iz zi 2019 jel mozete slikati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207177": {
+      "poster": "Jaster111",
+      "content": "@AK10#207176 ma preskocio",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "AK10 (endyyyy)"
+        ]
+      }
+    },
+    "207640": {
+      "poster": "Marko",
+      "content": "Ovaj ZI nema praga?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207684": {
+      "poster": "gladiator",
+      "content": "@Marko#207640 nema",
+      "votes": {
+        "upvoters": [
+          "Marko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207770": {
+      "poster": "gladiator",
+      "content": "1. zadatak iz ZI12.\n\nKoristimo već poznatu mješavinu Bridge/Visitor ? To mi ima smisla jer je lijeva struktura nestabilna (nije čisti visitor), a treba dinamički odlučiti gdje i kako prikazati objekt (pa ne možemo se osloniti na to da svaki objekt ima jedan renderer - nije čisti bridge)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207964": {
+      "poster": "DazedAndConfused",
+      "content": "![](assets/2021-06-16/00033.png)\n\nJel može netko ako se bavio ovim zadatkom dat neku okvirnu ideju kako mu pristupiti jer nemam nekih bistrih ideja.",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "208029": {
+      "poster": "zastozato (studoš)",
+      "content": "ima li netko riješen zi19",
+      "votes": {
+        "upvoters": [
+          "LucidDreamer",
+          "Stoja_9 (Bije_san_u_autobusu)",
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "208107": {
+      "poster": "gladiator",
+      "content": "@DazedAndConfused#207964 moj je prijedlog prvo gledati ključne riječi, a to su \"accept\" i \"command\". Ja sam zadatak riješio ovako: upravljačka jedinica očita senzore i skuži što treba napraviti. Zatim stvori neku naredbu (dakle obrazac Naredba) te je predaje aktuatorskoj jedinici na izvršavanje kroz argument metode (cjelokupni odnos je Visitor)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "208133": {
+      "poster": "fer999",
+      "content": "![](assets/2021-06-16/00066.png)\n\nKoriste li se u ovom zadatku KOMPOZIT i NAREDBA ili je ispravnije bez KOMPOZITA? Znam da su rekli da se kod makronaredbi koristi KOMPOZIT, ali ne vidim potrebu za tree-like strukturom u ovom slučaju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "208137": {
+      "poster": "JoKing",
+      "content": "@fer999#208133 Moraš kompozit zato što s jedne strane moraš moći spremiti podatke o više naredbi, a s druge strane moraš podržati da se Macro može izvesti u metodi do koja prima EditAction. Kad imaš takvu situaciju kompozit je prirodno rješenje. Može li se to riješiti bez obrazaca, može, sve se može rješiti bez obrazaca, međutim ne vjerujem da bi tako nešto prošlo na ispitu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "208174": {
+      "poster": "bufus",
+      "content": "@Rene#207158 kazalo je direktorij valjda, ne znam jel prekasno stigao odgovor haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "208259": {
+      "poster": "MalaPumpa",
+      "content": "@gladiator#208107 Mozes li objasniti tocno koji su sudionici kod Visitora, ne mogu skuzit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "208269": {
+      "poster": "gladiator",
+      "content": "lijeva strana je aktuator kao takav (i apstraktni aktuator), a desna strana je strategija naredbi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "284067": {
+      "poster": "JetaisUneErreur",
+      "content": "kako je najbolje ovo učiti za kontinuirani prolaz?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "284070": {
+      "poster": "Jale (čakijale)",
+      "content": "@\"JetaisUneErreur\"#p284067 \n\nKroz labose ces nauciti dosta toga sto te pitaju na ispitima, sto ne znas pogledas na izvorima poput [refactoring guru](https://refactoring.guru/design-patterns). Prije ispita pogledas stare zadatke s ispita, probas ih rijesiti (barem prepoznati obrazac i skicirati si neko rjesenje) i malo ponovis teoriju sto su vas pitali na labosima i to bi trebalo biti u redu. Na ispitima uvijek napisi barem nesto na programskim zadacima cak i ako ne znas \"tocno\" rijesiti, jer daju bodove ako to sto si napisao bar donekle ima smisla.",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "AntonioB25 (Pleteni miš)",
+          "JetaisUneErreur",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "284209": {
+      "poster": "bodNaUvidima",
+      "content": "@\"JetaisUneErreur\"#p284067 Nemoj zanemariti grafove svih obrazaca. Dosta bodova se skupi na crtanju njih na ispitima ako nece nista mijenjati od prosle godine.",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "JetaisUneErreur"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "291469": {
+      "poster": "--- ( 🤡 )",
+      "content": "![](assets/2022-04-18/00003.png)\n\njel bi ovo bio dekorator?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "291487": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"---\"#p291469 \n\nDa, rekao je profesor prošli put na predavanju. Nije ga rješavao cijelog, nego samo rekao da se radi o dekoratoru.",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "291488": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"Pleteni miš\"#p291487 hvala! jel davao upute za jos neke zadatke mozda? u proslogodisnjoj temi sam nasao za 3. i 5. samo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "291504": {
+      "poster": "Tonii (Zulul)",
+      "content": "@\"Pleteni miš\"#p291487 Jesi siguran, nez jesam li ja nesto pomijesao ali nije li on bas taj zadatak rijesavao cijelog sa okvirnom metodom, ili je to neki drugi bio??",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "291505": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"Zulul\"#p291504\n\nmislim da je to bio prvi zadatak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "291508": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"---\"#p291488\n1. zadatak je okvirna metoda (osim ako nisam nešto krivo shvatio)\n4. zadatak promatrač (a, b, c) i strategija (d)\n\nne mogu sad uslikat što imam zapisano\n\ni neka neko potvrdi, da nisam što krivo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "291509": {
+      "poster": "Tonii (Zulul)",
+      "content": "@\"Pleteni miš\"#p291508 A u pravu si da 1. je bio okvirna my bad",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "291523": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"Pleteni miš\"#p291508 cek na koji drugi zadatak mislis? jer 2. iz MI '19 bi trebao biti dekorator, to je ovo gore što sam pitao\n\nEDIT: aha jel to mislis na 4. iz ispita?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "291533": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"---\"#p291523\n\nda da\n\nkrivo sam označio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "291614": {
+      "poster": "Tonii (Zulul)",
+      "content": "Jel može netko objasniti razliku između strategije i naredbe, guglao sam na stacku overflow-u i refractoring guru i koliko sam skuzio naredba sluzi za odrediti sto napraviti a strategija kako napraviti. Ali uglavnom ne kuzim zasto bih ikad naredbu koristio jer mi se stvarno cini da se sve sa naredbom moze napraviti sa strategijom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "291624": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@\"Zulul\"#p291614 Naredbu koristiš kad imaš više različitih akcija koje mogu imati različite ishode, a strategiju kada imaš određenu akciju, ali želiš omogućiti više načina na koje se može izvesti. Tako da to dvoje možeš i kombinirati. \n\nNpr. imaš više akcija koje želiš napraviti u programu Open, Print, Save, itd. i to predstaviš sa OpenCommand, PrintCommand, SaveCommand. Ti možeš za npr. SaveCommand (konktekst) iskoristiti strategiju tako da klijent može spremati koristeći različite vrste kompresija (strategije) ovisno o odabranoj konkretnoj implementaciji strategije.",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Ardura (Maddy)",
+          "Ducky",
+          "Tonii (Zulul)",
+          "sivizid",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302817": {
+      "poster": "--- ( 🤡 )",
+      "content": "![](assets/2022-06-10/00013.png)\n\nzašto je ovdje točno pod c)?\n\nEDIT: glup sam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302819": {
+      "poster": "--- ( 🤡 )",
+      "content": "![](assets/2022-06-10/00014.png)\n\nzna itko o čem se u ovom pitanju uopće radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "303313": {
+      "poster": "--- ( 🤡 )",
+      "content": "![](assets/2022-06-12/00030.png)\n\njel ovdje odgovor b) ili d), nasao sam obje varijante?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "303422": {
+      "poster": "Tonii (Zulul)",
+      "content": "Jel može netko objasniti opet, koja je razlika izmedu mosta i posjetitelja. Zašto u ovom zadatku koji je u zadnjem ZI-u sa računanjem ne mozemo koristiti most?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "303477": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "Ako je netko sakupio teoriju na jedno mjesto, pls neka sharea",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "303487": {
+      "poster": "Tonii (Zulul)",
+      "content": "@\"DnkCkv\"#p303477 imas na materijalima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "303605": {
+      "poster": "Han",
+      "content": "Ima netko da je rjesavao zavrsne ili ima rjesen zi sa zadnjeg predavanja da podijeli",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Kniwy00 (DoktorZnanosti)",
+          "Lukak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

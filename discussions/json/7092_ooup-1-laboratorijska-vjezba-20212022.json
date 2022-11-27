@@ -1,0 +1,250 @@
+{
+  "title": "[OOUP] 1. laboratorijska vježba - 2021/2022",
+  "creator": "--- ( 🤡 )",
+  "slug": "ooup-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Oblikovni obrasci u programiranju",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "285787": {
+      "poster": "--- ( 🤡 )",
+      "content": "ima li smisla išta gledati s prezentacija za ovaj labos ili nemaju veze jedno s drugim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286021": {
+      "poster": "Ducky",
+      "content": "@\"---\"#p285787 malo pomaže, barem znaš o čem se radi gradivo. Pogledaj videopredavanja dok ne kaže na videu da možeš riješit labos",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286379": {
+      "poster": "--- ( 🤡 )",
+      "content": "može li mi netko objasniti što točno ova linija koda napravi? `typedef char const *(*PTRFUN)();`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286399": {
+      "poster": "Ducky",
+      "content": "@\"---\"#p286379 nisam ziher, ali mislim da definiraš ptrfun kao pointer na funkcije tipa char",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286571": {
+      "poster": "Ollie",
+      "content": "@\"---\"#p286379 \n\nDefiniraš svoj novi tip koji se zove PTRFUN i on je pointer na funkciju koja vraća char const* i ne prima argumente. \n\ntypedef - definiraš novi tip\n\nchar const* - tip koji vraća  funckija (pointer na char const)\n\n(*PTRFUN) - novom tipu ime PTRFUN\n\n() - funkcija na koju će taj tip pokazivati ne prima nikakve argumente\n\nKasnije to korisiš kao i ostale tipove, npr:\n```\nPTRFUN greet;                 // greet je pointer na neku funkciju koja ne prima argumente i vraća char const*\nchar const* dogGreet(){       //greet bi mogao bit pointer na ovu funckiju \n    return \"vau!\";\n}\n```",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286585": {
+      "poster": "Svarog (Veles)",
+      "content": "> @\"Ollie\"#p286571 ne prima argumente\n\nmala ispravka, prazna lista argumenata u C-u znači da funkcija prima neodređeni broj argumenata. Funkcija koja zaista ne bi primala argumente (greška prilikom prevođenja) bi bila:\n\n`typedef char const * (*PTRFUN)(void)`\n\nZa više info, vidi https://softwareengineering.stackexchange.com/a/287002",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Ollie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286808": {
+      "poster": "--- ( 🤡 )",
+      "content": "ekipa koja je imala labos, možete staviti kak je blic i usmeni na labosu izgledao? hvala :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286815": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@\"---\"#p286808 blic su 10 pitanja vezano usko uz samu vjezbu, tipa koliko koja klasa ima fcija u virt tablici, koliko memorije je neka klasa zauzimala i tako bas specificnosti... Odgovarao sam dobrih 15akmin, kolega je i duze, pitao me doslovno sva pitanja za svaki zadatak i u asembleru prolazili. Ovo je sveskupa najveci cancer od labosa za pljunutih 5 bodova koji sam ikad dozivio, a da ne govorim o negativnim lol",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Ollie",
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "--- ( 🤡 )"
+        ]
+      }
+    },
+    "286819": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"DnkCkv\"#p286815 dakle blic bas i nema veze s ovim pitanjima s materijala? https://github.com/studosi-fer/OOUP/blob/master/labosi/lab-1/2016-17/OOUP_2016-17_lab-1_pitanja-s-ferka.txt",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286820": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@\"---\"#p286819 Ne ali to svakako prodji jer me dosta od toga pitao na usmenom",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286826": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"DnkCkv\"#p286820 oprosti sto te maltretiram, ali jos me zanima jel blic imao pisanje nekog dodatnog koda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286880": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@\"---\"#p286826 Nope samo abcd pitalice",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Ollie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286913": {
+      "poster": "--- ( 🤡 )",
+      "content": "jel bi ovo bio dio gdje se postavlja VTable u Base konstruktoru?\n\n```\n_ZN4BaseC2Ev:\n.LFB7:\n\t.cfi_startproc\n\tendbr64\n\tpush\trbp\n\t.cfi_def_cfa_offset 16\n\t.cfi_offset 6, -16\n\tmov\trbp, rsp\n\t.cfi_def_cfa_register 6\n\tmov\tQWORD PTR -8[rbp], rdi\n\tlea\trdx, _ZTV4Base[rip+16]\n\tmov\trax, QWORD PTR -8[rbp]\n\tmov\tQWORD PTR [rax], rdx\n\tnop\n\tpop\trbp\n\t.cfi_def_cfa 7, 8\n\tret\n\t.cfi_endproc",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286923": {
+      "poster": "Ardura (Maddy)",
+      "content": "Pitanja s blica:\n\nZbog cega se CoolClass razlikuje u velicini od PlainOldClass? \n\nKako se tocno definira PTRFUN?\n\nPitanje vezana uz gdje se tocno poziva npr.dogGreet i slicno\n\nKoliko funkcija ima virtualna tablica za neku klasu\n\n1 pitanje za asembler, primjer koda pa koja linija nesto znaci(onaj dio prije poziva set za CoolClass)\n\nKoliko puta se pozove call nad klasom koja ima virt funkcije, konstruktor, destruktor\n\nAko Square pozove negative_value_at nad kojim objektom ce se zapravo pozvat\n\nU kojem trenu se definira tabulate() (tijekom prevodenja ili tijekom izvodenja)\n\nI slicno tako pitanje samo za neku funkciju vezanu uz cat/dog",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "AntonioB25 (Pleteni miš)",
+          "BlaBla5",
+          "Ducky",
+          "Tonii (Zulul)",
+          "joj (poni)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "--- ( 🤡 )",
+          "joj (poni)"
+        ]
+      }
+    },
+    "287027": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"Maddy\"#p286923 jesu tabulate i same_functions_for_ints obje at runtime jer sadrže pozive virtualnih funkcija?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287044": {
+      "poster": "Ardura (Maddy)",
+      "content": "@\"---\"#p287027 Nisam sigurna u to pitanje, sorry😕",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

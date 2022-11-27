@@ -1,0 +1,221 @@
+{
+  "title": "[SZRUSV] 2. laboratorijska vježba - 2021/2022",
+  "creator": "[deleted]",
+  "slug": "szrusv-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Sustavi za rad u stvarnom vremenu",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "264040": {
+      "poster": "[deleted]",
+      "content": "jel ima netko tko može i ima volje malo pojasniti kako bi ovo trebalo izgledati? pretpostavljam da nam je lift jedna dretva i generator putnika posebna dretva (+ neka koja se koristi za ispis u konzolu), ali nije mi baš jasno kako srediti komunikaciju, ne znam jel overthinkam zbog labosa iz NOS-a, ali krenuo sam razmišljati o nekim redovima poruka i slično pa ne znam jel idem u skroz krivom smjeru?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264108": {
+      "poster": "nnn (dinoo)",
+      "content": "@\"Todd Chavez\"#p264040 Ne znam u čemu radiš ali evo ti moj postupak otprilike.\n\nImaš dretve: graphics (1), elevator (1 ili 2 ovisno radiš li lab3 ili lab4), passengers (random broj njih). Za komunikaciju koristim globalne varijable, ili zajedničku memoriju kako god hoćeš to nazvat.\n\nNeke od globalnih varijabli: lokacija lifta 1 (int), lokacija lifta 2 (int), jesu li otvorena vrata lifta 1 (bool), tko sve čeka lift na katu 1 (list),  tko je izašao na katu 3 (list), tko je u liftu 1 (list) etc.\n\n1. Graphics samo rendera te podatke i ne mijenja ih. Ja koristim string formatiranje i samo to printam kao output.\n2. Elevator dretva gleda di treba ići gore ili dole a za to koristim globalnu varijablu kao listu na koje katove treba ići. Ako ide lift sa 1 na 4 kat a netko čeka na 3 onda stane na 3 i otvori vrata. Nakon tog mora 3 izbaciti sa liste katova na koje treba ići.\n3. Passenger dretva dodaje kat na kojem čeka u listu koju lift gleda. Kad uđe u lift dodaje kat na koji ide. Ovdje možeš imat problem ako ti liste u tom jeziku nisu thread safe. Npr u Pythonu jesu.\n\nPrvi labos sam radio sa socketima i bilo je puno kompliciranije od ovoga postupka (varijable i dretve), barem što se sinkronizacije tiče.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264200": {
+      "poster": "member",
+      "content": "Kako izgleda odgovaranje labosa? Jel pita po kodu di je šta i kako smo izveli ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264953": {
+      "poster": "[deleted]",
+      "content": "@\"dino\"#p264108 hvala ti! imam samo pitanje za Passenger dretvu, jel ti ta dretva samo generator putnika - odnosno nešto što puni globalne varijable s random podacima, ili ti je svaki putnik jedna dretva (koja je živa dok god je putnik u sustavu)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264965": {
+      "poster": "Ardura (Maddy)",
+      "content": "@\"Todd Chavez\"#p264953  Ovo prvo, rekao je prof da putnici ne moraju biti dretve",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264981": {
+      "poster": "[deleted]",
+      "content": "![](assets/2021-12-15/00035.png)\n\njel vama isto ovako na repozitoriju na gitu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269788": {
+      "poster": "Ardura (Maddy)",
+      "content": "Koliko je dovoljno rijesiti za labos da se smatra obavljenim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270277": {
+      "poster": "[deleted]",
+      "content": "@\"Maddy\"#p269788 jesi kojim slucajem saznala? jel itko imao ovo danas da podijeli iskustva?",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270361": {
+      "poster": "Ardura (Maddy)",
+      "content": "@\"Todd Chavez\"#p270277 \n\nImala danas, pokrenes prvo program, on samo gleda kako se odvija i tjt. Meni je zamjerio sto mi generator kad ga opet pokrenem ne nastavlja s id-jem nego opet ide od 1 i nije mu bas bilo drago to. Nije gledao imas li radno cekanje ni imas li prioritete, mislim da mu je najbitnije da generator salje por i da ih moze vide dretvi obradivati bez zastoja. Od kodova mi je samo generator pogledao, zanimao ga je red poruka, nista predetaljno. Ako ti kod ne radi poslat ce te na nadoknadu, i ako primjeti nesto da nemas pitat ce te kako/zasto i mozes li srediti. Cini mi se da ima malo vise kriterije sad nego prije, ali vrijedi doc pa sto bude.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271437": {
+      "poster": "[deleted]",
+      "content": "jel za zadatak s raskrscem svakih nekoliko sekundi stvaramo random pjesaka ili auto na random strani krizanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271440": {
+      "poster": "Jokke",
+      "content": "@\"Todd Chavez\"#p271437 Ja sam napravio da unosim tipa \"P-NW-NE\" za pjesaka koji ide sa NW na NE. Vjerojatno mozes i da se generiraju random, sumnjam da mu je to bitno",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271536": {
+      "poster": "joj (poni)",
+      "content": "@\"Todd Chavez\"#p271437 ja sam tak napravila i bilo je dobro",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272159": {
+      "poster": "nnn (dinoo)",
+      "content": "Kako ste implementirali fifo listu  sa ovim zadnjim u `poslužitelj.c`?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272168": {
+      "poster": "paradajz",
+      "content": "@\"dino\"#p272159 Ja sam posudio implementaciju najobicnije liste za c. Mislim da ima primjer na gitu ovdje na studosima. Ugl. obican list.append i list.remove, samo zakljucano u kriticni odsjecak naravno",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

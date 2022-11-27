@@ -1,0 +1,44 @@
+{
+  "title": "[KIK] Završni ispit - 2021/2022",
+  "creator": "Heklijo (Geralt of Rivia)",
+  "slug": "kik-zavrsni-ispit-20212022",
+  "tags": [
+    "FER",
+    "Kriptografija i kriptoanaliza",
+    "Ispiti"
+  ],
+  "posts": {
+    "280036": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "Jel ima netko slikano ZI ili zadatke slične kakvi su se pojavljivali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "280096": {
+      "poster": "tomekbeli420",
+      "content": "@\"Heklijo\"#p280036 evo ja ću iz sjećanja pokušati se sjetiti nekih pitanja\n\nPrvo je bila Vigenereova šifra: uz zadane abecedu od 26 slova šifrirati jasni tekst \"ISPIT\" sa ključem \"AUTO\", mislim da ispadne \"INKBT\"\n\nOnda su bila 2 pitanja iz diferencijalne kripotoanalize: razmatra se DES-ov S-Box koji na ulazu prima 6 bita na izlazu daje 4\n\nKoliko različitih izlaznih razlika je potrebno razmotriti za neku ulaznu razliku? 2⁴ odnosno 16\n\nI za AES-ov S-Box, koliko je mogućih izlaznih razlika ako na ulazu nema razlike odnosno razlika je 0? Pa samo jedna moguća: isto 0.\n\nOnda standardno pitanje za \"obični\" RSA sustav, zadan je jedan javni jedan privatni ključ i ispitati je li to korektan par. Kriptirati neku poruku (dan je kao broj da odmah možeš potencirati), i dekriptirati neku poruku koristeći uzastopno kvadriranje.\n\nOnda se sjećam da je bilo pitanje za RSA digitalni potpis sa nadopunom P i funkcijom sažetka H, kako se točno potpisuje, te pokazati, ako funkcija sažetka nije otporna na kolizije, da takav sustav digitalnog potpisa nije siguran (po onoj definiciji semantičke sigurnosti)\n\nS(m, sk) = S(m, (d,N)) = (P(H(m)))^d mod N\n\nA ovo za nesigurnost, ako napadač ima jedan par poruka,potpis (m, σ) takav da je σ ispravan potpis poruke m, onda pod pretpostavkom neotpornosti na kolizije može lako pronaći drugu poruku m' takav da H(m) = H(m') te uz dodatnu pretpostavku da je P deterministička nadopuna, P(H(m'))^d mod N će dati isti rezultat kao i P(H(m))^d mod N, pa će σ biti ispravan potpis i za tu drugu poruku m', dakle prema definiciji semantičke sigurnosti sustav je nesiguran\n\nOnda je bio protokol jednostrane autentifikacije koristeći certifikacijski centar, trebalo je napisati sadržaj onih 5 poruka koje se izmjene, imaš na slajdovima\n\nOnda je bilo pitanje što je to unaprijedna sigurnost, u sljedećem podzadatku navesti i skicirati protokol koji ima svojstvo unaprijedne sigurnosti. Radi se o TLS-u sa privremenim Diffie-Hellmanom. Također navesti što je to computational Diffie-Hellman assumption.\n\nOnda je bio zadatak sa ElGamalom i onim slanjem ponuda u poruci m. Neka šaljemo se par (Y, c) gdje je Y privremeni Elgamal javni ključ, a c skriveni tekst. Kakav će biti utjecaj na ponudu ako se pošalje (Y, 100\\*c)? Nekakva je pretpostavka da se radi u grupi [imath]\\left(\\mathbb{Z}^{*}_{p}, *\\right)[/imath] jer inače 100\\*c nema smisla.\n\nIma utjecaj. Pogledaj na slajdovima gdje se pokazuje korektnost ElGamala, u zadnjem koraku jedina je razlika što se umjesto [imath]m g^{ya} \\left(g^{ya}\\right)^{-1}[/imath] dobije [imath]100 * m g^{ya} \\left(g^{ya}\\right)^{-1}[/imath] što je [imath]100*m[/imath]\n\nDakle i ponuda će postati 100 puta veća (modulo p).\n\nOnda je bio zadatak iz lightweight kriptografije i postkvantne kriptografije. Za lightweight pitanje je bilo koji su ulazi a koji izlazi algoritma ASCON\n\nA za postkvantnu je bilo zaokružiti koje funkcionalnosti/sustave treba moći ostvariti algoritam otporan na kvantna računala, 2 odgovora su bila: razmjena ključeva i još nešto, ima na slajdovima\n\nI još je bilo pitanje nešto za BB84 protokol što Ana šalje Branku i opisati kanal.\n\nI zadnji zadatak se ne sjećam, bio je Needham Schroeder i napad čovjeka u sredini.\n\nUz ovo i MI pogledaj stare ispite iz NOS-a koji se tiču kriptografije (ima i neki google doc), jedino kaj tamo nema stvari poput ElGamala DSA i priča sa grupama",
+      "votes": {
+        "upvoters": [
+          "Heklijo (Geralt of Rivia)",
+          "Lukak",
+          "kix7 (Fish99)",
+          "plavisnajper",
+          "tempest"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

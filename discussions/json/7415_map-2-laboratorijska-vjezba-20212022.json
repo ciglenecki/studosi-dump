@@ -1,0 +1,213 @@
+{
+  "title": "[MAP] 2. laboratorijska vježba - 2021/2022",
+  "creator": "Rene",
+  "slug": "map-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Multivarijatna analiza podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "296065": {
+      "poster": "Rene",
+      "content": "Može neko objasnit kako se interpretira scatter plot dvije glavne komponente?\n\nJel' vam ispada ovako nekako, i kako bi tu identificirali grupe fondova?\n\n![](assets/2022-05-14/00013.png)",
+      "votes": {
+        "upvoters": [
+          "Ryder (Pepper)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296108": {
+      "poster": "Rene",
+      "content": "@\"Rene\"#p296065 Također, ako neko može pomoći s 5.2, nisam siguran uopće što treba napraviti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296386": {
+      "poster": "Ryder (Pepper)",
+      "content": "@\"Rene\"#p296108 https://stackoverflow.com/questions/62573178/pca-lda-analysis-r\n\nja sam ovako napravio ko u prvom odgovoru",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296396": {
+      "poster": "wesley",
+      "content": "pomoć s 3.2? ne kužim što točno treba napravit",
+      "votes": {
+        "upvoters": [
+          "Ryder (Pepper)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296403": {
+      "poster": "garica",
+      "content": "jel bi trebale onako skoro sve korelacije u 2.1 bit skoro pa jednake 1? kakav je to skup podataka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296406": {
+      "poster": "sheriffHorsey",
+      "content": "@\"wesley\"#p296396 Prvo odrediš prva dva svojstvena vektora, ako su im sume manje od 0 pomnožiš ih s -1 (meni je ispalo da jesu) i skaliraš ih sa recipročnom sumom apsolutnih vrijednosti tog vektora. Matrično pomnožiš povrate s tim skaliranim vektorom i sad imaš [imath]R_t[/imath] vektore. Na kraju samo trčiš po tom vektoru i računaš izraz [imath]V_t = V_{t-1}\\cdot(1+R_{t})[/imath], a za [imath]V_0[/imath] postaviš vrijednost na 100 i plottaš vektor [imath]V[/imath] u ovisnosti o vremenu. Nije tak teško samo je slabo objašnjeno u labosu.",
+      "votes": {
+        "upvoters": [
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296408": {
+      "poster": "Rene",
+      "content": "Koliko vam ispada APER za lda i qda? Meni 17% i 4% cca",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296409": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Rene\"#p296408 Ja sam dobio 12% i 4%",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296460": {
+      "poster": "wesley",
+      "content": "Kako vam ispada stupčasti dijagram u 5.1?",
+      "votes": {
+        "upvoters": [
+          "matt (Matt)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296487": {
+      "poster": "Ducky",
+      "content": "@\"garica\"#p296403 meni su samo sve obveznice korelirane jedne s drugima i dionice jedne s drugima",
+      "votes": {
+        "upvoters": [
+          "garica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296518": {
+      "poster": "kix7 (Fish99)",
+      "content": "Kolki vam ispadne povrat portfelja u ovom 3.2, tj kolko nakraju zaradite od pocetnih 100 dolara?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296528": {
+      "poster": "wesley",
+      "content": "@\"Fish99\"#p296518 za prvu komponentu mi ispadne 220, a drugu oko 37",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296742": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"sheriffHorsey\"#p296406 prva dva svojstvena vektora onih pocetnih vrijednosti iz csv-a?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296746": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Precious Bodily Fluids\"#p296742 ja sam koristio tjedne povrate",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

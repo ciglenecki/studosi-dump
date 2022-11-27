@@ -1,0 +1,3014 @@
+{
+  "title": "[NAISP] 2. laboratorijska vježba - 2020/2021",
+  "creator": "Amon",
+  "slug": "naisp-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Napredni algoritmi i strukture podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "102659": {
+      "poster": "Amon",
+      "content": "Ukucao sam vrijednost za 1. zadatak bez koda iz zezancije i malo kasnije sam dobio personalized message:\n\n![](assets/2020-11-29/00028.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amali (Amajli)",
+          "Broono (Burućuh)",
+          "Cubii",
+          "Daorson",
+          "Dekan",
+          "Emma63194",
+          "Filemon",
+          "Jakic007",
+          "Mirko_",
+          "MrHead (vandal)",
+          "Noggenfogger (dammitimmad)",
+          "Patak007",
+          "Svarog (Veles)",
+          "Svenchi",
+          "WhiteMamba",
+          "cotfuse",
+          "gamigugi",
+          "in1",
+          "koBASA (hackerman)",
+          "member",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "mikimoj",
+          "moukie",
+          "narval13068 (Dima)",
+          "saitama",
+          "turunturu (Cement)",
+          "whatTheHel"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102779": {
+      "poster": "Amon",
+      "content": "Protip: Ako slušate APR napravite neki od zadataka sa genetskim jer ćete identičnu stvar morati raditi na 4. labosu pa možete bez problema reuseati kod\n\n(naravno nakon što ga uspijete prebaciti iz poganog c++-a u neki jezik kod kojeg nećete lupati glavom u zid svake 3 minute)\n\nPS evo link sa APR-a kako raditi genetski algoritam:\n\nhttp://www.fer.hr/_download/repository/GA[1].ppt",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)",
+          "in1",
+          "member",
+          "tre_besty (luk)"
+        ],
+        "downvoters": [
+          "Emma63194"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102809": {
+      "poster": "Emma63194",
+      "content": "@Amon#102779 [Ova](http://java.zemris.fer.hr/nastava/nenr/knjiga-0.1.2013-08-12.pdf) i [ova](http://java.zemris.fer.hr/nastava/pioa/knjiga-0.1.2013-12-30.pdf) knjiga su, po meni, poprilično dobre za shvatiti GA, ako nekoga zanima.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "laugreano"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102831": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Divim se ekipi koja usprkos tome što za 2. zadatak treba napraviti najobičniji A star (10-tak linija koda) odabere GA i zajebanciju s Eigenom 😂👌",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)"
+        ],
+        "downvoters": [
+          "Principium"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Amali (Amajli)"
+        ],
+        "wtf": [
+          "pepelko"
+        ],
+        "tuga": []
+      }
+    },
+    "102842": {
+      "poster": "Emma63194",
+      "content": "@micho#102831 Pretpostavljam da misliš na treći zadatak, a ne drugi?\n\nNe vidim kako bi se to riješilo s A* , nemaš zadanu nikakvu heuristuku.\n\nAli da, taj zadatak definitivno izgleda najlakši jer je najobičnije dinamičko programiranje.",
+      "votes": {
+        "upvoters": [
+          "Principium"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102846": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Emma63194#102842 3. zadatak su neuronke, 2. zadatak je šetanje po grafovima\n\nPa heuristika ti je manhattan distance i pošto je to optimistična heuristika (uvijek imate strogo više cvijeća na polju od 0) i pošto nemate negativnih težina A star dokazano nalazi optimalno rješenje.\n\nŠto je najgore, gotovo identičan problem bio je nekoć riješen na 1. labosu umjetne\n\nEDIT: Aha, vidim da polje ima >= 0 cvijeća. Dakle onda bi bilo nužno samo svim težinama dodati 1, i problem ostaje istovjetan (jer nema negativnih težina). Nakon pronalaska rješenja potrebno bi bilo samo oduzeti duljinu puta da se dobije originalan broj pregaženog cvijeća.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "moji_prsti_prsti_klize_po_njoj",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": [
+          "Principium"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102850": {
+      "poster": "Emma63194",
+      "content": "@micho#102846 Um, ne, nisu neuronke treći. Čini mi se da nije isti raspored pitanja svima.\n\nDa, isprike!\n\nA* mi je bio pao na pamet, ali sam odbacila tu ideju jer mi nije pala na pamet Manhattan udaljenost. \n\nHvala!",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102851": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Emma63194#102850 A možda i osoba koja mi je slala zadatke ne zna brojat ¯\\\\\\_(ツ)_/¯\n\nništa nije isključeno lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Emma63194"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102870": {
+      "poster": "Murin",
+      "content": "U kojem IDE je najlakse namjestiti taj Eigen?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102909": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Murin#102870 Nije toliko ovisno o IDEu, moraš se igrati s buildanjem i cmakeom\n\nCLion je okej jer ti dosta toga sam izgenerira, ali daleko od neke automatike, pogan jezik štaš\n\nJedina sreća je što je Eigen koliko mi je poznato header-only, pa nema buildanja, ali ćeš morati malo proguglati kako naštimati CMake da ti prepoznaje Eigen ako ga ne staviš na predefirana mjesta. Ili s gcc-om linkati knjižnicu u command-lineu.\n\n[Više ovdje](https://eigen.tuxfamily.org/dox/GettingStarted.html)",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102920": {
+      "poster": "tonkec",
+      "content": "vezano uz zadatak s prepoznavanjem znakova, nije toliko bitno kako svako slovo izgleda, odnosno nije jednoznačno da svako slovo mora imati jedinice na točno određenim mjestima, jel?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102937": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@tonkec#102920 Ako razmišljaš u smjeru da bi radio dictionary - nope, trebalo bi raditi i za neviđene uzorke, a dictionary to ne može",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102938": {
+      "poster": "[deleted]",
+      "content": "@Murin#102870 \n\n@micho#102909 \n\nMislim da je za pocetnike najlakse u [Visual Studiu s vcpkgom](https://vcpkg.readthedocs.io/en/latest/examples/installing-and-using-packages/). Samo napises vcpkg install eigen3 i ne trebas brinuti o buildanju, ni nicemu, it just works.",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102955": {
+      "poster": "korisnik1",
+      "content": "Postoji li neki izvor za training setove za prepoznavanje znakova ili bismo bitmape trebali sami izmisliti? Za ostale zadatke isto tako kad smo kod toga... Copy-pasteanje u Edgar nije zabavan način debuggiranja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102964": {
+      "poster": "nickname",
+      "content": "Jel može netko objasnit prototip funkcije u zadatku s cvijećem. Šta im točno znači ovaj uint16_t *const problem? Da, napisali su da je to broj cvjetova u ćelijama al mi nije jasno kako će oni to pozivat i šta to točno znači? Jel to znači da je ta funkcija definitivno rekurzivna pa mi mijenjamo tu vrijednosti ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102968": {
+      "poster": "tonkec",
+      "content": "@micho#102937 mislio sam napraviti svoje matrice i oznake, ali sad vidim da nigdje ne piše da će nam dati oznake pojedinih matrica pa me zanima kako da izračunam greške ako nemam oznake?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102979": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@tonkec#102968 Čini mi se da ćete si sami trebati označiti podatke/napraviti skup. Onaj primjer koji su vam dali i grafički liči na slovo A. Problem bi bio ako ne znate točno koja je kodomena funkcije koju modelirate mrežom. A to trebate pitati njih, pretpostavljam da su samo uppercase ASCII slova i da će sva biti u training setu, znači vektor duljine 26 (ili 27 ako želite modelirati nesigurnost).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102985": {
+      "poster": "tito",
+      "content": "što mislite koji je najlakši zadatak od tih 5 zadataka",
+      "votes": {
+        "upvoters": [
+          "ImJustAKid (lumity)",
+          "member",
+          "moukie",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103012": {
+      "poster": "AN5A",
+      "content": "@nickname#102964 Definiciju funkcije promijenila u solve(uint N, uint M, uint16_t const *problem, vector<pair<uint, uint>> &solution) jer mi je javljalo grešku kada je zvjezdica bila prije const, i poziv funkcije mi izgleda ovako:\n\n`const uint16_t problem[] = {1, 7, 9, 2, 8, 6, 3, 2, 1, 6, 7, 8}; \n\nvector<pair<uint, uint>> solution;\n\ncout << solve(3, 4, problem, solution);`\n\nU funkciji elemente iz varijable problem pozivam kao elemente jednodimenzionalnog polja (pr. problem[2 * M + 2] za element koji bi u 2D tablici bio na poziciji (3, 3)). Ne znam pozivaju li na Edgaru malo drugačije, no meni prolazi ovako definirano.",
+      "votes": {
+        "upvoters": [
+          "Ruleta",
+          "member",
+          "nickname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103024": {
+      "poster": "AN5A",
+      "content": "Dobivamo li dio bodova ako nam prolazi neke testove, a neke ne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103046": {
+      "poster": "korisnik1",
+      "content": "@AN5A#103024 prosli labos nije bilo tako, pretpostavljam da nece ni sad",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Emma63194",
+          "narval13068 (Dima)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103230": {
+      "poster": "saitama",
+      "content": "@AN5A#103012 jel ti radi ovo pristupanje elementu na taj nacin ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103236": {
+      "poster": "Emma63194",
+      "content": "@korisnik1#103046 Prošli labos je, ako se ne varam, bio sam jedan jedini test, sada su ih dodali više. \n\nMeni ima smisla da dobijemo dio bodova, ali ipak mislim da bi bilo bolje to pitati nositelje predmeta.",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103278": {
+      "poster": "AN5A",
+      "content": "@saitama#103230\n\nDap, tipa u jednom dijelu koda imam ovako `cost[n][m] = cost[n][m - 1] + problem[n * M + m];`\n\nNajbolje je za probu ispisati polje na početku funkcije da vidiš radi li ti sve kako spada.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103324": {
+      "poster": "tonkec",
+      "content": "Na koji način da vratim `vector<Vector2i*>` iz funkcije? Probao sam na taj način i na `vector<Vector2i*>*`, međutim uvijek se vrijednosti vektora prepišu nekim random brojevima jednom kada se izvede linija s pozivom te funkcije.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103335": {
+      "poster": "korisnik1",
+      "content": "@Emma63194#103236 Stvarno su dodali jos testova...tko zna, mozda jednog dana dobijemo i testne primjere",
+      "votes": {
+        "upvoters": [
+          "Fran_- (random_trooper)",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103340": {
+      "poster": "Emma63194",
+      "content": "@korisnik1#103335 Lmao, pa to samo reverse engineeraš xD. Stavi si da ti se input ispisuje na cout ili cerr, pa vidiš točno koje ti podatke daju. Makar, vrlo vjerojatno nećeš iste primjere dobivati pri novom pokretanju, već random generirane svaki put.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103477": {
+      "poster": "narval13068 (Dima)",
+      "content": "Pretpostavljam da u 3. zdk neuronska mreza, ja dobivam nekoliko primjera znakova na ulazu za trainat mrezu (jedinstvenih za svaki znak) i toliko izlaznih neurona ce imati vektor izlaza moje neuronske mreze? Primjerice dobijem za trainat bitmape od B C i G tada moja mreza ima 3 izlazna neurona gdje prvi oznacava vjerojatnost za B, drugi C, treci G",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103531": {
+      "poster": "Murin",
+      "content": "@narval13068#103477 \n\nTo se i ja pitam, jer realno u skupovima podataka imas veci broj sampleova za svaki label i oni su obicno razliciti, tak da mi nije jasno kako bi ja trebao skuziti broj izlaznih neurona",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103539": {
+      "poster": "narval13068 (Dima)",
+      "content": "@Murin#103531 Da, jedino ako ce za svako slovo bit jedan sample u training skupu pa onda kao redni broj slova u train skupu mora odgovarat njegovom rednom broju izlaznog neurona, ali to su morali napisat ovako mogu samo pretpostavit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103541": {
+      "poster": "Murin",
+      "content": "Za prolaz laboratorija treba 15 bodova ako se ne varam? E sad trebam misljenje, zeznuo sam prvi i nisam kliknuo submit tako da sam dobio samo 4 boda na kraju, ovaj drugi razmisljam izmedu zadatka za 5 i za 11, dok tek treci labos predajem uzivo , tj. bas ga moram napraviti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103542": {
+      "poster": "Murin",
+      "content": "@narval13068#103539 \n\nLose definiram zadatak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103586": {
+      "poster": "MrHead (vandal)",
+      "content": "Jel se ikome u ovom smecu na edgaru s dinamckim desi error  \"bad:alloc\" u 4. testnom primjeru? Ako da kako ste rjesili to? Matrica je tam 3000*5000 (kad ispises M i N dobijes tak). Valjda je to prevelika matrica",
+      "votes": {
+        "upvoters": [
+          "moukie",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103591": {
+      "poster": "Joji",
+      "content": "@MrHead#103586 trebaš matricu alocirati na heapu npr. pomoću `new` i na kraju moraš osloboditi memoriju tako da pozoveš `delete[]`.",
+      "votes": {
+        "upvoters": [
+          "AN5A",
+          "Emma63194",
+          "Filemon",
+          "MrHead (vandal)",
+          "member",
+          "menace_master",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103629": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Murin#103542 ah yes opet ZPR širi RZ mudrost XD",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103631": {
+      "poster": "MrHead (vandal)",
+      "content": "@Joji#103591 Svaka cast",
+      "votes": {
+        "upvoters": [
+          "Joji"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103633": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Murin#103541 onaj s gaženjem cvijeća ti je full izi za 17, prouči 1. ciklus predavanja iz umjetne inteligencije (imaš na materijalima), lupiš A star uz sitne modifikacije (dodaš 1 svim elementima matrice ako ima neki element jednak 0, to radiš da ti heuristika bude optimistična) i to bi trebalo biti to heheheh",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "hejhoj (vdvd)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103634": {
+      "poster": "carrieb",
+      "content": "![](assets/2020-12-01/00014.png)\n\npitala sam Dalibora koji su nacini rjesavanja dopusteni za livadu - evo njegovog simpaticnog odgovora",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103636": {
+      "poster": "nickname",
+      "content": "@Joji#103591 A kad da točno deleteamo? Jer treba vratit broj pregazenog cvijeća, a ako deleteam prije returna izbrisat ce se i to. Il sam nes krivo skuzio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103637": {
+      "poster": "Joji",
+      "content": "@nickname#103636 spremiš rezultat u varijablu, deletaš i onda vratiš rezultat.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "menace_master"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103639": {
+      "poster": "nickname",
+      "content": "@Joji#103637 Ja ne znam šta krivo radim, ali izbriše i iz te varijable lol. U tom je problem\n\nEDIT: Nvm riješeno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103756": {
+      "poster": "saitama",
+      "content": "Jel bi mogao netko stavit svoj main za livadu ?",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103763": {
+      "poster": "[deleted]",
+      "content": "Je li netko uspio implementirati A* za livadu, daje mi optimalan put samo za testni primjer 😩\n\nEdit: moze netko staviti svoj ispis puta i cost za ovaj ulaz https://gofile.io/d/SNXsjy",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103766": {
+      "poster": "jazavci",
+      "content": "moze pomoc za zadatak s livadom ako netko slucajno zna...\n\nstd::reverse(solution.begin(), solution.end()); - zasto mi ne radi to, zelim samo obrnuti redoslijed u vektoru",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103768": {
+      "poster": "weedovnjak",
+      "content": "@saitama#103756\n```cpp\nint main() { \n\n    //uint16_t polje[] = {1, 7, 9, 2, 8, 6, 6, 7, 1, 3, 2, 8};\n\n    uint16_t polje[] = {100, 200, 1000, 0,\n                        200, 100,  600, 0,\n                        300, 1600, 100, 0};\n    uint16_t *ptr;\n    ptr = polje;\n    vector<pair<unsigned int, unsigned int>> solution;\n\n    uint16_t brCvijeca = solve(3, 4, ptr, solution);\n\n    cout << \"Kolicina cvijeca: \" << brCvijeca;\n    cout << \"\\n\";\n\n    for(int i=0; i<solution.size(); ++i){\n        cout << \"(\" << solution[i].first << \", \" << solution[i].second << \")\" << endl;\n    }\n  \n    return 0; \n}\n```\nSamo za mjesta gdje je unsigned int bi edgar zahtjevao uint",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "KimVersonRemaster",
+          "Zogen",
+          "[deleted]",
+          "hejhoj (vdvd)",
+          "jazavci",
+          "sane_insane"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103773": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Jesu zadaci od 17 bodova rezervirani samo za one koji su odabrani za ovu vježbu ili ih svatko može rješavat, uz javljanje profesoru?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103774": {
+      "poster": "jazavci",
+      "content": "@gentleman#103763 ne mogu nikako skinuti file, javlja mi gresku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103776": {
+      "poster": "[deleted]",
+      "content": "@jazavci#103774 https://mega.nz/file/r0h1xIiL#DGxFPt2R02-WFUI6bmcd_4wgb7Ii7-XQ_NsqU3isHCY probaj s ovog linka, na kraju filea ima zerez viska, hvala ti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103784": {
+      "poster": "jazavci",
+      "content": "@gentleman#103776 koje su dimenzije polja iz primjera?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103785": {
+      "poster": "[deleted]",
+      "content": "@jazavci#103784 50x100",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103787": {
+      "poster": "jazavci",
+      "content": "result: 34649  \n\n (49, 99)  (49, 98)  (49, 97)  (49, 96)  (48, 96)  (48, 95)  (48, 94)  (48, 93)  (48, 92)  (48, 91)  (47, 91)  (47, 90)  (47, 89)  (47, 88)  (47, 87)  (47, 86)  (46, 86)  (45, 86)  (44, 86)  (43, 86)  (42, 86)  (41, 86)  (40, 86)  (39, 86)  (38, 86)  (37, 86)  (36, 86)  (35, 86)  (34, 86)  (33, 86)  (32, 86)  (31, 86)  (30, 86)  (29, 86)  (28, 86)  (28, 85)  (28, 84)  (28, 83)  (28, 82)  (28, 81)  (28, 80)  (28, 79)  (28, 78)  (28, 77)  (28, 76)  (28, 75)  (27, 75)  (27, 74)  (26, 74)  (26, 73)  (26, 72)  (26, 71)  (25, 71)  (25, 70)  (25, 69)  (25, 68)  (24, 68)  (24, 67)  (24, 66)  (24, 65)  (24, 64)  (24, 63)  (24, 62)  (24, 61)  (24, 60)  (24, 59)  (24, 58)  (23, 58)  (23, 57)  (22, 57)  (21, 57)  (21, 56)  (21, 55)  (20, 55)  (20, 54)  (20, 53)  (20, 52)  (19, 52)  (19, 51)  (19, 50)  (19, 49)  (19, 48)  (19, 47)  (19, 46)  (19, 45)  (19, 44)  (19, 43)  (19, 42)  (19, 41)  (19, 40)  (19, 39)  (19, 38)  (19, 37)  (19, 36)  (18, 36)  (17, 36)  (16, 36)  (16, 35)  (16, 34)  (16, 33)  (16, 32)  (15, 32)  (15, 31)  (15, 30)  (15, 29)  (15, 28)  (15, 27)  (15, 26)  (15, 25)  (15, 24)  (15, 23)  (15, 22)  (15, 21)  (15, 20)  (15, 19)  (15, 18)  (15, 17)  (15, 16)  (15, 15)  (15, 14)  (15, 13)  (14, 13)  (13, 13)  (12, 13)  (11, 13)  (11, 12)  (11, 11)  (11, 10)  (11, 9)  (11, 8)  (11, 7)  (10, 7)  (9, 7)  (8, 7)  (7, 7)  (7, 6)  (6, 6)  (5, 6)  (4, 6)  (4, 5)  (3, 5)  (3, 4)  (2, 4)  (1, 4)  (1, 3)  (1, 2)  (0, 2)  (0, 1)  (0, 0)\n\nne znam je li to dobro, tako mi ispise",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103793": {
+      "poster": "[deleted]",
+      "content": "@jazavci#103766 `#include <algorithm>`",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103794": {
+      "poster": "jazavci",
+      "content": "@maki#103793 jesam, napravi on nesto, ali ne reversa dobro, stavi neki novi random redoslijed... npr. za vektor (1,2,3,4,5) on napravi (5,3,1,2,4)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103796": {
+      "poster": "[deleted]",
+      "content": "@jazavci#103794 hmm, jel ti radi na edgaru? mozda ti nije nesto u redu s lokalnom implementacijom standardnog librarya. meni radi i lokalno i na edgaru normalno.",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103798": {
+      "poster": "[deleted]",
+      "content": "@jazavci#103787 Svakako manji cost od mojeg, hvala ti budem probao pronaci gresku",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103805": {
+      "poster": "jazavci",
+      "content": "@maki#103796 ne mogu jos probati jer mi ne radi sve, ovo s brojevima je samo primjer, u kodu radim s vektorom parova uint, je li tebi za to radi ako tako koristis? npr. (2,2),(1,2),(0,2),(0,1),(0,0) mi vrati (0,0),(0,2),(2,2),(1,2),(0,1)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103812": {
+      "poster": "[deleted]",
+      "content": "@jazavci#103805 \n\nevo probao sam taj primjer\n ```\n    std::vector<std::pair<std::uint32_t, std::uint32_t>> example{\n            {2, 2},\n            {1, 2},\n            {0, 2},\n            {0, 1},\n            {0, 0}};\n\n    std::reverse(example.begin(), example.end());\n\n    for (const auto& pair : example)\n        std::cout << \"(\" << pair.first << \" \" << pair.second << \")\" << std::endl;\n```\nispis je \n\n`\n(0, 0)\n\n(0, 1)\n\n(0, 2)\n\n(1, 2)\n\n(2, 2)\n`",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103813": {
+      "poster": "jazavci",
+      "content": "@maki#103812 hvala puno, onda ce sigurno na edgaru raditi, tko zna sto se meni ovdje dogada",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103822": {
+      "poster": "jazavci",
+      "content": "je li itko imao gresku na edgaru: \"Your solution path is invalid\"?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103826": {
+      "poster": "losos",
+      "content": "Može netko objasniti kako je riješio 4. problem (livada) dinamičkim programiranjem. Moja logika je da je cost svakog polja na početku 1 te imamo  \"torbu\" veličine m + n - 2 (ako smijemo ići samo dole i desno), međutim kada zagazimo desno ili dole određena polja postaju nedohvatna, odnosno njihova cijena raste na m + n - 1. Sad kako bi se ovaj problem rješio knapsackom ja stvarno ne znam, pa ako mi netko može pomoći da formuliram problem na neki drugi način ili mi reći di griješim super.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103832": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@losos#103826 Doslovno A star uz dodavanje 1 svim poljima\n\ngoogleaj A star ili pogledaj 1. ciklus predavanja iz Umjetne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103836": {
+      "poster": "[deleted]",
+      "content": "@losos#103826 \n\ndinamicko programiranje nije samo knapsack\n\nideja ovdje je da gledas npr. polje [imath] (i,j)[/imath] na gridu i pitas se kako je moguce doci do njega. to je moguce iz polja gore ili polja lijevo od njega. onda je ideja da napravis array iste velicine kao grid [imath]dp[N][M][/imath]. svaki element tog arraya onda sadrzi najmanji broj cvijeca koje je potrebno unistiti da od [imath] (0,0)[/imath] dodes do [imath] (i,j)[/imath]. kako je u polje moguce doci samo od lijevo ili od gore, rekurzivna relacija je [imath]dp[i][j] = min(dp[i-1][j],dp[i][j-1]) + cost[i][j][/imath], uz [imath]dp[0][0] = cost[0][0][/imath] i uz paznju da ako je trenutni stupac prvi, ne gledas lijevo polje, isto i za redak. Rjesenje je onda [imath]dp[N-1][M-1][/imath].",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Njet",
+          "bob",
+          "saitama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103843": {
+      "poster": "jazavci",
+      "content": "zna li netko smijemo li dirati ovo njihovo polje problem, meni je na kraju unutar njega to novo polje, pa da nije do toga... radi mi na njihovom primjeru barem 100%, ne kuzim zasto nece na edgaru i javlja takvu gresku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103858": {
+      "poster": "DuckItUp",
+      "content": "@jazavci#103822 \n\nto znači da ti solution vector ima krive vrijednosti, ispiši ga pa provjeri da je dobar path",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103860": {
+      "poster": "losos",
+      "content": "@micho#103832 Ne vidim bas smisao u koristenju A* ako idem samo lijevo ili desno. Mislim moze se osmisliti neka heuristika npr. da je uvijek bolje ici na polje koje ti ostavlja vise opcija za buducnost (odnosno ne zelis se zgurat sto dolje ili skro desno), medutim treba ju pametno osmisliti da bude optimisticna,  a ako sam dobro shavatio iz tvog gornjeg posta ovo sto si naveo je heuristika kada smijes ici na sve strane.\n\n@maki#103836 pa mislim jasno mi je to, ali da bi dobio to rjesenje treba proci po svim poljima ? Zar nije onda to najobicnije slijepo pretrazivanje, u kojem su succ od nodea ovaj ispod njega i ovaj desno od njega?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103863": {
+      "poster": "[deleted]",
+      "content": "@losos#103860 \n\nnaravno da treba proci po svim poljima jer je to najmanja moguca slozenost posto moras uzeti u obzir cost u svakom polju. to nije slijepo pretrazivanje jer spremas rezultate potproblema koje bi slijepo pretrazivanje stalno ponovno racunalo i to je upravo bit dinamickog programiranja. zbog toga je slozenost ovog rjesenja koje sam napisao O(N*M) dok je slozenost slijepog pretrazivanja eksponencijalna.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "losos"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103864": {
+      "poster": "jazavci",
+      "content": "@DuckItUp#103858 istina, reverse mi ne radi :((((((((((((((((((((((((",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103867": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @losos#103860 Ne vidim bas smisao u koristenju A* ako idem samo lijevo ili desno. Mislim moze se osmisliti neka heuristika npr. da je uvijek bolje ici na polje koje ti ostavlja vise opcija za buducnost (odnosno ne zelis se zgurat sto dolje ili skro desno), medutim treba ju pametno osmisliti da bude optimisticna,  a ako sam dobro shavatio iz tvog gornjeg posta ovo sto si naveo je heuristika kada smijes ici na sve strane.\n\nA star radi za sva kretanja, a ako ne želiš dobiti 17 bodova za sve smjerove, dovoljno je predati samo drukčiji argument za dozvoljena kretanja\n\nnpr.\n\n```python\nproblem: List[List[int]]\n\ndef explore(\n    current_point: Tuple[int, int],\n    closed_nodes: Set[Tuple[int, int]],\n    allowed_directions: Tuple[Tuple[int, int]] = ((0, 1), (0, -1), (1, 0), (-1, 0)),\n) -> List[Tuple[int, int]]:\n    to_return = list()\n\n    for allowed_direction in allowed_directions:\n        proposed_direction = (\n            current_point[0] + allowed_direction[0],\n            current_point[1] + allowed_direction[1]\n        )\n        \n        if (\n            proposed_direction not in closed_nodes\n            and (-1 < proposed_direction[0] < len(problem))\n            and (-1 < proposed_direction[1] < len(problem[0]))\n        ):\n            to_return.append(proposed_direction)\n\n    return to_return\n```\n\nI sad ako si jako pametan pa umjesto 17 bodova želiš 11 samo napraviš\n\n```python\nexplore(current_point, closed_nodes, ((1, 0), (0, 1)))\n```\n\nHeuristika za desno i dolje je potpuno ista ali i dosta nebitna za ovakav tip zadatka. U oba slučaja je optimistična, a sad jel neka brže daje rješenje, nebitno, da se natječemo u brzini radile bi se transformacije problema u pogodniji za neki algoritam, a ne heuristike.",
+      "votes": {
+        "upvoters": [
+          "Tratarira"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103869": {
+      "poster": "DuckItUp",
+      "content": "@jazavci#103864 \n\nmožeš i u vector ubacivati na početak solution.insert(solution.begin(),tvojPar)",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103870": {
+      "poster": "BigD",
+      "content": "Jel itko zna što znači \"Your quality calculation is wrong\" u zadatku s cvijećem?",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103872": {
+      "poster": "[deleted]",
+      "content": "@BigD#103870 Krivi broj pregaženog cvijeća",
+      "votes": {
+        "upvoters": [
+          "BigD",
+          "Filemon",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103878": {
+      "poster": "jazavci",
+      "content": "dakle kako volim ovaj edgar... u primjeru iz zadatka treba ispasti 1000, i printam si rezultat i JE 1000, i dobijem \"Your quality calculation is wrong\"... je li se ikome jos mozda dogodilo?\n\n![](assets/2020-12-01/00024.png)\n\n![](assets/2020-12-01/00025.png)",
+      "votes": {
+        "upvoters": [
+          "BigD",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103882": {
+      "poster": "Luka14 (Kekec)",
+      "content": "@jazavci#103878 \n\n![](assets/2020-12-01/00027.png)\n\nKod mene ista stvar, jesi skuzio mozda gdje je problem?",
+      "votes": {
+        "upvoters": [
+          "Maci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "jazavci"
+        ]
+      }
+    },
+    "103883": {
+      "poster": "jazavci",
+      "content": "nisam, javim ako skuzim ista, zivcira meeeeeeee",
+      "votes": {
+        "upvoters": [
+          "Luka14 (Kekec)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103887": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Jel još nekom na golf-cartingu u 4. testu baca **`std::bad_alloc`**?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103901": {
+      "poster": "DuckItUp",
+      "content": "@PrisonMike#103887 \n\nkak inicijaliziraš matricu? ja radim na prvoj liniji funkcije\n\nuint \\*sum = new uint[M*N];\n\ni na predzadnjoj\n\ndelete[] sum;\n\nbez deleta ne radi zadnji",
+      "votes": {
+        "upvoters": [
+          "bob"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103902": {
+      "poster": "Luka14 (Kekec)",
+      "content": "@jazavci#103883 \n\nKod mene je stvar bila da sam mijenjao \"problem\" a ne smije se to radit, pa kada sam napravio kopiju vise mi nije izbacivalo taj error\n\n@PrisonMike#103887 \n\nJesi mozda rijesi problem, i meni to sad izbacuje?",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103906": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@DuckItUp#103901\n\nJa sam ovak, budem probao i ovo tvoje\n\n `\n uint** costs = new uint* [N];\n\n for (int i = 0; i < N; i++){\n\n costs[i] = new uint[M];\n\n }`\n \n\n> @Luka14#103902 Jesi mozda rijesi problem, i meni to sad izbacuje?\n\nNisam još uspio, javim ak uspijem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103907": {
+      "poster": "Luka14 (Kekec)",
+      "content": "@PrisonMike#103906 \n\nJa sam prepravio na ovo sto je kolega @DuckItUp rekao i sada radi sve",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103909": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Luka14#103907 Evo uspio sam upravo i ja, ali na drugi način. \n\nKod mene je bio problem da sam osim matrice `costs[N*M]` imao i `decision[N*M]`, koja je zapravo redundantna. Čim sam ju maknuo je proradilo.",
+      "votes": {
+        "upvoters": [
+          "Luka14 (Kekec)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103911": {
+      "poster": "jazavci",
+      "content": "@jazavci#103787 moze netko kome radi probati na ovom gore postanom da kaze koliko ispadne tocno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103917": {
+      "poster": "[deleted]",
+      "content": "@jazavci#103911 Točno je to što si ti poslao, meni sada radi dobro i dobijemo identično",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103918": {
+      "poster": "jazavci",
+      "content": "meni ne rade zadnja dva, kaze da je broj krivi... moze netko za neki random test za treci i cetvrti napisati koliko dobije samo da vidim otprilike?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103921": {
+      "poster": "Luka14 (Kekec)",
+      "content": "@jazavci#103918 \n\nMeni je za 3.  iz nekog razloga izbacivalo da je netocan, a za 4. error sve dok nisam dodao delete koji je kolega \n\n@DuckItUp#103901  gore spomenuo. Nakon sto sam to prepravio svi su prosli kao tocni",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103922": {
+      "poster": "jazavci",
+      "content": "@Luka14#103921 <3333333333",
+      "votes": {
+        "upvoters": [
+          "Luka14 (Kekec)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Luka14 (Kekec)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103924": {
+      "poster": "losos",
+      "content": "@micho#103867 Hvala na odgovoru, ali bas sam zelio rjesiti labos s dinamickim programiranjem, a sto se tice A* samo me malo zbunio tvoj post posto je redundantan kada se krecemo samo dole i desno, odnosno svodi se na slijepo pretrazivanje s cijenom ili kak se vec zove (davno je bila umjetna :P)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103925": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@losos#103924 Sve oke, inače i A star algoritam spada u dinamičko programiranje, al valjda misliš na ovaj tip rekurzivne funkcije s memoizacijom, zato te nisam skužio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103933": {
+      "poster": "Emma63194",
+      "content": "@PrisonMike#103773 Ja sam njih shvatila da samo ako odgovaraš tu vježbu, ali ne bih rekla da sam 100% sigurna pa neka me netko ispravi ako sam u krivu.",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103934": {
+      "poster": "Emma63194",
+      "content": "@jazavci#103843 Ne možeš ga dirati, meni baca error kada probam nešto promijeniti.",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103935": {
+      "poster": "Emma63194",
+      "content": "@Luka14#103882 Makni sve printove koje imaš, možda onda radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103941": {
+      "poster": "Simke",
+      "content": "Ako će nekome pomoći, meni je u 3. i 4. bila kriva povratna vrijednost, a putevi ispravni. Caka je bila u varijabli nove tablice. Promijenio iz uint16_t u uint i prošlo.",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "Simpy",
+          "Svarog (Veles)",
+          "bob",
+          "megi7 (someone7)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103944": {
+      "poster": "[deleted]",
+      "content": "cek ako imamo termin za odgovaranje 2 labosa bas moramo uzet zadatak za 17 bodova ili",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104066": {
+      "poster": "neja_negoti",
+      "content": "![](assets/2020-12-02/00000.png)\n\njel itko zna kako je ovo moguće? to je zadatak golf-carting i na 3. testu mi pada a na 4. ne... ne razumijem zašto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104085": {
+      "poster": "Dekan",
+      "content": "@neja_negoti#104066 Segmentation fault obično znači da pristupaš negdje gdje ne bi smio. Provjeri si kod indeksiranja jesu li ti dobri indeksi ili da ne pokušavaš dereferencirati nešto izvan adresnog prostora",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104111": {
+      "poster": "in1",
+      "content": "@ElitePer#103944 ne",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104121": {
+      "poster": "losos",
+      "content": "@neja_negoti#104066 Mozda kada je kockica u kutu ( ima samo jednog roditelja ) dohvacas ovog koji ne postoji.\n\n`auto p = get_parents(n, m, i);\n\nauto p1 = p.first != -1 ? dp[p.first] : 0xffff;\n\nauto p2 = p.second != -1 ? dp[p.second] : 0xffff;\n\ndp[i] = std::min(p1, p2) + *(problem + i);`\n\nJa kad sam usporedivao koji je manji, sam naivno stavio da je cvijece na nepostojecoj kockici 0xffff jer je u zadatku pisalo da ce se broj cvijeca kretati oko 1000 ak se ne varam i onda u unatraznjem prolazu kada trazis pozicije koje si zgazio pristupas nepostojecem indexu u problem polju. Uglavnom, kada sam zamijenio to s std::numeric_limits<uint>::max() se stvar rijesila.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104134": {
+      "poster": "Emma63194",
+      "content": "@neja_negoti#104066 Jel ti uvijek core dumpa na tom 3.?\n\nStavi std::cerr < problem; negdje u metodi solve.\n\n(Isto tako ispiši N i M).\n\nKopiraj si to u svoj IDE i mislim da bi trebala postojati neka opcija kod debuggiranja da zaustaviš program taman kad ti se crasha pa možda onda bolje možeš vidjeti što se događa.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104137": {
+      "poster": "nickname",
+      "content": "Jel mi može netko rec kako ovi vectori funkcioniraju u c++? Jer na netu sam nalazio da oni sami brinu o memoriji i da za njih ne treba ništa dodatno alocirati no meni baca segmentation fault kad probam insertat u prazan vector. Kad napravim ime_vectora.reserve(neka velicina) mi sve normalno radi ali mislim da za ove vece primjere baca bad_alloc",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104138": {
+      "poster": "moukie",
+      "content": "Što je ovaj uint_16t?\n\n![](assets/2020-12-02/00009.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104139": {
+      "poster": "DuckItUp",
+      "content": "@moukie#104138 \n\nunsigned 16-bitni integer, znači problem je array koja sadrži unsigned shortove",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104182": {
+      "poster": "moukie",
+      "content": "@DuckItUp#104139 \n\nto je predifinirani tip?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104190": {
+      "poster": "[deleted]",
+      "content": "Kako uspijete alocirati matrice dimenzija [5000*2000], jel ima neki napredniji način od `type *matrica = new type[M*N]`; jer u 4. mi ne želi inicijalizirati tako veliku matricu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104192": {
+      "poster": "pepelko",
+      "content": "Sto ako ne stignemo rijesit labos koji trebamo prezentirati? jel automatski padamo sve ostale labose iz naspa? o.o",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104194": {
+      "poster": "DuckItUp",
+      "content": "@moukie#104182 \n\nda, to postoji da si siguran da na svakoj platformi zauzima 16 bita\n\n@gentleman#104190 \n\nprobaj dodati delete[] matrica prije returna",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104215": {
+      "poster": "[deleted]",
+      "content": "@DuckItUp#104194 Jesam ali mi srusi program cim inicijalziram te matrice, recimo ovaj kod dolje radi segm fault\n\n`  multimap<uint, coordinates> open;\n\n    bool **openFlags = new bool*[N];\n\n    bool **closedFlags = new bool*[N];\n\n    auto *parents = new coordinates*[N];\n\n    auto *grid = new pair<uint, uint>*[N];  //(g,f)\n\n    for(int i = 0; i < N; i++) {\n\n        openFlags[i] = new bool[M];\n\n        closedFlags[i] = new bool[M];\n\n        parents[i] = new coordinates[M];\n\n        grid[i] = new pair<uint, uint>[M];\n\n    }\n\n    for (int i = 0; i < N; i++) {\n\n        for(int j = 0; j < M; j++) {\n\n            openFlags[i][j] = false;\n\n            closedFlags[i][j] = false;\n\n            grid[i][j].first = std::numeric_limits<uint>::max();\n\n            grid[i][j].second = std::numeric_limits<uint>::max();\n\n        }\n\n    }\n\n\t delete[] grid;\n\n   delete[] closedFlags;\n\n   delete[] openFlags;\n\n   delete[] parents;\n`\n\nedit: Kako da napravim onako lijep ispis koda kao mićo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104243": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@nickname#103639  Radi li tebi kod na edgaru za 4. primjer sa tim delete?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104244": {
+      "poster": "member",
+      "content": "3. zad\n\nAko je heuristika = abs (current_cell.first – N) +  abs (current_cell.second – M), a gScore je vrijednost svake čelije, jel bi onda otvorene čelije trebalo stavit u neki queue koji sortira po fscore? Ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104248": {
+      "poster": "[deleted]",
+      "content": "@member#104244 Da trebao bi imati sortirano tako da prvo uzimas najmanji f, ali heuristika bi ti trebala biti sa (N-1) i (M-1)",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104262": {
+      "poster": "toni98",
+      "content": "@gentleman#104190 probaj std::vector<uint> polje(M*N), on radi s heapom",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104313": {
+      "poster": "Murin",
+      "content": "Kakvu heuristiku koristite za a*?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104359": {
+      "poster": "hotpanties",
+      "content": "ekipa, moze mi netko rec koji je globalni maximum ove divlje funkcije? da znam koji broj treba dobit ![](assets/2020-12-02/00023.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104375": {
+      "poster": "hotpanties",
+      "content": "@hotpanties#104359 \n\nprihvaca <3, 3.2>",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104387": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@hotpanties#104359 Wolfram alpha kaže [imath]\\begin{bmatrix}-1, \\frac{-1}{\\sqrt{2}} \\end{bmatrix}",
+      "votes": {
+        "upvoters": [
+          "hotpanties"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104443": {
+      "poster": "moukie",
+      "content": "Je li shema da u ovom zadatku s livadom nesmijem napravit novo polje u koje spremam cijenju do odredenog polja(i,j) nego overrideam vrijednosti od onog polja *problem i u njemu zapisujem cijene do odregenog polja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104451": {
+      "poster": "Simpy",
+      "content": "@moukie#104443 ako sam dobro shvatio, moras napravit novo polje inace baca neke greske",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104452": {
+      "poster": "moukie",
+      "content": "@Simpy#104451 \n\nkakva radost ja sam isao overrideat ovo staro jer sam mislio da time cuvam memoriju\n\npredobro",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Simpy",
+          "jazavci",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Filemon"
+        ]
+      }
+    },
+    "104481": {
+      "poster": "narval13068 (Dima)",
+      "content": "Jedan testni mi prolazi a druga dva imam time limit exceeded na A* na zdk s livadom, jel imao ko isto ili ima savjet nekakav, radio sam prema alg. koji smo imali na umjetnoj",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104502": {
+      "poster": "member",
+      "content": "Koju strukturu uzet za otvorene čvorove (pozicija, fScore)? Možda std::priority_queue, ali onda ne mogu provjerit postoji li već neighbor u otvorenim čvorovima. Ili ako koristim set kako poredat od najmanjeg?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104509": {
+      "poster": "narval13068 (Dima)",
+      "content": "Jel ima netko da mu je uspio A* na livadi, meni uz brojne preinake je i dalje time limit",
+      "votes": {
+        "upvoters": [
+          "Ducius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Ducius"
+        ]
+      }
+    },
+    "104517": {
+      "poster": "[deleted]",
+      "content": "@member#104502 mozes koristiti multimap, ona omogucuje spremanje vise istih kljuceva, a to ce ti bit f, a dohvat je O(log n) što nije uzasno",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104524": {
+      "poster": "moukie",
+      "content": "Prva tri testa su mi dobra\n\nU zadnjem mi baca ovo\n\nZna li tko gdje je greska?\n\nDealociram polje u kojem pamtim cijene i polje u kojem pamtim kako se dolazi do koje polja\n\n![](assets/2020-12-02/00035.png)",
+      "votes": {
+        "upvoters": [
+          "Hus",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104537": {
+      "poster": "member",
+      "content": "@gentleman#104517 A kako onda radiš ovo ako imaš multipmap: \n\n`if neighbor not in openSet{    openSet.add(neighbor) } \n` i uzimaš onoga s najmanjim ključem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104551": {
+      "poster": "theos",
+      "content": "@micho#103832 \n\nej , nisam imao umjetnu i prvi put vidim a* algoritam, pa ako imas koju minutu samo da mi razjasniš jesam li dobro skužio. \n\nTi si ovime \"uz dodavanje 1 svim poljima\" mislio da se stavlja udaljenost izmedu svakog polja 1, a da vrijednost polja bude kolicina cvjeca? \n\nAko da, kako onda može ići A* algoritam pošto sam pronašao na više youtube videa da ukoliko želimo koristiti taj algoritam, vrijednost polja (estimate) mora biti manji od moguće udaljenosti između tog polja i našeg konačnog cilja. Odnosno heuristika svakog polja mora biti manja. Vidimo da u ovom njihovom primjeru to ocito ne vrijedi. \n\nAko je odgovor bio ne na ovo sa 1, jel bi mogao objasniti što točno to znaci onda? \n\nSori na dugom postu hah 😅\n\np.s. mislim da je kolega @Murin#104313  pod to mislio što smo uzeli za heuristiku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104553": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@theos#104551 Znači dodaš 1 ako ti je minimalan broj cvijeća 0, jer A star treba pozitivne težine da ne bi imao probleme s heurističke strane.\n\nI onda je manhattan optimistična heuristika, jer nikad neće precijeniti put. Po meni je najbolje uzeti [imath]d_{m} \\cdot min(\\vec{A})[/imath] kao heuristiku, gdje je [imath]d_m[/imath] Manhattan udaljenost, a [imath]\\vec{A}[/imath] je polje cvijeća. Ta heuristika će opet biti optimistična za kretanje gore dolje lijevo desno i podskupe toga. Kad bi se moglo kretati i dijagonalno, onda bi se tu heuristiku još trebalo podijeliti s 2.\n\nValja primijetiti da bi mogao i ostaviti da ti heuristika bude konstantno 0 ako ostaviš polja kakva jesu. Međutim tad A star degenerira i u slučaju da su sve težine polja mala, znači tipa 1, 2, 3 dobivaš znatno lošije performanse. U slučaju gdje samo par polja ima jako malu težinu a ostala nesrazmjerno veću bi stvari trebale biti gotovo iste jer ti heuristika s malim vrijednostima i neće previše utjecati na tijek algoritma - npr. ak su ti težine u 100tinama, a heuristika u jedinicama, onda ti ona ne mijenja stvari puno više nego da ni nemaš heuristiku. Opet, kad bi htio tu ubrzati stvari bilo bi potrebno reskalirati vrijednosti, smanjiti im raspršenje, tak da tvoja superoptimistična heuristika ima nekakav utjecaj. Ali pretpostavljam da je tak nešto u C++-u ionako dosta teško i sporo, a popravlja samo te neke rubne slučajeve.",
+      "votes": {
+        "upvoters": [
+          "theos"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104557": {
+      "poster": "theos",
+      "content": "@micho#104553 \n\npod min(A) misliš na minimalni broj cvijeća u cijeloj matrici koju nam oni daju kao problem? Tipa na onom primjeru to bi bilo 0 (kod nas 1 pošto moramo dodati 1 kak si napisao) ? \n\nI šta onda jednostavno uzmem taj problem koji su nam oni dali , provedem heuristiku (tu formulu) nad svakim poljem i napravim novo polje sa tim heurističkim vrijednostima, te onda bacim A* algoritam? \n\nedit: na samo ovaj drugi dio.. \n\nSkužio sam nešt slično to da po youtube videima. Ja sam razmišljao da pošto znamo da je vrijednost 0<=x<=1000 , da onda podijelimo sva polja sa 1000 i to je to , sigurno će nam heuristika držati vodu pošto vrijednost polja bude 0.001<=x<=1 . Onda možemo A* bacit.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104560": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @theos#104557 pod min(A) misliš na minimalni broj cvijeća u cijeloj matrici koju nam oni daju kao problem? Tipa na onom primjeru to bi bilo 0 (kod nas 1 pošto moramo dodati 1 kak si napisao) ?\n\nDa\n\n> @theos#104557 I šta onda jednostavno uzmem taj problem koji su nam oni dali , provedem heuristiku (tu formulu) nad svakim poljem i napravim novo polje sa tim heurističkim vrijednostima, te onda bacim A* algoritam?\n\nNe, znači nađeš minimalnu vrijednost u polju, ako je 0 cijelo polje podigneš za 1 i staviš da je minimalna vrijednost 1. Nakon toga tvoja heuristika je [imath]d_m(i, j) \\cdot min(\\vec{A})[/imath] za neke koordinate i i j, i s tom heuristikom vrtiš A star. Heuristiku računaš on-the-fly, ne spremaš ju nigdje, osim u open listu gdje je ona zbrojena s količinom cvijeća koje su pogazio, jer se po tome ravnaš koji čvor prije pregledavaš.",
+      "votes": {
+        "upvoters": [
+          "theos"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104564": {
+      "poster": "theos",
+      "content": "@micho#104560 \n\njep skužio, zahvaljujem se 🙂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104720": {
+      "poster": "Murin",
+      "content": "Mozda glupo pitanje alo ako npr zelim testirati svoju implementaciju kako trebam napisat main i zasto je ovo krivo\n\ndeklaracija fje:\n\n`uint solve(const uint N, const uint M, uint16_t *const problem, std::vector<std::pair<uint, uint>> &solution)`\n\nmoj trenutni main\n\n`int main(){\n\n    int a[]={100,200,100,0,200,100,600,0,300,600,100,0};\n\n    int n=3,m=4;\n\n    std::vector<pair> vec;\n\n    int k=solve(n,m,a,vec);\n\n    return 0;\n\n}`\n\nimam typedef std::pair<uint,uint> pair;\n\nnesto sa slanjem argumenata vjv",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104725": {
+      "poster": "DuckItUp",
+      "content": "@weedovnjak#103768 \n\n@Murin#104720 \n\nimaš tu primjer maina koji radi",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104764": {
+      "poster": "narval13068 (Dima)",
+      "content": "@moukie#104524 Da isti problem kod mene iako sam dealocirao oba polja......",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104821": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@moukie#104524 Ja sam imao taj problem dok sam koristio dvije strukture podataka, na kraju kad sam svoj postupak sveo samo na jednu matricu onda je prošlo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104856": {
+      "poster": "narval13068 (Dima)",
+      "content": "@PrisonMike#104821 Kako si ubacio cijenu i poziciju u jednu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104860": {
+      "poster": "glider (toblerone)",
+      "content": "Ako je netko radio zadatak sa GA i onim velikim grafom...Zanima me kako provesti križanje i mutaciju. U jednoj iteraciji koliko se križanja provodi? Da li se mutacija onda nakon križanja provede nad *svim* jedinkama? I kada mijenjate jedinke u populaciji s novostvorenom djecom? U edgaru sam napisala rjesenje i vraca mi samo incorrect test,nemam pojma sto bi mogla biti greska",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104880": {
+      "poster": "glider (toblerone)",
+      "content": "@glider#104860 htjela sam editirati ali ne mogu(ili ne znam :P ) Riješila sam problem, nisam dobro spremala u max_dobrotu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104895": {
+      "poster": "Ducius",
+      "content": "@narval13068#104856  Ja sam ubacia cijenu i poziciju u jedno polje, ali mi i dalje memorija pada na cetvrtom...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104912": {
+      "poster": "Murin",
+      "content": "@narval13068#104509 \n\njesi uspio srediti time limit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104913": {
+      "poster": "narval13068 (Dima)",
+      "content": "@Murin#104912 Nisam pribacia sam na dinamicko na kraju, pa mi sad rade prva tri al cetvrti pada radi memorije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Anonimity (BoJack)",
+          "Murin"
+        ]
+      }
+    },
+    "104915": {
+      "poster": "[deleted]",
+      "content": "@member#104537 Imam boolean grid koji mi govori koje su mi otvorene ćelije, a najmanji ključ dobijem korištenjem `multimap.begin()`, brisanje ključa onda radim ovako `auto it = open.find(open.begin()->first);\n\n        open.erase(it);` jer inače bi se obrisali svi isti ključevi, ovako samo prvi",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104930": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@narval13068#104856 Ostavio sam samo matricu s cijenama, poslije se put može direkt iz nje zaključit.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104944": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "btw kako izgledaju usmena ispitivanja labosa i koliko traju? jel se drži striktno napisanog koda ili u ispitivanje dolazi i gradivo iz prezentacija možda ne nužno vezano za zadatak koji smo rješavali?",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104949": {
+      "poster": "DuckItUp",
+      "content": "@janeromero#104944 \n\nmene su za prvi labos(skip lista za 7 bodova) pitali samo da objasnim kak mi radi insert i onda jedno teorijsko pitanje kad je najbolja efikasnost skip liste, nisam znal, ali svejedno sam dobil svih 7 boda",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104955": {
+      "poster": "in1",
+      "content": "@janeromero#104944 ispitivanje AVL stabla:\n\n![](assets/2020-12-03/00010.png)\n\nPitao je da objasnim kod i tjt :D",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "deus_vult",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Filemon",
+          "PrisonMike (Števo)",
+          "luba"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104961": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "tnx :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104970": {
+      "poster": "adidas",
+      "content": "zadatak sa pronalaženjem  maksimuma funkcije\n\n![](assets/2020-12-03/00011.png)\n\nJel mi moramo odrediti funkciju dobrote ili je oni implementiraju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104997": {
+      "poster": "in1",
+      "content": "@adidas#104970 moraš sam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105051": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Napisao sam 2. labos tako iz sprda, da vidim koliko bi mi trebalo uzevši u obzir C++ autizam\n\nhttps://github.com/Yalfoosh/NAISP/tree/master/lab/lab-2/a-star\n\nOvo nije poticaj da se prepiše (jer dio ljudi će prepisati i njih će lako uhvatiti, a i kod je copyrightan), ali može poslužiti ljudima kao sanity check, tipa ne znaju neku strukturu, imaju segfault u nekom dijelu, nešto im ne radi optimalno. Nije nešto previše testirano (osim za testni slučaj), ali trebalo bi raditi i algoritamski bi trebalo štimati (jer nema ničeg strašnog).",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "RIsta",
+          "Tratarira",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105112": {
+      "poster": "[deleted]",
+      "content": "@micho#105051 cini se tocno, probao sam random inpute i isti output bude kao moje DP rjesenje koje prolazi na edgaru, no cini mi se da bi mogao dobiti TLE jer je limit za N i M oko nekoliko tisuca\n\nnpr. \n\nza N=1000, M=1000 moje rjesenje zavrsi u nekoliko ms, dok tvoje treba oko 18 s\n\nza N=2000, M=3000 moje zavrsi u nekoliko desetaka ms, dok tvoje treba preko 100 s (ne znam tocno prekinuo sam izvrsavanje)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105125": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@maki#105112 Jesi li ograničio poteze kretanja na samo desno i dolje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105127": {
+      "poster": "[deleted]",
+      "content": "@micho#105125 yep",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105132": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@maki#105127 Aj profilirat ću kad završim s poslom, moguće da je overhead u strukturama koje koristim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105165": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@micho#105132 Profilirano, bottleneck je bio u `priority_queue`, zamijenio sam sa `multiset`. Sad 5000x4000 traje 75 ms. Pushano na git.\n\nTj. nešto popravljam, al bit će.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105177": {
+      "poster": "adidas",
+      "content": "Zadatak:\n\n![](assets/2020-12-03/00025.png)\n\nKoje ste uzeli granice za x i y kod inicijalizacije populacije? Jel dosta [-10,10]?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105203": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@micho#105132 Probao sam sve promijeniti i ništa baš posebno ne pomaže. Ne znam koliko sam blizu ili daleko optimuma, ali eto baš me zanima koje je onda po njima optimalno rješenje za sve smjerove. Mislio sam da je A star prava stvar za to ali izgleda da je asimptotski preloš. Ili sam ja preloš u C++-u.\n\nU svakom slučaju ne mislim nužno da je implementacija preloša, već da je heuristika nepogodna. Možda daju neki problem koji neće biti krvav kao nasumična matrica, pa heuristika bude bolja. Ručno testirajući sam uspio ubrzati algoritam par redova veličina, ali uz neoptimistične heuristike.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105343": {
+      "poster": "pepelko",
+      "content": "Zna netko sto znace ovi errori? ![](assets/2020-12-04/00006.jpeg)\n\n![](assets/2020-12-04/00007.jpeg)",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105345": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@pepelko#105343 \n\nhttps://www.google.com/search?client=firefox-b-d&q=core+dumped",
+      "votes": {
+        "upvoters": [
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105361": {
+      "poster": "pepelko",
+      "content": "Hoce li davat bodove ako nam radi 1/4? 😣",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Amon",
+          "Filemon"
+        ]
+      }
+    },
+    "105383": {
+      "poster": "member",
+      "content": "@Emma63194#104134  Meni ništa ne ispisuje  `std::cerr << problem`. Postoji li neki način za saznat tu njihovu matricu pa da kod sebe pokrenem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105484": {
+      "poster": "Simpy",
+      "content": "@pepelko#105343 moguce da nisi deletao novo polje koje si napravio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105603": {
+      "poster": "MJ3",
+      "content": "jel neko ima ideju kako izgledaju primjeri za mali,srednji i veliki random test (i na čemu padaju ako je krivo implementirano) u zadatku s golfom i cvijećem? npr ako mu nije radilo,pa je promijenio kod i sad radi. jer mi ne izbacuje error nego je jednostavno krivo rješenje",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105604": {
+      "poster": "pina_be",
+      "content": "@adidas#105177 jesi dobio/la odg na ovo? Ja uzela [-5,5]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105667": {
+      "poster": "adidas",
+      "content": "@pina_be#105604 Nop. Ma tako nešto ću i ja uzet. Zadali su max 300 generacija, pa nije za očekivati neki ludi interval.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105712": {
+      "poster": "FICHEKK",
+      "content": "Jel itko pitao profesora ili skužio šta treba u 5. zadatku s neuronskom mrežom? Nisu dani nikakvi izlazi na kojima se uči, nikakvi primjeri na kojima se uči, tužno koliko loše definiran zadatak.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105726": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@FICHEKK#105712 Po onome što sam vidio izgleda si vi trebate generirati dataset xD\n\nTipa za A:\n\n```\n0 0 1 0 0\n0 1 0 1 0\n0 1 1 1 0\n0 1 0 1 0\n0 1 0 1 0\n\n0 0 1 0 0\n0 1 0 1 0\n0 1 0 1 0\n0 1 1 1 0\n0 1 0 1 0\n\n0 0 1 0 0\n0 1 0 1 0\n0 1 1 1 0\n1 0 0 0 1\n1 0 0 0 1\n\n0 0 1 0 0\n0 1 0 1 0\n0 1 0 1 0\n1 1 1 1 1\n1 0 0 0 1\n\n0 0 1 0 0\n0 1 0 1 0\n1 1 1 1 1\n1 0 0 0 1\n1 0 0 0 1\n\n0 0 1 0 0\n0 1 0 1 0\n1 0 0 0 1\n1 1 1 1 1\n1 0 0 0 1\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105740": {
+      "poster": "FICHEKK",
+      "content": "@micho#105726 Ma jasno je to, ali konstruktor prima samo ulaze, ali ne i njemu definirane očekivane izlaze.\n\nZadano je:\n\n`ANN(vector<MatrixXd*> &train_symbols);`\n\numjesto nešto slično ovom:\n\n`ANN(vector<MatrixXd*> &train_symbols, vector<VectorXd*> &expected_outputs);`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105744": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@FICHEKK#105740 Dobro? Ne vidim baš zašto bi to bio dealbreaker, jer ti iskonstruiraš mrežu ovisno o ulazima, a onda kakav ti je izlaz, to je na tebi.\n\nJedino je zeznuto to što ako postoji neka metoda za train, dakle ne trenira se pozivom konstruktora, nemaš pojma kak se zadaju labele. Tj. bez tog saznanja imaš praktički unsupervised learning koji se može nekak iskombinirat maksimizacijom entropije, al to se ne radi na predmetu ni na faksu općenito.\n\nValjda ill-defined zadatak.\n\nEDIT: Iskreno, da moram riješiti taj zadatak, uzeo bi neku arhitekturu 25 x 32 x 26, pretrenirao je na svojem skupu, i hardkodirao težine. Pa onda ni ne treba trening na edgaru lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105860": {
+      "poster": "Kiflica",
+      "content": "Ima netko da mu u zadatku s cvjecem prolazi prvi test, a za ostale ne daje tocan broj pregazenog cvijeca? Sta se tu dogada :/ ?",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "hejhoj (vdvd)",
+          "luba",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105877": {
+      "poster": "Anonimity (BoJack)",
+      "content": "kako pratite dobru putanju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105878": {
+      "poster": "Anonimity (BoJack)",
+      "content": "@narval13068#104913 rjesila sam preko dinamickog I sere mi za time limit, a algorithme je jedan . Jesi radio min cost path?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105883": {
+      "poster": "shade",
+      "content": "@FICHEKK#105712 \n\nJa sam pitao ovo za izlaze i ovo mi odgovorio:\n\n![](assets/2020-12-05/00007.png)\n\nU biti izlazni broj neurona je jednak broju primjera ako sam dobro skuzio.\n\nPokusavam ovo napravit al nejde, uvijek mi baci \"symbol recognition failed\".",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105906": {
+      "poster": "member",
+      "content": "Jel ikome prolazi na svim testovima zadatak s livadom napravljen s A*?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105919": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@member#105906 Trebalo bi napraviti to s pointerima potpuno da imaš ikakvu šansu proći time limit.\n\nJa sam nešto bio kemijao s time ali nemam vremena dovršiti to jer imam neki drugi labos za riješiti do ponedjeljka.",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105943": {
+      "poster": "Just_some_name",
+      "content": "zna li netko slucajno sto se dogodi ako nam svi primjeri ne rade? Dal ne dobivamo uopce bodove ili samo smanjene?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105991": {
+      "poster": "Just_some_name",
+      "content": "dal se nekom dogodilo da isti kod dva puta stavi na edgar, prvi puta prode, a drugi puta javi core dumped",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106008": {
+      "poster": "Emma63194",
+      "content": "@Just_some_name#105991 Svaki put dobiješ nove primjere na kojima se to testira. Možda ti je došao neki koji baš pogađa rubni slučaj koji nije pokriven?",
+      "votes": {
+        "upvoters": [
+          "Just_some_name"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106011": {
+      "poster": "Just_some_name",
+      "content": "@jazavci#103911 \n\nne znam dal ti jos treba al meni je ispalo ovo:\n\nKolicina cvijeca: 34418\n\n(0, 0) (0, 1) (0, 2)(1, 2)(1, 3)(1, 4)(2, 4)(2, 5)(2, 6)(2, 7)(2, 8)(2, 9)(2, 10)(2, 11)(2, 12)(2, 13)(2, 14)(2, 15)(2, 16)(2, 17)(2, 18)(2, 19)(2, 2)(2, 21)(2, 22)(2, 23)(2, 24)(2, 25)(2, 26)(3, 26)(4, 26)(4, 27)(4, 28)(4, 29)(4, 30)(4, 31)(4, 32)(3, 32)(3, 33)(3, 34)(3, 35)\n\n(3, 36)(4, 36)(5, 36)6, 36)(7, 36)(8, 36)(9, 36)(10, 36)(11, 36)(12, 36)(13, 36)(14, 36)(15, 36)(16, 36)(17, 36)(18, 36)(19, 36)(19, 37)(19, 38)(19, 39)(19, 40)(19, 41)(19, 42)(19, 43)(19, 44)(19, 45)(19, 46)(19, 47)(19, 48)(19, 49)(19, 50)(19, 51)(19, 52)(20, 52)(20, 53)(20, 54)(20, 55)(21, 55)(21, 56)(21, 57)(22, 57)(23, 57)(23, 58)(24, 58)(24, 59)(24, 60)(24, 61)(24, 62)(24, 63)(24, 64)(24, 65)(24, 66)(24, 67)(24, 68)(25, 68)(25, 69)(25, 70)(25, 71)(26, 71)(26, 72)(26, 73)(26, 74)(27, 74)(27, 75)(28, 75)(28, 76)(28, 77)(28, 78)(28, 79)(28, 80)(28, 81)(28, 82)(28, 83)(28, 84)(28, 85)(28, 86)(29, 86)(30, 86)(31, 86)(32, 86)(33, 86)(34, 86)(35, 86)(36, 86)(37, 86)(38, 86)(39, 86)(40, 86)(41, 86)(42, 86)(43, 86)(44, 86)(45, 86)(46, 86)(47, 86)(47, 87)(47, 88)(47, 89)(47, 90)(47, 91)(48, 91)(48, 92)(48, 93)(48, 94)(48, 95)(48, 96)(49, 96)(49, 97)(49, 98)(49, 99)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106012": {
+      "poster": "Just_some_name",
+      "content": "@Emma63194#106008 \n\ndal slucajno postoji sansa da s obzirom da je A* napravljen za sva 4 smjera, da nam zato baci gresku kod puta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106013": {
+      "poster": "Emma63194",
+      "content": "@Just_some_name#106012 Nisam radila s A*, ali što nije taj algoritam koji ide u sva 4 smjera zadatak za 17 bodova? Nisam sigurna jesam li dobro shvatila, ali nije li da se onda javiš asistentu i to odgovaraš mimo Edgara? (tj. drugim riječima, da nema takvih primjer na Edgaru)",
+      "votes": {
+        "upvoters": [
+          "Just_some_name"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106018": {
+      "poster": "Just_some_name",
+      "content": "@Emma63194#106013 \n\naha, mislila sam da su stavili primjere koje bi trebali prolazit na obje verzije i onda jos obavezno odgovaranje usmeno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106020": {
+      "poster": "Emma63194",
+      "content": "@Just_some_name#106018 Nisam sada 100% ziher. Ja sam shvatila kao da nisu stavili takve primjere, ali neka netko od kolega potvrdi/negira to ili još bolje, možda da pitaš asistenta?",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Just_some_name"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106028": {
+      "poster": "sphera",
+      "content": "@Just_some_name#106011 \n\nkrivo ti je rješenje :(, kolegino je dobro, to sam i ja dobio i prolazi mi kod na edgaru,\n\ndakle ovo rješenje je točno\n\n-> @jazavci#103787",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106107": {
+      "poster": "Filemon",
+      "content": "iz onog njihovog primjera za dinamiku, u slučaju da je svejedno, prednost uvijek ima smjer dolje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106111": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Filemon#106107 trebalo bi biti svejedno\n\njer ako je dobro napisana provjera onda bi se za neki izlaz samo trebalo\n\n- provjeriti je li minimum u dobrim rješenjima\n- provjeriti jesu li dane koordinate validne po kretanju (x i y se smanjuju i povećavaju za 1 u odnosu na prošli)\n- provjeriti je li suma vrijednosti na tim koordinatama jednaka minimumu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106114": {
+      "poster": "Filemon",
+      "content": "> @micho#106111 jer ako je dobro napisana provjera\n\npričamo o ZPR-u",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon",
+          "Cubii"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106173": {
+      "poster": "theos",
+      "content": "Imam ovaj error u edgaru :\"Your quality calculation is wrong\"\n\nu VSCode-u mi baca točan broj cvijeća... \n\nJel imo tko takav problem? \n\nedit: Jel možda zato što mijenjam količinu cvijeća u \"problem\" dok računam minimalan broj ? Mislim nekak mi je to cijela logika dinamičkog programiranja al ajd...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106177": {
+      "poster": "DuckItUp",
+      "content": "@theos#106173 \n\nDa, ne smiješ mijenjati problem array, pretpostavljam da oni računaju svoje rješenje nakon kaj pozovu naš solve\n\nedit: može netko tko nije predal testirati ako je tak, promijeniti problem array sa svojim pathom i ispisati te vrijednosti?",
+      "votes": {
+        "upvoters": [
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106186": {
+      "poster": "theos",
+      "content": "@DuckItUp#106177 \n\nda evo sad sam to promijenio, napravio sam novi array i na prva dva testa opet isti error, na druga dva Runtime Error",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106255": {
+      "poster": "whatTheHel",
+      "content": "ima li netko da je rjesavao 1. zadatak?pronaći globalni max",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106361": {
+      "poster": "in1",
+      "content": "@whatTheHel#106255 yup",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106364": {
+      "poster": "in1",
+      "content": "@whatTheHel#106255 yes",
+      "votes": {
+        "upvoters": [
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106416": {
+      "poster": "megi7 (someone7)",
+      "content": "Ako trebam odgovarati labos, ali nikako ne mogu rijesiti da mi edgar izbacuje da je tocno. Mogu li na odgovaranju objasniti sto sam radila i ne past predmet? 😰\n\nEDIT: imam bodove iz prvog labosa.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106421": {
+      "poster": "Just_some_name",
+      "content": "@megi7#106416 \n\nto ces morat pitat njih, ja se nadam da ako nam ne prolaze sve testove da nece radit probleme",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106484": {
+      "poster": "cotfuse",
+      "content": "Ima li netko tip za 3. zadatak 4. test?\n\nAlociram jedino NxM matricu na heapu i brisem red po red kako mi vise ne treba.\n\nPut dodajem direktno u njihov vektor, alociram na stacku samo par pomocnih intova.\n\nSvejedno dobivam taj bad alloc. Jesu oni ozbiljno tako usko postavili memorijsko ogranicenje, nije mi fkt jasno sto vise mogu izbaciti..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106503": {
+      "poster": "jazzMassive",
+      "content": "jel mogu ja u ovom 1. zadatku (GA, funkcija je graf) napisati to kako meni pase ili se moram drzat njihovih prototipa funkcija?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106509": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@cotfuse#106484 i meni je tako bilo dok sam brisala SAMO red po red. prvo brišeš stupac po stupac, a onda sve redove. ((to je barem meni rješilo problem pošto mi je matrica lista u kojoj je svaki element pointer na listu, pa ako izbrišeš samo prvu listu, i dalje su ti sve ove ostale negdje))",
+      "votes": {
+        "upvoters": [
+          "cotfuse"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106510": {
+      "poster": "cotfuse",
+      "content": "@janeromero#106509 Hvala, ali na zalost vec brisem i sve redove i array koji drzi pointere na redove.",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106511": {
+      "poster": "megi7 (someone7)",
+      "content": "može li netko kome je tocan treci i cetvrti primjer u 4. zadatku napisati koliki je cost?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106602": {
+      "poster": "DuckItUp",
+      "content": "@megi7#106511 \n\nrandom su, svaki put drugačiji, imaš tu primjer jedne matrice i par postova dolje rješenje\n\n@gentleman#103776",
+      "votes": {
+        "upvoters": [
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106631": {
+      "poster": "megi7 (someone7)",
+      "content": "@Simke#103941 Ajme hvala! Znala sam da je neka glupost i da nije algoritam kriv!",
+      "votes": {
+        "upvoters": [
+          "Simke"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106717": {
+      "poster": "eaypeasy (easypeasy)",
+      "content": "Kako izgleda ispitivanje iz ovog?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106722": {
+      "poster": "member",
+      "content": "@eaypeasy#106717 mene je prošli put samo pita da ispričam šta se događa po kodu i trajalo je jako kratko",
+      "votes": {
+        "upvoters": [
+          "Ruleta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106740": {
+      "poster": "Ruleta",
+      "content": "može netko napisati što su danas pitali?",
+      "votes": {
+        "upvoters": [
+          "Juren"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106815": {
+      "poster": "ivona_075 (Adri)",
+      "content": "Sto je s ljudima koji danas odgovaraju nisu jos nista stavili na teams",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106835": {
+      "poster": "BasicUsername",
+      "content": "@ivona_075#106815 \n\nSlika govori tisucu rijeci![](assets/2020-12-07/00014.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "MrHead (vandal)",
+          "Simpy",
+          "ivona_075 (Adri)",
+          "luba",
+          "lucija (luc)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Filemon",
+          "MrHead (vandal)",
+          "PrisonMike (Števo)",
+          "PudingIzMenze",
+          "Ruleta",
+          "Simpy",
+          "bob",
+          "in1"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106839": {
+      "poster": "ivona_075 (Adri)",
+      "content": "sto se tice 5og zadatka pitao me da objasnim koji sam princip/nacin rjesavanja koristila u ovom zadatku (dinamicko programiranje) i onda me pitao da li bi taj isti princip mogli primjeniti na ovaj zadatak od 17 bodova (nisam znala jer nisam to ni pokusavala rijesiti)",
+      "votes": {
+        "upvoters": [
+          "bob"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106852": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @ivona_075#106839 onda me pitao da li bi taj isti princip mogli primjeniti na ovaj zadatak od 17 bodova\n\nMože se, ako netko sumnja, samo što bi onda postalo sve rekurzija (ako nije već bila), i imali bi neko kretanje u drugim smjerovima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108779": {
+      "poster": "glider (toblerone)",
+      "content": "Može netko napisati što su pitali vezano za GA :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108981": {
+      "poster": "whatTheHel",
+      "content": "@glider#108779 kako funkcioniraju mutacija i krizanje i ako je prof Brčić vjerojatno ce ti rec koliko imas bodova na mi, barem je meni rekao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

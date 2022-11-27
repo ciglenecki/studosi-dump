@@ -1,0 +1,486 @@
+{
+  "title": "[MREPRO] 2. laboratorijska vježba - 2020/2021",
+  "creator": "ruza0001 (rozy)",
+  "slug": "mrepro-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Mrežno programiranje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "187176": {
+      "poster": "ruza0001 (rozy)",
+      "content": "super im je primjer pozivanja koji je samo kopiran s prvog labosa i na drugom ni ne radi uopce....",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Mariox"
+        ]
+      }
+    },
+    "187199": {
+      "poster": "BigZ1",
+      "content": "kako je netko ostvario onaj stop komandu kad dobije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187236": {
+      "poster": "kolega_kolega",
+      "content": "Je li neko imao problema sa slanjem payloada preko tcp konekcije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187255": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@BigZ1#187199 \n\nPomoću `poll` ili `select` treba ionako provjeravati je li neka od žrtvi odgovorila, pa sam u listu socketa koji se provjeravaju ubacio i C&C-ov i kad on nešto pošalje provjerim je li STOP i ako je, breakam iz slanja.\n\n----\n\n@kolega_kolega#187236 \n\nAko simuliraš jedan od programa pomoću netcata, probaj s `-I` smanjiti receive buffer ako simuliraš bota ili s `-O` smanjiti send buffer ako simuliraš server.\n\nMože biti da ti bot ostane čekati kraj poruke, iako je server već sve poslao. Za to mi se čini da ima nekoliko rješenja:\n* bot ima timeout za čekanje payloada: čini mi se kao najbolje rješenje jer tako bot ne može ostati zauvijek u čekanju,\n* bot čita \\~1024 ili koliko već znakova odjednom, a server zatvara vezu čim sve pošalje: bot može zauvijek ostati čekati ako server ne zatvori svoj socket kad je gotov sa slanjem,\n* bot čita znak po znak dok ne dođe do \\\\n: bot može ostati zauvijek čekati ako server ne pošalje \\\\n i ne zatvori konekciju, a ako neki od payloada sadrži \\\\n će se izgubiti sve poslije njega.\n\nSamo prvo rješenje s timeoutom mi se čini bulletproof jer bot ne može zapeti u čekanju payloada.\n\nU svakom slučaju mi se čini korisno da server zatvori konekciju čim je poslao cijelu poruku. U prvom slučaju se izbjegne nepotrebno čekanje timeouta, a u ostala dva bot neće ostati čekati zauvijek.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187273": {
+      "poster": "ruza0001 (rozy)",
+      "content": "meni na neku foru salje na neki port \"vat\" jel nekome zvuci poznato pa da zna sta bi mogao bit uzrok problema?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187311": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@ruza0001#187273 nvm upravo sam skuzio da sam zbog njihovih mutavih krivih uputa potrosio sat vremena ispravljajuci \"bug\" kojeg nisam niti imao.....",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187314": {
+      "poster": "Mariox",
+      "content": "@ruza0001#187311 gdje su krive upute?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187317": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@Mariox#187314 pa ovaj zadnji dio \"primjeri pozivanja\", pise posaljete botovima naredbu p, a CandC ne podrzava naredbu p, vec pu i pt, onda ovo pokretanje nc -ul 5678, meni nije radilo, otvorim kod CandC-a i vidim da u onim portovima navedeniim vise ne pise 5678 ko u prosloj vjezbi vec je sada taj \"vat\" i onda sam runno program i ko zrtvu imo `nc -ul vat` i radilo mi je kak treba i primao je payloade",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187389": {
+      "poster": "BigZ1",
+      "content": "Jel ima itko vremena da pogleda kako to da mi isto definirani selectovi i sve ne uspije proci na serveru na na botu prodje?\n\n![](assets/2021-05-09/00044.png)\n\n ovo je iz servera i ne radi nikad ne dodje na liniju 100\n\n![](assets/2021-05-09/00045.png)\n\novdje select u botu prodje a sve sam probao na serveru promijeniti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187393": {
+      "poster": "jobi (azex)",
+      "content": "@BigZ1#187389 nez koja ti je 100. linija, al selectu kao prvi arg moras predat maksimalni sfd + 1, nez kako znas da je mysocketudp upravo taj najveci i makni gornja tri fd_set jer kad ude u while petlju to radi po drugi put iako ne bi treba",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187399": {
+      "poster": "BigZ1",
+      "content": "@jobi#187393 a to sam samo probao cisto ovako,a zadnji socket koji napravim je taj udp pa sam na njega dodao samo 1\n\nal evo maknem to i vidim koji je naveci sa printf",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187403": {
+      "poster": "BigZ1",
+      "content": "![](assets/2021-05-09/00046.png)\n\n ev sad je kod ovako i ne radi svakako ne prodje select\n\n@jobi#187393",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187415": {
+      "poster": "Mariox",
+      "content": "@BigZ1#187403 s primjera na https://beej.us/guide/bgnet/examples/selectserver.c\n\nFD_ISSET mora biti u for petlji koja izgleda ovako `for (i = 0; i <= fdmax; i++)`\n\nEDIT: aha, ili mozes provjeriti sve svoje sockete, kako si pretpotstavljam ti napravio, ali kanije moras napraviti da ti je u readsfd setu listener socket, pa nakon accepta dodas novi socket koji si dobio s accept(), te bi tako morao podrzati vise konkurentnih klijenta. Opet pogledaj primjer s linka, ja sam ga puno koristio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187431": {
+      "poster": "BigZ1",
+      "content": "@Mariox#187415 e pa gledao sam to ali ocigledno mi i dalje nije jasno,razumijem da accept mi vrati novi socket i to odradim nakon fd_isset od tcp socketa no opet mi nije jasno kako sav isti kod prodje u selectu u botu a u serveru ne. msm kod izgleda isto kao i ondje gore,ali unutar toga obradim ovo sto bude u aceptu. \n\n![](assets/2021-05-09/00048.png)\n\n evo cak i dio koda,kuzim da bi ja mozda trebao taj od accepta dodat onda u listu skroz novih no zasad ni ovo ne radi jer ne prodje select svakako.\n\nEDIT: inace napisao sam i wraper funkciju selecta no probao sam ovdje bas select pozvat da nije neki problem. no on kao da zapne u selectu i ne ide dalje a ne baci error",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187432": {
+      "poster": "Mariox",
+      "content": "@BigZ1#187431 koja je error poruka? Napravi si Select() wrapper",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187434": {
+      "poster": "BigZ1",
+      "content": "@Mariox#187432 ![](assets/2021-05-09/00049.png)\n\n ev i wrapper cak sam stavio i err <0 i nije se nist promijelo.. Pokusavam rec da se error ne dogodi nekako no zapne tu i program se NE terminira.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187436": {
+      "poster": "Mariox",
+      "content": "@BigZ1#187434 oprosti ako je glupo pitanje, ali samo da provjerim, jesi poslao nesto programu? Npr s stdina?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187437": {
+      "poster": "BigZ1",
+      "content": "@Mariox#187436 pokrenuo sam samo skriptu bash testiraj.sh i u njoj uneo pt i tjt i tu sve stane\n\nal nije glupo pitanje,logicno je",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187438": {
+      "poster": "Mariox",
+      "content": "@BigZ1#187437 pokreni samo server i pokusaj mu poslat na stdin nesto, mozda jednostavno select nije nista primio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187440": {
+      "poster": "BigZ1",
+      "content": "@Mariox#187438 jok samo mogu upisivat do kraja vjeka vjekova i tjt. Ma nista sutra ce mi ujutro asistenti reci sta ne valja jer nemam pojma vise.",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Mariox",
+          "jobi (azex)"
+        ]
+      }
+    },
+    "187442": {
+      "poster": "mstaver (staverm)",
+      "content": "Kako koristite select u botu kada istovremeno treba slat payloadove zrtvama? Mislio sam da je ideja koristit signale za bot, a select za server?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187445": {
+      "poster": "jobi (azex)",
+      "content": "@BigZ1#187440 aa stvarno mi nije jasno zasto se blokira zauvik, barem kada upises u terminal server nesto trebalo bi radit, valjda ce ti oni rec sta konkretno ne valja, drzin fige",
+      "votes": {
+        "upvoters": [
+          "BigZ1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187446": {
+      "poster": "BigZ1",
+      "content": "@jobi#187445 ma sve 5 stari nemam pojma iskreno nemam volje vise pa nek mi oni pomognu i dobro da dobije 2/5 ja zadovoljan no svakako cu ga poslije za sebe prepravit do kraja.",
+      "votes": {
+        "upvoters": [
+          "jobi (azex)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187448": {
+      "poster": "jobi (azex)",
+      "content": "@BigZ1#187446 mozda je ispis samo sjeban, pokusaj nakon svakog printf napisat naredbu fflush(0);\n\nto mi je upravo palo na pamet, ajd jos to provaj pa javi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187450": {
+      "poster": "jobi (azex)",
+      "content": "@mstaver#187442 ja sam koristia procese u botu jer ne pise da trebamo sa selectom, pa kad treba zaustavit samo posaljem kill procesu djetetu",
+      "votes": {
+        "upvoters": [
+          "mstaver (staverm)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Mariox"
+        ],
+        "tuga": []
+      }
+    },
+    "188688": {
+      "poster": "Mariox",
+      "content": "kako podržati broadcast? Samo staviti \n\n```\nSetsockopt(victimSockets[i], SOL_SOCKET, SO_BROADCAST, &on, sizeof(on));\n```\n\n?\n\nKako provjeriti je li radi?",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "188690": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@Mariox#188688 ja sam stavio tako i nisam dobio nikakvu primjedbu za to u mailu.. Nisam siguran kako bi testirao tho",
+      "votes": {
+        "upvoters": [
+          "Mariox",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "188691": {
+      "poster": "Mariox",
+      "content": "Ima li skripta za testiranje za ovaj labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "188862": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@ruza0001#188690 Ja sam isto tako stavio. Za testiranje sam otišao u C&C i za `r2` promijenio adresu na broadcast od lokalne mreže i onda pokrenuo jedan netcat da sluša. Nisam testirao s više klijenata na istoj mreži, ali radilo je za tog jednog i nisam dobio primjedbu za broadcast u mailu, tako da mi valjda radi.",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "188868": {
+      "poster": "Mariox",
+      "content": "@__builtin_popcount#188862 koju si adresu stavio? 127.0.0.255?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "188871": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Mariox#188868\n\nNe, to mi nije radilo. Mislim da local loopback ne podržava broadcast.\n\nStavio sam 10.0.2.255, tu adresu sam pročitao iz ispisa naredbe `ifconfig`.",
+      "votes": {
+        "upvoters": [
+          "Sale",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189002": {
+      "poster": "jobi (azex)",
+      "content": "oni kojima je tocno da bot stane kad primi poruku od zrtve, je li dovoljno da je to udp poruka ili treba gledat i pokusaj tcp konekcije i sl.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189185": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@Mariox#188691 http://mrepro.tel.fer.hr/lab2/",
+      "votes": {
+        "upvoters": [
+          "Mariox",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189410": {
+      "poster": "Mariox",
+      "content": "@jobi#189002 ja sam samo gledao jesu li (udp) socketi readable, ako jesu, provjeri je li to cc socket, ako nije onda je neki socket od zrtvi. Meni nije trebalo tcp",
+      "votes": {
+        "upvoters": [
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

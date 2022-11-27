@@ -1,0 +1,4553 @@
+{
+  "title": "[PARPRO] 3. laboratorijska vježba - 2021/2022",
+  "creator": "gladiator",
+  "slug": "parpro-3-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Paralelno programiranje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "298059": {
+      "poster": "gladiator",
+      "content": "Prvi termin predaje je sljedeći tjedan pa preporučam svima da krenu radit.\n\nAko se ne varam, ovo je prvi put da se ovakva vježba izvodi na predmetu pa je za očekivati da će mnogo ljudi biti zbunjeno (ja već jesam).",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Retard00",
+          "angello2",
+          "anon00",
+          "indythedog",
+          "madoxx",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298083": {
+      "poster": "indythedog",
+      "content": "Moje jedino pitanje je moze li se raditi u pythonu?",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)",
+          "Kasperinac"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298090": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"indythedog\"#p298083 može, sa pyopencl paketom. ima i one globalne i lokalne nešto za podešavanje kak god da se to zvalo",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)",
+          "Kasperinac",
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298106": {
+      "poster": "Bisolvon",
+      "content": "Može li netko tko shvati kako ovo treba napravit napisat neki mini tutorial. Ja sam izgubio već dva dana pokušavajući osposobit projekt u VS-u.",
+      "votes": {
+        "upvoters": [
+          "Kasperinac",
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298137": {
+      "poster": "Sinusan",
+      "content": "@\"Bisolvon\"#p298106 \n\nInstalirati Visual Studio uz opciju za C++ desktop development.\n\nSkinuti i raspakirati OpenCL i zapamtiti gdje se nalazi:\n\nhttps://www.fer.unizg.hr/_download/repository/OpenCL_mini_SDK.zip\n\nUpdejtati drivere.\n\nDjelomično pratiti ovaj tutorial:\n\nhttps://medium.com/@pratikone/opencl-on-visual-studio-configuration-tutorial-for-the-confused-3ec1c2b5f0ca\n\nKorak 1 je već odrađen kad smo raspakirali OpenCL mini SDK.\n\nZa korak 2 ja sam koristio empty template i ubacio Jakobovićeve kodove kostur++.cpp, primjeri.cl, i timing.h\n\nU koraku 3 za additional include directories staviti direktorij u kojem se nalazi CL folder (npr. \"C:\\OpenCL\\include\").\n\nU koraku 3 za additional dependencies dodati kako su oni dodali (staviti \"OpenCL.lib;\" na početak)\n\nU koraku 3 za additional library directories staviti adresu lib foldera (npr. \"C:\\OpenCl\\lib\").\n\nSad bi se trebalo moći pokrenuti kod pomoću visual studia.\n\nRadio sam isključivo s Jakobovićevim primjerima tako da ne znam je li kod iz tutoriala radi s ovim setupom i nisam rješavao dalje zadatke.",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Daeyarn",
+          "Spuk",
+          "Stoja_9 (Bije_san_u_autobusu)",
+          "angello2",
+          "anon00",
+          "dora (AE)",
+          "gladiator",
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298147": {
+      "poster": "strole55 (Sokol)",
+      "content": "Jeli nekome javlja error cannot open file 'OpenCl.lib'",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298149": {
+      "poster": "Carlito22",
+      "content": "@\"Sokol\"#p298147 \n\nsudo apt install ocl-icd-opencl-dev\n\nak si na ubuntu",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298158": {
+      "poster": "sheriffHorsey",
+      "content": "Jel ovo lakse radit s cudom ili openclom?",
+      "votes": {
+        "upvoters": [
+          "Kennedy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298230": {
+      "poster": "BillIK",
+      "content": "zna li netko kako ovo sve na ubuntu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "gladiator"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298315": {
+      "poster": "dora (AE)",
+      "content": "![](assets/2022-05-24/00021.png)\n\nIma li netko ideju zasto dobivam ove errore kad pokrenem primjer u visualu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298357": {
+      "poster": "Fikalo",
+      "content": "@\"AE\"#p298315 Koji IDE koristis?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298375": {
+      "poster": "dora (AE)",
+      "content": "@\"Fikalo\"#p298357 visual studio 2019",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298380": {
+      "poster": "Fikalo",
+      "content": "@\"AE\"#p298375 Znam da sam imo neki slican problem ko taj za jedan drugi labos, di sam pokreto u 2019. i nije radilo nego sam morao pokrenut u 2022. jer je imo nekih problema sa linkerom. Tesko mi rec po ovim errorima dal je to taj isti problem al moze bit do toga mozda.",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)",
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298389": {
+      "poster": "dora (AE)",
+      "content": "@\"Fikalo\"#p298380 Hvala, rijesilo problem!",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298390": {
+      "poster": "dora (AE)",
+      "content": "![](assets/2022-05-25/00011.png)\n\nZna li netko razlog ovome?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298396": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Za rad u Pythonu je li bolje CUDA ili OpenCL?\n\nCC @\"Olive Oil\"#p298090",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298398": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"IdeGas\"#p298396 probao sam samo opencl, ima dobro dokumentirano, ne znam za cudu. Al nekih 5 linija za inicizaciju varijabli i slanje na device  + kod za kernel mi se čini da jednostavnije ne može",
+      "votes": {
+        "upvoters": [
+          "Kasperinac",
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298853": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"IdeGas\"#p298396 CUDA je lakša iz mojeg iskustva ali provjeri može li ti GPU vrtiti CUDU, znam da je neko vrijeme bio problem s novijim AMD grafičkama jer nije bilo HIP supporta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298873": {
+      "poster": "Ljama",
+      "content": "Dobiva li još netko grešku (-46) pri pokretanju kostur++.cpp nakon postavljanja projekta iz mini SDK-a prema gornjim uputama? Pri pokretanju kostur.cpp ne javlja se nikakva greška, ali se ništa ni ne ispiše.   ![](assets/2022-05-26/00022.png)",
+      "votes": {
+        "upvoters": [
+          "Quarz",
+          "madoxx",
+          "strole55 (Sokol)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298883": {
+      "poster": "SuperSaiyano",
+      "content": "@\"Ljama\"#p298873 Slomio sam se sinoć oko toga ali sam riješio. Greška označava pogrešno ime kernela, međutim svako je ime pogrešno kada putanja SOURCE_FILE ne valja :/. Kernel datoteku (primjeri.cl ili .cl općenito) sam stavio unutar projekta kao na slici (pored onih filters i user datoteka) i za SOURCE_FILE stavio sam ime kernel datoteke tj. primjeri.cl ![](assets/2022-05-26/00023.png)",
+      "votes": {
+        "upvoters": [
+          "Haki",
+          "Kasperinac",
+          "KingGeedorah (King Geedorah)",
+          "Me1 (Me)",
+          "Quarz",
+          "Uchenikowitz (Učečuču)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298892": {
+      "poster": "Ljama",
+      "content": "@\"SuperSaiyano\"#p298883  Hvala puno!",
+      "votes": {
+        "upvoters": [
+          "SuperSaiyano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298912": {
+      "poster": "BillIK",
+      "content": "Može li mi netko pojasniti ovaj labos? Što se sve zahtjeva da imamo kako bi ga napisali i što sve moramo napisati? \n\nMoram li stvarno imati gpu za ovo ili? Ne kužim se u te stvari baš",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298929": {
+      "poster": "strole55 (Sokol)",
+      "content": "Jel radi opencl na integriranij grafickoj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298953": {
+      "poster": "indythedog",
+      "content": "@\"BillIK\"#p298912\n\n@\"Sokol\"#p298929 \n\nJa mogu pisati samo za PyOpenCl jer s njim radim, ali pošto se radi o specifikaciji OpenCL koja bi trebala biti neovisna o platformi, pretpostavljam da vrijedi i za C/C++. Ukratko, OpenCL će raditi na bilo čemu, ako nemate GPU procesor s više jezgri je dovoljan, samo je potrebno instalirati odgovarajuće drivere koji će podržavati rad s OpenCL-om - npr. za NVIDIA GPU \"driver\" koji podržava OpenCL je cuda, za ostale gpu-ove/procesore postoje odgovarajući driveri itd.\n\nhttps://documen.tician.de/pyopencl/misc.html - Ovdje su upute za podešavanje pyopencl-a, pa možda može pomoći. Konkretno za pyopencl dovoljno je imati odgovarajući driver i instalirati pyopencl paket korištenjem npr. conde i tjt, onda program možete pokrenuti doslovno klikanjem \"run\" u PyCharmu.",
+      "votes": {
+        "upvoters": [
+          "BillIK",
+          "Svudec",
+          "gladiator",
+          "strole55 (Sokol)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298971": {
+      "poster": "branimir1999",
+      "content": "@\"Sinusan\"#p298137 Ukoliko nekome se OpenCL ne želi include-ati nakon ovog tutorijala, pazite da su vam sve postavke za ispravnu konfiguraciju (x86/x64; Debug/Release) te da trenutno radite u ispravnoj konfiguraciji u samom VS. Najjednostanvije da radite u All Configurations i na x64.\n>! ![](assets/2022-05-27/00002.png)\n\n>! ![](assets/2022-05-27/00003.png)\n\n@\"SuperSaiyano\"#p298883 zar nije dovoljno samo da maknes tocku tako da `../primjeri.cl` -> `./primjeri.cl` i da ostavis .cl datoteke u istom direktoriju kao kostur++.cpp?",
+      "votes": {
+        "upvoters": [
+          "Stoja_9 (Bije_san_u_autobusu)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299014": {
+      "poster": "SuperSaiyano",
+      "content": "@\"branimir1999\"#p298971 To sam i ja isto pretpostavio, stavio tako, apsolutnu putanju i nije nijedno radilo...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299051": {
+      "poster": "madoxx",
+      "content": "Prevođenje bez ikakvog IDE-a na Ubuntu 20.04:\n\n`g++ kostur++.cpp -I/home/<moj_username>/fer/OpenCL/include -L/home/<moj_username>/fer/OpenCL/lib -lOpenCL`.\n\nPrevođenje baca jedan warning, ali nadam se da nije ništa bitno.\n\nAko vam pokretanje vrati status 46, promijenite vrijednost varijable SOURCE_FILE u datoteci kostur++.cpp u \"./primjeri.cl\" jer se ipak ta datoteka nalazi u istom folderu iz kojeg vi pokrećete projekt.",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)",
+          "steker",
+          "wolfs_123 (wLkR-74159)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299077": {
+      "poster": "indythedog",
+      "content": "Za neki kratki crash course o gradivu labosa jako preporučam slajdove i primjere sa ovog repoa: https://github.com/HandsOnOpenCL/\n\nIma primjere programa u C, C++ i Pythonu i ide od osnova, neusporedivo je bolje od službenih materijala koji su praktički nepostojeći",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Rope (Rops)",
+          "Smolaa",
+          "SuperSjajan3",
+          "Svudec",
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299084": {
+      "poster": "indythedog",
+      "content": "U 1. zadatku, može netko pojasniti na što točno misle pod \" Funkciju dretve obvezatno ostvarite tako da jedna dretva može obraditi više elemenata niza (N/G). \" Kao, ako ja jedan zadatak definiram da obrađuje i-ti element niza jel, kako tu mogu išta posebno naglasiti da jedna dretva može obraditi više elemenata niza? Ne kužim baš na što ciljaju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299087": {
+      "poster": "Multimedija",
+      "content": "@\"indythedog\"#p299084 \n\nAko je broj elemenata niza (N) veći od broja dretvi (G) onda jedna dretva ima više od jednog zadatka tj. treba obraditi N/G elemenata. To testiraš u kernelu - ja imam 2 for loopa i svaka dretva provjerava N/G elemenata.",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)",
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299088": {
+      "poster": "Multimedija",
+      "content": "Ima li tko problem u 2. zadatku gdje mu za određeni broj iteracija (npr. N=500) krivo izračuna pi, a za određeni (npr. 50 ili 500000) dobro?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299090": {
+      "poster": "hellvetica",
+      "content": "Koristim pyopencl i nije mi skroz jasno kako bi trebao definirat globalnu i lokalnu grupu dretvi (za prvi zadatak)\n\nPokrecem kernel ovako\n\n`knl = prg.prime\n\n    knl(queue, a_np.shape, None, a_g, res_g)\n`\n\nI sa np.shape definiram globalnu velicinu. Kernel funkcija mi uzima globalni index sa\n\n`int gid = get_global_id(0);` i tako cita/pise podatke.\n\nKako bi ovo trebao modificirat da mi radi sa lokalnim/globalnim dretvama i kako bi trebao nac optimalnu kombinaciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299091": {
+      "poster": "hellvetica",
+      "content": "@\"hellvetica\"#p299090 \n\nAha izgleda da trebam samo dodat broj za lokalni wg\n\n`knl(queue, a_np.shape, (32,), a_g, res_g)`\n\nJel trebam onda kernel promijenit da koristi neke lokalne id-eve ili?\n\nKako da nadem optimalnu kombinaciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299109": {
+      "poster": "Kasperinac",
+      "content": "Kaj je ovaj 3. zadatak??",
+      "votes": {
+        "upvoters": [
+          "pingvinka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299119": {
+      "poster": "Kasperinac",
+      "content": "![](assets/2022-05-28/00004.png)\n\nItko se susreo s ovakvim errorom pri pokusaju setupanja visual studija za opencl? Pokusavam pokrenuti onaj njihov kostur++ kod.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299121": {
+      "poster": "Me1 (Me)",
+      "content": "@\"Kasperinac\"#p299119 pogledaj ovaj post, mislim da mi je to pomoglo kod toga \n\n@\"SuperSaiyano\"#p298883",
+      "votes": {
+        "upvoters": [
+          "Kasperinac"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299122": {
+      "poster": "Me1 (Me)",
+      "content": "jel potrebno rijesit 3. da se zadovolji ona predaja svih labosa?",
+      "votes": {
+        "upvoters": [
+          "Kasperinac",
+          "MsBrightside",
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299126": {
+      "poster": "Kasperinac",
+      "content": "@\"Me\"#p299121 Hvala puno, visual studio je debil koji kad importas fileove ti pokaze da su u projektu, ali i dalje ne zna di su. Rucno kopiranje svih tih fileova u project folder je fixalo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299136": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "Kako bi tocno ove grupe dretvi (parametar L u zadacima) trebale utjecati na performansu? Sta ce nam uopce te grupe ako svaka dretva ima jedinstveni globalni id iz skupa (0, G-1) pomocu kojeg se moze ravnomjerno rasporediti posao?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299150": {
+      "poster": "indythedog",
+      "content": "Baca nekome u 1. zadatku OUT_OF_RESOURCES error za malo veća polja (Python)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299151": {
+      "poster": "indythedog",
+      "content": "@\"indythedog\"#p299150 Update: čini se da pomaže za velike N-ove staviti i veliku veličinu grupe G, valjda ako je G premalen zadataka ima malo ali su jako veliki pa processing unitu nestane lokalne memorije ili nešto slično (pretpostavljam)",
+      "votes": {
+        "upvoters": [
+          "Kasperinac"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299152": {
+      "poster": "Kasperinac",
+      "content": "@\"indythedog\"#p299151 meni ak stavim G = 1 (za slijedno), uz preveliki N vrati 0 i crashaju se driveri od grafe :D, tako da msm da def je nes oko memorije ili sl da je ograniceno.",
+      "votes": {
+        "upvoters": [
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299168": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Netko rješio 3. zadatak?\n\nSavjeti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299172": {
+      "poster": "Ardura (Maddy)",
+      "content": "Je li u prvom moramo koristiti lokalnu memoriju? Tipa zapisati neki medurezultat u lokalnu pa sve zbrojiti u globalnoj? Ili je ok samo kako su oni napisali kostur++.cpp?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299183": {
+      "poster": "Daeyarn",
+      "content": "@\"indythedog\"#p299151 meni baci OUT_OF_RESOURCES za n > 2^10, ne znam zasto, cak i kada stavim velicinu grupe da je veca(kada je n > 2^10 radi za G do 512, nakon toga baci error)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299199": {
+      "poster": "indythedog",
+      "content": "@\"Daeyarn\"#p299183 Meni recimo za velike n, npr. 2^15, 2^16 radi samo ako stavim neki veliki G, tipa 2^12, ali za sve iznad 2^17 mi se ruši\n\nI guess da je to zbog hardvera, sumnjam da će na ispitivanju praviti probleme zbog toga",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299264": {
+      "poster": "SuperSjajan3",
+      "content": "Jel zna netko sta im ovo znaci u prvom? \n\nPrilikom računanja ukupnog broja prim brojeva, ispitajte razliku\n\nizmeđu obične operacije uvećavanja (+=) i odgovarajuće atomičke (nedjeljive) operacije!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299267": {
+      "poster": "Kasperinac",
+      "content": "@\"SuperSjajan3\"#p299264 ak koristis += onda neces dobiti tocan broj, jer vise njih pokusava istovremeno pisati, i nezna se kak ce to zavrsiti, a onda imas msm atomic_add (ili tak nes), i on osigurava da samo jedan pise zbraja tu varijablu.",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299268": {
+      "poster": "Kasperinac",
+      "content": "@\"IdeGas\"#p299168 ja sam uzeo cijeli njihov kod i ovaj dio u velikom foru, di se poziva jacobianstep sam paralelizirao... I izvodi se brze, ali nz el to \"dovoljno paralelizirano\". Ostatak koda nisam dirao.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299316": {
+      "poster": "theimprobableone",
+      "content": "@\"indythedog\"#p299151 kako u pythonu postavljas velicine G i L?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299321": {
+      "poster": "indythedog",
+      "content": "@\"theimprobableone\"#p299316 Evo ovako:\n\n ![](assets/2022-05-29/00018.png)\n\nG i L su mi varijable koje sam definirao prije jel, a parametri se moraju predati kao (G,), a ne samo G jer metoda očekuje da bude tuple, čak i ako ima samo jedan element",
+      "votes": {
+        "upvoters": [
+          "matt (Matt)",
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299326": {
+      "poster": "MsBrightside",
+      "content": "ima netko da je ovo za python na windowsu pokrenija",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299332": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "Kako je najlakše postaviti okolinu za pokretanje OpenCL-a?\n\nhttps://marketplace.visualstudio.com/items?itemName=galarius.vscode-opencl\n\nRadi li ovo za visual studio code?\n\nhttps://www.intel.com/content/www/us/en/developer/tools/opencl-sdk/overview.html\n\nMožda ovo za integriranu Intelovu grafiku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299333": {
+      "poster": "SuperSjajan3",
+      "content": "@\"MsBrightside\"#p299326 Jes, samo napravi pip install pyopencl i to je to, mozes pokretat iz pycharma. Preporuka za onaj guide sa githuba kojeg je kolega gore poslo.",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299334": {
+      "poster": "indythedog",
+      "content": "@\"Kasperinac\"#p299268 Jesi paralelizirao na \"običan\" način ili korištenjem onih nekih fora sa podjelom u blokove i korištenjem lokalne memorije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299340": {
+      "poster": "Kasperinac",
+      "content": "@\"indythedog\"#p299334 \"obican\" valjda, neam pojma kak bi u openClu funkcioniralo to s lokalnom memorijom, predao sam nekoliko polja obradio i vratio u novom polju basically. Al sad kad gledam, cini mi se da to moje \"paralelno\" je sporije neg slijedno 🙃. Al fkt nz, runnam jedno i drugo na laptopu s integriranom grafom tak da idk el mby zbog tog moze biti... Msm da cu sam rec meni dost, \"rjesio jesam\". A sad koliko dobro nek mi skinu bodove svj mi je.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299341": {
+      "poster": "dora (AE)",
+      "content": "Jel bi mogao netko objasnit smisao koristenja radnih grupa dretvi za rjesavanje prvog zadatka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299349": {
+      "poster": "indythedog",
+      "content": "@\"Kasperinac\"#p299340 Ma da, tako sam i ja, mislim da će to bit oke\n\nMeni je 2x brže paralelno, ali zato što sam prepisao slijedni program u Python kojem onda treba 20 minuta da izvrti 100 iteracija xD",
+      "votes": {
+        "upvoters": [
+          "Kasperinac"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Kasperinac"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299357": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "Jel nasao itko nacin kako da u trecem zadatku natjeramo hosta i device da rade na *istom* komadu memorije? Moj algoritam trenutno u svakoj iteraciji prepise buffer na device, device izvrti kernel i onda procita iz buffera rezultat.  To zahtjeva puno vremena i na kraju mi paralelno rjesenje radi sporije nego slijedno 😑",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299364": {
+      "poster": "--- ( 🤡 )",
+      "content": "```\npyopencl._cl.LogicError: clGetPlatformIDs failed: PLATFORM_NOT_FOUND_KHR\n```\nzna li netko ovo fixat? ne znam sto jos trebam osim instalirati pyopencl (pycharm na linuxu)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299372": {
+      "poster": "indythedog",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p299364 Moraš instalirati driver koji će ti podržavati OpenCL - ako hoćeš raditi na (NVIDIA) GPU instaliraj cudu, ili idi putem manjeg otpora i instaliraj drivere za CPU. \n\nZa cpu drivere probaj neku od ovih naredbi: ![](assets/2022-05-29/00028.png)\n\nPune upute imaš na https://documen.tician.de/pyopencl/misc.html",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299373": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"indythedog\"#p299372 sto je najgore kad sam se prebacio na dedicated grafičku proradilo je samo od sebe ali hvala ti!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299389": {
+      "poster": "Reznox",
+      "content": "@\"indythedog\"#p299321 Meni baca ovo ako mi je G razlicit od N, nije mi posebno ovo jasno haha\n\n ![](assets/2022-05-29/00029.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299399": {
+      "poster": "Reznox",
+      "content": "@\"Reznox\"#p299389 Nevermind krivo nes sam cita",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299408": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "Netko radi na macu? M1 ?  Koliko vidim apple vise ni nema supporta za opencl, ne znam uopce koje su mi opcije onda, instalirao preko conde pyopencl + pocl i dobivam -> clGetPlatformIDs failed: PLATFORM_NOT_FOUND_KHR",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299413": {
+      "poster": "Bica",
+      "content": "Kako ste implementirali da jedna dretva obradi vise brojeva?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299427": {
+      "poster": "daer",
+      "content": "![](assets/2022-05-29/00031.png)\n\nZna li netko zašto baca ovaj error kad pokušam pip install pyopencl?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299450": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "@\"DnkCkv\"#p299408 ja sam se s Mac-a prebacio na drugi komp. Isti kod mi radi sad koji na Mac-u nije, iz nekog ralozga kad bi mu dao n brojeva, majstor je rjesavo samo prva 3-4 broja...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299451": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "@\"DnkCkv\"#p299408 ako imas neki non Mac komp, preporucam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299507": {
+      "poster": "Patak007",
+      "content": "ako je netko radio s OpenCL wrapper-om koji je na materijalima, kako ste postavljali parametre G i L u zadatcima? u kernel konstruktorima samo nasao samo get_global i get_local, ali ne mogu naci set 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299508": {
+      "poster": "Reznox",
+      "content": "Ekipa koja je u Py radila ovaj labos, 3. zadatak. Ste samo portali sve u python i paralelizirali jacobijan jer ne vidim nista drugo posebno sto bi trebalo ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299579": {
+      "poster": "indythedog",
+      "content": "@\"Reznox\"#p299508 Ja sam paralelizirao jacobian, onu metodu deltasq za izračun pogreške i ovo ![](assets/2022-05-29/00035.png)\n\nTj. ovo zadnje još nisam, iz nekog razloga mi ne radi dobro",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299583": {
+      "poster": "Bisolvon",
+      "content": "@\"indythedog\"#p299579 Jeli mi onda moramo pretipkat ovaj cpp kod u python samo da bi paralelizirali neke dijelove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299586": {
+      "poster": "indythedog",
+      "content": "@\"Bisolvon\"#p299583 To sam ja napravio da, al kao ne treba ti dugo, meni je trebalo nekih 15ak min",
+      "votes": {
+        "upvoters": [
+          "Bisolvon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299596": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "@\"wLkR-74159\"#p299332 zna li itko ovo?\n\nBTW ovaj drugi link za intel system studio (ili kako se vec zove) - nisam uspio pokrenuti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299718": {
+      "poster": "Lukak",
+      "content": "Za sve koji se muce s konfiguracijom na Macbook-u, ja sam pratio ovaj guide za Macbook s M1 cipom:\n\nhttps://wiki.tiker.net/PyOpenCL/Installation/Mac/\n\nVrlo jednosavno, 2min posla, cini mi se da sve normalno radi (probao sam par primjera s interneta, jos nisam rjesio vjezbu). Toplo preporucam svima",
+      "votes": {
+        "upvoters": [
+          "DankJakov (DnkCkv)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299728": {
+      "poster": "Ryder (Pepper)",
+      "content": "jel imao netko ovu grešku kod importanja pyopencl? `ImportError: DLL load failed while importing _cl: The specified procedure could not be found.`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299737": {
+      "poster": "JoKing",
+      "content": "@\"Pepper\"#p299728 Imao sam istu stvar, otišao na stranicu nvidie, downloadao i instalirao najnovije drivere i nakon toga radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299754": {
+      "poster": "SuperSjajan3",
+      "content": "treci zadatak, imam problem kod slanja parametara u kernel, iz nekog razloga mi se prenese neko smece umjesto pravih brojeva. \n\n![](assets/2022-05-30/00006.png)\n\novo dobijem kad ispisem m, n, bnorm, checkErr, tolerance.\n\nima neko ideju do cega je?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299773": {
+      "poster": "theimprobableone",
+      "content": "@\"SuperSjajan3\"#p299754 moguce da je do data typeova, probaj se malo poigrat s tim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299775": {
+      "poster": "Rene",
+      "content": "Koliko vam traje pretraga prostih brojeva i koju velicinu polja koristite?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299782": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@\"Rene\"#p299775 \n\n5 sekundi za polje s `int`ovima od 0 do 2^(25)−1, integrirana grafika od laptopa.\n\nRadeon Vega 8, ako kome to što znači.\n\nEDIT: To je bez prijenosa podatka, ako brojim i njega, onda je oko 5.3 s",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299784": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "(C++) jel ima netko ovaj  error:\n\n`kostur++.cpp:42:103: error: no matching function for call to ‘std::vector<std::__cxx11::basic_string<char>, std::allocator<std::__cxx11::basic_string<char> > >::vector(int, std::pair<const char*, long unsigned int>)’`\n\nI pun k note-ova pri kompajliranju\n\nSamo sam skinija njihov kod i kompajlira s g++ kostur++.cpp",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299787": {
+      "poster": "Spuk",
+      "content": "Jesu oni to pomjerili rok za predaju? U mailu pise da je predaja labosa do 31.5. do 12 sati, a na ferku pise do 23:59. \n\nI oce bit moguca predaja labosa u onom tjednu od 6.6. ? Po ovoj zadnjoj obavijesti moglo bi se zakljucit da nece, jel sta prof reko na predavanju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299790": {
+      "poster": "Daeyarn",
+      "content": "2. zadatak s brojem pi, meni se pi pocne krivo racunati za broj clanova oko 50000, jel jos nekome tako? pretpostavljam da je to do racunanja s decimalnim brojevima u grafickoj",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299798": {
+      "poster": "Me1 (Me)",
+      "content": "kako tocno paralerizirat jacobistep?",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Bisolvon",
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299802": {
+      "poster": "Jaster111",
+      "content": "Ako je netko radio sa PyOpenCL, jel može objašnjenje kako točno implementirat lokalne grupe i kako napravit da radi u  batchevima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299805": {
+      "poster": "Daeyarn",
+      "content": "@\"Jaster111\"#p299802 ja sam samo pokretao kernel kao kernel(queue, (G,), (L,), parametri), gdje su G i L velicina globalne grupe a L je velicina lokalne(workgroup)",
+      "votes": {
+        "upvoters": [
+          "Digimon",
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299807": {
+      "poster": "Digimon",
+      "content": "@\"Daeyarn\"#p299805 Za što točno koristiš taj L?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299808": {
+      "poster": "Daeyarn",
+      "content": "@\"Digimon\"#p299807 L je parametar koji odreduje velicinu radne grupe, a mislim da je radna grupa broj dretvi koje dobije svaki multiprocesor na obradu\n\nnpr ako je L=1 a G=10 onda se tih 10 dretvi rasporedi tako da svaki procesor dobije 1\n\nmight be wrong, obavezno ispravite ako sam nesto krivo napisao",
+      "votes": {
+        "upvoters": [
+          "Digimon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299811": {
+      "poster": "Jaster111",
+      "content": "@\"Daeyarn\"#p299805 ma zapravo tako i ja pozivam kernel, samo mi je bilo čudno jer mijenjanjem parametra L mi se ne smanjuje/povećava radno vrijeme",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299812": {
+      "poster": "MsBrightside",
+      "content": "@\"Reznox\"#p299399 sta ti je krivo bilo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299813": {
+      "poster": "Daeyarn",
+      "content": "@\"Jaster111\"#p299811 aaa ma kuzim, meni su isto vremena jako slicna, ali za najsporiju kombinaciju G i L i najbrzu se vidi razlika tho",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299834": {
+      "poster": "Daeyarn",
+      "content": "@\"Spuk\"#p299787 mislim da je i zadnji put rok bio do 12:00 a na ferku je pisalo do 23:59, znas mozda koji je onda pravi rok?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299837": {
+      "poster": "Spuk",
+      "content": "@\"Daeyarn\"#p299834 Nemam pojma, to i mene zanima. Ma samo se nadam ako ne uspijem sad rijesit da cu moc rpedat zadnji tjedan.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299844": {
+      "poster": "Spuk",
+      "content": "@\"Daeyarn\"#p299834 Koliko vidim po staroj obavijesti za proslu dz se trebalo predat do 23 sata a na ferku je bilo do 23:59. Nez koliko nam to pomaze, al trebali bi poslat mu mail ili napisat u onaj forum pitanje.",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299850": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "Ima li itko tko je ovo uspio rijesiti? Imam osjecaj da nitko ništa ne uspijeva.\n\nKako importati OpenCL library u g++? Pokusao sam instalirati ocl.icd.opencl-dev, opencl-headers i prevesti sa g++kostur.cpp -lOpenCL i dobijem CL/cl.hpp - No such file or directory.\n\nDa pokusao poslati mail da produze rok za sljedeci tjedan?",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Spuk",
+          "Tinx (pingvin)",
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299851": {
+      "poster": "--- ( 🤡 )",
+      "content": "mogli bi staviti da je u oba termina za sve bodove posto se prvi put izvodi labos 🤔",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Spuk",
+          "Tinx (pingvin)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299855": {
+      "poster": "itsdend",
+      "content": "@\"Spuk\"#p299787 ja racunam da je rok do 23:59",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299857": {
+      "poster": "--- ( 🤡 )",
+      "content": "koliko vam traje slijedno u 2. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299861": {
+      "poster": "madukali",
+      "content": "Hoće li biti još jedna predaja jer vidim da je predviđena još jedna predaja na https://www.fer.unizg.hr/predmet/parpro/ispiti ,ali na ferku je LAB 5 samo ovaj tjedan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299863": {
+      "poster": "Spuk",
+      "content": "@\"madukali\"#p299861 da to je i mene zbunilo. Razmisljam polako poslat mail profesoru.",
+      "votes": {
+        "upvoters": [
+          "madukali"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299864": {
+      "poster": "aerius",
+      "content": "@\"AE\"#p298390 \n\nJel zna neko možda rješenje za ovo? hhahah",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299869": {
+      "poster": "MrDREDD",
+      "content": "Kako ste u drugom zadatku dodavali u globalnu memoriju? Koliko sam shvatio, ne postoji atomic_add za float vrijednosti...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299873": {
+      "poster": "Daeyarn",
+      "content": "@\"MrDREDD\"#p299869 treba pohraniti sve vrijednosti u polje, i onda ce host kada iskopira polje iz gpu pozbrajati sve\n\ngpu samo racuna clanove, ne zbraja ih",
+      "votes": {
+        "upvoters": [
+          "MrDREDD",
+          "Rope (Rops)",
+          "samurai (samuraj)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299876": {
+      "poster": "--- ( 🤡 )",
+      "content": "zna netko zasto mi u prvom polje koje posaljem na device postane sjebano? posaljem npr [1, 2, 3, 4....] nule na mjestima neparnih indeksa??",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299877": {
+      "poster": "steker",
+      "content": "moze neko pojasnit kako u prvom ostvarit da jedna dretva moze obradit vise elemenata niza, kako znamo od kojeg do kojeg indeksa niza treba ici?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299879": {
+      "poster": "Bica",
+      "content": "Koje ste G i L postavili u 3? Pokusao sam paralelizirati samo jacobistep tako da podijelim na workgroups i onda pomocu workgroup_id i local_id racunam psi, ali dobijem grešku zbog krivog G i L.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299882": {
+      "poster": "Daeyarn",
+      "content": "@\"steker\"#p299877 ja posaljem svim dretvama koliko elemenata treba obraditi(broj elemenata niza N mora biti visekratnik od broja dretvi G tako da svaka dobije jednak broj elemenata) i onda dretva moze na temelju toga i svog global id-a izracunati koje elemente obraduje",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299889": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "jedan kolega me zamolio da napravim kao neke natuknice za pyopencl. [primjer programa koji obrađuje elemente s n dretvi](https://mega.nz/folder/FoxR2BRL#XVBsuXV3ceC3pKt9TRs32g) malo je objašnjeno u comm.py koliko sam bio sposoban. dvije slike gdje sam izvrtio taj kod,  pp.py i pp.cl da se može pokrenuti sa python pp.py. možda nekome pomogne",
+      "votes": {
+        "upvoters": [
+          "Bisolvon",
+          "Daeyarn",
+          "Lukak",
+          "Rope (Rops)",
+          "Smolaa",
+          "SuperSjajan3",
+          "anon00",
+          "gladiator",
+          "matt (Matt)",
+          "mini (Earthling)",
+          "paradizot (debeli gmaz)",
+          "steker",
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299892": {
+      "poster": "gladiator",
+      "content": "@\"Olive Oil\"#p299889 god's work kolega",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Daeyarn",
+          "matt (Matt)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299895": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"Olive Oil\"#p299889 sad sam vidio da u comm.py u drugoj petlji size treba bit threads, krivo sam vidio. u pp.cl je dobro napisano",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299902": {
+      "poster": "Reznox",
+      "content": "@\"MsBrightside\"#p299812 ma slucajno san ostavia na float vrijednosti umisto int",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299908": {
+      "poster": "aerius",
+      "content": "jel rok za predaju onda sutra do 12 ili ponoći?",
+      "votes": {
+        "upvoters": [
+          "Portus"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299909": {
+      "poster": "gladiator",
+      "content": "ako vam pip install pyopencl prođe u prvom pokušaju, jeste li uopće živjeli?",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Daeyarn",
+          "Extended_mix",
+          "FortunaRegem",
+          "Jaster111",
+          "MsBrightside",
+          "Reznox",
+          "Tone",
+          "madukali",
+          "matt (Matt)",
+          "mini (Earthling)",
+          "nnn (dinoo)",
+          "rolotex (brr)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299924": {
+      "poster": "aerius",
+      "content": "btw jel ima ko ili je imo problema sa pokretanjem jakobovićevim opencl primjera sa amd-ovom grafičkom na windowsu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299939": {
+      "poster": "--- ( 🤡 )",
+      "content": "Može netko podijeliti py kod za slijednu verziju CFD? Taj dio je ionako svima isti pa da uštedimo vrijeme :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299950": {
+      "poster": "MsBrightside",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p299939 imas ti kakvu ideju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299956": {
+      "poster": "MsBrightside",
+      "content": "@\"Bica\"#p299879 koje si vrijednosti stavija",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299978": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p299939 \n\n@\"MsBrightside\"#p299950 \n\n```\nimport numpy as np, math, time,sys\nnp.set_printoptions(threshold=sys.maxsize)\ndef main():\n\n    error, bnorm, tolerance, scalefactor, numiter, printfreq = 0, 0, 0, 0, 0, 1000\n    bbase, hbase, wbase, mbase, nbase = 10, 15, 5, 32, 32\n    irrotational, checkerr = 1, 0\n    m, n, b, h, w, iter, i, j = 0, 0, 0, 0, 0, 0, 0, 0\n    tstart, tstop, ttot, titer = 0, 0, 0, 0\n\n    print(\"Usage: cfd <scale> <numiter>\\n\")\n\n    scalefactor, numiter = 64, 1\n\n    print(\"Scale Factor = {}, iterations = {}\\n\".format(scalefactor, numiter))\n\n    b = bbase*scalefactor\n    h = hbase*scalefactor\n    w = wbase*scalefactor\n    m = mbase*scalefactor\n    n = nbase*scalefactor\n\n    print(\"Running CFD on {} x {} grid in serial\\n\".format(m,n))\n\n    psi = np.zeros(((m+2)*(n+2)), dtype=np.float32)\n    psitmp = np.zeros(((m+2)*(n+2)), dtype=np.float32)\n    i, j = 0, 0\n\n    for i in range(b+1, b+w):\n        psi[i*(m+2)+0] = i-b\n\n    for i in range(b+w, m+1):\n        psi[i*(m+2)+0] = w\n\n    for j in range(1, h+1):\n        psi[(m+1)*(m+2)+j] = w\n\n    for j in range(h+1, h+w):\n        psi[(m+1)*(m+2)+j]= w-j+h\n\n    bnorm=0.0\n    for i in range(0, m+2):\n        for j in range(0, n+2):\n            bnorm += psi[i*(m+2)+j]*psi[i*(m+2)+j]\n    \n    bnorm=math.sqrt(bnorm)\n\n    print(\"\\nStarting main loop...\\n\\n\")\n    tstart=time.time()\n\n    for iter in range(1, numiter+1):\n  \n        for i in range(1, m+1):\n            for j in range(1, n+1):\n                psitmp[i*(m+2)+j]=0.25*(psi[(i-1)*(m+2)+j]+psi[(i+1)*(m+2)+j]+psi[i*(m+2)+j-1]+psi[i*(m+2)+j+1])\n        if checkerr or iter == numiter: \n            dsq = 0\n\n            for i in range(1, m+1):\n                for j in range(1, n+1):\n                    tmp = psitmp[i*(m+2)+j]-psi[i*(m+2)+j]\n                    dsq += tmp*tmp\n            error = dsq\n            error=math.sqrt(error)\n            error=error/bnorm\n\n        if checkerr: \n            if (error < tolerance):\n                print(\"Converged on iteration {}\\n\".format(iter))\n                break\n\n        for i in range(1, m+1):\n            for j in range(1, n+1):\n                psi[i*(m+2)+j]=psitmp[i*(m+2)+j]\n\n        if(iter%printfreq == 0):\n            if not checkerr:\n                print(\"Completed iteration {}\\n\".format(iter))\n            else:\n                print(\"Completed iteration {}, error = {}\\n\".format(iter,error))\n\n    if iter > numiter:\n        iter=numiter\n\n    tstop=time.time()\n\n    ttot=tstop-tstart\n    titer=ttot/iter\n\n    print(\"\\n... finished\\n\")\n    print(\"After {} iterations, the error is {}\\n\".format(iter,error))\n    print(\"Time for {} iterations was {} seconds\\n\".format(iter,ttot))\n    print(\"Each iteration took {} seconds\\n\".format(titer))\n    print(\"... finished\\n\")\n\nif __name__ == '__main__':\n    main()\n```",
+      "votes": {
+        "upvoters": [
+          "Bisolvon",
+          "Daeyarn",
+          "Kennedy",
+          "Lukak",
+          "MsBrightside",
+          "SuperSjajan3",
+          "gladiator",
+          "js51856 (6ak)",
+          "matt (Matt)",
+          "paradizot (debeli gmaz)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300003": {
+      "poster": "Jaster111",
+      "content": "Jel itko skužio di i šta paralelizirat u 3. zadatku? Jel bi trebali sve ove 2d funkcije paralelizirat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300015": {
+      "poster": "Edrudo",
+      "content": "Jel itko rjesavao ovaj labos na linuxu da mi moze pomoc, ocajan sam.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300019": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"Jaster111\"#p300003 možeš sve petlje paralelizirat, osim one za iterracije, to nisam dirao\n\n```\nfor(i=gid; i < m; i+=threads){\n    for(j=0; j < n; j++){\n    }\n}\n```\nsvaki thread će imat još svoju petlju, drugačiji način ne znam, ali i to znatno ubrza. za python pogotovo meni je i do 25 puta brži s 64 dretve neg s jednom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300025": {
+      "poster": "Edrudo",
+      "content": "@\"Edrudo\"#p300015 \n\nKako to biva, cim pitas nades rjesenje.\n\nnakon kaj se instaliraju driveri i skine sdk s materijala kod se kompelira ovom naredbom:\n\ng++ -I/SDK/OpenCL/include -o app kostur++.cpp -lOpenCL\n\ngdje je /SDK put do direktorija gdje je SDK raspakiran, tj. tamo gdje se nalazi OpenCL folder",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300026": {
+      "poster": "MsBrightside",
+      "content": "@\"Olive Oil\"#p300019 je li paraleliziras i pisanje temp-a u psi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300028": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "![](assets/2022-05-30/00020.png)\n\n![](assets/2022-05-30/00021.png)\n\nMoze li mi netko pomoci, znaci kada unutar C funkcije isprintam C(i) dobijem dobru vrijednost, no nakon sto se napravi ovaj enqueue_copy koji bi trebao kopirati rezultat nazad u h_C, h_C sadrži potpuno drugacije brojeve (smeca od brojeva)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300029": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"MsBrightside\"#p300026 da, sve dvostruke petlje i one 4 na početku. te četiri sam složio da svaka dretva ima svoju petlju, nisam slagao da ima više",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300030": {
+      "poster": "MsBrightside",
+      "content": "@\"Olive Oil\"#p300029 koliko kernela imas?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300033": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"MsBrightside\"#p300030 za prva četiri fora je jedan, i po jedan kernel za svaku dvostruku petlju",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300034": {
+      "poster": "bb99",
+      "content": "@\"Olive Oil\"#p299978 Kolega razlikuju nam se greske za 10 iteracija, a sad je pitanje tko je pogrijesio kod prepisivanja\n\nTvoje:\n\n![](assets/2022-05-30/00022.png)\n\nMoje:\n\n![](assets/2022-05-30/00023.png)\n\n![](assets/2022-05-30/00024.png)\n\nStavio sam i 1000 iteracija nek se vrti, to ce biti gotovo za koja 2h pa cu usporediti sa greskom koju su nam dali",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300036": {
+      "poster": "MsBrightside",
+      "content": "@\"Olive Oil\"#p300033 jesu svi kernel programi sa istim kontekstom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300038": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"bb99\"#p300034 damn, ma sam zaokruži na 5 decimala i dobar je. moguće da sam u nekoj petlji krivi raspon stavio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300039": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"MsBrightside\"#p300036 jesu, i svi kerneli su mi u jednoj .cl datoteci",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300043": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"DnkCkv\"#p300028 probaj umjesto (N, N) stavit samo (N,) u glavnom programu, a u kernelu, ak ono prijašnje ne popravi, __global float* C, meni je nekad s double znalo zezat",
+      "votes": {
+        "upvoters": [
+          "DankJakov (DnkCkv)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300047": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@\"Olive Oil\"#p300043 Stari moj borim se vec sat ipo, ovo sa float je proradilo, svaka cast 🙌🏿",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300050": {
+      "poster": "zmaj",
+      "content": "@\"DnkCkv\"#p300028 \n\nEvo mučila sam se dva sata s tim, na kraju sam inicijalizirala polje h_C na int, što se više sumira u kernelu, bit će manja greška",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300059": {
+      "poster": "--- ( 🤡 )",
+      "content": "Jel i vama drugi zadatak ultrabrz neovisno o N? Odnosno skroz malo se usporava ali sve je tipa 0.0002s",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Patak007"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300090": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Jel itko imao ovaj problem pri pokretanju kostur++.cpp na Intel CPU:\n\n`clGetPlatformIDs(-1001)`\n\n`terminate called after throwing an instance of 'cl::Error'`\n\n`  what():  clGetPlatformIDs`\n\n`Aborted (core dumped)`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300099": {
+      "poster": "strole55 (Sokol)",
+      "content": "Jel iko koristi onaj L? Ja kad ga proban koristit sve se sjebe",
+      "votes": {
+        "upvoters": [
+          "Kennedy",
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300128": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"iNut\"#p300090 \n\nZa ubuduće ako nekoga bude jebalo jer nema para za grafičku i radi na Intel-ovom CPU na Ubuntu 22.04 i clinfo mu izbaciva da ima 0 platformi.\n1. sudo apt install intel-opencl-icd\n2. skini njihov miniSDK\n3. pokreni kostur++.cpp sa sljedećom naredbom:\n\ng++ kostur++.cpp -I/home/<your_username>/fer/OpenCL/include -L/home/<your_username>/OpenCL/lib -lOpenCL\n4. ./a.out\n\nTrebalo bi raditi. Ja se jebem s ovime već 2 sata, upila sam nevine ljude pa se nadam da ću ovako barem 1 osobi pomoći za ubuduće. \n\nNisam našao nigdje da mi eksplicitno govori što je error code -1001, ali pretpostavljam da to izbaciva ako ne može pronaći platformu.",
+      "votes": {
+        "upvoters": [
+          "Smolaa",
+          "wolfs_123 (wLkR-74159)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300133": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "@\"iNut\"#p300128 Jel radi za kostur++? Bez da si nešto mijenjao?\n\nMeni je proradio kostur sa kernelom get_id.\n\nKostur++ sa kernelom vektor mi se ruši - core dumped\n\n![](assets/2022-05-30/00030.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300137": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"wLkR-74159\"#p300133 \n\nOvo što sam napisa je za kostur++ bez da sam išta mijenja. Napravit ću update na svoje prijašnje objave kad mi uspije i staviti popis grešaka koje me budu jebale jer materijali online su stvarno oskudni ili sam ja retard za pronać rješenje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300139": {
+      "poster": "miss_anthropocene (neunist.iva)",
+      "content": "neki hint za paralelizaciju jacobistep?",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300141": {
+      "poster": "steker",
+      "content": "Zasto nam uopce trebaju lokalne grupe u 1 zadatku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300142": {
+      "poster": "Ardura (Maddy)",
+      "content": "@\"indythedog\"#p299579 Jesi li uspio popraviti? Meni isto daje krive vr",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300145": {
+      "poster": "strole55 (Sokol)",
+      "content": "@\"bb99\"#p300034 ![](assets/2022-05-30/00031.jpg)\n\nU mene puno manje traje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300149": {
+      "poster": "BakardiKola",
+      "content": "U 3. zadatku mi paralelni nacin radi sporije od slijednog. Zna li netko je li to nuzno do moje implementacije ili je moguce da je u pitanju nesto drugo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300163": {
+      "poster": "zara",
+      "content": "Do kad je na kraju predaja labosa, sad do 12 ili ponoci?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300180": {
+      "poster": "MsBrightside",
+      "content": "@\"zara\"#p300163 ponoć",
+      "votes": {
+        "upvoters": [
+          "zara"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300184": {
+      "poster": "zara",
+      "content": "@\"MsBrightside\"#p300180 \n\nJesi 100% ziher? Poslala sam mail prof, ali nije mi jos odgovorio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300194": {
+      "poster": "Baksuz",
+      "content": "Jel ima još netko da ne može direktno ući u grupu na burzi grupa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300199": {
+      "poster": "JoKing",
+      "content": "@\"zara\"#p300184 https://fer.studosi.net/d/6874-parpro-izvedba-20212022/157\n\nPonoć je",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300208": {
+      "poster": "marta7575 (user7575)",
+      "content": "@\"Baksuz\"#p300194 Ni ja ne mogu",
+      "votes": {
+        "upvoters": [
+          "Baksuz"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300212": {
+      "poster": "Rope (Rops)",
+      "content": "@\"Baksuz\"#p300194 Isto je i meni, ne znam znaci li to da onda moramo na nadoknadu ili ce u meduvremenu organizirati neke dodatne termine",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300216": {
+      "poster": "Baksuz",
+      "content": "@\"Rops\"#p300212 Sad sam bio kod njega, kaže da je moguće da se popunilo. Reka je da će kasnije oslobodit još mjesta za prijavu lab5 burze. Također, reka je da je predaja do 23:59 pa eto da znate.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Kasperinac",
+          "Rene",
+          "Rope (Rops)",
+          "feel_d_boot (iNut)",
+          "fraki",
+          "marta7575 (user7575)",
+          "mmmmDa (Ban Levačić)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300218": {
+      "poster": "steker",
+      "content": "@\"Baksuz\"#p300216 jel odabir grupe isto do ponoc?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300223": {
+      "poster": "grana2",
+      "content": "Ako nekome u Z3 nikako ne zeli dobro izracunati kroz iteracije, provjeri jel ti boundary ostaje konstantan. Njega se ne mijenja.\n\nVizualni primjer, racunate promjenu za cijelu matricu, ali kopirate samo A pozicije u psi.\n\nB B B B B B\n\nB A A A A B\n\nB A A A A B\n\nB B B B B B\n\nI napomena za buduce generacije, tko god ima nvidia grafu nek to iskoristi. CUDA + python je bogom dano za ovaj labos.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "feel_d_boot (iNut)",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300239": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"wLkR-74159\"#p300133 \n\nOprosti što tek sad odgovaram, al meni je isto bilo -1 kad sam krivo definira put do kernel datoteke. Provjeri da ti ne stoji ../ umjesto ./ odnosno obratno ako ti je kernel file u istom folderu kao cpp/py file iz kojeg pokrećeš program.\n\nNe znam jel ovo moje rješenje al evo lista error kodova za OpenCL 1.2. (starija verzija al poslužit će valjda) za buduće paćenike: https://stackoverflow.com/questions/24326432/convenient-way-to-show-opencl-error-codes",
+      "votes": {
+        "upvoters": [
+          "wolfs_123 (wLkR-74159)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300244": {
+      "poster": "Rene",
+      "content": "Koliko brzo van CFD radi paralelno? Jeste minjali G i L ili? Meni s G = (m+2, n+2) i L defaultnim radi skoro istom brzinom kao slijedni? Isprobavao sam i da ista dretva obradi više elemenata ali nema značajnog ubrzanja",
+      "votes": {
+        "upvoters": [
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300260": {
+      "poster": "dora (AE)",
+      "content": "burza grupa je ponovno otvorena",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300264": {
+      "poster": "Daeyarn",
+      "content": "@\"Rene\"#p300244 ja sam radio s pyopencl, paralelno mi traje 25 min, a slijedno mi je bilo oko 90 minuta ako se dobro sjecam\n\nedit: prosjecno trajanje iteracije petlje za paralelno mi je 1.55 sekundi, a za slijedno  5.48 sekundi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300268": {
+      "poster": "Jokke",
+      "content": "@\"Rene\"#p300244 Slijedno 15 sek po iteraciji, paralelno 0.04 sek. Ili sam ja bog paralelizacije ili sam nes sjebo",
+      "votes": {
+        "upvoters": [
+          "gladiator",
+          "strole55 (Sokol)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "--- ( 🤡 )",
+          "Ardura (Maddy)",
+          "Daeyarn",
+          "Rene",
+          "Tone",
+          "anon00",
+          "feel_d_boot (iNut)",
+          "gladiator",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300269": {
+      "poster": "Rene",
+      "content": "@\"Jokke\"#p300268 \n\n@\"Daeyarn\"#p300264 \n\nJel koristite njihov kod za slijedno? Jer meni i slijedni i paralelni traju cca. 2min za 1000 iteracija",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300270": {
+      "poster": "Daeyarn",
+      "content": "@\"Rene\"#p300269 da, samo sam pretipkao njihov kod u python",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300285": {
+      "poster": "Reznox",
+      "content": "@\"Jokke\"#p300268 MOLIM",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300288": {
+      "poster": "Reznox",
+      "content": "@\"Jokke\"#p300268 Meni traje 0.5 sa svim paraleliziranim al mi se errori zeznu (krivac je ova petlja kad ju paraleliziram)\n\n![](assets/2022-05-31/00006.png)\n\nPokusavam skuzit kako da nju tocno postavim, najjednostavnija je a jedina me zeza hahahahaha",
+      "votes": {
+        "upvoters": [
+          "Bisolvon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300292": {
+      "poster": "Bisolvon",
+      "content": "@\"Reznox\"#p300288 Meni ta copy_back petlja uzme 80% trajanja ako nije paralelizirano. Kad probam paralelizirat dolaze mi krivi errori isto.",
+      "votes": {
+        "upvoters": [
+          "Reznox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300293": {
+      "poster": "Reznox",
+      "content": "@\"Bisolvon\"#p300292 Da e potpuno mi nejasno, trebala bi biti \"prakticki\" ista kao ove ostale al nije mi jasno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300295": {
+      "poster": "Bisolvon",
+      "content": "@\"Reznox\"#p300293 Kad promijenim u kernelu iz double u float baca drugaciji krivi error. Neka zajebancija s tipovima podataka i pointerima. Unlucky.",
+      "votes": {
+        "upvoters": [
+          "Reznox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300353": {
+      "poster": "Reznox",
+      "content": "Kako predati ovo? Vidim da su Lab4 i Lab5 burze samo otvorene",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300356": {
+      "poster": "[deleted]",
+      "content": "je li okej ako se u 3. greška malo smanji? bila je cca 0.25 na slijednom, a sad je 0.18, pa nisam sigurna ak sam nekaj krivo napravila\n\nEDIT: ovo je za jednu iteraciju naravno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300369": {
+      "poster": "niknik",
+      "content": "@\"Reznox\"#p300353 Komponente kolegija -> Domaće zadaće -> 3. dz",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300380": {
+      "poster": "Reznox",
+      "content": "@\"niknik\"#p300369 Sry krivo sam reka, kako biramo grupu, esu lab4 i lab5 za nadoknade ili? Vidim da na burzi ima samo njih",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300387": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@\"Reznox\"#p300380 lab4 ako predajes 1 vjezbu, lab4 i lab5 ako predajes 2",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300388": {
+      "poster": "Reznox",
+      "content": "@\"MA\"#p300387 Ako predajem 3.? haha :')",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "--- ( 🤡 )",
+          "Daeyarn"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300390": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"Reznox\"#p300388 jednu i dvije, ne prvu i drugu :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300391": {
+      "poster": "Reznox",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p300390 Smooth brain moment",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300393": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"bb99\"#p300034 jesi usporedio mozda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300395": {
+      "poster": "[deleted]",
+      "content": "Je li normalno da se greška promijeni za jednu iteraciju nakon pararelizacije? Konkretno, nakon paralelizacije bnorma mi je greška porasla s cca 0.25 na cca 0.34, ali ne vidim gdje bi mogla biti moja greška.\n\nPrije toga sam paralelizirala još neke stvari i greška je ostala 0.25.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300404": {
+      "poster": "Reznox",
+      "content": "@\"Aimée\"#p300395 Mozda imas gresku u dimenzijama koje saljes/koristis unutar kernela",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300412": {
+      "poster": "MsBrightside",
+      "content": "meni je greska  u trecem cijelo vrijeme 0, jel ima jos netko da mu se to dogada",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300413": {
+      "poster": "gladiator",
+      "content": "kako generirati random broj u opencl-u?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300416": {
+      "poster": "Daeyarn",
+      "content": "@\"MsBrightside\"#p300412 jel imas postavljeno checkerr na 1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300425": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"gladiator\"#p300413 najbolje ga je poslat jer za generiranje treba nekakva [magija](https://stackoverflow.com/questions/9912143/how-to-get-a-random-number-in-opencl)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300428": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@\"MsBrightside\"#p300412\n\nMeni se događalo kad bih slučajno staro stanje pregazio novim (ili obrnuto), pa bih u funkciju za izračun greške i pod staro, i pod novo stanje poslao iste podatke.",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300429": {
+      "poster": "Rope (Rops)",
+      "content": "@\"MsBrightside\"#p300412 Meni isto, pokusavam paralelizirati jacobistep i vec nakon dvije iteracije greska je 0. Jesi mozda uspjela skuzit u cem je stvar?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300435": {
+      "poster": "MsBrightside",
+      "content": "@\"Daeyarn\"#p300416 ma probala sam i sa chekerrom i sa bez, izgleda da mi u jacobi kernelu sve budu 0 umjesto vrijednosti",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300436": {
+      "poster": "MsBrightside",
+      "content": "@\"Rops\"#p300429  @\"MsBrightside\"#p300435",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300438": {
+      "poster": "MsBrightside",
+      "content": "@\"std::popcount\"#p300428 a ne bi trebalo bit do toga jer nikad ne mijenjam oba prije racunanja greske",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300445": {
+      "poster": "MsBrightside",
+      "content": "Kod kreiranja buffera koje mem_flags koristite",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300446": {
+      "poster": "SuperSaiyano",
+      "content": "@\"gladiator\"#p300413 https://github.com/bstatcomp/RandomCL imaš ovdje kod koji mozes iskoristiti. Ja sam doslovno copy paste jednu od inacica, čak ima i primjer sa računanjem broja pi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300448": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@\"SuperSaiyano\"#p300446 \n\nZa što vama trebaju slučajni brojevi, zar ne trebamo ovo paralelizirati (piše \"tekst programa na kraju poglavlja 2. MPI u skripti\"):\n\n![](assets/2022-05-31/00009.png)",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300450": {
+      "poster": "Jaster111",
+      "content": "Ne kužim, meni već negdje oko 10. iteracije bude error otprilike kao i u njihovom primjeru nakon 1000 i onda se samo nastavi smanjivat prema nuli... jel se netko suočio s tim i neki help?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300459": {
+      "poster": "SuperSaiyano",
+      "content": "@\"std::popcount\"#p300448 Da u pravu si, nisam ni čitao i pomislio na drugi algoritam sa nasumičnim brojevima. \"ali također trivijalno paralelan\", možda jeste veća točnost rješenja ali sam nešto uradio, neće mi valjda sad ne priznati zadatak.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300466": {
+      "poster": "--- ( 🤡 )",
+      "content": "kako osigurati da kernel radi i ako je N < G ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300467": {
+      "poster": "Jaster111",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p300466 to i mene zanima pls help ppl",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300469": {
+      "poster": "--- ( 🤡 )",
+      "content": "također zad1 \"potrebno je odrediti optimalne parametre G i L koji daju najbrže izvođenje\"\n\nkoji bi to bili parametri?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300471": {
+      "poster": "ZalutaliStudent",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p300469 Ja sam testirao s razno raznim parametrima, i zapisao rezultate. Nasao sam optimalno od tih mojih testiranih (za 2 na 21, dakle 2 milijuna podataka) zadatak mi se izvrsi za 50ak sekundi i pronade 155 613 prostih brojeva. Ako se stavi G=a_np.shape, a L=None onda traje 80ak sekundi. Znaci uspio sam ga malo smanjiti. Moji optimalni parametri su G=(N/local_size)*6, a local_size je local_size = prg.prim.get_work_group_info(cl.kernel_work_group_info.WORK_GROUP_SIZE, device)\n\nMIslim da je poanta samo se poigrat s G i L da vidis kak funkcioniraju, ne trebas sad stvarno nac najoptimalnije i najbrze izvodenje moguce.",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300472": {
+      "poster": "ZalutaliStudent",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p300466 Ja bi radije osigurao da uvijek N bude veci od G. Cini se jednostavnije nego osiguravat da kernel radi za N < G.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300474": {
+      "poster": "Svudec",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p300466 šalješ kernelu parametar N iz hosta i onda u kernelu staviš if njegov globalni index < N računa, inače samo return.\n\nTo ti rješava i da N mora bit djeljiv sa G. Znači dio threadova neće raditi ništa, al nema drugog načina",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300475": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"Svudec\"#p300474 da al kak onda osigurati da neke dretve mogu raditi N/G sto je dio zadatka? jer tako dobijem 0",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300476": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Samo napravite da vam vrati netočan broj prostih brojeva neovisno o L-u i G-u, bitan je pristup, a ne točnost",
+      "votes": {
+        "upvoters": [
+          "Svudec"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300477": {
+      "poster": "Svudec",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p300469 Ja sam pronašao da je za moj procesor u dokumentaciji najbolji L=64 jer procesor ima fizički 16 threads, naredbe se izvode u 4 koraka i onda je to efektivno 64 threads istovremeno.\n\nI onda staviš G takav da uvijek bude djeljiv sa L i što veći (isprobavaj samo potencije broja 2).\n\nNpr meni je za prvi N= 2 na 25, G= 2 na 19, L=64 i to se izračuna za cca 3.8 sekunde",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300479": {
+      "poster": "Svudec",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p300475 A mislim da nije toliko bitno kao što je koolega rekao. Ja šaljem u kernel N, G i broj koliko svaki thread mora obraditi zadataka (N/G zaokruženo na veći cijeli broj) => count\n\nOnda svaki kernel zavrti petlju od 0 do count i računa elemente (globalni indeks dretve + (i * G)) naravno samo ako nije veće od N.",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300484": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"Svudec\"#p300477 meni se kernel obradi u 0.06s i onda mi `cl.enqueue_copy(queue, counter, device_counter)` traje jako dugo... sto ne razumijem zasto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Svudec"
+        ]
+      }
+    },
+    "300500": {
+      "poster": "Reznox",
+      "content": "Moramo li ista pripremit za odgovaranje na labosu, npr mjerenja i to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300509": {
+      "poster": "Lukak",
+      "content": "kako ste implementirali taj L?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300510": {
+      "poster": "guzmanov_brk (aybe)",
+      "content": "Meni sada javlja ovaj error za sva 3 zadatka iako su se prva 2 dosad normalno izvrsavala bez ikakvih problema. Sad sam isao testirati 3. i eto ga, \"sranje kroz gusto granje\" sta bi rekli.\n\n![](assets/2022-05-31/00014.png)\n\nZna li itko zasto se to dogodilo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300515": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"aybe\"#p300510 \n\nSlične probleme imam di ne minjam kid nego iskompajliram s istom naredbom u terminalu i izbaciva mi druge brojke kad pokrenem ili vrati samo nule. Idemo po tih nula zlatnih bodova.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "guzmanov_brk (aybe)"
+        ]
+      }
+    },
+    "300523": {
+      "poster": "guzmanov_brk (aybe)",
+      "content": "@\"iNut\"#p300128 i ja sam napravio po tvome i radilo mi dosad. sad odjednom nece seronja pokrenut, nego baca opet taj -1001 error",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "feel_d_boot (iNut)"
+        ]
+      }
+    },
+    "300528": {
+      "poster": "miss_anthropocene (neunist.iva)",
+      "content": "jel ima tko da mu je u 3. zadatku error 0 kad paralelizira? ili da mu se u psitmp ne mijenjaju vrijednosti u kernelu",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300530": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"Kernel Panic\"#p300528 \n\ndosl se jebem s tim problemom već 4 sata, al sam odusta i reka da mi gleda kako se vrijeme izvršavanja ubrzalo i nadat se najboljem. Ne znam na čemu radiš al intel proc i opencl nisu za mene. triba sam na agronomiju",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)",
+          "miss_anthropocene (neunist.iva)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300584": {
+      "poster": "guzmanov_brk (aybe)",
+      "content": "ma isto, intel proc i opencl. jebiga ja odustao i uploadao ovo sto imam dosad. jedino sta ti mogu rec ono za tvoj problem da ti izbaciva druge brojke svaki put je da si nesto sa memorijom sjebao. dakle recimo ne koristis atomicko zbrajanje nego obicno (+=) pa onda pitaj ćelavog sta ce se tu dogodit.",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300585": {
+      "poster": "Dorinacoko (Podvlaka_)",
+      "content": "Koliki bi udio mogao imati 3. zadatak glede bodova? Ne znam da li je negdje spomenuto...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300589": {
+      "poster": "nnn (dinoo)",
+      "content": "su rekli šta za predaju labosa bez trećeg zadatka? Neda mi se pisat to sljedeći tjedan..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300591": {
+      "poster": "ZalutaliStudent",
+      "content": "@\"Reznox\"#p300288 \n\n@\"Bisolvon\"#p300292 \n\n@\"Reznox\"#p300293 Jeste li slucajno skuzii di je greska? Ja vec 2 sata gledam samo to, imam identican problem, kad koristim paralelizirano krivu gresku izbacuje, a ovaj obicni slijedni kod je spor, ali s tocnom greskom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300593": {
+      "poster": "Haki",
+      "content": "Jel i vama na ferku nema mjesta u burzi grupa?",
+      "votes": {
+        "upvoters": [
+          "Tinx (pingvin)",
+          "alp (monte)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300595": {
+      "poster": "ZalutaliStudent",
+      "content": "@\"Haki\"#p300593 Napisali su da je reko prof da ce otvorit nove grupe i termine.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300596": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"Haki\"#p300593 \n\nJa sam se prije pola sata upisa za sutra i 3.6. za obranu. Nije se valjda već popunilo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300601": {
+      "poster": "Haki",
+      "content": "@\"ZalutaliStudent\"#p300595 da vidio sam, al evo sve je puno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300611": {
+      "poster": "samurai (samuraj)",
+      "content": "@\"Haki\"#p300601 \n\nja sam se prijavio onda pod Lab 5 pošto nema slobodnih grupa u Lab 4 jer jedino tamo ima slobodnih grupa (iako predajem samo jednu vježbu)",
+      "votes": {
+        "upvoters": [
+          "Haki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300623": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "Prijaviti se za 3. labos sa 1.5 zadatka ispravno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300628": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"wLkR-74159\"#p300623 nemas kaj za izgubit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300630": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "Predao sam ali se nisam uspio prijaviti ni u jednu grupu, sve su bile zauzete, what now?",
+      "votes": {
+        "upvoters": [
+          "Svudec"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300695": {
+      "poster": "--- ( 🤡 )",
+      "content": "Samo info da ne daju predati bez 3. Zadatka :S",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Daeyarn",
+          "Jale (čakijale)",
+          "miss_anthropocene (neunist.iva)"
+        ]
+      }
+    },
+    "300697": {
+      "poster": "Svudec",
+      "content": "Jel ima netko da se prijavio u grupu, a nema treći zadatak pa da uletim umjesto njega?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "--- ( 🤡 )"
+        ]
+      }
+    },
+    "300698": {
+      "poster": "miss_anthropocene (neunist.iva)",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p300695 a sta ak smo ga napisali al krivo radi? xd",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)",
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300699": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"Kernel Panic\"#p300698 tak sam i ja, ali sam danas predao drugi labos tek pa ne znam. Ako nekome prođe tak nek javi pls",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300701": {
+      "poster": "alp (monte)",
+      "content": "Ima netko tko je predao dvije zadaće ovaj tjedan, a uspio uhvatiti samo jedan termin na burzi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300708": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "@\"😎🚬😎🚬😎🚬\"#p300699 sta su pitali za drugi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300709": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"Peter Jordanson\"#p300708 prvo da pokrenes i dovedes bilo koga do pobjede, prokomentiras mjerenja i grafove zasto su takvi kakvi jesu (npr. ja imam 6 proc. pa mi ubrzanje postane ravno pa sam morao objasniti zasto), onda po kodu kako si napravio određene stvari (najviše oko generiranja poslova i distribucije), jos me pitala zasto uopce idemo do razine 2 i 49 poslova, a ne npr samo 7 (zbog load balancinga)",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)",
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300715": {
+      "poster": "Bisolvon",
+      "content": "Jeli netko odgovarao danas 3dz, sto pitaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300718": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"Bisolvon\"#p300715 pokrećeš redom zadatke, pita kak si paralelizirao u kernelu. kako šalješ podatke u kernel, što je buffer, što je enqueue_copy i što radi. koje sve funkcije si paralelizirao u 3. zadatku i kako. pokrenuti programe sa različitim brojem dretvi (ak već nemate složeno, ja sam imao ali se žalila jer nije isprva vidjela da imam, hjao). jel counteri (atomički i +=) trebaju bit isti (navodno trebaju, ne znam kak, kad sve dretve pristupaju istoj varijabli, a kod atomičke ih se slijedno rasporedi tak da dretve ne pišu u isto vrijeme, trebao sam countere napravit ko polje da svaka dretva ima svoj indeks i tamo piše svaka svoje, dobro da je pisalo u zadatku da tak treba). što mi je barrier u kernelu i zašto je bitan (da dretve ne pišu u neke garbage vrijednosti umjesto onih pravih, nule, ako zbrajam ko u recimo 2. zadatku međurezultate). i kako pozivam programe i funkcije kernela. 5 min ispitivanje. nisam imao one lokalne dretve, što već, tak da se i bez toga može proć",
+      "votes": {
+        "upvoters": [
+          "Bisolvon",
+          "Daeyarn",
+          "Kasperinac",
+          "MsBrightside",
+          "indythedog",
+          "matt (Matt)",
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300731": {
+      "poster": "miss_anthropocene (neunist.iva)",
+      "content": "@\"Kernel Panic\"#p300698 pustili su me 👍🏿",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Bisolvon",
+          "Daeyarn",
+          "Fica (Prof)",
+          "Jaster111",
+          "MsBrightside",
+          "Rope (Rops)",
+          "Uchenikowitz (Učečuču)",
+          "Unity (Sgt. Forge)",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "feel_d_boot (iNut)",
+          "guzmanov_brk (aybe)",
+          "indythedog",
+          "matt (Matt)",
+          "steker",
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300733": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"Kernel Panic\"#p300731 amin",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "miss_anthropocene (neunist.iva)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300735": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"Kernel Panic\"#p300731 \n\nima boga",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "guzmanov_brk (aybe)",
+          "miss_anthropocene (neunist.iva)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300777": {
+      "poster": "steker",
+      "content": "Nova pitanja s blica:\n\n-red tenzora koji vraca get features iz SimpleMetricEmbedding\n\n-ako imamo K klasa i u svakoj klasi M primjera, koliko je pozitivnih a koliko negativnih primjera za neko sidro (tu msm da moramo pazit da se za pozitivne ne smije uzet isto sidro tako da je to M-1)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300937": {
+      "poster": "nnn (dinoo)",
+      "content": "@\"ZalutaliStudent\"#p300591 jesi ti skužio u međuvremenu? Imam isti problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300938": {
+      "poster": "nnn (dinoo)",
+      "content": "@\"dinoo\"#p300937 @\"ZalutaliStudent\"#p300591 @\"Reznox\"#p300288 @\"Bisolvon\"#p300292  znaci 4 sata gledam, ako netko naleti na isti problem:\n```\ndev_psi = cl.Buffer(ctx, cl.mem_flags.WRITE_ONLY , psi.nbytes)\n```\nstvar je da ovdje se psi stavlja kao `write_only` i onda se boundary vrijednosti ne  inicijaliziraju prilikom izvršavanja petlje odnosno:\n```\nA A A A A              A je undefined\nA B B B A              B zapisemo u loop-u\nA B B B A\nA B B B A\nA A A A A\n```\n\ni onda kada citamo taj buffer nazad u psi sa `cl.enqueue_copy(queue, psi, dev_psi).wait()` imamo undefined vrijednosti, ugl ovo treba biti:\n```\ndev_psi = cl.Buffer(ctx, cl.mem_flags.READ_WRITE | cl.mem_flags.COPY_HOST_PTR, hostbuf=psi)\n```",
+      "votes": {
+        "upvoters": [
+          "AnamarijaM (MA)",
+          "Smolaa",
+          "Svudec",
+          "ZalutaliStudent",
+          "matt (Matt)",
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300939": {
+      "poster": "ZalutaliStudent",
+      "content": "@\"dinoo\"#p300938 Legendo hvala. Ne znam kak si to uspio skuzit al svaka cast, sad mi radi dobro. I s paraleliziranim jacobian i tom copy funkcijom iteracija mi traje 0.03s, sta za 1000 iteracija bude pol minute, tak da mislim da ne trebam dalje nista paralelizirat.",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301061": {
+      "poster": "MsBrightside",
+      "content": "@\"Olive Oil\"#p300718 jel treba i treci sa razlicitim brojem dretvi ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301064": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "S kojom atomickom funkcijom se ovo rjesava ovaj sum ?",
+      "votes": {
+        "upvoters": [
+          "mini (Earthling)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301065": {
+      "poster": "Bisolvon",
+      "content": "@\"MsBrightside\"#p301061 Ja sam samo onaj unutarnji for loop u jacobistep pretvorio u n dretvi, nije se nitko zalio.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301069": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"MsBrightside\"#p301061 nisam siguran da je baš nužno, al ja sam sa 1, 64 i 256 dretvi za scalefactor 64 i dvije iteracije jer je sve u pythonu pa da mogu pokrenut bez da se čeka predugo",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301074": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p301064 \n```\nvolatile __global int *atomic_counter_pointer = &atomic_counter[gid];\nfor (i = gid; ...) {\n    ...\n    atomic_inc(atomic_counter_pointer); // ova funkcija postoji\n    ...\n}\n```",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301079": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Kolko dugo vam treba  u prvom zad da se izvrsi 1 milja podataka ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301089": {
+      "poster": "BillIK",
+      "content": "ima netko tko je uspio ovo na linuxu u pythonu i koristi cpu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301099": {
+      "poster": "Reznox",
+      "content": "@\"dinoo\"#p300938 Oh ja tek ovo vidim, zaboravia sam vam raditi da sam popravia odma nakon posta, mozak sprzen my bad",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301103": {
+      "poster": "Reznox",
+      "content": "@\"Reznox\"#p301099 javiti*",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301106": {
+      "poster": "strole55 (Sokol)",
+      "content": "Traze li mjerenja na labosu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301107": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@\"Sokol\"#p301106 mene nisu pitali za mjerenja, ali ne skodi napraviti... nije to puno posla",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301123": {
+      "poster": "indythedog",
+      "content": "Ako ste računali ubrzanje, što ste uzeli za broj procesora prilikom paralelne izvedbe? G/L možda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301125": {
+      "poster": "sheriffHorsey",
+      "content": "@\"indythedog\"#p301123 G * L",
+      "votes": {
+        "upvoters": [
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301130": {
+      "poster": "Skenk",
+      "content": "![](assets/2022-06-03/00000.png)\n\nJe li imao tko ovakav problem? Za koji god local work size postavio osim None mi ne radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301139": {
+      "poster": "Svudec",
+      "content": "@\"Skenk\"#p301130 G ti mora biti djeljiv sa L",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301148": {
+      "poster": "Lukak",
+      "content": "@\"indythedog\"#p301123 G je ukupni broj procesora. L je broj orocesora u odredenoj grupi. Npr. ako je G=4, L=2 imas procese:\n\n1 2 | 3 4",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301161": {
+      "poster": "indythedog",
+      "content": "@\"Lukak\"#p301148 Ima smisla, ali recimo ja u 1 zadatku imam G = 32768. Sad znam da GPU-ovi imaju puno vise multiprocesora nego CPU, ali 32768 mi čak i za GPU zvuci puno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301172": {
+      "poster": "Lukak",
+      "content": "@\"indythedog\"#p301161 nije, moze biti i puno vise. imas funkciju koja ce ti i reci maksimalni broj procesa, ne znam ju napamet nazalost",
+      "votes": {
+        "upvoters": [
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301178": {
+      "poster": "neksi (filip)",
+      "content": "@\"Multimedija\"#p299087 Kako odrediš veličinu za G? Jel to treba postaviti na maksimalni broj koji G može biti ili samo neki bezveze broj npr 1000?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301188": {
+      "poster": "Skenk",
+      "content": "@\"Svudec\"#p301139 \n\nZnam ali nazalost ne radi kako god, napravio sam bez lokalne grupe",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301202": {
+      "poster": "neksi (filip)",
+      "content": "jel se u c++ ovako radi povecavanje s atomic int: atomic_inc(B) , ako je B -> global int *B?  Iz nekog razloga mi uvijek vraća count 0, a ne vidim grešku nigdi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301265": {
+      "poster": "DoktorKanye",
+      "content": "Koje ste petlje odlučili paralelizirati? Meni se povraca od ovog labosa.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "steker"
+        ]
+      }
+    },
+    "301274": {
+      "poster": "Lukak",
+      "content": "@\"DoktorKanye\"#p301265 Kljucan rezultat ce ti dati paralelizacija ove petlje:\n\n        for i in range(1, m+1):\n            for j in range(1, n+1):\n                psitmp[i*(m+2)+j]=0.25*(psi[(i-1)*(m+2)+j]+psi[(i+1)*(m+2)+j]+psi[i*(m+2)+j-1]+psi[i*(m+2)+j+1])\n\nmozes ih teoretski paralelizirati sve, ali ova je kljucan krivac za sporo izvrsavanje tako da nju moras da bi dobio neke pametne rezultate",
+      "votes": {
+        "upvoters": [
+          "DoktorKanye",
+          "TheCrimsonChin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301281": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@\"Sokol\"#p301106 mene su trazili da pokazem grafove ubrzanja i ucinkovitosti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301327": {
+      "poster": "Skenk",
+      "content": "Vam se izvede ovaj 3. u nekom razumnom vremenu kad koristite zadane ulazne parametre?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301334": {
+      "poster": "Polifem",
+      "content": "Treći zadatak - paralelno napravio jacobi , ali kako bi rijesio problem da mi error postaje 0 nakon 1. iteracije moram u svakoj iteraciji radit novi buffer A koji mi pokazuje na \"psi\"- sad mi je paralena izvedba skoro pa ista kao serijska. Ako je netko imao sličan problem da je riješio na pametniji način ...C++ implementacija (kostur++)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301335": {
+      "poster": "Polifem",
+      "content": "@\"Polifem\"#p301334 \n\nhmmm naravno sad odmah isprobao nešto i radi bez stvaranja buffera :) ... treba staviti CL_MEM_USE_HOST_PTR, za buffer iz kojeg se čitaju podatci",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301395": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Jel u drugom zadatku treba koristiti ovu formulu za PI ![](assets/2022-06-04/00011.png)\n\nili mogu ono s dva random broja ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301403": {
+      "poster": "Bisolvon",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p301395 Mislim da pise u tekstu zadatka da se treba to koristiti.  Tako ti je i lakse , ja sam samo taj dio kod copy pasto u kernel.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301404": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Bisolvon\"#p301403 tocnije mi ispada s onim nacinom , s ovim mi nije tolko precizan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301405": {
+      "poster": "Bisolvon",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p301404 Imaj onda oboje spremno za pokazat, s obzirom da je zadnja predaja a i sva tri zadatka navodno moraju radit da bi \"predao\" vježbu i ne pao predmet.",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301412": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Jel vam se uspjelo u trecem cfd izvrtit u nekom razumnom vremenu na pythonu ? il ste morali smanjivat paramtre one 64 i 1000 ili ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301420": {
+      "poster": "Bisolvon",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p301412 1000, 64 bez paralelizacije je meni bilo nekih 50min, kad sam paralaliziro jacoba je palo na nekih 20. Na predaji sam pokazivao 1000, 4. Bitno samo da je onaj error isti u slijednoj i paralelnoj inacici.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301423": {
+      "poster": "nnn (dinoo)",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p301412 meni je 50s paralelizirano (64, 1000), svaki dupli for loop mi je paraleliziran, intel integrirana graficka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301467": {
+      "poster": "neksi (filip)",
+      "content": "Jel se u 3. zadatku u svakoj iteraciji mora stvarat buffer i postavljat argumente za kernel ako paraleliziramo jacobistep?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301655": {
+      "poster": "MOXY",
+      "content": "jesu u 3. zadatku m i n zapravo G i L?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301657": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "1 records have invalid timestamps due to insufficient device buffer space. You can configure the buffer space using the option --device-buffer-size.\n\nKako ovo rijesiti ako koristim cudu \n3. zad",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301660": {
+      "poster": "DoktorKanye",
+      "content": "Kako da predam ovaj labos ponovno ako sam vec zakljucao labos koji su mi odbili jer nisam imao 3. zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301662": {
+      "poster": "Smolaa",
+      "content": "Moze neki savjet kako paralelizirat jakobijevu funkciju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301663": {
+      "poster": "Smolaa",
+      "content": "@\"Smolaa\"#p301662 I kako bi trebali izgledati bufferi koje saljemo u kernel jer mi nikako nece proradit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301668": {
+      "poster": "Retard00",
+      "content": "@\"Smolaa\"#p301662 \n\nPseudokod za jacobija može biti ovakav:\n\n```\nkernel void jacobi_step(psi, psinew, m, n, threadcount, psi_size):\n\tid = get_global_id(0)\n\trepeats = (int)ceil((float)(m * n) / threadcount)\n\tfor (int iter = 0; iter < repeats; iter++)\n\t\tnumber = id + iter * thread_count\n\t\tif (number >= psi_size)\n\t\t\tbreak\n\t\ti = (number % m) + 1\n\t\tj = ((number / m) % n) + 1\n\t\t\n\t\tpsinew[i * (m + 2) + j] = 0.25 * (psi[(i - 1) * (m + 2) + j] + psi[(i + 1) * (m + 2) + j] + psi[i * (m + 2) + j - 1] + psi[i * (m + 2) + j + 1])\n\t\n\treturn\n```\n\nZa buffere se može stavit `CL_MEM_READ_WRITE | CL_MEM_COPY_HOST_PTR` radi jednostavnosti i veličinu (m+2) * (n+2) * sizeof(double) za varijable psi i psitmp.",
+      "votes": {
+        "upvoters": [
+          "Smolaa",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301670": {
+      "poster": "Smolaa",
+      "content": "@\"Retard00\"#p301668 Hvala !",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301703": {
+      "poster": "Fikalo",
+      "content": "@\"Polifem\"#p301335 E kak si uspio to napravit, ja imam CL_MEM_USE_HOST_PTR u bufferu iz kojeg citam, ali ako ga ne refresham pri svakom loopu mi error postaje 0.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301712": {
+      "poster": "tempest",
+      "content": "@\"Peter Jordanson\"#p301657 \n\nNisam više siguran dal je to ta greška jer se ne sjećam koji je točno ispis greške meni bio, ali provjeri dal u `cudaMalloc()` i `cudaMemcpy()` stavljaš točnu veličinu, za Psi bi trebala biti `(m + 2) * (n + 2) * sizeof(double)`",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301716": {
+      "poster": "Polifem",
+      "content": "@\"Fikalo\"#p301703 \n\nPrije petlje za iteraciju postavljam buffere i kernel.setArgs i sve ono za CL, onda u petlji za iteraciju pozivam \n\nqueue.enqueueNDRangeKernel , finish , i enqueueReadBuffer koji znaci obavlja jacobi, a nakon toga se vrti sve ono iz cfd sto je ispod jacobi.",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301730": {
+      "poster": "neksi (filip)",
+      "content": "@\"Polifem\"#p301716 meni je uvik greska 0 ovako",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301734": {
+      "poster": "Polifem",
+      "content": "@\"filip\"#p301730 \n\nnez, paralelno si napravio samo jacobi ili i copy_back ? jer npr. ako probam i copy back paralelno onda mi je greska kriva a nez zašto jer bi trebala bit ista stvar. tako da radim samo  jacobi paralelno s  CL_MEM_USE_HOST_PTR i to mi funkcionira, smanji mi za 10 sek izvođenje.",
+      "votes": {
+        "upvoters": [
+          "Fikalo",
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301739": {
+      "poster": "neksi (filip)",
+      "content": "@\"Polifem\"#p301734 radia sam samo jacobi, jesi koristia samo CL_MEM_USE_HOST_PTR ili još neke druge zastave?",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301751": {
+      "poster": "JoKing",
+      "content": "@\"Polifem\"#p301734 Imao sam sličan problem, kad napravim svoju verziju copy dobijem nekoliko puta manju grešku, i na kraju skužim da sam ja kopirao čitavu listu, a i u copy treba staviti ogradu da se ne kopiraju rubni elementi \"matrice\", kao i za računanje jacobia i onda dobivam točno rješenje pa provjeri i ti imaš li istu situaciju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301757": {
+      "poster": "Polifem",
+      "content": "@\"filip\"#p301739 \n\n`Buffer A = Buffer(context, CL_MEM_READ_ONLY | CL_MEM_USE_HOST_PTR, (m + 2) * (n + 2) * sizeof(double), &psi[0]);`\n\nSamo ovo",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301764": {
+      "poster": "Fikalo",
+      "content": "@\"Polifem\"#p301757 i ja imam tako, al ak ne napravim to opet u svakoj petlji mi i dalje bude error 0",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301772": {
+      "poster": "TheCrimsonChin",
+      "content": "Je li netko tko je radio u cudi uspio napravit atomicAdd za double vrijednosti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301773": {
+      "poster": "JoKing",
+      "content": "@\"TheCrimsonChin\"#p301772 Nisam radio u cudi pa ne mogu reći, ali jesi probao [ovo](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#atomic-functions)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301791": {
+      "poster": "BK-",
+      "content": "Kod mi samo vrati exited with code -1073741676. Nešto je do openCL -a. Iz kostrur++.cpp sam kopirao stvari za pokretanje kernel programa i imam jednostavnu kernel funkciju koja računa jednu iteraciju psinew. Ne dobiva errore da mi ne valja dimenzija ili nesto slicno. Ima li netko ideju sto bi moglo bit krivo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301798": {
+      "poster": "AK10 (endyyyy)",
+      "content": "jel mogu proc labos ako imam kod za 3. koji ne radi al eto imam nesto napisano, a prva 2 mi rade dobro?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301799": {
+      "poster": "Bisolvon",
+      "content": "@\"endyyyy\"#p301798 Mene su prvo pitali dali sam napravio treci, koliko sam shvatio ne prihvacaju predaju ako nemas treci.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301801": {
+      "poster": "TheCrimsonChin",
+      "content": "@\"JoKing\"#p301773 da, funkcionira za integere, ali neće mi se kompajlirat ako zbrajam doublove",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301803": {
+      "poster": "TheCrimsonChin",
+      "content": "@\"endyyyy\"#p301798 kad sam bio na predaji drugog labosa čuo sam da asistentica nekom liku govori nešto tipa \"bitno mi je da ste svaki zadatak pokušali riješit, a sad je li funkcionira...\"",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "BK-",
+          "feel_d_boot (iNut)",
+          "matt (Matt)",
+          "neksi (filip)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "matt (Matt)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301810": {
+      "poster": "tempest",
+      "content": "@\"TheCrimsonChin\"#p301801\n\nJa sam prvo probao kopirati kod za double atomicAdd s linka @\"JoKing\"#p301773, isto mi nije htjelo funkcionirati pa sam funkciju preimenovao u atomicAdd_double, ali onda mi je izvođenje trajalo duže nego serijski.\n\nNa kraju sam uspio tako da sam definirao unsigned long long int varijablu za npr. Pi, koja ce se slati u kernel funkciju i nad kojom ce se izvodit atomicAdd. U kernel funkciji sam onda kalkulacije napravio koristeći double varijable i prije dodavanja u atomicAdd rezultat pomnozio sa 10 na veliku potenciju i castao u unsigned long long int. I na kraju nakon povratka rezultata castao ga u double i podijelio.",
+      "votes": {
+        "upvoters": [
+          "TheCrimsonChin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301823": {
+      "poster": "huhu",
+      "content": "Ima li netko neki konstruktivan hint za 3. zadatak ako se radi u pythonu s OpenCL (tipa da napise neke korake kako imati nesto, ne mora raditi cisto da mogu predat)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301826": {
+      "poster": "TheCrimsonChin",
+      "content": "@\"tempest\"#p301810 Zanimljivo rješenje. Ja sam našo nečiji [repozitorij](https://github.com/treecode/Bonsai/blob/master/runtime/profiling/derived_atomic_functions.h) gdje je nteko implementiro za sve ove tipove što fale pa sam to kopirao. Da znam tko je, častio bih ga",
+      "votes": {
+        "upvoters": [
+          "tempest"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301832": {
+      "poster": "SuperSjajan3",
+      "content": "@\"huhu\"#p301823 Prepisi njihov kod iz c++ u python i samo paraleliziraj n^2 for petlje. Znaci onaj jacobistep, dsquare i copy. Zapravo nije komplicirano, najvise ti je drkanja s tipovima podataka, svi su imali probleme da im je error 0 zbog neke gluposti. Scrollaj gore malo, vjerojatno ces nac sve sta ce te zanimat",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "MsBrightside",
+          "huhu",
+          "matt (Matt)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301875": {
+      "poster": "TheCrimsonChin",
+      "content": "Zna li netko kako includeat cuda header file (.cuh) u .cpp file-u?\n\nKernel funkciju mogu pokrenut samo iz .cu datoteke, ne znam kako da uvežem .cu i .cpp datoteke",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301883": {
+      "poster": "ZalutaliStudent",
+      "content": "@\"SuperSjajan3\"#p301832 Dovoljno je cak samo jacobian i copy, jer ona dsq se pokrece samo u slucaju errora ili u zadnjoj iteraciji, a jacobian i copy se pokrecu numiter * m * n puta. Dakle za 1000  iteracija i m i n 2048 -> 4 milijarde puta.",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301888": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "Paralelizirajte samo jacobian u 3. i nemojte se patit stvarno, dobit cete sve bodove ako vam to radi nema razloga jebat se s ostalim",
+      "votes": {
+        "upvoters": [
+          "Artemis",
+          "Retard00",
+          "Smolaa",
+          "reygrep"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301904": {
+      "poster": "faboche (him)",
+      "content": "![](assets/2022-06-06/00008.png)\n\nJe li itko imao ovu pogresku? Nisam imao problema s prvim i drugim zadatkom, ali ovaj treći nikako da proradi. Cak sam ubacio rjesenje od kolege u njihov kostur i opet mi rezultira ovom greskom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301918": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"faboche\"#p301904 \n\nProvjeri u ovoj dretvi ili u dretvi za 2. labos stavija sam link na SO di je popis svih grešaka koje ti može izaći za OpenCL",
+      "votes": {
+        "upvoters": [
+          "faboche (him)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301944": {
+      "poster": "anon00",
+      "content": "@\"DnkCkv\"#p301888 Relativno se lagano paralelizira i ona //copy back n^2 petlja \n\nBez nje mi je trajalo 4min za 100 iteracija, dakle ~40min za 1000 \n\nKad sam nju dodao onda mi je trajalo 1-2min za 1000 iteracija",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301978": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@\"anon00\"#p301944 vjerujem, ali neces vrtit tamo ni 100 ni 1000 iteracija, ja sam npr pokrenio s 2, yall overthinking this shit",
+      "votes": {
+        "upvoters": [
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301995": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Kaj pitaju na predaju labosa? barem neko pitanje da si znam ponovit haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302005": {
+      "poster": "Jaster111",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p301995 mene pitala tipa šta je context i šta je buffer",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302006": {
+      "poster": "spampers (majmunska boginja)",
+      "content": "mater jebo zašto mi niko nije reko da je rok sinoć a ne danas u podne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302007": {
+      "poster": "steker",
+      "content": "@\"majmunska boginja\"#p302006 ma ionak te niko nece pitat da skines s ferka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302008": {
+      "poster": "spampers (majmunska boginja)",
+      "content": "@\"steker\"#p302007 ma znam al bio bi jako smiješan fail u fotofinišu haha jako smiješan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302039": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Jaster111\"#p302005 koji je odgovor na to",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302204": {
+      "poster": "Jaster111",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p302039 \n\nvjerujem da ti ne treba više, ali za slučaj da će nekom trebat.\n\nJa sam samo rekao kako sam context shvatio kao MPI comm world, a buffer zapravo objekt koji je kao wrapper za objekt kojeg zelimo slat na GPU koji nam omogućava da uopće možemo koristiti taj objekt u paralelnom programiranju.\n\nMožda nije sve sto posto točno, al je asistentici to bilo skroz okej.",
+      "votes": {
+        "upvoters": [
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

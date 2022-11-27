@@ -1,0 +1,394 @@
+{
+  "title": "[SUI] Međuispit - 2020/2021",
+  "creator": "nekomutativna",
+  "slug": "sui-meduispit-20202021",
+  "tags": [
+    "FER",
+    "Sigurnost u Internetu",
+    "Ispiti"
+  ],
+  "posts": {
+    "92929": {
+      "poster": "nekomutativna",
+      "content": "Tema za međuispit iz Sigurnosti u internetu 2020./2021. za razmjenu pitanja i odgovora skupljenih prošlogodišnjih ispita i rješavanje općenitih nejasnoća vezanih uz gradivo.",
+      "votes": {
+        "upvoters": [
+          "HotPotato",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94486": {
+      "poster": "behappy98",
+      "content": "Imaju li igdje stari ispiti?",
+      "votes": {
+        "upvoters": [
+          "BrankoBrancin",
+          "Huginn",
+          "Tratarira",
+          "keykey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96387": {
+      "poster": "HotPotato",
+      "content": "Zna li netko odgovore na ova dva pitanja?\n\n![](assets/2020-11-20/00047.png)\n\n![](assets/2020-11-20/00048.png)\n\nVjerojatno će biti ova pitanja ili varijacije na njih na ispitu, pa bi bilo lijepo kada bi ih riješili.\n\nPitanja su iz ovog fajla: https://github.com/studosi-fer/SUI/blob/master/ispiti/zi/SUI_ZI_2016-17.pdf",
+      "votes": {
+        "upvoters": [
+          "MaIv",
+          "ardi (sprut)",
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96577": {
+      "poster": "Miskina666",
+      "content": "@HotPotato#96387 \n## Prvi - napadi\nDenial of service napadi jer te floodaju s TCP zahtjevima. Prvi napada preko HTTP (port 80) zahtjeva, a drugi ti flooda sve portove TCP zahtjevima. Ako pretpostavimo da je sve s istog računala onda je vjerovatno u prvome napadu korišten IP spoofing pa je prema tome napadačeva adresa 83.129.34.220. \n\n## Drugi - konfiguracija firewalla\n### a) \n```\niptables -A INPUT -p tcp -s 99.98.46.10 --dport 23 -j ACCEPT\n```\n        \n\nAko dodatno očemo ostalima onemogućit (makar je već u tablici onemogućeno koliko vidim):\n```\niptables -A INPUT -p tcp -s ! 99.98.46.10 --dport 23 -j DROP\n```\n\n### b)\n```\niptables -A INPUT -p tcp -s 10.0.0.1/16 -i eth1 --dport 53 -j ACCEPT\niptables -A INPUT -p dcp -s 10.0.0.1/16 -i eth1 --dport 53 -j ACCEPT\n```\n\nDozvoli da se priključi na port 53, pomoću TCP/UDP-a, računalima samo iz podmreže 10.0.0.1/16 preko interfacea eth1\n\nDodatno za output, makar su već svi outputi enablani.\n```\niptables -A OUTPUT -p tcp -d 10.0.0.1/16 -o eth1 --sport 53 -j ACCEPT\niptables -A OUTPUT -p udp -d 10.0.0.1/16 -o eth1 --sport 53 -j ACCEPT\n```\n         \n\nOvo za OUTPUT se more još poboljšati dodatnim flagovima za stanja kod outputa (ja mislim).\n         \n\n### c)\nDopušteno je zato što je HTTP uz korištenje SSL/TSL-a zapravo HTTPS koji koristi port 443. To je omogućeno postavljenim, defaultnim pravilom za OUTPUT:\n\n`:OUTPUT [0:0] ACCEPT`\n\n***Napomena***: pravila '-A OUTPUT -p tcp -m tcp --dport 80/8080 -j DROP' onemogučuju obični HTTP\n\n### d)\n```\niptables -A OUTPUT -p tcp --dport 25 -d 161.53.72.233 -j ACCEPT\n```\n\nOmoguci pristup SMTP-om(TCP port 25) na danu IP adresu. \n\n### e) \n```\niptables -A INPUT -i eth0 -s 10.0.0.1/16 -j DROP\niptables -A FORWARD -i eth0 -s 10.0.0.1/16 -j DROP\n```\nAko imaš masku unutarnje mreže, a pokušavaš se priključiti preko vanjskog interface-a na sam firewall ili nekog iz unutarnje mreže - doviđorno\n\n### f)\nPrihvatit će ih zbog pravila: `-A INPUT -p tcp -m tcp --dport 22 -j ACCEPT`, koje prihvaća sve konekcije na port 22 (SSH), od bilo kojeg IP-a i preko bilo kojeg\n\ninterface-a.\n\n\n# DISCLAIMER\nNisam siguran u točnost ovih rješenja, ali ovako (otprilike) bi ih ja rešil trenutnim znanjem.",
+      "votes": {
+        "upvoters": [
+          "HotPotato",
+          "Just_some_name",
+          "MaIv",
+          "Satanael",
+          "Trolololica",
+          "Vocko",
+          "aaa8 (Gerti)",
+          "ardi (sprut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96581": {
+      "poster": "HotPotato",
+      "content": "@Miskina666#96577 \n\n![](assets/2020-11-21/00008.png)",
+      "votes": {
+        "upvoters": [
+          "Just_some_name",
+          "Miskina666"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Trolololica"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96584": {
+      "poster": "Arfit",
+      "content": "> @Miskina666#96577 Denial of service napadi jer te floodaju s TCP zahtjevima. Prvi napada preko HTTP (port 80) zahtjeva, a drugi ti flooda sve portove TCP zahtjevima. Ako pretpostavimo da je sve s istog računala onda je vjerovatno u prvome napadu korišten IP spoofing pa je prema tome napadačeva adresa 83.129.34.220.\n\nDakle, u prvom slučaju se očito radi o SYN floodingu uz IP spoofing.\n\nZar se u drugom slučaju ne radi o port scanningu ?",
+      "votes": {
+        "upvoters": [
+          "Sale",
+          "Vocko",
+          "maPre"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96585": {
+      "poster": "Miskina666",
+      "content": "@Arfit#96584 \n\nMislim da je i drugi jer kod onog nmap-ovog -A (general) scana nmap bi trebal vratit RST (odbij TCP handshake). \n\nJa sam našel da TCP/SYN flood često napada na sve portove tu https://www.imperva.com/learn/ddos/syn-flood/.\n\nAli da nisam ni ja siguran, baš jedan drugi kolega i ja isto to raspravljamo.\n\nI ovo za IP adresu napadača, ništa nam ne garantira da nije i u drugom napadu koristil IP spoofing pa sad ko zna koja mu je zapravo IP adresa, ali eto.",
+      "votes": {
+        "upvoters": [
+          "Arfit"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96587": {
+      "poster": "Miskina666",
+      "content": "@Arfit#96584 \n\nMalo je problem kaj netstat bude za obadvoje na isti način pokazal, ali tcpdump pokazuje reset (R) flagove. Pa je možda najtočniji odgovor oboje?\n\nSad sam se i ja pogubil.",
+      "votes": {
+        "upvoters": [
+          "Arfit"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96593": {
+      "poster": "Vocko",
+      "content": "@Arfit#96584 Složio bih se, zadatak je nespretno postavljen (zbog ovoga ispisa kojeg kod skeniranja u pravilu ne bi bilo), ali mislim da je ideja zadatka bila da student vidi kako su u prvom slučaju konekcije isključivo na portu 80, a u drugom se slijedno prolazim po svim portovima pa bi to bilo skeniranje. Možda napisati ovako, a dodatno staviti napomenu da se naprednijim alatima za skeniranje te konekcije ne bi vidjele u netstat ispitu?",
+      "votes": {
+        "upvoters": [
+          "Arfit",
+          "Sale"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97017": {
+      "poster": "batman",
+      "content": "@HotPotato#96387 to spada sad pod gradivo za MI ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "HotPotato"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97019": {
+      "poster": "caffeine",
+      "content": "@batman#97017 da, jedino ne mogu naći ovo za Android, iako mi se čini da sam to čitala negdje, ne mogu naći prez gdje je.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97023": {
+      "poster": "Arfit",
+      "content": "@caffeine#97019 ma Android je u drugom ciklusu",
+      "votes": {
+        "upvoters": [
+          "caffeine"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97094": {
+      "poster": "johndoe",
+      "content": "jel se pise uzivo ili online? ako je online, kakva je politika? kamera, mic, nesto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97095": {
+      "poster": "MaIv",
+      "content": "@johndoe#97094 Uzivo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "andiamo"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97657": {
+      "poster": "ardi (sprut)",
+      "content": "> @Miskina666#96577 iptables -A INPUT -p dcp -s 10.0.0.1/16 -i eth1 --dport 53 -j ACCEPT\n\npretpostavljam da si ovdje mislio `-p udp`?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97672": {
+      "poster": "Miskina666",
+      "content": "@ardi#97657 da",
+      "votes": {
+        "upvoters": [
+          "ardi (sprut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97694": {
+      "poster": "boss15",
+      "content": "@Miskina666#96577 sta nije IP napadaca ovaj foreign 162. .. .137 ? Evo iz dokumentacije\n\nLocal address \tThe IP address of the local computer and the port number being used. The name of the local computer that corresponds to the IP address and the name of the port is shown unless the -n parameter is specified. If the port is not yet established, the port number is shown as an asterisk (*).\n\nForeign address \tThe IP address and port number of the remote computer to which the socket is connected. The names that corresponds to the IP address and the port are shown unless the -n parameter is specified. If the port is not yet established, the port number is shown as an asterisk (*).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97702": {
+      "poster": "Miskina666",
+      "content": "@boss15#97694 U zadatku je zadano da su svi zahtjevi slani s jednog računala, a svi zahtjevi u prvom dijelu zadatka (TCP SYN flood) su s različitim IP adresama, prema tome pretpostaviš da su spoofane. U drugom su svi s iste poslani, pa pretpostaviš da je to ta IP adresa napadača, makar je iz lokalne podmreže.",
+      "votes": {
+        "upvoters": [
+          "Sale"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97711": {
+      "poster": "boss15",
+      "content": "a jel netko mozda rjesio 2. i 3. iz tog zi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97717": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "@boss15#97711 2. TTL pokazuje koji je OS, slican sa labosa, ako je blizu 64 onda je linux, ako je blizu 128 onda je windows",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "98644": {
+      "poster": "lululululululululululu",
+      "content": "pitanja iz MI (trebat ce za usmeni)\n\nUdp amplifikacija\n\nDiffie hellman\n\nIptables nadopuni pravila\n\nšto ogranicava trajanje ceftifikata, zašto kratko vazi, kako nakon isteka provjeriti potpis\n\nRuteri I adrese za ping echo request I replay\n\nShadow salt i hash, usporedi korisničke lozinke po njima\n\nDnssec I koje kodiranje\n\nRansomware I na koji način ga korisnik dobije\n\nDigitalno potpisivanje\n\nZadatak s cipom i napadima na ssh, password autentikacija, key pass, root pristup, login attempts, itd\n\nTcp syn vs tcp connect I kako provjeriti da te netko skenira putem tcp connecta",
+      "votes": {
+        "upvoters": [
+          "BrankoBrancin",
+          "Nabas",
+          "SinanSuckich (Yelena)",
+          "Trolololica",
+          "Vocko",
+          "[deleted]",
+          "boss15",
+          "fritula",
+          "in1",
+          "maPre",
+          "rchbtrrs",
+          "setuid0"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109008": {
+      "poster": "data",
+      "content": "Uvidi ništa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109010": {
+      "poster": "Marenix",
+      "content": "@data#109008 rekao je jučer da će bit, samo trebaju organizirat. Rekao je da će bit prijave i da će skenirat ispite",
+      "votes": {
+        "upvoters": [
+          "data"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261524": {
+      "poster": "Tratarira",
+      "content": "imala aam sui prosle god i pisali smo mi uzivo na papiru (zavrsni je bio prek moodlea) i sjecam se da je bila slika diffie-hellman iz preze i da je trebalo objasnit. Uz to je bila neka tablica i trebalo je napisati neka pravila za vatrozid ako se sjecam (to je nama bio dio nekog labosa), onda se sjecam da je bilo pitanja za privatne/javne kljuceve i njihovo trajanje. E da, bilo je i pitanja za neke naredbe iz labosa (bar mislim da su iz labosa jer ih na prezama nije bilo).\n\nPredlazem da se dobro nauce preze jer znaju fakat pitat detalje.",
+      "votes": {
+        "upvoters": [
+          "DostDobroIme",
+          "Maglica",
+          "Murin",
+          "PrisonMike (Števo)",
+          "fritula",
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

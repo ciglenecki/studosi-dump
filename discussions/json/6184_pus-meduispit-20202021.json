@@ -1,0 +1,228 @@
+{
+  "title": "[PUS] Međuispit - 2020/2021",
+  "creator": "Emma63194",
+  "slug": "pus-meduispit-20202021",
+  "tags": [
+    "FER",
+    "Posrednici umreženih sustava",
+    "Ispiti"
+  ],
+  "posts": {
+    "260898": {
+      "poster": "Emma63194",
+      "content": "Prepisan MI:\n\n>! ![](assets/2021-12-01/00030.jpg)",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)",
+          "Amon",
+          "Broono (Burućuh)",
+          "Ellie",
+          "ImJustAKid (lumity)",
+          "Murin",
+          "Watson (112)",
+          "Zabe",
+          "burek",
+          "cajaznun",
+          "ls_123 (KimuraKong)",
+          "pushPop",
+          "tera",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260944": {
+      "poster": "Watson (112)",
+      "content": "Doc za odgovore\n\nhttps://docs.google.com/document/d/1bbSBgix7-3Ty1Hk7HTlrb_nmLru0uq4b_TS9qEEzdes/edit?usp=sharing",
+      "votes": {
+        "upvoters": [
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260947": {
+      "poster": "Emma63194",
+      "content": "@\"112\"#p260944 Mislim da nema potrebe za time. Imaš ovdje @\"vuk172\"#p260847 , između ostalog, taj MI prepisan u word i neke odgovore.",
+      "votes": {
+        "upvoters": [
+          "Watson (112)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261105": {
+      "poster": "pushPop",
+      "content": "@\"Emma63194\"#p260898 \n\nZna netko 4. objasniti zašto treba 2f+1 procesa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261108": {
+      "poster": "Smolaa",
+      "content": "@\"pushPop\"#p261105  U prezi ti je objašnjeno. 2f+1 je jer onda uvijek imaš više ispravnih koji nadglasaju neispravne (za 2 neispravna imaš 3 ispravna, za 3 neispravna imaš 4 ispravna itd.)",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "Murin",
+          "chuuya (temari)",
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261124": {
+      "poster": "pushPop",
+      "content": "@\"Emma63194\"#p260898 Što mislite, jel se u 5. zad gdje pita je li instanca problema kako smo ju definirali rješiva pohlepnim algoritmom, više filozofsko/NE konkretno pitanje?\n\nJer tu je onaj faktor uvijek da se treba gledati QoS cijele kompozicije servisa, a ne pojedinih servisa jer i ako odaberemo samo \"najbolje\" instance servisa, to ne znači da smo odabrali najbolju kompoziciju?\n\nTako da je odgovor više ne nego da, ali je moguće i da bude da - odgovor ne možemo baš definirati kao DA ili NE?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261127": {
+      "poster": "pushPop",
+      "content": "@\"Smolaa\"#p261108 Kako bi to pokazao na protuprimjeru - recimo zašto 2 kriva i 2 ispravna procesa ne bi funkcionirala? Ne mogu si predočiti kako bi to za Paxos mogao ilustrirati\n\nHvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261132": {
+      "poster": "Emma63194",
+      "content": "> @\"pushPop\"#p261124 više filozofsko\n\nRekla bih ovo.\n\nAko napišeš na ispitu što si ovdje sada, vjerujem da bi ti priznali takvo objašnjenje.\n\nUvijek je bolje raspisati se nego staviti samo DA/NE.",
+      "votes": {
+        "upvoters": [
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261137": {
+      "poster": "Emma63194",
+      "content": "@\"pushPop\"#p261127 Ne znam je li ovo točno, ali probat ću: ajmo reći da imamo, kako si rekao, 4 procesa i dva su ispravna, a dva nisu. Recimo da jedan ispravni proces želi biti leader i šalje svima tu poruku. Ovaj drugi ispravni će reći OK, ali ajmo pretpostaviti da ova dva koja su neispravna ne odgovaraju jednostavno na poruke (ono, možda je nešto gadno failalo u njima i jednostavno ne mogu odgovoriti). Sad, ovaj neće imati većinu i neće moći postati vođa. Mogao bi u beskonačnost čekati da ovi odgovore ili bi mogao imati neki timeout pa ponovo poslati poruku. Ako ponovo pošalje poruku, opet će se ista stvar dogoditi - jedan će reći OK, druga dva neće odgovoriti.\n\nAko pak s druge strane imamo 3 ispravna i jedan neispravan i recimo opet jedan ispravan želi postati leader. Pošalje svima poruku i dva će mu reći OK, a ovaj neispravan neće odgovoriti. S obzirom na to da sad ima većinu, postat će leader i algoritam će moći dalje nastaviti.",
+      "votes": {
+        "upvoters": [
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261147": {
+      "poster": "pushPop",
+      "content": "@\"Emma63194\"#p261137 Kužim, hvala ti puno na primjerima!\n\nJedini ima još jedan detalj za koji ne znam jel krivo stoji u prezentaciji ili što:\n\nKaže da bi netko postao leader, treba dobiti najmanje Qw odgovora OK.\n\nZa slučaj N = 4, Qw > 4/2 = 2 tj. najmanji mogući Qw = 3. To bi značilo da za ovaj drugi primjer što si navela kao ispravan, iako su 2 odgovorila OK, a 1 nije odgovorio, to ne bi bili dovoljno jer su potrebna barem 3 (ne 2) odgovora OK.\n\nTvoje objašnjenje mi je skroz logicno i ja bih isto rekao da je 2 : 1 većina, a prema prezentaciji je 3 : 0 većina za N = 4.\n\nJesam ja nešta krivo shvatio?\n\nHvala.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261160": {
+      "poster": "Emma63194",
+      "content": "> @\"pushPop\"#p261147 Za slučaj N = 4, Qw > 4/2 = 2 tj. najmanji mogući Qw = 3. To bi značilo da za ovaj drugi primjer što si navela kao ispravan, iako su 2 odgovorila OK, a 1 nije odgovorio, to ne bi bili dovoljno jer su potrebna barem 3 (ne 2) odgovora OK.\n\nHm, iskreno nisam sigurna.\n\nMožda se gleda kao N - 1? \n\nIli se možda uzima da, ako je ovaj predložio da bude leader, da se to računa kao +1 glas?\n\nU tom slučaju bi onda u drugom scenariju imao 3 glasa (svoj i dva ispravna) naprema 1 suzdržan.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261166": {
+      "poster": "pushPop",
+      "content": "@\"Emma63194\"#p261160 Hvala ti na puno na odgovoru!\n\nTo je objašnjenje koje sam se baš prije minutu sjetio - jer zapravo se ne očekuje da leader sam sebi odgovori nego za N = 4 se očekuje od ostala 3 da odgovore pa je Qw > 3/2 = 1.5 tj. najmanji Qw = 2 što je u redu.\n\nSamo što je upitna ta početna pretpostavka da gledamo N-1 kao N, ali ni ja ne vidim drugo moguće objašnjenje...",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261170": {
+      "poster": "Svarog (Veles)",
+      "content": "@\"Emma63194\"#p261160 @\"pushPop\"#p261166 \n\nPrema ovom isječku, zvuči kao upravo to objašnjenje, tj. predlagatelj ne vidi sebe kao prihvatilca, pa je N - 1 [[source](https://www.the-paper-trail.org/post/2009-02-03-consensus-protocols-paxos/)]\n\n![](assets/2021-12-02/00008.png)",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261177": {
+      "poster": "pushPop",
+      "content": "@\"Veles\"#p261170 Super, hvala ti na ovom! Da, tu piše da se radi o 2f+1 acceptora (umjesto svih = 2f+1 acceptors + 1 proposer)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

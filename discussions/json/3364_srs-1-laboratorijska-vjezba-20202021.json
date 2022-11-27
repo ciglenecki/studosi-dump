@@ -1,0 +1,2633 @@
+{
+  "title": "[SRS] 1. laboratorijska vježba - 2020/2021",
+  "creator": "ivan",
+  "slug": "srs-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Sigurnost računalnih sustava",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "154751": {
+      "poster": "ivan",
+      "content": "Koja bi bila najbolja praksa za izvedbu programskog rjesenja labosa? Ako sam dobro shvatio, sifre enkriptirati AES-om na nacin da je njihov kljuc KDF od master passworda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155178": {
+      "poster": "Jale (čakijale)",
+      "content": "Ima li netko kakvu ideju što napraviti sa spremanjem master passworda? \n\nNe znam jesam li nešto krivo shvatio u zadatku ali ne vidim kako to na siguran način napraviti ako napadač ima pristup disku.",
+      "votes": {
+        "upvoters": [
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155183": {
+      "poster": "Wayk",
+      "content": "@Jale#155178 Ne vidim zašto spremati master password? Čini mi se da bi samo trebalo uzeti `master_password` sa user inputa te pokušati sa time dekriptirati medij na koji spremamo rječnik credentialsa",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155193": {
+      "poster": "Jale (čakijale)",
+      "content": "@Wayk#155183 znači onda se samo trebamo nadati da će korisnik uvijek za svoje lozinke koje sprema koristiti isti master password, ništa ga ne sprječava da koristi više različitih? Razmišljao sam o tome no činilo mi se da onda password manager malo gubi smisao (pamćenje jednog master passworda umjesto n lozinki).",
+      "votes": {
+        "upvoters": [
+          "Wayk",
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155195": {
+      "poster": "Wayk",
+      "content": "@Jale#155193 Treba napraviti da točno jedan (jedinstven) `master_password` dekriptira sve",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)",
+          "LucidDreamer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155311": {
+      "poster": "pohanyx (2Đman)",
+      "content": "Ak sam dobro skuzio, ja msm da se master password sprema kao hash vrijednost(npr. sha256 algoritam). I onda kad upises master password gledas jel se hash od upisanog passworda poklapa sa spremljenim hashom.",
+      "votes": {
+        "upvoters": [
+          "pohanyx (2Đman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155728": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "koji kurac je ovaj labos",
+      "votes": {
+        "upvoters": [
+          "Aloko (Ardeo)",
+          "AntonioB25 (Pleteni miš)",
+          "BaboTrojka",
+          "Bucc (Olive Oil)",
+          "DazedAndConfused",
+          "Ducky",
+          "ErnestHemingway (Alfetta)",
+          "HARAmara (decko_sa_balkana)",
+          "JBQ",
+          "JeleeII",
+          "Kaladonter",
+          "Kennedy",
+          "KingGeedorah (King Geedorah)",
+          "LucidDreamer",
+          "Lusy (MGJ)",
+          "MiqeloS",
+          "Petra659",
+          "Suki7",
+          "Sulejman",
+          "SuperSaiyano",
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+          "Tone",
+          "Veki",
+          "ZliDule",
+          "bb8 (zaza)",
+          "bjunolulz",
+          "bodNaUvidima",
+          "boki8 (kerovac)",
+          "fraki",
+          "iva7740 (Mica Trofrtaljka)",
+          "jobi (azex)",
+          "joj (poni)",
+          "kameni (Isusek)",
+          "kix7 (Fish99)",
+          "krokodil",
+          "lucylu",
+          "mariak (kaiak)",
+          "matej1423",
+          "mini (Earthling)",
+          "neksi (filip)",
+          "netbitan11 (netbitan)",
+          "oneTwo",
+          "ruza0001 (rozy)",
+          "spampers (majmunska boginja)",
+          "steve (Mr_mr)",
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155823": {
+      "poster": "boogie_woogie (nika_1999)",
+      "content": "Sto tocno misle pod tim da treba predati: \"Upute za prevođenje i pokretanje, idealno u obliku shell skripte koja će sve prilikom pokretanja prevesti vaše rješenje te ga nakon toga pokrenuti kako bi se demonstrirala sva funkcionalnost.\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155857": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@boogie_woogie#155823 Moraš napisati upute ili skriptu koja sve radi da se pokrene\n\nnpr. za neki c program bi to valjda bilo nešto tipa\n\n```bash\n#!/bin/bash\n\n# Kompajliraj kod\ngcc -o main main.c\n\n# Daj ovlasti za pokretanje maina\nchmod +x main\n\n# Pokreni main\n./main\n```",
+      "votes": {
+        "upvoters": [
+          "boogie_woogie (nika_1999)"
+        ],
+        "downvoters": [
+          "Urmum (mamaRu)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156077": {
+      "poster": "Nocna_smjena",
+      "content": "![](assets/2021-03-21/00012.jpeg)\n\nMože meni neko pojasnit što oni misle pod ovim sigurnosnim zahtjevom? Koliko sam ja shvatio treba čovjek upisat točnu šifru za točno tu web stranicu da bi mu sustav javio tu istu šifru (što mi nema nikakvog smisla jer onda password manager nema smisla). WTF???\n\nI u čem je pametnije tj. jednostavnije da pišem? Javu znam dost dobro a Python elementarno elemantarnog znam (nisam ju nikad imao priliku učit osim onih labosa iz fizike)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "gladiator"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156080": {
+      "poster": "nnn (dinoo)",
+      "content": "@Nocna_smjena#156077 mislim da su mislili ovo:\n\nrecimo da imaš spremljeno:\n```\nstranica: example1.com, password: password1\nstranica: example2.com, password: password2\n\n```\nnapadač ne bi smio biti u mogućnosti zamjeniti te vrijednosti, odnosno: ako korisnik zatraži  \"example1.com\" da dobije \"password2\"",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)",
+          "krokodil"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156081": {
+      "poster": "nnn (dinoo)",
+      "content": "@Nocna_smjena#156077 i isto mislim da se pod tim misli da  ako korisnik kriptira neku lozinku npr:\n\n```\nstranica: example3.com password: password3\n```\n\nnapadač ne bi smio moći zamjeniti taj password nekako bez master ključa",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)",
+          "krokodil"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156085": {
+      "poster": "Nocna_smjena",
+      "content": "@nnn#156081 dobro to je druga rečenica, a šta je sa prvom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "gladiator"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156086": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@Nocna_smjena#156085 prva rečenica je malo kompliciranije zapisano ovo što je kolega @nnn#156080 ovdje objasnio",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156087": {
+      "poster": "nnn (dinoo)",
+      "content": "@Nocna_smjena#156085 \n\n@iNavy#156086 \n\nda, ta prva rečenica je malo čudno napisana probat ću malo pojasnit\n\nukratko integritet:\n\n> Another core concept in cryptography is message integrity. While encryption keeps messages confidential, data integrity ensures full confidence that the data you are receiving is the actual valid data from the sender, and has not been tampered with or manipulated.\n\nTi moraš osigurati integritet, odnosno ako korisnik može dohvatiti neki par adrese i lozinke, on **mora** biti stavljen unutra od strane korisnika, ne od napadača i ne smije biti modificiran nikako (od strane napadača).\n\nProblem je što simetrična enkripcija ti ne daje sama po sebi integritet već to trebaš riješiti s nečim drugim (mislim da treba MAC ili HMAC koristiti ali nisam 100% siguran)",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156152": {
+      "poster": "Retard00",
+      "content": "Jel bitno gdje se nalaza datoteka s enkriptiranim podacima ili je ok ak je u istom direktoriju kao i izvršna datoteka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156188": {
+      "poster": "Fikalo",
+      "content": "Di mi trebamo spremat te adrese i zaporke, tj sta je baza? samo u neki notepad trpamo ili",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156214": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@Fikalo#156188 ja mislim da u neki file samo trpamo i onda iz njega čitamo \n\nJel mi onda koristimo master_password kako bi stvorili KEY za enkripciju podataka ? il sam ja to krivo skužio",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Han"
+        ]
+      }
+    },
+    "156535": {
+      "poster": "kix7 (Fish99)",
+      "content": "https://www.youtube.com/watch?v=w68BBPDAWr8&ab_channel=Computerphile\n\ndost dobar video za skuzit opcenito o cem se radi, ovaj pbkdf2 o kojem prica je key derivation funkcija koju mozemo/moramo koristit",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Ducky",
+          "Fikalo",
+          "Jale (čakijale)",
+          "JayOhAit",
+          "Rene",
+          "SuperSaiyano",
+          "bb8 (zaza)",
+          "gladiator",
+          "iNavy (mornar Ica)",
+          "krokodil",
+          "laranotreallycroft",
+          "nikace (AeIoU)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156692": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "I am confusion",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "HARAmara (decko_sa_balkana)",
+          "JayOhAit",
+          "Kennedy",
+          "Lusy (MGJ)",
+          "Valentino",
+          "ZliDule",
+          "bb8 (zaza)",
+          "gladiator",
+          "krokodil",
+          "lucylu",
+          "oneTwo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ducky",
+          "Hrvoje (Hrvoje45)",
+          "Tone",
+          "gladiator",
+          "krokodil"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156727": {
+      "poster": "Retard00",
+      "content": "@kix7#156535 A jel sigurno spremat salt za pbkdf2 bez ikakve enkripcije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156775": {
+      "poster": "Gocc (***)",
+      "content": "Može li netko objasniti neki način kako ispravno autentificirati korisnika nakon unošenja master passworda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156876": {
+      "poster": "kix7 (Fish99)",
+      "content": "@Retard00#156727 kolko znam taj salt sluzi samo za dodatnu zastitu i nije ga bitno enkriptirat, tj moze bit i “javan”\n\nedit: sa stranice pycryptodome\n> salt (string or byte string) – A (byte) string to use for better protection from dictionary attacks. This value does not need to be kept secret, but it should be randomly chosen for each derivation. It is recommended to use at least 16 bytes.",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157093": {
+      "poster": "Gocc (***)",
+      "content": "@kix7#156876 a što ako ga  netko promijeni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157342": {
+      "poster": "kix7 (Fish99)",
+      "content": "@Gocc#157093 po nekoj mojoj logici briem da ne mozes nista zastiti od promijene, jer isto tako napadac kad vidi tvoju hrpu bajtova u fajlu moze promijenit i neki bajt u nekoj lozinci/adresi i onda ti je isto sjebo sustav, mi samo s ovim hashiranjem podataka mozemo potvrdit jel ih je netko mijenjao il su ostale iste/tocne\n\nmozes tipa spremit onda hash tog salta pa provjerit dal ga je netko mijenjao",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157522": {
+      "poster": "lovro (l123)",
+      "content": "Je li jedini način da očuvamo integritet da spremimo i hash u taj file u koji spremamo kriptirani sadržaj? Zar nije da ne bismo trebali spremat kriptirani sadržaj i hash na isto mjesto jer onda ako neko sazna ključ i promijeni sadržaj može promijeniti i hash i spremit ga nazad?",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157954": {
+      "poster": "Gocc (***)",
+      "content": "@lovro#157522 po meni se čini da ako do toga dođe da ga ništa ne može spriječiti i da ga promijeni ako je negdje dalje. Ako ima ključ može sve,  možda se varam",
+      "votes": {
+        "upvoters": [
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158025": {
+      "poster": "PostarLakogSna (snedul)",
+      "content": "Nego, ima li itko kakav tutorijal kako ovo riješiti? 😞",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Galke",
+          "Kennedy",
+          "gladiator",
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "kviNooyaa"
+        ],
+        "tuga": []
+      }
+    },
+    "158048": {
+      "poster": "gladiator",
+      "content": "Rollback attack... Kakvog ovo smisla ima kad mi imamo samo jednu verziju aplikacije s kojom komuniciramo preko terminala (koja podržava jako ograničen skup naredbi)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158082": {
+      "poster": "BigZ1",
+      "content": "@gladiator#158048 \n\nja sam napravio kad se program pokrene da dobijes meni. bmk kako ce oni to pokrenut nek se potrude kao sto su se \"potrudili\" objasniti kako defkriptirati i hmcati svoje zapise u kodu,vec se patim s time 2 dana,a nitko ne zna tako da je bas ekstra labos.",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "JoKing",
+          "Sulejman",
+          "gladiator",
+          "grga_it_is (it_is_what_it_is)",
+          "oneTwo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158085": {
+      "poster": "gladiator",
+      "content": "@BigZ1#158082 I što u tom meniju? Biram želim li mozzarellu ili gaudu na pizzi?",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)",
+          "feudalac",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158087": {
+      "poster": "BigZ1",
+      "content": "@gladiator#158085 da,mos cak i zacine birat",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158099": {
+      "poster": "tomekbeli420",
+      "content": "@pohanyx#155311 i ja sam o tome razmišljao, ali što ako napadač jednostavno generira svoj master password, iz njega ključ, hešira ga i prepiše to preko postojećeg hasha? Jest da bi kod dekriptiranja postojećih zapisa dobio neko smeće jer ključ nije onaj s kojim je kriptirano, ali kako ga spriječiti da unosi svoje zapise? Je li u redu ako naše rješenje dopušta ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158148": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@PostarLakogSna#158025 \n\nPseudokod za jedan mogući način:\n\nhttps://crypto.stackexchange.com/questions/46955/what-is-the-correct-way-to-implement-pbkdf2-aes-cbc-hmac\n\n(čini mi se da je autor pitanja zaboravio spremiti _salt_, a mislim da treba)",
+      "votes": {
+        "upvoters": [
+          "PostarLakogSna (snedul)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158154": {
+      "poster": "Jokke",
+      "content": "@tomekbeli420#158099 Cim on promijeni nesto u zapisu manager bi na iducem koristenju trebao izbaciti da je nesto prckano, tako sam barem ja to napravio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158190": {
+      "poster": "tomekbeli420",
+      "content": "@Jokke#158154 smijem li pitati: kako?\n\nOdnosno na koji način spremaš master password?",
+      "votes": {
+        "upvoters": [
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158194": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@tomekbeli420#158190 ja radim sljedeće:\n\nkad upišem ```$ ./srs_lab.py init masterpass```, u datoteku spremim neki string, nije važno kakav, kriptiram ga i spremim ga. Tak da masterpassword ne spremam nigdje u datoteku.\n\nEnkriptiram tak da prvo napravim random salt, zatim s master passwordom i saltom, nekom od funkcija derivacije ključa dobijem jedan kriptografski ključ (pycryptodome preporuča scrypt ili bcrypt). Taj ključ onda koristim za AES GCM mode jer osigurava integritet i povjerljivost. Zatim s ```encrypt_and_digest(plaintext, output=None)``` ekriptira poruku i kreira joj MAC tag koji nam je potreban za autentificirat ekripiranu poruku pri dekriptiranju (```decrypt_and_verify(ciphertext, mac_tag, output=None)```) da provjerimo ako je nešto mijenjano ili nije, ako ova ```decrypt_and_verify()``` funkcija vraća exception ValueError, može bit da je unjet krivi master password pri get ili put naredbe (```$ ./srs_lab.py (put ili get) masterpass itd.```) ili je nešto mijenjano u datoteci gdje spremamo site + sitepassword par.\n\nSad da se vratim na onaj ```init``` na početku gdje spremam neki string, kada idem staviti site + sitepassword, moram dekriptirati sadržaj datoteke gdje spremam da mogu staviti (zamijeniti ako imam već isti site unutra) ```decrypt_and_verify()``` će mi javiti ako je krivi masterpassword (ili ako sam odmah na početku nešto promijenio u datoteci) jer će baciti ValueError ako ne može autentificirati sa onim MAC tagom. Zato imam taj neki string unutra ako ne može dekriptirati, kriva je lozinka ili je nešto u datoteci prčkano.\n\nNote: nemam blage jer se išta od ovoga ovak radi, ali radi što bi trebalo",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Gocc (***)",
+          "Jokke",
+          "__builtin_popcount (std::popcount)",
+          "indythedog",
+          "jobi (azex)",
+          "spampers (majmunska boginja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158203": {
+      "poster": "Jokke",
+      "content": "@tomekbeli420#158190 \n\nRadim jako slično ovome zapravo @Bucc#158194  \n\nMaster password ne spremam nigdje. Ne znam jel to tako treba, ali program mi radi i svaki pokušaj izmjene je uspješno javio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158219": {
+      "poster": "Gocc (***)",
+      "content": "@Bucc#158194 gdje spremas MAC?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158223": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@Gocc#158219 sve spremam u tu kriptiranu datoteku kao: kriptiran par (site + password) + salt + iv (inicijalizacijski vektor) + taj tag (MAC)\n\ngledao sam da sve to može bit javno, a i sve to je potrebno da se može dekriptirat\n\nizmeđu njih je neki znak, npr. ';' ili '-' po kojem mogu splitat taj string da mogu koristit za dekriptiranje",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "HARAmara (decko_sa_balkana)",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159029": {
+      "poster": "Reznox",
+      "content": "@Bucc#158223 Kako si sacuvao salt za kasnije, pokusavam osmislit nacin da ga sakrijem ali u isto vrijeme sacuvam i nikako",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159034": {
+      "poster": "Lyras",
+      "content": "@Reznox#159029 salt ne moraš skrivati, smije biti public",
+      "votes": {
+        "upvoters": [
+          "Reznox",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159045": {
+      "poster": "faboche (him)",
+      "content": "Kako u javi doci do 2 kljuca na temelju master passworda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159123": {
+      "poster": "MetalRose42",
+      "content": "Je li lakše u pythonu ili javi pisati ovaj labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159141": {
+      "poster": "Vonj",
+      "content": "@faboche#159045 \n\nJa sam vidio da je netko napravio kljuc od 256 bita pa njega prepolovio i jedan koristis za aes, drugi za hmac.\n\nTakoder, mislim da mozes definirati PBEkeyspec s razlicitim saltom, pa onda si key generatora dobijes razlicite kljuceve.\n\n@MetalRose42#159123 \n\nMislim da je python, pogotovo jer je skripta na intranetu u pythonu, a cini mi se i da manje koda trebas kucati nego u javi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159220": {
+      "poster": "JBQ",
+      "content": "Bi mogao netko opisat sto se tocno treba dogodit sa init naredbom?",
+      "votes": {
+        "upvoters": [
+          "SuperSaiyano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159264": {
+      "poster": "miran (mirko)",
+      "content": "@JBQ#159220 s obzirom da su u uputama naveli samo dvije funkcionalnosti:\n1. Pohrana para adresa, zaporka. Ako je već pohranjena zaporka pod istom adresom onda ju je\n\npotrebno zamijeniti sa zadanom.\n2. Dohvaćanje zaporke za zadanu adresu.\n\nshvatio sam init naredbu kao nešto što se izvodi samo prilikom prvog korištenja programa kako bi se definirala glavna zaporka.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159365": {
+      "poster": "JBQ",
+      "content": "Kako u javi rjesavate ovaj problem da ako je vec pohranjean zaporka pod istom adresom da ju zamijenim sa zadanaom? Kako maknut tu liniju iz file-a ako radim s txt, tj kak napravit update tog? Ne kuzim kako da ako put-am i zapisem u txt sifrat, kako da onda promijenim ak dodem s istom adresom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159410": {
+      "poster": "kix7 (Fish99)",
+      "content": "@JBQ#159365 Mislim da ti je najjednostavnije da te parove adresa-lozinka spremas u neku hash mapu pa ti \"automatski\" ona updejta da je uvijek najnovija lozinka za istu adresu",
+      "votes": {
+        "upvoters": [
+          "JBQ"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159423": {
+      "poster": "PostarLakogSna (snedul)",
+      "content": "@JBQ#159365 Ja nisam radio s hash mapom iako sada kada vidim @kix7#159410 odgovor moguće da je tako lakše.\n\nUzmimo slučaj da sam ja komplicirao pa se moj kod otprilike izvodi ovako prilikom naredbe `put`:\n\n`dekriptiraj();`\n\n`ispitaj();`\n\n`dodaj();`\n\n`enkriptiraj();`\n\nGjde mi metoda `ispitaj();` zapravo najprije provjeri postoji li mi adresa već u datoteci (koja je prije toga dekriptirana), ako postoji onda cijelu tu liniju zamijenim s `\"\"` i zatim imam dio koda koji mi obilazi datoteku, zaobilazi svaku liniju koja je jednaka `\"\"`, a ostale lijepim u `strinbuilder` i zatim overwrite-am datoteku sa `stringbuilder.toString();`.\n\nMetoda `dodaj();` mi ponovno doda par `adresa:password` (to je format u kojem sam zapisivao parove).\n\nNadam se da pomaže.",
+      "votes": {
+        "upvoters": [
+          "JBQ"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159427": {
+      "poster": "LucidDreamer",
+      "content": "Kako ste osigurali onaj zahtjev da napadac ne moze skuzit da je lozinka koju je pokusao promijeniti ista onoj koja je vec i bila..?",
+      "votes": {
+        "upvoters": [
+          "Tinx (pingvin)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159428": {
+      "poster": "PostarLakogSna (snedul)",
+      "content": "@LucidDreamer#159427 Nisam točno siguran, ali ja enkriptiram čitav file s parovima adresa:šifra odjednom kao cjelinu.\n\nNe može promijeniti šifru ukoliko nema Master Password, ako nekako i uspije, meni se prilikom svake enkripcije/dekripcije mijenjaju salt i IV (koji su naravno slučajni), tako dobijem potpuno novi derivirani ključ, a to mi osigurava potpuno drugačiji šifrat i hmac tag.\n\nNote: iako mi sve radi, nisam siguran je li ispod haube sve ispravno kako su zamislili.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "JBQ",
+          "LucidDreamer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159475": {
+      "poster": "lucylu",
+      "content": "Može li netko objasniti kako se master password na neki način \"zapamti\" u kodu, a da ga pri tome nigdje ne spremamo?",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159481": {
+      "poster": "flicka",
+      "content": "@Bucc#158223 salt i iv spremas to stringove? ako da kak ih dok ih procitas pretvoris nazad u byte[] a da taj array bude isti ko inicijalni? problem je ako stvorim random byte[] salt i iv i onda ih u file pohranim ko string, ne dobim isti byte[] nazad pretvaranjem stringa u bytove",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159488": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@flicka#159481 da, stringovi su. Koristim ```b64encode(cipherText).decode('utf-8')``` tak za svaku stvar koju spremam, zatim kad želim dekriptirat koristim ```b64decode(cipherText)```\n\nOvdje tu sam dobio ideju, imao sam istu stvar kao i kod tebe\n\nhttps://www.semicolonworld.com/question/43679/encrypt-amp-decrypt-using-pycrypto-aes-256",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159489": {
+      "poster": "JBQ",
+      "content": "@lucylu#159475 \n\nJa nigdi ne pamtim, posto ga trebas upisat kod svake metode(get, put, itd) samo posaljem ko parametar toj metodi.\n\nNe znam jel to ispravno",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159492": {
+      "poster": "lucylu",
+      "content": "@JBQ#159489 mislila sam nakon init naredbe, kako i dalje znamo da je to ta zaporka nakon npr 3 dana ako se nigdje ne spremi, malo mi je to apstraktno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159493": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@lucylu#159492 \n\nbudući da je datoteka kriptirana ključem koji je deriviran iz te zaporke, ne možeš dekriptirat ako nije ista. Ako pokušaš dekriptirat nekom drugom zaporkom, treba javiti grešku",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Urmum (mamaRu)",
+          "kix7 (Fish99)",
+          "lucylu",
+          "oneTwo",
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159550": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "za što je nama točno potreban inicijalizacijski vektor?",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159553": {
+      "poster": "Asdf",
+      "content": "ima netko problem da dekriptiranje enkriptirane poruke ne daju originalnu poruku?",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159565": {
+      "poster": "faboche (him)",
+      "content": "@iNavy#159550 Kako se nebi ista sekvenca u šifratu generirala za iste sekvence u plaintextu.",
+      "votes": {
+        "upvoters": [
+          "ikerkaferkass"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159742": {
+      "poster": "boki8 (kerovac)",
+      "content": "inicijalizacijski vektor duljine 16 byte-ova pohranim u datoteku, a kada ga procitam iz datoteke dobijem 11 byte-ova. Kako to rijesiti? Pisem u Javi i koristim UTF-8 charset",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159770": {
+      "poster": "Ducky",
+      "content": "@boki8#159742 Ako ti bajtovi izgledaju nešta kao \"[B@brojevi\" onda si u datoteku zapisao id inicijalizacijskog vektora, a ne njegov sadržaj. Meni se dogodio da je id Stringa, pa možda treba pretvorit u bajtove",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159779": {
+      "poster": "tomekbeli420",
+      "content": "@lucylu#159492 Lozinka se nigdje ne sprema.\n\nJedino što spremaš su IV i salt, i to u čistom (dakle njih ne kriptiraš) obliku, npr ja sam metnuo na početak datoteke (u koju spremam sve podatke) prvo 16 bajtova IV pa sljedećih 16 bajtova salt.\n\nA master lozinku ne spremaš nigdje, nego onaj koji želi to dekriptirati, mora znati koja je master lozinka korištena.\n\nJer za ispravno dekriptiranje, kao prvo mora se rekonstruirati ispravan ključ (isti onaj s kojim je enkriptirana datoteka), a on se konstruira iz master lozinke (koju korisnik mora unijeit) i salta (koji je javno poznat i pročita se iz datoteke, to je onaj isti salt korišten za konstrukciju ključa prilikom enkripcije). Uz ispravan ključ, mora se pročitati i IV (isti onaj korišten za enkripciju, a spremiš ga isto u čistom obliku), jer on je potreban za ispravno dekriptiranje kod blok šifri (AES je jedan od njih).\n\nAko bilo što od toga troje ne valja, dakle ili salt ili IV ili master password, tvoj kod za integritet poruke (npr. ja sam koristio autentificiranu šifru AES u GCM načinu rada koja uz kriptat dodaje i oznaku) neće uspjeti verificirati kriptat i to ti je signal da je ili master password krivi ili je datoteka promijenjena (i to nebitno na kojem mjestu, ili ne valja IV ili ne valja salt ili je dio kriptiranih bajtova promijenjen, u svakom slučaju verifikacija neće proći).\n\n@boki8#159742 moji zapisi na disku uopće nisu tekstualne datoteke, nego binarne i tako se ne moram zajebavati sa mapiranjem IV-a i salta. Doduše jedino što sam morao je osmisliti način za zapisivanje čistih podataka kao niz bajtova (svojevrsna serijalizacija)",
+      "votes": {
+        "upvoters": [
+          "Aloko (Ardeo)",
+          "AntonioB25 (Pleteni miš)",
+          "KingGeedorah (King Geedorah)",
+          "Lyras",
+          "boki8 (kerovac)",
+          "laranotreallycroft",
+          "lucylu",
+          "mariak (kaiak)",
+          "neksi (filip)",
+          "swish41 (PlavušaSFilozofskog)",
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159863": {
+      "poster": "boki8 (kerovac)",
+      "content": "@Ducky#159770 A kako da to sredim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159891": {
+      "poster": "flicka",
+      "content": "ako sam sve parove prvo kriptirala i tako kriptirane spremala u datoteku treba li onda jos i cijelu datoteku kriptirati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159894": {
+      "poster": "Rene",
+      "content": "Vezano za sigurnosne zahtjeve, je li problem:\n\nAko idemo spremiti novu sifru za vec pohranjenu adresu, a program pita zelimo li overwriteati (kao napadac sada zna da je bila pohranjena sifra za tu adresu, idk)?\n\nAko sam kriptirao svaki par adresa-sifra zasebno i npr. imam pohranjena 2 para. Ako napadac promjeni neki byte u prvom paru, je li okej da korisnik i dalje moze dobiti sifru za drugu adresu, ili bi zbog svake promjene trebao rec file corrupted i ne vratit nista?\n\nI ako zbog paddinga nisu sve sifre jednake duljine, pa napadac moze dobiti info koja je duza koja kraca?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159983": {
+      "poster": "Ducky",
+      "content": "@boki8#159863 \n\nPa nisam siguran jer ne znam šta si točno napravio u kodu ali probao bi s ovim @Bucc#159488 , a ako ne radi; google!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160007": {
+      "poster": "Urmum (mamaRu)",
+      "content": "Kako mogu provjeriti jel mi unesena masterPassword ispravna kad pozivam put naredbu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160014": {
+      "poster": "Giovanni",
+      "content": "Ako koristimo AES-GCM jel treba onda računati i uspoređivati mac?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160030": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@Urmum#160007\n\nJa kod naredbe put prvo dekriptiram datoteku i pročitam parove iz datoteke i na taj način provjerim je li masterpassword dobar\n\ntj ako se dekriptira, dobar je inače ne valja",
+      "votes": {
+        "upvoters": [
+          "Urmum (mamaRu)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160055": {
+      "poster": "tomekbeli420",
+      "content": "@Giovanni#160014 implementacije u popularnim programskim jezicima obično bace iznimku pri pokušaju dekriptiranja.\n\nPrimjerice u Javi za AES u GCM načinu rada, kad sa `javax.crypto.Cipher` objektom pokušaš pozvati metodu koja dekriptira sve bajtove odjednom (ili završava multiple part dekripciju): `byte[] doFinal​(byte[] input)`, metoda će izazvati `javax.crypto.AEADBadTagException`.\n\n[Dokumentacija](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/javax/crypto/Cipher.html#doFinal(byte%5B%5D))",
+      "votes": {
+        "upvoters": [
+          "Giovanni",
+          "samurai (samuraj)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160179": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "Trebaju li se salt i iv mijenjati svaki put kad se unosi nova lozinka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160184": {
+      "poster": "Ardura (Maddy)",
+      "content": "Kad pogledam u datoteku sve je zapisano u ASCII, a kad čitam iz nje svaki znak se pretvori u UTF i onda ne mogu dobro usporediti upisani tekst i tekst u datoteci. Je li netko zna kako u startu zapisivati drugačije?  Pišem u javi, chiper.doFinal() vrati byte[] i zatim outputstreamom zapisujem u datoteku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160330": {
+      "poster": "tomekbeli420",
+      "content": "@KingGeedorah#160179 bilo bi poželjno da su slučajno odabrani prilikom svake enkripcije\n\n@Ardura#160184 ako spremaš i čitaš datoteke u tekstualnom obliku, onda pretpostavljam da si koristio neku implementaciju **Reader**-a (bitna je razlika između objekta tokova InputStreama/OutputStreama i Readera/Writera, InputStream radi sa bajtovima dok Reader radi sa charovima). Ako čitaš datoteku u tekstualnom obliku, pretpostavljam da si koristio nekakav most između InputStreama i Readera kako bi prvo uspio otvoriti samu datoteku (tok) u sirovom obliku u bajtovima (InputStream) te onda taj tok bajtova pretvoriti u tok znakova (Reader) (primjerice razred InputStreamReader). I upravo tu moraš definirati koja kodna stranica se koristi za interpretaciju bajtova u znakove.\n\nOno što pretpostavljam da ti ne valja jest da si negdje koristio defaultni konstruktor  (ili neku metodu) koji onda nekako sam izabire kodnu stranicu (ili uzme default koji metoda/konstruktor određuje ili uzme default od tvog računala). Pa onda vjerojatno iste bajtove si prilikom zapisivanja koristio jednu kodnu stranicu, a prilikom čitanja neku drugu\n\nTLDR: koristi metode/konstruktore koje eksplicitno primaju kodnu stranicu prilikom čitanja i pisanja, tako ćeš iste bajtove kad čitaš i pišeš interpretirati u iste znakova",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160353": {
+      "poster": "boki8 (kerovac)",
+      "content": "Pri postupku MAC-iranja,radi li se MAC samo od šifrata ili je potrebno MAC-irati i šifrat i inicijalizacijski vektor? Ako je odgovor ovo drugo, zašto je tako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160377": {
+      "poster": "branimir1999",
+      "content": "programiram u javi i koristim AES/CBC/ISO10126Padding. Testirao sam granicne slucajeve, a to je da su dvije iste sifre 256 slova, ali se razlikuju na prvom ili zadnjem mjestu. U prvom slucaju (razlikuju se sifre samo na prvom mjestu) dobijem da se enkriptirana sifre razlikuju za 98.08% slova, dok se u drugom slucaju (razlika samo na zadnjem slovu) razlikuju za 11.53%. Ovo je jedino problem kada covjek *zamjenjuje* staru sifru (dobiju se potpuno razlicite enkripcije za istu sifru za razlicite adrese pa to nije problem), a stara i nova sifra se razlikuju samo za zadnje slovo. Postoji li nesto sto mogu napravim da povecam razlicitost za isti tajni kljuc, a razlika je samo u zadnjem slovu?\n\nTakoder, mozemo li re-use IV kod CBC ili mu se narusava neka sigurnost?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160387": {
+      "poster": "WickyWinslow",
+      "content": "@boki8#160353 https://crypto.stackexchange.com/questions/24353/encrypt-then-mac-do-i-need-to-authenticate-the-iv",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160389": {
+      "poster": "jobi (azex)",
+      "content": "@branimir1999#160377 mislim da je to iz razloga sto koristis isti IV i salt svaki put kada enkriptiras, napravi da ti je IV i salt nasumican za svaku novu enkripciju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160392": {
+      "poster": "branimir1999",
+      "content": "@jobi#160389 ali moram koristiti isti iv + salt za dekripciju, zar ne? To znaci da moram pamtiti koji je salt + iv za svaku adresu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160393": {
+      "poster": "jobi (azex)",
+      "content": "@branimir1999#160392 tako sam ja, zapisa sam salt, iv, tag uz svaku adresu i lozinku;\n\nnjih ne moras enkriptirat",
+      "votes": {
+        "upvoters": [
+          "JBQ"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160518": {
+      "poster": "ppooww (pp)",
+      "content": "jel dovoljno kriptirat cijeli file ili treba posebno kriptirat lozinke i onda jos i file?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160703": {
+      "poster": "Stoja_9 (Bije_san_u_autobusu)",
+      "content": "@ppooww#160518 mislim da je dovoljno samo cijeli file",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "dodo",
+          "mariak (kaiak)",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Aloko (Ardeo)",
+          "boki8 (kerovac)",
+          "dodo",
+          "neksi (filip)"
+        ],
+        "tuga": []
+      }
+    },
+    "160886": {
+      "poster": "bb8 (zaza)",
+      "content": "@__builtin_popcount#158148 sta je taj salt i cemu sluzi? zasto bi se trebao spremit i jel to jedna jedina jedinstvena vrijednost ili bi trebalo za svaku enkripciju novi kao sto je to slucaj kod iv?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160939": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@bb8#160886\n\n_Salt_ služi kako ne bi svi koji imaju istu zaporku imali i isti ključ, te kako napadač koji ima [popis ključeva](https://en.wikipedia.org/wiki/Rainbow_table) deriviranih iz najčešćih lozinki ne bi mogao lookupom saznati lozinke.\n\nU ovom labosu ga ja mijenjam svaki put kad kriptiram, kao i IV. Razlozi su mi sljedeći:\n* Na zadnjem slajdu 3. prezentacije su napisali da preporučuju ne stalno koristiti isti simetrični ključ, pa ga promjenom _salta_ mijenjam pri svakom pisanju datoteke.\n* Ako napadač nekako nabavi kriptografski ključ, ali ne glavnu zaporku, ne može ju iz njega saznati. Dodatno, tim ključem neće moći dekriptirati nijednu prethodnu, niti buduću verziju datoteke.\n* Funkcija koju koristim za derivaciju ključa prima _salt_, pa zašto ga ne koristiti? Radije bih imao višak entropije nego manjak; tih 16-ak bajtova više u datoteci mi ne smeta, a vrijeme potrebno za generirati te bajtove pri svakom kriptiranju je zanemarivo.\n\n_Salt_ je od većeg značaja kad imaš nešto kao web servis i u SQL bazu spremaš npr. bcrypt hasheve zato što:\n* Ne želiš da napadač može lako prepoznati lozinke iz prošlih napada čije je hasheve unaprijed izračunao.\n* Ne želiš da ljudi s istom lozinkom u bazi imaju isti hash jer onda napadač koji nekom metodom (npr. phishingom) sazna zaporku jednog korisnika može znati tko je sve drugi koristio istu lozinku.",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)",
+          "kix7 (Fish99)",
+          "laranotreallycroft",
+          "netbitan11 (netbitan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160948": {
+      "poster": "bb8 (zaza)",
+      "content": "@__builtin_popcount#160939 Jel to isto random broj poput IV-a? I zar se ne bi problem istog ključa za iste zaporke mogao riješit IV-om? Ali dobro da, ako funkcija već prima salt zašto ga ne koristiti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160964": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "> @bb8#160948 Jel to isto random broj poput IV-a?\n\nDa.\n\n> @bb8#160948 I zar se ne bi problem istog ključa za iste zaporke mogao riješit IV-om?\n\nKao što sam rekao, postoje slučajevi gdje je _salt_ puno važniji nego ovdje.\n\nAES je zamišljen da se isti ključ koristi za cijelu sjednicu, ali da se IV mijenja za svaku poruku, barem koliko sam skužio. No, zato što kriptiram sve parove adresa-zaporka odjednom, imam samo jednu poruku po sjednici, pa mi se _salt_ i IV mijenjaju jednako često. Da sam kriptirao svaki par zasebno, svaki bi par imao svoj IV ali bi mi i dalje trebao samo jedan _salt_ za cijelu datoteku.\n\nZa AES dekripciju trebaju ključ i IV, a kako IV pišem nekriptiran u datoteku je napadaču ključ dovoljan za dekriptirati šifrat. No kod mene ključ ovisi i o glavnoj zaporci, i o _saltu_, pa napadač koji posjeduje samo ključ neće moći dekriptirati ostale inačice datoteke s istom zaporkom ali drugim _saltom_. Da budem potpuno iskren, nisam siguran kako bi napadač došao do ključa, ali ne i zaporke, ali promjena _salta_ u takvom slučaju napadaču odmaže.",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161033": {
+      "poster": "branimir1999",
+      "content": "Osim same implementacije, sto jos *konkretno* moramo napraviti? Trebamo li napisati dokumentaciju o nasoj implementaciji i objasniti zasto su uvjeti zadovoljeni? Je li moramo bas objasnjavati kako funkcioniraju algoritmi poput AES i HMAC ili samo apstraknto objasniti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161038": {
+      "poster": "bb8 (zaza)",
+      "content": "@branimir1999#161033 Mislim da ne moraš objašnjavat algoritme, ali možeš reći da si koristio IV, AES, HMAC, kako si ih implementirao u kodu i općenito o kodu kako si onda ostvario njihove zadane sigurnosne zahtjeve, šta se dogodi ako netko unese krivi master password i slično. A osim dokumentacije, treba ti shell skripta iako piše da bi to bilo idealno što znači da valjda možeš i u notepadu napisat korak po korak kak šta ide bez da radiš skriptu ak već nisi siguran kak.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161062": {
+      "poster": "Erpeg",
+      "content": "Jel netko dobiva ovaj error u pythonu ?\n\n`ModuleNotFoundError: No module named 'Crypto'`\n\nIsprobao sam sljedece:\n\n```\npip uninstall crypto\npip uninstall pycryptodome\npip install pycryptodome\n\npip install pycryptodome\npip install pycryptodomex\npip3 install pycryptodome\npip3 install pycryptodomex\n```\nNista od navedenog ne radi",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161072": {
+      "poster": "bb8 (zaza)",
+      "content": "@Erpeg#161062 python -m pip install pycryptodome \n\nmeni je ovo radilo",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161094": {
+      "poster": "nnn (dinoo)",
+      "content": "@Erpeg#161062 možda ružan račin ali: `pip install --user pycryptodome`",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161109": {
+      "poster": "Joskica",
+      "content": "@Erpeg#161062 ako koristis windows moguce da ti je module instaliran u folder crypto, a ne Crypto pa ga ne prepoznaje, samo promijenis ime foldera i tjt",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "allophone"
+        ],
+        "tuga": []
+      }
+    },
+    "161112": {
+      "poster": "Erpeg",
+      "content": "@Erpeg#161062 \n\nProblem sam rjesio tak da sam maknuo crypto i cryptodome iz nekog liba i ponovno napravio `pip install cryptodome`\n\nTolko random...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161175": {
+      "poster": "bjunolulz",
+      "content": "@Bucc#159488 jel koristis w ili a kao mode kod f = open()",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161257": {
+      "poster": "Lyras",
+      "content": "@Erpeg#161112 Welcome to python dependencies",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "gladiator"
+        ]
+      }
+    },
+    "161379": {
+      "poster": "me99",
+      "content": "Jel netko koristio algoritam \"PBKDF2WithHmacSHA256\" za derivaciju kljuca u Javi? Jel trebam uz to jos izracunavat hmac ili je takav kjuc sam po sebi dovoljan i za zastitu integriteta?\n\nP.S. Jasno mi je da je naziv algoritma \"withHmac\" ali vidim da svi posebno izracunavaju hmac i spremaju ga u datoteku za ksniju usporedbu pa vise nisam siguran",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161381": {
+      "poster": "JBQ",
+      "content": "@me99#161379 \n\nMoras, ovime ces dobit samo kljuc koji ti treba da bi macirao, jer samim izracunom kljuca nisi nista zastitio",
+      "votes": {
+        "upvoters": [
+          "me99"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161460": {
+      "poster": "Mariox",
+      "content": "samo da provjerim\n\nkoristim AES-GCM i tijekom inicializacije napravim jedan dummy `cipherText + salt + nonce(ili iv, isto) + hmac_tag` pomoću hardkodiranog plaintexta. Taj dummy par sluzi za provjeru master pasworda pri `put` naredbi. Posto je string hardkodiran, to daje napadaču pristup jednom paru `plaintext, cipherText,  salt,  nonce(ili iv, isto),  hmac_tag`\n\nJel to predstavlja problem?\n\nencryption key se derivira iz master passworda i salta pomoću PBKDF2\n\nsalt i nonce su random\n\nPokušao sam sam potražiti \"Is AES-GCM secure against dictionary attacks?\"\n\nAko je problem, kako onda provjeriti masterpassword tijekom `put` nardbe kada je baza prazna?",
+      "votes": {
+        "upvoters": [
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161468": {
+      "poster": "Mariox",
+      "content": "@Mariox#161460 \n\nhttps://security.stackexchange.com/a/117509\n\npronasao sam odgovor. AES je siguran protiv \"known plaintext\" napada, a posto koristim salt, također sam siguran od \"Ciphertext Indistinguishablity Attack\" (iz stackexchange odgovora)",
+      "votes": {
+        "upvoters": [
+          "Lenobius",
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161508": {
+      "poster": "mihamih",
+      "content": "netko tko je radio u pythonu, jesam li dobro shvatio da se derivacija kljuceva iz master passworda dogada prilikom stvaranja novog AEScipher objekta i u njemu cuvaju ti derivirani kljucevi koji se onda koriste za enkripciju i hashiranje u encrypt_and_digest metodi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161530": {
+      "poster": "Mariox",
+      "content": "@mihamih#161508 ne, deriviranje kljuca nije dio cipher objekta,\n\nsam to napravi, samo kopiraj ovaj primjer (link iz uputa) https://pycryptodome.readthedocs.io/en/latest/src/protocol/kdf.html",
+      "votes": {
+        "upvoters": [
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161531": {
+      "poster": "Kaladonter",
+      "content": "Jel rješenje možemo predati kao maven projekt?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161537": {
+      "poster": "mihamih",
+      "content": "@Mariox#161530 taj salt koji koristim u toj funkciji moram onda zapisat u dokument nezasticeno isto kao i IV, i onda s druge strane ponovo iz njega derivirat kljuceve koji bi trebali biti isti? takoder onda ne mogu koristit npr encrypt_and_digest() vec ih moram odvojeno koristit zbog dva razlicita kljuca koja koristim za enkripciju i hashiranje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161541": {
+      "poster": "Mariox",
+      "content": "@mihamih#161537 tijekom dohvacanja koristi decrypt_and_verify() nakon sto napravis cipher objekt pomocu kljuca kojeg si dobio pomocu korisnikovog inputa i salta kojeg si procitao iz baze. Kod stavljanja u bazu napravi novi salt (nemoj nikad koristiti isti kljuc 2 puta)",
+      "votes": {
+        "upvoters": [
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161587": {
+      "poster": "Artemis",
+      "content": "Moze mi netko objasniti koja je svrha \"init password\"?",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161635": {
+      "poster": "mihamih",
+      "content": "@Mariox#161541 znaci ipak ne moram razbijat derivirani kljuc na key1 i key2?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161677": {
+      "poster": "Mariox",
+      "content": "@mihamih#161635 tako je, GCM koristi jedan ključ za autentikaciju (GMAC) i enkripciju\n\nencrypt_and_digest() ti daje ciphertext i mac",
+      "votes": {
+        "upvoters": [
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161800": {
+      "poster": "bb8 (zaza)",
+      "content": "@Artemis#161587 ja sam ga koristio samo za stvaranje txt datoteke u koju ću upisivat ove parove. Vidim gore da su neki osim stvaranja datoteke implementirali nekakve mehanizme provjere masterpassworda. Kad se radi verificikacija onog parametra dobivenog metodom digest, onda je ili file mijenjan ili je masterpassword krivo unešen. Ja sam ostavio samo poruku onda na izlaz da je problem u nečem od tog dvoje.",
+      "votes": {
+        "upvoters": [
+          "Artemis",
+          "HARAmara (decko_sa_balkana)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161804": {
+      "poster": "yuniK",
+      "content": "jeli moze neko ko je pisa u javi poslat svoje upute za prevodenje i pokretanje lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161805": {
+      "poster": "Nocna_smjena",
+      "content": "@yuniK#161804 napraviš najobičniju shell skriptu\n\n`#!/bin/bash\n\necho \"Prvo trebamo inicijalizirati manager\"\n\njava Crypto.java init lozinka\n\necho \"Zatim dodamo entry\"\n\njava Crypto.java put lozinka www.fer.hr sifra`\n\nItd... Ovo sam samo ukratko napisao ali još bi trebao to do kraja napisati i to razložiti u specifičnije slučajeve (pokušava se put-at ili get-at a manager nije ni inicijaliziran), ne postoji entry za danu domenu itd",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161811": {
+      "poster": "tomekbeli420",
+      "content": "@yuniK#161804 honestly ja nemam pojma kako sa javacom kompajlirati java projekt sa vise fajlova da mi poslozi u finu direktorijsku strukturu ko što to rade eclipse ili maven... Ali ja to nisam uključio jer u Javi možeš distribuirati .class datoteke (kompajlirani bajtkod), bilo u folderima bilo u JAR biblioteci, i onda se to može izvršavati na bilo kojem računalu na bilo kojem operacijskom sustavu koji ima instaliranu Javu (implementaciju Javinog virtualnog stroja ako ćemo biti precizniji), bez ponovnog kompajliranja.\n\nrecimo, ako si radio kao Eclipse projekt, onda im možeš uploadati i **src** (jer traže izvorni kod) i **bin** (tamo su .class datoteke raspoređene po direktorijskoj strukturi koja odgovara paketima) poddirektorije koje generira Eclipse. I onda recimo da je se tvoj razred sa main metodom zove `MainClass`, i recimo da se nalazi u paketu `ime.paketa`. Onda da bi pokrenuo to čudo, recimo da si u terminalu pozicioniran na razini istoj ko i **src** i **bin**, onda opališ\n\n`java -cp bin ime.paketa.MainClass argument1 argument2 ...`.\n\nKonkretan primjer za ovaj labos, npr ako hoću staviti novi zapis website-lozinka (put):\n\n`java -cp bin ime.paketa.MainClass put masterPassword www.fer.hr lozinka123`\n\nA ako si radio npr kao projekt u Mavenu, onda će, nakon kompilacije, .class datoteke završiti u poddirektoriju `target/classes`, isto tako nakon toga imati direktorijsku strukturu koja prati imena paketa. Onda da bi to pokrenuo, za razliku od prethodnog, samo moraš promijeniti `-cp`:\n\n`java -cp target/classes ime.paketa.MainClass argument1 argument2 ...`\n\n\nI naravno pretpostavka je da se naredba `java` opće prepoznaje kao naredba u terminalu, a to možeš očekivati da će oni imati to ispravno konfigurirano.\n\nEvo to opišeš u uputama svojim riječima i to im je dovoljno. Rekao je tata Đerek da one gluposti sa shell skriptama nisu obavezne :)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Kaladonter",
+          "blablajar",
+          "gladiator",
+          "nimble"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161978": {
+      "poster": "JBQ",
+      "content": "Moze neko pomoc? Kad pozovem shell kao da mi ne radi get metoda.\n\nA kad idem rucno sve radi normalno i skroz je okej.\n\nRadim prvi put sa shell oa nez jel mi sta fali ili nesto\n\n![](assets/2021-04-02/00023.jpeg)\n\n![](assets/2021-04-02/00024.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161982": {
+      "poster": "Sulejman",
+      "content": "@JBQ#161978 Probaj napravit strip() argumenata u kodu, znam da je meni isto neš čudno radilo pa mi je to riješilo problem.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161984": {
+      "poster": "tomekbeli420",
+      "content": "@tomekbeli420#161811 Ispravak netočnog navoda:\n\nKaže Đerek da ipak se **ne** predaju binarne datoteke (.class kod Jave), tako da dio za kompajliranje ipak mora biti (doduše ne znam kako to napraviti bez mavena). Ali nakon kompajliranja ostalo i dalje vrijedi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161985": {
+      "poster": "JBQ",
+      "content": "@Sulejman#161982 \n\nHvala, radi :D",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162007": {
+      "poster": "ana (anci)",
+      "content": "@tomekbeli420#161984\n\nMozes kompajlirati sa\n\njavac Class1.java Class2.java ... koliko ih vec imas\n\ni onda pokrenuti sa\n\njava MainClass init master-password",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162012": {
+      "poster": "faboche (him)",
+      "content": "@tomekbeli420#161984 Zasto nebi koristio maven?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162030": {
+      "poster": "Fikalo",
+      "content": "Stari moj gledam tu neki pseudo kod i nije mi jasno sta se desava, kakva je ovo prevara naivnog naroda",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Lusy (MGJ)",
+          "blablajar",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "gladiator"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162036": {
+      "poster": "tomekbeli420",
+      "content": "@faboche#162012 well ne znam je li \"Rješenje mora biti moguće pokrenuti koristeći\n\n**standardne alate i prevoditelje** na Ubuntu Linux 18.04 sustavu\" uključuje i Maven\n\nZa one koje zanima perhaps, uspio sam skužiti kako se prevodi na isti način koristeći `javac`:\n>!Recimo da se izvorni kodovi nalaze u poddirektoriju `src/main/java` pa dalje imaju direktorijsku strukturu kako prate pakete. Tako bi primjerice, razred `MyClass` koji deklarira da je u paketu `ime.paketa`, imao izvorni kod na disku na lokaciji `src/main/java/ime/paketa/MyClass.java`. Recimo da želimo istu strukturu .class datoteka nakon kompilacije staviti, kao što to radi Maven, u poddirektorij `target/classes` (ovo je moglo biti bilo šta, al eto ja ću kao primjer uzeti tako). Recimo da razred `MyClass` sadrži main metodu koja je ulazna točka cijelog projekta, tada bi naredba glasila:\n\n>`javac -source 11 -target 11 -d target/classes -sourcepath src/main/java src/main/java/ime/paketa/MyClass.java`\n>\n>javac će pritom iskompajlirati sve korištene importane razrede i pravilno ih posložiti u poddirektorij `target/classes` (također stvoriti ga ako nije postojao)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162061": {
+      "poster": "[deleted]",
+      "content": "@tomekbeli420#162036 u kojem si ti desetljecu? s novom javom samo napravi @Nocna_smjena#161805",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "AK10 (endyyyy)",
+          "SuperSjajan3",
+          "kix7 (Fish99)",
+          "netbitan11 (netbitan)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162063": {
+      "poster": "Fikalo",
+      "content": "@boki8#159863 si uspio nac? meni je ista stvar, zapisujem byte[32] a dobijem byte[11] kad citam.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162070": {
+      "poster": "Fikalo",
+      "content": "@Fikalo#162063 nwm, naso",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162073": {
+      "poster": "Fikalo",
+      "content": "e i ak neko zna, kolko se bodova gubi za kasnu predaju, jer u prezentaciji s predmeta pise samo da je sistem isti ko u operacijskim sustavima, a sve nesto zvoni da se nece stic do ponoci predat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162074": {
+      "poster": "teta_iz_menze",
+      "content": "@Fikalo#162073 ![](assets/2021-04-02/00042.png)\n\ni mene to brine, bilo bi ispravno da dodijele npr 50% al ako ne donesu nista onda stvarno sranje haha",
+      "votes": {
+        "upvoters": [
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162076": {
+      "poster": "Fikalo",
+      "content": "@teta_iz_menze#162074 onda su lagali ovdje ![](assets/2021-04-02/00043.png), i guess da se onda vise isplati predat polovno rjesenje nego nista, fala na informaciji tho",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162079": {
+      "poster": "teta_iz_menze",
+      "content": "@Fikalo#162076 cek zar se boduje polovno rjesenje, jer imam 99% programa napisano tj sve je napisano ali neki je mali bug",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162081": {
+      "poster": "Fikalo",
+      "content": "@teta_iz_menze#162079 nemam pojma, al realno ja nemam kaj izgubit, ak predam kasnije je tak i tak 0 bodova. ak tebi malo fali imas jos 3 sata i guess da ispravis",
+      "votes": {
+        "upvoters": [
+          "teta_iz_menze"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162082": {
+      "poster": "Lusy (MGJ)",
+      "content": "Ako mi program baš i ne funkcionira, treba li ga ponovno predavati skroz točnog do 16.4. ili se to smatra obavljenim ako predam do večeras?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162087": {
+      "poster": "Daeyarn",
+      "content": "jel ok za padding samo na plaintext dodati npr. \"#\" tako da svi tekstovi imaju istu duljinu\n\nEDIT: mislio sam smijemo li hardcodirati taj znak koji se dodaje ili trebamo storeati u file velicinu paddinga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162093": {
+      "poster": "tomekbeli420",
+      "content": "@Itachi#162061 de dobro je weeb boy, za razliku od kolege, neki su svoja rješenja razdjelili u pakete, pa takvo pokretanje neće funkcionirati.\n\n@Fikalo#162073 ako se dobro sjećam, dobiješ 0 bodova ali ti treba da bi prođeš predmet. Source: upute za labos\n\n\"Ispravna rješenja poslana do tog roka ne donose bodove, ali omogućavaju\n\nstudentima ispunjavanje minimuma i prolaz predmeta\"",
+      "votes": {
+        "upvoters": [
+          "Fikalo",
+          "JoKing",
+          "Lyras",
+          "SuperSjajan3",
+          "[deleted]",
+          "bb8 (zaza)",
+          "iNavy (mornar Ica)",
+          "kix7 (Fish99)",
+          "teta_iz_menze"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162105": {
+      "poster": "GetSchwifty (_2D_)",
+      "content": "Ljudi koji su radili u Pythonu, kako ste dobivali string iz binarnog formata kojeg vraća cypher.decrypt(base64.b64decode(data)). Kad probam string=base64.b64decode(string).decode(\"utf-8\") dobivam error.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162107": {
+      "poster": "Daeyarn",
+      "content": "@GetSchwifty#162105 cypher.decrypt(bytes(data, 'UTF-8'))",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162109": {
+      "poster": "GetSchwifty (_2D_)",
+      "content": "@Daeyarn#162107 TypeError: encoding without a string argument",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162115": {
+      "poster": "Daeyarn",
+      "content": "@GetSchwifty#162109 aha sorry mislio sam da je data string argument, kojeg je data tipa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162116": {
+      "poster": "GetSchwifty (_2D_)",
+      "content": "@Daeyarn#162115 binary😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162120": {
+      "poster": "Daeyarn",
+      "content": "@GetSchwifty#162116 onda mozes cypher.encrypt(data), msm da funkcija prima bajtove kaj ne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162122": {
+      "poster": "GetSchwifty (_2D_)",
+      "content": "@Daeyarn#162120 ma prima, samo vraća nešto binarno što se neda vratit u s\n\ntring ahahah...nema veze, hvala svejedno😆",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162127": {
+      "poster": "gladiator",
+      "content": "@GetSchwifty#162122 Pretpostavljam da želiš zapisati te bajtove? Možeš direktno zapisivati bajtove u binarnu datoteku ili možeš bajtove pretvoriti u string (tj. u njihovu string reprezentaciju) i onda njih zapisati u tekstualnu datoteku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162130": {
+      "poster": "Fikalo",
+      "content": "jel neko zna sta treba predat kao argument za cbc algoritam, ovo mi vraca nosuchalgorithm exception\n\n Cipher cipher = Cipher.getInstance(\"CBC\");",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162131": {
+      "poster": "blablajar",
+      "content": "@Fikalo#162130 \n\n`Cipher cipher = Cipher.getInstance(\"AES/CBC/PKCS5Padding\");`",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162135": {
+      "poster": "GetSchwifty (_2D_)",
+      "content": "@gladiator#162127 ma trebalo bi ih u string vratiti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162142": {
+      "poster": "MiqeloS",
+      "content": "Jel dolazilo kome javax.crypto.IllegalBlockSizeException: Input length must be multiple of 16 when decrypting with padded cipher ?\n\nOvo mi je decrypt: ![](assets/2021-04-02/00048.png)\n\nNije bitno jel koristim ovaj Base64 za pretvaranje il normalnu implementiranu pretvorbu idalje dobivam istu stvar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162148": {
+      "poster": "bb8 (zaza)",
+      "content": "@GetSchwifty#162122 ja pročitam binarno šifrat iz txt filea i onda to ubacim tako pročitano u decrypt i to što dobijem provučem kroz decode('utf-8') i radi sve kak treba\n\nkod encrpyt funkcije uvijek string provučem kroz bytes(string, 'utf-8') i onda to stavim u encrypt\n\npa eto možda ti pomogne nešto od ovog",
+      "votes": {
+        "upvoters": [
+          "GetSchwifty (_2D_)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162150": {
+      "poster": "teta_iz_menze",
+      "content": "smije li se arhiva koju predajemo zvati bilo kako ili ima nekih pravila",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162159": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@teta_iz_menze#162150 Može bilo kako",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162167": {
+      "poster": "Fikalo",
+      "content": "Ovu dokumentaciju sta nas traze, je mozemo to samo u notepadu napisat il moramo na papir?",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Kaladonter",
+          "MiqeloS",
+          "Nocna_smjena"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162169": {
+      "poster": "DazedAndConfused",
+      "content": "@Fikalo#162167 Na papir pa onda to moraš osobno dostaviti pred vrata Anti Đereku.",
+      "votes": {
+        "upvoters": [
+          "Fikalo",
+          "Jale (čakijale)",
+          "Jaster111",
+          "JayOhAit",
+          "MiqeloS",
+          "nimble"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ardura (Maddy)",
+          "JayOhAit",
+          "Kaladonter",
+          "snowman"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162172": {
+      "poster": "bb8 (zaza)",
+      "content": "@Fikalo#162167 mozes u notepadu",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163022": {
+      "poster": "hellvetica",
+      "content": "Hoce onda u terminu tek odabrat ko ce prezentirat ili ce javit unaprijed?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Valentino"
+        ],
+        "tuga": []
+      }
+    },
+    "163025": {
+      "poster": "Retard00",
+      "content": "@hellvetica#163022 Prezentirat šta?",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163332": {
+      "poster": "hellvetica",
+      "content": "@Retard00#163025 \n\n![](assets/2021-04-05/00025.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Bucc (Olive Oil)",
+          "Kaladonter",
+          "LucidDreamer",
+          "zmei"
+        ]
+      }
+    },
+    "165122": {
+      "poster": "BrownPerson (Bambi)",
+      "content": "@hellvetica#163332 jel se zna kad će to biti? Jer su upisani ovi labosi u kalendar i više ne znam da ih zanemarujem ili ne?😳",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165124": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@BrownPerson#165122 \n\nReko je Đerek danas na konzultacijama, da bi u četvrtak trebali prezentirati ljudi koje odaberu (u terminu konzultacija)",
+      "votes": {
+        "upvoters": [
+          "BrownPerson (Bambi)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165162": {
+      "poster": "JBQ",
+      "content": "@AntonioB25#165124 \n\nOdabrat ce u terminu konzultacija ko je tamo ili ce objavit prije ko prezentira?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165170": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@JBQ#165162\n\nJa sam ga shvatio da će objaviti prije, ali nisam siguran.\n\nAko netko zna sigurno, neka javi",
+      "votes": {
+        "upvoters": [
+          "JBQ"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165903": {
+      "poster": "viliml",
+      "content": "> @bb8#162148 kod encrpyt funkcije uvijek string provučem kroz bytes(string, ‘utf-8’) i onda to stavim u encrypt\n\npro-tip: to je isto kao `string.encode('utf-8')`\n\nkad već za reverznu operaciju koristiš `bajti.decode(‘utf-8’)` umjesto `str(bajti, 'utf-8')` 😉",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166644": {
+      "poster": "Lusy (MGJ)",
+      "content": "@AntonioB25#165124 Prezentira se pred svima u pozivu ili zasebno zove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166675": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@Lusy#166644 \n\nNisu rekli\n\nRekli su samo da će se prezentirat u terminu konzultacija.\n\nKako će izabrat ljude i kako će izgledat te prezentacije, nisu rekli.",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166677": {
+      "poster": "Retard00",
+      "content": "Kad uopće misle bodovat rješenja prvog labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166691": {
+      "poster": "faboche (him)",
+      "content": "@Retard00#166677 Ja sam razumio da namjeravaju ispraviti početkom ovog sljedećeg tjedna i da će onda poslati mail studentima koji u četvrtak prezentiraju. Ali, mislim da se ogradio da to nije sto posto sigurno i da postoji mogučnost da ne bude tog odgovaranja u četvrtak ako ne stignu ispraviti.",
+      "votes": {
+        "upvoters": [
+          "Retard00",
+          "Suki7",
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167396": {
+      "poster": "anon00",
+      "content": "Je li ja sto krivo gledam ili nema forme za predaju 1. lab sa zakašnjenjem? \n\nNema ništa na Ferku, a i moodle sam provjerio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167609": {
+      "poster": "Zero",
+      "content": "@anon00#167396  Ja isto ne vidim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167649": {
+      "poster": "anon00",
+      "content": "@Zero#167609  ![](assets/2021-04-11/00036.jpeg)\n\nUgl poslao sam im mail pa javim sto odgovore",
+      "votes": {
+        "upvoters": [
+          "Zero"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168283": {
+      "poster": "JBQ",
+      "content": "Upisani bodovi iz labosa",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168290": {
+      "poster": "Zero",
+      "content": "@anon00#167649 Mogu sad predat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168405": {
+      "poster": "miran (mirko)",
+      "content": "@JBQ#168283 na ferwebu?",
+      "votes": {
+        "upvoters": [
+          "JBQ"
+        ],
+        "downvoters": [
+          "JBQ"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168407": {
+      "poster": "JBQ",
+      "content": "@miran#168405 Da, stigao je i mail u meduvremenu",
+      "votes": {
+        "upvoters": [
+          "miran (mirko)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169456": {
+      "poster": "Spuk",
+      "content": "Jel itko dobio email ili nesto na teams da odgovara labos u cetvrtak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169475": {
+      "poster": "snowman",
+      "content": "@Spuk#169456 mene su dodati u grupu za teamse i asistent je sve lijepo objasnio kako i sta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169484": {
+      "poster": "Spuk",
+      "content": "@snowman#169475 znaci vec su odabrali, ok to me sam zanimalo jer se uskoro ponoc",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170656": {
+      "poster": "oneTwo",
+      "content": "Ispitivanje traje otprilike 3 minute. Pitao me da objasnim kod i basically samo žele provjerit jeste sami pisali labos.",
+      "votes": {
+        "upvoters": [
+          "1vq",
+          "Fikalo",
+          "Kaladonter",
+          "Lusy (MGJ)",
+          "Mikki",
+          "Tone",
+          "grga_it_is (it_is_what_it_is)",
+          "iNavy (mornar Ica)",
+          "krokodil",
+          "miran (mirko)",
+          "nnn (dinoo)",
+          "ruza0001 (rozy)",
+          "soplagaitas (sopla)",
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "title": "[RACFOR] Završni ispit - 2020/2021",
+  "creator": "ton6 (toto6)",
+  "slug": "racfor-zavrsni-ispit-20202021",
+  "tags": [
+    "FER",
+    "Računalna forenzika",
+    "Ispiti"
+  ],
+  "posts": {
+    "139210": {
+      "poster": "ton6 (toto6)",
+      "content": "Znam da je malo kasno ali.. Imala sam problem na završnom da mi volatility  izbacuje ovu grešku na naredbu pslist, bez obzira jesam li postavljala -profile varijablu ili ne:\n\n```\nNo suitable address space mapping found\nTried to open image as:\n MachOAddressSpace: mac: need base\n LimeAddressSpace: lime: need base\n WindowsHiberFileSpace32: No base Address Space\n WindowsCrashDumpSpace64BitMap: No base Address Space\n WindowsCrashDumpSpace64: No base Address Space\n HPAKAddressSpace: No base Address Space\n VMWareMetaAddressSpace: No base Address Space\n VirtualBoxCoreDumpElf64: No base Address Space\n VMWareAddressSpace: No base Address Space\n QemuCoreDumpElf: No base Address Space\n WindowsCrashDumpSpace32: No base Address Space\n Win10AMD64PagedMemory: No base Address Space\n WindowsAMD64PagedMemory: No base Address Space\n LinuxAMD64PagedMemory: No base Address Space\n AMD64PagedMemory: No base Address Space\n IA32PagedMemoryPae: No base Address Space\n IA32PagedMemory: No base Address Space\n OSXPmemELF: No base Address Space\n MachOAddressSpace: MachO Header signature invalid\n LimeAddressSpace: Invalid Lime header signature\n WindowsHiberFileSpace32: No xpress signature found\n WindowsCrashDumpSpace64BitMap: Header signature invalid\n WindowsCrashDumpSpace64: Header signature invalid\n HPAKAddressSpace: Invalid magic found\n VMWareMetaAddressSpace: VMware metadata file is not available\n MachOAddressSpace: MachO Header signature invalid\n LimeAddressSpace: Invalid Lime header signature\n WindowsHiberFileSpace32: No xpress signature found\n WindowsCrashDumpSpace64BitMap: Header signature invalid\n WindowsCrashDumpSpace64: Header signature invalid\n HPAKAddressSpace: Invalid magic found\n VMWareMetaAddressSpace: VMware metadata file is not available\n VirtualBoxCoreDumpElf64: ELF Header signature invalid\n VMWareAddressSpace: Invalid VMware signature: 0xf000ff53\n QemuCoreDumpElf: ELF Header signature invalid\n WindowsCrashDumpSpace32: Header signature invalid\n Win10AMD64PagedMemory: Incompatible profile WinXPSP2x86 selected\n WindowsAMD64PagedMemory: Incompatible profile WinXPSP2x86 selected\n LinuxAMD64PagedMemory: Incompatible profile WinXPSP2x86 selected\n AMD64PagedMemory: Incompatible profile WinXPSP2x86 selected\n IA32PagedMemoryPae: No valid DTB found\n IA32PagedMemory: No valid DTB found\n OSXPmemELF: ELF Header signature invalid\n FileAddressSpace: Must be first Address Space\n ArmAddressSpace: No valid DTB found\n ```\n \n Pošto nas je bilo više na zi koji su imali taj problem. Jel ga netko uspio riješiti?\n\n Ista stvar mi se događa pokretanjem na njihovoj virtualci u virtualboxu, vmvare-u na mom ili novom lapotpu, također ista stvar pokretanjem sa executable volatility fileom sa volatilityfoundation stranice.\n\n Jel ima nešto čega nisam svjesna da moramo napravit s .dmp fileom prije pokretanja što nismo morali na labosu ili je do njihove datoteke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "139856": {
+      "poster": "pero122 (teslaFan)",
+      "content": "Vjerovatno si stavio KRIVI profil (nije isti ko u labosu)\n\nPrvo moraš saznati profil sa :\n\nvolatility -f mem.dmp imageinfo\n\nPod suggested profiles uzmeš jedan od njih (nije bitno koji)\n\nvolatility -f mem.dmp --profile=PROFIL_KOJI_PISE_U_SUGGESTED",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

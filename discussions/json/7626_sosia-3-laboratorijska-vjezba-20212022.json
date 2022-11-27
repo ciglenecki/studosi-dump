@@ -1,0 +1,81 @@
+{
+  "title": "[SOSIA] 3. laboratorijska vježba - 2021/2022",
+  "creator": "gladiator",
+  "slug": "sosia-3-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Sigurnost operacijskih sustava i aplikacija",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "301620": {
+      "poster": "gladiator",
+      "content": "\"Ako testovi prođu bez prijavljenih grešaka i Bandit ne pronađe sigurnosne propuste onda....\"  -- kako ste ovo provjerili u Jenkins skripti? Koristim onaj \"Snippet Generator\" u Jenkinsu + pokusavam nesto sklopit i bez toga, ali ne ide...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301626": {
+      "poster": "nnn (dinoo)",
+      "content": "@\"gladiator\"#p301620 Pokreni te komande u terminalu i nakon njih pokreni `echo $?` ako je `0` to znači da je prošlo a ako je nešto drugo znači da ima greški. Kod pisanja Jenkins pipelinea, ako ti neka komanda ne vrati `0` onda se baca exception, koji možeš uhvatiti sa try catch blokom.",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301648": {
+      "poster": "gladiator",
+      "content": "@\"dinoo\"#p301626 hvala ti. Sada imam problem s hvatanjem izlaza bat skripte. Znaš li kako da uhvatim taj izlaz? Ako uhvatim exception jedino dobijem nešto tipa \"script returned error code 1\", a meni baš treba popis testova koji padaju (tj izlaz python programa).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301659": {
+      "poster": "nnn (dinoo)",
+      "content": "@\"gladiator\"#p301648 imam jedan malo glup način ali meni je radio (opisao sam za sh ali mislim da je slično u windowsu)\n\nrecimo pada ti `python tests.py`, u `catch` dijelu koda: ponovno pokreneš skriptu, redirectaš stderr u datoteku [1], sad su spremio izlaz ali opet imaš error tj vraća ti se status code `1`.  Trebaš se još tog errora riješiti [2] \n\n\n[1] https://askubuntu.com/questions/625224/how-to-redirect-stderr-to-a-file\n\n[2] https://stackoverflow.com/questions/12504957/how-to-avoid-a-bash-script-from-failing-when-e-option-is-set",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301665": {
+      "poster": "Gocc (***)",
+      "content": "kako timestamp staviti za ime datoteke? za windws",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

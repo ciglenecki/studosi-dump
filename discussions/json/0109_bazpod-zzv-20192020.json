@@ -1,0 +1,98 @@
+{
+  "title": "[BAZPOD] ZZV - 2019/2020",
+  "creator": "psiho",
+  "slug": "bazpod-zzv-20192020",
+  "tags": [
+    "FER",
+    "Baze podataka",
+    "Vježba"
+  ],
+  "posts": {
+    "2882": {
+      "poster": "psiho",
+      "content": "![](assets/2020-03-25/00002.png)\n\nmoze neko pomoc sa b),c),d)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4006": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@psiho#2882 \n\nu b) bih rekao da ide razlika matematike i diglog unija obratno (nije navedeno je li potrebno položiti programiranje ili \n\n nije): (m \\ d) U (d \\ m)\n\nc) je isto kao u b) samo treba raditi unije \"oduzimatelja\", npr ako hoćemo samo one koji su položili matematiku, izraz glasi m \\ (d U p), i na kraju uniju ta tri skupa: (m \\ (d U p)) U (d \\ (m U p)) U (p \\ (d U m))\n\nkod d) imamo situaciju da su položena točno dva predmeta, dakle imamo uniju tri podskupa, a svaki podskup je presjek dva položena predmeta od kojeg je oduzet onaj treći predmet: ((m ∩ d) \\ p) U ((m ∩ p) \\ d) U ((d ∩ p) \\m)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6285": {
+      "poster": "isiah20",
+      "content": "![](assets/2020-04-04/00039.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7123": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "za ZZV 03, 12. zadatak u UNION, NULL, OUTER, ORDER BY, koja je razlika između:\n```sql\nSELECT imestudent, prezimestudent, akgodina, nazpredmet\n FROM predmet\n INNER JOIN upisanpredmet\n ON upisanpredmet.sifpredmet = predmet.sifpredmet\n RIGHT OUTER JOIN student\n ON upisanpredmet.jmbag = student.jmbag\n AND (ocjena = 5 OR ocjena = 4)\nWHERE EXTRACT(MONTH FROM datumrod) = 6;\n```\n\ni\n\n```sql\nSELECT imestudent, prezimestudent, akgodina, nazpredmet\n FROM predmet\n INNER JOIN upisanpredmet\n ON upisanpredmet.sifpredmet = predmet.sifpredmet\n RIGHT OUTER JOIN student\n ON upisanpredmet.jmbag = student.jmbag \nWHERE EXTRACT(MONTH FROM datumrod) = 6 AND (ocjena = 5 OR ocjena = 4);\n```\n\nOvaj položaj AND-a me buni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7178": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@BrkMateaBeusana#7123 u jednom slajdu (SQL 1) piše da kod vanjskog spajanja treba paziti koji uvjeti idu u ON a koji u WHERE jer rezultat se razlikuje",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "Gulbash",
+          "Kasperinac"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7187": {
+      "poster": "lucylu",
+      "content": "@BrkMateaBeusana#7123 \n\nnavodno, ono sto stavis iza ON ti je samo uvjet spajanja i ako neka n-torka ne zadovolji taj uvjet ona nece nestati vec ce se upisati null vrijednosti\n\na ako uvjet stavis u WHERE dio, po tom uvjetu selektira i izbacuje određene n-torke",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "Gulbash",
+          "Kasperinac"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,515 @@
+{
+  "title": "[AVSP] Završni ispit - 2019/2020",
+  "creator": "pero122 (teslaFan)",
+  "slug": "avsp-zavrsni-ispit-20192020",
+  "tags": [
+    "FER",
+    "Analiza velikih skupova podataka",
+    "Ispiti"
+  ],
+  "posts": {
+    "36598": {
+      "poster": "pero122 (teslaFan)",
+      "content": "Jeste vi pogledali :\n\nAVSP 11 Matrix Factorization in Recommender Systems\n\nAVSP 12 Dimensionality reduction\n\nU zbirci ne vidim zadatke za to...\n\nUlazi li to u završni?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36820": {
+      "poster": "Amali (Amajli)",
+      "content": "@pero122#36598 ne pise nigdje da ne ulazi, pa ono. pise da ulazi cijelo gradivo predmeta, al ne pise da nuzno imas zadatke za vjezbu zato kaj ulazi",
+      "votes": {
+        "upvoters": [
+          "triespe"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "39343": {
+      "poster": "Kushim",
+      "content": "Ima li itko neki primjer izvodjenja BFR algoritma? Nisam 100% siguran da sam pohvatao redoslijed s njihove prezentacije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "39344": {
+      "poster": "Kushim",
+      "content": "Je li sve od zadataka sto imamo zbirka? https://www.fer.unizg.hr/_download/repository/avsp-zbirka.pdf",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "39399": {
+      "poster": "Amali (Amajli)",
+      "content": "@Kushim#39344 https://github.com/studosi-fer/AVSP pogledaj tu jel ima kaj",
+      "votes": {
+        "upvoters": [
+          "Kushim"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "39400": {
+      "poster": "Amali (Amajli)",
+      "content": "@Kushim#39343 jesi pogledao predavanje s tim? meni su preze same po sebi malo teze za shvatit, al uz predavanje je najs\n\novo sam si ja zapisala uz predavanje i preslagivala mozda, al nez bas koliko je korisno hahah\n\nC je compression, D je discard, R je retained set\n\n![](assets/2020-06-13/00018.png)\n\n![](assets/2020-06-13/00019.png)",
+      "votes": {
+        "upvoters": [
+          "Kushim"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40428": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "![](assets/2020-06-15/00018.png)\n\nmoze li netko objasniti kako se dode do ovih vrijednosti u formuli? Radi se o zadatku na str 31 iz zbirke. Npr A i C imaju identican odnos kao A i E, zasto onda je u formuli drugacije pAC i (1-pAD)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40437": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "![](assets/2020-06-15/00020.png)\n\nne bi li u ovom slucaju trebao biti prikazan oglas C jer ima veci prioritet od A, a A i C imaju isti budzet?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40438": {
+      "poster": "EthanCarter",
+      "content": "Da li ZI ima prag? Ne mogu nista naci, ali mozda se nesto mijenjalo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40441": {
+      "poster": "Bobicki",
+      "content": "@EthanCarter#40438 Postoji prag na teoriju (50%), nema pojedinačnih pragova po ispitima",
+      "votes": {
+        "upvoters": [
+          "EthanCarter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40443": {
+      "poster": "vykar (mango)",
+      "content": "@johndoe12#40428 A i C te A i E nemaju identičan odnos. A i C su povezani, dok A i E nisu. Povezani su: (A, B), (A, C), (B, C), (B, D), (C, D), (D, E), a nisu: (A, D), (A, E), (C, E), (B, E).\n\nIz toga dobiješ P(G|p) = P(A, B) * P(A, C) * P(B, C) * P(B, D) * P(C, D) * P(D, E) * (1 - P(A, D)) * (1 - P(A, E)) * (1 - P(C,E)) * (1 - P(B, E)) = 0.01521\n\n![](assets/2020-06-15/00021.png)\n\n------\n\n\nJedno pitanje i od mene: kuži tko otkud su dobivene ove brojke u tablici?\n\n![](assets/2020-06-15/00022.png)",
+      "votes": {
+        "upvoters": [
+          "username11"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40446": {
+      "poster": "Bananaking",
+      "content": "> @johndoe12#40428 Npr A i C imaju identican odnos kao A i E, zasto onda je u formuli drugacije pAC i (1-pAD)\n\nKolega iznad je već odgovorio ali da i ja kratko pojasnim jer sam i ja neki dan počeo pisati isto pitanje ovdje - ključna riječ u \"pri čemu je E skup parova povezanih čvorova grafa\" je ovo \"grafa\". Lijeva slika su zajednice, desna graf društvene mreže koju želiš dobiti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40451": {
+      "poster": "Jim",
+      "content": "Postoje li gdje riješeni zadaci za završni? Tj. neki zadaci iz drugog ciklusa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40459": {
+      "poster": "Kristijan",
+      "content": "@Jim#40451 Imaš onu zbirku na stranicama predmeta, a i na materijalima ima nekih riješenih zadataka https://github.com/studosi-fer/AVSP/blob/master/ispiti/AVSP_Rje%C5%A1enja_zadataka_s_ispita.pdf",
+      "votes": {
+        "upvoters": [
+          "Jim",
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40472": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "![](assets/2020-06-15/00024.png)\n\nzna li netko sto se ovdje dogodilo\n\nhttps://github.com/studosi-fer/AVSP/blob/master/ispiti/AVSP_Rješenja_zadataka_s_ispita.pdf counting 1s  str.16",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40778": {
+      "poster": "vykar (mango)",
+      "content": "@johndoe12#40472 U 11. koraku treba izbrisati najstariji pretinac, dakle trebalo bi biti 1110111**0[1]0[1]0** jer gledamo zadnjih N = 5 bitova. \n\nU sljedećem koraku nam dolazi novi bit 1, dakle imamo ovaj međukorak: \n\n11101110[1]0[1]0**[1]**\n\nBudući da sad imamo 3 bloka iste veličine (prema teoriji možemo imati najviše 2), ona dva najstarija treba pretvoriti u jedan blok veličine 2 (2 bita su u 1), pa imamo: \n\n11101110**[101]**0**[1]**.\n\nU zadnjem koraku dolazi još jedna 1, no to nam je ok jer nemamo više od 2 bloka veličine 1.\n\n11101110**[101]**0**[1][1]**",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "hobotnica",
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40811": {
+      "poster": "Pilif",
+      "content": "Je netko možda riješio 5.a) iz 2016/2017. ZI-a ?\n\n![](assets/2020-06-16/00013.png)",
+      "votes": {
+        "upvoters": [
+          "Jim"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40934": {
+      "poster": "Bobicki",
+      "content": "@Pilif#40811 Imaš ga riješenog u fajlu s ovog [posta](https://forum.studosi.net/d/933-avsp-zavrsni-ispit-20192020/15)",
+      "votes": {
+        "upvoters": [
+          "Pilif"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41012": {
+      "poster": "Red_Baron",
+      "content": "Napomene radi, u Moodleu stoji da se **ZI piše sat vremena!**",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "Paula13 (p13)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41020": {
+      "poster": "Bananaking",
+      "content": "@Red_Baron#41012 Jesi poslao mail?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41028": {
+      "poster": "Bananaking",
+      "content": "Može netko pojasniti ovaj primjer? Za čvor C gledam C-A, C-B -> A-B?, C-A, C-F -> A-F? i C-B, C-F -> B-F? to su ti 1 pozitivan i 2 negativna. Za A imam samo jedan pozitivan B-C. Za B imam jedan pozitivan A-C i jedan negativan D-C kojeg ne spominje. To su onda 3 pozitivna i 3 negativna. Simetričan graf znači x2, gdje on tu dobije 8 negativnih?\n\n![](assets/2020-06-17/00000.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41035": {
+      "poster": "HerrOttoFlick1",
+      "content": "@Bananaking#41028 \n\nJa mislim da su preostala dva B-A, B-D -> A-D i D-B, D-E -> B-E",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Bobicki",
+          "hi_doggy",
+          "ton6 (toto6)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41044": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "![](assets/2020-06-17/00003.png)\n\nzna li netko sto je s ovim zadatkom. ja dobijem py=-3.6875 sto uopce nema smisla",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "Nabas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41068": {
+      "poster": "dd14",
+      "content": "@johndoe12#41044 Taj zadatak je krivo zadan. Ja dobijem isto to, a mislim da mi je dobar postupak.",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41098": {
+      "poster": "logitech",
+      "content": "![](assets/2020-06-17/00008.png)\n\nZnači sličan broj zadataka kao na međuispitu, ali pola sata manje i svo gradivo",
+      "votes": {
+        "upvoters": [
+          "Gwidoc",
+          "adrian7000",
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Gwidoc",
+          "Jim",
+          "Reyovski",
+          "SergeantPepper (Chet)",
+          "username11"
+        ]
+      }
+    },
+    "41108": {
+      "poster": "adrian7000",
+      "content": "Valjda ce onda biti jednostavniji zadaci od MI-a jer inace ce bit puno premalo vremena.",
+      "votes": {
+        "upvoters": [
+          "bebich",
+          "ton6 (toto6)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "username11"
+        ]
+      }
+    },
+    "41121": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "pa iz ovog 2.ciklusa ni nema puno zadataka... jedino ako ce staviti teoriju. npr iz prezentacija matrix i dimensionality uopce nema zadataka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41184": {
+      "poster": "Lovren97",
+      "content": "jel moguće iz ovog ispita završiti sa negativnim bodovima? Prošao sam već, no volio bi si možda podići ocjenu ako mogu, a ne znam jel moguće da se zeznem pa da dobim negativne bodove na kraju 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "miki123"
+        ]
+      }
+    },
+    "41199": {
+      "poster": "logitech",
+      "content": "Može netko objasniti kako se rješava ovakav zadatak:\n\nKod računanja skupa sličnih sažetaka koristeći permutacijske tablice, sustav koristi 64-bitne sažetke i parametar p u svim tablicama je jednak 16. U sustavu se nalazi ukupno 2^32 sažetaka. Prosječni broj sažetaka za koji sustav računa Hammingovu udaljenost, za svaki upit, jest?",
+      "votes": {
+        "upvoters": [
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41268": {
+      "poster": "Bananaking",
+      "content": "Zna netko ovaj? \n\n![](assets/2020-06-17/00027.png)\n\n![](assets/2020-06-17/00028.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41270": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Bananaking#41268  7. drugi moment bit ce malen",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "setuid0"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41272": {
+      "poster": "Bananaking",
+      "content": "Ovaj isto nisam nigdje u prezentaciji vidio..\n\n![](assets/2020-06-17/00029.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41303": {
+      "poster": "Amali (Amajli)",
+      "content": "@Lovren97#41184 ak odes u negativno postoje sanse da sam stave 0 bodova, al ne drzi me za rijec\n\n@Bananaking#41272 vec je gotov ispit, but like ALS - to je metoda za dobivanje rjesenja, ne mjera preciznosti rjesenja, kaj ne",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "303142": {
+      "poster": "Tinx (pingvin)",
+      "content": "cool link: https://www.fer.unizg.hr/_download/repository/avsp-zbirka.pdf",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

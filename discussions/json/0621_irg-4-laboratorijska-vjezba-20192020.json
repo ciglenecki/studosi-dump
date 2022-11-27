@@ -1,0 +1,582 @@
+{
+  "title": "[IRG] 4. laboratorijska vježba - 2019/2020",
+  "creator": "chuuya (temari)",
+  "slug": "irg-4-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Interaktivna računalna grafika",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "23769": {
+      "poster": "chuuya (temari)",
+      "content": "Kako da u 8. vježbi obojim slikovni element bojom k? Kako taj k rasporediti u `glColor3f`? Ili ima neka druga naredba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24456": {
+      "poster": "Ziher",
+      "content": "Isti problem kao i kolegica gore, ne kuzim taj dio\n\nI mislim da bi mi kod trebao biti u redu, ali nista se ne iscrtava, nemam pojma zasto, ima li netko isti problem?",
+      "votes": {
+        "upvoters": [
+          "Vrba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24486": {
+      "poster": "tintintintin",
+      "content": "ja napravih to kroz pygame, prvo izracunao za svaki pixel vrijednost (x, y, boja) i sibno u array i onda na kraju samo\n\n` for pix in pixels:\n\n        color = pygame.Color(0, 0, pix[2])\n\n        screen.set_at((pix[0], pix[1]), color)`\n        \n\n  s tim da je`screen = pygame.display.get_surface()`\n  \n\n  a za boju sam stavio tako jer nigdje ne pise kako konkretno to treba izgledat tak da moze bit to moje ili pygame.Color(pix[2], pix[2], pix[2]) ili pygame.Color(0, pix[2], pix[2]), itd... (bar mislim)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24542": {
+      "poster": "MsBrightside",
+      "content": "@chuuya#23769 imaš u knjizi primjer na stranici 292 način na koji se bira boja. Taj primjer je za mandelbrotov.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)",
+          "tintintintin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24680": {
+      "poster": "Yasuke (Bono)",
+      "content": "@chuuya#23769 Ja sam podijelio izracunati I sa 256 i onda postavio. Jer inace se glColor3f postavlja sa vrijednostima od 0 do 1. Neka me ispravi neko ako griješim.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24735": {
+      "poster": "[deleted]",
+      "content": "trebaju li svi vektori koji sudjeluju u sakrivanji straznjih poligona/sjencanju biti normirani?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24792": {
+      "poster": "Ziher",
+      "content": "Evo, meni se jednostavno nista ne crta i myDisplay() mi se iz nekog razloga uvijek pokrece dvaput. Pogledao sam kod i u knjizi i isti je kao i moj\n\nJel sam mozda krivo inicijalizirao nesto u mainu kod gluta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25105": {
+      "poster": "nickname",
+      "content": "Jel nekome jos termin ful kasno? Onaj tamo tjedan?",
+      "votes": {
+        "upvoters": [
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25195": {
+      "poster": "chuuya (temari)",
+      "content": "Jel nekom još ispadalo ovako, a da je uspio skužit u čem je problem? Čini mi se da radim sve po uputama kak treba, ali kocka def ne izgleda normalno. Ni za konstantno sjenčanje nije ništa bolje\n\n![](assets/2020-05-15/00032.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25232": {
+      "poster": "MsBrightside",
+      "content": "@chuuya#25195 koje naredbe koristis za bojanje, i kako mijenjas boje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25251": {
+      "poster": "Murin",
+      "content": "Kada ne koristim gluLookAt sve mi se normalno iscrtava na ekranu ali cim iskoristim tu metodu da mi promijeni ociste ekran bude crn, je li itko naisao na takav problem i postoji li neki poseban nacin kako se treba koristiti ta metoda?(isto tako i za ostale glu metode koje su potrebne za ovu vjezbu)",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25317": {
+      "poster": "chuuya (temari)",
+      "content": "@MsBrightside#25232 Koristim `glColor3f` za cijeli poligon ili za vrhove, i mijenjam sve 3 komponente tako da izračunam intenzitet s onim formulama iz uputa.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25481": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jel slika julijevog skupa kad se nacrta treba bit kao u primjeru na kraju vježbe? Dobivam nekakve vodoravne linije i ne mogu nikako di mi je greška\n\n.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25482": {
+      "poster": "[deleted]",
+      "content": "moze netko postat sliku kak mu izgledaju fraktali? odnosno julijev, moj se razlikuje malo od njihovog primjera, a ne kuzim zasto? mandelbrotov se cini ok",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25615": {
+      "poster": "MsBrightside",
+      "content": "@chuuya#25317 da nije možda zbog toga kako su izračunate normale u vrhovima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25622": {
+      "poster": "koode7",
+      "content": "pale su minilekcije, ne da se logirat.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25654": {
+      "poster": "chuuya (temari)",
+      "content": "@Yasuke#25481 @III#25482 Meni je ovakav julijev:\n\n![](assets/2020-05-16/00013.png)\n\nMislim da je sličan u knjizi, na isti način sam ga bojala. Nemam pojma kak su oni dobili onaj u vježbi, tj. koja je kombinacija boja bila.\n\n@MsBrightside#25615 Ne znam, provjeravala sam valjda 1000 puta. Kako obojiš poligon nakon što odrediš intenzitet?",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25656": {
+      "poster": "MsBrightside",
+      "content": "@chuuya#25654 prije upisa tocke poligona postavim boju i ona OpenGL napravi prijelaz tako za svaku tocku",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25663": {
+      "poster": "chuuya (temari)",
+      "content": "@MsBrightside#25656 God bless, ovo je riješilo stvar. Ja ko grade five dumbass postavljam boju nakon upisa točke",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25896": {
+      "poster": "Murin",
+      "content": "@Yasuke#25481 hahah kolega ja dobivam okomite i za mandelbrotov i za julijin",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25905": {
+      "poster": "Yasuke (Bono)",
+      "content": "@Murin#25896 meni je kod julijinog bila greska sto nisam svaki put ispocetka racunao i imaginarni dio od c",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25926": {
+      "poster": "Dekan",
+      "content": "@Murin#25251 Jesi uspio otkriti problem? Meni isto ne radi metoda gluLookAt, ne prikazuje nista samo bijelu pozadinu koju sam definirao u glClearColor, pa ako je netko uspio skuziti kako namjestiti to bio bi zahvalan. (koristim py + pyglet)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26013": {
+      "poster": "Murin",
+      "content": "@Dekan#25926 Nisam jos nazalost, mislim da cu ako nista na kraju samo kopirat kod svojih transformacija iz prosle vjezbe",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26074": {
+      "poster": "Dekan",
+      "content": "@Murin#26013 Meni nije nista prikazivao jer sam zaboravio napravit clear depth buffer bita. Mozda ti je zbog toga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26078": {
+      "poster": "[deleted]",
+      "content": "dobro jel te boje imaju neki nacin na koji se odreduju ili uzimamo random vrijednosti? ne pise nis konkretno u njihobim beskorisnim uputama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26138": {
+      "poster": "MsBrightside",
+      "content": "@III#26078 za koji zadatak pitas? Ugl za zadatak 7 je vazno samo da mijenjas nijanse, za to je dobar njihov kod i minilekcija, pa cak i upute, ugl tamo koristis random vrijednosti za intenzitet ambijentne komponente, Ia, i difuzne, Id, takoder neke konstante za jednu i drugu, ka, kd, još za difuznu trebas onaj l tj L koji ce ti biti razlicit za svaku tocku poligona. Kad izracunas to:\n\n   ad = Ia * ka + Id * kd * L \n\n L je razlog zasto su nijanse tocki razlicite. Nakon toga pomocu te vrijednosti biras boju za svaku točku. Np s naredbom glColor3ub(r, g, b) mislim da je takva naredba, ima u njihovom primjeru. Onaj kod za trokut. Ugl izracunatu vrijednost postavis na jedno od rgb mjesta ili vise kako hoces. Primjericr glColor3ub(ad, 0, 0) i onda ce bit crvenih nijansi.\n\nZa zadatak 8 princip bojanja imaš u knjizi kod fraktala.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "nilica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26209": {
+      "poster": "[deleted]",
+      "content": "@MsBrightside#26138 mozes li molim te slikati kako ti izgleda gouraud?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26231": {
+      "poster": "koode7",
+      "content": "jel bi mi se trebalo sta desavati kada pomicem ociste dok nacrtam trokut iz primjera?\n\nedit:\n\nevo rj (python): https://butterflyofdream.wordpress.com/2016/04/27/pyopengl-keyboard-wont-respond/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26237": {
+      "poster": "koode7",
+      "content": "(istekao edit)\n\nsto se tice sedmog zadatka, kada ucitavam tijelo \"prema postupku iz vjezbe 4\", da li trebam raditi i drugi i treci korak ili mi je dovoljan prvi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26245": {
+      "poster": "TheCrimsonChin",
+      "content": "Koliko vam traje da se iscrta mandelbrot? Ja pročitam \"razlučivost svog zaslona\" koja je izgleda 1536 x 864 i traje 22 sekunde da se iscrta. Imam osjećaj da nešto ne valja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26285": {
+      "poster": "MsBrightside",
+      "content": "@TheCrimsonChin#26245 ja sam za razlucivost stavila velicinu prozora a ne zaslona, ovisi koliku velicinu stavis. Ako je 300x300 traje par sekundi, ako je 1000x1000 juliejev mi traje 17 sekundi",
+      "votes": {
+        "upvoters": [
+          "TheCrimsonChin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26286": {
+      "poster": "MsBrightside",
+      "content": "@III#26209 ![](assets/2020-05-17/00003.jpeg)\n\nsorry zbog shit slike, screenala sam video koji sam snimila. Ali nadam se da vidis razliku.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26317": {
+      "poster": "Murin",
+      "content": "Evo da ja ispisem neke greske koje sam radio da ih drugi ne rade:\n\n-pazite redoslijed >/< , true/false ili sto vec korisitie za provjeru poligona kako ne bi iscrtavali straznje umjesto prednje\n\n-obavezno napraviti gluPerspective (da ne dobijete crni ekran)\n\n-kako je kolega rekao napravite clear buffer_bit za depth i color",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26347": {
+      "poster": "chuuya (temari)",
+      "content": "Kako vam izgleda kocka za konstantno sjenčanje? Ja uvijek dobivam samo 2 intenziteta, gdje god da mi je izvor:\n\n![](assets/2020-05-17/00007.png)\n\nEdit: Nevermind, problem je bio kod normiranja vektora.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26361": {
+      "poster": "koode7",
+      "content": "zna li netko zasto dobivam ovakvu kocku? ko da mi fali jedan poligon or smh\n\novo je neskalirana kocka inace..\n\n![](assets/2020-05-17/00009.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26422": {
+      "poster": "jazzMassive",
+      "content": "jel koristite gluPerspective, glFrustrum ili glOrtho? meni ne radi kako spada brisanje poligona s perspective i frustrum, osim ako ne stavim glEnable(GL_CULL_FACE) al to nije poanta ove vjezbe ja mislim...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26431": {
+      "poster": "koode7",
+      "content": "da li središte poligona mogu računati kao, npr za x kordinatu:\n\nx_srediste = (V1x + V2x + V3x) / 3 i onda analogno za ostale točke?",
+      "votes": {
+        "upvoters": [
+          "Dekan",
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26482": {
+      "poster": "Njet",
+      "content": "@koode7#26361 jesi uklonio straznje poligone?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26484": {
+      "poster": "chuuya (temari)",
+      "content": "Što bi mogao bit razlog da mi je prikaz julijevog skupa vertikalno flippan? Pokušavah promijenit sve moguće parametre ali i dalje ovi vrhovi na fraktalu gledaju ulijevo, a ne udesno kao na slici u uputama.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27614": {
+      "poster": "tuka",
+      "content": "dojmovi s odgovaranja 3. i 4. labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27620": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "@tuka#27614 ima u temi pitanja i odgovori",
+      "votes": {
+        "upvoters": [
+          "tuka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

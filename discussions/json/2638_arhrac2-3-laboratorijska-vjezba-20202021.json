@@ -1,0 +1,376 @@
+{
+  "title": "[ARHRAC2] 3. laboratorijska vježba - 2020/2021",
+  "creator": "Haki",
+  "slug": "arhrac2-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Arhitektura računala 2",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "116824": {
+      "poster": "Haki",
+      "content": "3. laboratorijska vježba održat će se 11. i 12.1.2021. Točan raspored vidljiv je u FERWebu.\n\nUputstva za izradu vježbe dostupna su putem poveznice.\n\nNa Ferko je potrebno uploadati zip arhivu sa rješenjem zadatka 2b do ponedjeljka 11.1. u 8:00.\n\nOtvorena je burza grupa za drugu laboratorijsku vježbu. Zamjenu će biti moguće napraviti do četvrtka, 7.1.2021.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116828": {
+      "poster": "Haki",
+      "content": "Jel moze netko objavit ispis iz 2.b zadatka, moj mi se cini malo cudan pa bi htio uporedit.\n\nEvo mog ako nekome treba:\n\nPotprogram A:\n\nVrijeme pristupa: 0.102692 ns\n\nPropusnost: 9286.78 MB/s\n\nPotprogram B:\n\nVrijeme pristupa: 0.72168 ns\n\nPropusnost: 1321.46 MB/s\n\nPotprogram C:\n\nVrijeme pristupa: 0.922852 ns\n\nPropusnost: 1033.4 MB/s\n\nPotprogram D:\n\nVrijeme pristupa: 0.954183 ns\n\nPropusnost: 999.467 MB/s\n\nt(L2)/t(L1): 7.02764\n\nt(L3)/t(L2): 1.27876\n\nt(LRAM)/t(L3): 1.03395",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116887": {
+      "poster": "BigZ1",
+      "content": "@Haki#116828 Ne razumijem sta ti nije jasno stoga cu ti objasnit opcenito o cemu je rijec. Potrogram A testira propusnost i brzinu kojom cache L1 (najblizi procesoru) dohvaca i prenosi podatke. (On je ujedno i najbrzi i u nekim procesorima i najmanji po velici). Nakon toga vidis imas u potrogramu B testiranje L2 cache-a koji je sporiji naspram L1 cache i kod tebe je to veoma velika razlika sto implicira na dobar ispis programa. Nakon toga testiras L3 koji je jos veci od L1 i L2 i on je ujedno najveci cache a ponekad i zajednicki svim jezgrama procesora (u vecini slucajeva je zajednicki svim jezgrama procesora, moguce da je skoro i uvijek tako no to sad nije tema). Nakon toga imas pristupanje RAM-u koji je memorija i naravno ona je najsporija jos,no ujedno od svih ovih memorijskih prostora daleko najveca. Na kraju ispisa testiras vremena pristupa tj. odnose tih brzina izmedju komponenti koje su medjusobno povezane i tjt.\n\nPodaci znaci idu iz RAMA -> L3 cache (primjer 8MB) -> (potencijalno veci broj L2 cacheva jer je npr 4.jezgreni procesor) L2 cache (256kB) -> L1 cache (64kB) (najblizi procesoru) -> procesor radi svoj posao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117738": {
+      "poster": "Haki",
+      "content": "Sve mi je to jasno samo sam ocekivao malo drugacije brojeve... Cudno mi je da za L3 cache i RAM dobivam istu propusnost i vrijeme pristupa, vrijeme pristupa RAMa bi trebalo biti negdje oko 50ns, takoder vrijeme pristupa L1 cachea trebalo bi biti oko 1ns, a ne 0.1. I za kraj propusnost cacheva mi se cini premala, u slucaju mojeg procesora ona bi za L1 cache npr trebala biti oko 500Gb/s. S obzirom na sve ovo nisam siguran jesam li nesto krivo napravio ili jednostavno cilj ovoga zadatka nije bio napraviti tocan benchmark nego samo okvirno vidjeti kako se odnose razine cacheva i RAMa.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117740": {
+      "poster": "BigZ1",
+      "content": "i summon @Filemon",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117753": {
+      "poster": "Filemon",
+      "content": "@Haki#117738 vremena pristupa za L1 i RAM koje očekuješ su ti okej svakako.\n\nOno što u današnje vrijeme nije toliko čudno je da su troughput RAM-a i L3 usporedivi.\n\nhttps://www.forrestthewoods.com/blog/memory-bandwidth-napkin-math/\n\n500 GB/s za L1 mi se čini kao prevelika propusnost svakako, ne znam kakav ti je kod, ali imaj na umu, a to možeš i sam provjerit u process monitoru ili task manageru, da bi se kod trebao izvršavati na samo jednoj jezgri.\n\n> @Haki#117738 jednostavno cilj ovoga zadatka nije bio napraviti tocan benchmark\n\nnaravno da ne, ali bi trebao biti dobrog reda veličine. S obzirom na vrijeme izvođenja od cca 1s i relativno mali broj pristupa cacheu, vidjet ćeš da ti rezultati dosta osciliraju kad ponovno pokreneš program, ovisno o tome što CPU radi.",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Haki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117921": {
+      "poster": "Kingsman54321",
+      "content": "Što biste preporučili od literature za naučit i shvatit ovu laboratorijsku vježbu? Da bude kratka i razumljiva.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119142": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Imam u CPU-Z L1 D-Cache i L2 I-Cache. Koji je potreban za labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119151": {
+      "poster": "Haki",
+      "content": "@BrkMateaBeusana#119142 treba ti D (data) cache, I je oznaka za Instruction cache",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119190": {
+      "poster": "Tootha",
+      "content": "@Haki#116828 \n\n\nEvo moj ispis za usporedbu:\n\nVrijeme pristupa A: 0.536163 ns\n\nPropusnost A:       17787MB/s\n\nVrijeme pristupa B: 15.8965 ns\n\nPropusnost B:       599.928MB/s\n\nVrijeme pristupa C:  26.7589 ns\n\nPropusnost C:        356.395MB/s\n\nVrijeme pristupa D:  44.9021 ns\n\nPropusnost D:        212.39MB/s\n\n\nKod potprograma A i D vrijeme pristupa mi se čini dosta očekivano s obzirom da su to pristupi L1 cacheu i RAM-u,  ali mi je čudno da su propusnosti i vrijeme pristupa  B i C za toliki faktor manji od potprograma A.",
+      "votes": {
+        "upvoters": [
+          "Haki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119233": {
+      "poster": "Haki",
+      "content": "@Tootha#119190 Dobivaš točno onakve rezultate kakve sam ja očekivao s obzirom na vremena pristupa cachevima/RAMu tako da msm da ti je to ok. Btw jesi koristio -O3 flag pri kopajliranju s g++om i koju arhitekturu procesora imaš?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119235": {
+      "poster": "Tootha",
+      "content": "@Haki#119233 \n\nKoristio sam -O3 flag i arhitektura procesora je x86-64 (Intel i7 8750H).  Svakako si provjeri veličine L1 i L2 cachea koje koristiš. Meni je bacalo krive rezultate jer nisam uzeo u obzir da svaka jezgra ima svoj L1 i L2 cache.",
+      "votes": {
+        "upvoters": [
+          "Haki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119336": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@Tootha#119235 \n\n![](assets/2021-01-10/00018.jpeg)\n\nZnaci onda je meni s1 = 192KiB? Ili uzimam i L1d i L1i pa je s1 = 384KiB?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119365": {
+      "poster": "ferball",
+      "content": "@Uchenikowitz#119336 meni je logicno da se zbroji",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119370": {
+      "poster": "Tootha",
+      "content": "@Uchenikowitz#119336 \n\n@ferball#119365 \n\nL1d ti je cache za podatke dok je L1i cache za instrukcije i kao takav nema nikakvog utjecaja  na rad s podacima u potprogramu. Tako da je meni logičnije da se uzima samo L1d kao prvi cache kao što je @Haki  napisao malo iznad.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119408": {
+      "poster": "Haki",
+      "content": "@Tootha#119370 tako je\n\n@Uchenikowitz#119336 u tvom konkretnom slucaju s1 je 32KiB, imas ocito 6 jezgara u procesoru pa ti je ukupan L1D cache 192KiB, ali ne gledas taj broj nego velicinu cachea za samo jednu jezgru kao sto ti i kaze 4. redak ispisa getconf naredbe",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Uchenikowitz (Učečuču)",
+          "ferball"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119510": {
+      "poster": "ferball",
+      "content": "Da li moze netko pomoc, kako dobiti propusnost cacheva i t(RAM), t(RAM) bi trebao biti 1 /  frequency(RAM)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119734": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "Labos:\n\n[PITALICE] \n\nKao s materijala, jedino su dodali dva zadatka tipa imas double matricu A[X][X] i specifikacije ja mislim L1 cache-a i sad pitanje je kolika mora biti propusnost da bi se obavilo 35000 prolazaka kroz matricu u jednoj sekundi (ako se ne varam, pisem po pamcenju). Ponovite si.\n\n[ZADATAK]\n\nISTI kao s materijala za mnozenje matrica i pitanje koliko ce biti promasaja. Pogledajte materijale sve pazljivo. Ja kad sam se pripremao sam ponovio transponiranje, reko ma znam valjda pomnozit dvije matrice, spoiler: imam greskicu kod trazenja elementa u drugoj matrici. Valjda mi nece puno uzet iz usta :D",
+      "votes": {
+        "upvoters": [
+          "Dr_Flare",
+          "Giovanni",
+          "Hrvoje (Hrvoje45)",
+          "ferball",
+          "latica",
+          "seni (ina)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120317": {
+      "poster": "Kingsman54321",
+      "content": "@ferball#119510 Jesi li saznao možda kako se računaju te stvari (idem na nadoknadu)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120772": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "Došli su rezultati pitalica na Ferko",
+      "votes": {
+        "upvoters": [
+          "Giovanni",
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120777": {
+      "poster": "blablajar",
+      "content": "jel se sjeca neko mozda kako su isli zadaci iz pitalica s propusnosti, i jel zna kako izracunat to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121927": {
+      "poster": "JBQ",
+      "content": "Upisani su bodovi iz zadatka s labosa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123202": {
+      "poster": "Kingsman54321",
+      "content": "Može li mi netko napisati formule po kojima se računa propusnost?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124121": {
+      "poster": "BigZ1",
+      "content": "Jel itko dobio kada će biti nadoknade laboratorijskih vježbi neki termin određeni?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124122": {
+      "poster": "JBQ",
+      "content": "@BigZ1#124121 \n\n![](assets/2021-01-19/00007.png)",
+      "votes": {
+        "upvoters": [
+          "BigZ1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124353": {
+      "poster": "ferball",
+      "content": "@Kingsman54321#120317  meni je pomogao onaj fajl na materijalima, probaj pogledat tamo, skuzit ces",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

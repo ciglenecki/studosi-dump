@@ -1,0 +1,442 @@
+{
+  "title": "[PUS] 2. laboratorijska vježba - 2021/2022",
+  "creator": "chuuya (temari)",
+  "slug": "pus-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Posrednici umreženih sustava",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "266998": {
+      "poster": "chuuya (temari)",
+      "content": "Dobiva li netko možda ovakav exception kod `pipeline.fit(training)`:\n\n```\n21/12/28 11:39:21 ERROR TaskSetManager: Task 4 in stage 0.0 failed 1 times; aborting job\n21/12/28 11:39:21 ERROR Instrumentation: org.apache.spark.SparkException: Job aborted due to stage \nfailure: Task 4 instage 0.0 failed 1 times, most recent failure: Lost task 4.0 in stage 0.0 (TID 4) \n(192.168.1.14 executor driver): java.net.SocketException: Connection reset\n```\n\nU čemu bi mogao bit problem? Nakon tog izgubi i sve ostale taskove, a u jupyter bilježnici dobivam `Py4JJavaError`.",
+      "votes": {
+        "upvoters": [
+          "ImJustAKid (lumity)",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267397": {
+      "poster": "carantena",
+      "content": "je li dobijate ovakav rezultat kod izvođenja njihovog primjera iz uputa:\n\n(4, spark i j k) --> prob=[0.6292098489668488,0.37079015103315116], prediction=0.000000\n\n(5, l m n) --> prob=[0.9847700067623042,0.015229993237695805], prediction=0.000000\n\n(6, spark hadoop spark) --> prob=[0.13412348342566116,0.8658765165743388], prediction=1.000000\n\n(7, apache hadoop) --> prob=[0.9955732114398529,0.00442678856014711], prediction=0.000000",
+      "votes": {
+        "upvoters": [
+          "gamigugi",
+          "ls_123 (KimuraKong)",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267570": {
+      "poster": "tito",
+      "content": "samo da provjerim je li je obavezan ovaj labos, ako smo ostvarili sve bodove na 1. labosu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267582": {
+      "poster": "Amon",
+      "content": "@\"tito\"#p267570 Nope, ako si na prvom skupio sve bodove onda imaš 50% iz labosa i to ti je prag",
+      "votes": {
+        "upvoters": [
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269254": {
+      "poster": "Smolaa",
+      "content": "@\"carantena\"#p267397 Ja dobijem isto.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270067": {
+      "poster": "Noname",
+      "content": "@\"temari\"#p266998 Ja dobijem isto to, kako si rijesio problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270080": {
+      "poster": "Noname",
+      "content": "@\"Noname\"#p270067 Ja sam dobijala java.net.SocketTimeoutException: Accept timed out error.  Deinstalirala sam pyspark i instalirala ga sa uputa sa ovog clanka https://inblog.in/Install-Spark-PySpark-to-run-in-Jupyter-Notebook-on-Windows-p2eZ2qQPmO",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270081": {
+      "poster": "Noname",
+      "content": "@\"temari\"#p266998  Ne znam jesi li uspio popraviti, ja sam dobijala java.net.SocketTimeoutException: Accept timed out error. Deinstalirala sam pyspark i instalirala ga sa uputa sa ovog clanka https://inblog.in/Install-Spark-PySpark-to-run-in-Jupyter-Notebook-on-Windows-p2eZ2qQPmO",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270884": {
+      "poster": "Noname",
+      "content": "Kako se sprema istrenirani model ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270961": {
+      "poster": "vuk172",
+      "content": "Jel i vama u 5. zadatku postane sve jaaaaaaaako sporo? Pretpostavljam da je to zbog vector assemblera.\n\nI jel onda u 6. trebamo ponovo koristiti s vector assemblera ili samo običan count vectorizer bez Ngrama kao što je u 2. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270963": {
+      "poster": "prx_xD",
+      "content": "ima netko neki guide kak se radi paralelizacija?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271178": {
+      "poster": "Smolaa",
+      "content": "Kako ucitavate ove txt fileove u rdd ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271228": {
+      "poster": "chuuya (temari)",
+      "content": "@\"vuk172\"#p270961 Meni je možda malo sporije al ne toliko. A za 6. ja ne koristim vector assembler nego onako kako je u 2., to mi nekak ima više smisla? A i manje je zahtjevno lol\n\n@\"prx_xD\"#p270963  \n\n```\nsc = SparkContext.getOrCreate()\nrdd_train = sc.parallelize(train)\nrdd_test = sc.parallelize(test) -> train i test su meni liste at this point\n```\n\n@\"Smolaa\"#p271178  Obradiš liniju po liniju i u neku listu spremiš (id, text, label) i onda tu listu predaš u parallelize ovako kako sam gore napisala\n\nDisklejmer ovo je sve onak kak sam ja radila, ne mora nužno bit 100% točno al eto meni daje convincing metrike pa",
+      "votes": {
+        "upvoters": [
+          "Smolaa"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271234": {
+      "poster": "MJ3",
+      "content": "koliku veličinu vokabulara bi trebalo koristit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271244": {
+      "poster": "Amon",
+      "content": "@\"MJ3\"#p271234 Ne postoji krivi odgovor na to, koristi onliko koliko možeš\n\nPočni od 1000 i povećaj 10 puta sve dok ti ne pukne program zbog nedostatka rama ili dok mu ne treba 5 min da izračuna",
+      "votes": {
+        "upvoters": [
+          "MJ3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271337": {
+      "poster": "Smolaa",
+      "content": "Koliko su vam ispadali false-positive i false-negative za linearnu reg, bayes i svc ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271743": {
+      "poster": "vuk172",
+      "content": "@\"temari\"#p271228 Možda sam onda nešto krivo. Jel bi mogla staviti možda kako ti izgleda pipeline za 5.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271852": {
+      "poster": "Noname",
+      "content": "Jel netko dobije error `py4j.Py4JException: Method falsePositiveRate([class java.lang.Integer]) does not exist` kod izračunavanja false-postiva, za svaki label pozivam ovako methodu : \n\n`print(\"Class %s False positive = %s\" % (label, metrics.falsePositiveRate(label)))`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271867": {
+      "poster": "Noname",
+      "content": "@\"vuk172\"#p271743` pipeline_ngrams_vec = Pipeline(stages=[tokenizer_ngrams_vec,remover_ngrams_vec,ngram_vec, cv_ngrams_vec_1,cv_ngrams_vec_2,vecAssembler, lr_ngrams_vec])` , s tim da cv_ngrams_vec_1 je CountVectorizer koji prima izlaz od StopWordsRemovera, a cv_ngrams_vec2 je CountVectorizer koji prima izlaz od ngrama, vecAssembler prima izlaze oba CountVectorizera",
+      "votes": {
+        "upvoters": [
+          "vuk172"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271874": {
+      "poster": "vuk172",
+      "content": "@\"Noname\"#p271867 Meni je isto tako. Očito mi je samo jako spor laptop :')\n\n@\"Noname\"#p271852 Ja nisam imala tu grešku, ali možda možeš staviti da ti samo cijelu konfuzijsku matricu vrati `metrics.confusionMatrix().toArray()`",
+      "votes": {
+        "upvoters": [
+          "Noname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271962": {
+      "poster": "Noname",
+      "content": "Kako izgleda ispitivanje na labosu ako ga je netko vec imao?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271979": {
+      "poster": "chuuya (temari)",
+      "content": "@\"Noname\"#p271962 Ništa posebno, mene je pitao kak sam napravila Bayesa, kako NGrame i kakvi su rezultati, i di sam napravila paralelizaciju i tjt, svi bodovi. Puno kraće traje neg prošli put i ništa nije trebalo mijenjat (logično tho)",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Noname",
+          "Smolaa"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272003": {
+      "poster": "Amon",
+      "content": "@\"Noname\"#p271962 Ja sam morao ići po kodu malo i pitao me par pitanja kad sam naišao na neku funkciju iz uputa za labos. Basically samo trebaš znati koja funkcija radi što i gdje ih koristiš\n\nugl dosta easy",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272004": {
+      "poster": "korisnickoime",
+      "content": "Moze neko napisati rezultate koje je dobio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272072": {
+      "poster": "Ducius",
+      "content": "![](assets/2022-01-19/00020.png)\n\njel itko ima ovaj error kod linije: model = pipeline.fit(training)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272093": {
+      "poster": "lkm",
+      "content": "Mogao je netko uploadat svoja rjesenja s obzirom da ionako nigdje ne predajemo. Olaksajte nam svima (ili barem samo meni) ovaj zadnji labos 😇",
+      "votes": {
+        "upvoters": [
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272119": {
+      "poster": "Simpy",
+      "content": "@\"Ducius\"#p272072 ako si instalirao biblioteke na nacin kako je to opisano tu: https://inblog.in/Install-Spark-PySpark-to-run-in-Jupyter-Notebook-on-Windows-p2eZ2qQPmO, mozda nisi pokrenuo jupyter iz dobrog environmenta. Meni je sve super radilo jucer, a danas sam pokrenuo iz obicnog cmd-a i bacilo error i onda sam se sjetio da moram pokrenut anacondin prompt (nisam siguran jel bitno da ga pokreces kao admin, ja ga uvijek tako), prebacio se u environment s \"conda activate environment_name\" i pokreno jupyter i sad sve radi super. Cini mi se da je ovo moje dosta specifican slucaj, ali mozda nekome dobro dode 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272156": {
+      "poster": "korisnickoime",
+      "content": "Jel jos ko imao problem da mu izbacuje upozorenje `WARN DAGScheduler: Broadcasting large task binary with size 1493.1 KiB`?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272158": {
+      "poster": "prx_xD",
+      "content": "jel radimo binarnu klasifikaciju ili multi?",
+      "votes": {
+        "upvoters": [
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272183": {
+      "poster": "chuuya (temari)",
+      "content": "@\"prx_xD\"#p272158 Binarna",
+      "votes": {
+        "upvoters": [
+          "prx_xD"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272199": {
+      "poster": "SudokuMaster",
+      "content": "Zna li netko kako se podatci učitaju i dodaju u dataframe objekt u ovom labosu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

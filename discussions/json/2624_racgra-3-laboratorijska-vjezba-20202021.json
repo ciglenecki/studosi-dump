@@ -1,0 +1,195 @@
+{
+  "title": "[RACGRA] 3. laboratorijska vježba - 2020/2021",
+  "creator": "Masli",
+  "slug": "racgra-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Računalna grafika",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "116494": {
+      "poster": "Masli",
+      "content": "Pokušavam koristiti shadere za 3. labos, no linkanje mi nikako ne ide. Odlučio sam koristiti glew i glfw libraryje, ali kod se ne kompajla zbog problema s linkanjem. Sve na internetu stavljaju ili nejasne upute ili upućuju na github s kilometasrkim Cmake-om kojeg ne znam čitati.\n\nIma li itko tko je radio shadere na linuxu, bez IDE-a i kompajlirao običnim makefileom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116523": {
+      "poster": "Kushim",
+      "content": "@Masli#116494 apsolutno ista okruzenja i problem, samo 2. labos\n\nodustao sam i napravio podzadatak koji nije trazio teksture",
+      "votes": {
+        "upvoters": [
+          "Masli"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116532": {
+      "poster": "Stimmar",
+      "content": "@Masli#116494 Ako koristiš OpenGL probaj ručno učitati shader i kompajlirati ga u kodu.",
+      "votes": {
+        "upvoters": [
+          "Miskina666"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116544": {
+      "poster": "Masli",
+      "content": "@Stimmar#116532 nisam siguran na kaj misliš. Program mi se uopće ne kompajla. \n```\nGLuint compile_shader(char *shader, int which) {\n\tchar *source;\n\tGLuint shader_id;\n\tGLint status;\n\n\tif (load_file(shader, &source) == -1)\n\t\treturn -1;\n\n\tshader_id = glCreateShader(which);\n\tglShaderSource(shader_id, 1, (const GLchar**) &source, NULL);\n\tglCompileShader(shader_id);\n\tglGetShaderiv(shader_id, GL_COMPILE_STATUS, &status);\n\tif (status == GL_FALSE) {\n\t\tchar buffer[512];\n\t\tglGetShaderInfoLog(shader_id, 512, NULL, buffer);\n\t\tfprintf(stderr, \"Error compiling %s:\\n%s\\n\", shader, buffer);\n\t\treturn -1;\n\t}\n\n\treturn shader_id;\n}\n```\nOvako učitavam shader iz file, pri kompajlu mi izbaci \n```\ngcc -g -o run main.c -lGL -lglut -lm -lglfw\n/usr/bin/ld: /tmp/ccbq7TIj.o: warning: relocation against `__glewGetShaderiv' in read-only section `.text'\n/usr/bin/ld: /tmp/ccbq7TIj.o: in function `compile_shader':\n/home/masli/FER/9_sem/rg/labosi/lab3/main.c:71: undefined reference to `__glewCreateShader'\n/usr/bin/ld: /home/masli/FER/9_sem/rg/labosi/lab3/main.c:72: undefined reference to `__glewShaderSource'\n/usr/bin/ld: /home/masli/FER/9_sem/rg/labosi/lab3/main.c:73: undefined reference to `__glewCompileShader'\n/usr/bin/ld: /home/masli/FER/9_sem/rg/labosi/lab3/main.c:74: undefined reference to `__glewGetShaderiv'\n/usr/bin/ld: /home/masli/FER/9_sem/rg/labosi/lab3/main.c:77: undefined reference to `__glewGetShaderInfoLog'\n/usr/bin/ld: /tmp/ccbq7TIj.o: in function `compile_shaders':\n/home/masli/FER/9_sem/rg/labosi/lab3/main.c:93: undefined reference to `__glewCreateProgram'\n/usr/bin/ld: /home/masli/FER/9_sem/rg/labosi/lab3/main.c:94: undefined reference to `__glewAttachShader'\n/usr/bin/ld: /home/masli/FER/9_sem/rg/labosi/lab3/main.c:95: undefined reference to `__glewAttachShader'\n/usr/bin/ld: /home/masli/FER/9_sem/rg/labosi/lab3/main.c:96: undefined reference to `__glewBindFragDataLocation'\n/usr/bin/ld: /home/masli/FER/9_sem/rg/labosi/lab3/main.c:97: undefined reference to `__glewLinkProgram'\n/usr/bin/ld: /tmp/ccbq7TIj.o: in function `main':\n/home/masli/FER/9_sem/rg/labosi/lab3/main.c:247: undefined reference to `glewInit'\n/usr/bin/ld: warning: creating DT_TEXTREL in a PIE\ncollect2: error: ld returned 1 exit status\nmake: *** [makefile:3: run] Error 1\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116547": {
+      "poster": "Stimmar",
+      "content": "@Masli#116544 Ja koristim ove flagove, možda ti glew fali\n\n`-lglfw -lGL -lGLEW -lpthread -lX11 -lXrandr -lXi`",
+      "votes": {
+        "upvoters": [
+          "Masli"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "118452": {
+      "poster": "vykar (mango)",
+      "content": "Pitanje za one koji su imali danas prezentaciju - kak je to izgledalo? Treba imat baš powerpoint ili je dovoljno pokazat rješenje/program?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "118458": {
+      "poster": "[deleted]",
+      "content": "@vykar#118452 oni koji su implementirali nesto nisu imali powerpoint, vec su samo demonstrirali i pokazali kod, oni koji su samo teoretski istrazili neku temu su imali powerpoint",
+      "votes": {
+        "upvoters": [
+          "knjklj",
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126135": {
+      "poster": "Anonimity (BoJack)",
+      "content": "ima li negdje predlozak za dokumentaciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126141": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "@Anonimity#126135 imaš tamo kod labosa stare projekte i onda si mozeš otvorit par starih dokumentacija pa vidjet kak su oni",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126265": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "Jel rekla profa kad će dat bodove za projekt?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126275": {
+      "poster": "smolito",
+      "content": "@ImJustAKid#126265 ja sam shvatila da kad svi izprezentiraju da će se onda unositi bodovi svima, mislim da je danas u 2 zadnja grupa bila, ali nisam sigurna",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "ImJustAKid (lumity)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126278": {
+      "poster": "Anonimity (BoJack)",
+      "content": "@smolito#126275 moraju svi izprezentirati i moras poslati dokumentaciju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126280": {
+      "poster": "Anonimity (BoJack)",
+      "content": "@ImJustAKid#126141 aha, ma kako su prve dvije bile iste mislila sam da postoji neki dokument predlozak, kao za seminar. Zapravo je freestyling lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,464 @@
+{
+  "title": "[PUS] Gradivo",
+  "creator": "tito",
+  "slug": "pus-gradivo",
+  "tags": [
+    "FER",
+    "Posrednici umreženih sustava"
+  ],
+  "posts": {
+    "260322": {
+      "poster": "tito",
+      "content": "Zbog nedostatka ispita kreirat ću sebi neka svoja pitanja pa ću ih tu objavit. Ako možda još netko to želi radit neka slobodno objavi. To radim jer mi je zapravo teško odredit koliko zapravo znam samo ponavljajući po slidovima.",
+      "votes": {
+        "upvoters": [
+          "Borna_P",
+          "Broono (Burućuh)",
+          "Ellie",
+          "ImJustAKid (lumity)",
+          "Svarog (Veles)",
+          "Watson (112)",
+          "[deleted]",
+          "burek",
+          "cajaznun",
+          "chuuya (temari)",
+          "flip",
+          "ls_123 (KimuraKong)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "orange",
+          "pepelko",
+          "rs50113",
+          "vuk172"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260358": {
+      "poster": "tito",
+      "content": "prez 1 - distributed_file_systems\n\nvjerojatno će mi motivacija s vremenom padat jer sam čovjek od krvi i mesa, pa ću se manje trudit. Osim toga moguće da su mi neka pitanja malo nejasna jer nisam pročitao šta sam napisao, ali uglavnom išao sam po prezentaciji pa će te se snać.\n\n1. koja je glavna prednost distribuiranih sustava?\n2. kako se može umanjiti problem kvarova čvorova?\n3. navedi karakteristike dfs-a?\n4. nabroji implementacije dfs-a?\n5. s kojim se karakteristikama u umu izgradio GFS (Google file system)?\n6. koje su pretpostavke čitanja i pisanja u umu imali tijekom izgradnje GFS-a?\n7. za koje odluke u designu su se odlučili kod GFS-a?\n8. na koji način i gdje se spremaju chunkovi (i koje su veličine)?\n9. nacrtaj arhitekturu gfs-a.\n10. kako umanjiti utjecaj uskog grla kod master noda i pada master noda?\n11. koji podaci se spremaju na metadatu?\n12. što je zapisano na master nodu?\n13. za što se koriste logovi na masteru i što se radi s njima kada ih bude puno (i to što nastane u kojoj je strukturi podataka :) )?\n14. koje još operacije radi master s chunkovima osim spremanja njihovih lokacija u metadata?\n15. kako se brišu chunkovi (garbage collection)?\n16. objasni ili nacrtaj algoritam čitanja chunkova kod GFS-a\n17. objasni ili nacrtaj algoritam pisanja chunkova kod GFS-a\n18. što je prednost kod atomic record appenda?\n19. opiši algoritam atomic record appenda.\n20. razlika između consistent i defined regiona?\n21. hoće li pisanje (write) biti defined i consistent u slučaju serijskog pisanja, a kakvo će biti kod konkurentnog pisanja?\n22. kako može doći do nekonzistentnih regija prilikom record appenda (kod zapisivanja na replikama)? \n23. zašto nisu neka područja zapisa defined na replikama kod concurent write-a?\n24. kako se može postići dobar fault tolerance?\n25. od kojih koponenti se hadoop file system sastoji?\n26. koje su specifičnosti kod hadoop-a (razlike u odnosu na GFS)?\n27. opiši ili nacrtaj postupak read-a kod hadoop-a?\n28. opiši ili nacrtaj postupak write-a kod hadoop-a?",
+      "votes": {
+        "upvoters": [
+          "Borna_P",
+          "Broono (Burućuh)",
+          "Emma63194",
+          "ImJustAKid (lumity)",
+          "Longclaw",
+          "Noggenfogger (dammitimmad)",
+          "Svarog (Veles)",
+          "Zabe",
+          "burek",
+          "cajaznun",
+          "chuuya (temari)",
+          "flip",
+          "ls_123 (KimuraKong)",
+          "madukali",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "mikimoj",
+          "orange",
+          "rs50113",
+          "saltybitch",
+          "svemia (bearyn)",
+          "vuk172"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260382": {
+      "poster": "tito",
+      "content": "prez 2 - map reduce 1\n\nstay tuned (danas ću vjerojatno navečer samo još map reduce 2, a po nekom planu sutra do 15 bi trebao napravit i 4 i 5 prezu)\n1. nactraj cluster architecture te što je rack?\n2. kakva je brzina unutar rack-a, a kolika između rackova?\n3. što je map reduce?\n4. koji je storage infrastructure - File system kod map reduca?\n5. koji je programming model kod map reduca :) ?\n6. čemu služi map u map reducu?\n7. čemu služi reduce u map reducu?\n8. što se dešava između map-a i reduc-a?\n9. napiši programski map reduce za brojanje riječi koje imaju isti broj znakova.\n10. koje su sve odgovornnosti radnog okvira map reduce?\n11. tko i kako dodjeljuje inpute map-u?\n12. tko dodjeljuje taskove workerima i koje vrste workera postoje?\n13. gdje se zapisuju podaci nakon što su obrađeni s map-om i što se onda odvija s podacima?\n14. kako reduce worker dođe do podataka?\n15. koje podatke master ima kako bi mogao upravljat workerima?\n16. kako master provjerava status workera?\n17. što se radi u slučaju kvara za:\n\n                                    a) worker ne daje response \n\n\t\t\t\t    b) završeni map task (zašto se radi išta s njim kad je gotov? (to je pitanje, nije da ja ne znam))\n\n\t\t\t\t    c) worker u progresu\n18. što se desi u slučaju da master fail-a?\n19. što je to svojstvo lokalnosti (gdje se smještaju map taskovi na koje lokacije)?",
+      "votes": {
+        "upvoters": [
+          "Borna_P",
+          "Broono (Burućuh)",
+          "Emma63194",
+          "ImJustAKid (lumity)",
+          "Noggenfogger (dammitimmad)",
+          "Svarog (Veles)",
+          "Zabe",
+          "burek",
+          "cajaznun",
+          "chuuya (temari)",
+          "flip",
+          "ls_123 (KimuraKong)",
+          "madukali",
+          "mikimoj",
+          "orange",
+          "pepelko",
+          "rs50113",
+          "svemia (bearyn)",
+          "vuk172"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260536": {
+      "poster": "tito",
+      "content": "prez 3 - map reduce 2\n\ntip: ako ponavljate već po ovim pitanjima, možda bi bilo dobro da u tipa drugoj rundi izbacite pitanja koja ste već sa sigurnošću dobro odgovorili\n\ntip2: google je nekad jasniji od prezentacija :)\n1. kakav omjer map i reduce taskova treba biti u odnosu na worker-e (i zašto treba biti takav omjer)?\n2. što je \"straggler\"?\n3. što mapreduce poduzme kada task traje dugo?\n4. kako se odredi broj reduce taskova?\n5. što je partitioning function i koja mu je defaultna vrijednost?\n6. kako mapreduce postupa s zapisima koji izazivaju greške?\n7. čemu služi combiner funkcija?\n8. kako pomnožiti vektor s matricom, ako vektor stane u memoriju?\n9. kako pomnožiti vektor s matricom, ako vektor ne stane u memoriju?\n10. napiši map reduce (ili opiši) za množenje 2 matrica.\n11. prilikom iterative message passing-a kako se updata stanje (state) kod svakog čvora u grafu?\n12. kakvi tipovi zadataka se mogu spretno riješavati s mapreducom?\n13. kako se povezuju dvije tablice s natural joinom?\n14. za kakve zadatke map reduce nije stvoren?",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Longclaw",
+          "Zabe",
+          "burek",
+          "cajaznun",
+          "flip",
+          "ls_123 (KimuraKong)",
+          "pepelko",
+          "vuk172"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260672": {
+      "poster": "Zabe",
+      "content": "@\"tito\"#p260322 imas mozda odgovore?",
+      "votes": {
+        "upvoters": [
+          "korisnickoime",
+          "ls_123 (KimuraKong)",
+          "vuk172"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260676": {
+      "poster": "tito",
+      "content": "@\"Zabe\"#p260672 \n\nne, a to bi mi uzimalo više vremena, a mislim da možeš sve nać u prezama donekle brzo i na taj način ćeš više naučit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260776": {
+      "poster": "tito",
+      "content": "prez 4 - reliable distributed applications\n\n1. što je pouzdanost (reliability)?\n2. zašto se moramo osigurati od fault toleranca?\n3. nacrtaj i opiši single-version fault tolerance model.\n4. kako se postiže redudancija kod multi-version fault tolerance modela?\n5. koje se strategije koriste kod multi version -||-?\n6. kolika je pouzdanost kod recovery block strategije?\n7. kako se odlučuje o instanci komponente u n-version programming strategiji?\n8. kada se može postići kocenzus?\n9. što je opasno kod bizantskog ispada?\n10. objasni kako se može osigurati od bizantskog ispada.\n11. što je to FPL imposibility?\n12. kakvo je to bivalentno stanje?\n13. kroz primjer objasni zašto se ne može postići koncenzus kod asinkronog procesa koji uvijek terminira.\n14. što paxos algoritam/protokol mora žrtvovati kako bi mogao postići asinkroni koncenzus?\n15. koliko se procesa treba slagat oko dogovora vrijednosti da bi se postigao koncenzus?\n16. koliko paxos treba procesa da se opravi od F failure procesa?\n17. nabroji faze u paxos protokolu.\n18. opiši postupak odabira vođe u paxos-u.\n19. kako se sinkronizira tijekom procesa propozicije vrijednosti?\n20. što se dešava u fazi čitanja?\n21. u kojem trenutku je zapravo koncenzus donesen?\n22. što se dešava u slučaju kvara \n\na) običnog procesa \n\nb) vođe \n\nc) ispada poruka\n23. koji programi / frameworci koriste paxos?\n24. je li znate slične algoritme paxos-u ili neke druge pristupe raspodijeljenim koncenzusima?",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Longclaw",
+          "Svarog (Veles)",
+          "Zabe",
+          "burek",
+          "cajaznun",
+          "flip",
+          "ls_123 (KimuraKong)",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260847": {
+      "poster": "vuk172",
+      "content": "Evo postoji i nekakav docs https://docs.google.com/document/d/1ePzhHYvwooawGXjVcfnvR6ODdwN1EaHN/edit",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Audaces",
+          "Broono (Burućuh)",
+          "Emma63194",
+          "ImJustAKid (lumity)",
+          "Luka14 (Kekec)",
+          "Simpy",
+          "Watson (112)",
+          "burek",
+          "cajaznun",
+          "gamigugi",
+          "moukie",
+          "svemia (bearyn)",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260850": {
+      "poster": "tito",
+      "content": "prez 5 - service selection alghoritm\n\na nisu ova pitanja savršena, kao ni prezentacije 😆  \n1. kakva je to SOA arhistektura?\n2. nabroji neka ne funkcionalna svojstva i navedi drugi naziv za to?\n3. o čemu sve ovisi QoS?\n4. što se treba napraviti kako bi se efektivno prikazao plan izvođenja zadataka?\n5. kojim postupcima se može odlučiti koje servise se treba pozvati?\n6. kako se predviđa kvaliteta usluge?\n7. nabroji algoritme za odabir sevisa s ograničenjima.\n8. koji je problem s greedy algoritmom kod odabira servisa?\n9. kako se može ubrzati postupak mixed integer programming?\n10. kojim algoritmom se rješava assignment problem i u kakvom se grafu postavi problem?\n11. koje su limitacije dosadašnjih algoritama za odabir servisa s ograničenjem?\n12. koji algoritam rješava neke od prethodnih problema?\n13. koji su neki od važnijih problema koje rješava SS-TSM algoritam?\n14. što su EI(C) i QoS(c) i kako izgleda formula ukoliko dolazi do grananja?\n15. opiši otprilike postupak za rješavanje transportacijskog problema sa SS-TSM-om.\n16. kako poboljšat ne zadovoljenu kvalitetu usluge s SS-TSM-om?",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Longclaw",
+          "burek",
+          "cajaznun",
+          "flip"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261110": {
+      "poster": "Emma63194",
+      "content": "@\"tito\"#p260850 Jesi zapisao možda odgovore na ta pitanja? Prošla sam prezu, ali ne mogu naći odgovore na sva pitanja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261112": {
+      "poster": "tito",
+      "content": "@\"Emma63194\"#p261110 \n\n@\"vuk172\"#p260847 ovdje neki zapisuju odgovore na pitanja🙂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261131": {
+      "poster": "Emma63194",
+      "content": "@\"tito\"#p261112 Ma vidim, da, ali čini mi se da je većini dosta nejasan taj dio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261144": {
+      "poster": "tito",
+      "content": "@\"Emma63194\"#p261131 \n\nkoliko sam vidio možda je većinu zbunilo ovo pitanje, možda sam malo lošije sročijo pitanje\n\nkroz primjer objasni zašto se ne može postići koncenzus kod asinkronog procesa koji uvijek terminira.\n\ntrebao sam dodat u pitanje i da u sustavu postoji jedan faulty proces. Ali uglavno želio sam dokaz za FPL imposibility što ima na 30 i 31 slajdu.\n\nOsim toga nije nešto bilo puno upitnika",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273422": {
+      "poster": "tito",
+      "content": "Neznam koliko ću imati motivacije za završni ispit, ali opet ću probat slagat neka pitanja.\n\napache spark\n1. što je big data (koja ga svojstva opisuju)?\n2. na čemu je sagrađen apache spark, tj. koju tehnologiju apache spark koristi?\n3. za kakve zadatke je spark namjenjen?\n4. što iskorištava apache spark od hadoop-a?\n5. kako se mogu deployat-i spark programi\n6. koje su komponente spark-a?\n7. što je rdd?\n8. glavna svojstva rdd-a? (crvene riječi na slidovima)\n9. kako su rdd-ovi fault-tolerantni\n10. što je to spark lazy evaluation?\n11. kako directed acyclic graph schedueler izvodi akcije?\n12. nacrtaj iterativne i interaktivne operacije na mapreducu te označi čitanje i pisanje na hdfs-u\n13. koliko ima čitanja i pisanja sa HDFS-a kada se koristi spark rdd i koja je prednost kada se koristi spark rdd?\n14. što je Dstream?\n15. za što se može koristit graphx?",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "ImJustAKid (lumity)",
+          "Murin",
+          "Noggenfogger (dammitimmad)",
+          "Zabe",
+          "cajaznun",
+          "chuuya (temari)",
+          "pepelko",
+          "vuk172"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273462": {
+      "poster": "tito",
+      "content": "keras i flask\n1. što  je keras?\n2. koje resurse može koristiti keras?\n3. koja su glavna svojstva keras-a?\n4. koje neuronske mreže se koriste?\n5. u kojem filu se mogu pronaći konfiguracije za keras?\n6. koja dva glavna api-a postoje u kerasu?\n7. što su inicijalizatori (initializer)?\n8. Nabroji neke aktivacijske funkcije.\n9. nabroji neke optimizatore (optimizers).\n10. čemu služi funkcija gubitka (loss function)?\n11. što je regularizacija?\n12. što je metrika?\n13. što su callback functioni i zašto ih koristimo?\n14. za što koristimo konvolucijske mreže i što konvolucijske operacije detektiraju?\n15. za što se koriste sekvencijski modeli?\n16. što definira model?\n17. kako model može biti trajan, tj. persistant?\n18. što je flask?",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "Murin",
+          "chuuya (temari)",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273573": {
+      "poster": "tito",
+      "content": "devops\n1. što je devops?\n2. kada koristit devops?\n3. što radi verzija kontrole?\n4. kakve vrste verzije kontrole postoje?\n5. nabroji neke verzijje kontrole.\n6. što je git?\n7. koje lokacije potoje u git-u?\n8. s kojom naredbom ćeš povući ppromjene s remote reposzitorija u lokalni repozitorij?\n9. objasni pojmove continous delivery i continous deployment?\n10. nabroji neke cdd sisteme.\n11. u čemu možemo definirati pipelineove?\n12. koje su prednosti virtualizacijje software-a, tj. software virtualization?\n13. koje vrste virtualizacije programa postoje?\n14. što je docker, a što je kontejner?\n15. koja je razlika između docker kontejnera i virtualnih mašina?\n16. koja je razlika između docker slike i docker kontejnera?\n17. kojom naredbom se može uništiti docker kontejner?\n18. čemu služi docker repozitorij?\n19. što je docker file, a što je docker compose?\n20. čemu služi kubernetes?\n21. koje su prednosti kubernetes-a?\n22. od kojih čvorova se kuberenetes sastoji?\n23. čemu služi api-server, a čemu controller manager kod kuberenetes master-a?\n24. čemu služi kubelet, a što cAdvisor kod kuberenetes minion noda?",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "Murin",
+          "chuuya (temari)",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273574": {
+      "poster": "tito",
+      "content": "bigtable\n1. nabroji neka svojstva tablice u bigtablu.\n2. kako se organiziraju (sortiraju) zapisi (row-ovi) u bigtablu?\n3. koja je razlika između table-a i tablet-a?\n4. gdje su spremljeni tableti, tj. u kojem spremištu ili usluzi?\n5. što je column family, a što column qualifier?\n6. je li može biti više vrijednosti u presjeku reda i stupca i ako da kako se označuju?\n7. kako cloud bigtable node pristupa tablet-u?\n8. koja je razlika između SSTabla i memtabla?\n9. s čega se prvo čitaju podaci s SSTabla ili memtabla?\n10. što je instanca u bigtablu?\n11. koje su odgovornosti node-a?\n12. ako korisnici znaju row podatka, kako klijenti saznaju lokaciju podatka?\n13. čemu služi lock service chubby?\n14. objasni malo proces membership managment-a od strane master-a.\n15. što master čvor radi kada se upali?\n16. koji su zadaci master server-a?\n17. za što se može koristiti bigtable?",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "Murin",
+          "chuuya (temari)",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273736": {
+      "poster": "tito",
+      "content": "graph database\n1. kakva je to baza podataka temeljena na grafovima?\n2. kakvi tip grafa je najčešće korišten za graph database?\n3. koja su svojstva labeled property graph-a?\n4. što je to OLTP system?\n5. kakav je native graph storage, a kakav native processing engine?\n6. što znači index-free adjacency?\n7. na koji način se mogu procesirati algoritmi (type of graph compute engine)?\n8. što su tripleti?\n9. kakvi su graph storage i processing engine kod triple store-a?\n10. što je hyperedge i za kakve vrste veza je pogodan (veza u er diagramu)?\n11. za kakve slučajeve je dobro koristiti relational database, noSQL i graph database?\n12. zašto graph databasi imaju prednost kod performanca, flexibilitya i agility-a?\n13. za koje vrste aplikacija je dobro koristiti graph database?",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "chuuya (temari)",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273880": {
+      "poster": "tito",
+      "content": "kafka stream\n1. koje su prednosti kafke?\n2. za što se kafka može koristiti?\n3. nacrtaj event-driven architecture.\n4. u kojim programskim jezicima se mogu iskoristiti funkcionalnosti apache kafke?\n5. što je topic?\n6. kako se poruka dodijeli particiji kada ima ključa i kada nema ključa?\n7. što predstavlja offset broj?\n\n8-15. Tko od navedenih: broker, zookeeper node, producer, consumer\n - odlučuje koja poruka se dodjeljuje kojoj particiji unutar topic-a\n - je posrednik između producer-a i consumer-a\n - koordinira consumere kako bi uravnotežili opterečenje konzumiranja poruka\n - je repozitorij konfiguracije\n - je izvor podataka\n - sprema metadatu broker-a\n - sprema poruke na disk\n - čita podatke s topic-a\n\n\n16. koja je prednost consumer grupe?\n17. čemu služi kafka connect?\n18. koje su odlike log-based arhitekture kod kafke?",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275195": {
+      "poster": "Ellie",
+      "content": "Jel netko krenuo možda u neki docs odgovarati na pitanja da ne pravimo duplo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275287": {
+      "poster": "moukie",
+      "content": "Ima li kakav goat materijal za ZI poput onog doc-a s MIjevima?\n\nPrimijetio sam da ima ZI od lani na materijalima, ali taj se ispit pisao online",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275404": {
+      "poster": "Amon",
+      "content": "@\"moukie\"#p275287\n\nPS Rekla je asistentica da će ispit vjerojatno biti na pisanje i da je prošle god bilo iznimno na zaokruživanje tak da ispit od prošle god neće previše pomoći",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275527": {
+      "poster": "chuuya (temari)",
+      "content": "@\"Ellie\"#p275195 https://docs.google.com/document/d/1Pi9c9mEcz8csq1-GvSi_OYfFNLzoRN3Yr_Ly7emDV1g/edit?usp=sharing evo somewhat odgovorena pitanja, i did my best, ali ne garantiram da je sve točno",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Ellie",
+          "Murin",
+          "Simpy",
+          "moukie",
+          "vuk172"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

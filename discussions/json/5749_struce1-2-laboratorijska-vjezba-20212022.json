@@ -1,0 +1,543 @@
+{
+  "title": "[STRUCE1] 2. laboratorijska vježba - 2021/2022",
+  "creator": "bodNaUvidima",
+  "slug": "struce1-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Strojno učenje 1",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "247154": {
+      "poster": "bodNaUvidima",
+      "content": "Ima netko hint kak u 2. zadatku nakon što raspolažem sa 3 istrenirana modela za svaku klasu, odredit kojoj klasi pripada neki zadani primjer?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247157": {
+      "poster": "prx_xD",
+      "content": "ako zelis\n\n@\"bodNaUvidima\"#p247154 ako zelis mjenjati 3 klase u 2 mozes koristit np.where()",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247165": {
+      "poster": "bodNaUvidima",
+      "content": "@\"prx_xD\"#p247157 Ne to je nepotrebno jer je zadatak implementacija One-Versus-Rest sheme. Problem mi je kad predam neki primjer x svim trima istreniranim binarnim klasifikatorima, i oni mi izbace neki broj, kako odrediti koja je predikcija od te 3 najvjerojatnija?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247170": {
+      "poster": "error",
+      "content": "@\"bodNaUvidima\"#p247165 ja sam koristila h.decision_function(x) (vraća koliki je iznos h za x) i onda vracala indeks od h koji je dala najveći rezultat",
+      "votes": {
+        "upvoters": [
+          "bodNaUvidima"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247205": {
+      "poster": "prx_xD",
+      "content": "@\"bodNaUvidima\"#p247165 sorry krivo sam shvatrio pitanje\n\nhvala na pojanjenju samo \n\nimas tri predikcije samo ih usporedi i koja je najveca vrati y = 0, 1, ili 2",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247233": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "A kada tražim predikcije h1, h2, i h3, to radim sa RidgeClassifier ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247254": {
+      "poster": "bodNaUvidima",
+      "content": "@\"Coffe123\"#p247233 Taj dio se treba odraditi sa LinearRegression razredom kao u jednom dijelu 1. zadatka.",
+      "votes": {
+        "upvoters": [
+          "Zuzu (Coffe123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247324": {
+      "poster": "angello2",
+      "content": "@\"prx_xD\"#p247205 jel mozes pls pojasnit kak ti izgleda ta funkcija di usporedujes predictione? meni baca errore cim u svoju funkciju posaljem cijelu matricu X",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247330": {
+      "poster": "prx_xD",
+      "content": "imas fitan linreg1, linreg2, linreg3\n\npred1 = linreg1.predict(x)\n\npred2...\n\npred3...\n\ni onda if pred1>pred2 and pred1>pred3: y=0\n\nif pred2>... y=1\n\nif pred3>... y=2\n\nreturn y",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247341": {
+      "poster": "angello2",
+      "content": "@\"prx_xD\"#p247330 ![](assets/2021-10-27/00034.png)\n\nto i radim cijelo vrijeme pa dobivam ovo sta god napravim...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247342": {
+      "poster": "prx_xD",
+      "content": "stavi predict([x])",
+      "votes": {
+        "upvoters": [
+          "Ollie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247344": {
+      "poster": "angello2",
+      "content": "@\"prx_xD\"#p247342 tak nema errora al uopce ne crta nis hahahha nis mi nije jasno\n\noke nvm crta sad hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247462": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "A kako nacrtati više grafova s ovom njihovom zadanom funkcijom za crtanje. Meni se uvijek iscrta samo jedan, kao da se crtaju jedan preko drugog",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247605": {
+      "poster": "Jaster111",
+      "content": "Imam isti problem kao i kolega iznad, ali osim toga, kako se očekuje da prikažemo granice klasifikacije? Napravio sam predict funkciju koja prima dataset i vraća array labela (0, 1, ili 2).",
+      "votes": {
+        "upvoters": [
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247642": {
+      "poster": "error",
+      "content": "@\"Jaster111\"#p247605 @\"Coffe123\"#p247462  ste probali staviti plt.show() nakon svakog grafa?",
+      "votes": {
+        "upvoters": [
+          "Jaster111",
+          "Zuzu (Coffe123)",
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247669": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "@\"error\"#p247642 sad radi, hvala!!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247926": {
+      "poster": "Ollie",
+      "content": "Jesu ovo dobri grafovi za zad2? \n\nNije mi jasno zasto ne dobivam pravce u prve tri slike... \n\n\n![](assets/2021-10-30/00002.jpg)\n\n![](assets/2021-10-30/00003.jpg)\n\n![](assets/2021-10-30/00004.jpg)\n\nOvo je graf za RidgeClassifier i on mi ima smisla... \n\n![](assets/2021-10-30/00005.jpg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248053": {
+      "poster": "lovro (l123)",
+      "content": "Kako uz pomoću one njihove funkcije za crtanje prikazat viseklasnu klasifikaciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248205": {
+      "poster": "tomekbeli420",
+      "content": "@\"l123\"#p248053 prvi argument su ulazni podaci odnosno matrica dizajna (oblika N x 2), a drugi argument je polje oznaka klasa (cijeli brojevi, polje je jednodimenzionalno u odnosu na matricu dizajna koja mora biti predana kao dvodimenzionalno polje).\n\nE a sad treći, opcionalan argument je nekakav funkcijski objekt (nez jel to prava terminologija za to u Pythonu pa možda pričam gluposti) koji predstavlja hipotezu za koju hoćeš crtati granice između klasa. E sad taj funkcijski objekt mora biti takav da prima 1 argument: matricu sa ulaznim podacima (bilo kakvim, bili viđeni ili neviđeni primjeri) također kao 2D polje (svaki redak je jedan primjer za koji hoćeš računati predikciju, odnosno iznos h(x)), a vraća predikcije prema toj hipotezi u obliku 1D polja (onoliko njih koliko ima redaka).\n\nAko ovaj treći argument ne predaš, onda će se prikazati samo ulazni primjeri i njihove oznake u obliku različitih boja.\n\nNpr evo za 1a zadatak kod bi ti mogao izgledati ovako (izostavio sam računanje preciznosti, to bi trebalo biti izi):\n```python\nmodel = RidgeClassifier(alpha=0)\nmodel.fit(seven_X, seven_y)\n\nh = lambda x: model.predict(x)\nplot_2d_clf_problem(seven_X, seven_y, h)\n```",
+      "votes": {
+        "upvoters": [
+          "gladiator",
+          "lovro (l123)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248255": {
+      "poster": "ana (anci)",
+      "content": "zasto u 1.b graf izgleda ovako?![](assets/2021-10-31/00006.png)\n\njel to tako ok? ne kuzim zasto lijepo ne razdvoji granica klase",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248257": {
+      "poster": "Ollie",
+      "content": "@\"anci\"#p248255 \n\nTo je zbog nerobusnosti regresije kad se koristi za klasifikaciju, pogledaj Šnajdera na videu 05, negdje od 45min do 53min, tamo objašnjava vrlo sličan primjer\n\nI okaj je na grafu da tak izgleda, to se i pokušava prikazati kao problem",
+      "votes": {
+        "upvoters": [
+          "ana (anci)",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248275": {
+      "poster": "feudalac",
+      "content": "@\"prx_xD\"#p247342 oprosti, mozes mi pliz objasnit zasto tako radi? python noob here",
+      "votes": {
+        "upvoters": [
+          "ZliDule"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248293": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"feudalac\"#p248275 Nije to do pythona nego do toga što se u praksi za vektore ne koriste 1D shapeovi. Dakle shape `(n, )` se smatra spljoštenim vektorom i radi generalizacije na tenzore se očekuje da je takav vektor barem forme `(1, n)`, ili `(m, n)`, ako se radi o m primjeraka. To ti uostalom i piše u [dokumentaciji](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression.predict)\n\nEDIT: Da klarificiram onda zašto `[x]` radi: pa, kad napraviš `[x]`, zapravo si svoj vektor dimenzija `(n, )` stavio u listu, pa je sad ta tvoja lista oblika `(1, n)`. Zbog toga što sklearn vjv koristi standardne pythonove iteratore mu to nije ništa drukčije nego numpy array te dimenzije. Inače isto možeš postići s `np.reshape(x, (1, -1))` ako je `x` numpy array. Što je ujedno i bolja praksa za slučaj da ti ta metoda koristi neko svojstvo ili varijablu numpy arraya, npr. `shape`, jer python lista nema to svojstvo ili varijablu, bacilo bi error.",
+      "votes": {
+        "upvoters": [
+          "feudalac"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248322": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "Jeste koristili polynomialFeatures u ovom labosu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248326": {
+      "poster": "Retard00",
+      "content": "@\"Precious Bodily Fluids\"#p248322 ne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248329": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Retard00\"#p248326 Jel znaš možda zašto se ne koristi? Kolko shvaćam učenje se obično provodi s dodanom dummy značajkom",
+      "votes": {
+        "upvoters": [
+          "feudalac"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248341": {
+      "poster": "Jaster111",
+      "content": "Kako napravit model linearne regresije koji će mi davat isti rezultat kao Ridge Classifier na slici ispod? Točnije, kako napisat predict metodu i predat ju njihovoj metodi za crtanje grafova?\n\n![](assets/2021-10-31/00025.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248381": {
+      "poster": "kix7 (Fish99)",
+      "content": "![](assets/2021-10-31/00034.png)\n\nJel krivo ako mi ovako ispadne u 1.b? Malo mi je sumnjiva ova granica koja se prelomi ovako, al mislim da fkt nisam nis fulo\n\nOvo mi je kod:\n\n```python\nridge_classifier = RidgeClassifier(alpha=0)\nridge_classifier.fit(outlier_X, outlier_y)\npredictions = ridge_classifier.predict(outlier_X)\naccuracy = accuracy_score(outlier_y, predictions)\nprint(accuracy)\nplot_2d_clf_problem(outlier_X, outlier_y, lambda x : ridge_classifier.predict(x) >= 0.5)\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248386": {
+      "poster": "tomekbeli420",
+      "content": "@\"Jaster111\"#p248341 da smijem i da nisam pickica dao bih ti svoj kod, ali jbg jesam pa je valjda ovo dovoljno dobro\n\nDakle kao što je @\"BDSMićo\"#p248293 ovdje rekao moraš složiti motodu koja prima 2D numpy array, dakle ulazni podaci po retcima i pljuje 1D numpy array: predviđene oznake klasa kojih ima onoliko koliko ima redaka u onom 2D numpy arrayu. E kao što zadatak kaže to moraš riješiti po shemi OVR. Dakle još pri učenju moraš stvoriti onoliko binarnih klasifikatora koliko ima klasa (u našem zadatku K=3), i svaka je naučena razdvajati primjer jedne klase od ostalih. Koji su to binarni klasifikatori? Običan `LinearRegression` bez klasifikacijskog dijela, dakle [imath]h \\left(\\mathbf{x}\\right) = \\mathbf{w}^{\\mathrm{T}} \\mathbf{x} + w_0[/imath] (gdje vektor težina nema [imath]w_0[/imath] i vektor [imath]\\mathbf{x}[/imath] nema dummy jedinicu). To je zato što shema OVR donosi odluku na temelju pouzdanosti, i zato nam treba to, a ne nešto što će nam dati samo oznaku klase.\n\nKod učenja onda pogledaš koje jedinstvene oznake se pojavljuju (odnosno koliko ima klasa), onda za svaku tu jedinstvenu oznaku `i` stvoriš kopiju onog vektora oznaka [imath]\\mathbf{y}[/imath] (u zadatku to je skup oznaka koji si dobio pozivom funkcije onaj `make_classification`) tako da sve oznake koje odgovaraju oznaci `i` budu jedno, a ostali drugo (koje te dvije oznake će biti je nebitno, može biti True False ako baš želiš). Glavni dio koda za učenje bi ti mogao izgledati ovako:\n```python\n# skup primjera: matrica dizajna X i oznake y\n# ...\nfor oznaka in jedinstvene_oznake:\n    binarne_oznake = np.array([i==oznaka for i in y])\n    binarni_klasifikator = LinearRegression() #nije baš klasifikator u pravom smislu ali ćemo ga iskoristiti za klasifikaciju\n    binarni_klasifikator.fit(X, binarne_oznake)\n    # ... nekako zapamti koji binarni klasifikator odgovara kojoj oznaci\n```\n\ne a što se tiče predviđanja odnosno onaj predict koju oni traže, evo kako (ne kod al logiku) sam ja napravio predviđanje za 2D array podatke `X` (bili viđeni ili ne)\n\nprotrči kroz sve binarne klasifikatore onih jedinstvenih oznaka koje smo istrenirali ranije (ima ih onoliko koliko ima klasa, odnosno jedinstvenih oznaka, dakle K) i pitaj svakog da ti pljune svoj `predict(X)`, dakle svaki će dati 1D array numerička (jer smo koristili `LinearRegression`) predviđanja za svaki podatak, odnosno svaki redak. Svih tih K jednodimenzijskih predviđanja složi u matricu po retcima, neka je ta matrica `Y`. Onda iskoristi [numpy.argmax](https://numpy.org/doc/stable/reference/generated/numpy.argmax.html) na sljedeći način:\n\n`indeksi = np.argmax(Y, axis=0)` koji će ti za svaki stupac reći u kojem indeksu retka se nalazi max za taj stupac. Na tebi je sad da nekako zapamtiš u kojem retku matrice `Y` su bile numeričke predikcije za koju klasu (u smislu sheme OVR), i onda kad izvučeš o kojim klasama se radi, to je tvoj output tog predicta.",
+      "votes": {
+        "upvoters": [
+          "Jaster111",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248389": {
+      "poster": "tomekbeli420",
+      "content": "@\"Fish99\"#p248381 `RidgeClassifier` na izlazu daje oznake, a ne numeričke vrijednosti, dakle zadnji redak ti mora biti\n```python\nplot_2d_clf_problem(outlier_X, outlier_y, lambda x : ridge_classifier.predict(x))\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248397": {
+      "poster": "kix7 (Fish99)",
+      "content": "@\"tomekbeli420\"#p248389 \n\nCak i da maknem tih >= 0.5 ispadne mi ovako:\n\n![](assets/2021-10-31/00037.png)\n\nEDIT:\n\npopravio, problem mi je bio sto sam iznad se nes igrao s podacima i isprobavao za oznake -1 i 1, pa mi je zbog tog sve bilo krivo kasnije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248398": {
+      "poster": "Upforpslone",
+      "content": "@\"Precious Bodily Fluids\"#p248329 Mislim da zato jer RidgeClassifier to automatski dodaje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248419": {
+      "poster": "tomekbeli420",
+      "content": "@\"Upforpslone\"#p248398 Ne da automatski dodaje dummy jedinicu, nego njegov model koji se koristi za klasifikaciju je\n\n[imath]h \\left(\\mathbf{x}; \\mathbf{w}, w_0\\right) = \\mathbf{w}^{\\mathrm{T}} \\mathbf{x} + w_0[/imath]. Dakle ovaj vektor [imath]\\mathbf{w}[/imath] je onaj bez težine [imath]w_0[/imath] pa onda ima jednak broj komponenata kao primjer [imath]\\mathbf{x}[/imath], dakle bez dummy jedinice",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248464": {
+      "poster": "Daeyarn",
+      "content": "![](assets/2021-10-31/00044.png)\n\nima li netko ideju zasto se ovo dogodi?(gornji graf je vlastitom metodom predict a donji je klasom RidgeClassifier) ne mogu skuziti gdje sam u kodu krivo oznacio klasu ili nesto, granice se cine dobre ali \"zarotirane\" za 180",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248467": {
+      "poster": "hellvetica",
+      "content": "@\"Daeyarn\"#p248464 Vjv su ti klase krivo namjestene. Pazi da prije u zadatku uzimas da ti je 1 klasa koja te zaniima a 0 sve ostale. Inace ces kad radis predict trebat uzimat argmin a ne argmax.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "angello2",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248468": {
+      "poster": "Daeyarn",
+      "content": "@\"hellvetica\"#p248467 \n\n![](assets/2021-10-31/00045.png)\n\ndo toga je bilo, ovako sam stavio isprva, sad se cine granice okej \n\n![](assets/2021-10-31/00046.png)\n\nhvala puno!!!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249470": {
+      "poster": "JogaBonito",
+      "content": "Isplati li mi se pisati ovu vježbu ako nisam skužio da je rok bio do prošle nedjelje? Jel moguće dobiti nekakve bodove bez predaje na vrijeme ako donesem rijeseni labos u termin?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249494": {
+      "poster": "Daeyarn",
+      "content": "@\"JogaBonito\"#p249470 ne znam mozes li dobiti iz 2. vjezbe, ali ta nosi 2 boda, a ova o logistickoj regresiji koja je do ove nedjelje za predati nosi 4 boda, tako da bar dobijes 4/6 ako nista drugo\n\nedit: mislim da to tak funkcionira, right?",
+      "votes": {
+        "upvoters": [
+          "angello2",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "title": "[RPPZW] 4. laboratorijska vježba - 2020/2021",
+  "creator": "Letov",
+  "slug": "rppzw-4-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Razvoj programske potpore za Web",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "201766": {
+      "poster": "Letov",
+      "content": "Preuzeo sam njihov projekt s gitlaba, pokrenuo 'npm install', napunio bazu. Ali kad pokrenem server (\"npm run dev\" ili \"node server.js\") i odem na localhost:3000, dobijem sljedeći error:\n\n`TypeError: Cannot read property 'user' of undefined`\n\nSe događa ovo još nekome ili zna netko kako riješiti ovo? Stvarno ne vidim u čemu bi mogao biti problem.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201778": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Letov#201766\n\nČini mi se da to tako treba biti, da projekt ne radi u stanju u kojem vam ga daju.\n\nProblem je što objekt zahtjeva na sebi nema `session`, a uzrok tome jest što nemaš middleware za sjednicu. Dodati ga je jedan od zadataka labosa. U _server.js_ su označili gdje to trebaš nadodati.\n\nČim sam to dodao sam prestao dobivati taj error i stranica se učitala.\n\n----\nKolega koji je prošle godine imao isti problem: @Vasili#31167",
+      "votes": {
+        "upvoters": [
+          "Jaki",
+          "Letov"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204096": {
+      "poster": "mkovac25",
+      "content": "Može li mi netko pomoći? Kada pokušam pokrenuti server s npm run dev izbacuje mi poruku: \"Failed to prune sessions: relation session does not exist\". Pokušao sam ali ne uspijevam shvatiti odakle potiče ta greška. Mislio sam da je možda problem sa seed.js-om ali jedino što sam tamo promijenio je ime baze podataka i lozinku, ostalo je sve kako su nam dali.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204133": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@mkovac25#204096\n\nJesi li stvorio tablice? _seed.js_ se ne pokreće automatski, trebaš napraviti `npm run seed`.\n\nAko misliš da si stvorio tablice, a ipak ti ne radi, pogledaj u pgAdminu je li sve u redu. Trebao bi tamo moći vidjeti sve tablice, uključujući tablicu _session_, za koju ti se žali da ne postoji.\n\n![](assets/2021-06-10/00011.png)",
+      "votes": {
+        "upvoters": [
+          "mkovac25"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204153": {
+      "poster": "mkovac25",
+      "content": "@__builtin_popcount#204133 \n\nDakle, nekako sam uspio zaboraviti da trebam seed pokrenuti zasebno jer nije naveden u package-u. Sad kad sam napravio tablice više mi ne javlja grešku. Samo mi sada ništa ne radi, javi mi da je pokrenuo server.js ali se ništa ne događa pa ne znam jesam li ja nešto zaboravio napraviti ili mi je neka greška negdje u kodu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204237": {
+      "poster": "Archie54",
+      "content": "Kak trebe izgledat ovaj dio di se u server.js pohranjuje session u bazu? Stanica se otvara li mi ne sprema nista u bazu, ne znam sto je krivo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204281": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Archie54#204237 \n\nMoje rješenje ze to od prošle godine: [Materijali](https://github.com/studosi-fer/RPPZWIPU/blob/997f990eb0a91de014841249d79f0083800cba14/labosi/lab-4/2019-20/by___builtin_popcount/server.js#L35)\n\nPost u kojem sam objasnio kako sam do toga došao: @__builtin_popcount#31192",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204380": {
+      "poster": "charlie44",
+      "content": "Zna li netko zašto dobivam ovaj error u browseru, a pokrenuo sam server sa npm run dev: \n\nThis site can’t be reached\n\nlocalhost refused to connect.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204381": {
+      "poster": "mkovac25",
+      "content": "Imam problem sa server.js-om. Kada pokušam pokrenuti server izbacuje mi grešku: cannot read property UserExists of undefined. Iz nekog razloga, mogu iz session-a dohvatiti user-a ali ne mogu iz app-a dohvatiti userData...\n\nZna li netko zašto se ovo događa i kako to popraviti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204415": {
+      "poster": "Letov",
+      "content": "Ovaj dio s dodavanjem i brisanjem artikala iz košarice mi nije baš jasan...\n\n1. Gdje mi zapravo koristimo ove pathove `/cart/add/id` i `/cart/remove/id`? Nekako bi mi imalo smisla da se oni pozovu kada kliknemo na gumbove u order.ejs i cart.ejs, ali tamo se samo poziva addItemToCart funkcija.\n2. Nije mi jasno zašto se klikom na te gumbove poziva addItemToCart funkcija samo s jednim parametrom (itemid), ako ona u modelu prima tri parametra? Na tim mjestima (onaj dio s `<%= item.id %>`) mi daje errore u obe .ejs datoteke, što mi je isto čudno.\n3. Ako direktno upišem path `/cart/add/id` mi se stranica vječno učitava bez ikakvog errora ili promjene.\n\nPogledao sam ovo na materijalima od prošle godine ali i tamo je više-manje sve isto, tako da stvarno sam skroz zbunjen, ako bi mi netko mogao objasniti šta krivo gledam...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204610": {
+      "poster": "delrey (nana)",
+      "content": "@mkovac25#204381 Imam isti problem. Jesi ti popravio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204744": {
+      "poster": "Fikalo",
+      "content": "Jel moramo mi predat sve vjezbe ili je dovoljno da smo skupili prag od 5 bodova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204764": {
+      "poster": "bb8 (zaza)",
+      "content": "@mkovac25#204381 za šta će ti točno userData? Kolko vidim prošle godine je na labosu bio jedan dodatan model UserData kojeg na ovogodišnjem labosu nema.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204774": {
+      "poster": "Archie54",
+      "content": "Jel mi moze netko zdravo seljacki objasnit kako treba izvest dodavanje u kosaricu, to mi jedino ne radi i vec sam jako ocajan.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204783": {
+      "poster": "Puhsy",
+      "content": "@Archie54#204774 ![](assets/2021-06-10/00053.png)\n\nsamo pozovi ovu funkciju addItemToCart iz CartModel za cart stavi req.session.cart, njega mozes negdje u server.js napravit s middlewarom (cart.createCart())",
+      "votes": {
+        "upvoters": [
+          "Archie54"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204787": {
+      "poster": "bb8 (zaza)",
+      "content": "@Archie54#204774 u cart.routes samo napravis async function u kojoj pozivas await cart.addItemToCart(req.session.cart, req.params.id, 1)  i res.end() dok u cart.ejs i order.ejs moras u script tagu napravit async function addItemToCart(id) koja radi await fetch('/cart/add/' + id). Remove isto tako, a jedina razlika je što ga nema potrebe stavljat u order.ejs jer ga ionako onClick ne mozes pozvat jer se iz order.ejs moze samo dodavat artikl.",
+      "votes": {
+        "upvoters": [
+          "Archie54",
+          "Letov"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204901": {
+      "poster": "mkovac25",
+      "content": "Ima li netko drugi problem sa cart.ejs-om? Kada pokušam otići na cart, izbaci mi da je err undefined. To je njihov kod pa ga ne želim dirati, jesam li propustio neki dio koji sam trebao možda u routeru proslijediti?\n\nUsput, meni se automatski kad otvorim localhost otvori stranica da sam logiran kao admin, po defaultu. Još uvijek će mi prikazati anonimnu stranicu sa login ako se logoutam ali ne znam gdje sam zeznuo da mi automatski se logira kao admin kada pokrenem server.js",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204902": {
+      "poster": "bb8 (zaza)",
+      "content": "@mkovac25#204901 kad u cart.routes radis render vjerojatno nisi stavio još i err: undefined",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204916": {
+      "poster": "wajdo",
+      "content": "za kaj sluzi ovaj cartSanitizer u cart.routes.js?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205033": {
+      "poster": "mkovac25",
+      "content": "@wajdo#204916 \n\nKoliko ja vidim, to ti samo provjerava da cart postoji, i onda ti rezultat te provjere zapiše u console.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205046": {
+      "poster": "mkovac25",
+      "content": "Uspio sam napraviti sve što traže od nas u pripremi, samo mi iz nekog razloga kada kliknem gumb za povećanje ili smanjenje broja nekog artikla u košarici se stranica ne reloada sam nego moram ja sam stisnuti reload da vidim promjenu količine. Hoće li to biti problem ako ostavim, nemam pojma zašto location.reload() ne funkcionira.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205149": {
+      "poster": "bb8 (zaza)",
+      "content": "@mkovac25#205046 jel ti location.reload() poslije fetcha u script tagu? ak je tak trebalo bi radit ...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

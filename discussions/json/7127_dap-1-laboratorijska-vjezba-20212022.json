@@ -1,0 +1,218 @@
+{
+  "title": "[DAP] 1. laboratorijska vježba - 2021/2022",
+  "creator": "Valentino",
+  "slug": "dap-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Dubinska analiza podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "287077": {
+      "poster": "Valentino",
+      "content": "Još uvijek mi nije jasno kako izgledaju ovi labosi, tj. bilježnice. Imamo li neku bilježnicu za popuniti ili odgovaramo na ova pitanja u slobodnoj formi ?\n\n-     dimensionality of the dataset\n-     features distributions - How many different types of distributions are there? Do some distributions suggest the feature is useless? If yes, explain why is that the case.\n-     missing values - Are there any? If yes, what will you do about it? Why?\n-     outliers - Do any features contain outliers? If yes, what will you do about it? Why?\n-     visualizations - Data visualizations in relation to the target variable (match outcome). Be sure to visualize the correct and accurate data for a particular match\n-     reference classifier - prepare the data for the first classification. No need for any feature engineering or hyperparameter optimization at this point. Just create any successful and meaningful classifier.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287079": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Valentino\"#p287077 Ako sam ja dobro shvatio ti radis svoju biljeznicu gdje napises kod koji se odnosi na zadane zadatke i eventualno odgovoris na pitanja ili prokomentiras. Po nositelju i glavnom asistentu bih rekao da ce bit kao projekt na uvodu u znanost o podacima. Tamo su isto bila takva open ended pitanja ali ti ih je zadavao asistent koji ti je bio dodijeljen, a ocjenjivanje je bilo relativno blago pa nebi trebalo bit nista prezahtjevno.",
+      "votes": {
+        "upvoters": [
+          "Valentino",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287086": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Valentino\"#p287077 \n\nJesi mozda nasao/ucio po točnom primjeru neke od ovih natuknica? Ima tolko tih značajki da me ovo sve samo zbunilo\n\n1. Dimenzionalnost mi je jasna pronać, pogleda se broj redaka i stupaca skupa podataka\n2. Ova distribucija podataka, nije mi skroz jasno pitanje, većinom su distribucije normalna razdioba, neka beta distribucija i tu i tamo neka uniformna (mislim da nekih kategoričkih nema ak se ne varam?) Ovo za beskorisnost jel to gledamo ako imamo znacajku koje je konstanta onda je beskorisna ? (standardna devijacija je 0)\n3. Kod mene je jedno 4,5 znacajka potpuno prazno, jel tako i kod vas? Rjesenje za to je potpuno maknut te znacajke ako se ne varam?\n4. Moram priznat da ih nisam našao (nisam previše ni tražio jer s utolko zbunjujući ti podatci, barem meni) ako je neko našao neke slobodno podjeli haha :D , i da kad ih se nađe onda se to popravi sa nekom metodom (normalizirat ga, uklonit ...)\n5. Šta se točno ovdje  traži ? jer za ovo bi trebalo naći i izabrati neke značajke i onda vizualno prikazati njihovu ovisnost jednu o drugoj? npr broj Assista HOME ekipe ovisi o tome dal je HOME ekipa dobila utakmicu (bubam bzvz)) Ili se ovdje misli na nešto drugo ?\n6. Ovo zadnje bi trebali izabrat X značajki koje mislimo da bi bile dobre za prvi klasifikator ? \n\nMoram priznat da sam malo zbunjen sa svime ovime, ako neko zna više, volio bih kad bi me uputio u pravom smjeru sa svime ovim, hvala vam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287381": {
+      "poster": "BaboTrojka",
+      "content": "Jesam ja dobro shvatio da mi trebamo predvidjeti rezultat iduće utakmice na temelju trenutne? To mi nema baš smisla jer nema bas prevelike korelacije izmedu dvije nasumicne utakmice.  I doslovno je u istoj tablici, samo u drugom retku prikazan rezultat te utakmice.",
+      "votes": {
+        "upvoters": [
+          "Ryder (Pepper)",
+          "angello2",
+          "cloudies",
+          "oneTwo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287420": {
+      "poster": "Ryder (Pepper)",
+      "content": "![](assets/2022-03-25/00015.png)\n\nNije mi jasno, recimo da gledamo prvi redak, mi imamo svu statistiku Pacers i Magic, a mi trebamo predvidjeti ishod Miami i Chicago na temelju te statistike? Trebamo li grupirat nekako podatke možda ili nešto jer ne vidim baš kako bi to funkcioniralo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287587": {
+      "poster": "Jaster111",
+      "content": "Jel ima netko ideju što sa podzadatkom za outliere? Probao sam svaku značajku provuć kroz Z-score tako da mi prikaže sve one podatke koji imaju Z-score > 3, ali čini mi se da tu postoji par problema:\n1. previše redaka bi bilo izbačeno (1114)\n\n2. čini mi se da to nije baš ni najbolji pristup jer vjerojatno bi svaka značajka zahtjevala neki osobni pristup, al s druge strane ima ih 230...\n\nAko netko tko je riješio ima savjete, dobro će doći.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287613": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Jaster111\"#p287587 Radio istu stvar, izbacio sam oko 800 redaka, sa 3700 na 2900, to mi je relativno okej, mozes onaj neki postupak koristit da zamjenis outlier sa srednjom vrijednoscu stupca",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287615": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Pepper\"#p287420 u istom problemu sam, ne vidim kak bi se na temelju neke utakmice(jednog retka) moglo predvidjet ishod druge dvije momcadi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287623": {
+      "poster": "garica",
+      "content": "Ovo pitanje sa distribucijama, jel bi mi trebali provodit neke testove za provjeru distribucija? Pretp da ne jer nismo to radili? Ako ne, sto bi onda trebali plottat 200 histograma?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287640": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Jaster111\"#p287587 tu mozes uzet neki outlier detection algoritam i plottat kolko ces podataka odrezat u ovisnost s hiperparametrima pa onda lako maknes kolko hoces\n\n@\"garica\"#p287623 ja sam napravio tako da sam uzeo 10-15 znacajki, plottao histograme i utvrdio kakve su distribucije ali sam ciljano uzimao znacajke za koje sam mislio da bi mogle imat razlicite distrobucije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287663": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "A kojom logikom trebamo nać korelaciju u retku kad su timovi poptuno nezavisni od onih za koje predviđamo ?",
+      "votes": {
+        "upvoters": [
+          "Marincek",
+          "angello2",
+          "matej1423"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287668": {
+      "poster": "snowman",
+      "content": "@\"ḰටḰටš\"#p287663 pa nema korelacija bas veze s ciljnom varijablom\n\nimas npr. plus_minus_home i plus_minus_away i vrijedi plus_minus_home = - plus_minus_away te su one visoko korelirane\n\nali koliko sam skuzio ne trebamo korelaciju za ovu biljeznicu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289084": {
+      "poster": "Jaster111",
+      "content": "Jel ima itko kakve informacije o tome kako je danas labos izgledao? Koja pitanja se pitaju i slično.",
+      "votes": {
+        "upvoters": [
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289128": {
+      "poster": "Valentino",
+      "content": "@\"Jaster111\"#p289084 Ulazni test je bio napisati u natuknicama jasno i koncizno korake pripreme podataka. Tu su rekle da nas je dosta izostavilo korak transformacije podatka. Onda ide po redu i ide po pitanjima iz zadace, pita samo sto si radio. Za bodove nemam pojma kako daju jer pise sa strane na neki papir nes 0.5,1.5...",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

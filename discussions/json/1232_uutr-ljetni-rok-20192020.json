@@ -1,0 +1,759 @@
+{
+  "title": "[UUTR] Ljetni rok - 2019/2020",
+  "creator": "ppooww (pp)",
+  "slug": "uutr-ljetni-rok-20192020",
+  "tags": [
+    "FER",
+    "Uvod u teoriju računarstva",
+    "Ispiti"
+  ],
+  "posts": {
+    "51956": {
+      "poster": "ppooww (pp)",
+      "content": "Nek i za ovo postoji tema\n\n**15.7. u 11:30**, vjerojatno u prostorijama fakulteta.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "52015": {
+      "poster": "Rogue (Fidel Catto)",
+      "content": "Koliko je točno jednostavan rok za dva, je li dosta dan-dva (ako prethodno ništa ne znamo)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "52026": {
+      "poster": "ppooww (pp)",
+      "content": "@Rogue#52015 Mozda ako si lumen ili ako ti se bas posreci. A ako ces vec ciljati na to preporucujem ti da se fokusiras najvise na 1. ciklus. Ima dosta šablonskih zadataka i teorija je malo lakša(bar meni). \n\nStvari koje ti ja preporucam da naucis: \n1. Nauči minimizacije automata [minimizacija podijelom stanja i 3. algoritam (Myhill-Nerode ako ces guglat)]\n2. Pretvaranje kontekstno neovisne gramatike u Chomskyjev i Greibachin oblik. S tim u kombinaciji ide eliminiranje epsilon produkcija, jediničnih produkcija i micanje beskorisnih produkcija (algoritam traženja živih znakova)\n3. Pretvaranje Mealyjevog automata u Mooreov i obratno / pretvaranje NKA u DKA\n4. Onaj zadatak s LR parserom ([1. zad u 3. auditornim](https://www.youtube.com/watch?v=ixoGc264tVE))\n5. Svojstvo napuhavanja za regularne i kontekstno neovisne jezike\n6. Skuži kako funkcionira potisni automat i pogledaj one zadatke s pretvorbom iz potisnog automata u kontekstno neovisnu gramatiku\n\nTo su neke osnovne stvari, trebat ce ti poznavanje regularnih izraza i njihovih identiteta, kao i stvaranje NKA iz regularnog izraza, pretvaranje lijevo linearne gramatike u NKA, pretvaranje desno linearne gramatike u lijevu itd. \n\nNaravno uz to bi trebalo proci auditorne i stare ispite ako stignes. Ako ti bude islo dobro onda kreni na Turinga.\n\nTLDR; Sumnjam da ces stici u dva dana, ali probaj s ovim stvarima koje sam ti nabrojao. Iako je \"rok za 2\", nije besplatna dvojka.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Rogue (Fidel Catto)"
+        ],
+        "downvoters": [
+          "maun (ok)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "52163": {
+      "poster": "StefBaustelic",
+      "content": "budući da je rok za dva koliko % treba imat za proć taj ispit, 50%?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "52166": {
+      "poster": "ppooww (pp)",
+      "content": "@StefBaustelic#52163 da",
+      "votes": {
+        "upvoters": [
+          "StefBaustelic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "52176": {
+      "poster": "ppooww (pp)",
+      "content": "Zna netko možda ovaj\n>! ![](assets/2020-07-09/00031.png)\n\nPo meni bi NKA trebao izgledati ovako: \n>!![](assets/2020-07-09/00032.png)\n\n Pa bi odgovor bio {S, B}, ali tog nema ponudenog.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53382": {
+      "poster": "logitech",
+      "content": "U jesenskom roku iz 2014. godine u 16. zadataku traži se DKA za komplement jezika koji je zadan regulranim izrazom `(2*0*)*` na abecdom {0, 1, 2}. Kako ovo riješiti?\n\nKoje jezike uopće generira ovaj regularni izraz? Untar zagrade kaže da prvo ide proizvoljan broj dvojki i onda proizvoljan broj nula. Ne kužim kako onda još na to primjeniti * koja je van zagrada? Jel to znači izraz unutar zagrade proizvoljan broj puta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53397": {
+      "poster": "ppooww (pp)",
+      "content": "@logitech#53382 Mislim da je to kao bilo koji broj dvojki i bilo koji broj nula bilo kojim redoslijedom, a valjda ta * izvan zagrada govori da se moze prihvatiti i prazan niz. \n\nMislim da bi ekvivalent tome bio (2+0)* , ali za to nisam 100% siguran.",
+      "votes": {
+        "upvoters": [
+          "logitech"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53426": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@logitech#53382 Imaš 2 stanja, oba prihvatljiva.\n\n[math]\n\\delta(S_0, 0) \\rightarrow S_1 \\\\\n\\delta(S_0, 2) \\rightarrow S_0 \\\\\n\\delta(S_1, 0) \\rightarrow S_1 \\\\\n\\delta(S_1, 2) \\rightarrow S_0 \\\\\n[/math]\n\nIzgraditi komplement ovoga znači napraviti jezik koji sadrži sve izvan ovog jezika. Da bi to napravio, moraš konstruirati puni DKA sa stanjima greške:\n\n[math]\n\\delta(S_0, 0) \\rightarrow S_1 \\\\\n\\delta(S_0, 1) \\rightarrow E \\\\\n\\delta(S_0, 2) \\rightarrow S_0 \\\\\n\\delta(S_1, 0) \\rightarrow S_1 \\\\\n\\delta(S_1, 1) \\rightarrow E \\\\\n\\delta(S_1, 2) \\rightarrow S_0 \\\\\n\\delta(E, 0) \\rightarrow E \\\\\n\\delta(E, 1) \\rightarrow E \\\\\n\\delta(E, 2) \\rightarrow E \\\\\n[/math]\n\nI onda treba obrnuti prihvatljiva i neprihvatljiva stanja, dakle samo staviš da je [imath]E[/imath] prihvatljivo a [imath]S_0[/imath] i [imath]S_1[/imath] neprihvatljiva. Regularni izraz za ovakav jezik je `(2*0*)*1[012]*` ako se ne varam.\n\nEDIT: I da, normalni oblik originalnog jezika može biti `(0|2)*` (trivijalno za pokazati da stvaraju isti minDKA).\n\nS tim da ako u zadatku piše da DKA treba minimizirati, onda se [imath]S_0[/imath] i [imath]S_1[/imath] trebaju spljoštiti u isto stanje.",
+      "votes": {
+        "upvoters": [
+          "logitech",
+          "ppooww (pp)",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53548": {
+      "poster": "logitech",
+      "content": "Riješavao možda netko ovaj ->\n\n![](assets/2020-07-12/00036.png)\n\nJa sam ga ovako ->\n\n![](assets/2020-07-12/00037.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53644": {
+      "poster": "ppooww (pp)",
+      "content": "@logitech#53548 Meni je isto tako ispalo, pa je valjda tocno.",
+      "votes": {
+        "upvoters": [
+          "logitech"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53743": {
+      "poster": "logitech",
+      "content": "Zašto je ovdje odgovor d)?\n\n![](assets/2020-07-13/00002.png)\n\nZar nije regularan jezik podskup kontekstno neovisnih jezika i presjek toga dvoje je regularan jezik?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53753": {
+      "poster": "fairlyamusing",
+      "content": "@logitech#53743 ![](assets/2020-07-13/00004.png)\n\neto sta kazu u udzbeniku, a mene zanima jesi li to ti oznacio crvenom bojom ili je bilo oznaceno? \n\nJer ja sam naso samo jedan djelomicno rijesen ispit s roka za 2 i to nije bilo oznacavano crvenom bojom.",
+      "votes": {
+        "upvoters": [
+          "logitech"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53757": {
+      "poster": "logitech",
+      "content": "@fairlyamusing#53753 \n\nTo  sam našao u ZI-u [ovdje](https://f2m.nyqcd.org/UTR/UTR_ZI_2012-2013_2012-13.pdf)",
+      "votes": {
+        "upvoters": [
+          "fairlyamusing"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53772": {
+      "poster": "slip",
+      "content": "Može netko objasnit taj \"rok za dva\"? Kako ga se prijavi, u odnosu na \"obični\" rok? Hoće li biti roka \"za dva\" i na jesen? Zašto ništa o tome ne piše u službenim informacijama na FERWebu?\n\nI koja je razlika u zadacima između roka za ocjenu dovoljan i običnog roka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53776": {
+      "poster": "logitech",
+      "content": "@slip#53772 \n\nU zadnjoj obavijesti na stranicama predmeta su rekli da se može pisati ispit koji je za ocjenu dovoljan i za bilo koju ocjenu. Po defaultu kad prijaviš rok oni smatraju da pišeš ovaj za dvojku. Ako želiš ovaj za više tj za bilo koju ocjenu moraš se javiti njima na mail. Rok za javiti da bi se pisalo za višu ocjenu je bio prošli petak u podne. Ostale informacije nažalost ne znam.",
+      "votes": {
+        "upvoters": [
+          "fairlyamusing",
+          "slip"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54032": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @slip#53772 I koja je razlika u zadacima između roka za ocjenu dovoljan i običnog roka?\n\nRok za 2 je normalan ispit, rok za višu ocjenu je 10 (ili otprilike toliko) esejskih pitanja",
+      "votes": {
+        "upvoters": [
+          "slip"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54158": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "moze neko pitanja i odgovore iz zavrsnog poslikat, izaso sam samo na medu, pa nemogu zavrsni ni otvorit na moodlu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54193": {
+      "poster": "fairlyamusing",
+      "content": "@SonGoku#54158 evo, samo ignoriraj moje gafove\n>! ![](assets/2020-07-14/00011.jpeg)\n\n![](assets/2020-07-14/00012.jpeg)\n\n![](assets/2020-07-14/00013.jpeg)\n\n![](assets/2020-07-14/00014.jpeg)",
+      "votes": {
+        "upvoters": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54212": {
+      "poster": "ppooww (pp)",
+      "content": "@micho#54032 Rok za 2 ima negativne bodove? Pretpostavljam da da, ali eto da pitam.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54235": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@ppooww#54212 Naravno",
+      "votes": {
+        "upvoters": [
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54256": {
+      "poster": "logitech",
+      "content": "Zna netko ovaj:\n\n![](assets/2020-07-14/00021.png)\n\nTo je s ZIa iz 2011/2012.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54316": {
+      "poster": "ppooww (pp)",
+      "content": "@logitech#54256 \n\nPrvo moraš prebaciti sve produkcije u desno-linearnu gramatiku. \n\nZnači produkcija moraju biti oblika:\n\n[imath]A→bC[/imath]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54329": {
+      "poster": "ppooww (pp)",
+      "content": "@logitech#54256 Prvo moraš tu gramatiku prebaciti u desno-linearnu gramatiku.\n\nZnači produkcije ti moraju biti oblika:\n\n[imath]A→bC[/imath]       ili [imath]A→Ɛ[/imath]\n\nPrvo moraš obrnut sve desne strane produkcija u obrnutom redoslijedu i onda ih svesti na gore navedeni oblik.\n\nAko desna strana produkcije zadrži samo završne znakove onda na kraj produkcije moraš dodati [Ɛ].\n\n**Za produkcije iz S:**\n>![imath]S→c[aB][/imath]\n\n[imath][aB]→aB[/imath]\n\n>! [imath]S→a[bbA][/imath]\n\n[imath][bbA]→b[bA][/imath]\n\n[imath][bA]→bA[/imath]\n\n>![imath]S→c[aƐ][/imath]\n\n[imath][aƐ]→a[Ɛ][/imath] \n\n**Za produkcije iz A:**\n>![imath]A→c[Ɛ][/imath]\n\n**Za produkcije iz B:**\n>![imath]B→a[cC][/imath]\n\n[imath][cC]→cC[/imath]\n\n>![imath]B→[Ɛ][/imath]\n\n**Za produkcije iz C:**\n>![imath]C→bC[/imath]\n\n>![imath]C→a[aƐ][/imath]\n\n`[aƐ] produkciju već imamo pa ju ne trebamo ponovno pisati`\n\n>![imath]C→b[Ɛ][/imath]\n\nI na kraju još treba dodati produkciju: \n\n[imath][Ɛ]→Ɛ[/imath]\n\n\nKad se napravi sve to, onda se iz tih produkcija generira NKA (što je sad vrlo jednostavno jer je desno-linearna gramatika). Početno stanje je S, a konačno stanje je [Ɛ]. Jedino nisam siguran što treba s produkcijom [imath]B→[Ɛ][/imath]. Možda @micho zna.\n\nNakon što si nacrtao taj NKA moraš mu zamijeniti početno i konačno stanje i obrnuti sve prijelaze(strelice) i onda imaš NKA za tu gramatiku.",
+      "votes": {
+        "upvoters": [
+          "Hrvoje (Hrvoje45)",
+          "logitech"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54341": {
+      "poster": "ppooww (pp)",
+      "content": "@logitech#54256 \n\n@ppooww#54329 S obzirom da traže Ɛ-NKA vjerojatno se onda produkcija [imath]B→[Ɛ][/imath] nacrta kao Ɛ-prijelaz iz B u [Ɛ].",
+      "votes": {
+        "upvoters": [
+          "logitech"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54724": {
+      "poster": "Aquaman",
+      "content": "I zna li netko odgovor na pitanje u kojem se pitalo koliko nizova mozemo kreirati iz zadane gramatike?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54730": {
+      "poster": "ppooww (pp)",
+      "content": "@Aquaman#54723 Mislim da je pod b) točno\n\n@Aquaman#54724 Ja sam stavio 2 niza, ali za to nisam siguran",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54731": {
+      "poster": "logitech",
+      "content": "@ppooww#54730 \n\nIsto sam stavio 2",
+      "votes": {
+        "upvoters": [
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54732": {
+      "poster": "Aquaman",
+      "content": "@logitech#54731 pogadali ili , ja sam.beskonacno stavio, sta ste napisali koliko ima nedohvatljivih stanja, ili dohvatljivih, nisam siguran sto je bilo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54733": {
+      "poster": "Aquaman",
+      "content": "@Aquaman#54732 u drugom racunskom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54735": {
+      "poster": "ppooww (pp)",
+      "content": "@Aquaman#54732 Ja sam samo raspisao produkcije, ali ne znam jel to tocno.\n\nS -> A -> aBa -> abCba -> abcba\n\nS -> B -> bCb -> bcb\n\n6 dohvatljivih, nije se moglo doci do p6 i p7",
+      "votes": {
+        "upvoters": [
+          "fairlyamusing",
+          "logitech"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54889": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Pitanja iz 3. računskih su se odnosila na 2. računski, sjebali su to",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54905": {
+      "poster": "logitech",
+      "content": "Stigli rezultati. Jel mi se čini ili nitko nije prošao? Piše da je max bodova netko dobio 49, a treba 50 za prolaz.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54915": {
+      "poster": "StefBaustelic",
+      "content": "@logitech#54905 mislim da je to tak ispalo iz luckastih razloga, prošli smo ugl",
+      "votes": {
+        "upvoters": [
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54920": {
+      "poster": "logitech",
+      "content": "@StefBaustelic#54915 \n\nKako smo prošli ako nemamo 50 ili više :)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54922": {
+      "poster": "StefBaustelic",
+      "content": "@logitech#5![](assets/2020-07-16/00012.jpeg)\n\n4920 \n\nTak",
+      "votes": {
+        "upvoters": [
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54925": {
+      "poster": "logitech",
+      "content": "@StefBaustelic#54922 \n\nKoliko si dobio bodova na roku od jučer?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54928": {
+      "poster": "StefBaustelic",
+      "content": "@logitech#54925 pišu brojke 49 49 48.25 nike mi jasno previše kak se događa",
+      "votes": {
+        "upvoters": [
+          "logitech"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54929": {
+      "poster": "StefBaustelic",
+      "content": "@logitech#54925 ![](assets/2020-07-16/00014.jpeg)",
+      "votes": {
+        "upvoters": [
+          "logitech"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54930": {
+      "poster": "StefBaustelic",
+      "content": "Reko je ak prodete ispit za 2 upisuje vm se min(kolko jetrebalo za prolaz predmeta, kolko treba bodova za prolaz na roku ) pa onda buduci da je ovo drugo ispalo 48.25 su nam zaokruzili na prvi iduci cjeli broj 49",
+      "votes": {
+        "upvoters": [
+          "fairlyamusing"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54931": {
+      "poster": "fairlyamusing",
+      "content": "Prilicno sam siguran da su svima koji su dobili na roku za dva 49 ili vise bodova stavili 49 i oni su prosli. \n\nBila je obavjest o spustanju svih pragova za 1 bod, a posto je rok za 2 svi smo dobili minimalno bodova za prolaz.",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "Filemon",
+          "StefBaustelic",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54954": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "jel ima neko zadatke i odgovore mozda ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54971": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@StefBaustelic#54922 ???",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54972": {
+      "poster": "ppooww (pp)",
+      "content": "@SonGoku#54954 Nemam odgovore(mogu napisat sto sam ja zaokruzio, ali ne garantiram tocnost), ali zadatci su bili isti kao ovi sve do 18 zadatka (16 i 17 su bili malo drugacije zadani, ali na istu shemu)\n>!![](assets/2020-07-16/00018.jpeg)\n\n![](assets/2020-07-16/00019.jpeg)\n\nNa kraju su bila jos dva zadatka. U jednom je bio zadan Turingov stroj i dvije funkcije prijelaza (jedna se micala u desno, druga u lijevo). Pitanje je bilo koliko produkcija nastane kada te dvije funkcije prijelaza pretvorimo u gramatiku.\n\nU zadnjem zadatku je iz gramatike trebalo\n\na) izbaciti sve beskorisne produkcije\n\nb) izbaciti sve epsilon produkcije\n\nc) izbaciti sve jedinicne produkcije",
+      "votes": {
+        "upvoters": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54973": {
+      "poster": "ppooww (pp)",
+      "content": "Tldr; treba 49 bodova za prolaz predmeta. Ako ste skupili vise od toga na ispitu spusta se automatski na 49 bodova.\n\nU slucaju @StefBaustelic vjv su zaokruzili tih 48.25 na 49. Ugl, bitno da pise prolaz.",
+      "votes": {
+        "upvoters": [
+          "fairlyamusing"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "55430": {
+      "poster": "StefBaustelic",
+      "content": "@micho#54971 ni meni nije jasno kak je tebe označilo u odgovoru, kliknuo sam reply na poruku logitecha",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64244": {
+      "poster": "Rogue (Fidel Catto)",
+      "content": "@ppooww#54972 Ima li netko rješenja ovog ispita, makar samo sa slovima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64397": {
+      "poster": "ppooww (pp)",
+      "content": "@Rogue#64244 Mislim da rjesenja nema, ovo sam ja zaokruzio ako me sjecanje dobro sluzi, tako da ne garantiram tocnost\n>! 1. a)\n> 2. d)\n> 3. b)\n> 4. d)\n> 5. a)\n> 6. ne znam\n> 7. c)\n> 8. ne znam\n> 9. a)\n> 10. b), ali nisam siguran \n> 11. c), ali nisam siguran\n> 12. d)\n> 13. a)\n> 14. b)\n> 15. ne znam\n> 16. d)\n> 17. ne sjecam se\n> 18. ne sjecam se\n> 19. a)\n> 20. b)",
+      "votes": {
+        "upvoters": [
+          "Rogue (Fidel Catto)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64996": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "di mogu nac rjesenja zadataka koji se ponavljaju na roku, nisam tako utr osim labosa, a na ljir samo izaso sa 30 naucenih pitanja bez zadataka, losa ideja...na gitu ima samo 20. zad s nekog roka i tjt",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "66044": {
+      "poster": "Rogue (Fidel Catto)",
+      "content": "Ako nekome treba za sljedeći rok/sljedećih godina:\n16. zadatak je bio (2+0zvjezdica)zvjezdica rješenje -> 2 stanja i 1 prihvatljivo (pišem zvjezdica jer mi neće onaj znak)\n17. mislim da je bio isti kao tu po svim stanjima, trebalo je zakružit broj stanja nakon brisanja nedohvatljivih (6) i nakon minimizacije (4)\n18. mislim da je razlika u postavljanju zadatka samo šta je prijelaz S->aS zamijenjen sa S->aD, trebalo je izračunati \n\n      δ(S, c) = {D} te pod broj prihvatljivih stanja: 2\n19. TS \n\n      M = { {q0, q1, q2, q3, q4, q5, qp}, {0,1}, {0, 1, B}, δ, q0, B, qp}\n\n      prvi dio zadatka izračunat broj produkcija za \n\n      δ(q0, 0) = (q1, B, R) -> 3\n\n      δ(q1, B) = (q3, B, L) -> 27\n20. A->AaADb|Bc|a\n\n      B->BBADD|A|b\n\n      D->ABCd|BC|epsilon\n\n    Prvo izbaciti beskorisne znakove, pa epsilon prijelaze, pa jedinične. Trebalo je napisati koliko nakon svakog tog \n\n    prijelaza ostaje produkcija: 7, 6, 8 \n\nŠto se tiče teorijskih zadataka ponovila su se više manje sva, ako želite bit sigurni za odgovore imate na materijalima završni iz 2013. sa službenim rješenjima. Što se tiče novih, došlo je samo jedno di se pita za broj nizova, rješenje je 2.\n\nUkratko svake god je više manje isti rok, naučite ovo i imate siguran prolaz.",
+      "votes": {
+        "upvoters": [
+          "Vasili (Fasili)",
+          "joj (poni)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69029": {
+      "poster": "Vasili (Fasili)",
+      "content": "Zna li tko odgovor na pitanje?\n\n![](assets/2020-09-10/00069.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69062": {
+      "poster": "Rogue (Fidel Catto)",
+      "content": "@Vasili#69029 a)",
+      "votes": {
+        "upvoters": [
+          "Vasili (Fasili)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

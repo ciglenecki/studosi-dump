@@ -1,0 +1,2525 @@
+{
+  "title": "[OPESUS] 4. laboratorijska vježba - 2019/2020",
+  "creator": "iNavy (mornar Ica)",
+  "slug": "opesus-4-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Operacijski sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "19945": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "rok za predaju je petak, 15.5.",
+      "votes": {
+        "upvoters": [
+          "McKovalski",
+          "[deleted]",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "20719": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "pomaknut rok za predaju zadaće na ponedjeljak 18.5.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "McKovalski",
+          "__builtin_popcount (std::popcount)",
+          "gladiator",
+          "ink",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21349": {
+      "poster": "Nocna_smjena",
+      "content": "Može meni neko reć zašto mi baca Segmentation fault na ovome? Varijabla help mi služi da iteriram po redcima ovisno o vremenu dolaska dretve.\n\n`P[0]->id = nove[help][1];\n\n        P[0]->p = nove[help][2];\n\n        P[0]->prio = nove[help][3];\n\n        P[0]->rasp = nove[help][4];`\n\nTakođer i ovdje baca Segmentation fault\n\n`else if(P[0]->prio < nove[help][3])`\n\nImam osjećaj da trebam koristit malloc naredbu\n\nHvala unaprijed :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21376": {
+      "poster": "koode7",
+      "content": "je li raspoređivanje podjelom vremena isto što i kružna raspodjela?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21441": {
+      "poster": "bb8 (zaza)",
+      "content": "@koode7#21376 da",
+      "votes": {
+        "upvoters": [
+          "koode7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21486": {
+      "poster": "koode7",
+      "content": "sto se tice prvog zadatka, u kruznom rasporedivanju, ako je jedna dretva gotova s izvođenjem, a kvant još nije gotov, iduća dretva preuzima ulogu?\n\nalso, prioritet pri kvantu ima dretva s najvećim prioritetom, tj prioritetom najmanje vrijednosti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21487": {
+      "poster": "Nocna_smjena",
+      "content": "@Nocna_smjena#21349 \n\nEDIT: Riješeno\n\nTreba se koristit malloc na početku main-a.\n\nKod:\n\n`for(int i=0; i<MAX_DRETVI; i++)\n\n\t\t        P[i] = (struct dretva *) malloc(sizeof(struct dretva));`",
+      "votes": {
+        "upvoters": [
+          "Me1 (Me)",
+          "SuperSjajan3",
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21496": {
+      "poster": "Nocna_smjena",
+      "content": "@Nocna_smjena#21487 \n\nJoš nešto, nemojte zaboravit na kraju programa (to kad pošaljete SIGINT) oslobodit memoriju:  \n\n`for(int i=0; i<MAX_DRETVI; i++) \n\nfree(P[i]);`",
+      "votes": {
+        "upvoters": [
+          "ink",
+          "pingvinka",
+          "setuid0"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21497": {
+      "poster": "koode7",
+      "content": "jel sigint obavezan?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21509": {
+      "poster": "Nocna_smjena",
+      "content": "@koode7#21497 Pa kako ćeš završit program? Nemreš to zaključit po `#define DRETVI 6`. U realnim situacijama ti nikad neznaš kad će tebi dretva doć. Ovdje nam je ta informacija poznata ( i može se tako riješit) iako je to netočan pristup. Vidiš na primjeru da je prekinuto izvođenje programa sa SIGINT",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21513": {
+      "poster": "faboche (him)",
+      "content": "@Nocna_smjena#21509 Što nije kazano u pripremi da možemo koristiti njihovu strukturu podataka za dretve? U tom slučaju postoji poznati konačni broj novih dretvi pa nije potrebno slanje signala za prekid rada.",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21518": {
+      "poster": "Nocna_smjena",
+      "content": "@faboche#21513 Možeš riješit s unaprijed poznatim brojem dretvi koje će doć. Ja samo kažem da u realnim situacijama takav kod neće proć; radit će za 6 dretvi ali ti imaš možda još dretvi nakon tog; takav kod nema mogućnost rada u beskonačnost",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21528": {
+      "poster": "faboche (him)",
+      "content": "Sve to stoji što govoriš, ali odnosio sam se na ovo što si sugerirao kolegi da je korištenje signala obvezno. Mislim da nije jer mi se čini da poanta labosa nije simuliranje realnog pristizanja dretvi u sustav, već pokazati kako sustav raspoređuje te dretve. Zato mislim da je unaprijed definirana struktura bez korištenja signala više nego dovoljna za potrebe labosa.",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21542": {
+      "poster": "Nocna_smjena",
+      "content": "@faboche#21528 E ali neznamo kako će oni ocjenjivat labos. Ja pokušavam napravit vjernu repliku njihovog output-a. Njihov output ima još par linija nakon što zadnja dretva odradi svoje i prekinut je sa SIGINT. Vaš bi output stao nakon što zadnja dretva obavi svoje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21546": {
+      "poster": "faboche (him)",
+      "content": "@Nocna_smjena#21542  Profesor je u snimljenim uputama dao pseudokod u kojem se glavna petlja programa vrti dok postoje početno definirane dretve koje nisu završile s radom, tako da pretpostavljam da neće biti nikakvih problema s tim outputom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21548": {
+      "poster": "Nocna_smjena",
+      "content": "A onda u redu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21578": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@koode7#21497 @faboche#21513  U uputama za 2. labos za višezadaćni rad je navedeno da se dodaje oslobađanje memorije i na sigint i pri normalnom završetku programa, pa mislim da bi to trebali raditi i u daljnim labosima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21927": {
+      "poster": "faboche (him)",
+      "content": "@AnamarijaM#21578  Memorija koju su oni koristili u uputama nije dinamički alocirana. Ona se oslobađa pri završetku rada programa.",
+      "votes": {
+        "upvoters": [
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23086": {
+      "poster": "djeno",
+      "content": "kod outputa za FIFO (tko ima) jeste li radili ispis id/preostalo_vrijeme/prioritet ili samo id/preostalo_vrijeme s obzirom da se prioritet ne koristi u tom zadatku vec samo red",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23345": {
+      "poster": "Nocna_smjena",
+      "content": "@djeno#23086 ja sam imao PRIO ali mislim da ti to nema veze. To što ekstra kod piše ne škodi uopće. Ionako su oni već zadali defaultni ispis; funkcije za ispis su već napisane. Ti samo trebaš main i eventualno pokoju još funkciju napravit",
+      "votes": {
+        "upvoters": [
+          "djeno"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23756": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "Može li mi tko reći je li ovo dobro rješenje B zadatka, ako kao unos stavim primjer iz A zadatka?\n\n![](assets/2020-05-13/00013.png)",
+      "votes": {
+        "upvoters": [
+          "Amariska",
+          "Pranjo (Pranjo_Suđman)",
+          "Rene",
+          "Suki7",
+          "kolega_kolega"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24351": {
+      "poster": "[deleted]",
+      "content": "linkali su nam kernel.org standard za formatiranje koda i rekli da ga se pridrzavamo a oni ga grubo krse u svojem kodu\n\n![](assets/2020-05-13/00083.png)\n\n![](assets/2020-05-13/00084.png)",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic",
+          "Bioxed",
+          "Cubi",
+          "MiqeloS",
+          "Rope (Rops)",
+          "Valentino",
+          "__builtin_popcount (std::popcount)",
+          "djeno",
+          "setuid0",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24366": {
+      "poster": "[deleted]",
+      "content": "@__builtin_popcount#23756 \n>Ako je aktivna dretva tipa RR, onda će nakon jednog koraka (kvanta/sekunde) biti vraćena u red pripravnih, iza dretvi istog prioriteta, ali ispred onih manjeg prioriteta\n\njesi li u B ovo implementirao doslovno tako kao sto su oni napisali? u prvoj sekundi nakon njenog dolaska stavljas RR dretvu kao aktivnu i onda ju u sljedecoj potiskujes iza? imalo bi mi vise smisla napravit to odma kao kad stigne dretva veceg prioriteta od aktivne, ona se odma stavlja na pocetak, zasto se RR ne bi odma stavljala iza aktivne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24367": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Itachi#24351\n\nJel taj coding style morao biti napisan tako insufferable tonom?\n\n> First off, I’d suggest printing out a copy of the GNU coding standards, and NOT read it. Burn them, it’s a great symbolic gesture.\n\n>There are heretic movements that try to make indentations 4 (or even 2!) characters deep, and that is akin to trying to define the value of PI to be 3.\n\n> Unlike Modula-2 and Pascal programmers, C programmers do not use cute names like ThisVariableIsATemporaryCounter.\n\n> If you are afraid to mix up your local variable names, you have another problem, which is called the function-growth-hormone-imbalance syndrome.",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ink"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24369": {
+      "poster": "[deleted]",
+      "content": "> @__builtin_popcount#24367 First off, I’d suggest printing out a copy of the GNU coding standards, and NOT read it. Burn them, it’s a great symbolic gesture.\n\nclassic butthurt torvalds, linux nikad nece bit nista vise od jezgre za postojece operativne sustave",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24374": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Itachi#24366\n\nNe razumijem pitanje, što ti znači dolazak u \"u prvoj sekundi nakon njenog dolaska\", pojavljivanje u sustavu ili postajanje aktivnom? Uz uputu drugog zadatka, primijenio sam i ono iz prvog:\n\n> _Što kad se nešto dogodi \"istovremeno\"?_ Npr. kraj jedne jedinice vremena poklapa se s dolaskom nova posla.\n\n> _Preporuka_: najprije \"obraditi\" kraj, a tek onda nove događaje. Npr. na kraju \"sekunde\" ažurirati broj dodijeljenih sekundi aktivnoj dretvi, napraviti odgovarajuće radnje, ovisno o raspoređivaču, a tek potom pogledati ima li pojave nove dretve (i akcije koje to nosi).\n\nZnači kad u 7. sekundi dođe FIFO dretva, ona će biti stavljena iza svih dretvi istog prioriteta i tu sekundu će se vrtiti ona koja je trebala biti aktivna po stvarima koje su se izdogađale u prethodnoj sekundi. Ako ispred te nove dretve postoji samo jedna RR dretva, ona će se vrtiti tu sekundu i onda propustiti ovu FIFO.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24384": {
+      "poster": "[deleted]",
+      "content": "> @__builtin_popcount#24374 Znači kad u 7. sekundi dođe FIFO dretva, ona će biti stavljena iza svih dretvi istog prioriteta\n\nzasto bi FIFO dretva bila stavljena iza dretvi istog prioriteta? jesi li mislio RR?\n\npokusat cu preformulirat pitanje\n\n>Ako je aktivna dretva tipa RR, onda će nakon jednog koraka (kvanta/sekunde) biti vraćena u red pripravnih, iza dretvi istog prioriteta, ali ispred onih manjeg prioriteta\n\nkako/zasto bi se ikad dodogilo da RR dretva bude 'aktivna'? \n\nvise logike mi ima da cim se RR dretva pojavi u sustavu, ona se pohranjuje iza dretvi istog prioriteta(dakle nikad ne postaje 'aktivna' tj. sjeda na prvo mjesto), a ne da se to dogodi \"nakon jednog koraka (kvanta/sekunde)\", u kojem slucaju se ona iz nekog razloga oznacava kao aktivna neposredno nakon njenog pojavljivanja i tek onda \"nakon jednog koraka(kvanta/sekunde) se stavlja iza dretvi istog prioriteta\"\n\nsad kad  razmislim vidim da RR dretva moze postat aktivna ako dode na red iz reda cekanja. to znaci da se ona moze pri njenom ulasku u sistem odma staviti na svoje mjesto iza aktivnih?(u efektu: nakon pojavljivanja RR dretve ona nece niti prvu sljedecu sekundu bit na aktivnom mjestu)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24397": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "> @Itachi#24384 zasto bi FIFO dretva bila stavljena iza dretvi istog prioriteta? jesi li mislio RR?\n\nSvaka dretva kad se pojavi ide na kraj reda za svoj prioritet, zar ne? Bila ona RR ili FIFO, ide iza svih dretvi svog prioriteta i neka se progura do naprijed ako želi procesorskog vremena.\n\nRR će se vrtiti jedan kvant pa ju pustiti, ali morat će čekati one FIFO koje su prije došle - upravo to i znači _first in, first out_.\n\n> @Itachi#24384 kako/zasto bi se ikad dodogilo da RR dretva bude ‘aktivna’?\n\nAktivna je kada dođe na red, kad sve ove ispred nje odrade jedan (RR) ili sve svoje kvantove (FIFO).\n\n> @Itachi#24384 vise logike mi ima da cim se RR dretva pojavi u sustavu, ona se pohranjuje iza dretvi istog prioriteta\n\nDa, to se i događa, ali to nije jedinstveno za RR, isto radim i sa FIFO.\n\n> @Itachi#24384 a ne da se to dogodi “nakon jednog koraka (kvanta/sekunde)”, u kojem slucaju se ona iz nekog razloga oznacava kao aktivna neposredno nakon njenog pojavljivanja i tek onda “nakon jednog koraka(kvanta/sekunde) se stavlja iza dretvi istog prioriteta”\n\nNisam siguran čime sam ti dao ideju da se to događa, to mi nikako ne pada na pamet raditi. 🙂\n\nKad nova dretva dođe, ona postaje aktivna samo ako je red prazan ili ako ima viši prioritet od svih već prisutnih.\n\nTo je li dretva RR ili FIFO nema nikakvog utjecaja na to kamo ju pozicioniram kad se prvi put pojavi. To samo određuje što radi kad dođe na red, kad postane aktivna.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24411": {
+      "poster": "[deleted]",
+      "content": "> @__builtin_popcount#24397 Svaka dretva kad se pojavi ide na kraj reda za svoj prioritet, zar ne? Bila ona RR ili FIFO, ide iza svih dretvi svog prioriteta i neka se progura do naprijed ako želi procesorskog vremena.\n\nali u njihovom primjeru ispisa u A zadatku kada dode dretva istog prioriteta kao aktivna ta nova postaje aktivna a prosla aktivna ide u iza",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24415": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Itachi#24411\n\nJa to ne vidim. U oba slučaja kad dođe druga istog prioriteta (dretva #2  u 7s i dretva #1 u 12s), ova koja je bila aktivna ostaje aktivna.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24419": {
+      "poster": "[deleted]",
+      "content": "@__builtin_popcount#24415 a istina. krivo sam ih gledao kad ne printaju ovu trojku (id, p, prio) istim redoslijedom kad dolazi i kad se prikazuje u sustavu :'(",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "__builtin_popcount (std::popcount)"
+        ]
+      }
+    },
+    "24524": {
+      "poster": "Suki7",
+      "content": "> @__builtin_popcount#23756 Može li mi tko reći je li ovo dobro rješenje B zadatka, ako kao unos stavim primjer iz A zadatka?\n\nDa i meni je tako ispalo",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "boki8 (kerovac)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24583": {
+      "poster": "Rene",
+      "content": "Ako sam dobro shvatio, u redu je imati fiksno zadane dretve iste kao u primjeru, ne treba se ništa unositi ni mijenjati?",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "ruza0001 (rozy)",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24598": {
+      "poster": "boki8 (kerovac)",
+      "content": "@Rene#24583  Tako je",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Rene",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "bush (Salut)",
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24664": {
+      "poster": "koode7",
+      "content": "da razjasnimo, u drugom zadatku isto radim simulaciju, ne moram proizvoditi dretve?",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24668": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@koode7#24664 da, možeš kopirati dobar dio koda prvog zadatka",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "koode7",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24687": {
+      "poster": "koode7",
+      "content": "ok, jos jedna stvar.\n\n> Ako je aktivna dretva tipa RR, onda će nakon jednog koraka (kvanta/sekunde) biti vraćena u red pripravnih, iza dretvi istog prioriteta, ali ispred onih manjeg prioriteta. \n\nda li ovo znači da implementiram proizvoljni Tq za RR dretve, u smislu zadavanjem kroz STDIN ili hardkodiranom varijablom, ili ce mi uvijek kvant biti jednu sekundu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24710": {
+      "poster": "koode7",
+      "content": "@Itachi nije smijesno. jel Tq uvijek jednu sekundu u drugom zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24713": {
+      "poster": "[deleted]",
+      "content": "@koode7#24710 nije smijesno? pa odgovor ti pise u toj recenici koju si citirao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "AK10 (endyyyy)",
+          "Galke",
+          "HARAmara (decko_sa_balkana)",
+          "Lyras",
+          "bb8 (zaza)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24726": {
+      "poster": "koode7",
+      "content": "@Itachi ako im je kvant isto sto i Tq, onda ne znaci nuzno po ovome sta pise, nego pise dvosmisleno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24755": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@koode7#24726 kvant == period (jer je period u RR kvant)",
+      "votes": {
+        "upvoters": [
+          "Galke"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24802": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "moze neko ispis za RR prvi zad stavit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24807": {
+      "poster": "Suki7",
+      "content": "@SonGoku#24802 Evo meni je ovako\n\n ![](assets/2020-05-14/00030.png)\n\n![](assets/2020-05-14/00031.png)",
+      "votes": {
+        "upvoters": [
+          "Bioxed",
+          "LucidDreamer",
+          "MT09 (mt09)",
+          "Me1 (Me)",
+          "Retard00",
+          "SonGoku (~~~~~~~~)",
+          "[deleted]",
+          "boban_rajovic (ravindrababu ravula)",
+          "boki8 (kerovac)",
+          "iNavy (mornar Ica)",
+          "indythedog",
+          "kolega_kolega",
+          "mini (Earthling)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24814": {
+      "poster": "[deleted]",
+      "content": "evo ispisa za drugi zadatak.\n>!   ```\n  t    AKT     PR1     PR2     PR3     PR4\n  0   -/-/-   -/-/-   -/-/-   -/-/-   -/-/- \n  1   -/-/-   -/-/-   -/-/-   -/-/-   -/-/- \n  1 -- nova dretva id=3, p=5, prio=3, RR=1 \n  1   3/3/5   -/-/-   -/-/-   -/-/-   -/-/- \n  2   3/3/4   -/-/-   -/-/-   -/-/-   -/-/- \n  3   3/3/3   -/-/-   -/-/-   -/-/-   -/-/- \n  3 -- nova dretva id=5, p=6, prio=5, RR=1 \n  3   5/5/6   3/3/3   -/-/-   -/-/-   -/-/- \n  4   5/5/5   3/3/3   -/-/-   -/-/-   -/-/- \n  5   5/5/4   3/3/3   -/-/-   -/-/-   -/-/- \n  6   5/5/3   3/3/3   -/-/-   -/-/-   -/-/- \n  7   5/5/2   3/3/3   -/-/-   -/-/-   -/-/- \n  7 -- nova dretva id=2, p=3, prio=5, RR=0 \n  7   5/5/2   2/5/3   3/3/3   -/-/-   -/-/- \n  8   2/5/3   5/5/1   3/3/3   -/-/-   -/-/- \n  9   2/5/2   5/5/1   3/3/3   -/-/-   -/-/- \n 10   2/5/1   5/5/1   3/3/3   -/-/-   -/-/- \nDretva 2 zavrsila\n 11   5/5/1   3/3/3   -/-/-   -/-/-   -/-/- \nDretva 5 zavrsila\n 12   3/3/3   -/-/-   -/-/-   -/-/-   -/-/- \n 12 -- nova dretva id=1, p=5, prio=3, RR=0 \n 12   3/3/3   1/3/5   -/-/-   -/-/-   -/-/- \n 13   1/3/5   3/3/2   -/-/-   -/-/-   -/-/- \n 14   1/3/4   3/3/2   -/-/-   -/-/-   -/-/- \n 15   1/3/3   3/3/2   -/-/-   -/-/-   -/-/- \n 16   1/3/2   3/3/2   -/-/-   -/-/-   -/-/- \n 17   1/3/1   3/3/2   -/-/-   -/-/-   -/-/- \nDretva 1 zavrsila\n 18   3/3/2   -/-/-   -/-/-   -/-/-   -/-/- \n 19   3/3/1   -/-/-   -/-/-   -/-/-   -/-/- \nDretva 3 zavrsila\n 20   -/-/-   -/-/-   -/-/-   -/-/-   -/-/- \n 20 -- nova dretva id=6, p=3, prio=6, RR=1 \n 20   6/6/3   -/-/-   -/-/-   -/-/-   -/-/- \n 20 -- nova dretva id=7, p=4, prio=7, RR=1 \n 20   7/7/4   6/6/3   -/-/-   -/-/-   -/-/- \n 21   7/7/3   6/6/3   -/-/-   -/-/-   -/-/- \n 22   7/7/2   6/6/3   -/-/-   -/-/-   -/-/- \n 23   7/7/1   6/6/3   -/-/-   -/-/-   -/-/- \nDretva 7 zavrsila\n 24   6/6/3   -/-/-   -/-/-   -/-/-   -/-/- \n 25   6/6/2   -/-/-   -/-/-   -/-/-   -/-/- \n 26   6/6/1   -/-/-   -/-/-   -/-/-   -/-/- \nDretva 6 zavrsila\n 27   -/-/-   -/-/-   -/-/-   -/-/-   -/-/- \n```",
+      "votes": {
+        "upvoters": [
+          "MT09 (mt09)",
+          "Me1 (Me)",
+          "SonGoku (~~~~~~~~)",
+          "Suki7",
+          "boban_rajovic (ravindrababu ravula)",
+          "iNavy (mornar Ica)",
+          "mini (Earthling)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24822": {
+      "poster": "bb8 (zaza)",
+      "content": "@__builtin_popcount#23756 Zar ne ovisi ovdje ispis o tome kako koja dretva ima zadan  2. način raspoređivanja?",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24849": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "je me izjebo ispis u cppu dok sam ga namjestio, duze sam ispis radio nego jebeni labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "iNavy (mornar Ica)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24850": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@bb8#24822\n\nDa, ali uzeo sam one podatke iz A zadatka koji imaju to definirano. Dretve s id 1 i 2 su FIFO, ostale RR.",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24853": {
+      "poster": "Suki7",
+      "content": "@bb8#24822 Da, ali najprije gledas prioritetno rasporedivanje, a taj drugi nacin rasporedivanja gledas samo ako su istog prioriteta",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24854": {
+      "poster": "bb8 (zaza)",
+      "content": "@__builtin_popcount#24850 previdjeo sam to",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24857": {
+      "poster": "Suki7",
+      "content": "@Itachi#24814 evo i moj, vidim da nisu isti pa ako nekom treba hahahah\n\n>!![](assets/2020-05-14/00034.png)\n\n![](assets/2020-05-14/00035.png)",
+      "votes": {
+        "upvoters": [
+          "Amariska",
+          "MT09 (mt09)",
+          "kolega_kolega"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24859": {
+      "poster": "[deleted]",
+      "content": "@Suki7#24857 koliko vidim tvoj se razlikuje od mojeg samo po tome da, u sekundi u kojoj je pristigla nova dretva, ne printas stanje prije dodavanja nove dretve(ispravi me ako sam u krivu). vjerujem da moras to radit jer tako i oni rade u njihovom ispisu u prvom zadatku",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24872": {
+      "poster": "Suki7",
+      "content": "@Itachi#24859 Mislim da su napisali da mozemo i drugacije, ali da njima je kao tebi sad vidim\n\nJa sam ovako ostavio jer mi vise slici ovome sto nacrtam inace na papiru kad se ide rjesavat taj zadatak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24879": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "moramo li izričito koristiti malloc ili možemo koristiti new (ako radimo u cpp)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24881": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@iNavy#24879 \n\nu cppu uvijek new brte",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "iNavy (mornar Ica)",
+          "ink",
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24949": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "![](assets/2020-05-14/00043.png)\n\ndi ste bogovi hardkodiranja, tek sad mi je valja ispis(t<10 2 spacea, inace 1 space)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "iNavy (mornar Ica)",
+          "laranotreallycroft",
+          "nimble",
+          "nnn (dinoo)"
+        ],
+        "wtf": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "tuga": []
+      }
+    },
+    "24953": {
+      "poster": "Rene",
+      "content": "@SonGoku#24949 printf(\"%3d\")?",
+      "votes": {
+        "upvoters": [
+          "Tinx (pingvin)",
+          "__builtin_popcount (std::popcount)",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24957": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@Rene#24953 \n\na necu to iz principa u cppu, a sa cout je drkancija izvest to\n\nedit:\n\nosim toga poprilicno sam izgoren pa ono",
+      "votes": {
+        "upvoters": [
+          "Rene",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24960": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@SonGoku#24957 pa čak i nije, koristi iomanip",
+      "votes": {
+        "upvoters": [
+          "SonGoku (~~~~~~~~)",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24967": {
+      "poster": "[deleted]",
+      "content": "zasto se satima mucite sa prepravljivanjem njihovog koda za ispis umjesto da samo uzmete to sto su dali i rjesite ostatak zadatka u C-u\n\nrjesi se jednostavnim petljama i varijablama, cemu kompliciranje zivota i uvodenje cppa?",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "crocorax",
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "tuga": [
+          "iNavy (mornar Ica)"
+        ]
+      }
+    },
+    "25029": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Itachi#24967 printf je smeće od naredbe",
+      "votes": {
+        "upvoters": [
+          "Hrvoje (Hrvoje45)",
+          "MiqeloS",
+          "SonGoku (~~~~~~~~)",
+          "Suki7",
+          "ink",
+          "koode7",
+          "mihamih"
+        ],
+        "downvoters": [
+          "Cubi"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "Suki7",
+          "iNavy (mornar Ica)",
+          "moose (sugar BoOo!!)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25290": {
+      "poster": "pingvinka",
+      "content": "Ja sam bila shvatila da kod RR raspoređivanja (1. zadatak) nema veze kojeg je prioriteta dretva već se sve samo kružno izmjenjuju, ali sad vidim da su neke kolege gledale i prioritet. Što je onda točno rješenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25292": {
+      "poster": "[deleted]",
+      "content": "@pingvinka#25290 u drugom zadatku se gleda prioritet+FIFO/RR",
+      "votes": {
+        "upvoters": [
+          "ink",
+          "pingvinka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25296": {
+      "poster": "pingvinka",
+      "content": "@Itachi#25292 a znači u prvom zadatku ne trebam gledati prioritet dretve ako imam RR raspoređivanje?",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "crocorax",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25297": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "@pingvinka#25296 \n\nNe trebas gledati prioritet u prvom ako imas RR.",
+      "votes": {
+        "upvoters": [
+          "Hrvoje (Hrvoje45)",
+          "__builtin_popcount (std::popcount)",
+          "crocorax",
+          "iNavy (mornar Ica)",
+          "ink",
+          "pingvinka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25298": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "@pingvinka#25296 Ne treba",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25299": {
+      "poster": "bb8 (zaza)",
+      "content": "@pingvinka#25296  u prvom onda trebas iskljucivo RR, prioritet zanemari",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25304": {
+      "poster": "pingvinka",
+      "content": "@tata#25297 Hvala!",
+      "votes": {
+        "upvoters": [
+          "Hrvoje (Hrvoje45)",
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25637": {
+      "poster": "MrPeanutButter",
+      "content": "Jeli potreban prioritet ako imam FIFO u 1. zadataku ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25638": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@MrPeanutButter#25637 nije za izvođenje programa, no za ispis možeš ostaviti da izgleda slično njihovom",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25660": {
+      "poster": "MrPeanutButter",
+      "content": "![](assets/2020-05-16/00015.png)\n\nEvo ispis 1.zad za FIFO",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25665": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@MrPeanutButter#25660 možda savjet jedan kod ispisa da ispišeš stanje dretvi odmah nakon što neka uđe u red čekanja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25671": {
+      "poster": "MrPeanutButter",
+      "content": "@iNavy#25665 ![](assets/2020-05-16/00016.png)\n\nOvako misliš ?",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25723": {
+      "poster": "pingvinka",
+      "content": "Jel moram pretpostaviti da će veličina reda pripravnih dretvi biti manja od maksimalnog broja dretvi koji se generira? (znači za slučaj da se napuni red, a kreiram novu dretvu, moram ju pamtiti i staviti u red tek kad se oslobodi mjesto)\n\nIli mogu za potrebe ovog labosa pretpostaviti da se nikada neće prenapuniti red?\n\nVidjela sam da je neki kolega postavio slično pitanje na Teamsu, ali nitko nije odgovorio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25737": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@pingvinka#25723\n\nNadam se da smijemo samo ispisati grešku i prekinuti izvršavanje ako se prepuni, jer sam upravo zaključao kod koji to radi 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "pingvinka",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25751": {
+      "poster": "SuperSjajan3",
+      "content": "Uzima li se za gresku ako mi je P[] inicijaliziran na 0/0/0 odma na pocetku ili bas mora biti -/-/-\n\n![](assets/2020-05-16/00027.png)",
+      "votes": {
+        "upvoters": [
+          "Josipa (Zelda)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25760": {
+      "poster": "[deleted]",
+      "content": "je li ok ako za prvi zadatak imamo RR i nismo stavili u ispis prio jer nam ne treba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25763": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@SuperSjajan3#25751\n\nPredlažem da radije handleaš to, ne bi smjelo biti teško. Ubaci u `if` da ispisuje crte npr. ako je id dretve jednak 0.\n\nPretpostavljam da se to događa jer odmah alociraš memoriju za sva mjesta u redu. Kad gledam onaj kod koji su nam dali, čini se da je njihovo zamišljeno rješenje da je alocirana memorija samo za dretve koje su trenutno u redu, a za prazna mjesta stoji NULL. Uostalom, zato i jesu stavili array pointera, a ne samo array struktura.\n\nTakav rad s pointerima je realističniji i bliži onome što bi u OS-u zapravo trebalo raditi, ali je teži za shvatiti ako nisi na _ti_ s pointerima i dinamičkom alokacijom memorije. S obzirom da je Jelenković u [videu](https://youtu.be/q2fIwrUOdnI?t=210) rekao da ne moramo koristiti onaj njihov predložak za ispis, ja za pristup bez pointera ne bih skidao bodove, ali ne znam što će oni koji to zapravo boduju reći.",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "SuperSjajan3",
+          "snowman",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25765": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@FERella#25760\n\nJa sam ga izostavio, čak sam prioritet maknuo i iz strukture.\n\n![](assets/2020-05-16/00030.png)\n\nIz OS-a format ispisa na labosu nikad nisam doživljavao kao strogo definiran, oni svi njihovi ispisi su mi bili više prijedlozi.",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "HARAmara (decko_sa_balkana)",
+          "[deleted]",
+          "nimble"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25792": {
+      "poster": "[deleted]",
+      "content": "@Suki7#24807 meni je ispis drugaciji, kad dretva 3 zavrsi , s obzirom da je nova dretva 2 dosla u red pripravnih meni ona postaje aktivna, meni se cini da RR radi na taj nacin ili sam u krivu?\n\n  6   5/5   3/1   -/-/-   -/-/-   -/-/- \n\n  **7 -- nova dretva id=2, p=3\n\n  7   3/1   5/4   2/ 3   -/-/-   -/-/- \n\nDretva 3 zavrsila\n\n  8   2 /3   5/4   -/-/-   -/-/-   -/-/- \n\n  9   5/4   2/2   -/-/-   -/-/-   -/-/-** \n\n 10   2/2   5/3   -/-/-   -/-/-   -/-/- \n\n\nedit: vjv je moje krivo xD",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25793": {
+      "poster": "mariak (kaiak)",
+      "content": "@__builtin_popcount#25765 jel greška u kodu ako se dretvi smanji p kad dode na zadnje mjesto a ne na prvo (kao sta se tebi ode dogada)\n\nmeni idenitcno ispisuje a nez kako da to popravim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25794": {
+      "poster": "SuperSjajan3",
+      "content": "@__builtin_popcount#25763 Da jasno mi je, hvala ti!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25796": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@mariak#25793\n\nRekao bih da je to dobro. Kad ispisujemo samo jednom po kvantu, teško je prikazati sve što se unutar njega dogodi. Tumačim taj ispis kao da se _p_ smanji dok je još dretva aktivna, a zatim se preseli na zadnje mjesto i tek se onda ispiše stanje.",
+      "votes": {
+        "upvoters": [
+          "mariak (kaiak)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25797": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@FERella#25792\n\nMislim da svaki ispis koji sam do sada vidio ne rotira dretve ako u tom kvantu dretva završi. Čini mi se da ti je krivo, nema mi previše smisla da RR dretva propušta sljedeću ako se nije vrtila na procesoru jedan kvant.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25832": {
+      "poster": "Lusy (MGJ)",
+      "content": "@MrPeanutButter#25671 Bi li preostalo vrijeme dretve na drugoj sekundi trebalo bit 4, a ne 3 ili ? Imam isti zadatak pa da provjerim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25847": {
+      "poster": "branimir1999",
+      "content": "Na koju adresu moram poslati mail ako imam pitanje? Na os@zemris.fer.hr ili profesoru?\n\nBtw je li ovo ispravno? Programatski valja ali strah me da ce mi oduzeti bodove za format ispisa. Prvo obradi aktivnu drevu ako postoji, onda makne gotove dretve, slusa i doda nove te onda tek ispise, pa dobijemo ovu situaciju na sekundi dva i tri pa ne znam hoce li mi oduzimati bodove jer nemam međupostupak\n\n![](assets/2020-05-16/00038.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25865": {
+      "poster": "bb8 (zaza)",
+      "content": "@branimir1999#25847 probaj dodat jos jedan poziv ispisa u kodu prije nego otkrijes novu dretvu pa ju trebas ubacit u red",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25875": {
+      "poster": "branimir1999",
+      "content": "@bb8#25865 Mene zanima je li nuzan taj medupostupak hence zasto zelim poslati mail",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25889": {
+      "poster": "niknik",
+      "content": "Zanima me za RR jel možemo napraviti na lakši način da se podrazumijeva da je kvant 1 (jer ako nebi bio, npr u a) zadatku da je kvant 8 onda po tom mom lakšem načinu dretvi se odma oduzme 8 i gotova je, u sljedećoj sekundi se ispiše da je dretva gotova, a zapravo nije(pošto se traži simulacija po svakoj sekundi), no ako je kvant 1 onda nema takvih problema)? Pitam za b zadatak jer u a zadatku nemam RR.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "tuga": []
+      }
+    },
+    "25894": {
+      "poster": "bb8 (zaza)",
+      "content": "@branimir1999#25875 Primjer iz 4a zadatka ima taj ispis, konkretno 3/3/3 jel pa nisam siguran, mislim da nemreš pogriješit ak ga staviš. Moje mišljenje je da sigurno neće skidat bodove ak ga staviš jer onda imaš identičan ispis njihovom, ali ako ne staviš onda je moguće i da skinu bodove iako nekak ne vjerujem da bi skidali.",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "branimir1999",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25899": {
+      "poster": "branimir1999",
+      "content": "@bb8#25894 Razuman pristup. Primijenit cu ga. Hvala!",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25909": {
+      "poster": "koode7",
+      "content": "@Suki7#24857 Oj, si siguran da u trenutku 7 ne bi trebalo doci do zamjene dretvi s obzirom da je dretva 5 RR?\n\nIpak je zavrsila s kvantom i postoji dretva jednakog prioriteta?!",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25918": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@koode7#25909\n\nJa po tom pitanju radim kao @Suki7, ravnao sam se po preporuci iz [teksta zadatka](http://www.zemris.fer.hr/predmeti/os/pripreme/z4_simulacija_rasporedjivanja.html):\n> _Što kad se nešto dogodi \"istovremeno\"?_ Npr. kraj jedne jedinice vremena poklapa se s dolaskom nova posla.\n\n_Preporuka_: najprije \"obraditi\" kraj, a tek onda nove događaje. Npr. na kraju \"sekunde\" ažurirati broj dodijeljenih sekundi aktivnoj dretvi, napraviti odgovarajuće radnje, ovisno o raspoređivaču, a tek potom pogledati ima li pojave nove dretve (i akcije koje to nosi).\n\nDakle, prvo napravim \"odgovarajuće radnje, ovisno o raspoređivaču\", odnosno gledam ima li dretvi za zamjenu, a tek onda na odgovarajuća mjesta u red dodajem eventualne nove dretve.\n\nAko tako radim, po završetku kvanta rada dretve 5, dretva 2 još nije ušla u red, pa ne dolazi do zamjene.",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "koode7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25928": {
+      "poster": "Suki7",
+      "content": "> @branimir1999#25847 Na koju adresu moram poslati mail ako imam pitanje? Na [os@zemris.fer.hr](mailto:os@zemris.fer.hr) ili profesoru?\n\nMozes i jedno i drugo, ja inace posaljem na os@zemris.fer.hr pa odgovore u roku pola dana najcesce\n\n@koode7#25909 \n\n> @__builtin_popcount#25918 Dakle, prvo napravim “odgovarajuće radnje, ovisno o raspoređivaču”, odnosno gledam ima li dretvi za zamjenu, a tek onda na odgovarajuća mjesta u red dodajem eventualne nove dretve.\n\n> Ako tako radim, po završetku kvanta rada dretve 5, dretva 2 još nije ušla u red, pa ne dolazi do zamjene.\n\nDa, ja sam se isto drza te recenice pa mi je zato tako.",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "koode7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25938": {
+      "poster": "zplusplus (gasaf)",
+      "content": "@Itachi#24814 je li greška ako se ne ispisuje stanje nakon ulaska 6.dretve a prije ulaska 7.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25983": {
+      "poster": "[deleted]",
+      "content": "@zplusplus#25938 pa nisam ja profesor",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "bb8 (zaza)",
+          "zplusplus (gasaf)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "iNavy (mornar Ica)"
+        ]
+      }
+    },
+    "25996": {
+      "poster": "tetak",
+      "content": "ljudi jel zna netko zasto mi baca segmentation?\n\n![](assets/2020-05-16/00058.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25997": {
+      "poster": "tetak",
+      "content": "@tetak#25996 FIFO, ovo je dio za zamjenu dretvi\n\n![](assets/2020-05-16/00059.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25999": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@tetak#25997 pokazivač vrijednosti NULL najvjerojatnije",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26085": {
+      "poster": "boki8 (kerovac)",
+      "content": "Je li u zadatcima sa RR potrebno uzeti u obzir da moze doci do promjene kvanta? Ako je, na koji bi se to nacin trebalo rijesiti? Ja sam to napravio na ovaj nacin (primjer za kvant=2, ako dretva zavrsi u 1. sekundi kvanta i dalje je drzim kao aktivnu dok ne zavrsi i 2. sekunda)\n\n![](assets/2020-05-16/00070.png)",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26097": {
+      "poster": "Jaster111",
+      "content": "![](assets/2020-05-16/00072.png)\n\nJel zna itko kako riješit segmentation fault koji se javlja u ovom dijelu koda?\n\nSpecifično, tu kod **nd->x = nove[i][broj];**\n\nRadio sam po zadanom predlošku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26102": {
+      "poster": "snowman",
+      "content": "@Jaster111#26097 mislim da moras malloc-at memoriju za struct dretva *nd\n\njer ti program inace ne zna da bi ona trebala imati id,p,prio,rasp",
+      "votes": {
+        "upvoters": [
+          "Jaster111",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26113": {
+      "poster": "Jaster111",
+      "content": "@snowman#26102 \n\nTop, sad radi sve, hvala!",
+      "votes": {
+        "upvoters": [
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26362": {
+      "poster": "SpekuraDebela (Šćap)",
+      "content": "Zanima me jedan slucaj\n\nu 3 sekunde za redom dodu 3 dretve istog prioriteta ali:\n\n1 sekunda dode dretva prioriteta 3 i raspored je takav da ide po RR\n\n2 sekunda dode dretva prioriteta 3 i raspored je da ide po FIFO\n\n3 sekunda dode dretva prioriteta 3 i raspored je da ide po RR\n\nkojim redom bi se to trebalo izvrasvati \n\nhoce li dretve iz 1 i 3 sekunde mjenjati mjesta svaki kvant ili im FIFO nece dat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26366": {
+      "poster": "[deleted]",
+      "content": "@SpekuraDebela#26362 mislim da ne bi trebale jer u zadatku pise da RR dretva ide na kraj reda dretvi svojeg prioriteta kad postane aktivna",
+      "votes": {
+        "upvoters": [
+          "SpekuraDebela (Šćap)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26374": {
+      "poster": "SpekuraDebela (Šćap)",
+      "content": "@Itachi#26366 Bez obzira koja dretva bila poslije nje (istog prioriteta naravno)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26381": {
+      "poster": "SpekuraDebela (Šćap)",
+      "content": "@SpekuraDebela#26374 \n\nTablica:\n```int nove[DRETVI][5] =\n{\n\t/* trenutak dolaska, id, p, prio, rasp (prio i rasp se koriste ovisno o rasporedivacu) */\n\t{ 1,  3, 5, 3, 1 }, /* rasp = 0 => PRIO+FIFO; 1 => PRIO+RR */\n\t{ 3,  5, 6, 5, 1 },\n\t{ 7,  2, 3, 5, 0 },\n\t{ 12, 1, 5, 3, 0 },\n\t{ 20, 6, 3, 6, 1 },\n\t{ 20, 7, 4, 7, 1 },\n};```\n\nzapravo onda bi to izgledalo ovako za njihovu tablicu : ![](assets/2020-05-17/00011.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26385": {
+      "poster": "SpekuraDebela (Šćap)",
+      "content": "@Itachi#26366  Za njihovu tablicu : \n\nint nove[DRETVI][5] =\n\n{\n\n\t/* trenutak dolaska, id, p, prio, rasp (prio i rasp se koriste ovisno o rasporedivacu) */\n\n\t{ 1,  3, 5, 3, 1 }, /* rasp = 0 => PRIO+FIFO; 1 => PRIO+RR */\n\n\t{ 3,  5, 6, 5, 1 },\n\n\t{ 7,  2, 3, 5, 0 },\n\n\t{ 12, 1, 5, 3, 0 },\n\n\t{ 20, 6, 3, 6, 1 },\n\n\t{ 20, 7, 4, 7, 1 },\n\n};\n\nBi izgledalo ovako?  :\n\n![](assets/2020-05-17/00013.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26389": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@SpekuraDebela#26385\n\nItachi je već objavio svoj ispis, odi pa usporedi: @Itachi#24814",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26406": {
+      "poster": "[deleted]",
+      "content": "jel vi zavrsite program nakon ispisa svih dretvi iz njihove strukture? htio bih ga zavrsit ali vidim da u njihovom ispisu oni prekidaju sa \\^C a stalno kradu bodove bez razloga pa se ne zelim zajebavat uopce",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26410": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Itachi#26406\n\nU [videu s uputama](https://youtu.be/q2fIwrUOdnI?t=479) pokazuje ovaj kod koji izađe kad potroši sve dretve:\n\n>! ![](assets/2020-05-17/00014.png)\n\nJa čak niti ne spavam u programu, nego sve ispišem odjednom (to je u videu navedeno kao mogućnost na [11:55](https://youtu.be/q2fIwrUOdnI?t=715))",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26412": {
+      "poster": "[deleted]",
+      "content": "@__builtin_popcount#26410 a i ti videi su im isto legendarni. nisu nigdje linkani u tekstu zadatka ali u njima su neka dodatna uputstva koja se uzimaju kao da smo ih svi primili. zasto samo ne napisu u zadatak tocno ono sto zele da napravimo",
+      "votes": {
+        "upvoters": [
+          "Mikki",
+          "__builtin_popcount (std::popcount)",
+          "ink",
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26416": {
+      "poster": "[deleted]",
+      "content": "@__builtin_popcount#26410 evo sad sam pogledo o cemu se radi u videu, dakle oni nama zadaju zadatak, daju nam pravi C kod za 75% zadatka i kazu da onih 25% rjesimo sami, i onda nakon toga snime video od 20min u kojem objasnjavaju kako rjesit tih 25% i daju pseudokod za to? jel oni misle da su svi na faksu debili ili? koja je svrha ovakvih \"labosa\"?",
+      "votes": {
+        "upvoters": [
+          "Valentino",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "ink"
+        ],
+        "downvoters": [
+          "BigZ1",
+          "DazedAndConfused",
+          "HARAmara (decko_sa_balkana)",
+          "Michael (Michael Scarn)",
+          "Suki7",
+          "Sulejman",
+          "[deleted]",
+          "boban_rajovic (ravindrababu ravula)",
+          "mp99",
+          "pez (ip)",
+          "sheriffHorsey"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [
+          "Kennedy"
+        ],
+        "tuga": [
+          "SuperSjajan3"
+        ]
+      }
+    },
+    "26421": {
+      "poster": "Hrvoje (Hrvoje45)",
+      "content": "@Itachi#26416 \n\nPosalji mail profesoru da ti je zadatak prelagan i zadat će ti nešto drugo\n>! Idi u kurac",
+      "votes": {
+        "upvoters": [
+          "5ani (5af)",
+          "AcoSofronijevic",
+          "BigZ1",
+          "Bioxed",
+          "BreadCat",
+          "DazedAndConfused",
+          "Filemon",
+          "Galke",
+          "Jaster111",
+          "MiqeloS",
+          "Mulder",
+          "Suki7",
+          "SuperSjajan3",
+          "[deleted]",
+          "bb8 (zaza)",
+          "boban_rajovic (ravindrababu ravula)",
+          "iNavy (mornar Ica)",
+          "jobi (azex)",
+          "kameni (Isusek)",
+          "kavastoplim (kavustoplim)",
+          "miss_anthropocene (neunist.iva)",
+          "mp99",
+          "sheriffHorsey",
+          "snowman",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "BigZ1",
+          "BreadCat",
+          "Bucc (Olive Oil)",
+          "DazedAndConfused",
+          "Exelero",
+          "Fica (Prof)",
+          "Filemon",
+          "Galke",
+          "HARAmara (decko_sa_balkana)",
+          "Jaster111",
+          "JeleeII",
+          "Michael (Michael Scarn)",
+          "MiqeloS",
+          "Mulder",
+          "Pranjo (Pranjo_Suđman)",
+          "Rene",
+          "Sans",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "bjunolulz",
+          "boban_rajovic (ravindrababu ravula)",
+          "bush (Salut)",
+          "gladiator",
+          "iNavy (mornar Ica)",
+          "idontwannabemyself",
+          "jobi (azex)",
+          "kameni (Isusek)",
+          "laranotreallycroft",
+          "lucylu",
+          "luka6 (ugrijaniRadijator)",
+          "miss_anthropocene (neunist.iva)",
+          "neksi (filip)",
+          "netbitan11 (netbitan)",
+          "snowman",
+          "steker",
+          "swish41 (PlavušaSFilozofskog)",
+          "turunturu (Cement)",
+          "zplusplus (gasaf)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26423": {
+      "poster": "[deleted]",
+      "content": "@Hrvoje#26421 kad sam reko da je zadatak prelagan? samo ne vidim svrhu da se studente hrani na zlicicu sa rjesenjem. pa nije ovo kolegij implementiranje pseudokoda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26427": {
+      "poster": "lup",
+      "content": "@Itachi#26416 svrha je da ti oduzmu 50% bodova jer pises kod (ovako) a ne ( ovako )",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "[deleted]",
+          "laranotreallycroft",
+          "pez (ip)",
+          "snowman",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "Amali (Amajli)",
+          "__builtin_popcount (std::popcount)",
+          "ink",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26428": {
+      "poster": "[deleted]",
+      "content": "@lup#26427 mrzim ih",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26429": {
+      "poster": "lup",
+      "content": "@Itachi#26428 salji mail i zali se",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "ink",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26437": {
+      "poster": "Jaster111",
+      "content": "@Itachi#26416 \n\nbrate kakav ti God complex imas lol",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "DazedAndConfused",
+          "Galke",
+          "HARAmara (decko_sa_balkana)",
+          "SpekuraDebela (Šćap)",
+          "Suki7",
+          "SuperSjajan3",
+          "iNavy (mornar Ica)",
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "Michael (Michael Scarn)",
+          "SonGoku (~~~~~~~~)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26441": {
+      "poster": "DazedAndConfused",
+      "content": "@Itachi#26416 Sve kuzim brate, ja sam si iskopao oba oka nozem za maslac pa sad programiram po sluhu, mi genijalci u nedostatku izazova moramo sami pred sebe stavljati prepreke. Drži se!",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "BigZ1",
+          "BreadCat",
+          "Cubi",
+          "Exelero",
+          "Extended_mix",
+          "Fica (Prof)",
+          "Filemon",
+          "Galke",
+          "HARAmara (decko_sa_balkana)",
+          "Hrvoje (Hrvoje45)",
+          "JBQ",
+          "Jaster111",
+          "KingGeedorah (King Geedorah)",
+          "Lusy (MGJ)",
+          "Michael (Michael Scarn)",
+          "MiqeloS",
+          "Rene",
+          "Suki7",
+          "SuperSjajan3",
+          "Tinx (pingvin)",
+          "Urmum (mamaRu)",
+          "[deleted]",
+          "[deleted]",
+          "at5611",
+          "bb8 (zaza)",
+          "boban_rajovic (ravindrababu ravula)",
+          "iNavy (mornar Ica)",
+          "idontwannabemyself",
+          "indythedog",
+          "kameni (Isusek)",
+          "kavastoplim (kavustoplim)",
+          "laranotreallycroft",
+          "snowman",
+          "turunturu (Cement)",
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "Amali (Amajli)",
+          "AnamarijaM (MA)",
+          "BigZ1",
+          "BlackMamba",
+          "BreadCat",
+          "Bucc (Olive Oil)",
+          "Exelero",
+          "Filemon",
+          "Galke",
+          "Gussy (huba buba)",
+          "Hrvoje (Hrvoje45)",
+          "JBQ",
+          "KingGeedorah (King Geedorah)",
+          "Michael (Michael Scarn)",
+          "Pranjo (Pranjo_Suđman)",
+          "Sans",
+          "Suki7",
+          "Tinx (pingvin)",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "gladiator",
+          "iNavy (mornar Ica)",
+          "indythedog",
+          "kameni (Isusek)",
+          "lucylu",
+          "luka6 (ugrijaniRadijator)",
+          "mp99",
+          "snowman",
+          "tata (NISAM ASISTENT)",
+          "turunturu (Cement)",
+          "zplusplus (gasaf)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26445": {
+      "poster": "[deleted]",
+      "content": "@Jaster111#26437 jesi ti to upravo spomenuo ime boga svoga uzalud??",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "BreadCat",
+          "DazedAndConfused",
+          "Exelero",
+          "Fica (Prof)",
+          "Jaster111",
+          "Michael (Michael Scarn)",
+          "Suki7",
+          "Tinx (pingvin)",
+          "kameni (Isusek)"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "BreadCat",
+          "Vasili (Fasili)"
+        ],
+        "wtf": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "tuga": []
+      }
+    },
+    "26469": {
+      "poster": "BigZ1",
+      "content": "sta ide sutra sve od gradiva u provjeru sutra?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26479": {
+      "poster": "Sulejman",
+      "content": "@SpekuraDebela#26362 FIFO neće dat",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26491": {
+      "poster": "niknik",
+      "content": "@BigZ1#26469 4. lekcija",
+      "votes": {
+        "upvoters": [
+          "BigZ1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26494": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "@BigZ1#26469 \n\n4. poglavlje - Međusobno iskjučivanje u višedretvenim sustavima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26506": {
+      "poster": "Sulejman",
+      "content": "@Itachi#26416 Odi radi labose iz DisMat-a",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "[deleted]",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "BigZ1",
+          "Bucc (Olive Oil)",
+          "Galke",
+          "Suki7",
+          "Vasili (Fasili)",
+          "iNavy (mornar Ica)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "ink"
+        ]
+      }
+    },
+    "26511": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "ah da kurčenje na OS labosima kekw",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "Galke",
+          "Hrvoje (Hrvoje45)",
+          "SuperSjajan3",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "iNavy (mornar Ica)",
+          "jobi (azex)",
+          "lup"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26532": {
+      "poster": "tomekbeli420",
+      "content": "@Jaster111#26437 Ja osobe sa anime profilnim slikama na internetu ne bih shvaćao ozbiljno tbh",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "Galke",
+          "HARAmara (decko_sa_balkana)",
+          "Hrvoje (Hrvoje45)",
+          "MiqeloS",
+          "SpekuraDebela (Šćap)",
+          "Suki7",
+          "Vasili (Fasili)",
+          "[deleted]",
+          "bb8 (zaza)",
+          "boban_rajovic (ravindrababu ravula)",
+          "iNavy (mornar Ica)",
+          "jobi (azex)",
+          "kavastoplim (kavustoplim)",
+          "mihamih",
+          "setuid0",
+          "snowman",
+          "steker",
+          "turunturu (Cement)",
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "AnamarijaM (MA)",
+          "BigZ1",
+          "Fica (Prof)",
+          "Hrvoje (Hrvoje45)",
+          "Pranjo (Pranjo_Suđman)",
+          "Rene",
+          "Suki7",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "bush (Salut)",
+          "iNavy (mornar Ica)",
+          "kameni (Isusek)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "tata (NISAM ASISTENT)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "ink"
+        ]
+      }
+    },
+    "26576": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@FERella#25792 Jesi mozda rijesila taj problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26577": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@AntonioB25#26576 Nemoj rotirati dretve ako je u istom kvantu neka dretva završila.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26639": {
+      "poster": "ink",
+      "content": "@__builtin_popcount#25763 ja sam shvatio da je tamo 1 pointer za 1 red koji sadrži hrpu dretva istog prioriteta. i onda tolko pointera kolko najvise prioriteta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26642": {
+      "poster": "mihamih",
+      "content": "kako ubacujem dretve u red, dal mora ic na korisnicki input ili mogu kodirat da se u random trenutku ubaci iduca, ili mogu cak stavit fiksni interval po kojem se ubacuju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26645": {
+      "poster": "ink",
+      "content": "@Itachi#24859 znači uputa svima, vidim da puno pišete o formatu ispisa. Moji ispisi nikad nisu bili ni slični njihovima (tj. ispisivao sam dodatne informacije, neke stvari nisam, drugačije sam složio rečenice i podatke itd.) i nikad mi nisu uzeli bod. Nije cilj postić identičan ispis njihovom, nego samo lijepo ilustrirat šta se događa, kako, zašto, i kojim redoslijedom. \n\nAk vam \"fali\" koja linija nema veze, pogotovo ak se sadrži bitne informacije",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "iNavy (mornar Ica)",
+          "krle",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26664": {
+      "poster": "mihamih",
+      "content": "u a) zadatku koristimo samo jedan nacin rasporedivanja, a u b) zadatku kombiniramo sva 3?",
+      "votes": {
+        "upvoters": [
+          "HARAmara (decko_sa_balkana)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26671": {
+      "poster": "bb8 (zaza)",
+      "content": "@mihamih#26664 da",
+      "votes": {
+        "upvoters": [
+          "ink",
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26748": {
+      "poster": "mihamih",
+      "content": "program mi ne zeli vrtit ovu while petlju, uz to ne javlja nikakav error ni kod kompajliranja ni kod izvodenja, program se samo prekine, jel vidi netko neki problem (osim da je ruzna, ali nije me briga sve dok radi)?\n\n![](assets/2020-05-18/00016.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26751": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@mihamih#26748\n\nNisam siguran ima li i drugih problema, ali kao prvo bih obrnuo redoslijed uvjeta u while-u:\n\n`while(nova != 0 && P[nova]->prio > P[nova]->prio) {`\n\nAko se ne varam, onda ti ne treba niti ovaj `break` na početku petlje.\n\nRazlog tome je short-circuit evaluation:\n\nU operatoru `&&` se prvo izvršava lijeva strana, a desna se uopće ne izvršava ako je lijeva 0. Ovako kako piše na slici, lijeva strana će se evaluirati čak i ako je _nova_ jednako nuli. To je problem jer onda pristupaš -1. elementu polja.\n\nAko zamijeniš strane, onda se prvo provjerava je li _nova_ jednako nuli i samo ako nije će se evaluirati desna strana.",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "Hrvoje (Hrvoje45)",
+          "bb8 (zaza)",
+          "ink",
+          "mihamih",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26753": {
+      "poster": "mihamih",
+      "content": "@__builtin_popcount#26751 puno hvala proradilo je",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26754": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@mihamih#26753 \n\nProtip: Ne moraš kopirati elemente strukture jedan po jedan. Možeš napisati npr. `*(P[nova-1]) = *(P[nova])` da prekopiraš cijelu strukturu. Isto tako i sve ove `zam_` varijable možeš zamijeniti jednom strukturom.\n\n**Doduše**, meni se čini da tu nepotrebno kopiraš te podatke iz strukture kad možeš samo baratati pokazivačima. Ako se za to odlučiš, tijelo petlje postaje:\n```C\nstruct dretva *zam = P[nova - 1]; /* ili kako se već struktura zove ako ne \"dretva\" */\nP[nova - 1] = P[nova];\nP[nova] = zam;\nnova--;\n```\nJezgrine funkcije OS-a moraju biti što brže, a to se postiže zamjenama pokazivača umjesto zamjenama cijelih struktura gdje god je moguće.",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26756": {
+      "poster": "mihamih",
+      "content": "@__builtin_popcount#26754 hvala ti na savjetu i pomoci, ali ja sam radio sa klasom Dretva umjesto sa strukturom, plus nisam bas na \"ti\" sa pointerima pa se nisam htio kockat i gubit vrijeme na ucenje pointera sad, samo sam htio slozit nesto sto radi lol",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26769": {
+      "poster": "ink",
+      "content": "@mihamih#26756 struktura == klasa, u svemu osim par nebitnih sitnica",
+      "votes": {
+        "upvoters": [
+          "JoKing",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "mihamih"
+        ],
+        "tuga": []
+      }
+    },
+    "26911": {
+      "poster": "mihamih",
+      "content": "@ink#26769 ![](assets/2020-05-18/00041.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26920": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@mihamih#26911\n\n[![](assets/2020-05-18/00042.png)](https://en.cppreference.com/w/cpp/language/class)\n\nKlase u C++-u imaju implicitno definiran [copy constructor](https://en.cppreference.com/w/cpp/language/copy_constructor#Implicitly-declared_copy_constructor) i [copy assignment](https://en.cppreference.com/w/cpp/language/copy_assignment#Implicitly-declared_copy_assignment_operator), zbog čega se mogu kopirati (i inicijalizirati) jednako kao i strukture u C-u, koristeći `=`.\n\nAli 100% razumijem nedostatak volje za petljanjem s pointerima. 😁",
+      "votes": {
+        "upvoters": [
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28359": {
+      "poster": "Avendo",
+      "content": "Može li netko objasniti princip rada ovog labosa za FIFO zadatak, tj opisati neki pseudokod? Hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28363": {
+      "poster": "niknik",
+      "content": "@Avendo#28359 Kada dođe prva dretva, ona se krene izvršavati. U slučaju da dođe nova dretva, a prva još nije gotova sa svojim izvršavanjem, ta nova dretva se stavlja u red čekanja i čeka da prva završi pa tek onda onda počinje sa svojim izvršavanjem i isto vrijedi i za sve ostale dretve. Ugl. za pseudokod pogledaj onaj video pripreme za 4. LV, kad dođe nova dretva pogledaj ima li trenutno neka koja se izvršava, ako da novu stavi u red čekanja, ako ne kreni s izvršavanjem nove dretve. (Aktivna dretva se uvijek nalazi u Red_Cekanja[0])",
+      "votes": {
+        "upvoters": [
+          "Avendo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31102": {
+      "poster": "Maja (promaja)",
+      "content": "![](assets/2020-05-27/00057.png)\n\n baca mi segmentation fault ovdje, zasto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31105": {
+      "poster": "Maja (promaja)",
+      "content": "![](assets/2020-05-27/00058.png)\n\n baca mi segmentation fault ovdje, zasto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31141": {
+      "poster": "Vasili (Fasili)",
+      "content": "@Maja#31105 Pristupaš nekoj memoriji kojoj ne smiješ/ne postoji, pogledaj prije toga, kod npr.  stvaranja pointera i budi sigurna da on dobro pokazuje šta treba.",
+      "votes": {
+        "upvoters": [
+          "Maja (promaja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

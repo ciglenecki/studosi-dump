@@ -1,0 +1,444 @@
+{
+  "title": "[NMIBP] Završni ispit - 2020/2021",
+  "creator": "Amon",
+  "slug": "nmibp-zavrsni-ispit-20202021",
+  "tags": [
+    "FER",
+    "Napredni modeli i baze podataka",
+    "Ispiti"
+  ],
+  "posts": {
+    "124076": {
+      "poster": "Amon",
+      "content": "Thread za pitanja u vezi završnog ispita\n\nProšle 2 godine je trebalo crtati sheme iz semantičkog weba, ali ove god se ispit piše na kompovima pa ne vidim kako bi mogli staviti takav zadatak. imho doći će ili napraviti ontologiju kao prije 3 god ili ćemo morati raditi upite (po meni je to vjerojatnija opcija)",
+      "votes": {
+        "upvoters": [
+          "BrankoBrancin",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124234": {
+      "poster": "moukie",
+      "content": "Zasto ovdje for petlja krece od jedan, zar nebi trebala krenuti od nula? Zar se ne gubi tako prvi element iz vlist-a?\n\nZI od prosle godine\n\n![](assets/2021-01-19/00010.png)",
+      "votes": {
+        "upvoters": [
+          "DostDobroIme"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124872": {
+      "poster": "AN5A",
+      "content": "Završni ispit obuhvaća samo gradivo 2. ciklusa ili i gradivo međuispita?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124873": {
+      "poster": "Amon",
+      "content": "@AN5A#124872 Samo 2. ciklus",
+      "votes": {
+        "upvoters": [
+          "AN5A"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125200": {
+      "poster": "moukie",
+      "content": "ZI 2018\n\nZasto u rjesenjima ovog zadatka nije korišten prefiks 'ex:' za instanciranje tih jedinki? \n\nTi resursi su sa onog example namespacea.\n\n![](assets/2021-01-20/00029.png)\n\n![](assets/2021-01-20/00030.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126718": {
+      "poster": "aKul (Vili Beroš)",
+      "content": "@Amon#124873  Što sve spada u 2. ciklus? ulazi li što iz gisa u ZI?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126737": {
+      "poster": "Amon",
+      "content": "@aKul#126718 Imaš onu mapu s predavanjima, basically 4 preze noSQL, 2 preze semantičkog weba i zadnja preza tokova",
+      "votes": {
+        "upvoters": [
+          "aKul (Vili Beroš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126926": {
+      "poster": "DostDobroIme",
+      "content": "Zasto ovdje nije uracunata ova osmica gore? Slozio bih se s rjesenjem da je preko koda zadan withAllowedLateness ali nije. Po meni trebalo je biti jos L 30 skroz gore kod te osmice\n\n![](assets/2021-01-23/00012.png)\n\n![](assets/2021-01-23/00013.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126958": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@DostDobroIme#126926 \n\n`withLateFirings(AfterCount(2))`\n\nMoja teorija (ne znam jel legit) je da se count odnosi na redne brojeve dogadaja (msm moze i na event time ista je logika), pa ova 9 je zadnja onTime i onda se jedino mogu brojat 10 i 11 jer watermark kaže da su svi prije zadnjeg već pobrojani.. možda sam u krivu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126977": {
+      "poster": "DostDobroIme",
+      "content": "@janeromero#126958 \n\nPoprilicno sam siguran da taj AfterCount znaci koliko dogadaja (broj dogadaja, a ne njihova vrijednost) moze biti nakon watermarka\n\nAli ono na sto me naveo tvoj prijedlog je da je moguce da je taj count globalan a ne za jedan window.\n\nDakle, AfterCount(2) su \"pokupili\" 3 i 4 i vise nema prostora za late dogadaje\n\nNo volio bih da mi netko potvrdi jer sam na prvu skuzio da je taj AfterCount vezan uz window a ne globalno",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127000": {
+      "poster": "korisnik1",
+      "content": "@DostDobroIme#126977 \n\n> No volio bih da mi netko potvrdi jer sam na prvu skuzio da je taj AfterCount vezan uz window a ne globalno\n\n `Okidači (triggers) odgovaraju na pitanje kada treba materijalizirati rezultate, odnosno kada treba generirati izlaz **za neki prozor** (u procesorskom vremenu)`\n \n Mislim da je sve jasno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127006": {
+      "poster": "korisnik1",
+      "content": "@DostDobroIme#126926 nije uracunato 8 jer je postavljeno `AfterCount(2)`, a 8 je prvi after. Da dode jos neki 10 iznad 8, u istom prozoru, tad bi se pokupili 8 i 10 pa bi imali L 40. U desnom prozoru je 8 kao 3 u lijevom",
+      "votes": {
+        "upvoters": [
+          "Arfit",
+          "mentally_disturbed_llama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127057": {
+      "poster": "DostDobroIme",
+      "content": "@korisnik1#127006 \n\nDakle ne samo da je max vrijednost late dogdaja 2 nego je to takoder i minimalna vrijednost?",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127083": {
+      "poster": "moukie",
+      "content": "Je li tko rjesio ovaj zadatak mozda? Dobivam dobar prosjek, ali ova postotna razlika mi je kriva\n\n![](assets/2021-01-23/00029.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127102": {
+      "poster": "korisnik1",
+      "content": "@DostDobroIme#127057 recimo, `AfterCount(2)` znaci da ce kad dodu 2 eventa nakon on-time triggera okinuti jos jedan late trigger",
+      "votes": {
+        "upvoters": [
+          "DostDobroIme",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127108": {
+      "poster": "BrankoBrancin",
+      "content": "Koliko je korisno pogledat zadnja 3 predavanja?\n\nKako najbolje rasporediti vrijeme i naučiti ovo ako nemamo puno vremena?",
+      "votes": {
+        "upvoters": [
+          "Tratarira",
+          "gunaman",
+          "keykey",
+          "laugreano",
+          "moukie",
+          "ton6 (toto6)"
+        ],
+        "downvoters": [
+          "korisnik1"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127935": {
+      "poster": "Tratarira",
+      "content": "(4 boda) Što je konzistentno raspršenje? Po čemu se razlikuje od „običnog“? Gdje nalazi primjenu u\n\nNoSQL sustavima, navedite primjer. \n\nZna netko? Pojavilo se to pitanje par puta na ispitima/rokovima...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127994": {
+      "poster": "narval13068 (Dima)",
+      "content": "![](assets/2021-01-24/00019.png)\n\n![](assets/2021-01-24/00020.png)\n\n![](assets/2021-01-24/00021.png)\n\n![](assets/2021-01-24/00022.jpeg)\n\n![](assets/2021-01-24/00023.jpeg)\n\nRekli su u obavijesti da ce bit baza nobelprizes pa evo zadataka iz mr vjezbe edgara sta san nasa i risia s tom bazom... zadnji put su za GIS izvukli iz vjezbi zdk u medjuispit pa mozda bude neki od ovih nama.. izvrtia sam negdi 20 puta vjezbu da nadjem ih mozda koji fali pa nek neko nabaci",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)",
+          "AN5A",
+          "Amon",
+          "Arfit",
+          "BrankoBrancin",
+          "DostDobroIme",
+          "Ducius",
+          "Ego",
+          "Tratarira",
+          "gunaman",
+          "hotpanties",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "keykey",
+          "mentally_disturbed_llama",
+          "moukie",
+          "narval13068 (Dima)",
+          "saki23",
+          "sose",
+          "stoper5"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "128380": {
+      "poster": "moukie",
+      "content": "Cini mi se ili nema ZI-a iz 2015/2016?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "128389": {
+      "poster": "moukie",
+      "content": "Na sta se misli konkretno ovdje pod 'Distribucijski modeli' i 'Replikacijski modeli' i misli li se na isto?\n\n![](assets/2021-01-24/00052.png)\n\n![](assets/2021-01-24/00053.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "128392": {
+      "poster": "korisnik1",
+      "content": "@moukie#128389 \n\nreplikacijski: single master (master-slave), multi master (p2p), \n\ndistribucijski: fragmentacija, replikacija\n\n@moukie#128380 cini ti se",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "128403": {
+      "poster": "Amon",
+      "content": "@korisnik1#128392 Jesi sig da je distribucijski fragmentacija i replikacija?\n\n![](assets/2021-01-24/00054.png)\n\nOvdje piše fragmentacija i alokacija",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "128908": {
+      "poster": "DostDobroIme",
+      "content": "Mislite da ce nam doci zadatak da napisemo SPARQL upit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "128916": {
+      "poster": "cavlic",
+      "content": "koje težine su zadaci iz tokova podataka? razmišljam bi li poslušao sad ili ne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "128920": {
+      "poster": "Tratarira",
+      "content": "@Amon#128403 \n\nOvo je s NoSQL 4/4 prezentacije, tko zna sto je tocno zapravo hahha\n\n![](assets/2021-01-25/00014.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "132682": {
+      "poster": "AN5A",
+      "content": "U slučaju da nekog zanima kako je trebao ići M/R upit:\n\n```\ndb.nobelprizes.mapReduce(\n    `function() {\n       if (this.laureates !== undefined && this.year !== undefined && this.category !== undefined) {\n          if (this.year >= 1900 && this.year <= 1999) {\n             var decade = this.year - (this.year % 10);\n             var dict = {};\n             dict[decade] = this.laureates.length;\n             emit(this.category, {dict: dict});\n          }\n       }\n    }`,   \n    `function(key, values) {\n       var masterDict = values[0];\n       for (var i = 0; i < values.length; ++i) {\n       \t // prolazak po rječniku i dodavanje broja laureata u rječnik (zbrajanje ako postoji vrijednost za dekadu, inače postavi na vrijednost)\n       }\n       return masterDict;\n    }`,   \n    { \n        finalize: `  \n        function (key, value) {\n           value = value.dict;\n           var totalLaureates = 0;\n           for (var i = 0; i < 10; i++) {\n              var index = 1900 + i * 10;\n              totalLaureates = value[index] ? totalLaureates + value[index] : totalLaureates;\n           }\n           value[\"avg\"] = (totalLaureates / 10).toFixed(1);\n           return value;\n        }`\n    }\n);\n```\nNaravno na mjesto komentara ide dodavanje iz value u masterDict, što nisam uspjela napraviti, tako da neka netko slobodno nadopuni ako zna.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "132686": {
+      "poster": "aKul (Vili Beroš)",
+      "content": "jel vi vidite ta rjesenja i komentare o kojima oni pricaju? ja spadam u tu skupinu koja bi trebala vidjet",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "132688": {
+      "poster": "DuckItUp",
+      "content": "@AN5A#132682 \n```\ndb.nobelprizes.mapReduce(\n    `function() {  \n       if(this.year>=1900 && this.year<2000)\n       {\n         var dict = {};\n          var y = this.year - this.year[3];\n          dict[y]=this.laureates.length;\n       \temit(this.category,dict);\n       }\n    }`,   \n    `function(key, values) { \n       rv={};\n       values.forEach((dict)=>{\n          Object.keys(dict).forEach((key)=>{\n             if(rv[key])rv[key]+=dict[key];\n             else rv[key]=dict[key];\n          })\n       });\n       \n       return rv;\n    }`,   \n    { \n        finalize: `  // if called for  \n        function (key, value) { \n           var count = Object.keys(value).length;\n           var sum=0;\n            Object.keys(value).forEach((key)=>{\n               sum+=value[key];\n            })\n           \tvalue['avg']=sum/count;\n           return value;\n           }`\n    }\n);\n```\n\nmeni je za ovo bilo točno",
+      "votes": {
+        "upvoters": [
+          "AN5A"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "132730": {
+      "poster": "AN5A",
+      "content": "@aKul#132686 My previous exams > Review i onda označeno klasično zeleno/narančasto/crveno i kod nekih zadataka ima komentar.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

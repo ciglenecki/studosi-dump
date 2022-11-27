@@ -1,0 +1,1942 @@
+{
+  "title": "[AIPR] 2. domaća zadaća - 2020/2021",
+  "creator": "Ziher",
+  "slug": "aipr-2-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Analiza i projektiranje računalom",
+    "Zadaće"
+  ],
+  "posts": {
+    "84044": {
+      "poster": "Ziher",
+      "content": "Jel ima neka dobra dusa za objasniti algoritam koordinatnog trazenja? Kako naci ovu lambdu i znaci li uvjet zaustavljanja velike petlje da apsolutna razlika svih clanova vektora mora biti strogo veca od epsilon vektora? Gdje uvrstiti tu lambdu u labosu?",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Emma63194",
+          "Ruleta",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84283": {
+      "poster": "Emma63194",
+      "content": "@Ziher#84044 I mene bi zanimalo ovo s lambdom. Trebamo li sada koristiti zlatni rez za nalaženje te minimalne lambde ili? Ako da, kako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84291": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Ziher#84044 \n\n@Emma63194#84283 \n\nNisam još testirao, ali mislim da je ideja u i-toj iteraciji nekog prolaza napraviti surogat funkciju oblika\n\n[math]\nf'\\left( \\lambda \\right) = f\\left( \\vec{x} + \\lambda e_i \\right)\n[/math]\n\ngdje je\n\n[math]\ne_0 = \\begin{bmatrix} e & 0 & 0 & \\dots & 0 \\end{bmatrix} \\newline\ne_1 = \\begin{bmatrix} 0 & e & 0 & \\dots & 0 \\end{bmatrix} \\newline\n\\vdots \\newline\ne_n = \\begin{bmatrix} 0 & 0 & 0 & \\dots & e \\end{bmatrix} \\newline\n[/math]\n\nI onda optimizirati [imath]\\lambda[/imath]. To je relativno elegantan način spljošćivanja n-dimenzionalne funkcije u n 1D funkcija.\n\nImam konkretnu implementaciju toga u Pythonu na GitHubu ali neću krenuti testirati dok ne napišem sve metode.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84339": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "u svakoj iteraciji for petlje zlatni rez optimira jednu varijablu (dimenziju, i-tu poziciju u vektoru) trenutne tocke \n\nNpr ako imate poc tocku [1 0 2] radite tri zlatna reza koji mogu dati ovako nesto:\n\n[_2_ 0 2]\n\n[2 _3_ 2]\n\n[2 3 _4_]\n\n(a to je samo jedna iteracija vanjske do while petlje)\n\nmorate  paziti da u unimodalnom intervalu i zlatnom rezu fiksirate ostale vrijednosti i to saljete u funkciju cilja\n\nnpr ako racunate u zlatnom rezu **fd = F(d)**,    morate vrijednost **d** staviti na **i**-to mjesto u vektoru kojeg saljete funkciji, jer optimizirate po **i**-toj dimenziji \n\nBasically, jos jednom - ako je poč točka [1 0 2] i prvo optimirate po x0, sve u golden ratiou i unimodalnom mora izgledat ovako: fc = F([c, 0, 2]) ili fd = F ([d, 0, 2]) ili fl =  F([l, 0, 2])",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Emma63194",
+          "Ruleta",
+          "i123b",
+          "in1",
+          "member",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84893": {
+      "poster": "member",
+      "content": "f3 i f6... Koja je granica za i?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84900": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@member#84893 Funkcija 3 nije funkcija već ajmo reći generator funkcije (`i` je varijabla od 1 do `n`, a `n` je neki parametar tog generatora koji onda daje konkretnu funkciju), a u Schafferovoj F6 funkciji `i` je indeks elementa u vektoru. Konkretno u funkciji 3 se `n` može smatrati duljina vektora, pa onda nije generator, slično kao F6.",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84913": {
+      "poster": "Borna_P",
+      "content": "Sto je uvjet zaustavljanja do-while petlje kod simpleks metode ako koristimo onaj pseudokod s fer weba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84921": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Borna_P#84913 Po skripti: \n\n[math]\n\\sqrt{MSE(F(\\vec{x_{centroid}}), F(\\vec{x_{j}}))} \\leq \\epsilon\n[/math]\n\nTreba uzeti u obzir da je [imath]\\vec{x_j}[/imath] matrica tj. niz točaka simpleksa. Tj. korijen sume kvadrata udaljenosti između funkcije dobrote simpleksa i centroida mora biti manji ili jednak epsilonu.",
+      "votes": {
+        "upvoters": [
+          "Borna_P"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84981": {
+      "poster": "Cubii",
+      "content": "@micho#84900 u prvom zadatku kaze: \"Definirajte jednodimenzijsku funkciju br. 3, koja će imati minimum u točki 3\". Kak je onda moguce i da je jednodimenzijska i da je minimum u 3?\n\nNije li minimum tocka (1,2,...n), pa bi onda u ovom slucaju mogla bit samo tocka 1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84990": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Cubii#84981 Rekao je Jakobović u predavanju da je to samo [imath](x - 3)^2[/imath]. Upravo zbog toga sam i rekao da je ovo generator funkcije - ovdje `i` može početi na bilo kojem indeksu.\n\nDakle, pravilan zapis generatora funkcije bi bio\n\n[math]\nG(a, \\vec{x}) = \\sum_{i=0}^{|\\vec{x}|}(x_i - (a + i))^2\n[/math]\n\nU tom slučaju oni te traže da izgeneriraš [imath]G(3, \\vec{x})[/imath]. To će se prevesti u funkciju\n\n[math]\nF(\\vec{x}) = \\sum_{i=0}^{|\\vec{x}|}(x_i - (3 + i))^2\n[/math]\n\nkoja će u slučaju jednodimenzionalnog vektora, tj. pojednostavnljeno skalara, glasiti\n\n[math]\nF(x) = (x - 3)^2\n[/math]",
+      "votes": {
+        "upvoters": [
+          "Cubii",
+          "Vrba",
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85131": {
+      "poster": "Ducius",
+      "content": "Drugi zadatak funkcija 4, jel bi trebali moć pronać točno rješenje ili? Jer ja samo za to dobivam krive vrijednosti za svaki postupak.",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85167": {
+      "poster": "Vrba",
+      "content": "Koju vrijednost koristimo za pomak pretrazivanja (h) kod trazenja unimodalnog intervala?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85211": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Vrba#85167 mislim da je 1 default",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85342": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "jel se nekom dogodilo da za 1.zadatak u simplex nelder-mead se uvjet nikad ne smanji ispod epsilon nego stalno ostaje isti 2.25 -> beskonacna petlja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85353": {
+      "poster": "happysun",
+      "content": "@Noggenfogger#85342  jesi možda uspjela riješiti? Imam i ja taj problem, kad skužim kako to riješiti javim ti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85356": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@happysun#85353 nisam :( jel ti ista vrijednost uvjeta cak? da znam koristim li dobru formulu uopce(onu iz skripte)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85359": {
+      "poster": "happysun",
+      "content": "@Noggenfogger#85356 nije, meni zapne na 0.7 i ispod toga se ne spušta... a uvjet za zaustavljanje sam koristio isto iz skripte",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85389": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@happysun @Noggenfogger poanta labosa je da vam pokaže da te metode nisu dobre za sve funkcije, morat ćete vjerojatno ugraditi timeout jer iz ovog labosa jedino zlatni rez garantirano nalazi rješenje uz unimodalnost intervala, ostali mogu zapeti u nekom minimumu. Generalno svaka funkcija koja je više divlja od kvadratnih funkcija je nepredvidiva i potencijalno nerješiva bez proširivanja dimenzionalnosti ili neke nasumičnosti u genetskom algoritmu, a sve ove priložene funkcije su više divlje od kvadratnih, jel.\n\nNaravno da može biti problem i kod implementacije, ali neće ti svaka početna točka dati rješenje u svakom algoritmu.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85390": {
+      "poster": "narval13068 (Dima)",
+      "content": "@happysun#85359 Mislim da kod simpleksa je idejno da tocke ne smiju nikada biti kolinearne (a kod jednodimenzijskog problema to je uvijek slucaj) stoga nece naci minimum (meni npr zapne u x=4 za minimum od (x-3)^2 )",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85396": {
+      "poster": "happysun",
+      "content": "@narval13068#85390 to da, ali ja sam napravio i pogrešku u algoritmu... redak koji je označen sam napisao X[h] = Xh što nema smisla. Nakon što sam to popravio nema više beskonačne petlje.![](assets/2020-10-29/00029.png)",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85453": {
+      "poster": "Emma63194",
+      "content": "Kako točno hendlati taj prvi zadatak kada imamo samo jednu dimenziju, a time ćemo i u skupu točaka imati samo jednu točku?\n\nMuči me to što je to ujedno i najbolja i najlošija točka koju imamo i u pseudokodu, ovaj dio \"pomakni sve točke prema x[l]\" mi nema smisla jer nemamo prema čemu pomicati točku.\n\nŠto je onda minimum koji bi tu simplex trebao vratiti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85455": {
+      "poster": "InCogNiTo124",
+      "content": "@Emma63194#85453 krivo si pokopcala, simplex uvijek ima n+1 tocaka, gdje je n broj dimenzija",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85464": {
+      "poster": "Vrba",
+      "content": "@InCogNiTo124#85455 Ako je pocetna tocka (0,0) onda bi tocke simpleksa bile (1,0), (0,1) i (0,0)?",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85465": {
+      "poster": "InCogNiTo124",
+      "content": "@Vrba#85464 to je jedan dobar primjer, recimo, da",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Vrba",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85479": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Ček, jel se centroid računa normalno, kao aritmetička sredina svih točaka, ili ono kak oni rade, aritmetička sredina bez najlošije točke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85482": {
+      "poster": "InCogNiTo124",
+      "content": "@micho#85479 bez najlosije tocke",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85483": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@InCogNiTo124#85482 Ah I see, shit by design, mislio sam da nešto krivo radim ali izgleda da je sve to showcase zašto je 1D simplex loš hehe",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85484": {
+      "poster": "Vrba",
+      "content": "_\"...vrijednost za koju se sve točke pomiču prema najboljoj točki simpleksa (sigma)...\"_\n\nJel ovdje trebamo svaku koordinatu svake tocke pomaknuti prema najboljoj tocki za vrijedonost sigme ili se to radi na neki drugi nacin?\n\nNpr ako je sigma 0.5, neka tocka (2, 2), a najbolja tocka (3, 3), jel bi onda trebali pomaknuti tocku u (2.5, 2.5)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85485": {
+      "poster": "InCogNiTo124",
+      "content": "@micho#85483 meni ima vise smisla to izbacivanje losije nego prosjek svih, mada 1-D je los za to, da\n\n@Vrba#85484 sve koordinate za sve tocke, kao da se gibas po duzini koja spaja tocku i centroid, gdje ides prema centroidu",
+      "votes": {
+        "upvoters": [
+          "Vrba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85488": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@narval13068#85390 meni je tako bilo dok nisam promijenila formulu za ekspanziju jer je u skripti kriva... ovo bi bila tocna `(1-gama)*xc[i] - gama*xr[i]` dakle s minusom, a ne plusom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85502": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Noggenfogger#85488 Jesi sigurna da je to problem? Ja imam normalno (očekivano) ponašanje s formulom iz skripte",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85529": {
+      "poster": "jazzMassive",
+      "content": "Ima li negdje ta skripta ili samo u skriptarnici? Nisam trenutno u prilici da idem u zg :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85531": {
+      "poster": "Arfit",
+      "content": "@jazzMassive#85529 https://gofile.io/d/NOuxCf",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85582": {
+      "poster": "svemia (bearyn)",
+      "content": "Jel moguće ovaj labos riješit u 3 dana? Ne znam teoriju previše i uzdam se u dane pseudokodove, skriptu i internet...",
+      "votes": {
+        "upvoters": [
+          "Svarog (Veles)",
+          "TheManFromEarth"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85636": {
+      "poster": "InCogNiTo124",
+      "content": "@svemia#85582 u teoriji moze, ja sam u prosjeku citave vikende ostavljao da u c++ napisem, i svaki sam stigao",
+      "votes": {
+        "upvoters": [
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85654": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "@Ducius#85131 Ja dobim (0,0) samo sa Nelder-Meadom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85655": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "@svemia#85582 mos, nemoj bas u nedjelju tho",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85789": {
+      "poster": "YenOfVen",
+      "content": "Jel nam se ovaj broj evaluacije funkcija u zadacima nuzno mora svima poklapat, il ovisi o raznoraznim faktorima implementacije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85833": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@YenOfVen#85789 Ovisi koliko si dobro optimizirao memoizaciju. Npr. moje funkcije imaju call kwarg \"dont_count\" koji ih ne broji kad se računaju za ispis (jer je ispis kozmetička stvar i radi još nekih razloga), i samo jednom pozivam funkciju, međurezultat spremam. U tom načelu onda taj broj može biti isti s nekim drugim ako imamo identičnu implementaciju. Ali ako negdje samo malo sjebem - bam, vjerojatno ću za većinu funkcija imati drukčije brojke. Načina da se taj broj sjebe ima po meni oko 20-tak po algoritmu, tak da šanse da ćeš imat iste brojke s nekim su proporcionalnije tome koliko ste obojica dobri programeri nego nekim drugim faktorima.\n\nProšle godine kad sam ja jako jako sjebo nelder meada znao sam imati 100k poziva u 4. zadatku, sad imam 600-tinjak. Brojevi mogu jako varirati.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85909": {
+      "poster": "Bananaking",
+      "content": "Jel se ove ciljne funkcije u pythonu implementiraju kao klase s obzirom da ih je potrebno predavati algoritmima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85916": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Bananaking#85909 Ne, pa možeš predati i lambdu i funkciju, i one su objekti.\n\nznači objekt funkcije može biti doslovno\n\n```python\ndef square(x):\n    return x ** 2\n```\n\nili\n\n```python\nsquare = lambda x: x ** 2\n```\n\nAli trebat ćeš potencijalno predavati objekt klase ak želiš bilježiti broj poziva.",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85935": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Jel se smije koristiti numpy za ovu zadaću?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85946": {
+      "poster": "YenOfVen",
+      "content": "@micho#85833 to me zanima, jel se moram potrudit reducirat taj broj poziva il mi je samo bitno da rezultat minimizacije bude ok? Odnosno jesu ti srali na labosu kad si imao tako velik broj poziva",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85948": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@YenOfVen#85946 Bruh pao sam labose, ne bih znao xD\n\nVjv bi srali za tak veliki nesrazmjer, razlika između 550 i 600 npr. je nezamjetna. Isto tako, nitko ne kaže da su oni optimalno iskodirali svoje referentne algoritme, jer i pseudokodovi su im neoptimalni (pogledaj samo Nelder Mead npr. - rade ekstra pass), tak da vjv imaš prostora za neke greškice.",
+      "votes": {
+        "upvoters": [
+          "YenOfVen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85986": {
+      "poster": "Yasuke (Bono)",
+      "content": "Koja je fora u 5. zadatku s funkcijom f6. Pokušao sam sa simpleksom i malo mi se pomjeri oko točke koju sam dao kao početnu i to je to. Slično je i kad probam s Hook-Jeevesom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86012": {
+      "poster": "member",
+      "content": "@Yasuke#85986 Jakobović je na predavanju reka za tu šestu fju da je sreća s ovim determinističkim metodama nać rješenje",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86047": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Yasuke#85986 Trebaš izvesti dosta iteracija. Imo početni interval je prevelik, ja dobivam od 0.6 do 1% šanse da nađe minimum. Ima načina kak da se ta vjerojatnost poveća, al trebao bi mijenjati algoritam. Za f6 moment (analogno momentu iz gradijentnog spusta s momentom) bi riješio stvar - jednom kad se točka krene gibati prema centru, stečeni moment bi je odglavio kad bi se našla u lokalnom minimumu.\n\nInače, čini mi se da su mi stvari okej napravljene i napisao sam još neke dodatne stvari u nekim zadatcima, pa vjerojatno možete usporediti rješenja [ovdje](https://github.com/Yalfoosh/AIPR/blob/main/dz/dz-02/demo/demo-01_hw-02.ipynb).",
+      "votes": {
+        "upvoters": [
+          "Sele",
+          "Vrba",
+          "Yasuke (Bono)",
+          "YenOfVen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86062": {
+      "poster": "toni98",
+      "content": "@Noggenfogger#85488 meni isto 4 kad je plus, a 3 kad je minus :((",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86063": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@micho#85948 jesi pao na obrani labosa ili se samo nisi pojavio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86086": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@johndoe12#86063 Pao sam jer je Reichskriminaldirektor Đurasević reko termin je gotov na zadnjem terminu zadnje predaje nakon što sam imao još 3 labosa za kolokvirat i odustao od predmeta. Kasnije sam skužio da si na nadoknadi s Jakobovićem mogao neograničeno labosa kolokvirat, razbio tipkovnicu lmao",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86124": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Jel bi u prvom Nelder-Mead za x0 = 10 trebao doci do minimuma? Isao sam po dijagramu i cini mi se da bi trebao zapeti na 4, odnosno u jednoj iteraciji će točke simpleksa biti 2 i 4 za koje funkcija poprima istu vrijednost pa će algoritam zavrsit.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86128": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@PrisonMike#86124 Meni zapelo\n\nZapne dok ne povećaš korak, iako na 2 jer dođe prije 4 u vektoru vrijednosti funkcija (a argmax vraća prvi indeks)",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86144": {
+      "poster": "Bananaking",
+      "content": "Koliki bi trebao biti pomak h u algoritmu traženja unimodalnog intervala?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86147": {
+      "poster": "InCogNiTo124",
+      "content": "@Bananaking#86144 pomak ti se povecava, prvo je 1, pa 2, pa 4, pa 8...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86149": {
+      "poster": "Bananaking",
+      "content": "@InCogNiTo124#86147 imaš pravo :D Ali zar nije da se taj \"step\" množi sa h koji se predaje kao argument funkciji u pseudokodu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86151": {
+      "poster": "InCogNiTo124",
+      "content": "@Bananaking#86149 ne sjecam se svih detalja, sori, ionak je defaultno `h=2`",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86175": {
+      "poster": "Bananaking",
+      "content": "Nije mi baš ful jasno kako točka treba izgledati za ove pseudokodove. \n\nKad kaže za prvu funkciju cilja da je: f1(**x**) = 100 * (x2 - x1^2 )^2 + (1 + x1)^2\n\nTu je \"x1\" = x koordinata a \"x2\" = y koordinata tocke **x** ?\n\nI onda u pseudokodu za unimodalni \"unimodalni(double h, double tocka, double& l, double &r)\" tu je tocka x[0] odnosno samo x koordinata? U pseudokodu treba izračunavati vrijednost (y koordinatu) predane funkcije u točki, recimo neka mi je početna točka 1, on pozove funkciju a u njoj treba biti vektor **x** a ne skalarna vrijednost x? 😕",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86178": {
+      "poster": "in1",
+      "content": "@Bananaking#86175 Funkcija prima vektor x, a kao rezultat daje jednu točku y. Općenito bi funkcijama trebao predavati polje x-eva i onda iz njega uzimaš vrijednosti koje ti trebaju za izračun funkcije.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86181": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "u 1. zadatku mi simplex algoritam pronade minimum u tocki 2.5.. Moze li mi netko reci je li to krivo? Msm minimum bi trebao biti u tocki 3. Je li to zato jer simplex ne moze pronaci uvijek pravi minimum?",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86185": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@johndoe12#86181 Doduse kada pomaknem x0 na 100, onda mi da precizniju vrijdenost minimuma, 3 cijela nesto.. :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86223": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@johndoe12#86181 Ne bi ti trebalo dati točno rješenje za zadani korak (koji je 1), ali isto tako moguće da ti je sjebana implementacija jer ako izvrtiš simpleks korak po korak na papiru trebao bi ti završiti na 2 ili 4, tj. točke simpleksa u zadnjoj iteraciji će ti biti 2 i 4, jednu od njih će odabrati kao goru a druga će ti biti centroid i ujedno i rješenje. Koju točku odabere nije bitno jer obje imaju istu vrijednost. 2.5 sugerira da je druga točka bila 3.5, a ja baš i ne znam kako bi uz dani postupak došla do te 2 točke simpleksa bez da mijenjaš korak ili neki od parametara.\n\nProvjeri si kakav ti je ispis centroida, npr. meni je ovak:\n\n![](assets/2020-11-01/00006.png)\n\nza [imath]x_0 = 100[/imath] dobijem\n\n![](assets/2020-11-01/00007.png)",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86231": {
+      "poster": "BigD",
+      "content": "Je li ikom drugom u 6. zadatku postupak ne nalazi globalni optimum kako je opisano? Najbolji rezultati koje dobivam još uvijek su nekoliko redova veličine veći od onog što su definirali kao globalni optimum.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86233": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@BigD#86231 Meni su šanse da Nelder Mead pronađe minimum 1%. Ja ga zavrtim 10000 puta i najčešće bude neki broj između 0.65 i 0.75%. Drugi postupci možda imaju druge vjerojatnosti, ali ni jedan ne bi trebao moći riješiti F6 konzistentno, bar ne bez neke transformacije",
+      "votes": {
+        "upvoters": [
+          "Arfit"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86244": {
+      "poster": "BigD",
+      "content": "@micho#86233 Za simplex i hook jeeves mi ispada oko 10-15 / 10 000. Ne znam jel problem u postupcima ili sam funkciju f6 lose definirao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86268": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@BigD#86244 Ha probaj si ju možda nacrtati matplotlibom ak misliš da je kriva, ima na internetu dosta slika nje. Samo jedna stvar koju moraš skužit kod te F6 je da je malo nejednoznačno definirana u formulama jer su štedili na zagradama. Mislim da je ovo jednoznačna, prava formula:\n\n[math]\nf_6 \\left( \\vec{x} \\right) = 0.5 + \\frac{%\n        sin^2 \\left( \\sqrt{\\sum{{x_i}^2}} \\right) - 0.5\n    }{%\n        \\left( 1 + 0.001 \\sum{{x_i}^2}\\right)^2\n    }\n[/math]\n\nHooke-Jeeves nisam probao al updateat ću ovu svoju bilježnicu i s time i s koordinatnim osima. Možda je problem u defaulnom koraku (trebao bi biti 1) ili u stvaranju početnih točaka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86277": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@micho#86268 Napravio sam sad i ostale metoda za zadatak 6, slični rezultati kao i kod simpleksa. @BigD moguće da nam se razlikuju ciljne funkcije, ja koristim običan MSE, što je možda i zajeb s obzirom na to da sam trebao koristiti f6 funkciju ahhhhhhhh\n\nAli dobro, sad sam ispravio i dobivam vjerojatnosti od 0.02 do 0.15%, tako da valjda ti je dobro.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86295": {
+      "poster": "MsBrightside",
+      "content": "Može netko ispis zadataka post-at?",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86298": {
+      "poster": "ReyKenobi",
+      "content": "@micho#86223 ti za ekspanziju koristiš formulu `(1 - gama) * xc + gama * xr`? Na predavanju smo radili da bi se ekspanzija trebala računati kao `(1 - gama) * xc - gama * xr` i uz takav račun mi u prvom zadatku nađe minimum i za početnu točku 10 i za 100 (sa većim brojem evaluacija funkcije). Ne znam jel to Jakobović krivo napisao na predavanju ili da se vodimo onime iz skripte?",
+      "votes": {
+        "upvoters": [
+          "mikimoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86301": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@ReyKenobi#86298 Ako je rekao tako na predavanju okej, valjda sam prao suđe tad pa nisam čuo, ja sam prepisivao algoritam iz skripte (a u uputama nije naznačeno da se koristi nešto drugo)\n\nTestiram sad pa javim jel ima razlike, samo nisam sklon vjerovanju Jakoboviću kad u drugoj literaturi je taj predznak koji je u skripti.",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86303": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "U zadnjem zadatku s koristenjem f6 fje. Nikako ne mogu dobiti nista slicno 0.0001. Najmanje nultocke koje dobijem su mir reda velicine 0.65 ... Ima li jos netko ovakvih problema?",
+      "votes": {
+        "upvoters": [
+          "BigD",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86307": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@micho#86301 Znači testirao sam, broj poziva se poveća za red-dva veličine i dobivaju se nepreciznija rješenja u procječnom slučaju. Algoritam ima manje \"štucanja\" kod promjene parametara, ali svejedno mislim da je to krivo (jer se ne slaže s literaturom), i da to onda nije Nelder Mead simpleks nego nešto drugo, neka izvedenica.\n\nUobičajena formula proširuje točke u smjeru najbolje točke jer je to interesantan smjer. Taj promijenjeni predznak radi suprotno - on kontrahira točku kao da pokušava naći bolji minimum putem. Zato to povećava broj iteracija - u prosječnom slučaju će takva kretnja puno fulati, a ti slučajevi gdje metoda zapne se ionako daju riješiti promjenom koraka, nije to bezveze najbitniji parametar.\n\nJa sam ionako već predao vježbu pa mi ta promjena ne igra ulogu, ostavit ću obje verzije u kodu pa nek si ljudi biraju što će koristiti.",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86311": {
+      "poster": "Ledeni56 (Jusuf)",
+      "content": "za f6 jel treba mozda pretvarati u radijane kad se racuna sinus?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86376": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@johndoe12#86303 Pronadeni minimumi manji od 0.0001: 7.78E-4 %, koristena hookeova fja, n = 1000000",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86385": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@johndoe12#86376 Mislim da ćeš za više info vjv trebati priložiti neki kod tih metoda kad nas je već nekoliko potvrdilo da bi trebala dobiti više od tog",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86387": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@micho#86385 ma znam ja da su mi metode vjv katastrofalno napisane, al dok daje dobre nultocke u prethodnim zadacima, nije me previse briga hh",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86389": {
+      "poster": "Bananaking",
+      "content": "Labosi za preživljavanje",
+      "votes": {
+        "upvoters": [
+          "YenOfVen",
+          "[deleted]",
+          "johndoe12 (enaiks)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86479": {
+      "poster": "renren",
+      "content": "Mogu li odbit labos ako ne radi bas sve ispravno ili to ovisi o ispitivacu? I ako je tako, jel inace bude nadoknada labosa kasnije? 🙃 znam da se gore nesto spominjalo",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86480": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@renren#86479 kad su bili uživo, da, znali su ti ili odbit labos ili ti reći da ostaneš i popraviš pa vide jesi uspio u drugom terminu\n\nNa mojem prvom labosu je bio neki lik koji je bio ostao iz termina u 8, popravljao je u mojem terminu, i nakon što je mene ispitao rekao mu je da ili dođe u drugi termin ili da mu da 1 bod il tak nešto. Kak će to sad biti kad nema nadoknada, ne znam.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86481": {
+      "poster": "megi7 (someone7)",
+      "content": "kolike vrijednosti ste stavljali za parametar a u zlatnom rezu u drugom zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "86513": {
+      "poster": "Bananaking",
+      "content": "Jel ulaz za funkciju 3 u 2. zadatku **x**=[0, 0, 0, 0, 0] ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86517": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Bananaking#86513 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86528": {
+      "poster": "megi7 (someone7)",
+      "content": "@megi7#86481 bolje citajte zad od mene pa cete vidjeti da nema zlatnog reza u drugom zadatku 🤣",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "member",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86529": {
+      "poster": "YenOfVen",
+      "content": "Znaci za zadnji zadatak, dobivene minimume ubacujem natrag u F6 i ako je rez manji od 1e-4 smatra se da je optimum pronadjen?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86537": {
+      "poster": "Vrba",
+      "content": "@YenOfVen#86529 da",
+      "votes": {
+        "upvoters": [
+          "YenOfVen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86538": {
+      "poster": "sphera",
+      "content": "koje minimume u 2 zadatku trebaju naći koordinatne osi, a koje ne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86540": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@sphera#86538 1, 2 i 3",
+      "votes": {
+        "upvoters": [
+          "sphera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86559": {
+      "poster": "Sprigan",
+      "content": "Može mi netko napisati formulu za refleksiju kod simpleksa jer sam izgleda krivo prepisao na predavanjima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86563": {
+      "poster": "Cvija",
+      "content": "@Sprigan#86559 \n\nxr = (1 + alpha) * xc - alpha * xh",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86567": {
+      "poster": "Sprigan",
+      "content": "@Cvija#86563 Hvala",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86568": {
+      "poster": "Bananaking",
+      "content": "@YenOfVen#86529 odnosno ako je abs( f(rez) - f(X) ) < 1e-4 to biljezim kao pronasao i idem dalje? \n\nDobijem oko 1-3 % pronađenih tim računom, to ok?",
+      "votes": {
+        "upvoters": [
+          "YenOfVen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86572": {
+      "poster": "Emma63194",
+      "content": "Kada inače budu te nadoknade labosa? Na kraju semestra ili idući termin labosa?\n\nI koliko koda mi mora raditi da bi mi barem 0 dali, da to ne moram ponovo pisati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86583": {
+      "poster": "Bananaking",
+      "content": "Jel netko osim miće zaključio štogod u 4. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86584": {
+      "poster": "sara (Gragas)",
+      "content": "jel za Jakobovicevu funkciju Nelder Mead nađe minimum za sve tocke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86590": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Bananaking#86568 Pod funkcijom cilja misle na konkretnu funkciju, dakle f6 funkciju, ne na ono što se u praksi zove funkcija gubitka. Tu sam se i ja sjebo pa lupio MSE, a trebalo je samo očitati vrijednost.",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86670": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "@Bananaking#86513 moze bit bilo sto sta ti oces samo da ih je pet",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86713": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Cereal_Killer#86670 Ne, pa zadali su početne točke, tako bi npr. mogao staviti sve početne točke na minimume i nikad ne bih ništa zaključio o algoritmima jer bi svi neovisno o funkciji našli taj lokalni minimum koji je ujedno i globalni.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86733": {
+      "poster": "Luka1112 (Akul1112)",
+      "content": "Kakva su bila pitanja ako je netko vec bio?",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Emma63194",
+          "Noggenfogger (dammitimmad)",
+          "ReyKenobi",
+          "[deleted]",
+          "cotfuse",
+          "glider (toblerone)",
+          "johndoe12 (enaiks)",
+          "member",
+          "miki123",
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87095": {
+      "poster": "Ena43",
+      "content": "Može li netko reći što bi se trebalo zaključiti u zadacima 3. i 4.? Simpleks mi ne radi dobro pa ne znam koji bi zaključak trebao biti",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87144": {
+      "poster": "sara (Gragas)",
+      "content": "@Ena43#87095 \n\nu trecem Hooke Jeeves zapne jer funkcija ima \"ostri brid\", a simplex (bar meni) nade minimum\n\ncetvrti mislim da je samo trebalo vidit da broj evaluacija raste kako udaljavamo početnu točku",
+      "votes": {
+        "upvoters": [
+          "Ena43",
+          "ReyKenobi",
+          "in1",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87155": {
+      "poster": "Bananaking",
+      "content": "Pitanja? Odgovori?",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87171": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "- pokaži 2. zadatak\n- jesu li sve funkcije našle minimum za 1. funkciju\n- zašto u kod funkcije 1 koordinatne osi nalaze najneprecizniji minimum\n- opiši kako se kreće pretraga kod koordinatnih osi (na ploči)\n- zašto je Hooke-Jeeves sofisticiraniji od koordinatnih osi\n- opiši kako se kreće pretraga kod Hooke-Jeevesa (na ploči)\n- što je to simpleks\n- što je nesavršeni a što savršeni simpleks\n- koliko vrijednosti funkcija računamo u prvom prolazu zlatnog reza\n- koliko vrijednosti funkcija računamo nakon toga\n- kad će algoritam zlatnog reza naći globalni optimum",
+      "votes": {
+        "upvoters": [
+          "Arfit",
+          "Bananaking",
+          "Broono (Burućuh)",
+          "Emma63194",
+          "Noggenfogger (dammitimmad)",
+          "ReyKenobi",
+          "Vrba",
+          "[deleted]",
+          "in1",
+          "member",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87175": {
+      "poster": "sara (Gragas)",
+      "content": "@micho#87171 \n\nšto to znači na ploči, kako to izvedu? \n\nzasto koordinatne u 2. nalaze najneprecizniji? i zaso je hooke jeeves sofisticiraniji?",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "ReyKenobi",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87179": {
+      "poster": "Bananaking",
+      "content": "* pokaži 2. zadatak, postoji li funkcija koju je koordinatni search baš dobro evaluirao i zašto (2. funkcija)\n* Kako se kreće koordinatni search\n* Što je simplex, koje operacije imamo u njemu (ekspanzija..), koji je uvjet zaustavljanja pretrage\n* zadatak 4., što smo tu dobili, jesi probao plotati rezultate, kakva je ta funkcija u odnosu na sve druge (nije unimodalna)",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Noggenfogger (dammitimmad)",
+          "Vrba",
+          "in1",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87181": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "pokazi prvi i drugi zadatak\n\nzasto algoritmi 4 fje nisu pronasli dobre rezultate\n\nkoliko tocaka koristimo u simplexu i zasto\n\nobjasni hooke jeeves\n\nobjasni nelder mead\n\npokazi i objasni koordinatni spust",
+      "votes": {
+        "upvoters": [
+          "Vrba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87185": {
+      "poster": "member",
+      "content": "@Cereal_Killer#87181 zašto je n+1 točaka u simplexu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87186": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "@member#87185 jer za centroid ne uzimas najlosiju",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87187": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @sara#87175 što to znači na ploči, kako to izvedu?\n\nOtvore whiteboard, daju ti link i onda crtate\n\n> @sara#87175 zasto koordinatne u 2. nalaze najneprecizniji?\n\nRadi prirode pretrage ima problema ako su minimalne konture po hiperdijagonali, do trena kad se algoritam krene kretati po toj hiperdijagonali pomaci će ti biti zanemarivi i okinut će se uvjet zaustavljanja ako je oko područja minimuma nekakav plato.\n\n> @sara#87175 i zaso je hooke jeeves sofisticiraniji?\n\nJer se ne pomiče po koordinatnim osima nego radi refleksiju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87188": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@micho#87171 Isto tako, zaboravio sam,\n\n- kod zlatnog reza, kad će algoritam naći globalni optimum",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87192": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@member#87185 za pomak = 1 : jer sadrzi pocetnu (0,0) i nove generirane (1,0) (0,1) po svakoj dimenziji. i to je ukupno 3 = n+1 (dimenzija n=2  -> tocka : (x1,x2)). nema to veze sa centroidom. centroid je tocka koja se racuna iz skupa simpleksa bez najlosije tocke; znaci aritmeticka sredina  svih tocaka simplexa(osim najlosije) podjeljeno sa brojem tocaka u simplexu-1 (-1 jer ne racunamo najlosiju)",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87194": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@member#87185 To je jednostavno definicija simpleksa\n\nsimpleks je generalizacija trokuta u 2-dimenzije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87196": {
+      "poster": "Arfit",
+      "content": "@member#87185 pa valjda zato sto ti treba n+1 tocaka da definiras n-dimenzionalan podprostor u n-dimenzionalnom prostoru",
+      "votes": {
+        "upvoters": [
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87198": {
+      "poster": "member",
+      "content": "Pa evo baš me pitao za taj simplex. Što bi se dogodilo ako bi simplex definirali s n.\n\nJoš šta nije bilo... Hooke jeeves - ako imamo 10-dim točku kolko će bit potrebnno evaluacija fja (najgori/najbolji slučaj). Zlatni rez - o čemu ovisi br. iteracija.",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87200": {
+      "poster": "ReyKenobi",
+      "content": "@member#87198 koji je odgovor za ovo sa hooke jeevesom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87201": {
+      "poster": "sara (Gragas)",
+      "content": "@ReyKenobi#87200 \n\nnajgori slucaj 21, a najbolji 11? \n\nna predavanju je profesor rekao da je 2n+1 evaluacija u svakoj iteraciji",
+      "votes": {
+        "upvoters": [
+          "Vrba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87202": {
+      "poster": "sara (Gragas)",
+      "content": "@Bananaking#87179 \n\nu 4 zadatku se koristi 1 funkcija, ona nije unimodalna? jel mozda mislis na sestu funkciju i peti zadatak",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87209": {
+      "poster": "miki123",
+      "content": "1. Pokreni 2. zadatak, prokomentiraj ispise (provjerit će jesu li točni), zašto samo Nelder-Mead nađe minimum za f4? (O: f-ja ima oštre rubove pa koordinatni spust i Hooke-Jeeves zapnu, Nelder-Mead provodi refleksiju, ekspanziju i kontrakciju pa uspije doći do minimuma i ne zapeti)\n2. Pokreni 1. zadatak, provjerit će jesu li točni ispisi\n3. Kada će koordinatni spust sigurno naći minimum u jednoj iteraciji? (O: ako se minimum nalazi na pravcu paralelnom s jednom od koordinatnih osi)\n4. Što je unimodalni interval i što sadržava? (O: sadržava minimum)\n5. Objasniti postupak zlatnog reza, zašto koristimo baš k=0.618? (O: zato što na taj način možemo u svakoj iteraciji, osim prve gdje postavljamo dvije unutarnje točke, odabrati samo jednu novu unutarnju točku i dobiti simetričnu podjelu)\n6. Što je simpleks?",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Emma63194",
+          "ReyKenobi",
+          "Vrba",
+          "Zogen",
+          "chuuya (temari)",
+          "in1",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87244": {
+      "poster": "sara (Gragas)",
+      "content": "kad će algoritam zlatnog reza naći globalni optimum?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87248": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "@sara#87244 \n\n[imath]k^i \\cdot d \\leq epsilon[/imath]\n\nGdje su: _k_ = 0.618, _i_ broj iteracija i _d_ veličina početnog intervala.\n\nIzračunaš za _i_",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87254": {
+      "poster": "pushPop",
+      "content": "4. zad.\n\n  Koja je pravilnost tj. kako br eval F ovisi o velicini koraka h?\n  \n\n  U svojim rezultatima vidim da br eval F malo pada ili raste pa raste, pada pa ne vidim neke pravilnosti.\n  \n\n  Hvala!",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87321": {
+      "poster": "PudingIzMenze",
+      "content": "@pushPop#87254 \n\nVjerojatno se misli na ovo sta su pricali gore da nije unimodalna funkcija pa imas vise minimuma i sad ovisno o pomaku od tocke bit ces blize dalje jednom od tih vise minimuma pa samim time i variraju brojevi iteracija umjesto da linearno rastu/padaju prema nekoj tocki",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87322": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "nova: \n\nkoriste li se u jednoj iteraciji neld-mead i ekspanzija i kontrakcija (ne, samo jedno od tog dvoje)\n\nkoja je razlika koordinatnog i hooke jeevesa (jedan ide u smjeru koord osi prema min a drugi slicno radi samo sto novu pocetnu odredi po dijagonali prema min)",
+      "votes": {
+        "upvoters": [
+          "PudingIzMenze",
+          "Vrba",
+          "chuuya (temari)",
+          "in1",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87363": {
+      "poster": "Yeltneb",
+      "content": "1. Nad kojom funkcijom zlatni rez brže dolazi do rjesenja (f1 parabola, f2 strmija parabola)\n\nO: To ovisi samo o širini početnog intervala\n2. Zasto hooke-jeeves pronalazi min u manje iteracija nego koordinatno pretraživanje?\n\nO: Jer se može kretati dijagonalno\n3. U kojim smjerovima može ići koordinatno pretraživanje, a u kojim hooke jeeves?\n\nO: Koordinatno u smjeru +/- osi. Hooke jeeves u smjeru +/- osi i dijagonalno (+45,-45,+135,-135 stupnjeva)\n4. Zasto hooke jeeves ne daje dobar rezultat u zadatku 3?\n\nO: jer zapne na oštrim bridovima i ne može izaći van\n5. Zasto u 5. zadatku ne pronalazimo minimum?\n\nO: Jer je funkcija višemodalna, ima više lokalnih minimuma u kojima zapne algoritam\n6. Zašto simplex radi ekspanziju?\n\nO: Kako bi proširio simpleks i kretao se u smjeru minimuma\n7. Opiši algoritam zlatnog reza. Zašto je on dobar?\n\n   Jer evaluira funkciju cilja samo jednom u svakoj iteraciji.",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Emma63194",
+          "Njet",
+          "Vrba",
+          "Zogen",
+          "[deleted]",
+          "cajaznun",
+          "in1",
+          "luba",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87369": {
+      "poster": "Yeltneb",
+      "content": "@Yeltneb#87363 \n8. U kojim smjerovima može ići simplex?\n\n   U svim smjerovima (bilo koji kut)",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Emma63194",
+          "Njet",
+          "[deleted]",
+          "in1",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87375": {
+      "poster": "PudingIzMenze",
+      "content": "![](assets/2020-11-03/00015.jpeg)\n\nDa nadodam samo na ova dva posta iznad ovo je slika bila uz to pitanje kojem ce zlatni rez pronaci prije ako su im intervali jednake duljine i epsiloni isti pa treba rec da im pronade u istom broju koraka zboh one nejednakosti k^n*d<eps;;; d sirina intervala, eps pocetni epsilon a kako ona kaze da su isti onda nade za isto vrijeme\n\nSva ostala pitanja su vise manje ljudi vec napisali",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87384": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Vezano uz ovo pitanje s pronalaskom globalnog minimuma, ja nisam uopće odgovorio s formulom, rekao sam samo da će naći globalni minimum ako je cijela domena funkcije jedan unimodalni interval, ili ako unimodalni interval koji pronađemo sadržava i globalni minimum i to je priznato :^)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87732": {
+      "poster": "MJ3",
+      "content": "Kada će koordinatni spust sigurno naći minimum u jednoj iteraciji? (O: ako se minimum nalazi na pravcu paralelnom s jednom od koordinatnih osi)\n\njel može netko ovo objasniti? ne nalazi li se točka uvijek na nekom pravcu koji je paralelan sa jednom osi?",
+      "votes": {
+        "upvoters": [
+          "Conrad",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87741": {
+      "poster": "carrieb",
+      "content": "@MJ3#87732 pravac između naše polazne točke i minimuma mora biti na pravcu paralelnom s jednom od osi, tj. polazna točka i točka minimuma razlikuju se u samo jednoj od dimenzija (npr. Xp(2,2,5) i Xmin (2,2,11)) -> kad provodimo optimizaciju po svakoj od dimenzija, sigurno ćemo u jednoj iteraciji odmah optimirati do minimuma",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "MJ3",
+          "[deleted]",
+          "in1",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88033": {
+      "poster": "renren",
+      "content": "Ako nekog zanima, u slucaju da vam ne rade potpuno (ili ikako) neki algoritmi, oduzet ce odredjen br bodova, ali odgovarate normalno.\n\nSto se tice pitanja, nisu bili van onog sto je vec postano.",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "Emma63194",
+          "MsBrightside",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88636": {
+      "poster": "Vrba",
+      "content": "Kolko je bitno da u vjezbi dobivamo ocekivane brojeve evaluacija, jer mi algoritmi rade ali sam ocito neke uspio slabije optimizirati pa ne ispadne uvijek da je najmanje evaluacija imao algoritam koji bi trebao ispasti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88748": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Vrba#88636 nije bitno. Samo nek nade dobre minimume",
+      "votes": {
+        "upvoters": [
+          "Vrba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "title": "[OSZUR] 3. laboratorijska vježba - 2021/2022",
+  "creator": "Bucc (Olive Oil)",
+  "slug": "oszur-3-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Operacijski sustavi za ugrađena računala",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "290491": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"Olive Oil\"#p289822 updejt za 3. labos. skoro 8 sati, nije ovo za mene",
+      "votes": {
+        "upvoters": [
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "menace_master"
+        ],
+        "tuga": [
+          "jobi (azex)",
+          "steker"
+        ]
+      }
+    },
+    "290536": {
+      "poster": "jobi (azex)",
+      "content": "@\"Olive Oil\"#p290491 cak i duze :(\n\npripremite se za debugiranje s gdbom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290628": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "Kako bi trebali testirat jel nam zadatak radi ispravno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290667": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"Peter Jordanson\"#p290628 \n\nmožeš inicirat pokazivače pa sa malloc određenu količinu memorije zauzet pa oslobodiš tu memoriju sa free, zatim opet zauzmeš s nekim drugim pokazivačima neku količinu memorije.\n\nna početku si pogledaj koliko je sve ukupno memorije dostupno jer prvo želiš veći dio te memorije zauzet pa oslobodiš dva-tri pokazivača i s jednim novim koji je veličine jednog oslobođenog plus veličina manja od sljedećeg da pokažeš spajanje.\n\n```\nvoid *a, *b, *c, *d;\nsize_t size_a, size_b, size_c, size_d, size_e; \nsize_a = 10000;\nsize_b = 64;\n\na = malloc(size_a);\n\nfree(b);\n\nvoid *a1;\nsize_t size_a1 = 100;\na1 = malloc(size_a1);\n```\nuz to si ispisuj sve dostupne blokove i njihove veličine prije i nakon spajanja",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290736": {
+      "poster": "steker",
+      "content": "@\"Olive Oil\"#p290667 kak ispises dostupne blokove i velicine",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290741": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"steker\"#p290736 \n\n![](assets/2022-04-14/00002.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290747": {
+      "poster": "steker",
+      "content": "@\"Olive Oil\"#p290741 \n\nHvala",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290869": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "Jel imao neko danas labos da javi dojmove",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290879": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"Peter Jordanson\"#p290869 jedan zadatak je bio napravit lab3x branch iz mastera i složiti da first-fit ne koristi prvu trećinu memorije (tako nešto), a jedan da se napravi lab2x branch iz mastera i dodat sectione u ldscript .text, .codata, .data, .bss i u debug.c ispisat da svi ti sectioni postoje. \n\ns ovim drugim sam se cijeli labos petljao jer nisam znao kak da to dovedem u debug.c pa sam samo uzeo size_text = SIZEOF(.text) zatim u debug extern size size_text i isprintao to. to vjerojatno nije rješenje, a prvi nisam ni krenuo haha, plaky",
+      "votes": {
+        "upvoters": [
+          "Al_Pakino (Al Pakino)",
+          "Ardura (Maddy)",
+          "Dlaid (Peter Jordanson)",
+          "Kasperinac",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290883": {
+      "poster": "Kasperinac",
+      "content": "@\"Olive Oil\"#p290879 Nisam siguran kak on ocekuje da mi u 1h (tj manje od 1h jer je zadao kasnije zadatak), da mi ne sam da rijesimo oba zadatka neg da i \"dokazemo\" da smo ih tocno rijesili... Ja sam nes namuljao za oba, ali nisam mu ih stigao pokazati, a kamoli da dobijem njegovo misljenje da mogu ispraviti ako imam neku pogresku...",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Retard00",
+          "joj (poni)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290885": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"Kasperinac\"#p290883 da, to je i meni diglo živce jer je druga prije grupa bila dulje unutra. oko 3 i 20 smo zadatak dobili i u 4 nas je stjerao da commitamo i napišemo u neki file što nam ne radi i što nismo stigli. mogu se sam zamislit ponovo dokazivat ovo s memorijom što mi je doma za onaj zadatak trebalo podosta vremena",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Kasperinac",
+          "Retard00",
+          "joj (poni)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302481": {
+      "poster": "nnn (dinoo)",
+      "content": "Ovi koji su imali da first_fit ne koristi prvu trećinu (http://www.zemris.fer.hr/~leonardo/oszur/lab/zadaci-pri-predaji/lab-3-2.txt):\n- Jeste li odvojili memoriju na 1/3 i 2/3 sa nekim posebnim chunkom ili ste samo gledali početak/kraj chunka?\n- Što ako alociram premale podatke na prvi dio memorije, odnosno rascjepkam ga na 16B i onda tražim 512B, a te veličine nema, šta onda moram prekopirat ono spajanje iz lab3 grane (o ovom zadatku se forka master)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

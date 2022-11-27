@@ -1,0 +1,435 @@
+{
+  "title": "[AVSP] 2. laboratorijska vježba - 2019/2020",
+  "creator": "Kristijan",
+  "slug": "avsp-2-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Analiza velikih skupova podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "8180": {
+      "poster": "Kristijan",
+      "content": "Je li možda netko riješio labos? Labos sam po sebi nije težak, ali ovo ograničenje od 200s mi predstavlja problem. Radim u pythonu i stalno mi se vrti oko 230s izvođenje.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Amali (Amajli)"
+        ]
+      }
+    },
+    "8256": {
+      "poster": "Bobicki",
+      "content": "@Kristijan#8180 meni se izvodi 15ak sekundi, i napravio sam doslovno kao što je zadano u pseudokodu. Doduše, labos sam napravio u Javi, tako da ne znam od kolike sam ti pomoći.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)",
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8278": {
+      "poster": "Kristijan",
+      "content": "@Bobicki#8256  Izgleda da mi je generiranje svih parova unutar košarica uzelo dosta vremena (npr. onaj prvi prolazak gdje se broje pojavljivanja mi se vrti cca. 2s). Malo sam \"optimiro\" to generiranje parova, tak da mi sad vrti otprilike 170s za ovaj testni primjer. Važno da je u granicama 😅",
+      "votes": {
+        "upvoters": [
+          "Bobicki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8363": {
+      "poster": "petar19",
+      "content": "preporučam da prije nego što krenete \"gubiti vrijeme\" (učiti kako napisati brzi/efikasni kod je uvijek dobra stvar) na optimizaciju da probate pokrenuti na snažnijem računalu, pogotovo ako koristite neko slabije/starije računalo.\n\nNa mom prilično sporom laptopu (pentium iz 2011) labos se vrti 7 minuta lol. Pitao kolegu da ga proba na svom (moderni i5), izvrti se za 2.5 min što je unutar dozvoljenih granica. Pitao sam ove na predmetu za to i rekli su mi da koriste Xeon E3 1220 v3.",
+      "votes": {
+        "upvoters": [
+          "Bobicki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8942": {
+      "poster": "Lovren97",
+      "content": "jel imao netko još problem da mu na ovom danom primjeru nema ni jedan par koji prolazi threshold? i također da svi pojedinacni prolaze threshold...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8983": {
+      "poster": "kontra_mraku",
+      "content": "Koja su ograničenja za k, tj. kako ste u pythonu inicijalizirali polje BrojacPredmeta[]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9114": {
+      "poster": "petar19",
+      "content": "@kontra_mraku#8983 ja sam koristio dictionary",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)",
+          "kontra_mraku"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11116": {
+      "poster": "Bananaking",
+      "content": "@Kristijan#8278 \n\nMalo mi ova razlika izmedju  tvojih 2 sekunde i mojih 46 upada u oci, jel to za testnu datoteku koju su dali? Novi laptop sam kupio ovo ljeto, nije valjda toliko sranje  😄\n\n![](assets/2020-04-18/00018.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11150": {
+      "poster": "pavla",
+      "content": "Vjerojatno je za testnu, i meni se izvrti za par sekundi. Pokušaj optimizirati čitanje broja predmeta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11156": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Bananaking#11116 Castaš dva puta i ne koristiš defaultdict tj. Counter, ostatak koda nije vidljiv pa ti ne mogu reći što je još suboptimalno tj. ako je još nešto suboptimalno.\n\nJer ono, ti za toliko iteracija trošiš bezveze jedan cast iz stringa u int + stvaranje dodatnog objekta, što je relativno skupo i konstantno radiš čitanje iz memorije koje je zapravo najskuplja operacija u strojnom kodu.",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11168": {
+      "poster": "Red_Baron",
+      "content": "Meni se taj primjer na laptopu (koji nije baš tolika krama) vrtio 12 minuta. Na SPRUT-u mu je trebalo <2 sekunde. Tako da mislim da se nepotrebno zamarate s vremenom izvođenja kod vas kad je vrijeme na sustavu jedino što je bitno. Taman i da je to što nam daju za inicijalni test puno manji primjer od ovog što dobijemo za samostalno testiranje - na raspolaganju imate još 100x toliko vremena koliko je trebalo za testni primjer; ako to nije dovoljno...",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Ellie",
+          "Jim",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11169": {
+      "poster": "Ellie",
+      "content": "Jel ovih vise prolazaka kroz kosare znaci da smo procitali datoteku jednom i spremili \"kosare\"?\n\nTo mi se cini kao puno podataka jer ima 400 000 kosara, ali alternativa je da za svaki prolazak otvorimo i zatvorimo datoteku, da bi se datoteka mogla svaki put citati ispocetka. \n\nTo je ok dok imamo datoteku, ali SPRUT nam daje podatke preko stdin-a samo jednom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11171": {
+      "poster": "Red_Baron",
+      "content": "@Ellie#11169 spremi sve u memoriju jer ćeš na SPRUT dobiti na ulaz samo jednom. Ujedno, piše u uputama da je osigurano dovoljno memorije, pa nemaš straha.",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11193": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "E da, valja uzeti u obzir to da je moguće da na sprutu vrte PyPy koji je galaksijama bolji od običnog Python interpretera po performansama.\n\nIsto tako ako imate AMD procesor, gotovo je sigurno da će na sprutu biti bolje performanse radi MKL koji je optimiziran za Intel procesore (npr. Xeon na sprutu), ali ne i za AMD.\n\nAlternativno pošto sprut daje podatke preko STDIN-a bi bilo idealno međusobno razmjenjivati rezultate preko npr. [IDEOne](https://ideone.com/). To vam koliko toliko garantira da razliku čini uglavnom implementacija, a ne performanse računala, python okolina, compile flagovi za neki python build, arhitekturalne optimizacije itd.",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11201": {
+      "poster": "adrian7000",
+      "content": "@Red_Baron#11168 @micho \n\nNa sprutu nije ni blizu isti testni primjer kao onaj s ferweba.  Tako da nemojte bas ignorirat ogranicenja i pretpostavit da je sprut svemirski brod.\n\nFerweb:\n\n400000\n\n0.15\n\n10000\n\nSprut:\n\n1000\n\n0.15\n\n10000\n\nMeni se ovaj sa spruta doma vrti 0.77 sec, a na sprutu 0.62 sec. Dok mi se ovaj s ferweba doma vrti 6 minuta.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)",
+          "Bananaking",
+          "Bobicki",
+          "triespe",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11497": {
+      "poster": "adrian7000",
+      "content": "![](assets/2020-04-19/00037.png)\n\nEto ne znam, kolko god se trudim ovaj dio koda se ne moze izvrsit za manje od 2.5 minute sto znaci 5 minuta za cijeli program. Probao razne kombinacije listi, dictionarya, numpy za ove pretince i brPredmeta, ali uvijek isto. Ako netko ima da mu se labos izvrsava za manje od 3 minute u pythonu prosvijetlite me sta se ovdje moze optimizirat.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11502": {
+      "poster": "neytiri",
+      "content": "@adrian7000#11497 \n\nmeni se isto toliko vrti, ali kad sam pokrenula preko pypy-a, izvrti se za 160sec.\n\nnisam sad pametna da li da predam taj kod i nadam se da pokrecu preko pypy-a ili da predam kod koji uopce ne radi po tom algoritmu, ali dobiva dobar rezultat unutar zadanog vremena",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11505": {
+      "poster": "adrian7000",
+      "content": "@adrian7000#11497 ![](assets/2020-04-19/00039.png)\n\nTocnije, ovo mi je kod koji se najbrze izvrsava.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11632": {
+      "poster": "Ellie",
+      "content": "sto se tice ispisa rezultata\n\nprvi broj je A\n\n![](assets/2020-04-19/00064.png)\n\njeste to nekako posebno prebrojavali ili je to samo `len(pretinci)`?\n\n`len(pretinci)` za ovaj primjer koji smo dobili daje dobar broj, ali ne znam jel mi to ok logika?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11639": {
+      "poster": "adrian7000",
+      "content": "@Ellie#11632 \n\nNe pa len(pretinci) bi ti trebao vratiti broj pretinaca, a on je zadan u ulaznoj datoteci. Odnosno 10 000 u primjeru.\n\n\"b je broj pretinaca na raspolaganju funkciji sažimanja.\" \n\nDa bi dobili tocan broj A izbrojimo m sto su predmeti koji se pojavljuju vise puta od praga i onda po zadanoj formuli koja ti je na slici.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11672": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@adrian7000#11497 Probaj ovo:\n\n```python\nfrom collections import Counter\n\npretinci = Counter()\nk_dict = dict()\n\nfor par in parovi:\n    if par in k_dict:\n        k = k_dict[par]\n        pretinci[k] += 1\n    elif brPredmeta[x] >= prag and brPredmeta[y] >= prag:\n        k = (x * brPredmetaVeleicina + y) % broj_pretinaca\n        k_dict[par] = k\n        pretinci[k] += 1\n```\n\nMožda i ne treba memoizacija, ne znam kakav je dataset, ali za svaki slučaj.",
+      "votes": {
+        "upvoters": [
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11689": {
+      "poster": "adrian7000",
+      "content": "@micho#11672 Hvala, smanjilo je sad drugi prolaz negdje s 2:45 na 2 minute.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11707": {
+      "poster": "petar19",
+      "content": "jedna stvar koja je meni masovno ubrzala izvođenje je stavljanje koda u funkciju (ubrzanje oko 35%). Znaci ako imate:\n\n`\nimport...\n\nKOD`\n\nsamo napravite:\n\n`\nimport ...\n\ndef fun(): KOD\n\nfun()`\n\nRazlog je basically brzina pristupanja globalnim vs lokalnim varijablama. A u slucaju ovog labosa ima puno prolazaka kroz petlje koju stalno pristupaju varijablama pa ubrzanje moze biti znacajno.",
+      "votes": {
+        "upvoters": [
+          "Red_Baron",
+          "adrian7000",
+          "lonelos"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11718": {
+      "poster": "adrian7000",
+      "content": "@petar19#11707 meni je ovo spustilo s 4:00 na 3:35, 2 put testirano.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11734": {
+      "poster": "petar19",
+      "content": "@adrian7000#11718 zanimljivo, meni je spustilo sa 7 min na 4-4.5 min. Koji cpu koristis btw?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11742": {
+      "poster": "adrian7000",
+      "content": "@petar19#11734 i7-4770. 8 virtualnih jezgri i python koristi samo jednu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11785": {
+      "poster": "petar19",
+      "content": "@adrian7000#11742 to je normalno (osim ako si koristio multiprocessing u kodu). Jednostavan način na koji možeš iskoristiti više jezgri (pogotovo u slučaju labosa poput ovog koji se izvode dugo) je pokretanje više programa odjednom (sa različitim parametrima). Znači pokreneš jednog, promijeniš kod, otvoriš još jedan terminal i pokreneš drugog.",
+      "votes": {
+        "upvoters": [
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12080": {
+      "poster": "Systematic (Firecracker)",
+      "content": "Rezultati su na sprutu",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "Ledeni56 (Jusuf)",
+          "adrian7000",
+          "tranquility"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12183": {
+      "poster": "logitech",
+      "content": "Zna netko zašto još nisu na FER-webu 🤓?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

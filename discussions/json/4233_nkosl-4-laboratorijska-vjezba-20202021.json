@@ -1,0 +1,228 @@
+{
+  "title": "[NKOSL] 4. laboratorijska vježba - 2020/2021",
+  "creator": "Erinon",
+  "slug": "nkosl-4-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Napredno korištenje operacijskog sustava Linux",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "200240": {
+      "poster": "Erinon",
+      "content": "Kako u 4. labu generirati onaj Let's Encrypt HTTPS certifikat sa Certbot-om?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "200421": {
+      "poster": "Cubii",
+      "content": "@Erinon#200240 nisam jos skroz dovrsio vjezbu, ali za taj dio sam samo pratio upute ovdje https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx (pod pretpostavkom da na ubuntu pokreces)\n\ntaj proces bi ti na kraju trebo izgenerirat 2 filea (fullchain.pem i privkey.pem) koja ces onda referencirat u nginx configu.",
+      "votes": {
+        "upvoters": [
+          "Erinon",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "200829": {
+      "poster": "Bananaking",
+      "content": "jel netko radio na digitaloceanu?",
+      "votes": {
+        "upvoters": [
+          "Cubii",
+          "Ma97"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201021": {
+      "poster": "Erinon",
+      "content": "@Cubii#200421 A koji domain name si tamo stavio? Jer dobijem error zbog time-outa kod generiranja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201078": {
+      "poster": "Cubii",
+      "content": "@Erinon#201021 3 domain namea koja sam izgeneriro na duckdns-u, ak se dobro sjecam\n\n@Bananaking#200829  ja sam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201092": {
+      "poster": "Bananaking",
+      "content": "@Cubii#201078 poslao sam ti PM",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201233": {
+      "poster": "Erinon",
+      "content": "@Cubii#201078 Kako si postavio duckdns? Nešto mi oko toga ne radi kad ne mogu pristupit toj domeni.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201237": {
+      "poster": "Koalefant",
+      "content": "@Erinon#201233 Prvo moras postavit nginx proxy da bi mogao pristupit stranici i bez https certifikata",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201247": {
+      "poster": "Ma97",
+      "content": "Ima netko problem da je uspio kreirati cerfifikate i nginx, no kada pozove stranicu dode u logu 104: Connection reset by peer kao error?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201261": {
+      "poster": "Erinon",
+      "content": "@Koalefant#201237 Kako da to napravim? Šta god da promijenim u nginx konfiguraciji i reloadam, uvijek mi bude isto.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201272": {
+      "poster": "Cubii",
+      "content": "@Erinon#201233 registriro se na https://www.duckdns.org, dodo domene i onda na serveru pratio ove upute za povezat https://www.duckdns.org/install.jsp?tab=linux-cron",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201275": {
+      "poster": "Koalefant",
+      "content": "@Erinon#201261 ja sam ovako\n\nserver {\n\n   listen 80;\n\ni onda ispod toga ovo\n\n![](assets/2021-06-04/00023.jpeg)\n\nreloadaj nginx i trebalo bi radit, zatim pokrenes certbota i onda on tu nginx konfiguraciju sam edita kak bi trebalo radit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201324": {
+      "poster": "Cubii",
+      "content": "Jel uspio ko slozit gitlab pipeline? Sta god da napisem u .yaml file mi pukne odma u prvom koraku, bez nekog loga. Jedino kaze failed (script failure)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201411": {
+      "poster": "Bananaking",
+      "content": "Može netko podjeliti kako mu izgleda docker compose za aplikaciju iz ranijeg labosa? Na njemu sam sve osim tog koraka napravio lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201431": {
+      "poster": "InCogNiTo124",
+      "content": "Zbog posla i diplomskog sam totalno zab da imam ovaj predmet. 😐\n\nOce bit naknadna predaja 3. i 4. lab haha",
+      "votes": {
+        "upvoters": [
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201443": {
+      "poster": "jobi (azex)",
+      "content": "@InCogNiTo124#201431 nadoknada 3. je ujutro, al sigurno se da dogovorit neka druga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

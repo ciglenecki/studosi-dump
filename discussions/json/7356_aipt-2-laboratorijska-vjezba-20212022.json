@@ -1,0 +1,271 @@
+{
+  "title": "[AIPT] 2. laboratorijska vježba - 2021/2022",
+  "creator": "steker",
+  "slug": "aipt-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Analiza i pretraživanje teksta",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "294090": {
+      "poster": "steker",
+      "content": "U 2. Labosu ima neko ovu gresku u a) zadatku\n\n![](assets/2022-05-02/00017.jpg)",
+      "votes": {
+        "upvoters": [
+          "Eva (snoopy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294091": {
+      "poster": "LucidDreamer",
+      "content": "@\"steker\"#p294090 🙋🏻‍♂️",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Kennedy",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294118": {
+      "poster": "djeno",
+      "content": "@\"steker\"#p294090 \n\n@\"LucidDreamer\"#p294091 \n\nobrisi folder glove_wikipedia i pokreni ponovo, trebao bi ti skinuti word embeddinge na GloVe() poziv vidjet ces loading bar ak se slucajno prekine download i pokreces blok ponovo dolazi do te greske",
+      "votes": {
+        "upvoters": [
+          "LucidDreamer",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "indythedog",
+          "sheriffHorsey",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294126": {
+      "poster": "indythedog",
+      "content": "Ima li neki pametan način za transformirati rečenice u lowercase koristeći pretokenize_hooks u a) zadatku? Prvo sam mislio koristiti TextCleanUp hook, ali vidim da njihova implementacija nema lowercase, a ne znam što bi drugo mogao iskoristiti od ovih ponuđenih hookova",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294128": {
+      "poster": "djeno",
+      "content": "@\"indythedog\"#p294126 \n\nstr.lower je skroz dovoljno i radi kao hook",
+      "votes": {
+        "upvoters": [
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294131": {
+      "poster": "sheriffHorsey",
+      "content": "jel se nekom ovo javljalo i kako to rijesit?\n\n![](assets/2022-05-02/00025.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Unity (Sgt. Forge)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294132": {
+      "poster": "djeno",
+      "content": "@\"sheriffHorsey\"#p294131 \n\ncini mi se kao da ti je vocab prazan probaj dodat numericalizer=vocab u oba fielda S1 i S2",
+      "votes": {
+        "upvoters": [
+          "GetSchwifty (_2D_)",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294156": {
+      "poster": "djeno",
+      "content": "imam problem da imam dva ndarraya shape (x, y, z) i (x, k, z) i ne mogu nac cosine similiarty izmedju njih kontam si da se treba ta druga dimenzija paddat ili broadcastat nesto pametno sa np.einsum ali nebih znao\n\npls help tnx",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294193": {
+      "poster": "djeno",
+      "content": "@\"djeno\"#p294156 nvm treba pozvat to na sredinama ja sam kreten",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Rene"
+        ]
+      }
+    },
+    "294265": {
+      "poster": "[deleted]",
+      "content": "Kak iz rečenice/riječi dobijemo embedding?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294280": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Aimée\"#p294265 \n\nimas ih u kodu koji su nam dali,\n\n>embeddings = glove.load_vocab(vocab)\n\nPrvo riječ rečenice pretvoriš u indekse preko Fielda, zatim dohvaćaš word embeddinge preko tih indeksa, npr. embeddings[indeks], da bi dobio word embedding, i tjt.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "djeno",
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294398": {
+      "poster": "steker",
+      "content": "u d) zadatku kojih 10 recenica dobijete kao najslicnijih?, meni su ispale: 2282  368 1748  172 2385 1660 3219 1903 2824  506",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294406": {
+      "poster": "steker",
+      "content": "@\"steker\"#p294398 ok nvm random je lmao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294408": {
+      "poster": "djeno",
+      "content": "@\"steker\"#p294398 \n\nto ti je to\n\nmozes ih ispisati sa `df_train.iloc[pairs]` pa dobijes lijep ispis pa ces vidjet da su slicne\n\nsentence1\tsentence2\tlabel\n\n2282\tNo pill is ever expected to replace earplugs a...\tNobody is saying such a pill could replace ear...\t1\n\n1748\tAn attempt last month in the Senate to keep th...\tAn attempt to keep the fund open for another y...\t1\n\n368\tMoore had no immediate comment Tuesday .\tMoore did not have an immediate response Tuesd...\t1\n\n1660\tThe United States and Britain are seeking back...\tAt the United Nations , the United States and ...\t1\n\n172\tConAgra stock closed Monday on the New York St...\tConAgra shares closed Monday at $ 21.63 a shar...\t1\n\n2385\tOther , more traditional tests are also availa...\tTraditional tests also are available at no cos...\t0\n\n1903\tSouth Africa has the world 's highest caseload...\tWith 4.7 million people infected with HIV or A...\t1\n\n3219\tDruce will face murder charges , Conte said .\tConte said Druce will be charged with murder .\t1\n\n2824\tJustices Stephen Breyer , Sandra Day O 'Connor...\tJustices Anthony Kennedy , Sandra Day O 'Conno...\t1\n\n506\tThe rest said they belonged to another party o...\tThe rest said they had no affiliation or belon...\t1",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294490": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"steker\"#p294398 wat, meni ispadnu\n\n[  73,   65,   54,   40,   38,   30,    7,    2, 3666,    0]\n\nassertovi prolaze, jel jos netko ovo dobio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "steker"
+        ]
+      }
+    },
+    "294491": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Precious Bodily Fluids\"#p294490 meni ispadaju isto kao ovi gore ali se katkad promijeni redoslijed, pretpostavljam zbog preciznosti",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "djeno"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294506": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"sheriffHorsey\"#p294491 bilo je do top_n, sad sljaka  : )",
+      "votes": {
+        "upvoters": [
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

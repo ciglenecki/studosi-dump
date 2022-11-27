@@ -1,0 +1,220 @@
+{
+  "title": "[KIK] Gradivo",
+  "creator": "[deleted]",
+  "slug": "kik-gradivo",
+  "tags": [
+    "FER",
+    "Kriptografija i kriptoanaliza"
+  ],
+  "posts": {
+    "260677": {
+      "poster": "[deleted]",
+      "content": "[Relevantni google doc s NOSa](https://docs.google.com/document/d/154tfehzFj5iIqmPYHYOUDDjY0WtimejFXEuHahnNiik/edit#heading=h.jg6rrlnnxc0c)",
+      "votes": {
+        "upvoters": [
+          "BillIK",
+          "Zk6dO73 (burw0r)",
+          "cowboy",
+          "miss_anthropocene (neunist.iva)",
+          "plavisnajper",
+          "tomekbeli420"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274269": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "kak ucit za ZI ? ima negdje predavanja ili nesto da se lakse skuzi nego ove preze",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274289": {
+      "poster": "tomekbeli420",
+      "content": "@\"Tompa007\"#p274269 mislim da su preze dovoljne. To mislim zato što cijeli MI se mogao riješiti uz informacije sa prezentacija, odnosno nije bilo neko pitanje/zadatak čiji odgovor se nije mogao naći u prezentacijama.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274630": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "![](assets/2022-01-28/00006.png)\n\nmoze neko objasnit sta tocno oznacava red elemenata s nekim primjerom? \n\nrazumijem sto je red grupe",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274635": {
+      "poster": "[deleted]",
+      "content": "@\"Tompa007\"#p274630 koliko puta trebaš \"pomnožiti\" \"jedinicu\" s g da bi se natrag vratio na \"jedinicu\"\n\nkad kažem \"pomnožiti\" mislim da primjenu operacije grupe nad dva elementa\n\nkad kažem \"jedinica\" mislim na neutralni element u grupi\n\nna primjer, ako nam je grupa (Z_5, +), tu je \"jedinica\" zapravo 0, jer je 0+x=0\n\nuzmimo element 2. koliko put trebam napraviti zbrajanje (ako krecem od 0) da bih dosao opet do 0?\n\n0+2=2\n\n0+2+2=4\n\n0+2+2+2=6 mod 5 = 1\n\n0+2+2+2+2=3\n\n0+2+2+2+2+2=5 mod 5 = 0\n\npa je red elementa 2 u navedenoj grupi jednak 5",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274772": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Hvala stari!! :) \n\nE si mozda skuzio sigurnost grupa kod diffie helmana,\n\n![](assets/2022-01-28/00022.png)\n\ntipa zasto je neka grupa sigurnija i pod kojim uvjetima si to mogu provjeriti? Nisam siguran dal u sklopu ispita moramo znati te neke kompleksne izracune sigurnosti ili ne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274774": {
+      "poster": "[deleted]",
+      "content": "@\"Tompa007\"#p274772 ovak na prvu ne mozemo reci koliko je koja grupa \"sigurna\" jer tu bi trebali uvesti definiciju sigurnosti, pa to rigorozno dokazati, i to je generalno skroz netrivijalno\n\nu globalu, recimo da vrijedi vise bitova ~ veca sigurnost\n\nznaci ak imamo DH u grupi (Z_p, *) gdje je p neki prosti broj, onda bude DH sigurniji ak je p reda velicine 2048 bitova, nego da je reda velicine 512 bitova (nevezano uz DH, ali danas je najveci RSA modul faktoriziran negdje reda velicine 800 bitova, pa to vise nije sigurno)\n\nisto tak su elipticke krivulje \"sigurnije po bitu\", pa ako radis u DH u grupi elipticke krivulje od 2048 bitova imas puno vise sigurnosti nego da radis u obicnoj Z_p grupi\n\nzasto je sigurnije sa vise bitova? pa logicno, to je vise future proof jer treba jaci hardver za krekanje necega takvog\n\nzasto je grupa elipticke krivulje sigurnija od grupe modulo p? valjda jer je operacija \"množenja\" u toj grupi puno složenija nego množenje u grupi Z_p",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+          "Zk6dO73 (burw0r)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275942": {
+      "poster": "BillIK",
+      "content": "![](assets/2022-02-01/00005.png)\n\nMože netko objasniti što se ovdje događa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275962": {
+      "poster": "Hrvoje (Hrvoje45)",
+      "content": "@\"BillIK\"#p275942 \n\nizazivač napadaču daje javni ključ\n\n\nnapadač šalje izazivaču kriptirani tekst,\n\nizazivač mu taj kriptirani tekst dekriptira i pokazuje\n\nnakon što je obavio nekoliko iteracije prethodnog (u svrhu učenja), šalje izazivaču dva bloka plainteksta,\n\nizazivač enkriptira jedan i šalje kriptirani tekst napadaču,\n\nnapadač iz tog primljenog enkriptiranog teksta pogađa je li izazivač enkriptirao prvi ili drugi plaintekst\n\nsustav/algoritam je siguran ako napadač pogađa s vjerojatnošću od jedne polovine (ne zna dal je prvi ili drugi pa pogađa, u prosjeku će pogoditi pola puta)\n\nsustav/algoritam nije siguran ako napadač u igri pobjeđuje češće od polovine puta",
+      "votes": {
+        "upvoters": [
+          "BillIK"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276397": {
+      "poster": "lucylu",
+      "content": "ima li negdje primjera zadataka koji bi mogli biti na ZI?",
+      "votes": {
+        "upvoters": [
+          "miss_anthropocene (neunist.iva)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276874": {
+      "poster": "Hrvoje (Hrvoje45)",
+      "content": "@\"Hrvoje45\"#p275962 \n\n@\"BillIK\"#532, nisam više siguran u svoj odgovor, zbunjen sam sa ovom notacijom pk i sk, možda je krivo u slajdu (možda bi u zadnjem koraku trebao enkriptirati privatnim (sk) ključem), a možda ja ne kužim dobro, jer bi prema ovom Napadač trivijalno uvijek pobjeđivao u igri jer za ovaj zadnji korak ima sve potrebne informacije za provest enkripciju za oba teksta i vidit koji je\n\nedit: isto je i na slajdu iz srs-a, tako da stvarno nisam siguran",
+      "votes": {
+        "upvoters": [
+          "BillIK"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276886": {
+      "poster": "tomekbeli420",
+      "content": "@\"Hrvoje45\"#p276874 to je istina kod determinističkih algoritama, primjerice RSA, zato one nisu sigurne pod ovim pretpostavkama/modelom napada. To nije slučaj kod ElGamala (naravno ako se koristi sigurna grupa)\n\nedit: doslovno na sljedećem slajdu se to spominje",
+      "votes": {
+        "upvoters": [
+          "Hrvoje (Hrvoje45)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "278880": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "Otkud je najbolje učiti ovaj predmet? Pogotovo za rok",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "278885": {
+      "poster": "[deleted]",
+      "content": "@\"Heklijo\"#p278880 ako zelis poloziti predmet, prezentacije su sasvim dovoljne\n\nako imas nekakvih nejasnoca ili ako zelis bas usvojiti gradivo, ona knjiga linkana u materijalima je super",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

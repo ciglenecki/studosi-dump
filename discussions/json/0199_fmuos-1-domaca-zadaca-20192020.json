@@ -1,0 +1,701 @@
+{
+  "title": "[FMUOS] 1. domaća zadaća - 2019/2020",
+  "creator": "Stark",
+  "slug": "fmuos-1-domaca-zadaca-20192020",
+  "tags": [
+    "FER",
+    "Formalne metode u oblikovanju sustava",
+    "Zadaće"
+  ],
+  "posts": {
+    "6050": {
+      "poster": "Stark",
+      "content": "Tema za pitanja u vezi prve domaće zadaće",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6095": {
+      "poster": "NekocBraca",
+      "content": "Ako netko instalirava na UNIX/LINUX, na [githubu](https://github.com/felipeblassioli/nusmv) imaju upute, ja sam napravio ovo sto pise pod `6. Binary distribution` i nije bilo nikakvih problema",
+      "votes": {
+        "upvoters": [
+          "ardi (sprut)",
+          "zeleni_caj123"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6098": {
+      "poster": "termodinamika",
+      "content": "Jel zna netko odgovore na 4.2 i 4.3 ? hvala (:",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6193": {
+      "poster": "Stark",
+      "content": "Skinuo sam arihvu s njihove stranice, raspakiram i pokušam otvoriti bin/nuSMV.exe ali ne događa se ništa. Kako da drugačije instaliram?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6410": {
+      "poster": "NekocBraca",
+      "content": "@termodinamika#6098 \n\n4.3 se moze prakticki samo prepisat rjesenje tog problema https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem, al 4.2 ne uspjevam napisati kak spada\n\nJel znas ti Kripke strukturu za 4.5?",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6888": {
+      "poster": "Shlic",
+      "content": "![](assets/2020-04-06/00027.png)\n\nJel moze netko objasniti kako ovdje flag sluzi kao semafor? user moduli medusobno ne vide jedan drugome flag varijable?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "nijeFER"
+        ]
+      }
+    },
+    "6993": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Shlic#6888 Vide, pogledaj linije 3 i 4.",
+      "votes": {
+        "upvoters": [
+          "Shlic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7011": {
+      "poster": "Shlic",
+      "content": "Aaa, kuzim sad. Tko bi to primjetio..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7033": {
+      "poster": "hobotnica",
+      "content": "Zna li netko u mutex_1ex uđe li proc1 ikad u kritični odsječak? Kad ručno idem po programu izgleda da ne uđe, ali kad to idem provjerit kao specifikaciju, kaže da ulazi u kritični.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7056": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@hobotnica#7033 Svi oni imaju scenarija gdje **mogu** ući u KO, ali bez ograničenja pravednosti ni jedan od njih neće **uvijek** moći ući u KO.\n\nAko ne vjeruješ da proc1 može ući u KO, napiši uvjet `Ne postoji put u kojem je proc1 u kritičnom odsječku` i NuSMV će ti izbaciti protuprimjer.",
+      "votes": {
+        "upvoters": [
+          "hobotnica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7159": {
+      "poster": "Shlic",
+      "content": "Jel zna netko kako se reloada model dok napravis neke promejene.? Bez da moram gasiti NuSMV upaliti ga i onda oper read_model.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7183": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Shlic#7159 U uputama piše:\n\n![](assets/2020-04-07/00068.png)\n\nprema tome promijeni varijablu `input_file` i pokreni `read_model` (bez argumenata).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7198": {
+      "poster": "pero122 (teslaFan)",
+      "content": "E može netko napisati koje je rješenje za 1.10 tj... \n\nPotrebno je u CTL logici napisat:\n\n`Ako proces proc0 uđe u kritični odsječak, proc0 neće ponovo ući u kritični odsječak sve dok proc1 nije prošao kroz svoj kritični odsječak`\n\nAlso... jel ima netko tutorial koji objašnjava kako se preslikavaju te rečenicu u CTL logiku... meni je to ful apstraktno",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "pero122 (teslaFan)",
+          "tranquility"
+        ],
+        "downvoters": [
+          "plop"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7204": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@pero122#7198 Ima na materijalima rješena zadaća, jedino čega nema je zadatak sa skeledžijom (koji zapravo i nije toliko težak ali se treba skoncentrirati: meni je to jedna A[x U y] klauzula.\n\nAk želiš shvatiti ovu notaciju stvarno nema drugog načina nego da dosta vježbaš, cijelo to gradivo je iznimno loše strukturirano i na OPP-u i na ovom predmetu jer osim njihovih zadataka nema nekog alata za vježbanje ili pokazivanje što je krivo.\n\nVolio bih ti pomoći u ovome kako se preslikavaju rečenice, al možda najbolji savjet koji ti mogu dati je da napišeš rečenicu u predikatnoj logici i pokušaš je preslikati u CTL, ja to radim na osjećaj i uglavnom bude krivo haha\n\nKad bude gotov rok za predaju ću staviti na materijale svoja rješenja, ima 30-tak stranica uredno napisanog LaTeX-a sa apsolutno svime potrebnim i komentiranim.",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "feel_d_boot (iNut)",
+          "mAcaLukas (mAca Lukas)",
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7206": {
+      "poster": "tranquility",
+      "content": "@pero122#7198 Onaj file s materijala kaze:\n\nAG (proc0.state = critical -> A [!(proc0.state = critical) U proc0.state = critical])\n\nI cini mi se da je to tocno.\n\nJel netko rijesio 2.11., taj mi se ne cini tocan na materijalima, tj. taj kod mi vraca false, a njima true 🤷",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7210": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@tranquility#7206 Imaš puno načina za izrazit što se događa, osobno sam napisao ovo:\n\n```smv\nCTLSPEC EF(AG(proc0.state = testflag1) -> AG (proc1.state = testflag1))\n```\n\nOno na materijalima ne prolazi jer sustav može zapeti i u drugim stanjima haha\n\nEDIT: Dodao sam AG prvom atomu kojeg sam pogreškom skopirao iz neispravljene verzije haha",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Stark",
+          "pero122 (teslaFan)",
+          "tranquility"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7247": {
+      "poster": "zeleni_caj123",
+      "content": "@Shlic#7159 imas naredbu reset, onda nakon toga ponovno readas_model",
+      "votes": {
+        "upvoters": [
+          "Shlic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7331": {
+      "poster": "HerrOttoFlick1",
+      "content": "Koliko su točna rješenja s materijala? Da li mogu poslužiti kao provjeravanje točnosti svojih rješenja?",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7358": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@HerrOttoFlick1#7331 Crtež Kripkea nije točan (jer nije isti kod u pitanju), nije točan 2.11, nije točan 1.8 (treba dodati samo za kritični odsječak, ne i za nekritični), nije točan 3.6 (jer ne postoji naredba `check_spec` već `check_ctlspec`.",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "HerrOttoFlick1",
+          "Stark",
+          "adrian7000",
+          "zeleni_caj123"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7362": {
+      "poster": "[deleted]",
+      "content": "Koja je razlika između:\n\n!EF (proc0.state = critical & proc1.state = critical)\n\ni\n\nAG (proc0.state != critical & proc1.state != critical)\n\n?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7373": {
+      "poster": "Gwidoc",
+      "content": "@tolecnal#7362 Druga prezentacija, slajd 58:\n\n![](assets/2020-04-08/00044.png)\n\nTe dvije formule su ekvivalentne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7378": {
+      "poster": "cvitaa",
+      "content": "@Stark#6193 imam isti problem, jesi naso rjesenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7382": {
+      "poster": "zeleni_caj123",
+      "content": "@cvitaa#7378 u cmdu se pozicioniraj u bin direktorij u kojem ti se nalazi NuSMV.exe i napisi naredbu:NuSMV -int; pokrenut ce ti se NuSMV i dalje sve naredbe zadajes preko cmda",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "cvitaa"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7386": {
+      "poster": "[deleted]",
+      "content": "@Gwidoc#7373  To mi je jasno. Ali za prvi zadatak iz DZ-a, !EF (proc0.state = critical & proc1.state = critical) vraca true, a AG vraca false.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7402": {
+      "poster": "[deleted]",
+      "content": "@tolecnal#7386 Kužim di sam fulao.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7410": {
+      "poster": "volimfmos69 (debos)",
+      "content": "@termodinamika#6098 4.2 je po meni CTLSPEC !E[safe_state U goal]",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "volimfmos69 (debos)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7418": {
+      "poster": "Stark",
+      "content": "@volimfmos69#7410 Čini mi se ok, ali neka još netko potvrdi. \n\nZa 4.3. onda ispada da navedeno svojstvo nije zadovoljeno. Ali što posebno daje ispis programa? Samo nam kaže gdje se tko nalazi u kojem trenutku? I što im znači redoslijed izvođenja kojim se uspješno dolazi do cilja problema?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7422": {
+      "poster": "volimfmos69 (debos)",
+      "content": "@Stark#7418 pazi na negaciju !, dakle postoji put za koji vrijedi safe_state until goal, i on nasu \"namjerno krivu\" tvrdnju opovrgava primjerom, gdje ispisuje jedan takav put.\n\nPod redoslijed izvodjenja misle da samo rijecima napises algoritam, vuk, koza itd.",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "volimfmos69 (debos)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7428": {
+      "poster": "Kushim",
+      "content": "Ako nisam poceo s predmetom (nisam bio ni na jednom predavanju, nit sam ucio nesto prije), koliko ce mi vremena trebati za ovu dz?",
+      "votes": {
+        "upvoters": [
+          "Jim",
+          "saki23",
+          "ton6 (toto6)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7433": {
+      "poster": "[deleted]",
+      "content": "@Kushim#7428 Počni sada.",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "Kushim",
+          "Stark",
+          "saki23"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Kushim"
+        ]
+      }
+    },
+    "7465": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Gwidoc#7373 Nisu to De Morganovi duali jer ne govore o negiranim slučajevima.\n\n Prva formula kaže \"Ne postoji put na kojem su oba procesa u kritičnom odsječnu\". Druga formula kaže \"Ni u jednom trenutku se neće dogoditi da je ijedan proces u kritičnom odsječku\".\n\nPrevedeno u ljudskije pojmove, prva formula govori o tome da ne postoji stanje u kojem će oba procesa biti u kritičnom stanju. Druga formula govori u tome da ni u jednom trenutku procesi neće biti u kritičnom stanju, što znači da će oba procesa uvijek čekati na red.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7494": {
+      "poster": "ton6 (toto6)",
+      "content": "@zeleni_caj123#7382 Ako nekome ni ovo ne radi meni je uspjelo:  .\\NuSMV -bmc -int",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7769": {
+      "poster": "Kushim",
+      "content": "Zahtijeva li svaki zadatak znanje cijelog ciklusa? Koje gradivo moramo znati za, npr., prva dva zadatka?\n\nPitam jer jos nisam poceo pa kalkuliram sto mi se najvise isplati.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7787": {
+      "poster": "Bobicki",
+      "content": "@Kushim#7769 U ovu zadaću ulaze prve 3 prezentacije. Prvu možeš preskočit, jer ti neće trebat za izradu zadaće. Ako si baš kratak s vremenom, 2. prezentaciju prođi malo brže, jer se koriste neki koncepti iz nje, a 3. prezentaciju prođi bolje. Uz prezentacije i riješene zadaće (ako negdje zapneš) možeš bez problema riješiti zadaću do sutra do kraja dana kad je rok za predaju.",
+      "votes": {
+        "upvoters": [
+          "Kushim",
+          "Rolf",
+          "adrian7000",
+          "knjklj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7789": {
+      "poster": "ivchi",
+      "content": "u zadatku 3.3. kad izvedem naredbu  simulate -v -k 3 mi se stanja u procesima uopće ne mijenjaju. Vidim da nitko nije napisao da je to krivo iz onih rješenja, ali ne kužim kak prođe kroz 3 stanja ak se ona ne promjene uopće.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7803": {
+      "poster": "Stark",
+      "content": "Nisam siguran kako nacrtati Kripke strukturu u 4.5 pa proučavam sličan zadatak s materijala. \n\n![](assets/2020-04-09/00030.jpeg)\n\nOvo je rješenje:\n\n![](assets/2020-04-09/00031.jpeg)\n\nKako smo došli do toga da se u stanju S2 request promijeni u TRUE ako nije zadan nikakav prijelaz za tu varijablu osim što je init na FALSE?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7831": {
+      "poster": "zeleni_caj123",
+      "content": "@ivchi#7789 ako proucis bolje kod, procesi se u pocetku mogu naci u stanjima nonciritcal ili entering, i mogu ostati u tim stanjima, odnosno nije nuzno da ti se u prvih par koraka stanje promijeni, tako da ne bi trebalo biti krivo",
+      "votes": {
+        "upvoters": [
+          "ivchi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7838": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Ako ne znate napraviti strukturu, možete izvrtiti simulaciju preko interaktivnog NuSMV-a jer se radi o totalno determinističkom procesu, i onda ćete dobiti trace po stanjima.\n\nJa sam to radio s\n\n```smv\npick_state -r\nsimulate -r -v\n```",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "BrankoBrancin",
+          "InCogNiTo124",
+          "Paula13 (p13)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7938": {
+      "poster": "saki23",
+      "content": "Može li netko podijeliti rješenje zadatka 4.5 🙈",
+      "votes": {
+        "upvoters": [
+          "BrankoBrancin",
+          "Jim",
+          "Paula13 (p13)",
+          "Satanael",
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "HotPotato"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8023": {
+      "poster": "Ellie",
+      "content": "```\nMODULE main \nVAR\n\tturn : boolean;\n\tproc0 : process user(turn, FALSE);\n\tproc1 : process user(turn, TRUE);\nASSIGN\n\tinit(turn) := FALSE;\n```\nJel nam za 1.11. ovo znaci da dajemo prednost proc0 i da zato imamo nedeterminirani redoslijed?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8054": {
+      "poster": "Bobicki",
+      "content": "@Ellie#8023 Ja sam tako odgovorio.",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8170": {
+      "poster": "adrian7000",
+      "content": "Smijemo neke zadatke ostavit prazne?",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "BrankoBrancin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8194": {
+      "poster": "Bananaking",
+      "content": "Zadatak 2.4, kako glasi CTL obilježja kada mutex_2 nema stanje \"entering\" za ulazak u kritični odsječak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8220": {
+      "poster": "adrian7000",
+      "content": "Zna netko odgovor na \n\n> 2.10. Dodajte sad ograničenja pravednosti kao kod zadataka 1.6, 1.8 i 1.9. Je li sad \n\n>          zadovoljeno obilježje životnosti?\n>",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8222": {
+      "poster": "Bananaking",
+      "content": "@adrian7000#8220 Nisam autoritet za ovaj predmet nikako ali stavljas one JUSTICE naredbe iz 1 zadatka i kad testiras sa check_ctlspec i dalje nije zadovoljeno. Zasto nije te pita u 2.11 i ovdje u temi imas odgovor sa naredbom pa pokusaj iz toga shvatiti",
+      "votes": {
+        "upvoters": [
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8228": {
+      "poster": "adrian7000",
+      "content": "Zna netko 4.2. ili 4.3.?\n\n>  4.2. Specificiraj i napiši u CTL notaciji obilježje:\n\n> «Ne postoji siguran put kojim se dolazi do cilja problema.»\n\n>        Pritom se u specifikaciji trebaju koristiti već definirane makro-instrukcije programa.\n> \n> 4.3. Provjeri zadano svojstvo. Je li ono zadovoljeno? Što nam u ovom slučaju daje ispis    \n\n>        traga programa? Opiši redoslijed izvođenja kojim se uspješno dolazi do cilja \n\n>        problema.\n>",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

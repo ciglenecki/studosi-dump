@@ -1,0 +1,141 @@
+{
+  "title": "[SBP] 4. laboratorijska vježba - 2020/2021",
+  "creator": "PiqueBlinders (zisku)",
+  "slug": "sbp-4-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Sustavi baza podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "159712": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "Zna itko kako bi tocno trebalo doci do rjesenja u 1.3. (bez indeksa)? Odnosno koja je razlika između hash-join i nested-loop join (bez indeksa)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159818": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@PiqueBlinders#159712 Mislim da hash join radi na jednakostima, probaj zamijeniti jednakost kod uvjeta sa nejednakosti",
+      "votes": {
+        "upvoters": [
+          "PiqueBlinders (zisku)",
+          "Tonek (Bila Pitura)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160800": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@janeromero#159818 koje bi bilo objasnjenje u tom zadatku, zas se izabere nested-loop? 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160810": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@hejhoj#160800 https://www.mssqltips.com/sqlservertip/2115/understanding-sql-server-physical-joins/ ja sam tu našla neko objašnjenje, sigurno će ti bolje odgovoriti na pitanje nego ovo što sam ja skužila xD",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "hejhoj (vdvd)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160946": {
+      "poster": "adidas",
+      "content": "Jel se za zad 1.3. ovaj dio bez indeksa odnosi i na auto generirane indekse?\n\nNapravio sam spajanje na temelju nejednakosti i radi nested loop, ali se vidi i Index Spool (auto generirani indeks).",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161007": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@adidas#160946 da i ja imam index spool i pojma nemam kaka bi to drugacije napravila... malo je rec da me izludia ovaj labos 😤",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161012": {
+      "poster": "adidas",
+      "content": "@hejhoj#161007 \n\nUspio sam. \n1. treba koristi relacije s malim brojem n-torki (cca 100-200 n-torki)\n2. treba u where staviti takve uvjete da ostane samo 10ak n-torki iz jedne relacije\n\nTreba isprobat i više kombinacija. Nakon malo isprobavanja dobije se nested loop join bez auto indeksa",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161013": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@adidas#161012 puno ti hvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161024": {
+      "poster": "hejhoj (vdvd)",
+      "content": "u 1.7. koji se operator koristi? meni nekad bude merge join a nekad samo sort i concatenation",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

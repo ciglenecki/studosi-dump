@@ -1,0 +1,202 @@
+{
+  "title": "[PEEIS] 1. laboratorijska vježba - 2020/2021",
+  "creator": "Elle",
+  "slug": "peeis-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Praktikum elektroničkih elemenata i sklopova",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "105911": {
+      "poster": "Elle",
+      "content": "Ljudi jeste počeli radit ovu vježbu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Kum"
+        ]
+      }
+    },
+    "107017": {
+      "poster": "Visnja",
+      "content": "@Elle#105911  jesam ali sve mi tako cudni grafovi ispadaju u matlabu da ne znam jeli ista dobro 😅",
+      "votes": {
+        "upvoters": [
+          "Elle"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107022": {
+      "poster": "Elle",
+      "content": "@Visnja#107017 isto, asistent kaze da je ovaj u redu\n\n![](assets/2020-12-07/00028.jpeg)\n\nali grafovi za betu mi se cine jako cudni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107026": {
+      "poster": "Visnja",
+      "content": "e super meni je isto tako došlo.  Samo nisam uspjela napraviti taj pravac, moram li to preko polyfit i polyval ici crtati? i kako ocitas tocnu vrijednost IS? ima neka funkcija ko sto je bilo za ocitavanje VAF smo uzimali roots()?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107028": {
+      "poster": "Elle",
+      "content": "@Visnja#107026 pomocu polyfit izracunam jednadzbu pravca, onda pomocu roots IS, a to možeš i napamet, broj u jednadžbi koji nije uz x, i onda samo u plot stavim x=gummel(:,1), y= jednadzba pravca",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107029": {
+      "poster": "Visnja",
+      "content": "Aha super hvala ti. a jeli ti beta o ovisnosti o Ube  ovako ispao? Ja sam samo do tuda došla.\n\n![](assets/2020-12-07/00032.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107032": {
+      "poster": "Elle",
+      "content": "@Visnja#107029 ne ali mislim da tvoje ima vise sanse da bude tocno,  kako to dobijes, ja kad stavim y=gummel(:,3)/gummel(:,2), ne racuna mi dobre vrijednosti bete",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107036": {
+      "poster": "Visnja",
+      "content": "moras staviti . / jer pošto su to vektori od Ib i Ic onda ti svaki sa svakim dijeli. a ako staviš bez točke onda ces nes cudno dobit nezz ni ja haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107037": {
+      "poster": "Elle",
+      "content": "@Visnja#107036 aa hvala puno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107038": {
+      "poster": "Visnja",
+      "content": "@Elle#107028 \n\ne za onaj pravac sam ovako stavila\n\n![](assets/2020-12-07/00034.png)\n\ni evo slike kakav pravac mi izbaci. možeš li mi pomoći oko toga?\n\n![](assets/2020-12-07/00035.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107047": {
+      "poster": "Elle",
+      "content": "@Visnja#107038 jesi definirala granice ube i ic? ja sam ovako:\n\nuvjet = Ube>=gummel(indeksi od napona 0.3) & Ube<=gummel(indeksi od napona 0.5)\n\nkoefIc = polyfit(Ube(uvjet), Ic(uvjet), 1)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107054": {
+      "poster": "Visnja",
+      "content": "@Elle#107047 \n\ne daa to sam zaboravilaa. Hvalaa",
+      "votes": {
+        "upvoters": [
+          "Elle"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107128": {
+      "poster": "imemijejura",
+      "content": "Kojom ste naredbom crtali gummelove karakteristike? Ja sam koristio semilogy(VBE,IB) pa mi je pojeo negativne struje baze\n\n![](assets/2020-12-08/00003.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107155": {
+      "poster": "Elle",
+      "content": "@imemijejura#107128 obicni plot",
+      "votes": {
+        "upvoters": [
+          "imemijejura"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

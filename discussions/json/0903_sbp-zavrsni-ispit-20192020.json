@@ -1,0 +1,191 @@
+{
+  "title": "[SBP] Završni ispit - 2019/2020",
+  "creator": "Q_more",
+  "slug": "sbp-zavrsni-ispit-20192020",
+  "tags": [
+    "FER",
+    "Sustavi baza podataka",
+    "Ispiti"
+  ],
+  "posts": {
+    "34944": {
+      "poster": "Q_more",
+      "content": "Jel vam upisan završni ispit u kalendar?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "34947": {
+      "poster": "Systematic (Firecracker)",
+      "content": "@Q_more#34944 Nije, ali ako pogledaš na Nastavnim aktivnostima piše 24.6. u 11:30",
+      "votes": {
+        "upvoters": [
+          "Q_more",
+          "hobotnica",
+          "neytiri",
+          "tranquility"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "42783": {
+      "poster": "Paula13 (p13)",
+      "content": "Ima netko možda rješenja završnih iz 2016./2017. i 2015./2016.?",
+      "votes": {
+        "upvoters": [
+          "ALovelace"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "42979": {
+      "poster": "tranquility",
+      "content": "Zavrsni iz 2019. - 3. b zadatak: zasto za 5. naredbu postavlja X-kljuc na zapis indeksa? Zar nije da repeatable read ne postavlja kljuceve na indeks?",
+      "votes": {
+        "upvoters": [
+          "HerrOttoFlick1",
+          "gatsby",
+          "username11"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "43214": {
+      "poster": "Systematic (Firecracker)",
+      "content": "Zna netko ukratko objasniti MGL protokol i protokol zaključavanja indexa? Može i na nekom od zadataka jer me bune svi ti ključevi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "43226": {
+      "poster": "tranquility",
+      "content": "@Systematic#43214 Evo na primjeru iz proslogodisnjeg zavrsnog, 3. a zadatak (gdje su oba serializable). Probat cu ovo raspisati sto detaljnije pa reci ako nesto i dalje nije jasno:\n1. Cita se po indeksu 22 pa na njega stavlja S, na n-torku 22 takoder stavlja S kljuc. Buduci da hijerarhija glasi: b.p. -> relacija (racun) -> n-torka, kada postavis S-kljuc na n-torku, na sve vise mora ici IS-kljuc.\n2. IS na b.p., IS na relaciju, S na indeks 28, S na n-torku 28 (analogno kao u 1. samo to sad radi T2).\n3. Opet se cita po indeksu pa sad na indeks 31 stavljamo S, ali buduci da se radi o operaciji UPDATE sada na tu n-torku (31) stavlja X-kljuc. Svi na visim razinama moraju biti IX pa se IS promovira u IX za b.p. i relaciju. Primijeti da se IX moze postaviti jer T2 drzi IS kljuc na b.p. i relaciji, ali postavljanje IX-kljuca od strane T1 ne uzrokuje konflikt (1. tablica sa sluzbenog podsjetnika gdje gledas stupac IS i redak IX). Napomena: U rjesenju ima tipfeler, treba biti 31, a ne 22.\n4. Cita se po indeksu 22 pa sad T2 na njega stavlja S-kljuc (on vec ima S-kljuc od T1, ali to ne izaziva konflikt). Zatim na n-torku stavlja S-kljuc. Vise razine trebaju imati IS-kljuc, ali ga vec imaju pa to ostaje isto.\n5. Kreiramo novi indeks (41) pa na njega ide X-kljuc. Na tu n-torku takoder ide X-kljuc, sto znaci da b.p. i relacija trebaju IX kljuc koji vec imaju.\n6. Ovdje se NE pretrazuje preko indeksa nego se pretrazuje cijela relacija sto znaci da na relaciju treba ici S-kljuc. Taj kljuc se ne moze postaviti jer T1 na relaciji vec ima IX-kljuc (koji se postavio u 3. koraku). To znas kad pogledas tablicu kompatibilnosti (stupac IX, redak S). Buduci da se kljuc ne moze odmah postaviti T2 mora cekati T1.\n\nZa druge razine izolacije vrijede ista pravila, samo je pitanje koji kljucevi se (ne) postavljaju/provjeravaju.",
+      "votes": {
+        "upvoters": [
+          "Systematic (Firecracker)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "45085": {
+      "poster": "HerrOttoFlick1",
+      "content": "Treba li što slati profesoru ako prihvaćamo bodove koji su nam ponudeni kao zamjena za usmeni? Ne sjećam se baš što je pisalo na prvoj stranici ispita.",
+      "votes": {
+        "upvoters": [
+          "gatsby"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "45089": {
+      "poster": "jitser",
+      "content": "Ja sam mu poslao mail da prihvaćam, on je instant odgovorio mailom \"U redu\".",
+      "votes": {
+        "upvoters": [
+          "HerrOttoFlick1",
+          "gatsby",
+          "tranquility"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "61478": {
+      "poster": "dovjea",
+      "content": "Ide netko na jesenski rok iz ovoga?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63243": {
+      "poster": "monky",
+      "content": "@dovjea#61478 \n\nIde se ide se",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63970": {
+      "poster": "dragocosic",
+      "content": "da daaaa",
+      "votes": {
+        "upvoters": [
+          "TheShtok (nickname123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "TheShtok (nickname123)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68032": {
+      "poster": "dovjea",
+      "content": "Kakva su iskustva sa usmenim ispitom na roku? ili sa zavrsnog ako je neko tada bio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

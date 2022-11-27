@@ -1,0 +1,335 @@
+{
+  "title": "[DAP] 2. laboratorijska vježba - 2021/2022",
+  "creator": "MT09 (mt09)",
+  "slug": "dap-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Dubinska analiza podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "293293": {
+      "poster": "MT09 (mt09)",
+      "content": "Zna li netko kako da prebacim konačni dataset iz prve bilježnice u drugu (za 2. labos)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293761": {
+      "poster": "Haki",
+      "content": "@\"mt09\"#p293293 Jesi uspio ovo rijesit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293767": {
+      "poster": "wesley",
+      "content": "![](assets/2022-04-30/00010.png)\n\npod \"entire dataset\" misle na cijeli skup za učenje ili trebamo spojiti train_data i test_data?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293769": {
+      "poster": "MT09 (mt09)",
+      "content": "@\"Haki\"#p293761 kaže asistent da sam mogao ili u prvom labosu dodati liniju koja sprema novi df u neki csv file, pa ga samo importaš u drugom, ili kopirati te linije koda kojima čistiš podatke u prvom i dodati ih na početak drugog. Ja sam napravio ovo drugo.",
+      "votes": {
+        "upvoters": [
+          "Haki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293777": {
+      "poster": "krokodil",
+      "content": "@\"Haki\"#p293761 Ja sam skinuo konačan dataset iz prve bilježnice pa ga dodao u Kaggle preko gumba \"Add data\":\n\n1. Spremiš podatke: train.to_csv('train.csv',index=False)\n2. Skineš ih\n3. Add data(ovo napravi u 2. bilježnici)\n4. Učitaš podatke: pd.read_csv('../input/ime_baze/train.csv')",
+      "votes": {
+        "upvoters": [
+          "Haki",
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293791": {
+      "poster": "sheriffHorsey",
+      "content": "Treba li u 2. zadatku koristiti time series split?",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293862": {
+      "poster": "feudalac",
+      "content": "bilo bi krasno ovo odgodit 😶",
+      "votes": {
+        "upvoters": [
+          "Jaster111",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Eva (snoopy)",
+          "fooFighter",
+          "oneTwo",
+          "sheriffHorsey"
+        ]
+      }
+    },
+    "293876": {
+      "poster": "mini (Earthling)",
+      "content": "@\"sheriffHorsey\"#p293791 Meni time series split daje jako lose rezultate u odnosu na onaj defaultni fold pa ne znam dal da ga pustim ili ne. Je li tako i vama?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293877": {
+      "poster": "mini (Earthling)",
+      "content": "@\"Earthling\"#p293876 nvm, ipak su dobri rezultati. Imala sam neki bug",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293881": {
+      "poster": "oneTwo",
+      "content": "@\"feudalac\"#p293862 međuispiti do petka + ogromni labos do ponedjeljka + max 2 submita dnevno😐",
+      "votes": {
+        "upvoters": [
+          "Jaster111",
+          "cloudies",
+          "feudalac",
+          "mini (Earthling)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293893": {
+      "poster": "mini (Earthling)",
+      "content": "Koji bi bio nedostatak RIPPER-a? To nas pita u 10.zadatku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293896": {
+      "poster": "ppooww (pp)",
+      "content": "@\"Earthling\"#p293893 Iz 7. prezentacije: \n\nNedostatak: Ako je problem složen (uvjeti pokrivaju mali broj primjeraka), nema garancije da će pronaći korisna pravila",
+      "votes": {
+        "upvoters": [
+          "mini (Earthling)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293897": {
+      "poster": "Sinusan",
+      "content": "@\"Earthling\"#p293893 \n\nIz preze:\n\n\"Nedostatak: Ako je problem složen (uvjeti pokrivaju mali broj primjeraka), nema garancije\n\nda će pronaći korisna pravila\"\n\nDodatno moš navesti sve probleme koje ti je RIPPER zadao pri rješavanju i srati po njemu.",
+      "votes": {
+        "upvoters": [
+          "mini (Earthling)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293900": {
+      "poster": "fooFighter",
+      "content": "U zadatku sa filterom filtriramo medu znacajkama trenutne utakmice i one 3 sto smo sami dodali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293915": {
+      "poster": "sheriffHorsey",
+      "content": "Jel nekome ripper baca 'TypeError: cannot unpack non-iterable NoneType' i kako to riješiti?",
+      "votes": {
+        "upvoters": [
+          "fooFighter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293930": {
+      "poster": "wesley",
+      "content": "može neke ideje za konstrukciju novih značajki?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293939": {
+      "poster": "sheriffHorsey",
+      "content": "@\"wesley\"#p293930 Ne znam kakve znacajke imas, ali mozes gledati npr. za koju kombinaciju vrijednosti ce nova znacajka imat velike vrijednosti, a za koje male vrijednosti ili kad ce biti pozitivno, a kad negativno. Zgodno je ubaciti i neku nelinearnost s npr. kvadriranjem, ali pazi na to jesu li ti bitne negativne vrijednosti. \n\nNpr. (prosjecni poeni home teama * vjerojatnost da home pobijedi - prosjecni poeni poeni away teama *  vjerojatnost da away pobijedi)**1.5. \n\nIma smisla da ce prvi dio izraza biti veci ako je prvi tim bolji, a drugi dio manji ako je drugi tim losiji pa ces dobivat pozitivnu vrijednost za taj slucaj, a x^(1.5) bih dodao za nelinearnost (x^(2) nebi bilo pametno jer neces razlikovat slucaj kad ti je prvi tim bolji i kada je drugi tim bolji vec samo \"koliko\" je neki od timova bolji).",
+      "votes": {
+        "upvoters": [
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "293998": {
+      "poster": "Jaster111",
+      "content": "Ulazni blic jutros u 8:\n\n- što predstavlja metoda mutual_info_classif\n\n- objasniti koje ste 3 značajke kreirali",
+      "votes": {
+        "upvoters": [
+          "cloudies",
+          "fooFighter",
+          "krokodil",
+          "mini (Earthling)",
+          "oneTwo",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294147": {
+      "poster": "Sulejman",
+      "content": "ljudi koji danas imaju u 12, u kojoj učionici ste?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294151": {
+      "poster": "2more (Shooshur)",
+      "content": "@\"Sulejman\"#p294147 \n\nA304",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "294158": {
+      "poster": "Haki",
+      "content": "a labos u 11, koja je to uciona?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298227": {
+      "poster": "Jaster111",
+      "content": "Jel može netko napisat upute kako pretvorit dataset iz 1. laboratorijske vježbe u koristan dataset za 2. labos?\n\nJer to mi je već bilo krivo i u 2. labosu, a samim time će mi bit i za 3.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,512 @@
+{
+  "title": "[AVSP] 5. laboratorijska vježba - 2019/2020",
+  "creator": "adrian7000",
+  "slug": "avsp-5-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Analiza velikih skupova podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "34589": {
+      "poster": "adrian7000",
+      "content": "Nek se nadje tema.",
+      "votes": {
+        "upvoters": [
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "35924": {
+      "poster": "Jimothy",
+      "content": "Je li možda netko uspio izračunati modularnost postupkom koji su oni dali u uputama? Može ukratko objasniti na onom manjem primjeru kako se to računa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "35932": {
+      "poster": "xeqte",
+      "content": "@Jimothy#35924 bitno je računati u onoj sumi vrijednosti uglate zagrade za svaki par cvorova u, v (dupla petlja po svim cvorovima) i uzimati odgovarajuce vrijednosti za brid samo ako taj brid postoji i ako u i w nisu isti cvor (inace uzeti Au,w = 0). Ku i Kv su samo zbrojevi tezina bridova koji izlaze iz cvora, a m je zbroj tezina svih bridova. Što se tiče ove funkcije delta (1 za istu zajednicu, 0 inace), ja sam samo ispitivao u if-u jesu li u i w u istoj zajednici i onda racunao uglatu zagradu ako jesu. na kraju treba zaokruzit na cetiri decimale kako bi bili se rezultati podudarali s njihovim.",
+      "votes": {
+        "upvoters": [
+          "Jimothy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "35965": {
+      "poster": "Jimothy",
+      "content": "@xeqte#35932 Pokušao sam riješiti na papiru za provjeru postupkom koji si naveo i ne dobijem rezultate koje oni dobili na primjeru u uputama (oni su dobili 0.3074). Možeš li mi reći radim li ovdje na slici nešto krivo? \n\nPS. Prvu uglatu sam pomnozio s dva jer se taj dio ponavlja. Uklonjeni su bridovi 34 i 25. Aii = 0.\n\n![](assets/2020-06-06/00004.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "35995": {
+      "poster": "xeqte",
+      "content": "@Jimothy#35965 znaci trebas u sumi imati sve parove od 11, 12, ..., 55. ali samo za one koji su povezani bridom se uzima Au,w, tj. ako nisu povezani bridom uzima se samo onaj drugi clan -(Ku*Kw)/2m",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36005": {
+      "poster": "Jimothy",
+      "content": "@xeqte#35995 \n\nTo sam i radio, samo sam za ovo 11, 22... izdvojio u posebnu sumu jer se to nece ponoviti dva puta. Vidi se da je prva suma pomnozena dodatno s 2. Ali kao što rekoh i dalje nisam dobio dobar rezultat.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36011": {
+      "poster": "xeqte",
+      "content": "@Jimothy#36005 mozda sam se krivo izrazio, treba uzeti sve parove, cak i one koji nisu povezani bridom. dakle 5*5 ukupno parova",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36013": {
+      "poster": "Jimothy",
+      "content": "@xeqte#36011 \n\nDa, ali dobar dio njih ce biti ponisten deltom jer nisu u istom community-u? Jer imamo dva community-a (1-3-5, 2-4).\n\nUkupno ce ostati 13 članova (5 za 11, 22, ..., 6 za community 1-3-5 te 2 za community 2-4).\n\nTako sam i naveo u izrazu. Za ove 11, 22... sam uzeo A = 0, za ostale tezinu brida između njih, a ako nema brida onda 0 (s tim da ovdje između svih koji pripadaju istom community-u postoji brid).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36043": {
+      "poster": "xeqte",
+      "content": "@Jimothy#36013 aha oprosti mislio sam da racunas modularnost u prvom koraku kad je jedan community, mozda je greska kod izracuna za zbroj tezina bridova nakon sto su neki uklonjeni, mislim da bi onda m i Ku i Kv trebali biti drugaciji",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36054": {
+      "poster": "MaIv",
+      "content": "@Jimothy#35965 Za m se uzima suma težina koje su ostale, pa je m 16",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36085": {
+      "poster": "Jimothy",
+      "content": "@xeqte#36043 \n\nI to sam probao, ali isto ne dobijem kao oni u uputama zadatka, tj. dobijem tako iz nekog razloga nepoklapanje u ovom 2. koraku\n\n![](assets/2020-06-06/00015.png)\n\n\n@MaIv#36054 \n\nProbao sam i samo m promijeniti, isto nije kao u uputama.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36169": {
+      "poster": "xeqte",
+      "content": "evo moje rjesenje ako pomaze ![](assets/2020-06-06/00029.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Kushim"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36882": {
+      "poster": "Amali (Amajli)",
+      "content": "@xeqte#36169 Zas u Q nemas nepovezane bridove? As in, ne vidim u izracunu za kombu (2, 1) i slicno. U uputama pise da se ide bas po svim parovima, pa i onim nepovezanim, pa je za njih ovaj A = 0 isto kao i kad je u paru (2, 2) recimo. Doduse i kad izbacim nepovezane i kad ih gledam i stavim A = 0, svakako mi ne radi dobro. Na ovom primjeru iz zipa mi sve fulava kakogod, a na primjeru iz skripte dobijem 0.3047 za zadnju iteraciju, al prva dva mi budu preprevelika (trebaju bit 0, meni su 0.1+).\n\nDoduse i na primjeru iz zipa dobijem dobar redoslijed izbacivanja kad gledam cijeli V**2, al zbog lose modularnosti mi je odabrana podjela vecinom kriva. A ispravna koji oni dobiju ni ne postoji, nekako, iako sve bridove dobro izbacuje iz grafa (dobar redoslijed, dobre skupine tj ista modularnost).\n\ndafuq",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36894": {
+      "poster": "xeqte",
+      "content": "@Amali#36882 te parove ponisti funkcija delta koja je 0 kada cvorovi u paru nisu u istom communityu",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36896": {
+      "poster": "Amali (Amajli)",
+      "content": "@xeqte#36894 hm, ali to sto cvorovi nisu upareni bridom ne znaci da nisu u communityju?\n\nkao, mogu bit povezani prek nekog zajednickog cvora",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36918": {
+      "poster": "xeqte",
+      "content": "@Amali#36896 u ovom rjesenom primjeru su prekrizeni bridovi uklonjeni, tj. kao da ih nema. u rezultiranoj mrezi ni nema onda cvorova koji bi bili u istom communityu a da nisu povezani. dobro je sto govoris da je u istom communityu, ako je povezan preko drugih cvorova ali takav je primjer da toga nema. (parovi 12 ili 21 nisu u istom communityu jer nema puta kojim mozes povezati cvorove). sto se tice prva dva koraka (prije ovog mog rjesenog), tu je slucaj da je jedan community jer su svi jos uvijek povezani pa provjeri kako racunas communitye",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36968": {
+      "poster": "Amali (Amajli)",
+      "content": "@xeqte#36918 yeah bilo je tam, nis pametno tho, samo sam _opet_ previdjela zamjenu jedne varijable za drugu kod nekog ranijeg refaktoriranja koda, a bila sam tako sigurna da sam sve promijenila kak spada...",
+      "votes": {
+        "upvoters": [
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36972": {
+      "poster": "BrankoBrancin",
+      "content": "Koliko je složen labos i koliko posla ima u usporedbi s prethodnim labosima?",
+      "votes": {
+        "upvoters": [
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36993": {
+      "poster": "Amali (Amajli)",
+      "content": "@BrankoBrancin#36972 dosta slicno, meni se samo ucinilo da ima vise tipkanja za svaki korak (a i upute su povece), al nije preslozen algoritam nit ista prepametno, i jos ne moras pazit na mem i time (bar ja nisam, a vrti se skoro instantno)",
+      "votes": {
+        "upvoters": [
+          "BrankoBrancin",
+          "adrian7000",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37109": {
+      "poster": "Bananaking",
+      "content": "Koje su vam vrijednosti modularnosti po iteracijama za onaj mali primjer u uputama?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37168": {
+      "poster": "Bananaking",
+      "content": "Jel uspio tko dobiti tocan ispis za t.in sa stranice predmeta? Ako ne, jel moozda u 5. liniji ispisa prva greska, treba 18393773 dobio 14911702?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37199": {
+      "poster": "volimfmos69 (debos)",
+      "content": "kako ste implementirali iterativno trazenje najkracih puteva(bfs/ona rekurzija iz uputa...)?",
+      "votes": {
+        "upvoters": [
+          "ton6 (toto6)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37204": {
+      "poster": "xeqte",
+      "content": "@volimfmos69#37199 ja sam trazio rekurzivno sve moguce puteve od izvora do odredista i stavljao ih u neku globalnu listu ako su uspjeli doci do odredista (u svakoj iteraciji pamtim koje sam cvorove posjetio da ne zavrsim u petlji). onda samo racunao koliki je najkraci put i za svaki koji je isto dug kao najkraci mijenjao centralnost.",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti",
+          "volimfmos69 (debos)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37292": {
+      "poster": "EthanCarter",
+      "content": "Može li netko kome radi staviti na pastebin izlaze najkracih puteva ili izracunatih maksimalnih centralnosti za t.in? Pokusavam debuggirati ali je malo zeznuto jer mi mali primjer radi, dok t.in nesto krivo izracuna na 8-9 iteraciji.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37356": {
+      "poster": "Amali (Amajli)",
+      "content": "@EthanCarter#37292 \n\ngigantski je, razdvojila sam sto sam bolje mogla po iteracijama, keywordsi za pretrazivanje su \"Iteration\" i \"Edge betweennesses\", iteracije imaju broj uz sebe al nema uz centralnosti no mogu sredit ako treba i mogu smanjit ispis na jedno ili drugo ili stogod - ovo je dakle najkraci putevi od jednog do drugog cvora, ukljuceni su u puteve pocetni i krajnji, pise i koliko ima puteva. Ima \"duplica\" (pod user1 ima za user2 centralnost, a i pod user2 za user1). Takodjer za svaku iteraciju izracunate centralnosti za taj graf na temelju tih najkracih puteva. Msm da je relativno pregledno, al na 14ak iteracija ima oko 4.5k linija s praznim redovima i razdvajanjem so lmk ak oces nekaj drugacije. glhf\n\nhttps://pastebin.com/tEeGmWM2",
+      "votes": {
+        "upvoters": [
+          "EthanCarter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37382": {
+      "poster": "Bananaking",
+      "content": "@EthanCarter#37292 Ja sam imao slicnu situaciju, svasta bi moglo biti ali evo neki primjeri koje sam ja imao, mozda pomogne: kad sam imao vise najkracih puteva sam kod racunanja centralnosti slucajno uzimao samo jedan, kod citanja cvorova nisam uzimao u obzir one koji nemaju susjeda koji se nalaze u 2. djelu inputa a ne u 1. Stavi si ispis modularnosti, bridova koje brises i zajednica za svaku iteraciju i ispisuj korak po korak uspoređujući sa izlazom koji je napisan u uputi",
+      "votes": {
+        "upvoters": [
+          "EthanCarter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37403": {
+      "poster": "EthanCarter",
+      "content": "@Amali#37356\n\nSuper, hvala! Uspio sam desifrirati iz tvojih izlaza gdje sam fulao.\n\n@Bananaking#37382 \n\nNazalost imao sam puno gluplju situaciju. Sve sam pripremio za filtriranje pathova po totalnoj duljini, i onda napisao da se filtrira po broju cvorova. Taman da u 80% slucajeva daje isti rezultat.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "triespe"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37475": {
+      "poster": "phuck",
+      "content": "Kako oni dobiju modularnost 0 za ovaj primjer sa slike 15, ocito ne shvacam kako se modularnost racuna, meni ispada 0.23",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37483": {
+      "poster": "keparrizabalaga",
+      "content": "jel ikome mozda izbacuje drugaciji output lokalno i na sprutu? meni tocno sve izbacuje lokalno, a na sprutu mi ispisuje neke dodatne communityje koji ne postoje....",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37823": {
+      "poster": "addisonRae",
+      "content": "Koji ste uvjet zaustavljanja koristili prilikom čitanja svojstava čvorova sa stdin-a? Tih redova može biti do 25 mislim, ali kako odrediti koji je zadnji? Nakon čitanja zadnjeg retka BufferReader čeka sljedeći",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37828": {
+      "poster": "Red_Baron",
+      "content": "@addisonRae#37823 ja sam u C# stavio while((line = Console.ReadLine()?.Trim()) != null)\n\nPritom '?' u prethodnoj liniji označava provjeru je li nešto null - ako je, ne poziva Trim() već ga samo vraća, inače će ga pozvati. U C# to služi da umjesto niza ugniježđenih if \\!= null u jednoj liniji provjeriš je li nešto po putu null.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37831": {
+      "poster": "addisonRae",
+      "content": "@Red_Baron#37828 razumjem, ali ovakav kod će zapest u liniji prije ispitivanja uvjeta, jer će čekat sljedeću liniju:\n\n`while(true) {\n\n\t\t\t\tline = br.readLine();\n\n\t\t\t\tif (line==null || line.isEmpty())\n\n\t\t\t\t\tbreak;`\n\nAko je netko radio u javi i radi mu da uskoči 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37842": {
+      "poster": "Red_Baron",
+      "content": "@addisonRae#37831 tako, pričaj bre srpski da te ceo svet razume. Mislim da je [scanner.hasNextLine()](https://www.tutorialspoint.com/java/util/scanner_hasnextline.htm) ono što tražiš.\n\n`while(br.hasNextLine()) {\n\n    line = br.readLine();\n\n    if (line==null || line.isEmpty())    // ne znam ni treba li ovaj if\n\n        break;`\n\nMalo zajebava formatting, htio sam lijepo složiti.",
+      "votes": {
+        "upvoters": [
+          "addisonRae"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37859": {
+      "poster": "addisonRae",
+      "content": "@Red_Baron#37842 Hvala na trudu kolega, probao sam već to i ne radi. Javadoc metode:\n\n\"Returns true if there is another line in the input of this scanner.This method may block while waiting for input. The scanner does notadvance past any input.\" \n\nkaže da će čekati sljedeći unos i blokirati :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Red_Baron"
+        ]
+      }
+    },
+    "38376": {
+      "poster": "Arya",
+      "content": "ima tko da bi podijelio labos za usporedbu sad kad je sve proslo? :)",
+      "votes": {
+        "upvoters": [
+          "Krama13",
+          "Red_Baron"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,999 @@
+{
+  "title": "[FMUOS] 2. domaća zadaća - 2020/2021",
+  "creator": "Toni",
+  "slug": "fmuos-2-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Formalne metode u oblikovanju sustava",
+    "Zadaće"
+  ],
+  "posts": {
+    "160018": {
+      "poster": "Toni",
+      "content": "Jel itko imao ovaj problem ? ![](assets/2021-03-29/00030.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160024": {
+      "poster": "Toni",
+      "content": "@Toni#160018 Za sve kolege Java levate poput mene, pomaknite JAVA_HOME na vrh Path variable",
+      "votes": {
+        "upvoters": [
+          "Simpy",
+          "hi_doggy",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162255": {
+      "poster": "tito",
+      "content": "samo bih htio napomenit prilikom builda projekta jpf-core ako koristite javu 11 prebacite se na granu java-10-gradle",
+      "votes": {
+        "upvoters": [
+          "WhiteMamba",
+          "[deleted]",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162447": {
+      "poster": "Amon",
+      "content": "U uputama piše da se pobriše onaj razred sharedSecret jer bude build errora zbog toga, međutim to mi je napravilo x drugih problema s kojima sam se cijeli dan zezao (jer kao taj razred mora postojati. Čak i kad deleteam sve dependancyje mi baca errore) pa nemojte brisati cijeli razred kao što piše u uputama nego otvorite razred i obrišite linije koda koje stvaraju error (u mom slučaju bila je to jedna static varijabla te getter i setter za tu varijablu, možda još nešto sitno, ali nisam sig) i onda će raditi kako treba",
+      "votes": {
+        "upvoters": [
+          "FICHEKK",
+          "ImJustAKid (lumity)",
+          "MarlonBrando",
+          "Murin",
+          "Yasuke (Bono)",
+          "happysun",
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162761": {
+      "poster": "Amon",
+      "content": "Treći dio labosa zahtijeva da se opet nešto doda projektu\n\nAnd surprise, surprise, opet sam uspio izgubiti gro vremena na nešto što nisu napisali\n\nUgl traži se od vas da pratite upute i dodate novi projekt koji sadrži onu neku jpf-aprop datoteku. I fino pratite upute i na kraju kaže da treba buildati projekt. Rekoh ok, buildam projekt i fakat dobijem 3 jar fajla (kao što su rekli da će biti) i to sve fino piše u ispisu. Međutim, ono što nisu naveli jest da novi projekt ima gro grešaka jer je netbeans iz nekog razloga odlučio u projekt staviti samo neke fajlove, a neke je uspješno izostavio (između ostalog one primjere koje trebamo koristiti za 3. zadatak).\n\nWorkaround tog problema je staviti se u files tab (netbeans ima 3 taba po defaultu: projects (iz kojeg sam pokretao prva 2 zadatka), files i services). Files tab sadrži sve fajlove koji su dodani u uputama (dakle nije ništa izostavljeno), međutim i dalje se većina fajlova crveni jer se i dalje registriraju greške. To se, međutim, smije ignorirati. Naći ćete examples file sa primjerima koje moramo koristiti i tamo će se moći koristiti ona verify mogućnost kao i u prva 2 zadatka bez da se javljaju greške (ako me pitate zašto to funkcionira, reći ću vam da nemam pojma i da se bojim uopće ponovno pokrenuti netbeans jer se bojim da će mi sve eksplodirati u greškama ako to napravim i da ću ga po 6. put morati reinstalirati, samo se želim riješiti ovog glupog labosa i još glupljeg predmeta).",
+      "votes": {
+        "upvoters": [
+          "BigD",
+          "Borna_P",
+          "FICHEKK",
+          "ImJustAKid (lumity)",
+          "Louverture (Žuti Kišobran)",
+          "MarlonBrando",
+          "Mirko_",
+          "Murin",
+          "Smolaa",
+          "Svarog (Veles)",
+          "Yasuke (Bono)",
+          "chuuya (temari)",
+          "frle10 (Frle)",
+          "in1",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "tito"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162948": {
+      "poster": "tito",
+      "content": "Ja sam isto imao problem s 3 zadatkom. Treba barem u mom slučaju, koristim linux, ant za pokretanje builda i nekoristim verify u intelij-u \n1. exportat projekt jpf-aprop gdje i jpf-core\n2. dodat 2 naredbe \n\njpf-aprop = ${jpf.home}/jpf-aprop\n\nextensions+=,${jpf-aprop} \n\nu site.properties\n3. u build.xml od jpf-aprop projekta sam izmjenio sam 32, 58 i dodao sam 59 i 60 liniju (vidi se u screenshotu). Trebate X zamijeniti s usernamom u linuxu\n4. izbrisati folder tests it jpf-aprop/src\n5. iz build.xml izbrisat dio sa testovima\n6. pokrenuti naredbu ant build\n\nValjda će nekom pomoć🙂, ovo je takav kancer🤮",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Njet",
+          "WhiteMamba",
+          "brbrbr",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162950": {
+      "poster": "tito",
+      "content": "![](assets/2021-04-05/00007.png)",
+      "votes": {
+        "upvoters": [
+          "Njet"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162991": {
+      "poster": "Harweyy",
+      "content": "Je li iko u mogućnosti me voditi me za ruku kako 3. zadatak pokrenuti ako radimo u intellij-u na windowsima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166876": {
+      "poster": "PrisonMike (Števo)",
+      "content": "jel još nekog zeza ovo u 4. zadatku?\n\n[SEVERE] cannot load application class Verifikacija",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167558": {
+      "poster": "WhiteMamba",
+      "content": "@tito#162948 \n\nJa sam imao problema na linuxu sa ovim postupkom, ali sam nasao workaround (inspiraciju sam dobio iz ovog razgovora: https://groups.google.com/g/java-pathfinder/c/bhxyabi5ivs/m/eF5ys-9oCgAJ) koji ce mozda jos nekome pomoci. \n\nJPF-Core je vecinu (ili sve) funkcionalnosti iz jpf-aprop implementirao te je moguce samo kopirati sve primjere iz `jpf-aprop/src/examples` u `jpf-core/src/examples` i zatim sve primjere pokretati kao i u prvom i drugom zadatku (npr: `java -jar build/RunJPF.jar src/examples/ContractViolation.jpf`).\n\nJa koristim Javu 11 i nalazim se u grani `java-10-gradle` unutar jpf-core.",
+      "votes": {
+        "upvoters": [
+          "Zuzu (Coffe123)",
+          "member",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168704": {
+      "poster": "Murin",
+      "content": "Ima netko tko je uspjesno rijesio cijelu zadacu da kaze kombinaciju IDE-a i dodatnih koraka koje treba napraviti kako bi se ovo sto bezbolnije rijesilo?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "brbrbr"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168711": {
+      "poster": "tonkec",
+      "content": "@Murin#168704 ja sam slijedio upute i sve je bilo oke, trebao sam samo promijeniti path do jave jer ih imam više instaliranih",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168992": {
+      "poster": "MJ3",
+      "content": "jel zna netko u čemu može bit problem u 4.1. kad izbaci error [SEVERE] cannot load application class Verifikacija? Verifikacija.java i Verifikacija.jpf nalaze se u istom folderu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169012": {
+      "poster": "tonkec",
+      "content": "@MJ3#168992 meni je bio problem jer sam umjesto target = fv.Verifikacija napisao target = Verifikacija u onom jpf fajlu",
+      "votes": {
+        "upvoters": [
+          "bob",
+          "orange"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169215": {
+      "poster": "MJ3",
+      "content": "@tonkec#169012 hvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169393": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "Ja sam pratila upute i koristim točno onu inačicu jave koju su nam zadali u projektu, ali i dalje dobivam isti error koji se dobiva korištenjem krive inačice kada pokušam verifyat HelloWorld.jpf. Zna li itko zašto se ovo dešava / kako rješiti problem? Provjerila sam config path za netbeans, probala sam runat iz cmda i netbeansa, stavila sam javu na vrh patha.. ne znam što drugo da napravim\n\n![](assets/2021-04-13/00047.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169409": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@janeromero#169393 Okej lmao iz nekog razloga  ako runam u cmdu \"set path=C:\\Program Files\\Java\\jdk1.8.0_91\\bin;%path%\" onda je okej, ali ako ručno postavljam path u sys properties onda ne radi. Tak da evo, solution found. Kasnije se vrati na normalnu verziju jave ako se maknem java home ispod oraclea u path varijablama.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169455": {
+      "poster": "Murin",
+      "content": "Je li se ikome desilo da instalacija netbeans-jpf-a ne prolazi jer mu fali nekakav org.desktop.layout?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169481": {
+      "poster": "Murin",
+      "content": "@Murin#169455 \n\nAko se ikome desi ovo, [ovdje](http://137.254.56.27/nexus/content/groups/netbeans/org/netbeans/api/org-jdesktop-layout/RELEASE65/) mozete skinuti .nbm",
+      "votes": {
+        "upvoters": [
+          "Louverture (Žuti Kišobran)",
+          "Sanjaaa",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "169514": {
+      "poster": "ReyKenobi",
+      "content": "Je li možda još netko naletio na ovaj problem:\n\n> @Bobicki#13976 Dobiva li netko ovaj error u 4.5. umjesto onoga na materijalima?\n\n> gov.nasa.jpf.vm.NoUncaughtExceptionsProperty\n\n> java.lang.AssertionError\n\n> \tat fv.Verifikacija.main(fv/Verifikacija.java:23)\n\n> Kad u 4.5. postavim onaj search.multiple_erros = true, opet dobivam isti taj error (samo jedamput). Da nisam nešto zeznuo u konfiguraciji ili je i drugima tako?\n> \n\nVidjela sam da je problem u ovom slučaju riješilo dodavanje site.properties, ali meni ne uspjeva prepoznati te anotacije ni sa tim. Ne znam jesam trebala još nešto dodati kod buildanja (koristim IntelliJ + Windows).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170144": {
+      "poster": "tito",
+      "content": "![](assets/2021-04-14/00048.png)\n\n![](assets/2021-04-14/00049.png)\n\n![](assets/2021-04-14/00050.png)\n\nVezano za 4. zadatak koristim linux i nemam plugin na intellij-u i koristio sam naredbe ant clean i ant build\n1. osim što su naveli u uputama kopirao sam build.xml iz jpf-aprop projekta u Java-FV\n2. na prvoj slici sam promijenio name projekta i namjestio jpf.properties kao property file\n3. na drugoj slici u compile-main dijelu sam maknuo if-alicu te sam promjenio dir od mkdir-a, srcdir i destdir od javac-a\n4. još sam za svaki slučaj promijenio u jpf.propertiu destinaciju of JavaFV, iako mislim da nije potrebno, ali me strah promijenit jer je proradilo🙂",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170231": {
+      "poster": "Murin",
+      "content": "Još jedan novi error za kolekciju \n\n![](assets/2021-04-14/00065.png)\n\npratio sve po uputama, zapinje na 4.4",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170403": {
+      "poster": "Klokan",
+      "content": "koliko je vremenski zahtjevan labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170482": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Klokan#170403 A racunaj potrosit sat vremena na instalaciju + guglanje errora za vrijeme rjesavanja zadataka sveukupno. (ali ovdje ima rjesenja za dosta errora pa se neces morat ubit u trazenju)\n\nKaj se tice samih zadataka fakat nije tesko, da se isto jako brzo. Ugl stignes sve u jednom danu dosta brzo rjesit,",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170502": {
+      "poster": "Amon",
+      "content": "> @janeromero#170482 sat vremena na instalaciju\n\nJa koji sam potrošio cijeli dan na instalaciju:\n\n![](assets/2021-04-15/00009.gif)",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "brbrbr",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Audaces",
+          "DostDobroIme",
+          "brbrbr",
+          "chuuya (temari)",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "sane_insane",
+          "supernatural"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Emma63194",
+          "Fran_- (random_trooper)",
+          "ImJustAKid (lumity)",
+          "Simpy",
+          "frle10 (Frle)",
+          "happysun",
+          "mentally_disturbed_llama",
+          "moji_prsti_prsti_klize_po_njoj",
+          "narval13068 (Dima)"
+        ]
+      }
+    },
+    "170530": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Amon#170502 F\n\nmeni je išlo stvarno oke, pratila sam te upute (windows + netbeans) i jedino mi je zaštekalo kad mi java nije htjela radit al sam dosta brzo našla rješenje na netu. + pogledala sam tuđe komentare ovdje prije nego što sam uopće krenula radit pa moguće da sam zaobišla u potpunosti neke probleme, zato kažem sad kad već ima dosta debuganja ovdje trebalo bi ić brže",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "mentally_disturbed_llama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "brbrbr"
+        ]
+      }
+    },
+    "171114": {
+      "poster": "narval13068 (Dima)",
+      "content": "@Murin#170231 Jesi uspia zaobic ovo, meni je isto izasa taj error",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172910": {
+      "poster": "post",
+      "content": "Sto se treba staviti pod {jpf.home} i {jpf-core} u site.properties?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172912": {
+      "poster": "post",
+      "content": "Treba li se datoteka site.properties nalaziti u folderu koji se zove site.properties ili se nalazi u folderu .jpf?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172915": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@post#172912 u .jpf",
+      "votes": {
+        "upvoters": [
+          "post"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172922": {
+      "poster": "post",
+      "content": "Itko ovo? Ne radi mi verifikacija u 1.2 i dobijem ovu poruku:\n\n jpf-core specification in C:\\Users\\[USERNAME]\\.jpf\\site.properties not a valid directory: $C:\\Users\\[USERNAME]\\Documents\\NetBeansProjects\\jpf-core\n\n[USERNAME] je stand-in za korisničko ime",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173032": {
+      "poster": "brbrbr",
+      "content": "Jel jos netko dobiva build failed (netbeans)\n\n```\nerror: cannot find symbol\n  public static JavaOISAccess getJavaOISAccess()\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173061": {
+      "poster": "brbrbr",
+      "content": "@janeromero#170530 Što si napravila da ti java proradi? Ja slijedim upute i dobivam svejedno greske, ne mogu nista na netu naci",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173071": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@brbrbr#173061 ovo mi je bio jedini problem - @janeromero#169409",
+      "votes": {
+        "upvoters": [
+          "brbrbr"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173084": {
+      "poster": "Ena43",
+      "content": "@brbrbr#173032 da, ali mozes obrisati razred zbog kojeg dobivas greske",
+      "votes": {
+        "upvoters": [
+          "brbrbr"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173299": {
+      "poster": "Smolaa",
+      "content": "@post#172922 Imam isti problem jesi uspio riješit možda ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173303": {
+      "poster": "Smolaa",
+      "content": "@Smolaa#173299 Trebalo je samo podesit putanju u onom site.properties fileu (ne samo kopirat ono sta pise vec pogledat kako je meni tocno spremljeno)",
+      "votes": {
+        "upvoters": [
+          "post"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173306": {
+      "poster": "post",
+      "content": "@Smolaa#173303 \n\nKako si je podesio? Meni site.properties izgleda ovako:\n\n```\n# JPF site configuration\njpf.home = $C:/Users/Administrator/Documents/NetBeansProjects\njpf-core = ${jpf.home}/jpf-core\nextensions=${jpf-core}\n```\n\nFolder jpf.core se zbilja nalazi na putanji C:/Users/Administrator/Documents/NetBeansProjects, baš provjerio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173322": {
+      "poster": "Smolaa",
+      "content": "@post#173306 Ovaj jpf.home sam izmjenio jer mi projekt nije bio u $C:/Users/Administrator/Documents/NetBeansProjects,\n\nveč u $C:/Users/Administrator/Documents",
+      "votes": {
+        "upvoters": [
+          "post"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173326": {
+      "poster": "post",
+      "content": "@Smolaa#173322 jpf-core je folder projekta, ne? Kod mene se on nalazi u Documents/NetBeansProjects pa stvarno ne vidim zašto dobivam grešku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173607": {
+      "poster": "layla",
+      "content": "Zadaca je ista kao i prosle godine?",
+      "votes": {
+        "upvoters": [
+          "Maglica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173615": {
+      "poster": "Amon",
+      "content": "@layla#173607 Da",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Maglica",
+          "Patak007",
+          "chuuya (temari)",
+          "layla",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "174013": {
+      "poster": "Klokan",
+      "content": "Hoće li nam nešto iz 2. dz trebat na MI?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "174014": {
+      "poster": "Klokan",
+      "content": "@post#173326 pokreci preko terminala, lakse je",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "174149": {
+      "poster": "brbrbr",
+      "content": "Jel jos netko ima problema s buildanjem u 4. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175324": {
+      "poster": "sphera",
+      "content": "@Murin#169481 \n\nIma netko ovaj .nbm file skinut org.jdesktop.layout? ovi netbeans serveri ne rade 😞",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175358": {
+      "poster": "Murin",
+      "content": "@sphera#175324 \n\njavio sam ti se u PM,\n\n@micho \n\njel bi se mogao taj file staviti na materijale da svi mogu skinuti?",
+      "votes": {
+        "upvoters": [
+          "sphera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175368": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Murin#175358 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175376": {
+      "poster": "Murin",
+      "content": "@micho#175368 \n\nevo stavio sam ga na cloud",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175618": {
+      "poster": "DostDobroIme",
+      "content": "Isplati li se ovo raditi u IntelliJ-u?",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175630": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@DostDobroIme#175618 tbh meni je ta instalacija bila lakša od netbeansa",
+      "votes": {
+        "upvoters": [
+          "DostDobroIme",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175650": {
+      "poster": "DostDobroIme",
+      "content": "@micho#175630 Jel bi mogao samo ukratko opisati koji je put instalacije ili barem koliko se razlikuje od puta instalacije za netbeans?",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175658": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@DostDobroIme#175650 \n\n@InCogNiTo124#10359",
+      "votes": {
+        "upvoters": [
+          "DostDobroIme",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175783": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "je li se nekom javljalo ovo u 4. zadatku kad pokuša verifajat verifikacija.jpf ? \n\n[SEVERE] JPF configuration error: error instantiating class gov.nasa.jpf.vm.OVHeap for entry \"vm.heap.class\":\n\n exception in gov.nasa.jpf.vm.OVHeap(gov.nasa.jpf.Config,gov.nasa.jpf.vm.KernelState):\n\njava.lang.NoClassDefFoundError: sun/misc/SharedSecrets\n\n used within \"vm.class\" instantiation of class gov.nasa.jpf.vm.SingleProcessVM\n \ni zna netko kako pokrenut iz terminala taj 4.zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "176000": {
+      "poster": "chuuya (temari)",
+      "content": "@micho#175368 Jel na materijalima? Meni je NetBeans uspio maknut ovaj plugin za Verify i sad mi sere da moram instalirat taj drugi, a ne mogu ga nać na materijalima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "176017": {
+      "poster": "sphera",
+      "content": "@chuuya#176000 \n\nnije na materijalima, al je uploadano na cloud https://u.pcloud.link/publink/show?code=kZYbtMkZGdYd92G0I8mtMaqnyGtMth3C3WPX#folder=9105916432",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "176063": {
+      "poster": "Kiflica",
+      "content": "@Murin#170231 Jesi li možda uspio riješit ovaj problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "176071": {
+      "poster": "Murin",
+      "content": "@Kiflica#176063 \n\nNope",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Kiflica",
+          "netko_tamo"
+        ]
+      }
+    },
+    "176461": {
+      "poster": "netko_tamo",
+      "content": "```\nExecuting command: java -jar C:\\Users\\Marko\\Documents\\NetBeansProjects\\jpf-core\\build\\RunJPF.jar +shell.port=4242 C:\\Users\\Marko\\Documents\\NetBeansProjects\\jpf-aprop\\src\\examples\\ConstViolation.jpf \n[WARNING] unknown classpath element: C:\\Users\\Marko\\Documents\\NetBeansProjects\\jpf-aprop\\build\\jpf-aprop-classes.jar\n[WARNING] unknown classpath element: C:\\Users\\Marko\\Documents\\NetBeansProjects\\jpf-aprop\\build\\examples\n[SEVERE] JPF configuration error: class not found .aprop.listener.ConstChecker\n[SEVERE] JPF terminated \n```\n\nneko imao ovaj error u trecem zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "176540": {
+      "poster": "netko_tamo",
+      "content": "@Kiflica#176063 Jesi mozda ti uspjela rijesit? hahaha, meni je isto taj error skocio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "176550": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "netko zna zašto ovo javlja za 4. zadatak u terminalu kad probam pokrenut? --> no main manifest attribute",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "176635": {
+      "poster": "Kiflica",
+      "content": "@netko_tamo#176540 nisam, najbolje ti odustat dok jos imas zdrav razum.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Murin",
+          "Simpy",
+          "Smolaa",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "member",
+          "netko_tamo"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "176656": {
+      "poster": "netko_tamo",
+      "content": "@Kiflica#176635 vec je za zdrav razum kasno...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Simpy"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "176818": {
+      "poster": "ketamie",
+      "content": "@Kiflica#176635 \n\n@netko_tamo#176656 \n\n znaci imao sam isti problem i nista ga nije dalo rijesiti. iz ocaja sam otisao nazad u onaj site.properties file i tamo double-checkao i copy pasteao iz uputa i 3. zadatka sta treba i magicno mi je proradilo. jako banalno i iznenadio bih se da smo svi samo nesto pogresno prepisali, ali je vrijedno pokusaja...",
+      "votes": {
+        "upvoters": [
+          "Kiflica",
+          "Smolaa",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "176929": {
+      "poster": "Smolaa",
+      "content": "@ketamie#176818 evo za ostale, ja sam isti problem imao i vjerojatno je trebalo samo kopirat tocno kako pise u uputama, ja sam cini mi se bio putanju postavljao do gdje mi je taj jpf-aprop a nije trebalo za  4 zadatak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

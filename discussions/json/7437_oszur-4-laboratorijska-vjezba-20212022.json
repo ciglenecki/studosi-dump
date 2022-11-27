@@ -1,0 +1,199 @@
+{
+  "title": "[OSZUR] 4. laboratorijska vježba - 2021/2022",
+  "creator": "Darla",
+  "slug": "oszur-4-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Operacijski sustavi za ugrađena računala",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "297081": {
+      "poster": "Darla",
+      "content": "Hvala :). Kad rjesavam 4. lab jel mijenjam kod u chapter 05/03 arm ili i386 dijelu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297082": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"Darla\"#p297081 i386. još da za 5. dodam što mi je uzelo sat vremena života. u fs.c za include treba dodat uz par ostalih (sve sam ih kopirao iz [Chapter_05_Devices/03_Serial_port/kernel/startup.c]  )\n ```\n#include \"../../kernel/device.h\"\n#include \"../../kernel/fs.h\"\n```",
+      "votes": {
+        "upvoters": [
+          "Darla",
+          "Retard00",
+          "Zk6dO73 (burw0r)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297197": {
+      "poster": "nnn (dinoo)",
+      "content": "tamo kod primjera za rješenje u drugom koraku:\n\n> 2. Dodati/proširiti podatkovnu strukturu\n\n> Primjerice dodati:\n\n> ```\n>int prio; //dodati element u struct ihndlr\n> \n> //definirati jedan zahtjev za prekid:\n> struct zahtjev {elementi: handler (struct ihndlr), obrada_u_tijeku };\n> //te dodati listu za takve zahtjeve:\n> static list_t zahtjevi;\n> ```\n\nDodao sam ovaj int u `./arch/i386/interrupt.c`, ali ne kužim šta se misli sa ovim: \n> ```\n> //definirati jedan zahtjev za prekid:\n> struct zahtjev {elementi: handler (struct ihndlr), obrada_u_tijeku };\n> //te dodati listu za takve zahtjeve:\n> static list_t zahtjevi;\n> ```\n\nmože netko objasnit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297209": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"dinoo\"#p297197 ta nova struktura zahtjev je poput strukture ihndlr samo što ima dodatne stvari u sebi. moja struct zahtjev izgleda ovako \n```\nstruct zahtjev {\n\tvoid *device; //struct ihndlr\n\tint irq_number;\n\tint prio; //struct ihndlr (možeš, a i ne moraš stavit u struct ihndlr već samo ovdje)\n\tuint8 done;\n\tint (*ihandler) (unsigned int, void *device); //struct ihndlr\n};\n```\n\ni onda listu za the zahtjeve\n```\nstatic list_t zahtjevi;\n\n// kasnije u func void arch_init_interrupts() iniciraš tu listu zahtjeva\nlist_init(&zahtjevi)\n\n// u func void arch_interrupt_handler(int irq_num)\n// dodaješ interupte u tu listu sortirane u onoj while(ih)\n// i izvan te petlje vadiš prekide po najvećem prioritetu i hendlaš ih\n```",
+      "votes": {
+        "upvoters": [
+          "Zk6dO73 (burw0r)",
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297287": {
+      "poster": "Kasperinac",
+      "content": "Kak raisati prekide (asinkrono nekak pretpostavljam) dok se vrsi obrada prekida?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297290": {
+      "poster": "Unity (Sgt. Forge)",
+      "content": "@\"Kasperinac\"#p297287 tako da ga pozoves u toj obradi prekida",
+      "votes": {
+        "upvoters": [
+          "Kasperinac",
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297296": {
+      "poster": "nnn (dinoo)",
+      "content": "@\"Olive Oil\"#p297209 hvala puno, samo nešto mi još nije jasno pa ako ti nije problem objasnit:\n\n- što ako se trenutno obrađuje prekid sa prioritetom 3, a dođu novi prekidi sa prioritetim 2 i 4:\n\n(1) čeka se kraj obrade ovog prekida 3, onda se zove 4 i kad on završi 2 ili\n\n(2) zaustavlja se obrada prekida 3,  pokrene se obrada prekida 4, po završetku se vraća nazad u obradu prekida 3, kad završi prekid 3, zove prekid 2\n\n- ~~prekide generiram  slično kao u onom `timer.c` programu sa `sigev_notify`?~~, samo zovem prekid sa vecim prioritetom u handleru prekida sa manjim\n\n- šta je ovaj 3. parametar:\n\n ` void list_sort_add(list_t *list, void *object, list_h *hdr,  int(*cmp)(void *, void *))\n` ,\n\n koliko ja razumijem\n\n `list_sort_add(lista_gdje_dodajem, objekt_struct_zahtjev_kojeg_dodajem, ?, funkcija za usporedbu)`\n\nal opet ne razumijem taj 3. parametar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297304": {
+      "poster": "Ardura (Maddy)",
+      "content": "Je li netko imao lab danas? Kakav je zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297318": {
+      "poster": "Unity (Sgt. Forge)",
+      "content": "@\"Maddy\"#p297304 \n4. bio simulacija prekida, samo izazvat par prekida slicno primjeru koji smo trebali imati\n5. implementirati rename funkciju za datoteke",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297333": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"dinoo\"#p297296 u onoj petlji while(ih) dodaješ prekide, a izvan nje u nekoj drugoj petlji hendlaš prekide sve dok ih ima i sve dok postoji prekid koji nije hendlan. \n\nnpr u to drugoj petlji staviš redom (meni je tak):\n``` \npi = list_get(&pr_reqs, FIRST);\nwhile (pi && !pi->done)\n{\np->done = 1\nenable_interrupts(); // funkcija već postoji\npi->ihandler(pi->irq_number, pi->device);\ndisable_interrupts(); // postoji\nlist_remove(&pr_reqs, FIRST, NULL);\nkfree(pi);\npi = list_get(&pr_reqs, FIRST);\n}\n\n```\novaj treći parametar je ne znam ni ja točno što. \n\nimam nešto tipa \n```\nlist_h *p_lh; // nisam ni ja siguran za list_h što je, samo sam vidio da se koristio\n\n// u list_sort_add za treći parametar stavim p_lh, ovo je u onoj petlji while(ih)\np_lh = kmalloc(sizeof(list_h));\n```\nnisam ni ja baš siguran u sve to, al na neku foru mi je radilo",
+      "votes": {
+        "upvoters": [
+          "Zk6dO73 (burw0r)",
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297338": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "Kad dodamo argument prioritet u funkciju za registraciju koje da prioritete dodamo ovim prekidima koji vec postoje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297343": {
+      "poster": "nnn (dinoo)",
+      "content": "@\"Peter Jordanson\"#p297338 Mislim da nije bitno, ja sam svima dodijelio 1, osim ovima koje koristim za demonstraciju",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297344": {
+      "poster": "Valentino",
+      "content": "Danas je jos bio zadatak napisati funkciju delete(filename)",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

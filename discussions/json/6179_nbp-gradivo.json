@@ -1,0 +1,987 @@
+{
+  "title": "[NBP] Gradivo",
+  "creator": "TamTam (foobar)",
+  "slug": "nbp-gradivo",
+  "tags": [
+    "FER",
+    "Napredne baze podataka"
+  ],
+  "posts": {
+    "260744": {
+      "poster": "TamTam (foobar)",
+      "content": "Jel ima netko rj zadataka s Edgara?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260973": {
+      "poster": "huhu",
+      "content": "@\"niknik\"#p260971 Možeš poslat možda kad napraviš?",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260992": {
+      "poster": "anon00",
+      "content": "EDIT: malo uže tako da stane na A4\n\n![](assets/2021-12-01/00049.png)\n\nAutomatski generirano pa nek netko provjeri \n\nMislim da nema nikakvih 'relationships'(veza, odnosa?) izmedu entieta vec se samo sjeku u geom",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260995": {
+      "poster": "MsBrightside",
+      "content": "evo za prvi\n\n```\nselect kat.categoryid, kat.categoryname, nooffights, rank () over (order by nooffights desc)\nfrom (with recursive kate(categoryid,\ncategoryname, subcategoryid) as\n(\n    select categoryid, categoryname, categoryid\n    from category\n    union\n    select kate.categoryid, kate.categoryname,\n    category.categoryid\n    from category, kate\n    where kate.subcategoryid = category.supcategoryid\n)\nselect kate.categoryid, kate.categoryname, count(*) as noOfFights\nfrom kate left join category on kate.subcategoryid = category.categoryid\nleft join game on kate.subcategoryid = game.categoryid\nleft join fight on game.gameid = fight.gameid\nwhere fightEnd is not null\ngroup by kate.categoryid, kate.categoryname) as kat \nleft join category on category.categoryid = kat.categoryid\nwhere category.supcategoryid is null\n```",
+      "votes": {
+        "upvoters": [
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260998": {
+      "poster": "Kaladonter",
+      "content": "![](assets/2021-12-01/00051.png)\n\njel netko ovu grozotu rijesio (ja ocito uopce ne kuzim tekst zadatka, ne kuzim kako izvuku samo sate i treba li grupirat po imenu arene ili samo po pocetku borbe??)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260999": {
+      "poster": "anon00",
+      "content": "@\"anon00\"#p260992 EDIT2 : Ipak nije bas dobro - hrv_adm0 ima dosta atributa, ali ne mogu birati koje cu includati - ili su svi ili kad stavim ovo sto je na slici. Ako stavim da su svi onda to bude valjda 30+ atributa i uzme cijelu a4 stranicu po visini. \n\nRoads isto tako ... vjv ima jos tog \n\nPa jos netko sastavi bilo bi super",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261001": {
+      "poster": "weedovnjak",
+      "content": "Evo peti:\n\n```\nWITH tablica AS\n(SELECT muny.name_2 as opcina, roads.gid as roadsgid, railways.gid as railwaysgid, pois.name as bolnica,\n\tROUND( ST_Distance(pois.geom, ST_Intersection(roads.geom, railways.geom)) ) AS distance,\n \trank() OVER (PARTITION BY roads.gid, railways.gid\n\t\t\t\tORDER BY ROUND( ST_Distance(pois.geom, ST_Intersection(roads.geom, railways.geom)) )) AS rang\nFROM muny, roads, railways, pois\nWHERE muny.name_1 = 'Splitsko-Dalmatinska'\nAND ST_Intersects(railways.geom, muny.geom)  \nAND ST_Intersects(roads.geom, railways.geom)\nAND ST_Intersects(ST_Intersection(roads.geom, railways.geom), muny.geom)                                                                         \nAND pois.fclass = 'hospital'\n)\nSELECT opcina, roadsgid, railwaysgid, bolnica, MIN(distance)\nFROM tablica\nWHERE rang = 1\nGROUP BY opcina, roadsgid, railwaysgid, bolnica\nORDER BY opcina, roadsgid, railwaysgid, bolnica\n```",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Urmum (mamaRu)",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261005": {
+      "poster": "anon00",
+      "content": "![](assets/2021-12-01/00070.png)\n\nEvo onda sa svim stupcima pa nek slobodno netko ako ima volje napravi kako spada, meni je ovo sasvim dovoljno",
+      "votes": {
+        "upvoters": [
+          "AnamarijaM (MA)",
+          "AntonioB25 (Pleteni miš)",
+          "Ducky",
+          "Rope (Rops)",
+          "huhu",
+          "niknik"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261011": {
+      "poster": "MrPeanutButter",
+      "content": "Inace ako niste skuzili mozete review napraviti od testnog MI di mozete vidjeti correct code.\n\nSamo predajte skroz prazni prvi put i onda mozete ic na previous exams i vidjeti review tog MI testnog.\n\nMožete ga još 100 puta kasnije otvoriti.\n\n![](assets/2021-12-01/00071.png)",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Urmum (mamaRu)",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261186": {
+      "poster": "huhu",
+      "content": "Jel ima neko opis baze za MI2020/2021 na edgaru",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261189": {
+      "poster": "Extended_mix",
+      "content": "@\"huhu\"#p261186 \n\nhttps://www.fer.unizg.hr/_download/repository/Ispiti_2020_2021_-_opis_baze.pdf\n\novo?",
+      "votes": {
+        "upvoters": [
+          "huhu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261193": {
+      "poster": "huhu",
+      "content": "@\"Extended_mix\"#p261189 Hvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273563": {
+      "poster": "Rope (Rops)",
+      "content": "postoje li negdje rjesenja zavrsnog od prosle godine?",
+      "votes": {
+        "upvoters": [
+          "Patak007"
+        ],
+        "downvoters": [
+          "Zk6dO73 (burw0r)"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Zk6dO73 (burw0r)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274631": {
+      "poster": "sekiro",
+      "content": "Jel ima negdje neki tutorial za ove tokove podatka, točnije za triggere i watermarkove? ovo u prezi i videopredavnju je jako loše objašnjeno.",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274648": {
+      "poster": "Ducky",
+      "content": "kako najbezbolnije skupit prag?",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Exelero",
+          "Lusy (MGJ)",
+          "Mike (Klaud Konzultanta)",
+          "MiqeloS",
+          "MrPeanutButter",
+          "MsBrightside",
+          "TamTam (foobar)",
+          "aerius",
+          "magla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274947": {
+      "poster": "Gocc (***)",
+      "content": "![](assets/2022-01-29/00007.png)\n\nšta bi ovdje bio odgovor, ono sinkroni i asinkorni? ili jednosmjesni i dvosmjerni?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275124": {
+      "poster": "Patak007",
+      "content": "@\"Rops\"#p273563 \n\nZI 2021 odgovori:\n\nhttps://icedrive.net/s/fi6SB58aikDPifjXXi6wVtR8havZ\n\nFali jedno teoretsko pitanje i sve skupa nije bas optimalno poslozeno, ali valjda ce vam posluzit 😉",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Rope (Rops)",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275172": {
+      "poster": "MrPeanutButter",
+      "content": "@\"Ducky\"#p274648 Ja bi rekao da naučiš M/R upite i ove ontologijske zadatke jer su stvarno lagani cak mozda i samo sa ontologijskim zadacima ako će biti oba tipa u ispitu skupis vec prag ako su ti 100% tocni",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "FERonja",
+          "Kennedy",
+          "Rope (Rops)",
+          "magla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275586": {
+      "poster": "magla",
+      "content": "@\"sekiro\"#p274631 Jesi možda našao išta? 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275594": {
+      "poster": "sekiro",
+      "content": "@\"magla\"#p275586 ne :(",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275750": {
+      "poster": "ZalutaliStudent",
+      "content": "@\"MrPeanutButter\"#p275172 Što su to M/R upiti i ontologijski zadatci i di se mogu učiti i vježbati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275781": {
+      "poster": "MsBrightside",
+      "content": "@\"ZalutaliStudent\"#p275750 m/r upite mozes na edgaru vjezbat, a ontologije su na prezi za semanticki web",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275783": {
+      "poster": "Patak007",
+      "content": "@\"ZalutaliStudent\"#p275750 M/R je map reduce u Mongu tj. 3. zadaca a ontologija ti je pod predavanjem semanticki web.\n\nAko nisi upoznat s M/R-om nemoj se s tim zezat dan i pol pred ispit jer nece biti kruha od toga samo ces ispalit na zivce s edgarom. Nauci ontologiju tj. semnaticki web, tokovi podataka su ful lagani, nauci jos teoriju i izi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275818": {
+      "poster": "MrPeanutButter",
+      "content": "Jel zna netko objasniti te tokove podataka nije baš jasno iz prezentacija... Makar na primjeru sa ovog test ZI-a",
+      "votes": {
+        "upvoters": [
+          "Kennedy",
+          "reygrep"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275824": {
+      "poster": "ZalutaliStudent",
+      "content": "@\"Patak007\"#p275783 Hvala. I zadnje pitanje, ne znam koristit map reduce, ali sam cijeli projekt riješio koristeći onaj aggregate. Jel znas jel smijemo na ZI koristit aggregate funkcije za M/R upite, i ako smijemo, pretpostavljam da mi to ima smisla uvježbavat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275825": {
+      "poster": "MrPeanutButter",
+      "content": "@\"ZalutaliStudent\"#p275824 mislim da nedaju sa tim raditi ili imaju stariju verziju mongo-a koji to ne podržava",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275841": {
+      "poster": "WickyWinslow",
+      "content": "@\"MrPeanutButter\"#p275825 Edgar ne zna baratati ničime osim jednostavnim find i mapreduce upitima. Tako su rekli profesori.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275863": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jel zna itko na onim map reduce upitima kako provjerit je li nešto undefined? Imam zadatak gdje nešto od paymenta treba računat ako postoji i imam u map funkciji na početku provjeru if this.payment != undefined && this.payment.amount != undefined. Ali kasnije kad uzmem taj this.payment.amount u emit funkciji onda javlja \"this.payment is undefined\".",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275870": {
+      "poster": "Svudec",
+      "content": "@\"Bono\"#p275863 ajde kod stavi. Trebalo bi se moći tako. To je obična js funkcija.",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275879": {
+      "poster": "weedovnjak",
+      "content": "@\"Bono\"#p275863 probaj odmah napravit varijablu npr var amount = this.payment.amount ak ce ti dalje trebat, meni se nekad zna zalit kad koristim this.nesto umjesto spremanja u posebnu varijablu",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275901": {
+      "poster": "Yasuke (Bono)",
+      "content": "@\"Svudec\"#p275870 Sori ne uspjevam nikako kod lijepo formatirat ovdje. Uglavnom ovakav je kod map funkcije:\n\n```\nfunction() {    \n    \tif(this.film != undefined && this.film.categories != undefined && this.payment != undefined){\n         if(this.payment.amount != undefined){\n            this.film.categories.forEach(function(category){\n               emit({\"category\":category}, {payment:this.payment.amount, count:1});\n            });\n         }\n      }\n    }\n```\n\nPokusao sam i ovo što je kolega @\"weedovnjak\"#p275879 napisao, ali nije pomoglo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275911": {
+      "poster": "FERonja",
+      "content": "@\"Bono\"#p275901 !== \"undefined\" možda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275916": {
+      "poster": "Bisolvon",
+      "content": "@\"Bono\"#p275901  \"{payment:this.payment.amount, count:1});\" izbaci ovaj this.payment.amount iz categories.forEach. Meni je znalo to napravit problem ako imas forEach(function...). Kao da ukrade this pointer.",
+      "votes": {
+        "upvoters": [
+          "Svudec",
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275920": {
+      "poster": "Svudec",
+      "content": "@\"Bono\"#p275901 \n\n@\"Bisolvon\"#p275916\n\nKao što je kolega već rekao, u javascriptu this ovisi o kontekstu u kojem se nalaziš. Inače forEach ima argument thisArg kojim možeš narihtati šta želiš da ti bude this u funkciji koju forEach zove. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach\n\nI inače u js možeš napisati samo if(this.payment && this.film?.categories).\n\nAko je payment ili film ili film.categories null ili undefined, ovo će biti false.",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276067": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "@\"anaa\"#p274947 \n\nDa, čini mi se da su sinkroni i asinkroni protokoli?",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276069": {
+      "poster": "sekiro",
+      "content": "Jel može netko samo objasnit kako da znamo je li event on time ili je early? Na bilo kojem primjeru",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276104": {
+      "poster": "ZalutaliStudent",
+      "content": "@\"WickyWinslow\"#p275841 Kak sam onda uspio cijeli projekt u edgaru rijesiti s aggregate funkcijom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276105": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"ZalutaliStudent\"#p276104\n\nprojekt se ručno ispravlja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276109": {
+      "poster": "zvonkoBogdan",
+      "content": "@\"sekiro\"#p276069 ako je early onda racunas da ga nisi uhvatio s watermarkom nego s triggerom, ako je on time onda je uhvacen watermarkom, ako je onaj treci, zakasnjeli, onda znaci da je naknadno ponovno uhvacen triggerom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276112": {
+      "poster": "ZalutaliStudent",
+      "content": "@\"Pleteni miš\"#p276105 U pravu si, sory zaboravio sam to.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276123": {
+      "poster": "prx_xD",
+      "content": "koje su sanse da dode cypher?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276133": {
+      "poster": "tetak",
+      "content": "Jel rješavao neko zi na Edgaru? na zadnjem zadatku sa emitiranjem, u prvom prozoru prema mom računu emitira se 1 Early i zatim 3 On time, pa me zanima kak napisati n-torku za ontime s obzirom da je između procesorskih vremena a treba napisati proc vrijeme u n-torki",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276155": {
+      "poster": "MrPeanutButter",
+      "content": "@\"tetak\"#p276133 \n\n(12:06,12:00-12:02,E,1)\n\n(12:07,12:00-12:02,O,3)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276178": {
+      "poster": "anon00",
+      "content": "@\"MrPeanutButter\"#p276155 \n\nZašto se tu 1 i 3 ne zbrajaju? \n\nIli se zbraja samo unutar isto 'emit'-a ? Kao svi Early se zbrajaju, svi OnTime se zbrajaju i svi Late se zbrajaju zasebno ili?\n\nTakoder, zasto 2 ne ulazi u rijesenje, a imamo .withLateFirings(AfterCount(2))) - dakle 2s nakon watermarka ako sam dobro skuzio?\n\n![](assets/2022-02-01/00026.png)",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276180": {
+      "poster": "Kaladonter",
+      "content": "@\"anon00\"#p276178 Koliko sam ja skužio to afterCount(2) ti znači da se nakon watermarka eventovi prijavljuju nakon svakgo drugog.  Npr.  u zadnjem prozoru ide prvo 8 i on se ne prijavi nego se prijavi tek nakon 9, jer je njih dvoje u tom windowu nakon watermarka, dok nakon 2 u ovom zadatku ne dođe više nikoji event u prvom windowu pa se 2 uopće ne prijavi. Moguće da sam u krivu al tako sam ja to shvatio.",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "anon00",
+          "sekiro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276185": {
+      "poster": "I3loodHound",
+      "content": "@\"anon00\"#p276178 \n\nNek me neko ispravi ak sam u krivu, ali 1 i 3 se ne zbrajaju zbok discarding akumulacije, odnosno 1 se early emita u 1:06, onda se 3 on time emita u 1:07 neovisno o ovoj 1. Ako bi bili u istom emmiting time ili ako bi imali accumulating ili accumulating & retracting onda bi se zbrajali",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "FERonja",
+          "Urmum (mamaRu)",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276190": {
+      "poster": "anon00",
+      "content": "@\"Kaladonter\"#p276180 Sad sam gledao po internetu i mislim da si dobro napisao\n\nEo i za druge kolege cu proci kroz zadatak pa da bude lakse za skuziti\n\n![](assets/2022-02-01/00029.png)\n\nDakle\n\n`.apply(Window.into(FixedWindows.of(TWO_MINUTES)) `\n- Oznacava da cemo na X osi imati **FIKSNE** prozore od 2 min svaki\n\n`.triggering(AfterWatermark()  `\n- Ovo znaci da ce se event trigerati tocno kad dodemo do watermarka \n\nTo je taj _On time_ event\n\n\n - Watermark je ono gdje vam krivulja (heuristika) dodiruje desni dio trenutnog prozora (iliti najvisa tocka krivulje u tom prozoru) </LI>\n\n`.withEarlyFirings(AlignedDelay(ONE_MINUTE))`\n- Ovo je _Early_ event - on je u funkciji od nailaska na prvi element pa do watermark-a\n\nU zagradi je uvijet koji kaze da kad dodemo do nekog elementa napravi delay do pune minute pa tek onda okini early event (tj. čekaj jer možda dođe još neki element kojeg ces obraditi zajedno s ovim) \n\n`.withLateFirings(AfterCount(2)))`\n\nOvo je _Late_ event koji počinje djelovati tek nakon watermarka\n\nU uvijetu ima AfterCount - tj propagiraj ovaj event tek nakon svaka 2 elementa koja su se dogodila, ako ne skupi 2 elementa onda se nikad nece ni okinuti. \n\n`.discardingFiredPanes())`\n\nReturns a new Window PTransform that uses the registered WindowFn and Triggering behavior, and that discards elements in a pane after they are triggered (Nisam najsigurniji kako bi ovo protumacio) \n\nEdit: Evo kolega gore je super objasnio\n\n`  .apply(Sum.integersPerKey());`\n\nVrijednosti unutar istog triggera/eventa se zbrajaju\n\n![](assets/2022-02-01/00030.png)\n\nDakle ako sad gledamo ovu gore sliku \n\nImamo 3 prozora na X osi: 12:00-12:02  |  12:02 - 12:04  |  12:04 - 12:06 \n\nWatermark 1. prozora je na 12:07\n\nWatermark 2. prozora je na 12:08 i mrvicu iznad tog, ali nije bitno\n\nWatermark 3. prozora je na 12:09\n\nDogađaj 1:\n\nDogodi se u 12:05 i nešto sitno - i od tad pa dok ne dođe do pune minute (_AlignedDelay(ONE_MINUTE)_) traje naš prvi Early trigger. Kako nismo naišli na nijedan drugi događaj onda se taj event propagira dalje i ukupni zbroj je \n\nDogađaj 3:\n\nDogodi se u 12:06 i nešto sitno i njega ce pokupiti onaj watermark trigger (AfterWatermark())\n\nDogadaj 2: \n\nKad se dode do njega pocinje .withLateFirings(AfterCount(2))), ali je problem sto nikad ne dode do Count=2 pa se nikad ne emit-a taj event \n\nDogadaj 5 je early i završi u 12:07 \n\nDogadaj 4 i 6 su early i zavrse u 12:08  - nisu watermark jer je watermark tek negdje na 12:08:30\n\nDogadaj 7 je isto tako early i zavrsi u 12:08 \n\nDogadaj 8 i 9 su .withLateFirings(AfterCount(2)), ali ovog puta se skupilo count=2 pa se taj event i okinuo. Nemojte zaboraviti da se ova 2 eventa grupiraju i njigova vrijednost se zbraja (.apply(Sum.integersPerKey())\n\nPrema edgaru tocno rjesenje je \n\n> (12:06, 12:00-12:02, E, 1)\n\n(12:07, 12:00-12:02, O, 3)\n\n(12:07, 12:02-12:04, E, 5)\n\n(12:08, 12:02-12:04, E, 10)\n\n(12:08, 12:04-12:06, E, 7)\n\n(12:09, 12:04-12:06, L, 17)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Cubi",
+          "Ducky",
+          "FERonja",
+          "Kaladonter",
+          "Lusy (MGJ)",
+          "Quarz",
+          "Rope (Rops)",
+          "Simke",
+          "TamTam (foobar)",
+          "TheManFromEarth",
+          "huhu",
+          "magla",
+          "mp99",
+          "niknik"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276191": {
+      "poster": "MrDREDD",
+      "content": "Koja je razlika kada piše AfterCount/AtCount ?\n\n![](assets/2022-02-01/00031.png)\n\n![](assets/2022-02-01/00032.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276194": {
+      "poster": "anon00",
+      "content": "@\"MrDREDD\"#p276191 \n\nclass AfterCount(TriggerFn):\n\n  \"\"\"Fire when there are at least count elements in this window pane.\n\nA taj AtCount uopce ne mogu pronaci u dokumentaciji - moja pretpostavka bi bila nakon svakog elementa - emit\n\nhttps://beam.apache.org/releases/pydoc/2.35.0/apache_beam.transforms.trigger.html",
+      "votes": {
+        "upvoters": [
+          "MrDREDD"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276208": {
+      "poster": "sekiro",
+      "content": "@\"anon00\"#p276194 znaci ako ih ima i vise od jedan se zbroje pa emitaju zajedno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276217": {
+      "poster": "anon00",
+      "content": "@\"sekiro\"#p276208 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276225": {
+      "poster": "TamTam (foobar)",
+      "content": "Moze netko staviti rj prvog zadatka iz ispita?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276241": {
+      "poster": "niknik",
+      "content": "@\"foobar\"#p276225 Kad predas ispit imas review i rjesenja, a i netko je vec uploadao ta rjesenja.",
+      "votes": {
+        "upvoters": [
+          "TamTam (foobar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276244": {
+      "poster": "anon00",
+      "content": "Je li se netko mozda potrudio skupiti i odgovoriti na pitalice, a da je voljan poslati u PM ili cak tu objaviti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276245": {
+      "poster": "Bisolvon",
+      "content": "@\"anon00\"#p276244 Koje pitalice?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276252": {
+      "poster": "I3loodHound",
+      "content": "Zna netko dal smijemo imati neki cheet sheet za SPARQL po naliku na onaj za SQL?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276253": {
+      "poster": "anon00",
+      "content": "@\"Bisolvon\"#p276245 Teoretska pitanja s edgara i sa starih ispita",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276254": {
+      "poster": "Bisolvon",
+      "content": "@\"I3loodHound\"#p276252 Imas \"SPARQL query syntax\" na sluzbenom pod.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276255": {
+      "poster": "I3loodHound",
+      "content": "@\"anon00\"#p276244 \n\nImas na materijalima pitanja iz prezentacija: https://github.com/studosi-fer/NMIBP/blob/master/vjezba/NMIBP_vjezba_pitanja-i-odgovori-s-prezentacija.pdf\n\n@\"I3loodHound\"#p276252 My bad, ima vec u sluzbenom",
+      "votes": {
+        "upvoters": [
+          "MrPeanutButter",
+          "Rope (Rops)",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276296": {
+      "poster": "anon00",
+      "content": "Je li nasao netko dobar tutorial za ova prva dva zadatka sa RDF-ovima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276322": {
+      "poster": "sekiro",
+      "content": "@\"anon00\"#p276296 preze i tutorial na edgaru",
+      "votes": {
+        "upvoters": [
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276346": {
+      "poster": "MsBrightside",
+      "content": "kako funkcionira allowedLateness?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276351": {
+      "poster": "anon00",
+      "content": "@\"MsBrightside\"#p276346 To je operator nad _Window_ i predstavlja dopušteno vrijeme nakon watermark-a kad ce uhvatiti neki element, ako prođe watermark i prođe tipa ONE_MINUTE onda sve elemente nakon tog nece uopce uhvatiti \n\nBar sam ja tako shvatio \n\nEDIT: moguce da je nije nakon watermarka vec nakon zadnjeg elementa? Ili unija to dvoje? \n\novo je iz dokumentacije \n> @Experimental(value=TRIGGER)\n\n> public Window<T> withAllowedLateness(Duration allowedLateness,\n\n>                                                                   Window.ClosingBehavior behavior)\n\n> Override the amount of lateness allowed for data elements in the pipeline. Like the other properties on this Window operation, this will be applied at the next GroupByKey. Any elements that are later than this as decided by the system-maintained watermark will be dropped.\n\n> This value also determines how long state will be kept around for old windows. Once no elements will be added to a window (because this duration has passed) any state associated with the window will be cleaned up.",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276364": {
+      "poster": "Svudec",
+      "content": "@\"anon00\"#p276351 Mislim da se gleda vrijeme nakon \"zatvaranja prozora\" tj. kad watermark zatvori prozor.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276371": {
+      "poster": "reygrep",
+      "content": "@\"anon00\"#p276190 oprosti nikako ne mogu skuziti koja je razlika izmedu (1 i 3) i (4 i 6) eventa?\n\nzasto se 1 gleda kao early, a 3 kao on time, a nisu kao slucaj (4 i 6) gdje su oba early i zbrajaju se? \n\nIsta stvar me muci kod 5 i 6 zasto ih nismo mogli grupirat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276376": {
+      "poster": "anon00",
+      "content": "@\"reygrep\"#p276371\n\nU zadaku imamo .withEarlyFirings(AlignedDelay(ONE_MINUTE)) \n\nSto znaci da kad se dode do nekog elementa (npr 1) i ako je on early (nije u istom trenutku kad i watermark) onda cekaj do PUNE minute odnosno za 1 cekaj do 12:06, za 3 cekaj do 12:07 - ali u 12:07 je watermark pa 3-cu ce pokupiti taj watermark, a ne early \n\nU window 2 prvo dolazimo do 5 koji se emit-a u 12:07 i nakon tog je on zabroavljen  zbog ovog \n\n`.discardingFiredPanes())`\n\n> Da je tu stajao onaj `accumulatingAndRetractingFiredPanes ` onda bi pamtili taj 5 do sljedeceg elementa (npr 6), a onda bi zbrojili i imali bi 11 i odbacili bi ovu staru vrijednost 5 \n\nSljedeci dolazi 6 i on ceka punu minutu tj 12:08 da se emit-a, ali prije tog nailazi na 4 pa se to zbraja skupa u 10 zbog `.apply(Sum.integersPerKey());`\n\nOni se emitaju prije watermarka (zato su early) jer je njihovo vrijeme u 12:08, a watermark je tek nakon tog \n\nUkratko 1 i 3 su u razlicitim minutama emitani, a 3 je u istoj minuti kao watermark pa je on OnTime \n\n5 je Early \n\n4 i 6 su u istoj minuti pa se zbrajaju i prije watermarka su pa su early (12:08, a watermark je recimo u 12:08:30)",
+      "votes": {
+        "upvoters": [
+          "reygrep",
+          "sekiro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

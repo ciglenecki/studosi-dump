@@ -1,0 +1,91 @@
+{
+  "title": "Troubleshooting nakon Zakrpe 1.0.6",
+  "creator": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+  "slug": "troubleshooting-nakon-zakrpe-106",
+  "tags": [
+    "Službeno"
+  ],
+  "posts": {
+    "19645": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Ljudi prijavljuju probleme odnedavno s učitavanjem stranice. Ti problemi izgleda nisu otklonjeni nakon refresha stranice. Stoga vam redom nudim rješenja, redoslijedom kojim ih možete isprobavati, kako bi otklonili probleme:\n\n- puno osvježavanje stranice\n- gašenje svih trenutnih Studoši kartica, otvaranje u novoj\n- gašenje preglednika i ponovno otvaranje stranice\n- brisanje predgledničkog cachea\n\nProblem će najvjerojatnije riješiti posljednja točka - pretpostavljam da postoje neki stari cacheirani podaci koji rade probleme jer smo maknuli jedno proširenje i stavili drugo, slično, a ta dva proširenja su u konfliktu.\n\nAko svejedno imate i nakon svega ovog probleme, javite u Bugove, pa ću se pozabaviti time.",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "InCogNiTo124",
+          "Johnny_Bravo (a beautiful and unique snowflake)",
+          "McKovalski",
+          "[deleted]",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19738": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "# Novost\n\nPronađen je problem u proširenju za reakcije, sukladno tome sustav realtime ažuriranja je trenutno ugašen. Testiram rješenja lokalno (problem je što se zove funkcija nad objektom koji je nema), kad popravim dignut ću natrag websockete.",
+      "votes": {
+        "upvoters": [
+          "Johnny_Bravo (a beautiful and unique snowflake)",
+          "McKovalski",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19773": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "# Razrješenje\n\nČini mi se da je bug s reakcijama \"popravljen\":\n\n![](assets/2020-05-05/00035.png)\n\npa u skladu s time ponovno omogućavam websockete. Pratim i dalje situaciju...\n\n### EDIT\n\nIpak nije popravljeno ahhh\n\n### EDIT2\n\nDrugi pokušaj (ovaj bi trebao popraviti to bez obzira na sve):\n\n```javascript\nconst reactions = (this.post.reactions() || []).filter(r => (r != null && r.user_id == \"function\"));\n```\n\n### EDIT3\n\nPopravak izaziva drugi bug. Reakcije su tako buggane...\n\n### EDIT4\n\nNema tu pomoći, onemogućio sam reakcijama realtime ažuriranja. Kad skužim kako ih popraviti (ili kad netko od kreatora ovih 2 proširenja odluči popraviti ih) reakcije će imati realtime ažuriranja\n\n### EDIT5\n\nSutra ću se možda pozabaviti svime jer mislim da imam rješenje, kao i dodavanjem uvida tko je reagirao na objave.",
+      "votes": {
+        "upvoters": [
+          "BrownPerson (Bambi)",
+          "Filemon",
+          "Galke",
+          "InCogNiTo124",
+          "McKovalski",
+          "RS7",
+          "ViBorg",
+          "__builtin_popcount (std::popcount)",
+          "ink",
+          "soplagaitas (sopla)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "jarza"
+        ]
+      }
+    },
+    "20093": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "# Novost\n\nPostoji problem s maksimalnom količinom realtime poruka koje proširenje može slati (100). Ovo tu nije baš jednostavno greška za otkloniti (potrebno je napisati konkretni alokacijski algoritam za korisnike, tako da se za svakih 100 korisnika stvori zasebni javni kanal po kojemu se mogu slati novosti), a to, predviđam, neće biti riješeno toliko skoro (moglo bi potrajati od par dana do tjedan-dva). Do daljnjega proširenje za realtime novosti ostaje isključeno.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)",
+          "InCogNiTo124",
+          "NekocBraca",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

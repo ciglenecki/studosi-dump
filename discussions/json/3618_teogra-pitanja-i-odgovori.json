@@ -1,0 +1,218 @@
+{
+  "title": "[TEOGRA] Pitanja i odgovori",
+  "creator": "Emma63194",
+  "slug": "teogra-pitanja-i-odgovori",
+  "tags": [
+    "FER",
+    "Teorija grafova"
+  ],
+  "posts": {
+    "159783": {
+      "poster": "Emma63194",
+      "content": "Zna možda netko objasniti kako riješiti zadatak 1.11.?\n\nTekst zadatka je: Koliko ima različitih jednostavnih grafova s n vrhova i n bridova koji su unaprijed obilježeni?\n\nDošla sam do zaključaka da je riječ o cikličkom grafu i da, koju god kombinaciju oznaka uzmemo za vrhove, moramo podijeliti s n, da se ne ponavljaju.\n\nMoja prva pomisao je bila da je odgovor n!/n jer kao, na svako mjesto možemo prvo staviti n oznaka, pa na iduće n - 1 oznaku, itd. i onda da maknemo ona ponavljanja što bi se desila da idemo u krug, ali rješenje nije ni blizu točnome i čini mi se da je način razmišljanja totalno kriv.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159821": {
+      "poster": "klukas",
+      "content": "@Emma63194#159783 \"N vrhova koji su unaprijed obilježeni\" označava da razlikuješ izomorfne grafove. Zamisli da imaš graf s 4 vrha iz skupa {A, B, C, D}, i znaš da taj graf ima samo 1 brid. Taj brid može povezivati vrhove AB, AC, AD, BC, BD, CD. I tako stoga možeš napraviti ukupno 6 grafova. Tebe ne zanima što su svi grafovi s 4 vrha i 1 bridom izomorfni, zato što ih unaprijed označiš (prebrajanje do izomorfizma je puno puno teži problem).\n\nKad smo objasnili ovo, \"jednostavnih grafova\" dio zadatka označava da grafovi ne smiju imati višestruke bridove ili petlje. Uvjet nije da graf mora biti povezan.\n\nNačin na koji se ovaj zadatak rješava je da nacrtaš N vrhova i označiš ih nekim oznakama. Ti sada biraš koje od tih vrhova ćeš povezati bridovima. Jednostavni graf s N vrhova može imati maksimalno (N povrh 2) bridova, i tad je riječ o potpunom grafu. S obzirom da dani graf ima N bridova, mi zapravo iz skupa od (N povrh 2) bridova biramo N njih, i stoga je rješenje ((N povrh 2) povrh N).",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168541": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "Ako netko rjesava zadatke:\n\n1.79 jel n različitih hamiltonovskih ciklusa i za Kn,n i za Wn?\n\njel zna netko 1.80?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171612": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "nije mi jasno kako se racuna broj razapinjujucih stabala kod opcenitih grafova, npr kod kotaca Wn\n\n(zadatak 18 u stablima poglavlje 4)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171628": {
+      "poster": "Emma63194",
+      "content": "@Cereal_Killer#171612 Ne znam odgovor na pitanje kako generalno tražiti, ali za W5 je ovdje konkretno odgovor (ako to imalo pomaže): https://math.stackexchange.com/questions/1590577/the-number-of-spanning-trees-of-w-4",
+      "votes": {
+        "upvoters": [
+          "Cereal_Killer (vagab0nd0)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173771": {
+      "poster": "Emma63194",
+      "content": "Postoji li neki jednostavan način za nalaženje križnog broja grafa?\n\nMeni je osobno dosta teško pokušati to nacrtati drugačije (ne ide mi baš ta vizualizacija) pa me zanima ima li neki drugi način?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173817": {
+      "poster": "Emma63194",
+      "content": "> @Cereal_Killer#168541 1.79 jel n različitih hamiltonovskih ciklusa i za Kn,n i za Wn?\n\nKn,n ide ovako:\n1. Na 2*n načina biramo vrh od kojeg ćemo početi. \n2. Idući vrh u koji se možemo pomaknuti biramo na n načina.\n3. Nakon toga, idući vrh biramo na (n-1) način (ne smijemo se vraćati).\n4. Idući ponovi biramo na (n - 1) načina.\n5. Idući na (n-2), pa idući na (n-2), itd.\n\nU brojniku ćemo dakle imati 2 * n * n * (n - 1) * (n - 1) * ... * 1 * 1.\n\nTo je u biti 2 * (n!)^2.\n\nTu smo definitivno previše puta prebrojali stvar, no osobno nisam bila sigurna koliko.\n\nMalo sam potražila i našla ovaj odgovor: https://math.stackexchange.com/questions/1549694/the-number-of-hamiltonian-cycles-in-the-complete-bipartite-graph\n\nJa to sebi objašnjavam kao, dijelmo sve s 2n da fiksiramo početni vrh, ali nisam sigurna je li to dobar način prebrojavanja.\n\nZa Wn nisam sigurna. Od kojeg god vrha krenuli, uvijek ćemo dobiti ciklus duljine n. Sada, moramo nekako označiti vrhove u tom ciklusu. \n\nNa koliko načina to možemo napraviti, ne znam. Možda n!? Ali ovdje smo sigurni previše puta prebrojali, no ne znam koliko. \n\nKako si ti došla do n ovdje?\n\n> @Cereal_Killer#168541 jel zna netko 1.80?\n\nZa ovaj drugi zadatak, mislim da kod dokaza hamiltonovosti imamo tri pristupa:\n1. Naći hamiltonski put u zadanom grafu (ako se to može smatrati dokazom?)\n2. Oreov teorem.\n3. Indukcija \n\nPrvo baš ne možemo iskoristiti ovdje, drugo ne možemo samostalno, ali možemo u kombinaciji s 3. Znam započeti indukciju, nisam sigurna doduše kako završiti.\n\nBaza: uzmemo da je n = 3. Kad uvrstimo u formulu, dobijemo da je broj bridova 3. Graf s 3 vrha i 3 brida je običan ciklus, trokut. Svaki brid ciklusa je 2-regularan i to zadovoljava Oreov teorem.\n\nPretpostavka: Vrijedi za n - 1 (valjda?). Onda dobijemo da taj graf ima (n^2 - 5n + 10)/2 bridova (ako nisam nešto zenzula). \n\nKorak: Eh, ne znam sada ovo napraviti. Nekako bi sada trebalo iskoristiti pretpostavku i onda dokazati da vrijedi i za n, ali ne znam kako pa ako netko slučajno vidi, bilo bi super da napiše.",
+      "votes": {
+        "upvoters": [
+          "Cereal_Killer (vagab0nd0)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173862": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "@Emma63194#173817 hvala ti, ima smisla;\n\nmislim da rjesenje nije n za Wn jer sam ja pobrkala duljinu lanca i broj razlicitih",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173869": {
+      "poster": "Emma63194",
+      "content": "@Cereal_Killer#173862 Ma kažem, za taj Wn ne znam ni ja što bih pa me samo zanimala tvoja logika. \n\nBtw, za onaj drugi zadatak, isti je bio u MI 2019., u biti ništa od onog što sam navela, tamo je riješeno pretpostavivši suprotno.",
+      "votes": {
+        "upvoters": [
+          "Cereal_Killer (vagab0nd0)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173906": {
+      "poster": "Lordborne",
+      "content": "> @Cereal_Killer#168541 jel zna netko 1.80?\n\nMislim da je moguće dokazati pomoću Diracovog teorema, jer je [imath]n \\geq 3[/imath].\n\nDiracov teorem glasi:\n\n> ako za svaki vrh [imath]v[/imath] vrijedi [imath]deg(v) \\geq \\frac{n}{2}[/imath], onda je graf hamiltonovski.\n\nU grafu iz zadatka imamo zadan broj bridova, te prema lemi o rukovanju vrijedi:\n\n[math]\n2 \\frac{n^2-3n+6}{2} = \\sum_{i=1}^{n} deg(v_i)\n[/math]\n\nIz Diracovog teorema, mora vrijediti:\n\n[math]\n\\sum_{i=1}^{n} deg(v_i) \\geq n \\frac{n}{2}\n[/math]\n\nSada uvrstimo gornju sumu u tu nejednakost i vidimo da nejednakost stvarno vrijedi.\n\nŠto se tiče nehamiltonovskog grafa, ako u vrstimo u drugi ponuđeni izraz za broj bridova [imath]n=3[/imath], dobijemo da je broj bridova u grafu [imath]2[/imath], a to je zapravo onda lanac.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173935": {
+      "poster": "Lordborne",
+      "content": "> @Cereal_Killer#168541 1.79 jel n različitih hamiltonovskih ciklusa i za Kn,n i za Wn?\n\nIskreno, nisam siguran. Ja mislim da je za kotač [imath]n(n - 1)[/imath].\n\nAko imamo neki kotač od [imath]n[/imath] označenih vrhova, postoji samo jedan oblik hamiltonovog ciklusa koji ja vidim u njemu, kao na slici. Imamo [imath]n[/imath] točaka iz kojih možemo početi, a cijeli taj oblik možemo zarotirati [imath]n - 1[/imath] puta, pa iz toga dobijem [imath]n(n - 1)[/imath].\n\n![](assets/2021-04-19/00023.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "174066": {
+      "poster": "Emma63194",
+      "content": "Je li nužan uvjet za skoro eulerovski graf da je povezan, a dovoljan da ima točno dva vrha neparnog stupnja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203442": {
+      "poster": "Luka14 (Kekec)",
+      "content": "Je li rekao prof na predavanju kako ce izgledat ispitivanje programskih zadataka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203479": {
+      "poster": "eleven",
+      "content": "Da jedan test primjer za prvi i jedan za drugi zadatak. Pozivete ga kad ste gotovi samo da pokazete ispis i to je to. Nista drugo ne pita i ne prolazi kroz kod.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207221": {
+      "poster": "Emma63194",
+      "content": "Zašto je rezultat ovdje 24?\n\n>! ![](assets/2021-06-14/00048.png)\n\n\nMoja prva ideja je bila da je 2 * 2 * 2 * 3 * 2, ali jedna dvojka mi je previše i ne vidim zašto.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

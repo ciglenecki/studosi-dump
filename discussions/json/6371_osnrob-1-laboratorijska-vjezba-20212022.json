@@ -1,0 +1,487 @@
+{
+  "title": "[OSNROB] 1. laboratorijska vježba - 2021/2022",
+  "creator": "bodNaUvidima",
+  "slug": "osnrob-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Osnove robotike",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "267456": {
+      "poster": "bodNaUvidima",
+      "content": "Ako itko uopće pokušava rješiti zadatke sa inverznom kinematikom, u zbirci je pokazan postupak kad je zakočen zglob q5, što uvelike olakšava matematiku za inverzno pronaći zakrete zglobova (kao što je lik što je sastavio labos i napisao na Teamse).\n\nSa zakočenim q6 mi se čini skoro nemoguće izraziti zakrete pa me zanima je li netko uspio?",
+      "votes": {
+        "upvoters": [
+          "ArthasMenethil",
+          "Bobinator",
+          "Diego",
+          "Drmolirius",
+          "Kuhar",
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267762": {
+      "poster": "Reznox",
+      "content": "Ima netko DH parametre? Nikako da ispadnu dobri..",
+      "votes": {
+        "upvoters": [
+          "Viks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267949": {
+      "poster": "Kuhar",
+      "content": "Jel nekom radi ovaj vizualizoator? kako to da ukljucim. U jednom dijelu pise da samo treba pokrenut visualizer.py a onda dolje da uz pomoc nekih trenutnih poruka i funkcije za direktnu kinematiku treba iscratat kretanje.. wtf",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267979": {
+      "poster": "Bica",
+      "content": "Jel itko moze rec kako je uspio direktnu srediti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268003": {
+      "poster": "lincthesinc17",
+      "content": "jel labos obavezan za predat ili samo necemo dobit bodove? koliko uopce nosi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268012": {
+      "poster": "Daho_Cro",
+      "content": "@\"Kuhar\"#p267949 nisam ni ja uspio. Koliko sam vidio u onom gazebo.launch fileu ima naredba za pokretanje tog visualizera, ali je zakomentirana. Kada ju odkomentiram i pokrenem launch file i dalje mi ne iscrtava kada pokrenem robotTest.py. Ne znam što napraviti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268014": {
+      "poster": "Daho_Cro",
+      "content": "@\"lincthesinc17\"#p268003 ako se dobro sjećam sa predavanja Orsag je rekao da je obavezan za predati. Labosi nose 10 bodova. Nije rekao koliko nosi koji labos, bit će još jedan nakon ovoga.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268019": {
+      "poster": "Reznox",
+      "content": "@\"Daho_Cro\"#p268012 Da li ti izbaci kakav error ili uopce nista ne izbacuje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268020": {
+      "poster": "Reznox",
+      "content": "Ako netko ima problem sa vizualizatorom da ga ne želi runnati zbog toga jer \"ne moze ga naci\" (ovo takoder vrijedi za robotTest.py) napravite ove dvi komande:\n\n`cd catkin_ws/src/kuka_kr10_gazebo/scripts`\n\n`chmod +x ime_python_filea.py`\n\nedit:\n\nA za pokretanje nakon provedenih gori komandi ide:\n\n`rosrun kuka_kr10_gazebo visualizer.py`",
+      "votes": {
+        "upvoters": [
+          "Kuhar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268030": {
+      "poster": "Kuhar",
+      "content": "@\"Bica\"#p267979 \n\npa ja sam u matlabu izmnozio matrice i dobio vektor konfiguracije alata kojeg sam samo prepisao u ros i dobio 6 točki kao izlaz i to je to. Valjda je točno...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268036": {
+      "poster": "Daho_Cro",
+      "content": "@\"Reznox\"#p268019 meni nista ne izbaci, samo ne crta nista haha a trebao bi. Ako sam dobro upucen kad pokrenem taj launch file u kojem je naredba za tu vizualizaciju on bi automatski trebao crtati putanju svaki put kad se robot pomice no to mi se ne desava.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268053": {
+      "poster": "Daho_Cro",
+      "content": "@\"Reznox\"#p268020 napravim sve što si rekao i dalje mi ništa ne iscrtava. Treba li možda još nešto napraviti ili možda podesiti u Gazebo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268057": {
+      "poster": "bodNaUvidima",
+      "content": "@\"Daho_Cro\"#p268053 putanja ti se isrcrtava u RVizu, ne u gazebu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268058": {
+      "poster": "Bica",
+      "content": "@\"Kuhar\"#p268030 Jesi usporedio to rjesenje i gazebo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268060": {
+      "poster": "Kuhar",
+      "content": "@\"Bica\"#p268058 dap i podudara mi se, samo sto sam krivo slozio DH tablicu pa krivo izbacuje hahah ali budem to sad sredio pa vidio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268061": {
+      "poster": "Daho_Cro",
+      "content": "@\"bodNaUvidima\"#p268057 kako da otvorim rviz?\n\nEDIT: nevermind, skužio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268062": {
+      "poster": "bodNaUvidima",
+      "content": "@\"Bica\"#p267979 ako ti se neda raditi DH, uzmes sa wikipedie matrice rotacije po X Y Z, nadjes vektore pomaka, stavis to u onu 4x4 H matricu i izmnozis ih sve sa numpy, može se dobiti broj identičan (eventualno neki rounding error na petoj sestoj decimali) kao u gazebu.\n\nZa naći roll pitch yaw googlaj \"rotation matrix to roll pitch yaw\", to su samo neke analiticke jednadzbe.\n\nUdaljenosti zglobova također moraš očitat direkt iz gazeba, one dimenzije su za IRL robota.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268063": {
+      "poster": "bodNaUvidima",
+      "content": "@\"Daho_Cro\"#p268061 ne bih znao, ne radim preko simulacije.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268084": {
+      "poster": "Bica",
+      "content": "@\"Kuhar\"#p268060 mozes pliz podijelit DH tablicu, to mene muci. Hvala 😃",
+      "votes": {
+        "upvoters": [
+          "Viks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268179": {
+      "poster": "Kuhar",
+      "content": "> @\"bodNaUvidima\"#p268062 ako ti se neda raditi DH, uzmes sa wikipedie matrice rotacije po X Y Z, nadjes vektore pomaka, stavis to u onu 4×4 H matricu i izmnozis ih sve sa numpy, može se dobiti broj identičan (eventualno neki rounding error na petoj sestoj decimali) kao u gazebu.\n> \n> Za naći roll pitch yaw googlaj “rotation matrix to roll pitch yaw”, to su samo neke analiticke jednadzbe.\n> \n> Udaljenosti zglobova također moraš očitat direkt iz gazeba, one dimenzije su za IRL robota.\n\n@\"Bica\"#p268084 mislim da sam te ja malo krivo shvatio haha, mislim da bi mogao poslusat kolegu iznad jer meni moja DH tablica daje dosta odstupanja a neznam zasto. Ako uspijem sredit da valja podijelit cu :).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268844": {
+      "poster": "Kuhar",
+      "content": "Jel bi se ovaj taylor trebao rijesavat preko neke rekurzije ili sta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268851": {
+      "poster": "snorlaxx (Jon Know)",
+      "content": "jel netko voljan sherati labos kad ga napravi? :)",
+      "votes": {
+        "upvoters": [
+          "Bobinator",
+          "verratti (Rom Jova (Željezo/bakar))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268853": {
+      "poster": "Viks",
+      "content": "@\"Kuhar\"#p268844 ja pokusavam rekurzijom, cini se jednostavnije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268856": {
+      "poster": "Kuhar",
+      "content": "@\"Viks\"#p268853 \n\nJa sam probavao ali cini mi se da funkcija ima pre malo ulaza, jer ako se spustim rekurzivno u to 'stablo' neznam dokle moram van, odnosno koji je interval izmedju točki, da ga ne predjem. Na neki način moram znat početne točke od kojih sam krenuo. Možda ja samo ipak neznam rekurziju hahaha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268860": {
+      "poster": "Viks",
+      "content": "@\"Kuhar\"#p268856 nisan sigurna da san te skroz svatila, pa cu pokusat objasnit kako sam ja to logicki krenila, sad mi u kodu stvara problem kako spremat tocke u matricu bez da se ponavljaju\n\nno u principu kad obavis sve i dodes do provjere uvjeta, ako uvjet prode (tj manje je od tolerancije) - super gotovo, a ako ne prode - pozoves funkciju 2 puta: jednom za 'livo' od medutocke (w1 - wM) i jednom za desno (wM-w2)\n\nna ovaj nacin pokrijes cilo stablo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268862": {
+      "poster": "Kuhar",
+      "content": "@\"Viks\"#p268860 mislim da mozes np.unique() pa bi ti on trebao izbacit sve vrijednosti koje se ponavljaju. a sto se tice principa tak sam i ja napravio samo dobijem dosta tocaka hahaha pa sam mislio da mi je krivo. Kako si izracunavala normu? To jest onaj kriterij da je ispod 0.01?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268863": {
+      "poster": "Viks",
+      "content": "@\"Kuhar\"#p268862 u najs, probat cu s tim, hvala ti\n\nwell, nisam jos bas tocke dobila, iz nekog razloga ne izlazi iz rekurzije \n\nprvo sam probala np.max(abs(w_m - w_M)) jer sam tako vidila negdi u starim materijalima (iako je to u matlabu, ne bi trebalo bit neke razlike), ali cini mi se da mi to izaziva problem\n\nsad mi je ideja probati np.dot(wm-wM)",
+      "votes": {
+        "upvoters": [
+          "Kuhar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268959": {
+      "poster": "Kuhar",
+      "content": "Evo ako neko ima problema s taylorom. Inace neke stvari ne radi kao recimo zbrajanje pa treba koristit np.add i tako neke sitnice ( la.norm isto meni nije radio, pa treba drugacije slozit ). Ali rekurzija i izlaz da su sve točke lijepo u istoj matrici bi trebalo radit. Razlika je sto ova funkcija vraca bas točke, a za pokretanje robota trebaju zakreti zglobova. U pripremi pise da mora vratit točke pa zato i vrača točke. Kasnije ce trebat s funkcijom def_ik to pretvorit u zakrete zglobova\n\n\n```\nimport numpy.linalg as la\n\ndef taylor_swift(self, w0, w1, q0, tol=0.01):\n\n    q0 = self.get_ik(w0,q0)\n    q1 = self.get_ik(w1,q0)\n    q_m = (q0+q1)/2.0\n    w_m = self.get_dk(q_m)\n    w_M = (w0+w1)/2.0\n    \n    # L2 norma \n    if la.norm(w_m, w_M) <= tol:\n        return np.array([w0, w1])  \n    else:\n        left = taylor_swift(w0, w_M)  \n        right = taylor_swift(w_M, w1)  \n        return np.vstack((left, right))  \n\n```",
+      "votes": {
+        "upvoters": [
+          "Bobinator",
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268961": {
+      "poster": "Kuhar",
+      "content": "@\"Bica\"#p268084 \n\n@\"Reznox\"#p267762 \n\nKolege vec ste vjv napravili direktnu ali nek se nađe. Za ono sto sam ja testirao meni vraca dobre točke:\n\n![](assets/2022-01-09/00004.png)",
+      "votes": {
+        "upvoters": [
+          "Bobinator",
+          "Viks",
+          "snorlaxx (Jon Know)",
+          "spiriney"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269015": {
+      "poster": "snorlaxx (Jon Know)",
+      "content": "Jel radi jos netko u The Construct-u? Imam problema na samom pocetku, uopce ne mogu promjeniti source, ne prihvaca mi one naredbe iz uputa. Jel sam trebala jos neki korak napraviti osim dodati projekt i pokrenuti ga?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269086": {
+      "poster": "Kuhar",
+      "content": "Ak se neko muci sa plotanjem : \n\nja sam to napravio u 3d-u u matlabu, sad neznam jel to tako treba : \n\n```\ndio1 = importdata('poze_point.txt');\nSpill=dio1.data;\ndio2 = importdata('poze_taylor.txt');\nSpill2=dio2.data;\n\nX = Spill(:,1);\nY = Spill(:,2);\nZ = Spill(:,3);\n\nplot3(X,Y,Z,'r')\nxlabel('X[m]');\nylabel('Y[m]');\nzlabel('Z[m]');\n\nhold on\n\nX2 = Spill2(:,1);\nY2 = Spill2(:,2);\nZ2 = Spill2(:,3);\n\nplot3(X2,Y2,Z2,'b')\n\nhold on\n\nX3 = matrica(:,1);\nY3 = matrica(:,2);\nZ3 = matrica(:,3);\n\nplot3(X3,Y3,Z3,'g')\n\ngrid on\n\n\n```\n\nmatrica je samo matrica s točkama kroz koje prolazi : \n\n![](assets/2022-01-09/00020.png)",
+      "votes": {
+        "upvoters": [
+          "Upforpslone",
+          "Viks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269114": {
+      "poster": "Kuhar",
+      "content": "@\"Kuhar\"#p268959 \n\nova funckija ima EPIC fail. dodaje u ifu tocku u sredinu (w_M), sto nebi smjela ( treba samo w0 iw1 ), tako da PRIPAZITE na to.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269119": {
+      "poster": "Kuhar",
+      "content": "@\"Kuhar\"#p269114 i u ifu tol mora biti <= :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270796": {
+      "poster": "Bobinator",
+      "content": "ima netko voljan podjelit svoj funkcionalni kod prve vjezbe nama E-ovskim smrtnicima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Daho_Cro"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

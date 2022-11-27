@@ -1,0 +1,1088 @@
+{
+  "title": "[OPESUS] 1. laboratorijska vježba - 2019/2020",
+  "creator": "laranotreallycroft",
+  "slug": "opesus-1-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Operacijski sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "1446": {
+      "poster": "laranotreallycroft",
+      "content": "Rok za predaju je 30.3.2020.\n\nU zadatku 1a signali, program mi svaki put kad runnam izbacuje druge proste brojeve i ne one koji su navedeni u primjeru, jel to ok? U uputi ne piše ništa vezano za to, ali i stara rješenja sa materijala imaju isti taj problem.\n\nTakođer, zna li netko kako namjestiti VSCode da za SIGINT samo pauzira, a ne potpuno izlazi iz programa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Marko"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1450": {
+      "poster": "Extended_mix",
+      "content": "VSCode? Ja radim preko virtualke u terminalu i to sam rijesio sa sigset(SIGINT, postavi_pauzu)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1456": {
+      "poster": "laranotreallycroft",
+      "content": "@Extended_mix#1450   ma preglednije mi je VSCode hahah  nije kod problem, nego do samog VSC. CTRL+Ž radi kako i treba, ali CTRL+C izlazi iz programa, u terminalu skroz normalno to radi.",
+      "votes": {
+        "upvoters": [
+          "Extended_mix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1482": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @laranotreallycroft#1446 U zadatku 1a signali, program mi svaki put kad runnam izbacuje druge proste brojeve i ne one koji su navedeni u primjeru, jel to ok?\n\nDa, jer je to nedeterministički proces, čak i da imaš čip identičan njihovom na razini molekula, još uvijek ti nije zagarantirano da ćeš dobiti iste brojeve zbog međudjelovanja drugih komponenti.\n\n> @laranotreallycroft#1446 Također, zna li netko kako namjestiti VSCode da za SIGINT samo pauzira, a ne potpuno izlazi iz programa?\n\nSigset, ali moguće je da VSCov terminal ne sluša sigset nego ima hardkodirane postupke. Vježbu će ionako izvoditi u normalnom terminalu, a ne u VSC-u.",
+      "votes": {
+        "upvoters": [
+          "Hrvoje (Hrvoje45)",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1741": {
+      "poster": "Venki",
+      "content": "Program mi za signal ^C ne ponavlja trenutni prosti broj nego tek broj 2 iteracije kasnije. Jel ima netko ideju do cega bi moglo biti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1752": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Venki#1741 Opet, imaš nedeterministički proces, ne možeš očekivati da ćeš imati iste rezultate nego koji ti dođe, osim ako si u kodu negdje eksplicitno definirao da nakon signala budu izračunate još 2 iteracije prostih brojeva pa da se tek tad pokažu (al vjerujem da je to teže složiti od ostatka labosa), ali za to bi valjda znao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2254": {
+      "poster": "pingvinka",
+      "content": "Kad stisnem Ctrl+Ž program se prekine (kako i treba), ali ne ispiše mi se još jedan posljednji prosti broj (zapravo, ne ispiše se baš ništa što se nalazi u funkciji za obradu SIGTERM signala nego se samo prekine program)... Zašto se to događa i kako da to popravim?",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2260": {
+      "poster": "Vonj",
+      "content": "@pingvinka#2254  Mislim da sa CTRL + Ž programu šalješ signal SIGQUIT (ako je vjerovati napisanome u uputama), a SIGTERM signal se treba pisati u konzolu. Zato jer u programu nemaš definirano ponašanje za signal SIGQUIT, onda ti on prekine program, ali se ne dogodi ono da se ispiše zadnji prosti broj.",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "pingvinka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2367": {
+      "poster": "AK10 (endyyyy)",
+      "content": "![](assets/2020-03-23/00032.png)\n\njel mogu izignorirati ova upozorenja?\n\n2 zad",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2382": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@AK10#2367 Ak radi da, ali ovo ti kompajler javlja jer još nije vidio prototip ili definiciju funkcije (a preko includea je svakako trebao!)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2403": {
+      "poster": "Suki7",
+      "content": "@AK10#2367  mislim da trebas     #include <unistd.h>",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2513": {
+      "poster": "error",
+      "content": "Yo, smijemo li koristiti njihov kod/obrazac ili se to smatra krađom koda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ink"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2518": {
+      "poster": "krle",
+      "content": "@error#2513 \n\nNjihov kod je samo kostur tako da smijes vjerojatno.",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2524": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "Ako netko zeli testirati svoj kod drugog zadatka prema onom \"sluzbenom ispisu\" a zeli sacuvat 5min zivota evo testni kod za to. Mislim da je meni velika vecina ispisa bila identicna kao kod njih. U kodu samo morate unijeti imena signala koje ste odabrali za S1, S2, S3 i S4. Naravno ne mora znacit da ce se svima isto izvesti, ali kazem meni je vecina bila dobra.\n>! ```\n#include<stdio.h>\n#include<signal.h>\n#include<stdlib.h>\n#include<time.h>\nint pid = 0;\nvoid prekidna_rutina(int sig){\n        kill(pid, SIGKILL);\n        exit(0);\n}\nint main(int argc, char *argv[]){\n    pid = atoi(argv[1]);\n    sigset(SIGINT, prekidna_rutina);\n\tkill(pid, ...);\t\t//S1\n\tfor(int i = 1; i <= 4; i++)\n\t\tsleep(1);\t\t\n\tkill(pid, ...);\t//S3\n\tfor(int i = 1; i<= 3; i++)\n\t\tsleep(1);\n\tkill(pid, ...);\t//S3\n\tfor(int i = 1; i <= 2; i++)\n\t\tsleep(1);\nkill(pid, ...);\t//S4\n    for(int i = 1; i<= 4; i++)\n        sleep(1);\n    kill(pid, ...);\t//S4\n    for(int i = 1; i <= 3; i++)\n        sleep(1);\n\tkill(pid, ...);\t//S3\n    for(int i = 1; i<= 2; i++)\n        sleep(1);\n    kill(pid, ...); //S2\n    for(int i = 1; i <= 5; i++)\n        sleep(1);\n\tkill(pid, SIGINT);\t//S5\n    for(int i = 1; i<= 2; i++)\n        sleep(1);\n    kill(pid, ...);\t//S3\n    for(int i = 1; i <= 4; i++)\n        sleep(1);\n\tkill(pid, ...); //S3\n\tfor(int i = 1; i <=4; i++)\n\t\tsleep(1);\n\tkill(pid, ...);\t//S2\n        return 0;\n}\n```",
+      "votes": {
+        "upvoters": [
+          "Goliathus",
+          "HARAmara (decko_sa_balkana)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2542": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "Jesu se na fer2 na os-u labosi online predavali ili je bilo potrebno samo sa kodom doc na labos ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2551": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "Kako u 1. zadatku namjestit da SIGALRM poziva periodicki ispis svakih 5s umjesto 0,5s kako je zadano u kodu s onim itimer. Kad onaj t.it_interval.tv_usec promijenim da mu nadodam jos jednu 0 onda mi program ne radi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2553": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @SonGoku#2542 Jesu se na fer2 na os-u labosi online predavali\n\nda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2556": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Michael#2551 Imaš i varijablu koja određuje trajanje u sekundama :D\n\nGeneralno je pravilo da barem jedna varijabla u intervalnom ili početnom dijelu ima nenul vrijednost (ako su obje nul ne pozivaju se signali uopće). Također, broj mikrosekundi očito **ne može** biti veći od 999999, a za limitacije sekunda nisam siguran ali začudio bih se da smiješ upisati nešto veće od [imath] 2^{32} - 1 [/imath]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2894": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "Jesam li ja retardiran što po njihovim uputama ne znam naći gdje se predaje labos?\n\nMože li mi netko pomoći?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ink"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2896": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@__builtin_popcount#2894\n\nČini mi se da sam našao pod\n\nOperacijski sustavi > Komponente kolegija > Domaće zadaće > 1. - DZ1\n\n...jer zašto bi bilo pod laboratorijskim vježbama?",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Fortius",
+          "Galke",
+          "JeleeII",
+          "ink",
+          "lucylu",
+          "soplagaitas (sopla)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3062": {
+      "poster": "JBQ",
+      "content": "Moze netko rec sta mu se dogodi u 2. zadatku kad u generator prekida stisne ctrl c? Meni u tom trenutku stane i obrada, tj ne obrade mi se prekidi do kraja, njima u primjeru koliko vidim se prekidi obrade i vrati se u gp.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3079": {
+      "poster": "Hrvoje (Hrvoje45)",
+      "content": "@JBQ#3062 \n\n![](assets/2020-03-25/00032.png)\n\nnjihov primjer je namješten",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3106": {
+      "poster": "tomekbeli420",
+      "content": "@Michael#2551 \n```c\n/* definiranje periodičkog slanja signala */\n\t/* prvi puta nakon: */\n\tt.it_value.tv_sec = 5;\n\tt.it_value.tv_usec = 0;\n\t/* nakon prvog puta, periodicki sa periodom: */\n\tt.it_interval.tv_sec = 5;\n\tt.it_interval.tv_usec = 0;\n```",
+      "votes": {
+        "upvoters": [
+          "Michael (Michael Scarn)",
+          "djeno"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3199": {
+      "poster": "SuperSjajan3",
+      "content": "A nigdje nije definirano koliko mora trajat taj period, moze biti proizvoljan ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3218": {
+      "poster": "HARAmara (decko_sa_balkana)",
+      "content": "Jel se može ovaj labosi riješiti bez virtualne mašine? Ne mogu je nikako uspješno skinuti, hvala.",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Krisle"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3227": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@HARAmara#3218 Ako misliš dualbootom, svakako.\n\nAko misliš na Windowsu, trebao bi proučiti Windowsov API za signale, ali može se (kad sam ja prije 2. godine polagao je već profesor Jelenković rekao da se može)",
+      "votes": {
+        "upvoters": [
+          "HARAmara (decko_sa_balkana)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3287": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "koliko se gledaju printf-ovi na plagijatu, tj. jel ispis mora bit isti kao i u pripremi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3351": {
+      "poster": "Suki7",
+      "content": "@SuperSjajan3#3199 može proizvoljno\n\n@tata#3287 nije bitan ispis, samo ideja korištenja signala je bitna (potvrdio prof. Golub)",
+      "votes": {
+        "upvoters": [
+          "JeleeII",
+          "SuperSjajan3",
+          "tata (NISAM ASISTENT)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3412": {
+      "poster": "JeleeII",
+      "content": "Zna li netko zašto mi u Ubuntu kada stisnem ctrl+ž ne registrira kao signal? Ni u njihovom primjeru za vjezbu ni u 1. zadatku labosa. SIGQUIT mogu samo preko drugog terminala poslat i onda tek radi. Ako je netko imao slican problem bilo bi korisno da mi javi kako ga popraviti haha\n\nTakođer ako sam napisala 1. zadatak signali.c ali prilikom prevođenja se mora dodati onaj -lm je li to pogreška ili mogu tako predati i samo im u napomenu napisati da se prilikom prevođenja treba linkat s -lm? (mislim na gcc signali.c -o neko_ime -lm)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3418": {
+      "poster": "[deleted]",
+      "content": "@JeleeII#3412 koji terminal emulator koristis? mozda mozes ovako slati signale\n\n![](assets/2020-03-26/00027.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3420": {
+      "poster": "SuperSjajan3",
+      "content": "@JeleeII#3412 Za ovaj prvi dio ti ne znam odgovor, ali za ovaj -lm mislim da je to ok zato što je i profesor Jelenkovic prilikom pokretanja svog programa s prostim brojevima koristio -lm. Mozes to vidjet u videu upute za lab1, pred kraj pokrene program prosti_brojevi.",
+      "votes": {
+        "upvoters": [
+          "JeleeII"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3428": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "@JeleeII#3412 Nije greska sto se -lm mora nadodat jer s tim ukljucujes math.h ili ti inace nece znat sta je npr. sqrt",
+      "votes": {
+        "upvoters": [
+          "JeleeII"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3447": {
+      "poster": "Valentino",
+      "content": "@JeleeII#3412 Pretpostavljam da si se odlučila za ovu opciju: https://docs.microsoft.com/en-us/windows/wsl/install-win10 Imala sam isti problem i nikako ga nisam uspjela riješiti, preporučam ti da koristiš ipak http://www.zemris.fer.hr/~leonardo/os/vmware/",
+      "votes": {
+        "upvoters": [
+          "JeleeII",
+          "[deleted]",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3477": {
+      "poster": "Amariska",
+      "content": "@JBQ#3062 ovaj njihov prvi ctrl c je stisnut u terminalu gdje je obrada, pa se zato samo nastavi, a kad posaljes generatoru SIGINT, on posalje SIGKILL obradi. Kao njima mi je\n\n![](assets/2020-03-26/00039.png)",
+      "votes": {
+        "upvoters": [
+          "JBQ"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3480": {
+      "poster": "Suki7",
+      "content": "@JeleeII#3412 mislim da tako i treba radit za Ctrl+ž , nije to greška valjda",
+      "votes": {
+        "upvoters": [
+          "JeleeII"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3960": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "![](assets/2020-03-27/00017.png)\n\nJel ovo ispravan ispis, i jel prvo ctrl \\ ide na generator prekida pa onda tek na obradu o.O",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4046": {
+      "poster": "Extended_mix",
+      "content": "@SonGoku#3960 Kad generatoru posaljes SIGINT (ctr C) onda on treba sa kill(pid,SIGKILL) poslati SIGKILL obradi i tako zaustavljas oba, ako sam ja dobro skuzio",
+      "votes": {
+        "upvoters": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4399": {
+      "poster": "itsdend",
+      "content": "Jesam ja njih dobro skuzio, znaci uploadamo samo jedan zip u kojem se nalaze sva 3 zadatka?",
+      "votes": {
+        "upvoters": [
+          "Extended_mix",
+          "JeleeII",
+          "awi (đusi)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4479": {
+      "poster": "ana (anci)",
+      "content": "U drugom zadatku, jel program treba pamtiti sve prekide ili ako ih dode vise istih a da se nisu jos obradili samo prvi? Svuda gdje smo do sada to radili je bilo samo prvi ali njima u pripremi u primjeru ispisa pamti sve, i ispod primjera ispisa pise da se moze uociti da program pamti vise prekida iste razine. Kako bi onda mi to trebali implementirati?",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4482": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@ana#4479\n\nUmjesto da zastavice (polje OZNAKA_CEKANJA) postavljaš na 1 ili 0, inkrementiraš ih ili dekerementiraš.\n\nAko se ne varam, onaj njihov kod za prekidnu rutinu tada postaje\n\n```C\nprekidna_rutina  /* pokreće se pojavom signala uz zabranu daljih prekida */\n{\n   odredi uzrok prekida, tj. indeks i;\n   OZNAKA_ČEKANJA[i]++;\n   ponavljaj {\n      /* odredi signal najveceg prioriteta koji ceka na obradu */\n      x = 0;\n      za j = TEKUćI_PRIORITET + 1 do N radi {\n         ako je (OZNAKA_ČEKANJA[j]<>0) tada {\n            x = j;\n         }\n      }\n      /* ako postoji signal koji ceka i prioritetniji je od trenutnog posla, idi u obradu */\n      ako je (x > 0) tada {\n         OZNAKA_ČEKANJA[x]--;\n         PRIORITET[x] = TEKUćI_PRIORITET;\n         TEKUćI_PRIORITET = x;\n         omogući prekidanje;\n         obrada_prekida(x);\n         zabrani prekidanje;\n         TEKUćI_PRIORITET = PRIORITET[x];\n      }\n   } dok je (x > 0);\n} \n```",
+      "votes": {
+        "upvoters": [
+          "ana (anci)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4483": {
+      "poster": "aaa8 (Gerti)",
+      "content": "@itsdend#4399 \n\npod tri zadatka mislis 1a ,1b ( koji ima dva programa) ili ja nešto zujim?",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4484": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@aaa8#4483 prosti brojevi, a iz 2. zadatka obrada i generiranje prekida koji su u zasebnim fileovima, pa 3 sveukupno",
+      "votes": {
+        "upvoters": [
+          "aaa8 (Gerti)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4530": {
+      "poster": "SpekuraDebela (Šćap)",
+      "content": "@Suki7#3351 Znaci oni rucno to pregledavaju ? \n\nNe ide kroz neki testi program ko tipa UTR?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4531": {
+      "poster": "Fortius",
+      "content": "@__builtin_popcount#4482 jel greska ako smo ostavili kao oni to?",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4536": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Fortius#4531\n\nDisclaimer: Ja sam samo student i nemam nikakvog autoriteta reći što je greška, a što nije, ali mogu ponuditi svoje tumačenje upute (koja je po meni poprilično loše napisana)\n\nNa dnu [upute](http://www.zemris.fer.hr/predmeti/os/pripreme/z1b.html) piše:\n> U ispisu se mogu uočiti tri stvari.\n\n> _(...)_\n\n> I treće, u primjeru ispisa program pamti više prekida iste razine (OZNAKA\\_ČEKANJA\\[i] se ne postavlja u 1 kao što je navedeno u pseudokodu, već se povećava za 1). \n\nPo ovome bih zaključio da očekuju da naši programi podržavaju više prekida iste razine.",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4538": {
+      "poster": "[deleted]",
+      "content": "@__builtin_popcount#4482 zasto bi to radio? u njihovom pseudokodu je napravljeno da se postavlja na 1/0, u ispisu u kojem inkrementiraju je i eksplicitno napomenuto da rade to umjesto postavljanja na 1/0 bas zato jer se to razlikuje od zadatka kojeg smo dobili?",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": [
+          "ink"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4540": {
+      "poster": "Fortius",
+      "content": "@Itachi#4538 iskreno se nadam da onda priznaju oba dva slucaja",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4541": {
+      "poster": "[deleted]",
+      "content": "@Fortius#4540 poslao sam mail sad i pitao, valjda ce ti priznat ako si vec predao, ja bi slao mail da ne priznaju",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4544": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Itachi#4538\n\nJa sam pripremu protumačio kao da to treba. Iznad ispisa u kojem inkrementiraju piše \"Tada bi se u prvoj ljusci trebalo ispisivati...\", ovaj _trebalo_ sam shvatio kao da moramo inkrementirati.\n\nSasvim je moguće da to ne treba raditi i da sam ja to sve krivo shvatio.",
+      "votes": {
+        "upvoters": [
+          "Fortius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4549": {
+      "poster": "pohanyx (2Đman)",
+      "content": "jel zna neko zas mi kaze da moram stavit sigwait umjesto sigset?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4550": {
+      "poster": "Fortius",
+      "content": "@__builtin_popcount#4544 mislim da se ama bas svi mozemo slozit da je priprema ocajno napisana ali nema veze nismo ni prvi ni zadnji koji imaju istu pripremu haha",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4553": {
+      "poster": "[deleted]",
+      "content": "@Fortius#4550 za jedan mali kek pogledaj \"pripremu\" za sljedeci labos",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ink"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Fortius",
+          "MrDREDD",
+          "__builtin_popcount (std::popcount)",
+          "turunturu (Cement)"
+        ]
+      }
+    },
+    "4554": {
+      "poster": "Fortius",
+      "content": "@Itachi#4553 jesam nazalost, no comment",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4594": {
+      "poster": "[deleted]",
+      "content": "@Itachi#4541 jos uvijek nema odgovora na mail. nadam se da ce odgovorit veceras da se ne moramo sutra rano ustajat samo za predat labos...",
+      "votes": {
+        "upvoters": [
+          "Fortius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4617": {
+      "poster": "MrDREDD",
+      "content": "Jel postoji neki specificni naziv koji moramo dati zip arhivi kada ju predajemo, ili ju nazovemo po zelji?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4622": {
+      "poster": "[deleted]",
+      "content": "odgovorili su na mail, oba rjesenja su u redu. @Fortius @__builtin_popcount",
+      "votes": {
+        "upvoters": [
+          "AnamarijaM (MA)",
+          "Fortius",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4646": {
+      "poster": "ruza0001 (rozy)",
+      "content": "Do kada je rok za predaju 30.3?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4648": {
+      "poster": "Snorlax (Bacva)",
+      "content": "@ruza0001#4646 Do 15h",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4655": {
+      "poster": "turunturu (Cement)",
+      "content": "@ruza0001#4646 Mozes i kasnije, samo ti se onda max broj bodova smanjuje kak pise u tablici, ne preporucam konzumiranje kasnije predaje labosa",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4677": {
+      "poster": "Avendo",
+      "content": "Što su ove domaće zadaće pod komponente kolegija na ferku za os ?\n\nMsm piše da tu predajemo kodove od labosa, nekuzim jel se to mora ili ne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4681": {
+      "poster": "lucylu",
+      "content": "![](assets/2020-03-29/00032.png)\n\njesu ova upozorenja za 1. zad prihvatljiva?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4684": {
+      "poster": "[deleted]",
+      "content": "@lucylu#4681 upozorenja nisu pogreske!!",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4690": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@lucylu#4681\n\nOvo je barem upozorenje kojeg se lako riješiti.\n\nsetPause u tvom kodu vraća int, a sigset očekuje da će joj se dati funkcija koja vraća void.\n\nPretpostavljam da u setPause nemaš nikakvih returnova. Onda je za maknuti warning dovoljno `int setPause(int sig)`, promijeniti u `void setPause(int sig)`.",
+      "votes": {
+        "upvoters": [
+          "ink",
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4693": {
+      "poster": "Krisle",
+      "content": "Jel se treba ful pazit na uvlacenje, razmake i formatiranje koda?\n\nJer moguce da nisam neke stvari po standardu onako fino..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4727": {
+      "poster": "Suki7",
+      "content": "@SpekuraDebela#4530  idk 🤷🏽",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4729": {
+      "poster": "Njet",
+      "content": "@Krisle#4693 Piše da treba prema ovim uputama napisati https://www.kernel.org/doc/html/v4.10/process/coding-style.html",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4740": {
+      "poster": "idontwannabemyself",
+      "content": "@SpekuraDebela#4530  \n\nGolub je rekao da tek nakon zavrsetka svih predavanja, prije ZI, on (i maybe jos asistenti) sjedne i krene cesljati po svakom kodu i tek tada dolaze negativni bodovi za plagijate i slicno (mozda se i to promijenilo zbog svega ovoga)\n\nsad ne znam kakvo je dodjeljivanje bodova labos po labos s obzirom na to da nema predaje uzivo 🙃",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Koalefant",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4741": {
+      "poster": "seni (ina)",
+      "content": "@pohanyx#4549 \n\ni sta je na kraju s time? imam isti problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4761": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Krisle#4693 ja sam pisao kako mi se sprdnulo jer ne trpim K&R konvenciju blokova npr. i nisam imao nikakvih problema.\n\nKonvencije formatiranja su jedino bitne kad više ljudi radi na kodu ili kad se kod koristi za podučavanje nekoga, u ovom slučaju nema razumnog opravdanja zašto bi kod moram biti napisan s posebnim indentovima itd., sve dok je čitljiv.\n\nMislim da su to stavili jer ljudi na 2. godini znaju pisati odvratne abominacije bez ikakvog smisla za organizaciju, pa da ne čitaju onelimere od 300 znakova i sl.",
+      "votes": {
+        "upvoters": [
+          "HARAmara (decko_sa_balkana)",
+          "Krisle",
+          "__builtin_popcount (std::popcount)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4787": {
+      "poster": "[deleted]",
+      "content": "@pohanyx#4549 \n\n@seni#4741 \n\nodlicno ste opisali problem koji vas je zadesio. cudim se sto vam vise ljudi nije pruzilo pomoc i savjete",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "seni (ina)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4801": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@seni#4741 Bolje opišite problem, ovako je malo nejasno sve osim toga što je problem.",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4808": {
+      "poster": "viliml",
+      "content": "@pohanyx#4549 \n\n@seni#4741 \n\nimate li sve potrebne #includeove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

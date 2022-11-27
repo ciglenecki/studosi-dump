@@ -1,0 +1,311 @@
+{
+  "title": "[SVERAC] 1. laboratorijska vježba - 2021/2022",
+  "creator": "Nocna_smjena",
+  "slug": "sverac-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Sveprisutno računarstvo",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "287491": {
+      "poster": "Nocna_smjena",
+      "content": "Za sve kojima Visual Studio Code baca **Something went wrong while getting the serial port list** prilikom pokušaja podešavanja COM port-a provjerite (ako koristite Windows-e) u _Device Manager_-u pod rubrikom _Ports (COM & LPT)_ da li imate warning na device-u _Silicon Labs CP210x USB to UART Bridge_-u. Ako imate warning odite na https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers -> Downloads -> CP210x Universal Windows Driver. Kad se to skine otpakirajte zip. Vratite se nazad u _Device Manager_, desni klik na device s warning-om kojeg sam maloprije spomenuo -> Update driver -> Browse my computer for drivers -> Let me pick from a list of available drivers on my computer -> Have Disk... -> Browse... -> navigirajte do otpakiranog zip file-a i izaberete silabser.inf -> Open -> OK. Trebao bi vam se sad pojaviti _Silicon Labs CP210x USB to UART Bridge_, select-ajte ga pa zatim stisnite Next -> Close. Nakon ovog bi morao warning nestati u Device Manager-u i VSC prestao dojavljivati ovu grešku",
+      "votes": {
+        "upvoters": [
+          "Zk6dO73 (burw0r)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287507": {
+      "poster": "KiflaKiflic",
+      "content": "Dobiva li itko ovaj error?\n\n```\nninja: error: loading 'build.ninja': The system cannot find the file specified.\n\nThe terminal process \"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -Command ninja \" terminated with exit code: 1.\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287512": {
+      "poster": "KiflaKiflic",
+      "content": "@\"KiflaKiflic\"#p287507\n\nEDIT: Popravio se error kada sam projekt renameao iz \"blink example\" u \"blink_example\"\n\nTakoder sam instalirao C/C++ extensions, ali ne znam koje od ovog dvoje je bilo glavni fix",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287553": {
+      "poster": "KiflaKiflic",
+      "content": "Moze li mi netko pojasniti sto se trazi od nas u ovoj vjezbi? Imamo interface i metode, no meni se cini kao da fali par varijabli (tipa za postavljanje pin-a). Takoder ne kuzim sto ce nam tick funkcija 🤔  A i ovaj buttonEventHandler ne mogu naci u dokumentaciji...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287574": {
+      "poster": "BK-",
+      "content": "Gdje se mogu naći upute za vježbu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287590": {
+      "poster": "TamTam (foobar)",
+      "content": "@\"BK-\"#p287574 na moodle-u pod tjedan#4",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287628": {
+      "poster": "Nocna_smjena",
+      "content": "Da li se mi smijemo poslužiti vanjskim bibliotekama?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287743": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "Sta su sve rekli na pripremama za labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287749": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "Nista posebno, prosli kroz osnove kako koristiti VS Code, prevođenje i upload koda na pločicu i sl.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287750": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "Ima li netko ovdje tko zna C++? Ne razumijem sto bi trebali napraviti u CButton?\n\n```\nvoid attachSingleClick(ButtonEventHandler method){singleClick = method;};\nvoid attachDoubleClick(ButtonEventHandler method){doubleClick = method;};\nvoid attachLongPress(ButtonEventHandler method){longPress = method;};\n```\n\nKako da ovo pretvorim u funkcije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287751": {
+      "poster": "Jokke",
+      "content": "@\"wLkR-74159\"#p287750 Prevideno je da se u app_main naprave tri funkcije za handlanje razlicitih scenarija i onda u mainu napravis CButton i zadas mu te funkcije sa button.attachSingleClick(ime_single_click_handle_funkcije). Te handler funkcije u mainu ti mogu dosl samo ispisati \"Detektirao sam single/double/long click\"",
+      "votes": {
+        "upvoters": [
+          "BK-",
+          "wolfs_123 (wLkR-74159)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287791": {
+      "poster": "marta7575 (user7575)",
+      "content": "Da li nam klasa CLed služi za išta ili mogu to izbrisati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287801": {
+      "poster": "KiflaKiflic",
+      "content": "@\"user7575\"#p287791 to je samo primjer s predvanja, ignoriraj",
+      "votes": {
+        "upvoters": [
+          "marta7575 (user7575)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287846": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "@\"Jokke\"#p287751 moram li u CButton::tick() ista pisati? I ako da, kako?\n\nCButton klasa bi trebala služiti za pohranu \"poslijednjeg načina pritiska na gumb\"?\n\nI onda prema tome, zadatak za paljenje LED-ice blinka ledicu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "287867": {
+      "poster": "KiflaKiflic",
+      "content": "@\"wLkR-74159\"#p287846 Nigdje nije definiran pravilan nacin impelementacije. Ne pise da u tick moras ista pisati. Mozes detekciju napraviti u tasku, a mozes i u tick metodi.",
+      "votes": {
+        "upvoters": [
+          "wolfs_123 (wLkR-74159)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288002": {
+      "poster": "Zk6dO73 (burw0r)",
+      "content": "U obavijesti pise da je \"Rok za predaju je srijeda, 30.03. u 11 sati.\"\n\nU onom pdf-u o organizaciji predmeta pise \n\n\"Predaja vježbe na Moodle 24h prije termina laboratorijske vježbe, kašnjenje predaje – za svakih 3h oduzima 1 bod\".\n\nZnaci li to da je vjezba za sve bodove trebala vec bit predana? \n\nNisam vidio ovaj drugi dio i planirao sam ju predat do 30.03 u 11h.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288008": {
+      "poster": "BigZ1",
+      "content": "@\"burw0r\"#p288002 ovaj labos je jedini koji se moze predat sat vremena prije pocetka labosa jer su ga kasno sastavili a ostali se moraju valjd predat dan prije.",
+      "votes": {
+        "upvoters": [
+          "Zk6dO73 (burw0r)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288011": {
+      "poster": "Zk6dO73 (burw0r)",
+      "content": "@\"BigZ1\"#p288008 \n\nNajs, hvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288089": {
+      "poster": "BK-",
+      "content": "Gdje mogu naći neki tutorial ili nešto da skontam kako ovo isprogramirat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288134": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "jel se za ovo moraju koristiti interuptovi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288167": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "Oko programiranja - meni je najteze bilo skuziti kaj se trazi vezano za C++.\n\nPrvo u \"main\" cpp fileu definiras 3 funkcije - svaka za po jedan nacin pritiska na gumb - funkcija radi nesto proizvoljno.\n\nOnda ih pridruzis objektu CButtonu sa attachSingleClick(funkcija_123) (ta funkcija_123 se poziva sa singleClick() unutar CButton klase)/ ... (i jos preostale dvije).\n\nA CButton::tick() napravis po uzoru na CLed.\n\nZa interuptove, nije definirano.",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301318": {
+      "poster": "maverick",
+      "content": "Neeego, ima li tko voljan podijeliti rjesenje prvog labosa kojim slucajem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

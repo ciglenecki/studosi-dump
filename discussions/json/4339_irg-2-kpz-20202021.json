@@ -1,0 +1,126 @@
+{
+  "title": "[IRG] 2. KPZ - 2020/2021",
+  "creator": "Retard00",
+  "slug": "irg-2-kpz-20202021",
+  "tags": [
+    "FER",
+    "Interaktivna računalna grafika",
+    "Ispiti"
+  ],
+  "posts": {
+    "203542": {
+      "poster": "Retard00",
+      "content": "Jel itko možda to riješio?",
+      "votes": {
+        "upvoters": [
+          "Gulbash",
+          "Heklijo (Geralt of Rivia)",
+          "Sicsile",
+          "stic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203562": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "Mala pomoć kod rješavanja: **https://github.com/studosi-fer/IRG/blob/master/ispiti/blicevi/IRG_blic-1-2.pdf**",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203592": {
+      "poster": "sekiro",
+      "content": "@Heklijo#203562 Jel korisno ovo? jer za prvi kpz bas i nije bilo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203619": {
+      "poster": "Retard00",
+      "content": "Imao sam 3/3.5 pa use with caution:\n\nU empirijskom modelu osvjetljenja za difuznu kamponentu važan je kut izmedu vektora:\n\n☐ normale i vektora prema promatraču\n\n☐ prema promatraču i prema izvoru\n\n✅ normale i vektora prema izvoru\n\n☐ prema izvoru i reflektirane zrake obzirom na zraku iz izvora\n\n☐ reflektirane zrake i vektora prema promatratu\n\nBensteinove težinske funkcije za aproksimacijske Bezierove krivulje (???)\n\n☐ njihova suma je oscilira duž cijelog intervala\n\n☐ jesu uvijek kvadratne funkcije\n\n☐ njihova suma je jed naka jedan duž cijelog intervala - (ovo sam bio stavio)\n\n☐ imaju točno dva maksimuma\n\n☐ jesu negativne\n\nZa normalizirane Baricentrične koordinate vrijedi:\n\n☐ njihova suma je jednaka nula\n\n☐ njihova suma je jed naka njihovom produktu\n\n☐ one odreduju središte opisne kružnice\n\n✅ njihova suma je jednaka jedan\n\n☐ one odreduju središte upisane kružnice objekta\n\nU algoritmu Algoritam Cohen-Sutherl anda dužina AB trivijalno nije vidljiva ako je:\n\n✅ A=1001, B=1010\n\n☐ A-0000, B=0000\n\n☐ A=1001, B-0010\n\n☐ A=0001, B=1010\n\n☐ (A AND B) jednako 0000\n\nTopološke podatke o Objektu zadanom poligonalnom mrežom čine:\n\n☐ vektori normalau vrhovima\n\n☐ (x, y, z) koordinate\n\n✅ popisi poligona koji vežu vrhove\n\n☐ boje u vrhovima\n\n☐ koordinate teksture u vrhovima\n\nObjekt sadrži 100 trokuta. Koristi se element GL_TRIANGLE_ STRIP kao primitiva. Broj vrhova koji se šalje grafičkoj kartici je:\n\n☐ 300\n\n☐ 200\n\n✅ 100+2\n\n☐ 100-2\n\n☐ 200+2\n\nJoš sam dobio pitanje vezano za konstanto sjenčanje i koji dio se time oboja, al ga se ne sječam.",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "Haki",
+          "KiflaKiflic",
+          "Sicsile",
+          "__builtin_popcount (std::popcount)",
+          "blast",
+          "feel_d_boot (iNut)",
+          "plavisnajper"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203641": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "2. Primitiva u OpenGLu je:\n\n⬛ GL_TEAPOT\n\n⬛ GL_FROG\n\n✅ GL_POINTS\n\n⬛ GL_SPHERES\n\n\n4. Interpolacijska Bezierova krivulja:\n\n✅ interpolira sve zadane točke\n\n⬛ prolazi svakom drugom točkom\n\n⬛ približava se prvoj i zadnjoj točki a ostale interpolira\n\n⬛ prolazi prvom i zadnjom točkom, a ostalima se približava\n\n⬛ aproksimira sve zadane točke\n\n\n5. U Warnockovom postupku prozor dalje treba dijeliti ako:\n\n⬛ jedan poligon prekriva prozor\n\n⬛ je jedan poligon u prozoru\n\n✅ više poligona sječe prozor\n\n⬛ u prozoru nema poligona\n\n⬛ jedan poligon sječe prozor\n\n\n6. U empirijskom modelu osvjetljenja za zrcalnu komponentu važan je kut između vektora:\n\n✅ reflektirane zrake (obzirom na zraku prema izvoru) i vektora prema promatraču\n\n⬛ reflektirane zrake (obzirom na zraku iz izvora) i vektora normale\n\n⬛ normale i vektora prema promatraču\n\n⬛ prema izvoru i vektora normale\n\n⬛ ne ovisi ni o kakvom kutu već je konstantna\n\n\n7. Kod Phongovog modela sjenčanja:\n\n⬛ interpolira se samo difuzna komponenta izračunata u vrhovima\n\n✅ izračunava se ambijentna, difuzna i zrcalna komponenta za svaki slikovni element projiciranog poligona\n\n⬛ izračunava se ambijentna, difuzna i zrcalna komponenta u vrhovima i interpolira po poligonu\n\n⬛ interpolira se intenzitet izračunat u vrhovima poligona\n\n⬛ izračunava se intenzitet na osnovi normale u središtu poligona\n\n----\n\nOstala dva pitanja koja sam dobio je već napisao @Retard00#203619",
+      "votes": {
+        "upvoters": [
+          "Haki",
+          "Heklijo (Geralt of Rivia)",
+          "plavisnajper"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203662": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "@sekiro#203592 \n\nMeni su dosla 2 pitanja iz toga pa je barem neka korist",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203669": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "Ako se BSP koristi za sortiranje pri određivanju vidljivosti i očište je s pozitivne strane prvo se obilazi:\n\n⬛ negativna strana pa pozitivna strana pa čvor\n\n⬛ čvor pa pozitivna strana pa negativna strana\n\n✅ negativna strana pa čvor pa pozitivna strana\n\n⬛ čvor pa negativna strana pa pozitivna strana\n\n⬛ pozitivna strana pa negativna strana pa čvor\n\nIzvor: knjiga 231. stranica\n\nAproksimacijska Bezierova krivulja zadana s n točaka:\n\n✅ ima stupanj za jedan manji od broja točaka\n\n⬛ ima stupanj jednak polovici broja kontrolnih točaka\n\n⬛ ima stupanj za dva manji od broja točaka\n\n⬛ ima stupanj za jedan veći od broja točaka\n\n⬛ je stupnja n\n\nIzvor: knjiga 151. stranica\n\nPrimitiva u OpenGLu je:\n\n⬛ GL_SPHERE\n\n✅ GL_QUAD_STRIP\n\n⬛ GL_CUBE_STRIP\n\n⬛ GL_FROG\n\nIzvor: knjiga 11. stranica\n\n\n\nOstalo je gore navedeno",
+      "votes": {
+        "upvoters": [
+          "Haki",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

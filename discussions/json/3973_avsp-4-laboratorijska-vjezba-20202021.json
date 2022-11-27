@@ -1,0 +1,534 @@
+{
+  "title": "[AVSP] 4. laboratorijska vježba - 2020/2021",
+  "creator": "Klokan",
+  "slug": "avsp-4-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Analiza velikih skupova podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "186974": {
+      "poster": "Klokan",
+      "content": "Jel u lab4 treba u A dijelu riješit prema algoritmu u case 1 dijelu koji je za slučaj da se matrica M ne može alocirati u memoriju? I dobivam ogromne brojeve korištenjem tog algoritma, zadnji iz querya: \"410924243673.7644653320\", ima tko ideju zasto je to tako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186983": {
+      "poster": "tonkec",
+      "content": "@netko_tamo#186899 nije to algoritam, samo se zadatak tak zove",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti",
+          "netko_tamo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187005": {
+      "poster": "netko_tamo",
+      "content": "@tonkec#186983 a kojim algoritmom bi se to najbezbolnije rijesilo? Pada mi na lamet djikstra, al sumnjam da bi sljakalo u zadanom vremenu 😂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187007": {
+      "poster": "[deleted]",
+      "content": "@netko_tamo#187005 optimalan je multi source bfs od svih crnih cvorova (implementacija je ista kao i normalan bfs, samo na pocetku ubacis sve crne nodove u queue, umjesto samo root)\n\nne treba ti dijkstra jer graf nije tezinski",
+      "votes": {
+        "upvoters": [
+          "Klokan",
+          "a_ko_si_ti",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "netko_tamo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187008": {
+      "poster": "Klokan",
+      "content": "@maki#187007 kak si rijesio A zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187009": {
+      "poster": "[deleted]",
+      "content": "@Klokan#187008 treba koristiti ovaj pseudokod jer matrica moze biti pre velika (oko 80 GB za najveci test) pa ne stane u ram\n\njedina razlika je da ne koristis ovaj kriterij zaustavljanja, nego samo odradis 100 iteracija\n\n![](assets/2021-05-08/00036.png)",
+      "votes": {
+        "upvoters": [
+          "Klokan",
+          "a_ko_si_ti",
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187018": {
+      "poster": "tonkec",
+      "content": "@netko_tamo#187005 vrlo jednostavno, krenem od početnog čvora, dodam susjede u red i onda provjeravam susjede itd., usput optimiraš neke dijelove da ne provjeravaš susjede koje nema smisla pregledavati i sl.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187086": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Klokan#186974 moguće da ne resetiraš neki vektor (u svakoj iteraciji old postaje new, to je i meni bio problem kad ne bih tak nes napravila i imala bih velike brojeve) Takoder ja sam naprvila prvo po tom algoritmu pa su brojke bile krive, onda sam isla na onaj drugi PageRank algoritam dolje spomenut i onda je ispalo točno.",
+      "votes": {
+        "upvoters": [
+          "Klokan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "187224": {
+      "poster": "Klokan",
+      "content": "Ima da nekom ne prolazi za \"ttest2\" a za ostale prolazi? Te za njihove Rb i Rt testove ne prolazi isto (Rb - daje gresku, a Rt - krivi ispis).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "188698": {
+      "poster": "tonkec",
+      "content": "Imam problem sa sljedećim algoritmom\n\n![](assets/2021-05-11/00039.png)\n\nOvaj vektor [imath]r[/imath] mi neprestano raste iz iteracije u iteraciju, ali ne konvergira. Je li imao još netko sličan problem? \n\nOvo ispod je doslovno kod u pythonu dobiven iz pseudokoda slike iznad.\n\n```python\nr_old = np.full(n, (1 - beta) / n)\nr_new = np.zeros(n)\nfor _ in range(num_iter):\n    for i, dest in edges.items():\n        ri = r_old[i]\n        di = len(dest)\n        for j in dest:\n            r_new[j] += beta * ri / di\n    r_old = r_new.copy()\n   ```\n   Varijabla edges je rječnik gdje je ključ čvor, a vrijednost lista čvorova u koje ide taj čvor.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "188992": {
+      "poster": "Emma63194",
+      "content": "U ovom labosu pretpostavljamo da matrica neće uvijek stati u RAM?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189193": {
+      "poster": "Emma63194",
+      "content": "Ako je u prvoj iteraciji imamo čvor kojemu je in-degree 0, hoće li njegov r(t+1) biti samo onaj leak koji se dodaje ili to nadodajemo na vrijednost u r(t)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189209": {
+      "poster": "Emma63194",
+      "content": "Ima možda netko savjet kako debuggirati ovo?\n\nRadila sam po pseudokodu kako je na 48. slajdu i brojke budu jako blizu, ali nisu točne.\n\n>! ![](assets/2021-05-12/00032.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189210": {
+      "poster": "a_ko_si_ti",
+      "content": "@Emma63194#189193 Bit će samo onaj leak koji se nadodaje",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189223": {
+      "poster": "tre_besty (luk)",
+      "content": "@Emma63194#189209 Probaj koristit vecu preciznost npr. numpy float64 umjesto float32 ako radis u pythonu",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189234": {
+      "poster": "Emma63194",
+      "content": "Hvala na odgovorima i savjetima!\n\nOno što je kod mene bila greška jest da sam zaboravila vektor r(t+1) staviti sve na nula u svakoj idućoj iteraciji.",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189521": {
+      "poster": "jelenan (tronogastonoga)",
+      "content": "Radim u Javi i stalno dobivam grešku u zadnje dvije decimale. Probala sam i s BigDecimal i svejedno ostaje greška. Je li netko možda imao sličan problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "kajDaSeRadi"
+        ]
+      }
+    },
+    "189542": {
+      "poster": "a_ko_si_ti",
+      "content": "@jelenan#189521 Ja sam radio s Double i dobivam točne rezultate. Jel printas sa `System.out.printf(\"%.10f\\n\", value)`?",
+      "votes": {
+        "upvoters": [
+          "jelenan (tronogastonoga)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189543": {
+      "poster": "jelenan (tronogastonoga)",
+      "content": "@a_ko_si_ti#189542 da, probat ću onda sada samo s Double ali koliko sam otkrila iz debuggiranja, dobijem ne posve točnu vrijednost nakon množenja dva decimalna broja i onda se ta greška dalje propagira",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189544": {
+      "poster": "jelenan (tronogastonoga)",
+      "content": "@a_ko_si_ti#189542 tako je, evo mislim da sam uspjela popraviti, greška je bila u B parametru, nisam ga tretirala kao big decimal a ostale jesam. hvala ti svejedno :)",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189626": {
+      "poster": "Emma63194",
+      "content": "Ako je netko radio u Pythonu, koliko vam se dugo vrti B dio zadatka za najveći primjer?\n\nMeni ovako bude i nisam sigurna je li ovo svaki put dovoljno (ograničenje je 10 sekundi) i nije mi za sada palo na pamet kako to optimizirati:\n\n>! ![](assets/2021-05-13/00022.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189648": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@maki#187007 jel se radi uz obicni multisource bfs neka optimizacija jos ili? onaj najveci primjer mi se puno predugo izvodi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189656": {
+      "poster": "[deleted]",
+      "content": "@PrisonMike#189648 meni za najveci test u c++-u traje oko 0.2s, cak nisam ni koristio onu informaciju da je maksimalna udaljenost do crnog cvora <= 10 sto bi se moglo iskoristiti za ubrzanje algoritma.",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189685": {
+      "poster": "chuuya (temari)",
+      "content": "@Emma63194#189626 Meni je ovak:\n\n![](assets/2021-05-13/00028.jpeg)\n\nMožda negdje provjeravaš iste nodeove više puta pa se zato tako odulji za velik primjer?",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "189697": {
+      "poster": "Emma63194",
+      "content": "@chuuya#189685 Mislim da ne. Skužila sam doduše da je queue dosta spor i da bude puno brže s deque. Sad mi se taj veliki primjer izvrti u manje od 2 sekunde.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190436": {
+      "poster": "zuza (jose)",
+      "content": "Koja predavanja na YT odgovaraju ovom labosu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190448": {
+      "poster": "Dekan",
+      "content": "Koliko vam se dugo izvrsava btest2 u pythonu (A zadatak)?\n\nMeni je na granici s time limitom ~ 85-100 s",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190467": {
+      "poster": "Emma63194",
+      "content": "@Dekan#190448 Mislim da mi je bilo oko 60 sekundi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190518": {
+      "poster": "saki23",
+      "content": "@Dekan#190448 \n\nMeni je isto nekih 80ak sekundi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190826": {
+      "poster": "Mirko_",
+      "content": "TIP ZA PYTHON SPEED:\n\numjesto\n\n```python\nedges = input().split()\nprint(\"{:.10f}\".format(rezultat))\n```\n\nkoristite \n\n```python\nfrom sys import stdout, stdin\nedges=stdin.readline().split()\nstdout.write(\"{:.10f}\\n\".format(rezultat))\n```\n\nubrza stvar 6x navodno, mene je prebacila u ![](assets/2021-05-16/00032.png)\n\nedit:\n\ndodao i stdin",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190900": {
+      "poster": "Emma63194",
+      "content": "Jel se još ikome desilo da mu je neki dan prošao taj prvi zadatak na svim primjerima, a da danas ne prolazi na velikom?",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "Ena43"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190934": {
+      "poster": "Maglica",
+      "content": "@Emma63194#190900 Da...",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190943": {
+      "poster": "Emma63194",
+      "content": "@Maglica#190934 Ne znam u čemu je stvar. Osobno se nisam trudila previše optimizirati kod jer je prolazilo tada bilo, a sada ne mogu optimizirati (doslovno nemam što), morala bih ispočetka pisati, a to ne stignem.\n\nSu oni nešto mijenjali ili? \n\nMalo nepravedno...",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190945": {
+      "poster": "Svarog (Veles)",
+      "content": "@Emma63194#190900 mislim da je do spruta, upravo sam izgubio 5 sati optimizirajući i shvatio da je nemoguće da serveru treba 2x više od mog stroja da izvrti taj veliki primjer",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "Emma63194",
+          "ImJustAKid (lumity)",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "190952": {
+      "poster": "Svarog (Veles)",
+      "content": "@Svarog#190945 evo sad sam i ručno testirao taj novi primjer, lokalno prođe za 65.5 s, nema razlike u rezultatima",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191646": {
+      "poster": "in1",
+      "content": "Objavljeni su rezultati na sprutu",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

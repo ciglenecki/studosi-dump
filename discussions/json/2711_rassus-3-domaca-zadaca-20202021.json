@@ -1,0 +1,1009 @@
+{
+  "title": "[RASSUS] 3. domaća zadaća - 2020/2021",
+  "creator": "zuza (jose)",
+  "slug": "rassus-3-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Raspodijeljeni sustavi",
+    "Zadaće"
+  ],
+  "posts": {
+    "120225": {
+      "poster": "zuza (jose)",
+      "content": "Može netko staviti rezultat koji dobije u 2.3 zadatku da usporedim (zadnji broj JMBAG-a 5, 6 ili 7)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120906": {
+      "poster": "PeroPerica",
+      "content": "Jesam ja jedini koji je ocekivao da ce ovaj PDQ actually rijesit cijeli sustav, a ne da mu mi moramo odredjivat load percentage? Zar je to puno za traziti? \n\nActually, jel bi mi kao trebali koristit neki system solver da to rijesimo, ili rucno, ili sta?",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120957": {
+      "poster": "Audaces",
+      "content": "@PeroPerica#120906 \n\nAko sam dobro shvatio tvoju dvojezičnu rečenicu, nisi jedini koji je to očekivao.\n\nAnalitički dio je čisto korištenje formula i kao što su rekli riješiti na papiru. Programski kod je onda jednostavan gdje se ubacuju lambde koje si analitički izračunao i te naredbe s predavanja PDQa, po mome shvaćanju zadatka.",
+      "votes": {
+        "upvoters": [
+          "PeroPerica",
+          "ardi (sprut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124",
+          "hejhoj (vdvd)",
+          "member"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121415": {
+      "poster": "moukie",
+      "content": "moramo li odrediti one visiting counte kao funkcije od vjerojatnosti ili je ok samo lupit brojeve?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121490": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@moukie#121415 \n\nsto nama nije prosjecan broj posjeta(visit count) određen kao vjerojatnost posjecivanja(a,b,c...) * lambda ? jer orginalna formula za visit count ima u sebi koliki je postotak retransmisije a to ni nije zadano..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121495": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "zna li netko za koliko lambdi bi trebalo isprobati rjesenje, maybe kao oni u primjerima od 0 do 2? Nigdje ne pise, i treba li ispisati T(lambda) za svaki posluzitelj i ukupni T ili samo ukupni? Pise samo ispisati u nekoliko tocaka....",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121503": {
+      "poster": "moukie",
+      "content": "@khm19#121490 \n\nda al taj visit count(to sto mnozi lambdu) mozes izrazit kao funkciju vjerojatnosti\n\nsvi postotci su zadani u zadatku koliko vidim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121508": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@moukie#121503 \n\nAli zadana je vjerojatnost prosljeđivanja, a ne retransmisije...a ako ga množimo s učestalosti dolaska lambdom dobije se prosjecan broj posjeta sto je visit count... npr. v1 = lambda_ulazna + f * lambda_6 (povratna veza)...barem sam ja tak shvatia",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121512": {
+      "poster": "DostDobroIme",
+      "content": "@khm19#121495 \n\nMsm da treba za cijeli sustav izracunati T, a ovo za nekoliko tocka msm da se odnosi na to da uzmes nekoliko razlicitih vrijednosti lambda i izracunas vrijednost T-a",
+      "votes": {
+        "upvoters": [
+          "khm19 (ajmemeni5)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121514": {
+      "poster": "moukie",
+      "content": "@khm19#121508 \n\nne znam sta ti je retransmisija a sta prosljedivanje\n\nsve sto znam je da mozes izrazit Vi(visit count)kao izraz od onih vjerojatnosti\n\nne znam je li to nuzno???\n\nnadam se da nije, nigdje tako ne pise\n\ntakoder, moramo li raditi graf?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121573": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@moukie#121514 ![](assets/2021-01-14/00037.png)\n\nRetransmisija je kad se dio zahtjeva vraca u rep cekanja, ovdje je povratna veza s jednim posluziteljem, medutim to nije nas slucaj tu visit count(broj prolaza) je definiran kao 1/1-p, a p je postotak povratka ulaznog zahtjeva, a po prvoj formuli vidis da je lambda = visit count * ulazna lambda, tako da kad rijesis analiticki cijeli sustav iz domace dobit ces lambde od 1 do 7 koliko je posluzitelja i brojevi uz tu lambdu su ti visit countovi... ako ti nije jasno pogledaj primjere na sluzbenoj stranici",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121596": {
+      "poster": "moukie",
+      "content": "@khm19#121573 \n\nje i te visit counteove mozes izrazit preko onih varijabli vjerojatnosti, no ne znam moramo li to \n\n![](assets/2021-01-14/00041.png)\n\nretransmisija je samo najobicni povratna veza, jednu povratnu vezu imamo u zadatku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121625": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@moukie#121596 \n\nzasto bi to ista izrazavao ako ces svakako dobiti visit count rjesavanjem komunikacijskog kanala? Ne vidim kako bi tu \"lupio brojeve\" neke\n\nDa, retrasmisija je povratna veza, ja ih imam 3 u domacoj, i one kose linije koje se vracaju npr u paraleli su isto povratne veze",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121659": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "ima li netko od prosle godine da rece kakav zadatak se dobije na obrani domace? nesto slicno ili?",
+      "votes": {
+        "upvoters": [
+          "MaIv",
+          "SinanSuckich (Yelena)",
+          "member",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121726": {
+      "poster": "moukie",
+      "content": "@khm19#121625 \n\njer ako izrazis v1 ili bilo koj preko onih vjerojatnosti\n\nonda ne moras ponavljat postupak racunanja svaki put kada zelis vidjet kako ti se ponasa sustav s drugim vjerojatnostima\n\nzato me zanima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121730": {
+      "poster": "InCogNiTo124",
+      "content": "jel moguce ovo rjesit samo s prezentacijom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121732": {
+      "poster": "InCogNiTo124",
+      "content": "i pise u zadaci da treba biti realizirano programskim jezikom java.\n\njel to isto hard constraint ili se moze u drugim jezicima kao i proslih zadaca?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121807": {
+      "poster": "PeroPerica",
+      "content": "@InCogNiTo124 Profesor je na predavanju spomenuo da se može u bilo kojem, mislim da na trecem dijelu (moze me netko ispravit ako sam u krivu).",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "khm19 (ajmemeni5)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121811": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@moukie#121726 \n\nKompliciras bezveze, nigdje to ne pise, samo ih moras nac da bi ih povezao s posluziteljima i that's it.",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121831": {
+      "poster": "moukie",
+      "content": "@khm19#121811 \n\nOk, oni su tako radili u onim svojim primjerima zato pitam\n\nSuper ako mi to ne moramo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121964": {
+      "poster": "ygerg11",
+      "content": "Malo glupo pitanje. Kako importati onaj kod što je dan sa zadatkom? Jeli to isto kao prilog 11. predavanju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121967": {
+      "poster": "tt98",
+      "content": "Kaj mislite jel ok samo predat jedan source file s rijesenim zadatakom, umjesto da zippamo bas cijeli projekt ukljucujuci PDQ? Obicno tak predajem al cisto provjeravam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122062": {
+      "poster": "tito",
+      "content": "@ygerg11#121964 mislim da možeš jar file dodat u projekt. Ako radiš u intelij-u File->Project Structure->modules->(desno pronađi plusić) ->Jars or directories      i dodaj jar koji si skinuo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122093": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@tito#122062 \n\nZa Eclipse : u configure path moze se samo dodati jar file u classpath",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122095": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@tt98#121967 tak sam i ja mislila. pošto sam ja zapravo importala njihov projekt u netbeans i tamo sam samo napravila svoju klasu, bzvz mi je u zip stavljat materijale sta su nam oni doslovno dali haha",
+      "votes": {
+        "upvoters": [
+          "tt98"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122234": {
+      "poster": "InCogNiTo124",
+      "content": "> Studenti trebaju analitički i programski odrediti rješenje [sustava] zadanog prema zadnjoj znamenki JMBAG-a. Primjerice, student s JMBAG-om 0036471234 rješava zadatak 2\n\nWTF? Zar ZTEL ima svoju matematiku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122339": {
+      "poster": "moukie",
+      "content": "@InCogNiTo124#122234 \n\nzadnja znamenka je 4 to je zadatak 2.2(ilitiga 2)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122342": {
+      "poster": "InCogNiTo124",
+      "content": "@moukie#122339 ahaaa wow na to su mislili, nije mi _uopce_ tak nesto palo na pamet",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122372": {
+      "poster": "[deleted]",
+      "content": "nema pragova na dz-ima, ne moramo rjesit sve, da provjerim za svaki slucaj",
+      "votes": {
+        "upvoters": [
+          "Krama13",
+          "khm19 (ajmemeni5)",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122393": {
+      "poster": "whatTheHel",
+      "content": "@ElitePer#122372 dz nisu obavezne, nema praga",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122404": {
+      "poster": "InCogNiTo124",
+      "content": "jel ima neki opcenit algoritam za rjesavanje ovog?\n\nrecimo izracunam lambde, izracunam rho_i,  s time N_i i onda mi je konacni `T = sum(N_i) / Lambda`\n\nkao, jel bi to bilo tocno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122411": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@InCogNiTo124#122404 \n\nJa mislim da bi to trebalo biti tako..\n\nMoze li netko tko ima znamenke 5,6,7 stavit koliko su mu visit countovi da provjerim ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122414": {
+      "poster": "InCogNiTo124",
+      "content": "@khm19#122411 za koji lambda xD",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122418": {
+      "poster": "basketbaler (Burek sa sirom)",
+      "content": "@InCogNiTo124#122414 moze za lambda 6 :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122420": {
+      "poster": "InCogNiTo124",
+      "content": "@basketbaler#122418 \n\n`0.01833, 8.2064e-3, 16.5491e-3, 0.10825, 0.6863, 1.2541, 11.3276`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122422": {
+      "poster": "Kiflica",
+      "content": "@InCogNiTo124#122404 Mozes li molim te napisati koje su ti vrijednosti visit_countova za svaki lambda? Ako sam dobro skuzila visit_countovi su brojevi koje dobijes uz lambdu kada sve izrazis. znaci npr. lambda3= 0.345lambda pa bi onda 0.345 bio visit_count3?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122424": {
+      "poster": "InCogNiTo124",
+      "content": "@Kiflica#122422 aha zabrijao sam, ja sam pisao N-ove\n\n`[1.0, 194/143, 194/715, 291/715, 97/143, 102/143, 146/143]`",
+      "votes": {
+        "upvoters": [
+          "Kiflica",
+          "basketbaler (Burek sa sirom)",
+          "khm19 (ajmemeni5)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122427": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@InCogNiTo124#122424 \n\nisto nam je samo sam ja u decimalnog obliku :)",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122430": {
+      "poster": "InCogNiTo124",
+      "content": "@khm19#122427 e super, to sve sad samo treba napisat u C smh",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122486": {
+      "poster": "InCogNiTo124",
+      "content": "evo ako je ikog zanimalo, za grupu 5,6,7 rjesenje u zatvorenoj formi:\n\n![](assets/2021-01-16/00029.png)\n\n100% correct",
+      "votes": {
+        "upvoters": [
+          "Kiflica",
+          "hejhoj (vdvd)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "122563": {
+      "poster": "Ena43",
+      "content": "Moze li netko tko je imao prvi zadatak napisati visit countove koje dobije?",
+      "votes": {
+        "upvoters": [
+          "DaL"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122913": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Ena43#122563         float[] v = {1.0f, 2.5f, 0.7731f, 0.9043f, 1.25f, 0.6f, 0.4f};\n\njel i tebi tak?",
+      "votes": {
+        "upvoters": [
+          "Ena43"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123129": {
+      "poster": "Ena43",
+      "content": "@janeromero#122913 Je, sve mi je isto.",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123267": {
+      "poster": "Maglica",
+      "content": "PREDAJA\n\nStudenti su dužni u zadanom roku putem sustava Moodle predati .zip arhivu koja se sastoji od sljedećih\n\ndijelova:\n1. izvještaj (npr. scan ili fotografija analitičkog rješenja zadatka),\n\n**2. izvorni kod u alatu PDQ.**\n\nVezano za ovaj boldani dio, vidim da su kolege gore  raspravljale o načinu predaje, no znači li ovo da je bitno predati source code(tu jednu java klasu u kojoj smo napravili logiku sa PDQ napravljenu u nekom IDE) ili baš ovo šta su dali alat(koji nisam uspio osposobit prateći zadane upute)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123442": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@Maglica#123267 \n\nja sam predao kao i uvijek projekt cijeli, samo sam importao, u njemu je samo main, u pathu mi je .jar file s pdq klasama..ali mislim da nece oko tog praviti ikakav problem",
+      "votes": {
+        "upvoters": [
+          "Maglica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123488": {
+      "poster": "bestik",
+      "content": "grupa sa zadnjim zadatkom (8 i 9 zadnja znamenka jmbaga), jel vam lambda6 = 0.4149lambda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123535": {
+      "poster": "Elendur19 (Zagor)",
+      "content": "@bestik#123488 meni je lambda6 = 0.7659lambda",
+      "votes": {
+        "upvoters": [
+          "bestik"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123564": {
+      "poster": "bestik",
+      "content": "@Elendur19#123535 koji ti je izraz za lambda6?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123569": {
+      "poster": "bestik",
+      "content": "@Elendur19#123535 sori, zanemari, nasao sam gresku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123701": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "oce li nama ista dati bodova ako smo predali dz, ali ne uspijemo rijesiti to na Moodle-u",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123721": {
+      "poster": "moukie",
+      "content": "@khm19#123701 \n\n1 bod valjda ces dobit\n\nJe li tko izrazio one visit counte preko onih vjerojatnosti sa sheme za 2. zadatak?\n\nI bi li ih podijelio?🙏🙏",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123726": {
+      "poster": "Lelek",
+      "content": "Jel netko dobio isto ove brojeve za zadnji zadatak ( znamenke 8 i 9) ?\n\nlambde su mi redom 1f, 2.5f, 0.5f, 0.75f, 1.25f, 36f / 47, 26f / 47\n\n![](assets/2021-01-18/00018.png)",
+      "votes": {
+        "upvoters": [
+          "Elendur19 (Zagor)",
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123736": {
+      "poster": "hobbit",
+      "content": "Stignem li do ponoći ako sam sad počeo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123739": {
+      "poster": "InCogNiTo124",
+      "content": "@hobbit#123736 u teoriji da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123824": {
+      "poster": "hobbit",
+      "content": "Kad napišem cijeli main kako pokrećem program? Što mi još fali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123842": {
+      "poster": "adidas",
+      "content": "@Lelek#123726 Da. I lambde i rješenja za T su isti ...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125037": {
+      "poster": "moukie",
+      "content": "Kada ćemo znati hoćemo li moći i kad ponovno rješavati zadatak za 3 boda?",
+      "votes": {
+        "upvoters": [
+          "Majmanko"
+        ],
+        "downvoters": [
+          "Ma97"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125074": {
+      "poster": "Majmanko",
+      "content": "@moukie#125037 ![](assets/2021-01-20/00024.png)",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125928": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "Na moodle-u su stavljena 2 nova zadatka za kolokviranje koji su ostavljeni 2 sata za rjesavanje i je li svejedno u kojem cu terminu rjesavati ? malo mi je sve to nide veze hahah",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125941": {
+      "poster": "InCogNiTo124",
+      "content": "@khm19#125928 pise u mailu da ce naknadno objavit termine ponovljenog kolokviranja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125949": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@InCogNiTo124#125941 \n\nali meni na moodle-u pise sutra u 10 do 12 jutarnji termin i vecernji cini mi se od 18 do 20 ???",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125961": {
+      "poster": "RS7",
+      "content": "@khm19#125949 Mozes odabrati jedan od ta dva termina i rjesavati kao prvi put - 15 minuta. Povecali su kao taj vremenski prozor na 2h unutar kojeg mozes zapocet kolokvij",
+      "votes": {
+        "upvoters": [
+          "Majmanko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125970": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@RS7#125961 \n\nahaa uglavnom mogu sam izabrat kad cu rjesavat..mislia sam da ce nam reci u kojem terminu rjesavamo...hvala :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126129": {
+      "poster": "member",
+      "content": "Jel nekome na moodle-u javlja da je lozinka netočna za \"rt32!s_/cXuZ7aqw+5gMM\"?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126132": {
+      "poster": "member",
+      "content": "@member#126129 Izgasila pa upalila i radi :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126182": {
+      "poster": "Maglica",
+      "content": "Koje ste formule koristili za rjesavnje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126243": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@Maglica#126182 \n\niste ko i u domacoj, troduplo laksi zadatak nego domaca, meni su bila onak tri posluzitelja",
+      "votes": {
+        "upvoters": [
+          "Maglica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126292": {
+      "poster": "tt98",
+      "content": "@khm19#126243 Meni ih je bilo 5.. Dosta tezi od onog krivog",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126297": {
+      "poster": "Maglica",
+      "content": "@tt98#126292 Zbog čega dosta teži?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126325": {
+      "poster": "tt98",
+      "content": "@Maglica#126297 Krivo zadani je imao 3 posluzitelja s jednostavnijim vezama i nije trebalo sustavrl rijesavat.. Nema veze tho uspio sam i ovaj rijesit, samo kazem malo vise posla je bilo",
+      "votes": {
+        "upvoters": [
+          "Maglica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "126335": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@tt98#126325 \n\nNe znam koji te dopao..ja sam odma u 10 rjesavao i imao sam samo 3 posluzitelja i jednu povratnu vezu, a onaj krivo zadani je imao 4 p tako da nije bas neka razlika, svakako je lakse nego domaca, izracunas visit countove i ubacis u kod od domace i gotovo haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

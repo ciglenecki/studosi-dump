@@ -1,0 +1,78 @@
+{
+  "title": "[SPNI] 1. laboratorijska vježba - 2021/2022",
+  "creator": "nnn (dinoo)",
+  "slug": "spni-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Sigurnosne prijetnje na Internetu",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "262093": {
+      "poster": "nnn (dinoo)",
+      "content": "Evo napisao sam upute pa možda budu korisne nekome\n\n## SPNI, lab1 upute\n1. Skinut ubuntu 20.04. iso\n\n2. Instalirat ga u virtualboxu\n\n3. Prebacit se u root shell, ako nisi root\n```\n$ sudo su\n```\n\n4. Apdejtat sve pakete na sustavu preko apt-a. \n```\n# apt update && apt upgrade\n```\n\n\n5. Instalirat tor, i pokrenut tor\n```\n# apt install tor\n# systemctl start tor\n```\n\n\n6. pogledat status tor servisa i da li je active\n```\n# systemctl status tor\n```\n\n(izlazi se iz pregleda status sa q)\n\n\n7. u /etc/tor/torrc na kraj datoteke dodat ovo:\n```\nHiddenServiceDir /var/lib/tor/my-website/\nHiddenServicePort 80 127.0.0.1:80\n```\n\n\n8. Restartat tor servis preko\n```\n# systemctl restart tor\n```\n\nNakon tog bi se trebao stvorit my-website direktorij u kojem se nalazi datoteka pod nazivom hostname koji ima u sebi .onion adresu.\n\nadresu možeš dobit ako pokreneš\n```\n# cat /var/lib/tor/my-website/hostname\n```\n\n9. Treba enableat port 80 preko firewalla, to se može napravit sa \n```\n# systemctl start ufw\n# ufw allow 80\n# ufw enable\n```\n\n\n10. Provjeriti ako je konfiguracija okej\n```\n# ufw status\n```\n\n\n11. Pokrenut dummy server sa\n```\n# python3 -m http.server 80\n```\n\n\n12. Otvorit u tor pregledniku <onion adresa>:80/ i vidit ako se tamo nalazi python server, ako se nalazi nešto to znači da se preko preko tor mreže može pristupiti portu 80 na VM-u\n\n\n\n13. Ugasit python server sa ctrl+c\n\nSve što je ostalo je pokrenut docker sliku koja se vrti na portu 80.\n\n\n\n14. Instalirat docker (ja sam preko snapa)\n```\n# snap install docker\n```\n\n\n15. Skinut i pokrenut phpbb\n```\n# mkdir phpbb\n# cd phpbb\n# sudo apt install curl\n# curl -sSL https://raw.githubusercontent.com/bitnami/bitnami-docker-phpbb/master/docker-compose.yml > docker-compose.yml\n# docker-compose up -d\n```\n15. Sad je forum dostupan na .onion adresi",
+      "votes": {
+        "upvoters": [
+          "DariolaVremenskiPutnik",
+          "Gussy (huba buba)",
+          "Jale (čakijale)",
+          "Zk6dO73 (burw0r)",
+          "menace_master",
+          "mesojed (sofronijevicevPrst)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "tempest",
+          "tidabudibuda"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262353": {
+      "poster": "Gussy (huba buba)",
+      "content": "hoće biti nekakva obrana labosa?",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262357": {
+      "poster": "tempest",
+      "content": "@\"huba buba\"#p262353 Na kraju pdfa su pripremna pitanja za odgovaranje tako da vjerojatno da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262359": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"tempest\"#p262357 da zato i pitam jer nigdje ne pise nista o obrani",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

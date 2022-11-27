@@ -1,0 +1,85 @@
+{
+  "title": "[NEINR] 2. domaća zadaća - 2020/2021",
+  "creator": "Atem",
+  "slug": "neinr-2-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Neizrazito, evolucijsko i neuro računarstvo",
+    "Zadaće"
+  ],
+  "posts": {
+    "80162": {
+      "poster": "Atem",
+      "content": "![](assets/2020-10-14/00011.png)\n\nMože li netko objasniti što znači max-min tranzitivna i kako se to provjerava?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80182": {
+      "poster": "Emma63194",
+      "content": "@Atem#80162 Recimo da imaš neki element u domeni, recimo da je oznaka (a, c). Želiš naći sve (a, b) i (b, c) elemente i to za svaki mogući b. Između tih parova (a, b) i (b, c) uvijek biraš onaj koji ima manju pripadnost te potom od svih tih minimuma nađeš onaj par koji ima najveću pripadnost.\n\nNpr. imaš UxU, U = {1, 2, 3, 4, 5}.\n\nRecimo da promatraš element (1, 3).\n\nTražiš: \n\nmin{mi(1, 2), mi(2, 3)}\n\nmin{mi(1, 4), mi(4, 3)}\n\nmin{mi(1, 5), mi(5, 3)}.\n\nOd svih tih minimuma nađeš onaj koji je maksimalan.\n\nMora vrijediti da ti je pripadnost od (a, c) veća ili jednaka toj nađenoj maksimalnoj pripadnosti i to mora vrijediti za svaki mogući (a, c) iz domene. Ako nađeš jedan primjer u kojem to nije slučaj, onda ti relacija nije tranzitivna.\n\nDa nisam za mobom, napisa bih ljepše u LaTeX-u, ali nadam se da je i ovako jasno :D",
+      "votes": {
+        "upvoters": [
+          "Atem",
+          "pingvinka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80206": {
+      "poster": "tre_besty (luk)",
+      "content": "@Atem#80162 Ja sam to provjerio tako da sam napravio kompoziciju relacije sa samom sobom i onda za za svaki element (x, y) u početnoj relaciji gledao jeli veći il jednak od elementa (x, y) u novoj relaciji koja je kompozicija. Ako to vrijedi za sve elemente početne relacije onda je max-min tranzitivna, a ako ima barem jedan element gdje to ne vrijedni onda nije max-min tranzitivna.",
+      "votes": {
+        "upvoters": [
+          "Atem",
+          "Franksta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80449": {
+      "poster": "luba",
+      "content": "Može li univerzalni skup U biti višedimenzionalan?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80451": {
+      "poster": "MJ3",
+      "content": "@luba#80449 mislim da se ne očekuje da to uzmemo u obzir, barem sudeći po primjerima gdje su relacije sastavljene od jednostavnih domena",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

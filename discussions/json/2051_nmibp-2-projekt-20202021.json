@@ -1,0 +1,814 @@
+{
+  "title": "[NMIBP] 2. projekt - 2020/2021",
+  "creator": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+  "slug": "nmibp-2-projekt-20202021",
+  "tags": [
+    "FER",
+    "Napredni modeli i baze podataka",
+    "Zadaće"
+  ],
+  "posts": {
+    "86453": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "Help, krećem sa zadacima za vježbu prije samog labosa (koji su prequel labosu ionako, https://www.fer.unizg.hr/_download/repository/POSTGIS_-_zadatci_za_vjezbu[1].pdf ) , sada sam na upoznavanju sa QGIS alatom. Na 15. stranici piše : _\"Instalirajte plugin „OpenLayers“ (Plugins->Manage and install plugins), te OpenStreetMap sloj stavite na najdonju poziciju u prikazu.\"_ \n\nE sad, \n\n![](assets/2020-11-01/00024.png)\n\nimam ovaj problem kada ubacim taj plugin, ne postoji novija verzija, i za zamjenu imam ovaj crveno zaokružen. Ne kužim baš jel to ok + ne mogu naći gdje što trebam stavit u najdonju poziciju na kojem prikazu (Pretpostavljam u Layers) jer mi se ništa od zamjenskog plugina nije nigdje pojavilo (možda krivo gledam?).\n\nZna li netko a) jel zamjenski plugin dobar, b) ako nije što mi treba i c) gdje je prikaz u kojem trebam pomaknuti taj novi layer ili štogod?\n\npoyyy janeromerooo",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86484": {
+      "poster": "moukie",
+      "content": "@janeromero#86453 \n\nAko u tom prozoru ides u settings vidit ces nesto tipa 'show deprecated plugins'. To označi i onda ces, kad budes trazio nove plugine za instalirat, vidjeti bas taj plugin o kojem govore. Onda tamo di ti je PostGIS sa svim onim tablicama/slojevima imas nesto 'XYZ Tiles' tamo ti se nalazi OpenStreetMap i samo ju potegni na kartu i prikazati ce ti se.",
+      "votes": {
+        "upvoters": [
+          "Sicsile",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86487": {
+      "poster": "moukie",
+      "content": "Misli li se ovdje u 2.4 na 'GISDB' a ne na 'GEODB'?\n\nTakođer kako to trebamo napraviti? Moramo li u PGAdminu napraviti novi view ili šta? I ako da što onda?\n\nU 2.2 možete li naći 'meadow' u tom fileu kad ga otvorite u nekom text editoru? Ja tu rječ ne nalazim.\n\nUspjevam nać samo 'dbname'.\n\n![](assets/2020-11-01/00026.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86508": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@moukie#86484 Puno ti hvala :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86519": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@moukie#86487  \n\novo za 2.2 ja nalazim dva puta meadow, u 5. i 18. redu, jesi li siguran da di stavio filtere na layer (možeš li naći grass u tom fileu?)",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86740": {
+      "poster": "moukie",
+      "content": "Kako doći do ovoga? Nigdje ne mogu naći ovaj General.\n\nKako znamo prikazuju li se ispravno ti tekstualni podaci?\n\n![](assets/2020-11-02/00006.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87003": {
+      "poster": "laugreano",
+      "content": "@moukie#86740 Layer->Layer properties->Source",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87016": {
+      "poster": "moukie",
+      "content": "@laugreano#87003 \n\nTo je kao taj 'General'?\n\nŠto sad trebamo postaviti? Meni tu već piše UTF-8.\n\n![](assets/2020-11-02/00026.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87827": {
+      "poster": "keykey",
+      "content": "jel itko zna objasnit u 2. zadatku ovo?\n\n> Znajte odgovoriti na pitanje što se događa u ova četiri različita pristupa, gdje su podatci, što je s\n\nosvježavanjem i sl.",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89639": {
+      "poster": "jazavci",
+      "content": "Je li uspio netko instalirati ovo sve za projekt na mac-u?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89683": {
+      "poster": "mentally_disturbed_llama",
+      "content": "4. zadatak: Šta radim krivo i zašto mi ovaj upit vraća tablicu s 0 n-torki?\n   \n\n![](assets/2020-11-07/00040.jpeg)",
+      "votes": {
+        "upvoters": [
+          "laugreano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89730": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@mentally_disturbed_llama#89683 \n\nProvjeri SRID HRV_adm.geom i landuse.geom. Moze biti da je jedan 4k a drugi 3k i onda ne racuna pravilno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89807": {
+      "poster": "mentally_disturbed_llama",
+      "content": "@janeromero#89730 Pazila sam na to, isti SRID imaju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89810": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "Ok. Ja imam poprilično sličan upit i radi tako da ne znam u čemu je problem :/",
+      "votes": {
+        "upvoters": [
+          "mentally_disturbed_llama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89822": {
+      "poster": "emrys (Scofield)",
+      "content": "@mentally_disturbed_llama#89683 Ja koristim sličan upit, ali mi se upit dugo izvršava pa nisam dobio rezultat. Kako to riješiti? Koliko vidim prostorni indeksi su već stvoreni pa ne kužim u čemu bi bio problem :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89884": {
+      "poster": "stoper5",
+      "content": "Zna netko što znači odgovarajući view , tj. što tu moramo napraviti ? \n\n![](assets/2020-11-08/00010.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89886": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@stoper5#89884  u postrgresu napravis query CREATE VIEW green4, selectas da u taj view udu ntorke koje su 'meadow' ili 'grass', refreshas postgres i qgis i imat ces onda tamo (u qugisu) taj layer green4 kao i prethodna 3.",
+      "votes": {
+        "upvoters": [
+          "stoper5"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90027": {
+      "poster": "DaL",
+      "content": "@emrys#89822 Jesi možda riješio problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90043": {
+      "poster": "emrys (Scofield)",
+      "content": "@DaL#90027 ne, jednostavno sam pustio da se izvršava i nakon 40-50 minuta sam dobio rezultat; previše vremena sam potrošio da bi sad se gnjavio s tim kako skratit..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90226": {
+      "poster": "DostDobroIme",
+      "content": "Jel bi prvi zadatak trebali riješit pomoću SQL upita ili samo jednostavnim odabiranjem u QGIS-u?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90231": {
+      "poster": "jazavci",
+      "content": "Je li itko ima problem u prvom da mu je pod edit opcija merge selected features zasivljena?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90282": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@jazavci#90231 u toggle editing prvo select features i drzis ctrl da ih oznacis vise i tek onda se omoguci funkcija merge",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90292": {
+      "poster": "hejhoj (vdvd)",
+      "content": "Jel zna itko zasto kad ubacim u bazu novi sloj sa svim regijama kao novu tablicu upit javlja gresku tj ne zeli je pretrazivat a tablica je vidljiva na popisu? Jel problem u tim novim, merge-anim atributima ili ja ne prebacim dobro?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90293": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@hejhoj#90292 Nemam pojma, ja sam samo u QGISu drag-and-drop layere iz Layer u browser view i refreshala onda postgres i tam s epojavilo i sve fino radi. (samo srid je trebalo mijenjat)",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90304": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@janeromero#90293 da tako sam i ja, al evo skuzila sam sad da sam kod merge-anja selected features u regijama1,2,3,4 za atribute novog (merge) retka stavila \"skipped\" vrijednosti pa sad kad stavim vrijednosti jedne n-torke tj zupanije onda mi moze u bazi prikazat pa valjda tako treba :D tnx!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90363": {
+      "poster": "gagotron",
+      "content": "Jel može netko uploadat  negdje ovaj zip file za administrativna područja u Hrvatskoj, jer iz nekog razloga mi se mogu ostale stvari dignuti (poput cesta itd), ali ne ovo šta treba za predmet",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90374": {
+      "poster": "keykey",
+      "content": "jel bi se prvi zadatak trebao znati rjesiti nakon gledanja onih videa ili? prosla sam zzv i i dalje ne znam kako bi to rijesila",
+      "votes": {
+        "upvoters": [
+          "laugreano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90375": {
+      "poster": "gagotron",
+      "content": "https://www.youtube.com/watch?v=Fm6bjyijamk \n\nili sam ja lud ili samo treba ovo sa kraja videa, selektirati zupanije i  spremiti selektirane zupanije kao regije",
+      "votes": {
+        "upvoters": [
+          "DostDobroIme",
+          "Patak007"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90437": {
+      "poster": "Patak007",
+      "content": "![](assets/2020-11-09/00034.png)\n2. zadatak... jel netko zna zasto ovaj upit ne valja cak i kada ga specifiram na pojedinacnu zupaniju u regiji (Zagreb) i pojedinacni dio save koji njime prolazi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90444": {
+      "poster": "keykey",
+      "content": "@Patak007#90437 ne bih znala ali me zanima jesi uzimao savu iz water ili waterways?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90449": {
+      "poster": "Patak007",
+      "content": "@keykey#90444 waterways, imalo mi je vise smisla jer je waterways tipa vector dok je water nšsto drugo (mislim onaj poligot ili kako vec, ugl istog tipa su parcele i zgrade)",
+      "votes": {
+        "upvoters": [
+          "keykey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90456": {
+      "poster": "Patak007",
+      "content": "@Patak007#90437 pošto zbog nekog razloga ne mogu editat vlastiti post evo ovdje \n\nEDIT: kod radi, problem je bio u nekompatibilnim SRID vrijednostima",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90458": {
+      "poster": "keykey",
+      "content": "jel nekom za duljinu save sveukupno kroz regije ispadne manje od 400 km? kad guglam pise da je duljina save u hrv 562 km 😁\n\nEDIT: u qgisu se actually vidi da je sava juznije i istocnije mapirana s obzirom na openstreet map a i na regije.. vjv je do toga",
+      "votes": {
+        "upvoters": [
+          "emrys (Scofield)",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90755": {
+      "poster": "Eteie",
+      "content": "Jel zna mozda netko sto znaci error transform: latitude or longitude exceeded limits (-14)\n\nDogada mi se kada u savi idem srid namjestit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90784": {
+      "poster": "keykey",
+      "content": "je li samo meni Licko-senjska nije valid kada unesem u bazu zupanije, tj hrv_adm1?",
+      "votes": {
+        "upvoters": [
+          "emrys (Scofield)",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90798": {
+      "poster": "emrys (Scofield)",
+      "content": "@keykey#90784 Ja sam koristio opciju ST_MakeValid() https://postgis.net/docs/ST_MakeValid.html, pa mi nije više radilo probleme",
+      "votes": {
+        "upvoters": [
+          "keykey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90799": {
+      "poster": "Patak007",
+      "content": "@Eteie#90755 Bio je i meni isti error, meni se dogodilo jer sam prckao po srid vrijednostima... Mislim da sam popravio tako da sam samo izbrisao tablicu Sava i napravio ispocetka... Ako radis Savu iz tablice koja vec ima podesen srid vrijednost ce ti se prenjet",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90801": {
+      "poster": "hys_kira",
+      "content": "Može li netko, please, podijeliti preuzete podatke o administrativnim područjima? Stranica  http://www.diva-gis.org/datadown trenutačno ne radi kada se pokušaju preuzeti podaci.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90803": {
+      "poster": "keykey",
+      "content": "@hys_kira#90801 izvoli :)  https://we.tl/t-Uep78iJy3p",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90805": {
+      "poster": "hys_kira",
+      "content": "@keykey#90803 Puno hvala.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90816": {
+      "poster": "laugreano",
+      "content": "@mentally_disturbed_llama#89683 ista stvar, jel se zna u čemu je problem ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90832": {
+      "poster": "keykey",
+      "content": "@laugreano#90816 najvjerojatnije ti je problem u SRID-u, napravi sve ono s zadataka za vjezbu da vidis SRID i da ga updateas",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90836": {
+      "poster": "gagotron",
+      "content": "Jel itko ima rješenje za ubrzanje querya za 3. zadatak (izlijevanje save). Probao sam dodavati funkcije poput st_buffer i  st_overlaps, ali od toga mi  samo jos vise treba vremena da se query izvrti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90940": {
+      "poster": "moukie",
+      "content": "Sjeća li se tko od prošle godine što se pitalo na usmenoj predaji?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91060": {
+      "poster": "mentally_disturbed_llama",
+      "content": "@laugreano#90816 Nisam uspjela otkriti što je problem. NIJE problem u SRID-u. Ja sam stavila taj upit, objasnila da ne radi i napisala što očekujem da bi trebao raditi i što bih nakon toga napravila da radi, nemam bolju ideju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91205": {
+      "poster": "Eteie",
+      "content": "Je li je bitno ime word dokumenta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91211": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "ne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91270": {
+      "poster": "hotpanties",
+      "content": "@Patak007#90437 \n\nmozes pls rec koje si srid vrijednosti koristio... meni nikako nece radit ovo sranje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91272": {
+      "poster": "hotpanties",
+      "content": "ako moze bilo tko napisat koje srid vrijednosti je korisito u 2. zadatku za admin a sta za savu tj waterways\n\nbio bih vjecno zahvalan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91273": {
+      "poster": "keykey",
+      "content": "@hotpanties#91272 iste kao u ZZV, samo za admin stavi da je Multiploygon, a Sava MultiLine nesto (isto imas primjer u ZZV)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91278": {
+      "poster": "hotpanties",
+      "content": "@keykey#91273 \n\nNe znma onda u cemu mi je problem... \n\nza sad samo tu gledam kroz koje zupanije prolazi sava i ne ispisuje nista\n\nnapravio sam st_makevalid i najestio taj glupi srid na 3765... ima ko kakve ideje sta ze desava\n```sql\nselect hrv_adm1.name_1\n\tfrom hrv_adm1, sava\n\twhere st_intersects(hrv_adm1.geom, sava.geom)\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91297": {
+      "poster": "AN5A",
+      "content": "@hotpanties#91270 Ja sam sve shp datoteke (koje su nam dali i admin) zajedno ubacila u bazu i za sve napravila postupak opisan u zadacima za vježbu (rename, update geometry i prebacivanje geometrija u SRID 3765 pri čemu se za sve hrv_adm datoteke koristi MultiPolygon). Nakon toga više nisam morala namještati SRID-ove, no treba popraviti geometriju za neku županiju što možeš s upitom:\n\n`UPDATE hrv_adm1 SET geom = ST_MakeValid(geom) WHERE NOT ST_IsValid(geom);`",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)",
+          "hotpanties"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91300": {
+      "poster": "hotpanties",
+      "content": "@AN5A#91297 \n\nhvala ti puno, sad cu bas probat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91302": {
+      "poster": "hotpanties",
+      "content": "@AN5A#91297 \n\nRADIIII!!!!\n\nhvala ti puno, bas sam se dugo s ovime zajebavao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AN5A"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91532": {
+      "poster": "keykey",
+      "content": "evo informacije s ispitivanja: \n\npitao me Mekterovic, isli smo po mom pdfu gdje sam ja objasnila sta i kako sam radila, on se ubacio sa pitanjima tipa sto je SRID ali nista izvan tog worda me nije bas pitao.. jos jedno pitanje kojeg se sjecam je bilo za onaj zadatak sa Savom kako sam poboljsala performanse al meni se taj upit izvrtio u manje od 5 min pa sam rekla da imam kreirane inedekse i da nisam imala problema..ugl ugodno skroz",
+      "votes": {
+        "upvoters": [
+          "behappy98",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91538": {
+      "poster": "behappy98",
+      "content": "Jel se trebam ja ubacit u call ili cekam da me nazove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91541": {
+      "poster": "keykey",
+      "content": "@behappy98#91538 cekas da te nazove",
+      "votes": {
+        "upvoters": [
+          "DostDobroIme",
+          "behappy98"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91567": {
+      "poster": "jazavci",
+      "content": "Jel itko uspio rijesiti ovaj sto mekterovic pita?",
+      "votes": {
+        "upvoters": [
+          "laugreano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

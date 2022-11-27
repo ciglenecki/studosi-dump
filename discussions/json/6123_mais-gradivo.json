@@ -1,0 +1,1395 @@
+{
+  "title": "[MAIS] Gradivo",
+  "creator": "Bananaking",
+  "slug": "mais-gradivo",
+  "tags": [
+    "FER",
+    "Multimedijske arhitekture i sustavi"
+  ],
+  "posts": {
+    "138544": {
+      "poster": "Bananaking",
+      "content": "![](assets/2021-02-06/00014.png)\n\nMože netko opisati kako se riješava ovaj zadatak? U MI temi su uglavnom za odgovor linkali http://denis-sofic.from.hr/huffmanov-kod gdje piše kako se računa efikasnost ali zanima me taj blok/tablica, što je ta razlika, izgradnja stabla.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "138566": {
+      "poster": "Filemon",
+      "content": "@Bananaking#138544 predviđanje je [imath]\\hat{P}(x, y) = P(x-1, y)[/imath], po tome izgradiš tablicu predviđanja, dakle za (0, 0) recimo je 0, jer nije definiran vrijednost za (-1, 0), a zadatak kaže da za takve pretpostavljamo 0, za (1, 0) je 3 itd. Iz te tablice predviđanja i og tablice računaš grešku predviđanja, što je ovdje računato izravno, bez tablice predviđanja.\n\nVrijednosti iz tablice grešaka se onda kodiraju Huffmanom ili iz vjerojatnosti pojavljivanja simbola ili iz frekvencija, isto dođe, ovdje su računate vjerojatnosti, pa imaš 14 nula, a 64 su simbola ukupno, dakle 14/64, itd.\n\nI onda iz toga gradiš stablo, kao u linku, sortiraš po vjerojatnosti/frekvencijama (nije nužno, ali je preglednije stablo), uzmeš dvije najmanje grane, manjoj pridjeljuješ 0, većoj 1 i spojiš ih pri čemu se zbrajaju vjerojatnosti/frekvencije, ako su iste konzistentno ćeš donjoj ili gornjoj grani davati 0. \n\nTo se ponavlja dok ne spojiš zadnje dvije grane s vjerojatnosti 1/frekvencijom 64 u ovom primjeru. Za svaki ćeš simbol onda pročitat unazad koji kod mu se pridjeljuje.",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "138761": {
+      "poster": "renren",
+      "content": "@Bananaking#138544 Zapisala sam zadatak sa ZI i tocne rezultate, ako zelis provjerit svoj postupak:\n\n[imath]P =\n [[8, 8, 8, 4],  [8, 8, 4, 5], [8, 4, 5, 4], [4, 5, 4, 4]] [/imath]\n\n [imath]\\hat{P}(x, y) = int([P(x-1, y)+P(x-1, y-1)+P(x, y-1)]/3)[/imath]\n\n [imath]e= |P(x, y)-\\hat{P}(x, y)|[/imath]\n\n(kod int zaokruzujes na manji)\n\nL = 2.8 (napomena, trazili su aritmeticku sredinu duljine kodnih rijeci, a ne onu uobicajenu formulu)\n\nH = 2.022\n\nbr bitova u bloku nakon sto se brojevi prikazu Huffmanom = 33\n\nkompresija = 3.88",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "138857": {
+      "poster": "Bananaking",
+      "content": "![](assets/2021-02-07/00005.png)\n\nDa provjerim prije nego što ispravim u docsu, ovo pod b je krivo? Ako je najveći broj u kvantiziranom nizu 4=2^2 onda je 8*2 bita = 16 bita za niz?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "138862": {
+      "poster": "Trolololica",
+      "content": "Pa 4 =100 u binarnom. Onda je 3 bita.",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "HotPotato"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "138868": {
+      "poster": "Bobicki",
+      "content": "@Bananaking#138857 Najveći broj koji se može napisati u n bitova nije 2^n, nego 2^n-1, krivo je tu napisano u uputama. U 2 bita najveći broj je 3 odnosno 11 binarno, tako da su ti potrebna 3 bita za zapis broja 4 (100 binarno).",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "139803": {
+      "poster": "basketbaler (Burek sa sirom)",
+      "content": "jel ima još koga na roku iz ovoga i je li dosta naučiti sam one zadatke iz docsa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "139804": {
+      "poster": "keparrizabalaga",
+      "content": "@basketbaler#139803 \n\nNisi jedini...ja prolazim kroz taj doc, ne znam sta bi drugo",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "basketbaler (Burek sa sirom)",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "139811": {
+      "poster": "renren",
+      "content": "@basketbaler#139803 \n\n@keparrizabalaga#139804 \n\nAko ce rok bit isto organiziran kao i MI i ZI, dovoljno je samo doc prec jer se sve iz njeg ponavlja. Iz gradiva drugog ciklusa imaju 2-3 zadatka, sve ostalo je iz prvog ciklusa. Sad je na ZI-u vecina bodova isla na pretrazivanje blokova pa na to obratite paznju. Idite samo redom po docu, dadne se relativno brzo sve prec. Mozda se na ispitu pojavi jedno teoretsko pitanje, ali za to su tu skripte ako zatreba.",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "basketbaler (Burek sa sirom)",
+          "hejhoj (vdvd)",
+          "keparrizabalaga"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140094": {
+      "poster": "basketbaler (Burek sa sirom)",
+      "content": "Zna li tko hoće li bit na zaokruživanje ispit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140258": {
+      "poster": "p444k",
+      "content": "Jel ima netko upute za rješavanje zadataka u 16bitnoj aritmetici. Wrap around i ostalo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140348": {
+      "poster": "Filemon",
+      "content": "@p444k#140258 pogledaj ili doc ili potraži u temi za ZI, znam da sam nekom objašnjavao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140378": {
+      "poster": "hejhoj (vdvd)",
+      "content": "aj nemojte sad da budem sama na ljetnom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Bananaking",
+          "Emma63194",
+          "Juren",
+          "Noggenfogger (dammitimmad)",
+          "Smolaa",
+          "basketbaler (Burek sa sirom)",
+          "keparrizabalaga"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140389": {
+      "poster": "Bananaking",
+      "content": "@hejhoj#140378 vjerojatno se stigneš još prirediti za sutra da i tek sad kreneš, ako ti nešto nije jasno nakon što prođeš kroz googledocs i teme pitaj",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "hejhoj (vdvd)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140653": {
+      "poster": "basketbaler (Burek sa sirom)",
+      "content": "@basketbaler#140094 poslao sam mail, biti ce na zaokruzivanje",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140711": {
+      "poster": "kivu",
+      "content": "moze li netko napisati sazetak kako se racuna broj operacija u full searchu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140723": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@kivu#140711 Izbrojiš koliko se operacija radi za razliku u jednom bloku i onda izračunaš koliko ćeš razlika blokova računati s tom konvolucijom (jer full search je zapravo ništa drugo nego konvolucija s referentnim blokom i korakom 1), pomnožiš ta dva broja i to ti je rezultat.",
+      "votes": {
+        "upvoters": [
+          "kivu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140725": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@micho#140723 https://docs.google.com/document/d/1-10EeweBtYiUp2jVAA2-BsnWoOL8ORU8XQnB7msOzsQ/edit?pli=1 mozes bacit oko na 4.zadatak? je li tocno crno ili crveno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140731": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Noggenfogger#140725 crno je točno, mislim da svaka mentalno zdrava osoba može zaključiti da\n\n[math]\n\\sum_{i=0}^{n}{|x_i - y_i|}\n[/math]\n\nsadrži [imath]n[/imath] oduzimanja i [imath]n - 1[/imath] zbrajanja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140743": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@micho#140731 cini se da sam mentalno nezdrava danas (zahalirala sam da se samo oduzimanja gledaju zbog prezentacija), uglavnom hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140760": {
+      "poster": "Bananaking",
+      "content": "Blok od 50 000 podataka, učitavanje 1000ns. Obrada jednog traje 2ns. Spremanje 2500ns. Prilikom odgovaranja zaokružite rezultat na prvi veći cijeli broj.\n\n1) Koliko treba procesora da bi se algoritam ubrzao 4x\n\n2) Kolika je paralelna efikasnost ako sustav ima 9 procesora\n\n1) N=4.46927=~ 5\n\n2) E=0.78707=~ 77%\n\nDobijem ovo ali mi se kroz maglu čini kao da je pod 1) možda odgovor bio 6 pa ako netko želi provjeriti za vježbu neka javi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140765": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Noggenfogger#140743 zbrajanje i oduzimanje su ti oboje izvedeni kao zbrajanje. Mislim, inače bi ovdje najbitniji bili dohvati iz memorije i množenja, ali u ispitu piše obično kako to gledaš i to budu ta zbrajanja. E sad, ako napraviš na ispitu da gledaš samo zbrajanje ili oduzimanje, omjeri će ti vjerojatno ispasti isti u oba slučaja jer su zbrajanja i oduzimanja otprilike iste učestalosti, ali može se i zakomplicirati zadatak (npr. kažu da se množenje računa kao 2 zbrajanja - onda će rješenja potencijalno biti kriva)",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140777": {
+      "poster": "renren",
+      "content": "@Bananaking#140760 To sa ZI? Tu sam kiksala postupak, pa ti ga nez dat, ali sam zapisala zadatak i ponudjene odgovore, (mislim da je 5000 podataka u zadatku zadano btw).  Za 1) treba ispast 5, a za 2) bi trebalo 79% po skeniranim obrascima",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140788": {
+      "poster": "Bananaking",
+      "content": "@renren#140777 Ok dobro je, ne znam zašto sam gore 0.787 zaokružio na 77% a ne 79%. Za budućnost: 50 000 podataka je, sa 5000 se dobiju neki čudni negativni brojevi.",
+      "votes": {
+        "upvoters": [
+          "renren"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "140880": {
+      "poster": "Bananaking",
+      "content": "U zadacima sa okvirima (ORT, LOG) piše \"svaki korak uspoređivanja računa se jedanput\". Znači li to da ako se pomaknem za recimo step=2 desno i onda računam lijevo za step=2 opet, algoritam pamti tu vrijednost otprije umjesto da ju računa ponovno pa to ne ide u ukupni zbroj uspoređivanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "221047": {
+      "poster": "p444k",
+      "content": "Jel netko moze pojasnit racunjae d-a i s-a u ORT, LOG i 3SS algoritmima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258511": {
+      "poster": "tito",
+      "content": "Koji je broj operacija množenja, zbrajanja i oduzimanja kod mse-a za matricu 8x8?\n\nPitam zato jer se kvadrira oduzimanje.\n\nNa primjer za mad je 1 množenje, 64 oduzimanja i 63 zbrajanja",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258514": {
+      "poster": "Filemon",
+      "content": "@\"tito\"#p258511 ovisi o veličini okvira koji gleda u tom prozoru za pretraživanje.\n\nali svih n kvadrata se naravno računaju kao množenje\n\nEDIT: aha sad sam skužio da je to veličina okvira, imat ćeš 64 računanja kvadrata razlike koje ćeš zbrojit i pomnožit s konstantom, dakle 64 oduzimanja, 64 množenja, 63 zbrajanja i još jedno množenje",
+      "votes": {
+        "upvoters": [
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258564": {
+      "poster": "tito",
+      "content": "zašto se mogu nakon dct-a više frekvencije više kvantizirati?\n\nrazumijem da prva vrijednost matrice nakon dct-a predstavlja ajmo reć prosječnu vrijednot svjetlosti ili komponente koja predstavlja boju, te onda ostale komponente donose manje informacija jer na tom bloku će se malo mijenjat vrijednost.\n\nA ako se i mjenja puno vrijednost, vjerojatno je do šuma koje se mora maknuti.\n\nMogu parafrazirati pitanje i u \"što više frekvencije predstavljaju u matrici nakon dct-a\"?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258565": {
+      "poster": "MJ3",
+      "content": "https://fer.studosi.net/d/2123-mais-meduispit-20202021/194\n\notkud ova množenja ispod i rezultat 17?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258572": {
+      "poster": "tito",
+      "content": "@\"MJ3\"#p258565 \n\nnakon što huffmanom odrediš kodove, gledaš koliko ti je potrebno bitova da zapišeš cijeli niz. Pa to množenje predstavlja koliko se puta pojavljuje određeni kod * duljina koda.\n\nI meni je ispalo 16 kao i nekim drugima u toj temi.",
+      "votes": {
+        "upvoters": [
+          "MJ3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258653": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"tito\"#p258564 Možeš ih više uništavati jer uzimaš kao pretpostavku da je ljudsko oko manje osjetljivo na distorziju u visokim frekvencijam, pa ti je okej žrtvovati neku informaciju ako se slika ne bi trebala znatno promijeniti.",
+      "votes": {
+        "upvoters": [
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258714": {
+      "poster": "Filemon",
+      "content": "@\"tito\"#p258564 u principu DCT-om se sliku rastavi na komponente koje izgledaju ovako: \n\nhttps://upload.wikimedia.org/wikipedia/commons/2/24/DCT-8x8.png \n\ndakle svaki ovaj kvadratić pokriva cijelu sliku i koeficijentom koji ostane odlučujemo s kolikim ćemo inzenzitetom uzet taj uzorak, a svi zbrojeni čine sliku. \n\nmožeš primijetiti tri stvari: \n\n1. na (0, 0) je istosmjerna komponenta slike, tj njena prosječna vrijednost. \n2. kako idemo prema rubovima, tako se dodaje još detalja u osi okomitoj na smjer kretanja\n3. otprilike istu količinu detalja imaš zig-zag kretanjem\n\nI onda kad izađemo iz DCT-a, zbog HVS-a, prvo bismo i ovako i onako mogli odlučiti maknuti sve komponente (frekvencije) npr. u donjem desnom kutu jer slabo doprinose razlučivosti slike, tj ne vidi se razlika. i onda još možemo ekstra kvantizirati da prvo sigrno imamo cijele brojeve koje je lakše kodirati a uz to i da dodatno komprimiramo sliku odbacujući kad dođemo do npr. svih nula.",
+      "votes": {
+        "upvoters": [
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258718": {
+      "poster": "tito",
+      "content": "uzeo sam iz mi-a 15./16. 4 zadatak i koristio sam sve algoritme, pa eto ako netko želi usporedit samnom za vježbu \n\nza algoritam ort: početni korak mi je 2 (s), 9 puta se računa mse\n\nza algoritam log: početni korak mi je 2 (s), 12 puta se računa mse\n\nza algoritam 3ss: početni korak mi je 4 (s), 22 puta se računa mse\n\nza sve sam dobio da mi je optimalni blok [[19, 19], [3, 8]], koji je smješten za 2 dolje od centralnog i mse za njega mi ispada 37,5",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)",
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259094": {
+      "poster": "ReyKenobi",
+      "content": "@\"tito\"#p258718 \n\nSve sam dobila isto osim broja puta računanja u LOG, to dobijem 16. U zadnjem koraku (kada je S=1) bi trebalo računati 8 vrijednosti umjesto 4, možda je to razlika?\n\n![](assets/2021-11-27/00029.png)",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259119": {
+      "poster": "MrHead (vandal)",
+      "content": "I meni se cini da je 16 odgovor kod LOG racunanja (bez ikakvog cachiranja)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259318": {
+      "poster": "MrHead (vandal)",
+      "content": "Ispravak isto mi ispadne 12 kod LOG.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259324": {
+      "poster": "Juren",
+      "content": "@\"vandal\"#p259318 Mozes stavit postupak? Meni ispada 16 ukupno (not stating i'm right or wrong),  \n\n1 racunanje je centar pa onda\n\n4 okolo (blok za 2 desno,gore,dolje lijevo), mininum je u ovome koji je za 2 dolje, posto to nije centar gledam njegova \n\n3 susjeda (desno, lijevo dolje), posto je sad minimum u centru, smanjim s=s/2=2/2=1 i u tom trenu pretrazujem svih\n\n8 njegovih susjeda, trenutni centar(2 dolje od centra cijelog bloka) je najmanji i to je rjesenje\n\nto je ukupno 16 racunanja... Kak ti dobijes 12?",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)",
+          "ReyKenobi",
+          "a_ko_si_ti"
+        ],
+        "downvoters": [
+          "JoKing"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259327": {
+      "poster": "tonkec",
+      "content": "@\"Juren\"#p259324 ne bi li trebalo biti 17 pošto nigdje nije navedeno da se keširaju neke prethodno izračunate vrijednosti, a ti si preskočio nakon prvog pomaka blok koji je gore, odnosno računao si  desno, lijevo dolje\n\nznači u prvom koraku 5 blokova pa je pomak za dva mjesta dolje, onda izračun na 4 bloka, ostaje se na istom mjestu, s postaje 1 pa se izračunava na 8 blokova što daje 17",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259337": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"tonkec\"#p259327 Ne, implicitno ne uvodiš taj bespotrebni korak, ne treba nigdje bit naznačeno kad je algoritam definiran na način da samo prvi put gleda centar.",
+      "votes": {
+        "upvoters": [
+          "tonkec"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259401": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "@\"Juren\"#p259324 meni je isto ovak i to bude 16",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259420": {
+      "poster": "MrHead (vandal)",
+      "content": "Znaci za LOG: prvo je centar [[19, 18],[17,2]]\n\ns=2\n\nOnda se racuna za gore, dolje, lijevo i desno za s=2 od njega i to su redom: [[10,1],[8,8]],  [[19,19], [3,8]],   [[4,1],[4,4]],  [[17,3],[20,1]]\n\nOnda se centar pomakne dolje u  [[19,19], [3,8]] i s=2 i dalje.\n\nOnda racunam za [[0,2],[1,1]], [[3,8],[3,8]], [[0,1,],[0,1]] i centar ostaje unutar istog [[19,19], [3,8]] i s=1 sad.\n\nOnda jos 4 oko njega koji su udaljeni za s=1 i to je to. Buduci da centar ostaje u istom, s=0 i kraj.\n\nTih 4 oko njega su [[2,19],[1,3]], [[17,2],[19,19]], [[19,0],[8,0]] i [[3,8],[3,8]].",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259423": {
+      "poster": "MrHead (vandal)",
+      "content": "Skuzio sam gresku, nisam na 8 njih racunao u zadnjem koraku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259424": {
+      "poster": "MrHead (vandal)",
+      "content": "@\"Juren\"#p259324 Skuzio sam gresku, nisam za 8 njih racunao u zadnjem koraku. Dobro je 16.",
+      "votes": {
+        "upvoters": [
+          "Juren",
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259487": {
+      "poster": "MrHead (vandal)",
+      "content": "Kako se rjesava ovaj zadatak?\n\n[Ovdje](https://github.com/studosi-fer/MAIS/blob/master/ispiti/mi/2015-16/MAIS_2015-16_mi_rjesenja.pdf) je rjesen na drukciji nacin nego u [google dokumentu (17.zadatak)](https://docs.google.com/document/d/1-10EeweBtYiUp2jVAA2-BsnWoOL8ORU8XQnB7msOzsQ/edit?pli=1).\n\n![](assets/2021-11-28/00020.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259510": {
+      "poster": "tonkec",
+      "content": "@\"vandal\"#p259487 ista matrica, različiti zadatci, na tvojem primjeru samo popišeš koliko se svaki broj pojavljuje, odnosno pretvoriš u vjerojatnosti, možeš si sortirati padajuće, napraviš huffmanovo kodiranje (4 vrijednosti imaju po tri znaka, a jedna ima samo jedan), prebrojiš koliko bajtova se utroši za početnu matricu (16 * 1B), a koliko za kodirane vrijednosti (mislim da 32 bita, odnosno 4B), podijeliš prvo s drugim i to ti je onda taj stupanj kompresije (4)",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259620": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "@\"tito\"#p258718 \n\n@\"ReyKenobi\"#p259094 \n\nKako nije za ORT optimalni blok [[17, 3], [20, 1]]? (na ovoj slici zaokruženi)\n\n![](assets/2021-11-28/00037.png)\n\nZnači početni MSE = 146.25\n\nAl za ovaj desni je ond MSE = 59.75 i to je ond minimalni i ond se prebacujemo desno?\n\nKako završite u ovom dolje?\n\n(Ond dalje ne bude nijedan novi minimalni pa ostane taj desni)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259621": {
+      "poster": "keykey",
+      "content": "@\"tonkec\"#p259510 ali je isti tekst zadataka a na drugačiji su način rješeni.. u kojem slučaju bi znali koristiti li običnog Huffmana ili ovog s DC i AC?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259627": {
+      "poster": "netko_tamo",
+      "content": "@\"Ivančica\"#p259620 nešto si krivo izracunao/la, za taj blok MSE = 255. 1/4*((20-17)^2 + (20-3)^2 + (1-20)^2 + (20-1)^2 )",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)",
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259630": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "@\"netko_tamo\"#p259627 Aaaaa fak, ja sam uzeo ove brojeve iz ref bloka pa sam imo (19-17)^2+(18-3)^2+....\n\nSjeb, tenkju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259650": {
+      "poster": "tonkec",
+      "content": "@\"keykey\"#p259621 u onom dokumentu je umjesto huffmanov kod pisalo hafov pa sam pretpostavio da je onaj drugi način kodiranja, piše u slajdovima \"modificirani\" huffmanov kod pa bolje onda pitati na ispitu što koristiti",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)",
+          "keykey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259704": {
+      "poster": "Fast-and-Fourierous",
+      "content": "Može li netko usporediti sa mnom zadatke iz međuispita iz 2012.?\n\n**2. zadatak**\n\n<0,3><1,5><0,6><1,1><0,1><4,7><0,1><4,1><1,2><0,2><1,3>\n\nStupanj kompresije: 32B/22B = 1.45\n\n**3. zadatak**\n\nBrzina prijenosa = (1920 x 1080 x 3 x 24B)/s = 149299200 B/s\n\nStupanj kompresije potreban za prijenos od 5MB/s: (142.38 MB/s)/(5 MB/s) = 28.48 (računala sam da je kilobajt 1024 bajta, vidim da je bila neka rasprava o tome u onom dokumentu, za obično 1000 mi omjer ispadne 29.86)\n\n**4. zadatak**\n\nORT s početnim korakom zadanim +/-4\n\nMAD kod osnovnog bloka [19, 18; 2, 17] mi je stalno bio najmanji (1.75) i nisam se micala iz njega (vektor pomaka 0,0), računala sam MAD još dodatnih 12 puta.",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti",
+          "koBASA (hackerman)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259716": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "@\"tito\"#p258718 Je li onda za taj zadatak vrijedi da je vektor pomaka (0,2)? Ak ne kako da to odredim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259785": {
+      "poster": "netko_tamo",
+      "content": "@\"Ivančica\"#p259716 (0,-2) je vektor pomaka jer ti je MAS najmanji za step = 2 i vertikalno prema dolje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259788": {
+      "poster": "Filemon",
+      "content": "@\"keykey\"#p259621 po tekstu zadatka kako je zadano, onaj s AC i DC je modificiran",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259800": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "@\"netko_tamo\"#p259785 Znači kako funkcionira taj vektor? Broj koji se upisuje je step na kojem je određen najmanji MAS, upisuje se lijevo ako si se pomicao horizontalno, + ako si išao lijevo, - ako si išao desno. Ako si se pomicao vertikalno upisuješ + ako si išao gore, - ako si išao dolje? Jel dobro kužim? Jel ima to u nekoj prezi btw.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259809": {
+      "poster": "Filemon",
+      "content": "@\"Ivančica\"#p259800 je znaš odredit vektor između točke (x_i, y_i) i (x_j, y_j)? \n\nx i y os su normalne, ako je vektor pomaka (1, -2), blok najbliži trenutnom u referentnom frameu po mjeri poremećaja nalazi se jedan piksel desno i 2 dolje od trenutnog",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259821": {
+      "poster": "post",
+      "content": "@\"Fast-and-Fourierous\"#p259704 \n\nIspada mi isto kao tebi",
+      "votes": {
+        "upvoters": [
+          "Fast-and-Fourierous",
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259853": {
+      "poster": "Broono (Burućuh)",
+      "content": "Da imamo sljedeći zig-zag niz DCT koeficijenata: 15,2,2,1,1,-1,15,-1,1,0,0,0,0,0,0,0. Kako bi se sada odredio DC (prvi broj u nizu) pošto se 15 ponavlja?",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "MrHead (vandal)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259863": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "@\"Burućuh\"#p259853 Prvi 15 bi išao po DC, a drugi po AC. Ako te muči to što je netko napisao u onom docu da imamo jedan blok pa ne oduzimamo ništa od 15 mislim da je to trebalo biti kada bi imali još jedan blok prije ovog i tamo je npr. prvi broj 10 onda bi imali 15-10=5",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Cvija",
+          "keykey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259871": {
+      "poster": "MJ3",
+      "content": "@\"Filemon\"#p259809 jel se osi gledaju normalno ili ipak raste y prema dolje? u labosu je pomak prema dolje definiran kao pozitivan pomak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259873": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "@\"Ivančica\"#p259800 Nisam sigurna ali na onim slikama s preze kod tih pretraživanja je nacrtan grid i taj početni je u 0,0 i po x osi ide + desno i - lijevo, a po y osi ide + gore i - dolje pa možda ide tako",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)",
+          "Fast-and-Fourierous",
+          "moji_prsti_prsti_klize_po_njoj",
+          "narval13068 (Dima)",
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259886": {
+      "poster": "Broono (Burućuh)",
+      "content": "@\"lumity\"#p259863 Hvala puno!",
+      "votes": {
+        "upvoters": [
+          "ImJustAKid (lumity)",
+          "MrHead (vandal)",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259909": {
+      "poster": "Filemon",
+      "content": "@\"MJ3\"#p259871 pitaj šetača, inače je prema dolja y os, ali nama je na ispitu lani bila normalna, pa tako i pričam",
+      "votes": {
+        "upvoters": [
+          "MJ3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260064": {
+      "poster": "member",
+      "content": "![](assets/2021-11-29/00029.png)\n\nZa blok  [19, 18; 2, 17] (početni), u onom dokumentu piše \"dok step ne bude 1 (**i za njega se računa**)\". Znači za s = 1 bi  za horizontalne blokove uzela [1, 19; 4, 2] i [18, 17; 17, 20]? Tako i za vertikalne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260069": {
+      "poster": "Amon",
+      "content": "@\"member\"#p260064 Tako je",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260097": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "Kad bi se u ovom zadatku\n\n![](assets/2021-11-29/00036.png)\n\npitalo kakvo je poboljšanje brzine izvođenja u odnosu na full search kako bi to odredili?\n\nJasno mi je da je formula broj operacija u full search / broj operacija u ort il log (tj. broj MSE operacija)\n\nOnd bi za ort bilo = broj operacija u full search / 9\n\nA za log = broj operacija u full search / 16\n\nAli kako odrediti taj broj operacija u full searchu (tj broj potrebnih MSE operacija u full searchu)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260102": {
+      "poster": "Fast-and-Fourierous",
+      "content": "Je li netko riješio 1. i 2. zadatak iz međuispita iz 2009.?\n\n3SS, MAD na 8x8 matrici (2x2 blok za step 4 izađe van matrice pa sam gledala da su izvan nule)\n\nOstajem u centru svo vrijeme gdje je MAD 1.75, osim toga sam izračunala MAD još 24 puta.\n\nSad nisam sigurna za operacije, ako može netko provjeriti i ispraviti me: \n\n**3SS**: sveukupno 25x4 oduzimanja,  25x3 zbrajanja, 25 množenja?\n\n**Potpuno pretraživanje**: pojedinačno 6x6 oduzimanja, 6x6-1 zbrajanja, 1 množenje, sveukupno (2x4 + 1)(2x4 +1)(6x6 + 6x6-1 + dohvat) zbrajanja + dohvati te (2x4 + 1)(1 + dohvat) množenja + dohvati",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "laugreano"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260122": {
+      "poster": "a_ko_si_ti",
+      "content": "@\"Ivančica\"#p260097 Ako sam dobro izracunao, ide ovako:\n\nBlok koji se pregledava je 4x4, sto znaci za MSE treba: 4 oduzimanja (svaki element sa svakim), 4 mnozenja (jer svaki od njih kvadriramo) i onda 3 zbrajanja (zbrojit te 4 razlike). I onda to treba ponoviti za full search. Posto je dimenzija ukupnog grida koji se pregledava 8x8 mi cemo napraviti takvo racunanje na 7 redova i 7 stupaca (ovaj blok 4x4 znaci da se ne mozemo u 8. redu spustit do kraja jer bi nam falio jedan redak u bloku i isto tako za zadnji stupac).\n\nZnaci na kraju je 7 operacija zbrajanja * 7x7 (blokovi za koje to racunamo) i ispada 343 operacije zbrajanja. Za mnozenje je 4 operacije mnozenja * 7x7 = 196 operacija\n\nP.s. za mnozenje ne znam jeli se dodaje jedna ili 2 operacije jer pise da se konacna suma mnozi s 1/(M*N). tehnicki posto se radi usporedba, ne treba to ni radit\n\nEDIT: orginalno sam napisao za MAD, sad vidim da je MSE pa sam ispravio",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260130": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "@\"a_ko_si_ti\"#p260122 Što nije blok 2x2? I ukupni grid 10x10?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260135": {
+      "poster": "netko_tamo",
+      "content": "@\"Fast-and-Fourierous\"#p260102 kaj nije kod full searcha 7 * 6 jer u tablici 8*8 imas 42 moguce pozicije bloka od 6 slikovnih elemenata",
+      "votes": {
+        "upvoters": [
+          "Fast-and-Fourierous",
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260141": {
+      "poster": "Fast-and-Fourierous",
+      "content": "@\"netko_tamo\"#p260135 7 * 6 čega točno? Koristila sam onu formulu sa slajda 58 prezentacije 3, samo što je u našem primjeru iz ispita pomak +/-4 a blok pretraživanja 6x6. Kada pomjeram 6x6 blok po 8x8 slici čini se da ima 9 različitih pozicija, što je valjda ovo (2x4+1)...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "laugreano"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260143": {
+      "poster": "Filemon",
+      "content": "@\"a_ko_si_ti\"#p260122 kompliciraš, za računanje ubrzanja, s obzirom da uvijek uspoređujemo s istom mjerom poremećaja, dovoljno je izračunat broj računa mjera poremećaja u izabranom alg vs FS \n\n@\"netko_tamo\"#p260135 ovisi o veličini prozora i bloka, ne učite napamet. i ne vidim di vidiš 6 slikovnih elemenata",
+      "votes": {
+        "upvoters": [
+          "whatTheHel"
+        ],
+        "downvoters": [
+          "netko_tamo"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260147": {
+      "poster": "Fast-and-Fourierous",
+      "content": "@\"Filemon\"#p260143 Zadano je u zadatku 6 slikovnih elemenata\n\n![](assets/2021-11-29/00044.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Murin"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260148": {
+      "poster": "netko_tamo",
+      "content": "@\"Filemon\"#p260143 hahahah doslovno sam isao po zadatku, imamo tablicu od 64 elementa i gledamo 6 slikovnih elemenata",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260149": {
+      "poster": "Filemon",
+      "content": "@\"Fast-and-Fourierous\"#p260147 onda je 42, bez smanjenja općenitosti možemo pretpostaviti da je blok širine 3 i visine 2, možemo ga micat 6 puta horizontalno i 7 vertikalno, općenito (N - n + 1)(M - m + 1), di je blok N x M, a search window n x m \n\n@\"[unknown]\"#p260148 sry gledao sam onaj gore, 1. zad",
+      "votes": {
+        "upvoters": [
+          "Fast-and-Fourierous",
+          "member",
+          "netko_tamo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260150": {
+      "poster": "netko_tamo",
+      "content": "@\"Fast-and-Fourierous\"#p260141 6 pozicija horizontalno, 7 pozicija vertikalno u slucaju da je taj blok od 6 elemenata raspoređen u 3*2(3 stupca i 2 retka)",
+      "votes": {
+        "upvoters": [
+          "Fast-and-Fourierous",
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260151": {
+      "poster": "a_ko_si_ti",
+      "content": "@\"Ivančica\"#p260130 Ma sjebo sam skroz, gledao sam kako sam pisao u biljeznici, a nije mi se dalo sve prepisivati. Dobro je @\"Filemon\"#206 gore napisao kako najlakse izracunati ubrzanje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260152": {
+      "poster": "a_ko_si_ti",
+      "content": "Koji je onda zaključak za pocetni korak 3SS?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260154": {
+      "poster": "Fast-and-Fourierous",
+      "content": "@\"Filemon\"#p260149 Aha, ma ne znam čitati izgleda... Mislila sam da su dimenzije bloka, a ne broj elemenata kao što piše 😅 Je li tu onda isto vrijedi što si i kolegi gore napisao? Da uspoređujemo broj računanja mjera poremećaja, a ne broj potrebnih aritmetičko-logičkih operacija? Mislim da je netko spomenuo suprotno negdje...\n\n@\"netko_tamo\"#p260150 Da, ma evo skužila sam, hvala",
+      "votes": {
+        "upvoters": [
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260156": {
+      "poster": "Filemon",
+      "content": "@\"Fast-and-Fourierous\"#p260154 a kao piše u zadatku baš broj operacija, ali lani je bilo na zaokruživanje pa ono. i puno puno češće se traži samo ubrzanje",
+      "votes": {
+        "upvoters": [
+          "Fast-and-Fourierous"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260179": {
+      "poster": "member",
+      "content": "Za blok 16x16, netko je rješavao tako da je zbrojio i 255 zbrajanja.\n\n![](assets/2021-11-29/00047.png)\n\nZašto taj 255 nije zbrojen i u prezentaciji tj. koja je razlika? \n\n![](assets/2021-11-29/00048.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260181": {
+      "poster": "danko (nerim)",
+      "content": "@\"lumity\"#p259401 Kako za 3SS ispadne 22 MAD operacije?",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": [
+          "RogerRoger"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260184": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "@\"nerim\"#p260181 pocetni, zatim 8 okolo, zatim se pomaknes dolje jer novi minimum i oko tog dolje imaju 5, zatim ode gore u novi minimum i onda opet 8 -> 1+8+5+8=22",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260189": {
+      "poster": "Amon",
+      "content": "@\"member\"#p260179 Ovo gore je def točno što se tiče broja operacija, pogotovo kad si raspišeš ti to bude jasno\n\nA zašto toga u prezama nema to ti ne mogu reći... Preze su jako flawed imho",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260205": {
+      "poster": "a_ko_si_ti",
+      "content": "Kako mi u onom AC kodiranju mozemo proizvoljno pisat jeli 2-komplement ili nije? Uzmimo naprimjer broj 2. Svugdi na dokumentu pise da za to trebaju dva bita (10). Al ako se koristi 2-komplement, (10) označava -2, pa bi nam trebala 3 bita da napisemo  broj 2 (010). Jel ima to smisla?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260218": {
+      "poster": "balvan",
+      "content": "jel u svakom brzom algo iduci korak s/2 ili je u 3SS s-1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "260222": {
+      "poster": "a_ko_si_ti",
+      "content": "@\"balvan\"#p260218 s/2",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273737": {
+      "poster": "member",
+      "content": "Ima li u prezentacijama nešto o Wavelet kompresiji? Ne mogu pronać",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273989": {
+      "poster": "keykey",
+      "content": "@\"renren\"#p138761 Kako se dobije kompresija 3.88? Kaj nebi trebalo biti 4* (4x4) / 33 = 4*16/33=1.939 ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274178": {
+      "poster": "renren",
+      "content": "@\"keykey\"#p273989 Uh gdje me nađe, izlapio mi ovaj predmet iz mozga lol. Znam da se dobilo kao 128/33, ali kako se došlo do tog 128 nemam pojma, valjda jer imamo zadano 16 brojeva i svaki se zapisuje s 8 bita idk",
+      "votes": {
+        "upvoters": [
+          "keykey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "keykey"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274187": {
+      "poster": "keykey",
+      "content": "@\"renren\"#p274178 da, valjda se uzima da je svaki podatak 8 bitova inicijalno, hvala ti!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274322": {
+      "poster": "brbrbr",
+      "content": "Jel moze pomoc s Huffmanom tko zna (neovisno o zadatku, znaci samo u ovom dijelu gdje se kodira)\n\nPostoji li neki razlog zašto nisu spojeni npr. 1 i 12? Po kojoj logici se bira par elemenata ako je vjerojatnost pojavljivanja identična?\n\n![](assets/2022-01-27/00030.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274342": {
+      "poster": "Murin",
+      "content": "@\"brbrbr\"#p274322 \n\nAko su isti biras proizvoljno (ako nije drukcije napisani, npr abecedno itd.)",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti",
+          "brbrbr"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "275035": {
+      "poster": "member",
+      "content": "![](assets/2022-01-29/00022.png)\n\nJel \"_za dobivene greške predviđanja_ potrebno je odrediti...\" Određujem ovako: prosječna duljina Huffmanovih kodova je L(x) = suma(Pi * li), a teorijska entropija izvora je H(x)= suma(Pi * log2(1/Pi).\n\nI koji je odgovor na \"zašto se one razlikuju\"?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

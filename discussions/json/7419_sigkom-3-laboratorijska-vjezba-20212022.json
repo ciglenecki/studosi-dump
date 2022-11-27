@@ -1,0 +1,1758 @@
+{
+  "title": "[SIGKOM] 3. laboratorijska vježba - 2021/2022",
+  "creator": "pingvinka",
+  "slug": "sigkom-3-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Sigurnost komunikacija",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "296591": {
+      "poster": "pingvinka",
+      "content": "kod pokretanja ssh naredbi i sudo himage u 2. zadatku, trazi me password al nije mi jasno od kud bih ga trebala znat/palo mi je na pamet da to radim iz krivog terminala pa jel bi mi mogao netko napisat kak to pokrenut da vidim jel radi sve kak treba\n\njedino sto mi radi u tom testiranju vatrozida je pokretanje firefoxa i spajanje na stranicu",
+      "votes": {
+        "upvoters": [
+          "Kasperinac"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296635": {
+      "poster": "madoxx",
+      "content": "@\"pingvinka\"#p296591 ako te pita za password onda radi ssh, ne trebaš se loginat",
+      "votes": {
+        "upvoters": [
+          "Kasperinac",
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296673": {
+      "poster": "ZliDule",
+      "content": "Jel imao netko problem da mu ne zeli pokrenuti ovu start_fw skriptu u prvom zadatku? Kaze mi da nemam dopustenja, a probao sam sa sudo otvoriti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296727": {
+      "poster": "samo_vagabundo",
+      "content": "@\"ZliDule\"#p296673 probaj chmod 777",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297122": {
+      "poster": "branimir1999",
+      "content": "Jesu li prezentacije dovoljne da konfiguriram firewall u prvom zadatku ili moram ukljucit mozak i guglati?",
+      "votes": {
+        "upvoters": [
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297147": {
+      "poster": "Venki",
+      "content": "Kad sam pogledao danas na moodlu, pise da je rok za predaju za sljedeci tjedan, \n\nJel zna netko mozda s predavanja jesu spominjali ista u vezi toga?",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Ollie",
+          "mesojed (sofronijevicevPrst)",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297151": {
+      "poster": "Ollie",
+      "content": "@\"Venki\"#p297147 \n\nDa bio je Vuković i rekao je na predavajnu u čet da treba dodati još neke stvari za labos i kao da će zato produžiti rok.. \n\nJa sam mislila da je onda odustao od toga jer nije bilo promjene na moodlu, ali evo produženo je",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "mesojed (sofronijevicevPrst)",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297160": {
+      "poster": "Artemis",
+      "content": "Ima li netko neki source otkud shvatiti konfiguraciju vatrozida? Kako da znam koliko pravila je potrebno dodati za svaki zahtjev?",
+      "votes": {
+        "upvoters": [
+          "Baksuz",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297186": {
+      "poster": "Sulejman",
+      "content": "@\"Artemis\"#p297160 Na predavanju je profesor objasnio sve",
+      "votes": {
+        "upvoters": [
+          "Ollie"
+        ],
+        "downvoters": [
+          "--- ( 🤡 )",
+          "Argadem",
+          "Baksuz",
+          "MOXY",
+          "Rope (Rops)",
+          "Tinx (pingvin)",
+          "Zk6dO73 (burw0r)",
+          "angello2",
+          "crocorax",
+          "deus_vult",
+          "domagojj (VolimStopala🇻🇦🇭🇷)",
+          "gladiator",
+          "limun (kuss)",
+          "mesojed (sofronijevicevPrst)",
+          "neksi (filip)",
+          "ruza0001 (rozy)",
+          "samo_vagabundo"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "FERonja"
+        ]
+      }
+    },
+    "297201": {
+      "poster": "Sulejman",
+      "content": "Ha gle fakat je objasnio. \n\nEvo par smjernica:\n1. svako pravilo počinje sa $IPT -A\n\n$IPT je samo varijabla definirana na početku file-a ($IPT==iptables)\n\n-A je flag koji appenda pravilo na kraj lanca\n2. zatim slijedi INPUT ako se pravilo odnosi na router, a FORWARD ako se pravilo odnosi na pakete koji izlaze/ulaze u mrežu\n3. -i je flag nakon kojeg slijedi interface/sučelje s kojeg paketi dolaze\n4. -s je flag nakon kojeg slijedi izvorišna adresa paketa\n5. -d je flag nakon kojeg slijedi odredišna adresa paketa\n6. - -dport označava destination port (neki bitniji SSH=22, HTTP=80, HTTPS=443) **i on neće raditi ako ne dodate protokol sa -p**\n7. -m označava imprtanje modula il tak neš, a mi uglavnom uportamo modul *state* koji nam treba za NEW,ESTABLISHED...\n8. -j flag koji označava željenu akciju koju želimo napraviti s tim paketom ACCEPT/DROP/REJECT/...\n9. na početku file je definirano da se sve DROPa po defaultu i da su sve već upostavljene konekcije dopuštene (znači ne trebate ESTABLISHED,RELATED u pravilima nego samo NEW)\n\nviše možete pronac na [iptables](https://linux.die.net/man/8/iptables).\n\n[Neka česta pravila i objašnjenja](https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands).",
+      "votes": {
+        "upvoters": [
+          "Artemis",
+          "Baksuz",
+          "Bazul",
+          "Cubi",
+          "Jaster111",
+          "Ollie",
+          "Rope (Rops)",
+          "SuperSaiyano",
+          "SuperSjajan3",
+          "blablajar",
+          "domagojj (VolimStopala🇻🇦🇭🇷)",
+          "gladiator",
+          "tempest"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297310": {
+      "poster": "Baksuz",
+      "content": "Jel bi u svim ssh naredbama u 2. zadatku trebalo tražit password?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297345": {
+      "poster": "anon00",
+      "content": "koliko je vremenski potrebno za ovaj labos?",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297373": {
+      "poster": "Sulejman",
+      "content": "@\"Baksuz\"#p297310 ne. samo za prvi (198.51.100.10 ak se dobro sjećam) bi trebalo tražit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297374": {
+      "poster": "Sulejman",
+      "content": "@\"anon00\"#p297345 ovisi kolko znaš konf. firewall-a, al mislim da bi u jednom danu stigo riješit",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297400": {
+      "poster": "samo_vagabundo",
+      "content": "_dodajte \"anti-spoofing\" pravila._ help",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297424": {
+      "poster": "Baksuz",
+      "content": "Zna li netko objašnjenje pitanja u nmap dijelu 2. zadatka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297437": {
+      "poster": "gladiator",
+      "content": "@\"samo_vagabundo\"#p297400 ako je slučaj da paket dolazi na jedno sučelje, a njegova IP adresa je iz podmreže koje nije \"spojena\" na to sučelje onda taj paket treba odbaciti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297505": {
+      "poster": "Artemis",
+      "content": "Koji točno terminal (path) koristimo za naredbu: ssh -J root@198.51.100.10 root@10.0.0.10 -p 2222?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297622": {
+      "poster": "Krpa1 (Janez)",
+      "content": "Navedite koji je način skeniranja prouzročio promjenu ispisa naredbe watch netstat. Objasnite.\n\nMIjenja li se nekome ispis? Pokrenuo sam watch na shh i koju god naredbu probao, ispis se ne mijenja. Probao sam -A, -sV, -sS, -O, -sU. Svaki put sam u himage za ip adresu stavio adresu ssh.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297837": {
+      "poster": "Haki",
+      "content": "@\"gladiator\"#p297437 jel to znaci da odbacujemo pakete iz mreze 10.0.0.0/24 ili neke druge?",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297903": {
+      "poster": "angello2",
+      "content": "moze neko pojasnit zasto za anti spoofing treba dodavat DROP pravila ako je vec po defaultu sve droppano?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298045": {
+      "poster": "admin123",
+      "content": "Ako nas za ssh spajanje ne pita lozinku, mozemo to smatrat kao da funkcionira ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298056": {
+      "poster": "Sulejman",
+      "content": "@\"admin123\"#p298045 tad ne funkcionira",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298291": {
+      "poster": "Haki",
+      "content": "jel moze neko pojasnit kak rjesit 3. zadatak?\n\nnapravim sve po uputam i kad se pokusam spojit na ssh_int prek ssh upisem pass koji sam postavio al dobim:\n\nPermission denied, please try again.",
+      "votes": {
+        "upvoters": [
+          "MT09 (mt09)",
+          "Skenk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298294": {
+      "poster": "Haki",
+      "content": "jel treba jos nesto promijeniti u onim config fileovima, samo sam portove mijenjao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298379": {
+      "poster": "Sulejman",
+      "content": "@\"Haki\"#p298294 PermitRootLogin yes",
+      "votes": {
+        "upvoters": [
+          "Haki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298383": {
+      "poster": "admin123",
+      "content": "@\"Sulejman\"#p298056 sta treba ispisat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298432": {
+      "poster": "SuperSaiyano",
+      "content": "@\"Sulejman\"#p298056 Meni i kada ne dodam nikakva pravila, svaka ssh naredba traži lozinku??",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298434": {
+      "poster": "vrdrli23",
+      "content": "@\"ZliDule\"#p296673 Jesi uspio ovo riješiti, i ako da kako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298444": {
+      "poster": "vrdrli23",
+      "content": "@\"vrdrli23\"#p298434 Nvm uspio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298479": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"Janez\"#p297622 meni isto nista nije uzrokovalo promjenu ikakvu, pa cu tako i napisat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298482": {
+      "poster": "Skenk",
+      "content": "Imamo zadano da je SSH pristup posluzitelju web dozvoljen samo s racunala int1 a na kraju FW_int takoder imamo zadano da je iz LAN-a dozvoljen pristup DMZ i Internetu, u samom tekstu zadatka pise da rcaunala iz LAN-a imaju neogranicen pristup posluziteljima u DMZ i Internetu. Nije li po tome redundantan ovaj prvi dio za vezu int1 i web?",
+      "votes": {
+        "upvoters": [
+          "yabk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298504": {
+      "poster": "Haki",
+      "content": "@\"Sulejman\"#p298379 been there done that",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298511": {
+      "poster": "Sulejman",
+      "content": "@\"Haki\"#p298504 na oba firewall-a",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298532": {
+      "poster": "Me1 (Me)",
+      "content": "watch netstat sam pokrenuo na web i promjene mi se desavaju kad stavim zastavice -sV i -A, moze neko objasnit zasto je to tako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298565": {
+      "poster": "Venki",
+      "content": "Gdje se treba postaviti password za ssh spajanje za 3. zadatak? \n\ntrazim po sshd_config_mail ali ne nalazim bas nekakav pametan field..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298574": {
+      "poster": "SuperSjajan3",
+      "content": "@\"Venki\"#p298565 upisi passwd u bash terminal na ssh-u pa ce te pitat da postavis password",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298587": {
+      "poster": "Skenk",
+      "content": "@\"Haki\"#p298291 Imam isti ovaj problem, jeste skuzili fix?",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298606": {
+      "poster": "gladiator",
+      "content": "@\"Skenk\"#p298587 postavi \"PermitRootLogin yes\" u sshd_config na oba servera",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298612": {
+      "poster": "Skenk",
+      "content": "@\"gladiator\"#p298606 jesam, nije mi pomoglo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298614": {
+      "poster": "GetSchwifty (_2D_)",
+      "content": "Koliko naredba imate u prvom zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298625": {
+      "poster": "Me1 (Me)",
+      "content": "u 3. sam prestao dobivat permission denied, ali sad mi dolazi connection timed out stdio forwarding failed. zna neko u cemu je problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298636": {
+      "poster": "Haki",
+      "content": "@\"gladiator\"#p298606 ne pomaze :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298646": {
+      "poster": "Jale (čakijale)",
+      "content": "@\"Me\"#p298625 ako se dobro sjecam meni je to bilo jer mi nije bilo dobro pravilo za ssh -> ssh_int, ali nisam 100% siguran",
+      "votes": {
+        "upvoters": [
+          "Me1 (Me)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298651": {
+      "poster": "Artemis",
+      "content": "![](assets/2022-05-26/00002.png)\n\nOvo dobijem nakon što pokrenem stvaranje konfiguracija, promijenim portove i \"PermitRootLogin yes\".\n\nNe znam što se događa i je li ovo dobro?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298662": {
+      "poster": "Me1 (Me)",
+      "content": "@\"Jale\"#p298646 mislis na pravilo u FW_int? ovako mi je sada\n\n$IPT -A FORWARD -i eth0 -p tcp --dport 22 -s 198.51.100.10 -j ACCEPT",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298675": {
+      "poster": "Kniwy00 (DoktorZnanosti)",
+      "content": "![](assets/2022-05-26/00010.png)\n\nJel zna netko mozda zas mi ne radi ovaj njihov fix za git pull?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298680": {
+      "poster": "anon00",
+      "content": "@\"DoktorZnanosti\"#p298675 izbrisi \\ , to je samo oznaka da se linija prekida u novi red u uputama, tj da to nisu 3 odvojene naredbe",
+      "votes": {
+        "upvoters": [
+          "Kniwy00 (DoktorZnanosti)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298699": {
+      "poster": "vrdrli23",
+      "content": "Kako se može testirati ovo što se postavi u prvom? Ove ssh naredbe u drugom, šta to mora vratiti kad je dobro, a šta kad nije dobro?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298710": {
+      "poster": "Sulejman",
+      "content": "@\"Artemis\"#p298651 \n\n@\"Me\"#p298662 \n\nPromijenili ste port na 2222 pa vise nije na 22",
+      "votes": {
+        "upvoters": [
+          "Me1 (Me)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298729": {
+      "poster": "bjunolulz",
+      "content": "Jel za antispoofing u FW_int dropamo pakete sa sourceom 192.0.0.0 a u FW iz 10.0.0.0?",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298737": {
+      "poster": "mravluk",
+      "content": "Kada se dobije privatni ključ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298758": {
+      "poster": "bjunolulz",
+      "content": "Di mijenjam ove datoteke iz 3. Zadatka, pretpostavljam u konzoli čvora ali ne znam kako",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298767": {
+      "poster": "[deleted]",
+      "content": "Kad nam napišu da se spajamo preko ssh-a iz Ubuntua, na kaj se to misli? Doslovno terminal u VM-u dok imamo pokrenuti eksperiment?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298768": {
+      "poster": "bjunolulz",
+      "content": "@\"Aimée\"#p298767 da",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298769": {
+      "poster": "blablajar",
+      "content": "@\"bjunolulz\"#p298729 u FW dropas ako ti na vanjsko sucelje dolazi paket sa source adresom iz podmreze 198.51.100.0/24 , a u FW_int dropas ako ti na vanjsko sucelje dolazi paket sa sourceom iz podmreze 10.0.0.0/24 ili na unutarnje sucelje dolazi iz podmreze 198.51.100.0/24",
+      "votes": {
+        "upvoters": [
+          "Ollie",
+          "bjunolulz"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298772": {
+      "poster": "blablajar",
+      "content": "@\"mravluk\"#p298737 kad napravis ssh-keygen dobijes javni i privatni kljuc",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298773": {
+      "poster": "[deleted]",
+      "content": "Ima neko možda ideju zakaj mi se niš ne događa nakon pokrenute ssh naredbe? Ni na Wiresharku nema ničega kad gledam na ext1...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298781": {
+      "poster": "Me1 (Me)",
+      "content": "u 3. zadatak jel treba neku naredbu osim ove dodat, bilo u FW bilo u FW_int?\n\n$IPT -A FORWARD -i eth0 -p tcp –dport 2222 -s 198.51.100.10 -j ACCEPT",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298794": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Šta treba napisat u ovim konfiguracijama u trecem zadatku na ssh i ssh_int",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298797": {
+      "poster": "[deleted]",
+      "content": "Molim vas  🙏 čak mi ni ping na Ubuntuu ne generira promet na Wiresharku na ext1. Je li trebalo nešto napraviti prije samog tipkanja naredbe, nekakvo spajanje, bilo kaj...?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298819": {
+      "poster": "--- ( 🤡 )",
+      "content": "jel itko imao problem da mu ne radi USRANI shared clipboard niti USRANI drag'n'drop u VirtualBox-u",
+      "votes": {
+        "upvoters": [
+          "Skenk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298826": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p298797 hmm, jel se mozes spojiti na http://198.51.100.11 ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298836": {
+      "poster": "--- ( 🤡 )",
+      "content": "jel itko imao problem da mu ne radi samo `$ sudo himage int1 ssh 192.0.2.1`\n\novo je pravilo: `$IPT -A INPUT -p tcp --dport 22 -s 10.0.0.21 -j ACCEPT`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298838": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p298826 to u potpunosti ovisi o tome kaj znači spojiti se 😁",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298839": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p298838 a da, istina 😅jel ti se otvori ova stranica kad otvoris link? \n\n![](assets/2022-05-26/00021.png)",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298842": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p298839 ne, ali sam samo pokrenula eksperiment bez one http skripte, bi to moglo biti povezano?\n\nhvala inače :D\n\nPS: mislim, ne radi niti nakon pokretanja ali pokušavam ograničiti stvari koje bi mogle poći po krivu",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298844": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p298842 da, to je to, trebas sudo ./start_http i sudo ./start_fw pa bi trebalo biti ok",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298846": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p298844 haha hvala, ali nije jer još uvijek ne radi\n\nEDIT: nvm, ne znam ni pokrenuti skriptu kak spada",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298849": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p298846 jesi probala pingati sa cvorova u mrezi? npr sa int1 na int2",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298851": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p298849 sve radi iz nekog razloga, hvala 🤔",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298857": {
+      "poster": "--- ( 🤡 )",
+      "content": "koji čvor je \"skenirani čvor\" u 2. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298867": {
+      "poster": "FERonja",
+      "content": "gdje u uputama stoji da se treba dodati pravilo \n# SSH pristup posluzitelju web je dozvoljen samo s racunala int1 (LAN)\nta linija se nalazi u FW_int.sh",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298878": {
+      "poster": "[deleted]",
+      "content": "@\"Janez\"#p297622 meni se promijenilo za -A, u stupcu Proto se pojavilo sve tcp",
+      "votes": {
+        "upvoters": [
+          "Krpa1 (Janez)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298884": {
+      "poster": "anon00",
+      "content": "Je li mi moze netko samo potvrditi: \n\nZa 1. zadatak trebamo samo ACCEPT pravila, a drop je po defaultu? (osim anti-spoofing)\n\nTipa ako trebamo dopustiti SSH sa interneta na racunalo SSH tad ispod pišemo samo jedan ACCEPT i to je to?\n\nIli ipak treba dodati neki reject/drop na kraju svega?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298893": {
+      "poster": "Daeyarn",
+      "content": "jel se nekome dogada da ssh izmedu Ubuntu i ssh radi, ali ssh i ssh_int ne radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298895": {
+      "poster": "[deleted]",
+      "content": "@\"Skenk\"#p298612 imaš možda rješenje? isti problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298899": {
+      "poster": "Sinusan",
+      "content": "@\"Daeyarn\"#p298893 \n\nJavni ključ od Ubuntua moraš spremit na oba.\n\nIsto tako firewall moraš modificirat zato što je port sada 2222 ili što su već stavili.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298900": {
+      "poster": "zmaj",
+      "content": "Na kojem čvoru bi u 2. zadatku trebali pratit veze?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298903": {
+      "poster": "Daeyarn",
+      "content": "@\"Sinusan\"#p298899 \n\n![](assets/2022-05-26/00025.png)\n\njavni kljuc na ssh, na ssh_int i na ubuntu, naredba u FW_int, ispis kad pokrenem jump host\n\nna ssh mi je u sshd_config port 22, a na ssh_int je 2222\n\ni u oba su PermitRootLogin yes\n\na kad pokrenem jump host se nista ne dogodi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298905": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p298903 nisam ekspert, ali kaj nije još skroz u prvim objavama kolega koji je objašnjavao iptables napisao da dodajemo samo NEW, ESTABLISHED su već odobrene\n\nne kažem da bude ti to popravilo zadatak, ali čisto sam primijetila, pa da ti nekaj drugo ne bude krivo itd.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298906": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p298905 ma probao sam sve kombinacije NEW, ESTABLISHED, RELATED, sad sam vratio na NEW ali ne radi svejedno 😭\n\nps: ali hvala ti na savjetu sad mi je svugdje opet NEW",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298907": {
+      "poster": "[deleted]",
+      "content": "ZAKAJ mi daje Permission denied za ssh Ubuntu na ssh 🤕 na obadva ssh čvora sam postavila novu šifru i generirala ključeve i stavila yes kod onoga za šifru i pokrenula himage restart",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298908": {
+      "poster": "Skenk",
+      "content": "@\"Aimée\"#p298895 nisam uspio :(",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Daeyarn",
+          "bjunolulz"
+        ]
+      }
+    },
+    "298917": {
+      "poster": "bjunolulz",
+      "content": "@\"Skenk\"#p298908 ni ja, odustao sam, napisao sam u izvjestaj sto sam radio i da ne radi",
+      "votes": {
+        "upvoters": [
+          "Skenk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298918": {
+      "poster": "[deleted]",
+      "content": "da reiteriramo, jedino kaj treba mijenjati u ssh configu su port na ssh_int u 2222 i ono za root login u yes?",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298919": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p298918 da, samo pazite da vam se ne dogodi da 2 sata gledate kaj ne valja i onda skuzite da je na ssh_int Port 2222 cijelo vrijeme zakomentiran...",
+      "votes": {
+        "upvoters": [
+          "Me1 (Me)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298920": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p298919 kolega, nemrem dva sata gledati kaj ne valja ak je rok predaje za sat i pol ![](assets/2022-05-26/00027.png)",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Daeyarn",
+          "ruza0001 (rozy)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298922": {
+      "poster": "Me1 (Me)",
+      "content": "@\"Daeyarn\"#p298919 da je samo 2 sata. nakon kaj mi to prode di dohvatim taj privatni kljuc?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298923": {
+      "poster": "Daeyarn",
+      "content": "@\"Me\"#p298922 ako imas generiran par privatnog i javnog kljuca onda se privatni nalazi u ~/.ssh/id_rsa a javni u ~/.ssh/id_rsa.pub\n\nako nemas generirano, onda to napravis pomocu ssh-keygen naredbe nakon cega ce se u navedenim fileovima nalazit privatni i javni kljuc",
+      "votes": {
+        "upvoters": [
+          "Me1 (Me)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298924": {
+      "poster": "[deleted]",
+      "content": "je trebalo poslati javni ključ na ssh?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298926": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p298924 \n\nprvo treba kopirati javni kljuc od ubuntua na ubuntuu\n\ni onda treba na ssh i na ssh_int napraviti \n\nmkdir ~/.ssh/\n\ncat >> ~/.ssh/authorized_keys\n\n<<middle mouse da se pastea>>\n\nctrl+D\n\nsauce: https://youtu.be/KFUodoyODEY?t=663",
+      "votes": {
+        "upvoters": [
+          "Me1 (Me)",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298927": {
+      "poster": "BlackMamba",
+      "content": "jel se odrađenom vježbom smatra i da ne predamo jedan zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298934": {
+      "poster": "Han",
+      "content": "![](assets/2022-05-26/00030.png)\n\nitko imo ovaj problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298935": {
+      "poster": "Han",
+      "content": "@\"BlackMamba\"#p298927 99% ne al nisam provjerio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "BlackMamba"
+        ]
+      }
+    },
+    "298936": {
+      "poster": "mrki",
+      "content": "@\"Daeyarn\"#p298903 jesi radio sudo ./start_fw nakon promjene iptablesa? Meni je to bila greška",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298937": {
+      "poster": "Daeyarn",
+      "content": "@\"mrki\"#p298936 jesam, bio je problem sto sam uredno pokusavao napraviti jump host na portu 2222, a u sshd_config na ssh_int mi je Port 2222 bio zakomentiran cijelo vrijeme...\n\n@\"Han\"#p298934 jel imas --dport ispred 22? pretpostavljam da je to kod ssh pravila",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298938": {
+      "poster": "Han",
+      "content": "![](assets/2022-05-26/00031.png)\n\nimam, sve mi izgleda regularno\n\n@\"Daeyarn\"#p298937",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298939": {
+      "poster": "Daeyarn",
+      "content": "@\"Han\"#p298938 treba ispred dport biti dva minusa",
+      "votes": {
+        "upvoters": [
+          "Han"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298942": {
+      "poster": "Han",
+      "content": "@\"Daeyarn\"#p298939 ![](assets/2022-05-26/00032.png)\n\nsad mi javlja samo ovo",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298945": {
+      "poster": "Daeyarn",
+      "content": "@\"Han\"#p298942 probaj dodati .sh na kraj sudo ./start_fw, ne znam je li do toga ali iz ovog errora mozda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298949": {
+      "poster": "[deleted]",
+      "content": "@\"Daeyarn\"#p292752  ![](assets/2022-05-26/00033.png)",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Daeyarn",
+          "Ollie",
+          "ZliDule",
+          "mesojed (sofronijevicevPrst)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298951": {
+      "poster": "Daeyarn",
+      "content": "@\"Aimée\"#p298949 ok wow ovo je impresivno, svaka čast😄",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300229": {
+      "poster": "djeno",
+      "content": "jel on mene samo obavjestava da imam gresaka ili ja sad to moram ispravljat \n\nnije napisao nis u mailu osim sta mi ne valja pa sam zbunjen\n\nnetko dobio slican mail?\n\n![](assets/2022-05-31/00005.png)",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300230": {
+      "poster": "Jale (čakijale)",
+      "content": "@\"djeno\"#p300229 svi smo dobili taj mail cini se, mislim da ne treba ispravljat nego da je samo informativno",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Ollie",
+          "angello2",
+          "djeno",
+          "mesojed (sofronijevicevPrst)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300231": {
+      "poster": "djeno",
+      "content": "@\"čakijale\"#p300230 \n\najde neka ga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "--- ( 🤡 )"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302275": {
+      "poster": "Jaster111",
+      "content": "Jel ima neka dobra duša voljna poslat kako izgledaju iptables datoteke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302317": {
+      "poster": "FERonja",
+      "content": "@\"Jaster111\"#p302275 pogledaj si 4. srs labos",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302334": {
+      "poster": "Jaster111",
+      "content": "@\"FERonja\"#p302317 jel postoje negdje rješenja? vidim na materijalima nema ništa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302773": {
+      "poster": "mariak (kaiak)",
+      "content": "jel imao itko problema sa git pullom? pise mi permission denied",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "302922": {
+      "poster": "Jaster111",
+      "content": "S obzirom da generalno ne postoje rješenja za ovaj labos, objavit ću šta sam ja napravio iako fale neki djelovi i također je vjerojatno dio kriv iako to nemam pojma, al može poslužit kao dobar guideline za iduće generacije koje će morat rješavat ovo smeće od labosa.\n\n> Zadatak 1:\n\n> \n> Dodavanjem naredbi u FW.sh i FW_int.sh sam postigao funkcionalnost vatrozida opisanu u tekstu ovog zadatka.\n> \n> ![](assets/2022-06-09/00038.png)\n\n> \n> Zadatak 2:\n> \n> Pokrenuo sam u terminalu sljedeće naredbe:\n> \n> sudo ./start_fw\n> \n> sudo ./start_http\n> \n> $ ssh 198.51.100.10 -> uspješno, konfiguriran je vatrozid da propušta ssh na ssh poslužitelj\n> \n> $ ssh 198.51.100.11 -> neuspješno, ima smisla jer ssh nije dozvoljen za web poslužitelj\n> \n> $ ssh 192.0.2.1 -> neuspješno, također ima smisla jer je rečeno da se int1 smije spajat sa ssh na FW\n> \n> $ ssh 198.51.100.2 -> neuspješno, isti razlozi kao i gore\n> \n> $ sudo himage int1 ssh 10.0.0.10 -> uspješno, unutar iste lokalne mreže su\n\n> $ sudo himage int1 ssh 198.51.100.10 -> uspješno, računala iz lokalne mreže imaju neograničen pristup računalima u DMZ\n\n> $ sudo himage int1 ssh 198.51.100.11 ->\n\n> $ sudo himage int1 ssh 192.0.2.1 ->\n\n> $ sudo himage int1 ssh 198.51.100.2 ->\n> \n> Otvaranjem stranice http://198.51.100.11 mi se prikazuje sljedeće:\n\n> **(tu mi fali slika fer test stranice koja se prikaže kada se otvori gore navedena adresa)**\n\n> Na čvoru ssh sam pokrenuo praćenje dolaznih veza:\n> \n> sudo himage ssh watch -n 0.5 netstat -ant\n> \n> Pokretanjem naredbi za detekciju verzija servisa i općeniti scan sam vidio promjene unutar terminala koji prati dolazne veze.\n> \n> Nakon općenitog scana su se pojavila 4 zapisa sa TIME_WAIT state-om, što je normalno ponašanje nakon zatvaranja sjednice, a nakon detekcije verzije servisa sam vidio još jedan zapis sa state-om ESTABLISHED što znači da uistinu u tom trenutku se uspostavila komunikacija između int1 i ssh.\n> \n> Zadatak 3:\n> \n> Korištenjem naredbe hcp ssh_int:/etc/ssh/sshd_config sshd_config_mail sam preuzeo konfiguracijsku datoteku te u njoj izmijenio parametar za port i PermitRootLogin u yes .\n> \n> Gotovo identičnu naredbu sam koristio za ssh, te obje datoteke vratio nazad na poslužitelje.\n> \n> Također sam uzeo ubuntu javni ključ te ga upisao u datoteku authorized_keys na oba poslužitelja u folder root/.ssh/ I zatim pokrenuo naredbu ssh -J root@198.51.100.10 root@10.0.0.10 -p 2222\n> \n> Dodatno bih uključio Kerberos, ChallengeResponseAuthentication i HostbasedAuthentication za veću sigurnost.",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "SuperSjajan3",
+          "angello2",
+          "grana2",
+          "joj (poni)",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "303787": {
+      "poster": "Rope (Rops)",
+      "content": "Ekipa koja je isla na kasniju predaju, jesu li vam odobrili labos na moodleu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304509": {
+      "poster": "Sale",
+      "content": "@\"Jaster111\"#p302922 Budući da želimo da labosi budu korisni, poučni, i u neku ruku zanimljivi studentima, možete li objasniti zašto je ovaj labos \"smeće\" i što bi trebalo popraviti da ne bude \"smeće\"?\n\nOzbiljno pitam jer svaki feedback je dobrodošao. Bit će korisno (barem idućim generacijama) ako nešto od loših stvari uspijemo popraviti.",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3",
+          "angello2",
+          "joj (poni)",
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304510": {
+      "poster": "samo_vagabundo",
+      "content": "@\"Sale\"#p304509 Podijelite skriptu za provjeru koliko je vatrozid ispravan. Najbolji materijal za rijesiti 1. zadatak je [random web koji je kolega podijelio](https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands).\n\nOsim toga, volim se uziviti u labos koji rijesavam, pa ubacite neke pricice stajaznam, _crvenkapa mora postaviti vatrozid baki_ ili tako nesto.\n\nOvo je ovako na prvu, vjerujem da postoji niz stvari koje bi drugi kolege mogli predloziti, ovi labosi su bas tlaka jbg",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304518": {
+      "poster": "Jaster111",
+      "content": "@\"Sale\"#p304509 \n\nIptables, ukoliko nemas prethodnog iskustva s time, se svodi na trial and error. Ja sam 2 dana pokusavao uspostavit da to radi kako treba i uspio donekle, ali zbog manjka kvalitetnih resursa nikad nisam sasvim naucio kako to funkcionira skroz (a nije da ne bih htio). \n\n\nOstatak labosa je okej generalno, nista pre iznimno time-consuming.\n\n\nAli to postavljanje IPtablesa je bas hassle i bilo bi iznimno kul kada bi jedna cijela prezentacija postojala ili neki pdf na materijalima predmeta koji ima raznorazne primjere problema te njegovog rješenja putem IPtables naredbe. Tako bi studenti na ful konkretnim primjerima naucili ideju iza svakog segmenta jedne takve naredbe.",
+      "votes": {
+        "upvoters": [
+          "samo_vagabundo",
+          "samurai (samuraj)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304519": {
+      "poster": "FERonja",
+      "content": "@\"Sale\"#p304509 Objaviti neke primjere (obrasce pravila) s dva računala i jednim vatrozidom čisto da lakše razumijemo kako se pišu ta pravila.\n\nI kao što je kolega rekao skriptu koja provjerava ispravnost vatrozida s detaljnim ispisom testova koji nisu prošli, nešto kao što smo dobili mail od profesora Mikuca.\n\nI malo bolje objasniti anti-spoofing pravila.",
+      "votes": {
+        "upvoters": [
+          "Jaster111",
+          "Rope (Rops)",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304528": {
+      "poster": "Sinusan",
+      "content": "@\"Sale\"#p304509 \n\nDodati skriptu za provjeru rješenja.\n\nUkloniti limit na broj riječi u izvještaju ili dati neki kostur izvještaja koji se mora nadopuniti na ključnim mjestima.\n\nS trenutnim ograničenjima izvještaja se događa da značajan dio vremena otpada na uklanjanje riječi kako bi se došlo ispod nekog limita.\n\nOne pričice što je spominjao kolega osobno ne bih volio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "samo_vagabundo"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304592": {
+      "poster": "Daeyarn",
+      "content": "jel vam treci labos jos uvijek neocijenjen na moodlu?",
+      "votes": {
+        "upvoters": [
+          "--- ( 🤡 )",
+          "Argadem",
+          "BillIK",
+          "FERonja",
+          "GetSchwifty (_2D_)",
+          "Jaster111",
+          "Kasperinac",
+          "Rope (Rops)",
+          "madoxx",
+          "miss_anthropocene (neunist.iva)",
+          "n_p_zagi (nicrosc)",
+          "rolotex (brr)",
+          "samo_vagabundo",
+          "tidabudibuda",
+          "yabk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "305511": {
+      "poster": "samo_vagabundo",
+      "content": "@\"samo_vagabundo\"#p304510 \n\n> Osim toga, volim se uziviti u labos koji rijesavam, pa ubacite neke pricice stajaznam, crvenkapa mora postaviti vatrozid baki ili tako nesto.\n\nDodali su te _pricice_ na ZI, koliko se sjecam nije bilo na MI i zelim vjerovati da je moj komentar razlog.",
+      "votes": {
+        "upvoters": [
+          "Artemis",
+          "Daeyarn",
+          "Sulejman",
+          "samurai (samuraj)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

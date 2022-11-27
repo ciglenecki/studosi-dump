@@ -1,0 +1,318 @@
+{
+  "title": "[DUBUCE] 2. laboratorijska vježba - 2019/2020",
+  "creator": "Jimothy",
+  "slug": "dubuce-2-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Duboko učenje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "10263": {
+      "poster": "Jimothy",
+      "content": "Što ste koristili za računanje loss-a i updatanje parametara modela u 3. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10271": {
+      "poster": "NekocBraca",
+      "content": "Ja za loss koristim CrossEntropyLoss(), a parametre updateam s SGD optimizatorom\n\n```\nmodel = CovolutionalModel()\noptimizer = optim.SGD(model.parameters(), lr=1e-1)\ncriterion = CrossEntropyLoss()\n...\nloss_train = criterion(output_train, torch.max(train_y, 1)[1])\nloss_train_acc += loss_train\nloss_train.backward()\noptimizer.step()\n```",
+      "votes": {
+        "upvoters": [
+          "Jimothy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10277": {
+      "poster": "Jimothy",
+      "content": "@NekocBraca#10271 \n\nJesi za regularizaciju koristio weight decay u optimizeru?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10279": {
+      "poster": "NekocBraca",
+      "content": "@Jimothy#10277 ne, ali to zato sto sam zaboravio da to postoji",
+      "votes": {
+        "upvoters": [
+          "Jimothy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10324": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Jimothy#10277 Za ovako malu mrežu ti je weight decay nebitan jer je mala mreža sama po sebi jedna vrsta regularizacije.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10352": {
+      "poster": "Jimothy",
+      "content": "@micho#10324 \n\nTako je zadano u zadatku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10357": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Jimothy#10352 Koristeći implementaciju L2 regularizacije iz prethodnog zadatka, ne u optimizatoru. Referencirao sam na to da za ovakvu mrežu takvo ponašanje ionako nije potrebno, a to što je zadano da se izvrši usporedba s modelom iz prošlog zadatka koji ima sloj koji to obavlja, to je sasvim druga stvar.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10394": {
+      "poster": "Jimothy",
+      "content": "@micho#10357 \n\nRazumijem sto si htio reci 👍\n\nMislim da je ideja bila da se ne koristi nista iz modula layers u 3. zadatku pa tako ni regularizacija. Mozda se varam 😄",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11191": {
+      "poster": "InCogNiTo124",
+      "content": "# Tutorial: računanje (efektivnog) receptivnog polja\n## Osnovne postavke\n1. Aktivacijske funkcije poput ReLU/Sigm/Tanh rade elementwise operacije - one ne mjenjaju receptivno polje\n2. Potpuno povezani (FC) slojevi rade linearnu kombinaciju svih vrijednosti - njihovo receptivno polje je cijela slika\n3. Svaka konvolucija ima dva parametra: velicinu kernela `k` i sirinu pomaka `s` - najcesce 1 ali ne mora biti\n4. operacije sazimanja (pooling) se 'lowkey' mogu smatrati konvolucijama gdje je `k == s`.\n5. receptivno polje _nikad_ ne moze biti vece od ulazne slike\n\n## Algoritam\n\nPocetno receptivno polje `rf` je `1`, pocetni faktor `f` je isto `1` (vidit cemo sta to znaci). idemo sloj po sloj. Ako je sloj\n- aktivacija:\n  - `rf` ostaje nepromjenjen</LI>\n-  konvolucija / pooling layer:\n  -  racuna se po formuli `rf = rf + (k-1)*f`\n  -  `f = f*s`</LI>\n-  FC:\n  -  receptivno polje postaje `rf = input.shape`</LI>\n \n## Primjer\nza primjer cu uzeti arhitekturu AlexNet:\n1. `Input(224, 224, 3)`\n2. `Conv(k=11, s=4)`\n3. `Relu()`\n3. `MaxPool(2)   //rekli smo ovo je isto kao Conv(2, 2)`\n4. `Conv(k=5, s=1)`\n6. `ReLU()`\n5. `MaxPool(2)`\n6. `Conv(k=3, s=1)`\n7. `ReLU()`\n7. `Conv(k=3, s=1)`\n8. `Tanh()`\n8. `Conv(k=3, s=1)`\n9. `Sigm()`\n9. `FC(4096)`\n10. `FC(2048)`\n11. `FC(1000)`\n\nIdemo redom:\n1. `rf = 1,  f = 1`\n2. `rf = 1 + (11-1)*1 == 11, f = 1*4 == 4`\n3. `rf = 11, f = 4`\n4. `rf = 11 + (2-1)*4 == 19, f = 4*2 == 8`\n5. `rf = 19 + (5-1)*8 == 51, f = 8*1 == 8`\n6. `rf = 51, f = 8`\n7. `rf = 51 + (2-1)*8 == 59, f=8*2 == 16`\n8. `rf = 59 + (3-1)*16 == 91, f = 16*1 == 16`\n9. `rf = 91, f=16`\n10. `rf = 91 + (3-1)*16 == 123, f=16*1 == 16`\n11. `rf = 91, f=16`\n12. `rf = 123 + (3-1)*16 == 155, f = 16*1 == 16`\n13. `rf = 155, f = 16`\n14. `rf = 244, f = 16`\n15. `rf = 244, f = 16`\n16. `rf = 244, f = 16`\n\nTutorial izmisljen osobno, a algoritam izveden [odavdje](https://shawnleezx.github.io/blog/2017/02/11/calculating-receptive-field-of-cnn/) i isproban na Segvicevoj zadaci, s tim da sam izmjenio imena varijabli da budu meni logicna :D\n\nTakoder, ovo pretpostavlja da nema neke razlike izmedu valid i same konvolucija sto se tice receptivnog polja",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Louverture (Žuti Kišobran)",
+          "Miki",
+          "Quentin",
+          "Upforpslone",
+          "Vocko",
+          "[deleted]",
+          "indythedog",
+          "luba",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "mini (Earthling)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11597": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "BTW ako netko mozga kako na lijep način ne regularizirati posljednji sloj bez da se radi nova loss funkcija, kolega @InCogNiTo124 mi je pokazao sljedeći način:\n\n```\noptimizer = torch.optim.SGD([\n            {\"params\": [*self.conv_1.parameters(),\n                        *self.conv_2.parameters(),\n                        *self.fc_1.parameters()], \"weight_decay\": weight_decay},\n            {\"params\": self.fc_2.parameters(), \"weight_decay\": 0}\n        ], lr=1e-1)\n```\n\ns tim da mi je `weight_decay = 1e-3` kao što je postavljeno u 2. zadatku.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11601": {
+      "poster": "InCogNiTo124",
+      "content": "> @micho#11597 s tim da mi je weight_decay = 1e-3 kao što je postavljeno u 2. zadatku.\n\nkj ne treba isprobacat weight_decay za sve mogucnosti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11607": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@InCogNiTo124#11601 Ima samo jedan weight decay u njihovom primjeru, pa pretpostavljam da treba trenirati samo s tim\n\nEDIT: NVM sad vidim na što misliš, da, treba proći po svim parametrima ali u načelu je formula za optimizator ista.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13423": {
+      "poster": "InCogNiTo124",
+      "content": "Jel ima netko informacija o tome kako ce izgledati ova obrana laboratorijskih vjezbi? Sta pitaju i sta sve treba?",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13431": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@InCogNiTo124#13423 Pita sam čovika. Proslijedit ću odgovor čim mi se javi.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13604": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Ovisi ko te dopadne, al poprilicno detaljno pitaju\n\nNas su znali pitat da izvedemo neke jednostavnije koncepte na papiru, tipa konvoluciju neku jednostavnu\n\nSad vas vjerojatno nece pitat na papiru nista\n\nAl skupi za prag iz prva 3 kako god znas hahaha jer je zadnji labos za ubit se\n\nNe znam koliko je korisno, al evo sto je frend napisa u vezi labosa.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Red_Baron",
+          "Satanael",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "InCogNiTo124",
+          "Red_Baron",
+          "Satanael",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "13621": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@feel_d_boot#13604 [Oh no no no no](https://www.myinstants.com/media/sounds/oh-no-no-no-no-laugh.mp3)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "InCogNiTo124",
+          "feel_d_boot (iNut)"
+        ]
+      }
+    },
+    "14998": {
+      "poster": "NekocBraca",
+      "content": "@InCogNiTo124#14995 Jel mozes mozda reci sto se pitalo na labosu?",
+      "votes": {
+        "upvoters": [
+          "Satanael"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15032": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@NekocBraca#14998 Bio sam prije kolege:\n\n- 1. labos\n  - 2. zadatak\n     - pokaži gdje si radio backprop\n     - pokaži gdje računaš gradijent gdje je ReLU ulaz</LI>\n  - 7. zadatak\n     - pokaži filtere 1. sloja\n     - pokaži kako si implementirao mini-batch učenje</LI>\n- 2. labos\n   - 1. zadatak\n      - pokaži implementaciju potpuno povezanog sloja\n      - koju od backwards metoda nemamo u L2Regularizer?</LI>\n    - 4. zadatak\n       - pokaži grafove\n       - misliš li da je ova mreža prenaučena?\n       - pokaži slike filtera</LI>\n\nRadi mojih implementacijskih detalja smo i nešto sitno pričali oko mijenjaja optimizatora tijekom učenja, dao sam mu moju hipotezu zašto moja mreža ima 77% accuracy s neinterpretabilnih filterima 1. sloja (koristio sam batch norm a maknuo weight decay), i pokazao sam mu kako gradim mrežu u 2. labosu 4. zadatku i kako je učim jer je mislio da ima neki bug, ali mislim da je to bilo izvan ispitivanja.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Kristijan",
+          "NekocBraca",
+          "Satanael"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16200": {
+      "poster": "sth",
+      "content": "Odgovarao netko tko Petre Bevandic da iznese dojmove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83293": {
+      "poster": "Rashford",
+      "content": "U 1. zadatku kada koristim check_grads, kako znam da su mi rezultati dobri?",
+      "votes": {
+        "upvoters": [
+          "Rashford"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

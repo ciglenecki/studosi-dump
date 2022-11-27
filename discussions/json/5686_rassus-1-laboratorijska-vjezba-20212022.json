@@ -1,0 +1,1240 @@
+{
+  "title": "[RASSUS] 1. laboratorijska vježba - 2021/2022",
+  "creator": "Gussy (huba buba)",
+  "slug": "rassus-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Raspodijeljeni sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "245530": {
+      "poster": "Gussy (huba buba)",
+      "content": "U kojem jeziku je ovo najbezbolnije za napisat? Čini se da ima pun kurac stvari za napraviti",
+      "votes": {
+        "upvoters": [
+          "mesojed (sofronijevicevPrst)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245628": {
+      "poster": "InCogNiTo124",
+      "content": "@\"huba buba\"#p245530 ja sam u 🐍trebalo mi dva dana",
+      "votes": {
+        "upvoters": [
+          "Mike (Klaud Konzultanta)",
+          "mesojed (sofronijevicevPrst)",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245693": {
+      "poster": "[deleted]",
+      "content": "rust or bust",
+      "votes": {
+        "upvoters": [
+          "Mike (Klaud Konzultanta)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "245709": {
+      "poster": "InCogNiTo124",
+      "content": "@\"  \"#p245693 ah yes, rust evangelist strike force",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246590": {
+      "poster": "RogerRoger",
+      "content": "Kako se ovaj template ispravno importa u Eclipse?\n\nImam instaliran i Spring Tools i Gradle Buildship s marketplacea, importao sam template kao Gradle projekt i dodao mu Java nature, ali uporno mi podcrtava SpringBootApplication annotation i importe za Spring i tooltip kaže \"cannot be resolved\".\n\nProbao sam desni klik na projekt -> Gradle -> Refresh Gradle Project, ali nije napravilo ništa koliko vidim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246766": {
+      "poster": "Gussy (huba buba)",
+      "content": "jeri zna neko kako stvarat entitete u ovom spring bootu kad imaju foreign key? konkretno za ovo ocitanje, 1 senzor moze imati N ocitanja, jel onda nesto stavljam u klasu ocitanje i klasu senzor ili sta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247519": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "@\"huba buba\"#p246766 \n\nhttps://www.baeldung.com/hibernate-one-to-many\n\nzna li itko kada se kreira prvi senzor (ne postoje susjedi) ceka li on prvog susjeda, ili koristimo pravilo da ako nema susjeda salje samo svoja ocitanja i zapravo nikad nema susjeda?\n\ntakoder, pretpostavljam da se ocitanja za pojedini senzor izvode periodcki, sa nekim random intervalom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247522": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"PiqueBlinders\"#p247519 vjv samo vratis neki not found na serveru ili nesto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247538": {
+      "poster": "Cvija",
+      "content": "Piše da senzori i poslužitelj trebaju biti dva različita projekta\n\nTrebaju li oba biti spring projekta ako radim u springu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247890": {
+      "poster": "PepGuardiola",
+      "content": "@\"RogerRoger\"#p246590 Ako nisi uspio već do sad, pogledaj jesi dobar folder importo jer kad se raspakira zip budu dva istog imena. Moguće da ti je i do verzije Jave pa probaj to podesit, meni je nakon toga prestalo podcrtavati to što si naveo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248040": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "radim u py,  nez ovo s grpc kak da napravm (vjv je isti koncept i u javi)\n\ndakle pokrenem: \n```\npython server.py\npython client.py --grpc_server=127.0.0.1 --grpc_port=3000\n```\n\nJel se onda u tom` client.py` kreira nova dretva za grpc server koja traje dok traje i `client.py` poces?\n\nPostoji ovaj dio koda u `client.py`:\n```\nserver = grpc.server(futures.ThreadPoolExecutor(max_workers=10))\nserver.add_insecure_port(\"127.0.0.1:5000\")\nserver.start()\nprint(\"hello\")\n```\nOva `server.start()` blokira rad, kako u py mogu napravit da se ispiše ovaj `\"hello\"`?\n\nIli taj grpc server treba bit poseban proces?\n\nIma neka preporuka za neki materijal o dretvama u pythonu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248061": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "Ako nađete neke dobre tutorijale koji bi mogli pomoc stavite ih ovdje",
+      "votes": {
+        "upvoters": [
+          "ljama_glama",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248083": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @\"NISAM ASISTENT\"#p248040 Ili taj grpc server treba bit poseban proces?\n\nPa da to je poanta servera... Ili odvojeni proces, ili daemon\n\n> @\"NISAM ASISTENT\"#p248040 Ima neka preporuka za neki materijal o dretvama u pythonu?\n\nDretve u pythonu ne postoje (bar ne na način na koji misliš), pogledaj si multiprocessing docse",
+      "votes": {
+        "upvoters": [
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248229": {
+      "poster": "saitama",
+      "content": "Jel se ovaj labos moze rijesiti u Flasku ili je bolje raditi u spring bootu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248358": {
+      "poster": "netko_tamo",
+      "content": "@\"huba buba\"#p246766 entitet oznacis s @Bean anotacijom i onda prilikom dizanja SpringBoot aplikacije svi entiteti s @Bean ce se inicijalizirat, a onda u entitet stavis listu očitanja i eto ti 1 na N veze",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249065": {
+      "poster": "laranotreallycroft",
+      "content": "Kako da uopce runnam onaj grpc primjer s predavanja?\n\nSto trebam napraviti da mi .proto napravi ove fileove koji mi trebaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249085": {
+      "poster": "laranotreallycroft",
+      "content": "@\"laranotreallycroft\"#p249065 \n\nupdate: fileovi se ipak naprave, ali se nalaze u build directoryu koji se iz nekog razloga uopce ne prikazuje u eclipseu? \n\nzbog toga ih klase ne prepoznaju i baca hrpu errora",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249185": {
+      "poster": "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+      "content": "@\"laranotreallycroft\"#p249085 Kako se to na kraju runa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249200": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Zlatan Ibrahimovic\"#p249185 desno gradle tasks-build-generateProto",
+      "votes": {
+        "upvoters": [
+          "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249211": {
+      "poster": "laranotreallycroft",
+      "content": "Moze netko potvrditi da sam dobro skuzila kaj treba u lab posto ne kuzim bas ovaj gRPC?\n\nZnaci serverski dio je Spring Boot.\n\nSenzor je stalno pokrenuti gRPC server, a gRPC klijentska veza se upali i ugasi samo kad trazi podatke od drugih servera?\n\nI onda taj senzor/gRPC server komunicira pomocu Retrofita sa Spring Boot serverom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249213": {
+      "poster": "ruza0001 (rozy)",
+      "content": "kako u springu mozemo promjeniti da umjesto 200 OK, dobijemo recimo \"201 Created\" kako gospoda zahtjeva?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249214": {
+      "poster": "narval13068 (Dima)",
+      "content": "@\"laranotreallycroft\"#p249211 Tako sam i ja shvatia",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249222": {
+      "poster": "narval13068 (Dima)",
+      "content": "@\"rozy\"#p249213 na ResponseEntity u Controlleru kad vracas objekt mijenjas prvom funkcijom 2XX\n\nnpr. za kad moras vratit 201 Created i link na resurs ces stavit \n\n```\nreturn ResponseEntity.created(\n    linkTo(\n        methodOn(\n            this.getClass()\n        ).getSensor(\n            sensor.getId()\n        )\n    ).toUri()\n).build()\n```\n\na kad nema readinga/senzora kod GET ces vratit \n\n```\nreturn ResponseEntity.noContent().build() \n```\n\nda dobijes 204 no content\n\nMOD EDIT: Samo bog zna šta je bio 1. kod, zbuggao cijeli editor...",
+      "votes": {
+        "upvoters": [
+          "mesojed (sofronijevicevPrst)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249276": {
+      "poster": "ljama_glama",
+      "content": "Gledam [ovaj](https://youtu.be/JJ4HkGbPV08?t=266) Kusekov tutorial i ne kuzim sto trebam upisati kao host name da bi mi radilo kako bih mogla isprobati taj primjer\n\n![](assets/2021-11-02/00056.png)\n\nZna li netko pomoci?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249286": {
+      "poster": "ruza0001 (rozy)",
+      "content": "moramo li pratiti ovaj njihov template i staviti stvari vezane uz ocitanja u Reading controller, ili mozemo napraviti onako kako su oni u primjeru s Person i Bill, gdje je sve osim dohvacanja svih racuna stavljeno u Person controller?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249332": {
+      "poster": "Argadem",
+      "content": "@\"rozy\"#p249286 \n\nTemplate je tu samo da studenti otprilike dobiju ideju kako ta struktura može izgledat. Ti možeš napravit kak god ti se čini najbolje, a onda eventualno na usmenom kolokviranju objasnit zašto je nešto napravljeno/implementirano na određeni način.\n\nŠto se tiče neke najbolje prakse, u većim projektima bi se to zaista odvojilo u posebne kontrolere zbog preglednosti, ali ovdje ovak i onak imaš samo nekoliko endpointova.",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249342": {
+      "poster": "netko_tamo",
+      "content": "@\"laranotreallycroft\"#p249200 za ekipu koja koristi maven imate plugin \n\n```xml\n<plugin>\n\t<groupId>org.xolstice.maven.plugins</groupId>\n\t<artifactId>protobuf-maven-plugin</artifactId>\n\t<version>0.6.1</version>\n\t<configuration>\n\t\t<protocArtifact>\n\t\t\tcom.google.protobuf:protoc:3.3.0:exe:${os.detected.classifier}\n\t\t</protocArtifact>\n\t\t<pluginId>grpc-java</pluginId>\n\t\t<pluginArtifact>\n\t\t\tio.grpc:protoc-gen-grpc-java:1.4.0:exe:${os.detected.classifier}\n\t\t</pluginArtifact>\n\t</configuration>\n\t<executions>\n\t\t<execution>\n\t\t\t<goals>\n\t\t\t\t<goal>compile</goal>\n\t\t\t\t<goal>compile-custom</goal>\n\t\t\t</goals>\n\t\t</execution>\n\t</executions>\n</plugin>\n```\n\ni na mvn clean install vam se izgeneriraju sve klase",
+      "votes": {
+        "upvoters": [
+          "fraki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249588": {
+      "poster": "Cvija",
+      "content": "0 sam sa springom i retrofit-om, ne znam kako to sve upogoniti nikako, već danima pokušavam i samo se sve više živciram\n\nJasno mi je što treba napraviti idejno, ali u čemu bi bilo to sve najlakše i najbezbolnije napraviti? Neki guide ili nešto?",
+      "votes": {
+        "upvoters": [
+          "ljama_glama",
+          "sphera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249592": {
+      "poster": "in1",
+      "content": "@\"Cvija\"#p249588 \n\nBez konkretnog pitanja je teško odgovoriti, ali dvije stvari koje mogu biti korisne su:\n\n1) scheduling - https://spring.io/guides/gs/scheduling-tasks/\n\n2) webclient umjesto retrofita - https://howtodoinjava.com/spring-webflux/webclient-get-post-example/",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249596": {
+      "poster": "Cvija",
+      "content": "A jel slučajno manje kancerasto ovo pisati u pythonu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249652": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Cvija\"#p249588 \n\nRadila sam prije u springu, ali svejedno jako korisni su mi bili oni videi za spring boot koji su na jednoj od prezentacija. Also ak radis u javi preporucam importanje gradle templatea za labos jer je vec nekakav okvir napravljen.\n\nJa na kraju nisam koristila retrofit, cinio se ko previse kompliciranja. Umjesto sam koristila Apache HTTP client. Samo se stavi gradle dependency i copy pasteas get/post di trebas.",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249663": {
+      "poster": "Ziher",
+      "content": "Kako se importa grpc za spring boot? Vidio sam u dokumentaciji da treba neki interface project, to mi nije jasno sto je u ovoj prici, a importanje samo onih dependencyja za server i client ne sljaka. Gledao sam prek ovog: https://yidongnan.github.io/grpc-spring-boot-starter/en/server/getting-started.html\n\nIsto se buni sto se koristi compile, a ova zadnja 2 dependencyja nikako ne prepoznaje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249669": {
+      "poster": "RogerRoger",
+      "content": "Jel zna netko /moramo/ li koristiti gRPC? Meni njihov gRPC projekt nikako da proradi pa gledam kako bih to drugačije riješio...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249678": {
+      "poster": "in1",
+      "content": "@\"Ziher\"#p249663 Čini mi se da je ovo linkano neki lib koji neke stvari radi za tebe, ne moraš to koristiti. Ako ideš [ovdje](https://grpc.io/docs/languages/) biraš jezik i onda tamo imaš upute, npr. za Javu te odvede [ovdje](https://github.com/grpc/grpc-java) gdje piše što trebaš dodati u gradle. \n___\nAko se netko mučio sa postavljanjem build.gradle.kts filea za Kotlin, ovo bi moralo raditi:\n\nhttps://pastebin.com/raw/NsdJKRsi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249691": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Ziher\"#p249663 \n\nMeni grpc nema nikakve veze sa spring bootom.\n\nspring boot je zasebni projekt koji runnam i kad pokrenem to je server i skoro cijeli sam ga napravila prije nego sto sam opce pogledala grpc.\n\nonda sam ostalo/senzor napravila kao zasebni projekt koji se pri startu pokrece grpcServer, a svaki put kad zeli komunicirati napravi novu instancu grpcClient koja se onda zatvori kad dobi podatke koje treba.\n\nNe znam jel tako treba biti, ali radi kako treba.",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249707": {
+      "poster": "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+      "content": "Zna li netko koje bi se metode trebale nalazit u zadanom interface-u SensorRepository i ReadingRepository u njihovom templateu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249934": {
+      "poster": "RogerRoger",
+      "content": "Ne mogu postići da mi se .proto fileovi kompajliraju (client, ni moji ni onaj iz primjera), jel netko uspio to koristeći Maven?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249995": {
+      "poster": "in1",
+      "content": "@\"Zlatan Ibrahimovic\"#p249707 U ReadingRepositoryu će ti trebati metoda za dohvat mjerenja određenog senzora, a u SensorRepositoryu meni ne treba ni jedna. Oba sučelja nasljeđuju JpaRepository pa iz njega imam ostale metode koje mi trebaju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250282": {
+      "poster": "Cvija",
+      "content": "Nisam shvatio sljedeće:\n\nSvaki senzor generira očitanja svake sekunde, ali sprema jedno kalibrirano očitanje na poslužitelj - znači li to da senzor svake sekunde sprema kalibrirano očitanje na poslužitelj ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250317": {
+      "poster": "burek",
+      "content": "@\"Cvija\"#p250282 Gdje točno to piše? Jer ja to ne pronalazim nigdje u njihovoj uputi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250345": {
+      "poster": "Wayk",
+      "content": "Vidim da puno ljudi roka spring boot. cini mi se ko overkill za par req, responsova, promasujem li nesto, ima li neki requirement?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250387": {
+      "poster": "Cvija",
+      "content": "@\"burek\"#p250317 ![](assets/2021-11-06/00006.png)\n\nA gle, možda sam jednostavno krivo shvatio taj dio...\n\nJoš jedna stvar, broj retka se računa kao `red = brojAktivnihSekundi % 100 + 1`, gdje je brojAktivnihSekundi vrijeme od početka rada senzora, pa neće li svakom pokrenutom senzoru proći jednako vremena od početka rada do čitanja podataka iz csv datoteke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250402": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"Cvija\"#p250387 ma ja sam stavio random ocitanja, ko ih jebe sa tim aktivnim sekundama",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Cvija"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250406": {
+      "poster": "Cvija",
+      "content": "@\"huba buba\"#p250402 I to što kažeš hahah\n\nznači onda jedno očitanje za jedan senzor?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250409": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"Cvija\"#p250406 ako radis u javi stavio sam ovo\n\n```\nTimer t = new Timer();\n        t.schedule(new TimerTask() {\n            @Override\n            public void run() {\n                Reading reading = readingService.getReading(getLine());\n                retrofit.addReading(id, reading);\n            }\n        }, 0, 5000);\n```\n\nsvakih 5000 milisekundi iliti 5 sekundi se radi novo ocitavanje, jos moram dovrsiti onaj grpc pa cu dodati i kalibriranje ali to je u biti to\n\novo retrofit.addReading salje na server ocitanje, a ovaj readingservice mi samo sluzi da dohvacam ocitanja iz liste svih ocitanja, u klasi je atribut List<Reading> readings pa se iz toga dohvacaju  ocitanja preko indexa liste i dovidenja",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250416": {
+      "poster": "burek",
+      "content": "@\"Cvija\"#p250387 Ma taj dio sa slike samo znači da svako očitanje pripada samo jednom senzoru, odnosno mora biti povezan sa jednim id od senzora, ali sprema se svako očitanje nakon kalibracija. A sad što se tiče aktivnih sekundi, mislim da bi i trebali svi senzori imati približno jednaka očitanja koja onda umjere jer je možda bilo nekog lagginga u komunikaciji ili tako nešto što je uzrokovalo krivo očitanje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250431": {
+      "poster": "Gussy (huba buba)",
+      "content": "citam nesto o ovom grpcu da nakon definiranja proto filea trebam nesto kompajlati pa ce mi se neki java fileovi automatski generirat, jesam ja nesto krivo shvatio?",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250453": {
+      "poster": "in1",
+      "content": "@\"huba buba\"#p250431 nisi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250467": {
+      "poster": "RogerRoger",
+      "content": "Imam instaliran i Gradle STS i Buildship plugin, svaki put kad importam onaj gRPC primjer sa stranice predmeta nešto se jako skrši.\n\nNe može mi pronaći Logger klasu, IOException i Logger importi se ne mogu resolvati, uglavnom sve neko teško sranje\n\nJel netko imao sličan problem? Kako ovo riješiti? Već gubim živce lagano",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250481": {
+      "poster": "Ziher",
+      "content": "@\"huba buba\"#p250409 Jos lakse je @Scheduled(fixedRateString = \"PT5S\") anotacija nad metodom servisa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250549": {
+      "poster": "RogerRoger",
+      "content": "Ljudi jeba ga ja zile cu prerezat\n\nRadim ovo 2 jebena tjedna da me grpc example projekt jebe\n\nIma li netko da koristi eclipse + gradle kombinaciju i uspijeva otvoriti grpc primjer sa stranica predmeta da bi bio voljan objasniti kako to otvoriti bez da se sjebu importi osnovnih jebenih javinih paketa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250557": {
+      "poster": "laranotreallycroft",
+      "content": "@\"RogerRoger\"#p250549 \n\niskreno ja sam svaki put kad sam buildala proto morala ponovo jdk selectat lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250568": {
+      "poster": "Nocna_smjena",
+      "content": "@\"RogerRoger\"#p250549 ako nisi nis dirao po projektu samo u build.gradle dodaj: \n\n`implementation 'com.squareup.retrofit2:retrofit:2.9.0` pod dependencies (ovo su izostavili iz njihovog source-a, idk zas). Zatim desni klik na build.gradle -> gradle -> refresh gradle project. Cekaj da povuce sve fajlove. Meni se ovdje kod normalno sad iskompajlirao a ak tebi i dalje ne ide vjv bus morao i ovo sa proto-om napravit. U tom slucaju ides na window -> show view -> other -> gradle -> gradle tasks -> otvoris u tom novom meniju taj grpc-example projekt -> build -> generateProto. Ak ti se sad IDE ne baca ikakvu gresku onda pod ovim gradle tasks-ima (ovaj prozor o kojem sam ti maloprije pricao, samo pripazi, kad si generateao proto on te prebacio u prozor gradle executions pa se moras vratit na gradle tasks) odi na exec -> prvo runnaj runExampleServer pa onda runExampleClient. U konzoli bi ti trebalo pisati da je uspjesno razmjenio poruke sa serverom. Mozes pregledavati konzole i servera i klijenta tako da na vrhu ovog prozora konzola (tamo di ti je inace onaj crveni gumb da terminiras program) pogledas desno i bus vidio jedan plavi monitorcic. Desni klik na strelicu pokraj njega i biras koju konzolu oces pogledat\n\nMoj serverski dio (2 puta sam runnao klijenta pa ovdje imas 2 requesta i 2 odgovora): \n\n![](assets/2021-11-06/00022.png)\n\nMoj klijentski dio:\n\n![](assets/2021-11-06/00023.png)",
+      "votes": {
+        "upvoters": [
+          "RogerRoger",
+          "niks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250569": {
+      "poster": "RogerRoger",
+      "content": "@\"laranotreallycroft\"#p250557 ja isto, ali mi ne popravi dobar dio import problema",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250633": {
+      "poster": "RogerRoger",
+      "content": "@\"Nocna_smjena\"#p250568 proradilo, hvala ti, ipak ću još poživiti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Nocna_smjena",
+          "PepGuardiola",
+          "in1"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250768": {
+      "poster": "Gussy (huba buba)",
+      "content": "riješio sam sve osim tog geprc dijela, ako predam tako jeli dobijem djelomicne bodove ili sta",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250770": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"huba buba\"#p250768 ja se iskreno nadam da ce tako biti, u istoj sam situaciji... posto je usmeno odgovaranje preko teamsa pretpostavljam da ce dati neke bodove za ovaj ostali dio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250771": {
+      "poster": "ruza0001 (rozy)",
+      "content": "nije mi jasno kojim postupkom napraviti taj grpc dio uvijek mi neki dio fali, kad buildam opet nesto fali... \n\nJel treba prvo napisati recimo ReadingsService, pa onda buildat, pa onda ono extendat sto bi ovaj trebo sam kreirati, ili prvo buildam pa onda pisem service?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250796": {
+      "poster": "in1",
+      "content": "@\"rozy\"#p250771 Nakon što napraviš .proto file buildaš da ti se generiraju razredi koje onda trebaš koristiti za ostvarivanje komunikacije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250814": {
+      "poster": "sphera",
+      "content": "kako se dobiva ovaj URI na stvoreni resurs, radio sam kako je kolega gore stavio s linkTo i methodOn i ne radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250816": {
+      "poster": "Cvija",
+      "content": "@\"sphera\"#p250814 \n\nJesi naveo sljedeće importe?\n\n```\nimport static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;\nimport static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;\n```\n\ni imaš li ovo u build.gradle?\n\n```\nimplementation 'org.springframework.boot:spring-boot-starter-hateoas'\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250818": {
+      "poster": "sphera",
+      "content": "jesam, i radio sam s entitymodelom, ne znam kako drugačije koji nakon što dobije id objekta vrati EntityModel<Sensor>",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250819": {
+      "poster": "Cvija",
+      "content": "Jesam li ja sve ovo dobro shvatio?\n\nSvaki senzor generira očitanje jednom i to očitanje svaki put šalje kad je nekome najbliži susjed, to jest, kad se ponaša kao  grpc server?\n\nTo bi onda značilo da prva instanca razreda sensor nema susjeda te šalje svoja očitanja na server\n\nDruga instanca razreda sensor ima susjeda, i to je ovaj prvi, te šalje kalibrirana očitanja\n\nTreća instanca razreda ima susjeda, bio to prvi ili drugi, kalibrira i šalje\n\nI tako dalje...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250820": {
+      "poster": "sphera",
+      "content": "nisam siguran kakva metoda treba biti ona koja se poziva na methodOn(SensorController.class).nesto(id), ne znam kakva bi ova metoda nesto trebala biti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250824": {
+      "poster": "Cvija",
+      "content": "@\"sphera\"#p250818 Možeš li mi poslati kako ti izgleda razred ili nešto, ne znam u čemu bi onda bio problem dok ne vidim razred",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250834": {
+      "poster": "sphera",
+      "content": "@\"Cvija\"#p250824 \n\nriješeno, nebitno uglavnom, radio sam neki overkill ne znajući sta radim, ugl dovoljno je samo na linkTo(Controller.class).slash(id) dodat ovaj slash i to je to ne treba nešto ulančano pozivat kao u nekom primjeru gore, \n\nbtw imaš li možda neki dobar primjer/tutorial ovog grpca, \n\njel grpc server sam po defaultu radi nove dretve za nove konekcije ili mi to moramo sami, koliko sam shvatio on sam hendla multithreading u npr javi",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250855": {
+      "poster": "Cvija",
+      "content": "@\"sphera\"#p250834 iskreno nemam, iskoristio sam onaj njihov primjer i našao nekog Indijca na YouTubeu koji objasni osnove https://youtube.com/playlist?list=PLI5t0u6ye3FGXJMh5kU2RvN0xrul67p7R\n\nJa nisam iskoristio taj što ima, nego sam napravio svoj threading i radi haha",
+      "votes": {
+        "upvoters": [
+          "megi7 (someone7)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250948": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "Samo da provjerim, onaj termin odgovaranja je fiktivan? Naknadno ćemo dogovoriti termin online odgovaranja? Piše li svima u kalendaru da je sutra u 9?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250950": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Klaud Konzultanta\"#p250948 meni je u sri",
+      "votes": {
+        "upvoters": [
+          "Mike (Klaud Konzultanta)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251025": {
+      "poster": "Ziher",
+      "content": "Imam problema s intellij exportanjem u JAR, ne nalazi mi META-INF. Ima tko fix?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251031": {
+      "poster": "Cvija",
+      "content": "@\"Ziher\"#p251025 zar treba u JAR?\n\nZar ne treba samo source code projekta predati?\n\nAko misliš zbog pokretanja samo, u Intelliju možeš omogućiti parallel run",
+      "votes": {
+        "upvoters": [
+          "Ziher"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251032": {
+      "poster": "Dr_Flare",
+      "content": "@\"Cvija\"#p251031 mislim da treba bilo kako ali ako exportas u JAR mozes vrlo lagano s vise terminala odmah pokretati vise klijenata, mislim da je to ideja",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251071": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "ima li ko problema sa pokretanjem klijenta kad pokusa exportat u JAR? u Eclipseu mi radi, no kao Jar mi baca exception Caused by: java.lang.ClassNotFoundException: io.grpc.Channel. Probao sam  i pakirati i extractati libove u generirani JAR.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251099": {
+      "poster": "Mars (mars_)",
+      "content": "@\"Klaud Konzultanta\"#p250948 Na teamsima je netko pitao isto pitanje, a asistent mu je odgovorio da ce sutra napravit raspored",
+      "votes": {
+        "upvoters": [
+          "Mike (Klaud Konzultanta)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251172": {
+      "poster": "Nocna_smjena",
+      "content": "Kolko van je trebalo vremena za napisat labos (i dal ste ga do kraja napisali)? Ja nisam dobio utisak dae nesto previse zahtjevno iako neki kazu kontra. Krenuo u petak navecer sa 0 predznanja o gradivu i napisao sve do roka dost opustenim tempom. Ja sam pisao u Javi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251212": {
+      "poster": "Erpeg",
+      "content": "@\"Nocna_smjena\"#p251172 2 dana da skuzim opce kak bi sve to iskombinirao i 3 dana da napisem u javi",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Nocna_smjena",
+          "PepGuardiola"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251226": {
+      "poster": "PepGuardiola",
+      "content": "@\"Nocna_smjena\"#p251172 \n\nBlago tebi",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "ljama_glama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Nocna_smjena"
+        ]
+      }
+    },
+    "251395": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"PepGuardiola\"#p251226 suosjecam... meni trebalo vise od tjedan dana (par sati u danu rada) i nisam napravio sve...",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252212": {
+      "poster": "Nocna_smjena",
+      "content": "Oni koji su imali, kakav je usmeni?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252216": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Nocna_smjena\"#p252212 \n\npokrenes kod, pita te par pitanja tipa pristup svim senzorima, ocitanja nekog specificnog senzora na sto sam ja samo pogledala koji mi je get url u springu i u browseru otvorila da se vidi json.\n\n5min gotovo, nis teorije",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252239": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"Nocna_smjena\"#p252212 usmeni je samo provjera jesi napravio sve one podzadatke, ja sam demonstrirao preko postmana da mi se sve ispravno dohvaća i to je to",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252307": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"huba buba\"#p252239 jel se dobije sta bodova i ako nismo napravili sve podzadatke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252308": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"rozy\"#p252307 da, ja sam dobio 8/10 a nisam napravio geprc",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Mike (Klaud Konzultanta)",
+          "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)",
+          "ljama_glama",
+          "niks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252311": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"huba buba\"#p252308 najbolje vijesti tjedna 😆",
+      "votes": {
+        "upvoters": [
+          "ljama_glama",
+          "niks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252314": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@\"huba buba\"#p252308 brutala, pa onda zapravo samo server api treba demonstrirati",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252484": {
+      "poster": "saitama",
+      "content": "Jel samo cekamo online na teamsu da netko nazove ili ?",
+      "votes": {
+        "upvoters": [
+          "Gussy (huba buba)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "252491": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"saitama\"#p252484 yup",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

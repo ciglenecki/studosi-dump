@@ -1,0 +1,1538 @@
+{
+  "title": "[OPESUS] 2. laboratorijska vježba - 2019/2020",
+  "creator": "[deleted]",
+  "slug": "opesus-2-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Operacijski sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "4556": {
+      "poster": "[deleted]",
+      "content": "Rok za predaju je 6.4.2020.\n\nU prvom zadatku se cini da je potrebno koristiti neki nacin sinkronizacije pristupa zajednickoj varijabli, ako nekoliko procesa pristupa kad god oce dogadaju se greske kad rade istovremeno - barem meni, ako je netko rjesio bez toga slobodno neka kaze",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "Galke",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4572": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Iz mojeg sjećanja 1. zadatak 2. labosa je da vidite što se događate kad ignorirate konvencije konkurentnog programiranja, ne nužno da to radi.\n\nBrzim pregledom na GitHub, za tu vježbu zapisao sam:\n\n> Prvi program demonstrira M inkrementacija N zasebnih dretvi nad nezaštićenom varijablom. Argumenti su \"N M\".",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4592": {
+      "poster": "[deleted]",
+      "content": "@micho#4572 kako to mislis, sto oces reci sa \"ne nužno da to radi\"? njihov testni primjer:\n```\npinus:~/vj2> ./a.out 5 100000\nA=500000\npinus:~/vj2>\n```\nmoj kod bez sinkronizacije za ulaz npr (5,1000) dobiva 5000 jer se svaki proces izvrsi do kraja prije pocetka sljedeceg. za (5,100000) rezultat mi je neki broj <500000, ali ako manualno prolazim kroz kod u debug modu(i dopustim par sekundi izmedu stvaranja procesa) ili dodam sleep() pozive nakon stvaranja novih procesa onda printa ispravno 500000 - pretpostavljam zato jer se ponovno zasebni procesi izvrse bez preklapanja kao u slucaju manjih brojeva",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4620": {
+      "poster": "SBolsec (Marko218)",
+      "content": "@Itachi#4592 https://youtu.be/GsVliK-3vVk?list=PL5Jyl3Lahn6wdcgjkjj2jMF-CEyqSMzXq&t=3624",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4624": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Itachi#4592 Isto kao što nije garantirano da ćeš za 5 100000 dobiti 500000 nije ni garantirano da nećeš. Sinkronizacijske mehanizme ne koristimo zato što su oni zaslužni za ispravno ponašanje u konkurentnom svijetu, njih koristimo samo kako bi **garantirali** ispravno ponašanje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4629": {
+      "poster": "[deleted]",
+      "content": "@micho#4624 u redu ali stvarno mi nije jasno trebamo li onda koristiti sinkronizaciju za ovaj labos ili ne. meni bez sinkronizacije nikad nije ispalo ni blizu 500000, ispadaju brojevi koji su cesto i manji od 100000 ili cak 10000, a oni u svom testnom dobiju tocno 500000\n\nshvacam sto zelis reci ali ako ne garantiramo ispravno ponasanje u ovom slucaju ga nece ni biti za dovoljno velike brojeve, jer svi procesi istovremeno zele povecati istu varijablu(ispravi me ako sam u krivu)\n\nJedino kad nešto moraš u zadatku je kad to izričito napišu, oduvijek i vazda u životu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4634": {
+      "poster": "[deleted]",
+      "content": "sad vidim da je zapravo 2b zadatak sinkronizacija varijabli. tako da ocito ne treba nista sinkronizirati u a) zadatku\n\nno stvarno mi nije jasno zasto su onda ostavili A=500000 u primjeru ispisa...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4635": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Itachi#4629 Jedino kad nešto moraš u zadatku je kad to izričito napišu, oduvijek i vazda u životu.\n\nPreviše se koprcate , treba se opustiti za labose",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4636": {
+      "poster": "[deleted]",
+      "content": "@micho#4635 ne editaj mi postove hitlere",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ink",
+          "schiz"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Goliathus",
+          "aaa8 (Gerti)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "turunturu (Cement)"
+        ]
+      }
+    },
+    "5283": {
+      "poster": "Lyras",
+      "content": "![](assets/2020-04-01/00011.png)\n\nDogađa li se još nekome da bez obzira na uvođenje atomica, za dovoljno velike početne uvjete tipa \"5 1000000\" ima rezultat koji odstupa za nekoliko jedinica, tipa \"4999996\" i taj broj se stalno mjenja? Msm da mi je sve uredu, jer bi inače odstupalo za puno više, a problem je u arhitekturi CPUa ili nešto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5313": {
+      "poster": "Lyras",
+      "content": "Update: pitao sam profesora Goluba i takvo rješenje se priznaje",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5375": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Lyras#5283 Preporučam da pogledaš [ovo](https://stackoverflow.com/questions/58477740/why-my-stdatomicint-variable-isnt-thread-safe)",
+      "votes": {
+        "upvoters": [
+          "Lyras",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5766": {
+      "poster": "ppooww (pp)",
+      "content": "@Lyras#5313 Znaci, mozemo koristit atomic_int? Jedino tako mi rjesenje uvijek ispada tocno, cak i za velike brojeve npr. \n\n( > 5 100000000...)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5884": {
+      "poster": "TamTam (foobar)",
+      "content": "![](assets/2020-04-03/00011.png)\n\nJesu li onda ovo prevelika odstupanja ili je poanta zapravo da cemo imati odstupanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5908": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@TamTam#5884 Poanta je da ces imati odstupanja, tek u drugom zadatku radis program u kojem ne bi trebalo bit odstupanja",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5920": {
+      "poster": "AK10 (endyyyy)",
+      "content": "koje gradivo treba nauciti da bi se uradio ovaj labos",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5922": {
+      "poster": "miss_anthropocene (neunist.iva)",
+      "content": "jel moramo implementirati zajednicku memoriju u a) slucaju s procesima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5936": {
+      "poster": "miss_anthropocene (neunist.iva)",
+      "content": "@miss_anthropocene#5922 edit: treba",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5976": {
+      "poster": "ppooww (pp)",
+      "content": "@AK10#5920 4. cjelina u [skripti](http://www.zemris.fer.hr/~leonardo/os/fer/_OS-skripta.pdf)",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6073": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "Imam Lamport dretve zadatak, dakle bez sinkronizacije mi kod radi, kada krenem s Lamportom program mi udje u neko cudno stanje (ako stavim neki bezvezni printf odmah u mainu, ne ispise ga), mislim da ne alociram dobro memoriju za ULAZ i BROJ. Probao sam s ovako:\n```\nULAZ = malloc(N* sizeof(int));\nBROJ = malloc(N* sizeof(int));\n```\nI s onim njihovim primjerom:\n```\nmemorija = malloc ( sizeof(int) * (n+n) + n * sizeof(pthread_t) );\nulaz = memorija;\nbroj = ulaz + n;\n```\n\nI još jedno pitanje, pozivi za odlazak i izlazak iz kriticnog odsjecka izgleda ovako?\n```\nfor(i do M){\n    udji_u_KO(i)\n    A = A+1;\n    izadji_iz_KO(i);\n} \n\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6106": {
+      "poster": "Rope (Rops)",
+      "content": "@tata#6073 kad u mainu radis nove dretve sa pthread_create kao parametar dretvi dajes jednu funkciju u koju nova dretva ulazi(funkcija udi_u_kriticni odsjecak u pseudokodu u uputama za labos) pa je lakse odma u njoj nakon one dvije while petlje koje cekaju da dretva dode na red za ulazak u kriticni odsjecak provuci for petlju koja se vrti M puta (M je zadani broj iteracija svake dretve) i u svakom prolazu povecava globalnu varijablu A za 1, nakon toga mozes pozvati funkciju izadi_iz_kriticnog_odsjecka(isto zadano u pseudokodu u uputama) kako bi dretva zavrsila s radom, pripazi samo da kad pri pozivu pthread_create kao parametar funkciji u koju ce dretva uci posaljes redni broj dretve(i), tu je najlakse poslati adresu elementa polja BR u kojem ces imati zapisane indekse od 0 do N-1(primjer dretve.c http://www.zemris.fer.hr/~leonardo/os/fer/primjeri-koda/02-dretve-i-procesi/dretve/dretve.c)",
+      "votes": {
+        "upvoters": [
+          "Jaki",
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6107": {
+      "poster": "pez (ip)",
+      "content": "jel netko ima problema sa slicnim errorima ili zna kako ih rjesiti?\n```\nIn file included from Lamport.cpp:11:0:\n/usr/lib/gcc/x86_64-linux-gnu/7/include/stdatomic.h:40:9: error: ‘_Atomic’ does not name a type\n typedef _Atomic _Bool atomic_bool;\n         ^~~~~~~\n/usr/lib/gcc/x86_64-linux-gnu/7/include/stdatomic.h:41:9: error: ‘_Atomic’ does not name a type\n typedef _Atomic char atomic_char;\n         ^~~~~~~\n/usr/lib/gcc/x86_64-linux-gnu/7/include/stdatomic.h:42:9: error: ‘_Atomic’ does not name a type\n typedef _Atomic signed char atomic_schar;\n         ^~~~~~~\n/usr/lib/gcc/x86_64-linux-gnu/7/include/stdatomic.h:43:9: error: ‘_Atomic’ does not name a type\n typedef _Atomic unsigned char atomic_uchar;\n         ^~~~~~~\n...\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6110": {
+      "poster": "nikace (AeIoU)",
+      "content": "u slucaju Dekkera s dvije dretve mi zelimo da nase dvije dretve svaka poveca neku varijablu M puta(M - broj koji zadamo preko komandne linije)?",
+      "votes": {
+        "upvoters": [
+          "Extended_mix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6136": {
+      "poster": "Sicsile",
+      "content": "imam zadatak lamporta s N procesa i prilikom ispisa mi ispadaju ovakve brojke. Je li to krivo ili?\n\n![](assets/2020-04-04/00005.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6159": {
+      "poster": "Fica (Prof)",
+      "content": "@pez#6107 Probaj samo include <atomic>, bez std",
+      "votes": {
+        "upvoters": [
+          "pez (ip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6172": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@Sicsile#6136  tako treba biti",
+      "votes": {
+        "upvoters": [
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6175": {
+      "poster": "lucylu",
+      "content": "u drugom zadatku, lamport procesi, imam problem sto mi nece za neke primjere radit, tj vrti se jako dugo i nista\n\nili recimo nekad hoce neki primjer izbacit i to bez cekanja, i tocno, a nekad taj isti primjer nista, ako je netko mozda imao slican problem?\n\nradila sam po pseudokodovima iz pripreme\n>! ![](assets/2020-04-04/00023.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6181": {
+      "poster": "puufi",
+      "content": "@lucylu#6175 provjeri jel zoves neku funkciju nepotreban broj puta, meni je isto bilo tako jer sam maksimum broja racunala svaki put u funkciji ulaz_u_KO, a kad stavila da se u mainu izracuna i to poslala proradilo je i za vece brojeve",
+      "votes": {
+        "upvoters": [
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6185": {
+      "poster": "JoKing",
+      "content": "Računa li se korištenje ovih uputa za labose (http://www.zemris.fer.hr/~leonardo/os/fer/primjeri-koda/02-dretve-i-procesi/) kao plagijat. Otprilike mi je 95% isto kao u ovim primjerima, a pretpostavljam da će još netko imati tako pa može li proć da sam prepisao s te stranice, a ne od kolege.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "miss_anthropocene (neunist.iva)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6190": {
+      "poster": "Veki",
+      "content": "u 1. zadatku za procese, treba li se koristiti A kao globalna varijabla ili napraviti zajednicki spremnik za procese?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6211": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@JoKing#6185 Ovisi što si radio s tim kodovima\n\nOni nisu rješenja laboratorijskih vježbi, pa ti ne bi trebali biti kodovi 95% isti (iako vjerujem da je to tvoja slobodna interpretacija, a ne točan postotak). Ako te i pozovu na razgovor, valjda ćeš moći objasniti situaciju.",
+      "votes": {
+        "upvoters": [
+          "JoKing"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6217": {
+      "poster": "Rene",
+      "content": "@Veki#6190 ako je koristis kao globalnu varijablu onda cim je promjenis stvore se kopije za procese i ona vise nije zajednička, na taj način će ti na kraju vraćat A=0. Treba koristiti zajednicki spremnik",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6226": {
+      "poster": "miss_anthropocene (neunist.iva)",
+      "content": "@AK10#6172 ne bih rekla, zasto? jelenkovic u [videu](https://youtu.be/GsVliK-3vVk?t=3692) govori da ce samo u prvom dijelu biti odstupanja za velike brojeve da vidimo kako funkcionira inkrementiranje bez sinkroniziranja, a dio s Lamportom/Dekkerom treba izbacivati dobar rezultat, a cijena ce biti duze izvrsavanje programa\n\nevo, za kolegine brojeve, s Lamportom, meni se izbacuje ovo:\n\n./L 2 100000000\n\nA=200000000",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6229": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@lucylu#6175 \n\n![](assets/2020-04-04/00031.png)",
+      "votes": {
+        "upvoters": [
+          "Sicsile",
+          "lucylu",
+          "miss_anthropocene (neunist.iva)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6246": {
+      "poster": "Lenobius",
+      "content": "@nikace#6110 Ja bih rekao da da, u uputi piše da treba biti isto kao u zadatku 2.a, samo mi što radimo s Dekkerom očito imamo fiksirano N = 2",
+      "votes": {
+        "upvoters": [
+          "nikace (AeIoU)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6250": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "fak ja sam rijesio od proslih godina lamportov sa stolovima 😱\n\nima neko ideju kako ga najbezolnije prebacit da radi za ovaj nas xd",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "miss_anthropocene (neunist.iva)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6259": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@miss_anthropocene#6226 Jesi li probala mozda nekoliko puta za redom pokrenuti za iste brojeve? Jer meni ponekad ispadne tocan broj a ponekad s pogreskom, pa isto nisam sigurna je li to tocno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6264": {
+      "poster": "miss_anthropocene (neunist.iva)",
+      "content": "@AnamarijaM#6259 meni ispada isti broj, ali sudeci po prethodnom postu kolege AK10, bitno je da radi za manji broj iteracija. :)",
+      "votes": {
+        "upvoters": [
+          "AnamarijaM (MA)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6271": {
+      "poster": "nikace (AeIoU)",
+      "content": "@Sicsile#6136 \n\nmislim da je ispravno i to, alii mozda uporaba atomic_int pomogne?\n\n![](assets/2020-04-04/00037.png)",
+      "votes": {
+        "upvoters": [
+          "Sicsile",
+          "Wayk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6294": {
+      "poster": "boki8 (kerovac)",
+      "content": "Za drugi zadatak imam Lamportov algoritam i zanima me sto ide u \"nekriticni odsjecak\"?",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "faboche (him)",
+          "neksi (filip)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6298": {
+      "poster": "gladiator",
+      "content": "@boki8#6294 Apsolutno ništa? Procesi/dretve imaju jedan zadatak i to je uvećanje zajedničke varijable",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6315": {
+      "poster": "[deleted]",
+      "content": ">Ako se program rješava s procesima tada treba zajedničke varijable tako organizirati da se prostor za njih zauzme odjednom i podijeli među njima. Ovo je nužno zbog ograničenog broja segmenata i velikog broja korisnika.\n\nRade li oni ovo u pokaznom kodu za zajednicke varijable i spremnike?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6316": {
+      "poster": "Fortius",
+      "content": "jel i vama u prvom zadatku jako dugo traje ispis s dretvama?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6317": {
+      "poster": "[deleted]",
+      "content": "@Fortius#6316 ne",
+      "votes": {
+        "upvoters": [
+          "Fortius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6318": {
+      "poster": "Bioxed",
+      "content": "Jel u 2a treba prenositi argument  (M ili neki drugi) pri stvaranju dretve ili ide NULL ?\n\n![](assets/2020-04-04/00042.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6337": {
+      "poster": "boki8 (kerovac)",
+      "content": "![](assets/2020-04-04/00046.png)\n\nIma li netko ideju zasto se ovo dogada...? Lamportov s procesima zadatak",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6338": {
+      "poster": "JeleeII",
+      "content": "Imali tko ovakvih problema u 1. zadatku?\n\n![](assets/2020-04-04/00047.png)\n\n![](assets/2020-04-04/00048.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6346": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@boki8#6337 vjerojatno dereferenciraš null pointer ili diraš memoriju koju ne bi smio dirati :)",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6348": {
+      "poster": "boki8 (kerovac)",
+      "content": "@micho#6346 da, problem je bio sa memorijom... Hvala!",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6368": {
+      "poster": "Gocc (***)",
+      "content": "koje sve varijable trebajju biti atomic",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6370": {
+      "poster": "boki8 (kerovac)",
+      "content": "@Gocc#6368 ![](assets/2020-04-05/00002.png)\n\nJa sam kao atomic stavio varijable ULAZ i BROJ, ali bez obzira na to dobijam ovakav ispis koji za velike brojeve postaje kriv pa ne znam je li to dovoljno dobro",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6371": {
+      "poster": "Gocc (***)",
+      "content": "@boki8#6370 meni toliko velike brojeve nece ni izracunat koliko mu treba vremena...",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6373": {
+      "poster": "boki8 (kerovac)",
+      "content": "@Gocc#6371 Ne znam kakav ti je kod, ali ja sam imao takav problem i rijesio sam ga tako da onaj \"max(broj[0]...broj[n])\" nisam racunao u funkciji nego jednostavno stavio globalnu varijablu koju sam povecavao za 1 svaki put",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6382": {
+      "poster": "Lenobius",
+      "content": "@Bioxed#6318 Sve što ti treba u funkciji uvecajA su varijable A i M, koje su obje globalne, tako da bih ja rekao da ne",
+      "votes": {
+        "upvoters": [
+          "Bioxed"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6415": {
+      "poster": "zplusplus (gasaf)",
+      "content": "može li mi netko objasniti u 2a zadatku Lamport čemu zapravo služe ULAZ[i] i\n\n   BROJ[i] ? kakve veze imaju sa varijablom a iz zadatka koju treba povećavati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6425": {
+      "poster": "krle",
+      "content": "@zplusplus#6415 ULAZ[N] i BROJ[N] sluze za taj Lamportov algoritam sinkronizacije. Nemaju direktne veze sa varijablom A, no sa njima se izvodi cekanje jednog procesa da zavrsi sa povecavanjem varijable A kako bi sljedeci u nizu mogao uzeti vrijednost varijable i povecati ju. Bez nekog algoritma sinkronizacije (tj. u ovom slucaju Lamportovog) moze se dogoditi da 2 (ili vise) procesa u isto vrijeme update-aju vrijednost varijable A - u tom slucaju nece se dogoditi inkrementacija 2 (ili vise) puta nego samo jednom i dolazi do greske.",
+      "votes": {
+        "upvoters": [
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6480": {
+      "poster": "BlackMamba",
+      "content": "S obzirom da je onima koji imaju Dekkera fiksiran N, ulazni argument nam je samo M, jel?",
+      "votes": {
+        "upvoters": [
+          "indythedog",
+          "nikace (AeIoU)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6506": {
+      "poster": "pingvinka",
+      "content": "Lamport s dretvama -> jel netko ima ideju zasto mi za broj dretvi koji je 8 (ili više) javlja Segmentation fault?\n\n(dodatno: program se dobro izvrši sve do djela kad uđe u for petlju gdje join-am dretve. ta for petlja se izvrsi 4 puta i onda stane program)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6526": {
+      "poster": "JeleeII",
+      "content": "@JeleeII#6338 Ako se netko nade s istim/slicnim problemom ovo je pomoglo:![](assets/2020-04-05/00014.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6544": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@boki8#6370 Imala sam isti problem i tek kad sam stavila da je i A atomic int je proradilo tocnije (jos uvijek ima gresku ali tek za broj iteracija 10^9, do tada je sve tocno).",
+      "votes": {
+        "upvoters": [
+          "Jaki",
+          "[deleted]",
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6548": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Nezz hoću li uspjeti sve dovršiti sutra do 15h. Ima li koji dio vježbe da se mora predati sutra do 15h, ili dretve.c, procesi.c i Dekker.c mogu uploadati i do drugog termina, tj 10.4?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6555": {
+      "poster": "soplagaitas (sopla)",
+      "content": "@BrkMateaBeusana#6548 ako se ne varam možeš sve predati kasnije za bod manje\n\nsource:\n>! ![](assets/2020-04-05/00024.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6557": {
+      "poster": "potemkin (meriMerino)",
+      "content": "@BrkMateaBeusana#6548 Mislim da se ovaj labos racuna pod zadacu i da ga moras predat do sutra. Ovi drugi termini su bili za \"prezentaciju\" koda. Sad s obzirom na trenutnu situaciju ne znam, ali nekako mi je vise vjerojatno da moras do sutra predat.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "MiqeloS",
+          "kameni (Isusek)",
+          "katakomba (kk626)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6564": {
+      "poster": "MalaPumpa",
+      "content": "![](assets/2020-04-05/00027.png)\n\nPar pitanja za ovo:\n\nZasto petlja ide do maxlong, to mi se cini preveliki broj pa mi ni ne radi, a i imalo bi vise smisla samo staviti id zajednicke memorije\n\nPoruka se ispise onoliko puta koliko ima procesa, dal je moguce da se zajednicki spremnik brise vise puta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6565": {
+      "poster": "Me1 (Me)",
+      "content": "kod Dekkera mi tek kad imam vise od 10^7 iteracija pocnu kriva rješenja, je li to uredu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6574": {
+      "poster": "lucylu",
+      "content": "@MalaPumpa#6564 ja sam samo prema primjeru iz skripte sa shmdt odvojila varijable koje su procesi zajedno koristili\n\ni obrisala sa shmctl, bez petlje sa maxlong\n\n![](assets/2020-04-05/00032.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6588": {
+      "poster": "boki8 (kerovac)",
+      "content": "@AnamarijaM#6544 da i meni radi ispravno do milijardu iteracija (tj. za manji broj procesa, npr 2 radi i 10^9, ali za neki malo veci broj, npr 5 pojavi se greska na 10^9...). Smatra li se takvo rjesenje ispravno ili ga je potrebno nekako doraditi?",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6594": {
+      "poster": "[deleted]",
+      "content": "svi koji neumorno pitate \"je li moje rjesenje od x iteracija sa greskom od y prihvatljivo\"... kaj je vama s glavom? pa rekao vam je kolega sve u postu @Lyras#5313",
+      "votes": {
+        "upvoters": [
+          "SonGoku (~~~~~~~~)",
+          "Wayk",
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": [
+          "Exelero",
+          "Hrvoje (Hrvoje45)",
+          "JoKing",
+          "MalaPumpa",
+          "RS7",
+          "SuperSjajan3",
+          "ZliDule"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "MalaPumpa",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      }
+    },
+    "6605": {
+      "poster": "toty",
+      "content": "Imam Lamporta s procesima, jel trebaju ovaj ULAZ i BROJ postavit da budu vrijednosti sve 0 ili od 0,1,..., n-1( i jel se tu na n misli na broj procesa ili broj ponavljanja), ovaj moj seljacki kod trenutno izbacuje za preko 10000 rjesenja koja mrvicu odstupaju od željenog, je li to tako treba biti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6612": {
+      "poster": "Suki7",
+      "content": "@pingvinka#6506\n\nprof. Jelenkovic:\n\n\"Greška je u liniji:\n\nt = (pthread_t *)(BROJ + 1);\n\numjesto +1 treba biti + N\n\nt = (pthread_t *)(BROJ + N);\n\n(Greška je i u video uputama.)\"",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3",
+          "pingvinka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6617": {
+      "poster": "aaa8 (Gerti)",
+      "content": "funkcija uđi_u_kritični_odsječak(i,j)\n\nkod dekkerovog postupka , šta su točno varijable i ,j?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6618": {
+      "poster": "MalaPumpa",
+      "content": "@lucylu#6574 Da, ali to je za sam kraj programa koji se uspjesno izvrsi, ova screenshotana uputa koju su nam dali da \"moramo\" imati u programima se odnosi na poslani signal Ctrl+C",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6621": {
+      "poster": "[deleted]",
+      "content": "@aaa8#6617 i je 0 ili 1 ovisno o tome radi li se o prvom ili drugom procesu, j=1-i",
+      "votes": {
+        "upvoters": [
+          "aaa8 (Gerti)",
+          "iNavy (mornar Ica)",
+          "samurai (samuraj)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6634": {
+      "poster": "Bioxed",
+      "content": "@Itachi#6621 \n\nJel za dekkerov postupak rješenje jedinstveno ili se meni čini? Barem ako se držimo njihovih uputa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6635": {
+      "poster": "[deleted]",
+      "content": "@Bioxed#6634 ne razumijem pitanje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6636": {
+      "poster": "lucylu",
+      "content": "@MalaPumpa#6618  mislim da to samo znaci da aktiviranjem sigint moramo ostvariti brisanje tog zajednickog dijela memorije, dakle ``sigset(SIGINT, fja_brisanja_segmenata)`` i ta funkcija se jos svakako prije returna pozove\n\na tu u uputama se spominju i semafori, nisu bas updeatane",
+      "votes": {
+        "upvoters": [
+          "MalaPumpa"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6638": {
+      "poster": "Bioxed",
+      "content": "@Itachi#6635 Oce nam svima isto izgledat rjesenje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6639": {
+      "poster": "SuperSjajan3",
+      "content": "@boki8#6348 Mozes napisat sta si tocno promijenio da ti vise ne baca seg fault ?\n\nedit: kolega @Suki7 mi je odgovorio",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6640": {
+      "poster": "[deleted]",
+      "content": "@Bioxed#6638 pa nece bit identicno ali algoritam je isti i isti je zadatak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6641": {
+      "poster": "zplusplus (gasaf)",
+      "content": "moramo li imat rješenje s atomic ili može i bez?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6644": {
+      "poster": "Edrudo",
+      "content": "@pez#6107  Jesi uspio rijesiti problem? Meni se isto to dogada, a ne znam zasto.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6647": {
+      "poster": "[deleted]",
+      "content": "@Edrudo#6644 kompajlas za C11?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6654": {
+      "poster": "JBQ",
+      "content": "Kod Dekkera i procesa, jel se smiju umjesto polja koristit dvije varijable posebno ko zastavice?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "LucidDreamer"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6667": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@zplusplus#6641 Atomic nije potreban, najnormalnije su se vježbe izvodile i bez njega godinama prije.",
+      "votes": {
+        "upvoters": [
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6676": {
+      "poster": "[deleted]",
+      "content": "@micho#6667 meni(i mnogim drugim kolegama) nije radilo ispravno bez atomic, znas zasto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6693": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Itachi#6676 A očito se atomic nosi s problemom sekvencijske konzistencije.\n\nMeđutim, atomic sam po sebi ne garantira da će se kod izvršiti tako kako se treba izvršiti, već je to njegova posljedica jer po defaultu ima najstroža ograničenja, tako da ne znam zašto su to predstavili kao popravak, kad je popravak situacije samo implementacijski detalj. Ono što su trebali napraviti je uputiti ljude na [ovo](https://en.cppreference.com/w/cpp/atomic/memory_order), a i obraditi to na predavanju, s obzirom da za neke druge arhitekture, npr. ARM, problem zna biti puno značajniji.\n\nOsobno sam za pronalaženje maksimuma izveo funkciju, tako da je možda u mojem slučaju to pomoglo da uz već ionako strog memorijski model C++-a gcc ne optimizira izvođenje tih naredbi:\n\n```\nSearching[i] = true;\nOrder[i] = arrMax(Order, threads) + 1;\nSearching[i] = false;\n```\n\nEDIT: Isto tako, pametnije bi bilo umetanje [hardverskih memorijskih zapreka](https://stackoverflow.com/questions/19965076/gcc-memory-barrier-sync-synchronize-vs-asm-volatile-memory) jer osim kompajlera i čip može promijeniti redoslijed izvođenja.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6703": {
+      "poster": "Pranjo (Pranjo_Suđman)",
+      "content": "U sinkronizaciji dvije dretve Dekkerovim algoritmom nisam koristio funkcije uđi_u_kritični_odsječak(i,j) i izađi_iz_kritičnog_odsječka(i,j) nego sam kodove iz tih funkcija napisao u funkciju proc(i). Trebam li u kodu imati te funkcije kao što su oni napisali odnosno mogu li bez toga i trebam li također imati atomic varijable?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6708": {
+      "poster": "DnaRam77 (son)",
+      "content": "Očekuje li se da (Lamport s dretvama) u kritičnom odsječku pojedine dretve inkrementiramo zajedničku varijablu A za 1 pa onda da svaka dretva čeka pravo na sljedeći ulazak u kritični odsječak ili da odmah izvršimo for petlju u kojoj se varijabla A inkrementira zadani M puta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6710": {
+      "poster": "flicka",
+      "content": "@lucylu#6175 imam isti problem, jesi uspjela rijesit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6711": {
+      "poster": "JeleeII",
+      "content": "Imam za napravit Lamporta i zanima me sta im predstavlja uvjet ovdje(odlucila sam se rijesit ga procesima) ![](assets/2020-04-06/00002.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6714": {
+      "poster": "Wayk",
+      "content": "@JeleeII#6711 Moras odabrat kaj ces rjesavat ovisno o zadnjem broju jmbaga.\n\nTu je uvjet broj inkrementiranja (onaj drugi broj koji upisujes kad pokreces program).\n\nZnaci ta petlja se treba vrtiti naprimjer 1000 puta ako program pokrenes sa `./lampart <nekiBroj> 1000`",
+      "votes": {
+        "upvoters": [
+          "JeleeII"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6718": {
+      "poster": "lucylu",
+      "content": "@flicka#6710 \n\npomogao je savjet  @puufi#6181",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6724": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "Da jos jednom provjerim, SIGINT treba maskirati samo u zadacima s procesima, a ne s dretvama? Kopka me jer i u dretvama alociramo memoriju s mallocom, hoce li onda ignorirati ako nismo maskirali prekid da se ta memorija dealocira ili?",
+      "votes": {
+        "upvoters": [
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6725": {
+      "poster": "TamTam (foobar)",
+      "content": "Jel ikome prof otkljucao predaju nakon ovih konzultacija?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Fica (Prof)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6726": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@TamTam#6725 meni je",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6728": {
+      "poster": "zloglasniKonjokradica (ooga booga)",
+      "content": "Jel nekom lamport s dretvama znatno uspori za veci broj dretvi (meni za >= 5 dretvi i >= 10000 iteracija). Dal skidaju bodove za to? Izvrsit ce se za bilo kolko sam ce mu trebat sto godina",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6729": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@KingGeedorah#6724 Da, rekao je da bi tehnicki trebalo i u dretvama zbog malloca ali to nije navedeno u uputi pa nece skidati bodove na to.\n\nEDIT: Upravo je stavljena obavijest da ne moramo ni u procesima jer nas je jako puno to previdjelo.",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6733": {
+      "poster": "boki8 (kerovac)",
+      "content": "@zloglasniKonjokradica#6728 izvršavanje se treba usporiti (to usporavanje je nedostatak, ali prednost je što bi trebao dobijati točna rješenja)",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6809": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@zloglasniKonjokradica#6728 Ono što logičke dretve rade je dijele izvršavanje na jednoj fizičkoj jezgri. Npr., ako imaš 5 dretvi istog prioriteta, onda će ti za 1 ciklus trebati 5 ciklusa na jednoj fizičkoj jezgri (jer će se svakoj dretvi trebati dati jedan ciklus).\n\nSad zamisli da si uključio 10000 dretvi. Sad ti za izvršavanje jednog ciklusa na jednoj fizičkoj jezgri treba 10000 ciklusa. Znači efektivno si usporio izvršavanje programa 10000 puta. Još tu ima usporenja s obzirom na to da npr. radiš s memorijom na hrpi koja nije u sekvenci, pa joj je pristup sporiji, ali to nije i jedino što ti može usporiti izvršavanje.\n\nU principu, jednom kad broj dretvi premaši broj logičkih jezgri procesora, povećanje broja dretvi programa će ti samo usporiti sustav. Isto tako, premašivanje broja fizičkih jezgri procesora će ti davati manje performanse na ostalim dretvama.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7993": {
+      "poster": "alp (monte)",
+      "content": "Koliko je ukupno izvornih tekostova programa u zipu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8029": {
+      "poster": "Krisle",
+      "content": "https://pastebin.com/b7CcDcqL\n\nJel netko vidi zašto mi ispisuje Seg fault? U pitanju je procesi.c \n\nDoslovno nema logike ni meni ni frendu, ak možete bacit pogled cijenio bih...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8042": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Krisle#8029 90% siguran da diraš A* koji nije inicijaliziran, tj imaš divlji pointer koji uzrokuje nedefinirano ponašanje.",
+      "votes": {
+        "upvoters": [
+          "Krisle"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8047": {
+      "poster": "Krisle",
+      "content": "Ma joj, nisam ni napravio zajednički spremnik, treba dodat shmat, shmget pozive",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8048": {
+      "poster": "Krisle",
+      "content": "Mislim sad više nisam siguran jel trebalo u vježbi radit zajednički spremnik\n\nhttps://cdn.discordapp.com/attachments/555454100381237273/698133250438201394/unknown.png\n\n@micho#8042",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8049": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@Krisle#8048 U zadatku piše \"Svaka dretva, odnosno svaki proces povećava **zajedničku varijablu A** za 1...\", tako da mislim da je trebalo u programu s procesima, a u programu s dretvama je ta varijabla već zajednička.",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "162880": {
+      "poster": "km52600",
+      "content": "U ovom zadatku procesi.c program mi(bez obzira što nije sinkronizirano) normalno izračuna vrijednost za parametre 5 100000, a griješi tek za 5 i 1000000.Je li to OK ili imam grešku u kodu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

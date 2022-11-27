@@ -1,0 +1,690 @@
+{
+  "title": "[ARHRAC1-E] 5. laboratorijska vježba - 2019/2020",
+  "creator": "Semofcanec",
+  "slug": "arhrac1-e-5-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Arhitektura računala 1E",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "27279": {
+      "poster": "Semofcanec",
+      "content": "Mi može neko objasniti kak radi ulazna jedinica?\n\nJel ja trebam prvo spremiti neke podatke na ulaznu jedinicu (i kak?)  i tek \n\nonda ih čitam s DMAC-om ili kaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27281": {
+      "poster": "BigTuna",
+      "content": "Samo posaljes kolko podataka ukupno trebas i sami ti dolaze brojevi 1 2 3 4 5 ......itd",
+      "votes": {
+        "upvoters": [
+          "Semofcanec"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27284": {
+      "poster": "Semofcanec",
+      "content": "@BigTuna#27281 onda sam nekaj zajebo jer kurac mi šalje.\n\nTo treba slati na transfersize ne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27304": {
+      "poster": "rjednakoR",
+      "content": "@Semofcanec#27284 Da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27690": {
+      "poster": "Upforpslone",
+      "content": "Kako da nakon sto je gotov prvi DMA prijenos zapocnem drugi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27734": {
+      "poster": "KR7 (Detective Schmosby)",
+      "content": "U prekidnom programu pokrenes ponovnu inicijalizaciju DMA, samo pazi da kada drugi DMA bude gotov, on ce isto opet prouzrokovat prekid i uc u prekidni program, pa trebas u tom drugom prolazu kroz prekidni program \"preskocit\" taj dio koda.",
+      "votes": {
+        "upvoters": [
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27735": {
+      "poster": "KR7 (Detective Schmosby)",
+      "content": "Ako je netko imao bolju ideju od ove neka kaze. 😃",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27747": {
+      "poster": "Upforpslone",
+      "content": "@KR7#27735 Napravio sam ovako kako si ti reko, ustvari ne treba se ponovno sve inicijalizirat nego se samo treba promjenit SrcAddr(iz M1 u M2)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27761": {
+      "poster": "Ilija123 (Mrnjotaur)",
+      "content": "@Upforpslone#27747 Oprosti ali je li ti prekidni potprogram izgledao kao u prezentaciji kod onog prvog primjera M->VJ ili si pravio neke modifikacije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27762": {
+      "poster": "KR7 (Detective Schmosby)",
+      "content": "@Upforpslone#27747 Da ovisi koji zadatak imas",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27763": {
+      "poster": "KR7 (Detective Schmosby)",
+      "content": "@Ilija123#27761 U prekidnom programu moras prvo clearat stanje od DMAC-a (upises bilo kaj da bi clearao), onda mozes tek pocet s ponovnom inicijalizacijom DMAC-a za drugi dio zadatka.",
+      "votes": {
+        "upvoters": [
+          "Ilija123 (Mrnjotaur)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27769": {
+      "poster": "Ilija123 (Mrnjotaur)",
+      "content": "@KR7#27763 A s koje adrese povlacim brojeve za drugi upis, ove 1, 2, 3...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27776": {
+      "poster": "Upforpslone",
+      "content": "@Ilija123#27761 Kostur mi je isti, ali sam dodao da nakon sta pobrise status spremnosti, a prije BL GOTOVO provjeri jel 2. dma prijenos sad na redu i ako je ponovno inicijaliziras dma da se pokrene 2. po redu prijenos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27777": {
+      "poster": "Ilija123 (Mrnjotaur)",
+      "content": "@Upforpslone#27776 taj drugi DMA prijenos si provjeravao brojačem ili? i drugi DMA si incijalizirao u prekidnom potprogramu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27778": {
+      "poster": "Upforpslone",
+      "content": "@Ilija123#27777 Da i da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27789": {
+      "poster": "Ilija123 (Mrnjotaur)",
+      "content": "@Upforpslone#27778 ![](assets/2020-05-20/00036.png)\n\njavlja mi ovaj error",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27796": {
+      "poster": "Ilija123 (Mrnjotaur)",
+      "content": "@Upforpslone#27778 pa ak mozda znas",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27818": {
+      "poster": "Semofcanec",
+      "content": "jel ima neko isto problem da mu ulazna jedinica jako sporo\n\npocinje generirati brojeve?Ova petlja koja smanjiva R11\n\nvec zavrsi, a ovaj nije ni počel.Tek dok sam stavil da R11 bude 200\n\nsu se uspjela oba dva prijenosa napraviti",
+      "votes": {
+        "upvoters": [
+          "Elle",
+          "PeanutMaster1801 (caca)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27851": {
+      "poster": "rjednakoR",
+      "content": "@Semofcanec#27818 Da, ta ulazna jedinica radi sporo al ti tako ionako moraš stavit petlju koja provjerava je li dmac završio sa drugim prijenosom  nakon što R11 dođe na 0",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27855": {
+      "poster": "Semofcanec",
+      "content": "@rjednakoR#27851 da,ali meni nije jos ni s prvim poceo.kaj onda dode brojac R11 do nula i onda u petlji stalno provjeravam dal je drugi prijenos obavljen?koja je onda poanta tog R11?prema tekstu zadatka dobil sam dojam da bi to smanjivanje trebalo malo prije(ako ne i poslije) drugog prijenosa zavrsiti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27856": {
+      "poster": "rjednakoR",
+      "content": "@Semofcanec#27855 Poanta ovog labosa je da naučiš kak radi DMA,  a ne da zadatak ima smisla",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Semofcanec"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27870": {
+      "poster": "Semofcanec",
+      "content": "@rjednakoR#27856 a dobro onda nafcil se jesam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27877": {
+      "poster": "p3tr5 (Mišica34)",
+      "content": "@Semofcanec#27855 privremeno se stavi dodatna petlja ispred SWI, da se provjeri ako se svi  podaci uredno potroše, možda to pomogne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27917": {
+      "poster": "Upforpslone",
+      "content": "@Ilija123#27789 Ne znam zbog cega je ta greska, ali prije inicijalizacije moras zavrsiti prvi prijenos sa         \n\nMOV R1, #0x00FF0000 \n\nSTR R1, [R3, #0x4]\n\npa tek onda inicijalizirat dma za drugi prijenos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28099": {
+      "poster": "netflix (seximan)",
+      "content": "@rjednakoR#27851 E kako si napravio to,ja sam stavio neki registar koji je 0 sve dok se ne zavrsi drugi prijenos,a u glavnom se nakon sto postane 0 R11 vrti i dalje u petlji sve dok taj registar s kojim provjeravam jel zavrsio drugi prijenos ne postane 1. Sad mi samo nije jasno kad da stavim 1 u registar za provjeru,jer svugdje di stavim na kraju zavrsi tako da dode na swi prije nego vidim da se ista pocelo stavljat na izlaz. Ako stavim jos jednu beskonacnu petlju prije swi sve radi okej. Ili je to okej tako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "LWide"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28103": {
+      "poster": "rjednakoR",
+      "content": "@netflix#28099 1 staviš u neku memorijsku lokaciju pa nju provjeravaša i to napraviš u prekidu da kad se završi 2. Prijenos onda postane 1.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28108": {
+      "poster": "rjednakoR",
+      "content": "@netflix#28099 Jel u toj beskonačnoj petlji prije swi provjeravaš jel registar 1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28110": {
+      "poster": "netflix (seximan)",
+      "content": "@rjednakoR#28108 imam jednu petlju za R11 di se oduzima,tu i provjeravam taj uvjet, al sam jos bio dodao jednu petlju tipa PETLJA B PETLJA prije SWI samo da vidim jel radi opcenito,al nemrem skuzit gdje zavrsava drugi prijenos da stavim 1 u taj registar za provjeru nakon toga. Svaki put prerano stavim 1 u taj registar i onda prerano zavrsi cijeli program",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28115": {
+      "poster": "rjednakoR",
+      "content": "@netflix#28110 Nakon prvog prekida povećaš taj neki registar koji oćeš za 1 onda u prekidu uspoređuješ jel taj registar 1 onda postavljaš u prekidu DMA da radi drugi prijenos i onda opet kad uđe u prekid taj registar će se povećat za jedan tj. Bit će 2 . U glavnom programu nakon što se završi petlja za R11 stavi još jednu petlju koja ispituje jel taj tvoj željeni registar 2, ako nije opet radi petlju, ako je ide van na swi.",
+      "votes": {
+        "upvoters": [
+          "netflix (seximan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28116": {
+      "poster": "Semofcanec",
+      "content": "@rjednakoR#28115 i kad tebi ta petlja za R11 zavrsi,odnosno dal \n\ntraje za vrijeme prvog i drugog prijenosa ili ti zavrsi prije prvog prijenosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28117": {
+      "poster": "rjednakoR",
+      "content": "@Semofcanec#28116 Završi prije prvog prijenosa jer je vanjska jedinica spora.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28124": {
+      "poster": "netflix (seximan)",
+      "content": "@rjednakoR#28115 e najs hvala, ostane ih par u vanjskoj na kraju znaci da je dobro",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28125": {
+      "poster": "Ilija123 (Mrnjotaur)",
+      "content": "@Upforpslone#27917 ![](assets/2020-05-21/00021.png)\n\nmeni na ovakav dio baca error",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28126": {
+      "poster": "rjednakoR",
+      "content": "@netflix#28124 Kak ih ostane par u vanjskoj, trebalo bi ti u memoriju upisat 32 broja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28130": {
+      "poster": "netflix (seximan)",
+      "content": "@rjednakoR#28126 ostane jer se ne stigne sve prebacit,to je ono sto je Danko napisao da dodamo privremenu beskonacnu petlju da vidimo oce oke radit sve.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28132": {
+      "poster": "rjednakoR",
+      "content": "@netflix#28130 Kaj bi to bila privremena beskonačna petlja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28138": {
+      "poster": "netflix (seximan)",
+      "content": "@rjednakoR#28132 PETLJA B PETLJA, privremena jer ju maknes kad im predajes labos,koristis samo za provjeru",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28139": {
+      "poster": "rjednakoR",
+      "content": "@Ilija123#28125 Ak ja tu dobro vidim ti postavljaš DMA za prijenos u M1 u Prekidu, to bi trebo u glavnom programu napravit.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28141": {
+      "poster": "Ilija123 (Mrnjotaur)",
+      "content": "@rjednakoR#28139 Zadat mi trazi da drugi prijenos bude u M1, pa sam koleginim naputcima isao po tome da u prekidnom potprogramu incijaliziram taj drugi prijenos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28142": {
+      "poster": "rjednakoR",
+      "content": "@netflix#28138 netreba ti ta petlja, imaš petlju    \n\nPETLJA cmp r10, 2\n\n                BNE PETLJA",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28143": {
+      "poster": "rjednakoR",
+      "content": "@Ilija123#28141 Jel možeš poslat tekst zadatka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28144": {
+      "poster": "netflix (seximan)",
+      "content": "@rjednakoR#28142 \"Nakon što glavni program završi, u Izlaznoj jedinici će vjerojatno biti još nepotrošenih podataka jer je njihovo trošenje relativno sporo (to nije greška u programu - ako želite provjeriti da li se svi podatci uredno potroše, stavite privremeno još jednu petlju ispred naredbe SWI).\" . Imam tu petlju ali nema veze to s ovim nepotrosenim podacima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28146": {
+      "poster": "rjednakoR",
+      "content": "@netflix#28144 Onda stvarno nemam pojma kakvi su ti nepotrošeni podatci",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28147": {
+      "poster": "Ilija123 (Mrnjotaur)",
+      "content": "@rjednakoR#28143 poslao sam u privatni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28149": {
+      "poster": "rjednakoR",
+      "content": "@Ilija123#28147 Nemoguće da ti tu baca error kad se prekid javlja kad se završi prijenos.  Jesi skino bugfix 5, jel možda u glavnom programu imaš petlju koja ti se vraća na inicijalizaciju DMA.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28151": {
+      "poster": "Upforpslone",
+      "content": "@Ilija123#28125 Kolko vidim na kraju nemas:\n\n        ;omoguci kanal\n\n        MOV R0, #1\n\n        STR R0, [R3, #0] ;Control registar (1=omoguci kanal), ovaj dio da pokrene dma prijenos\n\n        I nemas u kontekstu R6,R7 koje mjenjas, i stavi neku provjeru da preskoci ovu inicijalizaciju ako nije na redu 2. prijenos jer ce ti se inace cijelo vrijeme inicijalizirat i nece nikad bit gotov",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28152": {
+      "poster": "Ilija123 (Mrnjotaur)",
+      "content": "@Upforpslone#28151 a provjeru mogu napraviti s brojačem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28154": {
+      "poster": "rjednakoR",
+      "content": "@Ilija123#28152 R1 i R3 i R6 imaju istu vrijednost, koristi sam jedan registar od ta 3",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28366": {
+      "poster": "General_Kenobi (Aborteur)",
+      "content": "Treba li se osim inicijalizacije u prekidnom potprogramu pokrenuti i drugi DMA prijenos ili to negdje izvan?\n\nJer izvede mi se prvi prijenos i nakon tog se petlja za provjeru DMA vrti beskonačno i ne kreće drugi prijenos, a aktivirao sam ga odmah nakon druge inicijalizacije.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28380": {
+      "poster": "rjednakoR",
+      "content": "@General_Kenobi#28366 ako si inicijalizirao i pokrenuo u prekidnom programu(tak i treba) onda se trebalo pokrenut, a ak se nije pokrenulo onda ti nije ni došlo do prekida što bi moglo značit da si krivo napunio config registar ili nisi omogućio armu da prihvaća prekide.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28390": {
+      "poster": "General_Kenobi (Aborteur)",
+      "content": "@rjednakoR#28380  hvala provjeriti ću",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

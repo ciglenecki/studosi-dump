@@ -1,0 +1,522 @@
+{
+  "title": "[OPRPP1] 5. domaća zadaća - 2020/2021",
+  "creator": "faboche (him)",
+  "slug": "oprpp1-5-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Odabrana poglavlja razvoja programske potpore 1",
+    "Zadaće"
+  ],
+  "posts": {
+    "104274": {
+      "poster": "faboche (him)",
+      "content": "Netko imao problema sa BadPaddingException prilikom dekriptiranja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104456": {
+      "poster": "tomekbeli420",
+      "content": "Moguće da ti ključ nije dobar, jesi dobro copypastao ono čupićevo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104513": {
+      "poster": "faboche (him)",
+      "content": "@tomekbeli420#104456 Da, nekoliko puta sam pokrenio i bio je isti problem. Sumnjam da sam nekoliko puta krivo copy pasteao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104555": {
+      "poster": "potemkin (meriMerino)",
+      "content": "Kako tribamo postavit classpath? U .classpath fileu ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104556": {
+      "poster": "faboche (him)",
+      "content": "@faboche#104274 Problem je bio u krivom razumijevanju metoda update i doFinal. Moje shvacanje je bilo da update svaki put vraca kriptat uvecan za jedan ili vise blokova te da doFinal vraca kriptat na koji je nadodan padding. Zbog toga je moj kod zapravo samo zapisivao 16 byteova paddinga u target pdf prilikom kritptiranja jer sam shvacao povratnu vrijednost doFinala kao cijeli kriptat. Nadam se da ovo moze nekome pomoci.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104558": {
+      "poster": "faboche (him)",
+      "content": "@potemkin#104555 Ja sam pokretao program s Run Configurations pa se nisam s tim zamarao. Prof je vjerojatno mislio na vrijednost one -cp zastavice kad pokreces putem komandne linije",
+      "votes": {
+        "upvoters": [
+          "Vonj",
+          "__builtin_popcount (std::popcount)",
+          "potemkin (meriMerino)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104563": {
+      "poster": "potemkin (meriMerino)",
+      "content": "@faboche#104558 okej za Run configurations, ali ako bi pokretali u komandnoj liniji kako postavit cp?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104575": {
+      "poster": "faboche (him)",
+      "content": "Ja bi pokusao ovako `java -cp target\\classes hr.fer.oprpp1.hw05.crypto.Crypto checksha hw05test.bin`",
+      "votes": {
+        "upvoters": [
+          "potemkin (meriMerino)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104580": {
+      "poster": "potemkin (meriMerino)",
+      "content": "@faboche#104575 to je to, hvala!",
+      "votes": {
+        "upvoters": [
+          "faboche (him)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104707": {
+      "poster": "Artemis",
+      "content": "Ima li netko problem s otvaranjem hw05part2? Sve mi se normalno izvrši i onda mi se pdf neće otvoriti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104739": {
+      "poster": "Kennedy",
+      "content": "@Artemis#104707 Vjerovatno nesto ne radi kod ucitavanja/dekriptiranja/spremanja...\n\nUcitavanje i spremanje mozes probat na suho sa nekim pdf fileom u stilu ucitaj i onda spremi u neki drugi pdf file (preskoci dekriptiranje) pa provjeriti moze li se taj drugi pdf otvorit, a dekriptiranje tu treba pazit na to kako se poziva update i doFinal metoda i na ono koliko se byteova actually procitalo ugl ono sta je pricao na predavanju",
+      "votes": {
+        "upvoters": [
+          "Artemis"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105136": {
+      "poster": "flicka",
+      "content": "velicina nastalog pdfa kod kriptiranja mi je oke al nebrem ga otvoriti zna neko zakaj? ne kuzim bas ovu zadacu niti kaj konkretno treba raditi...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105139": {
+      "poster": "neksi (filip)",
+      "content": "@flicka#105136 kriptirani pdf ne mozes otvoriti, kad dekriptiras taj kriptirani trebao/la bi moći",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Stoja_9 (Bije_san_u_autobusu)"
+        ],
+        "tuga": []
+      }
+    },
+    "105161": {
+      "poster": "nikace (AeIoU)",
+      "content": "Nisam sig jel prof rekao na predavanju da ne smijemo koristiti readere i writere u cijeloj dz ili samo u prvom pdf-u, ako netko zna?",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105402": {
+      "poster": "flicka",
+      "content": "neki hint kako rjesiti 3. problem? kako komunicirati interaktivno s comand-line",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105422": {
+      "poster": "flicka",
+      "content": "@flicka#105402 krivo sam shvatila zadatak nema veze",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105452": {
+      "poster": "viliml",
+      "content": "@nikace#105161 Nije kao da \"ne smiješ\" nego nema smisla jer fajlovi nisu tekstualni...\n\nJedino što baš ne smiješ koristiti je CipherInputStream, CipherOutputStream, i metode za parsiranje hex znamenki koliko sam skužio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105456": {
+      "poster": "Artemis",
+      "content": "Još nije moguće predati zadaću?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105458": {
+      "poster": "AK10 (endyyyy)",
+      "content": "Koliko je vremenski potrebno za napravit zadacu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105461": {
+      "poster": "Vonj",
+      "content": "@AK10#105458 \n\nMeni je trebalo jedno 16-17h s time da u to vrijeme ide i pauze za kavu, hranu i gledanje u zid",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)",
+          "Kaladonter",
+          "Kennedy",
+          "Lyras",
+          "SuperSjajan3",
+          "blablajar",
+          "gladiator",
+          "ice",
+          "idontwannabemyself",
+          "indythedog",
+          "krokodil",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Lyras",
+          "gladiator",
+          "indythedog",
+          "krokodil",
+          "viliml"
+        ],
+        "wtf": [
+          "AK10 (endyyyy)",
+          "Suki7"
+        ],
+        "tuga": [
+          "Fica (Prof)"
+        ]
+      }
+    },
+    "105717": {
+      "poster": "tomekbeli420",
+      "content": "Očito sam ja jedini kojem treba cijeli tjedan malo po malo bušenja dok ne dostignem savršenstvo.\n\nSamo onaj isusov hexdump sam kucao 4-5 sati ;_;",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "JoKing",
+          "LongArmedJohhny (LongArmedJohnny)",
+          "Suki7",
+          "Vonj",
+          "boki8 (kerovac)",
+          "gladiator",
+          "neksi (filip)",
+          "potemkin (meriMerino)",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Suki7",
+          "Vonj",
+          "gladiator"
+        ]
+      }
+    },
+    "105853": {
+      "poster": "potemkin (meriMerino)",
+      "content": "Jel ima netko tko je imao dovoljno volje i napisao testove za shell? \n\nOd jutros mislim da sam gotova, ali svakih par minuta nadem nesto da sam preskocila",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106140": {
+      "poster": "viliml",
+      "content": "@potemkin#105853 Kaže da nije nužno pisati testove za išta osim Util (byte <-> hex).\n\nOve domaće zadaće ionako iziskuju previše vremena samo da se napravi ono što je nužno, koji mazohist bi se još mučio raditi nepotrebne stvari?",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "JoKing",
+          "Kaladonter",
+          "Vonj",
+          "krokodil",
+          "potemkin (meriMerino)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "gladiator",
+          "krokodil"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106202": {
+      "poster": "potemkin (meriMerino)",
+      "content": "@viliml#106140 mazohisti s viškom vremena?😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Cubi",
+          "Vonj",
+          "krokodil"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106223": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@potemkin#106202 mazohisti s viškom vremena koji ne vjeruju svom kodu.😔",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Cubi"
+        ],
+        "wtf": [],
+        "tuga": [
+          "krokodil",
+          "potemkin (meriMerino)"
+        ]
+      }
+    },
+    "106225": {
+      "poster": "Nocna_smjena",
+      "content": "Morat ću si uplatit 2 tjedna toplica nakon ovog shell-a da se mentalno oporavim",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "JoKing",
+          "blablajar",
+          "gladiator",
+          "potemkin (meriMerino)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "JoKing",
+          "MiqeloS",
+          "blablajar",
+          "gladiator",
+          "krokodil",
+          "potemkin (meriMerino)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106323": {
+      "poster": "tomekbeli420",
+      "content": "@__builtin_popcount#106223 šalji",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106332": {
+      "poster": "tomekbeli420",
+      "content": "Jel zna tko skida li Čupić bodove ako nema javadoca?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106334": {
+      "poster": "Nocna_smjena",
+      "content": "@tomekbeli420#106332 vjv da. Kad je labos to je veoma lako za uočit da fali. Javadoc je koristan za druge ljude a i nas koji smo te metode davnih dana nakucali",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106335": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "@tomekbeli420#106332 Sumnjam. Nisam imao na vecini zadaca(2/3) pa nije skinuo.",
+      "votes": {
+        "upvoters": [
+          "krokodil",
+          "tomekbeli420"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106336": {
+      "poster": "tomekbeli420",
+      "content": "@LongArmedJohhny#106335 jel te taman potrefio da mu pokazes onaj dio koda koji ima javadoc ili nije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106354": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "@tomekbeli420#106336 pitao me taman ono di nisam imao so...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

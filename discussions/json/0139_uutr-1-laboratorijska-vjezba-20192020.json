@@ -1,0 +1,580 @@
+{
+  "title": "[UUTR] 1. laboratorijska vježba - 2019/2020",
+  "creator": "Extended_mix",
+  "slug": "uutr-1-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Uvod u teoriju računarstva",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "4113": {
+      "poster": "Extended_mix",
+      "content": "Imam problem, kad pokušavam citati podatke sa konzole sa scannerom (u javi) kad dođem do zadnjeg reda mi scanner.hasNext() ode u beskonačnu petlju ili nešto slično pa mi se prekine izvođenje programa. Ima li tko kakvu ideju zašto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "__builtin_popcount (std::popcount)"
+        ]
+      }
+    },
+    "4116": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Extended_mix#4113\n\nKako programu daješ podatke?\n\nRedirekcijom iz datoteke, ili unosiš u konzolu pa šalješ EOF keyboard shortcutom?",
+      "votes": {
+        "upvoters": [
+          "Extended_mix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4117": {
+      "poster": "SBolsec (Marko218)",
+      "content": "Umjesto Scannera koristi BufferedReader",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4120": {
+      "poster": "error",
+      "content": "Imala sam isti problem (ako mislis da ti je tako dok sam unosiš) - sve ce ti dobro raditi ako preusmjeris datoteku (probaj nac nes tipa \"redirct input from\")",
+      "votes": {
+        "upvoters": [
+          "Extended_mix",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4121": {
+      "poster": "Extended_mix",
+      "content": "@__builtin_popcount#4116  Nisam slao EOF 😅 hvala!",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4338": {
+      "poster": "tomekbeli420",
+      "content": "yeh, to je i mene zezalo dok nisam skuzio da program nema pojma kad cu ja prestat sa unosom\n\nuglavnom najbolje ti je za isprobavanje primjera učitavat sa txt filea da se ne patiš sa unosom\n\n`try (Scanner sc = new Scanner(new FileInputStream(\"imedatoteke.txt\"))) {...}`\n\nnije baš najoptimalnije rješenje za čitat text file al je najjednostavnije umjesto da to ne wrappaš sa kojekakvih readerima i sličnim dekoratorima\n\npa prije neg šta predaš samo u konstruktoru Scannera staviš System.in jer na uputama piše da kad to SPRUT bude testirao da će ih metat na standardni ulaz",
+      "votes": {
+        "upvoters": [
+          "Extended_mix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4360": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Ako želite EOF, doduše, potrebno je samo stisnuti ctrl+d - to će unijeti EOF i na windowsu, i na macu i na linuxu.\n\nMeđutim ako strukturirate kod kako treba, trebali bi uz unos nekog argumenta regulirati hoćete li čitati sa STDIN ili iz datoteke. To je ujedno i najbolje što se tiče debugganja jer ćete vrlo vjerojatno u finalnim fazama debuggirati za jedan specifičan unos umjesto svaki puta uploadati isponova na sprut. Ljudi koji upišu PPJ godinu nakon će to opet trebati raditi i za te labose, dakle još 4 labosa.\n\nNpr. u Pythonu bi uz argparse definirali zastavicu npr. -d koja prima \"put/do/datoteke\", a ako je to prazno samo čitate sa stdina. I onda je dosta lagano provjeravati ispravnost.\n\nJednom kad ovo napravite za 1 vježbu, moći ćete koristiti te načine čitanja i u drugim vježbama, gdje ćete ionako opet na isti način trebati čitati.",
+      "votes": {
+        "upvoters": [
+          "Extended_mix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4424": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "Ako pisemo u cppu jel mozemo koristit boost library",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4441": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@SonGoku#4424 sumnjam da ga imaju instaliranog, ali možeš pokušati predati source code s boost includeom i vidjeti hoće li ti se srušiti.",
+      "votes": {
+        "upvoters": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4498": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "da nista od boosta, ipak sam u javi radio...jel jos netko dobio pri predaji \t\n\nSimEnka ispis na stderr:\n\nError: Could not find or load main class SimEnka\n\nA nazvo sam tako tocno tako klasu i iz nje sve radio, i ispisvo sam samo ono sto je trebalo sve na .out 😳",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4499": {
+      "poster": "helenic",
+      "content": "@SonGoku#4498 Ako imas package, obrisi",
+      "votes": {
+        "upvoters": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4597": {
+      "poster": "Ducky",
+      "content": "sta tocno saljemo kao rjesenje ako radimo u javi? Samo SimEnka.java u zipu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4606": {
+      "poster": "Ducky",
+      "content": "@Ducky#4597 odgovor je da ako netkom isto zatreba",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4842": {
+      "poster": "ruza0001 (rozy)",
+      "content": "jel jos nekome samo test33 pada?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4853": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@ruza0001#4842 Meni, upada mi u beskonacnu petlju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4871": {
+      "poster": "nikace (AeIoU)",
+      "content": "Zna li netko što trebam popraviti\n\n![](assets/2020-03-30/00023.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4955": {
+      "poster": "Extended_mix",
+      "content": "@KingGeedorah#4853 To se događa jer su ciljano napravili takav test, morate nekako označiti stanja koja ste već provjerili da se ta stanja više ne uzimaju u obzir za provjeru sljedećih stanja, ja sam to konkretno napravio sa hashset-om u koji sam dodavao provjerena stanja. Nadam se da je to riješenje i vašeg problema",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4976": {
+      "poster": "snowman",
+      "content": "kako točno dajemo file-u programu u javi? \n\nja sam išao preko args[0] ali sprut vraća da je array out of bounds",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4978": {
+      "poster": "SBolsec (Marko218)",
+      "content": "@snowman#4976 ![](assets/2020-03-31/00006.png)",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5052": {
+      "poster": "Stoja_9 (Bije_san_u_autobusu)",
+      "content": "Zna li netko na koji nacin treba ucitavat podatke u c++ programu? Stavio sam da mi se ucitavaju podatci sa stdin(cin) te mi sve normalno radi kad pokrenem u cmdu prema uputama (.\\program.exe < ulaz.txt). Medutim, sprut me uopce ne dozivljava, ne dojavljuje nikakvu gresku u programu nego je dobiveni izlaz prazan.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Aloko (Ardeo)",
+          "dodo",
+          "mariak (kaiak)"
+        ]
+      }
+    },
+    "5093": {
+      "poster": "laranotreallycroft",
+      "content": "@Stoja_9#5052 sustav ne prima podatke iz txt datoteke nego ti salje string direktno na cin. Ja sam uzimala liniju po liniju sa getline(cin,JedanRed) pa onda obradivala red po red(stringovi).",
+      "votes": {
+        "upvoters": [
+          "Stoja_9 (Bije_san_u_autobusu)",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5115": {
+      "poster": "Stoja_9 (Bije_san_u_autobusu)",
+      "content": "@laranotreallycroft#5093 i to je isto bilo u redu ali uspio sam rijesiti problem. Svaki put kad sam htio ispisati novi red ja sam stavljao '\\n', a trebalo je endl i zbog toga me sprut uopce nije dozivljavao.....",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Aloko (Ardeo)",
+          "dodo",
+          "mariak (kaiak)"
+        ]
+      }
+    },
+    "5117": {
+      "poster": "[deleted]",
+      "content": "jel oni nisu uopce uploadali nove prezentacije iz ovog kolegija..?\n\nsve sto vidim su YT videi predavanja koji pocinju od pete prezentacije i videi starih prezentacije iz 2007...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5136": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Itachi#5117 Područje se nije promijenilo 40 godina, da i postoji nova knjiga ili prezentacije, samo će korice biti nove.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5160": {
+      "poster": "cosko10",
+      "content": "jel netko mozda napisao kod za ispis onih testnih podataka na windowsu u c++?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5193": {
+      "poster": "[deleted]",
+      "content": "@cosko10#5160 e moj cos...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5361": {
+      "poster": "Lusy (MGJ)",
+      "content": "Kako treba imenovati zip datoteku koju predajemo na SPRUT? Nisam u uputama pronašla ništa o tome...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5441": {
+      "poster": "SuperSjajan3",
+      "content": "Moze li netko provjeriti rjesenje za test 16 jer mi se ovo sta su oni dobili ne podudara ni kad rucno rijesim\n\nedit: Nvm, skuzio sam cari praznog znaka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5443": {
+      "poster": "[deleted]",
+      "content": "@SuperSjajan3#5441 \n\ndobro je",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5523": {
+      "poster": "ghost (ksi)",
+      "content": "Ima li netko ideju zasto mi ne rade  samo testovi od 26. do 29.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5528": {
+      "poster": "fairlyamusing",
+      "content": "Meni sustav javlja grešku iako je jedina razlika u mom i njihovom rezultatu raspored kako je koje stanje nabrojano.\n\nIma li netko mozda rijesenje?\n\n![](assets/2020-04-02/00011.png)",
+      "votes": {
+        "upvoters": [
+          "fairlyamusing"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5531": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@fairlyamusing#5528\n\nUputa jasno kaže da stanja moraju biti poredana leksikografski u ispisu. Dakle, sortiraj stanja prije ispisa.",
+      "votes": {
+        "upvoters": [
+          "fairlyamusing"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5574": {
+      "poster": "Gussy (huba buba)",
+      "content": "@ghost#5523 zato što su svi prijelazi epsilon prijelazi i ima sto epsilon prijelaza odmah na početku. vjerojatno ti je tamo problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5594": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "da li se labos boduje sa sve ili ništa ili se može dobiti određeni dio od ukupno bodova predviđenih za taj labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5606": {
+      "poster": "Hrvoje (Hrvoje45)",
+      "content": "@iNavy#5594 \n\nmože polovično, ovisno koliko test primjera prođe",
+      "votes": {
+        "upvoters": [
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5693": {
+      "poster": "Fikalo",
+      "content": "Kaze ok al mi se ne cini ok sa svim ovim tekstom. Jel ipak dobro ili?![](assets/2020-04-02/00055.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5706": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Fikalo#5693 Pošalji im mejl, ali moguće da je na stdoutu bio dobar ispis, samo je ispisalo nešto i na stderru.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5739": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Fikalo#5693\n\n`system(\"PAUSE\");` ne funkcionira baš na Linuxu, a oni to evaluiraju na Linux serveru. Zbog toga imaš ispisa na stderr. Možda je i bolje da ne radi, jer u suprotnom bi server tu čekao i isteklo bi vrijeme za izvršavanje.\n\nOsim toga, ovo sve drugo su compiler upozorenja. Kad kod sebe kompajlaš, možeš reći prevoditelju da ti ih izgenerira s flagovima `-Wall` i `-Wextra`. Moguće je da ti kod radi kako spada, ali moguće je i da će se raspasti za neke test primjere. Ja osobno volim pisati kod koji ne stvara warninge.\n\nPredlažem da probaš izvrtiti [njihove test primjere](https://www.fer.unizg.hr/_download/repository/lab1_primjeri[1].zip) sa [evaluatorom koji imamo na Materijalima](https://github.com/studosi-fer/UTR/blob/master/UTR_Evaluator_1.2.py).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5761": {
+      "poster": "Fikalo",
+      "content": "@__builtin_popcount#5739 Hvala na savjetima, ima puno warninga kad me davo tjero da radim u  c-u, al ak se i raspadne na nekim test primjerima mislim da me vise nije briga jer dragi bog vise nema pojma sta se u tom kodu desava.",
+      "votes": {
+        "upvoters": [
+          "MiqeloS",
+          "MrDREDD",
+          "Valentino",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

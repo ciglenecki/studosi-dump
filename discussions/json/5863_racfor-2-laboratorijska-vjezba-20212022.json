@@ -1,0 +1,266 @@
+{
+  "title": "[RACFOR] 2. laboratorijska vježba - 2021/2022",
+  "creator": "nickname",
+  "slug": "racfor-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Računalna forenzika",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "249480": {
+      "poster": "nickname",
+      "content": "Di se nađe onaj superblok? Trebalo bi naći na kojem sektoru počinje particija i onda tamo piše taj superblok jel? I nađem da particija počinje na 63. sektoru (znači offset 62*512=31744 byteova), ali su tamo samo nule? Jel nešto krivo radim ili to tako treba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249485": {
+      "poster": "chuuya (temari)",
+      "content": "@\"nickname\"#p249480 Idi na 65. sektor, tamo je. Treba to kaj izračunaš + 1024 bajta, znači 2 sektora",
+      "votes": {
+        "upvoters": [
+          "nickname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249487": {
+      "poster": "nickname",
+      "content": "@\"temari\"#p249485 pod 65. sektor misliš baš odem na offset 65*512, a ne 64*512 pa onda počinje kao na sljedećem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249495": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@\"temari\"#p249485 Ee zašto dva sektora? Kužim +512 jer MBR, ali zašto još tih dodatnih 512?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249504": {
+      "poster": "in1",
+      "content": "@\"nickname\"#p249480 ideš na 63 * 512 + 1024 = 33280",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)",
+          "nickname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249506": {
+      "poster": "chuuya (temari)",
+      "content": "@\"nickname\"#p249487 Možeš računat offset kao @\"in1\"#p249504 ali možeš i sam upisat 65. sektor u onu kućicu i odmah te baci na taj sektor",
+      "votes": {
+        "upvoters": [
+          "nickname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249693": {
+      "poster": "wesley",
+      "content": "kako da iz superblocka ocitam koja je velicina bloka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249729": {
+      "poster": "theimprobableone",
+      "content": "@\"wesley\"#p249693 procitas vrijednost u superbloku na offsetu 0x18 i onda je velicina bloka jednaka 2 ^ (10 + vrijednost_koju_si_procitao)",
+      "votes": {
+        "upvoters": [
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249730": {
+      "poster": "theimprobableone",
+      "content": "@\"𝙎𝙖𝙧𝙖𝙝 𝘽𝙤𝙣𝙞𝙩𝙤\"#p249495 MBR je jedan jedini i on je skroz na pocetku, nema veze sa superblokom. Sto se tice offseta u superbloku, nasao sam ovo:\n\n![](assets/2021-11-04/00007.png)",
+      "votes": {
+        "upvoters": [
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249775": {
+      "poster": "blablajar",
+      "content": "jel uspio neko nac povijest poziva?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249804": {
+      "poster": "renren",
+      "content": "@\"blablajar\"#p249775 Samo ukucaj ivan bbb gore u search, bit će jedan rezultat. Isto, ako odeš u Application tab umjesto Text možeš odabrat da ti se datum fino prikaže desnim klikom na ćeliju.",
+      "votes": {
+        "upvoters": [
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249902": {
+      "poster": "123 (FERella)",
+      "content": "Je li netko uspio pronać sliku utakm?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249905": {
+      "poster": "blablajar",
+      "content": "misli se na sliku 432.jpg - pogledaj modified time pa guglaj datum",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249912": {
+      "poster": "123 (FERella)",
+      "content": "![](assets/2021-11-04/00020.png)\n\n ovo nije na moodlu ponuđeno, što ste vi stavili ili ja krivo gledam?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249914": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@\"theimprobableone\"#p249730 hvala zgodni",
+      "votes": {
+        "upvoters": [
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249962": {
+      "poster": "ivona_075 (Adri)",
+      "content": "@\"FERella\"#p249912 mislim da je samo druga vremenska zona u pitanju na moodlu, ostali podatci su isti (datum, trajanje)",
+      "votes": {
+        "upvoters": [
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249964": {
+      "poster": "n_p_zagi (nicrosc)",
+      "content": "koja je velicina superbloka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249967": {
+      "poster": "theimprobableone",
+      "content": "@\"𝙎𝙖𝙧𝙖𝙝 𝘽𝙤𝙣𝙞𝙩𝙤\"#p249914 i drugi put zgodna\n\n@\"nicrosc\"#p249964 defaultna je 1024 bajta",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "n_p_zagi (nicrosc)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

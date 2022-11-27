@@ -1,0 +1,138 @@
+{
+  "title": "[SUI] 2. laboratorijska vježba - 2021/2022",
+  "creator": "adidas",
+  "slug": "sui-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Sigurnost u Internetu",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "249740": {
+      "poster": "adidas",
+      "content": "Ima netko tip za 4. zadatak?\n\nVidim za _malware1_ html select listu koja spominje neke napade, ali ne da to može nanjeti ikakvu štetu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249764": {
+      "poster": "Murin",
+      "content": "U 2. zadatku niti jedan user mi nema persmission da otvori /etc/shadow, je li netko imao problem s tim?\n+ u 3. kako znamo je li john zavrsio, uvijek mi stane u nekom trenutku i nista se ne mijenja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "249778": {
+      "poster": "chuuya (temari)",
+      "content": "@\"Murin\"#p249764 Za 2. sam ja uspjela sa `sudo cat /etc/shadow`.\n\nZa 3. mislim da je bilo ono neš da se `rockyou` mora dodat u riječnik nakon MD5-a ili kog već prvog izabereš. Meni se bez toga nije htjelo izvrtit a nakon tog je, iako nez jel to official uputa (vidjela u threadu od prošle god). MD5 traje negdje 10ak min, sve ostalo dosta brzo.",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250147": {
+      "poster": "megi7 (someone7)",
+      "content": "@\"temari\"#p249778 Meni se vrti beskonacno dugo i nakon tog dodavanja, mozda sam krivo dodala. Kako dodat taj rockyou u riječnik?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250152": {
+      "poster": "chuuya (temari)",
+      "content": "@\"someone7\"#p250147 Ja sam sa:\n\n`sudo -i`\n\n\t`echo rockyou >> /usr/share/john/password.lst`\n\n\t`su - sui`",
+      "votes": {
+        "upvoters": [
+          "in1",
+          "megi7 (someone7)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250162": {
+      "poster": "Murin",
+      "content": "Vjerojatno nisu bas najrealnija vremena jer sam nesto pokretao prije ali\n\nMD5- skoro instantno-ovo mi je ful sumnjivo, pokusao sam izbrisati sadrzaj iz onoh john.pot filea ali i dalje ne kaze da ih je nasao.\n\n\nsha256_weak <10 sek\n\nsha256 \\~2 min\n\nsha 512_weak <10sek\n\nsha512 \\~2min\n\n+ dok dodajete \"rockyou\" koristitie >> a  ne > da si ne overwritate ostale passworde",
+      "votes": {
+        "upvoters": [
+          "megi7 (someone7)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250946": {
+      "poster": "marvin",
+      "content": "moze li netko pomoci s 1. zadatkom, fkt ne razumijem u cemu je stvar. napravim u tmp file smth u kojem pise : \n\nusermod -aG sudo sui (probala sam i /usr/sbin usermod -aG sudo sui), nista se ne dogada, kada probam sudo su dobijem this incident will be reported",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250951": {
+      "poster": "in1",
+      "content": "@\"marvin\"#p250946 Sačekaj da broj minuta u satu bude djeljiv s 5 da se izvrši taj cron job i onda restartaj VM",
+      "votes": {
+        "upvoters": [
+          "marvin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251008": {
+      "poster": "marvin",
+      "content": "@\"Murin\"#p249764  meni nije htio otvoriti  na ovom novom useru, odi nazad na sui i radit ce",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

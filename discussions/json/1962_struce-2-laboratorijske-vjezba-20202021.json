@@ -1,0 +1,1038 @@
+{
+  "title": "[STRUCE] 2. laboratorijske vježba - 2020/2021",
+  "creator": "Bananaking",
+  "slug": "struce-2-laboratorijske-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Strojno učenje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "84092": {
+      "poster": "Bananaking",
+      "content": "1. b) Q: Zašto model ne ostvaruje potpunu točnost iako su podatci linearno odvojivi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84097": {
+      "poster": "chuuya (temari)",
+      "content": "@Bananaking#84092 Jer imaš onaj ful desni primjer koji \"vuče\" gornji dio pravca udesno i preko ovog jednog primjera koji je sad krivo klasificiran. To se događa jer se regresija ne može koristit za klasifikacijske probleme jer će funkcija gubitka kažnjavati i \"previše točne\" primjere (kao ovdje).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84887": {
+      "poster": "chuuya (temari)",
+      "content": "Kako bi mi u 2. trebali izvest ona 3 binarna klasifikatora? Postoji nekakva klasa/metoda za to ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84894": {
+      "poster": "Amali (Amajli)",
+      "content": "@chuuya#84887 koristis LinearRegression, morat ces za svaki nastimat y podatke da budu binarni (npr mapiras podatke prema y == trenutna klasa za koju je model, za klasu 2 imas model di je klasa 2 oznacena kao 1, a ostale 2 kao 0). napravis onda 3 ta modela",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85102": {
+      "poster": "Noname",
+      "content": "U 3.c dobija li netko math error jer je h(x) =0 pa se ne može izračunati ln od toga? Zanima me opcenito kako se izracuna onda pogreska?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85104": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Noname#85102 dodaš proizvoljno mali epsilon",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Noname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85225": {
+      "poster": "Noname",
+      "content": "Kako se iscrtava granica sa plot_2d_clf_problem? koji h trebamo predati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85257": {
+      "poster": "narval13068 (Dima)",
+      "content": "U 3b kod batcha inace ide linijsko pretrazivanje, pretpostavljam da se to od nas ne trazi u vjezbi nego da samo zadrzimo dobiveni deltax",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85307": {
+      "poster": "member",
+      "content": "@Noname#85225 h je fja kojom se predviđa... npr. lambda x : model.predict(x) >= 0.5",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85309": {
+      "poster": "Stark",
+      "content": "Kakav utjecaj ima faktor  𝛼  na oblik sigmoide? Što to znači za model logističke regresije (tj. kako izlaz modela ovisi o normi vektora težina  𝐰 )?\n\nZa ovo prvo bi rekao da što je veći alfa sigmoida je strmija (da li je to uopće prihvatljiv odgovor?), a za ovo drugo ne znam.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85310": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @Stark#85309 Što to znači za model logističke regresije (tj. kako izlaz modela ovisi o normi vektora težina  𝐰 )?\n\nMislim da ti to znači da je model jako osjetljiv na male promjene, a to indirektno znači da će se lakše prenaučiti",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85317": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jel zna itko zašto mi u 3.d zadatku kad računam pogrešku kroz iteracije prvo događa da pogreška malo raste pa tek onda krene padati? Evo i graf\n\n![](assets/2020-10-29/00023.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85340": {
+      "poster": "InCogNiTo124",
+      "content": "@Yasuke#85317 to ti je nebitno.\n\nTo ti se desi jer se logreg uci modificiranim Newtonovim postupkom, koji osim derivacije, racuna i pamti i inverz Hessove matrice (druge derivacije of sorts). E sad, inverz se ne gradi odjednom vec polako, iz iteracije u iteraciju, i prvih par koraka se zagrijava dok hesijan (odn njegov inverz) ne konvergira. Zato azuriranja tezina nisu previse precizna i nekad se greska poveca. Al kao sto vidis to relativno kratko traje.\n\nEkvivalent tome ti je iz Signala i Sustava ako se sjecas, ono istitravanje na pocetku zbog pocetnih uvjeta, kasnije to fade outa xD",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85443": {
+      "poster": "Stark",
+      "content": "Iz pitanja:\n\n**Zašto dobivena pogreška unakrsne entropije nije jednaka nuli?**\n\nZaista dobivam da nije, ali svi su primjeri ispravno klasificirani?\n\n**Kako biste utvrdili da je optimizacijski postupak doista pronašao hipotezu koja minimizira pogrešku učenja? O čemu to ovisi?**\n\nOvo nemam ideju...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85447": {
+      "poster": "InCogNiTo124",
+      "content": "> @Stark#85443 Zašto dobivena pogreška unakrsne entropije nije jednaka nuli?\n\npogreska nikad ne moze bit nula. To se vidi iz izraza za Cross Entropy Loss: da bi pogreska bila 0, onda bi vrijednost u logaritmu morala biti jednaka 1. To, pak, znaci da izlaz hipoteze mora biti tocno 1. Nasa hipoteza je sigmoida, a njen izlaz nikad ne moze biti tocno 1, vec asimptotski prilazi jedinici. Iz tog razloga, u logaritmu se nikad nece naci jedinica, i uvijek ce biti broj malo veci od 0.\n\n> @Stark#85443 Kako biste utvrdili da je optimizacijski postupak doista pronašao hipotezu koja minimizira pogrešku učenja? O čemu to ovisi?\n\njedan od nacina je, npr, crtanjem granice `h(x;w) == 0.5`, ona bi trebala biti otprilike podjednako udaljena izmedu dvije klase.",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "chuuya (temari)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85456": {
+      "poster": "Ziher",
+      "content": "Zna li netko kako normalno iscrtati grafove u 2. zadatku? 4 grafa ispadnu dobra, ali evo im prešanog brata:\n\n ![](assets/2020-10-29/00037.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "MJ3",
+          "Red_Baron",
+          "Stark",
+          "Svarog (Veles)",
+          "a_ko_si_ti",
+          "in1",
+          "kix7 (Fish99)",
+          "member",
+          "tbauman",
+          "tito"
+        ],
+        "wtf": [],
+        "tuga": [
+          "sphera"
+        ]
+      }
+    },
+    "85593": {
+      "poster": "member",
+      "content": "Kako bi se 4.b (ili 4.c ili 5.) rješili s ugrađenom implementacijom logističke regresije linear_model.LogisticRegression? \n\nS ovom mojom funkcijom  lr_train koju smo trebali implementirat mi dobro ispada jer imam taj w_trace koji vraća fja, al me zanima kako bi se u tim zadacima(4. i 5.) \"kroz iteracije optimizacije prikazivalo sve zadano\". Tj može li se nekako dobit taj w_trace pomoću klase LogisticRegression?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85602": {
+      "poster": "TentationeM",
+      "content": "Mislim da i je poanta da koristiš vlastitu implementaciju i uvjeriš se da zaista radi kako spada. Ja sam isto lr_train koristio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85703": {
+      "poster": "Ruleta",
+      "content": "kako u 2 zadatku napraviti argmax h da radi s ovim njihovim crtanjem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85787": {
+      "poster": "Emma63194",
+      "content": "Ima li možda netko problem da mu se u 2. zadatku samo jedan graf nacrta, a ostali ne? Kako to riješiti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85790": {
+      "poster": "Emma63194",
+      "content": "@Emma63194#85787 Nvm, treba ispod svakog grafa napisati plt. show()...",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124",
+          "Stark"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85893": {
+      "poster": "Zabe",
+      "content": "Jesu li ovo dobre vrijednosti za 3.c zadatak? Konkretno me zanima točnost ove pogreške?\n\n![](assets/2020-10-31/00007.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85964": {
+      "poster": "Stark",
+      "content": "U 4 zadatku kaže da usporedimo grafove za lin odvojive i neodvojive primjere. \n\nMeni ispadaju jako slični. Da li bi razlika trebala biti velika?",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86078": {
+      "poster": "BigD",
+      "content": "Zna li itko zašto mi u funkcijama h koje predam plot_2d_clf_problem-u tretira taj x kao vektor primjera, a ne individualni primjer? U samoj plot funkciji ima provjera da vrijednost koju vraca h mora biti skalar, a s obzirom da mi je ulazni argument vektor primjera, onda bi izlaz trebao bit vektor skalara.\n\nKonkretno pitanje, kako napisati predict funkciju za 2. zadatak? Probao sam vratiti maksimalnu od triju predikcija, ali x mi je 20 tisuća dimenzionalni vektor.",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86089": {
+      "poster": "BigD",
+      "content": "@BigD#86078 \n\nIzgleda da izlaz stvarno treba biti ndarray, tako da u funkciji treba iterirati kroz sve x-eve i dodavati klasu s max hx u ndarray i onda njega vratiti.",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86132": {
+      "poster": "Emma63194",
+      "content": "Je li imao možda tko u 3.c da mu ovako ispada graf?\n\n![](assets/2020-10-31/00030.png)\n\nZaista ne mogu shvatiti zašto krivo klasificira dva primjera. Koristim identičan algoritam koji je u skripti i ne mogu naći gdje sam pogriješila da daje takve rezultate.",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86141": {
+      "poster": "TentationeM",
+      "content": "@Emma63194#86132 Probaj konstruktoru kao parametar predati solver=\"lbfsg\", očito po defaultu koristi neku bijesnu aproksimaciju koja je očajna na malom broju primjera (tako sam si ja to objasnio).",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86166": {
+      "poster": "Kupus",
+      "content": "@Emma63194#86132 Mozda provjeri predznake. Meni je slicno ispalo kada sam generirao dw i dw0 već negativne, pa ih oduzimao umjesto zbrajao pri azuriranju w i w0.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86168": {
+      "poster": "Kupus",
+      "content": "Jesu li ovo dobri grafovi za **5. Regularizirana logistička regresija**?\n\n![](assets/2020-11-01/00002.png)\n\n![](assets/2020-11-01/00003.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "86171": {
+      "poster": "member",
+      "content": "@Kupus#86168 1.graf: sve pogreške mi padaju (alfa=100 najveća pogreška, afa=100 najmanja), a norme rastu (najviše za alfa = 0, a najmanje za alfa = 100). I sve su mi krivulje glatke",
+      "votes": {
+        "upvoters": [
+          "Kupus"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86183": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Kupus#86168 Definitivno ne.\n\nOvako sam ja dobio prošle godine\n\n![](assets/2020-11-01/00004.png)\n\nS tim da razlog zašto su prekinute krivulje je zato što je trening iskonvergirao",
+      "votes": {
+        "upvoters": [
+          "Kupus"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86234": {
+      "poster": "Dekan",
+      "content": "3.e) Pise da ce se modeli mozda razlikovati zbog drugacije optimizacijske tehnike, ali generalne performanse modela trebaju biti iste. Zna li itko na sto se misli pod time generalne performanse?\n\nTezine mi se dosta razlikuju i pogreska unakrsne entropije, iako je tolerancija ista (0.0001). A po grafu se vidi da klasificira jednako samo je drugaciji pravac koji odvaja klase.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86236": {
+      "poster": "InCogNiTo124",
+      "content": "@Kupus#86168 ja bih cak rekao da su dobri, otprilike su isti poretci na grafu s l2 normama tezina, a i ak zanemarimo zeleni slicni su. Probaj promjenit solver ili learning_rate\n\nEdit: oke ne moze se mjenjat learning_rate, nvm. Mozes iskoristit SGDClassifier sa 'log' lossom al to ti je prevec posla",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86269": {
+      "poster": "login",
+      "content": "![](assets/2020-11-01/00009.png)\n\nJel koristimo ovo za racunanje cross entropy error u 3.b zadatku? Ili crveni dio za regularizaciju ne koristimo buduci da cross entropy prima samo parametre X, y i w, bez alphe.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86273": {
+      "poster": "Dekan",
+      "content": "@micho#86183 Dobivam slicne grafove, samo mi za  [imath]\\lambda = 1[/imath] algoritam konvergira puno brze nego za druge faktore [imath]\\lambda[/imath]. Treba mu `~25` iteracija, dok za ostale faktore treba,` ~200` ili `~900` iteracija. Je li to moguce i dobro ili imam neku gresku?\n\nGrafovi mi izgledaju ovako:\n\n![](assets/2020-11-01/00010.png)\n\n![](assets/2020-11-01/00011.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86274": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Dekan#86273 Ha teoretski se ne bi trebalo dogoditi ali moguće je. Provjeri da ta jedinica nije nešto drugo, ostalo objašnjavaš asistentu. Samo meni se ne čini baš da ti konvergira jer gradijent u odnosu na epohe ove žute linije što ti je nacrtao definitivno ne teži u 0, više mi izgleda da ti se dogodio neki overflow ili tako nešto pa ti je prekinut trening.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86294": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Jel u cross entropy error dijelite sumu funkcije gubitka s N? \n\nAko dijelim s N onda jako brzo konvergira, npr. za alpha=100 unutar 5 iteracija.",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86310": {
+      "poster": "ReyKenobi",
+      "content": "@PrisonMike#86294 To se i ja pitam, ne znam dal će se to uzimati kao \"greška\", ali tako je definirana pogreška na predavanjima. Vjerujem da ako razumiješ i možeš objasnit zašto konvergira, da će asistent isto razumijeti (valjda)",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86312": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "jel stignem napisati pola ovog labosa do 6 a.m. bez predznanja o temi ovog labosa? any bets?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "a_ko_si_ti",
+          "in1",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86317": {
+      "poster": "BigD",
+      "content": "![](assets/2020-11-01/00018.jpeg)\n\nJel iko drugi imao problem da mu implementacija logističke regresije daje hipotezu koja točno klasificira primjere, ali je krivo nagnuta? Uvjet zaustavljanja koji mi se aktivira je onaj s epsilonom, a kad njega maknem i stavim ogroman broj iteracija onda se približava točnom rješenju, ali užasno sporo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86319": {
+      "poster": "cotfuse",
+      "content": "@BigD#86317 ok ti je to. Probaj dodati regularizaciju ako želiš da ti izgleda kao kad se koristi sklearn.",
+      "votes": {
+        "upvoters": [
+          "BigD"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86326": {
+      "poster": "Dekan",
+      "content": "@micho#86274 \n\nIz uputa:\n> Optimizaciju treba provoditi dok se ne dosegne max_iter iteracija, ili kada razlika u pogrešci unakrsne entropije između dviju iteracija padne ispod vrijednosti epsilon.\n\nTrebam li gledati razliku samo pogreske unakrsne entropije bez regularizacijskog clana ili sa regularizacijskim clanom? Trenutno racunam s reg. clanom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86342": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Dekan#86326 Očito mora biti bez, kad unakrsna entropija u sebi nema regularizaciju (uspoređuje samo točke, ne poznaje koncept težina), nego je to eksterna stvar.",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86374": {
+      "poster": "cotfuse",
+      "content": "@Emma63194#86132 Jesi li slucajno previdjela da kod logisticke regresije w0 treba tretirati posebno, tj. da ne smijes primjenjivati regularizaciju na w0?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86382": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Emma63194#86132 umjesto ovog oduzimanja kod w0 = w0 - η∆w0 van petlje stavi plus meni je ovak kao tebi ispadalo kad sam po skriptni napisala i onda sam samo stavila plus i ispalo je dobro\n\nugl. napravila sam po pseudokodu iz predavanja 06 1:12",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86383": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "btw sta se dogodi ak ne rijesimo sve i eventualno dobijem 0 bodova na labosu? jel se pada predmet ili i dalje ima sanse za proc?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86401": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Noggenfogger#86383 Ak misliš što se dogodi ak skupiš 0 bodova na svim labosima, da, to padaš.\n\nAk dobiš 0 na pojedinačnom labosu, nikom ništa, dok god skupiš prag",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86501": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "Je li mi može netko molim vas reći kako napraviti ovaj argmax u drugom zadatku, nikako nemrem skužiti (ove zasebne mi rade normalno) 😕",
+      "votes": {
+        "upvoters": [
+          "Longclaw"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86510": {
+      "poster": "Yasuke (Bono)",
+      "content": "@-Ivan-#86501 Trebaš za svaki primjer izračunat kolika je predikcija svake hipoteze i onda označiš primjer da  pripada klasi za koju je vrijednost predikcije najveća.",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86551": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Noggenfogger#86382 bog te blagosolovio. vec dva sata gledam sta mi je krivo u kodu i zasto ga ne klasificira kako treba, e da bi po ne znam koji put bio krivo zadan pseudokod. u had one job fer!",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "InCogNiTo124"
+        ]
+      }
+    },
+    "86618": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "Netko budan?\n\n\"Nemate odgovarajuću dozvolu za izvođenje zahtijevane akcije.\"\n\nnemogu ni submitat ni zakljucat labos wtf",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86619": {
+      "poster": "Bananaking",
+      "content": "@Noggenfogger#86618 Upravo sam uploadao svoju, sve ok prošlo. Ferko -> Strojno -> komponente znanja -> 2. zadaća -> submit i zaključaj",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86730": {
+      "poster": "Luka1112 (Akul1112)",
+      "content": "Je vec netko imao termin da podijeli pitanja?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86753": {
+      "poster": "Vrba",
+      "content": "Prvo je pitao malo opcenitu teoriju...kako izgleda model logisticke regresije, funkcija pogreske i gubitka, optimizacija...\n\nKoja dva nacina postoje kako bi se binarni klasifikatori mogli upotrijebiti za viseklasnu klasifikaciju, koji sam koristio, objasniti oba, razlike, prednosti i mane.\n\nKako izgleda logisticka funkcija. Na 3.a objasniti utjecaj alfe na strminu i kako to utjece na model. \n\nKoja distribucija se koristi kod logisticke regresije.\n\nKoji gradijentni spust se koristi u 3.b...objasniti implementaciju i kako se to pretvori u stohasticki\n\nZasto u 3.d na drugom grafu neke ete zavrse ranije?",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Broono (Burućuh)",
+          "Conrad",
+          "Cvija",
+          "Emma63194",
+          "FICHEKK",
+          "Luka1112 (Akul1112)",
+          "MsBrightside",
+          "Njet",
+          "Noggenfogger (dammitimmad)",
+          "Quentin",
+          "Stark",
+          "Watson (112)",
+          "[deleted]",
+          "cajaznun",
+          "glider (toblerone)",
+          "in1",
+          "joc",
+          "johndoe12 (enaiks)",
+          "koBASA (hackerman)",
+          "member",
+          "mikimoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86865": {
+      "poster": "Amon",
+      "content": "Pitanja:\n\nZa početak malo osnovno o linearnim diskriminativnim modelima\n\nŠto je ona funkcija u prvom zadatku i zašto nam treba i zašto smo stavili da mora biti veće od 0.5\n\nKako bi y trebao izgledati da je tamo 0 umjesto 0.5\n\nZašto krivo klasificira u 1 b) i što na kvadratnoj funkciji pogreške minimum i što se događa ako idemo desno ili lijevo od tog minimuma\n\nŠto bi u 1 c) zapravo bila ona točka koja je krivo klasificirana (šum)\n\nBi li se to moglo ikako sa linearnim modelom pokriti\n\nKako funkcionira OVO i OVR (prednosti i nedostatci)\n\nZašto je loše ako je alfa prevelika, zašto želimo da ima prostora ispod i iznad sigmoide (dakle da ne bude prestrma jer će onda biti sklonije prenaučenosti)\n\n3 razloga zašto je sigmoida dobra (derivabilna, daje vrijednosti između 0 i 1 i daje vjerojatnosti na izlazu)\n\nKako moderirati lr_train da bude stohastički spust\n\nZašto koristimo gradijent i koje su alternative (Newtnov postupak), gradijent je derivacija prvog stupnja, a newton je drugog stupnja\n\nZašto je unakrsna entropija veća od pogreške klasifikacije, koja funkcija je ona koja daje pogrešku klasifikacije (0-1) i zašto nju ne koristimo (nije derivabilna)\n\nZašto se u 4. grafovi razlikuju (veća pouzdanost gornjih grafova jer nije bilo onog šuma)\n\nSkroz ok demos, bio je ugodan razgovor\n\nGL svima",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Broono (Burućuh)",
+          "Conrad",
+          "Cvija",
+          "Emma63194",
+          "FICHEKK",
+          "InCogNiTo124",
+          "Luka1112 (Akul1112)",
+          "Njet",
+          "Noggenfogger (dammitimmad)",
+          "Quentin",
+          "Red_Baron",
+          "Svarog (Veles)",
+          "Watson (112)",
+          "[deleted]",
+          "[deleted]",
+          "cajaznun",
+          "chuuya (temari)",
+          "glider (toblerone)",
+          "in1",
+          "joc",
+          "koBASA (hackerman)",
+          "member",
+          "mikimoj",
+          "setuid0"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87025": {
+      "poster": "Emma63194",
+      "content": "@InCogNiTo124#85447 A o čemu to ovisi? O onim parametrima eta i alfa ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87054": {
+      "poster": "InCogNiTo124",
+      "content": "@Emma63194#87025 morat ces ponovit pitanje drukcije, ne mogu skuzit na sto si misla",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87059": {
+      "poster": "Emma63194",
+      "content": "@InCogNiTo124#87054 Ma ovo jedno pitanje iz labosa: Kako biste utvrdili da je optimizacijski postupak doista pronašao hipotezu koja minimizira pogrešku učenja? O čemu to ovisi?\n\nRekao si da bismo mogli nacrtati h(x;w)==0.5 i gledati udaljenosti (also, to malo vuče na SVM, zar ne?), ali ovo pitanje o čemu ovisi, to nisam sigurna.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87060": {
+      "poster": "InCogNiTo124",
+      "content": "@Emma63194#87059 aha, da, u pravu si, ovisi o pocetnoj tocki (ne mora npr bit nul vektor pocetan, pa ti zavrsna hipoteza ovisi o tom), stopi ucenja (moze divergirat postupak), stopi regularizacije (mozes previse kaznjavat tezine), koristenom algoritmu (postoje mozda patoloski dataseti za neki optimizacijski postupak), i o samom datasetu (mozes imat linearno neodvojiv s nejasnom granicom)",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87063": {
+      "poster": "InCogNiTo124",
+      "content": "> @Emma63194#87059 also, to malo vuče na SVM, zar ne?\n\nMalo vuce, istina, ali bitna je razlika to sto, u slucaju logreg, granica koja je podjednako udaljena od npr sredista klasa, jednostavno ispadne iz matematike (uz neke sitne pretpostavke tipa gauss i ostalo) kad trazimo nesto sto \"najbolje generalizira\"\n\nKod svma enkodiramo eksplicitno u algoritam da zelimo nesto sto prepolavlja najblizu udaljenost.\n\n>! Uoci i suptilnu razliku koja se udaljenost tocno prepolavlja",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87071": {
+      "poster": "Emma63194",
+      "content": "Ima li možda netko volje komentirati pitanja za 5. i 6. zadatak, nisam sigurna jesu li moje pretpostavke za to točne.\n\nU 5. zadatku je ono pitanje jesu li krivulje očekivane i zašto (ovisnost unakrsne pogreške i norme vektora w o regularizacijskom faktoru, alfi).\n\nMoja nekako prva pomisao je bila da ima smisla da čim je alfa veći, model postaje više prenaučen pa više griješi. Ono što me buni jest, zašto toliko griješi na training setu? Ovo da više griješi bi sigurno bilo točno da mu sada damo neki novi skup podataka koji nikad nije vidio, ali zašto kod samog treniranja imamo veće pogreške kada imamo recimo regularizacijski faktor alfa=100, nego kada ga opće nemamo (alfa=0)?\n\nOnda drugi graf koji pokazuje ovisnost norme w o alfi. Zašto kada je alfa=0 bude veća norma vektora od ostalih?\n\nTu bi moj neki guess bio, obzirom da kod podešavanja težina vektora imamo formulu w*(1-eta*alfa), je li istina sada da je povezanost težina w i alfe obrnuto proporcionalna? Kao da taj izraz nekako teži nekoj konstantnoj vrijednosti?\n\nU 6. zadatku, mi mijenjamo podatke tako da ih preslikamo u neki prostor više dimenzije. Model nismo mijenjali. Zašto se ta promjena onda manifestira da granica između klasa bude sve više nelinearna, što je veći stupanj u koji preslikavamo značajke (ako ova rečenica ima smisla?) ako je hipoteza ostala ista?\n\nI kao odgovor na pitanje koji stupanj polinoma uzeti, je li oke ako kažem recimo i ovaj najveći (d=3), ali ako uz to uzmemo dobru alfu koja bi pazila na to da ne dođe do prenaučenosti? \n\nIsprike ako su neke rečenice besmislene, neke dijelove gradiva nisam baš još uspjela pokopčati, a i terminologija na ovom predmetu mi nije jača strana.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87142": {
+      "poster": "cotfuse",
+      "content": "@Emma63194#87071 \n\nSto se tice 5. zadatka...\n\nKako alpha raste, model postaje podnaucen a ne prenaucen. Povecavanjem alphe povecavas ulogu regularizacije u ukupnoj funkciji greske, sto smanjuje sigurnost modela ,odnosno napetost sigmoide. \n\nDrugo, nije ti u redu reci da model koji ima vecu gresku treniranja vise grijesi. Greske treniranja nisu usporedive po vrijednosti izmedju modela s razlicitim hiperparametrima.\n\nAnyways, ajmo pogledati sto se dogadja s nasom funkcijom gubitka kako povecamo alfu. Zamislimo da smo sa dvije vrijednosti alfe recimo alfa=10 i alfa=20 dobili dva seta tezina koje obije opisuju modele koji savrseno predvidjaju sve primjere u nasem skupu za ucenje (jednostavan skup podataka sa 7 primjera). Nasa funkcija gubitka se sastoji od dvije komponente, prve, koja je suma unakrsnih entropija po svim primjerima i druge, regularizacijske komponente alpha * norma vektora tezina. Alfa ovdje sluzi kako bi se uravnotezila vaznost te dvije komponente. Prva komponenta zapravo odgovara sigurnosti naseg modela u svoje pretpostavke. Ta komponenta se priblizava 0 kako se vise sigmoida napinje (postaje strmija), a to se radi tako da imamo velike vrijednosti u vektoru tezina. Regularizacijska komponenta s druge strane raste kako rastu vrijednosti u vektoru tezina. Povecavajuci alfu mi signaliziramo modelu da zelimo da se vise potrudi drzati vektor tezina manjim i onda te sada manje tezine, tj normu tog vektora, mnozimo sa tim vecim faktorom alpha. Kakav to ima ucinak na vrijednost regularizacijske komponente funkcije gubitka? Evo nemam pojma, mozda ide gore, mozda ide dolje, rekao bih da vjv ostaje tu negdje, ali ono sto se definitivno dogadja je da su same tezine manje i zbog toga je nasa sigmoida manje napeta, sto uzrokuje vecu gresku unakrsne entropije jer je sad kao nas model manje siguran u svoju predikciju. I zbog toga raste vrijednost ukupne greske ucenja. \n\nOvdje predikcija znaci w transpose * x, a ne broj tocno ili netocno klasificiranih primjera i zbog toga sto taj model moze biti manje siguran a i dalje sve savrseno klasificirati, ne mozemo reci da model s razlicitim hiperparametrima i vecom greskom treniranja (u smislu internalija modela) vise grijesi (u smislu konkretnog broja dobro/lose klasificirano)\n\nZa 6. ne znam sto bih ti tocno rekao, mozda ce ti ova slika pojasniti.\n\nhttps://www.researchgate.net/profile/Muin_Khoury/publication/42388347/figure/fig1/AS:267585019183132@1440808648815/Demonstration-of-finding-a-separating-hyperplane-in-high-dimensional-space-vs-in-low.png\n\nU nasem zadatku je slicno. Imamo tocke u 2D prostoru. Projiciramo ih u vise dimenzionalan prostor, gdje onda te tocke postaju odvojive nekakvom hiperravninom. Nazad u 2D prostoru, granica odluke sto je iznad te hiperravnine a sto ispod nama izgleda kao krivudava linija.",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Emma63194",
+          "Noggenfogger (dammitimmad)",
+          "[deleted]",
+          "in1",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87147": {
+      "poster": "login",
+      "content": "Jel odgovarao neko kod Vanesse Keranovic?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87170": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "3.d) moze netko pls objasniti \n\n---zasto je pogreska unakrsne entr veca od pogreske klasifikacija (ako postoji vise razloga od -> jer sigmoida nikad nece doci do nule) ?\n\n---ovisno o stopama ucenja eta jesu li za manje eta modeli podnauceni, a za vece eta brzo prenauceni?\n\n---ako je ovo iznad istina zasto za velike eta se model prenauci (pronalazak minimuma prolazi puno manje \"tocaka\" nego za neki mali korak(eta) pa me zanima je li prenaucen samo zato sto nije prosao puno tocaka pa vise generalizira ili? )",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87190": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @Noggenfogger#87170 ovisno o stopama ucenja eta jesu li za manje eta modeli podnauceni, a za vece eta brzo prenauceni?\n\nNema baš neke prejake korelacije. Preveliki eta sigurno neće prenaučiti model (što veći eta, to je gradijentni spust više nalik nasumične pretrage), a premali eta neće uvijek podnaučiti model (mali eta samo usporava konvergenciju u lokalni minimum). Upravo suprotno, veliki eta može podnaučiti model (model zaključuje preelementarne stvari jer je hiperploha gubitka tamo gdje takvo učenje zapne vjv jako ravna), a mali eta može prenaučiti model tako što će zapeti u nekom strmom lokalnom minimumu.\n\nU praksi se veliki learning rateovi koriste kako bi se povećala generalizacija, ne kako bi se prenaučilo model. A mali learning rateovi se koriste za stabilizaciju gradijenta, dakle za nekakve jako grbave hiperplohe gubitka s puno fatalnih lokalnih minimuma. Ovo prvo će konvergirati u platoima (jer veliki learning rate ne može izaći iz njih, vrti se u krug), ovo drugo potencijalno prenauči model ako pacing funkcija nije dobra (ali taj mali learning rate se povećava pa kad postupno dođeš u neke hiperbazenčiće gdje gradijent nije ogroman ti ne napuca parametre u 3pm).",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87522": {
+      "poster": "Ziher",
+      "content": "Iskustva s odgovaranja labosa?",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88931": {
+      "poster": "member",
+      "content": "Jel zna ko 6. Koji biste stupanj polinoma upotrijebili i zašto? Je li taj odabir povezan s odabirom regularizacijskog faktora 𝛼? Zašto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88948": {
+      "poster": "Amon",
+      "content": "@member#88931 Pošto nemaš primjera za testiranje nego samo za učenje, uzmeš onaj stupanj kod kojeg je greška najmanja - dakle d = 3 (jer ne znamo radi li se o prenaučenosti ili ne)",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

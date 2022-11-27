@@ -1,0 +1,964 @@
+{
+  "title": "[NAISP] 6. laboratorijska vježba - 2021/2022",
+  "creator": "Snorlax (Bacva)",
+  "slug": "naisp-6-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Napredni algoritmi i strukture podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "269156": {
+      "poster": "Snorlax (Bacva)",
+      "content": "Može netko podijelit zadatak i pitanja s blica?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269161": {
+      "poster": "SBolsec (Marko218)",
+      "content": "![](assets/2022-01-10/00001.png)\n\n![](assets/2022-01-10/00002.png)\n\n![](assets/2022-01-10/00003.png)\n\nKod za razvojno okruzenje:\n```\nimport sys\nimport array\nfrom typing import Union, List, Iterable\n\n\nclass ArrView:\n    \"\"\"\n    Helper class used for indexing the adjacency matrix.\n    Serves as a view of a row, column or any part of the adjacency matrix, although\n    it can be used for any 1D array/list.\n    \"\"\"\n    def __init__(self, arr: array.array, arr_slice: Union[slice, range]):\n        self._arr = arr\n        if isinstance(arr_slice, slice):\n            self._slice_range = range(*arr_slice.indices(len(self._arr)))\n        elif isinstance(arr_slice, range):\n            self._slice_range = arr_slice\n        else:\n            raise NotImplementedError(\"Must provide a slice or range object to the ArrView constructor\")\n        \n    def __len__(self):\n        \"\"\"\n        Return the length of the view.\n        \"\"\"\n        return len(self._slice_range)\n    \n    def __getitem__(self, pos: Union[int, slice]):\n        \"\"\"\n        Method to override indexing for the view. Fetches the values from the underlying array.\n        Args:\n            pos (int | slice): Position of the value/values to fetch.\n        \n        Returns:\n            int: Value at the 'pos' if it was an int.\n            or\n            ArrView: A subview if 'pos' was a slice.\n            \n        If passed an int, it will return a value at the specified position.\n        If passed a slice object, it will return another ArrView object which will be a subview\n        into the view, but will still use the underlying array to fetch the values. If passed\n        anything else will return NotImplemented.\n        \"\"\"\n        if isinstance(pos, int):\n            return self._arr[self._slice_range[pos]]\n        if isinstance(pos, slice):\n            return ArrView(self._arr, self._slice_range[pos])\n        return NotImplemented\n    \n    def __setitem__(self, pos: Union[int, slice], val: Union[int, Iterable[int]]):\n        \"\"\"\n        Set the value/values at the specified position/positions.\n\n        Args:\n            pos (int | slice): Position(s) of value/values to set.\n\n        Sets the values in the underlying array.\n        If passed an int as the position argument, it expects the value argument to be an int as well\n        and sets the value at the specified position.\n        If passed a slice and iterable of ints as value (i.e. list of ints), sets the values\n        indexed by the slice to the values provided in the 'val' argument.\n        If passed a slice as position and int as value, sets all of the elements indexed by the\n        slice to the specified int value. Otherwise, raises an exception.\n        \"\"\"\n        if isinstance(pos, int):\n            self._arr[self._slice_range[pos]] = val\n        elif isinstance(pos, slice):\n            val_range = self._slice_range[pos]\n            if isinstance(val, int):\n                val = [val] * len(val_range)\n            for i, v in zip(val_range, val):\n                self._arr[i] = v\n        else:\n            raise NotImplementedError('ArrView can only be indexed by an \"int\" or \"slice\" object.')\n    \n    def __iter__(self):\n        \"\"\"\n        Enables iteration over the view (for-each style).\n\n        Return an iterator over the array view. Enables the view to be used in\n        a for-each loop, i.e. \"for val in view: ... \".\n        \"\"\"\n        for i in self._slice_range:\n            yield self._arr[i]\n    \n    def as_list(self):\n        \"\"\"\n        Return the view as a list of integers.\n        \"\"\"\n        return [v for v in self]\n\n    def __str__(self):\n        \"\"\"\n        Return the string representation of the view, which is the representation\n        of the list with the same values.\n        \"\"\"\n        return str(self.as_list())\n\nclass AdjMatrix:\n    \"\"\"\n    Helper class which implements a weighted adjacency matrix.\n    Should hold zeros if there is no edge between nodes at an index\n    or the weight of the edge if there is one.\n\n    n_nodes (int): Number of nodes in the graph.\n\n    Indexing with regular integers returns ArrView of rows (matrix[0] -> 0-th row).\n    Indexing with tuples returns the values at the position in the matrix\n    (matrix[0, 1] -> weight of the edge at position (0, 1)).\n    \"\"\"\n\n    def __init__(self, n_nodes: int):\n        self._data = array.array('i', [0] * (n_nodes * n_nodes))\n        self.n_nodes = n_nodes\n        \n    def __len__(self):\n        \"\"\"\n        Get the total number of elements in the matrix.\n        \"\"\"\n        return self.n_nodes * self.n_nodes\n    \n    def getColumn(self, col_ind: int):\n        \"\"\"\n        Get a column as a view.\n\n        Args:\n            col_ind (int): Index of the column.\n        \n        Returns:\n            ArrView: View of the column.\n        \"\"\"\n        return ArrView(self._data, slice(col_ind, None, self.n_nodes))\n    \n    def getRow(self, row_ind: int):\n        \"\"\"\n        Get a row as a view.\n        Same as A[row_ind].\n\n        Args:\n            row_ind (int): Index of the row.\n        \n        Returns:\n            ArrView: View of the row.\n        \"\"\"\n        n = self.n_nodes\n        return ArrView(self._data, slice(row_ind * n, (row_ind + 1) * n))\n\n    def getEdgeWeight(self, row_ind: int, col_ind: int) -> int:\n        \"\"\"\n        Get the weight of the edge between the row_ind and col_ind nodes.\n        Weight of the edge row_ind->col_ind.\n\n        Args:\n            row_ind (int): Row index (source node).\n            col_ind (int): Column index (target node).\n        \"\"\"\n        return self._data[row_ind * self.n_nodes + col_ind]\n    \n    def __getitem__(self, pos: Union[int, tuple]):\n        \"\"\"\n        Enables indexing into the matrix with integers, tuples or slices.\n\n        Args:\n            pos (int | tuple): Position of the value/values to fetch.\n        \n        Returns:\n            int | ArrView: Value/values at the specified position/s.\n        \n        If the argument is an int, fetches pos-th row, equivalent to getRow(pos).\n        If the arugmnet is a tuple, fetches the weight of the edge between pos[0] and pos[1].\n        Otherwise returns NotImplemented.\n        \"\"\"\n        if isinstance(pos, int):\n            return self.getRow(pos)\n        if isinstance(pos, tuple):\n            i, j = pos\n            return self.getEdgeWeight(i, j)\n        return NotImplemented\n    \n    def __setitem__(self, pos: Union[int, tuple], val: Union[int, Iterable[int]]) -> None:\n        \"\"\"\n        Enables setting values by index.\n\n        Args:\n            pos (int, tuple): Position/s to set in the underlying array.\n            val (int, Iterable[int]): Value/s to set.\n        \n        If the pos argument is a tuple, then the val should be an int and\n        the method will set the value at the specified position in the matrix\n        (weight of the edge pos[0]->pos[1]).\n        If the pos is an int then sets the whole row, with ArrView\n        handling the logic of setting the values.\n        Otherwise, raises a NotImplemented error.\n        \"\"\"\n        if isinstance(pos, tuple):\n            i, j = pos\n            self._data[i * self.n_nodes + j] = val\n        elif isinstance(pos, int):\n            self.getRow(pos)[:] = val\n        else:\n            raise NotImplementedError('AdjMatrix can only be indexed by an int, tuple or slice object.')\n    \n    def columns(self):\n        \"\"\"\n        Fetches an iterator over the columns of the matrix.\n        Enables \"for col in A.columns(): ...\".\n        \"\"\"\n        for i in range(self.n_nodes):\n            yield self.getColumn(i)\n    \n    def rows(self):\n        \"\"\"\n        Fetches an iterator over the rows of the matrix.\n        Enables \"for row in A.rows(): ...\".\n        \"\"\"\n        for i in range(self.n_nodes):\n            yield self.getRow(i)\n    \n    def __iter__(self):\n        \"\"\"\n        Delegates to the 'rows' method.\n        \"\"\"\n        return self.rows()\n\n    def __str__(self) -> str:\n        \"\"\"\n        Fetch the string representation of the matrix as a list of lists.\n        \"\"\"\n        return str([row.as_list() for row in self])\n\nclass BellmanFordNode:\n    \"\"\"\n    Helper class for solving problems with the BellmanFordAlgorithm.\n\n    d (int): The current distance to a node.\n    prev (BellmanFordNode): The previous node in the solution graph.\n    \"\"\"\n\n    def __init__(self, d_value=sys.maxsize, prev_node=None):\n        self.d = d_value\n        self.prev = prev_node\n\nclass NegativeCycleError(Exception):\n    \"\"\"Class used to raise an error when a negative cycle is present in a graph\"\"\"\n    pass\n```\n\nKod koji treba nadopuniti:\n```\nclass BellmanFord:\n    \"\"\"\n    Class implementing static methods for solving graph problems\n    using the Bellman-Ford algorithm.\n    \"\"\"\n\n    @staticmethod\n    def edges(W: AdjMatrix):\n        \"\"\"\n        Fetch a iterable over the edges of the graph from its weighted adjacency matrix.\n\n        Args:\n            W (AdjMatrix): weighted adjacency matrix.\n        \n        Returns:\n            Iterable[...] | Iterator: An iterable of any representation of an edge or an iterator.\n        \"\"\"\n        ####################\n        ## YOUR CODE HERE ##\n        ####################\n        # HINT: Koristite 'yield' operator ili izradite listu\n        # bridova i nju vratite. Na Vama je da odaberete.\n    \n    @staticmethod\n    def createInitialSolution(n_nodes: int) -> List[BellmanFordNode]:\n        \"\"\"\n        Create the list which will hold the final solution to the problem\n        we are solving with the Bellman-Ford algorithm and populate it with initial values.\n\n        Args:\n            n_nodes (int): Number of nodes in the graph for which we are solving.\n        \n        Returns:\n            List[BellmanFordNode]: The starting point of the algorithm.\n        \"\"\"\n        return [BellmanFordNode() for _ in range(n_nodes)]\n    \n    @staticmethod\n    def solve(W: AdjMatrix, start: int) -> List[BellmanFordNode]:\n        \"\"\"\n        Solve the specified problem using the Bellman-Ford algorithm.\n\n        Args:\n            W (AdjMatrix): The weighted adjacency matrix of the graph for which we are solving.\n            start (int)  : The starting node.\n        \n        Returns:\n            List[BellmanFordNode]: Solution to the problem, i.e. the list of\n                                   distances to the nodes from the starting point\n                                   and which nodes are chosen as predecessors for each node.\n\n        Throws:\n            NegativeCycleError: If there is a negative cycle in the graph.\n        \"\"\"\n        D = BellmanFord.createInitialSolution(W.n_nodes)\n        ####################\n        ## YOUR CODE HERE ##\n        ####################\n        \n        # HINT: Iteracija po bridovima se mora moci pozivati na sljedeci nacin:\n        #     \"for ... in BellmanFord.edges(W):\"\n        # Gdje \"...\" ovisi o tome kako implementirate staticku metodu edges i kako\n        # zelite da Vam se varijabla/e zove/u.\n```\n\nKod za testni primjer:\n```\ndef revPath(solution: List[BellmanFordNode], to_node: int) -> List[int]:\n    curr = to_node\n    path = []\n    while curr is not None:\n        path.append(curr)\n        node = solution[curr]\n        curr = node.prev\n    return path\n    \n\nW = AdjMatrix(9)\nW[0] = [0, 1, 0, 0, 0, 0, 0, 0, 0]\nW[1] = [0, 0, 0, 0, -5, 0, 0, 0, 0]\nW[2] = [0, 0, 0, 1, 0, 0, 1, 1, 0]\nW[3] = [2, 0, 0, 0, 4, 0, 0, 0, 1]\nW[4] = [0, 0, 0, 0, 0, 4, 0, 0, 0]\nW[5] = [0, 0, 0, 0, 0, 0, 0, 0, 0]\nW[6] = [0, 0, 0, -1, 0, 0, 0, 0, 0]\nW[7] = [0, 0, 0, 0, 0, 0, -1, 0, 0]\nW[8] = [0, 0, 0, 0, 0, 1, 0, 0, 0]\nD = BellmanFord.solve(W, 2)\nassert revPath(D, 5) == [5, 8, 3, 6, 7, 2]\n```",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Ardura (Maddy)",
+          "Bucc (Olive Oil)",
+          "Daeyarn",
+          "FERonja",
+          "LLL",
+          "LucidDreamer",
+          "Quarz",
+          "Rene",
+          "Snorlax (Bacva)",
+          "Sulejman",
+          "Svudec",
+          "Uchenikowitz (Učečuču)",
+          "boogie_woogie (nika_1999)",
+          "gladiator",
+          "matt (Matt)",
+          "reygrep"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269164": {
+      "poster": "SBolsec (Marko218)",
+      "content": "![](assets/2022-01-10/00004.png)\n\n![](assets/2022-01-10/00005.png)\n\n![](assets/2022-01-10/00006.png)\n\n![](assets/2022-01-10/00007.png)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Ardura (Maddy)",
+          "Bucc (Olive Oil)",
+          "Daeyarn",
+          "LucidDreamer",
+          "Quarz",
+          "Rene",
+          "Retard00",
+          "Snorlax (Bacva)",
+          "Suki7",
+          "Sulejman",
+          "Uchenikowitz (Učečuču)",
+          "boogie_woogie (nika_1999)",
+          "gladiator",
+          "iNavy (mornar Ica)",
+          "kolega_kolega",
+          "limun (kuss)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269168": {
+      "poster": "BlaBla5",
+      "content": "![](assets/2022-01-10/00008.jpg)\n\nW={'a':{'a':0, 'b':2, 'c':0, 'd':0},\n\n   'b':{'a':0, 'b':0, 'c':3, 'd':-1},\n\n   'c':{'a':-1, 'b':0, 'c':0, 'd':7},\n\n   'd':{'a':3, 'b':0, 'c':0, 'd':0}}\n\nPoziv funkcije WFI(W,'a','d') mora vratiti:\n\nZadatak WFI i pitalice iste kao kolega Marko218.",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Uchenikowitz (Učečuču)",
+          "boogie_woogie (nika_1999)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269182": {
+      "poster": "aerius",
+      "content": "![](assets/2022-01-10/00010.png)\n\n```\nimport random\nfrom math import ceil, floor, log\nfrom typing import List\n\n\nclass SkipList:\n    \"\"\"Class for skip list\n    \"\"\"\n\n    def __init__(self, n: int = 10000, p: float = 0.5):\n        \"\"\"Creates skip list and initializes all the necessary\n        parameters\n\n        Args:\n            n (int, optional): expected capacity. Defaults to 10000.\n            p (float, optional): probability of jumping up by one level. Defaults to 0.5.\n        \"\"\"\n        self.p = p\n        self.n = n\n        self.max_level = # TODO: fix calculation for max_level\n        self.head = SkipNode(None)\n        self.head.pointers = [None]*self.max_level\n        self.histogram = self._createHistogram()\n\n    def _createHistogram(self) -> List:\n        \"\"\"Creates histogram of degrees.\n\n        Returns:\n            List: histogram according to the third method from the lecture\n        \"\"\"\n        H = [0]*(self.max_level+1)\n        for i in range(1, self.max_level+1):\n            H[i] = # TODO: fix value for the histogram\n        return H\n    \n    def sampleLevel(self) -> int:\n        \"\"\"Randomly decides the height of the node,\n        according to the histogram, using only one sample!\n\n        Returns:\n            int: returns valid randomly selected height\n        \"\"\"\n        ctoss = random.randint(1, self.n)\n        i = 1\n        while # TODO: fix the condition for sampling!\n            i += 1\n        return i\n\n    def insert(self, value: int) -> None:\n        \"\"\"Inserts an element into the skip list if it has not already existed.\n        Duplicates are not allowed.\n\n        Args:\n            value (int): key to insert into the skip list\n        \"\"\"\n        level = self.sampleLevel()\n\n        pred_node = self._search(value)\n        if pred_node.value == value:\n            return\n        succ_node = pred_node.pointers[0]\n\n        new_node = SkipNode(value, pred_node=pred_node)\n        new_node.pointers = [None]*level\n        new_node.pointers[0] = succ_node\n\n        #TODO: update all the pointers on necessary levels. \n        # Hint: Also use pred_node for backsearch over the levels to update. Or, use alternative way!\n\n\n    def _search(self, value: int) -> SkipNode:\n        \"\"\"Searches for the element in a list\n\n        Args:\n            value (int): search key\n\n        Returns:\n            SkipNode: skiplist node containing the search key, if it exists.\n            Otherwise it returns the last element of the skip list.\n        \"\"\"\n        node = self.head\n        curr_height = len(node.pointers)-1\n        while curr_height >= 0:\n            next_node = node.pointers[curr_height]\n            if next_node is None or #TODO: add the missing condition here\n                curr_height = curr_height-1\n            else:\n                node = next_node\n        return node\n    \n    def search(self, value: int) -> SkipNode:\n        \"\"\"tidy wrapper around _search\n\n        Args:\n            value (int): search key to find\n\n        Returns:\n            SkipNode: Returns the found node or None.\n        \"\"\"\n        node = self._search(value)\n        if node.value == value:\n            return node\n        else:\n            return None\n\n\n    def __str__(self) -> str:\n        \"\"\"string representation of skip list - useful for debugging\n\n        Returns:\n            str: string representation\n        \"\"\"\n        curr_node = self.head.pointers[0]\n        str = ''\n        while curr_node is not None:\n            str = str + \\\n                f\"(Node {curr_node.value},level={len(curr_node.pointers)}),\"\n            curr_node = curr_node.pointers[0]\n        return str\n    \nclass SkipNode:\n    \"\"\"Class for a node in skip list\n    \n    predecessor - pointer to predecessor node on THE lowest level.\n    \n    pointers - pointers to successors (over full height of the node)\n    value - value stored in the node \n    \"\"\"\n    pointers, value, predecessor = None, None, None\n\n    def __init__(self, value: int, pred_node: 'SkipNode' = None, succ_node: 'SkipNode' = None):\n        \"\"\"Creates skip node for skip list.\n        \n        Args:\n            value (int): value to be stored\n            pred_node (SkipNode, optional): predecessor node on the lowest level. Defaults to None.\n            succ_node (SkipNode, optional): successor node on the lowest level. Defaults to None.\n        \"\"\"\n        self.value = value\n        self.pointers = [None]\n        if pred_node is not None:\n            pred_node.pointers[0] = self\n            self.predecessor = pred_node\n        if succ_node is not None:\n            self.pointers[0] = succ_node\n            succ_node.predecessor = self\n```\nnjihov kod za testni primjer\n\n```\nrandom.seed(22)\n\na = SkipList(18, 0.6)\nprint(f'histogram={a.histogram}, max level={a.max_level}')\na.insert(12)\na.insert(18)\na.insert(16)\na.insert(18)\na.insert(281)\na.insert(-1)\na.insert(0)\n\nprint(a)\n\n\"\"\"ispisuje:\nhistogram=[0, 8, 12, 15, 16, 17, 18], max level=6\n(Node -1,level=1),(Node 0,level=2),(Node 12,level=1),(Node 16,level=1),(Node 18,level=1),(Node 281,level=1),\n\"\"\"\n\nrandom.seed(23)\n\na = SkipList(12, 0.5)\nprint(f'histogram={a.histogram}, max level={a.max_level}')\na.insert(12)\na.insert(18)\na.insert(16)\na.insert(18)\na.insert(281)\na.insert(-1)\na.insert(0)\n\nprint(a)\n\n\"\"\"ispisuje:\nhistogram=[0, 6, 9, 11, 12], max level=4\n(Node -1,level=2),(Node 0,level=2),(Node 12,level=1),(Node 16,level=1),(Node 18,level=1),(Node 281,level=1),\n\"\"\"\n```\n\nizvinite što se sjebano kopiralo, ugl puno pomaže što uopće ne morate raditi ovaj TODO u insertu tak da ukupno morate cca 5 linija koda napisat, riješi se za 10 min ko zna gradivo, ko ne zna ko ja onda malčice duže",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Dootz",
+          "LucidDreamer",
+          "Svudec",
+          "boogie_woogie (nika_1999)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269191": {
+      "poster": "NGboi (DrEtva)",
+      "content": "> @\"Marko218\"#p269161 def revPath(solution: List[BellmanFordNode], to_node: int) -> List[int]:\n\n>     curr = to_node\n\n>     path = []\n\n>     while curr is not None:\n\n>         path.append(curr)\n\n>         node = solution[curr]\n\n>         curr = node.prev\n\n>     return path\n\nKako je ovo moguce? curr je malo int pa malo BellmanFordNode?",
+      "votes": {
+        "upvoters": [
+          "Baksuz",
+          "matt (Matt)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269238": {
+      "poster": "Sulejman",
+      "content": "![](assets/2022-01-10/00013.png)\n\nJoš nekom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269239": {
+      "poster": "Artemis",
+      "content": "@\"Sulejman\"#p269238 \n\nI meni isto, taman krenula pisati mail nekome",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269248": {
+      "poster": "Sulejman",
+      "content": "@\"aerius\"#p269182 Zašto ne treba TODO u insertu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269250": {
+      "poster": "aerius",
+      "content": "jer radi i bez toga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269251": {
+      "poster": "Sulejman",
+      "content": "@\"aerius\"#p269250 da skuzio sam to al mislio sam da ima razlog neki",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269255": {
+      "poster": "Asdf",
+      "content": "Ima netko problem s WFI da mu je sve tocno ali postoje 2 razlicita najkraca puta sa istom udaljenošću i da u nihovom rješenju uzimaju onaj drugi pa je moje rješenje netočno iako ima istu udaljenost?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269259": {
+      "poster": "LucidDreamer",
+      "content": "@\"aerius\"#p269250 ziher pa ti je radilo.. meni konsntantno daje 5 errora kak vrijednosti pokazivača nisu iste",
+      "votes": {
+        "upvoters": [
+          "Kasperinac",
+          "Lusy (MGJ)",
+          "[deleted]",
+          "mrkva",
+          "reygrep"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269276": {
+      "poster": "alp (monte)",
+      "content": "Može li se na vježbi uživo odustati od rješavanja zadatka/usmenog ispitivanja?",
+      "votes": {
+        "upvoters": [
+          "huhu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269288": {
+      "poster": "strole55 (Sokol)",
+      "content": "@\"monte\"#p269276 može",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269294": {
+      "poster": "matt (Matt)",
+      "content": "Popravljena verzija `revPath`-a za `Bellman-Ford`:\n\n```\ndef revPath(solution: List[BellmanFordNode], to_node: int) -> List[int]:\n    curr = solution[to_node]\n    path = []\n    while curr is not None:\n        index = solution.index(curr)\n        path.append(index)\n        curr = curr.prev\n    return path\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269304": {
+      "poster": "viliml",
+      "content": "![](assets/2022-01-10/00019.png)\n\nkako isključiti pahuljice?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Daeyarn",
+          "Ducky",
+          "Filemon",
+          "Jale (čakijale)",
+          "McKovalski",
+          "Sicsile",
+          "Svudec",
+          "Tinx (pingvin)",
+          "blast",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "matt (Matt)",
+          "nikace (AeIoU)",
+          "nnn (dinoo)",
+          "sheriffHorsey",
+          "spampers (majmunska boginja)",
+          "steker",
+          "theimprobableone"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269307": {
+      "poster": "Mauricius",
+      "content": "Je li kome bilo pitanje za veličinu grafa? Google kaže da je broj bridova, a za točan su stavili da je broj vrhova.",
+      "votes": {
+        "upvoters": [
+          "viliml"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269310": {
+      "poster": "viliml",
+      "content": "![](assets/2022-01-10/00020.png)\n\nKomu da pišem mail?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269313": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"viliml\"#p269310 možeš kolegi asistentu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269317": {
+      "poster": "viliml",
+      "content": "@\"Mauricius\"#p269307 u pravu si, ali svejedno probaj koristiti bolji izvor od samo googla.\n\n![](assets/2022-01-10/00022.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269342": {
+      "poster": "Ardura (Maddy)",
+      "content": "@\"Matt\"#p269294 Je li to nova verzija u edgaru ili? Ispadao mi je tocno zad s prvom, a ovako baca error.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269394": {
+      "poster": "Mauricius",
+      "content": "@\"viliml\"#p269317 Ma provjerio sam na više izvora naravno, to tako kažem samo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269458": {
+      "poster": "matt (Matt)",
+      "content": "@\"Maddy\"#p269342 Valjda ovisi o tome kako si implementirala metodu `solve`. Oni su ju zadali kao `def solve(W: AdjMatrix, start: int) -> List[BellmanFordNode]` što znači da vraća listu `BellmanFordNode`-ova. Kad pošaljem takvu listu `revPath`-u dobijem `TypeError: list indices must be integers or slices, not BellmanFordNode` error...\n\n...zato što prilikom `curr = node.prev` bude tipa `BellmanFordNode` i u sljedećoj iteraciji `node = solution[curr]` više nema smisla.\n\n```py\n# njihov revPath\ndef revPath(solution: List[BellmanFordNode], to_node: int) -> List[int]:\n    curr = to_node\n    path = []\n    while curr is not None:\n        path.append(curr)\n        node = solution[curr]\n        curr = node.prev\n    return path\n```\n\nMožda nešto krivo gledam...Kolega je napisao istu napomenu @\"DrEtva\"#p269191 \n\nedit: ako će sutra na Edgaru padati testovi onda ću returnati indexe umjesto Node-ova pa bi sve trebalo biti ok",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269486": {
+      "poster": "sekiro",
+      "content": "Blic danas u 10\n\n![](assets/2022-01-11/00002.png)\n\n![](assets/2022-01-11/00003.png)\n\n![](assets/2022-01-11/00004.png)",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Ducky",
+          "menace_master"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269490": {
+      "poster": "steker",
+      "content": "Jesu isti zadatci",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269492": {
+      "poster": "matt (Matt)",
+      "content": "WFI zadatak. Zaboravio sam kopirati text zadataka ali ugl. treba izračunati matricu `W`, `Pi` i preko `Pi` završnu path listu. Vodite se po slajdovima iz prezentacije i po ovom videu https://www.youtube.com/watch?v=oNI0rf2P9gE\n\nInput je `W` a output treba biti ono što je u printu\n\n```py\nfrom copy import deepcopy\nfrom sys import maxsize\n\n\ndef WFI(W: dict, s: chr, d: chr) -> (dict, list):\n    # inicijaliziraj W\n    # fixaj vrijednosti na beskonacno ako treba\n    # inicijaliziraj Pi\n    # po algoritmu iz prezentacija iteriraj len(W.keys) puta i updateaj W i Pi\n\n    # napravi listu za path\n    # dodaj zadnji element `d` u path\n    # pomocu Pi koristi algoritam za path unazad iz predavanja i dodavaj imena u listu\n    # okreni listu\n\n    # vrati matricu i listu\n    pass\n\n\nW = {\"a\": {\"a\": 0, \"b\": 2, \"c\": 0, \"d\": 0}, \"b\": {\"a\": 0, \"b\": 0, \"c\": 3, \"d\": -1}, \"c\": {\"a\": -1, \"b\": 0, \"c\": 0, \"d\": 7}, \"d\": {\"a\": 3, \"b\": 0, \"c\": 0, \"d\": 0}}\n\nWFI(W, \"a\", \"d\")\n\nprint(({\"a\": {\"a\": 0, \"b\": 2, \"c\": 5, \"d\": 1}, \"b\": {\"a\": 2, \"b\": 0, \"c\": 3, \"d\": -1}, \"c\": {\"a\": -1, \"b\": 1, \"c\": 0, \"d\": 0}, \"d\": {\"a\": 3, \"b\": 5, \"c\": 8, \"d\": 0}}, [\"a\", \"b\", \"d\"]))\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269493": {
+      "poster": "sekiro",
+      "content": "@\"steker\"#p269490 ja sam bellman-ford imao",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269494": {
+      "poster": "matt (Matt)",
+      "content": "Blic pitanja\n\n![](assets/2022-01-11/00005.png)\n\n![](assets/2022-01-11/00006.png)\n\n![](assets/2022-01-11/00007.png)\n\n![](assets/2022-01-11/00008.png)",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269496": {
+      "poster": "Gocc (***)",
+      "content": "jel WFI uvijek ima samo 4 vrha, a,b,c,d u ovom zadatku na labosu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269497": {
+      "poster": "Ducky",
+      "content": "![](assets/2022-01-11/00009.png)",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269504": {
+      "poster": "So_Done",
+      "content": "![](assets/2022-01-11/00013.png)\n\n![](assets/2022-01-11/00014.png)",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269511": {
+      "poster": "madoxx",
+      "content": "Pitalice se ponovile + jedno pitanje o jednostavnim i multigrafovima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269552": {
+      "poster": "pingvinka",
+      "content": "![](assets/2022-01-11/00018.png)",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269728": {
+      "poster": "reygrep",
+      "content": "@\"Matt\"#p269492 imas mozda kako treba izgledati pi na kraju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269745": {
+      "poster": "FERonja",
+      "content": "Ako netko dobije WFI pošaljite priloženi kod.",
+      "votes": {
+        "upvoters": [
+          "Kennedy",
+          "LLL",
+          "boban_rajovic (ravindrababu ravula)",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269751": {
+      "poster": "Spuk",
+      "content": "@\"FERonja\"#p269745 Nema prilozenog koda uz taj zadatak. \n\n![](assets/2022-01-12/00001.png)\n\n![](assets/2022-01-12/00002.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269752": {
+      "poster": "ljama_glama",
+      "content": "![](assets/2022-01-12/00003.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269753": {
+      "poster": "Gocc (***)",
+      "content": "![](assets/2022-01-12/00004.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269768": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@\"FERonja\"#p269745 ja sam samo prebacila dict u array, onda radi kod iz skripte, i nazad u dict finalni rezultat.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269776": {
+      "poster": "mesojed (sofronijevicevPrst)",
+      "content": "labos danas u 10:\n\n zadatak BellmanFord\n\n blic se ponovila 2, nova 2 su \n\n![](assets/2022-01-12/00006.png)\n\n![](assets/2022-01-12/00007.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269802": {
+      "poster": "BigZ1",
+      "content": "Stigle preskočne liste\n\n![](assets/2022-01-12/00010.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269810": {
+      "poster": "steker",
+      "content": "Sta sa tim bellmanom, dal treba vratit listu bellmanford node-ova ili listu indexa, jer mi za jedno rade jedni testovi, a za drugo drugi...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Unity (Sgt. Forge)"
+        ]
+      }
+    },
+    "269818": {
+      "poster": "iva7740 (Mica Trofrtaljka)",
+      "content": "labos u 1:\n\nBellman-Ford\n\nblic ponovljen",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269827": {
+      "poster": "matt (Matt)",
+      "content": "@\"reygrep\"#p269728 \n\nOvo je moj završni PI\n```py\n{'a': {'a': None, 'b': 'a', 'c': 'b', 'd': 'b'}, 'b': {'a': 'c', 'b': None, 'c': 'b', 'd': 'b'}, 'c': {'a': 'c', 'b': 'a', 'c': None, 'd': 'b'}, 'd': {'a': 'd', 'b': 'a', 'c': 'b', 'd': None}}\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269833": {
+      "poster": "BigZ1",
+      "content": "kod od preskocnih listi\n\ngdje je TODO to treba napravit\n\nMOD EDIT: isto kao @\"aerius\"#p269182",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269844": {
+      "poster": "FERonja",
+      "content": "@\"BigZ1\"#p269833 Već je gore poslano kaj me cimas",
+      "votes": {
+        "upvoters": [
+          "SuperSaiyano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "SuperSaiyano",
+          "reygrep"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269933": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"steker\"#p269810 jel itko skuzio ovo? imam isti problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269937": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Precious Bodily Fluids\"#p269933 ako sam dobro shvatio kad postavljas prev varijablu nemoj ju postavljat na prethodni čvor nego na indeks prethodnog čvora",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "SuperSaiyano",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270018": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"sheriffHorsey\"#p269937 hvala, do toga je bilo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270094": {
+      "poster": "SuperSaiyano",
+      "content": "Krasno kada nestane neta u domu pa moraš u kafić da radiš labos...\n\nUgl. labos u 8, pitanja već viđena kao i zadatak iz skip listi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Filemon",
+          "Lusy (MGJ)",
+          "Mikki",
+          "maraska",
+          "reygrep",
+          "swish41 (PlavušaSFilozofskog)"
+        ]
+      }
+    },
+    "270098": {
+      "poster": "maraska",
+      "content": "također, pitanja iz pitalica su se već pojavila, a zadatak WFI implementirati (gore je netko sliku stavio)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270100": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "@\"Marko218\"#p269161 ima netko mozda rjesenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270109": {
+      "poster": "SuperSaiyano",
+      "content": "@\"StudenticaSaFera\"#p270100 https://ferhr-my.sharepoint.com/:u:/g/personal/ms52059_fer_hr/EW3BHZpq6_ZLgntSV7Q1_j4BVCz7IDeeCRzDAkHiXwSfvA?e=GGbCVr\n\nEvo rješenja za BF i WFI koje sam jučer pripremio za copy paste ali kako mi zadaci nisu došli možda će nekom biti od koristi. Kod možda nije najjasniji  i radi na onim testnim primjerima što su oni dali, ali nisam siguran prolaze li sve njihove testove na edgaru.",
+      "votes": {
+        "upvoters": [
+          "Smolaa"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270113": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Kasno Marko na Kosovo stiže\n\nAli hvala, nedama se da ce nekome drugom pomoc :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270124": {
+      "poster": "djeno",
+      "content": "u 12 bellman ford",
+      "votes": {
+        "upvoters": [
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270136": {
+      "poster": "[deleted]",
+      "content": "itko uspio rijesiti ovaj dio u insertu sa skip listama?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270146": {
+      "poster": "Baksuz",
+      "content": "@\"Matt\"#p269458 kako su ovi labosi iz naspa predobri. Likovi napišu u komentaru da prev mora biti BellmanFordNode, a onda se kao očekuje da to ipak bude int hahahahaha.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Valentino",
+          "WickyWinslow",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "jobi (azex)",
+          "mesojed (sofronijevicevPrst)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "jobi (azex)",
+          "nnn (dinoo)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270617": {
+      "poster": "Me1 (Me)",
+      "content": "ima neko da je imao usmeni, kaj ispituju?",
+      "votes": {
+        "upvoters": [
+          "Fikalo",
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270713": {
+      "poster": "tetak",
+      "content": "Jel imao neko error sa skip listama: Pointeri nisu dobro povezani u preskočnu strukturu",
+      "votes": {
+        "upvoters": [
+          "mrkva"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270723": {
+      "poster": "mrkva",
+      "content": "@\"tetak\"#p270713 ja imam i ne znam riješiti problem. Jesi ti možda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270726": {
+      "poster": "Filemon",
+      "content": "@\"tetak\"#p270713 pa moraš sredit insert i pospajat pointere",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

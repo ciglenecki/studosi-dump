@@ -1,0 +1,223 @@
+{
+  "title": "[OSNAUT] 3. seminar - 2020/2021",
+  "creator": "Rico",
+  "slug": "osnaut-3-seminar-20202021",
+  "tags": [
+    "FER",
+    "Osnove automatizacije"
+  ],
+  "posts": {
+    "200885": {
+      "poster": "Rico",
+      "content": "1 zadatak jeli mora biti u GRAPH-u?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "200892": {
+      "poster": "spenadla",
+      "content": "@Rico#200885 Prvi zadatak radis na HMI , a funkcionalnosti moras u graphu napraviti (piše na početku drugog zadatka)",
+      "votes": {
+        "upvoters": [
+          "Rico"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "200958": {
+      "poster": "LUJXIV",
+      "content": "jel netko napravio? koliko treba vremena otprilike odvojit?",
+      "votes": {
+        "upvoters": [
+          "Ak08 (obama)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "gad_gadski"
+        ]
+      }
+    },
+    "201249": {
+      "poster": "ToniJefer007",
+      "content": "U 2.zadatku, kako ste rijesili slanje glavne ref brzine na pretvarac?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201264": {
+      "poster": "KR7 (Detective Schmosby)",
+      "content": "@ToniJefer007#201249 Mislim da je dovoljno samo na ulaz **SpeedSp** od bloka **SINA_SPEED** dovest varijablu u kojoj je zapisana glavna ref brzina.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201312": {
+      "poster": "ToniJefer007",
+      "content": "@KR7#201264 da, ali kako postici da se ta brzina posalje 2sekunde nakon ukljucenja pretvaraca, jer ti ako na HMI-u upises brzinu ona ce odmah biti na ulazu u blok sina speed, znaci biti ce tamo i prije ukljucenja pretvaraca, koliko sam skuzio prvo zadamo neku ref brzinu, ukljucimo rucni rad stisnemo start, ukljuci se pretvarac i za 2sekunde pretvarac dobije na ulaz tu brzinu koju smo zadali putem HMI-a",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201325": {
+      "poster": "KR7 (Detective Schmosby)",
+      "content": "Tocno to sto si rekao, napravi si pomocnu varijablu u koju tek nakon dvije sekunde spremis vrijednost koja je upisana u HMIu. Nisam skuzio da te ovaj dio buni, mislio sam da ne znas gdje dovest tu varijablu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201329": {
+      "poster": "ToniJefer007",
+      "content": "@KR7#201325 u tome i je problem, ne znam kako to implementirat, postavim time delay ali na koji nacin da mi se prebaci vrijednost brzine u pomocnu varijablu? Probao sam pomocu bloka move, nije bas isti ko u LADu pa  ga ne kuzim bas najbolje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201363": {
+      "poster": "KR7 (Detective Schmosby)",
+      "content": "@ToniJefer007#201329 Taj dio radis u GRAPHU u nekom stanju, stavi kao qualifier N i onda pod action npr.  \n\n_speedSetpoint := speedReadFromHMI_, ovime kada se nalazis u tom stanju si spremio vrijednost brzine ucitane iz HMIa u pomocnu varijablu. Nisam siguran jesam li najbolje objasnio pa ako ti nije jasno reci.",
+      "votes": {
+        "upvoters": [
+          "ToniJefer007"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201385": {
+      "poster": "ToniJefer007",
+      "content": "@KR7#201363 to legendo, radi👍",
+      "votes": {
+        "upvoters": [
+          "KR7 (Detective Schmosby)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201894": {
+      "poster": "Rico",
+      "content": "Kako ste shvatili ovaj 3 zadatak. Jeli on povezan sa 4. Tako da se naprave tri recepta jedan koji je zadan, a ovi ostali proizvoljno i samo implementirati u automatskom načinu rada. ._\"Sekvencu je potrebno definirati s dva niza vrijednosti brzina i vremena. Duljina niza brzine vrtnje\n\nje 5 točaka, a duljina niza vremena je 6 točaka. Prvi članovi nizova čine parove, a par zadnjoj\n\ntočci vremena je brzina nula. Vrijednosti brzina zadaju se kao konačne vrijednosti brzine vrtnje\n\nza taj korak, a vrijednosti vremena kao vrijeme trajanja tog koraka sekvence.\"_",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201974": {
+      "poster": "gad_gadski",
+      "content": "Jel me moze netko prosvijetlit? Nisu mi jasne upute nikako, trebamo li mi ista raditi kao prema lab6? Jer ako da kako? Nista nije pojasnjeno kako bi se to doma treablo izodit, posto ja snicim nemogu otici online, nemogu pratiti korake iz onih uputa za lab6. Ili samo trebamo te zadatke iz sem3 napraviti koristeci sina_speed blok?",
+      "votes": {
+        "upvoters": [
+          "Ak08 (obama)",
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202702": {
+      "poster": "Upforpslone",
+      "content": "@gad_gadski#201974 Jesi skuzio? Kako ovo mozemo testirat na svom laptopu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202735": {
+      "poster": "LUJXIV",
+      "content": "pa sam pokrenete simulaciju i gledate jel vam se salje sve kak bi trebalo na sina_speed",
+      "votes": {
+        "upvoters": [
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202857": {
+      "poster": "gad_gadski",
+      "content": "@Upforpslone#202702 ocito sam radis te zadatke i saljes na sina speed stvari, zadatci nisu teski i dost jednostavna logika, nis sto nisi vec vidio na proslim labosima,, ugl nis ne radis s parametrima ni stvarima s lab6 onih uputa, to cemo radit tamo na licu mjesta",
+      "votes": {
+        "upvoters": [
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

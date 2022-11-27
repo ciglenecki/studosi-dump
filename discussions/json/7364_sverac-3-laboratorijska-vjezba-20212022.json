@@ -1,0 +1,251 @@
+{
+  "title": "[SVERAC] 3. laboratorijska vježba - 2021/2022",
+  "creator": "Spuk",
+  "slug": "sverac-3-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Sveprisutno računarstvo",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "294370": {
+      "poster": "Spuk",
+      "content": "Jel receno dns sta pametno vezano za labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295293": {
+      "poster": "BK-",
+      "content": "Ne...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295514": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "Je li itko uspio riješiti labos?\n\nOvo je fakat overkill.\n\nNapišu 3 rečenice u uputama, sve sami skužite.\n\nI ima li netko u ovome:\n\n```\ni2c_config_t conf = {\n        .mode = I2C_MODE_MASTER,\n        .sda_io_num = sda1,\n        .scl_io_num = scl1,\n        .sda_pullup_en = GPIO_PULLUP_ENABLE,\n        .scl_pullup_en = GPIO_PULLUP_ENABLE,\n        .master.clk_speed = 400000,\n    };\n```\n\nOvaj error (podcrtava mi točku na početku reda):\n\n```\nerror: expected primary-expression before '.' token\n         .master.clk_speed = 400000,\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295515": {
+      "poster": "DariolaVremenskiPutnik",
+      "content": "@\"wLkR-74159\"#p295514 Ja sam uspio riješit čitanje i pisanje vremena uz pomoć ds1307 library-a u sklopu esp-idf-lib. Ne znam što točno uopće misle s ovim čitanjem/upisivanjem u registre.",
+      "votes": {
+        "upvoters": [
+          "wolfs_123 (wLkR-74159)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295516": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "Rekli na predavanju da ne smijemo koristiti library ovaj puta",
+      "votes": {
+        "upvoters": [
+          "DariolaVremenskiPutnik"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295517": {
+      "poster": "DariolaVremenskiPutnik",
+      "content": "@\"wLkR-74159\"#p295516 Legende, fala bogu pa u uputama piše sve bitno za labos...",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)",
+          "Spuk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "maverick",
+          "wolfs_123 (wLkR-74159)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295538": {
+      "poster": "maverick",
+      "content": "Mislim, smiju se koristiti one funkcije kao i2c_master_write_to_slave, i2c_write_bytes i to sta je u drivers/i2c.h file-u, zar ne?",
+      "votes": {
+        "upvoters": [
+          "wolfs_123 (wLkR-74159)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295539": {
+      "poster": "maverick",
+      "content": "@\"wLkR-74159\"#p295514 To se javlja jer je to konkretno za C, a ne C++. Stavi samo vrijednosti redom unešene, ali vidi kojim redom idu elementi u strukturi -> ..conf={21, 22, I2C_MODE_MASTER,..., { {FREQ}}, 0}",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295542": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "@\"maverick\"#p295538 To se smije koristiti\n\n@\"maverick\"#p295539 kako bi to napisao?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295543": {
+      "poster": "maverick",
+      "content": "![](assets/2022-05-11/00007.png)\n\nhttps://stackoverflow.com/questions/11516657/c-structure-initialization\n\nOvo sa stackoverflow-a je za incijalizaciju \"normalnih\" vrijednosti u strukturi, a slika za kako napraviti s unijom (s tim da samo trebas navest master struct, a ovu drugu strukturu u uniju zanemaris). Ugl, prvo idu te poredane vrijednosti pa onda unija koju napises:\n\n`....,\n\nGPIO_PULLUP_ENABLE,\n\n{\n\n    {frequency}\n\n},\n\n0 //clk flags\n\n};`",
+      "votes": {
+        "upvoters": [
+          "wolfs_123 (wLkR-74159)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295556": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "@\"maverick\"#p295543 tnx",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295558": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "Kad čitam sa ds1307, radim ovo\n\n`i2c_master_read_from_device(I2C_NUM_0, RTC_ADDR, buff, 7, 1000/portTICK_RATE_MS);`\n\nI onda `bcd2dec(buff[i])` mi ispisuje uredne brojeve (dobijem god, mj, dan, ...).\n\nOnda sljedeći `i2c_master_read_from_device` više stvar ne valja.\n\nZar moram nešto pisati nakon čitanja?\n\nI kad pišem vrijeme u ds1307, mogu li to ikako u jednoj liniji?\n\n`i2c_master_write_to_device(I2C_NUM_0, RTC_ADDR, buff, 7, 1000/portTICK_RATE_MS);`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295609": {
+      "poster": "Spuk",
+      "content": "Mi trebamo napisat funkcije da se moze postavljat i citat vrijeme jelda? Nista vise ne treba? Znaci cim mi pocne ispisivat vrijeme kako treba to je to.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295689": {
+      "poster": "Nocna_smjena",
+      "content": "Jel neko uspio ovo rijesiti bez koristenja vanjske biblioteke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295711": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "@\"wLkR-74159\"#p295558 jesi uspio ovo rijesiti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295717": {
+      "poster": "spartanac555",
+      "content": "Jesam jedini koji ce predat nes bezveze?",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)",
+          "Nocna_smjena",
+          "Zk6dO73 (burw0r)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295806": {
+      "poster": "wolfs_123 (wLkR-74159)",
+      "content": "@\"Peter Jordanson\"#p295711 nasao sam library i neki tutorial online, pa sam iz toga nesto iskombinirao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

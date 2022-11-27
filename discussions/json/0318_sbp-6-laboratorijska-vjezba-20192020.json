@@ -1,0 +1,178 @@
+{
+  "title": "[SBP] 6. laboratorijska vježba - 2019/2020",
+  "creator": "Paula13 (p13)",
+  "slug": "sbp-6-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Sustavi baza podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "10198": {
+      "poster": "Paula13 (p13)",
+      "content": "Procedura montirajUzTrans ili montirajBezTrans mi normalno baca pogrešku ako se npr. pokuša montirati alat koji je zauzet, ali kad se pozove java programa (zadaci 4. i 5.) onda mi ispiše da je alat montiran, iako ga ne namontira jer je već zauzet, ali uopće ne uhvati tu pogrešku od procedure, kao da mu se ne proslijedi, jel se dogodilo nekome slično nešto možda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10212": {
+      "poster": "tranquility",
+      "content": "@Paula13#10198 \n\nJa sam isto imala problema s pogreskama, ono sto mi ga je rijesilo je: `connection.setAutoCommit(false);`.\n\n Na zalost, cini mi se da nemamo isti problem (meni su procedure bacale pogresku, ali bi se u java programu alat svejedno pokusao montirati tj. nije bilo rollbacka), ali mozda nekom drugom pomogne.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10243": {
+      "poster": "TentationeM",
+      "content": "@Paula13#10198 Dodaj u kod `callableStatement.getMoreResults()`.",
+      "votes": {
+        "upvoters": [
+          "Paula13 (p13)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10246": {
+      "poster": "Paula13 (p13)",
+      "content": "@TentationeM#10243 hvala, sad radi!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164981": {
+      "poster": "adidas",
+      "content": "**Zadatak 2.1.**\n\n Ako se pokuša dodati alat na stroj,a on ima već popunjen kapacitet. Jel treba onda poništiti dodavanje n-torke u relaciju _montaža_?\n\n Ili je ideja da ostane baza u nekonzistentom stanju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165077": {
+      "poster": "AN5A",
+      "content": "@adidas#164981 Ja nisam poništavala promjene. Kasnije u petom zadatku treba koristiti JDBC transakciju uz proceduru montirajBezTrans tako da mi nije imalo smisla dodavati taj dio koda u proceduru jer će transakcija jednostavno poništiti promjene.",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165309": {
+      "poster": "Process",
+      "content": "Kako se catcha specifičan exception? Prvu naredbu procedure okružim try blockom, no onda mi bilo koji exception (tipa montiranje nepostojećeg alata na stroj) obrađuje na isti način kao da je alat zauzet.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166280": {
+      "poster": "DaL",
+      "content": "Je li netko imao problem da mu java nije hvatala error Kapacitet je popunjen, a ostale je?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166356": {
+      "poster": "AN5A",
+      "content": "@DaL#166280 Probaj pozvati `callableStatement.getMoreResults()` tri puta, meni je tek tada proradilo.",
+      "votes": {
+        "upvoters": [
+          "DaL"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166408": {
+      "poster": "Noname",
+      "content": "Kako dobijete ime constrainta koji je  prekršen u 2.1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166411": {
+      "poster": "burek",
+      "content": "@Noname#166408 Ja provjeravam sa \"IF ERROR_MESSAGE() LIKE '%ime_ogranicenja%' \" pa onda provjeriš za ograničenja pkMontaza i chkKapacitet",
+      "votes": {
+        "upvoters": [
+          "Noname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166413": {
+      "poster": "Noname",
+      "content": "@burek#166411 Hvala ti",
+      "votes": {
+        "upvoters": [
+          "burek"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

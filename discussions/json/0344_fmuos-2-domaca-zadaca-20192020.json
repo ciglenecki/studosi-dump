@@ -1,0 +1,701 @@
+{
+  "title": "[FMUOS] 2. domaća zadaća - 2019/2020",
+  "creator": "gatsby",
+  "slug": "fmuos-2-domaca-zadaca-20192020",
+  "tags": [
+    "FER",
+    "Formalne metode u oblikovanju sustava",
+    "Zadaće"
+  ],
+  "posts": {
+    "10199": {
+      "poster": "gatsby",
+      "content": "Je netko pokusao instalirati jpf za IntelliJ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10222": {
+      "poster": "NekocBraca",
+      "content": "@gatsby#10199 Ja sam sve iz terminala, nisam imao nikakvih problema, sve sto nama treba je ful jednostavno pa nisam siguran kolko se isplati mucit s integracijom s IDE.\n\nProjekt sam buildao s antom (`ant build`, za instalaciju `brew install ant`), namjestio sam one pathove kako su oni rekli i onda pokretao primjere s `bin/jpf src/examples/ConstViolation.jpf`. Imaj na umu da ako nesto mijenjas po .java filovima da onda trebas rebuildat projekt (izvrsava se u sekundu), kad mijenjas jpf naravno ne trebas rebuildat.\n\nI za onaj 4. dio di oni kazu da treba raditi cijeli projekt, ja sam samo onaj njihov kod ubacio pod examples u jpf-u i izvrtio sto je trebalo za zadatke, takodjer nisam imao nikakvih problema",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "gatsby",
+          "triespe"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10359": {
+      "poster": "InCogNiTo124",
+      "content": "Danas sam se malo pomucio da ne skidam netbeans/eclipse i staru obsolete javu vec koristim IntelliJ kojeg vec imam otprije instaliranog pa pisem korake za one koji bi to isto htjeli uciniti:\n\n1. Upaliti IntelliJ\n2. New project from VCS\n   - Link na repo, OK</LI>\n3. dolje u kutu promjeniti branch sa mastera na java-10-gradle\n4. File0>Project structure->JDK treba pisati barem 10, ja npr imam 11\n5. desno gradle tab, stisnuti jpf-core/jpf build/buildJars\n\nstvorit ce se zuti folder `build` i unutra milijun stvari, al nama je bitna samo RunJPF.jar\n\nZa racer example, ide se na Edit configurations (dropdown lijevo od zelenog |> gumba), gore lijevo veliki +, pa Jar application.\n```\nPath to JAR == jpf-core/build/RunJPF.jar    # mozda puna putanja\nProgram arguments == src/examples/Races.jpf\n```\n\nrun vraca sljedece:\n>! /home/msmetko/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/201.6668.121/jbr/bin/java -Dfile.encoding=UTF-8 -jar /home/msmetko/IdeaProjects/jpf-core/build/RunJPF.jar src/examples/Racer.jpf\n\nJavaPathfinder core system v8.0 (rev 7c2f6254ff2689f26e64d5652629b7d25fcf6092) - (C) 2005-2014 United States Government. All rights reserved.\n>\n>\n>====================================================== system under test\n\nRacer.main()\n\n>====================================================== search started: 4/16/20, 4:34 PM\n\n[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.getUnsafe()Lsun/misc/Unsafe;\n\n10\n\n10\n\n>====================================================== error 1\n\ngov.nasa.jpf.listener.PreciseRaceDetector\n\nrace for field Racer@196.d\n\n  main at Racer.main(Racer.java:35)\n\n\t\t\"int c = 420 / racer.d;               // (4)\"  READ:  getfield Racer.d\n\n  Thread-1 at Racer.run(Racer.java:26)\n\n\t\t\"d = 0;                               // (2)\"  WRITE: putfield Racer.d\n\n>\n>====================================================== trace #1\n\n------------------------------------------------------ transition #0 thread: 0\n\ngov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:\"ROOT\" ,1/1,isCascaded:false}\n\n      [3936 insn w/o sources]\n\n  Racer.java:30                  : Racer racer = new Racer();\n\n  Racer.java:19                  : public class Racer implements Runnable {\n\n      [1 insn w/o sources]\n\n  Racer.java:21                  : int d = 42;\n\n  Racer.java:30                  : Racer racer = new Racer();\n\n  Racer.java:31                  : Thread t = new Thread(racer);\n\n      [131 insn w/o sources]\n\n  Racer.java:31                  : Thread t = new Thread(racer);\n\n  Racer.java:32                  : t.start();\n\n      [1 insn w/o sources]\n\n------------------------------------------------------ transition #1 thread: 0\n\ngov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:\"START\" ,1/2,isCascaded:false}\n\n      [2 insn w/o sources]\n\n  Racer.java:34                  : doSomething(1000);                   // (3)\n\n  Racer.java:41                  : try { Thread.sleep(n); } catch (InterruptedException ix) {}\n\n      [4 insn w/o sources]\n\n------------------------------------------------------ transition #2 thread: 1\n\ngov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:\"SLEEP\" ,2/2,isCascaded:false}\n\n      [1 insn w/o sources]\n\n  Racer.java:1                   : /*\n\n  Racer.java:25                  : doSomething(1001);                   // (1)\n\n  Racer.java:41                  : try { Thread.sleep(n); } catch (InterruptedException ix) {}\n\n      [4 insn w/o sources]\n\n------------------------------------------------------ transition #3 thread: 1\n\ngov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:\"SLEEP\" ,2/2,isCascaded:false}\n\n      [3 insn w/o sources]\n\n  Racer.java:41                  : try { Thread.sleep(n); } catch (InterruptedException ix) {}\n\n  Racer.java:42                  : }\n\n  Racer.java:26                  : d = 0;                               // (2)\n\n------------------------------------------------------ transition #4 thread: 0\n\ngov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:\"SHARED_OBJECT\" ,1/2,isCascaded:false}\n\n      [3 insn w/o sources]\n\n  Racer.java:41                  : try { Thread.sleep(n); } catch (InterruptedException ix) {}\n\n  Racer.java:42                  : }\n\n  Racer.java:35                  : int c = 420 / racer.d;               // (4)\n\n------------------------------------------------------ transition #5 thread: 0\n\ngov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:\"SHARED_OBJECT\" ,1/2,isCascaded:false}\n\n  Racer.java:35                  : int c = 420 / racer.d;               // (4)\n\n>====================================================== results\n\nerror #1: gov.nasa.jpf.listener.PreciseRaceDetector \"race for field Racer@196.d   main at Racer.main(Ra...\"\n\n>====================================================== statistics\n\nelapsed time:       00:00:00\n\nstates:             new=9,visited=1,backtracked=4,end=2\n\nsearch:             maxDepth=6,constraints=0\n\nchoice generators:  thread=8 (signal=0,lock=1,sharedRef=2,threadApi=3,reschedule=2), data=0\n\nheap:               new=414,released=35,maxLive=407,gcCycles=7\n\ninstructions:       4189\n\nmax memory:         110MB\n\nloaded code:        classes=71,methods=1573\n\n>====================================================== search finished: 4/16/20, 4:34 PM\n\n>Process finished with exit code 0\n\n\\:))",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "Buraz",
+          "Juren",
+          "Kushim",
+          "Ledeni56 (Jusuf)",
+          "Miki",
+          "ReyKenobi",
+          "Trolololica",
+          "ardi (sprut)",
+          "basic919 (byk)",
+          "data",
+          "luba",
+          "member",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "neytiri",
+          "pero122 (teslaFan)",
+          "plop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10887": {
+      "poster": "Bobicki",
+      "content": "@InCogNiTo124#10359 Ja sam nakon pokretanja buildJars, koji si spomenuo u 5. koraku, morao obrisati SharedSecrets.java klasu, jer je javljalo error pri buildu. Brisanje te klase se spominje i u njihovim uputama. Uz to sam morao napraviti promjene u kodu gdje se referencira na tu klasu, odnosno:\n- u klasi AnnotationType.java sam liniju 50\n\n`AnnotationType at = SharedSecrets.getJavaLangAccess().getAnnotationType(annotationClass);`\n\npromijenio u:\n\n`AnnotationType at = null;`\n\ni zakomentirao liniju 95\n\n`SharedSecrets.getJavaLangAccess().setAnnotationType(annoCls, this);`\n\n- u klasi System.java sam zakomentirao liniju 60\n\n`SharedSecrets.setJavaLangAccess( createJavaLangAccess());`\n\nNakon toga sam ponovno pokrenuo buildJars i na kraju uspješno pokrenuo Racer.jpf kako si napisao gore (za path sam morao dati punu putanju). Btw, napisao si Races.jpf, a zove se Racer.jpf, da se netko ne bi čudio zašto mu se ne želi pokrenuti :D. Nadam se da nisam pogriješio ovim mojim postupkom.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Kushim",
+          "Ledeni56 (Jusuf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10894": {
+      "poster": "InCogNiTo124",
+      "content": "@Bobicki#10887 ja sam napravio tocno 0 tih stvari koje si ti :D ali okej bitno da si slozio\n\nBtw primjer Rand.java ne radi uopce i mislim da je do buga u `jpf-core` /shrug al svi ostali rade",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11051": {
+      "poster": "gatsby",
+      "content": "Ima li netko da mu u NetBeansu ne prolazi instalacija projekta jpf-aprop?",
+      "votes": {
+        "upvoters": [
+          "Jim",
+          "bebich"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11280": {
+      "poster": "Stark",
+      "content": "Tema za pitanja u vezi druge domaće zadaće",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11586": {
+      "poster": "gama",
+      "content": "**3. dio**\n\nJe li netko možda imao ovu grešku prilikom pokretanja build.xml u jpf-aprop?\n\n![](assets/2020-04-19/00057.png)",
+      "votes": {
+        "upvoters": [
+          "Jim"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11833": {
+      "poster": "gatsby",
+      "content": "Je netko riješio zadatak 1.8.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12139": {
+      "poster": "Miki",
+      "content": "@InCogNiTo124#10359 \n\nKako si onda instalirao jpf-aprop za 3. zadatak?",
+      "votes": {
+        "upvoters": [
+          "Bobicki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12217": {
+      "poster": "YenOfVen",
+      "content": "@gatsby#11833 pogledaj si razliku između notify() i notifyAll() metoda, mislim da je tu kvaka",
+      "votes": {
+        "upvoters": [
+          "gatsby"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12221": {
+      "poster": "InCogNiTo124",
+      "content": "@Miki#12139 u starim uputama koje sam nasao nedostaje kljucna informacija da se pobrise redak `package fv;` osim toga mislim da se ne sjecam da sam ista drugo mjenjao",
+      "votes": {
+        "upvoters": [
+          "Bobicki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12241": {
+      "poster": "dd14",
+      "content": "@gama#11586 site.properties ti ne valja, nisi zadao dobar put do jpf-core",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12295": {
+      "poster": "termodinamika",
+      "content": "@NekocBraca#10222 mozes napisat koje si pathove namjestio i kako ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12296": {
+      "poster": "termodinamika",
+      "content": "[javac] /Users/*/jpf-aprop/src/main/gov/nasa/jpf/aprop/tools/MethodTester.java:34: error: cannot access Test\n    [javac] import gov.nasa.jpf.annotation.Test;\n    [javac]                               ^\n    [javac]   bad class file: /Users/*/jpf-aprop/build/annotations/gov/nasa/jpf/annotation/Test.class\n    [javac]     class file has wrong version 57.0, should be 52.0\n    [javac]     Please remove or make sure it appears in the correct subdirectory of the classpath.\njel netko dobivao ovaj error ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12299": {
+      "poster": "gama",
+      "content": "@dd14#12241 Ma jesam, zato mi nije ni jasno jer mi uredno radi za jpf-core, apsurdna je greška, ali nema veze",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12308": {
+      "poster": "NekocBraca",
+      "content": "@termodinamika#12295 jel koristis windowse ili si na unix/linux? Jer ja sam namjestao na unixu, a mislim da se za windowse pathovi podesavaju drugacije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12432": {
+      "poster": "Jim",
+      "content": "@gama#12299 jel mozes napisati kako si to rjesio? ja sam poludio i odustao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12439": {
+      "poster": "gama",
+      "content": "@Jim#12432  također, pa sam s frendom gledala za ostale zadatke jer je njemu bez problema prošlo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12645": {
+      "poster": "Stark",
+      "content": "Što je zaključak u 4.5?\n\nIsta greška više puta? Da li se isti error na različitim mjestima računa kao više grešaka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13335": {
+      "poster": "obrascic",
+      "content": "@InCogNiTo124#10894 \n\nu VM options stavi:\n\n**--add-opens java.base/jdk.internal.misc=ALL-UNNAMED -Dio.netty.tryReflectionSetAccessible=true**",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13457": {
+      "poster": "bebich",
+      "content": "jel ima neko problem da dok importa projekt u netbeans i builda, da ima errore u src/main i src/tests? ne prepoznaje mi neke pakete",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13460": {
+      "poster": "bebich",
+      "content": "nemam ni primjere koje bi trebal imat (ConstViolation, ContractViolation, itd.)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13548": {
+      "poster": "tranquility",
+      "content": "@bebich#13460 Imam iste probleme, jesi našao rješenje?\n\nEDIT: Uvijek skužim di je problem iste sekunde kad postam na forum 🙄\n\nIz nekog razloga mapa examples se ne učita pod Projects tab, ali možeš ju nać pod Files tabom i od tamo runnat programe",
+      "votes": {
+        "upvoters": [
+          "Franksta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13560": {
+      "poster": "Red_Baron",
+      "content": "@bebich#13457 Obriši sve i prilikom importa će ti u jednom koraku ponuditi koje foldere da učita - s gornje strane bit će source fonderi, dolje će biti test folderi. Gore u source foldere samo dodaj i examples.\n\nNa ove errore se ne zamaraj previše, radi bez toga.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13781": {
+      "poster": "pero122 (teslaFan)",
+      "content": "@obrascic#13335 \n\nBaca mi error :\n\nError: Could not find or load main class –add-opens\n\nCaused by: java.lang.ClassNotFoundException: –add-opens",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13810": {
+      "poster": "Ellie",
+      "content": "Koliko su točna rješenja s materijala? Mozemo li ih koristiti za provjeravanje točnosti svojih rješenja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13812": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@InCogNiTo124#10359 Nadodat ću na ovo da ak nekome ne ispisuje cijeli trace na tipa Javi 14, nek prebaci na nižu Javu (npr. 11, to radi) - meni na 13 i 14 ne radi već izbacuje sljedeće:\n\n```\n====================================================== system under test\nRacer.main()\n\n====================================================== search started: 23/04/2020, 23:37\n[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z\n[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.fieldOffset(Ljava/lang/reflect/Field;)I\n[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.compareAndSwapInt(Ljava/lang/Object;JII)Z\n[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.compareAndSwapLong(Ljava/lang/Object;JJJ)Z\n[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.putOrderedInt(Ljava/lang/Object;JI)V\n[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.putOrderedLong(Ljava/lang/Object;JJ)V\n[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.putOrderedObject(Ljava/lang/Object;JLjava/lang/Object;)V\n[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.getUnsafe()Lsun/misc/Unsafe;\n[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.unalignedAccess0()Z\n[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.isBigEndian0()Z\n[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.addressSize0()I\n\n====================================================== error 1\ngov.nasa.jpf.vm.NoUncaughtExceptionsProperty\njava.lang.UnsatisfiedLinkError: cannot find native jdk.internal.misc.Unsafe.getReferenceVolatile\n\tat jdk.internal.misc.Unsafe.getReferenceVolatile(gov.nasa.jpf.vm.JPF_jdk_internal_misc_Unsafe)\n\tat jdk.internal.misc.Unsafe.getReferenceAcquire(jdk/internal/misc/Unsafe.java:2044)\n\tat java.util.concurrent.ConcurrentHashMap.tabAt(java/util/concurrent/ConcurrentHashMap.java:760)\n\tat java.util.concurrent.ConcurrentHashMap.putVal(java/util/concurrent/ConcurrentHashMap.java:1018)\n\tat java.util.concurrent.ConcurrentHashMap.put(java/util/concurrent/ConcurrentHashMap.java:1006)\n\tat java.util.Properties.put(java/util/Properties.java:1331)\n\tat java.lang.System.<clinit>(java/lang/System.java:61)\n\n\n====================================================== trace #1\n------------------------------------------------------ transition #0 thread: 0\ngov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:\"ROOT\" ,1/1,isCascaded:false}\n      [1989 insn w/o sources]\n\n====================================================== results\nerror #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty \"java.lang.UnsatisfiedLinkError: cannot find native...\"\n\n====================================================== statistics\nelapsed time:       00:00:00\nstates:             new=1,visited=0,backtracked=0,end=0\nsearch:             maxDepth=1,constraints=0\nchoice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=0\nheap:               new=416,released=0,maxLive=0,gcCycles=0\ninstructions:       1989\nmax memory:         508MB\nloaded code:        classes=76,methods=1888\n\n====================================================== search finished: 23/04/2020, 23:37\n```\n\nImam Win10 1903, možda se događa i na drugim sustavima.",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13828": {
+      "poster": "petar19",
+      "content": "netko riješio 1.8? Nije mi jasno kako dolazi do deadlocka, u traceu izvođenja se vidi sljedeće:\n\nP1.put() -> P1.put() -> buffer je pun -> P1.wait() -> P2.wait() -> P3.wait() -> P4.wait() -> C1.get() -> C1.notify() -> C1.get() -> C1.notify() -> C1.wait() -> Deadlock.\n\nZasto je tu doslo do deadlocka?",
+      "votes": {
+        "upvoters": [
+          "Franksta",
+          "Paula13 (p13)",
+          "triespe"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13852": {
+      "poster": "Bananaking",
+      "content": "Jel imao netko nešto slično? U fv postoji Verifikacija.class\n\n![](assets/2020-04-24/00000.png)",
+      "votes": {
+        "upvoters": [
+          "ALovelace"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13855": {
+      "poster": "InCogNiTo124",
+      "content": "@Bananaking#13852 u staroj inacici uputa postojala je kljucna recenica da se makne `package fv;` linija",
+      "votes": {
+        "upvoters": [
+          "ALovelace",
+          "Jimothy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13875": {
+      "poster": "Whatsername",
+      "content": "@Bananaking#13852 Meni je proradilo kad sam zakomentirala `package fv;` i ponovno pokrenula Clean and Build",
+      "votes": {
+        "upvoters": [
+          "ALovelace"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13876": {
+      "poster": "Whatsername",
+      "content": "@Bananaking#13852\n\nAli mislim da je ispravnije ostaviti `package fv;`, a u .jpf staviti target = fv.Verifikacija pa opet Clean and Build (to isto radi)",
+      "votes": {
+        "upvoters": [
+          "tranquility",
+          "zeleni_caj123"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13972": {
+      "poster": "triespe",
+      "content": "@petar19#13828 Da, trace je jako čudan i ja ne vidim kako objašnjava deadlock. Consumer je dvaput pozvao notify() i morao je probuditi dva producera, a prema trace-u nastane deadlock čim consumer pročita sve poruke. Što se dogodi sa dva probuđena producera nemam pojma.\n\nDa stvar bude još apsurdnija, u samom kodu BoundedBuffer.java piše komentar:  \"Note there need to be at least 2x buffer_size instances of either producers or consumers in order to produce the deadlock\", a JPF reporta deadlock i kada staviš argumente npr. BUFFER_SIZE = 10, N_PRODUCERS = 2, N_CONSUMERS = 1.\n\nAko netko može ovo objasniti kako može nastati deadlock s argumentima 10,2,1 to bi bilo super, ja sam lagano izludio pokušavajući skužiti ovo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13976": {
+      "poster": "Bobicki",
+      "content": "Dobiva li netko ovaj error u 4.5. umjesto onoga na materijalima?\n```\ngov.nasa.jpf.vm.NoUncaughtExceptionsProperty\njava.lang.AssertionError\n\tat fv.Verifikacija.main(fv/Verifikacija.java:23)\n```\nKad u 4.5. postavim onaj search.multiple_erros = true, opet dobivam isti taj error (samo jedamput). Da nisam nešto zeznuo u konfiguraciji ili je i drugima tako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13986": {
+      "poster": "Bobicki",
+      "content": "@Bobicki#13976 Nisam imao kreiran site.properties file. Nakon što sam ga napravio i dodao ono sve što se traži, radi sve i daje rezultate kao na materijalima.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13995": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@InCogNiTo124#10359 kako si dodao Verify u inteliju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13997": {
+      "poster": "InCogNiTo124",
+      "content": "@johndoe12#13995 mislis plugin? Nisam to dodao uopce, vec sam samo radio nove konfiguracije slicne onom Runner",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14013": {
+      "poster": "EthanCarter",
+      "content": "> Također, navedite put do direktorija s međukodom razreda koji se kao primjeri provjeravaju uz pomoć jpf-aprop.\n  \n  Da li se tu misli na classpath ili sourcepath?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14018": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@EthanCarter#14013 Međukod ti je sadržan u .class datotekama, tako da je to classpath.",
+      "votes": {
+        "upvoters": [
+          "EthanCarter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14052": {
+      "poster": "caffeine",
+      "content": "**1.4.** Kojim mehanizmom u Javi su ostvareni ti sudionici?\n\nSemafor, monitor?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14057": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "kako podesiti jpf-aprop da radi u inteliju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14072": {
+      "poster": "Bobicki",
+      "content": "@johndoe12#14057 Ja sam kreirao novi projekt na lokaciji tog raspakiranog jpf-aprop projekta i dalje sve sličnim postupkom kao i za jpf-core, po postupku kakav je @InCogNiTo124 napisao. Za Path to JAR stavi onaj RunJPF.jar iz jpf-core.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14075": {
+      "poster": "InCogNiTo124",
+      "content": "@Bobicki#14072 bitna info, ja aprop nisam instaliro preko gradlea vec preko anta, a u razgovoru s kolegom sam shvatio da nekima plugin za ant nije aktiviran",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14094": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@caffeine#14052 Ne, sudionici konkretno su ostvareni nasljeđivanjem `Thread`. Oni su sinkronizirani sa semaforima pomoću `wait()` i `notify()`.",
+      "votes": {
+        "upvoters": [
+          "caffeine"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14174": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@triespe#13972 Well, ovako sam ja to skužio. Bitno je da su ti veličine međuspremnika, broj proizvođača i broj potrošača u nekoj ravnoteži, ali mislim da ne postoji konfiguracija koja **ne bi** proizvela potpuni zastoj. Evo, pokazat ću ti kako doći do potpunog zastoja i za 10, 2, 1:\n\n- inicijaliziraj prazni međuspremnik, šikni sve dretve da rade\n- potrošač šalje `get()`, nema ničega u spremniku - okej, `wait()`\n- proizvođač šalje `put()`, okej, stavi stvar, zove `notify()`\n- budi se proizvođač, šalje `put()`, okej, stavi stvar, zove `notify()`\n- ponavljaš do punog međuspremnika, i zadnji proizvođač zove `notify()`\n- probudi se **proizvođač**, vidi da je spremnik pun, zove `wait()`\n\nI sad imaš stanje gdje ti potrošač čeka još otpočetka, radi nedeterminizma nikad nije notifyjan, a jedini proizvođač koji je mogao poslati `notify()` čeka tuđi `notify()` koji nikad neće stići! Problem je što više ni jedan proizvođač ne može pozvati `notify()` jer će svi zapeti u `wait()`, a nijedan potrošač ne može pozvati `get()` jer čekaju `notify()`.\n\nDakle, ova situacija ti je moguća neovisno o brojkama s ovakvim sustavom. Kako izbjeći to? Well, imaš `notifyAll()`, ali isto tako umjesto `wait()` možeš samo pozvati `notify()`, ali time si \"ubio\" proizvod proizvođača (slično kao u 1. labosu iz OS-a gdje ti se ne inkrementira varijabla jer si inkrementirao staru kopiju).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14182": {
+      "poster": "triespe",
+      "content": "@micho#14174 Hvala na primjeru, skužio sam te sve osim ovog na kraju da umjesto wait možeš pozvati notify, ali čini mi se da to nije toliko bitno.\n\nA jesi li skužio trace koji izbaci jpf, meni se za (2,4,1) činilo da trace kaže da je jedan proizvođač stavio 2 znaka, drugi proizvođač otišao direktno u wait i onda dođe potrošač, pokupi 2 znaka i ode u wait. I tu JPF kaže da je nastupio deadlock. Pitanje je koga je potrošač onda probudio kad je pokupio ova 2 znaka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14210": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@triespe#14182 Mislim da ti se to događa jer nijedan proizvođač nije pozvao `wait()` prije nego što je potrošač pozvao `notify()`, i onda se u tom slučaju `notify()` ignorira. Dakle sljedeći scenarij:\n\n- P1 `put()`, `notify()`\n- P1 `put()`, `notify()`\n- C1 `get()`, `notify()`\n- C1 `get()`, `notify()`\n\nNitko nije u `wait()` i nitko ne može pozvati `notify()`, deadlock\n\nOno što meni nije jasno zašto P1 može dva puta za redom staviti nešto i kako C1 može 2 puta za redom skinuti nešto (jer `notify()` ne može notifyat sebe koliko čitam na netu).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

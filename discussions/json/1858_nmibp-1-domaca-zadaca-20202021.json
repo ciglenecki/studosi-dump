@@ -1,0 +1,466 @@
+{
+  "title": "[NMIBP] 1. domaća zadaća - 2020/2021",
+  "creator": "moukie",
+  "slug": "nmibp-1-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Napredni modeli i baze podataka",
+    "Zadaće"
+  ],
+  "posts": {
+    "80752": {
+      "poster": "moukie",
+      "content": "Evo teme za 1. dz",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80753": {
+      "poster": "moukie",
+      "content": "Zna li tko kako formulirati ovaj uvjet?\n\n![](assets/2020-10-16/00016.png)",
+      "votes": {
+        "upvoters": [
+          "gamigugi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80772": {
+      "poster": "emrys (Scofield)",
+      "content": "@moukie#80753 zvuči mi kao levenshteinova udaljenost iz prvog predavanja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80773": {
+      "poster": "moukie",
+      "content": "je da ali kako gledati levenshteinova za sve podstringove\n\nnezz ako me kuzis",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80809": {
+      "poster": "emrys (Scofield)",
+      "content": "@moukie#80773 aha, nisam to primijetio; trenutno mi baš ne pada na pamet kako bih to riješio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80882": {
+      "poster": "Amon",
+      "content": "@emrys#80809 Ja sam jedno sat vremena googlao i razmišljao kako to napraviti (jer mi se problem čini daleko od trivijalnog kad moraš gledat substringove) i onda sam odustao i samo sam stavio u WHERE dio title LIKE '%stone%' ili tak nešto i našao mi je sve (svi filmovi koji se traže su flintstones pa će to proći)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80988": {
+      "poster": "DuckItUp",
+      "content": "je li imao netko ovaj zadatak ili da vidi problem u mojem upitu?\n\nono kaj dobivam mi se čini ok, a nemam pojma kaj edgar misli pod uneven row count\n>! ![](assets/2020-10-17/00009.png)\n\n>![](assets/2020-10-17/00010.png)",
+      "votes": {
+        "upvoters": [
+          "BrankoBrancin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81009": {
+      "poster": "mpetrun",
+      "content": "@moukie#80773 \n\nOvo bi trebalo funkcionirati\n```\ncross join lateral regexp_split_to_table(film.title,  '\\y') r(word) \nwhere levenshtein(lower(word),  'flintstons') <= 2\n```",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81064": {
+      "poster": "behappy98",
+      "content": "Jel zna netko ovaj?\n\nIspisati godinu (datuma rental.return_date) i naslov filma te ukupan broj iznajmljivanja primjeraka filma u toj godini. Dodatno ispisati rang filma obzirom na ukupan broj iznajmljivanja u toj godini (primijetite da u svakoj godini postoji film s rangom 1).\n\nDonja tablica ilustrira izgled rezultata",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81175": {
+      "poster": "Ego",
+      "content": "@moukie#80753 Jesi li možda uspio/la riješiti dio s kumulativnim brojem iznajmljivanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81230": {
+      "poster": "Amon",
+      "content": "@Ego#81175 Čisto da znaš, mora biti SUM(COUNT(\\*)) pa onda kasnije ide onaj dio sa okvirom\n\nJa sam cijelo vrijeme bio stavljao COUNT(\\*) i nikako mi nije dobro ispadalo i nikako se nisam mogao sjetiti da se to može i sumirati",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81236": {
+      "poster": "Ego",
+      "content": "@Amon#81230 kako si uspio napraviti ovo \"SUM(COUNT(*))\"? Zar nije da se agregatne funkcije ne mogu ugnježđivati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81242": {
+      "poster": "Amon",
+      "content": "@Ego#81236 Ovo se smije napraviti, i to smo i na bazama radili bili, doduše dugo nisam slušao baze pa sam zab na to",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81364": {
+      "poster": "gamigugi",
+      "content": "Evo moji zadaci ak nekom pomogne. Prvi nisam znao tocno pa sam mali workaround napravio (hvala @Amon).\n\n![](assets/2020-10-18/00009.png)\n\n![](assets/2020-10-18/00010.png)",
+      "votes": {
+        "upvoters": [
+          "keykey",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81387": {
+      "poster": "moukie",
+      "content": "@Ego#81236 mozes agregatnu funkciju koristiti u onim agretnim fjama od prozora\n\ntj. onaj over dio ti se izvrsava zadnjim\n\nugl mozes to radit\n\njer ti se agretane funkcije(one obicne) izracunavaju prije prozorski funkcija pa ih mozes te rezultate koristit u njima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81546": {
+      "poster": "suchno",
+      "content": "@behappy98#81064 \n\nMeni ti je zadatak ovakav:\n\nIspisati godinu (datuma rental.rental_date) i naslov filma te iznos zarađen iznajmljivanjem primjeraka filma u toj godini. Dodatno ispisati rang filma obzirom na iznos zarade u toj godini (primijetite da u svakoj godini postoji film s rangom 1).\n\nU obzir uzeti samo filmove koji bilo u nazivu bilo u opisu sadrže riječ čiji je normalizirani oblik 'happi'. Donja tablica ilustrira izgled rezultata.\n\nI ovo je rjesenje, mislim da bis po ovome mogao to samo prepravit za svoje potrebe.\n\n![](assets/2020-10-18/00027.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81878": {
+      "poster": "BrankoBrancin",
+      "content": "@DuckItUp#80988 Jesi možda skužio u čemu je problem?\n\nEDIT: evo taman sam uspio nekako napikat rješenje koje radi\n\n```sql\nselect distinct \ntitle as filmTitle,\nextract(year from return_date) as year,\nsum(amount) over(partition by title, extract(year from return_date)) as totAmntYear,\nsum(amount) over(partition by title order by extract(year from return_date)) as totAmntThisAndPrevYear\nfrom payment \njoin rental on payment.rental_id = rental.rental_id\nright join inventory on rental.inventory_id = inventory.inventory_id\nright join film on film.film_id = inventory.film_id\nwhere fulltext @@ to_TSQuery('empir | happi')\ngroup by year, filmTitle, amount, return_date\n```",
+      "votes": {
+        "upvoters": [
+          "DuckItUp"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82295": {
+      "poster": "saki23",
+      "content": "Zna li možda netko ovaj, ja očito nešto krivo radim :P \n\n![](assets/2020-10-20/00021.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82318": {
+      "poster": "harry_pointer",
+      "content": "@saki23#82295 ![](assets/2020-10-20/00027.png)",
+      "votes": {
+        "upvoters": [
+          "saki23"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82328": {
+      "poster": "aKul (Vili Beroš)",
+      "content": "Jel imao neko ovaj?\n\n![](assets/2020-10-20/00030.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82627": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "Ne mogu skužit gdje je greška 🤨\n\n![](assets/2020-10-20/00051.png)\n\n![](assets/2020-10-20/00052.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82647": {
+      "poster": "DaL",
+      "content": "@-Ivan-#82627 probaj stavit grupiranje po film_id prvo",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82654": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "@DaL#82647 Iss kakva greška 😖\n\nTenkju",
+      "votes": {
+        "upvoters": [
+          "DaL"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82656": {
+      "poster": "narval13068 (Dima)",
+      "content": "![](assets/2020-10-20/00053.png)\n\n![](assets/2020-10-20/00054.png)\n\nJel ima itko ideju sto je izostavljeno/ gdje je greska\n\n(Ovo u primjeru je pokriveno izgleda samo sta znaci ovaj error...)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82660": {
+      "poster": "DaL",
+      "content": "@narval13068#82656 nemoj spajati paymet i rental sa natural join buduci da oba sadrze staff_id koji ne mora nuzno biti isti...koristi obicni join po rental_id-u",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82662": {
+      "poster": "narval13068 (Dima)",
+      "content": "@DaL#82660 Najss G tnx",
+      "votes": {
+        "upvoters": [
+          "DaL"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82678": {
+      "poster": "stoper5",
+      "content": "Zna mozda netko zas dobim uneven row count? ![](assets/2020-10-20/00056.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82854": {
+      "poster": "kivu",
+      "content": "![](assets/2020-10-21/00012.png)\n\nzna li netko ovaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82907": {
+      "poster": "fimm",
+      "content": "@kivu#82854 \n\nImala takav, ovo mi je radilo:\n```\nCREATE TEMP TABLE cats\n(categoryname varchar(25));\nINSERT INTO cats VALUES ( 'Comedy');\nINSERT INTO cats VALUES ( 'Horror');\nINSERT INTO cats VALUES ( 'Sports');\n\nSELECT *\nFROM crosstab($$SELECT last_name as employee, category.name AS cat, COUNT(*)\nFROM staff RIGHT JOIN rental USING(staff_id) LEFT JOIN inventory USING(inventory_id)\n              LEFT JOIN film USING(film_id) LEFT JOIN film_category USING(film_id) LEFT JOIN category USING(category_id)\nWHERE category.name IN ('Comedy', 'Horror', 'Sports') AND (to_TSVector('english', film.title) @@ to_TSQuery('english', 'empir | shark')\n                                                           OR to_TSVector('english', film.description) @@ to_TSQuery('english', 'empir | shark'))\nGROUP BY staff_id, cat, staff.last_name\nORDER BY employee, cat$$, 'SELECT categoryname FROM cats ORDER BY categoryname')\nAS pivotTable (employee VARCHAR(45), comedy VARCHAR(25), horror VARCHAR(25), sports VARCHAR(25))\nORDER BY employee\n```",
+      "votes": {
+        "upvoters": [
+          "kivu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82940": {
+      "poster": "Rudee",
+      "content": "Ima možda netko ovaj?\n\n![](assets/2020-10-21/00023.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82957": {
+      "poster": "Rudee",
+      "content": "Evo možda nekome pomogne kod do kojeg sam došo prije odstajanja.\n\n```sql\nCREATE TEMP TABLE country_categories (country_category text);\nINSERT INTO country_categories VALUES ('China'), ('India'), ('Italy');\n\nSELECT * FROM crosstab('SELECT film.title, country, COUNT(*)\nFROM rental NATURAL JOIN customer NATURAL JOIN address NATURAL JOIN city\nNATURAL JOIN country NATURAL JOIN inventory NATURAL JOIN film\nWHERE to_tsvector(film.title) @@ to_tsquery(''english'', ''shark | explor'')\nOR to_tsvector(film.description) @@ to_tsquery(''english'', ''shark | explor'')\nAND country IN (''China'', ''India'', ''Italy'')\nGROUP BY film.title, country.country', 'SELECT country_category as country from country_categories')\nAS pivottable(title varchar(255), china int, india int, italy int)\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82964": {
+      "poster": "lara",
+      "content": "https://e.pcloud.link/publink/show?code=kZzuaZr333gDFjvlX4MT9lDiMzaHxVUuvV\n\nrješenja nekih zadataka za 1. dz",
+      "votes": {
+        "upvoters": [
+          "Tk123"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83046": {
+      "poster": "Rudee",
+      "content": "![](assets/2020-10-22/00001.png)\n\nEvo za sljedeću generaciju.\n```\nCREATE TEMP TABLE country_categories (country_category text);\nINSERT INTO country_categories VALUES ('China'), ('India'), ('Italy');\n\nSELECT * FROM crosstab('SELECT film.title, country, COUNT(*)\nFROM rental INNER JOIN customer ON rental.customer_id = customer.customer_id\nINNER JOIN address ON customer.address_id = address.address_id\nINNER JOIN city ON address.city_id = city.city_id\nINNER JOIN country ON city.country_id = country.country_id\nINNER JOIN inventory ON rental.inventory_id = inventory.inventory_id\nINNER JOIN film ON inventory.film_id = film.film_id\nWHERE to_tsvector(film.title) @@ to_tsquery(''english'', ''shark | explor'')\nOR to_tsvector(film.description) @@ to_tsquery(''english'', ''shark | explor'')\nAND country IN (''China'', ''India'', ''Italy'')\nGROUP BY film.title, country.country', 'SELECT country_category as country from country_categories')\nAS pivottable(title varchar(255), china int, india int, italy int)\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

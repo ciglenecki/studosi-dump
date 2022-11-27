@@ -1,0 +1,464 @@
+{
+  "title": "[OER] 2. domaća zadaća - 2021/2022",
+  "creator": "Tootha",
+  "slug": "oer-2-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Optimiranje evolucijskim računanjem",
+    "Zadaće"
+  ],
+  "posts": {
+    "246080": {
+      "poster": "Tootha",
+      "content": "Je li itko rješavao 4. zadatak u domaćoj zadaći? Kako ste modelirali funkciju pogreške i njen gradijent?",
+      "votes": {
+        "upvoters": [
+          "luka6 (ugrijaniRadijator)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246417": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "a treci zadatak, kako modelirati funkciju ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246719": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "Pro tip kolege : pogledajte \"gradient descent\" na wikipediji, imate funkcije i differencijale za rjesavanje linearnih + nelinearnih sustava",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246720": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@\"DnkCkv\"#p246719 funkcije i gradijente*",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246749": {
+      "poster": "Tootha",
+      "content": "@\"Tompa007\"#p246417 Ja sam to modelirao kao sumu kvadratne pogreške za svaki primjer iz dataseta. I onda sam tu funkciju nastojao minimizirati. Za gradijent sam samo parcijalno derivirao po koeficijentima koje tražim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246750": {
+      "poster": "Retard00",
+      "content": "Jel se u ovoj vježbi sve rješava pomoću gradijentnog spusta?\n\nKak bi u 3. i 4. zadataku to nad matricom trebo radit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246751": {
+      "poster": "Tootha",
+      "content": "Pro tip: Gradijent se smije normalizarati što vam može olakšati život u 4. zadatku jer se dobivaju prilično velike vrijednosti gradijenta, pa takvi gradijenti mogu zakomplicirati računanje optimalnog pomaka.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246752": {
+      "poster": "Tootha",
+      "content": "@\"Retard00\"#p246750 Sve se rješava gradijentnim spustom. Nije mi jasno na koju matricu se referiras, ali ako mislis na onu  koju parsiras iz file-a, ja sam tu matricu rascijepao na vektore koji su mi predstavljali dataset, odnosno svaki vektor jedan primjer i onda sam grešku i gradijent odredio sumiranjem grešaka tih individualnih vektora.",
+      "votes": {
+        "upvoters": [
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246756": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Jel za 4 treba onda napravit Jacobian matricu koja ce biti derivacija po koeficijentima i nju pomnoziti sa (rezultatom kojim izracunamo minus pravi rezulat) ? \n\nNije mi pre jasno kako doci do ovoga ako je ovo tocno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246763": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Tootha\"#p246751 Ovo nije dobro raditi jer otežava pronalaženje minimuma, bolje clippati ili ga uvijek dijeliti s konstantom većom od 1, na taj način utjecaj gradijenta nije ovisan o normi težina",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246890": {
+      "poster": "blast",
+      "content": "jesam ja nest krivo implementirao za drugi zadatak. dobijem jako male korake. i rjesenje mi ispadne cca 15, 2. A minimum je u 1, 2. To je kao ona elipsa. Cak i kad povecam korake ne radi dobro jer je taj lamda 10^-8.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246892": {
+      "poster": "blast",
+      "content": "@\"blast\"#p246890 za jako velik broj iteracija dobijem NAN. XXXXD",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246991": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@\"Tompa007\"#p246756 Ja sam upravo pokusao tako ali dobijem gradijent u tocki reda 10^165 tako da stv ne znam sta dalje i jesam fulo sta",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247081": {
+      "poster": "Baksuz",
+      "content": "U kojem intervalu ste vi uzimali početnu točku (x1,x2...x10) za treći zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247114": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Baksuz\"#p247081 [-5,5]",
+      "votes": {
+        "upvoters": [
+          "Baksuz"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247158": {
+      "poster": "bjunolulz",
+      "content": "Kako ste implementirali funkcije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247247": {
+      "poster": "Fikalo",
+      "content": "Jel bi mi trebali mjenjat svaki x za vrijednost gradijenta pomnozenim sa istim lambda, ili svaki x ima svoj lambda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247249": {
+      "poster": "Retard00",
+      "content": "@\"Fikalo\"#p247247 lambdu kak sam shavtio za svaki x treba nać metodom bisekcije, piše na kraju dokumenta.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247250": {
+      "poster": "Fikalo",
+      "content": "@\"Retard00\"#p247249 mislim kao dal svaki x (x1,x2..) ima svoju lmabdu ili je samo jedna ista lambda za sve? tj vraca li funkcija koja nam vraca vrijednost gradijenta u trenutnoj tocki jednu vrijednost koja je zbroj vrijednost svih gradijenata, ili polje u kojem je svaki element vrijednost derivacije po toj varijabli? ako kuzis kaj hocu rec",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247251": {
+      "poster": "branimir1999",
+      "content": "Kod bisekcije za lambdu, kako dobivamo formulu/računamo derivaciju funkcije po lambdi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247259": {
+      "poster": "Baksuz",
+      "content": "@\"branimir1999\"#p247251 nećeš računati derivaciju po lambdi nego uvrstiš da je O'(lambda) = gradient(x0 - lambda * gradijent(x0)) * d(x0), gdje je d zapravo -1* gradijent(x0), x0 je trenutno rješenje. i onda gledaš kolika je ta vrijednost - jel manja od 0 ili veća i ovisno o tome ideš dalje. Nadam se da si skužio što hoću reć. Ovaj produkt gradijenta i d-a je zapravo matrični umnožak.",
+      "votes": {
+        "upvoters": [
+          "branimir1999"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247260": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@\"branimir1999\"#p247251 ![](assets/2021-10-27/00029.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247272": {
+      "poster": "blast",
+      "content": "rade mi prva 3 jako dobro. no kod 4. dobijem dost veliku gresku. tipa suma svih (y- f(x,a,b,c,d,e,f))^2 =  400. Kad malo bolje pogledam pod haubu ispadne da su mi svi u krugu abs(3) osim 3 koja su mi oko 10. Jel to dobro rjeseno ili sam negdje pogrjesio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247273": {
+      "poster": "Fikalo",
+      "content": "znaci ako dobro shvacam, na pocetku odaberemo neki lambda upper i lower, i onda nam je lambda u svakom koraku polovica izmedu njih. Potom izracunamo vrijednosti gradijenata za trenutnu tocku. Ovisno o zbroju tih vrijednosti lambda upper ili lover postaje trenutni lambda. Onda svakom x-u dodamo vrijednost od lambda*-(vrijednost derivacije funkcije po tom x-u u trenutnoj tocki) i ponovno ponavljamo sve?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247279": {
+      "poster": "Fikalo",
+      "content": "@\"Fikalo\"#p247273 Ja ocito nesto krivo shvacam, jer meni to sve pocinje jako brzo divergirati i vrijednost funkcije mi leti u nebesa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247282": {
+      "poster": "Baksuz",
+      "content": "@\"Fikalo\"#p247273 ja sam prije svega inicijalizirao da je LUpper = 1 a LLower = 0. Zatim sam tražio vrijednost derivacije funkcije za LUpper i ako je manja od 0, LLower postaje LUpper, a lUpper množim s 2. U slučaju da je derivacija > 0 onda idem dalje s algoritmom. Skuži da sam sad dobio dobar LLower i LUpper pa tek tad između njih tražim taj medium. Ja sam to tako shvatio, možda sam u krivu al mi radi za prva 3 zadatka (četvrti nisam još :D).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247283": {
+      "poster": "Retard00",
+      "content": "@\"Fikalo\"#p247250 jedna lambda za sve (vektor (x1, x2, ...))",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247285": {
+      "poster": "Baksuz",
+      "content": "Jel itko konta što bismo trebali u 4. zadatku? Ovaj d koeficijent u eksponentu me zeza (inače bismo mogli riješiti kao sustav jednadžbi kao u trećem zadatku).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247287": {
+      "poster": "Fikalo",
+      "content": "@\"Retard00\"#p247283 Kolko veliki bi veliki trebali biti pocetni lambda upper i lover? i smiju li biti manji od 0? ja mislim da vec polako gubim razum jer kad stavim neke malo vece brojeve mi oddivergira u beskonacnost, a ako stavim lambdu lower na 0 i upper na 3 ili manje mi u dva koraka nade rjesenje, jel to tako treba bit il sam ja sam tak specificno nes zezno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247288": {
+      "poster": "blast",
+      "content": "@\"blast\"#p247272 uf da sam seb odgovorim, stvar je u tome da ta funkcija ima puno lokalnih optimuma, te je bitna tocka iz koje se krece. sad sam pokreni sa svim 3. i dobio 150.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247291": {
+      "poster": "Retard00",
+      "content": "@\"Fikalo\"#p247287 lambda nikad ne smije biti manji od 0, a lambda od 0 predstavlja nikakav pomak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247307": {
+      "poster": "Fikalo",
+      "content": "![](assets/2021-10-27/00031.png)\n\nje to znaci da mi trebamo crtat grafove nasih rjesenja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247313": {
+      "poster": "Tootha",
+      "content": "@\"Fikalo\"#p247307 Ja mislim da je to leftover od labosa sa prijasnjeg predmeta kada se moralo raditi GUI za algoritme",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

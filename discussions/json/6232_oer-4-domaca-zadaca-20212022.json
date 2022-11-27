@@ -1,0 +1,379 @@
+{
+  "title": "[OER] 4. domaća zadaća - 2021/2022",
+  "creator": "Banananjeros",
+  "slug": "oer-4-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Optimiranje evolucijskim računanjem",
+    "Zadaće"
+  ],
+  "posts": {
+    "262733": {
+      "poster": "Banananjeros",
+      "content": "Jel neko zna kaj znači korištenje topologije lanca i lokalnog susjedstva u 1. algoritmu s rojem čestica?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262742": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@\"Banananjeros\"#p262733 više ne pamtiš globalno najbolje rješenje, nego za svaku jedinku gledaš najbolju u njenom susjedstvu, a topologija lanca ti je način definiranja tog susjedstva. On ima parametar n, i on određuje veličinu susjedstva. vel_sus = 1 + 2n. Znači u susjedstvu neke jedinke je ta jedinka, i n jedinki sa svake strane u populaciji. Ovo je ukratko objašnjenje, a ako ti treba detaljnije, pogledaj u knjizi, tamo je opširnije",
+      "votes": {
+        "upvoters": [
+          "Banananjeros"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262864": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@\"Banananjeros\"#p262733 Koje parametre c1 i c2 koristis i koje rangeve za x i v?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262869": {
+      "poster": "Fikalo",
+      "content": "Kod diferencijske evolucije koje rizanje bi trebali korsitit, ekpsonencijalno, uniformno ili je svejedno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262899": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "Btw, postoji greska u knjizi sto se tice pseudoalgoritma roja cestica ili mi se cini? gbest je jednom definiran kao double[][] a onda drugi puta kao da je double[]. gbest[d] - x[i][d] nije izvedivo kad je gbest[d] vektor a x[i][d] skalar. Jel mi moze netko pojasnit sta je pisac tu htio reci \n\n![](assets/2021-12-09/00008.jpg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262900": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@\"DnkCkv\"#p262899 da, vjv je greška, jer globalBest predstavlja najbolju jedinku, znači to je samo jedna jedinka, tako da ovaj gbest[i] = x[i] dio treba biti samo gbest = x[i], a gbest[d] - x[i][d] je ok, jer se gleda svaka komponenta od jedinke",
+      "votes": {
+        "upvoters": [
+          "DankJakov (DnkCkv)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263474": {
+      "poster": "Retard00",
+      "content": "Koja riješenja bi ovo trebalo izbacivat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263574": {
+      "poster": "Banananjeros",
+      "content": "@\"Retard00\"#p263474 \n\na = 7, b = -3, c = 2, d = 1, e = -3, f = 3\n\n@\"DnkCkv\"#p262864 \n\nc1 = 2, c2 = 2\n\nxMin = -8, xMax = 8, vmax = (xMax - xMin) * 0.2, vmin = -vmax\n\nVjerojatno nije do parametara, ali ne dobivam dobre rezultate (najbolja kvadratna pogreska mi je bila oko 1000)",
+      "votes": {
+        "upvoters": [
+          "Retard00",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263576": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@\"Banananjeros\"#p263574 mislim da je trik u tome da implementiraš faktor inercije. Pogledaj u knjizi kako se on definira, al basicaly, on služi tome da se regulira promjena brzine kroz rad algoritma, znači da u ranijim iteracijama možeš raditi veće promjene brzine, a kasnije manje.\n\nS time dobivam grešku reda 10^-26",
+      "votes": {
+        "upvoters": [
+          "Tootha",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263762": {
+      "poster": "samo_vagabundo",
+      "content": "@\"PlavušaSFilozofskog\"#p263576 10^-26 s globalnim ili lokalnim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263766": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@\"samo_vagabundo\"#p263762 oba",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263822": {
+      "poster": "mrki",
+      "content": "PSO algoritam: smatramo li da su u topologiji lanca spojeni prvi i zadnji element? Nije li to onda topologija prstena.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264053": {
+      "poster": "branimir1999",
+      "content": "Koji su vam parametri za iteracije i broj jedinki? Dobivam pogresku MSE red velicine 500 na pop 7 i iteracije 100",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264083": {
+      "poster": "branimir1999",
+      "content": "Ja ne znam je li krivo shvacam, ali posljednje tri laboratorijske vjezbe dobivam greske velicina izmedu 100-20000, nikada vise, nikad manje, a cesto bih pratio algoritam do slova. Ovo su izlazi pod populacijom 7 i iteracijama 150. Naglim povecanjem tih parametara rezultira u promjeni pogreske do 2 reda velicine. Varijable a,b,c,d,e,f (oznaceni s x ovdje) nekada budu stvarno blizu, a nekada potpuno promasi broj. Je li itko imao problema s ovim prije pa je znao rijesiti? Ja sam totalno bez ideja. Vec sam provjerio sve funkcije da li rade kako spada pa ne znam vise do cega ovo moze biti. Moze netko pomoci?\n********************\nx = (5.439, -2.893, 1.293, 0.945, 5.726, 3.814)\n\nMSE = 1267.952\n********************\nx = (6.606, -2.672, 1.445, 0.877, -7.204, 2.727)\n\nMSE = 1922.271\n********************\nx = (7.313, -2.908, -2.450, 0.160, -6.05, 3.505)\n\nMSE = 1258.899\n********************\nx = (2.703, -2.816, 0.693, 1.086, -5.367, 2.955)\n\nMSE = 1292.6401\n********************\nx = (6.099, -2.915, 8.0, 0.467, 0.0845, 3.515)\n\nMSE = 413.394",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264106": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"branimir1999\"#p264083 Možda imaš samo shitne algoritme križanja i mutacije, najbolje da kažeš što imaš\n\nIsto tako pop ti je vjerojatno premala i broj iteracija ti vjv treba biti veći, mislim, za 7 i 100 bi morao imati brutalne algoritme.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264109": {
+      "poster": "branimir1999",
+      "content": "@\"Mićo Maco\"#p264106 Koristim PSO za ovaj zadatak specificno, a za ostale sam pratio i stavio sve parametre po uputama.  Ovdje koliko vidim ne smeta 7 i 150 jer je slicno u knjizi te kao sto sam rekao, ako jako povecam te vrijednosti, ne vidim preznacajan napredak",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264110": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"branimir1999\"#p264109 Aha, pardon, vidim da nije više klasični genetski. Kao što je netko preporučio, imaš li tzv. `momentum` u njemu? On je dosta bitan za normalno funkcioniranje tog algoritma kad imaš jake oscilacije.",
+      "votes": {
+        "upvoters": [
+          "branimir1999"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264112": {
+      "poster": "branimir1999",
+      "content": "@\"Mićo Maco\"#p264110 Nisam propustio inerciju tj. momentu i ovako je implementiran:\n\n```\nreturn ((double) iteration / iteration_max) * (inertia_min - inertia_max) + inertia_max\n```\n\ngdje su inertia_min = 0.1 i inertia_max 0.9.\n\nOvako mi izgleda funkcija za racunanje brzine po dimenziji k:\n\n```\nDouble new_velocity = inertia * p.velocity.get(k);\n\nnew_velocity += individual_factor * random.generateRandomDouble(0.0,1.0) * (p.best_position.get(k) - p.position.get(k));\nnew_velocity += social_factor * random.generateRandomDouble(0.0,1.0) * (best.position.get(k) - p.position.get(k));\nnew_velocity *= K;\n```\n\ngdje su individual_factor = social_factor = 2 i K=0.729, p = trenutna cestica, best = najbolja globalna/lokalna cestica",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264116": {
+      "poster": "samo_vagabundo",
+      "content": "@\"branimir1999\"#p264112 \n\n> @\"branimir1999\"#p264112 return ((double) iteration / iteration_max) * (inertia_min - inertia_max) + inertia_max\n\nako je to java, msm da `(double) iteration / iteration_max)` radi cjelobrojno dijeljenje pa onda to casta u double, probaj s `iteration / (double) iteration_max)`.\n\nNe kazem da samo zbog toga imas lose rezultate, al sigurno ne pomaze.\n\nEDIT: \n> @\"[nepoznato]\"#p264083 Ovo su izlazi pod populacijom 7 i iteracijama 150\n\nalso, to je def premalo\n\nEDIT2:\n\nnah, nije ovo prvo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264121": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"branimir1999\"#p264112 Hmmm ovdje vidim potencijalne probleme:\n\n- ne clampaš brzine, to ti je potencijalno loše jer ti čestica može otići u 3pm što će ti rezultirati nekakvim spiralnim gibanjem i potencijalno zaglavljivanjem\n- moment ti je dosta velik, u praksi se koriste momenti između 0.2 i 0.5 za ovaj algoritam - kombinacija ovako velikog momenta s neograničenim brzinama ti može biti loša\n\nDakle ono što bih ja preporučio je da prvo postaviš faktor inercije da ti bude između 0.2 i 0.5. Okej je linearna interpolacija maksimuma prema minimumu i mislim da tu ne treba išta mijenjati.\n\nZatim, pogledaj malo koje brzine imaš. Specifično zanimaju te prvih par iterscija, preporučam da si raspišeš samo maksimalne i minimalne brzine čestica u prvih, nezz, 10-20 iteracija. Škicni malo i kako se mijenjaju. Zavrti to par puta i provjeri da ti ne spajkaju brzine nigdje - nakon promjene ovih vrijednosti inercije možda ni neće. Ti i sam znaš koliko su čestice udaljene od optimuma funkcije, pa ćeš znati prosuditi što su prevelike brzine.\n\nKako ti to ne bi bio konstantan hiperparametar, ja bih te limite brzina ograničio ovisno o inicijalnoj populaciji - dakle, nezz, gledao bih koje su dvije najudaljenije čestice i vjv ne bih dopustio da brzina bude ikad veća od toga. Nema smisla da neka čestica ima mogućnost otići vrlo daleko od inicijalne populacije ako to nemaju mogućnost sve čestice.\n\nTeatiraj ove stvari jednu po jednu, i kad dobiš dobar rezultat umjesto da to dalje šminkaš pokušaj racionalizirati zašto je to pomoglo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264122": {
+      "poster": "branimir1999",
+      "content": "@\"samo_vagabundo\"#p264116 Ovo s inercijom nije problem jer sam provjerio za svaki slucaj. Ali svejedno sam implementirao kako si mi rekao i povecao populaciju na 50 i 150000 iteracija i dobio sam:\n***\nx = (7.090, -2.958, 1.986, 1.106, -2.897, 3.115)\n\nMSE = 153.714\n***\nx = (6.843, -2.746, 3.005, 1.166, 3.184, 2.987)\n\nMSE = 7067.312\n***\n@\"[nepoznato]\"#p264121 već sam implementirao clampanje samo sto sam zaboravio napomenuti da sam izostavio u postu. Ako stavim inerciju na interval [0.2,0.5], algoritam samo losije rezultate daje. Koristio sam 0.9 jer se tako preporuca u knjizi",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264124": {
+      "poster": "samo_vagabundo",
+      "content": "@\"branimir1999\"#p264122 mozda dobro ne racunas MSE, ovo su rjesenja\n\n> @\"Banananjeros\"#p263574 a = 7, b = -3, c = 2, d = 1, e = -3, f = 3\n\nne cini mi se kao da su tvoja netocna za 7k MSE\n\n(dogodilo mi se na jednom labosu lmao) \n\nako nije nesto toliko ocito, onda po redu @\"Mićo Maco\"#1 odgovor",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264128": {
+      "poster": "branimir1999",
+      "content": "@\"samo_vagabundo\"#p264124 Dobro racunam (i ja sam takoder pomislio da je tu mozda problem) jer dobijem 10^(-27) za te vrijednosti. Ono sto se cini netocno je to sto mi je e priblizno 3, a treba biti -3.\n\n@\"Mićo Maco\"#p264121 Pogledao sam brzine dobivene tokom prvih 20 iteracija i u prvih nekoliko ima dosta po maksimalnoj brzini, pa onda sve rjede, ali i dalje se pojavljuju tu i tamo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264131": {
+      "poster": "samo_vagabundo",
+      "content": "@\"branimir1999\"#p264128 msm da je e u kosinus pa ti je svejedno, r1 i r2 kad azuriras brzine bi trebali biti jednaki, i istim random brojem mnozis sve dimenzije (MC skripta zadnji odlomak 101.str)\n\ninercija nakon `iteration_maxa` ti treba vracati uvijek `inertia_min`, provjeri jel to i radi\n\nosim toga, ispisuj stvari probaj naci nesto sto ne bi trebalo biti tu, isprobavaj razlicite parametre, jbg glhf",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264133": {
+      "poster": "Retard00",
+      "content": "> @\"Banananjeros\"#p263574 e = -3\n\nmeni ispada da je e = 3, jel to tvoje typo il sam ja neš sjebo?\n\nEDIT: ispada da su oba dobra, nekad mi ispadne e = -3, nekad e = 3, a nekad i zapne u nekom lok. opt.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264140": {
+      "poster": "branimir1999",
+      "content": "@\"samo_vagabundo\"#p264131 Hvala na pomoci svejedno tebi i @\"Mićo Maco\"#1 . Nista ne radi pa mislim da cu objasnit cu situaciju na labosu i dobit bodove koje dobijem. Skontao sam da mi brzina po jednoj komponenti na jednoj cestici kroz prvih 150000 iteracija skoro da ne konvergira, ali nemam ideje kako da to ispravim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264141": {
+      "poster": "samo_vagabundo",
+      "content": "@\"Retard00\"#p264133 jeje, u kosinusu, oba dobra",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

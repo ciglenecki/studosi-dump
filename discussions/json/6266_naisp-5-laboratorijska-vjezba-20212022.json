@@ -1,0 +1,1134 @@
+{
+  "title": "[NAISP] 5. laboratorijska vježba - 2021/2022",
+  "creator": "[deleted]",
+  "slug": "naisp-5-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Napredni algoritmi i strukture podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "264181": {
+      "poster": "[deleted]",
+      "content": "možete podijeliti zadatak/pitanja s blica od danas?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264192": {
+      "poster": "djeno",
+      "content": "@\"Todd Chavez\"#p264181 \n\nDanas je prvi labos u 12 objavim kad krene",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "blast",
+          "iNavy (mornar Ica)",
+          "mesojed (sofronijevicevPrst)",
+          "pingvinka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264199": {
+      "poster": "zmaj",
+      "content": "Sta ulazi u ovaj labos?\n\nDinamičko programiranje, kompresijski algoritmi i nasumični algoritmi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264201": {
+      "poster": "blast",
+      "content": "@\"zmaj\"#p264199 \n\nproblem naprtnjače, Huffmanovo kodiranje i LZ77.",
+      "votes": {
+        "upvoters": [
+          "mesojed (sofronijevicevPrst)",
+          "zmaj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264208": {
+      "poster": "n_p_zagi (nicrosc)",
+      "content": "Zadatak Vam je implementirati Huffmanov enkoder koristeći prioritetni red. Numerička tolerancija je . U postupku izgradnje stabla, lijevo dijete uvijek neka bude ono manje, a desno neka bude veće (pogledajte napomenu 1). Ovo će osigurati jednoznačnost koda. Testiranje se provodi nad odabranim i slučajno generiranim primjerima. Svi testovi se provode nad kodnom tablicom.\n\nVeć Vam je složena većina koda, ali morate ispravno dovršiti slijedeće:\n\nmetodu __lt__ unutar klase Node na način da ispravno uspoređuje čvorove stabla. U usporedbama brojeva sa pomičnim zarezom, pazite na numeričku preciznost! Ovu metodu koristi prioritetni red za određivanje redoslijeda čvorova.\n\nmetodu Huffman_tree na način da izgradi valjano Huffmanovo stablo\n\nMjesta gdje trebate unijeti kod su označena sa TODO. Za prioritetni red se preporuča korištenje heapq iz pythonove standardne programske knjižnice koja koristi min-heap za održavanje reda.\n\nOstatak koda riješava probleme izgradnje kodne tablice i enkodiranja.\n\nKod\n\nU prostor za odgovore zalijepite **CIJELI** kod (popunjen, naravno).\n\n```\nimport heapq\n\nTOL_DEC = 3\nTOLERANCE = 10**-TOL_DEC\n\n\nclass Node:\n    \"\"\"Node in a Huffman tree\n    \"\"\"\n\n    def __init__(self, prob, symbol, left=None, right=None):\n        self.prob = prob  # probability of symbol\n        self.symbol = symbol\n        self.left = left\n        self.right = right\n\n        # incoming tree direction to node (0/1) - root has ''\n        self.code = ''\n\n    def __lt__(self, other: 'Node') -> bool:\n        \"\"\"enables comparisons between objects\n\n        Args:\n            other (Node): other object in comparison\n\n        Returns:\n            bool: True if self is LESS THAN other,\n                  False otherwise\n        \"\"\"\n        # TODO: ovdje dodajte svoj kod za usporedbu. Pazite na numeričku toleranciju!\n        pass\n\n\ndef Huffman_tree(symbol_with_probs: dict) -> Node:\n    \"\"\"Builds Huffman tree\n\n    Args:\n        symbol_with_probs (dict): dictionary symbol-probability that describes the problem\n\n    Returns:\n        Node: root of the built Huffman tree\n    \"\"\"\n    symbols = symbol_with_probs.keys()\n    nodes_queue = []\n\n    # TODO: ovdje dovršite izgradnju stabla\n    # HINT: spajanje dva stringa s1 i s2 u sortirani se moze postici sa: ''.join(sorted(s1+s2))\n    # HINT: za rad sa prioritetnim redom vam mogu zatrebati metode heapq.heappop i heapq.heappush\n\n    return nodes_queue[0]\n\n\n####################### IT'S BETTER NOT TO MODIFY THE CODE BELOW ##############\n\n\ndef calculate_codes(node: Node, val: str = '', codes=dict()) -> dict:\n    # calculates codewords for Huffman subtree starting from node\n\n    newVal = val + str(node.code)\n\n    if(node.left):\n        calculate_codes(node.left, newVal, codes)\n    if(node.right):\n        calculate_codes(node.right, newVal, codes)\n\n    if(not node.left and not node.right):\n        codes[node.symbol] = newVal\n\n    return codes\n\n\ndef Huffman_encode(data: str, coding: dict) -> str:\n    # encodes\n    encoding_output = []\n    for c in data:\n        encoding_output.append(coding[c])\n    string = ''.join([str(item) for item in encoding_output])\n    return string\n\n\ndef Huffman_decode(encoded_data: str, huffman_tree: Node) -> str:\n    tree_head = huffman_tree\n    decoded_output = []\n    for x in encoded_data:\n        if x == '1':\n            huffman_tree = huffman_tree.right\n        elif x == '0':\n            huffman_tree = huffman_tree.left\n        # check if leaf\n        if huffman_tree.left is None and huffman_tree.right is None:\n            decoded_output.append(huffman_tree.symbol)\n            huffman_tree = tree_head\n\n    string = ''.join([str(item) for item in decoded_output])\n    return string\n\n\ndef roundToDecimals(num: float, decimals: int) -> float:\n    \"\"\"Rounds number to significant decimals\n\n    Args:\n        num (float): number to round\n        decimals (int): number of significant decimals\n\n    Returns:\n        float: rounded number\n    \"\"\"\n    return round(num*10**decimals)/10**decimals\n```\n    \n\nOvdje Vam je kod koji možete koristiti za testiranje\n\nKod za isprobavanje i testiranje\n\nOvaj kod nemojte kopirati u prostor za rješenje, već ga koristite lokalno u svojoj razvojnoj okolini.\n\n```\nsymbols_with_probs={'A':0.13,'B':0.21,'C':0.39,'D':0.19,'E':0.08}\nprint('problem: ', symbols_with_probs)\ntree=Huffman_tree(symbols_with_probs)\nhuffman_code = calculate_codes(tree)\nprint('encoding:',huffman_code)\n\ndata = 'DEBADE'\nprint('original text: ',data)\n\nprint('-------ENCODE--------')\nenc=Huffman_encode(data,huffman_code)\nprint('data encoded: ',enc)\n\nprint('-------DECODE--------')\nprint('data decoded back: ',Huffman_decode(enc,tree))\n\n\"\"\" # ispravan izlaz\nproblem:  {'A': 0.13, 'B': 0.21, 'C': 0.39, 'D': 0.19, 'E': 0.08}\nencoding: {'D': '00', 'E': '010', 'A': '011', 'B': '10', 'C': '11'}\noriginal text:  DEBADE\n-------ENCODE--------\ndata encoded:  000101001100010\n-------DECODE--------\ndata decoded back:  DEBADE\n\"\"\"\n```\n\nNapomena 1\n\nU postupku izgradnje kodne tablice, koristite sljedeći tie-breaker (razrješavanje situacija kada imate izjednačene usporedbe vjerojatnosti)...\n\nUvedimo imenovanje čvora u Huffmanovom stablu na sljedeći način:\n\nako je list, tada mu je ime njegov pripadni simbol\n\nako je unutarnji čvor, neka mu je ime uzlazno sortirana konkatenacija simbola njegovih listova. Npr. ako su u podstablu tog čvora listovi simbola 'C', 'A', 'E' onda će ime tog unutarnjeg čvora biti 'ACE'.\n\nAko dva čvora imaju jednake vjerojatnosti, tada se manjim čvorom smatra onaj koji ima leksikografski manje ime. Primjer istinitih usporedbi su: 'AB' < 'AC' < 'ACE' te dodatno 'BC'<'E'.\n\nNAPOMENA 2\n\nPazite na uvlačenja (indentacije) - koristite samo SPACE ili samo TAB\n\nMožete koristiti print funkciju za ispis međurezultata\n\nEdgar koristi Python verziju 3.8, tako da vam možda neke funkcionalnosti iz novijih (3.9+) ili starijih (2.x) verzija neće podržavati\n\nMolimo da pišete svoj vlastiti kod. Kodove u skripti možete koristiti za orijentaciju. Edgar ima mogućnost otkrivanja plagijata i ta će mogućnost biti korištena na ovom zadatku.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Digimon",
+          "GetSchwifty (_2D_)",
+          "Kikyy99",
+          "Retard00",
+          "Rope (Rops)",
+          "burek",
+          "indythedog",
+          "matt (Matt)",
+          "menace_master"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264210": {
+      "poster": "djeno",
+      "content": "![](assets/2021-12-13/00000.png)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Digimon",
+          "Kikyy99",
+          "Retard00",
+          "blast",
+          "burek",
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264214": {
+      "poster": "Digimon",
+      "content": "![](assets/2021-12-13/00002.png)\n\n![](assets/2021-12-13/00003.png)\n\n![](assets/2021-12-13/00004.png)",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "blast",
+          "burek",
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264216": {
+      "poster": "Rene",
+      "content": "@\"djeno\"#p264210 jesam ja lud ili im je createKnapsackTable kriv?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264220": {
+      "poster": "Cubi",
+      "content": "@\"Rene\"#p264216 Ja sam uspio s takvim napraviti. Izgleda da ima viska stupac koji bi odgovarao nijednom predmetu. Ustvari samo sluzi da bude pun nulama koliko sam skuzio",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264221": {
+      "poster": "Rene",
+      "content": "@\"Cubi\"#p264220 Aha, i koliko kužim obrnuto je nego u predavanjima tj. retci su predmeti a stupci su kapacitet...jer zašto bit konzistentan",
+      "votes": {
+        "upvoters": [
+          "blast",
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Kikyy99",
+          "ruza0001 (rozy)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264222": {
+      "poster": "Cubi",
+      "content": "Pitanja:\n1. Složenost rješavanja problema naprtnjače kapaciteta C i broja predmeta N: O(N * C)\n2. Huffmanovo kodiranje proizvodi optimalan binarni kod varijabilne duljine, da ili ne: DA\n3. Koja je tvrdnja neispravna za LZ77\n\na) Koristi operaciju kopiranja\n\nb) riječnički spremnik je u praksi dulji od unaprijednog spremnika\n\nc) provodi blokovsko enkodiranje\n\n**d) koristi statični riječnik**\n4. Koja je ukupna složenost izgradnje Huffmanove kodne tablice iz ulaznog problema: O(n * log(n))",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Kikyy99",
+          "Uchenikowitz (Učečuču)",
+          "WickyWinslow",
+          "blast",
+          "djeno",
+          "karla_cd (ocd)",
+          "matt (Matt)",
+          "maverick",
+          "menace_master",
+          "n_p_zagi (nicrosc)",
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264223": {
+      "poster": "miss_anthropocene (neunist.iva)",
+      "content": "jel ima ko kod huffmana da mu je original text == dekodirani tekst al edgar kaze da je kodna tablica kriva?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264224": {
+      "poster": "blast",
+      "content": "Zasto UVJEK ovi labosi moraju biti cancer. Najgori labosi na cjelom mom studiju, i to daleko.",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "JogaBonito",
+          "Lusy (MGJ)",
+          "MuffledScreams",
+          "[deleted]",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "mesojed (sofronijevicevPrst)",
+          "n_p_zagi (nicrosc)",
+          "pingvinka",
+          "rA9",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": [
+          "MalaPumpa"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Kikyy99",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264225": {
+      "poster": "Cubi",
+      "content": "@\"Rene\"#p264221 Naravno",
+      "votes": {
+        "upvoters": [
+          "Kikyy99",
+          "Rene",
+          "menace_master"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Kikyy99"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264226": {
+      "poster": "Digimon",
+      "content": "@\"Cubi\"#p264222 \n\nJa sam jos imao i ovo\n\n![](assets/2021-12-13/00006.png)",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264232": {
+      "poster": "djeno",
+      "content": "![](assets/2021-12-13/00010.png)\n\n![](assets/2021-12-13/00011.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "5ani (5af)",
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "Baksuz",
+          "Bazul",
+          "BigZ1",
+          "BlackMamba",
+          "Bucc (Olive Oil)",
+          "Cubi",
+          "Daeyarn",
+          "DariolaVremenskiPutnik",
+          "Darla",
+          "Digimon",
+          "Dootz",
+          "Ducky",
+          "Erpeg",
+          "Filemon",
+          "GetSchwifty (_2D_)",
+          "HARAmara (decko_sa_balkana)",
+          "Han",
+          "Hrvoje (Hrvoje45)",
+          "Icy",
+          "Jale (čakijale)",
+          "JayOhAit",
+          "JeleeII",
+          "JoKing",
+          "JogaBonito",
+          "Kennedy",
+          "Kikyy99",
+          "Krisle",
+          "LucidDreamer",
+          "Lusy (MGJ)",
+          "MOXY",
+          "Mikki",
+          "MiqeloS",
+          "MrPeanutButter",
+          "Nocna_smjena",
+          "Ollie",
+          "Quarz",
+          "Rene",
+          "Retard00",
+          "Rope (Rops)",
+          "Smolaa",
+          "Spuk",
+          "SuperSaiyano",
+          "SuperSjajan3",
+          "Svarog (Veles)",
+          "Svudec",
+          "Tinx (pingvin)",
+          "Tone",
+          "Uchenikowitz (Učečuču)",
+          "Urmum (mamaRu)",
+          "WickyWinslow",
+          "__builtin_popcount (std::popcount)",
+          "blast",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "burek",
+          "error",
+          "feel_d_boot (iNut)",
+          "gladiator",
+          "jobi (azex)",
+          "laranotreallycroft",
+          "limun (kuss)",
+          "ljama_glama",
+          "login",
+          "luka6 (ugrijaniRadijator)",
+          "maraska",
+          "maverick",
+          "menace_master",
+          "mesojed (sofronijevicevPrst)",
+          "mmmmDa (Ban Levačić)",
+          "mrkva",
+          "n_p_zagi (nicrosc)",
+          "neksi (filip)",
+          "nikace (AeIoU)",
+          "nimble",
+          "pingvinka",
+          "plavisnajper",
+          "reygrep",
+          "rolotex (brr)",
+          "ruza0001 (rozy)",
+          "spampers (majmunska boginja)",
+          "steker",
+          "swish41 (PlavušaSFilozofskog)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264254": {
+      "poster": "[deleted]",
+      "content": "@\"p_eeva\"#p264223 da, ali za 2 primjera \"samo\" (jedan nosi 30%)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264267": {
+      "poster": "[deleted]",
+      "content": "@\"p_eeva\"#p264223 ak si imala isti problem ovo ko ja, stvar je u onom slucaju kad se vjerojatnosti iste, ako usporedujes s `==` neces dobiti ispravno, moras npr. abs(self.prob - other.prob) < TOLERANCE koji je definiran u danom kodu",
+      "votes": {
+        "upvoters": [
+          "Ollie"
+        ],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264277": {
+      "poster": "maverick",
+      "content": "![](assets/2021-12-13/00014.png)",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264302": {
+      "poster": "Samon",
+      "content": "![](assets/2021-12-13/00017.png)\n\n![](assets/2021-12-13/00018.png)\n\n![](assets/2021-12-13/00019.png)\n\n![](assets/2021-12-13/00020.png)",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Filemon",
+          "blast",
+          "indythedog",
+          "mesojed (sofronijevicevPrst)",
+          "rolotex (brr)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264320": {
+      "poster": "SuperSaiyano",
+      "content": "Zadatak u 16 lz77, blicevi isti.\n\nTakođer je li neko isto radio lz77 a da mu prvi test prođe dok ostali padnu na jednom znaku ili na kraju dodaju višak/pogrešni znak. Kod sebe na svom ide-u kada enkodiram ulaz i dekodiram ga ručno ispadne ispravan( naravno kodiram sa pretpostavljenim prozorima od 4). Nije mi jasno da li sam negdje pogriješio ili je greška do njih.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264344": {
+      "poster": "Gocc (***)",
+      "content": "Jel ima netko baš kopiran kod da zaljepi za LZ77 i naprtnjaču",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264348": {
+      "poster": "Rene",
+      "content": "@\"SuperSaiyano\"#p264320 vjerojatno nisi obradio one rubne slučajeve, tj. onaj kad se desi puno poklapanje pa se pravis da nisi matchao zadnji znak",
+      "votes": {
+        "upvoters": [
+          "Kikyy99"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264364": {
+      "poster": "Edrudo",
+      "content": "jel moze netko objasniti kako da pomocu funkcija rk i searchString dobijem poziciju prefiksa i njegovu duljinu u zadatku LZ77. Ako koristim samo funkciju searchString krivo mi ispada",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264488": {
+      "poster": "AK10 (endyyyy)",
+      "content": "zadatci danas?",
+      "votes": {
+        "upvoters": [
+          "Tinx (pingvin)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264490": {
+      "poster": "iva7740 (Mica Trofrtaljka)",
+      "content": "@\"endyyyy\"#p264488 huffman u 11",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264491": {
+      "poster": "fer999",
+      "content": "@\"Mica Trofrtaljka\"#p264490 Isti zadatak kao jučer?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264494": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@\"endyyyy\"#p264488 bio je u 11 i knapsack, isto ko jučer",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264497": {
+      "poster": "Baksuz",
+      "content": "11h LZ77 - Isto kao i gore treba ispisat tablicu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264504": {
+      "poster": "Dootz",
+      "content": "11h imao huffmana",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264506": {
+      "poster": "bernard (macabrus)",
+      "content": "lz77 u 1",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264512": {
+      "poster": "anon00",
+      "content": "Je li i ovaj labos cancer i ima li ga smisla pokušavat riješit ?",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Kikyy99",
+          "pingvinka"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264513": {
+      "poster": "BigZ1",
+      "content": "ja dobio knapsack problem,bez ikakvog predzanja rijesio labos u 25min, kod vam je skoro napisan samo laganini. Mozda je mene tako potrefilo al eto. posaljem slike blica poslije. Blicevi su bili apsolutno isti.",
+      "votes": {
+        "upvoters": [
+          "Kikyy99",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264532": {
+      "poster": "steker",
+      "content": "Nabijem na kurac lz77",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "LucidDreamer",
+          "SuperSaiyano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Filemon",
+          "Kikyy99",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "pingvinka",
+          "ruza0001 (rozy)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "SuperSaiyano",
+          "iNavy (mornar Ica)",
+          "reygrep"
+        ]
+      }
+    },
+    "264556": {
+      "poster": "burek",
+      "content": "Jel ima netko možda neke primjere stringova i ispravnog ispisa LZ77 osim onog koji su dali? jer ono kod mi radi za taj primjer ali ne znam jel bi za neke rubne slučajeve",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264579": {
+      "poster": "Edrudo",
+      "content": "Ovo su dva testa za LZ, na neku foru mi ih je edgar ispisao:\n\n1.primjer\n\nulaz: \n\n```\nVMarioedranMihaeKresolMihaKresoelDaliborTomislavTomislavSonjaTomisMihaellavDaMarioliborDaliborSonDaliborjaKrKresoesoMarioDaMihaelliborTomislavMihael\n```\n\nizlaz:\n```\n['V', (0, 1, 'M'), (0, 0, 'a'), (0, 0, 'r'), (0, 0, 'i'), (0, 0, 'o'), (0, 0, 'e'), (0, 0, 'd'), (0, 0, 'r'), (0, 0, 'a'), (0, 0, 'n'), (0, 0, 'M'), (0, 0, 'i'), (0, 0, 'h'), (0, 0, 'a'), (0, 0, 'e'), (0, 0, 'K'), (0, 0, 'r'), (2, 1, 's'), (0, 0, 'o'), (0, 0, 'l'), (0, 0, 'M'), (0, 0, 'i'), (0, 0, 'h'), (0, 0, 'a'), (0, 0, 'K'), (0, 0, 'r'), (0, 0, 'e'), (0, 0, 's'), (0, 0, 'o'), (2, 1, 'l'), (0, 0, 'D'), (0, 0, 'a'), (2, 1, 'i'), (0, 0, 'b'), (0, 0, 'o'), (0, 0, 'r'), (0, 0, 'T'), (2, 1, 'm'), (0, 0, 'i'), (0, 0, 's'), (0, 0, 'l'), (0, 0, 'a'), (0, 0, 'v'), (0, 0, 'T'), (0, 0, 'o'), (0, 0, 'm'), (0, 0, 'i'), (0, 0, 's'), (0, 0, 'l'), (0, 0, 'a'), (0, 0, 'v'), (0, 0, 'S'), (0, 0, 'o'), (0, 0, 'n'), (0, 0, 'j'), (0, 0, 'a'), (0, 0, 'T'), (0, 0, 'o'), (0, 0, 'm'), (0, 0, 'i'), (0, 0, 's'), (0, 0, 'M'), (2, 1, 'h'), (0, 0, 'a'), (0, 0, 'e'), (0, 0, 'l'), (0, 1, 'a'), (0, 0, 'v'), (0, 0, 'D'), (2, 1, 'M'), (1, 1, 'r'), (0, 0, 'i'), (0, 0, 'o'), (0, 0, 'l'), (2, 1, 'b'), (3, 1, 'r'), (0, 0, 'D'), (0, 0, 'a'), (0, 0, 'l'), (0, 0, 'i'), (0, 0, 'b'), (0, 0, 'o'), (0, 0, 'r'), (0, 0, 'S'), (2, 1, 'n'), (0, 0, 'D'), (0, 0, 'a'), (0, 0, 'l'), (0, 0, 'i'), (0, 0, 'b'), (0, 0, 'o'), (0, 0, 'r'), (0, 0, 'j'), (0, 0, 'a'), (0, 0, 'K'), (3, 1, 'K'), (1, 1, 'e'), (0, 0, 's'), (0, 0, 'o'), (2, 3, 'M'), (0, 0, 'a'), (0, 0, 'r'), (0, 0, 'i'), (0, 0, 'o'), (0, 0, 'D'), (0, 0, 'a'), (0, 0, 'M'), (0, 0, 'i'), (0, 0, 'h'), (3, 1, 'e'), (0, 0, 'l'), (0, 1, 'i'), (0, 0, 'b'), (0, 0, 'o'), (0, 0, 'r'), (0, 0, 'T'), (2, 1, 'm'), (0, 0, 'i'), (0, 0, 's'), (0, 0, 'l'), (0, 0, 'a'), (0, 0, 'v'), (0, 0, 'M'), (0, 0, 'i'), (0, 0, 'h'), (0, 0, 'a'), (0, 0, 'e'), (0, 0, 'l')]\n```\n\n2.primjer\n\nulaz:\n\n```\nMIHAELMIHAELMIDALIBOREL\n```\n\nizlaz:\n\n```\n['M', (0, 1, 'I'), (0, 0, 'H'), (0, 0, 'A'), (0, 0, 'E'), (0, 0, 'L'), (0, 0, 'M'), (0, 0, 'I'), (0, 0, 'H'), (0, 0, 'A'), (0, 0, 'E'), (0, 0, 'L'), (0, 0, 'M'), (0, 0, 'I'), (0, 0, 'D'), (0, 0, 'A'), (0, 0, 'L'), (3, 1, 'B'), (0, 0, 'O'), (0, 0, 'R'), (0, 0, 'E'), (0, 0, 'L')]\n```",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Ducky",
+          "FERonja",
+          "Filemon",
+          "Kaladonter",
+          "Kikyy99",
+          "Uchenikowitz (Učečuču)",
+          "anon00",
+          "burek",
+          "idontwannabemyself"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264587": {
+      "poster": "LucidDreamer",
+      "content": "Jel mi moze netko objasniti ovaj primjer za LZ77. Dakle ako se dobro sjecam vrijednosti na izlazu prestavljaju (offset,length i sljedeci char), ali kad racunam offset na njihova zadnja dva primjera ne vidim nekakvu logiku pa ako mi moze netko objasnit kaj se dogada. U njihovom slucaju vrijednost offseta za oba slucaja je 2, a zadnje pojavljivanje slova A i B je bilo prije 3 puta.. barem smo tak to radili na tinf-u moguce da nije ovdje ovako pa nek me netko ispravi. Siguran sam da bi i ljudima za labos bilo lakse kad bi znali kako taj algoritam u njihovim prezentacijama izgleda\n\n![](assets/2021-12-14/00009.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264593": {
+      "poster": "mmmmDa (Ban Levačić)",
+      "content": "@\"LucidDreamer\"#p264587 Mislim da oni drugačije računaju offset odnosno između b i a je 0 u b|a;acb \n\nU drugom retku na slici bi offset trebao biti 1 dok je kod njih 0. Inače se računa tak kak ti kažeš al mislim da ne bi trebao bit problem koji god pristup odabereš",
+      "votes": {
+        "upvoters": [
+          "LucidDreamer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264600": {
+      "poster": "burek",
+      "content": "@\"LucidDreamer\"#p264587 imaš dobro objašnjen njihov algoritam u onoj skripti kompresijski algoritmi, ali da, drugačije je nego na tinfu i realno bilo gdje na internetu, nez zaš moraju biti spešl",
+      "votes": {
+        "upvoters": [
+          "LucidDreamer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264626": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@\"LucidDreamer\"#p264587 pise na slajdu \"i=pozicija p relativno od kraja D\", sto znaci da ti je offset zapravo udaljenost od kraja D (pr. ako u D imas \"ABCA\": offset(prvi A s desna) = 0, offset\\(C) = 1, offset(B) = 2). Nadam da je sad jasnije. Sto se tice tog zadatka na labosu, samo koristi sve njihovo, pogotovo ovo za posmak, ja sam probao sam rijesit pa sam se spetljao. Jako dobro obratit paznju na slucaj kada prefix ulazi u lookahead buffer.",
+      "votes": {
+        "upvoters": [
+          "LucidDreamer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264704": {
+      "poster": "So_Done",
+      "content": "Danas u 8:00 LZ77 enkoder, nista novo.",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Kikyy99",
+          "MT09 (mt09)",
+          "Retard00",
+          "__builtin_popcount (std::popcount)",
+          "madoxx"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264706": {
+      "poster": "huhu",
+      "content": "Danas u 8:00 Huffman, blic se ponovio sve isto ko gore",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Kikyy99"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264731": {
+      "poster": "anon00",
+      "content": "U 12 opet isti blic i Huffman",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264739": {
+      "poster": "IdemNecu",
+      "content": "Jel može molim vas netko objasnit kako jebeno krece ovaj Lz77 npr. ulaz = \"ABCABCABCE\", d=4, l=4.  Zasto nije tuple (0,0,a), (0,0,b) nego je prvi tuple (0,1,b) ? Hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264741": {
+      "poster": "burek",
+      "content": "@\"IdemNecu\"#p264739 Jer se na početku dictionary napuni sa prvim znakom, znači imaš AAAA u dict-u, i A prvi na ulazu u lookahed-u, taj A se prepozna pa ide na output (0,1,B)->0 je offset, 1 je duljina prepoznatog prefixa, a B je sljedeći znak na ulazu",
+      "votes": {
+        "upvoters": [
+          "IdemNecu",
+          "iNavy (mornar Ica)",
+          "kolega_kolega"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264743": {
+      "poster": "IdemNecu",
+      "content": "@\"burek\"#p264741 Hvala kolega",
+      "votes": {
+        "upvoters": [
+          "burek"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264757": {
+      "poster": "HARAmara (decko_sa_balkana)",
+      "content": "kako funkcioniraju labosi uzivo, možemo odgovarati usmenu prije isteka vremena za rješavanje ili moramo čekati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264771": {
+      "poster": "Valentino",
+      "content": "@\"decko_sa_balkana\"#p264757 cim zavrsis, pozoves asistenta, ispita te i onda si slobodan",
+      "votes": {
+        "upvoters": [
+          "HARAmara (decko_sa_balkana)",
+          "ljama_glama",
+          "menace_master"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264773": {
+      "poster": "ljama_glama",
+      "content": "@\"Valentino\"#p264771 Jel mozemo rjesavati na vlastitim laptopima ili moramo na njihovim racunalima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264780": {
+      "poster": "Valentino",
+      "content": "@\"ljama_glama\"#p264773 svi su na vlastitim radili kad sam ja imala labos",
+      "votes": {
+        "upvoters": [
+          "ljama_glama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264792": {
+      "poster": "mrkva",
+      "content": "labos u 14, lz77, ista pitanja na blicu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264844": {
+      "poster": "flicka",
+      "content": "Moze neko kopirat kod dobiven u Knapsack zadatku?",
+      "votes": {
+        "upvoters": [
+          "Unity (Sgt. Forge)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265018": {
+      "poster": "Unity (Sgt. Forge)",
+      "content": "moze li neko napisat primjer koji je dan u Knapsack zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265033": {
+      "poster": "Sulejman",
+      "content": "Jesu danas isti zadatci?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265036": {
+      "poster": "Lusy (MGJ)",
+      "content": "Koja pitanja na labosu pita asistent za Knapsack?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265037": {
+      "poster": "BlaBla5",
+      "content": "@\"Sulejman\"#p265033 \n\nJa sam imao danas u 9 isti zadatci i ista pitanja.",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265042": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"MGJ\"#p265036 mene je pitao da napišem neku formulu za to, nisam imao pojma",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Lusy (MGJ)",
+          "jobi (azex)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Filemon",
+          "Kikyy99",
+          "LucidDreamer",
+          "Rope (Rops)",
+          "jobi (azex)",
+          "ruza0001 (rozy)",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265074": {
+      "poster": "Sulejman",
+      "content": "@\"Olive Oil\"#p265042 ![](assets/2021-12-16/00010.png)\n\nvjerojatno ovo?",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Kikyy99"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265105": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"Sulejman\"#p265074 puno me pitaš haha, valjda, ne pratim više predmete od 1. semestra preddiplomskog jer sam kul 🙉🙈",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Tone",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Kikyy99"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265127": {
+      "poster": "LucidDreamer",
+      "content": "Mene je pito kraftovu nejednakost i knapsack problem s balonima u ruksaku 🙄",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Bucc (Olive Oil)",
+          "Kikyy99",
+          "ruza0001 (rozy)",
+          "steker"
+        ],
+        "wtf": [
+          "Ducky",
+          "jobi (azex)",
+          "pingvinka"
+        ],
+        "tuga": []
+      }
+    },
+    "265274": {
+      "poster": "Tootha",
+      "content": "Jel jos netko ne moze pristupit vjezbi?",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft",
+          "luka6 (ugrijaniRadijator)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265275": {
+      "poster": "Djani",
+      "content": "@\"Tootha\"#p265274 \n\nDa :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265276": {
+      "poster": "luka6 (ugrijaniRadijator)",
+      "content": "@\"Tootha\"#p265274 ponovno se prijavi, meni rijesilo problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265286": {
+      "poster": "Fikalo",
+      "content": "Koji je zadatak na trenutnom terminu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

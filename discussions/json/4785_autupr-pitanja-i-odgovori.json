@@ -1,0 +1,350 @@
+{
+  "title": "[AUTUPR] Pitanja i odgovori",
+  "creator": "Ilija123 (Mrnjotaur)",
+  "slug": "autupr-pitanja-i-odgovori",
+  "tags": [
+    "FER",
+    "Automatsko upravljanje"
+  ],
+  "posts": {
+    "220196": {
+      "poster": "Ilija123 (Mrnjotaur)",
+      "content": "Jel ima netko postupak iz zbirke za blok dijagram od 1.5 do 1.7?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "220569": {
+      "poster": "Kuhar",
+      "content": "Kome slat mail ako zelimo odjavit ispit a prosao je rok?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "220642": {
+      "poster": "Ilija123 (Mrnjotaur)",
+      "content": "Jel tko riješavao zbirku, da možda zna pojasnit kako u 3.4 dodu do nelinearne jednadžbe",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "220678": {
+      "poster": "domgal",
+      "content": "@zeroth#219898 Kad kažeš stari rokovi, misliš na one baš starije koji se mogu naći tu na materijalima (2015 i stariji), ili postoje negdje spremljeni noviji rokovi? Na webu vidim samo MI i ZI.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "220703": {
+      "poster": "General_Kenobi (Aborteur)",
+      "content": "@Kuhar#220569 Vjerojatno Baotiću",
+      "votes": {
+        "upvoters": [
+          "Kuhar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "220711": {
+      "poster": "General_Kenobi (Aborteur)",
+      "content": "Jel bi mi netko znao reć kako iz bodeovog diagrama vadim one jednadžbe pravaca, npr. kad pomoću toga moram naći neko pojačanje koje nije na lomnoj frekvenciji",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "220753": {
+      "poster": "zeroth",
+      "content": "@domgal#220678 iskreno nisam ni vidio da ih nema na ferwebu, ali da, ti rokovi plus MI i ZI isto ne škodi ako nešto treba uvježbati",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "220754": {
+      "poster": "zeroth",
+      "content": "@General_Kenobi#220711 daj primjer nekog grafa pa napišem jednom do jutra",
+      "votes": {
+        "upvoters": [
+          "General_Kenobi (Aborteur)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "220760": {
+      "poster": "General_Kenobi (Aborteur)",
+      "content": "@zeroth#220754 AU MI 2019/2020. 6. zadatak pod b) ljepše ćeš vidjet iz njihovog crteža neg mog, ima taj MI na fer webu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "220794": {
+      "poster": "zeroth",
+      "content": "![](assets/2021-07-09/00026.png)\n\n![](assets/2021-07-09/00027.png)\n\nKrećemo od jednostavne jednadžbe pravca y-y0 = k(x-x0)\n\nU ovim zadacima je k UVIJEK 0, +-20dB, +-40dB, +-60dB... \n\ny-os je linearna tako da kod tog dijela ništa ne mijenjamo, ono što mijenjamo je zapis x-osi odnosno x-x0.\n\nZato što imamo logaritamsku skalu na x-osi, umjesto x trebamo pisati log (x), a umjesto x0 log(x0) (baza 10 uvijek), pa je onda naš zapis pravca y-y0=k(log(x)-log(x0)) ili jednostavnije y-y0=k*log(x/x0).\n\nSada možemo krenuti s pisanjem jednadžbi pravaca. S obzirom da ovdje imamo član 1/s počinjemo pravac s nagibom -20dB/dek (kada njega ili bilo koje njegove potencije kao što je 1/s^2, 1/s^3 itd ne bi bilo, prvi nagib je 0 i krećete drugačije što ću zapisati kasnije).\n\nProblem je odrediti x0 i y0 za taj prvi pravac. Ovdje se služimo malim trikom da je pojačanje pri 10^0 jednako statičkom pojačanju (s=0) ignorirajući 1/s član. Znači izostavimo 1/s i uvrstimo s=0 čime dobivamo da je G=1/2=-6.02dB. Time smo dobili y0 i x0.\n\nPišemo prvi pravac: y-20log(0.5)=-20*log(x/1) -> y = -20log(x)+20log(0.5).\n\nZa sljedeći pravac vidimo da je nagib k=0, pa samo trebamo odrediti y0, njega odredimo tako što odredimo vrijednost prethodnog pravca u frekvenciji kada on prestaje odnosno ovdje za 10^-1 (0.1) i pišemo:\n\ny=-20log(0.1)+20log(0.5).\n\nTreći pravac imamo y0 (isti je kao i kod prethodnog pravca), a x0 je opet točka loma, u ovom slučaju 10^0 = 1.\n\ny-y0 = -20log(x/1). S obzirom da ovaj pravac siječe y=0 pravac (kada je |G| = 1) ovo je zadnji pravac koji trebamo naći.\n\ny=-20log(x)-20log(0.1)+20log(0.5). Ovo se izjednači s 0 i izračunaju se pojedini logaritmi da dobijemo frekvenciju. \n\nZašto se moj izraz razlikuje od njihovog službenog?\n\n ![](assets/2021-07-09/00028.png)\n\nOdgovor: Ne razlikuje se. 20log(0.5) je isto što i -20log(1/0.5) i analogno za drugi logaritam koji je drugačiji. \n\nU slučaju da nemate član 1/s, prva jednadžba je pravac y=y0 gdje je y0 statičko pojačanje sustava (odnosno pojačanje pri s=0) i dalje nastavljate kako je napisano iznad",
+      "votes": {
+        "upvoters": [
+          "General_Kenobi (Aborteur)",
+          "Kuhar",
+          "kinderlada (Javor)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "220798": {
+      "poster": "zeroth",
+      "content": "Što se tiče faze:\n\nImate nekoliko slučajeva kako krećete. Početna faza može biti -180, +90, 0 ili -90 (ne znam zašto se ne kreće nikada od +180, to možda netko drugi može odgovoriti).\n\nSa -180 krećete ako imate '-' ispred cijelog razlomka; sa +90 ako se razlomak množi s 's', 0 ako ništa ostalo ne vrijedi, odnosno imate najnormalniji razlomak i s -90 (kao ovdje) kada imate 1/s. \n\n+90 i -90 se množe s potencijom od 's' koju imate (znači s^2 odgovara 2*90 stupnjeva i slično).\n\nDalje idete slično kao kore samo što je k=+-45, +-90 i slično. Jedna sitnica koja je različita je da prijelomi za fazu počinju jednu dekadu prije nego prijelomi za amplitudu, i vrijede SAMO dvije dekade (to je bitno za crtanje, ali ako imate nacrtano onda je lako naći jednadžbe pravaca).\n\nNapisati ću prvih par pravaca.\n\nKrećemo s y=-90deg\n\nSljedeći pravac je y-(-90)=45*log(x/10^-2) -> y=45*log(x/0.01)-90\n\nTreći po redu pravac ima nagib 0 pa je y=45*log(0.1/0.01)-90\n\nZatim imamo y-(45*log(10)-90)=-45log(x/1) -> y=-45log(x)+45log(10)-90 itd...",
+      "votes": {
+        "upvoters": [
+          "General_Kenobi (Aborteur)",
+          "Kuhar",
+          "kinderlada (Javor)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "220799": {
+      "poster": "zeroth",
+      "content": "@zeroth#220794 Jednu stvar sam zaboravio spomenuti ovdje.\n\nAko imate situaciju da imate član 's' koji množi razlomak, radite isti postupak kao za 1/s osim što je početni nagib +20dB/dek",
+      "votes": {
+        "upvoters": [
+          "General_Kenobi (Aborteur)",
+          "kinderlada (Javor)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "220947": {
+      "poster": "PeanutMaster1801 (caca)",
+      "content": "jel mi moze netko reci zasto se u zadacima 4.2-4.8 iz zbirke (miskovic) nekad koristi ova pobuda R(s) = 1/s za racunanje nagib u ustaljenom stanju, a nekad ne?",
+      "votes": {
+        "upvoters": [
+          "Ilija123 (Mrnjotaur)",
+          "Klembuksna"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "221077": {
+      "poster": "General_Kenobi (Aborteur)",
+      "content": "@zeroth Kolega zahvaljujem puno mi je jasnije sada, izvježbat ću to malo da mi uđe u glavu",
+      "votes": {
+        "upvoters": [
+          "zeroth"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "221303": {
+      "poster": "Ilija123 (Mrnjotaur)",
+      "content": "Moze netko objasnit kako se u ovom nasem MI racunao Gz u prvom zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "228839": {
+      "poster": "Kuhar",
+      "content": "![](assets/2021-08-10/00031.png)\n\nJesu oni tu krivo napisali ovaj koeficijent uz H20 ovaj a1? tocnije krivo prepisali pa im je i rjesenje krivo na kraju. Ja dobijem dobar omjer rjesenja ko i oni na kraju ali brojke su drugacije? Moze neko pojasnit di grijesim. \n\nNjihovo rjesenje: ![](assets/2021-08-10/00032.png)\n\nJa dobijem za h20=1.1127 a h10 : 5.5636.\n\nEDIT: inace MI 2018/19 je u pitanju, prvi zadatak.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "232545": {
+      "poster": "Kuhar",
+      "content": "Zna neko u ZI 2016/2017 3. zadatak pod a), zasto su oni sve podijelili sa Ti u karakteristicnom polinomu i onda racunali granice parametara?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "232726": {
+      "poster": "tomke",
+      "content": "jel ima netko riješen onaj prvi zadatak sa njihalom što se znao pojavljivati ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "233920": {
+      "poster": "dontc4m4pc",
+      "content": "![](assets/2021-09-02/00013.png)\n\nZna li netko riješit ovaj zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "234171": {
+      "poster": "Kuhar",
+      "content": "Ova skroz zadnja prezentacija - analiticki postupak sinteze regulatora, ITAE oblik i to, jel to opce ikad bilo na ispitima, ja na to nisam nigdje naletio, bar ne na ZI i MI, jel dolazi mozda na rokovima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "234244": {
+      "poster": "rtnbot (Sharba10)",
+      "content": "Može netko objasniti kako se točno crta Nyquistov dijagram nakon što pronađemotočke? ω = 0 i ω = ∞ su početna i konačna, a što s ovima između?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "234306": {
+      "poster": "zeroth",
+      "content": "@rtnbot#234244 Nađeš ako postoji kada je imaginarni dio 0 i kada je realni dio 0. Ako ti treba za sebe uvrsti još neke frekvencije između tih (nije obavezno jer gledaju samo točke koje si rekao/la i ovo gore) da bolje vidiš kako se graf ponaša i tjt",
+      "votes": {
+        "upvoters": [
+          "rtnbot (Sharba10)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "234347": {
+      "poster": "Kuhar",
+      "content": "@Kuhar#234171 \n\nkolko sam shvatio to je novo gradivo od ove godine a i nalazi se na salabahteru, tako da bi moglo doc, pogledajte to :) ( snimka na temasu 25. predavanje, lakse za shvatit nego samo iz prezentacija ).",
+      "votes": {
+        "upvoters": [
+          "DukeFiction"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "234693": {
+      "poster": "tomke",
+      "content": "Jel ima negdje teorija sažeto ili nešto, stvarno nit znam sta bi me mogao pitati, samo san po zadatcima peglao",
+      "votes": {
+        "upvoters": [
+          "dontc4m4pc",
+          "jlo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

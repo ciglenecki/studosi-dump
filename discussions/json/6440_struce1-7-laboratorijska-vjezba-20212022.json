@@ -1,0 +1,243 @@
+{
+  "title": "[STRUCE1] 7. laboratorijska vježba - 2021/2022",
+  "creator": "[deleted]",
+  "slug": "struce1-7-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Strojno učenje 1",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "269058": {
+      "poster": "[deleted]",
+      "content": "Jesam ja jedina koja ne razumije kak su na rješenju na materijalima dobili ovakve tablice:\n\n![](assets/2022-01-09/00012.png)?\n\nKaj ne ide struktura tablice ovak: ![](assets/2022-01-09/00013.png)?\n\nPo toj logici ovak treba izgledati tablica:\n\n![](assets/2022-01-09/00014.png).\n\nIli ja nekaj propuštam haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269059": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Aimée\"#p269058 Prilicno sam siguran da je na materijalima krivo, za vecinu queryja koje te traze imas izracunate vrijednosti u skripti pa mozes to koristit da vidis jel ti tocno",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269060": {
+      "poster": "Bananaking",
+      "content": "U zadatku sa efektom objašnjavanja, jel mora biti P(S=1 | W=1, R=0) != P(S=1 | W=1, R=1) ili P(S=1 | W=1) != P(S=1 | W=1, R=1) ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269061": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Bananaking\"#p269060 Mislim da ovo drugo, imas u skripti probabilisticki graficki modeli, str. 12:\n\n![](assets/2022-01-09/00015.png)",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269125": {
+      "poster": "InCogNiTo124",
+      "content": "@\"Aimée\"#p269058 potvrdujem da je najvj krivo\n\ninace to je onak ful poznat example sigurno postoje rjeseni svi moguci upiti pa si provjeris lagano",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271377": {
+      "poster": "neksi (filip)",
+      "content": "Zašto je vjerojatnost 𝑃(𝑐=1) drugačija od 𝑃(𝑐=1|𝑠=1,𝑟=1) ako znamo da čvorovi 𝑆 i 𝑅 nisu roditelji čvora 𝐶?\n\nJel zna iko objasnit ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271395": {
+      "poster": "sheriffHorsey",
+      "content": "@\"filip\"#p271377 samo raspises vjerojatnosti i dobijes drukcije izraze:\n\n[imath]P(c=1) = \\sum_{s, r, w}^{} P(c=1, s, r,w) [/imath]\n\n[imath]P(c=1 | s=1, r=1) = \\frac{\\sum_{w}^{} P(c=1, s=1, r=1, w)}{\\sum_{c, w}^{} P(c, s=1, r=1, w)}[/imath]",
+      "votes": {
+        "upvoters": [
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271436": {
+      "poster": "sheriffHorsey",
+      "content": "pitanja koja sam danas dobio:\n\nprocjena parametara:\n\n    sto je funkcija izglednosti\n\n    koja vrijednost odgovara ml procjenama na grafu funkcije izglednosti\n\n    kako ovisi funkcija izglednosti za bernoullijevu distribuciju o parametru m\n\n    koje su ml procjene na 1.c grafu i koji je problem s njima\n\n    kako se rjesava taj problem\n\n    koje su razlike izmedu map i mle procjene\n\n    kako se mijenja mod beta distribucije u ovisnosti o alfa i beta parametrima\n\n    sto je pearsonov koeficijent korelacije, koji mu je raspon i sto predstavlja\n\n   pgm:\n\n    koja su tri aspekta pgmova\n\n    koju zajednicku distribuciju modelira konkretna mreza iz labosa i kako ju raspisati\n\n    kako radi egzaktno zakljucivanje i zasto se koristi\n\n    koja je razlika izmedu aposteriornog i map upita\n\n    pojasni efekt objasnjavanja na zadanom primjeru\n\n  grupiranje:\n\n    koja je razlika nadziranog i nenadziranog ucenja\n\n    koji su neki primjeri nenadziranog ucenja\n\n    sto je cvrsto a sto meko grupiranje\n\n    sto je particijsko a sto hijerarhijsko grupiranje\n\n    kakav algoritam je kmeans prema podjeli iz prethodnog pitanja\n\n    kako radi k means algoritam\n\n    kako odrediti vrijednost hiperparametra K iz grafa kriterijske funkcije\n\n    je li metoda robusna\n\n    objasni sto se dogada na silhouette plotu i kako iz njega odrediti hiperparametar K\n\n    sto uzrokuje problem u grupiranju na grafu 2.c\n\n    koje su razlike u parametrima kod gaussovih modela mjesavina i kmeansa\n\n    moze li se gmm dobro nostiti s grupama neprirodnih oblika\n\n    zasto je randov indeks ekvivalent klasifikacijske tocnosti u problemima grupiranja\n\n    kako radi randov indeks\n\n    koji je problem kod randovog indeksa",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Ardura (Maddy)",
+          "Artemis",
+          "Bananaking",
+          "Daho_Cro",
+          "Dlaid (Peter Jordanson)",
+          "Gulbash",
+          "Han",
+          "Lyras",
+          "Me1 (Me)",
+          "Mikki",
+          "MyKnee",
+          "Smolaa",
+          "Stark",
+          "SuperSjajan3",
+          "Uchenikowitz (Učečuču)",
+          "Upforpslone",
+          "WickyWinslow",
+          "[deleted]",
+          "batman3000",
+          "bodNaUvidima",
+          "cajaznun",
+          "cloudies",
+          "gad_gadski",
+          "gladiator",
+          "karla_cd (ocd)",
+          "krokodil",
+          "lucylu",
+          "madoxx",
+          "miss_anthropocene (neunist.iva)",
+          "rolotex (brr)",
+          "steker",
+          "swish41 (PlavušaSFilozofskog)",
+          "tempest"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271617": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "jel ima netko da danas odgovara da napise sta su pitali?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271716": {
+      "poster": "Dootz",
+      "content": "@\"sheriffHorsey\"#p271436 Koliko je to dugo trajalo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271730": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Dootz\"#p271716 20-25 minuta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271916": {
+      "poster": "Jaster111",
+      "content": "Koji je odgovor na pitanje: koju zajednicku distribuciju modelira konkretna mreza iz labosa i kako ju raspisati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272270": {
+      "poster": "Reznox",
+      "content": "Moze li netko pojasniti razliku izmedu aposteriornog i MAP upita, prosao sam par puta kroz taj dio i svejedno mi nije jasan...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272279": {
+      "poster": "at5611",
+      "content": "@\"Reznox\"#p272270 Kod aposteriornog upita ispitujes vjerojatnost neke varijable na temelju neke opazene, znaci mozes bilo koju vjerojatnost ispitat, a kod MAP upita dobijes samo koji je najvjerojatniji dogadaj na temelju opazene varijable, tako san bar ja skuzija",
+      "votes": {
+        "upvoters": [
+          "Reznox",
+          "bodNaUvidima",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

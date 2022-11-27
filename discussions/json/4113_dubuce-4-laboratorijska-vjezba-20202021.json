@@ -1,0 +1,975 @@
+{
+  "title": "[DUBUCE] 4. laboratorijska vježba - 2020/2021",
+  "creator": "AromaticConfusion (VrloZbunjen)",
+  "slug": "dubuce-4-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Duboko učenje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "194153": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "Kad je zadnji labos? Ja ga ne vidim u kalendaru",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194233": {
+      "poster": "DodgeCharger",
+      "content": "@AromaticConfusion#194153 11.06. Piše u onoj obavijesti za generativne modele.",
+      "votes": {
+        "upvoters": [
+          "AromaticConfusion (VrloZbunjen)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "200474": {
+      "poster": "DodgeCharger",
+      "content": "please send help",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "narval13068 (Dima)",
+          "pop (gabagool)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Trolololica",
+          "login",
+          "member",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "moji_prsti_prsti_klize_po_njoj",
+          "narval13068 (Dima)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201975": {
+      "poster": "tonkec",
+      "content": "Ima li netko problem s VAE da ne može dobiti ništa smisleno? Primjerice u mojem slučaju je problem što onaj dio greške koji se odnosi na unakrsnu entropiju ide prema minus beskonačnosti. Za izračun toga dijela koristim ```BCEWithLogitsLoss```  i vrlo brzo se promijeni s nečeg pozitivnog u nešto što je sve više i više negativno. Drugi dio greške koji se odnosi na KL divergenciju mi je negativan, ali se polako smanjuje. Treba li na izlazu dekodera primijeniti Softplus ili običnu sigmoidu? Treba li koristiti kakvu funkciju kod reparametrizcijskog trika ili je dovoljno samo napraviti ```z = mu + torch.exp(logvar / 2) * noise```?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202196": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @tonkec#201975 Za izračun toga dijela koristim BCEWithLogitsLoss  i vrlo brzo se promijeni s nečeg pozitivnog u nešto što je sve više i više negativno.\n\nPazi na redoslijed tenzora koje predaješ u loss, to ti najčešće bude problem. Tj. ako ih staviš obrnuto, znači target tamo gdje je prediction, onda će ti se to dogoditi hahaha\n\n\n> @tonkec#201975 Treba li na izlazu dekodera primijeniti Softplus ili običnu sigmoidu?\n\nJa sam u svakom sloju dekodera na kraj stavio softplus: https://github.com/Yalfoosh/DUBUCE/blob/3f53923c27b1bce0ac592b20c5bb98649cb7fb75/LAB4/bin/task_4.py#L186\n\n> @tonkec#201975 Treba li koristiti kakvu funkciju kod reparametrizcijskog trika ili je dovoljno samo napraviti z = mu + torch.exp(logvar / 2) * noise?\n\nNope, to je okej",
+      "votes": {
+        "upvoters": [
+          "tonkec"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202720": {
+      "poster": "tonkec",
+      "content": "U podzadatku s GANom gdje piše da treba u jednoj iteraciji trenirati diskriminator s dva batcha, a generator s jednim, to znači da onaj cijeli dio s generatorom preskočim svaki drugi batch ili to ide nekako drukčije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202754": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@tonkec#202720 Akumuliraš gradijent u diskriminatoru.\n\nA kak se to izvodi, napraviš funkciju treninga ovak:\n\n```python\ndef train(..., n_discriminator: int = 1, n_generator: int = 1, ...)\n```\n\ni u petlji samo staviš brojače koji počinju od 0, na početku stepa se inkrementiraju i na kraju stepa samo provjeriš jel ti brojač jednak `n_discriminator` ili `n_generator`, i ako je, nad optimizatorom napraviš step, znači `optimizator.step()` i normalno resetiraš taj brojač. To podrazumijeva da će ti optimizatori za generator i diskriminator biti odvojeni, tj. imat ćeš 2 optimizatora koji će upravljati različitim grupama parametara.",
+      "votes": {
+        "upvoters": [
+          "tonkec"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202760": {
+      "poster": "narval13068 (Dima)",
+      "content": "Jel netko shvaca sta ide u linije \n\nv_out_tmp_prob = \n\nv_out_tmp =\n\nu 3zdk fine tuning DBN? Meni izgledaju nepotrebne al valjda se varam...",
+      "votes": {
+        "upvoters": [
+          "Koalalica (zaba)",
+          "luba",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203264": {
+      "poster": "DodgeCharger",
+      "content": "@narval13068#202760 Ma kod za to ti je sličan kao i u 2. zadatku samo su ime varijabla promijenili.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203325": {
+      "poster": "neZnamNista",
+      "content": "Kako je predaja labosa putem moodle-a je li to znaci da nema negativnih bodova, tipa nece davati negativne bodove ako nam rješenje ne radi u potpunosti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203383": {
+      "poster": "antesha",
+      "content": "Zašto je izlazna aktivacija generatora tanh, kada podaci trebaju biti u rasponu [0,1]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203450": {
+      "poster": "branc116",
+      "content": "Kolko dugo vam se trenira prvi zadatak? Meni treba 5 min za 100 epoha :/\n\nČini mi se sporo",
+      "votes": {
+        "upvoters": [
+          "member",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203563": {
+      "poster": "Yasuke (Bono)",
+      "content": "Kako poboljšat rezultate kod GAN-a? Događa mi se da je diskriminator uglavnom dosta dobar i ima mali loss, a generator ima dosta velik i onda se baš i ne poboljšava.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203581": {
+      "poster": "narval13068 (Dima)",
+      "content": "@DodgeCharger#203264 Iako je sličan iskreno ne shvaćam šta ide jer mi je h1_down već dan iz gibbsa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203621": {
+      "poster": "orange",
+      "content": "Ima li tko problem da mu Colab nikako ne da dovoljno resursa da pokrene trening GAN-a",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203622": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Yasuke#203563 Možeš, primjerice, dati diskriminatoru da updatea gradijent svaka 2-3 stepa umjesto svaki step. Ali to će ti pomoći samo ako je stvarno disbalans generatora i diskriminatora u pitanju. I druga stvar je što problemi nastaju kad je generator jači, ne kad je diskriminator jači. Preporučam da pročitaš 4.4 [ovdje](https://arxiv.org/pdf/1701.00160.pdf)\n\nAli iznosi lossa gube svoj smisao kod GANova, tak da po tom se ne bi trebalo ravnati, nego po drugim metrikama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203625": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@orange#203621 Obično su u ovo vrijeme godine gužve na colabu, dakle imaš par rješenja:\n\n- nastavi pokušavati dok te ne pusti\n- vrti na svojem kompjuteru\n- kupi colab pretplatu\n- javi se nositeljima, možda ti oni mogu alocirati nešto resursa\n- javi se mentoru ako je na ZEMRIS-u, možda ti oni mogu dati nešto resursa\n- pitaj nekog kolegu da ti izvrti vježbu",
+      "votes": {
+        "upvoters": [
+          "orange"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203635": {
+      "poster": "Joji",
+      "content": "@orange#203621 Kaggle daje 30 sati tjedno GPU-a besplatno pa možeš i to probat https://www.kaggle.com/code",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "orange"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203677": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@antesha#203383 Podaci su u rasponu [-1, 1] koliko mi je poznato",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203734": {
+      "poster": "antesha",
+      "content": "@micho#203677 kako kad su grayscale pikseli u pitanju",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203735": {
+      "poster": "pushPop",
+      "content": "Imam ova 2 problema koje nikako ne mogu riješiti. Ima netko ideje-savjete? Hvala\n\n1-2-3 zad: dobivam da mi je RBM najbolji vizualno, pa DBN malo lošiji i onda FT DBN najlošiji, a logicno bi bilo da je suprotno? \n\n4 zad: default 1000 epoha mi je apsolutno previše jer su mi rezultat \"skroz žute\" rekonstrukcije. Gledao sam da je negdje do 200. epohe vizualno sve bolje, a onda počinje biti većina slike žuto. Zbog toga sam trenirao i 2D i 20D na 150-250 epoha.\n\nSvejedno mi je problem da su mi:\n\n-rekonstrukcije i dalje \"previše žute\"\n\n-latentni prostor koji daje walk_in_latent_space (za 2D) mi je generalno \"žut\", a posebno u sredini slike prežut da se ne vide brojevi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203742": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@antesha#203734 Nema smisla spremati nešto u float [0, 1] radi gubitka preciznosti, nego se stvari u floatu obično spremaju u [-1, 1] kad su tu najgušće raspoređene vrijednosti. Na kraju krajeva, možeš si i sam ispisati tenzore, pa provjeri, možda su i mijenjali nešto pa sam opet ja u krivu.\n\nA i da jesu, pametno bi bilo bilo kakve floatove koji nisu vjerojatnosti prebaciti u [-1, 1] rang, tj. nešto centrirano oko 0 ako ćemo samo gledati statistički.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203759": {
+      "poster": "pushPop",
+      "content": "@micho#203677\n\nPiše da su podaci u rasponu koji se može koristiti direktno kao vjerojatnost - znači u [0,1]",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203784": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@pushPop#203759 Ne vidim gdje to piše, jedino što piše je da su ulazi skalirani na 64x64.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203803": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Evo, išao sam ručno provjeriti, podatci su 0-255 intovi. Što onda znači da će ih se trebati pretvoriti u float. I onda se to neće raditi na [0, 1] raspon, nego na [-1, 1] ili eventualno skalirati da su iz [imath]\\mathcal{N}(0, 1)[/imath] (najbolje). U svakom slučaju, ide tanh.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203809": {
+      "poster": "narval13068 (Dima)",
+      "content": "@tonkec#201975 Koja je logika izad logvar/2, zbog čega je podijeljeno s 2?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203813": {
+      "poster": "pushPop",
+      "content": "@micho#203803\n\nJa sam pročitao da su iz [0,1] prema ovom paragraf ili sam ja nešta krivo shvatio?\n\n\"\n\nU zadacima će se koristiti MNIST baza. Iako pikseli u MNIST slikama mogu poprimiti realne vrijednosti iz raspona [0, 1], svaki piksel možemo promatrati kao vjerojatnost binarne varijable  p(vi=1) . Ulazne varijable tada možemo tretirati kao stohastičke binarne varjable s Bernoulijevom razdiobom i zadanom vjerojatnosti distribucijom  p(vi=1) .\n\n\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203838": {
+      "poster": "tonkec",
+      "content": "@narval13068#203809 kako sam gledao različite implementacije VAE, svaka je imala na neki svoj način interpretiranu reparametrizaciju, ali sad koristim samo ```mu + torch.exp(logvar) * noise``` premda uopće nema razlike, ali je valjda matematički ispravnije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "203933": {
+      "poster": "InCogNiTo124",
+      "content": "@narval13068#203809 @tonkec#203838 i mora bit svejedno, jedna implementacija parametrizira [imath]\\log(\\sigma)[/imath] a druga [imath]\\log(\\sigma^2)[/imath] pa se jedno iz drugog dobije korjenovanjem (koje je faktor od 1/2 kad se logaritmira)\n\nmatematicki je svejedno, mozda jedino moze bit neka razlika numericki al nista (pre)bitno",
+      "votes": {
+        "upvoters": [
+          "tonkec"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204009": {
+      "poster": "DodgeCharger",
+      "content": "Kad računamo gradijente kod RBM, DBN i DBN-FT...jel uzimamo samplirane tenzore ili samo vjerovatnosti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204021": {
+      "poster": "tonkec",
+      "content": "Je li imao netko sličan problem kod VAE?\n\n![](assets/2021-06-09/00034.png)\n\nOvo dobivam kada na izlazu dekodera ne primjenjujem nikakvu funkciju, a ako primijenim softplus ili sigmoidu, onda dobijem sljedeće\n\n![](assets/2021-06-09/00035.png)",
+      "votes": {
+        "upvoters": [
+          "Koalalica (zaba)",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204058": {
+      "poster": "pushPop",
+      "content": "@tonkec#204021\n\nJa stalno dobivam ovo gore i ne znam kako se riješiti tog žutog okolo. Primjenjujem sigmoidu na izlazu dekoder kako piše.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204081": {
+      "poster": "Vrba",
+      "content": "Ova zadnja obavijest u kojoj pise \"Nadoknada 4. laboratorijske vježbe biti će 15.6. na isti način.\" zapravo znaci da prakticki imamo 2 termina za predati ovu vjezbu, tj i na toj nadoknadi se moze dobit maksimalan broj bodova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204082": {
+      "poster": "neZnamNista",
+      "content": "@Vrba#204081 Pa ako je tako bilo dosad na nadoknadama onda je valjda i sada isto",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204097": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@pushPop#203813 Treba čitati s razumijevanjem\n\n> mogu poprimiti\n\n\n> možemo promatrati\n\n\nA što je najgore, to se niti ne odnosi na taj zadatak, niti ima veze sa stvarnošću kad sam doslovno skinuo dataset preko `torchvision`a (što su svi ostali mogli i sami) da provjerim točno u kojem je formatu, i nije u tom formatu. Priča se o tome kako se diskretne vrijednosti piskela mogu smatrati kao kontinuirane vjerojatnosti. I to je to.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204099": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@tonkec#204021 Moraš malo više detalja podijeliti s nama, jer je trivijalan odgovor \"mreža je podtrenirana\". Ovako na prvu mi se čini da je nešto sjebano s rasponima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204109": {
+      "poster": "antesha",
+      "content": "![](assets/2021-06-10/00002.png)\n\nJel bi ovako trebali ispasti rezultati GAN-a bez batchnorma?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "204128": {
+      "poster": "Solaire",
+      "content": "U prvom zadatku imam problem da mi nauči samo jedinice, ostalo je sve mutež između 9 u 0. Mislim da nekako krivo treniram. Jeli još netko možda imao taj problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204139": {
+      "poster": "narval13068 (Dima)",
+      "content": "U VAE, oni traze da nam se jedan fully connected sloj u modelu zove dec_fc1 da ga mogu plotat, koji je to točno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204155": {
+      "poster": "DodgeCharger",
+      "content": "@narval13068#204139 Prvi fully connected sloj u decoderu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204156": {
+      "poster": "Antuunn",
+      "content": "@Vrba#204081 \n\nKako je predaja vježbe on-line, ne morate se prijaviti\n\nKako se u 4. vježbi ne radi o testu, nego se ocjenjuju vaši rezultati, 4. vježbu možete predati samo jednom, ili u redovnom terminu ili u nadoknadi.\n\nNačin predaje i ocjenjivanja je isti za redovni termin i nadoknadu.\n\nAko do sada niste nadoknađivali niti jednu vježbu, maksimalan broj bodova na nadoknadi je 5. Ukoliko ste već imali nadoknade, maksimalan broj bodova je 2.5.",
+      "votes": {
+        "upvoters": [
+          "Vrba",
+          "luba",
+          "neZnamNista"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204164": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@antesha#204109 Ne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204165": {
+      "poster": "antesha",
+      "content": "@micho#204164 \n\nKad god runnam bez batchnorma, greška diskriminatora brzo dođe na 0, a generator se zalijepi za max grešku i tamo ostane",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204171": {
+      "poster": "Yasuke (Bono)",
+      "content": "@antesha#204165 Meni je općenito jako pomoglo da kad treniram diskriminator sa stvarnim primjerom labels postavim na 0.9 umjesto na 1. Ima nešto malo o tome u prezentaciji.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204176": {
+      "poster": "antesha",
+      "content": "@Yasuke#204171 \n\nA jesi prije toga imo isti problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204177": {
+      "poster": "Yasuke (Bono)",
+      "content": "@antesha#204176 Dobivao sam slike bez nekog smisla i događalo mi se ovo što si napisao za diskriminator da dođe na 0, a za generator je loss bio jako velik.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204324": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jel uspio itko rijesit problem kod autoenkodera sa žutim slikama?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204547": {
+      "poster": "narval13068 (Dima)",
+      "content": "Kako funkcioniraju te nadoknade, jel treba opravdan razlog imat? Ili samo mogu ne predat 4. lab sutra na moodle nego 15.6 na nadoknadi kako vec nisan bia nista nadoknadiva i imat sansu za sve bodove?",
+      "votes": {
+        "upvoters": [
+          "member",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204607": {
+      "poster": "[deleted]",
+      "content": "Jeste išta suvislo zaključili za pitanje u 2. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204975": {
+      "poster": "alfajastog",
+      "content": "@Antuunn#204156 Odkud ti ovaj info? Nisam ga nigdje službeno vidio, pogotovo ovo s predajom na nadoknadi kad netko ima već nadoknadu prijašnje vježbe. Što nije da se može nadoknađivati samo jedna vježba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "204988": {
+      "poster": "[deleted]",
+      "content": "jel ikome radi VAE dobro?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205070": {
+      "poster": "narval13068 (Dima)",
+      "content": "@maki#204988 Meni nikako, ova kl divergencija zeza, neznam kako je ukomponirat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205098": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@maki#204988 Ove postavke bi trebale funkcionirati\n\n![](assets/2021-06-11/00030.png)\n\nOvaj `lr_gamma` ne mijenja ništa, to je nešto zasebno a na 1 se ponaša normalno.\n\nA što se tiče lossa, običan beta VAE loss s beta = 1:\n\nhttps://github.com/Yalfoosh/DUBUCE/blob/3f53923c27b1bce0ac592b20c5bb98649cb7fb75/LAB4/util/losses.py#L20",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205246": {
+      "poster": "BigD",
+      "content": "Jel nužno predati nešto ili možemo uopće ne predati vježbu ako imamo dovoljno bodova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205852": {
+      "poster": "alfajastog",
+      "content": "Kada radimo s MNIST podatcima na RBM-u, trebamo li mi to sample-at na pocetku s batch.bernoulli() ili predajemo bas float vrijednosti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205888": {
+      "poster": "login",
+      "content": "@BigD#205246 ne treba, barem nisam vidio da ima neki uvjet predaje svih labosa. samo pripazi da je 8 bodova prag za kontinuirani prolaz, a 10 je za mogucnost izlaska na rok",
+      "votes": {
+        "upvoters": [
+          "BigD"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206160": {
+      "poster": "member",
+      "content": "jel bi se uopće išta trebalo dodavati u fju train za GAN?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206244": {
+      "poster": "DodgeCharger",
+      "content": "@member#206160 Mislim da ne. Samo nakuckaš tu klasu za GAN",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207065": {
+      "poster": "Vrba",
+      "content": "@DodgeCharger#206244 Jel treba mijenjat nesto s dimenzijama jer cini mi se da napravim dcgan sa zadanim brojevima a dobivam RuntimeError: Calculated padded input size per channel: (1 x 1). Kernel size: (4 x 4). Kernel size can't be greater than actual input size",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207070": {
+      "poster": "danko (nerim)",
+      "content": "@Vrba#207065 Moras sklairat sliku kod prepare data loaders tako da dodas transformaciju  torchvision.transforms.Resize((64, 64))",
+      "votes": {
+        "upvoters": [
+          "Vrba",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": [
+          "RogerRoger"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207157": {
+      "poster": "sphera",
+      "content": "što napravit s ovim tensorom z, u gan zadatku, on ima dimenzije (100, 1, 1) kako s njim radit konvoluciju s kernelom 4? izgleda mi nešto promiče al ne mogu shvatiti što",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207318": {
+      "poster": "Watson (112)",
+      "content": "Jel se treba prijaviti za nadoknadu 4. labosu, nisu poslali nikakvu obavijest, a nije omogucen upload na moodleu",
+      "votes": {
+        "upvoters": [
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207320": {
+      "poster": "Vrba",
+      "content": "Rekli su da nece bit potrebne prijave, nego samo da ne predamo u redovnom terminu pa cemo moci na nadoknadi",
+      "votes": {
+        "upvoters": [
+          "Watson (112)",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207325": {
+      "poster": "prshoot",
+      "content": "@Watson#207318 evo omogućen je upload na moodleu sada",
+      "votes": {
+        "upvoters": [
+          "Watson (112)",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207375": {
+      "poster": "Vrba",
+      "content": "Kad otvorimo ono sta smo predali na moodleu jel bi se trebale vidjeti slike koje smo zalijepili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207459": {
+      "poster": "danko (nerim)",
+      "content": "@Vrba#207375 Ni meni se ne vide, si probao drugi puta?",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": [
+          "RogerRoger"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207466": {
+      "poster": "Vrba",
+      "content": "@danko#207459 Nisam pokusavao, ostavio sam tako jer sam napravio tocno kako pise pa vjerujem da je okej i da ce oni vidjeti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207544": {
+      "poster": "danko (nerim)",
+      "content": "Ako ste imali problema sa predajom slika na moodle(ne prikazuju se u pregledu nakon zaklucavanja), javite se asistentu Denisu Milosevicu i posaljite slike mailom na denis.milosevic@fer.hr",
+      "votes": {
+        "upvoters": [
+          "Vrba",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": [
+          "RogerRoger"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

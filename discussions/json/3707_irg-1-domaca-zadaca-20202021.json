@@ -1,0 +1,286 @@
+{
+  "title": "[IRG] 1. domaća zadaća - 2020/2021",
+  "creator": "KiflaKiflic",
+  "slug": "irg-1-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Interaktivna računalna grafika",
+    "Zadaće"
+  ],
+  "posts": {
+    "171620": {
+      "poster": "KiflaKiflic",
+      "content": "Sto treba napraviti kada nas zatraze da za pravce odredimo sjeciste u radnom prostoru?\n\nKoja je razlika izmedu toga i onoga kada na ferku u wiki zadacima zadaju da odredimo u homogenom prostoru?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171917": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "Ja mislim da moraš koordinate podijelit sa homogenom (zadnjom) da dobiješ radni prostor. Znači ako imaš x,y,z,h u homogenom, za radni ti je x/h , y/h, z/h . Nisam 100% siguran tako da...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172125": {
+      "poster": "KiflaKiflic",
+      "content": "@TheNubKiller#171917 Na ferku sam dijelio s homogenom, no tamo pise da je u homogenom a ovdje trazi radni... Sad nez dal to znaci samo da ne upisujemo taj zadnji homogeni clan ili ne dijelimo na kraju 🤔",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172575": {
+      "poster": "stic",
+      "content": "Ima netko ideju kako ovaj rješiti? \n\n![](assets/2021-04-17/00027.png)\n\nTreba podudariti dužine, ali bez translacije pa nemam ideju koje transformacije su potrebne za to. \n\nDo sad sam probao prvo rotaciju pa skaliranje i prvo skaliranje pa smik, ali uvijek dobijem paralelnu dužinu koju bi onda trebao translatirati da dobijem presliku V3V4...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172578": {
+      "poster": "stic",
+      "content": "@KiflaKiflic#172125 Ako je u radnom, onda ti se podrazumijeva da je homogena koordinata 1, pa moraš sve podijeliti s homogenom, a u homogenom prostoru ne trebaš dijeliti sve s homogenom jer pišeš njezin iznos na kraju, a i ako podijeliš opet će ti biti dobro rješenje,",
+      "votes": {
+        "upvoters": [
+          "KiflaKiflic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172607": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@stic#172575 \n\nTočke sam prvo proširio homogenom koordinatom 1. V1 i V2 sam pomnožio matricom i izjednačio s V3 i V4, respektivno.\n\n[math]\\vec{V_1} \\cdot \\boldsymbol{M} = \\vec{V_3} \\\\\n\\vec{V_2} \\cdot \\boldsymbol{M} = \\vec{V_4}[/math]\n\nZa točke sam uvrstio brojčane vrijednosti, a za matricu sam koristio nepoznanice [imath]M_{11}[/imath], [imath]M_{21}[/imath], [imath]M_{12}[/imath] i [imath]M_{22}[/imath].\n\nTe 2 jednadžbe sam rastavio na jednadžbe za x-komponente točaka i za y-komponente. Time sam dobio sustav od 4 linearne jednadžbe s 4 nepoznanice [imath]M_{11}[/imath], [imath]M_{21}[/imath], [imath]M_{12}[/imath] i [imath]M_{22}[/imath]. Riješio sam ga i dobio elemente matrice.\n\nSustav možeš rješavati kao sustav od četiri nepoznanice ili jednostavnije kao dva sustava od dvije jer će u dvije biti samo [imath]M_{11}[/imath] i [imath]M_{21}[/imath], a u preostale dvije samo [imath]M_{12}[/imath] i [imath]M_{22}[/imath].",
+      "votes": {
+        "upvoters": [
+          "Gulbash",
+          "Retard00",
+          "plavisnajper",
+          "stic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172647": {
+      "poster": "JogaBonito",
+      "content": "Je li netko dobio zadatak u kojemu mu ispada da se npr pravac i ravnina ne sjeku? Kako onda treba odgovoriti na moodleu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173402": {
+      "poster": "[deleted]",
+      "content": "@JogaBonito#172647 nisam, ali ako je sudeci po ferku onda se sjeku u beskonacnosti i tamo se to oznacava sa (+, +, +) ili (+, +, +, +) ovisno jel 2D ili 3D",
+      "votes": {
+        "upvoters": [
+          "JogaBonito"
+        ],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "173963": {
+      "poster": "[deleted]",
+      "content": "![](assets/2021-04-19/00027.png)\n\nmoze li mi netko objasniti gdje grijesim, barem na prvom koraku? \n\nzar nam nije pocetni D = -0.5 i onda kad mu pridodam a, na kraju prvog koraka bude -0.25?",
+      "votes": {
+        "upvoters": [
+          "Sicsile"
+        ],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "174074": {
+      "poster": "Sicsile",
+      "content": "zna netk ovaj? \n\n![](assets/2021-04-19/00038.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "174412": {
+      "poster": "Retard00",
+      "content": "Jel ovdje treba na kraju podjelit točku s dva (napravljeno na slici) pošto je h=2 u početku?\n\n![](assets/2021-04-20/00012.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "174453": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "@Retard00#174412  Moras odma na početku podijelit drugi redak sa 2.  Imaš takav zadatak riješen sa postupkom na stranici 71. u [Wiki zbirci ](https://github.com/studosi-fer/IRG/blob/master/vjezba/IRG_2019-20_vjezba_zadatci-ferko.pdf) od Cvije.\n\nPro tip: postoje razni alati online koji računaju ove sve zadatke pa su dobri za provjeru ili brzo rješenje ako se nekome neda",
+      "votes": {
+        "upvoters": [
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "174578": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "za zadatke kao ovaj gore od @Retard00 \n\n https://keisan.casio.com/exec/system/1223531414\n\nSamo treba pripaziti da se prvi redak od G1/G2 unosi u drugi redak (V1/V2) kalkulatora, dok se drugi redak od G1/G2 unosi u prvi redak P1, odnosno P2",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "174853": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "![](assets/2021-04-20/00045.png)\n\nKako odabirem orijentaciju pravaca u ovom zadatku? O tome ovisi je li točka ispod ili iznad pravca.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "174872": {
+      "poster": "[deleted]",
+      "content": "@bodilyfluids#174853 ![](assets/2021-04-20/00052.png)",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175008": {
+      "poster": "JogaBonito",
+      "content": "![](assets/2021-04-20/00063.png)\n\nEvo da vidite kako treba ako se dogodi da se ne sijeku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175036": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@III#174872 Oprosti, al nije mi skroz jasno sto je ovo i kako mi pomaze xd,\n\nPretpostavljam da zelim uzet pravce koji nastaju ovim vektorskim produktima; V1xV2, V2xV3, V3xV1.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175048": {
+      "poster": "[deleted]",
+      "content": "@bodilyfluids#175036 pa ako se ne varam mozes nakon sto izracunas jednadzbe bridova iz zadanih tocki, izracunat skalarne umnoske svakog brida i njemu nasuprotne tocke i vidjet jesu li svi umnosci >= 0 ili <= 0 i onda zakljucit jel u smjeru kazaljke ili obrnuto (to bi trebalo biti ovo sto na tom skrinsotu pise, u razumljivijim terminima xd)",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175059": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@bodilyfluids#174853 Što znači da zapis brida mora biti u normiranom obliku? norma vektora smjera mora bit 1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

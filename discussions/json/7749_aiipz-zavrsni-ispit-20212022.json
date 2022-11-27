@@ -1,0 +1,42 @@
+{
+  "title": "[AIIPZ] Završni ispit - 2021/2022",
+  "creator": "anon00",
+  "slug": "aiipz-zavrsni-ispit-20212022",
+  "tags": [
+    "FER",
+    "Ambijentalna inteligencija i podržano življenje",
+    "Ispiti"
+  ],
+  "posts": {
+    "306306": {
+      "poster": "anon00",
+      "content": "Evo pitanja za iduću generaciju\n\nPisalo je da ima negativnih, ali su u zadnji tren odlucili da ipak nece biti \n\nMI smo svi dobili 1/1 bod bez ikakvog odgovaranja iako je najavio nekakvu anketu bezveznu koje nije bilo \n\nZI je nosio 4b, a prag je (koliko sam skužio) bio 2b kad se zbroji MI i ZI\n\n ![](assets/2022-06-27/00014.jpg)\n\n![](assets/2022-06-27/00015.jpg)\n\n![](assets/2022-06-27/00016.jpg)\n\n![](assets/2022-06-27/00017.jpg)\n\n![](assets/2022-06-27/00018.jpg)\n\n![](assets/2022-06-27/00019.jpg)\n\n![](assets/2022-06-27/00020.jpg)\n\n![](assets/2022-06-27/00021.jpg)",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "306312": {
+      "poster": "anon00",
+      "content": "Za sljedecu generaciju: \n\nUsmeni je bio dosta chill, troje u terminu i onda redom postavlja pitanja pa drugi odgovara ako prethodni nema pojma. Dosta je blag pri ocjenjivanju gdje je valjda najniza ocjena bila 3 ako nabodeš par pojmova\n\nPitanja su ja mislim svima bila doslovno ista i otprilike ovako: \n\nNačini USB prijenosa (Kontrolni, Izokroni, Prekidni , Masovni - ni slučajno nemojte reci serijski/paralelni), a zatim te pita što je miš, tipkovnica, kamera, usb stick... \n\nkoje su razlike među njima tj koje su osobine svakog \n\nWifi , o čemu ovisi domet wifi-a (zapreke, snaga), Koliko AP-a imaju adhock mreže, u koji mod bi postavio AP ako zelis spojiti dvije mreze preko ulice (bridge)\n\nMaksimalna duzina UTP kabela (100m), kako bi spojio na vecu udaljenost (switch izmedu dva kabela)\n\nSto je DNS \n\nKako funkcinira slanje podataka na sabirnici \n\nI onda ima nacrtanu shemu nekakvog \"interneta\" tj više različitih mreža povezanih sa gateway-ima \n\nI dodatno u kutu ima IP i Ethernet datagram pa onda pita da objasniš kako bi nešto poslao od A do B ako je A u jednoj podmreži gdje je Gateway1, a B u drugoj podmreži (token-ring) te izmedu njih ima dva moguca pita preko drugih gateway-a \n\nI sad zeli citavu pricu \n\nDakle IP datagram se enkapsulira u Ethernet datagram (pa pita sto je enkapsulacija), Ethernet datagram onda treba saznati MAC adresu odredišta da zapiše u header, a ne IP - tako da prvo mora napraviti ARP broadcast (tu pita kako ARP protokol funkcionira). I tada A to može slati prema B, ali zapravo to prosljeđuje svom Gateway-u G1. G1 tada gleda u svoju routing tablicu i prosljeđuje prema B (ima 2 puta do B pa pita kako odlučuje kojim - u routing tablici piše metrika koja govori koji je put bolji, a temelji se na brzini mreže, zakrčenosti i sl.)\n\nJoš pita kako gateway popunjava svoju tablicu (kad se novi uređaj spoji on prema SVOM gateway-u šalje da se spojio i oni ažuriraju tablicu, i onda te izmjene propagiraju svojim susjednim gateway-ima itd.  Dakle gateway-i samo međusobno izmjenjuju izmjene tablice sa svojim susjedima)",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

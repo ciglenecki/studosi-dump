@@ -1,0 +1,1732 @@
+{
+  "title": "[SRS] 2. laboratorijska vježba - 2020/2021",
+  "creator": "Krisle",
+  "slug": "srs-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Sigurnost računalnih sustava",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "164903": {
+      "poster": "Krisle",
+      "content": "Jel netko već krenuo? Ovo mi se čini dosta kao nastavak na 1. vježbu. \n\nKako osigurat ove sigurnosne zahtjeve, na kaj tu treba pripazit?",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)",
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164905": {
+      "poster": "WickyWinslow",
+      "content": "@Krisle#164903 Meni se čini da ipak nije toliko slična prvoj lab, već je puno lakša. O sigurnosnim zahtjevima se priča u prezentaciji Kontrola pristupa na slajdovima 9,10 i 11 i ukratko zelimo pohraniti hashiran password za korisnike u datoteku i onda pri loginu ponovno hashirati sto je korisnik unio te to usporediti to sa pohranjenom vrijednosti. A onaj admin alat ako sam dobro shvatio ne treba nikakvu sifru niti nista slicno jer se pretpostavlja da nitko drugi osim admina na moze njemu pristupiti. O tome kako hashirati sigurno lozinku pronasao sam ovaj clanak https://www.baeldung.com/java-password-hashing",
+      "votes": {
+        "upvoters": [
+          "5ani (5af)",
+          "AntonioB25 (Pleteni miš)",
+          "Ducky",
+          "JoKing",
+          "Krisle",
+          "LucidDreamer",
+          "PaleAle",
+          "iNavy (mornar Ica)",
+          "kix7 (Fish99)",
+          "krokodil",
+          "limun (kuss)",
+          "netbitan11 (netbitan)",
+          "zastozato (studoš)",
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172691": {
+      "poster": "ferball",
+      "content": "kako se salje pythonu input iz basha ako ceka na stdinu pomocu input komande?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172789": {
+      "poster": "BigZ1",
+      "content": "@ferball#172691 skini si brate pycharm i tako lakse testiraj,no meni bi uvijek bilo da imam neki print tipa (unesi svoju novu adresu:) i upises i maznes enter i doslovno skripta nastavi,ako te kod zanima imas stack overflow",
+      "votes": {
+        "upvoters": [
+          "ferball"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172800": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@ferball#172691 `echo \"Ulaz\" | python3 program.py`",
+      "votes": {
+        "upvoters": [
+          "Sulejman",
+          "ferball"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "177692": {
+      "poster": "blablajar",
+      "content": "jel mi se cini ili je u IDE-u nemoguce dobiti da se lozinka ne vidi prilikom unosa nego bas moramo pokretati program iz cmd-a?",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "LucidDreamer",
+          "WickyWinslow"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "177883": {
+      "poster": "ana (anci)",
+      "content": "Zna netko kako spremati lozinke i usernameove u file, tj kako sam skuzila lozinke treba saltati pa spremiti hash i salt ali nije mi jasno dal username treba nekako kriptirano spremiti ili je ok da je username vidljiv u fileu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "177884": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@ana#177883 u praksi se usernameovi mogu spremiti bez nekakvog skrivanja, tak da ako nije izričito rečeno u vježbi da to radiš, nemoj si komplicirati lookup.",
+      "votes": {
+        "upvoters": [
+          "ana (anci)",
+          "blablajar",
+          "cloudies",
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "180843": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "ovdje moramo imati spremljenu administratorovu lozinku u tim podatcima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "180952": {
+      "poster": "blablajar",
+      "content": "@iNavy#180843 mislim da ne, nigdje ne spominju da administratoru uopce treba lozinka buduci da pise da iskljucivo on moze pokretati usermgmt",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "181133": {
+      "poster": "Ducky",
+      "content": "Jel možemo samo reciklirat kod iz 1. labosa za kriptiranje usernamea i passworda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "181136": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@Ducky#181133 pa realno možeš no možda ti je lakše ne kriptirati username",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "181571": {
+      "poster": "kix7 (Fish99)",
+      "content": "@Ducky#181133 kolko sam skuzio ne kriptiras uopce lozinku, samo spremas hash(lozinka + salt)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "181629": {
+      "poster": "blablajar",
+      "content": "hint za ostalu bracu javaše kako najbezbolnije postic da se lozinka ne vidi:\n\n```java\nConsole c = System.console();\nString lozinka = String.valueOf(c.readPassword(\"Password: \"));\n```",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Cubi",
+          "Dave",
+          "Dodica",
+          "Ducky",
+          "Fikalo",
+          "HARAmara (decko_sa_balkana)",
+          "Kaladonter",
+          "LLL",
+          "LucidDreamer",
+          "NGboi (DrEtva)",
+          "Nocna_smjena",
+          "Rope (Rops)",
+          "Tone",
+          "Urmum (mamaRu)",
+          "aerius",
+          "anon00",
+          "boki8 (kerovac)",
+          "bufus",
+          "gladiator",
+          "iNavy (mornar Ica)",
+          "iva7740 (Mica Trofrtaljka)",
+          "krokodil",
+          "laranotreallycroft",
+          "larrikin (allegra)",
+          "me99",
+          "neksi (filip)",
+          "ppooww (pp)",
+          "tovar",
+          "yuniK"
+        ],
+        "downvoters": [
+          "PostarLakogSna (snedul)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182213": {
+      "poster": "PostarLakogSna (snedul)",
+      "content": "@blablajar#181629 ako netko zna kako napraviti da unutar testne skripte šaljem lozinke tako da se ne moraju svaki put ručno unositi, bio bih uvelike zahvalan. Korištena je ova tehnika kako je gore kolega hintao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182387": {
+      "poster": "Lyras",
+      "content": "Napravio sam random salt od 16 bajta i to ubacio s lozinkom u scrypt (u pythonu, crypto library) za hashiranje i dobio 16 bajtni hash. Je li to zadovoljava sigurnosni zahtjev sigurnosti lozinke, ili trebam još nešto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182628": {
+      "poster": "Nocna_smjena",
+      "content": "Znaci koliko sam iz uputa shvatio admin moze mijenjati lozinke korisnika bez da zna sifru tog korisnika i moze natjerat korisnika da pri iducoj prijavi promjeni lozinku. Korisnik sam po sebi nemre mijenjati sifru kad njemu pase\n\nI jos nesto, samo je receno da korisnici ne smiju vidjeti charactere prilikom upisa sifre ali to nije napomenuto za administratore",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182645": {
+      "poster": "Nocna_smjena",
+      "content": "@Lyras#182387 Cini mi se da da. Hashas password skupa sa saltom i onda u fajlu zapises i salt u plaintextu uz hashiranu vrijednost. Koliko sam skuzio korisnicko ime ide u plaintext formatu u fajl",
+      "votes": {
+        "upvoters": [
+          "Lyras",
+          "iNavy (mornar Ica)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182656": {
+      "poster": "blablajar",
+      "content": "@Nocna_smjena#182628 ni adminu ne smije biti vidljiva lozinka prilikom upisivanja",
+      "votes": {
+        "upvoters": [
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182671": {
+      "poster": "Diego",
+      "content": "> Zbog  načina  kako  će  se  pohranjivati  datoteka  s korisničkim imenima i lozinkama postoji način na koji bi ona mogla biti otuđena, tj. pasti u ruke napadačapri čemu napadači imaju vrlo napredne metode pogađanja lozinkii pristup značajnim količinama računalnih resursa.\n\njel to znači da moramo napraviti ograničenje koliko minimalno znakova smije imati lozinka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182677": {
+      "poster": "Retard00",
+      "content": "Koji algoritam za hashiranje lozinka koristiti? [PBKDF2](https://cryptobook.nakov.com/mac-and-key-derivation/pbkdf2) je nesiguran za dani kontekst zadatka, a navodno je [Argon2](https://cryptobook.nakov.com/mac-and-key-derivation/argon2) najbolja solucija jer je bolji od Scrypt-a i Bcrypt-a.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182679": {
+      "poster": "Nocna_smjena",
+      "content": "@Retard00#182677 Kaze ti u clanku MANJE siguran. To ne znaci nesiguran. Mozes koristiti PBKDF2 ak oces\n\nIsto kao sto je AES128 manje siguran od AES512. Za AES128 ti ionako danasnjom tehnologijom treba 14 milijardi godina da ju crackas",
+      "votes": {
+        "upvoters": [
+          "Retard00",
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182779": {
+      "poster": "Nocna_smjena",
+      "content": "Logično da će ferko past kad ideš predat labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182858": {
+      "poster": "JBQ",
+      "content": "Koje preze bi trebalo znat za 2.lab?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182876": {
+      "poster": "tomekbeli420",
+      "content": "@Retard00#182677 Zaš bi PBKDF2 bio nesiguran?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182884": {
+      "poster": "Retard00",
+      "content": "@tomekbeli420#182876 U zadatku nam je navedeno \"napadači imaju vrlo napredne metode pogađanja lozinki i pristup značajnim količinama računalnih resursa\", sad kolko sam skužio PBKDF2 nije baš otporan na napade ASIC-ima ili GPU-ovima (ie. računalni resursi) pa zato nisam 100% siguran jel je prikladan za korištenje u ovoj LV.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182895": {
+      "poster": "tomekbeli420",
+      "content": "@Retard00#182884 fair enough, ali to ga ne čini nesigurnim.\n\nTaj PBKDF2 je probably i jedina opcija za Javaše, bez uvođenja vanjskih biblioteka izvan standardne Javine. Stoga sumnjam da će ikome uzeti za zlo korištenje PBKDF2.",
+      "votes": {
+        "upvoters": [
+          "LucidDreamer",
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182896": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "Zna li netko kako riješiti problem kad mi javlja da ne postoji konzola?\n\nKad sam pokrećem u cmd-u, radi. \n\nAli kad iz skripte pozivam, onda javlja da je null.\n\n(radim u Javi)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182955": {
+      "poster": "Nocna_smjena",
+      "content": "@AntonioB25#182896 Zakomentiraj Console klasu i sve sto je vezano uz nju. Umjesto Console klase koristi [BufferedReader](https://www.tutorialspoint.com/how-can-we-read-from-standard-input-in-java) dok kod ne dovedes u funkcionalno stanje (dok debuggiras nije ti bitno sto se vidi lozinka koju upisujes). Kad si siguran da sve radi kako spada zakomentiraj BufferedReader i odkomentiraj Console klasu",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Cubi",
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183429": {
+      "poster": "jobi (azex)",
+      "content": "treba li paddat lozinke prije hashiranja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183549": {
+      "poster": "Retard00",
+      "content": "U zadatku piše: \"Primijetite da alat ne daje informaciju što je točno problem prilikom prijave, nepostojeće korisničko ime ili kriva lozinka. Razmislite zašto je to tako.\"\n\nJel to zato što implementacija ne bi trebala bit takva da se to može ili je to sam da program bude jednostavniji/tajnovitiji?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183567": {
+      "poster": "Nocna_smjena",
+      "content": "@jobi#183429 pa moras dodati salt. Nemres cistu lozinku hashat. To je dosta nesigurnije",
+      "votes": {
+        "upvoters": [
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183569": {
+      "poster": "Nocna_smjena",
+      "content": "@Retard00#183549 Ja bi rekao ovo drugo jer napadacu nisi onda dao apsolutno nista informacija. Nezna dal uopce taj account kojeg pokusava probit i postoji. Mozda potpuno bezveze radi",
+      "votes": {
+        "upvoters": [
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183628": {
+      "poster": "Gocc (***)",
+      "content": "Kako napraviti da se forsira korisnika na promjenu lozinke, gdje to treba zabiljeziti da se zna da je potrebna nova lozinka",
+      "votes": {
+        "upvoters": [
+          "mrkva"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183656": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@Gocc#183628\n\nJa kod zapisa korisnika imam još 0 ili 1 i onda kod prijave provjeravam što ima. \n\nAko je 1 onda tražim da promijeni i onda nakon promjene stavim opet na 0.\n\nZapis mi izgleda ovako: username;lozinka;salt;0/1",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "DazedAndConfused",
+          "Gocc (***)",
+          "Lyras",
+          "Urmum (mamaRu)",
+          "ink",
+          "mrkva"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183663": {
+      "poster": "jobi (azex)",
+      "content": "@Nocna_smjena#183567 \n\na mislia san na pad bas do neke duljine da sve imaju jednaku duljinu prije ulaska u hash funkciju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183685": {
+      "poster": "Nocna_smjena",
+      "content": "@jobi#183663 stavi ak oces ali u prezentacija se to ne spominje kao bolje sigurnosno rjesenje u kontekstu ovog zadatka",
+      "votes": {
+        "upvoters": [
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183757": {
+      "poster": "Gocc (***)",
+      "content": "@AntonioB25#183656 može li onda napadač promujeniti 1 u 0?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183759": {
+      "poster": "JoKing",
+      "content": "@Gocc#183757 U zahtjevima se nigdje ne spominje integritet datoteke, tako da čak i ako može, to ne bi trebalo predstavljati problem.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183768": {
+      "poster": "Gocc (***)",
+      "content": "@tomekbeli420#182895 a zašto ne bi mogli koristiti samo sha256",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183776": {
+      "poster": "tomekbeli420",
+      "content": "@Gocc#183768 jer je njegovo računanje brzo, i napadač sa dobrim hardverom može računati jako puno hasheva u sekundi, što mu smanjuje vrijeme uspješnog napada grubom silom.\n\nhttps://security.stackexchange.com/questions/90064/how-secure-are-sha256-salt-hashes-for-password-storage",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "cloudies",
+          "ink",
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183805": {
+      "poster": "bodNaUvidima",
+      "content": "Pošto je sha256 relativno nesiguran, možemo li importat onaj Crypto library iz prvog labosa i korisiti funckije od tamo za pohranu lozinki?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183915": {
+      "poster": "JBQ",
+      "content": "Moze samo malo objasnjenje...alat login moze promijenit lozinku, jel tada treba tu novu lozinku slat kao adminu da on promijeni ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "183978": {
+      "poster": "Nocna_smjena",
+      "content": "@JoKing#183759 kako bi to osigurao? Jedino vidim da to sa lozinkom potpises ali to bi onda znacilo da ni admin nemre zastavicu za obaveznu promjenu lozinke promjenit bez da sve ne poseremeti. Niti saltom kojeg si koristio za hashiranje ne smijes jer to bi onda bila dvostruka upotreba istog salta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "184307": {
+      "poster": "Ardura (Maddy)",
+      "content": "Trebamo li ikako zaštititi ime kad ga spremamo? Ako napadač fali ime ili lozinku dobiva istu poruku, ali ako ima pristup datoteci može vidjeti sva korisnička imena pa mi onda to baš nema smisla.",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "mrkva",
+          "netbitan11 (netbitan)",
+          "samurai (samuraj)",
+          "viliml",
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "184311": {
+      "poster": "Gocc (***)",
+      "content": "Kako mogu mogu uspješno konkatenirati i razdvojiti username, hash i salt kad hash može sadržavati i praznine i ostale znakove \n\n![](assets/2021-05-04/00001.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "184314": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Gocc#184311 Pretvori hash iz binarnog zapisa u hex\n\nZa odvajanje zapisa se obično koriste zarezi ili dvotočke, no recimo meni je draži pristup razdvajati tabovima jer se ne pojavljuju u hex zapisu, a plaintext zapis bi sav whitespace trebao imati normaliziran u 1 space ili se whitespace ne bi trebao pojavljivati (kao npr. u usernameu)",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "184328": {
+      "poster": "Lyras",
+      "content": "@Gocc#184311 ako koristiš python, imaš b64endocde i b64decode koja pretvara bajtove u (ja mislim) UTF8 znakove, koji se onda lagano spremaju u JSON formatu",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "184350": {
+      "poster": "anon00",
+      "content": "ASCII 29 je \"Group separator\"\n\nASCII 30 je \"Record separator\"\n\nASCII 31 je \"Unit separator\"\n\nKoristis slobodno bilo koji od njih jer su ionako van zadanog raspona iz labosa\n\nU javi na nacin: char separator = ((char)29);",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "184648": {
+      "poster": "viliml",
+      "content": "@anon00#184350 Zar nije lakše koristiti `\\0`?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "184667": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@viliml#184648 Iznimno loša praksa, pročitaj o [null byte injection](http://projects.webappsec.org/w/page/13246949/Null%20Byte%20Injection).\n\ntl;dr ne koristite `\\0` za išta osim za što je apsolutno potrebno, čak i ako za vaš usecase radi.",
+      "votes": {
+        "upvoters": [
+          "Rene",
+          "Wayk",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "184821": {
+      "poster": "MalaPumpa",
+      "content": "Moramo li uopce generirati i spremati salt zasebno kod bcrypta? Ovdje sam nasao da se salt automatski stavi u dobiveni hash pa kod provjere sam razdvaja niz, i prolazi mi:\n\nhttps://stackoverflow.com/questions/6832445/how-can-bcrypt-have-built-in-salts#:~:text=bcrypt%20has%20salts%20built%20into,maintain%20a%20list%20of%20salts.\n\nAli nisam siguran dal mi je mozda nesto promaklo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "184922": {
+      "poster": "bodNaUvidima",
+      "content": "@MalaPumpa#184821 Nije ti ništa promaklo, bcrypt i ona njegova checker funkcija se same brinu o salt vrijednosti.",
+      "votes": {
+        "upvoters": [
+          "MalaPumpa",
+          "Tinx (pingvin)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "184934": {
+      "poster": "Ducky",
+      "content": "\"za svaku zaštitu koja je opisana na predavanjima navesti jeste li ju implementirali ili ne\"\n\ndali misle na neku određenu prezentaciju ili moram objašnjavat kako nisam koristio McEliece jer sam \"pretpostavio da napadač nebi koristio kvantno računalo za moj shitty kod\"?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Wayk",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185046": {
+      "poster": "DvonogaStonoga",
+      "content": "Kako ste rijesili forced reset passworda, odnosno gdje ga pamtite?\n\nMislim da bi najjednostavnije bilo staviti samo flag pored imena usera kojem je zadan forced reset na sljedecem loginu, ali ako se to tako implementira onda napadac koji preuzme datoteku s passwordima moze otkriti koji user ima dignut flag i promjeniti pass u sto hoce s jednostavnim loginom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185051": {
+      "poster": "Reznox",
+      "content": "@DvonogaStonoga#185046 To nije moguće jer iako je dignuta zastavica za Password Reset user **mora** upisati svoju originalnu lozinku \n\n![](assets/2021-05-05/00007.png)",
+      "votes": {
+        "upvoters": [
+          "DvonogaStonoga",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185052": {
+      "poster": "snowman",
+      "content": "@DvonogaStonoga#185046 Ne moze promijeniti u sta hoce kad prvo mora upisati tocnu sifru za login.\n\nPassword: —> hash mora biti jednak zapisanom hashu\n\nNew Password: —> novi proizvoljni \n\nRepeat New Password: —> ponovljeni novi pass",
+      "votes": {
+        "upvoters": [
+          "DvonogaStonoga",
+          "Reznox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185055": {
+      "poster": "DvonogaStonoga",
+      "content": "Hvala, glup sam i nisam procitao zadatak :D\n\n@snowman#185052 \n\n@Reznox#185051",
+      "votes": {
+        "upvoters": [
+          "Reznox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185076": {
+      "poster": "Fikalo",
+      "content": "Jel ima u javi neki drugi nacin za izbrisat/edditat liniju osim prepisivanja citavog filea u temp file sa promjenama i onda rename tog filea?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185082": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Fikalo#185076 Generalno ćeš morati prepisati fajl, iako bi teoretski mogao samo izmjeniti bajtove kod stvari konstantne duljine (npr. hasheva lozinki ili zastavica) kad će to uvijek imati konstantnu duljinu u bajtovima. Onog trenutka kada tvoja zamjena nije jednake duljine kao i ono što zamijenjuješ, moraš prepisati sve jer moraš pomaknuti stvari u memoriji.\n\nVidi [ovo](https://docs.oracle.com/javase/7/docs/api/java/io/RandomAccessFile.html)",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185130": {
+      "poster": "viliml",
+      "content": "@DvonogaStonoga#185046 Koliko sam shvatio, napadač ne može pisati u datoteku s korisničkim imenima i lozinkama, samo ju čitati.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185131": {
+      "poster": "aerius",
+      "content": "Koliko je nužno da stavimo neka ograničenja za lozinke, tipa da obavezno sadržavaju slova, brojeve i znakove i slično?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185140": {
+      "poster": "viliml",
+      "content": "@aerius#185131 To je navedeno kao ranjivost u prezentaciji, dakle nužno je barem provjeriti da je dugačka barem 8 znakova. Koliko dodatnih još provjera treba dodati je više-manje po volji.",
+      "votes": {
+        "upvoters": [
+          "Krisle"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185252": {
+      "poster": "boki8 (kerovac)",
+      "content": "U slucaju kada admin pokusava napraviti naredbu \"add username\" za username koji vec postoji u bazi podataka, kada bi ga trebalo obavijestiti o tome? Odmah na pocetku (prije unosa lozinke), nakon unesenih lozinki ili je potpuno svejedno?",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185255": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@boki8#185252\n\nTo je implementacijski detalj.\n\nJa sam napravio tako da mu odma kaze:\n\nKorisnicko ime vec postoji. Zelite li promijeniti lozinku? (y/n)\n\nI ako potvrdi tretiram to kao zamjenu lozinke",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185408": {
+      "poster": "zastozato (studoš)",
+      "content": "Ako u javi koristim PBKDF2WithHmacSHA1 i u file spremam \"username password salt\" i onda kada ucitavam sve iz filea i zelim provjeriti jeli hash isti ispada da nije jer mi je salt spremljen kao string a treba mi byte array. koji je bolji nacin za raditi ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185453": {
+      "poster": "funky_funghi",
+      "content": "@zastozato#185408 Na koji način salt (i [password](https://stackoverflow.com/questions/5355466/converting-secret-key-into-a-string-and-vice-versa)) iz `byte[]` pretvaraš u `String` kako bi ga spremio u datoteku? Kad saznaš kako [enkodiraš](https://docs.oracle.com/javase/8/docs/api/java/util/Base64.Encoder.html) to, na komplementaran način [dekodiraš](https://docs.oracle.com/javase/8/docs/api/java/util/Base64.Decoder.html). Tu su ti prijatelji [duckduckgo](https://duckduckgo.com/?q=java+encoding+and+decoding+byte+array+string&atb=v215-1&ia=web) i [stackoverflow](https://stackoverflow.com/search?tab=votes&q=%5bjava%5d%20encoding%20and%20decoding%20byte%20array%20string).",
+      "votes": {
+        "upvoters": [
+          "JoKing",
+          "zastozato (studoš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185459": {
+      "poster": "MT09 (mt09)",
+      "content": "Može li napadač pisati u datoteku? Odnosno, treba li čuvati integritet datoteke s lozinkama ili to nije bitno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185474": {
+      "poster": "Kaladonter",
+      "content": "Jel se podrazumijeva da Login i Usermgmt trebaju biti dva odvojena programa ili trebaju biti dvije razlicite komande unutar istog programa?",
+      "votes": {
+        "upvoters": [
+          "aerius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185486": {
+      "poster": "funky_funghi",
+      "content": "@MT09#185459 Ne piše da treba. Za čuvanje integriteta je potrebna lozinka ako se datoteka i dobiveni hash za provjeru mogu jednako lako izmijeniti. U primjerima se vidi da za forcepass opciju nije potrebna nikakva lozinka, a ta opcija mijenja datoteku. Zato ga ja neću pokušati očuvati",
+      "votes": {
+        "upvoters": [
+          "JoKing",
+          "MT09 (mt09)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185491": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@Kaladonter#185474 Ja sam napravio dva odvojena programa jer piše kao da usermgmt može pristupiti samo admin a loginu može i napadač i korisnik",
+      "votes": {
+        "upvoters": [
+          "Kaladonter",
+          "ink",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185505": {
+      "poster": "teta_iz_menze",
+      "content": "pitanje za javaše, ja sam koristio ovu metodu readPassword od Console objekta i to radi normalno kad pokrenem u konzoli jer je tad postoji taj objekt tj moguce ga je napraviti ali kad pokrecem to iz shell skripte to ne moze jer ga valjda izvodi skripta a ne konzola, jel postoji neki workaround za ovo (inace cu morati duple upute praviti lel)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185512": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@teta_iz_menze#185505 \n\nNe znam jesi li na windowsima ili linuxu.\n\nJa imam taj problem, pa sam probao pokrenuti program na linuxu (napravio sam virtualku) i tamo nemam problema s tim. \n\nKod njih bi trebalo raditi jer oni pokreću na linuxu, ali ću napisati u uputama što da naprave ako dođe do toga.",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185529": {
+      "poster": "teta_iz_menze",
+      "content": "@AntonioB25#185512 ye i ja cu isto tako",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185541": {
+      "poster": "blablajar",
+      "content": "trebamo li pisat tu skriptu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185542": {
+      "poster": "teta_iz_menze",
+      "content": "@blablajar#185541 to je optional moze se u txt fileu upute napisati",
+      "votes": {
+        "upvoters": [
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185583": {
+      "poster": "ppooww (pp)",
+      "content": "> _Tekst datoteku koja sadrži opis vašeg sustava te za svaku zaštitu koja je opisana na predavanjima\n\nnavesti jeste li ju implementirali ili ne te argumentirati odluku._\n\nKoje su to **\"_sve_\"**  zastite koje su opisane na predavanjima? \n\nPretpostavljam duljina lozinke, koristenje velikih slova i brojeva, koristenje salt-a (ocito i samo hashiranje lozinke). Jel ima jos nesto sto je opisano?",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185592": {
+      "poster": "blablajar",
+      "content": "@ppooww#185583 ja sam jos stavio nakon par pokusaja da treba pricekati par sekundi da bi se opet mogla unijeti lozinka",
+      "votes": {
+        "upvoters": [
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185717": {
+      "poster": "steve (Mr_mr)",
+      "content": "koji je smisao ako napadac moze ugasiti cmd i ponovno upisati lozinku bez vremenskog ogranicenja? Na taj nacin ce izbjec sva vremenska ogranicenja ako se ne varam.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185718": {
+      "poster": "steve (Mr_mr)",
+      "content": "@blablajar#185592 Koji je smisao ako napadac moze ugasiti cmd i ponovno upisati lozinku bez vremenskog ogranicenja? Na taj nacin ce izbjec sva vremenska ogranicenja ako se ne varam.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185727": {
+      "poster": "JBQ",
+      "content": "Kako kad se upisuje password, jel se to isto napise u shell skriptu nekako da se automatski upise ili ce to oni upisivat? PS radim to drugi put u zivotu pa zato pitam.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185730": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@JBQ#185727 ja sam zaključao tak da će si sami sve upisivat. Imaju upute nek čitaju hahah",
+      "votes": {
+        "upvoters": [
+          "Fikalo",
+          "Tinx (pingvin)",
+          "bb8 (zaza)",
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "JBQ",
+          "Lusy (MGJ)",
+          "bb8 (zaza)",
+          "blablajar"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185740": {
+      "poster": "JBQ",
+      "content": "@Bucc#185730 da, doslovno napisat cu im upisi ovo hahah",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Bucc (Olive Oil)",
+          "Lusy (MGJ)",
+          "bb8 (zaza)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185768": {
+      "poster": "Gocc (***)",
+      "content": "Mislite da se trebaju provjeravati znakovi, u smislu kompleksnosti lozinke, čini mi se dosta kompleksno kad bi to radili",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185772": {
+      "poster": "Tootha",
+      "content": "@blablajar#185592 To mi se čini korisno ako bi napadač pogađao on-line. U vježbi su dali model prijetnje: \"Zbog načina kako će se pohranjivati datoteka s korisničkim imenima i lozinkama postoji način na koji bi ona mogla biti otuđena\" što bi bio off-line model prijetnje. Correct me if I'm wrong.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185774": {
+      "poster": "viliml",
+      "content": "@Gocc#185768 Nije preteško, ali meni se ipak nije dalo pa sam samo zatražio bar 1 poseban znak.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185789": {
+      "poster": "JBQ",
+      "content": "Jel imo neko problem da mu na windowsu radi normalno, a na virtualki ne, tipa kao da mi ne cita file dobro i kao da mi neki user ne postoji, a zapisan je?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185827": {
+      "poster": "funky_funghi",
+      "content": "@JBQ#185789 Nije mi se to dogodilo, ali ovako na prvu mi zvuči kao da koristiš OS-ov default charset za file encoding umjesto da u kodu specificiraš jedan određeni prilikom čitanja i pisanja. Probaj napraviti novi file u koji spremaš lozinke, u kodu prilikom čitanja i pisanja specificirati da se koristi [UTF-8](https://docs.oracle.com/javase/7/docs/api/java/nio/charset/StandardCharsets.html#UTF_8)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185830": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@Gocc#185768\n\nSmijemo li koristiti regularne izraze?\n\nJa sam pomoću toga pa je vrlo jednostavno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "185846": {
+      "poster": "nnn (dinoo)",
+      "content": "> @Ardura#184307 Trebamo li ikako zaštititi ime kad ga spremamo? Ako napadač fali ime ili lozinku dobiva istu poruku, ali ako ima pristup datoteci može vidjeti sva korisnička imena pa mi onda to baš nema smisla.\n\nStvar je u tome da u većini slučajeva želiš da administratori (ili neki drugi korisnici) vide tko sve ima account na nekom sustavu (odnosno da možeš izlistati sve usernameove). Ako ideš hashat i username onda to ne vidiš.\n\nLinux i ssh ti je primjer: za pogledat usernamove na linuxu `cat /etc/passwd` (a za hasheve lozinki `sudo cat /etc/shadow` al to je nebitno u primjeru). Al ako se spajas sa ssh na neki udaljeni linux on ti neće reći ako ti je lozinka kriva ili username ne postoji, iz očitih razloga.",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186005": {
+      "poster": "Emili (Nema Problema)",
+      "content": "@ppooww#185583 Ja sam zapisala ovo iz predavanja:\n\nsustav obnavljanja lozinki\n\nispravna pohrana: za svaku lozinku slučajni salt, zatim kriptografska hash-funkcija salta i lozinke, te pohrana sažetka uz salt u izvornom obliku\n\nlozinka ima minimalnu kompleksnost, ne iz rječnika niti već kompromitirane lozinke\n\ndulje vrijeme čekanja i blokiranje računa\n\nodržavanje jedinstvenosti i tajnosti\n\nzaštita od vidljivosti tijekom unosa\n\nzaštita tijekom prijenosa.\n\nNeke, naravno, ni nemaju smisla za ovu vježbu, ali ak su rekli sve onda evo sve.\n\nNaravno, upozorenje da sam možda nekaj preskočila, krivo zapisala, odricanje od odgovornosti itd.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "LucidDreamer",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186093": {
+      "poster": "Krisle",
+      "content": "@viliml#185130 Kako si to zaključio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186100": {
+      "poster": "gladiator",
+      "content": "@Krisle#186093 ako je ukrade može raditi s njom što hoće, ali mu to nije previše zanimljivo.\n\nOn želi saznati koje se lozinke kriju ispod tih hasheva",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186106": {
+      "poster": "Krisle",
+      "content": "@gladiator#186100 Ok, ali mi može maknut zastavicu blokiranog računa (ono ako je 3 puta krivo unesena lozinka), no dobro nije ništa o tome zadano u uputama pa ću vjv samo to preskočit. Vjv i pretpostavljaju neimplementaciju blokiranja ako se lozinke mogu beskonačno pogađati (ovi veliki računalni resursi itd.)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186254": {
+      "poster": "Zero",
+      "content": "Ako koristimo getpass() u pythonu kako predati argument u shell skripti?\n\nJel je to uopce moguce?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186261": {
+      "poster": "gladiator",
+      "content": "@Zero#186254 Kolega mi je pokazao kako se to radi:\n```\nif sys.stdin.isatty():\n    password = getpass.getpass()\nelse:\n    password = input(\"Password: \")\n```",
+      "votes": {
+        "upvoters": [
+          "funky_funghi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186292": {
+      "poster": "mihamih",
+      "content": "@tomekbeli420#183776 jel onda dobro koristiti sha512 ili je i on nesiguran?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186303": {
+      "poster": "Sulejman",
+      "content": "@mihamih#186292 Nesiguran je jer svi koji imaju istu lozinku će imati i isti hash.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186304": {
+      "poster": "Sveti_Ilija (Sveti Ilija)",
+      "content": "Nisam bio na konzultacijama ali vidim da se spominjala ta provjera brojeva i velikih malih slova. Što su točno rekli za to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186314": {
+      "poster": "MrDREDD",
+      "content": "@Sulejman#186303 Neće ako koristiš i salt",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Kaladonter",
+          "Sulejman",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186347": {
+      "poster": "nnn (dinoo)",
+      "content": "@mihamih#186292 Ne želim bit taj lik al pročitaj odgovor koji je kolega linkao\n> General-purpose hashes have been obsolete for passwords for over a decade. The issue is that they're fast, and passwords have low entropy, meaning brute-force is very easy with any general-purpose hash. You need to use a function which is deliberately slow, like PBKDF2, bcrypt, or scrypt. Crackstation actually explains this if you read the whole page. On the other hand, MD5 and SHA-1 aren't weaker than SHA-2 in the context of password hashing; their weakness is not relevant for passwords.\n\nGeneral purpose hash se misli i na sha512 i sha256\n\nsha256 i sha512 se ne razlikuju toliko puno, doslovno s googlea 'sha256 vs sha512':\n>The only real advantage that SHA-512 might have over SHA-256 is collision resistance, a term that in cryptography has a very narrow meaning.",
+      "votes": {
+        "upvoters": [
+          "Sulejman",
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186348": {
+      "poster": "Sulejman",
+      "content": "@MrDREDD#186314 Istina, al to nije napisao. U svakom slučaju i dalje je upitno dal je dovoljno siguran jer se [relativno](https://blog.engineyard.com/password-security-part-1) brzo (u odnosu na recimo bcrypt) može dobiti puno hash-eva.",
+      "votes": {
+        "upvoters": [
+          "MrDREDD",
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186352": {
+      "poster": "mihamih",
+      "content": "@Sulejman#186348 mislio sam da se salt podrazumijeva pa nisam napisao, znaci bcrypt je najbolja opcija?",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186363": {
+      "poster": "MrDREDD",
+      "content": "@mihamih#186352 bcrypt ili PBKDF2",
+      "votes": {
+        "upvoters": [
+          "Sulejman",
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186373": {
+      "poster": "tomekbeli420",
+      "content": "@mihamih#186352 \n\nili ako hoćeš biti kul i alpha, Argon2\n\nGeneralno, dobra je bilokakva funkcija koja obavlja tzv. [key stretching](https://en.wikipedia.org/wiki/Key_stretching).",
+      "votes": {
+        "upvoters": [
+          "Wayk",
+          "jobi (azex)",
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186376": {
+      "poster": "Lusy (MGJ)",
+      "content": "Ima li razlike kad u PBKDF2 u Javi koristimo PBKDF2WithHmacSHA1 ili PBKDF2WithHmacSHA256 ? Nesto sam citala da je svejedno, ali nisam sigurna.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186377": {
+      "poster": "tomekbeli420",
+      "content": "@Lusy#186376 \n\nSvejedno je",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186379": {
+      "poster": "Ljencina",
+      "content": "e znači jedno pitanje u labosu koristim PBKDF2 za spremanje podataka. E sad znači kad pokrenem citanje  i dekriptiranje filea u usermgmt mi najnormalnije prevede i dozvoli da radim sa podatcima, ali ako pokrenem tu istu funkciju u login kodu cijelo vrijeme mi baca da je unpad ValueError. Zna neko kako ovo popravit?\n\nedit: prepravljanje grešaka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186424": {
+      "poster": "Fikalo",
+      "content": "Imam pitanje, za ovo skriveno upisivanje sifre u javi, meni i u eclipsu i u konzoli javlja nullpointerexception da nemoze invokat console.readPassword, jel postoji neki work around",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186425": {
+      "poster": "Ducky",
+      "content": "@Fikalo#186424 pozovi sa cmd-a (ili cmd verziju tvog OS-a)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186426": {
+      "poster": "Fikalo",
+      "content": "@Ducky#186425 Da taman sam skuzio, ja sam pozivo u cygwinu a ne cmd-u pa zato",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186435": {
+      "poster": "steve (Mr_mr)",
+      "content": "@MrDREDD#186363 Jel dobro ako koristimo scrypt?",
+      "votes": {
+        "upvoters": [
+          "jobi (azex)",
+          "zmei"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186507": {
+      "poster": "Daeyarn",
+      "content": "jel potrebno pisati shell skriptu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "186508": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@Daeyarn#186507 nije",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "188612": {
+      "poster": "lovro (l123)",
+      "content": "Jel zna neko kad bi trebali otvorit rok za kasniju predaju 2. labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

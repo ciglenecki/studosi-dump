@@ -1,0 +1,515 @@
+{
+  "title": "[ILIJ] 1. laboratorijska vježba - 2019/2020",
+  "creator": "SinanSuckich (Yelena)",
+  "slug": "ilij-1-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Informacija, logika i jezici",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "6727": {
+      "poster": "SinanSuckich (Yelena)",
+      "content": "Kako počet sa ovim labosom, zapravo sam počeo ali sam onda došao do dijela di kažu da se mora koristiti antlr4, nisam bas skuzio kako to radi na onom kodu sa predavanja jer kad pokrenem main u antlr.server nista se ne dogada",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7027": {
+      "poster": "Majmanko",
+      "content": "@SinanSuckich#6727 Nista se ne događa jer server čeka da se klijent spoji i pošalje zahtjev što se radi pomoću terminala. Pogledaj predavanje koje je snimljeno, imaš u repozitoriju predmeta link.",
+      "votes": {
+        "upvoters": [
+          "SinanSuckich (Yelena)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7776": {
+      "poster": "RS7",
+      "content": "U što ste spremali matchane grupe tijekom parsiranja log datoteke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7842": {
+      "poster": "RS7",
+      "content": "Na koji nacin primiti listu na strani klijenta koju posalje server? Tj. kako implementirati to u onaj kod za klijenta koji imamo u prezi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8001": {
+      "poster": "djurag (dj)",
+      "content": "@RS7#7776 Probaj napraviti klasu koja predstavlja jedan red log datoteke i onda za svaki red datoteke radis novu instancu te klase koju na kraju dodajes u listu svih redova",
+      "votes": {
+        "upvoters": [
+          "RS7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8002": {
+      "poster": "djurag (dj)",
+      "content": "@RS7#7842 Klijentu saljes listu kao objekt ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8046": {
+      "poster": "RS7",
+      "content": "@djurag#8002 ![](assets/2020-04-10/00017.png)\n\nDruga recenica - kako si ti odradio to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8129": {
+      "poster": "djurag (dj)",
+      "content": "@RS7#8046 Sa servera sam slao filtriranu listu red po red koristeci `PrintWriter`, a na klijentu `BufferedReader` koji prima `InputStream` od socketa i ispisuje dok god ovaj nesto salje.... ovo bi trebalo raditi bez obzira postoji li klijent ili ne jer se mozes spojiti preko terminala na taj port koji zadas serveru i koji onda preuzima ulogu klijenta 😄\n\nPrema onome sta je receno na Teamsu taj klijent nije toliko bitan za cijelu pricu i ponasa se vise manje kao echo...sta po meni znaci da samo ispisuje ono sta dobije...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8185": {
+      "poster": "[deleted]",
+      "content": "@djurag#8129 \n\nkako si  izvukao RETURN\"intVrijednost\", jesi dodavao nešto novo u gramatiku ili na početku sa string metodama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8189": {
+      "poster": "djurag (dj)",
+      "content": "@ElitePer#8185 Preko Stringa",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8733": {
+      "poster": "SinanSuckich (Yelena)",
+      "content": "Kako napraviti ovo sa IP-em i iksevima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8758": {
+      "poster": "RS7",
+      "content": "@djurag#8129 Ovo filtriranu mislis nakon sto si izvadio one logove prema user query-ju? I sto ti se nalazi sve u while(true) petlji unutar klase server(ako si koristio onaj kod iz preze)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8788": {
+      "poster": "djurag (dj)",
+      "content": "@RS7#8758 Da...nakon sta je filtrirao logove prema user query salje jedan po jedan koristeci `PrintWriter`. Klasa server mi je ista kao i u kodu s predavanja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8819": {
+      "poster": "Krama13",
+      "content": "Gradle.build mi ne generira Expression i ExpressionExtractor, ima neko ideju zasto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8867": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@Krama13#8819 Ni ne treba ti to izgenerirati, generira samo one fajlove sa Request u imenu. Expression i ExpressionExtractor moraš sam napravit.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8874": {
+      "poster": "RS7",
+      "content": "Ima netko da mu build.gradle baca ovaj error: ![](assets/2020-04-13/00029.png)\n\nJesam li sto krivo ovdje napravio?\n\n![](assets/2020-04-13/00030.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8888": {
+      "poster": "SinanSuckich (Yelena)",
+      "content": "Jel se pod IP adresu koju treba predati klijentu misli na ovo localhost sto ima u projektu sa predavanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8952": {
+      "poster": "RS7",
+      "content": "@djurag#8788 U redu, fala. Jos jedno pitanje, gdje citas sam query koji se zadaje preko terminala(?) ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8963": {
+      "poster": "djurag (dj)",
+      "content": "@RS7#8952 Pa u serverExecutor ili kako god da si vec nazvao tu klasu",
+      "votes": {
+        "upvoters": [
+          "RS7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10086": {
+      "poster": "RS7",
+      "content": "Je li napravio netko parsiranje query-ja pomocu gramatike? Ako da, kako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10501": {
+      "poster": "Jaa",
+      "content": "Jel rade provjeru plagijata?",
+      "votes": {
+        "upvoters": [
+          "Krama13"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89979": {
+      "poster": "tb153",
+      "content": "Kako se spaja na server iz command prompt-a ako nemam instaliran netcat?",
+      "votes": {
+        "upvoters": [
+          "Tinx (pingvin)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90056": {
+      "poster": "Bioxed",
+      "content": "Može netko stavit kak vam LogLoader izgleda, oni imaju ovaj getMessage() a nama to ne treba",
+      "votes": {
+        "upvoters": [
+          "brol (Mason Mount me)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90256": {
+      "poster": "Bioxed",
+      "content": "I kak vam izgleda Request.g4? \n\nJa sam nešto napisao ali me zeza za ovo s navodnicima. Napisali su da može i ne moraju bit navodnici kod npr STATUS==200 ili STATUS=\"200\"",
+      "votes": {
+        "upvoters": [
+          "ThiccDicc (Impostor)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90325": {
+      "poster": "Retard00",
+      "content": "Pokrećem server i klijent iz eclipse-a i sve super radi, a onda to sve strpam u JAR, pokrenem server, pokrenem klijenta i dobivam ovakav error:\n\n![](assets/2020-11-09/00021.png)\n\nJel bi ja trebao ovo s gradle-om buildat il šta?",
+      "votes": {
+        "upvoters": [
+          "ThiccDicc (Impostor)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90335": {
+      "poster": "Bioxed",
+      "content": "Ja ne kuzim jel se klijent uopce treba runnat ili ga cmd nekako pokrene kad upisemo nc localhost 4444 i onda nakon toga neki filter",
+      "votes": {
+        "upvoters": [
+          "brol (Mason Mount me)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90567": {
+      "poster": "hlfdef (bismuth_lord)",
+      "content": "Kako ovo exportati za predaju i kako pokrenuti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90651": {
+      "poster": "deus_vult",
+      "content": "@hlfdef#90567 ja sam pokrenui iz cmd jar runnable sam da vidim dal sam dobro pretvoriu u jar file...a exportat standardno kao archive file",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90665": {
+      "poster": "hlfdef (bismuth_lord)",
+      "content": "@deus_vult#90651 Znači samo folder sa svime im pošaljem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90669": {
+      "poster": "deus_vult",
+      "content": "1. napraviše archive file..sa svime što imaš..to je 1. stvar koju trebeas uploadat..a 2. stvar je izvršna datoteka tj .jar datoteka i  to isto uploadas",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90696": {
+      "poster": "hlfdef (bismuth_lord)",
+      "content": "@deus_vult#90669 ne uspijevam nac kako napravit jar posto iman dva maina, imas neki tutorial za to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90950": {
+      "poster": "yuniK",
+      "content": "jel moze neko molim vas rec kako da exportan ovo jel triba dat dva jara il sta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91219": {
+      "poster": "tb153",
+      "content": "U uvodnom predavanju piše da treba skupit minimalno 20% na svakom labosu. Jesu li to stara pravila ili vrijedi i sad?\n\nDal to znaci da ce ocjenjivati cak i ako program ne radi kako treba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91220": {
+      "poster": "deus_vult",
+      "content": "@tb153#91219 koliko ja znam treba jos uvijek 20 posto...a za ovo 2. pitanje nisam siguran..mada msm da bi bilo dobro da se bar moze pokrenuti..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91236": {
+      "poster": "tb153",
+      "content": "Sve klase su napisane, uspije se povezati u cmd-u, no nisam testirao kako radi filter (dal uopce radi)\n\nValjda je to dovoljno za 20% 🤷‍♂️",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91238": {
+      "poster": "deus_vult",
+      "content": "@tb153#91236 a valjda jer prijašnjih godina prije korone se išlo to predavati uživo..pa je moglo oko malo i zasuziti ako je bilo potrebno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91258": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@deus_vult#91238 Prosle godine je bio u ljetnom semestru, pa se isto predavalo online. Bodovali su stvarno posteno, na prvom labosu je prosjek bio 8.67, a minimum 2 boda, tako da ne ruse na pragu ako napravis ista.",
+      "votes": {
+        "upvoters": [
+          "tb153"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

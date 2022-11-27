@@ -1,0 +1,113 @@
+{
+  "title": "[URS] 2. laboratorijska vježba - 2020/2021",
+  "creator": "Elle",
+  "slug": "urs-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Ugradbeni računalni sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "154699": {
+      "poster": "Elle",
+      "content": "![](assets/2021-03-17/00010.jpeg)\n\njel zna netko zasto mi javlja gresku u petom primjeru iz skripte",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Kum"
+        ]
+      }
+    },
+    "154705": {
+      "poster": "jobi (azex)",
+      "content": "@Elle#154699 mislim da ti fali begin prije D <= int",
+      "votes": {
+        "upvoters": [
+          "BigBoi",
+          "Elle",
+          "MrSebo67"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154826": {
+      "poster": "MrSebo67",
+      "content": "Pozdrav, ne mogu nikako skuziti kako napraviti funkciju za rotaciju ulijevo sa C_IN.\n\nTrenutno imam ovaj kod za tu funkciju \n\nresult <= std_logic_vector(shift_left(unsigned('0' & DR0), 1)) and (\"11\" & C_in);\n\nAko netko zna, hvala unaprijed!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154832": {
+      "poster": "jobi (azex)",
+      "content": "result <= DR0(1) & DR0(0) & C_in",
+      "votes": {
+        "upvoters": [
+          "MrSebo67"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154898": {
+      "poster": "Upforpslone",
+      "content": "Nije mi bas jasno kako trebamo rjesit ovaj individualni zadatak? Trebamo samo mjenjat ovu njihovu datoteku alu ili? I kako da uopce otvorim te njihove datoteke? Ne prepoznaje mi ih pod open project",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154908": {
+      "poster": "MrSebo67",
+      "content": "@Upforpslone#154898 Mislim da trebas samo dodati svoje funkcije u njihovu ALU datoteku. I napisati do kraja bus_tb. Ja sam u tom bus_tb morao jos mijenjati clock_period na 100ns jer mi nije stalo svih 8 naredbi i WR ostavio u 1 da mi se ne mijenja sadrzaj registra 0. A sto se tice otvaranja, moras napraviti svoj projekt i onda imas tamo sa strane design tree-a gumb add source i dodas njihove vhdl fileove ili napravis svoje i kopiras njihov source unutra.",
+      "votes": {
+        "upvoters": [
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164030": {
+      "poster": "Avendo",
+      "content": "Ima li netko voljan podijeliti svoj test bench za 2. labos (primjer koda) i ako netko ima rješenje 3. zadatka (Moore).\n\nHvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

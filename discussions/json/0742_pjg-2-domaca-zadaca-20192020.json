@@ -1,0 +1,284 @@
+{
+  "title": "[PJG] 2. domaća zadaća - 2019/2020",
+  "creator": "addisonRae",
+  "slug": "pjg-2-domaca-zadaca-20192020",
+  "tags": [
+    "FER",
+    "Programski jezik Go",
+    "Zadaće"
+  ],
+  "posts": {
+    "28699": {
+      "poster": "addisonRae",
+      "content": "Pozdrav, \n\nVidim da je na FerGo stranici [https://fergo.info.tm/#/](url)  objavljena 2. domaća zadaća. Zanima me zna li netko do kad je rok predaje (netko tko je redovit na Twitch predavanjima 🙄), pošto još zadaća nije objavljena na FerWeb-u.",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "viliml"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Suki7"
+        ]
+      }
+    },
+    "29771": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "može li netko objasniti kako napisati onu funkciju u 1. zadatku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30854": {
+      "poster": "idontwannabemyself",
+      "content": "@iNavy#29771 ako jos nisi rijesio, poanta je da iteriras po artiklima u kanalu i ako naidjes na na neki artikl cija je cijena veca od maxPrice, moras vratit **0** i error koji su oni stavili gore - ova nula je bila najveca muka za skuzit jer nisu nigdje specificirali u zadatku kakvo se stanje totalCosta mora tocno vratit\n\nako nije onda sam nadodajes kolicinu i cijenu u totalPrice i ides dalje",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Koalefant",
+          "Suki7",
+          "iNavy (mornar Ica)",
+          "lonelos"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31645": {
+      "poster": "Suki7",
+      "content": "Jel se da mozda nekome objasniti zasto 3. zad ne mogu ovako napraviti funkciju counter_channels i dat mi neku ideju kako bi zapravo trebalo raditi\n\n```Go\nfunc counter_channels(numbers chan int) (int, error) {\n\tticker := time.NewTicker(2 * time.Second)\n\n\tcounters := make(map[int]int)\n\tfor {\n\t\tselect {\n\t\tcase elem := <-numbers:\n\t\t\tcounters[elem]++\n\t\tcase <-ticker.C:\n\t\t\t// case <-time.After(2 * time.Second):\n\t\t\tif len(numbers) == 0 {\n\t\t\t\treturn 0, NoDataErr\n\t\t\t}\n\t\t\treturn 0, TimeoutErr\n\t\t}\n\t}\n\n\tvar max int\n\tfor _, value := range counters {\n\t\tif value > max {\n\t\t\tmax = value\n\t\t}\n\t}\n\t\n\treturn max * 111, nil\n}\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31700": {
+      "poster": "idontwannabemyself",
+      "content": "@Suki7#31645 vise cu dat neke smjernice vezano za ono kako sam ja to rijesila, jer o kanalima ne znam puno vise nego sto sam napisala u kodu pa ne mogu 100% provjereno reci zasto ne radi 😅\n\n- imas 3 stvari za provjeravati - je li ista ocitano iz kanala (to nije isto kao sto i duljina kanala), je li sam kanal otvoren/zatvoren i je li proteklo vise od 2 sekunde, a da nista nije doslo\n\n- za svaki error moras provjeravati nesto od ovoga ili kombinaciju nekih stvari\n\n- ovaj case koji je zakomentiran meni radi bez problema, tako da nema potrebe za ovim tickerom (niti nemam pojma sto je to tocno pa je mozda i korektno koristiti to, ali eto meni time.After normalno radi)\n\n- sva racunanja i naredbe sam provodila unutar tog beskonacnog fora\n\n- malo prouci sto sve i koliko toga moze vratiti citanje iz kanala (*khm* je li otvoren ili zatvoren *khm*) i sto mozes s tim\n\n- i da, tu se ne vraca nula kao u prvom *surprise surprise*, vec mostCommon",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Koalefant",
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Suki7"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31733": {
+      "poster": "Suki7",
+      "content": "@idontwannabemyself#31700 Hvala ti puno 😁 , idem probat smislit onda nesto hahahaaha",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)",
+          "idontwannabemyself"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31816": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "kojom funkcijom u drugom zadatku iz queryja možemo uzeti samo broj (dakle maknuti onaj \"n=\" ispred broja) bez dodatnih importova",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31843": {
+      "poster": "Suki7",
+      "content": "@iNavy#31816 \n\nAa ima vise opcija kao koje se mogu koristiti\n\nPrva koju sam vidio je ova doli (dohvacas po imenu key vrijednosti i vrati ti uvijek array pa trebas dalje gledati s keys[0] jer nas zanima prvi samo npr. \"n=5\", ali trebas si pogl na int malo sto ti sve moze vratiti i tako)\n\n```Go\nkeys, ok := req.URL.Query()[\"n\"]\n```\n\nA druga je bia nekako ovako (ne sijecam se tocno pa provjeri na int isto)\n\n```Go\nn := req.URL.Query().Get(\"n\")\n```",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)",
+          "iNavy (mornar Ica)",
+          "idontwannabemyself"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31872": {
+      "poster": "Suki7",
+      "content": "Poslat cu mail nekome, ali zna li neko zasto mi na mom kompu radi zadnji zad, a kad predam na fergo ne zeli prihvatit rjesenje i baca error: 406 Command timed out\n\nA meni se na kompu u roku 2-3 sekunde ispise sve pa nez hahhahaha\n\n>!```Go\n> func counter_channels(numbers chan int) (int, error) {\n> \tvar mostCommon, elem int\n> \tvar err error\n> \tvar ok bool\n> \tcounters := make(map[int]int)\n> \n> \tticker := time.NewTicker(2 * time.Second)\n> selectLoop:\n> \tfor {\n> \t\tselect {\n> \t\tcase elem, ok = <-numbers:\n> \t\t\tif ok {\n> \t\t\t\tcounters[elem]++\n> \t\t\t\tbreak\n> \t\t\t}\n> \t\t\tif len(counters) == 0 {\n> \t\t\t\terr = NoDataErr\n> \t\t\t\tbreak selectLoop\n> \t\t\t}\n> \t\tcase <-ticker.C:\n> \t\t\tif ok {\n> \t\t\t\terr = TimeoutErr\n> \t\t\t}\n> \t\t\tbreak selectLoop\n> \t\t}\n> \t}\n> \n> \tvar max int\n> \tfor key, value := range counters {\n> \t\tif value > max {\n> \t\t\tmax = value\n> \t\t\tmostCommon = key\n> \t\t}\n> \t}\n> \t\n> \treturn mostCommon * 111, err\n> }",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32698": {
+      "poster": "RespaiD (Sreten Ćićo Srećković)",
+      "content": "@Suki7#31872 imam istu stvar, jesi uspio rjesit?",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32717": {
+      "poster": "viliml",
+      "content": "@Suki7#31872 Trebaš brojati 2 sekunde od primitka prošle vrijednosti.\n\nTvoj program vrati TimeoutErr ako bilo što presijeca parnu sekundu.",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32785": {
+      "poster": "Suki7",
+      "content": "@viliml#32717 Jeje uspio sam rijesiti, hvala ti svejedno\n\n> @RespaiD#32698 imam istu stvar, jesi uspio rjesit?\n\nAaaa uglavnom treba paziti na te performanse puno pa je najbolje sve onda napisati unutar te for petlje (znaci 3 slucaja za return treba imati):\n- 1 normalno ocitavanje podataka\n- 1a ako je kanal zatvoren (svi podaci su stigli) a nije nista doslo NoDataErr\n- 2 gresku timeout samo ako nista nije doslo dvije sekunde (nije bitno jesmo li vec ista ucitali ili ne)",
+      "votes": {
+        "upvoters": [
+          "RespaiD (Sreten Ćićo Srećković)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33068": {
+      "poster": "Fica (Prof)",
+      "content": "Jel se još nekome događa da mu 3. zadatak radi dok testira i da radi vraćanje oba errora i rezultata, ali kod predaje dobije 8 bodova?",
+      "votes": {
+        "upvoters": [
+          "saitama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33304": {
+      "poster": "saitama",
+      "content": "Na koji nacin treba vratit badRequestStatus jer gubim bodove a nisam siguran zbog cega?  Ja sam radio http.Error(w,\"n nije prirodan broj\", http.StatusBadRequest)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33309": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@saitama#33304 ja napravio ovako, možda može i drugačije\n\n![](assets/2020-05-31/00031.png)",
+      "votes": {
+        "upvoters": [
+          "saitama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33319": {
+      "poster": "saitama",
+      "content": "@iNavy#33309 Hvala ! Bilo je do tog.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33321": {
+      "poster": "saitama",
+      "content": "Kolko ce ovih zadaca bit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33340": {
+      "poster": "RespaiD (Sreten Ćićo Srećković)",
+      "content": "@saitama#33321  3. je zadnja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

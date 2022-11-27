@@ -1,0 +1,915 @@
+{
+  "title": "[RASSUS] 2. laboratorijska vježba - 2021/2022",
+  "creator": "tata (NISAM ASISTENT)",
+  "slug": "rassus-2-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Raspodijeljeni sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "261825": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "štae ovo brt",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ElonDusk (💀  )",
+          "Nocna_smjena",
+          "Portus",
+          "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+          "Zogen",
+          "domagojj (VolimStopala🇻🇦🇭🇷)",
+          "in1",
+          "luba",
+          "mesojed (sofronijevicevPrst)",
+          "mikimoj",
+          "narval13068 (Dima)",
+          "ruza0001 (rozy)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261905": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"NISAM ASISTENT\"#p261825 izivljavanje nakon MI da pozelimo ispite opet da se odmorimo od labosa 😆",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "tata (NISAM ASISTENT)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261911": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "je li itko skuzio kako se na windowsu + spring mogu brisati poruke na nekom topicu kada recimo ponovno pokrenem aplikaciju. Znaci prvi put pokrenem imam 4 START poruke koje pošalje kooordinator i onda kad ponovno pokrenem apk te poruke ostanu, a ja bi htio da se izbrisu. uspjeva mi kada odem preko terminala izbrisati direktno u kafki/zookeeper ali bi htio nekako iz springa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261966": {
+      "poster": "netko_tamo",
+      "content": "@\"zisku\"#p261911 obrises direktorij koji si definirao u zookeeper.properties(dataDir) i pokrenes sve ispocetka i trebali bi topici biti cisti, al ak bas oces direkt kroz aplikaciju to ne znam i mislim da cak i nije moguce jer to jednostavno nije smisao kafke, ona je dizajnirana da šalje stream poruka, a ne da svako može brisat podatke ko ima informacije o nazivu topica, tak da ostaje ovo brisanje direktorija i tjt :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262272": {
+      "poster": "burek",
+      "content": "Jel može netko tko je shvatio kaj treba objasniti logiku ovoga? Ne znam jesam skroz skužila kaj se treba, kolko sam ja shvatila imamo upravljački čvor koji je zapravo samo kafka producer, i imamo čvorove za senzore koji su istovremeno consumeri i produceri i u pozadini razmjenjuju očitanja, jel to ispravno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262278": {
+      "poster": "RogerRoger",
+      "content": "@\"burek\"#p262272 tako sam ja skužio. Što meni ne ide u glavu je kako ovo organizirati, u smislu što ide u zasebni thread?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262280": {
+      "poster": "burek",
+      "content": "@\"RogerRoger\"#p262278 pa ja sam mislila u mainu pozvati producera čisto da se registrira, consumera za topic register i dohvatiti sve info o čvorovima, pokrenuti u zasebnom threadu taj udp dio razmjene i onda samo imati u mainu petlju koja poll-a topic command i ako dođe stop ugasiti worker thread, nez jel to ok kak su oni zamislili",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262299": {
+      "poster": "RogerRoger",
+      "content": "@\"burek\"#p262280 tako sam i ja zasad napravio. Mislila si stvoriti jedan thread koji šalje i jedan koji prima očitanja, uprosječuje ih i ispisuje, ili sve u isti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262306": {
+      "poster": "burek",
+      "content": "@\"RogerRoger\"#p262299 yep svaki zasebno za server,client i uprosjecivanje bi trebalo",
+      "votes": {
+        "upvoters": [
+          "RogerRoger"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262579": {
+      "poster": "laranotreallycroft",
+      "content": "Možemo mijenjati ovaj njihov stupidUDPClient? Ne vidim kako bi mogli dobro očitati podatke ako se šalju jedan po jedan byte unordered. Kako bi onda uopće mogli slati i skalarne i vektorske oznake vremena?",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262613": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"laranotreallycroft\"#p262579 ma mozemo sigurno to je samo predlozak da nam pomognu malo vj",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262694": {
+      "poster": "WickyWinslow",
+      "content": "Zna li netko kako integrirati oba tipa vremenskih oznaka u ovaj labos? Pretpostavljam da je bitno jedino da se koriste kod ispisa ocitanja u zadnjih 5 min ali na koji način to napraviti?\n\nKako koristiti sortirati očitanja za ovaj problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262696": {
+      "poster": "WickyWinslow",
+      "content": "@\"laranotreallycroft\"#p262579 Ja nisam imao problem sa slanjem podataka ako sam serializirao objekt koji zelim slati. Kod deserijalizacije jedino treba paziti lenght koji vrati udp paket jer se ne napuni cijeli buffer byte[] koji mu predas i velicinu tog buffera da stane cijeli serijalizirani objekt.\n\nSerializiranjem mozes gurnuti sve u neku klasu uljucujuci te nesretne oznake vremena.",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262702": {
+      "poster": "WickyWinslow",
+      "content": "@\"Karlovsky120\"#p262643 Ne znam ništa za treći labos osim da su spomenuli docker da će kao biti ali za ovaj sada trebaš se spojiti na kafka broker port (default je 9092) osim ako nisi drugacije naveo u server.properties. Tradicionalno se za administraciju kafke koriste komandno linijski alati kao sto je vjerojatno navedeno u quickstartu ili neki GUI koji se ili placa ili neka free verzija koju treba nadodati. UDP se koristi za komunikaciju između nodeova (gdje kafke nije bitna). Za oznake vremena nemam blage.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262789": {
+      "poster": "laranotreallycroft",
+      "content": "@\"WickyWinslow\"#p262696 \n\nna kraju sam samo promjenila da ne šalje jedan byte nego da koliko ih treba pošalje odjednom. Mislim da je to skroz ok po ovom kaj sam pročitala na netu jer nisu veliki paketi.\n\n@\"WickyWinslow\"#p262694 \n\nJa sam to vjerojatno zakomplicirala al ovak:\n\n\tSortedMap<Long, Integer> scalarTime;  -- <vrijeme,vrijednost>\n\n\tSortedMap<Map<Integer, Integer>, Integer> vectorTime; -- <skup parova <id,count>,vrijednost>\n\nOnda sam to kroz milijun raznih threadova i referenci držala u glavnoj klasi senzora i dodavala u njih svaki put kad je nešto poslano/stiglo.\n\nZa vectorTime SortedMap sam napisala Comparator pa da se automatski sortira odma kod unosa.",
+      "votes": {
+        "upvoters": [
+          "WickyWinslow"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262803": {
+      "poster": "RogerRoger",
+      "content": "Vjerojatno glupo pitanje, ali kako implementirati primanje potvrde?\n\nsocket.receive() je blokirajuća metoda i ako nakon slanja paketa server ostavim da čeka potvrdu, a potvrda se izgubi negdje u mreži, neće li on čekati beskonačno dugo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262806": {
+      "poster": "laranotreallycroft",
+      "content": "@\"RogerRoger\"#p262803 \n\nja sam stavila i za primanje i slanje potvrde da se pokreće u novom threadu pa ne blokira",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262919": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"Karlovsky120\"#p262643 ja ni pokrenut nemogu jer ne koristim windows, a ofc da su upute samo za to napisali...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262920": {
+      "poster": "in1",
+      "content": "@\"rozy\"#p262919 Možeš preko dockera, installiraš docker i pratiš ovo: https://developer.confluent.io/quickstart/kafka-docker/. Prva 3 koraka su bitna.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262923": {
+      "poster": "ruza0001 (rozy)",
+      "content": "imam vec docker tako da jako najs, hvala tii",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262933": {
+      "poster": "saitama",
+      "content": "Je li prije generiranja novog ocitanja cvor mora pricekati da primi potvrde za trenutno ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263039": {
+      "poster": "RogerRoger",
+      "content": "@\"laranotreallycroft\"#p262806 da, ali blokira thread, što ne?\n\nImaš thread za slanje svog očitanja ostalim senzorima, kad pošalje paket s očitanjem, stvori novi thread koji čeka potvrdu (jesam dobro shvatio?), ali taj novi thread može zapeti beskonačno dugo ako se potvrda izgubila u mreži. \n\nMetoda receive() nema nikakav timeout parametar, a po defaultu je na socketu postavljeno na inf (blokiranje bez timeouta).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263043": {
+      "poster": "laranotreallycroft",
+      "content": "@\"RogerRoger\"#p263039 ne ne, za svaku poruku koja se salje se stvara novi thread. Znaci pozovem ovaj StupidUDPClient kao novi thread i onda nek blokira sam sebe kolko hoce u vlastitom threadu. Isti je thread za slanje i cekanje odgovora na poslano.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263052": {
+      "poster": "RogerRoger",
+      "content": "@\"laranotreallycroft\"#p263043 u redu, tako sam i ja mislio napraviti, ali i dalje me buni ovo.\n\nAko želiš poslati očitanje, stvoriš jedan novi thread za server koji šalje to očitanje, on ga pošalje, čeka potvrdu jer je blokiran receive() metodom, ali potvrda se izgubila (realan slučaj jer je lossRate 30% po tekstu zadatka). U tom slučaju, on nikad ne dobije potvrdu, nema timeouta, a ako nije dobio potvrdu jer nije ni poslana, tj. zagubio se originalan paket, onda ni druga strana nikad ne dobije poslano očitanje. Kako dođe do retransmisije onda, ako je server cijelo vrijeme blokiran jer čeka potvrdu koja neće doći?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263057": {
+      "poster": "laranotreallycroft",
+      "content": "@\"RogerRoger\"#p263052\n\nServer je jedan odvojeni thread koji je zasebno pokrenut i koji slusa kaj mu dolazi i salje odgovore.\n\nKlijent je zaseban thread i vise ih moze biti odjednom pokrenuto jer je to odvojeni thread koji ne blokira main thread koji stvara i salje nova ocitanja niti ne utjece na server thread. Takoder treba implementirat retransmisiju ako ne dobije odgovor, znaci osim ako je cvor koji salje ugasen,dobit ce odgovor prije il kasnije",
+      "votes": {
+        "upvoters": [
+          "RogerRoger",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263061": {
+      "poster": "RogerRoger",
+      "content": "@\"laranotreallycroft\"#p263057 hvala ti na objašnjenju, al ne kužim i gotovo. Razumijem što želiš reći sa serverom i klijentom, ali ne kužim kako ti radi za sljedeći scenarij: thread (server ili klijent, ovisi kako ga zoveš) pošalje paket, paket se izgubi u mreži, on čeka potvrdu metodom receive(), ne dobije ju jer paket nije primljen, kako on može pokrenuti retransmisiju ako je blokiran receiveom? Kako itko skuži da potvrda nije primljena?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "laranotreallycroft"
+        ]
+      }
+    },
+    "263086": {
+      "poster": "in1",
+      "content": "@\"RogerRoger\"#p263061 Prva rečenica 5.6 poglavlja:\n\n\"Ako čvor ne primi potvrdu za poslani podatkovni promet, ponovno šalje taj podatknovni promet.\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263120": {
+      "poster": "RogerRoger",
+      "content": "@\"in1\"#p263086 okej, nisam debil, kužim to\n\nAli ako ju očekuje, očekuje ju koristeći receive, jel da\n\nA ako ju ne dobije, ostaje blokiran jer je receive blokirajuć, a socket klasa koju su nam dali je namještena da nema timeout\n\nI što onda, voditi neki dictionary u glavnom programu i samo otvarati novi thread za svaki koji ne primi potvrdu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263121": {
+      "poster": "WickyWinslow",
+      "content": "@\"RogerRoger\"#p263061 \n\nImaš thread koji sluša za incoming poruke i thread koji šalje poruke. Ovaj koji sluša dolazeće ce ack poruku staviti u necki blocking queue koji ce probuditi thread koji je poslao. Thread koji je poslao i ceka ack radi poll na taj blocking queue. \n\nGooglaj malo i pretrazi na gitlabu DZ sa java vjestine ili sa OPRPP2 predmeta bio je za zadacu chat UDP server i klijent na kojem je trebalo rjesiti istu problematiku.",
+      "votes": {
+        "upvoters": [
+          "RogerRoger"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263134": {
+      "poster": "VelikiMarko",
+      "content": "Znači li to da zapravo mi koristimo u ovom labosu samo jedan socket jer vidim da su stavili napomenu da promet potvrda i očitanja treba ići preko samo jednog porta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263136": {
+      "poster": "WickyWinslow",
+      "content": "@\"VelikiMarko\"#p263134 Socket po nodeu/peeru, da.",
+      "votes": {
+        "upvoters": [
+          "VelikiMarko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263137": {
+      "poster": "VelikiMarko",
+      "content": "Čemu su nam onda dali dva konstruktora za onaj SimpleSimulatedDatagramSocket? Jedan kao za klijentsku stranu, a drugi za serversku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263142": {
+      "poster": "Erpeg",
+      "content": "kako vi inkrementirate vektore ?\n\njel samo sa slanjem/primanjem ocitanja, ili se tu racuna retransmisija i potvrda ?\n\ni na kako bi trebao sortirati ocitanja po vektorima, to mi uopce nije jasno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263149": {
+      "poster": "Erpeg",
+      "content": "isto ne kuzim kako bi trebali implementirat mijenjanje skalarnog vremena\n\nako mi trenutno vrijeme dohvacamo sa currentTimeMillis() i recimo da je to vrijeme 3 npr, a vrijeme od primljenog paketa je 4, kako cemo mi sad promijenit vrijeme 1. senzora na 5 ?\n\njer ako ne promijenimo, moze se desit da sljedece ocitanje od 1. senzora bude ocitano u vremenu 4 zbog currentTimeMillis jer ga nismo promijenili",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263151": {
+      "poster": "sphera",
+      "content": "dobivam ovo kad pokrećem zookeeper u cmd-u u 3.3? kako se to rješava?\n\n**The input line is too long.\n\nThe syntax of the command is incorrect.**",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263153": {
+      "poster": "sphera",
+      "content": "@\"sphera\"#p263151 \n\nkafka ne voli duge putanje pa stavite na neke kratke putanje kao u uputi C:\\kafka\\..., druga stvar je da ako ne može nać putanju, 'can't find path specified' onda možda imate razmake u putanji java_home-a ili je ta putanja invalidna pa se pobrinite da je validna",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263269": {
+      "poster": "narval13068 (Dima)",
+      "content": "Kako spojiti vise consumera na kordinator, meni jedan uhvati poruku a drugi ne, isto mi se dogodi s njihovim primjerom kafke s ferneta kad pokrecem dva consumer procesa i jedan producer proces...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263271": {
+      "poster": "burek",
+      "content": "@\"Dima\"#p263269 To ti se događa jer kafka za istu grupu stvara particije i procesi unutar iste grupe ne mogu čitati iste poruke nego svaki dobije svoj \"set\", trebaš za groupid stavit UUID.randomUUID().toString() tako da ti svaki Consumer bude u novoj grupi",
+      "votes": {
+        "upvoters": [
+          "in1",
+          "luba",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263285": {
+      "poster": "Erpeg",
+      "content": "@\"Dima\"#p263269 \n\nstavi ovo prije .poll ->\n\n`<tvoj_consumer>.seekToBeginning(<tvoj_consumer>.assignment());`\n\ni ovo nakon neke petlje u kojoj citas ->\n\n`consumer.commitAsync();`\n\nonda ce ti svi consumeri citati sve poruke",
+      "votes": {
+        "upvoters": [
+          "menace_master",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263329": {
+      "poster": "RogerRoger",
+      "content": "Može li mi netko pls objasniti (ili me uputiti na neko objašnjenje) kako sortirati poruke prema vektorskim oznakama?\n\nZa skalarne mi je naravno intuitivno jer su brojevi, ali vektorske su (kako sam ja to shvatio) skup skalarnih za svakog sudionika. Kojim principom to sortirati?",
+      "votes": {
+        "upvoters": [
+          "WickyWinslow"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263380": {
+      "poster": "RogerRoger",
+      "content": "@\"Erpeg\"#p263149 ja sam to implementirao tako da imam fju update() koja prima vrijednost sata i racuna razliku izmedu te nove vrijednosti i this.currentTimeMillis() i onda tu razliku (ako je pozitivna) sprema u privatnu varijablu. Vrijednost te varijable sam samo zbrojio na kraj returna od currentTimeMillis().",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263421": {
+      "poster": "adhdd",
+      "content": "@\"WickyWinslow\"#p263121 gdje se može pronaći taj dio sa predmeta OPRPP2, koliko vidim na materijalima nema ništa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263425": {
+      "poster": "Erpeg",
+      "content": "@\"RogerRoger\"#p263329 \n\n![](assets/2021-12-10/00023.png)\n\nrecimo da sortiras ocitanja u senzoru 1 i imas ova 3 (u crvenom kvadratu)\n\nprvo ocitanje je taj senzor generirao i njegova oznaka je 3\n\ndrugo ocitanje koje je primljeno ima dolazi sa vektorom (1,4,3). ti od toga uzimas oznaku za prvi senzor (1) i gledas jel ta oznaka veca il manja od oznake u generiranom ocitanju.\n\nu ovom slucaju oznaka 1 je manja od 3, iako je ocitanje generirano kasnije. senzor 1 misli da je ocitanje generirano ranije (zbog oznake) i stavit ce ga prvog u listu.\n\nsljedece ocitanje koje mora sortirat je sa vektorom (3,6,5).\n\nto ocitanje ima istu vrijednost (oznaceno plavom) kao i vrijednost senzora 1 (3), pa ces to stavit nakon vlastito generiranog ocitanja.\n\nnadam se da ti je jasno sad, ja sam se isto borio da shvatim sve to",
+      "votes": {
+        "upvoters": [
+          "RogerRoger",
+          "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+          "menace_master"
+        ],
+        "downvoters": [
+          "luba"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263428": {
+      "poster": "RogerRoger",
+      "content": "@\"Erpeg\"#p263425 sve mi je jasno, hvala ti!",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263435": {
+      "poster": "WickyWinslow",
+      "content": "@\"adhdd\"#p263421 Ljudi su svoje zadace na github objavljivali. Treba tamo pretrazivati sa pametno izabranim kljucnim frazama.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263454": {
+      "poster": "Erpeg",
+      "content": "jel netko imao problem da mu currentTimeMillis() vraca negativnu vrijednost ??\n\ni to sam od sebe, bez modifikacija ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263462": {
+      "poster": "Dr_Flare",
+      "content": "@\"Erpeg\"#p263454 ovaj čoek živi u 1969, F\n\ntakođer, nažalost ne znam kako se to dogodi i kako popraviti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Erpeg"
+        ]
+      }
+    },
+    "263465": {
+      "poster": "Erpeg",
+      "content": "@\"Dr_Flare\"#p263462 cini mi se da se to desi kad modificiramo startTime\n\nonda iz nekog razloga ona njihova funkcija sa jitterom kaze \"i will not serve\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263469": {
+      "poster": "Erpeg",
+      "content": "@\"RogerRoger\"#p263380 al onda tebi npr ak imas\n\np1 salje u trenutku 5, a p2 prima u trenutku 4 (p2 jitter(inkrement) je 4)\n\nonda p2 primi dobro prvi put u 6, ali njegovo slijedece vrijeme nije 10, nego 11\n\njer je inkrement=4 + razlika=(5-4)=1\n\ni to se onda dalje propagira",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263508": {
+      "poster": "ruza0001 (rozy)",
+      "content": "kako pokrenut ovaj njihov kafka examples uopce, posto kad pokrenem i pisem poruku tamo di kaze write a message... nista se ne desava dalje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263511": {
+      "poster": "in1",
+      "content": "@\"rozy\"#p263508 napiši poruku i lupi enter :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263513": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"in1\"#p263511 dobro nisam bas tako glup,  kad to napravim nista se ne desava dalje.. to je problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263515": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"rozy\"#p263513 okej otkrio sam problem... kad sam pokrenuo kafku u dockeru nije mi se pokrenuo broker nego samo zookeeper i kad sam restarto i provjerio da je pokrenut i broker sad radi sve okej... neki message da nije moguce spajanje bi bio koristan bome",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263521": {
+      "poster": "RogerRoger",
+      "content": "@\"Erpeg\"#p263469 nisam baš shvatio, možeš li opet pojasniti?\n\nRazmislio sam o mogućim problemima i mislim da se ništa ne može zeznuti, jako je jednostavan pristup pa mislim da smo se krivo shvatili.\n\nDakle:\n\nFja update() prima novu vrijednost sata i uspoređuje ju s currentTimeMillis() klase EmulatedSystemClock. Ako je veća, u privatnu varijablu (npr. int correction, inicijalno 0) sprema razliku. Uz to, na return statement fje currentTimeMillis() na kraju dodaš +correction.",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263548": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "Moze li se napraviti da se prvo senzori kod pokretanja registriraju i svi pokupe podatke od ostalih, a onda kad dode START samo krenemo s UDP-om. Jer me buni 5.2. gdje kaze kako se salje registracija tek nakon sto dode START. al u tom slucaju kako bi tocno rjesili problem koliko ukupno registracijskih poruka treba primiti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263606": {
+      "poster": "RogerRoger",
+      "content": "Jel može netko, itko, IKAKO pomoći oko ovog UDP dijela, konkretno kako voditi evidenciju koji su paketi poslani, a potvrda nije stigla (po mogućnosti bez map<,map<,map<,>>>) i kojim senzorima ju treba ponovno poslati\n\nDobit ću slom živaca od ovog jebenog predmeta, strojno me nije slomilo, apr i retardirani nos me nisu slomili, nesposobni nositelji s naspa me nisu slomili ali evo rassus je na dobrom putu",
+      "votes": {
+        "upvoters": [
+          "fraki",
+          "mesojed (sofronijevicevPrst)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "ruza0001 (rozy)"
+        ]
+      }
+    },
+    "263735": {
+      "poster": "Erpeg",
+      "content": "@\"RogerRoger\"#p263521 kuzim, imas pravo. onda npr ako opet dodje poruka sa vecim vremenom, samo dodatno povecas inkrement jel tako",
+      "votes": {
+        "upvoters": [
+          "RogerRoger"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263777": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "jel se može ništa ne predati i ne pojaviti se uopće na vježbi?",
+      "votes": {
+        "upvoters": [
+          "km123 (CoAt)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263793": {
+      "poster": "RogerRoger",
+      "content": "@\"Erpeg\"#p263735 da, jedino vidim da sam krivo napisao, u taj \"correction\" se ne bi spremala razlika nego bi se zbrojila s njim, u biti:\n```\nint correction = 0;\nupdate(long newvalue)\n{\nint diff = (newvalue - this.currentTimeMillis());\nif(diff > 0) correction += diff;\n}\n```",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263951": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"zisku\"#p263548 ja sam stavio da poola 3 puta po 4 sekunde pa ko se registriro registriro se ode voz",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264039": {
+      "poster": "Klokan",
+      "content": "@\"RogerRoger\"#p263793 treba +1 dodat na correction ukoliko je diff > 0?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264057": {
+      "poster": "RogerRoger",
+      "content": "@\"Klokan\"#p264039 da, ja to dodam pri pozivu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264058": {
+      "poster": "Klokan",
+      "content": "@\"RogerRoger\"#1977 ako saljemo vise senzora \"istovremeno\" ocitanja, jel moramo i vise puta azurirati skalarnu i vektorsku vrijednost?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264125": {
+      "poster": "RogerRoger",
+      "content": "@\"Klokan\"#p264058 ne znam, ja sam nakon slanja svake poruke, dakle ako saljem jedno ocitanje 5 senzora onda je to 5 poruka i 5 azuriranja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

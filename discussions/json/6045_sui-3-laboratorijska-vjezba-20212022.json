@@ -1,0 +1,431 @@
+{
+  "title": "[SUI] 3. laboratorijska vježba - 2021/2022",
+  "creator": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+  "slug": "sui-3-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Sigurnost u Internetu",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "255145": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "Jel se samo meni čini ili u 3. zadatku stavke navedene pod \n\n> Definirajte iptables pravila na FW i FW_int u skladu sa sljedećim zahtjevima:\n\nse ne podudaraju u potpunosti sa djelovima .sh datoteka koje trebamo nadopunit? kao da neki zahtjevi koje žele fale, a neki koji se nalaze u .sh nisu navedeni u zadatku. Da samo nadopunim, il da dodam i te stvari koje nigdje ne vidim ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255449": {
+      "poster": "Murin",
+      "content": "3. Kako uopce pokrenuti te napisane skripte na cvorovima, nemrem ih nikako copy pastat u konzolu cvorova\n\n\n4. postavio sam isti password na sva tri racunala, stavio \"yes\" na PermitRootLogin , ali i dalje dobivan permission denied kod instaliranja  pc-ovog pubkeya na mail/mail-relay\n\nracunala u imunesu mi uopce nemaju hcp komandu, tako da ne znam kako bi preuzeo pubkey kojeg moram uploadat na moodle",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255486": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@\"Murin\"#p255449  za 3. u jednom terminalu (u VM) pokrenes imunes, zatim u Imunesu executeas zadatak, a u drugom terminalu (isto u VM) odes u folder zadatak 3, napravis onu sudo su naredbu i onda redom po 2 naredbe kako su napisane u uputama.  I onda iz istog (drugog) terminala pokreces himage naredbe\n\na do  ovog dalje nisam ni dosla uzela sam pauzu prije 4. i 5. zadatka xD",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255614": {
+      "poster": "theimprobableone",
+      "content": "@\"𝙎𝙖𝙧𝙖𝙝 𝘽𝙤𝙣𝙞𝙩𝙤\"#p255145 I meni se cini da se ne podudara...Ja sam se vodio onime sto pise u .sh fileovima, a ne onime s githuba, a na kraju sam popunjavao ono sto mi test skripta pokaze da nije dobro",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255615": {
+      "poster": "theimprobableone",
+      "content": "@\"Murin\"#p255449 za cetvrti ne znam, ali treci ti je najlakse kontrolirat pokretanjem test.sh skripte, ali nemoj prije toga zaboravit executeat imunes",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255656": {
+      "poster": "Murin",
+      "content": "@\"theimprobableone\"#p255615 \n\nE al to me i zanime, gdje pokretati te skirpte, konkretno FW i FW_int, jer pise da ih moram pokrenuti na tim cvorovima a kad upalim njihov terminal nemam opciju da napravim copy paste te skripte",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255665": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@\"Murin\"#p255656 test.sh skriptu samo pokreneš u virtualnom stroju (izvan imunesa), skripta se sama pobrine da firewall skripte pokrene na odgovarajućim firewallima unutar imunesa",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "in1",
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255709": {
+      "poster": "theimprobableone",
+      "content": "@\"Murin\"#p255656 \n\n@\"Števo\"#p255665 tako je, samo je pokrenes iz terminala i ona odradi ostalo",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255734": {
+      "poster": "chuuya (temari)",
+      "content": "Kojim pravilom ste postigli da je https u pc -> web server vezi closed? Šta god probam vječito je filtered.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255826": {
+      "poster": "theimprobableone",
+      "content": "@\"temari\"#p255734 probaj sa \"iptables...-j REJECT --reject-with tcp-reset\", meni je tako uspjelo",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256278": {
+      "poster": "moukie",
+      "content": "ima li tko da mu se ne pokazuje TTL kad pinga mail.fer.hr, a kad pinga ostala računala mu se pokazuje? može li se to nekako zaobići?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "256900": {
+      "poster": "chuuya (temari)",
+      "content": "Jel netko uspio ovo ssh sranje napravit (4. zadatak)? Namjestim portove (bar mislim da je kak treba) i sve al uvijek mi time-outa kod `ssh-copy-id`. Što sve treba promijenit u `sshd-config` uopće?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257034": {
+      "poster": "in1",
+      "content": "Uspjeli su ispraviti prva dva labosa, na Moodleu su bodovi",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257143": {
+      "poster": "theimprobableone",
+      "content": "@\"temari\"#p256900 u sshd_config moras promijenit port na 1111, odnosno 2222, stavit \"permitrootlogin yes\", odkomentirati \"pubkeyauthentication yes\" i \"authorizedkeysfile ...\"",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257164": {
+      "poster": "chuuya (temari)",
+      "content": "@\"theimprobableone\"#p257143 To i napravih! I i dalje mi timeouta... Jesi išta mijenjao u firewallima nakon 3. zadatka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257327": {
+      "poster": "theimprobableone",
+      "content": "@\"temari\"#p257164 E to je dobro pitanje jer sam ja samo isao po FW skriptama i popunjavao sve di je pisalo da treba popunit tak da nemam pojma sta je za 3, a sta za 4...Ali u svakom slucaju nisam nista dodavao van onoga sta treba",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257782": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "kak dobit ovaj ključ u 4? jel je moguće doć do ključa ako nisam sve konfigurirala po pravilima tj. ssh jump ne radi? iskreno nemam pojma više što je dobro, a što nije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257786": {
+      "poster": "chuuya (temari)",
+      "content": "@\"𝙎𝙖𝙧𝙖𝙝 𝘽𝙤𝙣𝙞𝙩𝙤\"#p257782 Nije li to samo onaj `id_rsa` koji nađeš u `.ssh` nakon keygena?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257791": {
+      "poster": "theimprobableone",
+      "content": "@\"𝙎𝙖𝙧𝙖𝙝 𝘽𝙤𝙣𝙞𝙩𝙤\"#p257782 taj kljuc, odnosno par kljuceva javni i privatni samo generiras naredbom ssh-keygen, ne trebas nista imat setupano da bi to uspjela",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257823": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@\"temari\"#p257786  @\"theimprobableone\"#p257791  aha, nisam znala, nisam nigdje vidjela da ih moram stvoriti pa sam pretpostavila da negdje vec postoje i da samo trebam exportat privatni kljuc. hvala dvaput💜",
+      "votes": {
+        "upvoters": [
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258260": {
+      "poster": "prx_xD",
+      "content": "@\"moukie\"#p256278 `ping -4 mail.fer.hr` to ti je da korisit ipv4 umjesto ipv6",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258741": {
+      "poster": "moukie",
+      "content": "kako dodati pravilo za \"... SSH Access to mail-relay (on DMZ) is permitted only on port 1111\" ?\n\nzar nije ssh vezan uz port 22?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258747": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@\"moukie\"#p258741 riješi kao da se uopće ne odnosi na ssh, piše ssh jer će se za to koristiti u sljedećem zadatku",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258757": {
+      "poster": "moukie",
+      "content": "@\"Števo\"#p258747 \n\nznaci samo omogucim da se moze pristupati portu 1111 na racunalu mail-relay?\n\nje li to to sto treba?\n\nbi li mi mogao pasteat svoje pravilo koje si napisao za to pls?🙏🏿",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258819": {
+      "poster": "moukie",
+      "content": "Kako u 4. zadatku kopirati kljuc sa **pc** na **mail**, kada bi trebalo vrijediti `pristup iz vanjske mreže u lokalnu LAN mrežu je zabranjen` po pravilima iz 3. zadatka?\n\nJe li tko to uspio bez da je ugasio FWove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271236": {
+      "poster": "Noname",
+      "content": "Jel imao tko problema sa nmapom u drugom zadatku?\n\nKod svake naredbe koju pokrenem dobijem ovakav izlaz\n\nNote: Host seems down. If it is really up, but blocking our ping probes, try -Pn\n\nNmap done: 1 IP address (0 hosts up) scanned in 5.19 seconds",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271367": {
+      "poster": "theimprobableone",
+      "content": "@\"Noname\"#p271236 probaj runnat sa sudo ako vec nisi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272505": {
+      "poster": "happysun",
+      "content": "@\"Noname\"#p271236  jesi uspio/la skuziti u cemu je problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272532": {
+      "poster": "macan",
+      "content": "![](assets/2022-01-21/00014.png)\n\nZa 3. labos sam predao 1. i 2. zadatak, asistent/prof/netko treci mi je napisao komentar (slika). Dobio sam 0/2 boda(logicno). \n\nTrebam li pisati ponovno 3. labos, oce li mi prihvatit kao da je labos odraden? Da sam ranije vidio poslao bi mail...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272630": {
+      "poster": "Noname",
+      "content": "@\"happysun\"#p272505 Meni je bio problem u konfiguraciji sui.ova . Jedna od mreža na koju je spojen bio mi nije bila omogućena. Oracle VM ->SUI.ova ->postavke->mreža pa pogledati naziv mreže na koji je  Adapter 3 povezan. Onda ctrl+h u Oracle VM-u i pogledati jel ta mreža omogućena",
+      "votes": {
+        "upvoters": [
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

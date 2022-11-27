@@ -1,0 +1,561 @@
+{
+  "title": "[INFSUS] 3. domaća zadaća - 2021/2022",
+  "creator": "Tonii (Zulul)",
+  "slug": "infsus-3-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Informacijski sustavi",
+    "Zadaće"
+  ],
+  "posts": {
+    "296691": {
+      "poster": "Tonii (Zulul)",
+      "content": "Jel netko krenuo pisati ovo, vidim da su zahtjevi dosta slicni onome što je bilo na rppp-u prosle godine ali se ničega ne sjecam od toga, pa ako netko može pomoći sa par savjeta puno bi pomoglo.",
+      "votes": {
+        "upvoters": [
+          "Sicsile",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296973": {
+      "poster": "Karabajo",
+      "content": "Kako bi na engleski bilo ovo šifranik",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297013": {
+      "poster": "Svudec",
+      "content": "@\"Karabajo\"#p296973 To ti je doslovno njima id. kao šifra pa kad imaš listu id ti je kao šifrarnik\n\nUgl to se sjećam sa OPP-a tih njihovih retardiranih prijevoda. To da moraš imat šifrarnik samo znači da moraš imati popis nečega (npr. lista knjiga, korisnika, bilo cega).\n\nE a onda ovo master-detail ili kaj im već piše ti znaci da kada klikneš na neki item u listi bi se trebalo sa strane (ili negdje dolje, gore) otvoriti detalji o tom itemu, al ne smiješ ići na novi ekran, nego mora biti moguće odmah kliknuti na drugi item.\n\nEDIT Evo primjer: https://demo.mobiscroll.com/listview/master-detail-view\n\n         Također, sad sam guglajući taj izraz otkrio otkud im to. Iz Sharepoint-a naravno, odakle bi bilo",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Karabajo",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297136": {
+      "poster": "Tonii (Zulul)",
+      "content": "Znao sam o sebi da imam mentalnih zaostataka, ali da neću moći pronaći video gdje se normalno spoji MVC projekt na bazu, nisam znao da sam tako nisko pao. Jel može netko proslijediti video gdje fakat spoje bazu u ssms-u sa projektom u visual studiu, pošto nema dislike bara naslušao sam se toliko različitih indijskih naglasaka da bi se mogao zaposliti u scamcentru da nisam ovoliki retard.",
+      "votes": {
+        "upvoters": [
+          "Karabajo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Lusy (MGJ)",
+          "anon00"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297191": {
+      "poster": "Kennedy",
+      "content": "@\"Zulul\"#p297136 Nemam video, al budem napisao ukratko...\n\nPretpostavljam da je skroz novi projekt bez ikakvih dependencya instaliranih.\n\nPrvi korak bi bio onda u VS-u desni klik na projekt \"Manage NuGet Packages\" i instalirati\n\n- Microsoft.EntityFrameworkCore\n- Microsoft.EntityFrameworkCore.Design\n- Microsoft.EntityFrameworkCore.SqlServer\n\nza povezivanje sa bazom trebamo kreirati klasu za kontekst sto mozemo automatski generirati iz same baze (vec smo napravili SQL za proslu zadacu pa samo u smss bazi runamo skriptu da imamo sve tablice spremne)\n\nGeneriramo kod sa alatom https://docs.microsoft.com/en-us/ef/core/cli/dotnet uglavnom to se instalira, sa cmdom pozicionira u folder projekta i automatski se generiraju razredi za sve entitete iz baze naredbom `dotnet-ef dbcontext scaffold \"Server=localhost;Port=5432;Database=ImeDB;Username=postgres;Password=passwordhere\" Microsoft.EntityFrameworkCore.SqlServer -o Models`\n\nSada kad imamo generirani kontekst u Startup.cs u ConfigureServices(IServiceCollection services) metodu dodamo liniju `services.AddDbContext<PogledatiUModelsFolderRazredZavrsavaSaContext>(options => options.UseSqlServer(\"Server=localhost;Port=5432;Database=ImeDB;Username=postgres;Password=passwordhere\"));` \n\nAko nisam nesto zaboravio ovo bi trebalo raditi, sad se moze dodati folder controllers i desni klik na njega Add -> Controller -> MVC controller with views using Entity framework i on ce automatski generirati skoro sve sta treba :)\n\nOvo sam vecinom iz glave vadio pa je moguce da nes nece radit odma, al barem je nekakav okvir po kojem se moze radit...",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297361": {
+      "poster": "marta7575 (user7575)",
+      "content": "Jel može netko pojasniti što su mislili pod ovim:\n\n\"mogućnost odabira vrijednosti stranog ključa putem padajuće liste u zaglavlju i detaljima složenog ekrana\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297362": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@\"user7575\"#p297361 mislim da kod dodavanja novog detaila da imaš dropdown sa njegovim šifrarnicima, npr kod dodavanja studenta da imaš dropdown za mjesto prebivališta u kojem će se nalaziti sva mjesta koja imaš u bazi",
+      "votes": {
+        "upvoters": [
+          "Svudec",
+          "marta7575 (user7575)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297382": {
+      "poster": "Sicsile",
+      "content": "Koliko testova treba napisati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297391": {
+      "poster": "anon00",
+      "content": "Znam da je mozda vec malo kasno, ali svejedno cu napisati\n\nNapomena za ekipu koja radi u Node-u -> Prema razgovoru s asistentom ispada da cete u node.js-u jako tesko ostvariti pravu troslojnu arhitekturu koju oni ocekuju i onda ce te dobiti tek 2-3 boda max. \n\nIako smo se gotovo 45min natezali naprijed-nazad sto on smatra troslojnom arhitekturom ja bi to srocio ovako: \n\nAko promjenite bazu iz SQL-a u Mongo - ideja je da ne trebate gotovo nista dirati po logici u kodu. \n\nJa kad sam radio u Node.js-u sam koristio postgreSQL na nacin da bi u node-u pisao SQL naredbe -> dakle u tom slucaju sigurno nije moguce prebaciti bazu na mongo (pretpostavka da su podaci unutra identicni) bez da mijenjaš svaki upit u projektu. \n\nNisam najpametiniji kako to tocno treba izgledati, ali treba pratiti jednu od struktura pokazanih na IS07 (tipa onion) i ima primjer u Primjer/IS07/Project-MVC-onion",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Svudec"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297399": {
+      "poster": "Svudec",
+      "content": "@\"anon00\"#p297391 Malo glupo da to tako gledaju ako nisu napomenuli na pocetku.\n\nOvo u principu možeš ostvariti samo ako koristiš neki ORM Framework poput Hibernate na Java Spring ili Entity Framework na .NET",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297493": {
+      "poster": "Fica (Prof)",
+      "content": "@\"anon00\"#p297391 Jel priznaju ako se koristi Nest i TypeORM?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297494": {
+      "poster": "anon00",
+      "content": "@\"Prof\"#p297493 Moguce, ali nemam pojam je li to zadovoljava njihove uvjete.\n\nPošalji mail Doncevicu jer ce ti vjv profesor odgovoriti \"pa to bi trebalo biti okej, vidit ce te\"",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297516": {
+      "poster": "boki8 (kerovac)",
+      "content": "Koliko testova ukupno treba napisati? Otprilike barem?",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297714": {
+      "poster": "Lusy (MGJ)",
+      "content": "Može netko malo detaljnije objasnit kakve testove treba napisati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297734": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Jel za testove misle ono što se da exportati Postmanom ili unit testovi sa određenim coverage percentageom ili nesto trece?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297760": {
+      "poster": "Sicsile",
+      "content": "Ima netko savjet kako napravit dijagram komponenti ako ja aplikacija node/vue i koliko nosi bodova dijagram ako se zna",
+      "votes": {
+        "upvoters": [
+          "LucidDreamer",
+          "Lusy (MGJ)",
+          "Parazit",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297819": {
+      "poster": "lucylu",
+      "content": "Može li netko navesti primjer kako implementirati ovo \n\n'validacija podataka koja se ne svodi na provjeru je li podatak popunjen, u valjanom rasponu, već se provjerava neko složenije pravilo'",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297822": {
+      "poster": "anon00",
+      "content": "@\"lucylu\"#p297819 Moja pretpostavka bi bila nekakav regex za email ili password \n\nTipa !null, barem 8 znakova, veliko slovo, broj .. \n\nNek me netko ispravi ako sam u krivu",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297841": {
+      "poster": "Tonii (Zulul)",
+      "content": "Di mogu nacrtati ovaj component dijagram, ne vidim na draw.io neki format za to",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297847": {
+      "poster": "Sicsile",
+      "content": "@\"Zulul\"#p297841 \n\nna drawio\n\n![](assets/2022-05-22/00009.png)",
+      "votes": {
+        "upvoters": [
+          "Tonii (Zulul)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297851": {
+      "poster": "hejhoj (vdvd)",
+      "content": "Jel mi moze neko reci koje komponente imam ako sam radila cijelu aplikaciju po uzoru na projekt iz rppp-a? Znaci to je valjda dvoslojno rješenje s izravnim povezivanjem na sloj pristupa podacima (koristila sam entity framework) 🙏",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297855": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"vdvd\"#p297851 tj slojeve, sta god vec..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297864": {
+      "poster": "itsdend",
+      "content": "Kako pisati testove za svaki sloj u c#, ima li negdje neki primjer ili nesto..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297865": {
+      "poster": "Tonii (Zulul)",
+      "content": "@\"vdvd\"#p297851 ![](assets/2022-05-22/00011.png)\n\nevo od prosle godine oni su ovako imali definirano, mislim da ćemo i mi imati tako. Ja sam na isti način radio i mislim da je to ovo za 3 boda",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297891": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"Zulul\"#p297865 da nadam se da ce se drzati toga od prosle godine hahahh ali mislila sam na ovaj dijagram, na sta se misli pod komponente ako imamo tu jednostavnu varijantu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297909": {
+      "poster": "Tonii (Zulul)",
+      "content": "@\"vdvd\"#p297891 Nemam pojma ja sam neko sranje nasvrljao za taj dijagram pa nažalost ne mogu ništa korisno reči",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "hejhoj (vdvd)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297948": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"Zulul\"#p297909 bit ce svega u tim dijagramima meni se cini hahahh",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297960": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Kako predajete ovo?\n\nLink na Git repo, sav kod u zip-u ???",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298095": {
+      "poster": "Sicsile",
+      "content": "Kako izgleda prezentiranje projekta? Koja pitanja pitaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298103": {
+      "poster": "Gocc (***)",
+      "content": "@\"Sicsile\"#p298095 \n\nMilašinović\n\nPokažeš neku funkcionalnost koja mu zapne za oko u aplikaciji, pa te onda traži da pokažeš to i u kodu. Komentira tvoje rješenje, ako ne valja kaže šta ne valja i kako popraviti",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298116": {
+      "poster": "krle",
+      "content": "@\"***\"#p298103 mozes li mozda napisati kako funkcionira bodovanje? Koji dijelovi najvise bodova nose/oduzimaju itd.",
+      "votes": {
+        "upvoters": [
+          "Cubi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298132": {
+      "poster": "Gocc (***)",
+      "content": "@\"null\"#p298116 pa iskreno nisam sigurna, on to gleda u globalu, mislim za svaki dio ima maksimalan broj bodova. Mi smo imali sve implementirano, ali ne baš na najbolji način pa je oduzeo bod. Mislim da dosta ovisi o arhitekturi. Ali općenito na frontendu nismo ni pokazali sve funkcionalnosti, bio je više fokus na backendu. Dijagram ne znam ni je li pogledao, nije ništa za to komentirao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298176": {
+      "poster": "TamTam (foobar)",
+      "content": "Mi smo imali dodavanje termina na grupu i pitao je jel se mogu dodati dva ista termina, kad smo rekli da ne i pokazali validaciju, odma je rekao super i samo to pogledao u code-u kako je implementirano. \n\nDijagram isto nije niti spomenuo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298231": {
+      "poster": "reygrep",
+      "content": "jel netko radio .net , mvc app i da ste odgovarali? koliko bodova/koji komentari su vam bili?",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298243": {
+      "poster": "hejhoj (vdvd)",
+      "content": "je li moramo skinuti kod koji smo predali i njega pokrenuti ili mozemo odma pokrenuti koji imamo? 🙃",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298252": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@\"vdvd\"#p298243 u nekoj obavijesti je pisalo da trebamo bit spremni sa svime pokrenutim za svoj termin",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298260": {
+      "poster": "Cubi",
+      "content": "Mi smo imali sve pokrenuto cim smo usli u poziv. Ispitivao nas je po kodu malo, htio je vidjeti podatkovni, prezentacijski i poslovni sloj jasno dovojeno. Onda je pitao kako smo ostvarili neke stvari i opcenita pitanja. Rekao bih da je naglasak na dobro implementiranoj arhitekturi i jasno definiranim slojevima. Mozda se mozete izvuci i na dobrom razumijevanju ako nesto i niste implementirali, ali znate kako biste poboljsali.\n\nRadili smo spring na backendu i React na frontendu i to je bilo skroz ok. Pitao nas je gdje bismo implementirali neko poslovno pravilo u aplikaciji vezano za nas projekt.\n\nNikakvu teoriju nas nije pitao niti ista vezano za dijagram.",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298276": {
+      "poster": "Tonii (Zulul)",
+      "content": "@\"Cubi\"#p298260 Jel u MVC-u podatkovni-model, prezentacijski-view i poslovni- controller ili je to nes sasvim drugo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

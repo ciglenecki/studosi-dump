@@ -1,0 +1,284 @@
+{
+  "title": "[INTSTV] 2. laboratorijska vježba - 2020/2021",
+  "creator": "Just_some_name",
+  "slug": "intstv-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Internet stvari",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "167428": {
+      "poster": "Just_some_name",
+      "content": "Mi onda ne dolazimo uživo na laboratorijsku vježbu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171303": {
+      "poster": "nickname",
+      "content": "Jel ima netko problema s pokretanjem mqtt-spy?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171548": {
+      "poster": "Kiflica",
+      "content": "Ima netko da je uspio kod CoApa rijesit 3 zadatak? Cisto da napise na koju foru to treba izvest",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171773": {
+      "poster": "DostDobroIme",
+      "content": "@nickname#171303 imao sam ja al sam uspio rjesiti. u cemu je problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171775": {
+      "poster": "DostDobroIme",
+      "content": "@Kiflica#171548 imas na githubu s primjerima primjer isti, preko observera. Cak tamo ima i nacin kako da osiguras ovaj exit s enterom.\n\nklijent https://github.com/Tanganelli/californium/blob/master/api-demo/src/org/eclipse/californium/examples/CoAPClientExample.java\n\nresurs kao publisher https://github.com/Tanganelli/californium/blob/master/api-demo/src/org/eclipse/californium/examples/CoAPObserveExample.java",
+      "votes": {
+        "upvoters": [
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171778": {
+      "poster": "DostDobroIme",
+      "content": "Jel netko uspio simulirati duplikate poruka ili izgubljene poruke u 4. zadatku MQTT?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172199": {
+      "poster": "nickname",
+      "content": "@DostDobroIme#171773 Baca error _Error: Could not find or load main class pl.baczkowicz.mqttspy.Main_ . Verzija jave je 8. Probao sam i s većim verzijama pa nije uspjelo. Negdje na netu sam vidio da treba instalirat JavaFX pa sam i to instalirao, dodao u path i nije pomoglo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172247": {
+      "poster": "DostDobroIme",
+      "content": "@nickname#172199 imao sam taj problem. Koliko sam skuzio, taj spy nece radit s JDK. Ja sam skinuo Java 8 JRE i nju stavio u path i sve je proradilo...\n\nhttps://www.oracle.com/java/technologies/javase-jre8-downloads.html\n\nA to sam nasao ovdje https://github.com/eclipse/paho.mqtt-spy/wiki/GettingStarted",
+      "votes": {
+        "upvoters": [
+          "nickname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172315": {
+      "poster": "nickname",
+      "content": "Jel mi može netko reć kako se povezuju ovaj klijent i poslužitelj za CoAP? Znači najjednostavniji primjer. Jel se to preko onog CoapClient konstruktora šalje onaj server endpoint na kojem se server stvori, tipa coap://0.0.0.0:5683? Vjv ne, jer mi ne radi tako lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172327": {
+      "poster": "DostDobroIme",
+      "content": "@nickname#172315 pogledaj linkove koji vode na primjere koje su ti dali u pdfu. Primjeri su dovoljno dobri i uz manju analizu vrlo brzo ces doci do nacina kako to napraviti",
+      "votes": {
+        "upvoters": [
+          "nickname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172408": {
+      "poster": "RS7",
+      "content": "1. Ako koristite BufferedReader klasu za citanje entera, vam se dogada da procita tek drugi put kad kliknete?\n2. Nakon sto mi drugi put procita enter, proactiveCancel() se izvrsi, ali mi se program ne zaustavi - cancela se observanje, ali se program klijenta ne terminira. Ima tko da mu se to dogada/lo?\n3. Sto ste napisali za prvi zadatak pod MQTT - broker se definira samo sa njegovim URIjem koji predamo konstruktoru klijenta ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172656": {
+      "poster": "Kiflica",
+      "content": "@DostDobroIme#172247 napravio sam isto tako, dodao jre u path ali mi i dalje nece.. Sto se tocno dodaje u path?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172747": {
+      "poster": "nickname",
+      "content": "@Kiflica#172656 Dodaj put do tog JRE-ovog .exe programa koji si instalirao",
+      "votes": {
+        "upvoters": [
+          "Kiflica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172759": {
+      "poster": "DostDobroIme",
+      "content": "@RS7#172408 \n\n1. ovo mi se cini da stisnes enter na krivom mjestu pa ti on ode na pravo mjesto gdje ti stises drugi put enter i onda ga on procita...probaj se pozicionirat misem na to drugo mjesto i onda stisnut enter, tj. moras paziti da stisnes enter na praznom retku. no mozda sam u krivu. \n2. to se i meni dogada i msm da je to dobro jer koliko se sjecam pise da se na enter gasi subscription a ne program\n3. tako je",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172760": {
+      "poster": "nickname",
+      "content": "@Kiflica#171548 Jesi uspio ovo riješit na kraju? Radim šta i oni al da me ubiješ, stalno mi vraća početnu vrijednost. Tj ja nez jel se to updateanje temperature stavlja u UpdateTask al nikako da proradi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172769": {
+      "poster": "DostDobroIme",
+      "content": "@nickname#172760 u update tasku je dovoljno implementirati metodu run() koja samo zove changed(). ako se ne varam tom metodom changed se prakticki zove handleGET od resursa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172790": {
+      "poster": "nickname",
+      "content": "@nickname#172760 Update: ubacio sam u handleGET i sad radi lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172798": {
+      "poster": "Kiflica",
+      "content": "@nickname#172760 u updateTask stavis da generira random brojeve npr od 0 do 30. I onda taj broj sto dobijes konvertiras u string i stavis ga u handleGET metodi exchange.respond(string); Ja sam tako, pa mi svaku sekundu generira novi broj i ispise ga samo",
+      "votes": {
+        "upvoters": [
+          "nickname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172805": {
+      "poster": "[deleted]",
+      "content": "u prvom zadatku kod coapa ne vidim razmjenu nikakvih poruka u wiresharku, osim errora u eclipsu, koje ste vi rezultate dobili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "172878": {
+      "poster": "nickname",
+      "content": "@ElitePer#172805 Vide se CON i ACK i onda poslije nešto random. Jesi uzeo da pratiš onaj loopback traffic? Ako jesi i greška je, vjerojatno ti nisu dobro spojeni klijent i poslužitelj",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

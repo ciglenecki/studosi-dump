@@ -1,0 +1,631 @@
+{
+  "title": "[ARHRAC2] 2. laboratorijska vježba - 2020/2021",
+  "creator": "Uchenikowitz (Učečuču)",
+  "slug": "arhrac2-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Arhitektura računala 2",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "106301": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "2. laboratorijska vježba održat će se 10. i 11. 12. Točan raspored vidljiv je u FERWebu.\n\nUputstva za izradu vježbe dostupna su putem poveznice.\n\nNa Ferko je potrebno uploadati zip arhivu sa rješenjem zadatka 9c do četvrtka 10.11. u 8:00.\n\nOtvorena je burza grupa za drugu laboratorijsku vježbu. Zamjenu će biti moguće napraviti do utorka, 8.12.",
+      "votes": {
+        "upvoters": [
+          "Mikki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106894": {
+      "poster": "JBQ",
+      "content": "![](assets/2020-12-07/00018.png)\n\nJel mozda netko rjesavao za gcc i uspio? Dogada mi se ovo, ne mogu fixat.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106909": {
+      "poster": "BigZ1",
+      "content": "@JBQ#106894 kako ti izgleda p_asm.s?\n\ninace neke od ovih stvari stavis si pod labelu kao ime_labele:\n\ntakodjer ako imas komentare stavio sam ih /****komentar****/ jer ocigledno ti tu vraca kao sto vidis neke od problema kao errora pa sigurno complier ne zna sto ce sa tim tekstom.",
+      "votes": {
+        "upvoters": [
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106921": {
+      "poster": "Filemon",
+      "content": "protip: rješavajte s MSVC, masu je jednostavnije podesit sve",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106945": {
+      "poster": "BigZ1",
+      "content": "@Filemon#106921 ja vec rijesio preko gcc-a sve osim pod d,al predao sam labos. Ali za msvc morate si samo skinut to sa interneta pa vam malo vise vremena skine da si sve setup-ate.",
+      "votes": {
+        "upvoters": [
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107001": {
+      "poster": "Kingsman54321",
+      "content": "Je li možda netko riješio pod d. pa ako nije problem da postavi rješenje jer ne znam riješiti taj zadatak (nije dio predaje)? I kako je najbolje pripremit se za blic i zadatak na labosu tj. što pitaju? Zna li netko kakva su iskustva s prethodnih godina?",
+      "votes": {
+        "upvoters": [
+          "Haki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107218": {
+      "poster": "BigZ1",
+      "content": "@Kingsman54321#107001 sto se blica tice,nisam bas nasao nesto puno materijala. No nasao sam za zadatke popis sih zadataka i dostupan je na materijalima. zadaci koji su bili su tamo i pise zadaci sa blica 2015-2016. sumljam da si ista promijenili jer su na prvom labosu ostavili stara pitanja. Ja cu danas potencijalno rijesiti sve zadatke pa ih dropam tu da si imate. Kod u C vjerovatno cu sve potrpat ovdje na jedan papir gdje ce pisat koji je koji zadatak.",
+      "votes": {
+        "upvoters": [
+          "Giovanni",
+          "latica",
+          "lup"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107228": {
+      "poster": "BigZ1",
+      "content": "![](assets/2020-12-08/00016.png)\n\n![](assets/2020-12-08/00017.png)\n\n\n@Kingsman54321#107001 evo D,al rijesio sam prvi dio i onaj drugi dio apsolutno necu. Najvise mi je ovo pomoglo https://en.wikibooks.org/wiki/X86_Assembly/Floating_Point",
+      "votes": {
+        "upvoters": [
+          "Giovanni"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107246": {
+      "poster": "Kingsman54321",
+      "content": "Hvala ti puuuno!",
+      "votes": {
+        "upvoters": [
+          "BigZ1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107247": {
+      "poster": "Kingsman54321",
+      "content": "@BigZ1#107228  Hvala ti puuuuno!",
+      "votes": {
+        "upvoters": [
+          "BigZ1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107274": {
+      "poster": "Filemon",
+      "content": "@Kingsman54321#107001 topla preporuka da ga riješiš, svi zadaci na labosima zadnje 3 g. su bili sa FPU/x87 instrukcijama. MMX i SSE ne moraš znat, ako i budu na ispitu, objasne tu jednu ili dvije intrinzične funkcije.\n\n2.d bih ovako riješio:\n\n>! ```\n> #include <iostream>\n> using namespace std;\n> \n> void _declspec(naked) sum_asm(float const* A, float const* B, int count, float *R) {\n> \t_asm {\n> \t\t/* cdecl prolog: */\n> \t\tpush ebp\n> \t\tmov ebp, esp \n> \n> \t\tpush ebx /* volatilni registri */\n> \t\tpush edi\n> \n> \t\tmov eax, [ebp + 8] /* A */\n> \t\tmov ebx, [ebp + 12] /* B */\n> \t\txor ecx, ecx /* i = 0 */\n> \t\tmov edx, [ebp + 16] /* n */\n> \t\tmov edi, [ebp + 20] /* R */\n> \n> PETLJA:\t        fld DWORD PTR[eax + ecx * 4] /* st = a[i] */\n> \t\tfld DWORD PTR[ebx + ecx * 4] /* st = b[i], st(1) = a[i] */\n> \t\tfaddp st(1), st(0) /* st = a[i]*b[i], pop st(1) */\n> \t\tfstp DWORD PTR[edi + ecx * 4] /* R[i] = st, pop st */\n> \n> \t\tinc ecx /* i = i + 1 */\n> \t\tcmp ecx, edx /* i < n ?*/\n> \t\tjne PETLJA \n> \n> \t\tpop edi /* obnova registara */\n> \t\tpop ebx\n> \t\t\n> \t\t/* cdecl epilog: */\n> \t\tpop ebp /* umjesto ’add esp,4, pop ebp’ moze biti ’leave’*/\n> \t\tret /* povratak iz potprograma */\n> \t}\n> }\n> \n> void sum_c(float const* A, float const* B, int count, float *R) {\n> \tfor (int i = 0; i < count; i++)\n> \t\tR[i] = A[i] + B[i];\n> \treturn;\n> }\n> \n> void _declspec(naked) sum_SSE(float const* A, float const* B, int count, float *R) {\n> \t_asm {\n> \t\t/* cdecl prolog: */\n> \t\tpush ebp\n> \t\tmov ebp, esp\n> \n> \t\tpush ebx /* volatilni registri */\n> \t\tpush edi\n> \n> \t\tmov eax, [ebp + 8] /* A */\n> \t\tmov ebx, [ebp + 12] /* B */\n> \t\txor ecx, ecx /* i = 0 */\n> \t\tmov edx, [ebp + 16] /* n */\n> \t\tmov edi, [ebp + 20] /* R */\n> \n> PETLJA:\t        movaps xmm0, [eax + ecx * 4] /* xmm0 = a[i:i+4] */\n> \t\tmovaps xmm1, [ebx + ecx * 4] /* xmm1 = b[i:i+4] */\n> \t\taddps xmm0, xmm1 /* xmm0 = xmm0 + xmm1 */\n> \t\tmovaps [edi + ecx * 4], xmm0 /* R[i:i+4] = xmm0 */\n> \n> \t\tadd ecx, 4 /* i = i + 4*/\n> \t\tcmp ecx, edx /* i < n ?*/\n> \t\tjne PETLJA\n> \n> \t\tpop edi /* obnova registara */\n> \t\tpop ebx\n> \n> \t\t/* cdecl epilog: */\n> \t\tpop ebp /* umjesto ’add esp,4, pop ebp’ moze biti ’leave’*/\n> \t\tret /* povratak iz potprograma */\n> \t}\n> }\n> \n> int main()\n> {\n> \tint n = 5;\n> \tfloat a[5] = {1, 2, 3, 4, 5};\n> \tfloat b[5] = {-1.5, 0, 2.5, 0.75, 2};\n> \tfloat r[5];\n> \tfloat c[5];\n> \tfloat s[5];\n> \n> \tsum_asm(a, b, n, r);\n> \tstd::cout << \"ASM: \";\n> \tfor (int i = 0; i < n; i++)\n> \t\tcout << r[i] << \" \";\n> \tcout << endl;\n> \n> \tsum_c(a, b, n, c);\n> \tcout << \"C: \";\n> \tfor (int i = 0; i < n; i++)\n> \t\tcout << r[i] << \" \";\n> \tcout << endl;\n> \n> \tsum_SSE(a, b, n, s);\n> \tcout << \"SSE: \";\n> \tfor (int i = 0; i < n; i++)\n> \t\tcout << s[i] << \" \";\n> \tcout << endl;\n> }\n\nŠto se tiče blica, osnove asemblera i nešto sitno o ektenzijama je gg. Bio je neki jebeni pdf resource, mislim pisan u latexu gdje su sve ekstenzije bile skicirane i objašnjene redom, ali ga stvarno ne mogu naći, a mislim da nije službeni materijal. Iz njega sam povadio natuknice, mogu eventualno poslikat i uploadat tu i na materijale. Bez toga, za riješit labos dovoljne su [osnove x86 asm](http://www.cs.virginia.edu/~evans/cs216/guides/x86.html) i [Intelov manual poglavlja 5, 8 i 9](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-1-manual.pdf). Također, [c9x.me](https://c9x.me/x86/).\n\nPrimjeri nekih prošlih zadataka:\n\nskalarni produkt `dotproduct_asm(float* a, float* b, int n, float* &rezultat);`\n\nduljina vektora `vectorlength_asm(float* v, int n, float* &rezultat);`\n\n.* odnosno [Hadamardov produkt](https://en.wikipedia.org/wiki/Hadamard_product_(matrices)) `vectormul_asm(float* u, float* v, float* w, int n);`",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Kingsman54321",
+          "Uchenikowitz (Učečuču)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107281": {
+      "poster": "BigZ1",
+      "content": "jel mozemo opet ponet laptop na lab vjezbu,msm svakako cu pitat sutra al jel netko zna?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107309": {
+      "poster": "blablajar",
+      "content": "kolko treba otprilike da se labos rijesi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107321": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "http://www.jegerlehner.ch/intel/IntelCodeTable.pdf fora podsjetnik za x86",
+      "votes": {
+        "upvoters": [
+          "Dr_Flare"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107327": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@blablajar#107309 ma ne treba dugo idk u danu rijesis, ja sam duze rjesavao jer sam citao sve ove gluposti po wikipedijama jer me zanimalo. Citao sam cak cijeli ovaj gdb tutorial. Ostaje mi jos 9. d) za vjezbu i to je to.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107341": {
+      "poster": "ferball",
+      "content": "moze mozda pomoc? Dobijem error undefined reference to `potprogram_asm(int, int, int)'\n\n![](assets/2020-12-08/00023.png)\n\nCompile s g++ -g -o potprogram potprogram_asm.s potprogram_asm.c -m32 \n\nEDIT: RJESENO",
+      "votes": {
+        "upvoters": [
+          "BigZ1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107479": {
+      "poster": "Filemon",
+      "content": "kod za SSE prije nije bio dobar, zbog c/p mi je u mainu zvao sub_asm, pa sam mislio da je sve ok jer je test prolazio.\n\nUgl, treba pazit na: \n\n- poravnanje, `movaps` zahtijeva da su mem lokacije poravnate na 128b. God bless pa to možemo namjestit s `__declspec(align(16)) float a[n]` u mainu\n- to da ne smijemo uzimati van memorije kojoj imamo pristup. To znači da se zadnjih `n % 4` lokacija mora zbrojiti pojedinačno\n\nKorektan kod:\n>!  ``` \n>void _declspec(naked) sum_SSE(float const* A, float const* B, int count, float *R) {\n> \t_asm {\n> \t\t/* cdecl prolog: */\n> \t\tpush ebp\n> \t\tmov ebp, esp\n> \n> \t\tpush ebx /* volatilni registri */\n> \t\tpush edi\n> \t\tpush esi\n> \n> \t\tmov eax, [ebp + 8] /* A */\n> \t\ttest eax, 0fh /* poravnat? */\n> \t\tjnz KRAJ\n> \t\tmov ebx, [ebp + 12] /* B */\n> \t\ttest ebx, 0fh /* poravnat? */\n> \t\tjnz KRAJ\n> \t\txor ecx, ecx /* i = 0 */\n> \t\tmov edx, [ebp + 16] /* n */\n> \t\tmov edi, [ebp + 20] /* R */\n> \t\ttest edi, 0fh /* poravnat? */\n> \t\tjnz KRAJ\n> \n> VEC:\t        cmp edx, 4\n> \t\tjl ITER /* n < 4, ne moze SSE */\n> \n> \t\tmovaps xmm0, [eax + ecx * 4] /* xmm0 = a[i:i+4] */\n> \t\tmovaps xmm1, [ebx + ecx * 4] /* xmm1 = b[i:i+4] */\n> \t\taddps xmm0, xmm1 /* xmm0 = xmm0 + xmm1 */\n> \t\tmovaps[edi + ecx * 4], xmm0 /* R[i:i+4] = xmm0 */\n> \n> \t\tadd ecx, 4 /* i += 4 */\n> \t\tsub edx, 4 \n> \t\tcmp edx, 4 /* n >= 4 ? */\n> \t\tjge VEC\n> \n> \t\ttest edx, 03 /* edx % 4 == 0? */\n> \t\tjz KRAJ\n> \n> ITER:\t        fld DWORD PTR[eax + ecx * 4] /* st = a[i] */\n> \t\tfld DWORD PTR[ebx + ecx * 4] /* st = b[i], st(1) = a[i] */\n> \t\tfaddp st(1), st(0) /* st = a[i]*b[i], pop st(1) */\n> \t\tfstp DWORD PTR[edi + ecx * 4] /* R[i] = st, pop st */\n> \n> \t\tinc ecx /* i++ */\n> \t\tdec edx \n> \t\ttest edx, edx /* n = 0 ? */\n> \t\tjne ITER\n> \n> KRAJ:\t        pop esi\n> \t\tpop edi /* obnova registara */\n> \t\tpop ebx\n> \n> \t\t/* cdecl epilog: */\n> \t\tpop ebp \n> \t\tret\n> \t}\n> }\n> ```\n\nbez brige, u C-u s intrinzicima je masu jednostavnije",
+      "votes": {
+        "upvoters": [
+          "ferball"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107518": {
+      "poster": "BigZ1",
+      "content": "@BigZ1#107218 \n\nbitno da rijesavam vec 2 zadatka pola dana iz onih zadataka sa blica. Izgubio svo znanje FPI lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107999": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Može li mi netko reći u čemu je problem?\n>!![](assets/2020-12-09/00031.png)\n\n>![](assets/2020-12-09/00032.png)\n\nPo uputama bi trebalo biti sve ok. Je li do compilera ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108000": {
+      "poster": "ferball",
+      "content": "![](assets/2020-12-09/00033.png)\n\nOvo je pokusaj hadamarda, nesto ne stima(mislim nekaj sitno) pa ako se kome da pogledat :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108001": {
+      "poster": "Giovanni",
+      "content": "@BrkMateaBeusana#107999 Ako se ja ne varam ne možeš to prevesti tako sa gcc-om nego ti treba msvc prevoditelj. Ako sam u krivu neka me netko ispravi",
+      "votes": {
+        "upvoters": [
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108005": {
+      "poster": "zloglasniKonjokradica (ooga booga)",
+      "content": "zna li netko jel nuzno da rjesenje prati njihove upute il je samo bitno da radi ono sto treba radit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108027": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "@BrkMateaBeusana#107999 \n\nP.S. ima li tko zadatke s blica?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108030": {
+      "poster": "BigZ1",
+      "content": "@BrkMateaBeusana#108027 ja rješavam dio njih sa @Filemon no zapeo sam jos u procesu pa cu ih vcrs tu ukeljit. Jel itko ima ista bas sa blica mislis pitanja teorijska,navodno nesto ima u ultimate packu pa nek neko pogleda.",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108033": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "@BigZ1#108030 aha, ima i u ultimate? Super. Hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108087": {
+      "poster": "BigZ1",
+      "content": "@BrkMateaBeusana#108033 valjda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108105": {
+      "poster": "BigZ1",
+      "content": "ljudi stavio sam da se par zadataka stavi na materijale u arh2 sto sam rijesio sa onog docx file od 15-16. godina.\n\nTakodjer kolega @Filemon će ovdje ili na materijale staviti i druge zadatke.",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "Filemon",
+          "Hrvoje (Hrvoje45)",
+          "ferball",
+          "seni (ina)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108238": {
+      "poster": "Filemon",
+      "content": "aj da stavim tu, kad su vam već labosi sutra. Od pred 2 g što sam sebi rješavao za vježbu.\n\n[color=\"red\"] **❗️ ne znam poštuju li ovi kodovi cdecl i standardne x86 konvencije u potpunosti ❗️** [/color]\n\nodnosno nemam pojma spremaju li se volatilni/callee-saved registri (svi osim eax, ecx, edx) na stog, čisti li se x87 stog, je li rezultat uvijek u eaxu, je li ecx ugl brojač u petlji, esi pointer na ulazno polje, a edi pointer na izlazno polje.\n\nKad budem imao vremena jednom ću proći kroz sve, izbacit suvišnu upotrebu registara i ostalo pa uploadat baš na materijale.\n\nhttp://www.filedropper.com/zadaci\n\n@ferball#108000 Hadamard koji sam ja spomenuo je bio za dva jednodimenzionalna polja. \n\nTvoje ne radi jer su **arr pointeri na pointere, jednostavno ti fali razina dereferenciranja ako su polja stvarno u potpunosti dinamička (dinamičko polje pointera na dinamička polja pointera). Tada je arr\\[i][j]  \\*(*(arr+i) + j). \n\nZa obično statičko 2D polje bi a\\[i][j] stvarno bio \\*(arr + i*C + j) odnosno dword ptr[ecx + esi].",
+      "votes": {
+        "upvoters": [
+          "Uchenikowitz (Učečuču)",
+          "ferball"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108239": {
+      "poster": "blablajar",
+      "content": "zna neko zasto mi javlja type operand mismatch za push i pop ako napisem push ebp i pop ebp",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108252": {
+      "poster": "ferball",
+      "content": "@blablajar#108239 vjerojatno ne prevadas za 32-bitnu arhitekturu",
+      "votes": {
+        "upvoters": [
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108358": {
+      "poster": "Kingsman54321",
+      "content": "Može li netko napisati kakva su danas bila pitanja iz teorije i zadaci?",
+      "votes": {
+        "upvoters": [
+          "BigZ1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108529": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@Kingsman54321#108358 \n\n[javlja kolega koji je danas bio]\n\nOvako je bilo na arhu (moš i postat na studoše ak oš): 1. CDECL - kako se šalju parametri, kako se vraća razultat, koja je obična početna rutina (spremi ebp, napravi novi ebp), što znaci kad napraviš npr. sub esp,4. 2. Kako se piše u donjih 16 bitova eax? 3. Kako bi izveli operaciju a*b + c 4. Instrukcija MOVAPS 5. gdje se (s obzirom na parametre potprograma) na stogu nalaze lokalne varijable? ZADATAK: slično kao 9.d, samo što ne zbrajaš vektore nego ih oduzimaš i akumuliraš sumu u parametar tipa float. 95% koda isto kao i za 9.d zadatak. Trebat ce vam naredba FABS i FSUBP. Pita te da nacrtaš cijeli stog pri pozivu potprograma i da nacrtaš di pokazuje EBP i ESP",
+      "votes": {
+        "upvoters": [
+          "Giovanni",
+          "Kingsman54321",
+          "luka6 (ugrijaniRadijator)",
+          "seni (ina)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108540": {
+      "poster": "Kingsman54321",
+      "content": "@Uchenikowitz#108529 Hvala ti!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108547": {
+      "poster": "Kingsman54321",
+      "content": "@Uchenikowitz#108529 Jel znaš možda gdje pokazuju EBP i ESP? To ne znam što bih nacrtao.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108579": {
+      "poster": "Giovanni",
+      "content": "@Kingsman54321#108547 Na ovom linku imaš  primjer kako izgleda stog sa EBP i ESP\n\nhttp://www.cs.virginia.edu/~evans/cs216/guides/x86.html",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Kingsman54321"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108589": {
+      "poster": "Kingsman54321",
+      "content": "@Giovanni#108579 Hvala ti",
+      "votes": {
+        "upvoters": [
+          "Giovanni"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108609": {
+      "poster": "BigZ1",
+      "content": "https://gofile.io/d/Lt4Wyc\n\nev i moji rjeseni zadaci koji jos nisu na materijalima",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "Filemon",
+          "Hrvoje (Hrvoje45)",
+          "Kingsman54321",
+          "Uchenikowitz (Učečuču)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108638": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@Giovanni#108579 \n\n@Kingsman54321#108547 \n\nTaj link je svetinja",
+      "votes": {
+        "upvoters": [
+          "Giovanni",
+          "Kingsman54321"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108642": {
+      "poster": "Kingsman54321",
+      "content": "@Uchenikowitz#108638 lol, al fakat je dobro objašnjenje",
+      "votes": {
+        "upvoters": [
+          "Uchenikowitz (Učečuču)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108792": {
+      "poster": "Aquaman",
+      "content": "@Uchenikowitz#108529 jel itko napisao kako bi izgledao promijenjeni dio koda zadatka i nacrtao stog? ako jest, moze li objaviti pa da pogledam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111159": {
+      "poster": "Giovanni",
+      "content": "Došli su bodovi iz blica na ferku",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112178": {
+      "poster": "JBQ",
+      "content": "Dosao i drugi dio bodova",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

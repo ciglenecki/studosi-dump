@@ -1,0 +1,822 @@
+{
+  "title": "[NBP] 3. domaća zadaća - 2021/2022",
+  "creator": "Exelero",
+  "slug": "nbp-3-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Napredne baze podataka",
+    "Zadaće"
+  ],
+  "posts": {
+    "266844": {
+      "poster": "Exelero",
+      "content": "Ako je netko počeo rješavati zadaću, jeste uspjeli ovaj zadatak? ![](assets/2021-12-27/00014.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266979": {
+      "poster": "sekiro",
+      "content": "![](assets/2021-12-27/00029.png)\n\njel ima neko ovaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267079": {
+      "poster": "Harweyy",
+      "content": "![](assets/2021-12-28/00016.jpg)\n\nZadatak glasi : koristeći kolekciju dvdrent izračunajte prosječan iznos plaćanja najma u 2016. godini i koliko je postotno različit od prosjeka svih prethodnih godina zajedno. Prosjek zaokružite na 4 decimale, a postotnu razliku na dvije i formatirajte na dvije.\n\nAvg koji se izracuna je tocan, tako da pretpostavljam da je avg prethodnih godina isto, nikako ne mogu dobit tocan postotak. Pokusao sam razlicite varijante racunanja i zaokruzivanja medurezultata ali uglavno dobivam -1.09, -1.1000000003, -1.18 .....",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267089": {
+      "poster": "Stubla",
+      "content": "![](assets/2021-12-28/00018.png)\n\nZna netko ovaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267094": {
+      "poster": "mgd",
+      "content": "@\"Harweyy\"#p267079 kako si dobio točan avg? Ja ne mogu nikako",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267097": {
+      "poster": "Harweyy",
+      "content": "@\"mgd\"#p267094 za datum koji koristis, koristi payment_date",
+      "votes": {
+        "upvoters": [
+          "mgd"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267104": {
+      "poster": "mgd",
+      "content": "zna li netko ovaj?\n\n![](assets/2021-12-28/00020.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267121": {
+      "poster": "Harweyy",
+      "content": "Pro tip : nemoj te izgubit cijeli dan ko ja, new date(null) vraca 1. sijecanj 1970",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "MsBrightside",
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267231": {
+      "poster": "mgd",
+      "content": "```\ndb.dvdrent.mapReduce(`\n\tfunction(){\n   if(this.customer !== undefined && this.customer.address !== undefined && this.staff.address !== undefined && this.staff.address.country === 'Philippines'){\n      var staf = {name: this.staff.first_name,\n                  lastaname: this.staff.last_name};\n      emit(staf, this.customer);\n   }\n}\n`, `\n\tfunction(staff, customers){\n   var set = new Set();\n   var set2 = new Set();\n   var value = {phil: 0, other:0};\n   \n   customers.forEach(function(cst){\n      if(cst.address.country === 'Philippines'){\n         set.add(cst.customer_id);\n      }else{\n         set2.add(cst.customer_id);\n      }\n   });\n   \n   value.phil = set.size;\n   value.other = set2.size;\n   \n   return value;\n}\n      \n`\n);\n```\n\nvidi li netko problem? javlja mi da cst.address is undefined, a u shellu mi vraća dobar rezultat...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267392": {
+      "poster": "Ducky",
+      "content": "Jel ima neko neki tip za debbugiranje funkcija map i reduce ili da ih bar zasebno pozovem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267481": {
+      "poster": "Lusy (MGJ)",
+      "content": "Vidi netko grešku? Edgar mi vraća [ ]\n\n![](assets/2021-12-31/00007.png)\n\n![](assets/2021-12-31/00008.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267612": {
+      "poster": "I3loodHound",
+      "content": "Zna netko ovaj?\n\n![](assets/2022-01-01/00007.png)\n\nImam ovolko od koda, pomoc dalje bi dobro dosla\n\n![](assets/2022-01-01/00008.png)\n\n![](assets/2022-01-01/00009.png)",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": [
+          "kd240"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267659": {
+      "poster": "Arbeit123",
+      "content": "@\"mgd\"#p267231 Mislim da je problem CR-Combinable Reducer, tj. izlaz bi trebao odgovarati ulazu po formatu , preza 8. NoSQL (3. od 4) od 49. slajda\n\n@\"MGJ\"#p267481 ne vidim gresku ali evo rjesenje 😅\n \n```\ndb.dvdrent.mapReduce(\n`function(){\n\tif (this.film!==undefined && this.film.categories.name !==null && this.film.length>180){\n\t\tvar description = this.film.description;\n\t\tvar year = this.film.release_year;\n\t\tvar title = this.film.title;\n\t\tthis.film.categories.forEach(function(category){\n\t\temit({\n\t\t\tcategory:category.name\n\t\t},\n\t\t{\n            films:[\n\t\t\t    {\n                year:year,\n\t\t\t\ttitle: title,\n\t\t\t\tdescription :description,\n\t\t\t\t}\n\t\t]\n\t\t}\n\t\t)\n\t\t})\n}};`,\n`function(key,values){\nvar rv= {\n\tfilms:[]\n};\n\tvalues.forEach(function(value){\n\t\trv.films=rv.films.concat(value.films);\n\t});\n\n\trv.films = rv.films.sort(function(a,b){\n\treturn a.title>b.title;\n\t});\n\n\trv.films = rv.films.filter((film , index , self) => (\n\tindex===self.findIndex((t) => (t.title === film.title)\n)));\n\treturn rv;\n};`, {\n})\n```",
+      "votes": {
+        "upvoters": [
+          "Extended_mix",
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267665": {
+      "poster": "MrPeanutButter",
+      "content": "![](assets/2022-01-02/00005.png)\n\njel netko vidi grešku edgar mi vraća [] ...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267666": {
+      "poster": "I3loodHound",
+      "content": "A ovaj? Count i amount mi za par drzava nisu dobri, greska je za 1-2, ne vidim dal grijesim u uvjetu negdje ili necem drugom\n\n![](assets/2022-01-02/00006.png)\n\n![](assets/2022-01-02/00007.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267667": {
+      "poster": "I3loodHound",
+      "content": "@\"MrPeanutButter\"#p267665 Ne znam dal je do toga, ali u reduce funkciji imas argumente `(key, values)` a dolje u funkciji pokusavas dohvatiti iz objekta s `value.amount` i `value.count`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267704": {
+      "poster": "prx_xD",
+      "content": "![](assets/2022-01-02/00013.png)\n\njel netko imao ovakav zadatak?  \n\nmeni rjesenje nikako ne ispada dobro",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267705": {
+      "poster": "Vrba",
+      "content": "@\"I3loodHound\"#p267666 jesi uspio rijesiti ovaj? EDIT: samo makni 1. uvjet iz if-a (paymentdate != null)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267714": {
+      "poster": "Vrba",
+      "content": "![](assets/2022-01-02/00015.png)\n\njel imao netko ovaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267742": {
+      "poster": "MsBrightside",
+      "content": "@\"prx_xD\"#p267704 sta dobijes",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267744": {
+      "poster": "prx_xD",
+      "content": "@\"MsBrightside\"#p267742 \n\ndobijem drugacije brojeve \n\notvorio sam ticket i kaze mi profesor da mi fali CR (valjda combinable reducer)\n\niako kada isti kod izvrsim lokano na bazi dobijem rezultate iste kao oni\n```\ndb.dvdrent.mapReduce(\n  function () {\n    if (this.staff.address.country === 'Philippines') {\n      var st = {\n        name: this.staff.first_name,\n        lastname: this.staff.last_name,\n      };\n      var cs = {\n        customer_id: this.customer.customer_id,\n        country: this.customer.address.country,\n      };\n      emit(st, cs);\n    }\n  },\n  function (key, values) {\n    var res = {\n      phil: 0,\n      other: 0\n    };\n    var cust_ids = [];\n    values.forEach(function (value) {\n      if (!cust_ids.includes(value.customer_id)) {\n        cust_ids.push(value.customer_id);\n        if (value.country === 'Philippines') {\n          res.phil += 1;\n        } else {\n          res.other += 1;\n        }\n      }\n    });\n    return res;\n  },\n  {\n    out: {\n      inline: 1,\n    },\n  }\n);\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267768": {
+      "poster": "Vrba",
+      "content": "@\"Exelero\"#p266844 jesi mozda uspio rijesiti ovaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267769": {
+      "poster": "Harweyy",
+      "content": "@\"prx_xD\"#p267744 Nije bitno je li ti lokalno se izvrsava tocno, stvar je u tome sto npr ima 100 podataka\n\n oni su namjerno namjestili edgar da ti ih 99 dode istovremeno a 100-ti ima delay tipa 200ms, i onda ti upit ne prode za to sto nije compound reduce. Dok lokalno ti ih sve dohvatis istovremeno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267770": {
+      "poster": "prx_xD",
+      "content": "@\"Harweyy\"#p267769 jel znas mozda sta bih trebao dodati u kodu da se to rjesi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267780": {
+      "poster": "Harweyy",
+      "content": "@\"prx_xD\"#p267770 nek ti map emitira kao value listu, u reduce konkateniraj listu i nek return je lista i onda u finalize funkciji konzumiraj listu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267784": {
+      "poster": "Yasuke (Bono)",
+      "content": "![](assets/2022-01-03/00006.png)\n\nMoj kod:\n```\ndb.dvdrent.mapReduce(\n`function(){\n    if(this.film != undefined){\n        if(this.film.actors != undefined && this.film.categories != undefined){\n            var filmTitle = this.film.title;\n            var actorsId = [];\n            this.film.actors.forEach(function(actor){\n                actorsId = actorsId.concat(actor.actor_id)\n            });\n            this.film.categories.forEach(function(category){\n                emit(category, {films : [{title:filmTitle, actorsId:actorsId}] });\n            });\n        }  \n    }\n};`,\n\n`function(key, values){\n    var rv = {\n        films : []\n    }\n    \n    values.forEach(function(value){\n        rv.films = rv.films.concat(value.films)\n    });\n    \n    return rv;\n};`,\n\n{ \"finalize\" : `function(key, reducedValues){\n    reducedValues.films = reducedValues.films.filter((item, pos, self) => \n        pos === self.findIndex((t) => (\n            t.title === item.title\n        ))\n    );\n    \n    var allActors = [];\n    \n    reducedValues.films.forEach(function(value){\n        allActors = allActors.concat(value.actorsId)\n    });\n    var uniqueActors = new Set(allActors);\n    \n    var all = allActors.length;\n    var unique = uniqueActors.size;\n    \n    return {\"all\":all, \"unqiue\":unique};\n};`    \n}\n)\n```\n\n\nAko neko ima rješenje zadatka ili može pomoć pronaći grešku pls?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267790": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "![](assets/2022-01-03/00007.png)\n\nStavili su obavijest",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267820": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Je li netko uspio riješiti ova 2?\n\n![](assets/2022-01-03/00012.png)\n\n![](assets/2022-01-03/00013.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267821": {
+      "poster": "MrPeanutButter",
+      "content": "![](assets/2022-01-03/00014.png)\n\nIma li netko ideju za ovaj zadatak naime kako bih trebao napraviti da value na ovakav naćin ima varijable tj. da su nazivi kategorija ovako ?\n\n```\n\"value\": {\n      \"Cartoons\": {\n        \"count\": 10,\n        \"amount\": 32.9\n      },\n      \"Drama\": {\n        \"count\": 10,\n        \"amount\": 48.901\n      },\n      \"Action\": {\n        \"count\": 8,\n        \"amount\": 38.92\n      },\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267869": {
+      "poster": "Tonii (Zulul)",
+      "content": "@\"MrPeanutButter\"#p267821 Jesi možda uspio riješiti ja fakat nemam pojma a trebam 1 od ova 3 zadatka riješiti za uvjet iz zadaća",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267904": {
+      "poster": "mgd",
+      "content": "```\n`db.dvdrent.mapReduce(`\n\tfunction(){\n   if(this.payment !== undefined && this.payment !== null && this.payment.date !== undefined && this.payment.payment_date !== null &&\n   this.film.rating === 'G' && this.film.length > 120){\n      var film = {title: this.film.title};\n      emit(film, {posudba: [{rentaldate: new Date(this.rental_date), amount: this.payment.amount}]});\n      \n   }\n}\n`, `\nfunction(key, values){\n\tvar rv = {posudba: []};\n   \n   values.forEach(function(film){\n   \trv.posudba = rv.posudba.concat(film.posudba);\n      });\n      \n      return rv;\n}\n      \n`, {\n\"finalize\": `function(key, values){\n   \n   var value = {rentals: 0,\n   \t\t\t\tamount: 0,\n               days: 0,\n               amountPerDay: 0};\n   var listaDatuma = [];\n   var listaCijena = [];\n   \n   var min_date = null;\n   var max_date = null;\n   values.posudba.forEach(function(p){\n      listaDatuma.push(p.rentaldate);\n      listaCijena.push(p.amount);\n   });\n   \n   if(listaCijena.length > 0){\n      value.rentals = listaCijena.length;\n      for(var i = 0; i < listaCijena.length; i++){\n         am += listaCijena[i];\n      }\n   }\n   \n   if(listaDatuma.length > 0){\n      for(var i = 0; i < listaDatuma.length; i++){\n         var datum = listaDatuma[i];\n         if( min_date !== null){\n            if(datum < min_date){\n               min_date = datum;\n            }\n         }else{\n            min_date = datum;\n         }\n         \n         if(max_date !== null){\n            if(datum > max_date){\n               max_date = datum;\n            }\n         } else{\n            max_date = datum;\n         }\n         \n      }\n   }\n   \n   var razlika = Math.round((max_date-min_date)/(1000*60*60*24));\n   value.days = razlika;\n   value.amount = Math.round(am * 100) / 100;\n   value.amountPerDay = Math.round((value.amount/value.days) * 1000) / 1000;\n   \n   return value;\n}`\n});`\n```\n\njel moze pomoc kako da ovo pretvorim u taj CR ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267974": {
+      "poster": "Tonii (Zulul)",
+      "content": "![](assets/2022-01-04/00000.png)\n\nJel možda netko kuži zašto mi baca ovaj error na cards ali mi na primjer nobelprizes radi normalno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267978": {
+      "poster": "MrPeanutButter",
+      "content": "@\"Zulul\"#p267869 nop nisam jos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267988": {
+      "poster": "Cubi",
+      "content": "@\"MrPeanutButter\"#p267821\n\n@\"Zulul\"#p267974 \n\nMožeš dodavati nove ključeve objektu o na sljedeći način: o[\"Drama\"] = { ... }.\n\nAko ti je string \"Drama\" spremljen u varijablu v, onda možeš pisati o[v] = { ... }. Kasnije možeš iterirati po ključevima s for in petljom ako ti zatreba.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267999": {
+      "poster": "Lusy (MGJ)",
+      "content": "@\"I3loodHound\"#p267612 Jesi uspio ovaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268000": {
+      "poster": "Lusy (MGJ)",
+      "content": "Zna netko ovaj?\n\n![](assets/2022-01-04/00002.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268051": {
+      "poster": "boki8 (kerovac)",
+      "content": "@\"Harweyy\"#p267079 na koji nacin se ovo rjesava?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268072": {
+      "poster": "Tonii (Zulul)",
+      "content": "![](assets/2022-01-04/00004.png)\n\nJel ima netko možda ovaj riješen? Vidim da je netko uploadao file prošle godine ali više ne postoji",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)",
+          "TheManFromEarth",
+          "kivu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268099": {
+      "poster": "Eteie",
+      "content": "@\"MGJ\"#p268000 jesi mozda uspio ovaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268106": {
+      "poster": "kivu",
+      "content": "Moze pomoc?\n\n![](assets/2022-01-04/00009.png)\n\nZasad dobijem ovo\n\n![](assets/2022-01-04/00010.png)",
+      "votes": {
+        "upvoters": [
+          "Jere"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268108": {
+      "poster": "Extended_mix",
+      "content": "@\"Bono\"#p267784 Ako nisi do sada skuzio, nigdje ne izbacujes filmove krace od 120 min",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268109": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "@\"Ibracadabra\"#p267820 \n\njel imo netko u medjuvremenu :(",
+      "votes": {
+        "upvoters": [
+          "Jere"
+        ],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268110": {
+      "poster": "Vrba",
+      "content": "Jel moze netko pomoc zasto ovo radi lokalno, a u edgaru krivo racuna kategorije\n\n![](assets/2022-01-04/00011.png)\n\n![](assets/2022-01-04/00012.png)\n\n![](assets/2022-01-04/00013.png)",
+      "votes": {
+        "upvoters": [
+          "jazzMassive"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268115": {
+      "poster": "Lusy (MGJ)",
+      "content": "@\"Eteie\"#p268099 nop",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268118": {
+      "poster": "NGboi (DrEtva)",
+      "content": "@\"kivu\"#p268106\n\n![](assets/2022-01-04/00015.png)\n\n![](assets/2022-01-04/00016.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268140": {
+      "poster": "Ducky",
+      "content": "@\"Vrba\"#p268110 vjv ti treba combinable reducer (u finalize statementu). Mongo ga koristi po defaultu, ali edgar ne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268145": {
+      "poster": "anon00",
+      "content": "Je li itko imao nesto od ova 3 \n\n![](assets/2022-01-04/00020.png)\n\n![](assets/2022-01-04/00021.png)\n\n![](assets/2022-01-04/00022.png)\n\nPregledao sam proslogodisnju temu, ali ono sto ima je istekao upload",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268155": {
+      "poster": "anon00",
+      "content": "@\"kivu\"#p268106 Prije \"finalize\" ti fali otvorena zagrada { \n\nNa kraju je vec imas zatvorenu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268160": {
+      "poster": "Multimedija",
+      "content": "@\"Vrba\"#p268110 \n\n```\ndb.dvdrent.mapReduce(\n  function () {\n    print(this.film);\n    if (this.film !== undefined) {\n        if (this.film.categories.length == 1) {\n           var hour = new Date(this.rental_date).getHours(); \n           key = {\n              hour: hour\n\t\t   }\n\t\t   ct = {};\n\t\t   ct[this.film.categories[0].name] = 1;\n           value = { \n              categories: ct,\n              films: 1\n\t\t   }\n           emit(key, value);\n        }\n    }\n}\n,function (key, values) {\n    var rv = {\n        categories: {}, \n        films: 0\n\t}\n    values.forEach(value => { \n        rv.films += value.films;\n        for(var cat in value.categories) {\n            if(rv.categories[cat] !== undefined){\n                rv.categories[cat] += value.categories[cat];\n            } else {\n                rv.categories[cat] = value.categories[cat];\n            }\n        }\n    });\n    return rv;\n  }\n)\n```\n\nS obzirom na CR, format ulaza u reduce() funkciju mora biti jednak njezinom izlazu.",
+      "votes": {
+        "upvoters": [
+          "Sicsile",
+          "Vrba",
+          "knis"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268173": {
+      "poster": "niknik",
+      "content": "Jel mozda uspio netko rijesiti?\n\n![](assets/2022-01-04/00023.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268177": {
+      "poster": "toty",
+      "content": "![](assets/2022-01-04/00025.png)\n\nJel zna tko?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268192": {
+      "poster": "Lelek",
+      "content": "@\"anon00\"#p268145  ja ti imam prva 2",
+      "votes": {
+        "upvoters": [
+          "Ena43",
+          "MrPeanutButter",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268206": {
+      "poster": "Lusy (MGJ)",
+      "content": "@\"MGJ\"#p268000 \n\n@\"I3loodHound\"#p267612 \n\nIma itko ove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268208": {
+      "poster": "anon00",
+      "content": "@\"MGJ\"#p268206 Nemam pojma je li to taj, ali se cini kao nesto slicno pa mozda pomogne \n\nSlucajno sam naisao na to na materijalima maloprije (nazalost je to jedino sto postoji)\n\nhttps://github.com/studosi-fer/NMIBP/blob/master/zadace/dz-4/2020-21/NMIBP_2020-21_dz-4.txt",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268209": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "![](assets/2022-01-04/00026.png)\n\njos samo ovaj ako netko ima :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268225": {
+      "poster": "magla",
+      "content": "Ima netko ovaj, bio bi zahvalan na kodu 😄\n\n![](assets/2022-01-04/00029.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268512": {
+      "poster": "sekiro",
+      "content": "jel se mora submitat dz da bi ju priznali ili se automatski submita nakon isteka vremena?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268522": {
+      "poster": "anon00",
+      "content": "@\"sekiro\"#p268512 \n\nOdi na NBP na edgaru i stisni gore lijevo \"my previous exams\" pa vidi imas li tamo bodove. Ja sam submitao i pise mi rezultat\n\nUpitno je sto se događa kad nisi trenutno u nekom testu kad vrijeme istekne. Ako ne vidis definitivno im posalji poruku da nisi submitao. U najgorem slucaju ce moci rucno vidjeti da si run-ao i je li to tocno ili ne.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268548": {
+      "poster": "sekiro",
+      "content": "@\"anon00\"#p268522 da, nemam, zato i pitam. Hvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

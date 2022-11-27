@@ -1,0 +1,482 @@
+{
+  "title": "[SUI] 2. laboratorijska vježba - 2020/2021",
+  "creator": "SinanSuckich (Yelena)",
+  "slug": "sui-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Sigurnost u Internetu",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "83591": {
+      "poster": "SinanSuckich (Yelena)",
+      "content": "Jel sam ja nesto krivo skuzio ali meni u crontabu nema */5 * * * * /usr/local/bin/backup\n\n![](assets/2020-10-23/00004.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83810": {
+      "poster": "vykar (mango)",
+      "content": "@SinanSuckich#83591 gledaš krivi crontab, ta naredba se nalazi u crontabu korisnika root.\n\nDakle \"sudo crontab -u root -l\".",
+      "votes": {
+        "upvoters": [
+          "SinanSuckich (Yelena)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84122": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "Je li itko uspio prvi? napravio sam skriptu u /tmp  \"sudo adduser sui sudo\" ali nakon 5 minuta opet ne mogu pokrenuti naredbu za popis sudoersa.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84345": {
+      "poster": "Marenix",
+      "content": "@PiqueBlinders#84122 Ne znam dal si uspio otkrit, al stavi skriptu \"sudo usermod -aG sudo sui\", meni je to radilo",
+      "votes": {
+        "upvoters": [
+          "Abarth",
+          "PiqueBlinders (zisku)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84405": {
+      "poster": "Marenix",
+      "content": "Ja došao do trećeg i pokrenuo Johna za sha-512, i već se kojih pola sata ili sat vremena okreće i ne može pronać zadnju šifru. Za md5 je užasno dugo isto trebalo, baš za tu zadnju. Jesu nešto zeznuli pa tako dugo traje, ili sam ja nešt zeznuo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84445": {
+      "poster": "petar19",
+      "content": "@Marenix#84405 također, na kraju ju nisam ni uspio dobiti jer mi se nije dalo čekati. Radi se o 82. liniji (za svih 5 pass* datoteka, barem je kod mene tako). Probao sam i van virtualke (gdje bi trebalo biti brže), nakon 15 min ništa.\n\nKoja je na kraju lozinka btw?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84452": {
+      "poster": "Marenix",
+      "content": "@petar19#84445 Ostavio sam 2 sata se vrtjelo za SHA-512, ništa nije našlo. Sad sam sve pobrisao i idem ponovno probat, jer su mi nekako bili nađeni passwordi za sve, makar nisam sve ni pokrenuo 😕",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84455": {
+      "poster": "Marenix",
+      "content": "@petar19#84445 Evo, trebalo mi je 10 minuta za MD5, i zadnji pass je bio \"rockyou\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84466": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "@Marenix#84345 vjerojatno nesto krivo radim, stvorim datoteku sa touch i imam samo taj jedan red u njoj. Treba li skripta imati sh ekstenziju ili nekaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84469": {
+      "poster": "maPre",
+      "content": "@PiqueBlinders#84466 Probaj staviti puni path, do toga je vjerojatno: sudo /usr/sbin/usermod -aG sudo sui",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84662": {
+      "poster": "Marenix",
+      "content": "Čini se da su stavili jedan pass koji nema u riječniku (rockyou) i da onda taj nasumično pokušava otkrit. Rekao mi je asistent da taj pass stavim u riječnik i da dalje onda za ostale radim s tim nadopunjenim riječnikom i da to objasnim u predaji. Jedino, još nisam otkrio di se skriva taj riječnik... hahah",
+      "votes": {
+        "upvoters": [
+          "PiqueBlinders (zisku)",
+          "jitser"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84668": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "Probaj naci u /usr/share/john , datoteka password.lst\n\nJa sam prekinuo prije nego mi je naslo sve za recimo MD5, jel znas kako resetat taj proces?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84669": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "@Marenix#84662 \n\nProbaj naci u /usr/share/john , datoteka password.lst\n\nJa sam prekinuo prije nego mi je naslo sve za recimo MD5, jel znas kako resetat taj proces?",
+      "votes": {
+        "upvoters": [
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84681": {
+      "poster": "Marenix",
+      "content": "@PiqueBlinders#84669 Nažalost ne, ja sam ispočetka vm napravio. Ali, ak si samo za md5 provjeravao, onda možeš sam sad dodat i za druge tražit, pa kažeš da je za md5 dugo trebalo jer je moralo nasumično trqžit pravi pass, dok si za ostale dodao ovaj rockyou, pa je zato bilo brže",
+      "votes": {
+        "upvoters": [
+          "PiqueBlinders (zisku)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84787": {
+      "poster": "jitser",
+      "content": "@PiqueBlinders#84669 resetat session tako da ponovno traži lozinke? ako je to što tražiš, onda samo switchaj na root usera pa obriši ~/.john/john.pot datoteku (tamo se spremaju crackane lozinke).",
+      "votes": {
+        "upvoters": [
+          "PiqueBlinders (zisku)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84826": {
+      "poster": "ardi (sprut)",
+      "content": "Kako ste obrazložili 4. zadatak? Ja bih rekao da je prva datoteka najobičniji virus/backdoor, opcije se vide odavde: \n\n```\n<FORM ACTION=%s METHOD=POST>\n<SELECT NAME=STRCMD>\n<OPTION>suid shell in tmp dir\n<OPTION>shutdown machine\n<OPTION>del all logs\n<OPTION>erase backdoor\n<OPTION>killall users\n<OPTION>ping str site\n<OPTION>xterm to external host\n<OPTION>create new root account\n<OPTION>execute command:\n</SELECT>\n```\n.. dok mi se čini da je druga datoteka nekakav alat za dns flooding (ddos), bar se iz ovoga u ispisu da zaključiti: \n```text\nCannot packet local networks\nUdp flooding target\nTcp flooding target\nSending packets to target\nDns flooding target\nInvalid IP\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85191": {
+      "poster": "boss15",
+      "content": "Jel moze netko ko budali objasnit ovaj 1. zadatak i naredbe kojim redom kako jer meni cijelo vrijeme baca sui is not in the sudoers file. this incident ce ti jebat majku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "HotPotato",
+          "batman",
+          "in1",
+          "jitser"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85199": {
+      "poster": "xeqte",
+      "content": "@Marenix#84662 Trebamo li svi onda pitati asistente za taj dio da opravdamo kako smo znali da treba staviti rockyou u password.lts? 😀",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "caffeine"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85231": {
+      "poster": "ardi (sprut)",
+      "content": "@xeqte#85199 Mislim da nema potrebe. Sam možeš otkrit tu zadnju šifru preko rippera, meni je trebalo nekih 5-10 min na i7-8565U za MD5 da mi nađe taj rockyou koji nije bio u password.lts fajlu",
+      "votes": {
+        "upvoters": [
+          "Marenix",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85264": {
+      "poster": "Marenix",
+      "content": "@xeqte#85199 Ma nema potrebe da svi pitaju. Nakon što 10ak studenata pita, stavit će obavijest 🤣",
+      "votes": {
+        "upvoters": [
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85537": {
+      "poster": "Tk123",
+      "content": "Zna netko kaj točno misle pod: \n\nS pomoću naredbe mkpasswd može se stvoriti polje jednako onome iz datoteke\n\n/etc/shadow. Navedite naredbu koja stvara takav redak.\n\nTo kao generiram sažetak neki s mkpasswd i onda ga ubacim novom korisniku s useradd da bi se stvorio takav redak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85548": {
+      "poster": "Marenix",
+      "content": "@Tk123#85537 Kolko sam ja shvatio, samo moraš naći koje argumente predati da dobiješ password kao neki u onoj datoteci. Ne mora biti jednak onome, al onaj u datoteci je određene dužine, i onaj $6$ označuje kojim algoritmom je hashirano. Mislim da je to najbitnije, da pozoveš mkpasswd i da mu kažeš da iskoristi taj algoritam",
+      "votes": {
+        "upvoters": [
+          "Tk123"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85569": {
+      "poster": "Tk123",
+      "content": "@Marenix#85548 Ahaa okej, ak je tak onda dobro :D Zbunilo me kaj su napisali da treba dobiti takav red kao u shadow fileu, al oni valjda misle na dio s sažetkom",
+      "votes": {
+        "upvoters": [
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85571": {
+      "poster": "Marenix",
+      "content": "@Tk123#85569 Da, ak želiš dobit točan redak kao za novog useraniki za user sui, onda moraš još dodatno kao salt stavit onaj njihov, koji piše između $6$ i sljedećeg $",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85572": {
+      "poster": "Tk123",
+      "content": "@Marenix#85571 Dada kuzim :)",
+      "votes": {
+        "upvoters": [
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86060": {
+      "poster": "BrankoBrancin",
+      "content": "Jel imao tko problem s permissionom za uređivanje datoteke /usr/share/john/password.lst?\n\nne mogu dodati password rockyou u nju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86069": {
+      "poster": "BrankoBrancin",
+      "content": "@BrankoBrancin#86060 \n\nhttps://askubuntu.com/questions/230476/how-to-solve-permission-denied-when-using-sudo-with-redirection-in-bash\n\novako :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86070": {
+      "poster": "maPre",
+      "content": "Jel još nekome brže pronađe SHA-512 lozinke od SHA-256?",
+      "votes": {
+        "upvoters": [
+          "Marenix",
+          "rchbtrrs"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86074": {
+      "poster": "SenorBurrito",
+      "content": "@maPre#86070 Meni isto tipa 9 sekundi brže",
+      "votes": {
+        "upvoters": [
+          "maPre"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86411": {
+      "poster": "prodanacro (oat)",
+      "content": "Ako trebate ponovno pokrenuti naredbu john (jer niste odmah mjerili - ko ja, npr.), samo obrišite hasheve iz john.pot (put do datoteke:  `/root/.john/john.pot`,  otvoriti ko root (sa `sudo`)).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86412": {
+      "poster": "kolsdj",
+      "content": "@boss15#85191 jesi uspio to riješiti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86604": {
+      "poster": "batman",
+      "content": "@kolsdj#86412 meni isto nije jasno, pratim i upute iz onog file-a 'pomoc' ali stalno isto upozorenje baca",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86671": {
+      "poster": "boss15",
+      "content": "@kolsdj#86412 touch /tmp/smth” i on će ti napraviti taj file kojeg samo urediš te u taj file (dodi do njega putem file explorera) pisi sudo adduser sui sudo, hvala kolegi @vykar  na pomoci",
+      "votes": {
+        "upvoters": [
+          "in1",
+          "kolsdj",
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,415 @@
+{
+  "title": "[AIPR] 3. domaća zadaća - 2021/2022",
+  "creator": "Harweyy",
+  "slug": "aipr-3-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Analiza i projektiranje računalom",
+    "Zadaće"
+  ],
+  "posts": {
+    "255137": {
+      "poster": "Harweyy",
+      "content": "U petom zadatku kada definiramo sustav nelinearnih jedn, te od njih napravimo Jacobian matricu prilikom množenja Jacobian transponirano sa Jacobian dobije se matrica 4x4 koja je po meni singularna iz razloga što su stupci linearno zavisni jedni o drugima te onda sustav nema riješenja. Je li još neko možda došao do toga ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262709": {
+      "poster": "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+      "content": "Koje rezultate bi trebali dobit u 3 i 4 zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262834": {
+      "poster": "dora (AE)",
+      "content": "Dobijete li rezultat za 3. zad?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262997": {
+      "poster": "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+      "content": "@\"AE\"#p262834 ja dobijem da nema rješenja, tj. kad rješavam sustav  A * ∆x = -g preko LUP-a dobijam da je pivot mala vrijednost, a kad rješavam preko inverza dobijem da je matrica singularna, al nekako sumnjam da je to točno\n\nJel sustav nelinearnih jednadzbi treba izgledati ovako ili?\n\n100 * (x2 -x1^2)^2 = 0\n\n(1-x1)^2 = 0",
+      "votes": {
+        "upvoters": [
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263000": {
+      "poster": "Harweyy",
+      "content": "@\"Zlatan Ibrahimovic\"#p262997 Sustav jedn treba izgledat kao :  \n\n10*(x2-x1) = 0\n\n1-x1 = 0",
+      "votes": {
+        "upvoters": [
+          "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263001": {
+      "poster": "Harweyy",
+      "content": "i rjesenje zadatka je 1,1",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263003": {
+      "poster": "dora (AE)",
+      "content": "Jel se mijenja vrijedost epsilona za peti zadatak? Kao rjesenje parametara dobijem gotovo identicne vrijednosti kao i pocetne.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263079": {
+      "poster": "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+      "content": "@\"Harweyy\"#p263001 Koje rješenje dobiješ u 4. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263084": {
+      "poster": "Harweyy",
+      "content": "@\"Zlatan Ibrahimovic\"#p263079 ovisno s koje strane se krene -0.89, -0.44 ili 0.89, 0.44",
+      "votes": {
+        "upvoters": [
+          "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263088": {
+      "poster": "Harweyy",
+      "content": "@\"AE\"#p263003 Treba se dobit 0.19, 0.45, 3.11\n\nProvjerio sam bio s profesorom, otkrio sam bio na pocetku da su u prvoj verziji zadali ne rijesiv sustav pa nakon sto je updejto file mi je poslao prva tri koraka da provjerim, ali da uglavnom gore navedene tocke su rijesenje",
+      "votes": {
+        "upvoters": [
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263113": {
+      "poster": "angello2",
+      "content": "@\"Harweyy\"#p263084 ja dobijem (-0.786, 0.618) i (0.786, 0.618) ovisno o strani s koje se krene, za to je vrijednost funkcije 1.005E-27, a za ovo tvoje rjesenje dobim vrijednost funkcije 1.5183, ne znam jesam krivo napravio funkciju ili ti nisi dobio optimalno rjesenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263188": {
+      "poster": "Harweyy",
+      "content": "@\"angello2\"#p263113 sto si uzeo kao zamjensku funkciju cilja, o tome ovisi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263193": {
+      "poster": "dora (AE)",
+      "content": "@\"Harweyy\"#p263088 Na koji si način definirao f. cilja? Suma kvadrata ovih 6 nelinearnih?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263194": {
+      "poster": "Harweyy",
+      "content": "@\"AE\"#p263193 da",
+      "votes": {
+        "upvoters": [
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263202": {
+      "poster": "angello2",
+      "content": "@\"Harweyy\"#p263188 ![](assets/2021-12-10/00010.png)\n\ni kad rucno upisem te tocke u sumu kvadrata ove dvije funkcije dobim istu stvar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263234": {
+      "poster": "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+      "content": "@\"angello2\"#p263113 ja dobijem isto rjesenje kao ti, upiso sam u geogebru x1^2 + x2^2 +1  i x2 -x1^2 i ove dvije tocke( (-0.786, 0.618) i (0.786, 0.618)) su ubiti tocke presjek te dvije funkcije\n\n![](assets/2021-12-10/00012.png)",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263829": {
+      "poster": "blast",
+      "content": "Naci rjesavao sam 5. zadatak jedno 3 sata, stalno su mi jakobjani bili singularni i nije se dalo rjesit, malo sam se igrao sa reglularizacijama, dobio rjesenje koje je ono brat bratu ok cc 0.5 je greska, i onda skuzim da su promjenili zdatak. fakat su mogli dati neku obavjest ili nesto. 🙃",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263838": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"Harweyy\"#p263000 \n\nZar ne bi trebalo biti 10* (x2- x1^2) u prvoj nelin. jed.?\n\nAko ne, kako si ti doša/la do tog sustava?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263870": {
+      "poster": "Harweyy",
+      "content": "@\"ok i pull up\"#p263838 tocno si napiso, misstypo sam",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263877": {
+      "poster": "Harweyy",
+      "content": "@\"blast\"#p263829 19.11 su napisali mail da su updejtali 3. Dz nakon sto sam ih upozorio da su krivo zadali sustav",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "blast"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263992": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Jel ode itko ima problem da mu Newton Rhapsonova metoda ne divergira za funkcija cilja 1. (banana funkciju) već da mu dođe do vrijednosti 134. Gledam implementaciju i čini mi se koliko vidim točnom tako da mi je ovdje pitati jel netko ima sličan problem najlakše. \n\nAlso koja su rješenja za 3. i 4. zadatak? Jel GN metoda treba konvergirati u oba slučaja?\n\nI za 5. zadataka, kako izgleda funkcija cilja po kojoj bismo mi trebali tražiti minimalnu lambdu za pomicanje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264062": {
+      "poster": "eaypeasy (easypeasy)",
+      "content": "Postoji li negdje pseudokod Gauss Newtonove metode da je malo detaljniji od onog na ferwebu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264063": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"ok i pull up\"#p263992 Vidi moje labose pa možeš i testirati s vlastitim vrijednostima.\n\nhttps://github.com/Yalfoosh/AIPR/blob/main/dz/dz-03/demo/demo-01_hw-03.ipynb\n\nUgl. ne bi ti smio divergirati za tu početnu vrijednost - provjeri da se krećeš u pravom smjeru, pogotovo sanity check jesu li njima dobri pseudokodovi; ja sam prošle godine našao dosta grešaka koje su ispravljene u tim bilježnicama, samo trebaš vidjet jel se to poklapa s tim vašim malo izmijenjenim labosima ove godine.",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264067": {
+      "poster": "JustinCase",
+      "content": "@\"ok i pull up\"#p263992 Za 3. zadatak meni konvergira samo za čitav iznos dobivenog pomaka, kod zlatnog reza zapne negdje kod -1.75, 1.51",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264127": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Aaaaaaaaaaaah yes, hvala mojoj malenkosti što je tako dobro napravija prvi labos da mi ništa sad ne radi iz njega lmao\n\nČitam ovaj pdf i samo me zanima MORAMO li mi koristiti LUP dekompoziciju iz prvog labosa ili možemo koristiti numpy i linalg za rješavanja sustava nejednadžbi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264129": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@\"ok i pull up\"#p264127 mislim ne znam je li baš obavezno koristit svoju implementaciju iz 1. zadaće, al profesor mi je rekao da je to bila ideja, kad su pisali zadatke",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264130": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"PlavušaSFilozofskog\"#p264129 \n\nSve je meni jasno da oni to žele zaokružiti i da se reciklira kod, al ja ovo želim samo proć lol\n\nFck it, previše sam živaca potrošija na ovaj labos. Numpy it is.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264317": {
+      "poster": "dora (AE)",
+      "content": "Jel oni jos nisu dodjelili mjesto za ovaj labos il je to samo meni greska?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264576": {
+      "poster": "Harweyy",
+      "content": "@\"AE\"#p264317 meni pise pclab2",
+      "votes": {
+        "upvoters": [
+          "Skaxen",
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

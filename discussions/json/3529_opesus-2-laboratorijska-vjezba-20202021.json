@@ -1,0 +1,250 @@
+{
+  "title": " [OPESUS] 2. laboratorijska vježba - 2020/2021",
+  "creator": "KitKat (H(x))",
+  "slug": "opesus-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Operacijski sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "159083": {
+      "poster": "KitKat (H(x))",
+      "content": "Pitanje vezano za 2. labos (Dekker s processima). Napisala sam algoritam, ali što on _zapravo_ treba raditi? Jel treba išta ispisivati ili...? Jer ovako ni ne trebam signale? Ništa mi nije jasno. \n\n![](assets/2021-03-26/00029.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159230": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@KitKat#159083 sam taj algoritam je samo za ulaz i izlaz iz kritičnog odsječka, a uz njega ide druga funcionalnost ovisno o zadatku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163011": {
+      "poster": "krampus",
+      "content": "Ima netko primjer koda(pseudo) za dva procesa Dekkerovim algoritmom. Nisam siguran što bi trebao napraviti sa PRAVO i ZASTAVICE; kako podijeliti mem za oba procesa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163117": {
+      "poster": "mkovac25",
+      "content": "Može li mi netko samo pojasniti što točno trebamo predati? Ja imam laportov algoritam, pa da li ja trebam predati dretve.c, procesi.c i laportovi_procesi.c ili trebam samo predati dretve.c i laportovi_procesi.c?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163220": {
+      "poster": "Bisenberg (DonaldPump)",
+      "content": "@mkovac25#163117 Trebas sve predati, dretve, procesi i svoj zadatak ovisno o jmbagu",
+      "votes": {
+        "upvoters": [
+          "mkovac25"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163867": {
+      "poster": "mkovac25",
+      "content": "Može li mi netko objasniti zašto ovaj kod kompajlira bez problema:\n>! []()\n\n>```\n#include <stdio.h>\n#include <stdlib.h>\n#include <unistd.h>\n#include <sys/mman.h>\n#include <fcntl.h>\n\n> struct dijeljeno {\n    int A, N, M;\n};\n\n> #define VELZS sizeof(struct dijeljeno)\n#define ZSIME \"/lab2ZS\"\n\n> static void *inicijaliziraj_zs() {\n    char *imezs;\n    int id;\n    void *zs;\n\n>    imezs = getenv(\"ZS_IME\");\n    if (imezs == NULL) {\n        imezs = ZSIME;\n    }\n\n>    id = shm_open(imezs, O_CREAT | O_RDWR, 00600);\n\n>    if (id == -1 || ftruncate (id, VELZS) == -1) {\n        perror(\"shm_open ili ftruncate\\n\");\n        exit(1);\n    }\n\n>    zs = mmap(NULL, VELZS, PROT_READ | PROT_WRITE, MAP_SHARED, id, 0);\n\n>    if (zs == (void *) -1) {\n        perror(\"mmap\\n\");\n        exit(1);\n    }\n\n>    close (id);\n\n>    return zs;\n}\n\n> static void obrisi_zs(void *zs) {\n    char *imezs;\n\n>    munmap(zs, VELZS);\n\n>    imezs = getenv(\"ZS_IME\");\n    if (imezs == NULL) {\n        imezs = ZSIME;\n    }\n\n>    shm_unlink(imezs);\n}\n\n> int main(int argc, char *argv[]) {\n    struct dijeljeno *d;\n\n>    d = inicijaliziraj_zs();\n\n>    if (d->A == 0) {\n        d->A = 0;\n        d->N = atoi(argv[1]);\n        d->M = atoi(argv[2]);\n\n>        printf(\"A = %d, N = %d, M = %d\\n\", d->A, d->N, d->M);\n    }\n\n>    for (int i = 0; i < d->N; i++) {\n        if (!fork()) {\n            for (int j = 0; j < d->M; j++) {\n                d->A++;\n            }\n            exit(0);\n        }\n    }\n\n>    sleep(2);\n\n>    printf(\"A = %d\\n\", d->A);\n\n>    obrisi_zs(d);\n\n>    return 0;\n}\n```\n\na ovaj kod mi stalno javlja greške sa atoi naredbama, premda su indentične onima u prvom kodu:\n\n>![]()\n\n>```\n#include <stdio.h>\n#include <string.h>\n#include <unistd.h>\n#include <sys/shm.h>\n#include <sys/mman.h>\n#include <fcntl.h>\n\n> struct dijeljeno {\n    int A, N, M;\n    int *BROJ;\n    int *ULAZ;\n};\n\n> #define VELZS sizeof(struct dijeljeno)\n#define ZSIME \"/lab2bZS\"\n\n> int *ULAZ;\nint *BROJ;\n\n> static void *inicijaliziraj_zs() {\n    char *imezs;\n    int id;\n    void *zs;\n\n>    imezs = getenv(\"ZS_IME\");\n    if (imezs == NULL) {\n        imezs = ZSIME;\n    }\n\n>    id = shm_open(imezs, O_CREAT | O_RDWR, 00600);\n\n>    if (id == -1 || ftruncate (id, VELZS) == -1) {\n        perror(\"shm_open ili ftruncate\\n\");\n        exit(1);\n    }\n\n>    zs = mmap(NULL, VELZS, PROT_READ | PROT_WRITE, MAP_SHARED, id, 0);\n\n>    if (zs == (void *) -1) {\n        perror(\"mmap\\n\");\n        exit(1);\n    }\n\n>    close (id);\n\n>    return zs;\n}\n\n> static void obrisi_zs(void *zs) {\n    char *imezs;\n\n>    munmap(zs, VELZS);\n\n>    imezs = getenv(\"ZS_IME\");\n    if (imezs == NULL) {\n        imezs = ZSIME;\n    }\n\n>    shm_unlink(imezs);\n}\n\n> void udi_u_ko(int i) {\n    ULAZ[i] = 1;\n    int max = 0;\n    for (int k = 0; k < sizeof(BROJ); k++) {\n        if (BROJ[k] > max) {\n            max = BROJ[k];\n        }\n    }\n    max += 1;\n    ULAZ[i] = 0;\n\n>    for (int j  = 0; j < d->N; j++) {\n            while (ULAZ[j] != 0) {\n\n>            }\n\n>            while (BROJ[j] != 0 && (BROJ[j] < BROJ[i]  || (BROJ[j] == BROJ[i]) && j < i)) {\n\n>            }\n    }\n}\n\n> void izadi_iz_ko(int i) {\n    BROJ[i] = 0;\n}\n\n> int main(int argc, char argv[]) {\n    struct dijeljeno *d;\n\n>    d = inicijaliziraj_zs();\n\n>    if (d->A == 0) {\n        d->A = 0;\n        d->N = atoi(argv[1]);\n        d->M = atoi(argv[2]);\n        d->BROJ = malloc(d->N*sizeof(int));\n        d->ULAZ = malloc(d->N*sizeof(int));\n    }\n\n>    for (int i = 0; i < d->N; i++) {\n        d->BROJ[i] = 0;\n        d->ULAZ[i] = 0;\n    }\n\n>    printf(\"A = %d, N = %d, M = %d\\n\", d->A, d->N, d->M);\n\n>    for (int i = 0; i < d->N; i++) {\n        if (!fork()) {\n            udi_u_ko(i);\n            for (int j = 0; j < d->M; j++) {\n                d->A++;\n            }\n            izadi_iz_ko(i);\n            exit(0);\n        }\n    }\n\n>    printf(\"A = %d\\n\", d->A);\n\n>    obrisi_zs(d);\n\n>    return 0;\n}\n```\n\nIspričavam se zbog kobasice koda, ali ja iskreno ne mogu naći točan dio koji stvara probleme.",
+      "votes": {
+        "upvoters": [
+          "mkovac25"
+        ],
+        "downvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164476": {
+      "poster": "Letov",
+      "content": "@mkovac25#163867 \n\nint main(int argc, char argv[]) -> int main(int argc **char *argv[]**)",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)",
+          "krampus"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164477": {
+      "poster": "Letov",
+      "content": "@mkovac25#163867 \n\nint main(int argc, char argv[]) -> int main(int argc **char *argv[]**)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164550": {
+      "poster": "yuniK",
+      "content": "Nisam bas u toku s ovim predmetom jel moze neko rec sta je s ovim domacima. di je to objavljeno jesu li vec bile ta prva i druga zadaca bas sam izgubljena",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "164814": {
+      "poster": "Letov",
+      "content": "@yuniK#164550 Domaće zadaće su u principu usko vezane uz labos. Svaki labos ima dva dijela:\n\n-Domaća zadaća: Riješiti zadatak za labos i uploadati kod na web. Za svaku \"zadaću\" je tako moguće skupiti 0, 1 ili 2 boda, ovisno o tome kada se preda. Max 8 bodova, nema praga za prolaz.\n\n-Laboratorijska vježba: Riješen zadatak (onaj za domaću) se demonstrira asistentu na Teams i tako se može skupiti do X bodova za svaku, ovisno o vježbi i terminu predaje. (Sve piše u tablici na stranici za labose). Max 22 bodova, 2 boda za prolaz.",
+      "votes": {
+        "upvoters": [
+          "yuniK"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165304": {
+      "poster": "krampus",
+      "content": "kakva pitanja postavljaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166163": {
+      "poster": "delrey (nana)",
+      "content": "Koji je odgovor na pitanje:\n* Zašto a može imati vrijednost manju od N*M (broj dretvi * broj iteracija)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166172": {
+      "poster": "Letov",
+      "content": "@delrey#166163 Jer se u zadatku 2-a ne koristi sinkronizacija dretvi, odnosno procesa. Moguće je da jedna dretva pročita vrijednost globalne varijable (A) i prije nego što ju stigne uvećati i to zapisati, druge dretve mogu pročitati staru vrijednost. Analogno vrijedi i za procese. Zato u zadatku 2-b, gdje postoji sinkronizacija rada dretvi/procesa, i gdje se to uvećanje radi u kritičnom odsječku, vrijednost bude točna.",
+      "votes": {
+        "upvoters": [
+          "delrey (nana)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167917": {
+      "poster": "yuniK",
+      "content": "imam ovaj zadatak dekker s dvije dretve pa mi samo nije jasno oce li se primat N i M ka argumenti, mslm N bi treba biti 2 ali sta je s M",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168178": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "@yuniK#167917 ja sam stavio N kao konstantu, ono `#define N 2`, a M primam kao jedini argument, dakle kao u dretve.c, samo s argumentom manje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171241": {
+      "poster": "howe892 (dado)",
+      "content": "koji je odg na Zašto je zadnji argument (koji se prenosi u početnu funkciju dretve) kazaljka? (funkcija pthread_create)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "171340": {
+      "poster": "BanankoKojiLebdi",
+      "content": "@howe892#171241 kaže ti u onim snimljenim uputama uglavnom zato što dretve žele moći raditi različite stvari npr žele raditi s intom ili stringom ili cime god pa ta kazaljka koja prenosi argument omogućava da u definiciji funkcije i pthread_create i one za obradu nije zadano da mora samo biti int nego što god jer se pointer prenosi da sve vrste podataka može prenositi bez da se ima više skoro identičnih funkcija i pthread i za obradu samo sa tom razlikom",
+      "votes": {
+        "upvoters": [
+          "howe892 (dado)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,727 @@
+{
+  "title": "[ARHRAC2] Gradivo",
+  "creator": "Mihael",
+  "slug": "arhrac2-gradivo",
+  "tags": [
+    "FER",
+    "Arhitektura računala 2"
+  ],
+  "posts": {
+    "62644": {
+      "poster": "Mihael",
+      "content": "jel netko radi po ultimate packu, imam nekih pitanja oko nekih zadataka, cnine mi se krivo rijeseni ali nisam siguran.11 i 12 takt mi se cine krivi\n\n![](assets/2020-08-22/00014.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "62645": {
+      "poster": "menace_master",
+      "content": "@Mihael#62644 ne radim trenutno arh, al sjecam se da ih je bilo dosta krivo rijesenih",
+      "votes": {
+        "upvoters": [
+          "Joji"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "62646": {
+      "poster": "Mihael",
+      "content": "@menace_master#62645 sječaš li se gradiva",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "62649": {
+      "poster": "menace_master",
+      "content": "@Mihael#62646 pitaj pa cemo vidjet 😅",
+      "votes": {
+        "upvoters": [
+          "Joji"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "62653": {
+      "poster": "Mihael",
+      "content": "@menace_master#62649 \n\njel ne bi u 10 taktu spremiti B1 na adresu $1007 i na adresnu sabirnicu dovesti $1007 i upaliti write signal?\n\ns obzirom da je spremljen B1 na $1007 to više nije op code od neke poznate instrukcije, tu prepostavljam da je i to oduzimanje kako bi mogao nastaviti s zadatkom\n\njel u 16 taktu trebalo biti isto spemanje. nisu mi jasni ** na adresnoj i podatkovnoj sabirnici i kako se nikada ne dovodi signal na write\n\nzašto u 12 taktu sprema 11 u privremeni registar?\n\nedit: moje riješenje:\n\n![](assets/2020-08-22/00016.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "62702": {
+      "poster": "menace_master",
+      "content": "@Mihael#62653  konstanta 11 se sprema u privremeni registar kako bi ju mogao u sljedećem koraku oduzeti od akumulatora. sve šta pročitaš i trebaš iskoristiti moraš spremiti negdje. to možeš vidjeti i na skici pojednostavljenog modela procesora. \n\nšto se tiče samog zadatka, tvoje rješenje mi izgleda točno, i na prvoj slici se na $1007 pročita B1 pa to valjda je operacijski kod za oduzimanje. imislim da i dobro pišeš u memoriju, ne znam zašto bi trebalo biti stanje visoke impedancije ni write cijelo vrijeme u 0.  al moguće da sam u krivu, kad bi još netko potvrdio bi bilo superrrrr",
+      "votes": {
+        "upvoters": [
+          "Joji",
+          "Mihael"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "62818": {
+      "poster": "Sicsile",
+      "content": "zna netko ovaj rj\n\n![](assets/2020-08-23/00005.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "62999": {
+      "poster": "Sicsile",
+      "content": "Jel mi moze netko objasnit dvorazinsko straničenje na nekom ispitnom zadatku ili slikat svoje rj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63512": {
+      "poster": "gunaman",
+      "content": "@Sicsile#62999 Koliko sam ja shvatio, ideja je da klasicna virtualna memorija nije memorijski isplativa kada se radi o procesima sa malim zauzecem memorije.. iz razloga sto u racunalu sa npr. 32 bitnim virtualnim adresama za proces koji je dimenzija tocno jedne stranice, npr. 4KiB memorije (dimenzija standardne stranice, kad u zadatku nije navedeno, to sam dns saznao) bi tablica stranicenja bila veca od samog procesa..\n\nza navedeni primjer... 32 bita virtualna adresa i 4KiB stranica -> 12 bitova za adresiranje pomaka unutar stranice i 20 bitova za indeksiranje tablice preslikavanja -> 2^20 unosa u tablici preslikavanja -> uz pretpostavku 4B za jedan unos u tablici (to je neka standardna dimenzija, fizicka adresa u gl. memoriji + zastavice + bit valjanosti) -> sama tablica preslikavanja zauzima 2^20 unosa * 4B = 4MiB + jos dimenzije samog procesa a to je 4Kib\n\nu principu za jedan proces koji zauzima samo jednu stranicu imamo citavu tablicu stranicnog preslikavanja koja ima popunjen samo jedan unos koji pokazuje na tu nasu jednu ucitanu stranicu...\n\nRJESENJE PROBLEMA: dvorazinsko stranicenje\n\numjesto tablice stranicenja (stranicnog preslikavanja kako god) imamo stranicni imenik sa primjerice 512., relativno malo unosa (recimo istih pojedinacnih dimenzija - 4B) od kojih svaki referencira jednu (ili nijednu) tablicu stranicenja za minimalano 1 i maksimalno 512 potencijalnih tablica.. on i tablica sad dijele adresni prostor virtualne adrese, pa tako sada imamo 12 bitova za adresirati pomak unutar stranice dimenzija 4Kib (A0-A11), 9 bitova za adresirati 512 elemenata stranicnog imenika (A23-A31) i 11 bitova za adresiranje unosa u samoj tablici stranicenja (A12-A22) koja sad umjesto 2^20 ima 2^11 elemenata..\n\nZa isti slucaj naveden gore sada nam zauzece glavne memorije izgleda ovako... 512 * 4B za stranicni imenik + 2^11 * 4B za tablicu = 2KiB + 8KiB = 10 KiB\n\nkada tome dodamo zauzece same tablice dobivamo 10KiB + 4KiB = 14KiB sto znaci da smo smanjili zauzece memorije za isti proces sa priblizno 4MiB na 14KiB...\n\n*** DISCLAIMER ***\n\ns obzirom da ja nisam bio na predavanjima i da sam ucio po knjizi Građa racunala od Ribarica di se viserazinsko stranicenje niti ne spominje izuzev TLBa, ovo je samo moje tumacenje izvuceno na temelju prezentacije na temu virtualne memorije, ali sam poprilicno siguran da je ispravno.. kako tocno izgleda sadrzaj unosa u imeniku, kojim mehanizmima se osigurava da se ucita samo jedna tablica, a ne primjerice 511 praznih i jedna sa jednim unosom za ovaj konkretan primjer, neznam.. \n\neto just my two cents.. \n\nako netko vidi gresku u mojoj logici tu iznad, molim da me ispravite ispit je sutra :O",
+      "votes": {
+        "upvoters": [
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63578": {
+      "poster": "eaypeasy (easypeasy)",
+      "content": "Može netko objasnit kako gledamo ovaj rezultat, tj. kako znamo jel pogodak ili nije\n\n![](assets/2020-08-25/00028.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63608": {
+      "poster": "gunaman",
+      "content": "@eaypeasy#63578 ono što pretpostavljam da te buni je koji dio adrese uspoređujemo..\n\nkad se radi o potpuno asocijativnom preslikavanju adresa se sastoji od znacke i pomaka i tada gledamo samo znacku i jednostavno je...\n\nkada se radi o jednom od ova druga dva slučaja (skupno asocijativnom i izravnom) malo je teze skuzit.. ideja je da su značke PRIDUŽENE bločnim priključcima, tako da se na temelju bitova indexa bločnog priključka zna koja se značka unutar memorije za pohranu značaka uopće gleda.. jedino mi to ima smisla.. kad ides po ovoj tablici prvo gledaj index, pa značku..\n\nu stilu, za bločni priključak sa indexom 0, značka je 1, dok je u adresi koju ja promatram značka 0, odnosno dogodio se promašaj",
+      "votes": {
+        "upvoters": [
+          "eaypeasy (easypeasy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "65830": {
+      "poster": "gunaman",
+      "content": "Zna netko definitivno odgovorit kako se prikazuju negativni brojevi u razlicitim arhitekturama?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "66808": {
+      "poster": "gunaman",
+      "content": "![](assets/2020-09-04/00011.png)\n\nzna netko pomoc s ovim.. znam sve izuzev kako bi ja sad trebao negirat sadrzaj registra A (akumulatora) da bih mogao izvesti oduzimanje dvojnim komplementom? taj sklopovski me dio zeza.. da li moram dodavati jos jednu operaciju ALU ili se to moze jednostavnije odraditi na izlazu iz registra?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85524": {
+      "poster": "BigZ1",
+      "content": "![](assets/2020-10-30/00000.png)\n\njel ikome jos izbacuje ovakve errore premda je sve definirao kao u primjerima? i jel zna netko kako rijesiti ove probleme da mi sve sve runam da testiram ih vec jednom pobogu.. ako netko zna vise nek mi se javi.\n\nEDIT: citao sam i dokumentaciju i covjek nije nista o errorima spomenio,ako je onda sam ja slijep vjerovatno..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85584": {
+      "poster": "JBQ",
+      "content": "@BigZ1#85524 \n\nImao sam i ja sam i ja slican problem jer nisam u uvjetnoj naredbi stavio then, npr treba biti if ____ then goto _____ else goto  _____ endif.",
+      "votes": {
+        "upvoters": [
+          "Uchenikowitz (Učečuču)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85605": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "@BigZ1#85524 moras dobro paziti kako pises naredbe, uploadaj .ucode datoteku s numeriranim redovima pa mozemo naci gresku. Takoder pazi da kao na ARH1 imas uvijek jedan prazan red na kraju prije spremanja. Smijes imati samo jedan signal jedne vrste u jednoj instrukciji, znaci ne mozes u jednom redu imat dva puta result_sel, odvoji to u dvije instrukije. Ne znam kako bih ti jos pomogao :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85628": {
+      "poster": "ferball",
+      "content": "da li trebamo prije svake mikroinstrukcije postavit r4 u 0 ako ga koristimo kao privremeni registar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97044": {
+      "poster": "ferball",
+      "content": "ako se iz prekidnog potprograma zove drugi potprogram, onda ce se parametri i lokalne spremit svejedno na nadgledni stog, a ne korisnicki sta ne?",
+      "votes": {
+        "upvoters": [
+          "Hrvoje (Hrvoje45)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97045": {
+      "poster": "ferball",
+      "content": "i sta ne pise da je PC 4B u ppt, a adrese su u ispitima 6B",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "129712": {
+      "poster": "JBQ",
+      "content": "Jel mozda netko rjesio ispite koji su na stranici?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130652": {
+      "poster": "BigZ1",
+      "content": "Prvi zadatak u ispitu 17/18. apsolutno nemam pojma kako se riješava premda princip razumijem do neke razine, stoga ako bi itko mogao donekle pojasnit to računanje ovdje.\n\nev slika da ne traze ljudi\n\n![](assets/2021-01-27/00002.png)\n\n@JBQ#129712 nisam rijesio prvi zadatak,a i cetvrti nisam bas siguran sta tu hoce. Staviti cu slike uskoro",
+      "votes": {
+        "upvoters": [
+          "JBQ",
+          "ferball"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130657": {
+      "poster": "BigZ1",
+      "content": "@BigZ1#130652 evo 3/5 zadataka rijeseno,ne vjerujem ni da je sve to tocno bas ono pa ako netko zna bolje/tocnije nemojte me kamenovat.\n\n![](assets/2021-01-27/00003.jpeg)\n\n![](assets/2021-01-27/00004.jpeg)\n\n![](assets/2021-01-27/00005.jpeg)\n\n![](assets/2021-01-27/00006.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "JBQ",
+          "ferball",
+          "seni (ina)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130684": {
+      "poster": "ferball",
+      "content": "@BigZ1#130652 ![](assets/2021-01-27/00011.jpeg)\n\nJa mislim da ide ovako, ali nisam siguran sta s ovim maximumom, bilo bi dobro da netko provjeri",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130796": {
+      "poster": "MrPeanutButter",
+      "content": "@ferball#130684 mislim da ti je krivo ovo pod a) zasto je 2^20 ? Inace bi trebao podijeliti znaci (5 * 64MB)/4KB jer to je koliko bi trebalo stranica za program i onda za svaku tu stranicu još treba opisnik a opisnik je 4B stoga bi ispalo da je \n\n 5 * 64MB = 5 * 2^26 a 4KB= 2^12 i ispada 5 * 2^14 i onda još to puta 4 => 5 * 2^14 * 4 ?",
+      "votes": {
+        "upvoters": [
+          "Uchenikowitz (Učečuču)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130806": {
+      "poster": "MrPeanutButter",
+      "content": "ok mislim da sam skuzio ovo sto si ti napisao je zapravo maksimum a ovo sto sam ja izracunao je minimum \n\n znaci maksimalno može zauzeti koliko bitova ima u vs tj 2^20 * 5 * 4 dok minimalno ispada 5 * 2^14 * 4 jer nam programi nisu toliko veliki da uspiju popuniti sve tablice.\n\n Za b) dio zadatka sada gledamo 2^20 * 5 je broj stranica maksimum a 2^14 * 5 je minimum pa onda\n\n slijedi vs1=log(256) (baza 2)=8 bita => vs2=32-8-12=12 bita =>2^12 toliko tablica ima stavki \n\n maksimum : 5 * 2^20 / 2^12 =5* 2^8 te je zauzeće maksimalno: 6B * 5 * 2^8 + 5 * 2^8 * 4B * 2^12\n\n minimum:  5 * 2^14 / 2^12 =5* 2^2 te je zauzeće maksimalno: 6B * 5 * 2^2 + 5 * 2^2 * 4B * 2^12",
+      "votes": {
+        "upvoters": [
+          "lup"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130958": {
+      "poster": "lup",
+      "content": "@BigZ1#130657 \n\npo meni bi 2.b bio ovo, posto trazi poboljsanje performanse za 20%, a ne smanjenje CPI za 20%\n\n![](assets/2021-01-27/00034.jpeg)",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130964": {
+      "poster": "BigZ1",
+      "content": "@lup#130958 moguće jer takve zadatke uvijek na kraju protumacim kako mi dodje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130970": {
+      "poster": "MrPeanutButter",
+      "content": "@BigZ1#130657 Možeš li malo pojasniti 3. zadatak kako gledamo jeli H ili M?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130982": {
+      "poster": "madoxx",
+      "content": "Jel netko zna one zadatke sa simultanom višedretvenoscu? Nikako dobit točno rješenje..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130989": {
+      "poster": "BigZ1",
+      "content": "@MrPeanutButter#130970 evo ovako kolega,da se ne raspisem tu izvolite ova dva videa meni su pomogla\n\nhttps://www.youtube.com/watch?v=RqKeEIbcnS8&t=0s\n\nhttps://www.youtube.com/watch?v=quZe1ehz-EQ\n\ntakodjer mislim da je u drugom videu treba bit way0 way 1 a ne kao sto je on napisao jer tada LRU ima smisla sta upisuje u njega.",
+      "votes": {
+        "upvoters": [
+          "MrPeanutButter",
+          "ferball",
+          "lup"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "131199": {
+      "poster": "BigZ1",
+      "content": "@BigZ1#130657 ima greska u ovom sa pricuvnom memorijom u a) je 4/10 jer sam ja u 2 ujutro nesto krivo usporedjivao a ne oznake... a u b) je isto 4/10 pogodaka jer nekako uspio krivo napisat 18(16) binarno... u c) mi se cini da je sve u redu",
+      "votes": {
+        "upvoters": [
+          "BaboTrojka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "131409": {
+      "poster": "JBQ",
+      "content": "@MrPeanutButter#130806 \n\nZar nije u a) zadatku uvijek isto maksimum i minimum jer bez obzira kakav je program da ce zauzet sve ako se radi o jednorazinskom straničenju?",
+      "votes": {
+        "upvoters": [
+          "ferball"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "131572": {
+      "poster": "jdr",
+      "content": "Može netko objasniti algoritam za simultanu višedretvenost?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "139881": {
+      "poster": "buyer",
+      "content": "Jel na ispitu moramo napamet znati one tablice upravljanja sabirnicama u mikroprogramiranju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "139882": {
+      "poster": "BigZ1",
+      "content": "@buyer#139881 to ili oni ti daju neki dio kao na MI,a ostalo trebas solo znat,ali nije tesko realno.",
+      "votes": {
+        "upvoters": [
+          "buyer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "buyer"
+        ]
+      }
+    },
+    "139884": {
+      "poster": "buyer",
+      "content": "@BigZ1#139882 jel ima neko objasnjenje takvih zadatka\n\n detaljno, jer gledam po onim tutorijalima i ne kontam bas",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "139886": {
+      "poster": "BigZ1",
+      "content": "@buyer#139884 pogledaj si labose onda,doslovno tamo ti je sve objasnjeno, a za neki poseban zadatak trebat ce ti malo logike eventualno.",
+      "votes": {
+        "upvoters": [
+          "buyer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "141037": {
+      "poster": "buyer",
+      "content": "jel zna netko kak da se na teamsu pridruzim arh2 timu i dobijem pristup materijalima i predavanjima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "141047": {
+      "poster": "Hrvoje (Hrvoje45)",
+      "content": "@buyer#141037 \n\npredavanja nisu snimljena, a ne znam na koje materijale misliš, sve što je dostupno je ili na githubu ili na stranici predmeta",
+      "votes": {
+        "upvoters": [
+          "buyer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "141766": {
+      "poster": "MrPeanutButter",
+      "content": "Zna li netko hoće li biti usmenog na ZIR?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "142895": {
+      "poster": "MrPeanutButter",
+      "content": "dosli bodovi iz ZIR",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "142909": {
+      "poster": "buyer",
+      "content": "@MrPeanutButter#141766 pretpostavljam da hoce, posto je ovaj pismeni nosio 80 bodova samo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "142919": {
+      "poster": "MrPeanutButter",
+      "content": "@buyer#142909 mislim da su i na jesenskom imali da je 80 pa se skaliralo na 100 jer nije bilo usmenog",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "143154": {
+      "poster": "MrPeanutButter",
+      "content": "@buyer#142909 evo nema usmenog ako hoces ocjenu na temelju pismenog ispita skalira se na 100, ali moze se izaci na usmeni ako se zeli podici ocjena",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "231964": {
+      "poster": "Johnny_Bravo (a beautiful and unique snowflake)",
+      "content": "ima li netko spremljene ispite od ove godine, a i zadnjih par? nedostaje materijalima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "232145": {
+      "poster": "BigZ1",
+      "content": "@Johnny_Bravo#231964 ispita nema,no ako nema na stranici od predmeta onda su ti preostali materijali od prije što su sacuvani. Ne sjećam se da su ih uopce i dali nama na ferwebu da ih imamo,pogotovo ne teoriju koja nema veze sa teorijom.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Johnny_Bravo (a beautiful and unique snowflake)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "234460": {
+      "poster": "Johnny_Bravo (a beautiful and unique snowflake)",
+      "content": "Koja je 'sabirnice' potrebno prikazati u zadatcima sa prikazom stanja na sabirnicama? U knjizi su jedino navedene po definiciji sabirnice, dok rjesenja od drugih ljudi sadrze PC, IR, DC, TR, A itd.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "257741": {
+      "poster": "MOXY",
+      "content": "Jel mi moze netko objasniti 3. zadatak s mi13 s ferweba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273710": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "![](assets/2022-01-26/00001.png)\n\nJel moze netko objasnit kako se rjesavaju ovi zadaci",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274135": {
+      "poster": "MalaPumpa",
+      "content": "Ima ko savjet koja gradiva pogledati za laksi prolaz?",
+      "votes": {
+        "upvoters": [
+          "rolotex (brr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274162": {
+      "poster": "macaklin",
+      "content": "@\"MalaPumpa\"#p274135 Ono zadnje s dretvama kako rasporedit, MIPS kod je lagan donekle, svi zadaci su slični, ovo kako ne najbolje imat priručnu memoriju je isto okej i još možda kao razmještaj naredbi u superskalarnom procesoru možeš jer se može na logiku kao. (poredano od najlakšeg prema težem po mojem nekom mišljenju)",
+      "votes": {
+        "upvoters": [
+          "MalaPumpa"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

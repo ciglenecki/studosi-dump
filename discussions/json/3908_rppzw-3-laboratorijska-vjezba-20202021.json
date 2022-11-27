@@ -1,0 +1,549 @@
+{
+  "title": "[RPPZW] 3. laboratorijska vježba - 2020/2021",
+  "creator": "dobro",
+  "slug": "rppzw-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Razvoj programske potpore za Web",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "182620": {
+      "poster": "dobro",
+      "content": "Zna li netko kad će bit 3. lab?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "182634": {
+      "poster": "BanankoKojiLebdi",
+      "content": "![](assets/2021-04-30/00017.jpeg)\n\nscreenshot uvodne preze\n\n@dobro#182620",
+      "votes": {
+        "upvoters": [
+          "Koalefant",
+          "dobro",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195530": {
+      "poster": "Fikalo",
+      "content": "Kad pokrenem npm start, cim se to izvede odma i zavrsi, i ako upisem netstat -a -n ne pise mi da iko slusa na portu 3000, jer zna neko zbog ceg bi se izvodenje moglo odma prekinuti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195541": {
+      "poster": "Fikalo",
+      "content": "@Fikalo#195530 nwm, napiso sam server.js, al ga nisam saveo pa se zato nije nis desavalo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195645": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "Prošle godine sam koristio nodemon da mi automatski restarta node svaki put kad izmijenim skriptu. Preporučam da ga probate.\n\n> @snowman#31351\n\nmozete si instalirat [nodemon](https://www.npmjs.com/package/nodemon) ako zelite da vam se server restarta nakon svake promjene da ne morate rucno",
+      "votes": {
+        "upvoters": [
+          "Michael (Michael Scarn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195659": {
+      "poster": "Fikalo",
+      "content": "Jer zna iko kako izvadit iz async funckije ono što dobijemo iz querija da pošaljemo dalje u render funkciju. U primjerima s predavanja di se koristi query se ne koriste render funkcije, a di se koriste render funkcije se koristi radna memorija a ne query i await.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195678": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Fikalo#195659\n\nPriložena `query` funkcija vraća obećanje koje možeš `await`ati. Na objektu iz obećanja postoji svojstvo `rows` koje sadrži polje objekata. Svaki objekt u tom polju predstavlja jedan redak u rezultatu SQL upita. Imena svojstava u objektu odgovaraju imenima stupaca u bazi podataka, ako se dobro sjećam.\n\nU `render` možeš proslijediti to polje. To napraviš isto kako i sve druge varijable, dodaš ga kao svojstvo u objekt koji je drugi argument poziva `render`. Onda to polje možeš koristiti u predlošku, npr. u `for` petlji.\n\n>!```JavaScript\nrouter.get('/', async function (req, res) {\n    const categories = (await db.query('SELECT * FROM categories')).rows;\n    /* ... */\n    res.render('order', {\n        title: 'Order',\n        linkActive: 'order',\n        categories: categories, // Array prosljeđujem u template pod imenom categories.\n        /* ... */\n    });\n});\n```\n\n>```EJS\n<%# Ovdje je taj array sada dostupan pod imenom categories. %>\n<% for (const category of categories) { %>\n    <%# ... %>\n    <h1><%= category.name %></h1>\n    <%# ... %>\n<% } %>\n```\n\n>Primjere sam temeljio na svojem rješenju prošlogodišnjeg 3. labosa iz RPPZWPU: [route](https://github.com/studosi-fer/RPPZWIPU/blob/997f990eb0a91de014841249d79f0083800cba14/labosi/lab-3/2019-20/by___builtin_popcount/routes/order.routes.js#L19) i [view](https://github.com/studosi-fer/RPPZWIPU/blob/997f990eb0a91de014841249d79f0083800cba14/labosi/lab-3/2019-20/by___builtin_popcount/views/order.ejs#L18).\n\n>U svoja rješenja na GitHubu sam stavio linkove na materijale iz RPPZWPU iz kojih je došla većina koda, ali izgleda da su te materijale obrisali kad su napravili novi predmet.",
+      "votes": {
+        "upvoters": [
+          "Fikalo",
+          "Letov",
+          "gladiator",
+          "miran (mirko)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195765": {
+      "poster": "Fikalo",
+      "content": "Kako se postize ovo sa aktivnim linkom?\n\n![](assets/2021-05-24/00044.png)\n\nNisam primjetio da su negdi na predavanjima to spomenuli",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195838": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Fikalo#195765 \n\nU priloženom [views/partials/header.ejs](https://gitlab.com/fer-web1/public/lab3-baseline/-/blob/c82a1a14920ea41eb902d6505b89c073cac6e1c4/views/partials/header.ejs#L4) iz pripreme su već započeli implementaciju toga. Za svaki link uspoređuju varijablu `linkActive` s nekim određenim stringom.\n\nOd vas se očekuje da u controlleru u `render`u toj varijabli postavite ispravnu vrijednost. Ona bi bila `'home'` za prvi link, `'order'` za drugi, a ako će trebati neki od ostalih ćete sami to analogno trebati dodati u _views/partials/header.ejs_.\n\n----\n\nEvo primjer postavljanja varijable za template u `render`u. Ovdje će biti označen prvi link, _Home_.\n```JavaScript\nres.render('home', {\n    title: 'Home',\n    linkActive: 'home', // <-- Ovo je bitno!\n    /* Eventualno još varijabli gdje će trebati... */\n});\n```\n\nPrimjer iz mojeg prošlogodišnjeg rješenja 3. labosa iz RPPZWPU:  [views/partials/header.ejs](https://github.com/studosi-fer/RPPZWIPU/blob/997f990eb0a91de014841249d79f0083800cba14/labosi/lab-3/2019-20/by___builtin_popcount/views/partials/header.ejs#L4), [routes/home.routes.js ](https://github.com/studosi-fer/RPPZWIPU/blob/997f990eb0a91de014841249d79f0083800cba14/labosi/lab-3/2019-20/by___builtin_popcount/routes/home.routes.js#L13)",
+      "votes": {
+        "upvoters": [
+          "Fikalo",
+          "Letov",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196200": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "Zna li netko iz kojeg mi se razloga ne zeli ucitati css kad kliknem na odredei item na stranici order?\n\nZnaci u order.ejs loadam sve u galeriju na ovaj nacin:\n\n![](assets/2021-05-25/00032.png)\n\nU item.routes.js imam ovako nesto:\n\n![](assets/2021-05-25/00033.png)\n\nJe li moguce da mi se zbog ovog itemId parametra u URL od metode get zezne nesto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196210": {
+      "poster": "Fikalo",
+      "content": "@Uchenikowitz#196200 ja sam iz nekog razloga imo isti problem, i nije mi jasno zasto je to tako jer u order.ejs nema problema, ali dodao sam u itemu dvije tocke ..  prije importa stvari\n\n![](assets/2021-05-25/00035.png)\n\ni onda mi je proradilo, probaj s tim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196302": {
+      "poster": "Fikalo",
+      "content": "@__builtin_popcount#195838 i swear da moj header iz baselinea kojeg sam skinuo nije imao taj dio u templateu, al sad gad gledam na gitu je tamo idk",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196303": {
+      "poster": "Fikalo",
+      "content": "@__builtin_popcount#195838 zaboravio sam da sam taj dio izbriso iz svog headera jos na pocetku kad sam skino, jer kad pokrenem dobivam ovaj error \n\n![](assets/2021-05-26/00003.png)\n\niako saljem u order, home i item ejs linkActive kao parametar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196306": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "@Fikalo#196303 Vidi jesi taj parametar u modelu nazvao linkActive a ne linkactive ili nesto drugo",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196307": {
+      "poster": "Fikalo",
+      "content": "@Michael#196306 ![](assets/2021-05-26/00004.png)\n\nisto za order i home",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196313": {
+      "poster": "Fikalo",
+      "content": "@Fikalo#196307 rjeseno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "__builtin_popcount (std::popcount)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197132": {
+      "poster": "Ljencina",
+      "content": "ej kako pošaljem točno id od itema u item.routes.js da  ga mogu potrazit u bazi sa queryjem?\n\nJer mislim u order je easy samo povucem sve ali kako dobijem direktno samo jednu varijablu iz stranice da je koristim u item.routes.js?",
+      "votes": {
+        "upvoters": [
+          "Josipa (Zelda)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197258": {
+      "poster": "Fikalo",
+      "content": "@Ljencina#197132 pogledaj 11. prezentaciju slajd 31",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197353": {
+      "poster": "Ljencina",
+      "content": "ok hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197369": {
+      "poster": "me99",
+      "content": "zašto mi css headera i footera nije uključen na npr. localhost:3000/item/2 , a je na localhost:3000/order ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197372": {
+      "poster": "delrey (nana)",
+      "content": "@me99#197369 ![](assets/2021-05-28/00004.jpeg)",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "me99"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197375": {
+      "poster": "me99",
+      "content": "@delrey#197372 hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197397": {
+      "poster": "miljac (LordStark)",
+      "content": "Oni spominju errore na kraju pripreme. Gdje to treba implementirati? Ja sam samo queryje omoto sa tryjem, treba li jos negdje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197427": {
+      "poster": "Josipa (Zelda)",
+      "content": "Je li itko imao problema s ovim ili mozda zna kak to rijesit?\n\n home.ejs kojeg su oni uploadali \n\n![](assets/2021-05-28/00010.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197433": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Josipa#197427  Koji je error?",
+      "votes": {
+        "upvoters": [
+          "Josipa (Zelda)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197453": {
+      "poster": "Lucidar",
+      "content": "Je li uspio netko mozda napisat ove item.ejs i item.routes.js i jos bitnije, bi li ih htio podijelit? Krvavi labos iz baza sam radio sinoć uhvatilo me potpuno nespremnog ovaj labos.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197470": {
+      "poster": "Josipa (Zelda)",
+      "content": "@__builtin_popcount#197433  Isti kao i  kod @Fikalo  https://fer.studosi.net/d/3908-rppzw-3-laboratorijska-vjezba-20202021/15",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197476": {
+      "poster": "Letov",
+      "content": "@Josipa#197470 Ako ti piše \"linkActive is not defined\" kao kod kolege, moguće da si negdje ili napisao krivo (linkactive, LinkActive i sl.).\n\nIsto je moguće da ako u res.render() funkciji linkActive predaješ kao zadnji argument da si stavio zarez nakon njega (uz zadnji argument ne ide zarez).",
+      "votes": {
+        "upvoters": [
+          "Josipa (Zelda)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197479": {
+      "poster": "Josipa (Zelda)",
+      "content": "Kolko vidim ni jedno od tog nije problem\n\n![](assets/2021-05-28/00017.png)\n\n@Letov#197476",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197483": {
+      "poster": "Letov",
+      "content": "@Josipa#197479 linkActive bi trebao biti ili 'home' ili 'order', mislim da ništa drugo ne prihvaća, probaj to. (Za item treba biti 'order').",
+      "votes": {
+        "upvoters": [
+          "Josipa (Zelda)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197486": {
+      "poster": "Josipa (Zelda)",
+      "content": "@Letov#197483 I dalje nista :/\n\nNadam se da ce mi @Fikalo odgovorit kak je on rijesio problem",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197494": {
+      "poster": "Fikalo",
+      "content": "@Josipa#197486 kind of magija, samo se popravilo, meni je problem bio mislim opet to sto nisam saveo to sto saljem link active. I na konzultacijama je profesor reko da si ispisujem na stranicu <%= locals.‘nesto’ %> al se nemogu sjetit sto je to nesto bilo i nemogu nac na internetu, ugl preko toga sam si ispisivo sve varijable koje su poslane ejsu, i primjetio sam da uopce ne prima activeLink varijablu. Mozes si iskljucit header da ti ne rusi stranicu, pa pokusat ispisat <%= linkActive %> i vidjet dal ti prolazi parametar",
+      "votes": {
+        "upvoters": [
+          "Josipa (Zelda)",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197497": {
+      "poster": "Josipa (Zelda)",
+      "content": "@Fikalo#197494 hvala\n\nZa buduce generacije - nisam u home.routes.ejs stavila linkActive uopce.... \n\nSad se pojavljuje normalno i header i footer, al ovo sranje je i dalje crveno https://fer.studosi.net/d/3908-rppzw-3-laboratorijska-vjezba-20202021/26",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197499": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Josipa#197497 Ne čini mi se kao greška, možda editor samo ne podržava EJS ili ga nije prepoznao, pa javlja problem jer ga tretira kao da je običan HTML.",
+      "votes": {
+        "upvoters": [
+          "Josipa (Zelda)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197536": {
+      "poster": "Fikalo",
+      "content": "Req.body mi je uporno undefined, instaliro sam body parser paket, i koristio express.urlencoded i express.json al i dalje je undefined, vjerojatno nesto  krivo radim ali neznam sto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197610": {
+      "poster": "pero",
+      "content": "@Fikalo#197536 Sad je vjerojatno kasno, al evo ako nekome posluži za ubuduće. U server.js, prije nego se definiraju pathovi za routere, treba dodati liniju:\n\n`app.use(express.urlencoded({ extended: true }));`",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197636": {
+      "poster": "Fikalo",
+      "content": "@pero#197610 nije mi radilo pretpostavljam jer sam ja stavio extended false umjesto true, al mi je proradilo kad sam dodao i .json\n\n```javascript\napp.use(express.urlencoded({extended:false}));\napp.use(express.json());\n```",
+      "votes": {
+        "upvoters": [
+          "pero"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206381": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "Oćel ovi rezultati",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

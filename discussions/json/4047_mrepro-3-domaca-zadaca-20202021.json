@@ -1,0 +1,286 @@
+{
+  "title": "[MREPRO] 3. domaća zadaća - 2020/2021",
+  "creator": "ruza0001 (rozy)",
+  "slug": "mrepro-3-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Mrežno programiranje",
+    "Zadaće"
+  ],
+  "posts": {
+    "165213": {
+      "poster": "ruza0001 (rozy)",
+      "content": "Kako poslati sadrzaj datoteke? Tocnije kako ga dohvatiti iz datoteke, spremiti u varijablu (?) i onda poslati... C previse komplicira ovu zadacu...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165470": {
+      "poster": "Bisenberg (DonaldPump)",
+      "content": "@ruza0001#165213 Imas funkciju fgets koja uzima liniju po liniju datoteke, uguglaj kako se koristi, samo stavis while (fgets(....) ) send().\n\nTo je za tekstualne datoteke, nisam siguran ako su u binarnom zapisu ima li razlika, vjerojatno ima",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166224": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@ruza0001#165213\n\nJa napravim buffer od 1 KiB, pa koristim [read](https://www.freebsd.org/cgi/man.cgi?query=read&sektion=2) da učitam iz datoteke koju sam prethodno otvorio s [open](https://www.freebsd.org/cgi/man.cgi?query=open&sektion=2). `read` mi vrati broj stvarno pročitanih okteta, pa toliko onda pošaljem sa [send](https://www.freebsd.org/cgi/man.cgi?query=send&sektion=2). Ta brojka je bitna jer veličina datoteke možda nije višekratnik 1 KiB, pa ne smijem svaki put na klijent slijepo slati cijeli buffer. Taj postupak s čitanjem i slanjem ponavljam dokle god mi `read` ne vrati da je pročitano 0, što znači da sam na kraju datoteke i da nema više bajtova.\n\nJa sam koristio Unix syscallove `open` i `read`, ali postoje i funkcije C standard libraryja [fopen](https://en.cppreference.com/w/c/io/fopen) i [fread](https://en.cppreference.com/w/c/io/fread). Kako u ostatku ovog programa puno koristim syscallove, odlučio sam ih i koristiti za čitanje datoteka radi ujednačenosti, te mi je izgledalo kao da je lakše handleati errore u syscallovima. Negativna povratna vrijednost je uvijek greška za `read`, dok `fread` vraća 0 i kad dođe do kraja datoteke, i ako se dogodi greška, pa s [feof](https://en.cppreference.com/w/c/io/feof)/[ferror](https://en.cppreference.com/w/c/io/ferror) provjeravati koje od tog dvoje se dogodilo. Standardne funkcije bih svakako koristio kad bih pisao neki prenosivi program koji mora raditi i na Windowsima, ali se ovdje jako oslanjamo na Unix syscallove pa nema nikakve potrebe za prenosivosti.",
+      "votes": {
+        "upvoters": [
+          "Sale",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166386": {
+      "poster": "mstaver (staverm)",
+      "content": "Pazite da vam tcpserver radi za zahtjeve poslane u više TCP segmenata: \n\nnpr. offset(2 bajta) + offset(2 bajta) + prvi dio filename + ostatak filename (ovo Miljenko provjerava)\n\nOvo možete napraviti tako da offset citate sa readn (pogledajte primjer readn u skripti), a filename treba citati sa socketa dok god ne naiđete na delimiter \\0. Ovo možete napraviti tako da čitate byte po byte i svaki byte provjeravate ako je on delimiter (nije baš efikasno jer stalno radite sys pozive) ili da pročitate sve sa socketa u neki buffer pa ručno tražite delimiter u tom bufferu i ak ga nema spremite buffer i čitate opet.",
+      "votes": {
+        "upvoters": [
+          "Sale",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166712": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@__builtin_popcount#166224 a u kojem obliku prenosis ovaj zahtjev sto su prva 4 bajta offset, a nakon toga ime datoteke. Jel to obicni string pa onda iz njega iscitat prvo offset pa dalje filename ili? Totalno sam bez ideje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166880": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@ruza0001#166712 \n\nOffset napravim tako da sam napisao funkciju koja čita točno neki broj bajtova. Sam sam ju pisao jer u tom trenutku nisam bio svjestan da [u knjizi](https://www.fer.unizg.hr/_download/repository/MrePro-2021.pdf) postoji implementacija toga na stranici 40 (`readn`). Implementacija iz knjige:\n\n>!```C\nssize_t\nreadn(int fd, void* vptr, size_t n){\n    size_t nleft;\n    ssize_t nread;\n    char   *ptr;\n\n>     ptr = vptr;\n    nleft = n;\n\n>     while (nleft > 0) {\n        if ( (nread = read(fd, ptr, nleft)) < 0) {\n            if(errno == EINTR)\n                nread = 0; /* and call read() again */\n            else\n                return (-1);\n        } else if (nread == 0) {\n            break;         /* EOF */\n        }\n        nleft -= nread;\n        ptr += nread;\n    }\n    return (n - nleft);    /* return >= 0 */\n}\n```\n\n----\n\nZa filename sam napisao drugu funkciju koja čita bajt po bajt dok ne naiđe na `'\\0'`. Ona je donekle slična ovoj `readn`, samo što uvijek čita 1 bajt i pointer uvećava za 1 dokle god ne naiđe na `'\\0'`.\n\nKako bih izbjegao mogućnost buffer overflowa, funkcija prima i maksimalnu duljinu filenamea i prestaje ako pročita toliko bajtova, a ne naiđe na `'\\0'`.",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166930": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@__builtin_popcount#166880 koje velicine bi buffer trebao biti ako ima neka zadana ili je to proizvljno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167462": {
+      "poster": "ruza0001 (rozy)",
+      "content": "kako sloziti ovaj zahtjev od klijenta koji je offset + filename? Ja pokusavam offset ko int imat, i onda ga samo pretvorit u string i na to dodat filename, ali cini mi se da je to krivi nacin, pa ako netko ima ideju neku..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167486": {
+      "poster": "BigZ1",
+      "content": "@ruza0001#167462 jednostavnije rjesenje se zove struktura. (nju mozes poslat) (imao isti problem)",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167494": {
+      "poster": "Mariox",
+      "content": "@ruza0001#167462 bez pretvaranja u string radi, isprobao sam. Int u linuxu je 4 byte-a:\n\nklijent (pošiljatelj)\n```\n    int offset = htonl(777);\n    writen(sockfd, &offset, 4);\n```\nserver (primatelj)\n```\n    int offset;\n    readn(newfd, &offset, 4);\n\n    offset = ntohl(offset);\n    \n    debug_printf(\"offset je %d\\n\", offset); // ispise 777\n```\nnakon toga sam mislio slati filename.\n\nPrimatelj filename-a (server) ce citat byte po byte dok nedođe do \\0 kao sto je popcount opisao",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167508": {
+      "poster": "Mariox",
+      "content": "@Mariox#167494 \n\nEDIT: evo na isti nacin odmah iza toga jos jedan writen i readn da se posalje filename, samo bez pretvaranja byte ordera. Za sada sam napravio da se uvijek salje svih n=FILENAME_MAX bytova. Kasnije cu optimizirati da se salje samo koliko je filename string zapravo dugacak, no onda ima vise posla za primatelja",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167517": {
+      "poster": "puufi",
+      "content": "Ako predamo prazan zadatak3 ili barem c fileove koji ne rade jel se to racuna kao predana zadaca?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167617": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@puufi#167517 pa vjerovatno da, samo 0 bodova i tjt... napisi im neki zanimljivi print kad runnaju i tjt 😆",
+      "votes": {
+        "upvoters": [
+          "puufi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167646": {
+      "poster": "ruza0001 (rozy)",
+      "content": "jel imao netko problem da mu fwrite, kad appenda na file dodaje u novi red uvijek",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167661": {
+      "poster": "Mariox",
+      "content": "kako da pretvorim service name u string ili integer?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167672": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@Mariox#167661 ja ga spremam ko string uvijek, i onda ce getaddrinfo() vidjet jel valjan ili nije, to mi je asistent na odgovaranju labosa predlozio bio, jer sam ja koristio samo integer bio..",
+      "votes": {
+        "upvoters": [
+          "Mariox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167718": {
+      "poster": "Mariox",
+      "content": "@ruza0001#167646 evo ja sam sada dosao do istog problema, ali ja koristim pwrite().  Zadnji line u svakom text file-u mora imati new line na kraju (koji se automatski dodaje kada save-as file u geany-u npr). Zbog toga append uvijek ide u novi red.",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167726": {
+      "poster": "Mariox",
+      "content": "@Mariox#167718 evo uspio sam rijesiti pomocu [pwrite](https://www.freebsd.org/cgi/man.cgi?query=open&sektion=2)(). Nisam otvorio u append modu nego u write modu, a write mod ne obrise sadrzaj datoteke. Samo sam onda pomocu pwrite() pisao na dobru poziciju",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167911": {
+      "poster": "Extended_mix",
+      "content": "Jel make clean mora obrisati i txt datoteke koje stvorili izvođenjem programa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,729 @@
+{
+  "title": "[PARPRO] 2. laboratorijska vježba - 2020/2021",
+  "creator": "RogerRoger",
+  "slug": "parpro-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Paralelno programiranje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "191941": {
+      "poster": "RogerRoger",
+      "content": "Je li netko počeo raditi ovaj labos?\n\n\"Algoritam u kojemu postoji stalan broj od najviše 7 zadataka (radnika) nije prihvatljiv!\"\n\nŠto ovo točno znači? Krenuo sam pisati labos i ima mi smisla da zadataka može biti više, ali broj radnika je broj procesa (osim mastera) predan kao argument pri pozivu programa i on bi morao biti stalan, što ne?\n\nOvako kako se meni to čini je da postoji red zadataka i **n** radnika koji redom skidaju i rješavaju zadatke iz reda kad god su slobodni. Jesam li dobro shvatio?",
+      "votes": {
+        "upvoters": [
+          "JustinCase"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191955": {
+      "poster": "JustinCase",
+      "content": "Kako testirat ovo ako imam samo dvije jezgre?",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "192931": {
+      "poster": "Ziher",
+      "content": "@RogerRoger#191941 mislim da je ideja zbog specificnosti ploce gdje imas 7 stupaca, u svakom trenutku imas najvise 7 mogucih poteza i jedan voditelj moze biti koji delegira poslove radnicima. To se fino poslozi na 8 jezgara, samo je pitanje gdje to stvarno testirati (i zasto ne hyperthreading, kako da to izvedem uopce ako ne mogu na faks do racunala?). Uostalom zbog rekurzivnosti problema, kako taj problem podijeliti na vise od 7 radnika (efikasno)? Doslovno, da svaku jezgru posaljem u vlastitu rekurziju, ne bi li se u idealnom slucaju algoritam ubrzao 7 puta? Kako onda, da u svakom koraku rekurzije trazim novog radnika da mi nastavi rekurziju? Cini mi se ko previse overheada, jedino ako se nekako moze kombinirati da radnik pomaze ako je gotov sa svojim poslom...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193033": {
+      "poster": "Simke",
+      "content": "Ja sam labos implementirao tako da prilikom pokretanja programa zadajem broj MPI procesa (od 2 do 9) jer je jedan proces Master proces koji ostalim procesima delegira zadatke, njih 49 u svakoj iteraciji programa. Proveo mjerenja na svom računalu s 4 jezgre i dobio rezultate u kojima se ubrzanje kreće od 1 do cca 3.9. Poslao mail asistentu da pitam jesu takva mjerenja prihvatljiva budući da nemam 8 jezgri i koja bi bila alternativa i on je rekao da mi je sve u redu, ali da mogu doći na fakultet testirati ako baš želim. Valjda smo se dobro razumjeli. Ugl, ako sam ja mogao sa 4 jezgre, valjda se može i s dvije.",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "JustinCase",
+          "hejhoj (vdvd)",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193061": {
+      "poster": "Cvija",
+      "content": "@Simke#193033 Koliko ti je vremenski trebalo da napišeš cijeli labos? Čuo sam da je patnja...",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193082": {
+      "poster": "Simke",
+      "content": "@Cvija#193061 7-8h sveukupno ajmo rec. S tim da mi ne radi bas savrseno program, al ko bi to cudo 100% izdebbugirao",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "hejhoj (vdvd)",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193113": {
+      "poster": "netko_tamo",
+      "content": "@Simke#193082 za sve koji pocinju pisat labos, imate za ovo pretrazivanje stabla na stranici predmeta programcic kojeg se da iskoristit,a ne ko ja da se mucim sam to pisat hahahah i potrosim pol dana, al ugl jel imas koji savjet na sto jos treba pripazit?",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Noggenfogger (dammitimmad)",
+          "Patak007",
+          "ReyKenobi",
+          "a_ko_si_ti",
+          "hejhoj (vdvd)",
+          "in1",
+          "korisnik_studosa (wildcard)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193162": {
+      "poster": "Simke",
+      "content": "@netko_tamo#193113 Da, prakticki cijela funkcija za evaluaciju se moze iskoristit uz minimalne promjene. Za komunikaciju i raspodjelu zadataka može puno pomoći njihov program za računanje broja pi. Implementirati ploču s funkcijama koje oni koriste u njihovom kodu (gameEnd, move, moveLegal..). Ostalo je sve u domeni buggova i detalja.",
+      "votes": {
+        "upvoters": [
+          "Patak007",
+          "ReyKenobi",
+          "a_ko_si_ti",
+          "hejhoj (vdvd)",
+          "in1",
+          "netko_tamo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193478": {
+      "poster": "ReyKenobi",
+      "content": "Jel imao netko problema sa importanjem MPI (python + Windows)? Javlja mi` DLL load failed while importing MPI: The specified procedure could not be found`. Čisto da znam dal se netko susreo s tim prije nego što pređem na c++ :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193541": {
+      "poster": "Klokan",
+      "content": "@ReyKenobi#193478 imas u temi za lab1",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193649": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "Radim u pythonu i kada uzimam input od usera sa input() za prvi potez radi normalno, a kada pokušam dobiti input od usera za drugi potez ne radi. Program samo stane i vrti se beskonačno i nikad mi ne prođe na liniju nakon input(). Je li imao netko sličan problem pa zna rješenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193652": {
+      "poster": "DodgeCharger",
+      "content": "@Zuzu#193649 Jel ti primi input pa onda neće dalje ili ne dođe do inputa uopće?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193656": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "@DodgeCharger#193652 Dođe do inputa ispiše mi se i onda stane, npr x = int(input('igraj')), ispiše se igraj, ali kad se utipka preko tipkovnice što se treba, stane i ne ide dalje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193669": {
+      "poster": "DodgeCharger",
+      "content": "@Zuzu#193656 Hmmm....čudno. Ja pišem u cpp-u i nešto slično mi se događalo i to zato što sam zeznuo send i recv, pa mi se činilo kao da master ne prima input, a zapravo ga je zablokirao send. Sad sve ovisi što imaš poslije tog inputa...",
+      "votes": {
+        "upvoters": [
+          "Zuzu (Coffe123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193886": {
+      "poster": "adidas",
+      "content": "@netko_tamo#193113 nemrem naci gdje je to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193892": {
+      "poster": "Simke",
+      "content": "@adidas#193886 https://www.fer.unizg.hr/predmet/parpro/materijali#%23!p_rep_24712!_-33462",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193904": {
+      "poster": "a_ko_si_ti",
+      "content": "@Simke#193892 Ako mi to kopiramo i onda iskoristimo za rjesavanje, jel to ok? Javno dostupan je materijal, ali ako to napravi bar dvoje ljudi sigurno ce pasti na plagijatu... nez koja je onda tu situacija?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193912": {
+      "poster": "Simke",
+      "content": "@a_ko_si_ti#193904 profesor je rekao da mozemo iskoristiti",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193943": {
+      "poster": "a_ko_si_ti",
+      "content": "Jeli u njihovom kodu `Current.GameEnd(iLastCol)` potrebno ispitvati sa LastCol? Ako je gotova igra, onda mora da je zadnji potez, ubačen u `iLastCol` bio potez koji je donio pobjedu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194099": {
+      "poster": "Klokan",
+      "content": "Jeste koristili onaj `iDepth /= 2;` iz `do-while` petlje, cini mi se da u nekim potezima dobro dođe?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194170": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "Je li se događalo nekom možda da se potezi računala često slažu jedan na drugi u isti stupac pa da zna možda kako to popravit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194181": {
+      "poster": "Simke",
+      "content": "@Zuzu#194170 Meni..na neku foru kada radnik javlja masteru rezultat promijeni mu se redni broj zadatka. Nez kak i zas, a dogada mi se jednom il dvaput od 49 zadataka pa sam samo uzeo da je rezultat isti kao i u prethodnom stupcu..pa mi tako greska ne utjece puno na prosjek",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194226": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "u onoj obavijesti di su napisali kako treba izgledati ispis ploca je 7x7. Treba li onda i nama biti uvijek 7x7, ili gledamo upute iz onog dokumenta di pocinjemo sa 6 redova i nadopunjavamo po potrebi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194349": {
+      "poster": "DodgeCharger",
+      "content": "@PiqueBlinders#194226 A gle, možeš broj redova stavit kao parametar. Ja sam stavio da defaultno bude ploča 6x7, ali ostavio sam i mogućnost da bude i više. Mislim da to ne uzrokuje neke velike promjene u kodu, osim što se igra može dulje igrat.",
+      "votes": {
+        "upvoters": [
+          "PiqueBlinders (zisku)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194472": {
+      "poster": "netko_tamo",
+      "content": "![](assets/2021-05-22/00014.png)\n\nbaca mi nakon MPI_Send pogrešku \"Connect4Game.exe has triggered breakpoint\" bez ikakvog dodatnog objašnjenja. Ima netko ideju? Probao sam da mozda nije do podataka koje šaljem pa sam samo poslao običnu int varijablu, al ista stvar se dešavala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194487": {
+      "poster": "ReyKenobi",
+      "content": "Nije mi baš jasno kolika nam treba biti minimalna dubina kod pretraživanja stabla? U uputama piše:\n\n![](assets/2021-05-22/00016.png)\n\nNa predavanjima je profesor rekao da bi minimalna dubina trebala biti 8 pa ne znam dal da se vodim time ili uputama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194576": {
+      "poster": "in1",
+      "content": "Pitanje za nekoga tko je radio u Javi, kako učitati podatke sa standardnog ulaza? Uobičajene metode ne rade :|",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194645": {
+      "poster": "gagotron",
+      "content": "@Simke#194181 Jel se smije znati zbog čega je baš 49 zadataka, taj dio me najviše buni, ostalo mi je sve prilično straightforward",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194693": {
+      "poster": "Cvija",
+      "content": "@gagotron#194645 7x7 ploča -> imaš sedam stupaca na ploči, igrač odigra potez, proces voditelj napravi 7 mogućih poteza (jer je 7 stupaca na ploči) CPU i za tih 7 mogućih poteza napravi po 7 mogućih poteza za igrača što je dvije for petlje -> 49 zadataka koje rasporediš na procesore\n\n64 zadatka bi bilo da je ploča 8x8",
+      "votes": {
+        "upvoters": [
+          "gagotron",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194921": {
+      "poster": "ReyKenobi",
+      "content": "@Cvija#194693 Ploca moze biti i 6x7 ili 8x7, kljucno je to da je uvijek 7 stupaca",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194974": {
+      "poster": "Hus",
+      "content": "Koju naredbu treba koristit da pokrenem porgram na npr 4 jezgre? Napisao sam kod u pythonu pa koristim samo u cmd-u naredbu \"mpiexec -n 4 python dz2.py\" no mislim da to nije dobro...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "194997": {
+      "poster": "Cvija",
+      "content": "@Hus#194974 Ako na primjer imaš dvije jezgre, a želiš pokrenuti 8 MPI procesa napisao bi:\n\n`mpiexec -n 8 --oversubscribe python dz2.py` ~~(ovo je - -, samo se čudno prikaže kao jedan veliki minus)~~\n\nAko na primjer imaš 4 jezgre, onda bi ovo tvoje bilo dobro\n\nMOD EDIT: Formatiranje koda",
+      "votes": {
+        "upvoters": [
+          "Hus"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195007": {
+      "poster": "a_ko_si_ti",
+      "content": "Sta tocno trebamo mjerit? Da uprosjecim na nekoj istoj igri koliko je CPU igraču trebalo da napravi odluke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195015": {
+      "poster": "Tonek (Bila Pitura)",
+      "content": "Radio sam labos na 4 jezgre s hyperthreading i mjerenja mi se smanjuju do 7 procesa, tad mi se poveca i opet se na 8 smanji. Jel imao netko sličan slučaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195017": {
+      "poster": "Hus",
+      "content": "@a_ko_si_ti#195007 To sam ja napravio. Izmjerio sam vrijeme koje je trebalo CPU-u da napravi svoj potez.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195020": {
+      "poster": "Hus",
+      "content": "Mi pišemo svoja mjerenja u \"mjerenja.txt\" datoteku ručno? Kao pokrenemo svoj program više puta sa različitim brojem procesa i onda samo zapišemo vremena, ubrzanje i učinkovitost?\n\nBTW koju dubinu stabla koristimo pri mjerenju? 8?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195096": {
+      "poster": "netko_tamo",
+      "content": "prema kojoj formuli računati ubrzanje i učinkovitost?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195167": {
+      "poster": "DodgeCharger",
+      "content": "Zbog ovog labosa će mi životni vijek bit kraći jedno 10 godina...",
+      "votes": {
+        "upvoters": [
+          "Conrad",
+          "Cvija",
+          "Noggenfogger (dammitimmad)",
+          "a_ko_si_ti",
+          "adidas",
+          "netko_tamo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "AlejaGovana",
+          "MsBrightside",
+          "a_ko_si_ti",
+          "happysun"
+        ]
+      }
+    },
+    "195189": {
+      "poster": "Cvija",
+      "content": "Ne razumijem ovu datoteku mjerenja.txt, jel ona treba ovako izgledati:\n\nbr_procesora\n\nvrijeme_izvođenja_programa_za_1_mpi_proces pa vrijeme_izvođenja_programa_za_2_mpi_procesa ... vrijeme_izvođenja_programa_za_8_mpi_procesa\n\nonda ostalo za isto tako\n\nili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "195224": {
+      "poster": "DodgeCharger",
+      "content": "@Cvija#195189 Koliko sam ja skužio, to prvo vrijeme se mjeri za jednog MPI **radnika** (znači, moraš pokrenut s 2 procesa), drugo vrijeme za dva MPI **radnika** (pokreneš s 3 procesa), itd. \n\nUbrzanje i učinkovitost je trivijalno izračunat kad dobiješ ta vremena",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196359": {
+      "poster": "moukie",
+      "content": "Koja predavanja pokrivaju ovu laboratorijsku vjezbu?\n\nTj. kojim je predavanjem pređeno svo gradivo potrebno za ovo implementirat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196379": {
+      "poster": "Cvija",
+      "content": "@moukie#196359 \n8. kao neki uvod\n9. je sredinom predavanja drugog sata objašnjeno kako riješiti zadatak\n10.  ti služi za ona mjerenja na kraju\n     \n\nIako ti predavanja mogu dati neki uvid, za samu ideju ti je dovoljno to što je objašnjeno sredinom devetog predavanja i poznavanje MPI i možeš riješiti zadatak + pogledaj one njihove kodove na stranicama predmeta, uštedjet će ti dosta vremena",
+      "votes": {
+        "upvoters": [
+          "Svarog (Veles)",
+          "a_ko_si_ti",
+          "hejhoj (vdvd)",
+          "moukie",
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196622": {
+      "poster": "a_ko_si_ti",
+      "content": "Stigli bodovi za prvu predaju.\n\nPredalo nas je manje pa su ovaj put čak i stigli pregledat 😂",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197055": {
+      "poster": "saki23",
+      "content": "Postoji li negdje snimka 9og predavanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197084": {
+      "poster": "Cvija",
+      "content": "@saki23#197055 Microsoft Teams -> Paralelno Programiranje -> nađeš deveto predavanje -> otvoriš sve poruke i unutra bi ti trebale biti snimke, dostupne su još 4 dana",
+      "votes": {
+        "upvoters": [
+          "AlejaGovana"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197085": {
+      "poster": "saki23",
+      "content": "@Cvija#197084 Super, hvala pronašla sam 😃",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197661": {
+      "poster": "moukie",
+      "content": "sta ako nemamo 8 jezgri?\n\nradimo li sve isto kao i da imamo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198688": {
+      "poster": "a_ko_si_ti",
+      "content": "@moukie#197661 Da. Neces vidit neko ubrzanje nakon sto predes broj pravih jezgri, al treba to bit u `mjerenje.txt`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "200570": {
+      "poster": "aKul (Vili Beroš)",
+      "content": "Profesor je reko da uzmemo minimalnu dubinu pretrazivanja stable 8 zato da je odma na pocetku moguce doci do razine di netko pobijedi (4 covjekova poteza, 4 poteza za racunalo). Jel to znaci da u workerima mogu staviti dubinu pretrazivanja 6 posto master obradi prve 2 razine?",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

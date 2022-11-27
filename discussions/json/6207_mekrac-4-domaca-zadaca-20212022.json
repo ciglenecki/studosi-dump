@@ -1,0 +1,496 @@
+{
+  "title": "[MEKRAC] 4. domaća zadaća - 2021/2022",
+  "creator": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+  "slug": "mekrac-4-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Meko računarstvo",
+    "Zadaće"
+  ],
+  "posts": {
+    "261948": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Zasto mi na genetskom algoritmu toliko jako varira rjesenje s razlicitim pocetnim populacijama ? kvadratna greska mi je minimalna za ta rjesenja a toliko su razlicita. (4 zadatak labos)\n\nnapprimjer:\n1. [1.8594551075230257, -2.450156112139978, -3.6778627269646282, 1.1547754888624002, -0.34301607811600743]\n2. [0.23778191882743815, -0.05369462915239609, -0.24912500576810892, -2.7367321448894275, 0.3173651304683647]\n\ngreske za oba su manje od 0.01",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261973": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Tompa007\"#p261948 Vjv jer ima više lokalnih minimuma, a inicijalizacija početne populacije je dovoljno stohastička za problem da utječe na konačan rezultat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261975": {
+      "poster": "Ducky",
+      "content": "jel smijemo koristit  ga ili pygad u pajtonu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262194": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Mićo pl. Flajšu\"#p261973 kojim parametrima bi mogao smanjiti stohasticnost bez preuranjenog konvergiranja?\n\nKoji su inace optimalni parametri za vjerojatnost mutacije? ja koristim 10%, selection mi je 3-k turnir, pocetna populacija 200,\n\nodnosno jel ovo sto zasad imam gdje svaki put dobijem neko novo rjesenje sa dosta malom greskom okej kao rjesenje ?\n\n![](assets/2021-12-06/00007.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262201": {
+      "poster": "tonkec",
+      "content": "@\"Tompa007\"#p262194 prevelika populacija (probaj 50) i prevelika mutacija (probaj 1 promil)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262206": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Tompa007\"#p262194 S ovim što si rekao probaj smanjiti populaciju, makar mislim da ta raznolika rješenja nisu problem sama po sebi.\n\nJa sam svojevremeno radio simulacije i s populacijom od 10, pa sam opet dobivao dovoljno dobre rezultate:\n\n```\n# Rješenje 1. [0.3712056, -0.12289254, 3.5152062, 1.31750053, -1.32588974] (MSE = 6e-7, 1000 iteracija)\n# Rješenje 2. [0.37028343, -0.11768803, 3.46963318, 1.31324859, -1.32198286] (MSE = 1e-2, 1000 iteracija)\n```\n\nMoja rješenja su često konvergirala u ovaj specifični minimum, ali možda zato što sam ja imao jako dobru custom mutaciju, prije nje su išle u sve i svašta.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263658": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "jeste ko globalni optimum dobili \n\n[0.3713013148200785, -0.1196418836174594, 3.49322171792782, 1.3132657932434397, -1.3201762288567955]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263728": {
+      "poster": "Ducky",
+      "content": "@\"Tompa007\"#p263658 Da, kolko ti vrti algoritam?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263731": {
+      "poster": "Cubi",
+      "content": "@\"Tompa007\"#p263658 Dobivao sam osim tog još neke minimume vjerojatno zbog periodicnosti sinusa\n\n```\n[0.3716098375679594, -0.12266472245630115, 3.5162387906120154, 1.3177075521853587, -1.3261765840444857] with loss: 1.6671128739085025E-7\n[2.770784293503402, 0.12256865363848134, 3.5176495287161345, 1.317469740599704, -1.3253394282893025] with loss: 2.9374046879972064E-7\n[-3.5124331864338245, 0.1225424381149127, 3.5177726467507826, 1.3174557388358044, -1.3249290266495395] with loss: 3.018603846283212E-7\n```",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265292": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Ja tek sad kužim da \"normalni\" roulette wheel selection funkcionira tako da je veća vjerojatnost da odabire jedinke s većom vrijednosti funkcije dobrote, no s obzirom da mi ovdje radimo s funkcijom kazne što je MSE, kako implementirati roulette wheel selection da zapravo uzima to u obzir?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265295": {
+      "poster": "Jaster111",
+      "content": "@\"ok i pull up\"#p265292 \n\n```new_errs = [i-np.min(errors)+0.0001 for i in errors]```\n\n```probabilities = [i/np.sum(new_errs) for i in new_errs]```\n\nGdje je varijabla `errors` zapravo numpy array funkcija kazne za svaku jedinku. U `probabilities` onda dobijemo da  negativna vrijednost najbliža nuli dobije najveću vjerojatnost.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265296": {
+      "poster": "Jaster111",
+      "content": "Btw jel netko može objasnit riječima ili pseudokodom kako funkcionira troturnirska selekcija za eliminacijski algoritam?Nisam ni u prezentaciji ni u knjizi baš pronašao nešto detaljno objašnjeno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265297": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Jaster111\"#p265296 kao inace, ima bezbroj varijanti. \n\nMoguce rjesenje: nasumicno odabrati 3 jedinke, ubiti onu s najlosijim fitnesom, od preostale dvije napravit novo dijete i njega ubaciti u populaciju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265301": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"Precious Bodily Fluids\"#p265297 \n\nJe li ispravno ako bismo m puta izbacili najgoru od 3 nasumično izabrane jedinke iz populacije pa bismo onda tek krenili s nadopunjavanjem populcije novim jedinkama? \n\nOdnosno ako je moratlitet 50%, a veličina populacije 50 jedinki, izbacimo 25 jedinki pa onda tek krenemo s popunjavanjem da nam populacija opet ima 50 jedinki?",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265303": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"ok i pull up\"#p265301 može i to",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265305": {
+      "poster": "Rene",
+      "content": "@\"Precious Bodily Fluids\"#p265297 mene buni sto je u tom slucaju \"iteracija\",  tj. ako je mortalitet 50% znaci da je jedna iteracija kada 50% populacije zamjenimo s djecom pobjednika turnira?\n\nTj. s obzirom da cuvamo samo jednu populaciju i nju mijenjamo, moguće je npr. da dijete koje si ubacio nakon ovog turnira izaberes u sljedecem turniru i izbacis kao najlosiju jedinku od te 3?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265326": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Rene\"#p265305 postoje algoritmi koji rade s dvije generacije (populacije), trenutnom i \"budućom\", to su tzv. generacijski GA. Pri radu s njima jedna iteracija znači stvaranje nove generacije iz stare.\n\nDruga vrsta bi bila steady-state GA koji rade s jednom populacijom, u njima odabereš dva roditelja koja stvore dvoje djece, roditelji se brišu, a djeca se umeču. Jedno ponavljanje navedenog je jedna iteracija. Ovo možeš i shvatiti kao ajmoreć \"eliminacijski\" GA jer brišeš jedinku i na njeno mjesto stavljaš novu. Ipak, bitna razlika je da eliminacijski GA briše jedinku jer ima malen fitness, dok steady-state GA briše roditelje, a oni imaju velik fitness. Dakle roditelji nastave živjeti kroz svoju djecu, dok se u eliminacijskom GA loša jedinka briše bez da prenese svoje gene.\n\nPoanta priče, nedajte se zbuniti. Postoji puno terminologije koja je isprepletena i glavna stvar za shvatiti je da svaka komponenta GA ima više implementacija, svaka sa svojim prednostima i manama.",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265332": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Rene\"#p265305 \n\nDa odgovorim na pitanje... \n>mene buni sto je u tom slucaju “iteracija”, tj. ako je mortalitet 50% znaci da je jedna iteracija kada 50% populacije zamjenimo s djecom pobjednika turnira?\n\n Ovo je ok, možda bi imalo smisla djecu dobivenu u jednoj iteraciji držati u priručnoj strukturi koju ćeš spojiti s populacijom tek na kraju iteracije. To bi onemogućilo da dijete u istoj iteraciji bude stvoreno i eliminirano.",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265333": {
+      "poster": "Rene",
+      "content": "@\"Precious Bodily Fluids\"#p265332 e super, mislim radi i ovako pa je valjda okej, ali htio sam skužit što bi bila \"školska\" implementacija. Hvala puno!",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265356": {
+      "poster": "ana (anci)",
+      "content": "Nisam skuzila na kraju, kod eliminacijskog algoritma se tri jedinke biraju da je veca vjerojatnost odabira dobrih, odabira losijih ili skroz random? Kuzim da se eliminira najlosija ali ne kuzim kako da ih biram",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265360": {
+      "poster": "Ducky",
+      "content": "@\"anci\"#p265356 vjerojatno postoje sve varijante i is up to you, ali neki lik na yutubu je reko totalno random",
+      "votes": {
+        "upvoters": [
+          "ana (anci)",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265374": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"ok i pull up\"#p265301 Tako ćeš vjerojatno dobiti manji selekcijski pritisak, i semantički je to točnije. Generalno ne želiš imati veliki selekcijski pritisak da ga ne moraš kompenzirati jakom mutacijom",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265885": {
+      "poster": "[deleted]",
+      "content": "Nije mi baš jasan postupak stvaranja nove generacije kod generacijskog GA.\n\nPomoću RWS-a biramo 1/3 nove populacije, a ostale 2/3 čine njihova djeca? Biramo roditeljsku populaciju u kojoj je samo veća vjerojatnost da se bolje jedinke pojave više puta, pa iz nje slučajno biramo roditelje za križanje? Nekaj treće?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265908": {
+      "poster": "Dootz",
+      "content": "@\"Aimée\"#p265885 Izaberes 2 roditelja sa RWS, napravis od njih djecu, stavis u novu generaciju. Radis dok je ne popunis. Ako hoces elitizam, onda na pocetku stvaranja nove generacije odreden broj jedinki samo prebacis iz stare u novu.",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265929": {
+      "poster": "[deleted]",
+      "content": "@\"Dootz\"#p265908 hvala puno! :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265930": {
+      "poster": "angello2",
+      "content": "koju ste rekombinaciju koristili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266106": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"angello2\"#p265930 jel pod to mislis na crossover? koristio sam krizanje s jednom tockom prekida\n\nRezultati su vrlo slicni ovima @\"Cubi\"#p263731",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266141": {
+      "poster": "Jaster111",
+      "content": "@\"angello2\"#p265930 aritmeticka sredina, radi skroz ok",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266241": {
+      "poster": "BaboTrojka",
+      "content": "U čem bi mogao biti problem ako za beta0 i beta1 dobivam slične rezultate kao kolege iznad, ali za ostale bete nešto totalno drukčije? Za crossover koristim par opcija od kojih se random bira jedna, a mutacija samo mijenja parametar na novu random vrijednost. MSE mi je za najbolju kombinaciju parametara algoritma oko 0.25",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266245": {
+      "poster": "Dootz",
+      "content": "@\"BaboTrojka\"#p266241 Stavi za mutaciju da dodaje random vrijednost iz normalne distribucije, to je dosta dobra mutacija",
+      "votes": {
+        "upvoters": [
+          "BaboTrojka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266246": {
+      "poster": "Jaster111",
+      "content": "Šta nam program treba ispisivat? Je li okej ispisivati prosječnu pogrešku nad populacijom u svakoj iteraciji ili bi trebali \"izvadit\" najbolju jedinku iz populacije u svakoj iteraciji te ispisat njenu pogrešku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266248": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @\"Jaster111\"#p266246 “izvadit” najbolju jedinku iz populacije u svakoj iteraciji te ispisat njenu pogrešku?\n\nOvo se čini bolje, prosječna pogreška populacije je samo zgodna na početku, kasnije nije toliko bitna jer ti populacija više nije raznolika",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266320": {
+      "poster": "[deleted]",
+      "content": "@\"BaboTrojka\"#p266241 Imam isti problem, ti je @\"Dootz\"#p266245 pomoglo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "bernard (macabrus)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266338": {
+      "poster": "BaboTrojka",
+      "content": "@\"Aimée\"#p266320 Malo je smanjilo msq, ali ipak sam imao grešku u računanju izlaza cijele funkcije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

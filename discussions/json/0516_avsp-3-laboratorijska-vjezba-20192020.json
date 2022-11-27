@@ -1,0 +1,267 @@
+{
+  "title": "[AVSP] 3. laboratorijska vježba - 2019/2020",
+  "creator": "vykar (mango)",
+  "slug": "avsp-3-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Analiza velikih skupova podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "19070": {
+      "poster": "vykar (mango)",
+      "content": "Jel tko uspio riješiti CF lab i dobiti rješenja iz testnog primjera s weba? Kod mene ispravno radi primjer iz zadatka i svi ostali primjeri koje isprobam (zbirka, prezentacija...), no iz nekog razloga za onu 100x100 matricu iz testnog primjera dobijem kriva rješenja.\n\nMože tko potvrdit da mu je ispalo isto kao i njihovo, čisto da eliminiram hipotezu da su oni pogriješili? :) Tnx",
+      "votes": {
+        "upvoters": [
+          "Gwidoc",
+          "Kristijan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19078": {
+      "poster": "neytiri",
+      "content": "@vykar#19070 Ni meni ne prolaze njihovi testovi (ni ovaj s ferweba, ni sa spruta), a ostali manji primjeri prolaze. Tj sve isto kao i tebi..",
+      "votes": {
+        "upvoters": [
+          "Gwidoc",
+          "Miki",
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19091": {
+      "poster": "Nabas",
+      "content": "@vykar#19070 Meni na sprutu dolaze kriva rješanja, a kad pokrenem na svom dobivam njihov očekivani izlaz.",
+      "votes": {
+        "upvoters": [
+          "phuck"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19092": {
+      "poster": "vykar (mango)",
+      "content": "Čudno... poslao sam im mail pa stavim tu kad odgovore.",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "Gwidoc",
+          "Miki",
+          "Nabas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19296": {
+      "poster": "volimfmos69 (debos)",
+      "content": "@vykar#19070 meni su kod 100*100 bili krivi izlazi samo za user user(krivo sam indeksirao stupac korelacijske matrice), mozda je to, jer se tako potrefilo da nijedan od tih manjih ne provjerava, dovoljno dobro valjda, user user pristup",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19328": {
+      "poster": "zeleni_caj123",
+      "content": "@vykar#19070 meni prolaze svi primjeri i taj na sprutu, tako da provjeri jos jednom",
+      "votes": {
+        "upvoters": [
+          "sama",
+          "vykar (mango)",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19516": {
+      "poster": "vykar (mango)",
+      "content": "> Primjer je u redu, što zaključujem ponovnim testiranjem našeg referentnog rješenja (kao i rješenja jednog od studenata) na navedenom primjeru.\n> \n> Pozdrav,\n\n> Adrian",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19542": {
+      "poster": "vykar (mango)",
+      "content": "Vi kojima radi ispravno, jeste koristili ovu formulu ili onu jednostavniju za izracun procjene, a kao similarity funkciju pretpostavljam cosine?\n\n![](assets/2020-05-05/00007.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19576": {
+      "poster": "Paula13 (p13)",
+      "content": "Meni je isto tako bilo radilo za primjer iz uputa, ali nije bilo radilo na sprutu i onda sam shvatila da sam na kraju, pri izračunu procjene, kad se uzima max k najsličnijih itema, uzimala i iteme koji su slični tom itemu za koji računam procjenu (dakle imaju cosine similarity > 0), ali za koje ne postoji ocjena za usera za kojeg računamo procjenu. Dakle ja sam provjeravala samo je li cosine similarity > 0, a trebalo je još provjeriti jel uopće postoji ocjena u matrici (tj. je li veća od 0). I u tom primjeru iz uputa onda nije bilo takve situacije gdje bi se unutar prvih k najsličnijih itema našao takav koji nema ocjenu pa je tamo prolazilom, a na sprutu ne... pa evo možda nekom pomogne, ako je istu stvar pogriješio",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)",
+          "Bobicki",
+          "Red_Baron",
+          "mc1313",
+          "vykar (mango)",
+          "zeleni_caj123"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19577": {
+      "poster": "Paula13 (p13)",
+      "content": "@vykar#19542 ja sam onu jednostavniju koristila",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19626": {
+      "poster": "Miki",
+      "content": "Evo ako ce kome pomoci ja sam imao isti problem kao kolege gore. \n\nMeni je greska bila da sam ja prvo odredio k najblizih i onda uzimao od tih k one koji su imali ocjenu, a trebalo je napraviti da se uzme k najblizih koji imaju ocjenu.",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "Kristijan",
+          "Kushim",
+          "Ledeni56 (Jusuf)",
+          "Nabas",
+          "adrian7000",
+          "damaHerc",
+          "leo (tajler)",
+          "neytiri",
+          "tre_besty (luk)",
+          "vanna_li",
+          "vykar (mango)",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19633": {
+      "poster": "Nabas",
+      "content": "Ja sam imao dictionary kojeg sortiram prema vrijednostima (ključevi su itemi prema kojim se računa sličnost, vrijednost). Na sprutu iz nekog razlog nije prolazilo moje sortiranje i zato je padao na testu, a na mom računalo je radilo. To sam promjenio i sad prolazi i na sprutu.",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "phuck"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19707": {
+      "poster": "zeleni_caj123",
+      "content": "@Miki#19626 Da, treba uzeti najviše k najbližih, al onih za koje postoji ocjena.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22690": {
+      "poster": "anakonda",
+      "content": "koju funkciju slicnosti koristiti ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22701": {
+      "poster": "Bobicki",
+      "content": "@anakonda#22690 Ja sam imao identičan postupak onome u 20. zadatku u zbirci, tako da možeš tamo pogledati.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22744": {
+      "poster": "mc1313",
+      "content": "@Paula13#19576 tnx",
+      "votes": {
+        "upvoters": [
+          "Paula13 (p13)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

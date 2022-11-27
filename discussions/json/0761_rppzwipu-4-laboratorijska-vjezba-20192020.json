@@ -1,0 +1,5788 @@
+{
+  "title": "[RPPZWIPU] 4. laboratorijska vježba - 2019/2020",
+  "creator": "gladiator",
+  "slug": "rppzwipu-4-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Razvoj programske potpore za web i pokretne uređaje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "29490": {
+      "poster": "gladiator",
+      "content": "Pravila znate, laboratorijska vježba održat će se u petak 29. svibnja 2020. od 08:30 do 11:00.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29491": {
+      "poster": "gladiator",
+      "content": "Trebamo li instalirati cookie-parser? Nekako mi se čini neophodnim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29596": {
+      "poster": "viliml",
+      "content": "@gladiator#29491 Ne, zašto? Sve radi automatski under the hood, mi se s time ne trebamo mučiti.",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29704": {
+      "poster": "WickyWinslow",
+      "content": "Sanity check -> treba li nam uopće TABLE Cart iz baze koju su nam dali s obzirom da se košarica ubacuje u session?\n\nAnd good job ZPR daju nam \"gotove routere\" koji pozivaju funkciju sa string argumentom a ona treba klasu (npr za adresu poziva funckiju sa req.session.name dok funkcija prima oblik klase User is UserModel)",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "gladiator",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29713": {
+      "poster": "WickyWinslow",
+      "content": "EDIT: Promalnulo mi je da su oni zapravo cijelu klasu kao objekt spremali u sjednicu a ne samo username.",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29793": {
+      "poster": "viliml",
+      "content": "@WickyWinslow#29704 Ne, tablica Cart se ne *trenutno* ne koristi.\n\nVrlo vjerojatno će jedan od zadataka na samom labosu biti \"implementirajte perzistiranje košarice za registriranog korisnika između sjednica\" i onda će se ta tablica morati iskoristiti.",
+      "votes": {
+        "upvoters": [
+          "WickyWinslow",
+          "gladiator",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Suki7"
+        ]
+      }
+    },
+    "29808": {
+      "poster": "JBear",
+      "content": "Pojavljuje mi se ovaj error kad pokrenem seed.js makar mi se nije pojavljivao na prošlom labosu. Ima tko rješenje?\n\npassword authentication failed for user \"postgres\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29810": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@JBear#29808 je li ti sigurno lozinka od postgresa točna",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29811": {
+      "poster": "pingvinka",
+      "content": "U ovaj labos ulaze predavanja do (ukljucivo) Dinamicki Web 3?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29813": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@JBear#29808\n\nPodatke za pristup bazi treba napisati i u _db/seed.js_, i u _db/index.js_.",
+      "votes": {
+        "upvoters": [
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29818": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@pingvinka#29811 uistinu",
+      "votes": {
+        "upvoters": [
+          "ink",
+          "pingvinka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29820": {
+      "poster": "JBear",
+      "content": "@__builtin_popcount#29813 Znači na prošlom labosu prije nekoliko dana mi se sve pokretalo dobro, a sad taj isti labos ne mogu pokrenuti. Šifra mi je servera ista, ali izgleda da mi se nešto promijenilo u samom useru postgres. Googlanjem sam došao do toga da on valjda koristi m5a login i sad bi ja valjda to trebao promijeniti nekako da koristi iden.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "tuga": []
+      }
+    },
+    "29823": {
+      "poster": "gladiator",
+      "content": "@JBear#29820 paziš li na ime baze podataka? I je li stvorena nova baza podataka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29829": {
+      "poster": "gladiator",
+      "content": "Recimo da podatke o korisniku čuvam u varijabli \"req.session.user\". Nije mi baš jasno gdje bih ja trebao čuvati stanje košarice? Ako je čuvam u req.session.cart onda se ne pamti stanje košarice iz nekog razloga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29836": {
+      "poster": "JBear",
+      "content": "Brainlet sam kolege, razmak mi je bio na kraju šifre",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "DazedAndConfused"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Fica (Prof)",
+          "Filemon",
+          "Goliathus",
+          "MiqeloS",
+          "Reznox",
+          "__builtin_popcount (std::popcount)",
+          "iNavy (mornar Ica)",
+          "snowman"
+        ]
+      }
+    },
+    "29857": {
+      "poster": "Lyras",
+      "content": "`//session middleware\n\napp.use(session({\n\n    secret: process.env.SESSION_SECRET,\n\n    resave: false,\n\n    cookie: {\n\n        maxAge: 1000 * 60 * 60 * 24, //1 dan\n\n    },\n\n    store: new pgSession({\n\n        db: wim-lab4,\n\n        table: 'session'\n\n    }),\n\n    saveUninitialized: true\n\n}));`\n\nMože li mi netko reći zašto ovo ne radi? Jer ja trenutno udaram glavom u zid i copy pasteam snippete koda pokušavajući izvesti da nešto radi, a nemam pojma kako i što se događa. Čekaj malo... pa to je web dev i ovaj predmet in a nutshell.\n\nTakođer mi se prikazuje \n\n`TypeError: Cannot read property 'user' of undefined` a nisam ništa ni napravio",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29901": {
+      "poster": "Lyras",
+      "content": "@Lyras#29857 \n\n`//session middleware\n\napp.use(session({\n\n    secret: 'no idea what this does',\n\n    resave: false,\n\n    cookie: {\n\n        maxAge: 1000 * 60 * 60 * 24, //1 dan\n\n    },\n\n    store: new pgSession({\n\n        pool: db.pool,\n\n        tableName: 'session'\n\n    }),\n\n    saveUninitialized: true\n\n}));`\n\novo radi",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Galke",
+          "Goliathus",
+          "LucidDreamer",
+          "SuperSjajan3",
+          "aerius",
+          "gladiator",
+          "indythedog",
+          "krokodil",
+          "mariak (kaiak)",
+          "mini (Earthling)",
+          "nnn (dinoo)",
+          "viliml"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30219": {
+      "poster": "gladiator",
+      "content": "const pg = require('pg')\nJeste li ovo igdje koristili u server.js?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30229": {
+      "poster": "Kaladonter",
+      "content": "@gladiator#30219 ja ne, jedino sam onaj pg-connect-simple koristio ja msm",
+      "votes": {
+        "upvoters": [
+          "WickyWinslow",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30231": {
+      "poster": "Kaladonter",
+      "content": "Jel zna tko kako trebamo spremati košaricu i njen sadržaj na razini sessiona,  zato jer u cartModel nema funkcija koje išta spremaju u cart tablicu u bazi podataka.\n\nEDIT: sad mi je palo napamet da mogu u session samo napravit kao cart jel to ima smisla ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30235": {
+      "poster": "WickyWinslow",
+      "content": "@Kaladonter#30231 dap samo napravis cart i spremis ga u req.session.cart",
+      "votes": {
+        "upvoters": [
+          "Kaladonter",
+          "gladiator",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30252": {
+      "poster": "Kaladonter",
+      "content": "@WickyWinslow#30235  imas mozda ideju zasto se ovo pojavljuje\n\n![](assets/2020-05-26/00024.png)",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30255": {
+      "poster": "snowman",
+      "content": "Zna netko rijesiti problem da mu se ne brise cart nakon checkouta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30263": {
+      "poster": "SBolsec (Marko218)",
+      "content": "@snowman#30255 U checkout.routes.js za brisanje postave zastavicu \"req.session.cart.invalid = true\"\n\nJa sam u cart.routes.js na pocetak funkcija samo dodao provjeravanje te zastavice, pa ako je true napravim novi cart, nezz dal je ovo ispravni nacin, ali radi",
+      "votes": {
+        "upvoters": [
+          "DAC",
+          "Kaladonter",
+          "snowman",
+          "swish41 (PlavušaSFilozofskog)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30295": {
+      "poster": "LucidDreamer",
+      "content": "Jel rijesio mozda tko ovaj error u cart.ejs . Kako ste inicijalizirali ovaj item\n\n![![](assets/2020-05-26/00029.png)\n](src)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30298": {
+      "poster": "LucidDreamer",
+      "content": "Jel rijesio mozda tko ovaj error u cart.ejs . Kako ste inicijalizirali ovaj item\n\n![](assets/2020-05-26/00031.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30303": {
+      "poster": "snowman",
+      "content": "@LucidDreamer#30298 Ja imam isto tako ali sve radi normalno, vjerojatno je samo jer funkcija prima ejs pa se malo gubi",
+      "votes": {
+        "upvoters": [
+          "Kaladonter",
+          "LucidDreamer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30304": {
+      "poster": "WickyWinslow",
+      "content": "@Kaladonter#30252 Probaj pri iscrtavanju te stranice ispisati na konzolu cijeli objekt session.cart. Mozda skuzis u čemu je problem. Ovako ne bih znao sto bi moglo biti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30316": {
+      "poster": "gladiator",
+      "content": "@Kaladonter#30252 Pozoveš funkciju za dodavanje u korpu (koja je asinkrona), a program se nastavi dalje izvršavati.\n\nI ovaj koji dodaje u košaricu je tek stvorio objekt (i nije mu stigao postaviti sliku i naziv) dok je glavni program već poslao res.render() ili što već i sjednica se spremila sa razjebanim objektima.\n\nStavi await ispred addToCart() i unutar tog asinkronog bloka (ne izvan!) stavi res.redirect()",
+      "votes": {
+        "upvoters": [
+          "Kaladonter",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30386": {
+      "poster": "Kaladonter",
+      "content": "@gladiator#30316 ma popravio sam, problem je bio sto nisam napisao await ispred add to cart funkcije...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30467": {
+      "poster": "Sveti_Ilija (Sveti Ilija)",
+      "content": "`console.log(req.session.cart)\n\n     if (req.session.cart[itemZaDodati.id]){\n\n        req.session.cart[itemZaDodati.id].quantity++;\n\n     } else {\n\n       req.session.cart[itemZaDodati.id] = itemZaDodati\n\n     }\n\n    console.log(req.session.cart)`\n\n\n\n![](assets/2020-05-26/00056.png)\n\nzna li tko zašto mi za ovaj kod izbacuje ovakav ispis, tojest zašto cart bude prazan svakim novim pozivom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30469": {
+      "poster": "Lyras",
+      "content": "@Sveti_Ilija#30467 čini mi se da ne koristiš njihove cart funkcije. Imaš već napisan sav kod za dodavanje i micanje iz košarice, samo trebaš pospajati",
+      "votes": {
+        "upvoters": [
+          "Sveti_Ilija (Sveti Ilija)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30478": {
+      "poster": "Suki7",
+      "content": "Jel mozda jos nekome njihov kod baca ovakve errore kao ovaj (node:896)???\n\n![](assets/2020-05-26/00060.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30484": {
+      "poster": "steker",
+      "content": "koliko treba vremena da se napravi priprema?",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30491": {
+      "poster": "WickyWinslow",
+      "content": "@Suki7#30478 Obrati pažnju koji tip element šalješ njihovim funkcijama iz User Address i Order",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30497": {
+      "poster": "Sveti_Ilija (Sveti Ilija)",
+      "content": "@Lyras#30469 \n\n![](assets/2020-05-26/00063.png)\n\nnapravijeh sad s njihovim al mi opet req.session.cart bude prazan svakim dodavanjem itema",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30499": {
+      "poster": "[deleted]",
+      "content": "@steker#30484 zdravo je za pretpostaviti da otprilike jedan dan",
+      "votes": {
+        "upvoters": [
+          "Lyras",
+          "iNavy (mornar Ica)",
+          "ink",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "AK10 (endyyyy)",
+          "boban_rajovic (ravindrababu ravula)",
+          "steker"
+        ]
+      }
+    },
+    "30566": {
+      "poster": "Lyras",
+      "content": "@Sveti_Ilija#30497 moras stavit await ispred njihovih funkcija (stavi ih u async blok prije toga). Moguće da si inicijaliziraš cart negdje svaki put, ne mogu znati bez da vidim kod",
+      "votes": {
+        "upvoters": [
+          "Sveti_Ilija (Sveti Ilija)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30584": {
+      "poster": "JoKing",
+      "content": "@Sveti_Ilija#30497 Imao sam identičnu stvar i  rješio sam sa na način da nakon što dodam item u košaricu renderam cart sa\n ```\n res.render('cart', {\n            title: 'Cart',\n            user: req.session.user,\n            cart: req.session.cart,\n            linkActive: 'cart'\n    });\n    ```\n    Zbog nekog razloga ako ne napraviš render ne želi ti zapamtiti košaricu",
+      "votes": {
+        "upvoters": [
+          "Sveti_Ilija (Sveti Ilija)",
+          "[deleted]",
+          "gladiator",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30602": {
+      "poster": "krampus",
+      "content": "![](assets/2020-05-27/00009.png)\n\nlet user = await User.fetchByUsername(req.body.email) . Jeli to točno da on šalje email. to znači da je email ustvari username?",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30604": {
+      "poster": "Suki7",
+      "content": "@krampus#30602 da email je username",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "krampus"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "krampus"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30710": {
+      "poster": "Suki7",
+      "content": "Zna neko jel namjerno stvore u seed.js ove indexe pa ih nigdi ne ubace u bazu podataka ili su ih zaboravili hahahaha\n\n``` javascript\n const sql_create_users_name_index = \"blablabla\";\n const sql_create_address_user_index = \"blablabla\";\n const sql_create_cart_user_id_index = \"blablabla\";\n```\n\nI jel ima ko ideju u kojem smislu ce nam u petak na labosu trebat tablica history ako ovako izgleda\n>! ``` javascript\n const sql_create_history = `CREATE TABLE history (\n    id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,\n    user_id int REFERENCES users(id),\n    inventory_id int REFERENCES inventory(id),\n    history_date date NOT NULL\n);`;\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30714": {
+      "poster": "ruza0001 (rozy)",
+      "content": "kad i gdje treba stvoriti kosaricu, i jel ide s cart.createCart(), ili kako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30727": {
+      "poster": "snowman",
+      "content": "@ruza0001#30714 stvaras ju kad korisnik klinke na add to cart ako vec ne postoji\n\nide ti u onaj dio `router.get(cart/add/:id)`\n\nprobaj stvorit sa  `req.session.cart = cart.createCart()`",
+      "votes": {
+        "upvoters": [
+          "LucidDreamer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30745": {
+      "poster": "Erpeg",
+      "content": "Ako nakon checkout klikem na cart ostanu items od prosle narudjbe, ali ako kliknem na bilo sta drugo pa onda na cart onda se izbrisu. Posto kao neb smjeli mjenjati checkout.routes dal je ovo ispravno ili ima nacina kako ovo rijesiti",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30799": {
+      "poster": "WickyWinslow",
+      "content": "@Erpeg#30745 probaj dodati ispitivanje onog uvjeta koji checkout.routes dodaje. req.session.cart.invalid ako se dobro sjecam.",
+      "votes": {
+        "upvoters": [
+          "Erpeg",
+          "gladiator",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30848": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@snowman#30727 stvorim ju tako, ali kad idem dodat nesto u nju dobijem `error: syntax error at or near \"[\"\n\n    at Connection.parseE (D:\\Faks\\RPPWPU\\lab4-baseline\\node_modules\\pg\\lib\\connection.js:581:48).....` i jos dalje taj error message, al nemam nigdje u kodu uopce '[',    a funkciju za dodat pozivam ovako `await cart.addItemToCart(req.session.cart, req.params, 1)`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30858": {
+      "poster": "Erpeg",
+      "content": "@ruza0001#30848 probaj stavit req.params.id mozda ti je u tom greska",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30864": {
+      "poster": "[deleted]",
+      "content": "@gladiator#29490 kako da lolam cijelu pdf pripremu za ovaj labos",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "LucidDreamer",
+          "__builtin_popcount (std::popcount)",
+          "gladiator",
+          "ruza0001 (rozy)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "ink"
+        ]
+      }
+    },
+    "30865": {
+      "poster": "steker",
+      "content": "kako pristupit modelu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30866": {
+      "poster": "[deleted]",
+      "content": "kako proc kolegij",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "BigZ1",
+          "Ducky",
+          "JeleeII",
+          "KingGeedorah (King Geedorah)",
+          "Lyras",
+          "Sans",
+          "SonGoku (~~~~~~~~)",
+          "Valentino",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "awi (đusi)",
+          "bodNaUvidima",
+          "cloudies",
+          "crocorax",
+          "fraki",
+          "ink",
+          "pez (ip)",
+          "snowman",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ducky",
+          "Erpeg",
+          "awi (đusi)",
+          "boban_rajovic (ravindrababu ravula)",
+          "krokodil",
+          "pingvinka",
+          "steker",
+          "wutangfan (HugoStiglitz)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "AK10 (endyyyy)",
+          "ink"
+        ]
+      }
+    },
+    "30870": {
+      "poster": "cloudies",
+      "content": "Kada pokušavam pristupiti user stranici ili napraviti checkout, dobivam ovaj error: \n\nerror: column \"undefined\" does not exist at Connection.parseE (C:\\Users\\User\\Documents\\WiM\\Labosi\\Četvrti labos\\node_modules\\pg\\lib\\connection.js:581:48) i ima jos dalje hrpu toga... Je li se ovo isto nekome pojavilo? Neki hint gdje bi greška mogla biti s obzirom da su to sve njihovi kodovi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30872": {
+      "poster": "steker",
+      "content": "@miho#30499  izgleda da za nas glupe ipak 3 dana :(",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Ducky",
+          "Suki7"
+        ]
+      }
+    },
+    "30875": {
+      "poster": "[deleted]",
+      "content": "@steker#30872 kolega to ste mi morali reci pred 2 dana",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Suki7",
+          "[deleted]",
+          "ppooww (pp)",
+          "soplagaitas (sopla)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "BigZ1",
+          "Bucc (Olive Oil)",
+          "Ducky",
+          "Sans",
+          "Suki7",
+          "Tone",
+          "iNavy (mornar Ica)",
+          "soplagaitas (sopla)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Erpeg",
+          "Vasili (Fasili)",
+          "steker"
+        ]
+      }
+    },
+    "30879": {
+      "poster": "snowman",
+      "content": "@ruza0001#30848 https://github.com/brianc/node-postgres/issues/1079\n\nna ovom linku kaze da ti to moze biti problem s konekcijom na bazu.\n\njesi dodala ime baze i lozinku u index i seed u /db?\n\n@cloudies#30870 ovo mozda i tebi pomogne",
+      "votes": {
+        "upvoters": [
+          "cloudies",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30896": {
+      "poster": "flicka",
+      "content": "zna neko zasto mi se dodaje samo zadnji produkt kojeg odaberem u orderu,znaci ne stvara se lista produkata, neko samo zadnji odabrani dode u kosaricu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30897": {
+      "poster": "Suki7",
+      "content": "@flicka#30896 Mozda svaki put kad kliknes add stvaras novi cart? Pa ti taj novi pobrise sto si prije dodala?",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30899": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Itachi#30864\n\nU PDF-u su stavili link na NPM paket [express-sessions](https://www.npmjs.com/package/express-sessions), koji ima parsto downloada tjedno i zadnji put je updatean pred 4 godine.\n\nU pripremi zapravo koriste paket [express-session](https://www.npmjs.com/package/express-session), koji ima 780000 downloada tjedno i zadnji put je updatean pred mjesec dana.\n\nBolje nego da su napravili obrnuto, I guess.",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "JoKing",
+          "Rope (Rops)",
+          "Suki7",
+          "[deleted]",
+          "gladiator",
+          "ink",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Cubi",
+          "JoKing",
+          "Suki7",
+          "ink"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30900": {
+      "poster": "flicka",
+      "content": "@Suki7#30897 da to je problem",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30907": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@snowman#30879 meni je greska bila zato jer sam slao req.params, a on je oblika id:'1', tako da sam to izvukao* u obicni let npr. let par, i onda sam u add slao par.id da dobijem samo taj int",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "tuga": []
+      }
+    },
+    "30912": {
+      "poster": "Fica (Prof)",
+      "content": "@cloudies#30870 U loginu ti je problem, barem je meni bio, trebaš u postu prvo sa fetchByUsername dohvatiti usera i staviti req.session.user = user i onda dalje kao u njihovim primjerima.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30920": {
+      "poster": "[deleted]",
+      "content": "@__builtin_popcount#30899 sramota i ocekivano za ovaj kolegij",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30921": {
+      "poster": "snowman",
+      "content": "@ruza0001#30907 sry bro \n\nali mozes izvuci odmah req.params.id pa ne trebas to uopce u varijablu stavljat",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30922": {
+      "poster": "Urmum (mamaRu)",
+      "content": "@Fica#30912  To bi ovako trebalo izgledati?   \n\n  let user = await User.fetchByUsername(req.body.email);\n\n  req.session.user = user;",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30931": {
+      "poster": "flicka",
+      "content": "kako postizemo da kad se prijavimo sa novim korisnikom opet imamo praznu tablicu?\n\nI zasto mi undefine user ima role: user?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30938": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "jel bi mogao neko postat funkciju za ispis cart-a ? mislim da cu pomocu nje skuziti ostatak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30940": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@snowman#30921 pokuso sam i tako pa mi je vuko neki drugi id od nekud, myb mi je prvi cart bio kriv jer pokusavo sam stalno dok nije uspjelo, pa je vj nes krivo povlacio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30941": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@Tompa007#30938 to sve imas gotovo, samo moras kad renderas cart, u cart.routes poslat `cart: req.session.cart`, kojeg stvoris u onom get('/add/:id'......",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30942": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@ruza0001#30941 meni je req.sessions.cart undefined",
+      "votes": {
+        "upvoters": [
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30945": {
+      "poster": "cloudies",
+      "content": "@Fica#30912 Da, to je popravilo. Sad radi kako treba. Puno hvala!",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30948": {
+      "poster": "Fica (Prof)",
+      "content": "@Urmum#30922 Meni je u argumentu za fetch req.body.user, ali moguće da i ovo radi, u svakom slučaju isprobaj i ako ti login i user rade, onda je to to.",
+      "votes": {
+        "upvoters": [
+          "Urmum (mamaRu)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30951": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "`app.cart = cartModel;\n\napp.cart.initialize(true);`\n\n> app.cart.initialize is not a function",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30966": {
+      "poster": "KitKat (H(x))",
+      "content": "Kakav je ovo autizam s video uputama? ZPR wtf\n\nTko je pobogu mislio da je to dobra ideja kraj dobrih starih napisanih upta koje mogu pročitati 4 puta zaredom ako treba i na koje se zapravo mogu koncentrirati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "ink"
+        ]
+      }
+    },
+    "30994": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@ruza0001#30941 jesi ovu funkciju await cart.additems() samo pozvala ili lridruzila req.session.cart = await cart.additems()",
+      "votes": {
+        "upvoters": [
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31032": {
+      "poster": "bodNaUvidima",
+      "content": "@Tompa007#30994 imas njihovu gotovu funkciju u CartModel \"async function addItemToCart(cart, id, quantity);\",\n\ni prvi argument predaš req.session.cart (ne smije biti undefined, ako ne postoji cart onda ga prvo napravi), drugi argument je  ID itema kojeg dodajes i treci quantity (jedan u našem slučaju).",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31034": {
+      "poster": "snowman",
+      "content": "@Tompa007#30994 samo kad stvaras cart pridruzujes,\n\n sve ostalo pozivas samo`await cart.addtoCart(...)`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31089": {
+      "poster": "ppooww (pp)",
+      "content": "Kad registriramo novog korisnika kako ga spajamo na novu sjednicu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31104": {
+      "poster": "steker",
+      "content": "@ppooww#31089 req.session.user=user ispod await adress.persist()",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31106": {
+      "poster": "steker",
+      "content": "kad stisnem na onaj plus ili minus u kosarici ne mjenja mi se quantity nego tek kad refresham stranicu onda se promjeni .. zna li neko kako da napravim da se mjenja bez refresha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31113": {
+      "poster": "ppooww (pp)",
+      "content": "@steker#31106 napravi res.render('cart', ...) za svaki add",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31131": {
+      "poster": "flicka",
+      "content": "di treba napraviti da se nakon checkouta kosara obrise, kolko vidim s danim checkout kodom se ne brise nakon narudzbe",
+      "votes": {
+        "upvoters": [
+          "Galke"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31144": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@snowman#31034 iz nekog razloga mi je req.session.cart prazan kad dodem u funkciju za ispis cart-a , kad ga console logam unutar add funkcije ispisu se itemi normalno ali kad console logam unutar funkije za prikaz , pise da je items = {} prazan",
+      "votes": {
+        "upvoters": [
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31145": {
+      "poster": "JoKing",
+      "content": "@Tompa007#31144 Provjeri radiš li res.render()/res.redirect() u add funkciji",
+      "votes": {
+        "upvoters": [
+          "Galke"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31152": {
+      "poster": "snowman",
+      "content": "@Tompa007#31144 jesi promijenio u renderu `cart: req.session.cart` \n\njer mislim da su oni po defaultu stavili `cart: req.cart`\n\nznam da je mene nesto drkalo oko toga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31153": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@JoKing#31145 okej sad mi radi hvala ti , jel dobro ako sam ja  `const cartVar = cart.createCart();` deklarirao izvan svih funkcija jer mi se inace samo prikazivao zadnji element dodan",
+      "votes": {
+        "upvoters": [
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31155": {
+      "poster": "BigZ1",
+      "content": "![](assets/2020-05-27/00064.png)\n\ngledam ovo i cudan mi omjer like i dislike.. sta je toliko lose predavanje iz ovog drugog dijela 3.dinamicki veb,tocnije sjednice 2.dio?",
+      "votes": {
+        "upvoters": [
+          "Wayk",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ducky",
+          "JoKing",
+          "__builtin_popcount (std::popcount)",
+          "boban_rajovic (ravindrababu ravula)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31157": {
+      "poster": "JoKing",
+      "content": "@Tompa007#31153 ne bih znao, i ovo što sam ti odgovorio znam jer sam potrošio pol dana na debug istog problema, ali ja imam konstruktor košarice na početku funkcija kada dodajem novi element i kada učitavam košaricu ako vrijedi da je session.cart undefined ili je invalid",
+      "votes": {
+        "upvoters": [
+          "Galke"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31164": {
+      "poster": "steker",
+      "content": "@BigZ1#31155 bezvze lik preleti po tim kodovima primjer kao da je ponavljanje gradiva a ne predavanje .. ali to je samo moje skromno misljenje",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "BigZ1",
+          "Bucc (Olive Oil)",
+          "Fica (Prof)",
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "JoKing",
+          "Kaladonter",
+          "Lusy (MGJ)",
+          "MiqeloS",
+          "Suki7",
+          "Tinx (pingvin)",
+          "ZliDule",
+          "awi (đusi)",
+          "feudalac",
+          "fraki",
+          "ink",
+          "mini (Earthling)",
+          "nimble",
+          "ppooww (pp)",
+          "ruza0001 (rozy)",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31165": {
+      "poster": "BigZ1",
+      "content": "@steker#31164 pa gledam ja ovo prvo predavanje (2xbrzina ljudi ne brinite da moze brze i to bi stavio) i skuzim vec tu ono tip mi 85% vremena pojasnjava sta se desava a nema koda i mislim si sta je ovo u pm gdje je kod.. bolje cu sad sam preci preze da vidim nego da mi on prakticki NE objasni sta pise.",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "JeleeII",
+          "Lusy (MGJ)",
+          "Suki7",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31167": {
+      "poster": "Vasili (Fasili)",
+      "content": "![](assets/2020-05-27/00066.png)\n\njel zna tko zašto mi ovo baca, doslovno sam pratio onaj njihov uvodni video",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31171": {
+      "poster": "steker",
+      "content": "@BigZ1#31165 ma jes trkelja bezveze neku teoriju a onda kad ti treba objasnit ono bitno samo preleti preko tih kodova... ugl bolji mi je predavac onaj sto me prijavio na stegovno",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Ardura (Maddy)",
+          "BigZ1",
+          "Ducky",
+          "Erpeg",
+          "Jale (čakijale)",
+          "JeleeII",
+          "JoKing",
+          "KingGeedorah (King Geedorah)",
+          "KitKat (H(x))",
+          "Lusy (MGJ)",
+          "MiqeloS",
+          "Sveti_Ilija (Sveti Ilija)",
+          "Tinx (pingvin)",
+          "Urmum (mamaRu)",
+          "Valentino",
+          "Wayk",
+          "WickyWinslow",
+          "__builtin_popcount (std::popcount)",
+          "awi (đusi)",
+          "bodNaUvidima",
+          "boki8 (kerovac)",
+          "gladiator",
+          "ink",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31172": {
+      "poster": "BigZ1",
+      "content": "@steker#31171 dap,al obadvojica imaju odlicneee fore...\n\nUPDATE: odma sam mu ga lupio.\n\n![](assets/2020-05-27/00067.png)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Bucc (Olive Oil)",
+          "JoKing",
+          "KingGeedorah (King Geedorah)",
+          "Lusy (MGJ)",
+          "MiqeloS",
+          "Suki7",
+          "Tinx (pingvin)",
+          "boban_rajovic (ravindrababu ravula)",
+          "neksi (filip)",
+          "steker",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ducky",
+          "Nocna_smjena",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "awi (đusi)",
+          "luka6 (ugrijaniRadijator)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "nimble",
+          "steker",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31176": {
+      "poster": "krampus",
+      "content": "netko zna zašto poslje logina i  res.redirect('/'); mi se ovo javlja.\n\nako se vraćam na home zar nebi trebao home.router ponovno se pokrenuti?\n\n![](assets/2020-05-27/00069.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31177": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@steker#31106 @ppooww#31113\n\nZa one koji žele razumjeti što se zapravo događa:\n\n#### Glava prva: Metoda `res`\nObjekt odgovora `res` ima svoju metodu `res.end`. Ona služi za finaliziranje HTTP odgovora i njegovo slanje na klijent. Nju na kraju svog izvršavanja zovu metode `render`, `redirect`, `send`, `sendStatus`, `json`, i još par drugih.\n\nU middlewareu možete na objekt `res` stavljati razna zaglavlja, mijenjati sadržaj tijela, ali server ništa od toga neće poslati na klijent dok pozivom metode `end` ne javite da ste gotovi s petljanjem po odgovoru. Većinom tu metodu ne morate sami eksplicitno zvati jer, kao što sam rekao, kad pozovete `render` ili `redirect`, on će implicitno unutar sebe pozvati `end`.\n\nAko se `end` nigdje ne pozove, server neće na klijent ništa poslati, pa će preglednik ostati čekati odgovor dok mu ne istekne neka vremenska kontrola.\n\n#### Glava druga: Koronarna premosnica\nKad u svom middlewareu mijenjate objekt sjednice (`req.session`), vi samo radite promjene na kopiji objekta. Vaše promjene još se u tom trenutku ne pohranjuju u sjednicu. One će biti vidljive unutar tog trenutnog zahtjeva, ali neće imati nikakvog utjecaja na `session` objekt na sljedećem zahtjevu.\n\nSve promjene nad `session` objektom se trajno pohranjuju (u ovom slučaju u bazu) tek kad finalizirate odgovor. Trajno pohranjivanje je _express-session_ ostvario tako da je u middlewareu \"premostio\" metodu `end` na objektu `res`. _Express-session_ tu metodu zamijeni svojom, koja prvo pohrani promjene koje ste napravili na objektu `req.session`, a tek zatim finalizira odgovor.\n\nDakle, da ponovim, **kako bi se vaše promjene nad objektom sesije trajno pohranile, važno je da odgovor bude završen**. To se radi u metodom `end`, koju ne zovete vi kad koristite `render` ili `redirect`.\n\n#### Glava treća: Uvijek pametujem\n\nU pregledniku se rute _/cart/add/:id_ i _/cart/remove/:id_ dohvaćaju asinkrono. Korisnik neće vidjeti sadržaj tog odgovora. Jedino što se na klijentu (u JavaScript u _cart.ejs_) provjerava jest status code tog odgovora: Pokazuje se error message ako status ne označava uspjeh, to jest ako nije u rasponu 200 -- 299.\n\nZbog toga što sadržaj odgovora nema nikakvog utjecaja na klijent, smatram da je tu nepotrebno renderirati i slati cijelu HTML stranicu. Time se samo stvaraju prilike da se dogode greške, troši se vrijeme servera i mrežom se šalju nepotrebni bajtovi. Radije bih tu poslao neki minimalan ili čak prazan odgovor. Rekao bih da je bolje napraviti nešto kao:\n\n- `res.end();`\n- `res.send('Added item to cart');`\n- `res.sendStatus(200);`\n\nThat's just my 2¢.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "BaboTrojka",
+          "Bazul",
+          "Galke",
+          "Goliathus",
+          "JoKing",
+          "Joskica",
+          "KingGeedorah (King Geedorah)",
+          "Lenobius",
+          "LucidDreamer",
+          "Lusy (MGJ)",
+          "Lyras",
+          "MiqeloS",
+          "Rope (Rops)",
+          "Sans",
+          "Suki7",
+          "SuperSjajan3",
+          "Sveti_Ilija (Sveti Ilija)",
+          "Tinx (pingvin)",
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+          "Urmum (mamaRu)",
+          "Wayk",
+          "WickyWinslow",
+          "ZliDule",
+          "aerius",
+          "awi (đusi)",
+          "boban_rajovic (ravindrababu ravula)",
+          "boki8 (kerovac)",
+          "feudalac",
+          "gladiator",
+          "haworthia (bulrog)",
+          "iNavy (mornar Ica)",
+          "idontwannabemyself",
+          "indythedog",
+          "ink",
+          "jobi (azex)",
+          "krokodil",
+          "laranotreallycroft",
+          "lucylu",
+          "nnn (dinoo)",
+          "pez (ip)",
+          "ppooww (pp)",
+          "puufi",
+          "snowman",
+          "steker",
+          "steve (Mr_mr)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31179": {
+      "poster": "JoKing",
+      "content": "@__builtin_popcount#31177 Nominiram @__builtin_popcount za predavača i nositelja ovog kolegija",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "Ardura (Maddy)",
+          "BigZ1",
+          "Diego",
+          "Ducky",
+          "Erpeg",
+          "Galke",
+          "Goliathus",
+          "Lenobius",
+          "Lusy (MGJ)",
+          "MiqeloS",
+          "Sans",
+          "SonGoku (~~~~~~~~)",
+          "Suki7",
+          "SuperSjajan3",
+          "Sveti_Ilija (Sveti Ilija)",
+          "Tinx (pingvin)",
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+          "__builtin_popcount (std::popcount)",
+          "awi (đusi)",
+          "boban_rajovic (ravindrababu ravula)",
+          "boki8 (kerovac)",
+          "fraki",
+          "gladiator",
+          "iNavy (mornar Ica)",
+          "indythedog",
+          "ink",
+          "krokodil",
+          "laranotreallycroft",
+          "neksi (filip)",
+          "ppooww (pp)",
+          "ruza0001 (rozy)",
+          "snowman",
+          "steker",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "BigZ1",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "krokodil",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31180": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@JoKing#31157 puno si mi pomogo s ovim , uspio sam nekako sredit hvala puno",
+      "votes": {
+        "upvoters": [
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31184": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "kad smo već kod vrijeđanja predavača. Koji gej, koliko puta taj stari grob može reći de facto? I koji penis ima vrijeđat žuće, ili su mu tak oči pod normalno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AntonioB25 (Pleteni miš)",
+          "BigZ1",
+          "Ducky",
+          "Suki7",
+          "ink",
+          "luka6 (ugrijaniRadijator)",
+          "ruza0001 (rozy)",
+          "steker"
+        ],
+        "wtf": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "31192": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@krampus#31176\n\nImaš li možda neki poziv `res.render` prije poziva `res.redirect`? Ne smiješ imati `render` ako zoveš `redirect`.\n\n----\n\n@Vasili#31167 \n\nJesi li u _server.js_ uključio middleware za upravljanje sjednicom?\n\nPrimjer toga možeš vidjeti ovdje: https://github.com/voxpelli/node-connect-pg-simple#usage\n\nNa toj stranici pogledaj primjer gdje piše \"_Advanced example showing some custom options:_\"\n>! ```JavaScript\n var pg = require('pg')\n  , session = require('express-session')\n  , pgSession = require('connect-pg-simple')(session);\n\n> var pgPool = new pg.Pool({\n    // Insert pool options here\n});\n\n> app.use(session({\n  store: new pgSession({\n    pool : pgPool,                // Connection pool\n    tableName : 'user_sessions'   // Use another table-name than the default \"session\" one\n  }),\n  secret: process.env.FOO_COOKIE_SECRET,\n  resave: false,\n  cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days\n}));\n```\n\nSamo da napomenem da ne moraš stavljati `tableName` jer koristimo defaultni naziv _session_.\n\nU labosu ne trebaš sam stvarati `pgPool` kao u tom primjeru, nego koristiš gotovi `db.pool` iz pripreme.",
+      "votes": {
+        "upvoters": [
+          "Vasili (Fasili)",
+          "[deleted]",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31197": {
+      "poster": "Goliathus",
+      "content": "@BigZ1#31165  tip: mozes i brže ako si mazohist. ctrl+shift+J i u konzolu upiši ovo: document.getElementsByTagName(\"video\")[0].playbackRate = 10\n\n![](assets/2020-05-27/00075.png)",
+      "votes": {
+        "upvoters": [
+          "JoKing",
+          "Wayk",
+          "__builtin_popcount (std::popcount)",
+          "gladiator",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Wayk"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31200": {
+      "poster": "[deleted]",
+      "content": "@Goliathus#31197 nice try zpr. nikad necu koristit javascr*pt",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "JoKing",
+          "Sans",
+          "Tinx (pingvin)",
+          "__builtin_popcount (std::popcount)",
+          "ink",
+          "luka6 (ugrijaniRadijator)",
+          "snowman",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31202": {
+      "poster": "Goliathus",
+      "content": "@Itachi#31200 But JS is beautiful <3",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "AK10 (endyyyy)",
+          "Jale (čakijale)",
+          "turunturu (Cement)"
+        ],
+        "tuga": []
+      }
+    },
+    "31203": {
+      "poster": "[deleted]",
+      "content": "@Goliathus#31202 t. satan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31204": {
+      "poster": "Vasili (Fasili)",
+      "content": "@__builtin_popcount#31192 Imaš pivu",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31207": {
+      "poster": "nnn (dinoo)",
+      "content": "Ima netko problem da mu seed.js ne radi ništa? Stv bi mi trebala pomoć\n\n![](assets/2020-05-27/00077.png)\n\nPsql mi ima otvoren port na 5432 i probao sam maknuti lozinku, restartat psql i nikako da mi se pokrene.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31208": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@nnn#31207\n\nEdit: Probaj pokrenuti samo `node db/seed.js`.\n\nSamo da provjerim: Znaš da moraš ručno napraviti bazu, npr. u pgAdminu?\n\nSeed.js automatski u nju dodaje tablice i podatke, ali samu bazu moramo mi napraviti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31209": {
+      "poster": "nnn (dinoo)",
+      "content": "@__builtin_popcount#31208 Da, napravio sam je sa psql-om: `CREATE DATABASE \"wim-lab4\"`\n\n![](assets/2020-05-27/00078.png)\n\nidem probat opet namjestiti pgadmin (s time nisam imao baš sreće)",
+      "votes": {
+        "upvoters": [
+          "Wayk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31212": {
+      "poster": "[deleted]",
+      "content": "> @nnn#31209 idem probat opet namjestiti pgadmin (s time nisam imao baš sreće)\n\nprobaj phppgadmin. meni se isto pgadmin grcio",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31213": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@nnn#31209\n\nNakon što sam napisao onaj odgovor sam primijetio da krivo pozivaš skriptu.\n\nNapiši `node db/seed.js` ili `npm run seed`.",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31216": {
+      "poster": "nnn (dinoo)",
+      "content": "@__builtin_popcount#31213 Jao, hvala ti \n\n@Itachi#31212 Samo terminal brt kakav gui",
+      "votes": {
+        "upvoters": [
+          "Wayk",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31217": {
+      "poster": "[deleted]",
+      "content": "@nnn#31216 nadam se da ne koristis Xorg",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31219": {
+      "poster": "nnn (dinoo)",
+      "content": "@Itachi#31217 fk",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31223": {
+      "poster": "nnn (dinoo)",
+      "content": "Sad kad pokrenem ovo sa `npm start`,  `npm run server`, ili `node server.js` nakon učitavanja localhost:3000 dobijem ovaj error (isti tekst mi se prikaže u pregledniku), zna netko u čemu može biti problem? \n\n![](assets/2020-05-27/00079.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31226": {
+      "poster": "[deleted]",
+      "content": "@nnn#31223 to se i meni dogada. nisam jos poceo radit labos, ne znam jel to mozda tako dok se ne implementiraju neki djelovi koda koji fale",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31230": {
+      "poster": "[deleted]",
+      "content": "@nnn#31223 \n\n![](assets/2020-05-27/00080.png)\n\nproblem je ocito u ovom dijelu koda u home.routes, kad ga se zakomentira ovako onda radi, trebamo valjda napravit nekakvog defaultnog usera? jer baca da je undefined",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31237": {
+      "poster": "nnn (dinoo)",
+      "content": "@Itachi#31230 ja ću tako ostaviti i ići dalje, valjda će netko pomoći i reći što nije tu okej u `req.session.user`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31242": {
+      "poster": "Rope (Rops)",
+      "content": "```js\nconst express = require('express');\nconst session = require('express-session');\nconst {Pool} = require('pg');\n\nconst pool = new Pool({\n    user: 'postgres',\n    host: 'localhost',\n    database: 'session-database',\n    password: 'session',\n    port: 5432,\n});\n\nconst app = express();\n\napp.use(session({\n    store: new (require('connect-pg-simple')(session))( { pool: pool } ),\n    secret: 'database-session',\n    resave: false,\n    saveUninitialized: true\n}));\n\napp.get('/', function(req, res) {\n    res.send('Hello world from sessions!');\n})\n\napp.listen(3000);\n```\nKad pokrenem ovaj kod dobijem error 'Failed to prune sessions: relation \"session\" does not exist', zna li netko u cemu je problem ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31250": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "jel bi se pod req.session.user trebao prenositi objekt kao cijeli user , ili samo user.email onaj ?",
+      "votes": {
+        "upvoters": [
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31251": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@Rope#31242 probaj ubaciti ovo `{ pool: db.pool , tableName: 'session'}` umjesto ` { pool: pool }`",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)",
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31255": {
+      "poster": "viliml",
+      "content": "@__builtin_popcount#31177 TL;DR: u /cart/add/:id i /cart/remove/:id samo nabaci `res.end()` nakon `await cart.addItemToCart()` i to je to.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31258": {
+      "poster": "Mariox",
+      "content": "preporuku molim. Nisam napravio 3. lab niti ucio gradivo dalje od javascripta, jel bolje da sam napravim prvo 3. lab pa 4. ili da odmah idem 4. lab?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ink"
+        ],
+        "wtf": [],
+        "tuga": [
+          "gladiator",
+          "iNavy (mornar Ica)"
+        ]
+      }
+    },
+    "31268": {
+      "poster": "Nocna_smjena",
+      "content": "@Mariox#31258 ovo je neko HC gradivo. Nećeš ništa napravit ak se sad misliš pozabavit ovim (osim ak ti je node.js i express u krvi). Bolje pređi na 5.labos. Ja sam rješavao skupa ovaj labos sa 5 ljudi i bome nam je trebalo 4-5h (nije da želim plašit kolege ovdje 😅).",
+      "votes": {
+        "upvoters": [
+          "Mariox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31269": {
+      "poster": "Nocna_smjena",
+      "content": "@Rope#31242 otvori pgAdmin. Napravi novi database i nazovi ga wim-lab4. Nakon toga izmjeni u ovom kodu kaj si ovdje poslao database i password (stavi database: 'wim-lab4' i password: 'bazepodataka')",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31270": {
+      "poster": "ink",
+      "content": "@Mariox#31258 probaj napravit pa se vrati ak ne uspiješ... Ak si pratio predavanja i igrao se s onim primjerima koda, vjrj nećeš morat radit 3. lab. Možeš pogledat gotova rješenja na materijalima\n\nedit: aha, nisi učio dalje od javascripta. Onda teško, baš ak jako udariš po Expressu (i espressu)",
+      "votes": {
+        "upvoters": [
+          "Mariox",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "krle"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31278": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Tompa007#31250\n\nPostojeći kod (_user.routes.js_) očekuje da ubacim cijeli objekt, pa sam ja tako radio. ¯\\\\\\_(ツ)\\_/¯\n\nTo baš i nije najbolje, jer se mogu promijeniti podatci u bazi, a u sjednici će ostati stari. Ako u sjednicu pohranjuješ samo ID, onda svaki put moraš iz baze dobaviti podatke o korisniku, ali znaš da su najažurniji.\n\n----\n\n@nnn#31223  @Itachi#31226 \n\nVjerojatno nemate objekt `req.session` jer u _server.js_ još niste dodali middleware za upravljanje sjednicama. Vidite ovaj post: @__builtin_popcount#31192",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31289": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "kako točno možemo maknuti nekog usera iz baze podataka\n\nručno u pgadminu dobivam grešku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31291": {
+      "poster": "WickyWinslow",
+      "content": "@iNavy#31289 moraš prvo obrisati njegovu adresu",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31293": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@iNavy#31289\n\nU tablici _address_ mu prvo moraš obrisati adresu.\n\nMoguće da će zadatak sutra biti da jednom korisniku omogućimo dodavanje više adresa.",
+      "votes": {
+        "upvoters": [
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31320": {
+      "poster": "Bica",
+      "content": "@cloudies#30870 \n\nMozes molim te pojasnit kako si ovo rijesila. I dalje dobivam taj error...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31323": {
+      "poster": "[deleted]",
+      "content": "@__builtin_popcount#31192 znas mozda zasto dobivam ovaj error? \n\n![](assets/2020-05-28/00016.png)\n\nkad zamjenim liniju u server.js [code]secret: process.env.FOO_COOKIE_SECRET[/code] sa tipa [code]secret: 'fdjkdfjkfsd'[/code] onda sve naizgled radi normalno, al ne znam jel to \"ispravno\". ne nalazim skoro nikakvu dokumentaciju za ovo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31329": {
+      "poster": "cloudies",
+      "content": "@Bica#31320 Meni je login/logout/signup sve normalno radilo prije ispravka. Samo mi je na one dvije stranice bacao onaj error. Kod mene je bila greška to što sam spajala req.session.user sa email-om a ne sa userom. Tj. ja sam imala req.session.user = req.body.email, a ne req.session.user = user. Pogledaj ovo što je @Urmum#30922 napisao i probaj s time ako već nisi.",
+      "votes": {
+        "upvoters": [
+          "Bica",
+          "Urmum (mamaRu)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31332": {
+      "poster": "fer999",
+      "content": "Prilikom klika na \"Login\" u headeru, odmah mi se pojavi \"Logout\" na tom mjestu i prije nego je user zapravo ulogiran. Znam da se to događa jer user nije undefined ako koristim req.session.user, ali ne znam kako da to ispravim.",
+      "votes": {
+        "upvoters": [
+          "krampus"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31334": {
+      "poster": "lucylu",
+      "content": "kako isprazniti kosaricu nakon checkouta? \n\npokušala sam savjet kolege u prethodnim porukama, ali i dalje se nije ispraznilo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31335": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Itachi#31323\n\nKoliko sam vidio, u [primjerima](https://gitlab.com/fer-wim1/docs/-/blob/master/src/9.%20DYN-WEB-3/06-express_session/app.js) za WiM su uvijek taj `secret` samo zahardkodirali na `'FER WiM'`.\n\nKad radiš neku produkcijsku aplikaciju, za sigurnost korisnika je bolje imati neki sigurniji secret. ;)\n\nOvaj `FOO` u nazivu bi ti trebao ukazivati da je to u primjeru samo placeholder. Autori paketa valjda sugeriraju da bi se parametar `secret` koji se koristi za enkripciju cookieja trebao prosljeđivati kao environment variable.\n\nKoliko sam na poslu shvatio, uobičajeno je da se takvi parametri (lozinke, privatni ključevi i slično) definiraju u zasebnoj datoteci koja se iz očitih sigurnosnih razloga onda ne commita u repozitorij, pa se oni aplikaciji prosljeđuju preko environment varijabli.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "iNavy (mornar Ica)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31336": {
+      "poster": "fer999",
+      "content": "@fer999 uspio sam riješiti taj problem slanjem user:undefined i err:undefined u login.routes za metodu GET ali nisam siguran je li to dobro rješenje problema",
+      "votes": {
+        "upvoters": [
+          "krampus"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31340": {
+      "poster": "snowman",
+      "content": "@lucylu#31334 ja imam ovako nesto \n\n`if(req.session.cart !== undefined)\n\n        if(req.session.cart.invalid)\n\n            req.session.cart = undefined`",
+      "votes": {
+        "upvoters": [
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31342": {
+      "poster": "steker",
+      "content": "@snowman#31340 meni je tako nesto ali se ne isprazni odma kad stisnem na order now nego tek kad odem na neku drugu stranicu pa nazad na cart onda je prazna, jel to dobro ili se odma mora ispraznit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31344": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@steker#31342\n\nČini mi se da je za to kriv njihov kod u [_checkout.routes.js_](https://gitlab.com/fer-wim1/public/-/blob/master/lab4-baseline/routes/checkout.routes.js), pa nekako zaključujem da je to tako namjerno, kad kupiš da još jednom vidiš što je točno kupljeno.",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31345": {
+      "poster": "flicka",
+      "content": "@viliml#29793 jel imas ideju kak bi se to ostvarilo, mozes ukratko objasnit?",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31347": {
+      "poster": "snowman",
+      "content": "@steker#31342 evo sad sam opet isao prckat i dodao to na kraj checkout.routes tako da nakon svakog ordera, odmah se prazni kosarica",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31351": {
+      "poster": "snowman",
+      "content": "mozete si instalirat [nodemon](https://www.npmjs.com/package/nodemon) ako zelite da vam se server restarta nakon svake promjene da ne morate rucno",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "__builtin_popcount (std::popcount)",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31354": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@snowman#31351\n\nTopla preporuka! ❤",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31355": {
+      "poster": "AK10 (endyyyy)",
+      "content": "u logout-u, kako odjaviti korisnika, jel mogu staviti samo req.session.user = undefined?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31356": {
+      "poster": "snowman",
+      "content": "@__builtin_popcount#31354 you know what's up",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31358": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@AK10#31355\n\nPogledaj za inspiraciju:\n\nhttps://gitlab.com/fer-wim1/docs/-/blob/master/src/9.%20DYN-WEB-3/07-users/routes/logout.js\n>!```JavaScript\nvar express = require('express');\nvar router = express.Router();\n\n>router.get('/', function(req, res, next) {\n  \n>  //clear session-user mapping\n  req.session.user == undefined\n  \n>  //destroy session object\n  req.session.destroy((err) => {\n    \n>    if(err) {\n      //report possible error\n      console.log(err)\n    }\n    else {\n      //redirect to the main page\n      res.redirect('./')\n    }\n  })\n});\n\n>module.exports = router;\n```\n\n  \n\nČini mi se da je samo `req.session.destroy` dovoljan, ali možda garbage collectionu pomogne ako napravite\n```JavaScript\nreq.session.user = undefined;\nreq.session.cart = undefined;\n```\n\nPozor! Nemojte napraviti grešku, oni su napisali `req.session.user == undefined` umjesto `req.session.user = undefined`.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Exelero",
+          "Suki7",
+          "boki8 (kerovac)",
+          "feudalac",
+          "iNavy (mornar Ica)",
+          "idontwannabemyself",
+          "indythedog",
+          "ink",
+          "luka6 (ugrijaniRadijator)",
+          "pingvinka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ink"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31370": {
+      "poster": "Fortius",
+      "content": "Kada kliknem na iteme u order neće mi dodati u Cart tj u cartu se pokazuje No items. \n\nInače u order.ejs i u cart.ejs imam greške (nisam ništa mijenjala za to iz pripreme). Sad me zanima jel to normalno da imam greške kod addItemToCart(<%= item.id %>) i u cart.ejs i u order.ejs? Nije mi baš jasno što se događa jer ne ispisuje se niakkva pogreške nego samo se neće dodati.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31373": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Fortius#31370\n\nVeć je par ljudi se javilo s tim problemom\n\nShort version: \n> @viliml#31255 u /cart/add/:id i /cart/remove/:id samo nabaci res.end() nakon await cart.addItemToCart() i to je to.\n\nLong version:\n\n@__builtin_popcount#31177",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "indythedog",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31376": {
+      "poster": "idontwannabemyself",
+      "content": "@Fortius#31370 vezano za ejs - vscode, a vjerojatno i neki drugi IDE-ovi, nativno ne podrzavaju ejs pa se neke stvari prikazuju kao greske, iako je sve ok\n\nmislim da postoje neki pluginovi za to, ali in general je sve ok, samo IDE to ne prepoznaje",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "Joskica",
+          "Koalefant"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31377": {
+      "poster": "Fortius",
+      "content": "@__builtin_popcount#31373 jesam ali svejedno neće",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31378": {
+      "poster": "[deleted]",
+      "content": "![](assets/2020-05-28/00021.png)\n\nkao da itko skida ikakve dodatne module pa da mu se package-lock.json mijenja od defaultnog kojeg su nam dali. krajnja drskost",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31379": {
+      "poster": "[deleted]",
+      "content": "@idontwannabemyself#31376 pa vscode ni nije IDE. nece ti podrzat prikazivanje syntaxa i errora ni za sto ako ne instaliras odgovarajuci plugin",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31381": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@__builtin_popcount#31278 ja sam radio da sam za checkout i user izvlacio iz baze usera preko req.session.user , jel bi mi preporucio da mjenjam to u onako kako su oni zamislili ili da ostavim ovako ?",
+      "votes": {
+        "upvoters": [
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31383": {
+      "poster": "Rene",
+      "content": "@Itachi#31378 Evo sad je package-lock obavezan, proslu vjezbu je pisalo samo package.json i još na upit je asistentica rekla da nije obavezno uključit package-lock.json. Ako zbog toga budu skidali bodove bit će šlag na torti",
+      "votes": {
+        "upvoters": [
+          "HARAmara (decko_sa_balkana)",
+          "MiqeloS",
+          "[deleted]",
+          "ink",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31385": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Fortius#31377\n\nZa svaki slučaj da pitam, taj cart ti je u `req.session`u?\n\nŠto se greški na klijentu tiče, provjeri u prelgedniku u konzoli javlja li kakav error.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31386": {
+      "poster": "[deleted]",
+      "content": "@Rene#31383 pa u package-locku je vecina tj. sve bitne informacije o paketima, on ima 26.2KiB a package.json samo 591B...\n\nbas su strucni ti asistenti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31388": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "je li očekivano ponašanje da user ostane prijavljen nakon što zatvorimo session te pokrenemo novi u istom pregledniku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31389": {
+      "poster": "Fortius",
+      "content": "@__builtin_popcount#31385 je, u req.session.cart \n\nnema nikakvih greški ni pregledniku u konzoli ni općenitu u cmdu. Wtf se događa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "tuga": []
+      }
+    },
+    "31390": {
+      "poster": "[deleted]",
+      "content": "@iNavy#31388 pa mislim da da ako se sesija sprema u kolacice",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31391": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Tompa007#31381\n\nRadi li ti ovako kako sad imaš stranica \"user\"?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31392": {
+      "poster": "Fortius",
+      "content": "> @Fortius#31389 je, u req.session.cart \n\n> nema nikakvih greški ni pregledniku u konzoli ni općenitu u cmdu. Wtf se događa\n\nda se nadovežem na to, znači ko da uopće nisam stisnula na Add To Cart button. Doslovno se ništa ne dogodi ni ne ispiše.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31393": {
+      "poster": "idontwannabemyself",
+      "content": "vise mi nisu jasni s tim zele li da svi cookies budu session ili mix, jer su u video uputama stalno spominjali kako u ovoj vjezbi koristimo samo session cookies\n\nkada definiramo cookie pri stvaranju sesije u server.js, onda mu dajemo maxAge (iako je sam komentar uz taj dio po sebi oksimoron jer traze da definiramo *vrijednost sjednickog kolacica*, a session cookies imaju maxAge 0), ali onda kad definiramo usera stvaramo pravi session cookie s maxAge 0 jer se ne smije pamtit kosarica i ostale informacije van sessiona?\n\nostaje li mi onda user i dalje prijavljen kada ponovno pokrenem server zbog ovog \"master\" cookieja u server.js?",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Koalefant"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31394": {
+      "poster": "idontwannabemyself",
+      "content": "@Itachi#31379 mislila jedno, napisala drugo jebiga, sad je kasno da ispravim",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Koalefant",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31395": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@__builtin_popcount#31391 da radi normalno , ` let user = await User.fetchByUsername(req.session.user);` s ovim dohvatim trenutnog usera cijelog i onda to saljem u order i adress",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31397": {
+      "poster": "[deleted]",
+      "content": "> @idontwannabemyself#31393 ostaje li mi onda user i dalje prijavljen kada ponovno pokrenem server zbog ovog “master” cookieja u server.js?\n\nja sam sad isprobo i stvori se novi cookie kad ponovno pokrenes server.js i ides kroz isti browser\n\nali jos uvijek imam otkljucanog samo onog guest usera",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31398": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Fortius#31392\n\nPogledaj u \"network\" tabu u developer toolsima pojavi li se request, što vraća i završi li u nekom razumnom vremenu.\n\n![](assets/2020-05-28/00023.png)\n\nMoguće da je problem što je riječ o GET ruti, pa cache nešto radi probleme. Ne što da tu kažem, smatram da te add i remove rute _nikako_ ne bi smjele biti GET, nego POST, ali njihov kod radi GET i nisam to htio mijenjati.\n\nJedan mogući znak cachea bi bio status code 304 umjesto 200.",
+      "votes": {
+        "upvoters": [
+          "Fortius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31401": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Tompa007#31395\n\nOnda mislim da može tako. Ja nisam htio mijenjati njihov kod u _user.routes.js_, pa sam u session utrpao cijelog usera, što nikako ne podržavam.",
+      "votes": {
+        "upvoters": [
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31402": {
+      "poster": "Fortius",
+      "content": "@__builtin_popcount#31398 http://prntscr.com/spczcy meni se čini uredu taj dio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31406": {
+      "poster": "idontwannabemyself",
+      "content": "@Itachi#31397 hmmm, meni se stvori bas novi cookie samo ako ga eksplicitno clearam u devtoolsima, inace mi je pri svakom pokretanju servera cijelo vrijeme isti",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Koalefant"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31411": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Jel neko možda ima ideju ili predosjecaj što bi moglo doci ko zadatak?",
+      "votes": {
+        "upvoters": [
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31412": {
+      "poster": "Rene",
+      "content": "@Tompa007#31411 Spremit cart u trajnu memoriju za korisnika, dodat novu adresu korisniku..",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31414": {
+      "poster": "[deleted]",
+      "content": "@Tompa007#31411 deployat web store kao pravu web stranicu i pravim kupcima slat cvijece postom",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "Wayk",
+          "fraki",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AntonioB25 (Pleteni miš)",
+          "Cubi",
+          "Ducky",
+          "Erpeg",
+          "Goliathus",
+          "JoKing",
+          "Lenobius",
+          "MiqeloS",
+          "Rene",
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+          "__builtin_popcount (std::popcount)",
+          "boban_rajovic (ravindrababu ravula)",
+          "fer999",
+          "fraki",
+          "indythedog",
+          "jobi (azex)",
+          "ruza0001 (rozy)",
+          "snowman",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31415": {
+      "poster": "[deleted]",
+      "content": "@Rene#31383 niti u njihovom primjeru zipa nije bilo locka tako da nam nemogu na to uzet",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Rene",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31417": {
+      "poster": "Artemis",
+      "content": "U cart.routes.js što šaljete kao argumente kod addItemToCart?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31421": {
+      "poster": "[deleted]",
+      "content": "@Artemis#31417 req.session.cart i req.params.id i 1, ali me nešto guzi a ne znam što",
+      "votes": {
+        "upvoters": [
+          "Artemis",
+          "ErnestHemingway (Alfetta)",
+          "Fortius",
+          "Sveti_Ilija (Sveti Ilija)",
+          "__builtin_popcount (std::popcount)",
+          "awi (đusi)",
+          "gladiator",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "DAC",
+          "gladiator"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31429": {
+      "poster": "[deleted]",
+      "content": "kad malo bolje pogledam labos je zapravo totalno pristojan. s ovim modelima su nam rjesili vecinu zadatka i samo to sve treba slijepit",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "BigZ1"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31436": {
+      "poster": "aerius",
+      "content": "![](assets/2020-05-28/00036.jpeg)\n\njel može pomoć zašto sad ovo odjednom izbacuje kad idem pokrenut server?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31440": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "Gdje treba stvoriti novi cart ja sam se kompletno pogubio u ovom kodu",
+      "votes": {
+        "upvoters": [
+          "JeleeII",
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31446": {
+      "poster": "Rene",
+      "content": "@aerius#31436  Nemas server.js u tom folderu?",
+      "votes": {
+        "upvoters": [
+          "aerius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31449": {
+      "poster": "aerius",
+      "content": "@Rene#31446  da zaboravio sam da mi je sve u lab4-baselineu hahaha tnx :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31454": {
+      "poster": "flicka",
+      "content": "Zna neko kako da uhvatim polje items iz cart iz orders?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31456": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "![](assets/2020-05-28/00037.png)\n\nkako bih iz ovoga mogao izvuci ovaj id, ovo mi je req.session.cart , probavao sam s req.session.cart.items.id , ali je undefined , neznam kako da zaobiđem ovaj '1' : {}",
+      "votes": {
+        "upvoters": [
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31459": {
+      "poster": "nnn (dinoo)",
+      "content": "Gdje treba koristiti `createCart()` funkciju? Dobivam error jer je nisam inicijalizirao, a ne znam di bih to trebao napraviti da bude ispravno.",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31460": {
+      "poster": "nnn (dinoo)",
+      "content": "@Tompa007#31456 si probao `req.session.cart[0].id` ili `req.session.cart.items[0].id`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31464": {
+      "poster": "[deleted]",
+      "content": "@nnn#31459 generalno govoreći resurse je najbolje stvarati tik prije nego što se koriste, a u našem slučaju, to je kod dodavanja predmeta ili kod logina",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31468": {
+      "poster": "lucylu",
+      "content": "@nnn#31459 \n\nja sam to unutar get zahtjeva ('/add/:id, ...\n\nako mi košarica nije definirana onda kreiram novu i pridružim je req.session.cart",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31469": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@nnn#31460 jesam isprobavao sam i to , i dalje je bilo undefined , ali mislim da je i dalje ovo problem '1' : {} , nez kako da zaobidem ovo i procitam podatke unutar {} \n\nbtw: za tvoje pitanje , stavio sam unutar get zahtjeva kod /add/:id  tamo sam stvarao kosaricu , no prvo gledao dali već postoji odnosno dali je undefined ili nije",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)",
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31471": {
+      "poster": "Rene",
+      "content": "Jel iko isprobavao pohranit kosaricu u bazu podataka? Cudno su mi definirali tablicu cart(user_id, inventory_id, items) i sva 3 atributa su integer pa ne znam kako bi u to pohranio išta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31472": {
+      "poster": "nnn (dinoo)",
+      "content": "@miho#31464 Da, to razmijem, i pretpostavljam da je to u ovoj funkciji, (edit: ty @lucylu, @Tompa007  nisam vidio )\n```\nrouter.get('/add/:id', function (req, res, next) {\n <tu negdje>\n});\n```\nJe okej da se taj cart onda sprema u tablicu `session` u polje `sess` na ovakav način?\n\nI zašto imamo  img url spremljen u košaricu?\n```\n{\"cookie\":{\"originalMaxAge\":86400000,\"expires\":\"2020-05-29T12:51:06.110Z\",\"httpOnly\":true,\"path\":\"/\"},\"cart\":{\"totalAmount\":15,\"items\":{\"2\":{\"id\":\"2\",\"name\":\"Lavender\",\"price\":\"15\",\"quantity\":1,\"imageur\nl\":\"https://i.imgur.com/gH33WyT.jpg\"}}}}\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31475": {
+      "poster": "BigZ1",
+      "content": "![](assets/2020-05-28/00038.png)\n\nzapeo sam na lginu.ejs i baca tu error,nemam ideje nikako rijesit ovo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31477": {
+      "poster": "BigZ1",
+      "content": "![](assets/2020-05-28/00039.png)\n\njel itko rijesio kako spada login jer mi ovdje baca error?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31478": {
+      "poster": "[deleted]",
+      "content": "@nnn#31459 \n\n@miho#31464 \n\n@lucylu#31468 \n\njel se dogadalo kome da funkcije router.get('/add/:id' i router.get('/remove/:id' ne mogu stvorit niti pristupit kosarici(tj. zapisat ili procitat ju iz session tablice) ali ona glavna funkcija router.get('/' to najnormalnije moze...?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31479": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@Rene#31471 evo ja upravo isprobavam to , user_id mogu izvuc , inventory_id se borim vec sat vremena , ali imam neku ideju kako bi to trebali , dakle za svakog usera cemo pohraniti njego user_id , te inventory_id koji ce oznacavati vrstu itema (u tablici invetory mozes pogledati sve vrste itema ) i onda nakrau items mislim da je kolicina tog itema za tog usera i taj item. \n\nbtw: jesi uspio procitati iz cart.items.id ?",
+      "votes": {
+        "upvoters": [
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31480": {
+      "poster": "nnn (dinoo)",
+      "content": "@Itachi#31478 meni ne, koji error imaš  i kako si napisao taj dio `router.get(‘/add/:id’..`",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31481": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@Itachi#31478 jel imas nakraju funkcije res.render() ili res.end() ?",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31485": {
+      "poster": "[deleted]",
+      "content": "@Tompa007#31481 nisam ih imao ali kad stavim nema razlike. res.render() baca gresku(vjv jer nema nista za renderat) a res.end() ne mijenja situaciju\n\n@nnn#31480 \n\n![](assets/2020-05-28/00041.png)\n\nisti isjecak koda u gornjoj funkciji ispravno zapise cart u session a u donjoj ne, ako ga ostavim u donjoj onda se svakim klikom na 'add to cart' ispisuje poruka 'stvoren cart' ali se cart ne stvori a ako ga maknem iz donje funkcije i ostavim samo ovaj addItemToCart onda baca TypeError: Cannot read property 'items' of undefined (donja funkcija se ponasa kao da zapis req.session.cart ne postoji)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31486": {
+      "poster": "Rene",
+      "content": "@Tompa007#31479 Ne moze se tako jer je user_id PK relacije, tj. moze postojati samo jedan zapis za jednog korisnika.\n\nJesam isto kao u cart.ejs što su oni izvlacili item.id",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31487": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@Itachi#31485 ahaa funkciju stavi da je async function , i stavi await ispred dodavanja itema u cart",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31488": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@Rene#31486 ali je složeni primarni ključ tj i user_id i inventory_id su kljucevi pa može biti više istih user_id , ali user_id inventory_id kombinacija može biti samo jedna",
+      "votes": {
+        "upvoters": [
+          "Rene",
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31490": {
+      "poster": "[deleted]",
+      "content": "@Itachi#31485 baci add/remove i res.end u async blok i dodaj await",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31498": {
+      "poster": "[deleted]",
+      "content": "@Tompa007#31487 \n\n@miho#31490 \n\njos uvijek mi ne radi ispravno, sad svaki poziv te funkcije stvara zaseban session entry u kojeg zapise taj jedan item koji dodaje😩",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31499": {
+      "poster": "Lusy (MGJ)",
+      "content": "![](assets/2020-05-28/00042.png)\n\n\nKod logina usera mi stalno javlja grešku \"Incorrect username or ...\" i ne želi mi se logirati, a slijedila sam njihov primjer s predavanja. Je l treba to drugačije nekako?",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31500": {
+      "poster": "Bica",
+      "content": "Ako napravim login normalno mi otvara usera, ali u slucaju kada se prvi put registriram onda mi nece otvorit usera. Jel zna netko koji bi mogao bit problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31502": {
+      "poster": "Rene",
+      "content": "@Tompa007#31488 To sam skroz previdio, meni je error javljalo jer sam jos nastimavao pa nisam unio mogucnost da vec postoji taj item pa da se updejta cart umjesto da se dodaje item. Sada radi sve:)",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31503": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@Lusy#31499 probaj koristiti one funkcije iz UserModela, isPersisted i checkPassword",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31506": {
+      "poster": "[deleted]",
+      "content": "@Itachi#31498 mozda ak probas s == undefined umjesto === undefined dok provjeravas ak postoji cart",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31509": {
+      "poster": "[deleted]",
+      "content": "@miho#31506 ma stvar je u tome da ta funkcija ne moze vidjet postojeci session zapis provjeravao ja to ili ne. sada samo moze svaki put stvorit novi unikatni session i u njega zapisat taj item kao jedini cart item\n\nevo koda ako itko vidi gresku, probo sam svakakve varijacije async bloka ili deklariranja cijele funkcije kao async kao i bacanje await posvuda\n>![code]router.get('/add/:id', function (req, res, next) {\n    (async () => {\n        await cart.addItemToCart(await req.session.cart, req.params.id, 1);\n        res.end();\n    })()  \n\n});[/code]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31513": {
+      "poster": "nnn (dinoo)",
+      "content": "EDIT: ne znam šta pričam..\n\n@Itachi#31485 nemaš parametre u `createCart()`, pogledaj definiciju funkcije\n\n@Itachi#31509 Ne vidi ga jer ga nisi predao u funkciji `createCart()`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31515": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "javlja li se još ikome \"err is not defined\" kod login.ejs\n\nEDIT: glup sam nvm",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31516": {
+      "poster": "[deleted]",
+      "content": "@nnn#31513 pa createCart() ne prima paramtre\n\nnego, zakaj se meni košarica ne sprazni dok kliknem order now? nije to nekaj kaj su oni trebali implementirati?",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31518": {
+      "poster": "idontwannabemyself",
+      "content": "@BigZ1#31477 @ErnestHemingway#31515 \n\nje li vam u getu definirano `err: undefined`  u renderu?",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Joskica",
+          "Koalefant",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31519": {
+      "poster": "Venki",
+      "content": "![](assets/2020-05-28/00043.png)\n\n![](assets/2020-05-28/00044.png)\n\nkada se prijavim chrome iznaci ovo i popraceno je errorom u CMD-u. jel ima netko ideju do cega je?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31521": {
+      "poster": "Lusy (MGJ)",
+      "content": "@swish41#31503  Izgleda da je ipak greska u signupu, ubaci mi korisnika u bazu, al kad se idem prijavit, svi atributi su mu undefined.",
+      "votes": {
+        "upvoters": [
+          "swish41 (PlavušaSFilozofskog)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31525": {
+      "poster": "snowman",
+      "content": "@Itachi#31509 zasto ti ne bi vidjelo dal je cart definiran ili ne ako ga stavis u session.cart?\n\nkako ti izgleda middleware za session u serveru?",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31526": {
+      "poster": "[deleted]",
+      "content": "> @snowman#31525 zasto ti ne bi vidjelo dal je cart definiran ili ne ako ga stavis u session.cart\n\nne znam, to i je problem koji se cijelo vrijeme dogada. samo se stvori novi session cookie umjesto da procita postojeci\n\n> @snowman#31525 kako ti izgleda middleware za session u serveru?\n\n\n>![code]app.use(session({\n  store: new pgSession({\n    pool : db.pool,\n  }),\n  secret: 'FER WiM',\n  resave: false,\n  cookie: { maxAge: 24 * 60 * 60 * 1000 }\n}));[/code]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31527": {
+      "poster": "[deleted]",
+      "content": "@Itachi#31526 probaj ako pomogne saveUninitialized: true \n\nja sam naučio da je najbolje setup konfiguracije prepisati riječ za riječ iz primjera",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "laranotreallycroft",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31528": {
+      "poster": "laranotreallycroft",
+      "content": "@Itachi#31526 probaj dodati `saveUninitialized: true`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31532": {
+      "poster": "[deleted]",
+      "content": "@miho#31527 nije pomoglo D:",
+      "votes": {
+        "upvoters": [
+          "Fortius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31534": {
+      "poster": "Fortius",
+      "content": "@Itachi#31532 ako nađeš riješenje toga, pls reci jer mene ista stvar muči",
+      "votes": {
+        "upvoters": [
+          "awi (đusi)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31535": {
+      "poster": "snowman",
+      "content": "@Itachi#31526 za stvorit cart ja imam ovako u router.get(add/:id):\n>! if(req.session.cart !== undefined ){\n\n        await cart.addItemToCart(req.session.cart, req.params.id, 1)\n\n    }\n\n    else{\n\n        req.session.cart = cart.createCart()\n\n        await cart.addItemToCart(req.session.cart, req.params.id, 1)\n\n    }\n\ni sve radi bez problema",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31536": {
+      "poster": "[deleted]",
+      "content": "@Fortius#31534 evo upravo sam upravo jebeno skuzio da kroz ungoogled-chromium radi a kroz icecat(firefox fork) nije radilo. jebemu mater zadnjih potrosenih 2+ sati na ovo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "snowman"
+        ]
+      }
+    },
+    "31538": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@miho#31516 jesi skuzio sta treba napraviti? i treba li se uopce isprazniti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31539": {
+      "poster": "[deleted]",
+      "content": "@AK10#31538 jes, sam treba na get od order pitati ako je cart.invalid, i onda ak je sam stvoriti novi cart",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31540": {
+      "poster": "Fortius",
+      "content": "@Itachi#31536 ja radim na normalnom Chromu i sad ne kužim ništa aaaaaaaaa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31543": {
+      "poster": "[deleted]",
+      "content": "@Fortius#31540 onda ti je drugdje kriv kod. pogledaj ove snipete koje sam ja postavio i probaj namjestit da ti bude isto tako, pazi na one async i await gluposti javaskripta",
+      "votes": {
+        "upvoters": [
+          "Fortius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31544": {
+      "poster": "steker",
+      "content": "Ima ko ideju kako bi spremio stanje kosarice usera u postgre pa da i na drugom pregledniku kad se ulogira bude sacuvana (Jel bi se trebala koristit cart tablica iz postgre?)?",
+      "votes": {
+        "upvoters": [
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31546": {
+      "poster": "nnn (dinoo)",
+      "content": "Zna netko kako popraviti ovo, login sam napravio, sad pokušavam Sign up \n\nI svaki put kad otvorim `localhost:3000/signup` dobijem ovo:\n\n`Error: Failed to lookup view \"Signup\" in views directory \"/home/user/Documents/FER/WIM/lab4/views\"`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31548": {
+      "poster": "[deleted]",
+      "content": "> @steker#31544 Jel bi se trebala koristit cart tablica iz postgre\n\nda. pogledaj njihov kod za recimo spremanje usera ili order historija u bazu podataka i copy pastaj ga te izmijeni da radi za tvoj potrebni slucaj, kao za sve na ovom kolegiju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31549": {
+      "poster": "[deleted]",
+      "content": "@nnn#31546 izmijeni route tako da rendera 'signup' a ne 'Signup'. iznenadenje, iznenadenje, kriv im je kod.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31572": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Kolega , svaka riječ na mjestu.\n\n![](assets/2020-05-28/00045.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31591": {
+      "poster": "Fortius",
+      "content": "UnhandledPromiseRejectionWarning: TypeError: Cannot read property 'items' of undefined\n\n@Fortius#31540 ta mi se greška javlja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31592": {
+      "poster": "[deleted]",
+      "content": "@Fortius#31591 i meni se to dogadalo. dodaj console.logove za taj session posvuda i probaj debugirat, async sve, await sve, zavrti se tri puta oko sebe i pomoli js bogovima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31596": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "jel ima itko da moze objasnit kako slozit login jer ja sam ocito mutav za ovo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31605": {
+      "poster": "BigZ1",
+      "content": "@Itachi#31429 a jos se ono kolega mucite sa cartom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31607": {
+      "poster": "Fortius",
+      "content": "@Itachi#31592 tbh jedino mi molitva ostaje. Ovo je fakat frustrirajuće",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31614": {
+      "poster": "[deleted]",
+      "content": "@BigZ1#31605 a ne ne",
+      "votes": {
+        "upvoters": [
+          "BigZ1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Fortius"
+        ]
+      }
+    },
+    "31615": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "Kako da kod logina dohvatim korisnika iz baze?\n\nPokusao sam s\n\n ```let user = await User.fetchByUsername(req.body.username)```, ali mi uvijek vraca undefined.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31616": {
+      "poster": "Fortius",
+      "content": "@Itachi#31614 sam se ti nabrijavaj. ovo je nenormalno",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31618": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@KingGeedorah#31615 req.body.name umjesto ..username",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31619": {
+      "poster": "[deleted]",
+      "content": "@Fortius#31616 ne znam zas mislis da se nabrijavam niti kaj ti uopce to znaci, postavi kod pa ti mogu pomoc ljudi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31620": {
+      "poster": "Fortius",
+      "content": "@Itachi#31619 ma zezam se. lol sori\n\nno u biti \n\n\n    \n    if(req.session.cart === undefined){\n        cart.createCart();\n        res.end();\n    }\n    else{\n        \n        await cart.addItemToCart(req.session.cart, req.params.id, 1);\n        res.end();\n        \n    }",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31621": {
+      "poster": "[deleted]",
+      "content": "@Fortius#31620 zas ti je to u elsu? pa zelis stvorit kosaricu i onda nakon stvaranja dodat u nju taj item",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31622": {
+      "poster": "Fortius",
+      "content": "@Fortius#31620 kad stavim bilo što drugo javlja grešku. ovo samo ništa ne javlja i dobro se sve učitava u networku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31623": {
+      "poster": "Zero",
+      "content": "@KingGeedorah#31615 kod req.body se koristi ono pod name u ejs, a ne pod id.",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31624": {
+      "poster": "Fortius",
+      "content": "@Itachi#31621 to ne radi stvara se items undefined onaj error",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31626": {
+      "poster": "[deleted]",
+      "content": "@Fortius#31622 pa kako se ucitava dobro kad ti ne radi. nabacaj posvuda console.log(req.session.cart) i vidi kaj se dogada. vjerojatno ti svaki put pokusa stvorit vlastitu sesiju i cart umjesto da procita postojeci - to se meni dogadalo al je prestalo prelaskom na chromium",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31628": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@ErnestHemingway#31618 Zapravo je req.body.user, hvala svakako tek sam kasnije vidio gresku",
+      "votes": {
+        "upvoters": [
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31629": {
+      "poster": "ppooww (pp)",
+      "content": "@Fortius#31624 Probaj stavit req.session.cart = cart.createCart(). Nez jel to ispravno ali ja sam tako radio i cini mi se da sve radi.",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "[deleted]",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Fortius"
+        ]
+      }
+    },
+    "31632": {
+      "poster": "[deleted]",
+      "content": "@ppooww#31629 e da, u ovome ti je stvar @Fortius , nisam uopce skuzio. cart.createCart() vraca objekt cart i trebas ga spremit u tu varijablu req.sessions.cart",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Fortius"
+        ]
+      }
+    },
+    "31633": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@KingGeedorah#31628 zato meni ne radi pa ja sam kreten",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "KingGeedorah (King Geedorah)"
+        ]
+      }
+    },
+    "31634": {
+      "poster": "[deleted]",
+      "content": "@ErnestHemingway#31633 kaj te muci tocno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31635": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@KingGeedorah#31628 kolega duzan sam pivu",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31636": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@ErnestHemingway#31633 Majstore moj uz ovakav debilan predmet rijetko tko nije kreten",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)",
+          "Galke",
+          "JoKing",
+          "MiqeloS",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "crocorax",
+          "ppooww (pp)",
+          "ruza0001 (rozy)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ppooww (pp)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31637": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@Itachi#31634 vracalo mi je stalno undefined i nisam mogo skuzit zasto ali evo kolega je pomogao",
+      "votes": {
+        "upvoters": [
+          "Fortius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31639": {
+      "poster": "Fortius",
+      "content": "@Itachi#31632 omg da fakat. Ode mi 7 sati života na ovo.",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31640": {
+      "poster": "[deleted]",
+      "content": "@Fortius#31639 znam osjecaj tak je i meni bilo. sad ces ostatak labosa izrokat za pola sata, skoro sve kaj trebas je vec implementirano",
+      "votes": {
+        "upvoters": [
+          "Fortius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31644": {
+      "poster": "Fortius",
+      "content": "@Itachi#31640 \n\n@ppooww#31629 \n\nHvala vam puno 😄",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31647": {
+      "poster": "ferball",
+      "content": "sta bi mogao bit problem da mi samo u microsoft edge-u ne dodaje iteme u kosaricu, chrome radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31649": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "treba li biti moguće otvoriti user stranicu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31650": {
+      "poster": "[deleted]",
+      "content": "@ferball#31647 ma ocito nisu sposobni napravit real-world zadatak koji bi radio u svim browserima, radi samo u chromu\n\n@ErnestHemingway#31649 da ako si ulogiran",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31651": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@Itachi#31650 ulogiran sam ali ne želi, tocnije samo se ucitava beskonacno kao da ceka nesto asinkrono ali ne kuzim sta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31653": {
+      "poster": "[deleted]",
+      "content": "@ErnestHemingway#31651 \n\n![](assets/2020-05-28/00046.png)\n\nvjerojatno te ovo ulovi u user.routes jer mi nismo trebali nista radit za taj dio stranice, radi po defaultu. nabacaj console.log(req.session) i debugiraj\n\naha, sad vidim edit da ti se ucitava beskonacno, hmm, ko zna kaj si mogo pokvarit, mozda da redownloadas baseline i dodajes natrag jednu po jednu stvar koju si radio i isprobavas",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31657": {
+      "poster": "SuperSjajan3",
+      "content": "@miho#31421 Jesi skuzio mozda sta te guzi? Mislim da mene guzi ista stvar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31659": {
+      "poster": "[deleted]",
+      "content": "oni su u login.ejs hardkodirali title da bude \"Flower Power!\" umjesto da se koristi poslana vrijednost iz route fajla kao za ostale, jel netko misli to popravljat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31660": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@ErnestHemingway#31651 @Itachi#31653 Meni isto beskonacno ucitava user stranicu, ali ako se odlogiram pa ponovno ulogiram na taj racun onda mi sve normalno radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31663": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@KingGeedorah#31660 ja sam uspio fixat stvar je što sam ja za usera stavljao samo ime umjesto cijelog objekta",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31666": {
+      "poster": "[deleted]",
+      "content": "@SuperSjajan3#31657 da, trebao sam staviti res.end i jos dodati await za obavljanje funkcije",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31667": {
+      "poster": "[deleted]",
+      "content": "![](assets/2020-05-28/00048.png)\n\njel jos tko dobiva ovakva upozorenja pri validaciji inputa u loginu? sve radi samo ne znam oce mi asistenti jebat mater",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31669": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@ErnestHemingway#31663 Ne kuzim te bas, ja sam u varijablu user dohvatio korisnika iz baze, a onda sam stavio req.session.user = user. Jesi ti tako ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31670": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@KingGeedorah#31669 je je to je to",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31674": {
+      "poster": "Kaladonter",
+      "content": "@Itachi#31667 to se meni bilo javilo kad bi u istoj funkciji renderao dvije razlicite stranice, ali možda je tebi nešto drugo",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31675": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@ErnestHemingway#31670 Pa meni to ne radi lol, ajde ako ti se da pokusaj napravit novi racun i odmah nakon njega pokusaj uci u order, cim se redirecta na home page. Meni u tom slucaju ne radi, ali ako idem na logout pa opet login onda radi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31680": {
+      "poster": "nnn (dinoo)",
+      "content": "Imam problem oko login-a: znači u login routes, pošalje se objekt tipa \n\n`{ user: 'agadsasdgsd', password: 'gdsagdsgdasgdsagdgsadsga' }`\n\nKako provjeriti ako taj `user` postoji u bazi podataka (ovaj gore ne postoji)? Ona njihova  \n\n```js\nstatic async fetchByUsername(username)\n```\n funkcija mi vraća ovo kao rezultat:\n\n`Promise { <pending> }`\n\nKako da dobijem \"potvrdu\"  da nema tog user-a?\n\nEDIT: čak i kad je username ok, mi vraća promise",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31683": {
+      "poster": "[deleted]",
+      "content": "@Kaladonter#31674 to mi dolazi kad ponovno(nakon prvog puta) zovem res.render kako bi ponovno renderao login stranicu ali ovaj put sa error porukom, imas neko bolje rjesenje za to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31684": {
+      "poster": "[deleted]",
+      "content": "> @nnn#31680 funkcija mi vraća ovo kao rezultat:\n\n> Promise { <pending> }\n\nawaitaj ju, kad to napravis mozes provjerit jel undefined",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31685": {
+      "poster": "nnn (dinoo)",
+      "content": "@Itachi#31684 da (ako netko bude zapeo, morao sam još staviti i da je gore async u pozivu)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31689": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@KingGeedorah#31675 meni radi, vjerojatno je greška u signup.routes gdje se sjednica povezuje s korisnikom",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31692": {
+      "poster": "nnn (dinoo)",
+      "content": "Kako bi se trebao handleati login? Odnosno što treba napraviti ukoliko nam je username i password okej? \n\nvidio sam gore da su kolege napravile `req.session.user = user`, treba li jošt nešto ili?\n\ni kako provjerim npr za checkout  ako je korisnik logiran?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31693": {
+      "poster": "pez (ip)",
+      "content": "Failed to prune sessions: relation \"session\" does not exist? zna netko kako rjesiti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31694": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@ErnestHemingway#31689 A evo sad sam skuzio da sam tu imao gresku. Hvala kolega, sad sam i ja duzan pivu",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31701": {
+      "poster": "kolega_kolega",
+      "content": "![](assets/2020-05-28/00049.png)\n\nJe li neko mozda ima slicna iskustva. ovo mi izbaci kad stisnem USER i kad stisnem order now kad se nešto nalazi u košarici. kako riješiti ovo?",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31705": {
+      "poster": "Dootz",
+      "content": "Jel itko imao ovakav error? Radim login, i pokusavam otisi na user page\n\n`error: column \"undefined\" does not exist\n\n    at Parser.parseErrorMessage (C:\\WiM\\lab4\\node_modules\\pg-protocol\\dist\\parser.js:241:15)\n\n    at Parser.handlePacket (C:\\WiM\\lab4\\node_modules\\pg-protocol\\dist\\parser.js:89:29)\n\n    at Parser.parse (C:\\WiM\\lab4\\node_modules\\pg-protocol\\dist\\parser.js:41:38)\n\n    at Socket.<anonymous> (C:\\WiM\\lab4\\node_modules\\pg-protocol\\dist\\index.js:8:42)\n\n    at Socket.emit (events.js:310:20)\n\n    at addChunk (_stream_readable.js:286:12)\n\n    at readableAddChunk (_stream_readable.js:268:9)\n\n    at Socket.Readable.push (_stream_readable.js:209:10)\n\n    at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {\n\n  length: 172,\n\n  severity: 'ERROR',\n\n  code: '42703',\n\n  detail: undefined,\n\n  hint: undefined,\n\n  position: '88',\n\n  internalPosition: undefined,\n\n  internalQuery: undefined,\n\n  where: undefined,\n\n  schema: undefined,\n\n  table: undefined,\n\n  column: undefined,\n\n  dataType: undefined,\n\n  constraint: undefined,\n\n  file: 'd:\\\\pginstaller_12.auto\\\\postgres.windows-x64\\\\src\\\\backend\\\\parser\\\\parse_relation.c',\n\n  line: '3359',\n\n  routine: 'errorMissingColumn'\n\n}\n\n(node:11132) UnhandledPromiseRejectionWarning: error: column \"undefined\" does not exist\n\n    at Parser.parseErrorMessage (C:\\WiM\\lab4\\node_modules\\pg-protocol\\dist\\parser.js:241:15)\n\n    at Parser.handlePacket (C:\\WiM\\lab4\\node_modules\\pg-protocol\\dist\\parser.js:89:29)\n\n    at Parser.parse (C:\\WiM\\lab4\\node_modules\\pg-protocol\\dist\\parser.js:41:38)\n\n    at Socket.<anonymous> (C:\\WiM\\lab4\\node_modules\\pg-protocol\\dist\\index.js:8:42)\n\n    at Socket.emit (events.js:310:20)\n\n    at addChunk (_stream_readable.js:286:12)\n\n    at readableAddChunk (_stream_readable.js:268:9)\n\n    at Socket.Readable.push (_stream_readable.js:209:10)\n\n    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)\n\n(node:11132) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled \n\nwith .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)    \n\n(node:11132) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.`",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31706": {
+      "poster": "JayOhAit",
+      "content": "![](assets/2020-05-28/00050.png)\n\nZasto ovdje ponovno bacaju error i trebamo li to ishendlat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31707": {
+      "poster": "ppooww (pp)",
+      "content": "@nnn#31692 Mislim da ne moras nista provjeravat, sve su oni napravili u checkout.routes.js(nek me neko ispravi ako sam u krivu). Kad ga logiras s req.session.user = user, samo ga redirectas na '/' i to je to.",
+      "votes": {
+        "upvoters": [
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31709": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@Dootz#31705 provjeri jel ti se dobro povezuju korisnik i sjednica `req.session.user = user`",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Dootz"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31712": {
+      "poster": "Dootz",
+      "content": "@ErnestHemingway#31709 To bi bilo to, hvala puno!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31714": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "Zna li netko zbog čega mi se logira, bez obzira je li lozinka tocna ili ne?\n\n![](assets/2020-05-28/00051.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31715": {
+      "poster": "nnn (dinoo)",
+      "content": "@Dootz#31705 ako imaš code block koristi 3 backticka u redu iznad i ispod koda: ```\n> @ppooww#31707 Mislim da ne moras nista provjeravat, sve su oni napravili u checkout\n\nDa, tako je i meni izgledalo ali nisam bio siguran, hvala",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31718": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "na koji nacin bi mogli koristiti tablicu \"history\" u zadacima ?",
+      "votes": {
+        "upvoters": [
+          "Sveti_Ilija (Sveti Ilija)",
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31719": {
+      "poster": "JayOhAit",
+      "content": "@AntonioB25#31714  u if-u bi trebao staviti req.body.user umjesto req.session.user",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31725": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@JayOhAit#31719 \n\nI dalje prihvaća sve 😕",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31727": {
+      "poster": "fer999",
+      "content": "@Rene#31412 kako bi ostvarili dodavanje nove adrese korisniku? nije mi sasvim jasan koncept adrese",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31728": {
+      "poster": "fer999",
+      "content": "@AntonioB25#31725 probaj staviti \"user:undefined\" u metodi GET za login stranicu, tad user jos nije povezan sa sjednicom, barem sam ja to tako shvatio, tek u metodi POST ga vežeš na nju",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31730": {
+      "poster": "laranotreallycroft",
+      "content": "@AntonioB25#31714 stavljas req.session.user=user prije ikakve provjere\n\nPrvo sa \"user\" ispitaj sve uvjete, onda ako je sve ok spoji sa sessionom",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "idontwannabemyself"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31736": {
+      "poster": "nnn (dinoo)",
+      "content": "EDIT: uspio sam\n\nTreba mi pomoć oko logout-a i checkout-a\n-  Kako napraviti logout? probao sam `req.body.user = undefined` i u render dijelu staviti `user: undefined`\n- Kako isprazniti košaricu? \n \n@Tompa007#31718 npr. za pohranjivanje svega što je kupljeno i onda na temelju toga dati popust ili nešto tako kod checkout-a",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31743": {
+      "poster": "laranotreallycroft",
+      "content": "@nnn#31736 \n\nlogout: pogledaj primjer 7-users s predavanja, ja sam po tome -> `req.session.user = undefined;` i `req.session.destroy` \n\nkošarica: checkout postavlja cart.invalid zastavicu, pa samo kod prikaza cart napravis if i iteriras po elementima carta i brises (mozda i ima jednostavniji nacin?)",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31744": {
+      "poster": "[deleted]",
+      "content": "> @laranotreallycroft#31743 (mozda i ima jednostavniji nacin?)\n\nreq.session.cart = undefined ili req.session.cart = cart.createCart() recimo",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31748": {
+      "poster": "snowman",
+      "content": "@laranotreallycroft#31743 dovoljan ti je jedan `req.session.cart = undefined` i obrise kosaricu",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31751": {
+      "poster": "nnn (dinoo)",
+      "content": "@snowman#31748 @Itachi#31744 Da, ali da li je onda problem jer je košarica ostala zapravo u memoriji? Zato sam i pitao, jer sam i ja mislio kao @laranotreallycroft, no nisam bio siguran da li to treba tako ili ima neka funkcija za uništiti taj objekt",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31754": {
+      "poster": "laranotreallycroft",
+      "content": "@nnn#31751 mislim da je ok ako pozoves i `req.session.cart.destroy`, ali ako na labosu izmjene da se cart pohranjuje u bazu, vjerojatno bi nesto trebalo preko fja cartModel",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31765": {
+      "poster": "Jaska (Ante)",
+      "content": "Ne znam jel vec gore objasnjeno jer ne mogu nac, ali ne mogu povezat kosaricu s userima. Kad kao anoniman user dodajem u kosaricu, to sve ostane u kosarici i kod prijave i kod sign upa. ne znam jel bi mi taj midleware trebao napravit novi session kod prijave jer ja imam samo jedan session od preglednika bez obzira tko je prijavljen. Sto treba namjestiti tocno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31772": {
+      "poster": "[deleted]",
+      "content": "> @Jaska#31765 Kad kao anoniman user dodajem u kosaricu, to sve ostane u kosarici i kod prijave i kod sign upa\n\nto je trazena funkcionalnost, samo trebas napravit da kosarica nestane kad se logoutas\n\n> @Jaska#31765 ja imam samo jedan session od preglednika bez obzira tko je prijavljen\n\novako je i meni, to je ispravno jer je to bas i definicija sesije ako se ne varam. trebale bi ti bit dvije razlicite sesije kad pristupis kroz dva browsera",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31778": {
+      "poster": "flicka",
+      "content": "@Itachi#31772 a kako bi se moglo ostvarit da kroz dva razlicita preglednika ako se isti korisnik ulogira da se onda kosarica dijeli tj da se vidi iz oba dva preglednika?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31781": {
+      "poster": "[deleted]",
+      "content": "@flicka#31778 to isto ne treba napravit za pripremu, kaze defacto lik iz videa. to bi se ostvarilo tako da se kosarica za nekog usera spremi u bazu podataka i onda se iz nje iscitava, ali jos uvijek trebaju bit odvojene sesije za odvojene preglednike",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31783": {
+      "poster": "flicka",
+      "content": "@Itachi#31781 da znam da ne treba za pripremu al imam fobiju da bi sutra moglo trebat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31784": {
+      "poster": "[deleted]",
+      "content": "@flicka#31783 vjerojatno ce bit tako da spremas kosaricu u bazu podataka(cak ima vec i postojece polje za nju u bazi), mislim da se ne moze radit tako da se iz drugog preglednika prikljucis na postojecu sesiju",
+      "votes": {
+        "upvoters": [
+          "flicka",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31887": {
+      "poster": "nnn (dinoo)",
+      "content": "> @Itachi#31781 defacto lik iz videa\n\nkakav video",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31891": {
+      "poster": "[deleted]",
+      "content": "@nnn#31887 u pdfu je linkan video u kojem se pokazuje funkcionalnost gotove pripreme",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31896": {
+      "poster": "Erpeg",
+      "content": "@flicka#31783 ja sam krenuo tak da uzmem iz baze sve aktivne sessione i onda trazim dok ne nadjem da je id sessiona isti ko onaj iz baze, e sad bi trebao provjerit koje se sve stvari nalaze u mom sessionu i u json file-u iz baze, te dodat stvari koje fale u bazu/session (ovisno di fale).\n\novo mi se cini dost komplicirano da bi stavili sutra il ima laksi nacin koji nisam otkrio pa sam pretjerano otezao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31908": {
+      "poster": "itsdend",
+      "content": "Jel moramo kad se log outamo i ponovno log inamo (s istim acc) imat istu kosaricu kao i prije log out ili treba bit prazna?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31909": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@itsdend#31908 u pripremi ne, sa logoutom se briše košarica. Moguce da to dode sutra kao zadatak",
+      "votes": {
+        "upvoters": [
+          "itsdend"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31918": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "Jel zna netko problem?\n\n![](assets/2020-05-28/00062.jpeg)\n\n![](assets/2020-05-28/00063.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31922": {
+      "poster": "steker",
+      "content": "@LongArmedJohhny#31918 koliko se sjecam persist je funkcija od User u usermodelu pa da bi je mogo koristit moras je koristit nad objektom user a req.session.user nije objket user.. valjda\n\nprobaj stavit gore iznad ifa novu varijablu user = fetchbyusername(req.body.user)  i onda u ifu koristi user.ispersisted i check password",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31924": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "@steker#31922 Opet isto...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31925": {
+      "poster": "steker",
+      "content": "@LongArmedJohhny#31924 daj da vidim kod\n\nedit: treba bit \n\nlet user = await User.fetchByUsername(req.body.user);\n\n    if(user.isPersisted() && user.checkPassword(req.body.password)){\n\n        req.session.user=user\n\n        res.redirect(\"/\")\n\n    }",
+      "votes": {
+        "upvoters": [
+          "LongArmedJohhny (LongArmedJohnny)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31927": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "@steker#31925 Yep... Ty",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31930": {
+      "poster": "MiqeloS",
+      "content": "@Itachi#31744 \n\nMeni nije radilo sa postavljanjem invalida pa sam njihov kod promijenio na:\n\n>!`if( req.session.cart !== undefined){\n\n        req.session.cart = undefined;\n\n        res.redirect('/cart')\n\n    }`\n   \nMislim da bi i ovo trebalo biti sasvim uredu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31935": {
+      "poster": "Mariox",
+      "content": "@LongArmedJohhny#31918 \n\nprvo stavi `let user = await User.fetchByUsername(req.body.user);` i onda koristi `user.checkPassword(req.body.password) && user.isPersisted()` uvjet te samo ako je taj uvjet ispunjen mozes staviti `req.session.user = user`\n\ninace `req.body.user` je samo string koji je username, to nije objekt `user` koji `req.session.user` zeli da mu pridruzis (ako sam ovo dobro skuzio)\n\nEDIT: nije mi se refreshala stranica pa nisam vidio da je problem rijesen",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31938": {
+      "poster": "Mariox",
+      "content": "@MiqeloS#31930 \n\nradije stavi u cart.routes.js prije render-a \n```\nif (req.session.cart !== undefined) {\n        if (req.session.cart.invalid) {\n            req.session.cart = undefined;\n        }\n    }\n```\nna ovaj nacin ne moramo mijenjati checkout.routes.js",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31942": {
+      "poster": "Aloko (Ardeo)",
+      "content": "@Fortius#31370 imam isti problem, jel netko otkrio sto je problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31945": {
+      "poster": "vjeva",
+      "content": "@Aloko#31942 ako se na kraju add i remove item ne stavi ponovno renderiranje stranice moguce je da ih doda ali se ne vidi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31946": {
+      "poster": "Fortius",
+      "content": "@Aloko#31942 imas malo gore tamo. U biti pogledaj sto vraca createCart funkcija",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31952": {
+      "poster": "Fortius",
+      "content": "@Mariox#31935 jel u else stavljaš Incorrect username or password? meni opet to ne funkcionira zbog nekog razloga. eh user mi je undefined kad ga fetcham i da dobro upisujem podatke",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31955": {
+      "poster": "Mariox",
+      "content": "@Fortius#31952 da, stavljam incorect username or password, u else blocku renderaj i stavi argument `err: 'Incorrect username or password'`. Je li imas `await` prije `User.fetchByUsername(req.body.user)` i je li to u async bloku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31956": {
+      "poster": "Fortius",
+      "content": "@Mariox#31955 je sve.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Mariox"
+        ]
+      }
+    },
+    "31959": {
+      "poster": "fer999",
+      "content": "Što predstavlja file users.json koji se predaje u argumentu konstruktoru new userData() u 2. zadatku?",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Fortius",
+          "jobi (azex)"
+        ]
+      }
+    },
+    "31981": {
+      "poster": "steker",
+      "content": "jel prvi zadatak tolko lagan ili sam ja nesto krivo shvatila lol",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "awi (đusi)",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31982": {
+      "poster": "[deleted]",
+      "content": "@steker#31981 ne samo prvi\n\nza ocekivani zadatak s kosaricom nije niti trebalo spremat u bazu nego u obican fajl",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31985": {
+      "poster": "steker",
+      "content": "Naci bit ce plagijat nema sanse da ne bude hehe",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Suki7"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31989": {
+      "poster": "Zero",
+      "content": "@fer999#31959 to ti je samo ime datoteke koja se stvara kolko sam skuzio i path ako dodas",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31990": {
+      "poster": "Zero",
+      "content": "@fer999#31959 a ovaj initialize(true) ti je da ako dobije error(npm ako ne postoji ta datoteka) onda da se stvori ta datoteka",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31991": {
+      "poster": "Zero",
+      "content": "@Zero#31989 sry krivo sam to ti je ime datoteke koju koristis za userData, a onda initialize gleda da li postoji ili ne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31993": {
+      "poster": "Aloko (Ardeo)",
+      "content": "moze neka ideja za ovo: dodati novu rutu za prihvat zahtjeva za brisanja proizvoda na strani poslužitelja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Stoja_9 (Bije_san_u_autobusu)"
+        ]
+      }
+    },
+    "32002": {
+      "poster": "Suki7",
+      "content": "Volim ravnopravnu raspodjelu tezina po zadacima (khm drugi khm) : 😍",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Bazul",
+          "BigZ1",
+          "Bucc (Olive Oil)",
+          "Cubi",
+          "Ducky",
+          "Galke",
+          "Jale (čakijale)",
+          "JoKing",
+          "Krisle",
+          "Lusy (MGJ)",
+          "Mariox",
+          "MiqeloS",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "awi (đusi)",
+          "boki8 (kerovac)",
+          "iNavy (mornar Ica)",
+          "indythedog",
+          "ink",
+          "lucylu",
+          "luka6 (ugrijaniRadijator)",
+          "neksi (filip)",
+          "snowman",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32005": {
+      "poster": "steker",
+      "content": "ako sam krivo imenovala zip tj metla sam jmba_brojzadatka umjesto jmbag_brojlabosa_brojzadatka  oce mi svejedno pregledat :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32010": {
+      "poster": "Mariox",
+      "content": "@steker#32005 editaj rijesenje dok mozes, inace 0 bodova EDIT: barem mislim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32011": {
+      "poster": "steker",
+      "content": "@Mariox#32010  ma tek sam sad skuzila da sam to napravila za prosli lab :/\n\nedit: ne vidim da su naveli krivo imenovanje filea pod onim sto su napisali da nosi 0 bodova pa imam jos trunku nade :/",
+      "votes": {
+        "upvoters": [
+          "Mariox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32012": {
+      "poster": "puufi",
+      "content": "@steker#32005 trebali bi, ja sam zadnji put krivo zipala i nisu nista spomenuli za to, bitno da nije neka greska za koju su bas naveli da se gube bodovi ili da je automatski 0",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32013": {
+      "poster": "[deleted]",
+      "content": "ha ha where is my drugi zadatak koji kurac geng",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Cubi",
+          "ErnestHemingway (Alfetta)",
+          "Jale (čakijale)",
+          "JeleeII",
+          "JoKing",
+          "Lusy (MGJ)",
+          "MiqeloS",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "ink",
+          "luka6 (ugrijaniRadijator)",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Suki7",
+          "ppooww (pp)",
+          "ruza0001 (rozy)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Ardura (Maddy)",
+          "Bucc (Olive Oil)",
+          "JeleeII",
+          "error",
+          "iNavy (mornar Ica)"
+        ]
+      }
+    },
+    "32015": {
+      "poster": "gladiator",
+      "content": "prvi je zadatak bio laganeze,  pa što niste bili dodijeljeni prvom",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Galke",
+          "Sveti_Ilija (Sveti Ilija)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32017": {
+      "poster": "Jale (čakijale)",
+      "content": "hahahahaha kako je padanje wima real haha nigga samo dobij prvi zadatak like nigga samo nemoj dobit drugi haha",
+      "votes": {
+        "upvoters": [
+          "Dodica",
+          "Galke",
+          "Krisle",
+          "Lusy (MGJ)",
+          "Suki7",
+          "cloudies",
+          "gladiator",
+          "steker",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Bucc (Olive Oil)",
+          "Dodica",
+          "Erpeg",
+          "Galke",
+          "JeleeII",
+          "Suki7",
+          "cloudies",
+          "gladiator",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32019": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Zanima me dali će shvatit kakvu razliku u težini zadataka su složili....",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Fica (Prof)",
+          "Galke",
+          "Jale (čakijale)",
+          "JeleeII",
+          "JoKing",
+          "Lusy (MGJ)",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "cile",
+          "jobi (azex)",
+          "lucylu",
+          "ppooww (pp)",
+          "steve (Mr_mr)",
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32036": {
+      "poster": "MiqeloS",
+      "content": "@Tompa007#32019 \n\nA realno nije prvi puta, u prvom labosu je bio onaj sa sidebarom bio puno puno teži od ostalih, u drugome je recimo onaj s loaderom bio smješan u odnosu na ostale (jer uopće nije zahtjevao onu zajedniču košaricu), lutrija 😶",
+      "votes": {
+        "upvoters": [
+          "JeleeII",
+          "Suki7",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32042": {
+      "poster": "steker",
+      "content": "@MiqeloS#32036 ali meni se cini da si u proslim labosima makar dobio laksi zadatak, opet imo dosta posla... a na ovom sad labosu sam imala prvi i ovo je smjesno koliko je bilo lagano za napisat da jos uvijek ne vjerujem da sam dobro shvatila zadatak ...",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "MiqeloS",
+          "Reznox",
+          "Suki7",
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+          "__builtin_popcount (std::popcount)",
+          "awi (đusi)",
+          "indythedog",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32045": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@MiqeloS#32036 a kuzim kaj oces rec da sve to stoji , ali za ovaj labos  većina ekipe je prvi riješila u 15 minuta , a ako nisu došli spremni na labos i dalje je bio rješiv , treći neka sredina ajde , drugi nebi komentirao :|",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "JoKing",
+          "Suki7",
+          "awi (đusi)",
+          "cile",
+          "lucylu",
+          "steker",
+          "vjeva"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32052": {
+      "poster": "cile",
+      "content": "ovo je moja prva objava",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "BigZ1",
+          "Galke",
+          "KingGeedorah (King Geedorah)",
+          "Lenobius",
+          "Mioch",
+          "MiqeloS",
+          "Suki7",
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+          "[deleted]",
+          "awi (đusi)",
+          "gladiator",
+          "nnn (dinoo)",
+          "ppooww (pp)",
+          "ruza0001 (rozy)",
+          "steker",
+          "swish41 (PlavušaSFilozofskog)",
+          "vjeva"
+        ],
+        "downvoters": [
+          "BreadCat"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "Reznox",
+          "Rogue (Fidel Catto)",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "iNavy (mornar Ica)",
+          "vjeva"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32056": {
+      "poster": "[deleted]",
+      "content": "@cile#32052 legendo!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32057": {
+      "poster": "gladiator",
+      "content": "@cile#32052 nema više cile mile",
+      "votes": {
+        "upvoters": [
+          "cile",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "HARAmara (decko_sa_balkana)",
+          "__builtin_popcount (std::popcount)",
+          "awi (đusi)",
+          "luka6 (ugrijaniRadijator)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32058": {
+      "poster": "[deleted]",
+      "content": "ja ne znam sto se svi zalite. meni je draze sto sam dobio drugi koji se rjesi u cistim backendu nego da sam trebo tamo drkat po onim htmlovima i cssima u prvom zadatku",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)",
+          "Lenobius",
+          "haworthia (bulrog)"
+        ],
+        "downvoters": [
+          "Bazul"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32063": {
+      "poster": "HARAmara (decko_sa_balkana)",
+      "content": "@Itachi#32058 legendo!",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "DariolaVremenskiPutnik",
+          "Diego",
+          "Galke",
+          "Krisle",
+          "Suki7",
+          "SuperSjajan3",
+          "[deleted]",
+          "bjunolulz",
+          "ppooww (pp)",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "BigZ1",
+          "Erpeg",
+          "Galke",
+          "Goliathus",
+          "Lyras",
+          "Suki7",
+          "SuperSjajan3",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32123": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "Od koda koji smo dobili za pripremu me neironično boli glava. Ovaj labos sam pisao sa znatno više kurcobolje od prošlih.\n\nAko Čavrak može pisati ružan kod (nečitak i s **očitim** greškama), neću si dati puno truda da ja sve pišem po PS-u. To je kao da na govno stavljaš mašnicu, jednostano nije vrijedno toga.\n\n[WiM Labos 4 svi zadaci](https://mega.nz/file/AK4CAQTL#fup5zkYsrLuETEWkn6bWwoAXuswUI_gBwzAlASVDS7o)\n\nAko sam nešto sjebao pa ne radi, vičite da popravim, nisam previše testirao ali ovo što jesam je sve izgledalo OK.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "Ardura (Maddy)",
+          "BigZ1",
+          "Erpeg",
+          "JoKing",
+          "KingGeedorah (King Geedorah)",
+          "Suki7",
+          "[deleted]",
+          "awi (đusi)",
+          "boki8 (kerovac)",
+          "gladiator",
+          "iNavy (mornar Ica)",
+          "idontwannabemyself",
+          "indythedog",
+          "lucylu",
+          "mariak (kaiak)",
+          "puufi",
+          "ruza0001 (rozy)",
+          "steker",
+          "steve (Mr_mr)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Suki7",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32161": {
+      "poster": "viliml",
+      "content": "@__builtin_popcount#32123 Ja sam pola tog njihovog koda sam preuredio još za pripremu jer mi je išlo na živce i nisam se mogao koncentrirati na svoje zadatke. Pododao točkazareze posvuda, umjesto pozivanja anonimnih async funkcija postavio cijelu funkciju na async i slično.\n\nNadam se da ne koriste git diff za pomoć u ispravljanju jer će se onda namučiti.",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32169": {
+      "poster": "nnn (dinoo)",
+      "content": "@__builtin_popcount#32123 \n\n\"ček jel se stavlja točka zarez u js, idem vidit u ovaj fajl\"\n\novaj fajl:\n\n![](assets/2020-05-29/00029.png)",
+      "votes": {
+        "upvoters": [
+          "Bazul",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "indythedog",
+          "laranotreallycroft",
+          "neksi (filip)",
+          "swish41 (PlavušaSFilozofskog)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "1vq",
+          "AntonioB25 (Pleteni miš)",
+          "Bazul",
+          "Bucc (Olive Oil)",
+          "Erpeg",
+          "Lyras",
+          "MiqeloS",
+          "Sans",
+          "WickyWinslow",
+          "__builtin_popcount (std::popcount)",
+          "idontwannabemyself",
+          "luka6 (ugrijaniRadijator)",
+          "steker",
+          "turunturu (Cement)",
+          "viliml"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32244": {
+      "poster": "steker",
+      "content": "Kakva su predavanja iz androida, jel se isplati gledat",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32262": {
+      "poster": "cloudies",
+      "content": "@steker#32244 Tvoja slika mi donosi ružna sjećanja",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Fica (Prof)",
+          "Galke",
+          "Jale (čakijale)",
+          "Kaladonter",
+          "Mariox",
+          "MiqeloS",
+          "Rope (Rops)",
+          "SonGoku (~~~~~~~~)",
+          "SuperSjajan3",
+          "Tone",
+          "[deleted]",
+          "mariak (kaiak)",
+          "steker",
+          "steve (Mr_mr)",
+          "swish41 (PlavušaSFilozofskog)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "Galke",
+          "TamTam (foobar)",
+          "awi (đusi)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Jale (čakijale)",
+          "steker"
+        ]
+      }
+    },
+    "32386": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@steker#32244 ako do sad nisi, nemoj. Nisu nešto korisne, nisam ih sve pogledao, ali ovo što jesam nije korisno. Ali ako želiš slušat frajera kad priča zvuči poput flakserice u praznom hodu, onda daj, slobodno.",
+      "votes": {
+        "upvoters": [
+          "steker",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Erpeg",
+          "Galke",
+          "__builtin_popcount (std::popcount)",
+          "potemkin (meriMerino)",
+          "ruza0001 (rozy)",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": [
+          "boban_rajovic (ravindrababu ravula)"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,485 @@
+{
+  "title": "[OPRPP1] 1. domaća zadaća - 2020/2021",
+  "creator": "SuperSjajan3",
+  "slug": "oprpp1-1-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Odabrana poglavlja razvoja programske potpore 1",
+    "Zadaće"
+  ],
+  "posts": {
+    "80295": {
+      "poster": "SuperSjajan3",
+      "content": "U drugom zadatku na početku piše: \"Storage of null elements is not allowed.\" Ali po defaultu kad napravim prazan Object[] array je on napunjen nullovima. Znaci li to da se nullovi samo ne smiju dodavati u taj array ili bi i ove defaultne nullove trebo rijesit nekako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80326": {
+      "poster": "JoKing",
+      "content": "Zabranjeno je SPREMANJE null elemenata, što znači da ti u polje ne smiješ dodati null objekt. Sukladno tome ti iz liste nikad ni ne možeš dobiti null objekt. Međutim to ti ne predstavlja nikakav problem jer je polje, iako u stvarnosti sadrži 16*n elemenata, korisnik može pristupiti samo do size njih (bilo sa metodom get, remove, insert), stoga ti zapravo moraš osigurati samo to da se u intervalu [0, size - 1] ne nalazi null vrijednost, ostatak te ni ne zanima (jer za korisnika taj dio polja \"ne postoji\"). Ovo je samo moje shvaćanje zadatka, ne mora biti 100% točno.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Sulejman",
+          "SuperSjajan3",
+          "Vonj",
+          "__builtin_popcount (std::popcount)",
+          "jobi (azex)",
+          "kolega_kolega",
+          "tomekbeli420"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80430": {
+      "poster": "flicka",
+      "content": "ne kuzim u prvom jel moramo radit sve ove ekstendane klase koje su na dijagramu ili samo ovu za  paran hashCode ili nijednu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80502": {
+      "poster": "Sulejman",
+      "content": "![](assets/2020-10-15/00012.png)\n\njel može netko malo pojasnit ovu metodu?  Collection.class ne pohranjuje elemente uopće pa ne kužim kaj bi se trebalo dodavat u trenutni objekt: \"will add each item into the current collection by calling method add\", metoda add tak i tak ne dodaje niš u Collection.class i ne kužim ćemu služi ta klasa Processor u metodi addAll.",
+      "votes": {
+        "upvoters": [
+          "krokodil"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80505": {
+      "poster": "Kennedy",
+      "content": "Ja sam shvatio to kao trebamo unutar addall metode definirati novu klasu tipa AddAllProcessor koja extenda Processor, overrideat metodu process pozivajuci nad trenutnom kolekcijom metodu add(value) i onda samo pozovemo other.foreach(new AddAllProcessor) \n\nOnda u pravoj implementaciji kolekcije cemo overriedat forEach i za svaki element pozivati processor.process(obj) nad svakim objektom kolekcije\n\nako je ovo krivo ispravite me pls",
+      "votes": {
+        "upvoters": [
+          "Sulejman",
+          "WickyWinslow",
+          "feudalac",
+          "tomekbeli420"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80707": {
+      "poster": "flicka",
+      "content": "This class should override empty method definitions inherited from the Collection class with an\n\nappropriate implementation.\n\nodnosi li se to samo na one za koje eksplicitno pise da je implementirano kao prazna metoda ili i na one koje vracaju 0 ili false kao zadano bez ikakvog drugog koda.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80797": {
+      "poster": "Lyras",
+      "content": "koju bismo mi onda klasu trebali koristiti za \"elements\" varijablu? Object[]?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80812": {
+      "poster": "Lyras",
+      "content": "![](assets/2020-10-16/00022.png)\n\nKakva 4 konstruktora on tu spominje? Ova prva dva, oke, ali kako je on razvojio sad ovaj što prima ArrayIndexedCollection(Collection other)? To je po meni jedan konstruktor? I kako da ja pozovem ova prva dvo konstruktora u druga \"dva\" konstruktora ako moram na prvoj liniji pozvati this(...), a treba mi if uvjet da razdvojim po uvjetima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80819": {
+      "poster": "Lyras",
+      "content": "@Lyras#80812 Kolega, definirajte konstruktore od najsloženijeg, odnosno onog koji ima najviše varijabli prema onome koji ima najmanje varijabli i sve će vam biti jasno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80853": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "Je napravio netko parse metodu u zadnjem zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80889": {
+      "poster": "Kennedy",
+      "content": "@LongArmedJohhny#80853 iirc mozes si olaksat stvari ako provjeris jel string ima \"i\", ako nema onda samo pozoves fromReal(str) metodu, mozes takoder provjerit jel string samo \"i\" ili \"-i\" i onda samo fromImaginary(1 il -1), preostali slucajevi su kad ima i real i imaginarni dio i slucaj di je npr \"-4i\", a to se lakse handlea nego sve odjednom. Tako sam barem ja rjesio, znam da je farmerski al radi",
+      "votes": {
+        "upvoters": [
+          "LongArmedJohhny (LongArmedJohnny)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80895": {
+      "poster": "tomekbeli420",
+      "content": "@flicka#80707 Ja sam implementirao sve što je neispravno jer ne bi imalo smisla da ostane neispravno kao u klasi Collection.\n\n@Lyras#80797 Da\n\n@Lyras#80812 Ja imam\n\n`\npublic ArrayIndexedCollection();\n\npublic ArrayIndexedCollection(int initialCapacity);\n\npublic ArrayIndexedCollection(Collection other);\n\npublic ArrayIndexedCollection(Collection other, int initialCapacity);`",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80901": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "Jel ima neko ideju zašto ovo ne prepozna kao Integer i kako bi drugačije trebalo to implementirati?\n\n![](assets/2020-10-17/00000.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80902": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "Ne pusha vrijednost 8 na stog.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80903": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "![](assets/2020-10-17/00001.png)\n\nKako provjeriti za Object ako je Integer?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80908": {
+      "poster": "tomekbeli420",
+      "content": "@LongArmedJohhny#80903 Moraš prvo pomoću stringa stvoriti (isparsirati) Integer. Tu funkcionalnost ti nudi iz klase java.lang.Integer statička metoda `Integer.parseInt(String s)` koja iz danog stringa stvori novu instancu Integer koja u sebi ima vrijednost koja je predstavljena tim stringom. Ako string ne predstavlja ispravan broj, odnosno ako se string ne da isparsirati kao broj, metoda baca `NumberFormatException`.\n\nDakle onda ako sam dobro skužio šta hoćeš napraviti (želiš iz polja referenci tipa Object koji su zapravo svi stringovi (iako ne razumijem zašto bi onda držao referencu tipa Object[] a ne String[])) onda bih predložio ovakvo nešto (ne znam kako na forumu kak spada stavit komad koda):\n\n```\nfor (Object obj : splited) {\n\tString str = (String) obj; // potrebno da možemo koristiti parse metodu koja prima referencu tipa String\n\ttry {\n\t\tInteger number = Integer.parseInt(str); // probaj str pretvoriti u broj\n\t\tstack.push(number);\n\t\tcontinue;\n\t} catch (NumberFormatException) {\n        // parsiranje nije uspjelo, dakle nije cijeli broj\n\t}\n\t// ili je operator ili nešto treće\n\t// nastavak ...\n}\n```\n\na kad bi referenca na ovo polje koje hoćeš obraditi bilo tipa String[] a ne Object[] onda bi ti foreach oblik petlje bio for (String str : splited) i ovo castanje u liniji ispod ne bi bilo potrebno",
+      "votes": {
+        "upvoters": [
+          "LongArmedJohhny (LongArmedJohnny)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80909": {
+      "poster": "TamTam (foobar)",
+      "content": "Koliko ste dobili ispis c3 u zadnjem zadatku i jeste zaokruzivali na dvije decimale?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81281": {
+      "poster": "tomekbeli420",
+      "content": "@TamTam#80909 -1.6181754193833349+0.06878563085611361i\n\nnisam zaokruživao\n\n@tomekbeli420#80908 retardiran si, statička metoda `Integer.parseInt(String s)` ne stvara novu instancu tipa Integer, već vraća primitivan, mali int. Iako četvrta linija koda je i dalje u redu zbog autoboxinga koji primitivni mali int pakira i stvara novi veliki Integer.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "LongArmedJohhny (LongArmedJohnny)",
+          "TamTam (foobar)",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81311": {
+      "poster": "Lyras",
+      "content": "![](assets/2020-10-18/00003.png)\n\nNemojte zaboravit castat int u float kad racunate magnitudu u root funkciji.... RIP pola sata",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "Kaladonter",
+          "krokodil"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81338": {
+      "poster": "Kaladonter",
+      "content": "@Lyras#81311 Doslovno isto pola sata izgubio, sad jos pokusavam skuzit kako neki broj sa eksponentom -17 prebacit u  0 bilo bi odlicno ako neko zna",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81341": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @Kaladonter#81338 eksponentom -17 prebacit u  0 bilo bi odlicno ako neko zna\n\n```text\nako |x| < EPSILON:\n    x = 0\n```",
+      "votes": {
+        "upvoters": [
+          "Kaladonter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81365": {
+      "poster": "Kaladonter",
+      "content": "@micho#81341 To bi radilo da, al sam na kraju skuzio da su zapravo svi brojevi u tekstu zadatka na dvije decimale pa to nesto olaksava stvar.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81453": {
+      "poster": "Nocna_smjena",
+      "content": "Da li smijemo implementirat neke svoje dodatne metode? Došao sam u situaciju gdje bi trebao copy paste-at kod ali Čupić je rekao da to nije tolko dobra ideja. Npr metoda koja provjerava jel riječ o NullPointerExceptionu i slično",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81468": {
+      "poster": "Rene",
+      "content": "\"Where needed, throw an appropriate exception. For parsing decimal numbers always use\n\nDouble.parseDouble(…) so that decimal symbol is always dot (‘.’) and never comma (‘,’).\"\n\nKoristim metodu Double.parseDouble() ali svejedno mi se ispisuje sa zarezom. Jel' to do Eclipsea i zašto je uopće bitno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81470": {
+      "poster": "tomekbeli420",
+      "content": "@Rene#81468 Vjerojatno zato što si koristio System.out.printf metodu koja doublove ispisuje sa zarezom.\n\nAko koristiš println ili samo print metodu od System.out, neće ti biti sa zarezom, jer će se tada pozvati Doubleov toString koji ih pretvara u string s točkom",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81473": {
+      "poster": "Rene",
+      "content": "@tomekbeli420#81470 Ne koristim, koristim println(). Imaš neku drugu ideju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81485": {
+      "poster": "tomekbeli420",
+      "content": "@Rene#81473 ne bih znao, osim ako mi u privatni ne pošalješ svoj kod :)\n\n@tomekbeli420#81281 Ispravak na ispis, krivo sam inicijalno implementirao getAngle metodu\n\nipak mi ispisuje 1.6181754193833349-0.06878563085611093i",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81503": {
+      "poster": "Rene",
+      "content": "@Rene#81473 Evo ako još koga bude zezalo, koristio sam String.format() u toString metodi pa je ispisivalo zareze.",
+      "votes": {
+        "upvoters": [
+          "tomekbeli420"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81531": {
+      "poster": "Extended_mix",
+      "content": "@tomekbeli420#81485 jel se smije znati koju si to grešku ispravio jer i meni ispada -1.6181754193833349+0.06878563085611361i",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81534": {
+      "poster": "tomekbeli420",
+      "content": "@Extended_mix#81531 koristio sam statičku funkciju `Math.atan2(double y, double x)` koja vraća kut koji ti treba, ali je vraća iz intervala od -pi do pi, a nama za getAngle treba funkcija koja vraća iz intervala [imath][0, 2\\pi)[/imath]. To je uzrokovalo da je redoslijed korijena kompleksnog broja pomaknut tijekom računanja.",
+      "votes": {
+        "upvoters": [
+          "Extended_mix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81651": {
+      "poster": "MiqeloS",
+      "content": "@tomekbeli420#81485 Tomek tomek jučer sam izgubio dobrih pola sata da nađem zašto su mi drugačiji predznaci od tvojih, na kraju sam odustao, dobro pa je riješeno 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "tomekbeli420"
+        ]
+      }
+    },
+    "81668": {
+      "poster": "[deleted]",
+      "content": "kak ste napisali junit testove za konstruktore?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81720": {
+      "poster": "tomekbeli420",
+      "content": "@MiqeloS#81651 ko zna možda sam ja zajebo, išao sam ovom logikom:\n\nSve do korijenovanja, dakle `c1.add(ComplexNumber.fromMagnitudeAndAngle(2, 1.57)).div(c2).power(3)` matematički ima vrijednost jednaku izrazu, do na dvije decimalie\n\n[math]\\left(\\frac{2 + 3i + 2 \\left(\\cos{\\frac{\\pi}{2} + i \\sin{\\frac{\\pi}{2}}}\\right)}{2.5 - 3i}\\right)^3 \\approx 2.61 - 0.22i[/math]\n\ne a onda a sad sam poziv funkcije i pristupanje [imath]k[/imath]-tom članu polja, dakle `root(n)[k]` implementirao tako da mi vrati kompleksni broj [imath]|z|^{\\frac{1}{n}} \\left(\\cos{\\frac{\\varphi + 2k\\pi}{n}} + i \\sin{\\frac{\\varphi + 2k\\pi}{n}}\\right)[/imath], gdje je [imath]|z|[/imath] rezultat poziva `getMagnitude()`, a [imath]\\varphi[/imath] rezultat poziva `getAngle()`.\n\nZa kompleksni broj [imath]z = 2.26 - 0.22i[/imath] i za još ovaj nastavljeni niz poziva `.root(2)[1]` onda, prema mojoj logici, vraća otprilike [imath]\\sqrt{2.62} \\left(\\cos{\\frac{6.20 + 2\\pi}{2}} + i \\sin{\\frac{6.20 + 2k\\pi}{2}}\\right) \n= 1.62 \\left(\\cos{6.24} + i \\sin{6.24}\\right) \\approx 1.618 - 0.067i[/imath], što je otprilike ono što ima moj ispis\n\n@Itachi#81668 istestirao scenarije bacanje exceptiona sa argumentima null kolekcijom, neispravnim inicijalnim kapacitetom, a što se tiče testiranja kad je predana vanjska kolekcija bila ne null, pozvao sam toArray i sa assertArrayEquals provjerio hoce li mi toArray vratit ocekivane elemente i sa assertEquals provjerio hoce li size postati onoliko koliki je size vanjske predane kolekcije",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

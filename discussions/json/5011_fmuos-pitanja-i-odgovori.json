@@ -1,0 +1,3638 @@
+{
+  "title": "[FMUOS] Pitanja i odgovori",
+  "creator": "[deleted]",
+  "slug": "fmuos-pitanja-i-odgovori",
+  "tags": [
+    "FER",
+    "Formalne metode u oblikovanju sustava"
+  ],
+  "posts": {
+    "6559": {
+      "poster": "[deleted]",
+      "content": "Otvaram temu da ne bi prljao ostale, postojeće teme. Imam pitanje vezano uz propozicijsku logiku.\n\nKada radimo pretpostavku i onda otvaramo one kućice, iskreno ništa mi nije tu jasno. Čitam u knjizi \"Logic in Computer Science\" i piše \"The line immediately following a closed box has to match the pattern\n\nof the conclusion of the rule that uses the box.\" . Ok i to se vidi iz zadataka koje smo riješili na predavanjima, ali općenito mi nije to ništa jasno. Ima li netko neki video tutorijal ili bilo šta za pomoć?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6619": {
+      "poster": "[deleted]",
+      "content": "@tolecnal#6559 Našao sam odgovor. Dosta dobro objašnjeno: https://www.youtube.com/watch?v=_1JoPuRocXE&list=PLSvsx8116eZjiLMHpa5TZZHMUIzCsvkTS&index=31",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "feel_d_boot (iNut)",
+          "zeleni_caj123"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "51111": {
+      "poster": "Dell",
+      "content": "![](assets/2020-07-07/00026.png)\n\nZna li tko kako se ovo rješava?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "51124": {
+      "poster": "Red_Baron",
+      "content": "@Dell#51111 Moje razmišljanje ide ovako - koji god ulaz daš da nije p, ostat će u S0. Kad mu daš ulaz p ide u konačno stanje gdje, što god mu nakon toga dao, opet će biti u S1. Pa iz toga možeš zaključiti da se radi o formuli F p iliti <> p ako ćemo strogo po njihovoj notaciji.\n\nMožeš se s tom notacijom igrati ovdje i gledati što dobiješ za koji ulaz i kako izgledaju never blokovi: http://www.lsv.fr/~gastin/ltl2ba/index.php",
+      "votes": {
+        "upvoters": [
+          "Dell"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "52169": {
+      "poster": "Bananaking",
+      "content": "Zašto je ovdje u fT minimizirano u y1' + y2' ? y1'y2' + y1'y2  mogu shvatiti ali gdje je y1 nestao u y1y2' ?\n\n![](assets/2020-07-09/00030.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "52224": {
+      "poster": "gama",
+      "content": "@Bananaking#52169 \n\nvidiš da svi slučajevi u konačnici obuhvaćaju ili y1’ ili y2’, zato se to pokratilo\n\nsamo u obzir ne ulazi slučaj kad su i jedno i drugo 1, Ilitiga kad i jedan i drugi nisu komplement",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "52259": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Bananaking#52169 \n\nTreba malo booleove magije\n\n[math]\nf_T = y_1'y_2' + y_1'y_2 + y_1y_2' \\\\\nf_T = y_1'(y_2 + y_2') + y_1y_2' \\\\\nf_T = y_1' + y_1y_2' \\\\\nf_T = (y_1(y_1' + y_2))' \\\\\nf_T = (y_1y_2)' \\\\\nf_T = y_1' + y_2'\n[/math]\n\nInače je [imath]A + \\bar{A}B = A + B[/imath] teorem booleove logike, ali ne znam točno kako se zove. Al nije ni bitno kad ga pomoću DeMorgana možeš izvesti kao ja tu.",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "52810": {
+      "poster": "Stark",
+      "content": "Kako znamo sa slike da stanje req može za init biti TRUE ili FALSE?\n\n![](assets/2020-07-11/00005.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "52812": {
+      "poster": "[deleted]",
+      "content": "@Stark#52810 Iz grafa vidiš, zbog strelica koje ulaze u njih, da su početna stanja [imath]S_0[/imath] i [imath]S_2[/imath], i onda iz vrijednosti _req_ i _stat_ u njima, vidiš da _req_ može poprimiti i TRUE i FALSE, a _stat_ samo FALSE",
+      "votes": {
+        "upvoters": [
+          "Dell",
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "52813": {
+      "poster": "Stark",
+      "content": "@Delpins#52812 Puno hvala! Još da sam vidio ovu strelicu koja ide u S2 bilo bi super 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53065": {
+      "poster": "aaa",
+      "content": "Jel moze netko objasniti kako se točno iz izraza 1 dobije 2?\n\n![](assets/2020-07-11/00043.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53081": {
+      "poster": "pero122 (teslaFan)",
+      "content": "@aaa#53065 \n\nPrebaci radije u sintasku iz digtalne logike, lakse se vidi\n\n\"i\" -> mnozenje\n\n\"ili\" -> zbrajanje\n\n![](assets/2020-07-11/00046.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53103": {
+      "poster": "Bananaking",
+      "content": "Koju vrijednost poprima y nakon atomic strukture a koju ispisuje printf\n\nbyte y=3\n\n...\n\natomic{y--; y++;}\n\nprintf(\"y=%d\\n\", y);\n\na) 3  b) 4  c) 2  d) 0\n\nTo je Promela?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53121": {
+      "poster": "Bananaking",
+      "content": "Što od navedenog nije uobičajeni naziv konfiguracijske datoteke koju koristi sustav Java PathFinder?\n\na) bounded_buffer.jpf\n\nb) include.properties\n\nc) site.properties\n\nd) jpf.properties",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53267": {
+      "poster": "Stark",
+      "content": "Kuži netko ovaj ite operator? Prezentacije mi ništa ne pomažu. Također mi nije jasno kako crtam ROBDD iz konačnog izraza.![](assets/2020-07-12/00010.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53279": {
+      "poster": "m14246",
+      "content": "@Stark#53267 Radis rekurziju s redoslijedom varijabli a, d, c, b. Vrijedi ite(f) = ite(varijabla, f kad je varijabla 1, f kad je varijabla 0).\n\nZnaci da u drugom retku imas:\n\n-> varijabla a\n\n-> (acd, 1, bc+a'd') kad je a=1 je (cd, 1, bc) (a'd' je 0 kad je a=1)\n\n-> (acd, 1, bc+a'd') kad je a=0 je (0, 1, bc+d')\n\n-> sto je konacno ite(a, ite(cd, 1, bc), ite(0, 1, bc+d'))\n\nU trecem retku uredujes ite(0, 1, bc+d'): ako to raspises po pravilu ite(x,g,h)=xg+x'h dobijes 01+0'(bc+d') sto je ocito samo bc+d'.\n\nU 4,5,6 retku je varijabla po kojoj radis rekurziju d. Prvi clan (a) nema d u sebi pa ga samo prepises. Drugi clan je ite(cd, 1, bc) i opet: d je varijabla, (cd, 1, bc) kad je d=1 je (c, 1, bc), a kad je d=0 (0, 1, bc). Uredivanje: ite(c, 1, bc) = 1c+1'bc = c; ite(0, 1, bc) = 01+0'bc = bc. Itd...\n\nCrtanje probaj usporedit s nekim rijesenim zadatkom, ako je ite(a, b, c) onda je a korijen, b lijevo podstablo i c desno podstablo.",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53291": {
+      "poster": "Dell",
+      "content": "@m14246#53279 Znaš li možda da li se rekurzija radi dok svi članovi nisu sami ili dok samo vršna varijabla nije samostalna? Zbunjuje me ovaj slajd ![](assets/2020-07-12/00016.png)\n\nJer ako se dobro sjećam kada sam rješavao neki drugi primjer s rekurzijom još se onda provodila i na izradu bc.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53298": {
+      "poster": "m14246",
+      "content": "@Dell#53291 Nisam siguran, da se islo ite algoritmom a bi od pocetka bila samostalna al su jos napravili rekurziju za b pa valjda nije dovoljno da bude samostalna... ite(a, c+bc, bc) -> ite(a, ite(b, c, c), ite(b, c, 0)) -> ite(a, c, bc). Al ako se radi po svim varijablama ne znam zasto se nije napravila konacna rekurzija za c tj. ite(a, c, ite(c, b, 0))...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53414": {
+      "poster": "Bananaking",
+      "content": "@Bananaking#53121 Da nastavim seriju pitanja, 1. zadatak s postupkom sa ovogodišnjeg završnog:\n\nDefiniraj predikate i konstante u wff logici 1. reda\n\n\"Postoji proces u OS-u koji je pokrenuo barem dvije dretve\"\n\n\"Svaki verifikacijski program formalno verificira točno 1 instrukciju FPU-a\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53416": {
+      "poster": "Stark",
+      "content": "@Bananaking#53414 Ovdje je teorija, hoćemo nastaviti s tim i uključiti pitanja iz ove godine? \n\n[Teorija Docs](https://docs.google.com/document/d/1bEyCLoK74tduFFSxOMWCxd85fffCqElOMI9XiIGDfl4/edit)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53442": {
+      "poster": "Bananaking",
+      "content": "@Stark#53416 Hmm čini mi se dosta nečitko ali evo da napišem teorijska pitanja sa ZI koja sam prepisao i što mislim da je točan odgovor. Nešto je još kolega prepisao i stavio u temu završnog ispita.\n\n3. Booleova funkcija F = a' + b' može se prikazati u obliku operatora ITE kao\n\na) ITE(a, b', 1)\n\n**b)** ITE(a, 0, b')\n\nc) ITE(a, 1, b')\n\nd) ITE(a, b', 0)\n\n6. Rezultat preslikavanja formule propozicijske logike (P -> (Q v R)) -> (Q -> (P v R)) u konjunkcijski normalni oblik (CNF) je\n\na) P v Q' v R'\n\nb) P ^ (Q v R)\n\n**c)** P v Q' v R\n\nd) P ^ (Q' v R)\n\n7. Glavni problem klasičnog simboličkog izvršavanja programa, zbog čega se možemo odlučiti koristiti konkoličko izvršavanje je:\n\na) I simboličko i konkretno stanje programa utječu na izvođenje\n\nb) Nema garancije pronalaska svih pogreški\n\n**c)** Ispitni slučaj ne može se generirati ako SMT-rješavač ne može razrješiti ograničenje\n\nd) Nema garancije prolaska svim putovima kroz program\n\n8. Zadavanje kašnjenja u Verilogu **ne** radi se pomoću\n\na) #10\n\nb) wait(ack == 1) req = 0;\n\nc) @posedge(dk) w = 5;\n\n**d)** sleep(10);\n\n9. Sva posjećena grananja kod simboličkog izvršavanja programa bilježe se u \n\na) Simboličkom programskom brojilu\n\nb) Simboličkom registru\n\n**c)** Simboličkom ograničenju puta\n\nd) Simboličkom stanju\n\n10. Koju vrijednost poprima y nakon atomic strukture a koju ispisuje printf\n\nbyte y = 3\n\n...\n\natomic {y--; y++;}\n\nprintf(\"y = %d\\n\", y);\n\na) 3  b) 4  c) 2  d) 0\n\n12. Kod SAT rješavača GRASP, neka je konfliktno pridruživanje nastalo nakon alternativnog izbora vrijednosti varijabli pri grananju na razini 6 bilo: KP = {x4 = 0@1, x5 = 0@3, x6 = 1@4}. U tom slučaju događa se povratak na razinu\n\n    a) 5  b) 1  c) 4  d) 3\n\n15. Što od navedenog nije uobičajen naziv konfiguracijske datoteke koju koristi sustav Java PathFinder?\n\na) bounded_buffer.jpf\n\nb) include.properties\n\nc) site.properties\n\nd) jpf.properties\n\n19. Teorija kao gradivni dio logičke formule koja tvori ograničenje određena je svojim potpisom (domenom djelovanja) i\n\n**a)** Aksiomima\n\n20. U jeziku Promela naredba a!b\n\na) definira sinkorni produkt procesa a i procesa b\n\n**b)** šalje poruku b preko komunikacijskog kanala a\n\nc) definira asinkroni produkt procesa a i procesa b\n\nd) Šalje poruku a preko komunikacijskog kanala b\n\n\nAko itko misli da sam pogrješio sa bodebljanim odgovorima ili zna odgovor na pitanja gdje nisam podebljao odgovor molim ga da napiše, hvala.",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53455": {
+      "poster": "Dell",
+      "content": "@Bananaking#53442 \n\nU trećem su odgovori krivo prepisani, ponuđeni odgovori su bili:\n\na) ITE(a, 0, b)\n\nb) **ITE(a, 1, b)**\n\nc) ITE(a, b, 1)\n\nd) ITE(a, b, 0)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53461": {
+      "poster": "Bananaking",
+      "content": "@Dell#53455 Jel moguće da su drugačije zadane funkcije? Malo mi je nevjerojatno da sam baš svaki odgovor toliko krivo prepisao al dobro, ako je tako mea culpa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53465": {
+      "poster": "Dell",
+      "content": "@Bananaking#53461 Hmmm, moguće, jer sam ja prepisao da je bila zadana funkcija f = !a + b što je drugačije nego u tom",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53468": {
+      "poster": "Dell",
+      "content": "@Bananaking#53461 Također, ako je u zadatku zadano tako kao što si ti napisao, mislim da je odgovor c, a ne b\n\nEdit: \n\n8 bih stavio a), 9 ovisi radi li se o kronološkom povratku, jer onda mislim da je a), u slučaju ne-kronološkog c)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53473": {
+      "poster": "Bananaking",
+      "content": "> @Dell#53468 Također, ako je u zadatku zadano tako kao što si ti napisao, mislim da je odgovor c, a ne b\n\nSad sam ja opet rješio i rekao bih a) hahah, izgleda da sam koristio tablicu za AND a ne OR kada sam rješavao, ups, evo razmišljanje/postupak\n\n![](assets/2020-07-12/00025.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Dell",
+          "Stark",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53476": {
+      "poster": "Dell",
+      "content": "@Bananaking#53473 Imaš pravo, dobro je tvoje, provjerio sam u prezentaciji kako oni računaju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53543": {
+      "poster": "Bananaking",
+      "content": "Što je u postupku fiksne točke ovaj R^-1 i zašto je ovdje R^-1 (2) = 3\n\n![](assets/2020-07-12/00034.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53547": {
+      "poster": "Dell",
+      "content": "@Bananaking#53543 Prethodnici čvorova u Z1, ili ti ga u ovom slučaju čvorovi iz kojih možeš doći u čvor 2.",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53555": {
+      "poster": "Stark",
+      "content": "Ovo je link na onaj Doc s prošlih godina, ali sad je dopušteno uređivanje: \n\n[Klik](https://docs.google.com/document/d/1T-kl760EHE8qo2lGUwCCPeUIYZuzqQS9e_nHe_gLGpc/edit?usp=sharing)\n\nProbajte da li radi.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53575": {
+      "poster": "Stark",
+      "content": "Kako raditi s ovim prijelazima? (zadatak sa ZI)\n\nObično je za prijelaz bio npr inktement varijable, a ovdje se gleda neki uvjet?![](assets/2020-07-12/00040.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53891": {
+      "poster": "Bananaking",
+      "content": "> @Bananaking#53442 Kod SAT rješavača GRASP, neka je konfliktno pridruživanje nastalo nakon alternativnog izbora vrijednosti varijabli pri grananju na razini 6 bilo: KP = {x4 = 0@1, x5 = 0@3, x6 = 1@4}. U tom slučaju događa se povratak na razinu\n\n>     a) 5  b) 1  c) 4  d) 3\n\nMože netko objasniti kako se rješavaju ovi GRASP zadaci pls?",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53950": {
+      "poster": "Franksta",
+      "content": "@Bananaking#53442 tek sad vidim ovu temu, jebeno...\n\nNasao sam ovo: http://www.cse.chalmers.se/edu/year/2016/course/TDA383_LP1/spin/ i tamo za 8. zadatak kaze y = 3",
+      "votes": {
+        "upvoters": [
+          "pero122 (teslaFan)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53953": {
+      "poster": "Franksta",
+      "content": "@Bananaking#53442 10. bih rekao bounded_buffer jer to nije konfiguracijska datoteka, nego nekakav primjer za DZ sto su nam oni dali.",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53964": {
+      "poster": "Franksta",
+      "content": "18. Program koji odlucuje o zadovoljivosti formule predikatne logike I. reda u odnosu na pozadinske teorije kao sto su teorija jednakosti, cijelih i realnih brojeva, polja itd. naziva se:\n\n **a) SMT-rjesavac**\n\n b) jpf-core\n\n c) SAT-rjesavac\n\n d) NuSMV\n \n19. Algoritam Chaff provodi propagaciju Booleovih ogranicenja koristeci:\n\n a) strategiju backjumping\n\n b) dodavanje suma pri svakom grananju\n\n c) promatranje dva literala u svakoj klauzuli\n\nd) uklanjanje klauzula s cistim literalima\n\n20. Koja od navedenih formula nije sintaksno ispravna u logici CTL\n\n a) A( ~ reg U ~ ack)\n\n b) AX EX AG reg\n\n c) E(~ reg U ~ ack ^ reg)\n\n **d) E(~ reg U A ~ ack)**\n \n21. isti kao i 8. kod kolege\n\n22.  isti kao i 12. kod kolege\n23. Ispravno navodjenje ekplicitnog nedeterminizma u NuSMV-u u stilu dodjeljivanja za varijablu reg tipa boolean je:\n\na) next(reg) := {ready, busy};\n\nb) kod eksp. nedet. ne navode se vrijednosti koje varijabla treba poprimiti\n\nc) reg = {TRUE, FALSE};\n\n**d) next(reg) := {TRUE, FALSE};**\n\n24. Isti kao i 9. kod kolege\n\n25. isti 6. zadatak kao i kod kolege\n26. ZAdan je ekspandirani asinkroni produkt (6^ω) s vrijednostima varijabli: x=2; x=1; x=5; x=4; x=7; x=9; x=10; x=13; x=12; x=11; Odredite koji od ponudjenih odgovora je LTL formula [ ]p (\"globally\" p) istinita:\n\na) p ≡ (x==7)\n\nb) p ≡ (x>=10)\n\n**c) p ≡ (x>0)** \n\nd) p ≡ (x<7)\n\n27. isti kao i 3. kod kolege\n28. isti kao i 4. kod kolege\n29. Nekakva slika s ROBDD jbg\n30. Sto od navedenog nije nacin kako osnovni projekt Java PathFindera (jpf-core) nastoji rijesiti problem eksplozije broja stanja:\n\na) Djelomicno smanjenje poretka (partial order reduction)\n\nb) Odgovaranje ?? izvodjenja metoda JVM-a\n\nc) Simbolicko izracunavanje skupova stanja\n\nd) Provjera podudaranja stanja (state matching)",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53978": {
+      "poster": "Stark",
+      "content": "@Stark#53575 Da li netko zna ovo, trebali bi biti easy bodovi, radi se o zadatku koji se ponavlja samo ne znam što s ovim prijelazima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Franksta"
+        ]
+      }
+    },
+    "53980": {
+      "poster": "Franksta",
+      "content": "@Franksta#53964 19. valjda promatranje dva literala u svakoj klauzuli",
+      "votes": {
+        "upvoters": [
+          "Dell",
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "53983": {
+      "poster": "Stark",
+      "content": "@Franksta#53964 \n\nSto od navedenog nije nacin kako osnovni projekt Java PathFindera (jpf-core) nastoji rijesiti problem eksplozije broja stanja:\n\na) Djelomicno smanjenje poretka (partial order reduction)\n\nb) Delegiranje izvodjenja metoda JVM-a\n\n**c) Simbolicko izracunavanje skupova stanja**\n\nd) Provjera podudaranja stanja (state matching)",
+      "votes": {
+        "upvoters": [
+          "Franksta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54004": {
+      "poster": "Volimluk",
+      "content": "Ej ljudi, sretno sutra, rijesite se ovog sranja.\n\nProbajte zapamtit pitanja za nas koji ne mozemo doci, bit cu vam zahvalna do neba.",
+      "votes": {
+        "upvoters": [
+          "Dell",
+          "Franksta",
+          "Trolololica",
+          "feel_d_boot (iNut)",
+          "pero122 (teslaFan)",
+          "who13"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54118": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Ako ja ovo sutra prođem, pucam iz automata kad dođem kući.\n\n**Sritno svima ljudi!!!**",
+      "votes": {
+        "upvoters": [
+          "Dell",
+          "Franksta",
+          "InCogNiTo124",
+          "Volimluk",
+          "aKul (Vili Beroš)",
+          "amnael",
+          "who13"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54222": {
+      "poster": "Dell",
+      "content": "Došli rezultati, hvala gospodinu Joviću, cya fmos",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Franksta",
+          "midget"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54248": {
+      "poster": "Trolololica",
+      "content": "Jel ispit izgledao sicno zavrsnom?",
+      "votes": {
+        "upvoters": [
+          "HotPotato"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54250": {
+      "poster": "midget",
+      "content": "@Trolololica#54248 da",
+      "votes": {
+        "upvoters": [
+          "Trolololica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54258": {
+      "poster": "aKul (Vili Beroš)",
+      "content": "@feel_d_boot#54118 jesi proso?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Filemon"
+        ]
+      }
+    },
+    "54263": {
+      "poster": "Bananaking",
+      "content": "@aKul#54258 Ja nisam.\n\nAli sam prepisao nešto računskih. Teorijske mi se nije dalo pa ako netko je bilo bi odlično. Stavit ću danas/sutra ovdje ili na materijale što imam.",
+      "votes": {
+        "upvoters": [
+          "Trolololica",
+          "Volimluk",
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54477": {
+      "poster": "adrian7000",
+      "content": "@Bananaking#54263 stavit cu ja teorijske.",
+      "votes": {
+        "upvoters": [
+          "Trolololica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "54498": {
+      "poster": "Franksta",
+      "content": "Imam ja cijeli ispit slikan\n\nBudem stavio na materijale",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Trolololica",
+          "Volimluk",
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "56322": {
+      "poster": "Franksta",
+      "content": "evo link na LJIR https://u.pcloud.com/#page=filemanager&folder=6710540759&tpl=foldergrid",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "56324": {
+      "poster": "slip",
+      "content": "@Franksta#56322 Kaže \"Folder is not accessible\".",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "56354": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@slip#56324 Na materijalima je u rootu, sredit ću repo sutra valjda (danas ne stignem, uzimam odmor jer sam u tjedan dana uredio tipa 20 repoa)",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "slip"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "56469": {
+      "poster": "Stark",
+      "content": "Neke dijelove ne mogu pročitati.\n\n@adrian7000#54477 Imaš možda 4. teorijski? \n\n@Bananaking#54263 Imaš možda 4 i 8.b računski?\n\n@slip#56324  https://raw.githubusercontent.com/studosi-fer/FMUOS/master/FMUOS_2019-20_ljir.pdf\n\nEvo tu privremeno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "56578": {
+      "poster": "Bananaking",
+      "content": "@Stark#56469 \n\n4. Verilog, a) nacrtaj odgovarajući FSM, b) navedi o kojoj vrsti stroja s konačnim brojem stanja se radi\n ```verilog\n typedef enum {S1, S2, S3, S4} state;\n module kripke(clk, x, y);\n input clk;\n state reg s;\n output x, y;\n wire x, y, rand;\n assign rand = $ND(0,1);\n assign x = ((s = S1) || (s = S3));\n assign y = (s != S4);\n initial begin\n      s = s1;\n end\n always @(posedge clk) begin\n    case(s)\n        S1: if (rand) s = S2\n        S2: if (!rand) s = S1;\n            else s = S3\n        S3: if (rand) s = S4;\n        S4: if (!rand) s = S1;\n      endcase\n    end\n  endmodule\n  ```\n\n8 b) Opiši postupak kako primjenom LTL formule odrediti istinitost sljedeće tvrdnje te postupak pronalaženja protuprimjera\n\n\"Tijekom izvođenja globalna varijabla x neće poprimiti vrijednost x > 15\"\n\nUvlačenja u kodu su u ovom editoru retardirana pa je sve u crti ali to možeš vidjeti u slici pdf-a koliko je što uvučeno ako je to uopće bitno",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "56662": {
+      "poster": "adrian7000",
+      "content": "@Stark#56469 ![](assets/2020-07-24/00005.png)\n\nStavljene sve slike na materijale, al u medjuvremenu evo i ovdje.",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "57670": {
+      "poster": "Stark",
+      "content": "Gdje su objašnjeni ekspandirani asinkroni produkti? Ne nalazim u prezentacijama (to je onaj zadatak s brojevnom crtom)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63534": {
+      "poster": "Amali (Amajli)",
+      "content": "https://docs.google.com/document/d/1bBje-_w6EPqfqmQeIb8yIVSTVDd0oZJ61kkVu_Rnl0M/edit?usp=sharing\n\nPrepisala sam ono sa slika ovogodisnjeg LJIR-a sve da se vidi procitat kak spada i jos dodala neka distinct pitanja iz teorije sa ZI koja imaju u nekim postovima tu i za te sam uzela rjesenja koja su u tim postovima ili replyjevima s ispravcima. Nekih par sam oznacila po sjecanju, al jos nisam pocela ucit pa je vecina neoznacena\n\nAko netko zna odgovor na neko pitanje, bilo bi super da se oznaci ko ova neka ostala ili slicno zelenom bojom \\:D\n\nOne starije (do 2015) ispite nisam jer su citki iovak ionak\n\nExtra - ponovni paste necijeg linka na stari docs file s rijesenim/objasnjenim zadacima https://docs.google.com/document/d/1T-kl760EHE8qo2lGUwCCPeUIYZuzqQS9e_nHe_gLGpc/edit",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Stark",
+          "adrian7000",
+          "feel_d_boot (iNut)",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63556": {
+      "poster": "adrian7000",
+      "content": "@Amali#63534 \n\nEvo i ZI sve sta sam skupio i sortiro: https://easyupload.io/ypk6fg\n\nPa ako ti se slucajno da prepisat 😀 \n\nStavljeno i na materijale, al nije odmah vidljivo.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)",
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63969": {
+      "poster": "Stark",
+      "content": "Došla obavijest, neće biti pitanja na zaokruživanje na roku 😔",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63974": {
+      "poster": "adrian7000",
+      "content": "@Stark#63969 A prije ZI-a su objavili ovo:\n\n> Podsjećamo da su na predmetu predviđena još tri roka (kao i dekanski rok), koji će biti slične težine kao završni ispit te bi, u slučaju sumnje u simptome koronavirusa, bilo pametno radi drugih kolega odustati od izlaska na ispit.\n\nAl sta ces, kad si smece onda si smece. Nema tu pomoci.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)",
+          "Stark",
+          "feel_d_boot (iNut)",
+          "mAcaLukas (mAca Lukas)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63975": {
+      "poster": "Stark",
+      "content": "@adrian7000#63974 Sva sreća pa ima starih rokova na materijalima na taj princip. Možda bi ih trebalo početi u Docs rješavati...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63976": {
+      "poster": "Amali (Amajli)",
+      "content": "@Stark#63969 vidjeh i whatthefuck\n\nMijenjaju uvjete studentima za polaganje predmeta nakon \"ZI\" i LJIR koji su imali zaokruzivanje, i to jos jave 4 dana pred ispit\n\nMozda stalkaju forum pa su vidjeli da imamo pitanja s proslih ispita a nemaju kaj novo smislit pa ce sad ispit degradeat na onaj opp kancer - ipak je to ista ekipa. Steta, bas sam si mislila kak zapravo ispiti nisu tako losi s obzirom na cinjenicu da vjerujem da je jako mali broj ljudi koje _ne_ boli kurac za fmos, a zaokruzivanje dosta olaksava prolaz ove gluposti za koju ne vidim razlog da bude **obavezan** predmet\n\nUkratko, nek idu u kurac. Nekako cu proc svakako, al ovo svejedno nije u redu",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Stark",
+          "YenOfVen",
+          "adrian7000",
+          "feel_d_boot (iNut)",
+          "mAcaLukas (mAca Lukas)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63983": {
+      "poster": "adrian7000",
+      "content": "Inace se stvarno ne volim zalit, al s obzirom na trenutnu situaciju najradje bi poslao mail prodekanici za nastavu jer mislim da je bezobrazno stavit onu obavijest i onda promijenit koncept ispita.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)",
+          "InCogNiTo124",
+          "Stark",
+          "YenOfVen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "63994": {
+      "poster": "adrian7000",
+      "content": "@adrian7000#63983 Samo da napomenem da necu slat mail jer to ionako nista nece promijeniti osim mozda da nam oteza prolazak ispita. Nakon rokova cu ga poslat cisto jer mislim da bi prodekanica trebala znat kakvi su odredjeni profesori.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)",
+          "Volimluk",
+          "YenOfVen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64188": {
+      "poster": "YenOfVen",
+      "content": "@Amali#63976 Ako stalkaju pa umjesto da nakon legit feedbacka nesto naprave od predmeta, oni naprave ovo, onda fakat svaka cast. Budu dobili postovanje studenata ko sto ga i sad imaju, u minusu",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64494": {
+      "poster": "Stark",
+      "content": "Vidim da se dosta često pita ova promjena kanala (c) zadatak), pa da li bi to netko znao objasniti? Obično je u ovakvim zadacima.\n\n ![](assets/2020-08-28/00049.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64518": {
+      "poster": "mAcaLukas (mAca Lukas)",
+      "content": "Prvi put da idem prolazit kroz ova jebena predavanja iako je 2. upis, zaboravio sam od OPP-a koliko je čovjek nesposoban. Hlupić je imo bolje slajdove, a vjerojatno i predavanja. 10 slajdova o tome kako radi kompajler i onda slajd s 8 linkova na kojima možemo proučiti stvari zapravo vezane uz gradivo. Jesi to mogo stavit u slajd pizdo, mjesto da nas jebeš s nečim što smo 15 puta učili i nema veze s nijednim tvojim predmetom?",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amali (Amajli)",
+          "HotPotato",
+          "InCogNiTo124",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64577": {
+      "poster": "Amali (Amajli)",
+      "content": "@YenOfVen#64188 To mi nazalost jedino zvoni kao razlog zakaj bi naglo mijenjali koncept ispita",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64589": {
+      "poster": "Amali (Amajli)",
+      "content": "@Stark#64494 promjena kanala ti je u inicijalizaciji/deklaraciji\n\nsinkroni su chan a  = [0] of nes, kao kapacitet 0\n\nasinkroni imaju kapacitet >0, ovo dolje je recimo asinkroni kanala kapaciteta 4 poruke\n\n![](assets/2020-08-29/00011.png)\n\nmsm da ne bi trebalo bit promjene osim tih definicija, ak se koristi normalno slanje i primanje prek kanala s ! i ? to je sve automatski rijeseno? Someone correct me if I'm wrong, prvi put sam to citala sinoc\n\nZa deadlock ne znam stvarno, nisam uopce sigurna, ja ne bih rekla da je moguc, to je samo blokirajuce ak je kanal pun, trebalo bi funkcionirati, al ne drzi me za rijec. Mozda treba rucno proc postupak nekak pa vidjet kaj se dogadja i kak\n\nDoduse mene buni ovaj random skip tu izmedju dva stanja, izgleda apsolutno bespotreban, al preze nisu najbajnija stvar ikad i msm da nije bas tam objasnjen skip (odnosno tam se samo spominje da je skip naredba kojom se oznacava zavrsno stanje?) nit postoje neki rijeseni zadacici ko za neke druge cjeline.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64591": {
+      "poster": "EthanCarter",
+      "content": "Da li postoji razlika izmedu []<> i <>[]? Globalno konacno i konacno globalno? Da li je []<> uopce ispravno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64593": {
+      "poster": "Stark",
+      "content": "Kuži li tko kako se iz Buchi automata dobije LTL formula? Samo znam za onaj link koji izbaci sliku automata za LTL formulu, ali mi to nije baš od pomoći...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64598": {
+      "poster": "Amali (Amajli)",
+      "content": "@EthanCarter#64591\n\nobjasnjeno je negdje u prezama\n\nides iznutra prema van\n\nGFp tj []<> - beskonacno puta se pojavi p (beskonacan niz xxxxpxxxxxpxpxxxpppxxxxxxxpxpxpxppx....). Na globalnoj razini, uvijek ce se kad tad pojavit p (uvijek u buducnosti postoji p barem jednom, I guess). Iznutra prema van: finally se pojavio p, postoji u nizu. E sad to imas na globalnoj razini.\n\nFGp tj <>[] - konacno u nekom trenutku imat ces beskonacan niz p, dakle (x*p+ kao regex). Iznutra prema van: uvijek imas p, bas uvijek od sad nadalje. E ali to dobijes tek u nekom trenutku u nizu.\n\nHope that's clear",
+      "votes": {
+        "upvoters": [
+          "EthanCarter",
+          "Trolololica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64604": {
+      "poster": "Amali (Amajli)",
+      "content": "@Stark#64593 buchi automat je basically _idealan_ automat za tu formulu, kind of. Modelira ju, pokazuje ti kak se formula ponasa. Moras znat kakav niz ta LTL formula prihvaca i iz tog napravit automat, ko UTR gramatike u biti\n\nevo basic primjeri moj tok misli\n\nnpr Gp tj []p\n\nto je cijeli niz p\n\nvrlo jednostavno. Imas pocetno stanje i dobivas samo p, i to stanje je ujedno i zavrsno\n\n![](assets/2020-08-29/00013.png)\n\n\nnpr Fp iliti <>p\n\np se mora pojavit negdje u nizu. Trazi se samo prvi p, za ostale nas nije briga.\n\ntrebas samo jedan p i sretan si. Imas pocetno stanje, mozes primat 1 (true) kao sve osim p ili p koji trazis. S 1 ide sam u sebe i ceka na p. Dobije p?  Super, ode u zavrsno stanje, i tam se vrti sam u sebe s 1 na prijelazu jer ga nije briga kad dolazi iza tog prvog p koji je nasao.\n\n![](assets/2020-08-29/00014.png)\n\nnpr GFp odnosno []<>p\n\nglobalno u cijelom nizu, dakle iz svakog stanja (elementa? nez kak se to zove) moras kad tad doc do p. Minimalan broj p je 1, i taj mora bit zadnji element niza, za ostale prije je aps svejedno kak i di se nalaze, al prihvacas ih jer ne znas koji je zadnji\n\nimas pocetno stanje. iz njega mozes dobit il nekaj random (1) il p jer je to beskonacan niz random shita i p.\n\n1 ide sam u sebe jer ne trazis to (trazis p).\n\np ide u zavrsno stanje jer to zelis (GFp vrijedi sam ak je zadnji element niza p btw)\n\nkul, sad si u zavrsnom stanju. Kaj sad? Well, GFp trazi beskonacno ponavljanje p, i opet imas prijelaze p i 1\n\n1 ide nazad u pocetno, jebiga ak je doslo nes di ne vrijedi p, ne vrijedi ni formula vise osim ak se poslije pojavi p opet. Postoji prijelaz jer ti nije bitno da se zauvijek vrti p nakon prve pojave, sam je bitno da je zadnji element niza p jer onda globalno iz bilokojeg koraka na putu dodjes eventually do p\n\np se pak vrti u zavrsnom stanju jer njega trazimo i mora bit zadnji element niza\n\n![](assets/2020-08-29/00015.png)\n\n\nnpr FGp tj <>[]p\n\nNiz hrpe bilocega koji na svom kraju ima neprekinut niz 1+ stanja di vrijedi p\n\npocetno stanje.\n\nvrtis se sam u sebe s 1, cekas i cekas, moze bit inf znakova\n\nDodje p, ides u zavrsno stanje\n\nu zavrsnom prihvacas samo p, te tak u zavrsnom stanju imas samo prijelaz sam u sebe s p\n\n![](assets/2020-08-29/00016.png)\n\n------\n\nbest I can do s losom terminologijom jer ju pojma nemam, pitajte ak nije jasno il recite ak je uzasno, glhf",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64611": {
+      "poster": "Amali (Amajli)",
+      "content": "@Stark#64593 zabrijah totalno na prvi reply, treba obratni proces lel\n\nNisam vidla da uopce ima takvih zadataka, and if yes vj nece bit dramaticnije od bazicnih Fp, Gp, FGp i GFp, myb Xp? I hope. Ne znam  ni napisat neku pametniju\n\nImamo ovu glupost\n\n![](assets/2020-08-29/00017.png)\n\nbasically najjednostavnije ti je krenut pisat niz koji to generira, random biras ak imas dva prijelaza that's the point anyway\n\novo tu daje nizeve tipa\n\nxxxxxxxxxxxxxxxxxxpxxxxxxxxxxxxxxxxxxx\n\nx je zanemarivo stanje\n\nhmmmmmmmm kojoj to formuli pase?\n\n|| Fp / <>p ||\n\n\nOvaj mi je cudan af, al dobro\n\n![](assets/2020-08-29/00018.png)\n\nprihvaca prazan niz (init)\n\nprihvaca niz jednog random stanje di moze ili ne mora vrijediti p (koliko kuzim, 1 je catch all, if true)\n\nnakon toga mora doc !p (to je drugo stanje or whatever)\n\nnakon tog moze bit kaj god pozeli\n\nhmmm\n\n''\n\nx\n\nx!p(x+)\n\nU drugom po redu/iducem stanju mora vrijediti !p\n\nhmhm\n\n|| X¬p tj ¬Xp ||\n\n-----\n\nMogu po zelji probat jos njih osnovnijih raskopat maaaybe\n\nI'm no expert tho",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64614": {
+      "poster": "EthanCarter",
+      "content": "@Stark#64494 Ima negdje rijesen i a) dio zadatka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64618": {
+      "poster": "Stark",
+      "content": "@EthanCarter#64614 Imaš ovdje [klik](https://docs.google.com/document/d/1bBje-_w6EPqfqmQeIb8yIVSTVDd0oZJ61kkVu_Rnl0M/edit#)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64641": {
+      "poster": "EthanCarter",
+      "content": "@Stark#64618 Sorry, moguce da sam slijep ali u tom linku nema rjesenja, samo zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64645": {
+      "poster": "Stark",
+      "content": "@EthanCarter#64641 Sorry, krivi link, već sam lud od FMOSA [link](https://docs.google.com/document/d/1T-kl760EHE8qo2lGUwCCPeUIYZuzqQS9e_nHe_gLGpc/edit)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64688": {
+      "poster": "Stark",
+      "content": "Da li je netko naletio na zadatak u kojem treba pisati kod u Verilogu? Znam da NuSMV i Promelu treba znati i pisati a za Verilog nisam siguran.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64987": {
+      "poster": "Volimluk",
+      "content": "@Stark#53555 \n\nKako se na kraju rješava zadatak iz tog doca?\n\nZadana su dosezljiva stanja sustava S={S0, S1, S2, S4-S7, S16-S21}. Potrebno je odrediti njihovu karakteristicnu Booleovu funkciju.\n\nIma dosta rasprave oko tog zadatka u docu, ne kuzim koje je tocno rjesenje na kraju :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "65108": {
+      "poster": "lara",
+      "content": "![](assets/2020-08-30/00035.jpeg)\n\nZna netko b) ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "65254": {
+      "poster": "Bananaking",
+      "content": "Jest da sam izašao na ispit samo vidjeti ga i prepisati pokoje pitanje kao pripremu za korona rok ali moram reiterirati: kako glup predmet brate mili... Pitanja ću staviti na materijale kroz dan dva, nemam sve\n\nP.S. kovrčava jurassic park ako hoćeš na kavu javi mi na PM 😉",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "InCogNiTo124",
+          "MarokMarsci (Collapse Enjoyer)",
+          "Stark",
+          "adrian7000",
+          "amnael",
+          "feel_d_boot (iNut)",
+          "mAcaLukas (mAca Lukas)",
+          "soplagaitas (sopla)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124",
+          "Mioch",
+          "Stark",
+          "amnael",
+          "feel_d_boot (iNut)",
+          "in1",
+          "mAcaLukas (mAca Lukas)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "soplagaitas (sopla)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "65808": {
+      "poster": "knjklj",
+      "content": "1. JIR 19/20\n\nza 12. zadatak nisam prepisao kôd. \n14. zadatak je također imao napisane primjere korištenja funkcija. 3 stanja, x i y varijable, prijelazi (ako se ne varam)\n15. fali slika\n16. isto. \n18. napisati* pseudokôd\n\nVjerujem da je sve ostalo tu. \n\n![](assets/2020-09-01/00010.jpeg)\n\n![](assets/2020-09-01/00011.jpeg)\n\n![](assets/2020-09-01/00012.jpeg)\n\n![](assets/2020-09-01/00013.jpeg)\n\n@Bananaking slobodno uredi file sa mojim po potrebi.",
+      "votes": {
+        "upvoters": [
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "67362": {
+      "poster": "adrian7000",
+      "content": "![](assets/2020-09-06/00019.png)\n\nZasto ovaj AX? Zasto ne moze bez toga?\n\nedit: tek sad sam scrollao dolje gdje bas pise da se AX moze i izostavit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "67445": {
+      "poster": "adrian7000",
+      "content": "![](assets/2020-09-06/00028.png)\n\nJel ovaj prijelaz iz S2 u S2 greska?",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "67513": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@adrian7000#67445 Možda čak i je\n\nmislio sam da je do načina osvježavanja stanja al ne vidim kako bi iz tog stanja ostao bez da se ignorira neki prijelaz\n\ntj specifično, morao bi se preskočiti prijelaz sreće. E sad, ako su to dva procesa, onda se može dogoditi, jer nema justicea da se naizmjence izvršavaju, pa se praktički sreća nikada ne mora reevaluirati.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "67517": {
+      "poster": "adrian7000",
+      "content": "@micho#67513 po toj logici onda bi morao imati i prijelaze S3->S3 i S3->S1 koji nisu navedeni tako da sumnjam da je to moguce.\n\nedit: a sto nam tocno govori ovaj JUSTICE !(zdravlje=bolestan)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "67758": {
+      "poster": "Bananaking",
+      "content": "(P<->R) ∨ (Q<->R) u CNF, može netko pomoći s koracima?\n\nRiješim ekvivalencije i dođem do\n\n((¬P v R) ^ (¬R v P)) v ((¬Q v R) ^ (¬R v Q))",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68017": {
+      "poster": "joza_oo7",
+      "content": "@Bananaking#67758  Ja sam tu iskoristio pravilo a v (b^ c) = (a v b) ^ (a v c).  Znaci a = ((¬P v R) ^ (¬R v P)) dok je b = ((¬Q v R) i c = (¬R v Q)). Konkretno u ovom slucaju dobijes \n\n[ (¬P v R) ^ (¬R v P) v  (¬Q v R) ] ^ [ (¬P v R) ^ (¬R v P)  v  (¬R v Q) ] zatim ponovo primjenimo isto pravilo samo u uglatim zagradama (teze je primjetit jer se gleda od nazad) \n\n [(¬Q v R) v (¬R v P)] ^ [(¬Q v R) v (¬P v R)] ^ [(¬R v Q) v (¬R v P) ] ^ [(¬R v Q) v (¬P v R)] gdje su prva i zadnja uglata zagrada true jer imas R v ¬R te ostaje [¬Q v R v ¬P)] ^ [¬R v Q v P] (ovdje se radi apsorpcija R u prvoj i apsorpcija ¬R u drugoj uglatoj zagradi.  Evo i kalkulator https://www.erpelstolz.at/gateway/formular-uk-zentral.html",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68065": {
+      "poster": "Bananaking",
+      "content": "@joza_oo7#68017 Jel generalno u tim zadacima sa više zagrada bolje krenuti \"iz unutra\" ili \"iz vana\"?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68083": {
+      "poster": "Bananaking",
+      "content": "FOPL:\n\n\"Svaki sklop u računalu Q777GX ima upravljačku jedinicu\"\n\n\"Ne postoje 2 jednaka ljudska oka\"\n\nMože netko ova 2 (ili još neke) riješiti? Ima gdje više rješenih primjera za vježbati?\n\nMoj pokušaj za drugi je : ∃x(O(x) ^ ∃y(O(y) -> =(x, y)))",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68172": {
+      "poster": "adrian7000",
+      "content": "@Bananaking#68083 \n\nMislim da ti je krivo to jer to sto si napisao bi se procitalo kao \"Postoji x koji je ljudsko oko i postoji y koji ako je ljudsko oko onda su x i y jednaki.\" Sto ne mora vrijedit jer mozes imat x i y koji su oboje ljudsko oko, ali razlicito oko.\n\nIskreno nisam siguran kako bi taj isao, ali probao bi ovako:\n\nO(x) - x je ljudsko oko\n\n=(x,y) - x je jednako y\n\n=O(x,y) - oko x je jednako oku y\n\n∃x ∃y ( (O(x) ^ O(y) ^ =O(x,y)) -> =(x,y) )\n\nOdnosno, ako postoje x i y koji su oci i te oci su jednake, to znaci da su x i y u stvari isto oko. Nemam pojma jel ovo dobro stvarno.\n\nA ovaj prvi bi pokusao s:\n\nS(x) - x je sklop\n\nR(x) - x je racunalo Q777GX\n\nUJ(x) - x je upravljacka jedinica\n\nU(x,y) - x je u y\n\nIMA(x,y) - x ima y\n\n∀x ∃y ( (S(x) ^ R(y) ^ U(x,y)) -> (∃z( UJ(z) ^ IMA(x,z) )) )",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68255": {
+      "poster": "joza_oo7",
+      "content": "@Bananaking#68065 ovisi o zadatku, treba se igrat 🤣 Ako na prvu ruku formula imalo slici na CNF (umnozak(logicko I) suma(logicko ILI)) onda iznutra ides, inace izvana.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68322": {
+      "poster": "Bananaking",
+      "content": "Kod fiksne točke imamo izračunavanje EG i EU, treba zapamtiti formulu za Z(k+1) = ... za svaki od njih i provoditi postupak ili ima neke shvatljive logike iza toga?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68406": {
+      "poster": "knjklj",
+      "content": "Tek sam sad skužio da je u obavijesti za prvi jesenski rok pisalo da ne ulazi 7. cjelina u ispit, a uvalili su nam dva pitanja iz JML (10. i 11. pitanje)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68418": {
+      "poster": "adrian7000",
+      "content": "@knjklj#68406 Jesi siguran da to nisu pitanja iz 5. cjeline?",
+      "votes": {
+        "upvoters": [
+          "knjklj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68427": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68418 ah, onda sam ja zabrijao, ne znam više koja je koja cjelina. Hvala.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68435": {
+      "poster": "adrian7000",
+      "content": "Ako je netko rijesavao zadatke s nekog od rokova kojih nema rjesenih stavite rjesenja tu da usporedimo. Ja cu stavit isto cim cu imat nesto. Krenut cu od jesenskog ove godine.",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68444": {
+      "poster": "knjklj",
+      "content": "rj. 3. zadatak\n\nT je logička posljedica w (tj. T |= w) ako i samo ako T ^ ¬(w) je NEZADOVOLJIVO\n\nraspišeš ¬(w) kao ¬(¬P v Q v R) == (P) ^ (¬Q) ^ (¬R)\n\nPošto T ^ ¬(w) mora biti nezadovoljivo odbaci sve slučajeve gdje je nezadovoljivo:\n\nako P = False onda je odmah nezadovoljivo \n\nako Q = True onda je odmah nezadovoljivo\n\nako R = True onda je odmah nezadovoljivo\n\nkonačno preostaje kombinacija P = T, Q = F i R = F\n\nsveukupna nezadovoljivost glasi: \n\n(P) ^ (QvR) ^ (Pv¬Qv¬R) ^ (P) ^ (¬Q) ^ (¬R)\n\nvidiš da za Q=F i R=F relacija QvR daje F, čime je dokazana nezadovoljivost.",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68449": {
+      "poster": "knjklj",
+      "content": "Naravno, ispravljajte me ako pogriješim.\n\nrj. 4. zad.\n\n(P <=> Q) je ekvivalentno ( (P=>Q) ^ (Q=>P) )\n\nP => Q je ekvivalentno ¬P v Q\n\ndobivamo: (¬P v R) ^ (¬R v P) (skraćeno dalje pišem A ^ B)\n\nanalogno za (Q <=> R) dobivamo (¬Q v R) ^ (¬R v Q) (skraćeno dalje pišem C ^ D)\n\nubacivanjem tih supstitucija u početnu formulu:\n\n(A ^ B) v (C ^ D) = (AvC) ^ (AvD) ^ (BvC) ^ (BvD)\n\nu (AvD) (i analogno u (BvC)) dobivamo (¬P v R v ¬R v Q). Zbog R ili ¬R je to tautologija, pa ignoriramo\n\nkonačno, ostaje (A v C) ^ (B v D) = (¬P v R v ¬Q) ^ (P v ¬R v Q)",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68450": {
+      "poster": "joza_oo7",
+      "content": "Može li netko objasniti Chaff algoritam?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68452": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68172 Za ovo sa sklopom bih osobno izbacio Z i IMA(x, y), pa bih stavio\n\nUJ(x) - x ima upravljačku jedinicu\n\n∀x ∃y ( (S(x) ^ R(y) ^ U(x,y)) ->UJ(x) )\n\ndok za oči bih stavio:\n\nO(x) - x je ljudsko oko\n\nJ(x, y) - x je jednako y\n\n∀x∀y ( (O(x) ^ O(y) -> ¬J(x, y) )\n\ntj. bilo koja dva ljudska oka nisu jednaka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68453": {
+      "poster": "adrian7000",
+      "content": "@knjklj#68449 Dobro je, ali prva 2 reda si greskom pisao Q umjesto R cini mi se.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68456": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68453 da sori, zamijeni Q sa R i to bi trebalo biti to.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68459": {
+      "poster": "knjklj",
+      "content": "za 5. zadatak dobivam:\n\na) postoji put - E\n\nzatim, na tom putu je iduće stanje p - (X p)\n\nslijedi da na tom putu vrijedi p sve dok ne počne vrijediti q\n\nEX (p ^ (p U q))\n\ntj. ima put gdje je iduće stanje p i gdje (onda) vrijedi p sve dok nije q\n\nb) \"Uvijek vrijedi da p ne može biti u 2 uzastopna stanja\"\n\nTj. u na svim putovima, u svim stanjima vrijedi da svaki p iza sebe nema p\n\nAG A(p ^ (AX !p))\n\nslično je 2.a) zadatku iz zadataka za vježbu, barem tako mislim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68471": {
+      "poster": "adrian7000",
+      "content": "@knjklj#68452 S ovim ocima mi je problem da ako uzmes 2 puta isto oko iz domene onda ce ti funkcija J(x,y) vratit True. Naprimjer pogledaj na ovoj slici primjer s fakultetima i kako su se osigurali da ne uzmes isti fakultet i za y i z.\n\n![](assets/2020-09-09/00029.png)",
+      "votes": {
+        "upvoters": [
+          "knjklj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68474": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68471 da, kasnije sam razmišljao o tome, vjerojatno bi trebalo staviti\n\nE(x, y) - x je ekvivalento y\n\n∀x∀y ( (O(x) ^ O(y) ^ ¬E(x, y)) -> ¬J(x, y) )\n\nbilo koja dva ljudska oka, koja nisu isto oko, su različita.",
+      "votes": {
+        "upvoters": [
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68486": {
+      "poster": "adrian7000",
+      "content": "@knjklj#68459 \n\nPod a) jel moze to tako EXU? Po meni bi to trebalo ici EX(p ->  E(pUq))\n\nPod b) isto mislim da ne moze AGA p.  Tu bi stavio AG(p -> AX!p) \n\nGeneralno kad god vidim rijec \"ako\" to me vuce da koristim ->",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68489": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68486 Najvjerojatnije si u pravu za oboje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68490": {
+      "poster": "knjklj",
+      "content": "Jel zna netko kako se (ili da li se uopće može) rješava u ROBDD ITE-om slučaj\n\nITE (c, 1, 0)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68519": {
+      "poster": "adrian7000",
+      "content": "@knjklj#68490 ![](assets/2020-09-09/00034.png)\n\novako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Luka1112 (Akul1112)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68525": {
+      "poster": "knjklj",
+      "content": "Stavljam svoje rješenje 17. zadatka.\n\n![](assets/2020-09-09/00035.jpeg)\n\n![](assets/2020-09-09/00036.jpeg)\n\nNe znam da li slika treba, vjerojatno ne treba ali sam ju svejedno napravio.\n\nTakođer, ne znam je sam li dobro radio, išao sam po svojem shvaćanju kako se rješava.\n\nVjerujem da je dosta nejasno na prvi pogled, no kako sam skužio je:\n\n1) stvoriti ili funkciju za ITE; uzeti (prvi dio F) ILI (preostatak F) i od toga stvoriti ITE. Ako prvi dio = true onda daje rješenje 1, inače razmatramo drugi dio.\n\n2) prezentacija 11 (BDD), slajd 41, pri dnu stranice ima ITE(c, 1, bc) i ITE(0, 1, bc) objašnjeni. Ako treba, mogu pojasniti.\n\n@adrian7000#68519 da, zapravo sam trebao pitati (c', 1, 0). To pretpostavljam da je samo obrnuto; ako c = 1 onda daje 0, ako c = 0 onda daje 1.",
+      "votes": {
+        "upvoters": [
+          "Trolololica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68536": {
+      "poster": "knjklj",
+      "content": "18.) šta oni točno podrazumijevaju pod \"Pseudokod ITE algoritma\"? Objašnjenje kako radi ITE? Rastav na slajdu 36? Onih 5 koraka na slajdovima 38-42?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68537": {
+      "poster": "adrian7000",
+      "content": "> @knjklj#68525 da, zapravo sam trebao pitati (c’, 1, 0). To pretpostavljam da je samo obrnuto; ako c = 1 onda daje 0, ako c = 0 onda daje 1.\n\nDa. Ista slika samo zamijenis c s c' i zamijenis 1 s 0.",
+      "votes": {
+        "upvoters": [
+          "knjklj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68538": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68537 Ali kod tebe obje c mogućnosti vode u rješenje 1, zar ne bi trebalo biti i 1 i 0 rješenja? Jer za ITE(c', 1, 0) se raspisuje kao:\n\nIF (not(c))\n\nTHEN 1\n\nELSE 0\n\ni onda kad c=0 dobiješ IF(1) što daje THEN 1\n\nkad c = 1 dobiješ IF(0) što daje ELSE 0",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68542": {
+      "poster": "Bananaking",
+      "content": "3. Za T = {P, Q v R, P v (¬Q v ¬R)} i ω: P=>(Q v R) pokaži vrijedi li\n\nT ⊨ ω. Izbor metode je proizvoljan\n\nMože netko kratko objasniti kako se rješavaju ovi zadaci ili staviti svoje rješenje pls",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68544": {
+      "poster": "adrian7000",
+      "content": "@knjklj#68538 Ali ELSE na svojoj isprekidanoj liniji ima kruzic sto oznacava komplement. Odnosno da ce ta linija vratiti komplement onoga na sto pokazuje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68545": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68544 Aha, nisam znao za to.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68546": {
+      "poster": "adrian7000",
+      "content": "@Bananaking#68542 https://fer.studosi.net/d/215-fmuos-pitanja-i-odgovori/102",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68549": {
+      "poster": "knjklj",
+      "content": "@Bananaking#68542 https://fer.studosi.net/d/215-fmuos-pitanja-i-odgovori/102\n\nNajlakše je ići da je lijeva strana i not(desna) NEZADOVOLJIVA. Slajd 26 2. prezentacija\n\nlijevu stranu polupaš ^(tj. i) između svih tih zadanih varijabli ^ not(desna)\n\nako baš ne želiš rastavljat te funkcije na jednostavnije oblike (npr rastav implikacije => na notA ILI B) napravi veliku tablicu istinitosti. Cilj je da na kraju lupiš ^(tj. i) svih tih funkcija i svi ^-ovi moraju biti False",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68550": {
+      "poster": "adrian7000",
+      "content": "> @knjklj#68525 da, zapravo sam trebao pitati (c’, 1, 0). To pretpostavljam da je samo obrnuto; ako c = 1 onda daje 0, ako c = 0 onda daje 1.\n\nCisto da skrenem paznju da oni nigdje ne koriste negaciju u ite-u. Pogledaj ovdje za d'\n\n![](assets/2020-09-09/00049.png)",
+      "votes": {
+        "upvoters": [
+          "knjklj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68552": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68550 Ako misliš na ITE(c', 1, 0) tj. da IF nema negaciju, vjerojatno se može zamjeniti sa ITE(C, 0, 1).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68553": {
+      "poster": "adrian7000",
+      "content": "@knjklj#68552 Da, svejedno je. Ne znam jel postoji neko pravilo da ne ide negacija u ite pa sam zato napisao.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68560": {
+      "poster": "knjklj",
+      "content": "Stavljam odgovore na neka teorijska pitanja (živcira me ovo automatsko uvlačenje, zato točka ispred broja)\n\n.1. Tipovi schema:\n\nState schema - globalne izjave o sustavu\n\nOperation schema - opisuje učinak određenih operacija koje mijenjaju stanje podataka u sustavu\n\nObservation schema - opisuje dohvat informacija (ne mijenjaju se podatci u sustavu)\n\n.2. Metode formalne verifikacije:\n\nProvjera modela - zadovoljava li model implementacije zadano obilježje\n\nDokazivanje teorema - je li neka specifikacija logička posljedica implementacije\n\nProvjera ekvivalentnosti - usporedba novog oblikovanog modela, implementacije s izvornim modelom, implementacijom da se ustanovi logička ekvivalentnost\n\nProvjera tvrdnje - provjera zadovoljenosti uvjeta ili speicifičnog svojstva\n\n\n.7. ima netko dijagram?\n\n.10. Runtime data areas (Memorijski prostori koje JVM organizira):\n\nMethod area - informacije o metodama, atributima, konstantama razreda...\n\nHeap - memorijski prostor za pohranjivanje objekata, nad njim operira garbage collector\n\nJava stack i PC register - svaka dretva dobiva svoj stog i programsko brojilo. PC register čuva adresu trenutne JVM instrukcije\n\nNative method stack - dretve koje izvršavaju nativne metode (metode ovisne o OS-u). Imaju zaseban stog.\n\n.11. (Kako se provodi) specifikacija i provjera svojstava programa - ovo pitanje mi nije jasno\n\nNavođenjem koja svojstva treba provjeriti??\n\n.14.\n\nChan - Kanak za komuniciranje između promela procesa\n\nProctype - deklaracija procesa, opisuje ponašanje; run - eksplicitni poziv izvršivosti procesa (pokretanje procesa?)\n\nTimeout - predodređeni globalni read-only boolean; break - skakanje na kraj loop-a\n\nAtomic - sekvenca ili blok naredbi koju simulacija promatra kao da su nedjeljive\n\n.20.\n\nDPLL rješava konflikt pridruživanjem alternativne vrijednosti varijabli grananja, po potrebi uz slijedno vraćanje unatrag\n\nGRASP uči nove klauzule kroz konflikt, ta klauzula je jednaka negaciji konfliktnog pridruživanja\n\n.21. restart \n\nsluži za rješavanje teških problema\n\nradi tako što napušta trenutno stanje pretrage i započinje novu uz pamćenje naučenih (konfliktnih) klazula. Dodaje mali šum pri prvih nekoliko odluka o grananju za istraživanje drugog puta pretraživanja\n\n.22. 3 značajke simboličkog izvršavanja\n\n1 - za ulazne vrijednosti programa koristi simboličke vrijednosti\n\n2 - varijable prikazuje kao simboličke izraze nad simboličkim vrijednostima\n\n3 - pri ispitivanju, simboličko izvršavanje se koristi za generiranje konkretnih ulaznih podataka za svaki ostvarivi put kroz program.\n\n.23. slučaj gdje se ispitni slučaj ne može generirati ako SMT-rješavač ne može (učinkovito) razrješiti ograničenje",
+      "votes": {
+        "upvoters": [
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68562": {
+      "poster": "adrian7000",
+      "content": "> @knjklj#68560 .7. ima netko dijagram?\n\n![](assets/2020-09-09/00050.png)",
+      "votes": {
+        "upvoters": [
+          "knjklj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68564": {
+      "poster": "Bananaking",
+      "content": "@knjklj#68560 7. dijagram ti je 4. prezentacija, slajd 26. (Ne znam ga objasniti).\n\nJel rješio netko 8. zadatak (fiksnu točku)? Brzim scrollom nisam našao, ja dobijem već u 2. koraku rješenje {2, 3}\n\nRačunam Z(k+1) = Q( r ) u [Q(p) (presjek) R^-1 (Zk)] s tim da ne znam zašto baš taj oblik ali sam tako vidio u zzv za zadatke sa Q E p U r",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68569": {
+      "poster": "adrian7000",
+      "content": "@knjklj#68525 Mislim da je dobro, al ovo zaokruzeno treba jos raspisat.\n\n![](assets/2020-09-09/00051.png)\n\nedit: tj mozda i ne treba, vidim da oni nisu u onim zadacima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68575": {
+      "poster": "adrian7000",
+      "content": "@Bananaking#68564 To bi trebalo bit dobro, ja isto tako dobijem. Z0 je prazan skup kad trazimo EU. Kad trazimo EG onda ide ona formula koja ima samo presjek i Z0=sva stanja.",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68599": {
+      "poster": "adrian7000",
+      "content": "Jel zna neko 16.?",
+      "votes": {
+        "upvoters": [
+          "Pilif"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68669": {
+      "poster": "Bananaking",
+      "content": "može netko pojasniti ovaj dio:\n\n![](assets/2020-09-09/00057.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68671": {
+      "poster": "adrian7000",
+      "content": "@Bananaking#68669 \n\nZnaci imas ite(ac, 1, bc) i sad to moras razbit jer ti se grana po \"ac\" odnosno po vise od jedne varijable. Recimo da varijabla a ima veci prioritet od c(a>c). \n\nZnaci da razbijamo po a. I sad napises ite( a, ite(), ite() ). E sad moras dobit ova 2 nova ite-a, prvi je za slucaj kad je a=1, a drugi kad je a=0. To radis tako da pogledas u originalnom ite-u kako izgledaju f,g,h odnosno 1., 2. i 3. clan.\n\nite(ac, 1, bc) znaci:\n\nf=ac, g=1, h=bc\n\nI sad prvo za a=1 cemo dobit f=c, g=1, h=bc\n\nA za               a=0 cemo dobit f=0, g=1, h=bc\n\nI to su ti tvoja 2 nova ite-a, prvi je ite(c,1,bc) drugi je ite(0, 1, bc) i njih sad ubacimo gore u  ite( a, ite(), ite() )\n\nNa kraju dobijemo  ite( a, ite(c,1,bc), ite(0,1,bc) )\n\nAko nes nije jasno pitaj.",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68768": {
+      "poster": "mAcaLukas (mAca Lukas)",
+      "content": "AAAAAAAAAAAAAAAAAAA\n\nThank you for coming to my TED talk\n\nEdit: neka jedu govna obojica",
+      "votes": {
+        "upvoters": [
+          "knjklj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68784": {
+      "poster": "knjklj",
+      "content": "Tek sad vidim da mi fali 9. pitanje, ako netko zna kako je išlo ili o čemu je pitanje bilo javi.\n\n.4. i 5. pitanje su po dvije rečenice, tj. a) i b)\n\n.6. \"napiši rečenicom prirodnog jezika\"\n\n.7. tm == teorem, def. == definiraj\n\n.8. d) \"sustav beskonačno često ...\"\n\n.10. \"u uobičajenom načinu ... s eksplicitnim pamćenjem stanja izvođenja programa...\"\n\n.12. \"koje ostvaruju različiti alati za automatizaciju oblikovanja sklopovlja\"\n\n.14. a) (Y je globalna varijabla tipa int inicijalne vrijednosti y=5)\n\nb) napisati komponente C.S, C.s0, C.L, C.T, C.F\n\nc) expandirani asinkroni produkt\n\n.15. a) - vrijednost x ....\n\nc) a što tokom izvođenja analizatora _pan_\n\n.16. nisam crtao sve točke i pisao svugdje x=, nadam se da je jasno.\n\n.18. za Büchi napisati LTL formulu\n\n.19. expandiraj funkciju uporabom Shannonovog teorema oko vrijednost **b**, .... maksimalno pojednostavi rezultat uporabom aksioma i teorema booleove logike.\n\n.23. \"Napomena - pridružene vrijednosti koje nisu prikazane ...\"\n\n.25. što simboličko izvršavanje programa održava u svakom trenutku\n\n![](assets/2020-09-10/00009.jpeg)\n\n![](assets/2020-09-10/00010.jpeg)\n\n![](assets/2020-09-10/00011.jpeg)\n\n![](assets/2020-09-10/00012.jpeg)\n\n![](assets/2020-09-10/00013.jpeg)\n\n![](assets/2020-09-10/00014.jpeg)",
+      "votes": {
+        "upvoters": [
+          "adrian7000",
+          "mAcaLukas (mAca Lukas)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68790": {
+      "poster": "adrian7000",
+      "content": "@knjklj#68784 sta si ti odusto od ispita ili kak stignes prepisat to sve jos? :D",
+      "votes": {
+        "upvoters": [
+          "knjklj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Trolololica"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68795": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68790 Nisam se dovoljno pripremio za prolaz :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68810": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Znači da je dobro što sam navija alarm za krivi dan i dobija good nights sleep? Kako je prošlo?",
+      "votes": {
+        "upvoters": [
+          "knjklj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68813": {
+      "poster": "knjklj",
+      "content": "Prva prezentacija - za štrebanje i učenje napamet.\n\nPrepisao sam koja su pitanja bila u zadnja dva ispita iz ove cjeline, crnom točkom su dani odgovori.\n\nAko netko smatra da ima još nešto bitno iz prve prezentacije javite. Naravno, nemojte učiti moje kao sveto pismo\n\n![](assets/2020-09-10/00016.jpeg)\n\n![](assets/2020-09-10/00017.jpeg)\n\nNe vjerujem da su tražili \"objašnjenje\" svake tehnike koju B-metoda koristi, no ako treba:\n\nTeorija skupova - kao notacija za modeliranje\n\nRafiniranje - za predstavljanje sustava na različitim razinama apstrakcije\n\nMatematički dokazi - za provjeru konzistentnosti između različitih razina kao način deduktivnog rasuđivanja\n\n2-4 boda u ispitu, ako se dobro sjećam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68832": {
+      "poster": "adrian7000",
+      "content": "@feel_d_boot#68810 meni 50-50 prolaz/pad. Ako prodjem to ce bit iskljucivo na zadacima jer ova teorija je tesko zatupljivanje mozga.",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68837": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Jel teoriju najbolje učiti tako da se prođu zadatci s gdocsa pa učiti(čitaj zapamtiti) s prezentacija?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68841": {
+      "poster": "Dell",
+      "content": "@feel_d_boot#68837 Moraš s prezentacija teoriju zato što pola teorije u tim zadacima se ne primjenjuje direktno pa baš nisi ni svjestan toga dok rješavaš zadatak. Također za dosta teorije uopće ne postoje zadaci u ispitima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68842": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@Dell#68841 \n\nUpravo zato govorim, opcenito teoriju lakse ucim uz zadatke pa računam bi li bilo lakse da prodem sve zadatke pa da teoriju koje nema u zadatcima naštrebam i ggwp?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68844": {
+      "poster": "Dell",
+      "content": "@feel_d_boot#68842 Pa gle, zadatke svakako moraš proći pošto nose previše bodova u ispitu. Ja sam doslovno išao prezentaciju po prezentaciju i rješavao zadatke u njima i onda one iz pdf-a za vježbu. Teoriju sam pročitao par puta ali ništa nisam baš štrebao napamet i bilo je i više nego dosta na ispitu.",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68848": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@Dell#68844 \n\nI jesi teoriju uspija dobro napisati i jesi izaša na rokovima di nije bilo teorije na zaokruživanje? Lako je sititi se nečega iz teorije kad ti je ponuđeno ka odgovor, drugi je napisati esejski odgovor ka što on očekiva",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68850": {
+      "poster": "Dell",
+      "content": "@feel_d_boot#68848 LIR, tada su još bila zaokruživanja, ali su bila i ona 4 teorijska pitanja za opisati. Mislim da su mi 3 / 4 bila dobra. Ali kažem, ja sam učio ovo sranje od predmeta tjedan dana (što je realno dosta dugo) tako da ne znam koliko vi sada imate vremena.",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68851": {
+      "poster": "knjklj",
+      "content": "@feel_d_boot#68848 koliko sam skužio 1., 5. i zadnje prezentacije (12., 13.?) dobiju pitanja koja su čista teorija koju moraš nabubat napamet + često znati I OBJASNITI (opisati) šta je koja metoda/tehnika/whatever",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68873": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68172 Sad isprobavam ponovno rješiti taj FPOS \"Svaki sklop u računalu Q777GX ima upravljačku jedinicu\", zašto ne bismo jednostavno stavili da Računalo Q777GX je konstanta? Slično kao d) primjer iz ZZV.\n\nTakođer, za upravljačku jedinicu bih rekao da ti je netočno, zato što u zadatku ne navodi da li sklop ima BAREM ili TOČNO jednu upravljačku jedinicu, već da jednostavno IMA.\n\nS(x) - x je sklop\n\nU(x, y) - x je u y\n\nI(x) - x ima upravljačku jedinicu\n\nracunalo_Q777GX - konstanta\n\n∀x( (S(x) ^ U(x, racunalo_Q777GX)) => I(x) )",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68893": {
+      "poster": "adrian7000",
+      "content": "> @knjklj#68873 zato što u zadatku ne navodi da li sklop ima BAREM ili TOČNO jednu upravljačku jedinicu, već da jednostavno IMA.\n\nNije mi tocno jasno sto si ovdje htio reci? \n\n∃z( UJ(z) ^ IMA(x,z) )\n\nOvo sto sam ja napisao bi se procitalo kao \"postoji neki z koji je upravljacka jedinica i sklop x ima tu upravljacku jedinicu z. Nije definiran nikakav broj ovdje. U zadatku ne pise da ima tocno jednu upravljacku jedinicu niti to pise u mojem rjesenju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68899": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68893 Da ali mislim da je taj dio nepotreban, da možeš spojiti u jedan predikat, jer sa postoji naglašavaš da postoji barem jedan, tj. \"Postoji barem jedan z koji je upravljačka jedinica ...\". Slajd 39, 2. prez.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68902": {
+      "poster": "adrian7000",
+      "content": "@knjklj#68899 Moguce, iskreno nemam pojma jer se meni cini ko da se sve moze napisat na beskonacno razlicitih nacina i nikad ne znam do koje mjere moram razdvajat stvari.",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68903": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68902 vjerujem da ne treba uopće previše komplicirati, no kad saznam više i točnije javim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68946": {
+      "poster": "knjklj",
+      "content": "Pitanje \"4 pravila zaključivanja propozicijske logike\" pretpostavljam da je slajd 11 + usporedio sam s https://en.wikipedia.org/wiki/Rule_of_inference (koja također navodi da tollens ima dva L, a ne jedno.)\n\nIzgleda kao da ima puno, ali sam jako naširoko pisao + primjeri i zadatci su također tamo. Zadnje 3 slike su ponavljanje.\n\n![](assets/2020-09-10/00025.jpeg)\n\n![](assets/2020-09-10/00026.jpeg)\n\n![](assets/2020-09-10/00027.jpeg)\n\n![](assets/2020-09-10/00028.jpeg)\n\n![](assets/2020-09-10/00029.jpeg)\n\n![](assets/2020-09-10/00030.jpeg)\n\n![](assets/2020-09-10/00031.jpeg)\n\n![](assets/2020-09-10/00032.jpeg)\n\n![](assets/2020-09-10/00033.jpeg)\n\n![](assets/2020-09-10/00034.jpeg)\n\n![](assets/2020-09-10/00035.jpeg)\n\n![](assets/2020-09-10/00036.jpeg)\n\n![](assets/2020-09-10/00037.jpeg)\n\n![](assets/2020-09-10/00038.jpeg)\n\n![](assets/2020-09-10/00039.jpeg)\n\n![](assets/2020-09-10/00040.jpeg)\n\n![](assets/2020-09-10/00041.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69195": {
+      "poster": "Bananaking",
+      "content": "Jel ima smisla ići na uvide iz ovog predmeta i pokušati isciganiti nešto ako nam fali par bodova do prolaza ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69209": {
+      "poster": "Bananaking",
+      "content": "Stigli bodovi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69220": {
+      "poster": "knjklj",
+      "content": "@Bananaking#69195 Nećeš ništa izgubiti ako otiđeš (osim vremena).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69224": {
+      "poster": "knjklj",
+      "content": "@adrian7000#68902 Bio sam sad na konzultacijama:\n\n\"Svaka osoba u gradu Zagrebu ima auto\"\n\nO(x) - x je osoba\n\nG(x) - x je grad\n\nU(x, y) - x je u y\n\nZagreb - konstanta\n\n--------- verzija 1 (koja je također točna):\n\nA(x) - x ima auto\n\n∀x( (O(x) ^ G(Zagreb) ^ U(x, Zagreb) => A(x) )\n\n--------- točnija verzija:\n\nA(x) - x je auto\n\nI(x, y) - x ima y\n\n∀x( (O(x) ^ G(Zagreb) ^ U(x, Zagreb) => ∃y(A(y) ^ I(x, y))\n\nOpet, obje su ispravne, ali druga je tehnički točnija. Također, ako ne piše pretpostavka je \"barem\", tj. \"Svaka osoba u Gradu Zagrebu ima (barem 1) auto.\". Ako sam dobro skužio, staviti objekt (x, y, z...) za imenice kao \"x je _imenica_\"\n\nTakođer, ona verzija gdje si pisao ∀x∃y( (S(x) ^ R(y) ... nije dobra, ako se dobro sjećam da je rekao.\n\n\"Ne postoje dva jednaka stabla u šumi\"\n\nS(x) - x je stablo\n\nŠ(x) - x je šuma\n\nU(x, y) - x je u y\n\n=(x, y) - x je jednako y\n\n∃x∃y∃z (S(x) ^ S(y) ^ != (x, y) ^ Š(z) ^ U(x, z) ^ U(y, z))\n\nšto znači da za rečenicu sa računalom i sklopom bi bilo:\n\n∀x( (S(x) ^ U(x, racunalo_Q777GX) => ∃y(I(y) ^ Ima(x, y))\n\n(jedino možda još staviti R(x) - x je računalo i konstanta je samo Q777GX, ovisno kako interpretiraš ime računala)\n\ni rečenica za dva jednaka ljudska oka\n\n∃x∃y(LJ(x) ^ LJ(y) ^!=(x, y))\n\nZa jednako ne moraš se brinuti da je isti objekt, generalno neće biti, jedino kada je navedeno u početnoj rečenici \"(ni)je jednako\" (tj. različit) onda stavljaš =(x, y)\n\nza CTL, sa prvog JIR-a, \"Promatrano iz početnog stanja, postoji put .......\" je točno (FALE MI ZAGRADE! Na slici nisam stavio (p => E(pUq) treba zagrada). Jedino da je pisalo na početku \"Uvijek vrijedi kada je promatrano iz početnog stanja......\" onda bi bilo rješenje\n\nAG EX (p => E(pUq))\n\nZa rečenicu \"Uvijek vrijedi da p ne može vrijediti u 2 uzastopna stanja\" još dva moguća rješenja su:\n\nAG !(p ^ AXp)  - ne smije biti u trenutnom stanju p i u idućem p\n\nAG (p => AX!p) - ako je trenutno stanje p onda iduće ne smije biti p",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69226": {
+      "poster": "knjklj",
+      "content": "oh yes, na kraju je spomenuo da proučim BDD, SAT, da studenti često ne rješe te zadatke i da \"izgube\" puno bodova tamo.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69323": {
+      "poster": "[deleted]",
+      "content": "Za formalnu logiku postoje predavanja od Šnajdera za kolegij umjetne inteligencije - https://www.fer.unizg.hr/predmet/umjint/materijali#%23!p_rep_15986!_-23757-166793 . Nema vremenske logike, ali propozicijska i predikatna su tu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69381": {
+      "poster": "adrian7000",
+      "content": "@knjklj#69224 Hvala sta si javio, al ja sam proso tako da sam srecom gotov s tim. Sretno svima na dekanskom 😁",
+      "votes": {
+        "upvoters": [
+          "knjklj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69416": {
+      "poster": "knjklj",
+      "content": "@adrian7000#69381 Nema frke, nadam se da će nekome drugom pomoći.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69551": {
+      "poster": "knjklj",
+      "content": ".4. cjelina (koja dođe prije 3. cjeline u ispitu)\n\nPoprilično lagana cjelina, zadaci se rješavaju lagano jednom kada se skuže i nije teško za skužiti. U slikama je teorija i rješavani zadaci.\n\n![](assets/2020-09-11/00037.jpeg)\n\n![](assets/2020-09-11/00038.jpeg)\n\n![](assets/2020-09-11/00039.jpeg)\n\n![](assets/2020-09-11/00040.jpeg)\n\n![](assets/2020-09-11/00041.jpeg)\n\n![](assets/2020-09-11/00042.jpeg)\n\n![](assets/2020-09-11/00043.jpeg)\n\n![](assets/2020-09-11/00044.jpeg)\n\n![](assets/2020-09-11/00045.jpeg)\n\n![](assets/2020-09-11/00046.jpeg)\n\n![](assets/2020-09-11/00047.jpeg)\n\n![](assets/2020-09-11/00048.jpeg)\n\n![](assets/2020-09-11/00049.jpeg)",
+      "votes": {
+        "upvoters": [
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69558": {
+      "poster": "knjklj",
+      "content": ".3. cjelina\n\nJako lagano, takorekuć besplatni bodovi.\n\n![](assets/2020-09-11/00050.jpeg)\n\n![](assets/2020-09-11/00051.jpeg)\n\n![](assets/2020-09-11/00052.jpeg)\n\n![](assets/2020-09-11/00053.jpeg)\n\n![](assets/2020-09-11/00054.jpeg)\n\n![](assets/2020-09-11/00055.jpeg)\n\n![](assets/2020-09-11/00056.jpeg)",
+      "votes": {
+        "upvoters": [
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "70605": {
+      "poster": "knjklj",
+      "content": "Da li itko zna kako se crta FSA za promela model ako imamo nešto kao ovo\n\ndo:\n\n:: x == 13 -> break;\n\nod\n\n(puni primjer pitanja je iz ZI ove godine, treća slika)\n\nMoja pretpostavka je ovo\n\n![](assets/2020-09-14/00028.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "70649": {
+      "poster": "knjklj",
+      "content": "8.-10. prezentacija\n\nIz samih prezentacija - objašnjeno šta koje funkcije rade, LTL operatori:\n\n<> == F tj. Finally\n\n[] == G tj. Globally\n\nO == X tj. Next\n\nU == U tj. Until\n\nZa zadatke:\n\n3.dz s materijala\n\nZadaci iz https://docs.google.com/document/d/1T-kl760EHE8qo2lGUwCCPeUIYZuzqQS9e_nHe_gLGpc/edit\n\nStavljam svoje postupke zadataka sa ZI i JIR-ova. Za većinu vjerujem da su uglavnom točni OSIM onih zadataka \"Nacrtaj konačne automate za promela procese\", za njih tražim pomoć/potvrdu točnosti.\n\n![](assets/2020-09-14/00038.jpeg)\n\n![](assets/2020-09-14/00039.jpeg)\n\n![](assets/2020-09-14/00040.jpeg)\n\n![](assets/2020-09-14/00041.jpeg)\n\n![](assets/2020-09-14/00042.jpeg)\n\n![](assets/2020-09-14/00043.jpeg)\n\n![](assets/2020-09-14/00044.jpeg)\n\n![](assets/2020-09-14/00045.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "71026": {
+      "poster": "knjklj",
+      "content": "DIR:\n\nFormalna sinteza šta je (ili tako nešto) + navedi 2 primjera\n\ndovrši: Formula w je logička posljedica skupa formula T , ako je ....\n\na) preko modela\n\nb) drugi način, ne sjećam se šta je točno pisalo (ono sa nezadovoljiva)\n\nPropozicijska logika odrediva? objasni\n\nnapiši CTL formule koristeći AU\n\npretvori u CNF oblik\n\n(Q => (P=>R)) => (Q => (R=>P))\n\nnapiši linearnu strukuturu π u LTL-u\n\nprepiši u FOPL, jedna od njih je bila \"Svatko povremeno plače i nitko stalno plače\"\n\ntekorijsko pitanje oko veriloga\n\nnacrtaj automat iz verilog kôd-a\n\nstanja javine dretve\n\n(3 boda) napiši o generiranju (ili već štagod) izvještaja u JPF\n\nNuSMV, promela standardni zadaci (napiši nusmv kôd, napiši promela kod + C = A1 x A2 + komponente napiši + napiši 5 koraka, napiši funkcioniranje promela naredbi (chan, else + break, d_step + potpitanje, assert(a < b) + potpitanje ako a = 2 i b = 3 šta će raditi spin a šta pan), nacrtaj iz promela koda (jedan proces sa do, drugi sa if, oba imala else), slika ekspandiranog async produkta i odredi istinitost LTL)\n\nROBBD napiši kako god hoćeš (4 boda), imao si zadanu tablicu\n\n(2 boda) napiši ITE naredbe za AND, NAND, XNOR, još neka (ili sam krivu napisao, whatever)\n\n(4 boda) napiši ROBBD pomoću ITE-a za zadanu funkciju\n\nkada i zašto(?) se koristi SMT i šta je (općenito pitanje objašnjavanja)\n\npitanje o ograničenim provjerama modela i neka funkcija vremena (teorijsko pitanje)\n\npitanje o simboličkom izvršavanju, valjda šta pamti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "71031": {
+      "poster": "knjklj",
+      "content": "e da, i pitanje Chaff, da li ima SAT + rješenje, pisati svaki korak zasebno, odabir je bio najbrojnija varijabla (te ako ih ima više s istim brojem pojavljivanja odaberi na random), postavljanje tako da se veličina klauzule smanjuje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "71107": {
+      "poster": "mAcaLukas (mAca Lukas)",
+      "content": "Mislim da 11 stranica pitanja s esejskim odgovorima nije preizvedivo u 2.5 sata. Većinu sam znao, šta nisam, sam skipao i svejedno mi nije bilo dosta vremena",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158622": {
+      "poster": "Atem",
+      "content": "![](assets/2021-03-25/00048.png)\n\nKako je F monotna ako npr. Y'={S1} , Y={S0} i po tome Y'unija{S0} nije podskup od Yunija{S0}",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159943": {
+      "poster": "Atem",
+      "content": "![](assets/2021-03-29/00022.png)\n\nZašto nema strenice iz stanja REQ/READY u stanje notREQ/READY kad piše da ako req postane false da 'status' može poprimiti vrijednost READY i zašto nema strelice od REQ/BUSY prema notREQ/READY kad piše da ako REQ postane false da 'status' može poprimiti READY",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159952": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "@Atem#159943 Mislim da ovo request:busy znači da oni sa req mogu ići samo u busy znači req/ready ide u req/busy i !req/busy i onda req/busy isto ide u req/busy i !req/busy, a ovo TRUE:{ready, busy} znači da ovi koji imaju ready mogu ići u sve koji imaju ready ili busy",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159960": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "@ImJustAKid#159952 ispravak: svi koji imaju !req mogu ici u ready ili busy",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "160989": {
+      "poster": "carantena",
+      "content": "![](assets/2021-03-31/00024.png)\n\nJeli može netko objasniti kako oni dođu do ove skice/rješenja? (ako može samo objašnjenja ovih uvjeta?) hvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161003": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@carantena#160989 init(a)= false i init(b)=false je početno stanje , S0. Sljedeće stanje varijable a je false, zato što next(a) kaže da ako je b=false (što je u početnom stanju) onda a ostaje onakav kakav je bio (dakle a= false). Sljedeće stanje od b(iz S0) je !b, dakle !false = true. Znači iz S0 je slejdeće stanje S1 gdje su a false i b true. \n\nOnda iz S1 -> b=false nije istina, pa onda je next(a) !a (ovaj dio di piše TRUE, to je kao else), dakle a=true, a b je !b, pa ako je prije bio true, sad je false. Imaš novo stanje S2  gdje je a=true i b= false.\n\nIz S2 u S3 -> b je opet obrnuto od prošlog, dakle true, a kako je u prošlom stanju bio false, a iz prošlog stanja u ovo ne mijenja vrijednost. Znači S3 je b=true, a=true. I na isti način iz S3 dobiš slejdeće stasnje, koje je S0.",
+      "votes": {
+        "upvoters": [
+          "carantena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161318": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Jel se za Kripke strukturu crtaju samo dosezljiva stanja ili sva?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205917": {
+      "poster": "p444k",
+      "content": "Jel postoje riješeni ispiti negdje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205918": {
+      "poster": "p444k",
+      "content": "![](assets/2021-06-12/00023.png)\n\nZna netko?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205964": {
+      "poster": "Svarog (Veles)",
+      "content": "@p444k#205918 moj pokušaj\n1. DA\n2. NE\n3. DA\n4. NE?\n5. NE\n6. NE\n7. NE\n8. NE\n9. DA\n10. NE\n11. DA",
+      "votes": {
+        "upvoters": [
+          "AromaticConfusion (VrloZbunjen)",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206047": {
+      "poster": "chuuya (temari)",
+      "content": "Može netko na zdravoseljački način objasnit kak se grade grafovi implikacija za GRASP? Šta su im ove razine odluke i kako njih određujemo? Šta radit sa klauzulama?? Čitam preze i niš ne kužim\n\nEvo primjer zadatka ak treba:\n\n![](assets/2021-06-12/00031.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206077": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "@Svarog#205964 5. je da ja mislim",
+      "votes": {
+        "upvoters": [
+          "Doktor0807"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206089": {
+      "poster": "Svarog (Veles)",
+      "content": "@AromaticConfusion#206077 da, u pravu si, zbunio me taj izraz [imath]\\omega[/imath]-sekvence/acceptance, na to nisam nigdje naletio da doslovno tako piše, pa sam odbacio kao trik pitanje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206203": {
+      "poster": "Amon",
+      "content": "@chuuya#206047 Konkretno u tom zadatku već imaš dosta stvari ponuđeno (to ti je već neka sredina zadatka), ali zadatak počinje tako da imaš klauzule i cilj je odabrati literale koji će **što manje** tih klauzula riješiti, tj. pretvoriti u true (jer će time nestati).\n\nPostoje 2 mogućnosti:\n\nPrva mogućnost je ako ti ostane 1 literal u klauzuli, onda ćeš njega odabrati kako bi cijela klauzula bila true (to se gleda prvo), a ako prva mogućnosti ne ide (ako nema 1 literal u nekoj klauzuli), onda tražiš literal koji se najčešće pojavljuje (i u kojem obliku) i odabireš opciju kojom će se dobiti false\n\nNpr. imaš 5 puta x1 i 1 puta !x1, stavit ćeš x1 na 0 (klauzula sa !x1 će biti true, ali sve ostale će još biti u igri, a želimo da ih što više bude u igri)\n\nOvo sa razinama je easy: Kad god donosiš odluku koja je nastala zbog 2. mogućnosti navedene iznad (dakle nismo imali samo 1 literal u klauzuli), onda će se counter razina povećati za 1. Dakle prva odluka koju donosiš je razina 1, druga je razina 2, itd.\n\nKada god ostane sam literal i moraš ga stavit na neku vrijednost da klauzula bude true (dakle 1. mogućnost), onda nisi sama birala (tj. nisi donosila odluku, nego si bila prisiljena staviti literal na tu vrijednost) to će i dalje biti ista razina\n\nNpr. na početku donosim odluku da je x1 0 (tj. false) i to je razina 1, dakle x1 = 0 @ 1. Ako nakon toga donesem odluku da je x1 1 (tj. true) onda ću napisati x2 = 1 @ 2 i ako je kao rezultat te odluke neka klauzula (npr. x3) bila prisiljena da postane recimo 1, onda ćeš napisati x3 = 1 @ 2 (jer je odluka bila prisiljena)\n\nKada crtaš graf, to će ti se manifestirati tako da napišeš točkicu za x1, točkicu za x2 i onda iz njih ide strelica prema x3 (koji je prisiljen) i na strelice napišeš klauzulu kod koje je x3 ostao sam\n\nJoš imamo rubni slučaj gdje se dogodi da smo u konfliktu (ako zbog naše ili forsirane odluke) dobijemo da je neka klauzula false, onda moramo dodati novi klauzulu u zadatak koja će glasiti suprotno od odluka koje ste do tada donijeli (to je formalna definicija, zdravoseljačko objašnjenje je da ne smijete ponavljati kombinaciju literala kod kojih je došlo do konflikta) što znači da idete na zadnju odluku i promijenite ju i gledate hoće li opet doći do konfikta, ako hoće onda idete još razinu natrag, itd. sve do početka i ako ste sve isprobali i ako i dalje imate konfilkt, onda to što su vam zadali nije SAT",
+      "votes": {
+        "upvoters": [
+          "Maglica",
+          "chuuya (temari)",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206236": {
+      "poster": "p444k",
+      "content": "![](assets/2021-06-12/00045.png)\n\nMože netko pojasnit zdravo razumski ova rješenja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206248": {
+      "poster": "zokonil",
+      "content": "@p444k#206236 \n1. veli <>p ovo znaci finally p, odnosno pri nekoj tocki ce vrijediti p. x>5 ce vrijediti kad dodemo do x = 6.\n2. []p => globalno ce vrijediti x<9, ovo nikad nece biti tocno jer loop u kojem se nade ima vrijednost x=9, pa ne vrijedi.\n3. []<>p => always finally vrijedi x==3, iz bilo kojeg stanja u produktu je moguce doci u stanje gdje vrijedi da je x==3, loop ima x=3 pa cemo eventualno doci u to stanje\n4. <>[]p => finally always => eventualno cemo doci u situaciju gdje ce uvijek vrijediti x>=1, nema toga jer imas u loop-u x=0",
+      "votes": {
+        "upvoters": [
+          "Maglica",
+          "Sele",
+          "WhiteMamba",
+          "Zogen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206261": {
+      "poster": "p444k",
+      "content": "@zokonil Hvala puno\n\nTo je primjer zadatka s točkicama, a kako mogu najlakše naučit Spin/Promelu? Predavanja su katastrofalna",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206285": {
+      "poster": "zokonil",
+      "content": "@p444k#206261 Mislim kaj su samo predavanja i ostala, nisam videl neki tutorial sa githuba. Jebiga nemamo srece",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206363": {
+      "poster": "Doktor0807",
+      "content": "@p444k#206261 to ćeš ili razumjeti ili nećeš, ne vidim baš nešto odakle učit, probaj riješiti ove primjere googlajući stvari i tak nešto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206404": {
+      "poster": "Anonimity (BoJack)",
+      "content": "Kako uciti ovo? 😭",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206424": {
+      "poster": "chuuya (temari)",
+      "content": "@p444k#206236 Thanks, a kako funkcionira ovo pod c)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206425": {
+      "poster": "chuuya (temari)",
+      "content": "@Amon#206203 Thanks, a kako funkcionira ovo pod c)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206441": {
+      "poster": "Amon",
+      "content": "@chuuya#206425 Basically je pitanje zašto dolazi do konfikta kada smo stavili x2 = 1? Tu samo moraš ići natrag po grafu da vidiš koja je odluka bila prije nego što smo x2 stavili na 1, a da je utjecala na klauzule. Tipa ovo je graf:\n\n![](assets/2021-06-13/00008.png)\n\ni vidiš da ti je zadnja odluka na grafu bila na razini 2 (ovo sa razinom 4 su sve forsirane odluke), to je ovo:\n\n![](assets/2021-06-13/00009.png)",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206447": {
+      "poster": "korisnickoime",
+      "content": "Jel neko možda rješavao ogledne primjere ispita iz teme 10 da stavi rješenja?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206654": {
+      "poster": "Zabe",
+      "content": "![](assets/2021-06-13/00028.png)\n\n jel zna netko ovaj zadatak objasnit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206659": {
+      "poster": "netko_tamo",
+      "content": "![](assets/2021-06-13/00029.png)\n\nkaj ovo znači točno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206752": {
+      "poster": "Doktor0807",
+      "content": "@Zabe#206654 Ovdje se kreira 6 procesa koji svi rade jednu te istu stvar te po meni oni su neovisni tak da je isto ko da promatramo jedan proces. Ugl ulaziš u beskonačnu do petlju pri čemu će se uvijek izvršiti jedna od 3 naredbe :: pri čemu je ovo u zagradi uvjet, kako samo prve dvije imaju uvjet prvo se provjerava je li neki uvjet zadovoljen, ako nijedan od tih uvjeta nije zadovoljen izvest će se :: bez uvjeta, kad bi takvih bilo više, random bi se izabrao jedan za izvođenje. Kako je tebi zadovoljen uvjet (a==2) prvo će se izvesti prva naredba a-- i postaviti a na 1, zatim će se u sljedećoj iteraciji izvesti ova druga gdje je (a==1) i njih dvije će beskonačno dugo alternirati\n\nAko nisam u pravu nek me neko ispravi.\n\nTako da su odgovori na pitanja.\n\n    Proces ne dolazi u završno stanje, ali ne ostaje ni blokiran. Varijabla _a_ alternira s 1 na 2 i s 2 na 1.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206755": {
+      "poster": "p444k",
+      "content": "![](assets/2021-06-13/00045.png)\n\nZašto se  razmatra samo K4, a ne k4 i k5?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206758": {
+      "poster": "Doktor0807",
+      "content": "@netko_tamo#206659 da za prijelaz u novo stanje automata asinkronog produkta možeš gledati samo jedan prijelaz iz početnih automata. Tipa prijelaz a iz automata 1, ili samo prijelaz c iz automata 2, da se neće desiti da u globalnom produktu promjeniš stanja oba automata.\n\nUzmimo za primjer da se nalaziš u stanju s1s1. Iz njega možeš prijeći samo u neko stanje s1sy ili sxs1 uz x i y neka stanja iz automata u koja možeš doći postojećim prijelazom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206790": {
+      "poster": "p444k",
+      "content": "![](assets/2021-06-13/00048.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206815": {
+      "poster": "Doktor0807",
+      "content": "@p444k#206790 FG(p)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206836": {
+      "poster": "p444k",
+      "content": "@Doktor0807#206815 \n\nA kako sam to zaključio? P je bilo koja vrijednost kojavodi u drugo stanje i za svaku vrijednost ostaje tamo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206841": {
+      "poster": "Doktor0807",
+      "content": "@p444k#206836 zbog nedostatka primjera ne znam bi li vrijedilo tipa i FX p ili tako nešto,\n\nali ugl neka prva provjeravanja za Buchi su mi FG(p) i GF(p) pa ako vrijedi koje od ovog dvojeg super",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206877": {
+      "poster": "MJ3",
+      "content": "@p444k#205918 gdje je ovaj ispit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206923": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "pitanje, u pdfu : 12_SAT-rjesavaci_dodatni_zadaci_za_vjezbu.pdf, 2. zadatak, da li bi 3. korak trebao izgledati ovako ?\n\n![](assets/2021-06-14/00018.png)\n\nili ako je ovo njihovo točno, mi može netko tko razumije reći zašto je to točno?",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206952": {
+      "poster": "Amon",
+      "content": "@janeromero#206923 Da, tvoje je dobro, oni su fulali\n\nK2 ni nema x7 u sebi pa sigurno ne može biti ko ovo njihovo\n\nVidiš još da su ispod napisali da su se riješili K4\n\n![](assets/2021-06-14/00020.png)",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206955": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Amon#206952 hvala! jel onda i u 5. koraku fali još jedan ulazni luk iz x1 ? Ili se taj ne crta ? (ako se ne crta, zašto?)",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206959": {
+      "poster": "Amon",
+      "content": "@janeromero#206955 Dap, i tamo fali luk",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206966": {
+      "poster": "korisnickoime",
+      "content": "![](assets/2021-06-14/00021.png)\n\nZna neko ovaj?",
+      "votes": {
+        "upvoters": [
+          "Klokan",
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206970": {
+      "poster": "Klokan",
+      "content": "Kako se `atomic` ponaša, te koji je rezultat za y?\n```c\nbyte y=3;\n. . . . . . . . .\natomic{y-- ;\ny++ ; }\nprintf(\"(trace) y=%d\\n\", y);\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206992": {
+      "poster": "Svarog (Veles)",
+      "content": "@Klokan#206970 atomic definira komad koda koji se izvršava nedjeljivo i bez blokiranja (npr. drugi procesi ne mogu se izvršavati dok se izvršava atomic blok). Efektivno se zaustaljva konkurentnost procesa za vrijeme njegovog izvršavanja. U ovom slučaju se y umanji, pa uveća. Atomic je tu kako bismo bili sigurno da nema nuspojava na y od drugih procesa i to je ključno da znamo da će printf samo printati \"(trace) y=3\" jer se ne može dogoditi da se printa nakon što se izvrši y--, a prije y++.",
+      "votes": {
+        "upvoters": [
+          "AromaticConfusion (VrloZbunjen)",
+          "Klokan",
+          "koBASA (hackerman)",
+          "member",
+          "mikimoj",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207015": {
+      "poster": "Murin",
+      "content": "![](assets/2021-06-14/00025.png)\n\n\nIsto dodatni zadaci za vjezbu SAT-12, zar se ne bi u 3. koraku x5 trebao implicirati u F, a ne da se nista ne dogodi i onda da ga se u 4. \"slucajno\" stavlja u F grananjem. Ili se u ove podcrtane ne uvrstavaju vrijednostI?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207018": {
+      "poster": "mikimoj",
+      "content": "@Murin#207015 Rekao bih da si u pravu, x5 bi se u 3. koraku trebao implicirati u F bez obzira sto je x4 podcrtan. Cijeli taj pdf je pun gresaka tako da je to vjerojatno jos jedna u nizu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207029": {
+      "poster": "chuuya (temari)",
+      "content": "@Murin#207015 Kako tu uopće gledaju x4? Nije li ona resolvana?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207050": {
+      "poster": "saitama",
+      "content": "Odkud je najbolje uciti ovo jer kolko sam vidio i skuzio ti pdf sa rijesenim zadacima imaju greske?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207053": {
+      "poster": "Klokan",
+      "content": "@saitama#207050 Po tim zzv i prezama. Kroz zadatke skuzis poantu one besmislene teorije,a greške su po meni zanemarive ako poloviš koncept.",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207060": {
+      "poster": "saitama",
+      "content": "@Klokan#207053 ajme koja tuga od predmeta. Hvala ti!",
+      "votes": {
+        "upvoters": [
+          "ImJustAKid (lumity)",
+          "Klokan",
+          "chuuya (temari)",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "pepelko"
+        ]
+      }
+    },
+    "207119": {
+      "poster": "chuuya (temari)",
+      "content": "Ak budemo imali asinkroni produkt dva FSA od kojih svaki ima npr 3 stanja, jel mi fakat trebamo crtat sve prijelaze ili postoji neki drugi način? Čini mi se kao jako puno posla i clusterfuck na papiru, pa gledam jel ja nešto krivo shvaćam... Evo npr ovaj zadatak:\n\n![](assets/2021-06-14/00039.png)\n\nKak bi izgledao asinkroni produkt ova dva FSA?",
+      "votes": {
+        "upvoters": [
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207125": {
+      "poster": "Atem",
+      "content": "Ima li negdje zadataka za Spin/Promela ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207126": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@p444k#206755  Znači promatraš samo one klauzule gdje je podcrtan baš taj literal i gdje je njegova vrijednost F. tj u K4 x4 je false, a u K5 je negiran, znači true pa ga zato ne gledamo tamo.\n\n![](assets/2021-06-14/00040.png)",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207130": {
+      "poster": "Cvija",
+      "content": "Ovdje postoji ovaj dijeljeni dokument:\n\nhttps://docs.google.com/document/d/1T-kl760EHE8qo2lGUwCCPeUIYZuzqQS9e_nHe_gLGpc/edit",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Emma63194",
+          "Maglica",
+          "Simke",
+          "Svarog (Veles)",
+          "bestik",
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "korisnickoime",
+          "tonkec",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207134": {
+      "poster": "koBASA (hackerman)",
+      "content": "@Atem#207125 imaš na mudlu\n\n![](assets/2021-06-14/00041.png)",
+      "votes": {
+        "upvoters": [
+          "Atem"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207149": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "Što ako dolazimo do situacije npr.:\n\n{[imath]x_4 = F[/imath]}\n\ni onda imamo klauzulu:\n\n[imath]K_1: \\underline{x_1} + \\underline{x_2} + \\lnot x_4[/imath]\n\nHoce li se ta klauzula maknuti iz daljnjeg razmatranja jer se evaluira u T ili ne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207171": {
+      "poster": "p444k",
+      "content": "@AromaticConfusion#207149 ako sam dobro shvatio objašnjenje gore iznad od @janeromero#207126 ne bi trebalo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207173": {
+      "poster": "p444k",
+      "content": "![](assets/2021-06-14/00043.png)\n\nMože samo potvrda imat ću stanja:\n\n{S0, S0}, {S0, S1}, {S1, S0}, {S1, S1}, {S2, S0}, i tako sve kombinacije\n\nZavršno stanje je {S0, S3}\n\nA prijelaz recimo iz {S0, S0} -> {S0,S1} je prijelaz S0->S1 iz desnog automata? (prvi  simbol mi predstavlja livi, a drugi desni automat)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207175": {
+      "poster": "Cvija",
+      "content": "@p444k#207173 Koliko sam ja shvatio, završna stanja su ti sva ona koja u sebi sadrže barem jedno završno stanje od bilo kojeg automata. Znači to bi konkretno bila {(S0, S0), (S1, S0), (S2, S0), (S3, S0), (S3, S1)}\n\nOstalo mi se čini u redu",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207189": {
+      "poster": "Doktor0807",
+      "content": "@chuuya#207119 zapravo ti i nije tak puno posla, imat ćeš ukupno 9 stanja i sad prijelaza koliko ih već bude, nije neka fantastika, ali kao što i tak zadatak kaže više moraš samo znati što se događa nego da ćeš ga morat teško crtat, ovdje recimo traže da ispišeš stanja vezana uz s0",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207210": {
+      "poster": "p444k",
+      "content": "@Doktor0807 kako bi izgledalo rješenje od zadatka kojeg je objavio @chuuya",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207234": {
+      "poster": "Doktor0807",
+      "content": "@p444k#207210 uploadam sutra kroz dan svoja rješenja tih oglednih",
+      "votes": {
+        "upvoters": [
+          "Belfort",
+          "MsBrightside",
+          "chuuya (temari)",
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "ls_123 (KimuraKong)",
+          "p444k"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207344": {
+      "poster": "Doktor0807",
+      "content": "![![](assets/2021-06-15/00006.jpeg)\n![](assets/2021-06-15/00007.jpeg)\n![](assets/2021-06-15/00008.jpeg)\n![](assets/2021-06-15/00009.jpeg)\n](src)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207345": {
+      "poster": "Doktor0807",
+      "content": "![](assets/2021-06-15/00010.jpeg)\n\n![](assets/2021-06-15/00011.jpeg)\n\n![](assets/2021-06-15/00012.jpeg)\n\n![](assets/2021-06-15/00013.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Carmichael (Charm)",
+          "Conrad",
+          "Cvija",
+          "Daorson",
+          "Ducius",
+          "ImJustAKid (lumity)",
+          "Maglica",
+          "Polifem",
+          "Simpy",
+          "Svarog (Veles)",
+          "Watson (112)",
+          "Zogen",
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "pepelko",
+          "tre_besty (luk)",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207352": {
+      "poster": "Doktor0807",
+      "content": "@Doktor0807#207345 ispravak za 3.c C.T(s0, s0) = { s0s0 -> A2B!req -> s1s0, s2s0 -> B2A?answ -> s0s0 }",
+      "votes": {
+        "upvoters": [
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207396": {
+      "poster": "p444k",
+      "content": "Ovaj s točkicama [](x<=3) -> Globalno je x manji od 3\n\nTo tako čitam?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207417": {
+      "poster": "p444k",
+      "content": "Gdje je u snimkama predavanja objašnjena komunikacija između 2 procesa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207455": {
+      "poster": "p444k",
+      "content": "![](assets/2021-06-15/00027.png)\n\nKada pišem sekvencu.. Jel ima pravilo za redosljed A i B ili mogu proizvoljnoi AABABBBABA?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207490": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "Jel itko zna ovo?\n\n![](assets/2021-06-15/00033.png)\n\nZadatak je iz dokumenta sa git materijala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207493": {
+      "poster": "p444k",
+      "content": "Mislim da nije include.properties. Obićno se definiraju konfig datoteke {naziv_projekta}.jpf pa pretpostavljam da se pod a) izbacuje",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207497": {
+      "poster": "Cvija",
+      "content": "@Doktor0807#207345 Zašto u 3.a) je chan oblika {mtype, bit}, zašto bit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207605": {
+      "poster": "Doktor0807",
+      "content": "@Cvija#207497 zanemari taj bit, zaboravio sam obrisati to",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207607": {
+      "poster": "Doktor0807",
+      "content": "@p444k#207455 možeš odabrati proizvoljno",
+      "votes": {
+        "upvoters": [
+          "p444k"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207637": {
+      "poster": "netko_tamo",
+      "content": "jel može neko objasnit ite algoritam kroz neki od primjera u riješenim zadacima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207658": {
+      "poster": "DodgeCharger",
+      "content": "Otkud da krenem ovo učit?",
+      "votes": {
+        "upvoters": [
+          "FICHEKK",
+          "toni98"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Doktor0807",
+          "in1",
+          "lucija (luc)",
+          "member",
+          "netko_tamo",
+          "p444k"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207672": {
+      "poster": "Koalalica (zaba)",
+      "content": "@DodgeCharger#207658 i guess zadnja 3 tjedna (BDD, SAT i STM). lakse je gradivo nego spin promela (i prezentacije su puuno bolje) a nosi jednako bodova. pogledaj si predavanja i rjesenja zadataka za vjezbu, pa onda prodi kroz stare ispite. ako ti ostane jos vremena pogledaj si i racunske zadatke za spin (posebno onaj dio s crtanjem automata).\n\nako budes znao sve iz zadnja tri predavanja to je cca 13 bodova, ako se sjecas bar neceg iz MI to su [0-9] bodova, i ako ti se posreci zadatak sa spinom to je jos nekoliko bodova, u svakom slucaju dovoljno da se zadovolji prag.",
+      "votes": {
+        "upvoters": [
+          "DodgeCharger",
+          "Maglica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207686": {
+      "poster": "Doktor0807",
+      "content": "@netko_tamo#207637 ![](assets/2021-06-15/00043.png)\n\novo je slika iz zadataka za vježbu iz tog gradiva, \n\nu zadatku ti je uvijek zadano uređenje varijabli, ovdje je to a<b<c<d, ovo ti samo znači koju varijablu gledaš prije drugih\n\nprvotno imaš zadanu funkciju i nju trebaš pretvoriti u početni ite, ako je recimo to funkcija kao ovdje onda trebaš to zapisati u ite kao rastav or funkcije prvog člana i ostalih članova, i tako dobiš ovo desno u prvom redku rješenja, to tumačiš ovako: ako vrijedi abc onda je F = 1, a ako ne vrijedi abc onda F = a'd'+b'c'd\n\nto upravo i znači ITE(If,Then,Else)\n\ni sad ti ovo moraš razriješiti jer trebaš nacrtati graf, a to znači da ne smiješ imati više varijabli jednu uz drugu u jednom ite, što znači da moraš rastaviti abc i a'd'+b'c'd\n\nza nastavak jedino što moraš znati je sljedeći rastav:\n\nite(f, g, h) = ite (v, ite(fv, gv, hv), ite(fv', gv', hv'))\n\npri čemu ti je v varijabla koju ćeš odabrati iz f iz ovog prošlog ite(...), fv,gv,hv su te prethodne funkcije kada bi u njih uvrstio v = 1, a ove druge 3(fv', gv', hv') kada bi u njih uvrstio v' = 1\n\nevo na ovom konkretnom primjeru iz prvog u drugi redak:\n\nbiraš v = a zbog ovog uređenja zadanog u zadatku i dalje slijedi f = abc, g = 1, h = b'c'd\n\ni zato ćeš u then dijelu imati ite(bc, 1, b'c'd), a u else dijelu ite(0, 1, d' + b'c'd)\n\ni tako dok ne razriješiš sva mjesta s više varijabli",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "Zogen",
+          "koBASA (hackerman)",
+          "layla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207693": {
+      "poster": "p444k",
+      "content": "![](assets/2021-06-15/00044.png)\n\nJel n=1 tj samo se zadovolji prvi uvjet i izlazi se iz if-a",
+      "votes": {
+        "upvoters": [
+          "Doktor0807",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207694": {
+      "poster": "p444k",
+      "content": "U jeziku promela nareba a!b je:\n\nJel rješenje a šalje b?",
+      "votes": {
+        "upvoters": [
+          "Doktor0807",
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207695": {
+      "poster": "p444k",
+      "content": "![](assets/2021-06-15/00045.png)\n\nOvo je c?",
+      "votes": {
+        "upvoters": [
+          "Doktor0807",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207696": {
+      "poster": "p444k",
+      "content": "![](assets/2021-06-15/00046.png)\n\nIspisati će 3?",
+      "votes": {
+        "upvoters": [
+          "Doktor0807",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207698": {
+      "poster": "p444k",
+      "content": "![](assets/2021-06-15/00047.png)\n\nOvo je a?",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207714": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "@p444k#207698 \n\nPo redu kak si pito\n1. c\n2. a je komunikacijski kanal b je poruka\n3. ne znam\n4. mislim da je b, kolko sam skužio atomic niš tu ne radi, sam se izvedu normalno obe naredbe\n5. a",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "p444k"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207729": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@-Ivan-#207714 3. je c",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207735": {
+      "poster": "p444k",
+      "content": "@-Ivan- kod a!b je znači kanal a šalje poruku b.\n\n? -> prima\n\n! -> Šalje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207736": {
+      "poster": "Doktor0807",
+      "content": "@p444k#207735 na kanal a se šalje poruka b",
+      "votes": {
+        "upvoters": [
+          "p444k"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "219625": {
+      "poster": "Arya",
+      "content": "Kako se u GRASP-u odredjuju razine?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "231622": {
+      "poster": "moukie",
+      "content": "ima li gdje rješenja starih rokova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "232324": {
+      "poster": "ivona_075 (Adri)",
+      "content": "jel netko mozda rjesavao ove stare ispite u 10-om poglavlju spin-promela",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

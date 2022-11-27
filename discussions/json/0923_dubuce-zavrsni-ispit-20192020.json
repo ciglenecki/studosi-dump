@@ -1,0 +1,539 @@
+{
+  "title": "[DUBUCE] Završni ispit - 2019/2020",
+  "creator": "phuck",
+  "slug": "dubuce-zavrsni-ispit-20192020",
+  "tags": [
+    "FER",
+    "Duboko učenje",
+    "Ispiti"
+  ],
+  "posts": {
+    "35998": {
+      "poster": "phuck",
+      "content": "Od kud uciti za ZI?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36027": {
+      "poster": "InCogNiTo124",
+      "content": "@phuck#35998 ja sam planirao proci prezentacije i malo labose jos jednom, i na kraju stare ispite grajndat, mislim da nema nista pametnije od tog",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37514": {
+      "poster": "talos",
+      "content": "Zna li netko riješiti zadnji zadatak u \" http://www.zemris.fer.hr/~ssegvic/du/exams/zi2017 \"?.\n\nNacrtam si povratnu mrežu iscrtam si ulančanu jednadžbu (od 3 čelije), no koliko vidim nema načina da se to jednostavno riješi. U W postoje 3 nepoznanice, u V postoji 3 nepoznanice, funkcija prijelaza je nepoznanica, te je još b i c nepoznanica. Dimenzionalnost skrivenog sloja zaključujem da je 3 pošto piše da U je jedinična matrica. Pošto U ima dimenzije (h,3) treba biti (3,3) da može biti jedinična, stoga h=3.\n\nPokušao sam riješiti s pretpostavkom da je b=0 c=0 i f = jedinična, no bez uspjeha. To sam sve također radio s pretpostavkom da imam podatke od 3 učenika, no po samom dizajnu RNN-a (i samog zadatka) to ne mora biti. Nešto gadno tu griješim, ako netko ima ideju naka javi.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "37524": {
+      "poster": "talos",
+      "content": "DODATAK: pročitao sam ponovno zadatak i skužio da direktno govori da indeks svakog skrivenog stanja je prisutnost studenta.\n\nMoramo dobit za svaki sloj u kojem postoji input +1, a za svaki koji je odsutan na kraju moramo dobiti -1 za njega.\n\nAko se stave sve težine W i V na jedinične matrice, te b=0 i c=0, prijelazna funcija=jedinična može se jednostavno dobiti zbrajanje, ali treba još skužiti kako dobit oduzimanje za odsutne studente.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37534": {
+      "poster": "talos",
+      "content": "Ok mislim da sam riješio, mislio sam da se treba nešto s W komplicirati ali ipak ne treba. Kao što sam prije rekao postave se W na jediničnu matricu, V ima sve vrijednosti kao 1 postavljene. Jedina promjena je što se c mora postaviti na maksimalnu vrijednost učenika - 1, znači c=-(3-1)=-2.\n\nOvako se postigne da se dobije njihov zahtjev da ako je pun razred onda = 1, fali jedan onda = 0 itd...\n\nProblem sada s tim rješenjem je ako se pojavi isti učenik dva puta još uvijek se broji dva puta. Tako da za prijelazne funkcije treba postaviti unit step funkciju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38297": {
+      "poster": "NekocBraca",
+      "content": "Jel napravio netko mozda popis stranih materijala koji prate nase gradivo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38307": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@NekocBraca#38297 Goodfellowov i Bengiov Deep Learning? Vjerojatno nećeš imati ništa relevantnije od toga, a koliko vidim nema ni ništa novije.",
+      "votes": {
+        "upvoters": [
+          "NekocBraca"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "39117": {
+      "poster": "Jimothy",
+      "content": "![](assets/2020-06-12/00038.png)\n\nMože netko pojasniti što se točno od nas očekuje u c) zadatku? Što smatraju pod ovime da fc layer ima jednak broj izlaznih aktivacija i brišu li se pool layeri ili se pretvaraju u nekakvo 1d sažimanje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "39182": {
+      "poster": "InCogNiTo124",
+      "content": "@Jimothy#39117 nemam pojma, ja da sam na zi bih grupirao conv+pool pa bih ulaznu 28x28 sliku sa FC layerom pretvorio u 14x14\n\nZnci vektorizacija u 784, pa fc u (14\\*14\\*16) pa fc u (7\\*7\\*32) pa fc u 512 itd",
+      "votes": {
+        "upvoters": [
+          "Jimothy",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "39198": {
+      "poster": "Denn",
+      "content": "@Jimothy#39117 Zamisli da imaš 1x1 conv, ulazni broj filtera je 64 a izlazni 128, dimenzije recimo 14x14. Izlazni volumen je 14x14x128 -> toliko aktivacija ti tvoj konvolucijski sloj daje. Stavljaš ekvivalentni FC sloj takav da pretvoriš ulaz od 14x14x64 u 14x14x128. Poolanje i ostalo ne diraš, shape ti ostaje isti (jel vektor poredan kao batch_size x 784 ili batchsize x 28 x 28 na kraju dana nije važno).",
+      "votes": {
+        "upvoters": [
+          "Jimothy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40512": {
+      "poster": "NekocBraca",
+      "content": "Jel rjesavao tko 3. zadatak iz [zimskog roka 2016/17](https://github.com/studosi-fer/DUBUCE/blob/master/ispiti/rokovi/DUBUCE_Zimski_Rok_2016-2017_2016-17.zip) da usporedimo rezultate?\n\nSam ADAM mi se cini dosta jednostavan, vise sam nesiguran u propagaciju pogreske unazad. Nisam bio siguran kako je to najbolje izvesti pa sam preko racunskog grafa (slika u spoileru). Jel ima neki bolji nacin za racunanje propagacije rucno?\n\n>! Ovdje je prva iteracija. Na gornjoj strani grafa sam pisao vrijdnosti za prolazak unaprijed, a na donjoj za prolazak unazad (jedino mi nije stalo za zavrsni izracun tezine Wh na graf pa je to ispod). W_h i b_h mi oznacavaju hidden layer, a W_i i b_i izlazni layer.\n\n ![](assets/2020-06-15/00029.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40798": {
+      "poster": "Kristijan",
+      "content": "![](assets/2020-06-16/00011.png)\n\nJel zna možda netko?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40812": {
+      "poster": "[deleted]",
+      "content": "@NekocBraca#38297 Pogledaj si \"Neural Networks and Deep Learning: A Textbook.\" Ja sam bio učio RBMove iz njega i dobar je. Backprop ima dosta detaljno, ali nema toliki naglasak na pristup preko computational grapha nego izvodi skalarano, a onda prebacuje u matrični oblik. Isto tako stavlja naglasak na razliku između backpropa i multivariate chain rule-a, odnosno, naglašava da je backprop = dinamičko programiranje + multivariate chain rule.\n\nIsto sam čitao CNN iz njega. Šegvić u predavanjima preskoči neke osnovne stvari, ali ovaj ti daje izraze za računanje aktivacija ...\n\nIstina, ponekad zna samo \"pričat\" i zna se ponavljat (što i nije nužno loše).",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "NekocBraca"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "40927": {
+      "poster": "Jimothy",
+      "content": "![](assets/2020-06-16/00023.png)\n\nZna netko ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41029": {
+      "poster": "NekocBraca",
+      "content": "@Kristijan#40798 \n\nmeni se nije dalo rjesavati za CD-2 (ko normalan to zadaje, treba mi sat vremena da izmnozim te matrice, kada cu ikada u zivotu rucno mnoziti matrice), pa sam napravio CD-1 (princip je isti). Podzadatak a) se moze izravno ocitati iz podzadatka b), u mojem slucaju je to [0.6, 0.48, 0.5] (prvi redak matrice neg_hid_probs, takodjer nisam napravio za ovaj state koji su oni oznacili, nego za jedan prije - kada je k=1).\n\n**Bitan disclaimer**: kada se u negativnoj fazi trebaju odrediti aktivacije vidljivog sloja, tu bi trebalo koristiti samplirane vrijednosti hidden sloja (na temelju dobivenih vjerojatnosti u pos_probs). Nisam bio siguran kako da pametno odradim to sampliranje na temelju vjerojatnosti (jer ono, doslovno bi mogao generirati bilo koje uzorke i rec eh tako je ispalo). Zato sam ja za odredjivanje aktivacije vidljivog sloja koristio zapravo **vjerojatnosti** aktivacije skrivenog sloja (a i po ovom principu se izbacuje nedeterminizam, odnosno rjesenje je jedinstveno pa se mogu usporediti rjesenja).\n\nEDIT: i jos jedna napomena, nije mi se dalo posebno brinuti o biasima pa sam ja to odmah sve puknuo u matrice s podacima/tezinama\n\n>! ![](assets/2020-06-17/00001.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Kristijan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41033": {
+      "poster": "antunmod",
+      "content": "Napravio sam [dokument](https://docs.google.com/document/d/1hwdYDL7MHhEIACwH3Mac0fxOlgMYcnWSRawWVvxVBBc/edit?usp=sharing) u koji stavljam svu pronađenu teoriju i ispite i tamo sam planirao odgovarati i pisati rješenja do kojih dođem pa bih cijenio kada biste se pridružili da to zajedno sve riješimo :)",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "NekocBraca",
+          "Piki",
+          "Satanael",
+          "blackbean",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41036": {
+      "poster": "NekocBraca",
+      "content": "@antunmod#41033 ja sam rjesio 4 i 5 iz ZIR 2017, ali nisam siguran jel to dobro pa bi htio da netko potvrdi rjesenja prije nego li ih stavimo u dokument.\n\nza 4. bi rekao da su dimenzije:\n\nW_hh = 200 x 200\n\nW_xh  = 200 x 80\n\nb_h = 200 x 1\n\nW_hy = 80 x 200\n\nB_s = 80 x 1\n\nZa 5. bi rekao:\n\nU = `I`\n\nV = `I`\n\nb = [1, 1]^T (bias za h^(t))\n\nc = [-1, -1]^T (bias za output)",
+      "votes": {
+        "upvoters": [
+          "blackbean"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41038": {
+      "poster": "antunmod",
+      "content": "@NekocBraca#41036 \n\nSlobodno piši odmah sve u dokument pa ćemo tamo raspravit što je točno ;)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41040": {
+      "poster": "NekocBraca",
+      "content": "@antunmod#41038 po meni je forum primjereniji za raspravu o ispravnsti rjesenja jer prikazuje cijelu povijest i argumentaciju + mislim da je puno veca sansa da ljudi vide i ukljuce se u raspravu na forumu, nego u google docsu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41091": {
+      "poster": "PeroPerica",
+      "content": "Ekipa, jel zna netko razlog zašto u prezentaciji o regularizaciji (bagging) pretpostavljaju normalnu razdiobu pogreške modela? Zar nije pogreška nenegativna? Kako to onda možemo aproksimirati normalnom varijablom oko nule?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41104": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@PeroPerica#41091 Ili su oni sjebali pa treba aproksimirati [imath]\\mathcal{N}(x, \\Sigma)[/imath], ili su uzeli u obzir i mogućnost da postoje funkcije greške koje imaju i negativne vrijednosti. Ali to s nenegativnim greškama se može ispravit tak da se npr. uzme logaritam greške, pa to može uzeti nenegativne brojeve i premapirati ih u cijeli skup realnih brojeva, samo što će to razmrdati distribuciju.\n\nPošalji mejl da dobiš bodove haha",
+      "votes": {
+        "upvoters": [
+          "PeroPerica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41105": {
+      "poster": "Jimothy",
+      "content": "Jel ima teorije na zaokruzivanje na ispitima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41133": {
+      "poster": "NekocBraca",
+      "content": "Evo moje rj pa ako je jos netko rjesavao neka potvrdi/ospori [4. zadatak](https://github.com/studosi-fer/DUBUCE/blob/master/ispiti/zi/DUBUCE_ZI_2016-17.pdf):\n>! ![](assets/2020-06-17/00013.jpeg)",
+      "votes": {
+        "upvoters": [
+          "ALovelace"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41204": {
+      "poster": "phuck",
+      "content": "3. zad zi 2018, ako netko nadje gresku nek javi\n>!![](assets/2020-06-17/00020.jpeg)\n\n![](assets/2020-06-17/00021.jpeg)",
+      "votes": {
+        "upvoters": [
+          "blackbean"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41757": {
+      "poster": "InCogNiTo124",
+      "content": "@antunmod#41033 druga strana 4. zadatak, pokusaj argumentiranja:\n\nUcenje s momentumom koristi trenutni gradijent samo kao azuriranje nekog prosjecnog (uz skaliranje s normama gradijenata)\n\n(a) plitki lokalni minimumi, to bi takvi postupci trebali pregaziti kao plitak potok [size=10]pun intended[/size]\n\n(b) kanjoni, to se vjerojatno misli na V shaped oblike u kojima obicni SGD ide cik-cak, nesto poput [ovog](https://miro.medium.com/max/1560/0*FCDOGYopeD0GqsU-.) ili jos bolje [ovog](https://blog.paperspace.com/content/images/2018/06/patho2-1.png). Adam i ostali postupci brzo isfiltriraju cik cak gibanje i nastave tjerat samo ravno.\n\n\\(c) sedla, to bi adam isto trebao jako dobro prebroditi zato jer su sedla dosta nestabilna, i jedino ako bi se nasli u sredistu sa SGD bi ostali na istom mjestu (tamo je gradijent vektorska 0, ali hessian nije pozitivno definitan), ali bilo kakav pomak u nekom smjeru ce ponovo pokrenuti gradijentni spust. S obzirom da se zbog momentuma adam ne moze samo zaustaviti, i to je prebrodivo\n\n(d) eto jedino ostaju ravne plohe, i kao sto je kolega vec napisao gradijent je tamo jako mali (jer se vrijednost funkcije ne mjenja puno) i tu nam momentum postupci ne pomazu puno",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41763": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@InCogNiTo124#41757 Nadodat ću da iako se platoi mogu riješiti jako velikim momentima (pa zapravo nema 100% točnog odgovora), u praksi se to ne radi (iz očitih razloga) a i to je jako slično hendlanju plitkih lokalnih minimuma, nego se to rješava promjenom stope učenja (ili se ne rješava, platoi znaju biti znak dobrog položaja za generalizaciju), tak da bi morao bit taj odgovor. Sve ove ostale stvari se *najefikasnije* riješavaju momentom.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41863": {
+      "poster": "Red_Baron",
+      "content": "Prepisao sam zadatke s ispita (samo zadatke, bez dijela na zaokruživanje). Stavim gore tijekom popodneva/večeri.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Satanael",
+          "WallStreetBets",
+          "[deleted]",
+          "blackbean",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "42165": {
+      "poster": "Red_Baron",
+      "content": "Nisam zaboravio nego sam se napio... i zaboravio. A nakon tog imao malih tehničkih problema. Ukratko - ne da mi da ovdje stavim pdf, njega sam stavio na materijale, a ovdje evo png-ova po stranicama. Ako se štogod ne vidi pročitati, javite, znam da mi rukopis nije idealan, ali dao sam sve od sebe. Živjeli! \n\n![](assets/2020-06-20/00002.png)\n\n![](assets/2020-06-20/00003.png)\n\n![](assets/2020-06-20/00004.png)\n\n![](assets/2020-06-20/00005.png)",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Jimothy",
+          "Satanael",
+          "[deleted]",
+          "antunmod"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "44546": {
+      "poster": "NekocBraca",
+      "content": "Na ferka je upisana teorija.\n\nPretpostavljam da to tamo stoji vec neko vrijeme, ali sam ja tek danas skuzio pa ako jos netko nije skuzio moze si pogledati",
+      "votes": {
+        "upvoters": [
+          "ALovelace",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "47440": {
+      "poster": "sth",
+      "content": "Kako su oni skalirali ove bodove?",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "m14246"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "47675": {
+      "poster": "m14246",
+      "content": "Mislim da su sad unijeli konacne bodove",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "47746": {
+      "poster": "NekocBraca",
+      "content": "Jel se sjeca itko kaj je bio 4. zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "47749": {
+      "poster": "Red_Baron",
+      "content": "@NekocBraca#47746 doslovno gore prepisan ispit.",
+      "votes": {
+        "upvoters": [
+          "NekocBraca",
+          "Satanael"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "47750": {
+      "poster": "NekocBraca",
+      "content": "@Red_Baron#47749 🤦‍♂️ 🤦‍♂️",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "50131": {
+      "poster": "Yolonak",
+      "content": "![](assets/2020-07-05/00049.png)\n\nje li zna iko rješit ovaj?\n\n![](assets/2020-07-05/00050.png)\n\ntakođer nisam siguran za ovaj kod\n\nako iko zna nek pls pošalje rješenje\n\nHvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "62626": {
+      "poster": "sth",
+      "content": "Ima netko rijesen zavrsni od ove godine da je voljan uslikati rješenja? Također, kakav je bio ljetni rok?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

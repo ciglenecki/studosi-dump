@@ -1,0 +1,415 @@
+{
+  "title": "[PPJ] 3. laboratorijska vježba - 2020/2021",
+  "creator": "[deleted]",
+  "slug": "ppj-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Prevođenje programskih jezika",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "102108": {
+      "poster": "[deleted]",
+      "content": "Kako ste u 3. laboratorijskoj vjezbi impementirali pamcenje scopa vidljivosti varijable? nemam pojma kako iz sintaksnog stabla to pamtiti. Kako odrediti kad neka varijabla vise nije vidljiva ako imate 2, ili 3 ugnježđene petlje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102564": {
+      "poster": "viliml",
+      "content": "@abcdefgh#102108 Ja pamtim scope unutar samog stabla. Svaki čvor koji označava blok ima u sebi svoju tablicu znakova. Varijabla je vidljiva ako je unutar tablice nekog od čvorova predaka trenutnog čvora.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "114898": {
+      "poster": "Lyras",
+      "content": "@viliml#102564 Kako pamtiš scope unutar samog stabla? Što nam smije biti ulaz, samo test.in, ili možemo koristiti test.lex pa generirati sintaksno stablo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "114969": {
+      "poster": "Artemis",
+      "content": "Može neka uputa za 3.labos? Koristiti stog?",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "114998": {
+      "poster": "blablajar",
+      "content": "@Lyras#114898 \n\n@Artemis#114969 \n\nja koristim dvije mape za spremanje varijabli, jednu za cijeli program i jednu za spremanje varijabli definiranih u petlji, kad se izade iz petlje ocistim tu mapu za petlju",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115484": {
+      "poster": "lovro (l123)",
+      "content": "Je li potrebno nekakvo predznanje ili su dovoljne upute za vježbu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115489": {
+      "poster": "bodNaUvidima",
+      "content": "@lovro#115484 ako si rjesio 1. i 2. sam onda bi lagano trebao zaključiti što se događa u ovom. Dosad najlakši labos (lakša inačica sam).",
+      "votes": {
+        "upvoters": [
+          "lovro (l123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115512": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@lovro#115484 Ni za jedan labos osim 4. ti ne treba predznanje (izuzev klasičnog programiranja), dok se za 4. trebaš samo malo prisjetiti FRISC-a",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "lovro (l123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115518": {
+      "poster": "MOXY",
+      "content": "c = 0\n\nza c od c x 2 do c x 3 \n\nZa ovo je ispis prema njima error 2 c, jel zato sto definiranu varijablu ne smijemo koristiti odmah iza rijeci za?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115553": {
+      "poster": "blablajar",
+      "content": "@MOXY#115518 u za petlji dolazi do skrivanja varijable c i ne moze se odmah koristit jer je njena vrijednost nepoznata",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115759": {
+      "poster": "Lyras",
+      "content": "mojtest.iz se generira mojim programom, Test.out je njihov izlaz, a Test.pj je kod napisan u jeziku pj\n\n![](assets/2020-12-31/00005.png)\n\nŠto propuštam? Zar nije da će se x definiran u retku 1 \"sakriti\" x-om definiranim u retku 4? Zar se takve stvari ne gledaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115812": {
+      "poster": "SuperSjajan3",
+      "content": "@Lyras#115759 Moguce da sam u krivu, al koliko sam ja skuzio to skrivanje varijabli se desava samo kad definiras varijablu u za petlji, a ne u tijelu te petlje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115813": {
+      "poster": "JoKing",
+      "content": "@Lyras#115759 Stvar je u tome što x nije definiran u retku 4, nego to je isto x koji je definiran u retku 1. Odnosno da je PJ jezik koji za varijable mora definirati tip kod bi izgledao\n\n1: int x = 2\n\n...\n\n4: x = x * i (ili x *= i)  -> znači samo zamjena vrijednosti, a ne definicija/deklaracija varijable\n\nOsim toga linija x = x * i sama po sebi ne može biti definicija varijable (zato što ne možeš imati\n\ntip varijabla = varijabla i nešto\n\njer varijabla u trenutku u kojem se koristi sa desne strane uopće nije definirana\n\nEDIT: a i kao što je kolega iznad mene rekao doseg varijable je doseg tamo gdje je definirana i svi unutarnji dosezi (a taj for je jedan od njih)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116121": {
+      "poster": "Gocc (***)",
+      "content": "Zasto mi ovdje govori da fileovi nisu jednaki \n\n![](assets/2021-01-02/00001.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116122": {
+      "poster": "JoKing",
+      "content": "@Gocc#116121 Možda imaš razmak nakon x i k, a prije novog reda, možda u zadnjem redu imaš razmak. Uglavnom kopiraj sadržaj obje datoteke u https://www.diffchecker.com/diff i pogledaj gdje ti javlja razliku",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116154": {
+      "poster": "Gocc (***)",
+      "content": "@JoKing#116122  preko toga mi je sve u redu, jedino kada citam pomocu nekih funkcija Files.read* onda ne valja zato mi je cudno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116251": {
+      "poster": "Nocna_smjena",
+      "content": "Moze mi netko pojasnit zasto bi primjer 13-err-za trebao bacat pogresku? Uvidom u sintaksna pravila 2.labosa ne vidim gdje nastaje problem a prema uputama iz 3.lab vjezbe jedino se error moze desit ako se koristi nedefinirana varijabla ili varijabla izvan scope-a",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116323": {
+      "poster": "kix7 (Fish99)",
+      "content": "Po meni teži labos od drugog",
+      "votes": {
+        "upvoters": [
+          "Giovanni",
+          "HARAmara (decko_sa_balkana)",
+          "Lusy (MGJ)",
+          "MT09 (mt09)",
+          "Sulejman",
+          "SuperSjajan3",
+          "Tonii (Zulul)",
+          "[deleted]",
+          "[deleted]",
+          "cloudies",
+          "gladiator",
+          "iNavy (mornar Ica)",
+          "ljama_glama",
+          "lucylu",
+          "mini (Earthling)",
+          "neksi (filip)",
+          "sheriffHorsey"
+        ],
+        "downvoters": [
+          "Fica (Prof)"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Kniwy00 (DoktorZnanosti)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116646": {
+      "poster": "[deleted]",
+      "content": "@kix7#116323 \n\nIsto, ne razumijem kako je drugima ovo najlakši labos, barem su tako rekli, a 2. im je najteži nakon 4.",
+      "votes": {
+        "upvoters": [
+          "Lyras",
+          "mini (Earthling)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116844": {
+      "poster": "Nocna_smjena",
+      "content": "Sad sam se sjetio jos jednog lakseg nacina iako defeat-a purpose ovog labosa. Uglavnom najzafrkaniji dio je iteracija po tom generickom stablu pa da se to izbjegne najlakse bi bilo convertat to stablo nazad u leksicko. Trim-ate vodece space-ove i izbacite \"useless\" dio input-a tako da vam ostane samo leksicki output. Dalje je veoma jednostavno, pamte se definicije tj naredbe pridruzivanja i kad naletite na KR_ZA prekopirate dosadasnje definicije u taj novi scope petlje. Kad dovrsite se petljom (naletite na KR_AZ) pobrisete definicije kojima se sluzila ta petlja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116849": {
+      "poster": "Lusy (MGJ)",
+      "content": "Koristim Scanner i kad dodem do zadnjeg $ u inputu (samo zalijepim test.in u konzolu), program se i dalje vrti jer sljedecu liniju ispitivam sa hasNextLine() i ta funkcija vraca true dok god u inputu ne stavim CTRL+Z. Kako da to popravim tako da mi program odmah da ispis, a da ne moram korisiti CTRL + Z?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116850": {
+      "poster": "Nocna_smjena",
+      "content": "@Lusy#116849 nece ti to bit problem za SPRUT. Ako predas rjesenje na njemu vidjet ces da ce rec da je kod OK ako je samo tu problem",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116860": {
+      "poster": "Lusy (MGJ)",
+      "content": "@Nocna_smjena#116850 Aaa vidim sad da na SPRUTU radi, tenks",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117863": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "stigli rezultati",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117889": {
+      "poster": "BigZ1",
+      "content": "hmm 0/5 ma jel to moguce jer sam skupio za prag pa nisam napravio labos?",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Lyras",
+          "Sulejman",
+          "cloudies",
+          "gladiator",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "BrownPerson (Bambi)",
+          "JayOhAit",
+          "Lyras",
+          "Rope (Rops)",
+          "__builtin_popcount (std::popcount)",
+          "zvucnik"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117908": {
+      "poster": "Sulejman",
+      "content": "@BigZ1#117889 BigFlex hahhah",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "BigZ1"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

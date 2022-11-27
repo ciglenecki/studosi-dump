@@ -1,0 +1,590 @@
+{
+  "title": "[NAISP] 7. laboratorijska vježba - 2021/2022",
+  "creator": "tempest",
+  "slug": "naisp-7-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Napredni algoritmi i strukture podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "271368": {
+      "poster": "tempest",
+      "content": "Blic:\n\n![](assets/2022-01-17/00001.png)\n\n![](assets/2022-01-17/00002.png)\n\n![](assets/2022-01-17/00003.png)\n\n![](assets/2022-01-17/00004.png)\n\nZadatak:\n\n![](assets/2022-01-17/00005.png)\n\nKod za nadopuniti:\n```\n\ndef AugmentedHierholzer(G: Dict[str, List[str]], start: str) -> Tuple[List[str], List[List[str]]]:\n    stog = deque()\n    stog.append(start)\n    \n    ####################\n    ## YOUR CODE HERE ##\n    ####################\n    \n    while stog:\n        u = stog[-1]\n        adj = G[u]\n        if len(adj) > 0:\n            v = G[u][0]\n            stog.append(v)\n            G[u].remove(v)\n            G[v].remove(u)\n        else:\n            ####################\n            ## YOUR CODE HERE ##\n            ####################\n            stog.pop()\n    return ...\n```\n\nKod za testni primjer:\n```\n\nimport copy\nG = {'a': ['b', 'c', 'd', 'e'],\n     'b': ['a', 'd', 'e'],\n     'c': ['a', 'e'],\n     'd': ['a', 'b', 'e'],\n     'e': ['a', 'b', 'c', 'd']}\nG1 = copy.deepcopy(G)\npath, circles = AugmentedHierholzer(G1, 'b')\npath.reverse()\nassert path == ['b', 'a', 'c', 'e', 'a', 'd', 'b', 'e', 'd']\nassert circles == [['d', 'e', 'b', 'd'], ['e', 'b', 'd', 'a', 'e'], ['a', 'e', 'c', 'a'], ['b', 'd', 'a', 'e', 'c', 'a', 'b']]\n\nG1 = copy.deepcopy(G)\npath, circles = AugmentedHierholzer(G1, 'd')\npath.reverse()\nassert path == ['d', 'a', 'b', 'd', 'e', 'a', 'c', 'e', 'b']\nassert circles == [['e', 'c', 'a', 'e'], ['b', 'e', 'c', 'a', 'e', 'd', 'b'], ['a', 'e', 'd', 'b', 'a'], ['d', 'b', 'a', 'd']]\n```",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Filemon",
+          "Kennedy",
+          "Lusy (MGJ)",
+          "Retard00",
+          "Uchenikowitz (Učečuču)",
+          "WickyWinslow",
+          "__builtin_popcount (std::popcount)",
+          "blast",
+          "branimir1999",
+          "iNavy (mornar Ica)",
+          "jobi (azex)",
+          "menace_master",
+          "mesojed (sofronijevicevPrst)",
+          "mrkva",
+          "rolotex (brr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271371": {
+      "poster": "rolotex (brr)",
+      "content": "![](assets/2022-01-17/00006.png)\n\n![](assets/2022-01-17/00007.png)\n\n![](assets/2022-01-17/00008.png)\n\nNova pitanja\n\nZadatak je isti",
+      "votes": {
+        "upvoters": [
+          "Kennedy",
+          "Lusy (MGJ)",
+          "Retard00",
+          "__builtin_popcount (std::popcount)",
+          "branimir1999",
+          "iNavy (mornar Ica)",
+          "jobi (azex)",
+          "menace_master"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271374": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "![](assets/2022-01-17/00009.png)\n\n![](assets/2022-01-17/00010.png)\n\n![](assets/2022-01-17/00011.png)\n\n![](assets/2022-01-17/00012.png)\n\n![](assets/2022-01-17/00013.png)\n\n```\nfrom typing import Dict, Hashable, List,Set\nimport collections\nimport random\n\n\nclass DirectedGraph(object):\n    def __init__(self, adjacency_list:Dict[Hashable,Set]=None):\n        if adjacency_list is None:\n            adjacency_list = []\n        self.vertex_dict = adjacency_list\n\n    def getVertices(self)->List:\n        \"\"\"return all vertex labels\n\n        Returns:\n            List: list of all vertex-labels in the graph\n        \"\"\"\n        return list(self.vertex_dict.keys())\n\n    def getNeighbors(self, vertex:Hashable)->Set:\n        \"\"\"returns a list of vertex neighbors\n\n        Args:\n            vertex (Hashable): Vertex label\n\n        Raises:\n            ValueError: if there is no vertex with a given label\n            in the graph\n\n        Returns:\n            Set: set of neighbors\n        \"\"\"\n        if vertex not in self.vertex_dict.keys():\n            raise ValueError(f'Vertex {vertex} does not exist in this graph')\n        return self.vertex_dict[vertex]\n\n\ndef detect_cycle(graph: DirectedGraph)->bool:\n    \"\"\"Detects if there exists a cycle in directed graph that might be consisting\n    of disconnected components\n\n    Args:\n        graph (DirectedGraph): input graph\n\n    Returns:\n        bool: True if there is cycle in a graph, else False\n    \"\"\"\n    visited = []\n    stack = collections.deque()\n    for source in graph.getVertices():\n        #TODO: dovrsite ovdje orkestraciju preko komponenti \n    return False\n\n\ndef detect_cycle_recursive(graph:DirectedGraph, current_vertex:Hashable, visited: List, stack:collections.deque)->bool:\n    \"\"\"recursively searches for any cycle in connected components\n\n    Args:\n        graph (DirectedGraph): input graph\n        current_vertex (Hashable): search goes from this vertex\n        visited (List): mark visited vertices\n        stack (collections.deque): current DFS track\n\n    Returns:\n        bool: True if found cycle, False\n    \"\"\"\n    visited.append(current_vertex)\n    stack.append(current_vertex)\n    for v in graph.getNeighbors(current_vertex):\n        #TODO: dovrsite ovdje kod za komponentu\n    return False\n\n\n############# test #############\n\ndef construct_deterministic1():\n    graph_adjacency = {}\n    graph_adjacency['a'] = {'b'}\n    graph_adjacency['b'] = {'c'}\n    graph_adjacency['c'] = {'d', 'e', 'f'}\n    graph_adjacency['d'] = set()\n    graph_adjacency['e'] = {'b'}\n    graph_adjacency['f'] = {'b'}\n    return DirectedGraph(graph_adjacency)\n\n\ndef construct_deterministic2():\n    graph_adjacency = {}\n    graph_adjacency['a'] = {'b'}\n    graph_adjacency['b'] = {'c'}\n    graph_adjacency['c'] = set()\n    graph_adjacency['d'] = set()\n    graph_adjacency['e'] = {'b'}\n    graph_adjacency['f'] = {'b'}\n    return DirectedGraph(graph_adjacency)\n    \ndef test_detect_cycle(constructor):\n    is_cyclical = detect_cycle(constructor())\n    print(is_cyclical)\n\n\n# ako Vam kod ne radi na ova dva primjera ispod, dobivate automatski 0 bodova\n\ntest_detect_cycle(construct_deterministic1) # prints True\n\ntest_detect_cycle(construct_deterministic2) # prints False\n```",
+      "votes": {
+        "upvoters": [
+          "Kennedy",
+          "Lusy (MGJ)",
+          "Retard00",
+          "Uchenikowitz (Učečuču)",
+          "WickyWinslow",
+          "__builtin_popcount (std::popcount)",
+          "branimir1999",
+          "iNavy (mornar Ica)",
+          "jobi (azex)",
+          "menace_master",
+          "mrkva"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271376": {
+      "poster": "mrkva",
+      "content": "![](assets/2022-01-17/00014.jpg)\n\n![](assets/2022-01-17/00015.jpg)",
+      "votes": {
+        "upvoters": [
+          "Kennedy",
+          "Lusy (MGJ)",
+          "Retard00",
+          "WickyWinslow",
+          "__builtin_popcount (std::popcount)",
+          "branimir1999",
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271392": {
+      "poster": "mrkva",
+      "content": "zaboravila sam kopirati kod koji dali, ovo je što imam... \n\nsjecam se da su implemtirane funkcije: NewAdjMatrix, edges, FindCycle, FindCycle_r \n\n![](assets/2022-01-17/00017.png)\n\n![](assets/2022-01-17/00018.png)\n\n![](assets/2022-01-17/00019.png)",
+      "votes": {
+        "upvoters": [
+          "Kennedy",
+          "Retard00",
+          "Uchenikowitz (Učečuču)",
+          "branimir1999",
+          "matt (Matt)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271401": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"mrkva\"#p271392 jel ta funkcija FindCycle pogresno opisana? Valjda prima graf ili tezinsku matricu grafa a ne minimalno razapinjujuce stablo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271405": {
+      "poster": "branimir1999",
+      "content": "Labos u 13:\n\nPonovljeno sve i nema novih pitanja. Zadatak je bio detekcija od kolege @\"Olive Oil\"#p271374",
+      "votes": {
+        "upvoters": [
+          "WickyWinslow",
+          "iNavy (mornar Ica)",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271408": {
+      "poster": "samo_vagabundo",
+      "content": "![](assets/2022-01-17/00021.png)",
+      "votes": {
+        "upvoters": [
+          "Kennedy",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271409": {
+      "poster": "idontwannabemyself",
+      "content": "u 13 ova dva nova pitanja sa slozenostima + Dijkstra MST\n\n![](assets/2022-01-17/00022.png)\n\n![](assets/2022-01-17/00023.png)",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Kennedy",
+          "Koalefant",
+          "Lusy (MGJ)",
+          "Retard00",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271410": {
+      "poster": "jobi (azex)",
+      "content": "@\"idontwannabemyself\"#p271409 bi li mogao ti kopirati dani kod za taj zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271411": {
+      "poster": "idontwannabemyself",
+      "content": "@\"azex\"#p271410 bih kada bih skuzila zasto odjednom ne da formatirati kod - skuzila sam minutu nakon sto je proslo vrijeme za editanje\n\n@\"mrkva\"#p271392 \n\nDIJKSTRA MST\n\nhint: ako cete imati u MST zadatku time exceeded error na jednom od zadataka i ako ste u NewAdjMatrix copy stavili u True, probajte promijeniti u False, tj. ostaviti default vrijednost\n\ndobiveni kod\n>!```\nimport collections\nimport copy\ndef _NewAdjMatrix(G, copy=False):\n    am = {}\n    for u in G:\n        am[u] = {}\n        for v in G[u]:\n            if copy:\n                am[u][v] = G[u][v]\n            else:\n                am[u][v] = 0\n    return am\ndef _FindCyclesMatrix(G):\n    visited = []\n    cycs = []\n    S = collections.deque()\n    for u0 in G:\n        if u0 not in visited:\n            P = _NewAdjMatrix(G)\n            _FindCyclesMatrix_r(G, P, u0, visited, S, cycs)\n    return cycs\ndef _FindCyclesMatrix_r(G, P, u, visited, S, cycs):\n    visited.append(u)\n    S.append(u)\n    n = []\n    for v in G[u]:\n        if G[u][v] != 0: n.append(v)\n    for v in n:\n        if v not in S:\n            P[u][v] = P[v][u] = 1\n            _FindCyclesMatrix_r(G, P, v, visited, S, cycs)\n        else:\n            if P[u][v] != 1:  # prevents turning back to the previous vertex in undirected graphs\n                c = []\n                for vx in reversed(S):\n                    c.append(vx)\n                    if vx is v:\n                        break\n                if c not in cycs:\n                    cycs.append(c)\n    S.pop()\ndef _adj(G, u):\n    a = []\n    for v in G[u]:\n        if G[u][v] != 0:\n            a.append(v)\n    return a\ndef _edges(G):\n    e = {}\n    for u in G:\n        for v in _adj(G, u):\n            if not (v, u) in e.keys():\n                e[(u, v)] = G[u][v]\n    return e\ndef FindCycle(G: dict) -> dict:\n    c = _FindCyclesMatrix(G)\n    E2 = {}\n    E = _edges(G)\n    if len(c) > 0:\n        c = c[0]\n        cp = [(c[-1], c[0])]\n        for i in range(len(c) - 1):\n            cp.append((c[i], c[i + 1]))\n        for cpi in cp:\n            E2 = {**E2, **dict(filter(lambda x: x[0][0] in cpi and x[0][1] in cpi, E.items()))}\n    return E2\n#za testiranje#\n    G = {'a': {'a': 0, 'b': 2, 'c': 3, 'd': 0},\n         'b': {'a': 2, 'b': 0, 'c': 5, 'd': 0},\n         'c': {'a': 3, 'b': 5, 'c': 0, 'd': 0},\n         'd': {'a': 0, 'b': 0, 'c': 0, 'd': 0}}\n```",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Kennedy",
+          "Koalefant",
+          "Retard00",
+          "Uchenikowitz (Učečuču)",
+          "WickyWinslow",
+          "jobi (azex)",
+          "mrkva"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271449": {
+      "poster": "Rene",
+      "content": "@\"tempest\"#p271368 zna li netko kako dobiju krugove u ovom redoslijedu? Mislim da nije bitno ali ako su testovi ovakvi onda valjda ocekuju da bude isti redoslijed ko njima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271453": {
+      "poster": "idontwannabemyself",
+      "content": "@\"Rene\"#p271449 \n\nidu po stogu i kupe krugove od trenutnog vrha na stogu, ako postoji, pa do ponovne pojave tog slova (krug/ciklus, ne)\n\nono sto rade u slucaju kad postoji jedan unutar drugog, zapravo prvo zapisu onaj unutar pa tek onaj vani, iako ce vrlo vjerojatno vecini implementacijski doci i spremiti se prvo vanjski pa unutarnji jer tako i idu slova po stogu (tako je i meni)\n\nkak sam ja to \"popravila\" da mi ispadne kao njima je da sam nakon dobivenih svih krugova isla jos jednom po njima i provjerila postoji li neki krug koji je u cijelosti sadrzan u nekom drugom (hint: jedan su pored drugog jer tako i idu po stogu), i ako jest, onda im zamijenila pozicije u listi i dobio se ispis koji su oni htjeli",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Koalefant",
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271455": {
+      "poster": "Joskica",
+      "content": "@\"koode7\"#p271450 Hierholzer* i prezentacija 10, slajd 36\n\n@\"Rene\"#p271449 ja sam reverseala path (odnosno kopiju koju sam koristila za krugove) i onda svaki krug i na kraju listu svih krugva i dobijem taj redoslijed njihov\n\nEDIT: malo lose objasnjenje, al krugove sam trazila iz patha na kraju funkcije, sto vj nije optimalno",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271480": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "Je li imao tko problem da mu za Hierholzerov dobro vraća put za prvi primjer, ali ne i za drugi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271485": {
+      "poster": "Baksuz",
+      "content": "![](assets/2022-01-17/00042.png)\n\n![](assets/2022-01-17/00043.png)\n\n![](assets/2022-01-17/00044.png)\n\n![](assets/2022-01-17/00045.png)\n\nEvo braćo teorije.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "MrPeanutButter",
+          "Retard00",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271605": {
+      "poster": "TamTam (foobar)",
+      "content": "Mozete li pokrenut lab?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271606": {
+      "poster": "Quarz",
+      "content": "@\"foobar\"#p271605 ne, kaže time has passed",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271607": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@\"foobar\"#p271605 tako je i meni bilo prosli tjedan, samo je nakon par min proradilo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271608": {
+      "poster": "Extended_mix",
+      "content": "Je li itko uspio dosad uci ili jos uvijek nista",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271609": {
+      "poster": "estoyAqui",
+      "content": "@\"Extended_mix\"#p271608 \n\ni meni istu poeuku daje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271610": {
+      "poster": "TamTam (foobar)",
+      "content": "sad je moguce",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271611": {
+      "poster": "estoyAqui",
+      "content": "isto i meni proslo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271616": {
+      "poster": "huhu",
+      "content": "_Potrebno je implementirati Dijkstrin algoritam za pronalaženje minimalnog razapinjujućeg stabla neusmjerenog grafa (minimal spanning tree - MST) (pazite! ne radi se o algoritmu za pronalazak najkraćih udaljenosti)._... je zadatak\n\nPitalice se ponovile",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271641": {
+      "poster": "Lusy (MGJ)",
+      "content": "@\"huhu\"#p271616 labos u 10 sati, ista stvar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271652": {
+      "poster": "Gocc (***)",
+      "content": "@\"idontwannabemyself\"#p271453 je li dovoljno provjeriti samo za susjedne, jel moguce da se unutar jednog kruga pojavi drugi krug, te unutar tog kruga jos jedan\n\nne kuzim zast su ovo zakomplicirali s ispisom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271676": {
+      "poster": "idontwannabemyself",
+      "content": "@\"anaa\"#p271652 uhh nemam pojma, nisam testirala nista dalje jer sam to na brzinu slozila prije termina labosa, a nisam dobila taj zadatak na labosu pa nisam dublje ulazila u to :(",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Koalefant"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271708": {
+      "poster": "SuperSaiyano",
+      "content": "@\"anaa\"#p271652 Ja sam radio sa dict-tom već posjećenih vrhova tj. spašavao sam vrhove i njihove indexe/pozicije u var path, te ukoliko se ona nekada pojavi opet u kasnijim iteracijama samo napravim listu vrhova ciklusa od tog zadnje viđenog index-a do trenutno opet viđenog, i naravno ažuriram svaki put nanovo taj dict visited.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271778": {
+      "poster": "Gocc (***)",
+      "content": "@\"SuperSaiyano\"#p271708 ma da nije meni problem naći te cikluse, nego taj poredak ciklusa koji oni očekuju, ne vidim u ovome što si opisao kako si na to utjecao.  A bome ne znam ni zast im je bitan taj poredak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271781": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"anaa\"#p271778 vrlo vjerojatno nije bitno, ali je tak ostalo u testovima za provjeru koje su nam dali",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271890": {
+      "poster": "123 (FERella)",
+      "content": "Koji vam je sad zadatak u 8?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271892": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@\"FERella\"#p271890 \n\nJa sam dobio detekciju ciklusa preko DFS-a, kao u postu gore: @\"Olive Oil\"#p271374 \n\nNa blicu nisam dobio nijedno novo pitanje.",
+      "votes": {
+        "upvoters": [
+          "123 (FERella)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271910": {
+      "poster": "iva7740 (Mica Trofrtaljka)",
+      "content": "Labos danas u 10: \n\nDijkstra MST, pitalice se sve ponovila",
+      "votes": {
+        "upvoters": [
+          "123 (FERella)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271971": {
+      "poster": "feudalac",
+      "content": "![](assets/2022-01-19/00014.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271982": {
+      "poster": "123 (FERella)",
+      "content": "@\"std::popcount\"#p271892 \n\nisti zadatak u 13 labos, ponovile se sce pitalice",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272259": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "Ima netko hint kako modificirat kod iz skripte da dijsktra proradi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272281": {
+      "poster": "reygrep",
+      "content": "mislim da ovu pitalicu jos nisam vidjela na forumu\n\n ![](assets/2022-01-20/00005.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

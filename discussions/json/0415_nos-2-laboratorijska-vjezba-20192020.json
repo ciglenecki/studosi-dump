@@ -1,0 +1,602 @@
+{
+  "title": "[NOS] 2. laboratorijska vježba - 2019/2020",
+  "creator": "YenOfVen",
+  "slug": "nos-2-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Napredni operacijski sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "14653": {
+      "poster": "YenOfVen",
+      "content": "Može li netko tko se upoznao s vježbom malo ju podrobnije obrazložiti ovdje za ljude koji nisu skroz u toku s predmetom, odnosno što je potrebno proći prije rješavanja (jesu dovoljna videopredavanja) i sl.?",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "NekocBraca",
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14693": {
+      "poster": "Red_Baron",
+      "content": "@YenOfVen#14653 Neke stvari sam znao od ranije, ali mislim da su videopredavanja dovoljna. Đerek je prilično dobro objasnio gradivo, tako da ne bi trebalo biti problema.",
+      "votes": {
+        "upvoters": [
+          "Kushim"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15122": {
+      "poster": "Stark",
+      "content": "Ponuditi na izbor sve moguće veličine ključeva za svaki algoritam te najmanje **dva** načina kriptiranja (ECB, CBC, OFB, CFB, CTR, ...).\n\n Da li tu treba biti dva u tekstu zadatka?",
+      "votes": {
+        "upvoters": [
+          "Jimothy",
+          "maPre"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15124": {
+      "poster": "maPre",
+      "content": "@Stark#15122 da, receno je u cetvrtak da ce to ispravit, al jos nisu izgleda",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15414": {
+      "poster": "vykar (mango)",
+      "content": "Pitanje vezano uz digitalni potpis u kombinaciji s RSA i nekom hash funkcijom: kako iskoristiti RSA i kriptirati sažetak privatnim ključem pošiljatelja ako RSA kao asimetrični algoritam kriptira poruku javnim ključem primatelja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15468": {
+      "poster": "maPre",
+      "content": "@vykar#15414 ne znam u cemu radis al recimo u pythonu imas package za dig. potpis:\n\nhttps://pycryptodome.readthedocs.io/en/latest/src/signature/signature.html\n\nPa onda to koristis",
+      "votes": {
+        "upvoters": [
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16325": {
+      "poster": "Stark",
+      "content": "U kakvom formatu treba biti ulazna datoteka s tekstom koji želim kriptirati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16432": {
+      "poster": "InCogNiTo124",
+      "content": "@Stark#16325 folib jr vise pita naglasoo da sve sto nije zadano u zadatku rjesava se proizvoljno, ja ni nemam datoteke imam stringove",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16471": {
+      "poster": "Jimothy",
+      "content": "Može li netko pojasniti veličine ključeva u Crypto.Cipher - DES3? U prezentacijama piše da su veličine ključeva 112 i 168 bitova, a ovdje su omogućene samo veličine 128 i 192 bitova.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16476": {
+      "poster": "maPre",
+      "content": "@Jimothy#16471 mislim da je fora u tome sto DES ima kljuc od 56 bitova koji se nadopunjuje s 8 bitova za paritet = 64 bita\n\n56 * 2 = 112 , 64 * 2=128\n\n56 * 3 = 168, 64 * 3=192",
+      "votes": {
+        "upvoters": [
+          "Jimothy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16485": {
+      "poster": "adrian7000",
+      "content": "Moze neko dati nekakav hint kako ovaj labos najlakse napravit u pythonu? Tipa koje module koristit?",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16492": {
+      "poster": "Red_Baron",
+      "content": "@adrian7000#16485 [was it so fckin hard?](https://lmgtfy.com/?q=python+cryptography+libraries&iie=1)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16511": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@adrian7000#16485 Crypto (tj. Cryptodome) i Tkinter (za GUI)\n\nZa manipulaciju stringova se koristi standardna biblioteka, za matematiku Numba ili Numpy.",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16665": {
+      "poster": "dozo",
+      "content": "Jel nam ulaz kod provjere potpisa i ostalog treba biti ova kriptirana datoteka koju su naveli u primjeru ili možemo poslat potpis i ključeve stvorene npr u main-u?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16778": {
+      "poster": "Jimothy",
+      "content": "Zna li netko kako kreirati RSA privatni ključ u pycryptodome-u na temelju poznatog modulusa i privatnog eksponenta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17216": {
+      "poster": "Kristijan",
+      "content": "Je li netko uspio implementirat digitalni potpis bez one definirane funkcije potpisivanja u pycryptodome? Sad sam tek vidio da su eksplicitno zabranili korištenje gotovih funkcija potpisivanja\n\n![](assets/2020-05-01/00004.png)\n\nProblem je što pycryptodome ne dozvoljava potpisivanje sa privatnim ključem (kao iz sigurnosnih razloga ...), a glupo mi je koristit neki treći modul samo zbog tog dijela zadatka.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Jimothy",
+          "Marenix",
+          "leo (tajler)",
+          "maPre"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17230": {
+      "poster": "DeA11 (princezA)",
+      "content": "je li netko radi u javi, sta je najbolje koristiti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17542": {
+      "poster": "InCogNiTo124",
+      "content": "@Kristijan#17216 implementiraj pomocu signature/verification ali napisi u komentarima zasto koristis to a ne encrypt/decrypt (lib ne da enkripciju privatnim kljucem, [jer to nema smisla](https://unix.stackexchange.com/a/296731)) tako sam ja, vjerujem da ako im nekoliko ljudi to napravi da ce skuzit i maknut taj uvjet",
+      "votes": {
+        "upvoters": [
+          "Jimothy",
+          "Kristijan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17557": {
+      "poster": "Jimothy",
+      "content": "@InCogNiTo124#17542 \n\nMožda bi im bilo bolje napisati email vezano uz to. Navodno je isprva netko od profesora/asistenata rekao da se može koristiti sign, ali je Golub jučer na predavanju rekao da nije dozovoljeno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17573": {
+      "poster": "InCogNiTo124",
+      "content": "@Jimothy#17557 ako zelis mozes poslat slobodno 😀",
+      "votes": {
+        "upvoters": [
+          "Jimothy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17575": {
+      "poster": "Jimothy",
+      "content": "@InCogNiTo124#17573 \n\nMogu probat :D",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17723": {
+      "poster": "Vocko",
+      "content": "Prof. Đerek mi je potvrdio da je ovo u redu.![](assets/2020-05-02/00004.png)",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Jimothy",
+          "Kristijan",
+          "Rolf",
+          "leff",
+          "leo (tajler)",
+          "maPre"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17732": {
+      "poster": "leo (tajler)",
+      "content": "jel zna netko kako napraviti u pycryptodome da se dobije isti rsa ključ iz modula, privatnog i javnog eksponenta,\n\njer mi izbacuje svaki put drugačiji ključ, nekad je isti kao originalni, nekad nije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17735": {
+      "poster": "Jimothy",
+      "content": "@leo#17732 \n\nRSA.construct((n, e, d))",
+      "votes": {
+        "upvoters": [
+          "leo (tajler)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17740": {
+      "poster": "leo (tajler)",
+      "content": "@Jimothy#17735 kad probam s tim često izbaci drugačiji ključ",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17753": {
+      "poster": "WallStreetBets",
+      "content": "Dal je potrebno raditi vlastite implementacije ECB ili CBC. Ili je dovoljno samo ovako zadati vrstu implementacije kod definiranja AES-a. `AES.new(self.key, AES.MODE_CBC, iv)`",
+      "votes": {
+        "upvoters": [
+          "Jimothy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17836": {
+      "poster": "Red_Baron",
+      "content": "@WallStreetBets#17753 samo digitalnu omotnicu, potpis i pečat moraš izvest sam (ne i algoritme koje oni koriste); sve ostalo ne.",
+      "votes": {
+        "upvoters": [
+          "WallStreetBets",
+          "caffeine"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18042": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@leo#17740 To bi sugeriralo da ne pamtiš dobro `n`, `e` i `d`; nekoliko implementacija na githubu to radi na isti način, hell, i ja to radim na isti način i sve funkcionira. Najlakše za provjeriti ovo je da napraviš neku `RsaKey` instancu pomoću `generate`, uzmeš njene parametre i napraviš `construct` s tim parametrima -> `n`, `e` i `d` ti moraju biti isti.\n\nPrimjer:\n\n```python\nfrom Crypto.Cipher import PKCS1_OAEP\nfrom Crypto.PublicKey import RSA\n\nkey = RSA.generate(bits=1024, e=65537)\nkey2 = RSA.construct((key.n, key.e, key.d))\n\na = b\"a\"\n\nassert a == PKCS1_OAEP.new(key2).decrypt(PKCS1_OAEP.new(key).encrypt(a))\nassert key.n == key2.n\nassert key.e == key2.e\nassert key.d == key2.d\n```\n\nEDIT: Nadodat ću da iste trojke `n`, `e` i `d` ne moraju davati ciphere koji vraćaju isti ciphertext - ovo je zato što se primjenjuju različite padding metode, bez toga bi se neki tekst uvijek preslikavao u isti ciphertext, što očito nije previše sigurno. Bez obzira na to dva drukčije inicijalizirana ključa s istim `n`, `e` i `d` će najnormalnije moći međusobno dekriptirati podatke koje je druga instanca ključa enkriptirala.",
+      "votes": {
+        "upvoters": [
+          "leo (tajler)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18152": {
+      "poster": "NekocBraca",
+      "content": "@Vocko#17723 Kad provjeravas valjanost ovakvog potpisa, jel rucno dekriptiras signature, racunas digest poslane poruke i usporedjujes te dvije vrijednosti? Ili koristis neku funkciju iz liba koja zna verifyat signature na temelju signaturea, digesta i orginalne poruke?\n\nMeni radi dobro kad koristim ugradjenu funkciju za verify, ali mi ne radi dobro kada to radim rucno pa nisam niti siguran trebamo li podrzati rucno provjeravanje. Pretpostavljam da mi ne radi jer kad racunam rucno digest ne dodam padding koji se doda pri kreiranju signaturea pa da ne gubim vrijeme na to ako nije obavezno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18215": {
+      "poster": "Vocko",
+      "content": "@NekocBraca#18152 Koristim verify iz paketa, ne radim to ručno.",
+      "votes": {
+        "upvoters": [
+          "NekocBraca"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18743": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Preporuka - ako radite u Pythonu te za paddanje koristite proširivanje razmacima, rješenje će vam vjerovatno padati za posebnije znakove - npr. već samo `č` skrši program.\n\nPreporuka je koristiti `Crypto.Util.pad` i `Crypto.Util.unpad` za paddanje i unpaddanje bitova, a block size se nalazi u npr. `AES.block_size` ili `DES3.block_size`.\n\nPrimjer:\n\n```python\nfrom Crypto.Cipher import AES\nfrom Crypto.Util.Padding import pad, unpad\n\nporuka = pad(\"nečto\".encode(\"utf8\"), AES.block_size)\nporuka2 = \"nečto           \"\n\nprint(len(poruka2))      # 16\n\nporuka2 = poruka2.encode(\"utf8\")\n\nprint(len(poruka))      # 16\nprint(len(poruka2))     # 17\n```\n\nOva `poruka2` ima ručno dodano 11 razmaka (da dođe na 16 znakova).",
+      "votes": {
+        "upvoters": [
+          "Kushim"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19421": {
+      "poster": "[deleted]",
+      "content": "@micho#18743 \"Datoteke u koje se spremaju ključevi (javni, tajni, ...) i kriptirane podaci su ASCII datoteke, tj. sadržavaju isključivo ASCII znakove, odnosno **samo slova engleske abecede** (velika i mala), brojke te znakove \"-\" i \":\" (uz znakove za formatiranje: razmak, novi red, tabulator).\" (izvor: http://www.zemris.fer.hr/predmeti/os2/kriptografija/kljucevi.html)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19429": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@tolecnal#19421 To je preporuka formata (nije obavezna) koja je napisana tako jer se labosi pretpostavljeno pišu u C-u i C++u koji se useru kad vide ne-ASCII slovo\n\nIsto tako, upute su izgleda pisane prije ere JSONa, a danas je glupo pisati svoje parsere umjesto toga. To što su datoteke ASCII, ne znači da su poruke koje enkriptiramo ASCII (niti će to biti slučaj za bilo koji moderni jezik, oni koriste UTF8 i UCS2).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29150": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "sto uzimam za vrijednosti d i n kad radim digitalni potpis?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30460": {
+      "poster": "mn4 (mm)",
+      "content": "Kad briju oni ispravit taj labos = ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30482": {
+      "poster": "Marenix",
+      "content": "@mn4#30460 \n\nReko je Golub da će vjv ovaj tjedan",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "mn4 (mm)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30483": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@mn4#30460 Rekao je da im puno više treba jer nije samo da demonstriraš da radi i to je to, ali i ovo: Golub je sve svoje labose ispravio (njih je bilo manje). Ostatak su trebali ispraviti asistenti, ali kad je provjerio koliko ih je ispravljeno, rekao je da je to jako malo i da bi sad ovaj tjedan, kao što je kolega iznad mene rekao, trebali više vremena odvojiti za ispravljanje tog labosa.\n\nAli ja osobno ne bih rekao da će to biti ovaj tjedan, možda sljedeći bude.",
+      "votes": {
+        "upvoters": [
+          "mn4 (mm)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32884": {
+      "poster": "anakonda",
+      "content": "Netko rjesava labos za novce (python il java), moze bez gui-a ... bitno samo da se rijesi do zadnjeg roka (za 4 boda)?\n\nOdgovor plz privatno, pa dogovorimo cijenu 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "peaceko",
+          "prodanacro (oat)",
+          "termodinamika",
+          "triespe"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Aquaman"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33222": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "Moze li netko reci kome su vec ispŕavljeni labosi iz 1. Ili 2.vjezbe, ako nesto ne radi kako treba, jel se to broji kao nerijesena laboratorijska vjezba ili samo skinu par bodova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33377": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@johndoe12#33222 Skidaju bodove, samo je pitanje koliko. Meni su npr. skinuli 1 bod na 1. labosu jer nisam pratio tko ide na vrtuljak, nego sam samo poslao 4 \"sjedi\" poruke",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

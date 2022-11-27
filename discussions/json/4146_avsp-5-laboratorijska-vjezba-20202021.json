@@ -1,0 +1,1019 @@
+{
+  "title": "[AVSP] 5. laboratorijska vježba - 2020/2021",
+  "creator": "svemia (bearyn)",
+  "slug": "avsp-5-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Analiza velikih skupova podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "196349": {
+      "poster": "svemia (bearyn)",
+      "content": "Jel ima jos netko kome radi na malom primjeru, ali na velikom primjeru krivo izbacuje cvorove/krivo racuna centralnost? Pokusavam shvatit u cemu je problem i fixat vec dan i pol, izmijenila sam svasta, cini mi se kao da na velikom primjeru ne pronalazi dobro najkrace puteve (prvo nadem sve puteve, a onda izracunam koji je najkraci)...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196388": {
+      "poster": "chuuya (temari)",
+      "content": "Kako ste implementirali pronalazak svih najkraćih puteva između 2 čvora? Jel ima neki jednostavni, tried and true način? Stalno mi negdje puca pa pretpostavljam da mi pristup nije dobar, a i voljela bih ne imat milijun for petlji :/",
+      "votes": {
+        "upvoters": [
+          "Atem",
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196391": {
+      "poster": "pushPop",
+      "content": "Kako se kod izgradnje grafa računa sličnost vektora? \n\nKaže \"na Slici 9 vidimo da je maksimalan iznos mjere sličnosti vektora svojstava jednak 5.\". Kako to kad ne postoje 2 vektora (svi su duljine 5) koji su isti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196393": {
+      "poster": "chuuya (temari)",
+      "content": "@pushPop#196391 Mislim da je to kao imaš 5 elemenata u vektoru i njih najviše 5 može bit isto između 2 vektora, tako da je max sličnost 5. Ne gledaš ove konkretne vektore nego sve moguće i think",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196454": {
+      "poster": "in1",
+      "content": "@chuuya#196388 Nije optimalno, ali je moguće BFS pokretati iz svakog čvora do svakog čvora (EDIT: nije potrebno iz svakog u svaki jer je graf neusmjereni) uz modifikaciju da se ne završi kada je pronađen prvi put nego da se algoritam izvrti do kraja i onda sve pronađene puteve spremaš u listu puteva. Prije dodavanja puta u listu provjeriš koliko je dug put/putevi u listi pa onda na temelju toga ili dodaješ ili ne dodaješ novodobiveni put.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)",
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196485": {
+      "poster": "tonkec",
+      "content": "@pushPop#196391 mislim da je to koliko se maksimalno može postići",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196529": {
+      "poster": "adidas",
+      "content": "Kakvav je labos po težini naspram prijašnjih?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196540": {
+      "poster": "Amon",
+      "content": "@adidas#196529 Upute imaju 10 stranica\n\nnuff said",
+      "votes": {
+        "upvoters": [
+          "adidas",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "adidas"
+        ]
+      }
+    },
+    "196566": {
+      "poster": "gagotron",
+      "content": "@in1#196454 Na koji način koristiš BFS algoritam, odnosno kakva ti je struktura grafa. Ja sam graf napravio 2D polje i sad ne znam kako pristupiti tom algoritmu s takvom strukturom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196572": {
+      "poster": "gagotron",
+      "content": "@in1#196454 Da li si koristio 2d matricu za prikaz grafa ili nešto drugo, ako si koristio 2d polje jel imaš link za neki dobar pseudokod, slomih se dok sam trazio BFS za 2d polje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196589": {
+      "poster": "in1",
+      "content": "@gagotron#196572 \n\nKoristih:\n\n`HashMap<Integer, List<Node>> connections = parsedInput.connections;\n\nHashMap<Integer, int[]> properties = parsedInput.properties;`\n\nUzeo sam kod koji sam imao sa 1. labosa umjetne i njega sam preuredio na ovaj način @in1#196454",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196785": {
+      "poster": "tbauman",
+      "content": "Jel netko moze objasniti kako izračunati modularnost (točno)? Ja za mali primjer i ručno i u programu uporno dobivam u zadnjoj iteraciji 0.30469 umjesto 0.124 kako piše u primjer. Izbacivanje bridova tj. ostatak zadatka mi je točan.\n\nRačunam k_u*k_v za sve kombinacije vrhova (i kad je u=v i kada je (u,v)=(v,u) tj. duplo ). U svakoj iteraciji imam drugačiji m i k, po iteracijama mi je m= 22,20,16, a vektor k=[8, 5, 14, 7, 10], [8, 3, 14, 7, 8], [8, 3, 10, 3, 8]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196791": {
+      "poster": "glider (toblerone)",
+      "content": "@tbauman#196785 https://fer.studosi.net/d/3899-avsp-pitanja-i-odgovori/101 kolega je ovdje objasnio da su u mailu rekli da se kroz iteracije m i tezine bridova ne mijenjaju ( sto je malo glupo), tako da samo mijenjaš deltu a ostale podatke izvuces iz pocetnog grafa i tjt.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196931": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jel se ikom dogodilo za manji primjer da su prva i zadnja modularnost dobre, a u drugoj iteraciji ispadne -0.0909",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "196948": {
+      "poster": "Sipa31",
+      "content": "@Yasuke#196931 ovo se meni dogodilo, pogledaj @Sipa31#196355. Ukratko, nemoj mijenjati varijablu [imath]A{uv}[/imath] kad uklanjaš bridove s gridova. Konkretno za tebe, kad izbrišes brid (2,5) u prvoj iteraciji, nemoj mijenjat [imath]A_{25}[/imath], tj. nemoj zamijenit težinu od brida (2,5) s nulom kao što sam ja radio.",
+      "votes": {
+        "upvoters": [
+          "Njet",
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197087": {
+      "poster": "adidas",
+      "content": "Pomoću nekog algoritma nađem dužinu najkraćeg puta svih parova čvorova u grafu.\n\nKada tražim bridove koji su uključeni u neki put onda to radim rekurzivno? (ili moram prepraviti  algoritam pronalaska najkraćih puteva tako da mi odma pamti i bridove u najkraćem putu?)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197157": {
+      "poster": "gagotron",
+      "content": "Da li su u početku algoritma svi čvorovi u jednoj zajednici za mali primjer? Za veliki ne bi smjeli biti jer ima izoliranih čvorova. I ako su svi u zajednici, kako se dogodi da je modularnost u prvoj iteraciji?\n\nEDIT: na zaokruživanju na 4 decimale ispadne 0, da ne bi u nekog drugog izazvalo tilt ko u mene",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197370": {
+      "poster": "korisnickoime",
+      "content": "Može neko pojasniti malo izračun bridne centralnosti? \n\nRezultat koji dobijem mi ovisi o redoslijedu na koji obilazim čvorove, a probao sam i ručno riješiti pa dobivam iste rezultate kao u kodu. Ne mogu nikako replicirati ovaj njihov primjer što su stavili u pripremi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197387": {
+      "poster": "tbauman",
+      "content": "ja ne dobijem rješenje za t.in kao t.out nego je isto kao i rješenje iz zadatka (gdje je napisan primjer za izlaz i modularnost).  ne razumijem zasto te dvije stvari nisu iste, jel netko skuzio o cem se radi? \n\nna SPRUT-u mi je rješenje OK.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197389": {
+      "poster": "in1",
+      "content": "@korisnickoime#197370 \n1. izračunaš najkraće puteve od svakog čvora do svakog čvora\n2.  za svaki najkraći put, bridovima na tom putu dodaješ 1/N gdje je N broj najkraćih puteva između ta dva vrha\n\nIspod imaš najkraće puteve i vrijednosti bridne centralnosti po koracima pa vidi što ti ne štima.\n\nhttps://pastebin.com/raw/CyXTaSZ5",
+      "votes": {
+        "upvoters": [
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197391": {
+      "poster": "tbauman",
+      "content": "@korisnickoime#197370 vidi ovo gore sto su meni odgovorili, https://fer.studosi.net/d/3899-avsp-pitanja-i-odgovori/101 \n\nima slika s računom gdje je dobiven 0.124 sto trebas za mali primjer.\n1. A, m i k ostaju isti kao za pocetni graf. U svakoj iteraciji racunas s tim pocetnim vrijednostima. Mijenja se samo delta funkcija \n2. sve cvorove brojis 2 puta u sumi: npr. i (1,2) i (2,1)\n3. cvorove oblika (x,x) brojis samo jednom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197394": {
+      "poster": "in1",
+      "content": "@tbauman#197387 Poprilično sam siguran da gledaš u krivi t.out jer su rezultati tamo jednaki kao u uputi.",
+      "votes": {
+        "upvoters": [
+          "tbauman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197395": {
+      "poster": "tbauman",
+      "content": "@in1#197394 da, vidim sad. valjda sam skinula zip prije nego sto su ga promijenili jer se sigurno radi o istom zadatku",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197419": {
+      "poster": "Sipa31",
+      "content": "@tbauman#197395 isti je zadatak, prošle godine je bilo drugačije rješenje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197659": {
+      "poster": "korisnickoime",
+      "content": "Jel se kome desilo da mu manji primjer iz pripreme dobro ispisuje, a za t.in se dobro ispisuju samo bridovi koji se uklanjaju? Popis zajednica ispisuje krivo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197693": {
+      "poster": "Emma63194",
+      "content": "Isplati li se raditi ovaj labos ako tek sada idem u proučavanje gradiva?\n\nNisam se stigla prije posvetiti tome pa me zanima stigne li se u dva dana?\n\nNe treba mi za prag, samo čisto jer mi se čini zanimljivo gradivo, a opet, glupo mi je baciti vikend u vjetar i ne stići/uspjeti riješiti pa bi neka procjena o težini bila jako dobrodošla.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197707": {
+      "poster": "chuuya (temari)",
+      "content": "Može li netko staviti svoje međurezultate kod izračunavanja modularnosti za onaj mali primjer sa 5 čvorova? Negdje uporno radim grešku a ne vidim gdje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197711": {
+      "poster": "Sipa31",
+      "content": "@Emma63194#197693 po meni je najteži labos dosad, ne u smislu da je komplicirano za shvatit, nego po tome da ima dosta kodiranja s više nekako nezavisnih komponenti (izgradnja grada, izračun centralnosti bridova, modularnost grafa...) Prema duljini upute se vidi da ima posla. Reko bi da se stigne u dva dana, plus je ako od prije imas neki labos koij ima programsku strukturu grafa pa mozes brzo pocet radit sam zadatak. Mozda procitaj uputu jer ionako trebas znat gradivo za ispit, pa onda odluci hoces li rjesavat ili ne?",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197712": {
+      "poster": "Sipa31",
+      "content": "@chuuya#197707 tu imas izracun modularnosti 0.124 za mali primjer : @Jimothy#35965",
+      "votes": {
+        "upvoters": [
+          "Watson (112)",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Watson (112)"
+        ],
+        "tuga": []
+      }
+    },
+    "197715": {
+      "poster": "in1",
+      "content": "@chuuya#197707 https://pastebin.com/raw/jQRirSML",
+      "votes": {
+        "upvoters": [
+          "blast",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197729": {
+      "poster": "Dekan",
+      "content": "Jesam li ja slijep ili ne kuzim kako racunaju udaljenost cvorova u poglavlju 5. Kako dobiju da je slicnost izmedu 3 i 5 jednaka 3? Koliko ja vidim, samo se dvije jedinice poklapaju.\n\nEdit: NVM slijep sam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197771": {
+      "poster": "Cvija",
+      "content": "Koja rješenja dobijete za edge_betweenness za ovaj njihov graf sa slike 14 nakon svih koraka? Meni ispadne ovako:\n\n```{[1, 2]=3.5, [3, 4]=2.5, [2, 4]=2.5, [1, 3]=3.5, [1, 5]=3.5}```\n\nA njima:\n\n```{[1, 2]=3.5, [3, 4]=2.5, [2, 4]=2.5, [1, 3]=3.5, [1, 5]=4.0}```\n\nA nekako i po izračunima dobijem za brid [1, 5] rješenje 3.5, radim li krive izračune ili je to krivo u primjeru?\n\n[Edit] Ulaz neka npr. izgleda ovako\n```\n5 1\n1 2\n2 4\n4 3\n1 3\n\n1 0 0 1 0 1\n2 0 0 1 0 0\n3 1 1 0 1 1\n4 0 0 1 1 1\n5 0 1 1 0 0\n\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197780": {
+      "poster": "Noname",
+      "content": "Kako provjerimo jel modularnost dobrog iznosa da prekinemo particioniranje? Ne razumijem bas s cim se treba usporediti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197812": {
+      "poster": "in1",
+      "content": "@Cvija#197771 dobijem ovo:\n\nhttps://pastebin.com/raw/hzdkVknE\n\n@Noname#197780 ne prekidaš particioniranje kada modularnost dosegne neku vrijednost nego pustiš algoritam da se izvrti do kraja (ukloni sve bridove), a tijekom izvršavanja algoritma pamtiš particioniranje grafa za najveću modularnost",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197816": {
+      "poster": "in1",
+      "content": "@Cvija#197771 \n\nako pokrenem sa ovim inputom koji si dao dobijem:\n\nhttps://pastebin.com/raw/sMQdjBam\n\nako pokrenem direktno s težinama koje su dane na slici 11 dobijem ovo (isto kao u uputi):\n\nhttps://pastebin.com/raw/e3B0mG5k\n\n@Noname#197780 ne prekidaš particioniranje kada modularnost dosegne neku vrijednost nego pustiš algoritam da se izvrti do kraja (ukloni sve bridove), a tijekom izvršavanja algoritma pamtiš particioniranje grafa za najveću modularnost",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197893": {
+      "poster": "chuuya (temari)",
+      "content": "@korisnickoime#197659 Meni se ovo događa, jesi možda skužio/la grešku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197897": {
+      "poster": "in1",
+      "content": "@chuuya#197893 Meni je problem bio da prilikom izrade zajednice nisam pazio da ako npr. prilikom izgradnje zajednice imaš 1-2 3-4 5-6 i onda vidiš da postoji brid 2-6 da će ti rezultat tada biti 3-4 1-2-5-6, a ne npr. 3-4 5-6 1-2-6",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197901": {
+      "poster": "chuuya (temari)",
+      "content": "@in1#197897 Izgleda da je problem ipak u računanju modularnosti, iako mi pravilno računa za onaj mali graf iz uputa... Imaš li možda međurezultate za ovaj veći graf (t.in)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197902": {
+      "poster": "korisnickoime",
+      "content": "@chuuya#197893 Nisam, nije mi jasno jer su mi sve modularnosti točne. Ako skužiš di je problem javi.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197904": {
+      "poster": "netko_tamo",
+      "content": "Kolko dobivate modularnost za zadnji korak za manji graf? 0.3047 ili je tocno 0.124? Mislim svakako mi krivo dolaze međurezultati za veći graf u racunanju modularnosti. Vidim da se ovaj rezultat 0.124 dobije tak da se uvijek uzimaju vrijednosti pocetnog grafa na ku i kv, al nije mi jasno zasto hahaha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197905": {
+      "poster": "chuuya (temari)",
+      "content": "@korisnickoime#197902 Ako postoje dvije iste max modularnosti, možda uzimaš krivu, tj ako si spremao u dict kao ja, možda ti je nova zajednica s istom modularnošću prebrisala onu prvu?",
+      "votes": {
+        "upvoters": [
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197907": {
+      "poster": "korisnickoime",
+      "content": "@chuuya#197905 Koju modularnost bi trebali gledati u slučaju kada imam dvije ili više njih koje su max?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197909": {
+      "poster": "chuuya (temari)",
+      "content": "@korisnickoime#197907 Ne bih znala budući da meni generalno modularnost za t.in ne ispada dobro lol. Ali možda onu \"raniju\"?",
+      "votes": {
+        "upvoters": [
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197911": {
+      "poster": "in1",
+      "content": "@chuuya#197901 Ne znam koji točno međurezultati ti trebaju, ali ako misliš koje sve vrijednosti utječu na modularnost u jednoj iteraciji onda je to ovo:\n\nhttps://pastebin.com/raw/gyC662aw\n\n...iako mislim da toga ima puno previše da bi se moglo pratiti \n\nEDIT: nisu ispisani izračuni ako dva vrha nisu u istoj particiji grafova jer onda ne dodaju ništa u ukupnu sumu, a bilo bi puno takvih ispisa\n\n@korisnickoime#197907 čini se prvu, barem tako ispada točno u t.in",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)",
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197940": {
+      "poster": "korisnickoime",
+      "content": "Zna li neko jel se bodovi dodjeljuju po tome koliki postotak ispisa rješenja je točan ili koliki postotak testova je točno izvršen?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197957": {
+      "poster": "Amon",
+      "content": "@korisnickoime#197940 Prilično sam siguran da je po postotku testova\n\nOni samo imaju zastavice jel prošao test ili ne, nemaju mehanizme da uspoređuju koliki se postotak tvog primjera matcha sa njihovim",
+      "votes": {
+        "upvoters": [
+          "in1",
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197978": {
+      "poster": "korisnickoime",
+      "content": "@in1#197897 Mislim da je i meni ovo problem. Kako si riješio to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "197983": {
+      "poster": "in1",
+      "content": "@korisnickoime#197978 Meni su podatci spremljeni tako da imam mapu u kojoj imam sačuvano koji čvor je spojen sa kojom listom čvorova tj. gdje se sve može doći iz pojedinog čvora. Onda kada bih iterirao po svim tim unosima u mapi, ispitao bi sadrže li mi prijašnje zajednice neki od tih čvorova, ako sadrže dodao bi ih u trenutni set i zapamtio da moram obrisati ovaj drugi set.\n\nnpr. ako imaš da čvor 1 ide u 2,3,4 i imaš zajednice 2-5, 6-8, 3-7\n\nonda bih u trenutnu zajednicu koja mi je 1-2-3-4 (koju znam da imam zbog prijelaza) dodao još (2-5, 3-7) pa bih dobio 1-2-3-4-5-7 i onda bih obrisao 2-5 i 3-7 pa bih na kraju imao samo 6-8 1-2-3-4-5-7",
+      "votes": {
+        "upvoters": [
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198123": {
+      "poster": "netko_tamo",
+      "content": "@chuuya#197909 jesi uspjela rijesit problem s modularnoscu?\n\n>! []()\n\n> ```\nModularity: 0.04\n17758399 18393773\nModularity: 0.485\n15318882 34663865\nModularity: 0.4543\n10067152 17758399\nModularity: 0.4135\n17758399 69393657\nModularity: 0.5015\n18393773 29477388\nModularity: 0.3995\n17104585 18393773\nModularity: 0.4714\n17758399 28706024\nModularity: 0.4612\n25521487 34663865\nModularity: 0.458\n10067152 15318882\n15318882 93733494\nModularity: 0.3822\n14911702 29477388\n38232487 69193714\nModularity: 0.2993\n28706024 30799813\nModularity: 0.29\n4519121 69193714\n4519121 19299909\n17758399 34665247\n18393773 69193714\n18393773 19299909\n26109801 40081665\n34665247 66833459\n40081665 44779307\nModularity: 0.1501\n17758399 34663865\n34663865 34665247\n34663865 66833459\nModularity: 0.1048\n10067152 69393657\n14911702 29459405\n17104585 29477388\n25521487 30799813\n25521487 42080740\n30799813 42080740\n93733494 456846767\n```\n\novo je moj debug ispis, nakon drugog koraka mi se sjebe modularnost i ne mogu rec da razumijem hahaha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198154": {
+      "poster": "saitama",
+      "content": "Samo me zanima jel promjena tezina ide u while petlji ili to sam jednom izracunam?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198158": {
+      "poster": "stoper5",
+      "content": "Zna netko kako dobit zajednice na temelju tablice susjedtva i bridova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198159": {
+      "poster": "stoper5",
+      "content": "@saitama#198154 Mislim da je netko napisao da samo jednom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198197": {
+      "poster": "chuuya (temari)",
+      "content": "@netko_tamo#198123 Ne, ali našla sam uzrok, BFS mi ne pronalazi put između nekih bridova između kojih bi trebao postojat put :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198211": {
+      "poster": "saitama",
+      "content": "Muci me ovaj izracuna modularnosti pa ako bi netko imo volje pogledati i reci gdje grijesim bio bi mu jako zahvalan. Trenutno radim ovo ucitam graf, promjenim tezine (dobro se zamjene), izracunam m, izracunam ku,kv samo ih na pocetku izracunam zatim idem u while petlju gdje svaki put ponovo racunam q tako da prvo sumiram po svim koji su povezani u trenutnoj iteraciji suma += tezina_inicijalnog_u_v - (ku*kv)/(2*m) i onda q izracunam tako da (1/(2*m))*suma.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198232": {
+      "poster": "joc",
+      "content": "@netko_tamo#198123 ja sam imao isti takav ispis, kod mene je problem bio taj da sam računao modularnost na grafovima na kojima sam micao bridove (i time postavljao A_uv na 0). \n\nZa formulu modularnosti sve parametre izračunaš na početnom grafu, samo se delta mijenja kroz iteracije.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198235": {
+      "poster": "joc",
+      "content": "@saitama#198211 Sve si parametre (m, ku, kv, Auv) izračunao samo jednom na početnom grafu što je ok. Jedini problem koji vidim je da sumiraš samo po onima koji su povezani u trenutnoj iteraciji, ak pod time misliš da su povezani direktno bridom, a ne da su u istoj zajednici to je problem. Jer ak su dva čvora u istoj zajednici, a nisu direktno povezani bridom njihov doprinos neće biti 0 (iako je A_uv jednak 0), već -ku * kv/2m. delta parametar ovisi o tome jesu čvorovi u istoj zajednici, ne jesu direktno povezani.",
+      "votes": {
+        "upvoters": [
+          "saitama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198263": {
+      "poster": "zuza (jose)",
+      "content": "Doslo je do pogreske u radu sustava. Javite se na e-mail listu predmeta.\n\nIma netko taj problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198269": {
+      "poster": "milanista",
+      "content": "@in1#197389 Iz kojeg razloga su putevi od 1 do 4 i od 4 do 1 različiti u prvoj iteraciji?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198279": {
+      "poster": "in1",
+      "content": "@milanista#198269 ne bi trebali biti ; moram pogledati zašto mi se to dogodi, ali svakako bi putevi trebali biti isti ; iako sve vrijednosti mi ispadaju dobre pa vjv to imali premali utjecaj da promjeni rezultat, ali je pogrešno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198296": {
+      "poster": "in1",
+      "content": "@milanista#198269 @in1#198279\n\nbio je bug kod uvjeta u BFS ; hvala na dojavi 😄",
+      "votes": {
+        "upvoters": [
+          "milanista"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198310": {
+      "poster": "glider (toblerone)",
+      "content": "Ako u pocetku imam izolirani brid, kojoj zajednici on pripada kasnije nakon sto se obrise par bridova? Nije mi jasna ta ideja sa izoliranim bridom uopće... Ja sam deltu implementirala tako da provjeravam postoji li bilo kakav put izmedu dva cvora. Je li to u redu ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198314": {
+      "poster": "in1",
+      "content": "> @glider#198310 Ako u pocetku imam izolirani brid, kojoj zajednici on pripada kasnije nakon sto se obrise par bridova?\n\n(vjerojatno misliš na izolirani vrh?) ako da, istoj kojoj je pripadao i prije nego što se obrisalo par bridova - sam je\n\n> @glider#198310 Ja sam deltu implementirala tako da provjeravam postoji li bilo kakav put izmedu dva cvora. Je li to u redu ili?\n\nda",
+      "votes": {
+        "upvoters": [
+          "glider (toblerone)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198334": {
+      "poster": "saitama",
+      "content": "@joc#198235 u tome je bio problem, hvala ti puno na pomoci.",
+      "votes": {
+        "upvoters": [
+          "joc"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198351": {
+      "poster": "glider (toblerone)",
+      "content": "Koliki bi bio _ku_ za izolirani vrh? Odnosno ako nema bridova koji izlaze iz njega tada _ku_ = 0 ? Kakav onda utjecaj imaju na algoritam tj modularnost jer im je doprinos uvijek 0 ?\n\n(također i _Auv_ bilo kojeg vrha i izoliranog = 0, delta također iznosi 0...ispravite me ako griješim i skratite mi muke jer ne kuzim ulogu izoliranog vrha)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198380": {
+      "poster": "in1",
+      "content": "@glider#198351 \n\nku bi bio 0 ; nema utjecaja na modularnost, ali ga moraš ispisati na kraju kao zasebnu zajednicu",
+      "votes": {
+        "upvoters": [
+          "glider (toblerone)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198492": {
+      "poster": "adidas",
+      "content": "Modularnost za iteraciju računam nakon što izbacim brid?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198496": {
+      "poster": "adidas",
+      "content": "Je li težina brida **Auv** bridna centralnost ili težina na temelju sličnosti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198500": {
+      "poster": "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+      "content": "Ako je zadatak isti kao prošle godine kako onda ispis može biti drukčiji?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198552": {
+      "poster": "adidas",
+      "content": "@adidas#198492 Računa se prije nego što se izbaci brid",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198727": {
+      "poster": "in1",
+      "content": "objavljeni su rezultati",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198740": {
+      "poster": "pepelko",
+      "content": "Ostao mi je neki dodatni ispis iz neke petlje, nisam primetila to na testnom primjeru nego tek sada kad su dosla rjesenja. ima li sanse da mi uvaze ista od labosa ako program radi kontra tog ispisa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198741": {
+      "poster": "stoper5",
+      "content": "Mene isto zanima postoje li eventualni uvidi ili nešto slično?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "198762": {
+      "poster": "stoper5",
+      "content": "Može li mi netko tko je dobio sve ili većinu bodova poslati rješenje da usporedim. Nemogu shvaiti gdje imam grešku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

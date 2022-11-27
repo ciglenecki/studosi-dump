@@ -1,0 +1,295 @@
+{
+  "title": "[POSINT] 3. domaća zadaća - 2021/2022",
+  "creator": "svemia (bearyn)",
+  "slug": "posint-3-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Poslovna inteligencija",
+    "Zadaće"
+  ],
+  "posts": {
+    "263062": {
+      "poster": "svemia (bearyn)",
+      "content": "Nisam bila u mogucnosti doci na danasnje prvo predavanje nakon meduispita kad je objasnjavao 3. domacu zadacu. Prosla sam kroz to sta bi trebalo napravit, ali ne kuzim bas kak se koriste ti metapodaci i kak bi trebao taj gui funkcionirat. Jel ima netko tko bi bio voljan ukratko objasnit da se shvati osnovni dio toga svega? Hvala unaprijed :)",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264543": {
+      "poster": "adidas",
+      "content": "Uspješno generiram SQL upit na frontendu. Nikako ne mogu napraviti controller u Spring Bootu koji će primit raw SQL query, poslati ga i vratiti rezultat SQL querya.\n\nPokušao sam sa EntityMenager napraviti query i dobiti rezultat, ali dobivam grešku:\n\norg.hibernate.MappingException: No Dialect mapping for JDBC type: -15\n\nProblem je što atributi vrste NCHAR(10) nemaju definirano mapiranje u Java tip. Pokušao sam ga sam definirati, ali nisam uspio.\n\nPotoji li drugi način kako poslati raw SQL upit i dobiti odgovor?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264737": {
+      "poster": "Rudee",
+      "content": "@\"adidas\"#p264543 \n\nJa nisam jos poceo ali prvo cu probati preko JDBC-a jer je njemu mozes bas pisati sql i onda planiram taj sql vratit na front samo. Neznam hoce li biti problema s tim al mozda ti pomogne.",
+      "votes": {
+        "upvoters": [
+          "BakardiKola",
+          "adidas",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265130": {
+      "poster": "MsBrightside",
+      "content": "ja ne znam jesam li ja slijepa, ali di je ova metadata.sql skripta ja je ne mogu nac",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265144": {
+      "poster": "Simke",
+      "content": "@\"MsBrightside\"#p265130 Na Edgaru",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265433": {
+      "poster": "hejhoj (vdvd)",
+      "content": "Kad nam daju drugo skladiste za aplikaciju jel nam ostaju iste tablice metapodataka? Mislim valjda njih mogu imat kao modele, ne moze se i to promijenit?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265435": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "@\"hejhoj\"#p265433 da, pretopistavljam da su samo drugacije cinjenicne i dimenzijske.",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265450": {
+      "poster": "MsBrightside",
+      "content": "Sta mi je najlakse za front dio",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265736": {
+      "poster": "BakardiKola",
+      "content": "Jel ima netko podatke od baze na kojoj možemo testirati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265748": {
+      "poster": "MsBrightside",
+      "content": "@\"BakardiKola\"#p265736 mozes na adventure works, mozes je nac na netu https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265817": {
+      "poster": "Yasuke (Bono)",
+      "content": "Što znači ova napomena \"NE spajati uvijek sa SVIM dimenzijskim tablicama\" na slajdu o WHERE dijelu, sa kojim dimenzijskim tablicama se ne bi trebalo radit spajanje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265826": {
+      "poster": "Doktor0807",
+      "content": "@\"Bono\"#p265817 to ti govori da ne radiš spajanje sa onim tablicama za koje nije označen nijedan atribut",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265848": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "Ima li ovaj predmet teams grupu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265851": {
+      "poster": "cajaznun",
+      "content": "Nema, mislim da ce nas samo nazvati preko teamsa",
+      "votes": {
+        "upvoters": [
+          "PiqueBlinders (zisku)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265860": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jesu postavili negdje upute za spajanje na njihovu bazu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265862": {
+      "poster": "Simke",
+      "content": "connection_string = \"jdbc:sqlserver://<ime_servera>;databaseName=<ime_baze>\";\n\npa DriverManager.getConnection(connection_string, username, password);",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265863": {
+      "poster": "Yasuke (Bono)",
+      "content": "Ma znam to. Spajao sam se na svoju bazu dok sam radio zadaću. Rekli su kad prođe rok da će nam dat njihovu bazu koju nismo vidjeli, ali ne vidim da su je negdje postavili.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265864": {
+      "poster": "Simke",
+      "content": "@\"Bono\"#p265863 Aha, pogledaj mail",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "265865": {
+      "poster": "Yasuke (Bono)",
+      "content": "@\"Simke\"#p265864 Hvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266284": {
+      "poster": "Yasuke (Bono)",
+      "content": "Jesu vam upisani bodovi nakon odgovaranja kod Mekterovića?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

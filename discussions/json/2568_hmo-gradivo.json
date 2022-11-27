@@ -1,0 +1,121 @@
+{
+  "title": "[HMO] Gradivo",
+  "creator": "InCogNiTo124",
+  "slug": "hmo-gradivo",
+  "tags": [
+    "FER",
+    "Heurističke metode optimizacija"
+  ],
+  "posts": {
+    "112882": {
+      "poster": "InCogNiTo124",
+      "content": "koja je razlika izmedu `cooling schedule` i `decrement function`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112886": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@InCogNiTo124#112882 Cooling schedule je koliko sam skužio skup početne i krajnje temperature te kako se ona smanjuje po iteracijama. Međutim, iako je decrement function funkcija koja ti određuje koliko ćeš dekrementirati u nekom trenutku, ona ne mora biti pozvana u svakoj iteraciji. Npr., ako ti je cooling schedule\n\n```python\nt_start = 100\nt_end = 0\nn_iters = 100\nfunction = lambda i: t_start - i * (t_start - t_end) / n_iters\n```\n\ndecrement function može biti\n\n```python\ndef get_decrement(current_t, cooling_schedule, i):\n    return current_t - cooling_schedule.function(i)\n```\n\nali koliko vidim ovako u literaturi se najviše spominje cooling schedule kao takav, a za dekrement se smatra da je opisiv samim scheduleom. Tj. evo meni jedini razlog zašto bi razlikovao dvoje je da trebaš nekakvu memoriju koja je pohranjena u trenutnoj temperaturi, npr. kad bi ti cooling schedule sadržavao nekakav nasumični uzorak, pa ne bi uvijek mogao doći do iste vrijednosti primjenom funkcije iz cooling schedulea.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "114737": {
+      "poster": "TentationeM",
+      "content": "Može li mi netko objasniti koja poglavlja iz prezentacija proučiti ako nisam tako predmet, a idem radit ovaj Vehicle routing projekt? Tj. kojim algoritmom implementirati to. Tips please 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "130053": {
+      "poster": "obrascic",
+      "content": "Ima li praga na završnom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261232": {
+      "poster": "Zabe",
+      "content": "Ima netko tips and tricks za proc ovo u jednom danu?",
+      "votes": {
+        "upvoters": [
+          "korisnickoime",
+          "korisnik_studosa (wildcard)",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261453": {
+      "poster": "at5611",
+      "content": "@\"Zabe\"#p261232 ja sam prosa preze pa se nadan da ce bit dovoljno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276925": {
+      "poster": "Bato (Morski Pas)",
+      "content": "može netko objasniti kako bi se mogla prikazati tabu lista kada se koristi explicit memory type\n\nIma zasad u ZI 12/13 s materijala gdje pita za 2 tipa memorije i dati primjer tabu liste za oba tipa\n\nJel u tom slucaju cuvamo cijelo rjesenje koje je postalo tabu ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276948": {
+      "poster": "oneTwo",
+      "content": "@\"Morski Pas\"#p276925 recimo za onaj primjer s 5 bitova koji čine jedno rješenje bi eksplicitno bilo pohraniti listu koja je duljine 5 i na svakoj poziciji ima broj koji označava koliko još iteracija je zabranjeno flipati taj bit, a za attributive memory bi mogao pohraniti koji sve potezi su zabranjeni, npr. 4. bit se ne smije flipati.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,687 @@
+{
+  "title": "[MREPRO] 2. laboratorijska vježba - 2019/2020",
+  "creator": "Sashat_Triceps (Sasha_Triceps)",
+  "slug": "mrepro-2-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Mrežno programiranje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "11842": {
+      "poster": "Sashat_Triceps (Sasha_Triceps)",
+      "content": "Jel netko možda već počeo raditi na labosu? Ako da, kako riješiti za bota kad šalje payloadove žrtvama da istovremeno sluša ako mu neka žrtva pošalje nešto?\n\n Za server piše da treba riješiti sa pollingom/selectom, a ovdje ne piše niš pa možda se može preko alarma da si olakšamo život",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12151": {
+      "poster": "Gussy (huba buba)",
+      "content": "@Sashat_Triceps#11842 jel se to za bot isto odnosi na ovo da ako primi STOP od CandC da se zaustavlja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12259": {
+      "poster": "Gussy (huba buba)",
+      "content": "I još kako server može imati i tcp i udp na istom portu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12264": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Gussy#12259 Može jer su TCP i UDP paketi različiti. Gledaj na to kao na činjenicu da na jednu kućnu adresu mogu dolaziti i pisma i paketi (različite vrste pošiljaka, kao i ovdje različite vrste paketa)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12268": {
+      "poster": "Gussy (huba buba)",
+      "content": "@micho#12264 jel bi onda trebalo biti dva procesa koji ce svaki obradivati tcp odnosno udp pakete?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12269": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Gussy#12268 Mislim da nije potrebno (as in moguće je to raditi jednim procesom), ali isto tako mislim da će ti 2 procesa znatno olakšati upravljanje jer je TCP zajeban.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12275": {
+      "poster": "Gussy (huba buba)",
+      "content": "@micho#12269 u biti tcp socket ne može primiti podatak od udp socketa i obrnuto? tj. kada bindam oba socketa na isti port onda ce tcp socket primati tcp pakete a udp socket udp pakete?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12276": {
+      "poster": "angello2",
+      "content": "@Gussy#12275 mislim da da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12277": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Gussy#12275 Da, bez problema. Imaju različite identifikacijske n-torke, što znači da svakoj toj n-torci možeš pridružiti drukčiji proces.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12419": {
+      "poster": "Sashat_Triceps (Sasha_Triceps)",
+      "content": "@Gussy#12151  Da, ako primi od bota STOP zaustavlja slanje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13418": {
+      "poster": "Cvija",
+      "content": "U zadatku piše da se među onih 20 ip adresa može nalaziti i broadcast adresa.\n\nŠto mi taj podatak točno predstavlja?\n\nZnači li to da ako pročitam broadcast adresu prilikom slanja payload-ova da onda payload-ove šaljem svima odjednom?",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13600": {
+      "poster": "Gussy (huba buba)",
+      "content": "@Cvija#13418 možda samo postaviš adresu slanja na taj broadcast i valjda funkcija zna što dalje treba.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13602": {
+      "poster": "Gussy (huba buba)",
+      "content": "ne razumijem uopće kako bi ovaj select/poll kod servera trebao funkcionirati. ima li neki dobar primjer jer iz njihove skripte ništa ne razumijem.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13628": {
+      "poster": "angello2",
+      "content": "@Gussy#13602 ima neki link u onom pdfu predavanja gdje je primjer servera, ja sam po tom select() radio\n\nMeni radi server sa selectom tak da pitaj ak trebas neki specificni dio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13658": {
+      "poster": "Gussy (huba buba)",
+      "content": "@angello2#13628 znači taj select() se poziva na početku rada servera i onda on vrti petlju i gleda je li dosla konekcija na bilo koji od tih file descriptora? u ovom primjeru od beej to bi bila ova petlja\n\n`for(i = 0; i <= fdmax; i++)` \n\ni ovaj if gleda ako ima nekih novih podataka\n\n`if (FD_ISSET(i, &read_fds))`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13673": {
+      "poster": "angello2",
+      "content": "@Gussy#13658 da, i select moras pozvat svaki put iznova (znaci on ti stoji unutar while(1)), onda taj for prolazi sockete i ovaj if(FD_ISSET) gleda dal je taj specificni socket spreman za citanje. jos nesto sta je mene zajebavalo je da moras svaki put nakon sta ti se javi neki socket ih ponovo sve upisat u read_fds, znaci stavi si sve sockete u neku varijablu i onda ih prije svakog selecta prepisi u read_fds inace ce ti petlja primit samo jednu poruku i onda se beskonacno vrtit bez primanja",
+      "votes": {
+        "upvoters": [
+          "Gussy (huba buba)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13676": {
+      "poster": "Gussy (huba buba)",
+      "content": "> @angello2#13673 znaci stavi si sve sockete u neku varijablu i onda ih prije svakog selecta prepisi u read_fds\n\nto pretpostavljam je ovo\n\n`read_fds = master;`\n\nkako mogu više socketa staviti u taj master? jel to može biti array?\n\ni još nešto,  kada uđe u ovaj `if (FD_ISSET(i, &read_fds))` onda radim sve one accept, read, send itd. i onda resetam kao što si rekao  taj read_fds?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13677": {
+      "poster": "Gussy (huba buba)",
+      "content": "bilo bi lakše sto puta da se radi sa procesima i threadovima joj",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13684": {
+      "poster": "angello2",
+      "content": "@Gussy#13676 to je to da, nista samo roknes FD_SET na master za svaki socket koji ti treba i ta funkcija ti ih dodaje u set (master i read_fds su setovi), ne trebas array radit\n\nOvo drugo da pretty much, provjeris koji se tocno socket javio sa ifovima, ako je stdin obradis komande, ak je tcp radis njegov accept i recv i ak je udp recvfrom\n\n\nNe znam meni je oke ovaj select nije tak strasno",
+      "votes": {
+        "upvoters": [
+          "Gussy (huba buba)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13688": {
+      "poster": "Gussy (huba buba)",
+      "content": "@angello2#13684 aha znači imam 3 file descriptora, još jedan za stdin\n\na ovo za fd_set bi ovako otprilike izgledalo\n```\nFD_SET(tcp_socket, &master);\nFD_SET(udp_socket, &master);\nFD_SET(stdin_fd, &master);\n```\ni onda samo moram u toj infinite petlji na pocetku staviti `read_fds = master;` kao što je u primjeru ili moram isto u petlji uvijek dodavati ove FD_SETove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13694": {
+      "poster": "angello2",
+      "content": "@Gussy#13688 dobro je to, nemoras ih ponovo jedan po jedan jer ti master ostaje dobar, kolko sam skuzio select cleara set koji mu das (read_fds ovdje) svaki put nakon sto se neki socket javi pa je zato taj dio potreban",
+      "votes": {
+        "upvoters": [
+          "Gussy (huba buba)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13748": {
+      "poster": "Cvija",
+      "content": "Jel moguće ovaj dio u bot-u kad treba \"prisluškivati\" STOP i poruke od žrtava, riješiti pomoću selecta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13778": {
+      "poster": "angello2",
+      "content": "@Cvija#13748 je, ja sam tako",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13790": {
+      "poster": "Cvija",
+      "content": "@angello2#13778 Polling ili s nekom vremenskom blokadom?\n\nDoslovno sam zapeo samo na tom dijelu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13791": {
+      "poster": "angello2",
+      "content": "@Cvija#13790 stavio sam select sa timeout 0 sec 0 microsec, mislim da je to onda polling? basically provjerim prije svakog slanja jel neko nes poslo, ak nije onda select odma izade",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13793": {
+      "poster": "angello2",
+      "content": "@Cvija#13790 kak si podijelio payloade? ja sam strtok sa dvotockom al nije bas dobro, npr ako imam payload1:payload2:payload3 prvoj zrtvi posalje payload1, payload2, pa payload3 i onda svima nakon samo payload1, ne kuzim zas",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14312": {
+      "poster": "Gussy (huba buba)",
+      "content": "@angello2#13793 upravo to i meni radi, zato što izmijeni početni string, ali ne znam kako to riješiti.\n\nNpr. probao sam sa \n\n`char *tmp = payload;`\n\nali ovo svejedno izmjenjuje taj originalni string jer tmp pokazuje na isti dio memorije kao i payload, tj. originalni string, bar ja mislim da je zato. Ne znam kako to popraviti.\n\n I jel mogu ovaj stop i quit za bota jednostavno riješiti sa procesima? Tipa run() je zaseban proces/thread nebitno, i onda kad main dobije stop ili quit on samo killa taj child proces. To mi je onako najjednostavnije rješenje ovako napamet.",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14313": {
+      "poster": "Cvija",
+      "content": "@Gussy#14312 Problem možeš riješiti sa funkcijom strcpy\n\nŠto se tiče ovog drugog, lakše ti je sa select, bar sam ja uspio na kraju\n\nSlično ti je kao u programu server, samo što ti je bolje da namjestiš na Polling, a to napraviš tako da ti je vrijeme (0, 0), a ne null, tj. select ti onda ne blokira program\n\nMislim, ne znam je li lakše, no pretpostavljam da će asistenti inzistirati da se sve riješi selectom",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14315": {
+      "poster": "Gussy (huba buba)",
+      "content": "@Cvija#14313 taman mi palo strcpy napamet. Al to za proces, u botu nisu nigdje rekli da moramo sa selectom. Ne znam, trebalo bi biti svejedno.",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14320": {
+      "poster": "angello2",
+      "content": "@Gussy#14315 a mozes al iskreno sa selectom mi se cini puno jednostavnije",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14606": {
+      "poster": "Gussy (huba buba)",
+      "content": "jel vama ispis na netcatu ne radi kada pokušate drugi put slati podatke? meni prvi put radi kako treba, ali kad opet probam pokrenuti napad, nema nikakvog ispisa na netcatu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14608": {
+      "poster": "angello2",
+      "content": "@Gussy#14606 meni radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14679": {
+      "poster": "Gussy (huba buba)",
+      "content": "@angello2#14608 kako pokreneš? ja pokrenem sa nc -ul 6789",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14686": {
+      "poster": "angello2",
+      "content": "@Gussy#14679 isto, vjerojatno ti je s kodom nes",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14690": {
+      "poster": "Gussy (huba buba)",
+      "content": "@angello2#14686  a u kurac hahaha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14740": {
+      "poster": "menace_master",
+      "content": "@Gussy#14690 jesi uspio skuzit? imam isti problem",
+      "votes": {
+        "upvoters": [
+          "Joji"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14743": {
+      "poster": "Gussy (huba buba)",
+      "content": "@menace_master#14740 ne, bot šalje podatke pravilno, u wiresharku sam vidio. problem je u netcatu ja mislim, jer za te pakete piše destination unreachable.",
+      "votes": {
+        "upvoters": [
+          "menace_master"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14745": {
+      "poster": "menace_master",
+      "content": "@Gussy#14743 tako je i meni isto, valjda nije neka velika greska",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14746": {
+      "poster": "Gussy (huba buba)",
+      "content": "@menace_master#14745 jesi li možda koristio procese za slanje paketa na žrtve kod bota?\n\nili možda radio novi socket što već?\n\novo je jedino objasnjenje sto sam ja nasao\n\n> However, once the first packet is received, netcat6 will only receive packets from that client in future. This is done by putting the UDP socket into \"connected\" state (see udp(4) and connect(2)). Packets from other sources are discarded by the kernel and an ICMP unreachable response is sent. This is discussed in the nc6(1) man page (\"UDP\"), but is applicable to socat and nc as well:",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14755": {
+      "poster": "angello2",
+      "content": "ak mozete asistentu pokazat da se u wiresharku salje, onda je vjerojatno dobro, al precudno s obzirom da meni najnormalnije prima i ako 5 puta restartam run",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14756": {
+      "poster": "menace_master",
+      "content": "@Gussy#14746 nisam koristila procese ali jesam radila novi socket. gledala sam sa netstat, 6789 mi ostane uparen sa prvim socketom sa kojeg sam slala. probat cu napravit sad jedan na pocetku odma za slanje zrtvama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14758": {
+      "poster": "Gussy (huba buba)",
+      "content": "@angello2#14755 problem je sto sam ja stvarao novi socket svaki put",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17908": {
+      "poster": "Gussy (huba buba)",
+      "content": "Kako ste napravili da vam program prihvaća broadcast adresu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17912": {
+      "poster": "angello2",
+      "content": "@Gussy#17908 mislim da samo treba setsockopt napravit s tom opcijom al nisam siguran dal je to dovoljno, nisam testiro",
+      "votes": {
+        "upvoters": [
+          "Gussy (huba buba)",
+          "Sashat_Triceps (Sasha_Triceps)",
+          "menace_master"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17951": {
+      "poster": "Cvija",
+      "content": "@angello2#17912 Slao sam mail asistentu i on je to potvrdio",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18577": {
+      "poster": "Gussy (huba buba)",
+      "content": "Jeste li koristili isti socket kod bota za provjeru je li žrtva išta odgovorila? Pokušavam riješiti sa select() ali imam neke probleme, vjerojatno u implementaciji.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18607": {
+      "poster": "angello2",
+      "content": "@Gussy#18577 jesam, pitaj slobodno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18696": {
+      "poster": "Gussy (huba buba)",
+      "content": "@angello2#18607 Znači manje više copy pasteam ono što sam napravio za server, ali umjesto 3, imam samo 1 sockfd. I sad u dijelu petlje kada pozivam sendto() , prije poziva sendto() dodam select(sockfd+1,&read_fds,NULL,NULL,NULL) i nakon toga if FD_ISSET(sockfd, &read_fds) i stavio sam unutar tog ifa da izađe iz  te funkcije i prekine slannje poruka. međutim kada pokrenem program, onda on uopće ne šalje poruke na žrtve, nego se samo zamrzne.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18716": {
+      "poster": "angello2",
+      "content": "@Gussy#18696 zato jer ti je select blokirajuci, moras mu stavit vrijeme 0, napravi jedan struct timeval s nulama i to predaj u select",
+      "votes": {
+        "upvoters": [
+          "Gussy (huba buba)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

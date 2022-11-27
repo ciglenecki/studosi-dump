@@ -1,0 +1,999 @@
+{
+  "title": "[RASSUS] Laboratorij profila - 2020/2021",
+  "creator": "hobbit",
+  "slug": "rassus-laboratorij-profila-20202021",
+  "tags": [
+    "FER",
+    "Raspodijeljeni sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "115536": {
+      "poster": "hobbit",
+      "content": "Kako stojite s izradom labosa? Koliko vremena treba?\n\nDrugo... promaklo mi je formiranje grupa pa ne znam s kim sam u grupi, ako uopće s nekim jesam. Mogu li to kako vidjeti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115570": {
+      "poster": "moukie",
+      "content": "@hobbit#115536 \n\nUzmi si par dana barem, ma da to ovisi i o tebi\n\nNa moodle mozes vidjet s kim si u grupi tamo gdje si birao u koju ces grupu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115573": {
+      "poster": "RS7",
+      "content": "Je netko odradio onaj zadnji dio sa docker-composeom? Imamo problema sa skriptom wait-for-it -> želimo prvo pokrenuti konfiguracijski i registracijski server, pa tek onda ova 3 mikroservisa i to nam ne uspijeva, odnosno ne možemo implementirati to čekanje (imamo _racing condition_).\n\nOvo nam je docker-compose.yml:\n\n```yml\nversion: '3.7'\nservices:\n  config:\n    image: config-server-jib\n    ports:\n      - \"8888:8888\"\n  eureka:\n    image: eureka-server-jib\n    ports:\n      - \"8761:8761\"\n    depends_on:\n      - \"config\"\n    command: [\"/wait-for-it.sh\", \"config:8888\", \"--strict\"]\n  humidity:\n    image: humidity-jib\n    ports:\n      - \"8082:8082\"\n    depends_on:\n      - \"eureka\"\n    command: [\"/wait-for-it.sh\", \"eureka:8761\", \"--strict\"]\n  temperature:\n    image: temperature-jib\n    ports:\n      - \"8083:8083\"\n    depends_on:\n      - \"eureka\"\n    command: [\"/wait-for-it.sh\", \"eureka:8761\", \"--strict\"]\n  aggregator:\n    image: aggregator-jib\n    ports:\n      - \"8081:8081\"\n    depends_on:\n      - \"eureka\"\n    command: [ \"/wait-for-it.sh\", \"eureka:8761\", \"--strict\"]\n    ```\n\nA ovo nam je JIB plugin u build.gradle-u:\n\n```\njib {\n\tfrom {\n\t\timage = 'openjdk:11.0.9-jre-slim'\n\t}\n\n\tto {\n\t\timage = 'humidity-jib'\n\t}\n\n\tcontainer {\n\t\tappRoot = '/opt'\n\t\tports = ['8082']\n\t\tjvmFlags = ['-Djava.security.edg=file:/dev/./urandom']\n\t}\n\n\textraDirectories.paths = ['src/main/jib']\n}\n```\n\nSkripta wait-for-it se nalazi u svakom projektu unutar foldera src/main/jib. Također, pokrenuli smo ručno jedan od mikroservisa i vidjeli smo da se u root-u kontejnera nalazi ta skripta.  Je li itko uspješno odradio pokretanje tih aplikacija u pravilnom redoslijedu? Nama se nekad uspije pokrenuti sve po pravilnom redoslijedu, ali u 99% slučajeva puca. Vidi li tko što nam je krivo?",
+      "votes": {
+        "upvoters": [
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116132": {
+      "poster": "Maglica",
+      "content": "Ima li tko kakav dobar tutorial ili dobre materijale za ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116178": {
+      "poster": "hobbit",
+      "content": "@moukie#115570 \n\nhvala, ali ja nisam odabrao grupu... i nisam nigdje dodan...\n\n![](assets/2021-01-02/00007.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116247": {
+      "poster": "Kiflica",
+      "content": "![](assets/2021-01-02/00014.png)\n\nZna li netko kako tocno treba rijesit ovaj dio? ako sam dobro shvatila, radimo 2 zasebna projekta koji ce bit isti, samo ce jedan na GET zahtjev vracati na /current-reading temperaturu, a drugi projekt vlagu iz podataka ucitanih u bazu? Treba li onda uopce radit iste stvari u oba projekta buduci da ce se svaki put kod pokretanja radit h2 baza? \n+ Kako onda u iducem koraku napravit agregat tih usluga na /readings? Glupa sam za ovo :/ ako netko zna nesto ili mozda ima negdje objasnjeno detaljnije nek plz posalje  🙏🙏",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116281": {
+      "poster": "pina_be",
+      "content": "@Kiflica#116247 Mislim da treba napraviti posebno cijeli postupak za svaki projekt (temperatura i vlaga) jer koliko ja shvaćam poanta je da je svaki projekt samostalan.",
+      "votes": {
+        "upvoters": [
+          "Kiflica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116300": {
+      "poster": "whatTheHel",
+      "content": "@Maglica#116132 yt videi koje je kusek stavio su jako dobri\n\nza mikroservise i spring je ovo: https://www.youtube.com/watch?v=Wtjx-75w5CY&list=PLy0T81VDh93YLJEEe5AxydDlXxUPrPs_B\n\nza docker: https://www.youtube.com/playlist?list=PLy0T81VDh93awNP1X91-WPNgOykME_2CI",
+      "votes": {
+        "upvoters": [
+          "Kiflica",
+          "Maglica",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116495": {
+      "poster": "pepelko",
+      "content": "@RS7#115573 Doslovno identican problem kod mene.. izgleda kao da ta bash skripta ne funkcionira, tj nije pravilno pozvana. Jeste li mozda uspjeli rjesiti to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116531": {
+      "poster": "RS7",
+      "content": "@pepelko#116495 Nista i dalje, ako rijesimo, javim",
+      "votes": {
+        "upvoters": [
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116628": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@Kiflica#116247\n\nDa da, dva zasebna projekta. \n\nAgregat : uzmes http temperature i http vlage i na get request aggregata on pozove ta 2 linka(kasnije ces to malo promijenit jos) i skomba u jedan odgovor podatke vrlo jednostavno zapravo (ako znas napravit temp/vlagu onda znas i ovo) . Struktura agregat projekta je skoro identicna kao ova dva prva.",
+      "votes": {
+        "upvoters": [
+          "Kiflica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116655": {
+      "poster": "Kiflica",
+      "content": "@janeromero#116628 dada taman sam nekako tako i shvatila to, hvaka puno",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "116704": {
+      "poster": "tuka",
+      "content": "Je li predaja ovog labosa do 23:59 u petak 8.1.2021.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "SinanSuckich (Yelena)"
+        ],
+        "tuga": []
+      }
+    },
+    "116792": {
+      "poster": "korisnik1",
+      "content": "@RS7#115573 ta skripta je samo wrapper skripa, a postavljanjem `commad:` se overridea command koji docker koristi za pokretanje, dakle trebalo bi nesto tipa `command: ./wait_for_it.sh config:8888 && java -jar /opt/aggregator-microservice.jar` tako da se nakon sto zavrsi wait-for-it.sh rucno pokrene servis koji se vec treba pokrenuti\n\nmedutim, neke cudne stvari se dogadaju i tcp na config:8888 postane dostupan jako brzo, puno prije nego se spring boot inicijalizira (samim time valjda i slusanje na http) pa se aggregator i ostali krenu pokretati prije nego sto bi trebali i evo sad pokusavam postaviti neke timeoutove za to\n\ntl;dr cini mi se da skripta ne radi bas onako kako su to kolege s rassusa zamislili",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117106": {
+      "poster": "tuka",
+      "content": "Što se točno mora čitati iz preko ovog konfiguracijskog servera? Svaka usluga svoj id s kojim ce se registrirati na Eureku + temperature cita mjernu jedinicu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117114": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@tuka#117106 Koliko sam ja skužila, samo aggregate čita. ove 2 druge se spajaju samo (pretpostavljam da čitaju iz praznih datoteka ili iz iste ali ne uzimaju nikakve podatke), a aggregate čita podatak o temperaturi i onda prilagođava return vrijednosti. To je moja interpretacija uputa, neka me ispravi netko ako sam u krivu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117127": {
+      "poster": "gunaman",
+      "content": "jel netko moze share-at application.yml fileove od konfiguracijskog servera i klijenta.. jebem se s tim citav dan i nikako da mi proradi.. server mi radi oke i na http://localhost:8093/application/default mi izbacuje sadrzaj application.yml, ali klijent nemogu konfigurirat da mi ispravno dogvaca vrijednosti iz fajla",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117141": {
+      "poster": "tuka",
+      "content": "@janeromero#117114 \n\n\"Nakon toga promijenite logiku unutar mikrousluge za agregaciju tako da zahtjev prema mikrouslugama za temperaturu i vlagu ne ide preko statički definirane IP adrese i vrata, **nego da se ime mikrousluge čita iz konfiguracijske datoteke** nakon čega se po tom imenu preko poslužitelja Eureka pristupa uslugama.\"\n\nMuči me ovaj boldani dio, kaj ne bi trebao agregator čitati ona imena humidity-ms i temperature-ms iz konfiguracijskoj servera?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117207": {
+      "poster": "Kiflica",
+      "content": "@janeromero#117114 Ispravi me ako sam u krivu, ali znaci za 5.tocku treba napravit spring cloud config na nacin da cemo na gitu stvorit repozitorij gdje ce bit config datoteka u kojoj ce bit application.yml u koju unosimo podatke o mjernoj jedinici. I sad bi aggregator ms trebao dohvacati podatke iz te application.yml datoteke i radit nesto s njima? i nisam sigurna kako povezujemo sve 3 mikrousluge s tim konfiguracijskim serverom :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117242": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@tuka#117141 mi (moj tim i ja) smo to skuzili kao da svaka mikrousluga u svojem projektu u application.properties cita svoje ime sad jel to tocno ili ne, ne znam \n\n@Kiflica#117207 da i ja sam tako shvatila. i meni je nejasno zasto se sve 3 mikrousluge trebaju spajat na to i sta se tocno smatra pod spajanjem, ali mi smo to napravili tako da svaka usluga cita podatke koji se nalaze na config serveru, a samo aggregator ih koristi. tamo se zapravo nalazi podatak za mjernu jedinicu temperature, pa aggregator onda prilagodi vrijednost ovisno o tome kaj se nalazi u tom fileu.",
+      "votes": {
+        "upvoters": [
+          "Kiflica",
+          "tuka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117315": {
+      "poster": "zavrskina",
+      "content": "@gunaman#117127 Bok! Imala sam sličan problem i pronašla na internetu da Spring Cloud verzija 2020 koja se koristi ako ideš preko onog Initilzr-a nema više onu bootstrap opciju enableanu po defaultu:  https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2020.0-Release-Notes#breaking-changes. Dodavanje -> implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap' unutar build.gradlea je meni riješilo problem.",
+      "votes": {
+        "upvoters": [
+          "Elendur19 (Zagor)",
+          "gunaman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117358": {
+      "poster": "Elendur19 (Zagor)",
+      "content": "@zavrskina#117315 Hvala, ovo je rjesenje!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117369": {
+      "poster": "Frootek",
+      "content": "Je li netko uspio postaviti docker-compose da radi? I",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117387": {
+      "poster": "SinanSuckich (Yelena)",
+      "content": "Kako izgleda build.gradle kod config clienta, pokušavam staviti to gore ali mi konstantno javlja Could not find org.springframework.cloud:spring-cloud-starter-bootstrap",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117501": {
+      "poster": "tuka",
+      "content": "@SinanSuckich#117387 meni je isto tako\n\nmislim da mi klijenti uopće ne čitaju te konfiguracijske fileove i nikako ne mogu otkrit u čemu je stvar.. jel netko radio da je git repozitorij na kojeg server gleda na gitlabu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117611": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@janeromero#117242 \n\nAko sam te dobro skuzia, ova humidity i temperature mikroservisi zapravo ne procitaju nista, a aggregator procita mjernu jedinicu kelvina i onda to prilagodi dalje? Nije mi bas jasno sta s ova dva prva mikroservisa zas su povezani uopce?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117656": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@tuka#117501 Ja. Jel ti git repo public? i jel u cloud projektu u fileu di stoji link za repo imas na kraju gitlab linka .git? Meni je to dvoje radilo probleme pa kad sam skuzila se fino citalo \n\n@khm19#117611 Ma da. napisali su nekom cak odgovor u Teamsima da se temp i hum spajaju na cloud, a aggregator cita podatke s clouda. A zasto se povezuju , nezz cisto reda radi? haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117777": {
+      "poster": "gunaman",
+      "content": "@zavrskina#117315 yupp, to je i meni bilo... nadjoh rjesenje na komentaru youtube tutorijala nekog indijca... standardno 😂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117817": {
+      "poster": "Kiflica",
+      "content": "jel se nekome dogada da config server uopce ne cita iz application.yml? Za config server sam dodala sve potrebno u bootstrap.properties, na gitu se nalazi mapa /config/application.yml i u njoj poruka koju zelim da mi ispise na linku localhost:8888/config/application al jedino sto dobijem je {\"name\":\"config\",\"profiles\":[\"application\"],\"label\":null,\"version\":\"04fd8ab7a007af141a436caea45334eba563c22b\",\"state\":null,\"propertySources\":[]}\n\nUnutar ovoga propertySources bi trebao biti sadrzaj mog yml filea pretpostavljam, koji je msg: Bok! ali je propertySource prazan... Je li se ikome mozda to dogadalo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117818": {
+      "poster": "Kiflica",
+      "content": "@Kiflica#117817 ![](assets/2021-01-07/00005.png)\n\novo je bootstrap.properties config servera",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "117980": {
+      "poster": "Kiflica",
+      "content": "@Kiflica#117818 edit ovo je rijeseno. Kad implementiramo eureka server i klijent i dobijemo na localhost:8761/ da nam je aggregator registriran i sad na koju foru treba napravit ovaj dio da se preko eureka servera po imenu pristupa uslugama temperature-ms i humidity-ms?",
+      "votes": {
+        "upvoters": [
+          "dobardan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "118063": {
+      "poster": "trubadur",
+      "content": "@Kiflica#117980 Trebaš registrirat i temp i humidity mikrousluge s tim imenima. Onda pogledaj razred DiscoveryClient. Moras ga autowireat u kontroler od aggregatora. Onda imas metodu getInstances(serviceId), gdje je serviceId humidity-ms, odnosno temperature-ms. Ona ti po serviceId-u vrati instancu koja je registrirana na Eureka serveru. Od dobivene instance onda samo uzmes host i port i stavis u restTemplate.getForObject(url, returnType) sto ti vrati mjerenje vlage ili temperature. I to je to.",
+      "votes": {
+        "upvoters": [
+          "Kiflica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "118073": {
+      "poster": "trubadur",
+      "content": "@RS7#115573 \n\nNama radi docker. Ovo je docker-compose.yml:\n```yml\nversion: \"3.7\"\nservices:\n    config-server-microservice:\n        image: config-server-microservice-jib:0.0.1-SNAPSHOT\n        ports:\n            - \"8888:8888\"\n\n    eureka-server:\n        image: eureka-server-jib:0.0.1-SNAPSHOT\n        ports:\n            - \"8761:8761\"\n        environment:\n            EUREKA_INSTANCE_HOSTNAME: eureka-server\n\n    humidity-microservice:\n        image: humidity-microservice-jib:0.0.1-SNAPSHOT\n        ports:\n            - \"8080:8080\"\n        depends_on:\n            - config-server-microservice\n            - eureka-server\n        entrypoint:\n            - /wait-for-it.sh\n            - config-server-microservice:8888\n            - --timeout=60\n            - --strict\n            - --\n            - /wait-for-it.sh\n            - eureka-server:8761\n            - --timeout=60\n            - --strict\n            - --\n            - java\n            - -Djava.security.egd=file:/dev/./urandom\n            - -cp\n            - /app/resources:/app/classes:/app/libs/*\n            - hr.fer.rassus.labpro.grupa23.humidityMicroservice.HumidityMicroserviceApplication\n        environment:\n            EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/\n            SPRING_CLOUD_CONFIG_URI: http://config-server-microservice:8888\n\n    temperature-microservice:\n        image: temperature-microservice-jib:0.0.1-SNAPSHOT\n        ports:\n            - \"8081:8081\"\n        depends_on:\n            - config-server-microservice\n            - eureka-server\n        entrypoint:\n            - /wait-for-it.sh\n            - config-server-microservice:8888\n            - --timeout=60\n            - --strict\n            - --\n            - /wait-for-it.sh\n            - eureka-server:8761\n            - --timeout=60\n            - --strict\n            - --\n            - java\n            - -Djava.security.egd=file:/dev/./urandom\n            - -cp\n            - /app/resources:/app/classes:/app/libs/*\n            - hr.fer.rassus.labpro.grupa23.temperatureMicroservice.TemperatureMicroserviceApplication\n        environment:\n            EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/\n            SPRING_CLOUD_CONFIG_URI: http://config-server-microservice:8888\n\n    aggregator-microservice:\n        image: aggregator-microservice-jib:0.0.1-SNAPSHOT\n        ports:\n            - \"8082:8082\"\n        depends_on:\n            - config-server-microservice\n            - eureka-server\n            - humidity-microservice\n            - temperature-microservice\n        entrypoint:\n            - /wait-for-it.sh\n            - config-server-microservice:8888\n            - --timeout=60\n            - --strict\n            - --\n            - /wait-for-it.sh\n            - eureka-server:8761\n            - --timeout=60\n            - --strict\n            - --\n            - /wait-for-it.sh\n            - humidity-microservice:8080\n            - --timeout=60\n            - --strict\n            - --\n            - /wait-for-it.sh\n            - temperature-microservice:8081\n            - --timeout=60\n            - --strict\n            - --\n            - java\n            - -Djava.security.egd=file:/dev/./urandom\n            - -cp\n            - /app/resources:/app/classes:/app/libs/*\n            - hr.fer.rassus.labpro.grupa23.aggregatorMicroservice.AggregatorMicroserviceApplication\n        environment:\n            EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/\n            SPRING_CLOUD_CONFIG_URI: http://config-server-microservice:8888\n```\nWait skripte se mogu chainati.\n\nJIB u build.gradle-u aggregatora, humidity-ms-a i temperature-ms-a (znaci onih koji su ovisni o drugima):\n\n```gradle\njib {\n\tfrom {\n    \timage = 'openjdk:11.0.5-jre-slim'\n \t}\n  \n\tto {\n  \t\timage = \"${project.name}-jib:${version}\"\n  \t}\n  \n\tcontainer {\n  \t\tappRoot = '/app'\n  \t\tports = ['8082']\n  \t\tjvmFlags = ['-Djava.security.egd=file:/dev/./urandom']\n  \t\textraDirectories {\n\t\t    permissions = [\n\t\t        '/wait-for-it.sh': '755'\n\t\t    ]\n  \t\t}\n  \t\t\n  \t\tcreationTime = \"USE_CURRENT_TIMESTAMP\"\n  \t}  \n}\n```\n\nConfig server i eureka imaju isti jib, jedino nemaju extraDirectories {}, a nemaju ni skriptu, jer oni ne ovise o nikome.\n\nSkripta nam je kod ostalih u 'src/main/jib' pa prema dokumentaciji ne treba dodavati extraDirectories.paths, jer se taj folder gleda kao root. Bitno je i da skripta kao end of line ima LF, a ne CRLF. To se moze u vscode-u promijenit. A za git treba dodat i .gitattributes da ne promijeni automatski iz LF u CRLF kod commita.\n\nOvaj extraDirectories.permissions omogucuje izvrsavanje skripte.\n\nNadam se da ce ovo bit nekom od pomoci.",
+      "votes": {
+        "upvoters": [
+          "Frootek",
+          "Maglica",
+          "basketbaler (Burek sa sirom)",
+          "mdot",
+          "meggy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "118087": {
+      "poster": "Kiflica",
+      "content": "@trubadur#118063 Hvala ti puno, uspjela sam :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "118887": {
+      "poster": "basketbaler (Burek sa sirom)",
+      "content": "@trubadur#118073 \n\n> @trubadur#118073 Skripta nam je kod ostalih u ‘src/main/jib’\n\nU svakom projektu ste u ‘src/main/jib’ dodali skriptu wait-for-it? \n\nJa nemam ni u jednom projektu taj folder 'jib'. Jeste li njega ručno dodali ili vam se on automatski napravio kada ste buildali image ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "118896": {
+      "poster": "Process",
+      "content": "Jel imao tko problema s docker credentialsima?\n\n com.google.cloud.tools.jib.plugins.common.BuildStepsExecutionException: Build image failed, perhaps you should make sure your credentials for 'registry-1.docker.io/library/humidity-microservice-jib' are set up correctly.\n\nProbao sam dodat credentialse u config.json, al nisam imao nekog uspjeha s tim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "118938": {
+      "poster": "Process",
+      "content": "@Process#118896 Gradle jibDockerBuild umjesto gradle jib 🤦‍♂️",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "118956": {
+      "poster": "trubadur",
+      "content": "@basketbaler#118887 Taj folder trebate sami dodat. On se ne generira automatski. A skripta je u humidity, temp i aggregator mikrouslugama, jer samo oni ovise o drugim mikrouslugama.",
+      "votes": {
+        "upvoters": [
+          "basketbaler (Burek sa sirom)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119002": {
+      "poster": "hobbit",
+      "content": "Ne mogu nikako namjestiti config server da mi radi. Ima li netko neki hint ili dobar tutorial po kojemu je radio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119011": {
+      "poster": "hobbit",
+      "content": "@hobbit#119002 edit uspio sam, ali mi ne radi učitavanje konfiguracije na klijentu. Mogu li koristi .properties ili mora biti .yml na gitu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119174": {
+      "poster": "trubadur",
+      "content": "@hobbit#119011 Mislim da bi trebalo radit i jedno i drugo. Jel vam git repo config servera public? Nama nije radilo kad smo zvali localhost:8888/application.yml, ali kad se zove npr. sa temp-ms-a kao localhost:8888/temp-ms.yml, onda radi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119458": {
+      "poster": "mdot",
+      "content": "Jel itko imao problem da mu kada pokrene skriptu sve usluge rade, ali ne mogu procitati mjerenja.csv file?\n\nTreba ga se nekako ukljuciti prije izrade slike, tako da kada se builda slika, usluga isto moze pristupiti fileu. Pokusao sam sa volume property-em u build.gradle fileu, ali bezuspjesno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119470": {
+      "poster": "Maglica",
+      "content": "@mdot#119458 Jesi probao staviti csv u direktorij mikroservisa koji ga koristi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119475": {
+      "poster": "mdot",
+      "content": "@Maglica#119470 da, tu mi se nalazi file, prilikom lokalnog izvodenja sve uredno ocitava i radi, ali virtualno ne moze",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119499": {
+      "poster": "Process",
+      "content": "@mdot#119475 Stavi mjerenja u resources i dohvati ih na [ovaj način](https://stackoverflow.com/a/39985540)",
+      "votes": {
+        "upvoters": [
+          "mdot"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119882": {
+      "poster": "whatTheHel",
+      "content": "Jel se ikome mozda ovo desilo prilikom docker-compose up? s tim da nam je wait-for-it.sh u jib folderu\n\nERROR: for temperature-microservice  Cannot start service temperature-microservice: OCI runtime create failed: container_linux.go:370: starting container process caused: exec: \"/wait-for-it.sh\": stat /wait-for-it.sh: no such file or directory: unknown\n\nERROR: Encountered errors while bringing up the project.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119883": {
+      "poster": "hobbit",
+      "content": "Koristio sam retrofit u aggregatoru. Kako mogu pomću retrofita i njegovih metoda reći mu da je notacija npr. \"temperature-ms\" id za određenu adresu i port?\n\nbaca mi error \"No such host is known (temperature-ms)\"\n\na u eureka konzoli vidim sve lijepo da je registrirano",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119890": {
+      "poster": "trubadur",
+      "content": "@hobbit#119883 temperature-ms nije host name, Eureka generira neki svoj. Moras preko DiscoveryClienta dobit instancu od temperature-ms i onda preko metoda getHost() i getPort() dobijes url na koji saljes zahtjev za mjerenje.\n\nOvdje pod \"Talking to the registry\" imas objasnjeno to: [https://spring.io/guides/gs/service-registration-and-discovery/](url)",
+      "votes": {
+        "upvoters": [
+          "hobbit"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120035": {
+      "poster": "hobbit",
+      "content": "Može neko kratke smjernice da uspijem docker i zadnji 7. dio do ponoći napraviti?\n\nŠto sve ide build gradle? Sve ono sa githuba ili samo ovo što je na prezentaciji u videu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120066": {
+      "poster": "hobbit",
+      "content": "ne razumijem gdje bi mi se trebala spremiti slika\n\njel se uopće samimim copajlanjem napravi slika?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120125": {
+      "poster": "hobbit",
+      "content": "U kontejneru mi ne može pročitati file, a inače može kad pokrenem ručno. \n\nMože li se nekako koristiti CsvToBeanBuilder koji je Kušek pokazao, a da dalje radi?\n\nIli kak najlakše da napravim da radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120191": {
+      "poster": "Kiflica",
+      "content": "@trubadur#118073 Znas li mozda zasto nam javlja ovaj error? | Error: Could not find or load main class hr.fer.rassus.mikrousluge.humiditymicroservice.HumidityMicroserviceApplication\n\npretpostavljam da je do necega ovdje u docker-compose fajlu\n\n> @trubadur#118073 /app/resources:/app/classes:/app/libs/*\n\n>             - hr.fer.rassus.labpro.grupa23.humidityMicroservice.HumidityMicroserviceApplication\n\nmozda nam nisu jednaki entrypointovi tu, e sad ne znam kako tocno treba ic entrypoint do klase HumidityMicroserviceApplication pa ako mozda znas?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120237": {
+      "poster": "trubadur",
+      "content": "@Kiflica#120191 Otvori u Eclipse-u humidity microservice, nađi klasu HumidityMicroserviceApplication, ili kako ste je vec nazvali, i samo kopiraj onaj gore package dio + ime te klase. Znaci nama je paket \"hr.fer.rassus.labpro.grupa23.humidityMicroservice\", a klasa \"HumidityMicroserviceApplication\". Vjerojatno ste slucajno krivi paket napisali u docker-compose pa vam zato ne radi.",
+      "votes": {
+        "upvoters": [
+          "Kiflica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120285": {
+      "poster": "hobbit",
+      "content": "Može neko zalijepiti kako je pročitao mjerenja.csv?\n\nJer meni radi preko intelliJ-a, a preko dockera ne radi jer ga ne može naći.\n\nProbao sam staviti u recoureces, ali svejedno ne radi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120307": {
+      "poster": "Frootek",
+      "content": "@hobbit#120285  Odi na dokumentaciju od jib plugina (extraDirectories). Ako ne specificiraš u build gradle, jib plugin po defaultu dodaje u image datoteke koje se nalaze u src/main/jib.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120469": {
+      "poster": "hobbit",
+      "content": "@Frootek#120307 Hvala\n\nSad mi na kraju ne radi http://localhost:8083/readings...\n\nŠto može biti krivo? ko da se ne pokrene taj docker...\n\nPreko intelliJa radi i dobro ispisuje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120494": {
+      "poster": "hobbit",
+      "content": "@hobbit#120469 skripta mora završiti sa LF!!!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120497": {
+      "poster": "hobbit",
+      "content": "Ah, ipak nije do toga... aggregator se samo ugasi, ovo je log pa ako mi može dati netko neko riješenje ili ideju. U 9 mi je kolokviranje.\n\n\nwait-for-it.sh: waiting 60 seconds for config-server-microservice:8888\n\nwait-for-it.sh: config-server-microservice:8888 is available after 40 seconds\n\nwait-for-it.sh: waiting 60 seconds for eureka-server:8761\n\nwait-for-it.sh: eureka-server:8761 is available after 6 seconds\n\nwait-for-it.sh: waiting 60 seconds for humidity-microservice:8082\n\nwait-for-it.sh: timeout occurred after waiting 60 seconds for humidity-microservice:8082\n\nwait-for-it.sh: strict mode, refusing to execute subprocess",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120529": {
+      "poster": "hobbit",
+      "content": "@hobbit#120497 stari laptop... trebao sam timeout povećati...",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Kiflica"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120567": {
+      "poster": "Kiflica",
+      "content": "Kako izgleda obrana? Sto traze tocno i sto pitaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120576": {
+      "poster": "meggy",
+      "content": "@Kiflica#120567 \n\nPripremi se na detalje.\n\nPitaju teoriju springa, dockera, docker-compose-a, wait-for-it skripte, itd. Vjerojatno imaju pripremljena pitanja za svaki termin, ali svakako nimalo slično predaji dz. Nas je iznenadilo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120577": {
+      "poster": "meggy",
+      "content": "@meggy#120576 \n\nJedan pokrene i provjere jel sve radi, to je jedan dio bodova (max 27). Nakon toga pojedinačno jednog po jednog pitaju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120587": {
+      "poster": "tuka",
+      "content": "@Kiflica#120567 nama su bila pitanja: \n1. dependency injection \n2. MVC \n3. eureka server\n4. config server \n5. mapiranje portova u docker composeu \n6. kako smo povezali usluge u docker composeu (ono da se medusobno cekaju)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120680": {
+      "poster": "Kiflica",
+      "content": "@meggy#120576 pitaju li kod programa ili se samo pokene sve i tjto? kolko vidim treba samo tu teoriju neku znat.. Kakvi su s bodovima? Skidaju li puno bodova ako se nesto ne zna?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120781": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "Mogu li ostale grupe napisati pitanja? I jesu li pitanja bila vise vezana uz samu toeriju ? npr treba li objasnit kako radi taj config server ili opcenito o spring cloud config?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120809": {
+      "poster": "Kiflica",
+      "content": "@meggy#120576 pitaju li kod programa ili se samo pokene sve i tjto? kolko vidim treba samo tu teoriju neku znat.. Kakvi su s bodovima? Skidaju li puno bodova ako se nesto ne zna?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120814": {
+      "poster": "moukie",
+      "content": "@meggy#120577 \n\nSta ako pokrenemo i sve radi automatski imamo 27 bodova?\n\nOvo ispitivanje nosi samo 6?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120838": {
+      "poster": "meggy",
+      "content": "@moukie#120814 \n\nNama je tak bilo. Rekli su da je ovaj dio sve ok i da je to 27/27, a ova pitanja su pojedinačno gledali koliko je tko znao i podijelili bodove na temelju toga kolko je i kak odgovoreno.",
+      "votes": {
+        "upvoters": [
+          "Krama13",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120878": {
+      "poster": "RS7",
+      "content": "@meggy#120838 Dobije li to 27 bodova svaki od clanova iz grupe (ako sve radi ofc)? Ili je to 27/3 svako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120880": {
+      "poster": "khm19 (ajmemeni5)",
+      "content": "@RS7#120878 \n\nsumnjam bas da ispitivanje nosi 24 boda hahah a kod 9 lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120882": {
+      "poster": "RS7",
+      "content": "@khm19#120880 Sumnjam i ja da se samo tako dobije 27 bodova ako sve radi lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "khm19 (ajmemeni5)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121013": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@RS7#120878 da. Kod je 27 bodova ako radi u cjelosti i svi clanovi dobe 27 bodova, a ostalih 6 bodova dobis odgovaranjem na pitanja vezana uz eureku i docker vecinom (vec su naveli ostali)",
+      "votes": {
+        "upvoters": [
+          "RS7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

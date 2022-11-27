@@ -1,0 +1,172 @@
+{
+  "title": "[IRG] 1. laboratorijska vježba - 2020/2021",
+  "creator": "BrkMateaBeusana (Umarell)",
+  "slug": "irg-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Interaktivna računalna grafika",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "153826": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Za drugi dio 1. labosa, za Bresenhama, možemo li koristiti ovaj njihov kostur i onda prepraviti myLine funkciju ili trebamo cijeli program od nule napisat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "153926": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "@BrkMateaBeusana#153826 Nema smisla da ti daju kostur ako ga ne smiješ koristiti lol. Cilj vježbe je naučit bresenhamov algoritam tako da moraš samo popraviti myLine da radi za sve kuteve. Time rečeno, pokušaj algoritam u potpunosti sam skužit i napisati ga, nemoj sve doslovno iz knjige prepisati. Barem sam tako ja.",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "153932": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Pokušavam ovaj njihov primjer za Bresenhama pokrenut u terminalu naredbom iz knjige `gcc -Iinclude -Llib -o zadatak1.exe zadatak1.cpp -lfreeglut -lopengl32` i stalno mi javlja `zadatak1.cpp:(.text+0x218): undefined reference to gluOrtho2D@32 collect2: ld returned 1 exit status`. \n\nZna li netko u čemu je problem?\n\nEdit: riješeno , treba još staviti i `-lglu32`",
+      "votes": {
+        "upvoters": [
+          "seni (ina)",
+          "shoshakis (teshna)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154222": {
+      "poster": "seni (ina)",
+      "content": "jel nam labos mora bit potpuno tocan ili moze imat neke manje greske? mislim kao da se pokrece i crta i mijenja boje i sve to, ali da ima malih odstupanja od ocekivanog ponasanja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154263": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@seni#154222 može imati greške al okreću oči na to i prije 2 godine su skidali bodove",
+      "votes": {
+        "upvoters": [
+          "seni (ina)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154283": {
+      "poster": "Haki",
+      "content": "Jel se smije 2. labos (bresenham) napravit u pythonu sa PyOpenGL",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154329": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Haki#154283 ne znam za pyopengl, ali ja sam sve labose napravio u pygletu, koji je viša razina apstrakcije, tak da bi trebalo moći",
+      "votes": {
+        "upvoters": [
+          "Haki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154417": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Treba li predavat i glut.h file?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154422": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "Jel moze netko napisati sta sve treba uploadati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154798": {
+      "poster": "Sicsile",
+      "content": "Može netko tko je imao labos napisat što su sve ispitivali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155036": {
+      "poster": "TheNubKiller (Lumpy)",
+      "content": "Ispitao me Marko Đurasević. Bilo je chill. Prvo me pitao razliku između skalarnog i vektorskog umnoška te ako imamo dva vektora kako da dobijemo te vrijednosti. U kojem je odnosu rezultat umnoška vektorskog naspram dva vektora koje množimo, matrice me nije pitao, pitao je što su baricentrične koordinate i dao mi je da unesem točke A,B,C, T da vidimo u kojem je odnosu T naspram trokuta ABC, prva koordinata koju sam unio je 0,0,0 i ispis je bio NaN. To je točan rezultat ali je pitao zašto je do toga došlo i kako da se to popravi. Naime, ako imamo stupac 0,0,0 u matrici, ne možemo joj pronaći invers i onda umjesto stupca 0,0,0 potrebno je samo upisati neku kombinaciju kojoj je zbroj 1 (npr. može 0,0,1 ili 1/3 1/3 1/3). Dalje me pitao za bresenhama da mu objasnim kako algoritam funkcionira te zašto onaj slučaj koji je dan u kosturu funkcionira za samo kuteve od 0 do 45 te kako namjestiti da funkcionira za sve kuteve. To je više manje to. Pročitajte poglavlja u knjizi i pripremu za labos i nemate nikakvih problema.",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "Darla",
+          "Gulbash",
+          "Retard00",
+          "Sicsile",
+          "batman3000",
+          "buyer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

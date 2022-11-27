@@ -1,0 +1,2560 @@
+{
+  "title": "[AIPR] 3. domaća zadaća - 2020/2021",
+  "creator": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+  "slug": "aipr-3-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Analiza i projektiranje računalom",
+    "Zadaće"
+  ],
+  "posts": {
+    "86833": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Heads up - Đurasević je rekao da se ne treba spajati 1. zadaća s ovom, tj. da se ne mora koristiti LUP dekompozicija iz 1. zadaće. To otvara vrata raznim stvarima, počevši od numpyjevih funkcija za inverze, pa sve do autograda za automatsko diferenciranje.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "InCogNiTo124",
+          "Njet",
+          "Noggenfogger (dammitimmad)",
+          "Svarog (Veles)",
+          "[deleted]",
+          "doki",
+          "johndoe12 (enaiks)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88652": {
+      "poster": "Amon",
+      "content": "Jel zna netko što i kako treba raditi sa zlatnim rezom u najbržem spustu i newtnovom postupku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89706": {
+      "poster": "BigD",
+      "content": "Kako bi trebali implementirati analitičko računanje gradijenta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89708": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@BigD#89706 Hardkodirat ga",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91804": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "Što u situacijama kod transformacije u problem bez ograničenja kada Hook Jeeves na primjer u fazi istraživanja provjerava vrijednost funkcije za točku koja ne zadovoljava neki g(x) to jest, kad imamo negativni broj u ln-u?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91839": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "@AromaticConfusion#91804\n\n>  napomena: prilikom računanja  logaritma,  ako  ograničenje  nije  zadovoljeno  vratite  beskonačno  ili  neku  veliku  vrijednost\n\nmy bad, sad vidim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94433": {
+      "poster": "Yasuke (Bono)",
+      "content": "@Amon#88652 Jesi skužio možda kako se sa zlatnim rezom radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94440": {
+      "poster": "Amon",
+      "content": "@Yasuke#94433 Nope, napravio sam što sam znao, a o labosu više neću razmišljati do poslije ispita",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94501": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Yasuke#94433 Nisam napravio labos još al pretpostavljam da je ovako:\n\n## Najbrži spust\n\n- nađeš gradijent, to ti je smjer u kojem se trebaš kretati\n- rotiraš cijelu jednadžbu tako da ti je gradijent x-os\n- obaviš zlatni rez nad tom novom ciljnom funkcijom, a početna točka ti je točka u kojoj si računao gradijent\n\nAko ti nije jasno kako bi to zarotirao jednadžbu, mali hint - transformacijska matrica. Sjeti se IRG-a ak si ga imao i kako možeš bilo koji vektor poravnati s nekim drugim. Alternativno, možeš formulirati ovako ciljnu funkciju:\n\n[math]\nf(x, a) = f(x + \\nabla \\cdot a)\n[/math]\n\ni onda nad time raditi zlatni rez (nad a). U ovom slučaju x ti je točka iz koje si računao gradijent, dakle konstanta, a a ti je parametar koji optimiraš zlatnim rezom, i to je neki realni broj. Na taj način se tvoj a pomiče u smjeru gradijenta, to je slično kao i način na koji si kod pretraživanja po koordinatnim osima osigurao da optimiraš u jednoj dimenziji n-dimenzionalnog prostora sa samo jednim parametrom.\n\n## Newton-Raphson\nZa Newton-Raphsona je isto. I tu ćeš dobiti neki vektor pomaka, ono što ti trebaš je preformulirati funkciju gubitka (ili gradijent) tako da se pomičeš po x osi (ili da se pomičeš u smjeru pomaka).\n\nU oba slučaja ono što ti radiš sa zlatnim rezom je samo pronalaženje pomaka po gradijentu za koji će ti nova ciljna funkcija biti minimalna.",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94508": {
+      "poster": "Arfit",
+      "content": "@micho#94501 ma nije potrebno rotirati sustav\n\nPa trebas samo svesti funkciju na jednu dimenziju -> pravac u smjeru gradijenta\n\nNa primjer (u prostoru 2 dimenzije):\n\ndobio si gradijent grad = (2.5, 3.6)\n\npocetna tocka iz koje zelis pretrazivati neka je npr. A = (0.2, 1.5)\n\nimas dvodimenzijsku funkciju f(x, y)\n\njednostavno sto radis je ogranicis x i y da mogu poprimit vrijednosti samo na tom pravcu odredenom gradijentom:\n\ndakle x mora biti oblika x = A[0] + grad[0] * lambda = 0.2 + 2.5 * lambda\n\nanalogno y = A[1] + grad[1] * lambda = 1.5 + 3.6 * lambda\n\ni sad imas funkciju jedne varijable f(lambda) = f(x, y) = f(0.2 + 2.5 * lambda, 1.5 + 3.6 * lambda)\n\nradis zlatni rez po lambdi ...",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Noggenfogger (dammitimmad)",
+          "ReyKenobi",
+          "Ruleta",
+          "Yasuke (Bono)",
+          "[deleted]",
+          "[deleted]",
+          "happysun",
+          "in1",
+          "koBASA (hackerman)",
+          "luba",
+          "magikarp (level90magikarp)",
+          "member",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96764": {
+      "poster": "renren",
+      "content": "Jel kod gradijentnog spusta (bez zlatnog reza) u trecoj funkciji  treba upast u beskonacnu petlju ili sam fulila negdje implementaciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96766": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@renren#96764 Može upasti u beskonačnu petlju ako ti je korak prevelik za epsilon",
+      "votes": {
+        "upvoters": [
+          "renren"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102104": {
+      "poster": "tre_besty (luk)",
+      "content": "jel se jos ikome box cudno ponasa u 3. zad za f1? nekad mi nade minimum u (1, 1) al nekad mi zapne u beskonacnoj petlji il nade neki fejk minimum tipa (0.1, 0.1) il tako nesto.",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102190": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "@tre_besty#102104 meni je ili (1, 1) ili (0.01 0.01), ali mislim da je to je okej -> zbog ogranicenja nekad ce naci jednu tocku, a nekad drugu (pogledaj primjer s funkcijom kruznice koju smo imali i na predavanju: 7-1, 49 min)\n\nsto se beskonacne petlje tice - jesi dodao provjeru da ako nema promjene tocke (za vise od epsilon) u vise od 100 iteracija prekidas pretrazivanje?",
+      "votes": {
+        "upvoters": [
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102219": {
+      "poster": "tre_besty (luk)",
+      "content": "@Cereal_Killer#102190 eee super tako i meni bude (1, 1) ili (0.01, 0.01), da valjda zato jer pretrazujemo prostor koji nije konveksan ko u tom primjeru s predavanja. \n\na beskonacnu petlju sam rijesio ko ljena guzica i samo breakao nakon vise od 10000 iteracija lol\n\nugl super, to je onda ocekivano ponasanje boxa za f1",
+      "votes": {
+        "upvoters": [
+          "ImJustAKid (lumity)",
+          "MrHead (vandal)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102339": {
+      "poster": "[deleted]",
+      "content": "@micho#86833 \"Pro\" tip vezan za korištenje NumPyevih funkcija za numeričku linearnu algebru - [izbjegavajte korištenje NumPyevih metoda za numeričku LA](https://scipy-lectures.org/intro/numpy/operations.html) (pogledaj Note: Linear Algebra). Ok, ako ćemo biti realni, za labos je pitanje koliko se ovo isplati, ali eto, ako netko negdje zapne.\n\nSretno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102340": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@tolecnal#102339 Šta, zato što se ne kompajlira uvijek u nešto optimalno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102342": {
+      "poster": "[deleted]",
+      "content": "@micho#102340 Ne, nego oni ne garantiraju korištenje optimalnih algoritama.\n\nNaravno, onda se koriste algoritmi iz scipy.linalg .",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102343": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@tolecnal#102342 To je dosta nebitno za stvari koje ti trebaju u labosu: lup, inverz i eventualno norma\n\nMislim tko voli nek izvoli ali nema vidljivog dobitka od ovoga, samo malo veći requirements i malo nepregledniji kod radi miješanja to dvoje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102344": {
+      "poster": "[deleted]",
+      "content": "> @tolecnal#102339 Ok, ako ćemo biti realni, za labos je pitanje koliko se ovo isplati, ali eto, ako netko negdje zapne.\n\n@micho#102343",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102385": {
+      "poster": "member",
+      "content": "Zašto je početna za f3 = 0 (nul vektor), a za f4 = (0,0) ?\n\nZa f3 svejedno uzimam (0,0) kao početnu točku?\n\nI kad radim zlatni rez po lambdi za gradijenti spust, jel mi početna točka tj pocetna lambda = 0?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102400": {
+      "poster": "member",
+      "content": "@member#102385 stavila (0,0) i za poč_lambdu = 0 i nađe min pa valjda dobro",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102402": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @member#102385 Zašto je početna za f3 = 0 (nul vektor), a za f4 = (0,0)\n\ntak su oni definirali, može biti bilo šta teoretski\n\n> @member#102385 Za f3 svejedno uzimam (0,0) kao početnu točku?\n\nako je dvodimenzionalna da, al f3 je definirana kao n-dimenzionalna pa ne možeš za svaku formulaciju uzeti (0, 0)\n\n> @member#102385 I kad radim zlatni rez po lambdi za gradijenti spust, jel mi početna točka tj pocetna lambda = 0?\n\nPočetna lambda je 0, početna točka ista kak su rekli",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102475": {
+      "poster": "Emma63194",
+      "content": "Je li imao tko u 2. zadatku problem da mu se kod računanja minimuma f1 pomoću gradijenta jednostavno program skrši jer budu preveliki brojevi?",
+      "votes": {
+        "upvoters": [
+          "Longclaw"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102484": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Emma63194#102475 Jel normaliziraš gradijent\n\nAko imaš problema s dijeljenjem s malim brojevima, clippaj sve na [imath][10^{-6}, 10^6][/imath] npr.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102489": {
+      "poster": "Emma63194",
+      "content": "@micho#102484 Ne, zaboravih. Hvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102506": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "Dobiva li netko gradijentnim spustom 1. jednadžbe rezultat (4.409, 2.888) jer mi za ostale jednadžbe računa dobro, a i Newthon -Raphsonov mi računa dobro tu 1. jednadžbu pa ne znam zašto tu bude krivo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102507": {
+      "poster": "Emma63194",
+      "content": "@micho#102484 Jel tebi to iskonvergira kada normiraš vektore?\n\nMeni u jednom trenutku alterira vrijednost gradijenta između: [-0.5498729245438967, 0.8352483264595878] i [0.5498729245438965, -0.8352483264595879] zapne tu samo.",
+      "votes": {
+        "upvoters": [
+          "Longclaw"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102516": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Emma63194#102507 Nisam još napisao ali moglo bi zapeti, jer ovaj njihov gradijentni spust forsira da je gradijent norme 1, što nije dobro kad ti treba mali pomak.\n\nDoduše meni se čini da je tebi nešto drugo. Napravim danas il sutra pa će bit moguće usporediti. Jednostavan način kak možeš provjeriti jel problem s normom gradijenta je da ga nakon normiranja podijeliš s 2. Konvergencija će ti se usporiti, ali ne bi trebalo zapeti nigdje drugdje jer je F1 vrlo benigna funkcija, tj. trebala bi dobiti finije rješenje.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102538": {
+      "poster": "Emma63194",
+      "content": "> @micho#102516 Jednostavan način kak možeš provjeriti jel problem s normom gradijenta je da ga nakon normiranja podijeliš s 2.\n\nProbala sam to. Točka koju dobijem kao minimum mi bude (0.66, 0.357) (a trebao bi kao biti (1, 1)), što je bolje nego prijašnji rezultat koji sam imala, ali opet nije točno.\n\nNašla sam ovo na wikipediji za tu funkciju: \"The global minimum is inside a long, narrow, parabolic shaped flat valley. To find the valley is trivial. To converge to the global minimum, however, is difficult. \"\n\nPa evo, samo me zanima jel drugi uspiju doći do (1, 1) ili isto svima negdje zapne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102539": {
+      "poster": "Yeltneb",
+      "content": "Jel nekome osim meni Newton-Rapson u drugom zadatku za funkciju 1 ne konvergira i zapne u točki [-0.381, 0.112]\n\nOsim toga, ako ne koristim zlatni rez onda mi nađe minimum u [-1,1]\n\nBtw, jel mi moramo normirati vektore smjera (gradijente) jer to ne piše eksplicitno u vježbi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102543": {
+      "poster": "Emma63194",
+      "content": "> @Yeltneb#102539 Btw, jel mi moramo normirati vektore smjera (gradijente) jer to ne piše eksplicitno u vježbi?\n\nMeni kad ne normiram vektore za prvu funkciju baci OverflowError. Tebi se dobro izvrši?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102544": {
+      "poster": "Yeltneb",
+      "content": "@Emma63194#102543 \n\nAko se referenciraš na gradijentni spust za f1 sa zlatnim rezom, on mi daje minimum u točki [-1.287, 1.66]\n\nNisam jos nigdje dobio Overflow. Ja prekidam algoritme na 10000 iteracija pa mozda zato",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102546": {
+      "poster": "Emma63194",
+      "content": "@Yeltneb#102544 Ne, znači, meni se u nekom trenutku crasha program jer brojevi s kojima računa budu preveliki kada mi je gradijent nenormiran. Mislim da mi to bude kod traženja unimodalnog intervala i onih provjera.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102550": {
+      "poster": "Yeltneb",
+      "content": "@Emma63194#102546 Ja nisam imao problema s time tak da ti ne znam pomoć. Meni radi super s nenormiranim gradijentom (kak i piše u labosu). Mislim da to nebi trebao biti problem jer dođe na isto. Ako normiraš gradijent samo ga smanjiš, a to isto možeš postići množenjem s optimalnom lambdom",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102553": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @Yeltneb#102539 Btw, jel mi moramo normirati vektore smjera (gradijente) jer to ne piše eksplicitno u vježbi?\n\nAlgoritam koji se radi na predmetu je normiran, bez stope učenja, tako da da\n\nOni kažu da koristiš nenormirani gradijent, ali fora je u tome što je u skripti normirani. Tako da jebe lud zbunjenoga.",
+      "votes": {
+        "upvoters": [
+          "TheCrimsonChin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Yeltneb"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102555": {
+      "poster": "Yeltneb",
+      "content": "@micho#102553 Skopirano iz labosa: \n\n\"Postupak treba podržavati dva načina rada: u prvom načinu točka se uvijek pomiče za čitav iznos dobivenog pomaka (iznos nenormiranog vektora gradijenta), dok u drugom načinu postupak korištenjem metode zlatnog reza pronalazi optimalan iznos pomaka na pravcu.\"\n\nNormirati moramo kad koristimo zlatni rez?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102558": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Yeltneb#102555 A prije toga te referencira na definiciju algoritma u skripti gdje normiranje nije neobavezno.\n\nNormiranje nije potrebno kod zlatnog reza, ne mijenja usmjerenje vektora smjera.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102559": {
+      "poster": "Yeltneb",
+      "content": "@micho#102558 hahahah uzas 😆",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102560": {
+      "poster": "member",
+      "content": "jel bi mogao ko napisat kako izgleda Hesseovu matricu za f1 da provjerim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102562": {
+      "poster": "Yeltneb",
+      "content": "@member#102560 Meni u prvoj iteraciji za x0 = [-1.9,2.0] ispadne:\n\n[3534  760]\n\n[760 200]\n\nTrebala bi biti:\n\ndf/dx1^2 = 1200 * x1^2 - 400 * x2 + 2\n\ndf/dx1dx2 = -400 * x1\n\ndf/dx2^2 = 200\n\n[df/dx1^2 df/dx1dx2]\n\n[df/dx1dx2 df/dx2^2]",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "joc",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102572": {
+      "poster": "[deleted]",
+      "content": "@Emma63194#102489  @micho#102484 Zar ne trebamo raditi sa **nenormiranim** vektorom kao prvom opcijom i zlatnim rezom kao drugom opcijom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102574": {
+      "poster": "basmatibeetle",
+      "content": "Kako napraviti optimiranje po lambdi u javi?",
+      "votes": {
+        "upvoters": [
+          "Daniel12",
+          "Longclaw"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102628": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "Za newton raohs algoritam> treba izcunati gradijent u tocki, gradijent normirati, izracunati hesseovu matricu u tocki, izracunati inverz hessea, i jos pomnoziti svaki element u hesse s -1, i na kraju mnozenje matrica gradijenta i hesse? jel to tocno?",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102632": {
+      "poster": "Ziher",
+      "content": "@johndoe12#102628 Da, samo ja to sve prvo izracunam pa tek onda normiram, ako se radi o postupku sa zlatnim rezom\n\nNe normiram nista prije",
+      "votes": {
+        "upvoters": [
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102633": {
+      "poster": "Ziher",
+      "content": "Kako napraviti dobar uvjet za zaustavljanje Boxa?",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102640": {
+      "poster": "Murin",
+      "content": "Koji je onda zakljucak, gdje u gradijentnom/newtonu koristimo normiranje? I sto vracate kod boxa, centroid ili tocku s najnizom vrijednosti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102650": {
+      "poster": "Ziher",
+      "content": "@Murin#102640 ja koristim normiranje samo dok biram lambdu preko zlatnog reza\n\nA kod boxa valjda ovisi kakve su ti vrijednosti, ja sam skuzio da je uzeti centroid vecinom dosta dobro, ponekad je tocka s najnizom vrijednosti bolja, mozda se moze i to nekak kombinirati i uzeti kaj bolje ispada za danu situaciju?",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102664": {
+      "poster": "ssbb",
+      "content": "Kako vam ispada 4. zadatak sa ovim pocetnim tockama sto su oni zadali  ([-1.9,2], [0.1,0.3]) ?\n\nMeni se cini da obje pocetne tocke zadovoljavaju ogranicenja,ali dobijem rezultate koji nisu optimumi. Mozda funkcije nisu unimodalne nakon sto stavimo ogranicenja, ili sam zeznuo negdje u kodu. Pls help\n\nedit: kad startam ih nekih drugih pocetnih tocaka, dobivam [1,1] i [2,2] sto su tocna rjesenja (2,2 za f2 je tocno radi ogranicenja), pa mi se cini da je unimodalnost u pitanju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102672": {
+      "poster": "Bananaking",
+      "content": "Za glupe: kako računamo gradijent u gradient descentu? Moram za svaku funkciju kao što sam ju definirao definirati i njen gradijent kao drugu funkciju?",
+      "votes": {
+        "upvoters": [
+          "Longclaw",
+          "Maci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102682": {
+      "poster": "Ziher",
+      "content": "@Bananaking#102672 hardkodiras derivacije funkcije po svakoj varijabli unutra i onda samo izracunas vrijednosti on demand za neku tocku, stavis funkciju i tjt",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102684": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "@ssbb#102664 \n\nMeni ovako\n\nFunkcija 1 - minimum: \n\n0.009561157226562589 0.0100555419921875\n\nFunkcija 2  - minimum: \n\n1.999993896484375 2.000347900390625",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)",
+          "PrisonMike (Števo)",
+          "Sele",
+          "narval13068 (Dima)",
+          "ssbb"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102687": {
+      "poster": "Ziher",
+      "content": "@Cereal_Killer#102684 Za pretpostavljene tocke da, ali mislim da kolega misli na drugu pocetnu tocku koja je blize globalnom optimumu pa tamo i zavrsi na kraju\n\nAli kako da mi zapravo znamo koji je optimum najbolji koji mozemo dobiti s obzirom na ogranicenja? Da si nacrtamo to u nekom programu pa probamo \"nabosti\" neku dobru pocetnu tocku? Ako je netko nasao bolju tocku recimo za f1, please share",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102689": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "@Ziher#102687 \"Kako vam ispada 4. zadatak sa ovim pocetnim tockama sto su oni zadali ([-1.9,2], [0.1,0.3]) ?\"\n\n-> mislim da misli na tocno ovo sto je napisao\n\nmoguce da ako zadamo pocetnu tocku koja je s \"prave strane ogranicenja\", algoritam nade optimalni minimum\n\nfja 1 mi da rezultat (1,1) za x0 = (1.5 3.5)",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Ziher"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102694": {
+      "poster": "Ziher",
+      "content": "@Cereal_Killer#102689 To da hahahah, excuse me ako sam spaljen, gledam u laptop citav dan\n\nMene je ipak zanimalo za koju pocetnu tocku se dobije minimum (1,1) za funkciju f1 i evo, dobio sam za pocetnu tocku (3,7)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102697": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "@Ziher#102694 hm, (3,7) mi ne zadovoljava uvjete pa mi ju algoritam prebaci u (1.5, 8.5) i onda ta tocka da (1,1) minimum",
+      "votes": {
+        "upvoters": [
+          "Ziher"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102701": {
+      "poster": "Murin",
+      "content": "Ja nisam siguran sto krivo radim jer mi u 4. i dalje nalazi iste minimume (1,1) i (4,2)\n\n![](assets/2020-11-29/00032.png)\n\nineq je suma logaritama vrijednosti od ogranicenja nejednakosti a eq kvadrata od ogranicenja jednakosti, ovu fju minimiziram sa hooke-jeevesom i nakon svakog koraka napravi *=10 za t i radim jeevsa sa novom tockom\n\n\nedit: ignore glup sam, sad dobivam (0.01, 0.01) i (2,2)",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102714": {
+      "poster": "login",
+      "content": "Kaj vam ispada u 5. zadatku? Ja sam dobio (1,1), ima mi smisla buduci da je zadovoljeno implicitno ogranicenje jednadzbe, al mozda i krivo radim.",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102722": {
+      "poster": "member",
+      "content": "Box, f2... min ispada [2, 2] ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102723": {
+      "poster": "Bananaking",
+      "content": "![](assets/2020-11-29/00034.png)\n\nJel ovdje točno ovo \"dok ne bude\", jel ne bi tu trebalo biti manje od epsilon? To je norma gradijenta znači korijen iz sume kvadrata elemenata gradijenta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102732": {
+      "poster": "korisnickoime",
+      "content": "Može neko napisati rezultate koje dobijete za gradijentni postupak bez uporabe zlatnog reza za funkcije 1, 2, 3",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102742": {
+      "poster": "Bananaking",
+      "content": "@korisnickoime#102732 Jel ti dobiješ išta i za koliko maksimalno iteracija? Meni samo divergira ili u funkciji 2 baci math error za limit=1000 ali ne znam stvarno jesam li dobro implementirao",
+      "votes": {
+        "upvoters": [
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102751": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "@Bananaking#102723 ma da, samo treba pisati dok (umjesto \"dok ne bude\") \n\nPonavljas dokle god je vece od EPS, kada bude dovoljno mala norma gradijenta, stajes",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102753": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "@member#102722 i meni tako",
+      "votes": {
+        "upvoters": [
+          "glider (toblerone)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102765": {
+      "poster": "Daniel12",
+      "content": "U gradijentom spustu, nakon što dobijem gradijent (i valjda ga normiram), kako izračunati parcijalnu derivaciju lambe u Javi?\n\nPretpostavljam da mi to treba kako bih mogao naći koja će mi iduća točka u kojoj računam gradijent biti, bar sam tako shvatio. Odnosno kad imam f(lambda) = f(x, y) = f(x[0] + grad[0] * lambda, x[1] + grad[1] * lambda) gdje je x pocetna tocka. Kako sada iz ovog dobiti taj lambda u prvoj verziji algoritma (bez zlatnog reza) da bih mogao onda vidjet koja je točka minimuma (u smjeru tog gradijenta).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102778": {
+      "poster": "Borna_P",
+      "content": "Što je uvjet zaustavljanja u Boxovom algoritmu?",
+      "votes": {
+        "upvoters": [
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102782": {
+      "poster": "Klokan",
+      "content": "Koji je uvjet zaustavljanja u Box-ovom postupku i kako ga implementirati?",
+      "votes": {
+        "upvoters": [
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102785": {
+      "poster": "member",
+      "content": "@Murin#102701 zašto ograničenje jednakosti u 4. ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102804": {
+      "poster": "korisnickoime",
+      "content": "@Bananaking#102742 I meni divergira, a za neke funkcije mi vrijednosti rastu tolko da se crasha program",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102827": {
+      "poster": "Murin",
+      "content": "@member#102785 to mi je opceniti izraz u klasi koja podrzava i jednakosti i nejednakosti, u ovom slucaju ce biti +0",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102828": {
+      "poster": "narval13068 (Dima)",
+      "content": "Jel u 5. uz pocetnu tocku 5 5 minimum pronadjen 2 1",
+      "votes": {
+        "upvoters": [
+          "Bravos (Supraman)",
+          "PrisonMike (Števo)",
+          "ls_123 (KimuraKong)",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102854": {
+      "poster": "ssbb",
+      "content": "@Cereal_Killer#102684 o najs, isto dobivamo :D",
+      "votes": {
+        "upvoters": [
+          "Cereal_Killer (vagab0nd0)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102855": {
+      "poster": "ssbb",
+      "content": "@narval13068#102828 nebi smio, pocetna tocka 5,5 ne zadovoljava sva ogranicenja nejednakosti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102856": {
+      "poster": "Ena43",
+      "content": "@narval13068#102828  Da, to je dobro ako ti nakon toga algoritam trazi unutarnju pocetnu tocku kao sto je zadano.  \n\nPronade li Box u trecem minimum za F1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102857": {
+      "poster": "ssbb",
+      "content": "@Ena43#102856 dap",
+      "votes": {
+        "upvoters": [
+          "Ena43"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102859": {
+      "poster": "korisnickoime",
+      "content": "@Klokan#102782 Bump",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)"
+        ],
+        "downvoters": [
+          "Klokan",
+          "narval13068 (Dima)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102863": {
+      "poster": "ssbb",
+      "content": "@korisnickoime#102859 isti je kao u simplexu, suma kvadrata udaljenosti svih tocaka od centroida <= epsilon",
+      "votes": {
+        "upvoters": [
+          "Borna_P",
+          "Broono (Burućuh)",
+          "Daniel12",
+          "Klokan",
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102874": {
+      "poster": "narval13068 (Dima)",
+      "content": "@ssbb#102855 Prvo provedem trazenje unutarnje tocke",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102875": {
+      "poster": "narval13068 (Dima)",
+      "content": "@Ena43#102856 Meni nekad divergira a nekada nadje ili 0.01 0.01 ili 1 1",
+      "votes": {
+        "upvoters": [
+          "Maci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102877": {
+      "poster": "Emma63194",
+      "content": "Je li imao netko problem kod Boxa da 2. funkcija zapne kod jedne točke i ne uspije naći minimum? \n\nAko da, kako ste to riješili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102883": {
+      "poster": "carrieb",
+      "content": "kako za box generiramo simplex ako nisu zadana ogranicenja? isto kao u nelder-mead simplexu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102891": {
+      "poster": "Daniel12",
+      "content": "@Daniel12#102765 Jel netko zna, mozda je glupo pitanje al opce ne kuzim kak tak nesto implementirat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102892": {
+      "poster": "Klokan",
+      "content": "kako optimiramo funkciju G(x) kod trazenja unutarnje tocke ako nam je G(x) pravac? nema mi misla to optimiranje ako ne kvadriramo g_i(x)",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102893": {
+      "poster": "Klokan",
+      "content": "@Daniel12#102891 mislim da ni to samim sastavljacima labosa nije jasno",
+      "votes": {
+        "upvoters": [
+          "Daniel12"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102900": {
+      "poster": "carrieb",
+      "content": "@Daniel12#102891 na predavanjima je rekao durasevic da si hardkodiramo izraze za derivacije (npr. kao clansku varijablu klase Funkcija ili kako god imas to implementirano)",
+      "votes": {
+        "upvoters": [
+          "Daniel12"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102904": {
+      "poster": "glider (toblerone)",
+      "content": "Je li u trećem zadatku Newton sa zlatnim rezom za f1 dode do konačnog rješenja ili divergira ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102908": {
+      "poster": "login",
+      "content": "Jel bi Newton Raphson trebao pronac optimum za f1 u 2. zadatku? Meni zlatnim rezom zapne u tocki (-7.72, 51.296)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102929": {
+      "poster": "ssbb",
+      "content": "koliko vam u petom ispadne minimum kada krecete iz [5,5] bez trazenja unutarnje tocke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102930": {
+      "poster": "ssbb",
+      "content": "@glider#102904 u trecem zadatku je Box, a ne Newton\n\n@login#102908 da, u drugom zadatku svi postupci za sve funkcije nalaze pravi minimum",
+      "votes": {
+        "upvoters": [
+          "login"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102940": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@carrieb#102883 Nasumično, pa poravnat da štima za ograničenja\n\nAko nema ograničenja, samo nasumično valjda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102992": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "u box algoritmu mi algoritam zapne u dijelu kada se ispistuje dal xR zadovoljava implicitna ogranicenja:\n\n```\nwhile(!impl_ogr_satisfy(impl_ogr, xR)){\n                    xR = novixR(xc,xR);\n                    //xR.printConsole();\n                }\n```\n                Jel imao netko slican problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103003": {
+      "poster": "Emma63194",
+      "content": "Kad se u onoj mješovitoj transformaciji pojavi negativan broj u ln, koju onda vrijednost uzeti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103004": {
+      "poster": "[deleted]",
+      "content": "@Emma63194#103003 Onda odmah vrati inf kao vrijednost\n\nedit:  (_napomena: prilikom računanja logaritma, ako ograničenje nije zadovoljeno vratite beskonačno ili neku veliku vrijednost_)",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103005": {
+      "poster": "Emma63194",
+      "content": "@gentleman#103004 A, hvala! Već toliko gledam u papir i svoj kod, nisam mogla naći tu rečenicu (makar mi je pod nosom bila).",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103021": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "jel u box algoritmu stavljamo i x0 koja nam je zadana u zadatka kao tocku simpleksa ili ne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103035": {
+      "poster": "BigD",
+      "content": "Jel ikom drugom ispada da Newton Raphson sa zlatnim rezom treba vise iteracija nego bez?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103036": {
+      "poster": "Bananaking",
+      "content": "Može netko tko je poprilično siguran napisati rješenja po zadacima (jel divergira ili našao rezultat)?\n\nMeni za 3. zadatak kako kada, nekad mi za f1 divergira nekad nađe točku oko 0,0 (ne baš točno), a za f2 nađe oko 2,2 (ne baš točno, recimo 1.929, 2.055)",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103042": {
+      "poster": "Emma63194",
+      "content": "@Bananaking#103036 Imam isti problem. Je li netko imao to i riješio problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103043": {
+      "poster": "Vrba",
+      "content": "Jel smijemo za boxa hardkodirat ova ogranicenja u algoritam bez stvaranja razreda s obzirom da su ista ogranicenja uvijek?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103044": {
+      "poster": "Murin",
+      "content": "@Bananaking#103036 \n\nMislim da sam krivo nes napravio da divergenciju kod gradijentnog pa mi uvijek kaze da divergira ali vracam zadnje vrijednosti.\n\n1. bez zl rez 1.664 -2.5 sa zl rezom 2 -3\n2. grad fj1 (1,1), fj2 (4,2), isto tako i za newtona\n3. box mi fakat svugdje ide i nezz zasto, za prvu fju zna biti  0.nesto ili 0.00nesto, dok za drugu je obicno oko (1.2 ,1.7)\n4. fj1 (0.01,0.01) f2 (2,2)\n5. oba daju (2,1) s tim da mi na drugom izabere unutranju tocku (1,1)",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103047": {
+      "poster": "Bananaking",
+      "content": "Sorry na spamanju ali gdje se nalazi ta skripta u kojoj je navodno postupak transformacije u problem bez ograničenja (\"Algoritam je objašnjen na predavanjima i u skripti na stranici 4-83\")? Jedine skripte koje vidim su skripta: numerička optimizacija u kojoj ga nema i onda rukom pisana",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103049": {
+      "poster": "member",
+      "content": "@Bananaking#103047 U toj rukom pisano je na toj stranici 4-83 taj postupak. Al možeš gledat u ovoj novoj skripti pod Optimizacija uz metodu kazne i barijere, algoritam 7.2",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103052": {
+      "poster": "Klokan",
+      "content": "@Murin#103044 kak si dosao do unutarnje tocke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103057": {
+      "poster": "Murin",
+      "content": "@Klokan#103052 \n\nPa koristio sam postupak minimiziranja fje G(x)=-sum ti*gi gdje je gi ogranicenje nejednakosti. \n\nObjasnjeno je na predavanjima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103059": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "u 4.zadatku, jel dobijete za F1 minimimum 1,1\n\n===================== 4. zadatak =======================================\n\nUTRANSFORM algoritam, F1: 1.0003734588623048, 1.0007476806640625",
+      "votes": {
+        "upvoters": [
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103061": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Koji vam je uvjet zaustavljanja kad gradijentni spust divergira pa brojevi postanu toliko veliki da se ne može niti izvest funkcija do kraja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103063": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "jel ikome ovako box ispao? radila sam po njihovom pseudokodu\n\n________________________ZADATAK 3________________________\n\n--f1\n\n--> Postupak po Boxu zapeo u beskonacnoj petlji <--\n\nBroj evaluacija f-je = 626\n\nBox MIN = [-1.4070356232228252, 2.004131877807754]\n\n--f2\n\nBroj evaluacija f-je = 185\n\nBox MIN = [1.9999985958332154, 2.2037947968238862]\n\n\n\ni za zadatak 2. za funkciju f1 mi oba nadu isto, ali krivo\n\n________________________ZADATAK 2________________________\n\n--f1\n\nGradijentni spust\n\n--> Gradijentni spust zapeo u beskonacnoj petlji <--\n\nBroj racunanja gradijenta = 100\n\nBroj evaluacija f-je = 22080\n\nMIN sa optimalnim korakom \n\n min = [-1.0584239841659335, 1.1202613281503742]\n\nNewton-Raphson\n\n--> Newton_Raphson zapeo u beskonacnoj petlji <--\n\nBroj racunanja gradijenta i Hesseove matrice = 100\n\nBroj evaluacija f-je = 17644\n\nMIN sa optimalnim korakom \n\n min = [-1.0460852488603276, 1.094294345810919]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103065": {
+      "poster": "ReyKenobi",
+      "content": "Evo mojih rješenja zadataka:\n\n1. zadatak\n\n   a) bez određivanja optimalnog iznosa koraka: postupak divergira (vrti se u petlji između dvije točke s istom vrijednosti funkcije cilja)\n\n   b) sa određivanjem optimalnog iznosa koraka: nalazi minimum (2, -3)\n\n2. zadatak\n\n   a) funkcija f1 - Newton-Raphson i gradijentni spust oboje nađu (1, 1), Newton-Raphson sa manjim brojem evaluacija funkcije cilja\n\n   b) funkcija f2 - isto oboje nađu (4, 2)\n\n3. zadatak\n\n   a) funkcija f1 - najčešće nailazi na točku (0.010, 0.010) zato što je dodavanjem ograničenja funkcija postala višemodalna, no nekad (rijetko) ne zapne ni tu nego divergira (pretpostavljam da je to zbog problema u Boxovom algoritmu kada refleksijom i pomicanjem prema centroidu gubimo jednu dimenziju)\n\n   b) funkcija f2 - nalazi točku (2, 2)\n\n4. zadatak \n\n   a) funkcija f1 - iz početne točke (-1.9, 2) nalazi onaj lokalni minimum (0.010, 0.010), a iz početne točke (1.9, 2) nalazi točku (1.001, 1.001), dakle uspjeli smo doći dosta blizu minimuma mijenjanjem početne točke\n\n   b) funkcija f2 - nalazi točku (2, 2)\n\n5. zadatak\n\n   Za početnu točku (5, 5) pokrene se postupak traženja unutarnje točke te se nakon toga dobije rezultat (2, 1)",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Emma63194",
+          "PrisonMike (Števo)",
+          "gamigugi",
+          "magikarp (level90magikarp)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103066": {
+      "poster": "tre_besty (luk)",
+      "content": "@Bananaking#103036 \n\n**1. zadatak:**\n\nMinumum 3. f-je uz određivanje  optimalnog  iznosa koraka gradijentnog spusta:  (2, -3) \n\nMinumum 3. f-je bez određivanja  optimalnog  iznosa koraka gradijentnog spusta:  (4, -6) (divergencija zbog prevelikog koraka)\n\n**2. zadatak**\n\nMinumum 1. f-je uz određivanje  optimalnog  iznosa koraka gradijentnog spusta:  (1, 1)\n\nMinumum 1. f-je uz određivanje  optimalnog  iznosa koraka Newton-Raphsonovog postupka:  (1, 1)\n\nMinumum 2. f-je uz određivanje  optimalnog  iznosa koraka gradijentnog spusta: (4, 2)\n\nMinumum 2. f-je uz određivanje  optimalnog  iznosa koraka Newton-Raphsonovog postupka:  (4, 2)\n\n**3. zadatak**\n\nMinumum 1. f-je Boxovim postupkom:  (0.01, 0.01) (nekad bude ovo rješenje, nekad bude (1, 1), a nekad zapne u beskonacnoj petlji zbog divergencije --> pretražujemo prostor koji nije konveksan)\n\nMinumum 2. f-je Boxovim postupkom:  (2, 2)\n\n**4. zadatak**\n\nMinumum 1. f-je mješovitom transformacijom bez traženja unutarnje početne točke :  (0.01, 0.01)\n\nMinumum 2. f-je mješovitom transformacijom bez traženja unutarnje početne točke:  (1.99, 2)\n\nUnutarnja početna točka: (1.5, 3) (prvo uzimamo neku točku koja ne zadovolja uvjete npr. (3, 2) i onda tražimo unutarnju početnu točku)\n\nMinumum 1. f-je mješovitom transformacijom uz traženje unutarnje početne točke :  (1, 1)\n\nMinumum 2. f-je mješovitom transformacijom uz traženje unutarnje početne točke:  (1.99, 2)\n\n**5. zadatak**\n\nMinumum 4. f-je mješovitom transformacijom bez traženja unutarnje početne točke:  (5, 5) (početna točka ne zadovoljava uvjete)\n\nUnutarnja početna točka nakon traženja: (1.5, 1) \n\nMinumum 4. f-je mješovitom transformacijom uz traženje unutarnje početne točke:  (2, 0.999)\n\nfkt se ispričavam ako je nešto krivo",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "TheManFromEarth",
+          "gamigugi",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103070": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@ReyKenobi#103065 3.zad kada ti divergira za f1 koja je vrijednost optimuma?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103073": {
+      "poster": "Emma63194",
+      "content": "@ReyKenobi#103065 \n\n@tre_besty#103066 \n\nZašto u 4. morate mijenjati poočetnu točku? Što nije da sve one zadovoljavaju ograničenja?",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103077": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "btw jel itko koristio u pythonu numdifftools ? ak je pls javi se",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103078": {
+      "poster": "ReyKenobi",
+      "content": "@Emma63194#103073 \n\nU tekstu 4. zadatka: \n\n>  Može li se uz zadanu početnu točku pronaći optimalno rješenje problema s ograničenjima?\n\nAko ne, probajte odabrati početnu točku iz koje je moguće pronaći rješenje.\n\nOdgovor je ne, zato što sa početnom zadanom točkom daje onaj lokalni minimum (0.010, 0.010) (jer je funkcija postala višemodalna, ograničenje dijeli tu funkciju). Zato promijeniš točku da dođe do pravog minimuma (1, 1).",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "carrieb"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103080": {
+      "poster": "tre_besty (luk)",
+      "content": "@Emma63194#103073 Zadovoljavaju, ali za f1 iz točke (-1.9, 2) ne dolazimo do optimalnog rješenja (1, 1) nego (0.01, 0.01) pa u zadatku pitaju da probamo odabrati početnu točku iz koje je moguće pronaći optimalno rješenje. Ja sam to preko traženja unutranje početne točke, ali vjerojatno mozemo to tako da samo odaberemo rucno neku drugu pocetnu točku.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "MrHead (vandal)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103082": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@ReyKenobi#103078 meni odmah  nade tocne minimume i za f1 i za f2 o.O whyyy",
+      "votes": {
+        "upvoters": [
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103083": {
+      "poster": "ReyKenobi",
+      "content": "@Noggenfogger#103070 \n\nNe nađe mi uvijek istu onda, ne znam jel to očekivano (valjda je?). Sad mi je nakon 10ak pokretanja vratilo točku (-0.052, 1.565).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103086": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@ReyKenobi#103083 meni uvijek diverigra i uvijek istu nade:  [-1.4070356232228252, 2.004131877807754]\n\nnajcudniji labos ikad",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103088": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "čisto pitanje ovako hehe\n\nKako hendlate scenarij kad vam od generiranih [imath]2n[/imath] točaka ni jedna (tj. nijedne dvije) ne zadovoljavaju ograničenje? Reroll pretpostavljam? Ili lupite centroid bez izdvajanja najlošije točke, pa ako početna štima nema problema?\n\nEDIT: nvm, skužio sam da se centroid postavlja na [imath]x_0[/imath] XD",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103089": {
+      "poster": "ReyKenobi",
+      "content": "@micho#103088 Ja generiram jednu po jednu točku. Samo pomičem trenutnu točku prema centroidu ako ne zadovoljava ograničenja sve dok ih ne zadovolji, tek onda ju dodajem u skup točaka (brijem da je tak i u pseudokodu napisano, vjerojatno nije optimalno, al radi)\n\nEDIT: da, centroid se postavlja na x0 inicijalno",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103092": {
+      "poster": "Murin",
+      "content": "@micho#103088 \n\nPo algoritmu imas\n\nstvori tocku\n\ndok nije unutar ogranicenja -priblizuj centroidu do sada prihvacenih\n\nrepeat\n\na pocetna ti je ujedno i centroid u prvom koraku",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103094": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "jel za racunanje ove inner tocke, mi zapravo imamo novuf fju koja je gx=3-x1-x2, i za nju preko hooke jeevesa treba naci novu tocku??",
+      "votes": {
+        "upvoters": [
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103105": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "jeste kvadrirali ovu fju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103144": {
+      "poster": "dante_zu",
+      "content": "@tre_besty#103066 \n\nU vezi trećeg zadatka\n\nDobivam jednako ko ti ali me zanima ovaj komentar \"pretrazujemo prostor koji nije konveksan\"\n\nMislim imamo dva ogranicenja koja su linearna i izgleda mi kao da je konveksan, mozes malo pojasnit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103170": {
+      "poster": "tre_besty (luk)",
+      "content": "@dante_zu#103144 krivo sam bio gledao crtez ogranicenja, sori konveksan je\n\n![](https://i.ibb.co/HpPD3kS/Screenshot-from-2020-11-30-20-37-45.png)\n\novo plavo je dopusten prostor, ja sam zabunom zabrio da je bijelo dopusten prostor pa onda ne bi bio konveksan.",
+      "votes": {
+        "upvoters": [
+          "dante_zu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103180": {
+      "poster": "dante_zu",
+      "content": "@tre_besty#103170 \n\nKak bi onda ti objasnio divergenciju u tom slucaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103189": {
+      "poster": "PrisonMike (Števo)",
+      "content": "> @ReyKenobi#103065 a) bez određivanja optimalnog iznosa koraka: postupak divergira (vrti se u petlji između dvije točke s istom vrijednosti funkcije cilja)\n\njesi za ovaj slucaj normirala gradijent?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103198": {
+      "poster": "tre_besty (luk)",
+      "content": "@dante_zu#103180 iskreno nemam pojma, nadam ce netko pametniji od mene skuzit pa tu napisat zas",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103215": {
+      "poster": "ReyKenobi",
+      "content": "@PrisonMike#103189 nisam, piše u uputama da bi trebalo napraviti pomak za nenormirani vektor gradijenta",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103216": {
+      "poster": "ReyKenobi",
+      "content": "@dante_zu#103180 \n\n> @ReyKenobi#103065 pretpostavljam da je to zbog problema u Boxovom algoritmu kada refleksijom i pomicanjem prema centroidu gubimo jednu dimenziju\n\nNisam sigurna, ali ovo mi se čini da bi mogao biti razlog? Na predavanju smo odradili primjer di sve točke skupa završe samo na jednom pravcu (gubi se jedna dimenzija) pa se samo po njemu mogu gibati.",
+      "votes": {
+        "upvoters": [
+          "dante_zu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103227": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Itko ima slučaj da mu se u Boxu dogodi da centroid ne zadovoljava ograničenja (čak ponekad i kod generacije točaka?), pa da mu algoritam zapne?\n\nEDIT: Otkrio bug - kad sam nešto prtljao s čuvanjem početne točke u originalnom skupu sam iterirao od elementa na indeksu 1 nadalje, što nisam popravio kad sam maknuo dodavanje početne točke u originalni skup. I onda jbg. ponekad mi ta prva točka nije štimala po ograničenjima i skršila je centroid. Sad sve konvergiriše.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103249": {
+      "poster": "Bananaking",
+      "content": "Evo moja rješenja komplet ispis dobivena nabadanjem po labosu, ako vidite da nešto ne valja ili je zaključak \"???\" slobodno napišite 😄\n\n```\n----- 1. zadatak -----\n\na) Postupak gradijentnog spusta bez odredjivanja optimalnog iznosa koraka:\n\nIstekao zadani broj iteracija, funkcija divergira, zaustavljanje algoritma\n\nb) Postupak gradijentnog spusta s odredjivanjem optimalnog iznosa koraka pomocu zlatnog reza:\n\nDobiven rezultat: 2.000 -3.000 \nBroj iteracija funkcije: 108\nBroj iteracija gradijenta: 105\n\nZakljucak: \n\tU slucaju gradijentnog spusta bez odredjivanja optimalnog koraka (lambda = 1), postupak divergira i ne pronalazi se optimum.\n\tU slucaju postupka sa zlatnim rezom, pronalazimo rezultat u tocki [2, -3]\n\n\n\n----- 2. zadatak -----\n\na) Postupci na funkciji 1\n\tPostupak gradijentnog spusta sa odredjivanjem optimalnog iznosa koraka na funkciji 1:\nIstekao zadani broj iteracija, funkcija divergira, zaustavljanje algoritma\n\n\tPostupak Newton-Raphson sa odredjivanjem optimalnog iznosa koraka na funkciji 1:\nDobiven rezultat: 1.000 1.000 \nBroj iteracija funkcije: 857\nBroj iteracija gradijenta: 16\nBroj iteracija hessian matrice: 16\n\n\nb) Postupci na funkciji 2\nPostupak gradijentnog spusta sa odredjivanjem optimalnog iznosa koraka na funkciji 2:\nDobiven rezultat: 4.000 2.000 \nBroj iteracija funkcije: 1349\nBroj iteracija gradijenta: 28\n\n\nPostupak Newton-Raphson sa odredjivanjem optimalnog iznosa koraka na funkciji 2:\nDobiven rezultat: 4.000 2.000 \nBroj iteracija funkcije: 112\nBroj iteracija gradijenta: 3\nBroj iteracija hessian matrice: 3\n\n\nZakljucak: \n\tNewton-Raphsonov postupak je ucinkovitiji sto se moze vidjeti iz broja evaluacije funkcije\n\n\n\n----- 3. zadatak -----\n\na) Postupak po Boxu na funkciji 1\nDobiven rezultat: -0.053 0.012 \nBroj iteracija funkcije: 9031\n\n\nb) Postupak po Boxu na funkciji 2\nDobiven rezultat: 2.000 2.021 \nBroj iteracija funkcije: 4581\n\n\nZakljucak: \n\t???\n\n\n\n----- 4. zadatak -----\n\na) Postupak transformacije u problem bez ogranicenja na funkciji 1\nDobiven rezultat: 0.010 0.010 \nBroj iteracija funkcije: 1771\n\n\nb) Postupak transformacije u problem bez ogranicenja na funkciji 2\nDobiven rezultat: 2.000 2.000 \nBroj iteracija funkcije: 2058\n\n\nZakljucak: \n\t???\n\n\n\n----- 5. zadatak -----\n\na) Postupak transformacije u problem bez ogranicenja za funkciju 4 i pocetnu tocku [5, 5]\ninf\n\nb) Postupak transformacije u problem bez ogranicenja za funkciju 4 i pocetnu tocku [0, 0]\nDobiven rezultat: 2.000 1.000 \nBroj iteracija funkcije: 1697\n\n\nZakljucak: \n\t???\n\n\n\n\nProcess finished with exit code 0\n```",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103252": {
+      "poster": "Emma63194",
+      "content": "Mogu li prodati dušu vragu da vrati vrijeme unazad i da ne upišem ovaj predmet? Ako da, kako? Tips & tricks?",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "[deleted]",
+          "_xXx_Matej_xXx_ (Mateejj)",
+          "chuuya (temari)",
+          "doki",
+          "lucija (luc)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon",
+          "Bato (Morski Pas)",
+          "Cvija",
+          "Daniel12",
+          "Daorson",
+          "Murin",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103256": {
+      "poster": "Bananaking",
+      "content": "@Emma63194#103252 Ja s drugim upisom i bez ideje što se događa\n\n![](assets/2020-11-30/00022.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon",
+          "Bato (Morski Pas)",
+          "Cvija",
+          "Ruleta",
+          "_xXx_Matej_xXx_ (Mateejj)",
+          "member"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Emma63194"
+        ]
+      }
+    },
+    "103285": {
+      "poster": "chuuya (temari)",
+      "content": "Glupo pitanje al šta bi mi trebali s ovim \"velikim brojem ili beskonačno\" kada x ne zadovoljava ograničenja, kod mješovite transformacije? Onak vraćamo ga and then what",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103288": {
+      "poster": "Vrba",
+      "content": "Kako izgleda bodovanje i odgovaranje ako uopce ne rijesimo jedan dio labosa, tj ako npr ni ne krenemo rjesavati algoritam mjesovitog nacina a ostali rade? To bi znacilo samo da odgovaramo sve osim toga za npr max 3 boda ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103289": {
+      "poster": "[deleted]",
+      "content": "@chuuya#103285 ne trebas nista dodatno jer tu novu funkciju minimiziras npr. hooke jeevesom i onda zbog toga sto vracas veliku vrijednost kad ogranicenja nisu zadovoljena, on nece pretrazivati u tom podrucju.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103292": {
+      "poster": "chuuya (temari)",
+      "content": "@maki#103289 Koju novu funkciju? Nez gledam ovaj pseudokod u onoj novoj knjizi i u skripti šta piše i nikak ne mogu to implementirat da properly radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103295": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@chuuya#103292 Moraš generirati novu funkciju, kao što i piše u skripti\n\nI onda nju optimiraš, ne izvornu + ograničenja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103298": {
+      "poster": "[deleted]",
+      "content": "@chuuya#103292 https://www.youtube.com/watch?v=ryOSrt7_NEQ&list=PLkvvR-DsEW7FfzzNYbWsG4ydqCFQY-IZB&index=16&ab_channel=DomagojJakobovi%C4%87\n\noko 1:55\n\ndefiniraj ovu U(x) funkciju, g(x) su ti ogranicenja nejednakosti, h(x) su ti ogranicenja jednakosti, ako prilikom racunanja ti neko  ogranicenje nejednakosti g(x) bude <= 0, onda odmah vratis beskonacno, inace samo izracunas ovaj izraz\n\nonda tu novu funkciju U(x) minimiziras hooke jeevesom ili nelder meadom",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103308": {
+      "poster": "glider (toblerone)",
+      "content": "@Murin#102701 gdje ti je bila greska? ja imam isti problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103316": {
+      "poster": "Murin",
+      "content": "@glider#103308 \n\nma napravio sam glupost gdje sam sa hooke jeevsom minimizirao originalnu fju, a ne mjesovito transformiranu",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103326": {
+      "poster": "Ellie",
+      "content": "@Vrba#103288 \n\nMoj savjet ti je da ju rijesis bilo kako, cak i da nema smisla i izbacuje uzasno glupe brojeve, ispricaj se asistentu sto ne radi i probaj objasniti da ti nije bilo skroz jasno kako popraviti gresku. Ako znas teoriju (a imas ju vremena vjerojatno proci do ispitivanja) i objasniti sto bi funkcija trebala raditi, postoje dobre sanse da ce ti samo oduzet 0.5 ili 1 bod jer ti kod ne radi. \n\nBilo kako bilo, puno vise ti se isplati imati buggy rjesenje koje nikako ne radi, nego ostaviti prazno taj dio.\n\np.s. ako slucajno ne znas objasniti teoriju, mozda ti oduzme i vise bodova, ali barem ces proci",
+      "votes": {
+        "upvoters": [
+          "Vrba",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103347": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "ajde još malo manje od 6 sati, work hard\n\n[u međuvremenu, for reference](https://github.com/Yalfoosh/AIPR/blob/main/dz/dz-03/demo/demo-01_hw-03.ipynb)\n\nlaku noć",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "InCogNiTo124",
+          "Vrba",
+          "Zogen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103398": {
+      "poster": "member",
+      "content": "Ako neko bude odgovarao do 10 jel može napisat šta ga je pitalo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103418": {
+      "poster": "moji_prsti_prsti_klize_po_njoj",
+      "content": "Koje bi bile složenosti algoritama gradijenti spust, newton-raps, box, mix?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103443": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@moji_prsti_prsti_klize_po_njoj#103418 to pitanje s labosa ili ti pitas ovako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103444": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@member#103398 mozes napisati sto te pitao?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103454": {
+      "poster": "member",
+      "content": "@Noggenfogger#103444 Zapravo dosta kratko jer mi šteka  internet.\n\nMože li gradijenti spust u jednoj iteraciji pronać minimum ako imamo bilo koju kvadratnu fju u bilo kojoj točki? Za koju može?\n\nMože li Newton-Raphson isto to? Jel ptrebno pronaći optimalan iznos pomaka?\n\nMora li početna točka zadovoljavat sva ograničenja za Box? Šta radim ako ne zadovoljava? Gdje pomičem točku? Zašto se točka refleksije ne postavlja na samu granicu ograničenja?\n\nKod transformacije bez ograničenja zašto želim logatiram? Kako se ponaša što je bliže granici i kako ću onda uopće doć do granice?",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Bananaking",
+          "Broono (Burućuh)",
+          "Ellie",
+          "Emma63194",
+          "Joji",
+          "MsBrightside",
+          "Noggenfogger (dammitimmad)",
+          "ReyKenobi",
+          "Sanjaaa",
+          "Watson (112)",
+          "Yeltneb",
+          "[deleted]",
+          "chuuya (temari)",
+          "cotfuse",
+          "hi_doggy",
+          "in1",
+          "login"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103458": {
+      "poster": "hi_doggy",
+      "content": "@member#103454 bi mogao napisat i koji odgovor?",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103474": {
+      "poster": "moji_prsti_prsti_klize_po_njoj",
+      "content": "@Noggenfogger#103443 pitan onako, razmisljan sto bi asistenti mogli pitat 🤷‍♂️",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Sanjaaa"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103485": {
+      "poster": "login",
+      "content": "Evo ukratko od odgovaranja u 11.\n\nPrvo sam trebao pokrenut gradijent i NR za 1. i 2. zadatak. Pitao je asistent zasto je Newton bolji, to samo velite da koristi drugu derivaciju, tj. da u obzir uzima i zakrivljenost funkcije i da ce pametnije od gradient descent trazit novu tocku. \n\nKoji je minus Newtona? O(n^3) slozenost racunanja inverza matrice, zato postoje kvazi Newton postupci koji to ipak malo zaglade.\n\nUkratko o Boxu, kako funkcionira, nis posebno.\n\nKaj se desi kod Boxa ako pocetna tocka ne zadovoljava ogranicenja? Trazimo novu, novim optimizacijskim postupkom, to je ono s predavanja kad je Marko rijesavao.\n\nZasto koristimo 2n tocaka a ne n + 1 kao kod Simplexa? Da smanjimo vjerojatnost da te tocke postanu kolinearne jer gubimo dimenziju po kojoj optimiramo i sve se svodi na pretrazivanje na pravcu npr. u 2d slucaju. Nazalost cesce je slucaj kod Boxa da se to desi, a sad zasto? Ako nam reflektirana tocka ne zadovoljava eksplicitna ogranicenja, pomicemo ju na blizi rub, ako se to desi za par tocaka, sve ce bit na rubu i prakticki su na pravcu.\n\nZasto je mjesoviti bolji od Boxa? Prvenstveno jer mozemo koristiti bilo koji optimizacijski postupak od prije, Hooke Jevees, simplex, cak i postupke s derivacijama buduci da deriviramo po logaritmu i kvadratu u nadomjesnoj funkciji. \n\nSve u svemu, nis strasno. :)",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Bananaking",
+          "Broono (Burućuh)",
+          "Daorson",
+          "Ellie",
+          "Emma63194",
+          "FICHEKK",
+          "Joji",
+          "MsBrightside",
+          "Njet",
+          "ReyKenobi",
+          "Ruleta",
+          "Sanjaaa",
+          "Vrba",
+          "Yeltneb",
+          "[deleted]",
+          "[deleted]",
+          "[deleted]",
+          "chuuya (temari)",
+          "in1",
+          "joc",
+          "johndoe12 (enaiks)",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103486": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "kako funkcionira gradijentni spust? -gradijent;vektor smjera,pomak po pravcu...\n\nsto je drugacije kod newton-rapsh? -druga derivacija\n\nsto je problem kod newton-rapsh?\n\nu transformaciji sto kaznjava t ? -jednakosti\n\nzasto se koristi kvadriranje? -jer je derivabilno\n\nkod boxa sto ako neka tocka ne zadovoljava ogranicenja; koji uvjet provjeravamo na kraju kada ispitamo sva ogranicenja? -f(xr)>f(xh)\n\nbilo je jos podpitanja vezano za ova, ali ih se ne sjecam xD",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Bananaking",
+          "Broono (Burućuh)",
+          "Daorson",
+          "Ellie",
+          "Emma63194",
+          "FICHEKK",
+          "Joji",
+          "Klokan",
+          "MsBrightside",
+          "ReyKenobi",
+          "Sanjaaa",
+          "Vrba",
+          "Yeltneb",
+          "[deleted]",
+          "[deleted]",
+          "chuuya (temari)",
+          "in1",
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103553": {
+      "poster": "Murin",
+      "content": "@Noggenfogger#103486 \n\nispravak za zadnje pitanje: provjeravamo f(xr)>f(xh2) (druga najgora, znaci ne ona koju cemo maknuti u toj iteraciji)",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Klokan",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Noggenfogger (dammitimmad)"
+        ]
+      }
+    },
+    "103655": {
+      "poster": "neZnamNista",
+      "content": "jedno koje nisam vidio, za koje kvadratne funkcije će gradnijentni spust dati rješenje u prvoj iteraciji, ne sjećam se tocno odgovora ali je glasio da izokonture kvadratne funkcije funkcije moraju biti kružnice jer tada će usmjerenja biti točno prema minimumu, jer je usmjerenje tangenta na kruznicu a okomica na tangentu usmjeri prema središtu tako nesto ugl",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "Klokan",
+          "MsBrightside",
+          "Yeltneb",
+          "[deleted]",
+          "chuuya (temari)",
+          "in1",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103660": {
+      "poster": "member",
+      "content": "@neZnamNista#103655 odgovor je za sve kvadratne fje koje imaju iste koeficijente.. i tad su koncentrične kružnice i sve šta si napisa",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "MsBrightside",
+          "Yeltneb",
+          "in1",
+          "neZnamNista"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103727": {
+      "poster": "[deleted]",
+      "content": "Od novih pitanja pitala me kako se dođe do izraza za delta x kod newton raphsona. Treba opisati ideju da se kreće s aproksimacijom funkcije taylorovim redom, i trazi se minimum takve funkcije. Derivacija se izjednaci su nula i iz tog slijedi da je dx = -f'(x) / f''(x)",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Broono (Burućuh)",
+          "Ellie",
+          "Emma63194",
+          "FICHEKK",
+          "MsBrightside",
+          "Ruleta",
+          "Vrba",
+          "[deleted]",
+          "chuuya (temari)",
+          "in1",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104151": {
+      "poster": "Amon",
+      "content": "Fresh batch of pitanja:\n\nzašto je newtnon jako dobar za kvadratne fje (jer taylorov red koristi kvadratnu fju za aproksimaciju)\n\nkako funkcioniraju newton i gradijentni\n\nšto ako se početna točka kod boxa nađe u nedozvoljenom području (sve ostale radnom točke će isto biti u nedozvoljenom)\n\ngdje je u kodu hooke jeeves za traženje unutarnje točke i koje fje se ubaciju u taj hooke jeeves (implictna ograničenja)\n\nšto se dogodi kod implicitnih, a što kod eksplicitnih ograničenja kod inicijalizacije boxa (kod implicitnih se moramo maknuti prema centroidu, a kod eksplicitnih moramo samo staviti da nam se točke inicijaliziraju u zadanom rasponu)\n\nkakav je odnos linija 2 iteracije gradijenta (okomite su)\n\nzašto deriviramo taylorov red (da nađemo minimum)\n\nkada će gradijent naći u prvoj iteraciji minimum (kad su izokonture kružnice)",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Broono (Burućuh)",
+          "Conrad",
+          "Ellie",
+          "Emma63194",
+          "MsBrightside",
+          "Yeltneb",
+          "[deleted]",
+          "chuuya (temari)",
+          "sara (Gragas)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104233": {
+      "poster": "megi7 (someone7)",
+      "content": "Zasto nije nužno odrediti pomak u Newtonovom postupku?",
+      "votes": {
+        "upvoters": [
+          "TheManFromEarth",
+          "[deleted]",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104267": {
+      "poster": "Emma63194",
+      "content": "Jedino novo pitanje koje mi je došlo jest koliki alfa uzimamo kod Boxa (1.3) i zašto je on veći nego kod simplexa (ako sam dobro shvatila, jer tu nemamo ekspanziju pa kao da pomaknemo malo tu reflektiranu točku prema minimumu).",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "MsBrightside",
+          "[deleted]",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105242": {
+      "poster": "Ellie",
+      "content": "Hej, jel bi mi mogli reci koliko vas na labosima dobijete dosta pitanja koja zahtjeva dobro razumijevanje matematike i pitanja u smislu kako bi se algoritam ponasao na funkciji _____ (ovdje ubacite neku random izmisljenu fju koja nije najjednostavnija za zamisliti)?\n\nVidim pitanja gore koja su pitali drugi asistenti i zanima me jesu li to sva pitanja koja su vas pitali, jer su meni pitanja koja zahtjevaju da si jako brzo zamislim neke izmisljene fje i odredim ponasanja algoritma na njima dosad uglavnom cinila 50-70% pitanja. Odnosno pitanja poput ovih cine vrlo mali udio ispitivanja. \n\nGotovo da nema pitanja kao sto su \"objasni mi kako funkcionira Boxov algoritam\" ili \"sto su nedostatci newton-rapshonova postupka\" ili \"zasto je newton bolji od gradijentnog\". Sto su pitanja kakva bih ocekivala.\n\nVidim da i tu ima \"matematickih\" pitanja kao sto je  \"zašto deriviramo taylorov red (da nađemo minimum)\" ili \"zašto je newtnon jako dobar za kvadratne fje (jer taylorov red koristi kvadratnu fju za aproksimaciju)\" i to mi je ok. Takva pitanja ocekujem.\n\nVise mi je problem sto mi je nekad barem iscrtavao te random fje pa gledajuci njih mogu donositi neke zakljucke, ali kako idemo dalje s labosima vise ih ne iscrtava, vec odmah ocekuje odgovor. I takva pitanja su mu najbitnija.\n\nKako su mi matematike uvijek bile dosta teske na faksu (uglavnom zato jer mi fali jako puno podloge iz srednje) premda sam puno ucila matematiku da bih nadoknadila to i uspjela sam ih skoro sve proci kontinuirano, i dalje ih nemam u malom prstu.\n\nVise me zanima jel vi imate slicna iskustva na labosima i problem je sto se ja lose pripremam za ove labose ili bi znati odgovoriti na pitanja koje su drugi kolege naveli gore bilo sasvim dovoljno za ostale asistente?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105245": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @Ellie#105242 Vise me zanima jel vi imate slicna iskustva na labosima i problem je sto se ja lose pripremam za ove labose ili bi znati odgovoriti na pitanja koje su drugi kolege naveli gore bilo sasvim dovoljno za ostale asistente?\n\nMeni su takva pitanja najdraža, s obzirom na to da mi je relativno lagano zamisliti funkciju koju sam prije vidio ili njoj sličnu. A na predmetu se uglavnom rade paraboloidi. Možda da preporučiš ispitivaču da odete na aws whiteboard pa da si nacrtate? Ili da imaš papir uz sebe?",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105250": {
+      "poster": "Ellie",
+      "content": "@micho#105245 Da, onda se vjerojatno ne pripremam dobro za ovo i mislim da je dobra ideja da si za iduci put u wolfram alphi iscrtam sto vise toga unaprijed i bolje se pripremim za takva pitanja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105255": {
+      "poster": "Amon",
+      "content": "@Ellie#105242 Honestly, dosta pitanja se ponavlja kod svih asistenata, tak da ak imaš recimo u čet ili pet termin onda vjerujem da ćeš dosta bolje proći, a ak si među prvima onda moraš dobro razmisliti što bi te mogli pitati i što se tu događa\n\nPS nezz kako je tebi, ali mene je sva 3 labosa ispitivala ista asistentica i nezz možda je to i do osobe koja te ispituje pa ak dobiješ stalno istu osobu koja inzistira na takvim zadacima onda jednostavno imaš peh, ja osobno nisam imao doživljaj da jako vole matematičke stvari ispitivati (barem ne u zadnja 2 labosa)",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105261": {
+      "poster": "Ellie",
+      "content": "@Amon#105255 Da, hvala ti na odgovoru, upravo ovaj dio me zanimao, jer mi se cinilo da asistentica ne inzistira na takvim pitanjima. I da, s obzirom na moje snalazenje u matematici to zaista je peh, ali, mislim da nemamo opciju promjene asistenta i da imamo uvijek istog, jer sam i ja sva tri puta imala istog, tako da izgleda da cu morati skuziti kako se bolje pripremiti za ova iduca dva labosa.",
+      "votes": {
+        "upvoters": [
+          "Amon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105285": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Ellie#105250 Ne ne ne, nemoj me krivo shvatiti, to što je meni lagano ne znači da bi trebalo i tebi biti. Samo kažem da je meni npr. lagano zamisliti si to jer često tako razmišljam, tj. da onda takva pitanja nisu usmjerena protiv studenata jer ima ljudi kojima je to lagano.\n\nInače i meni je bilo teško s tim konturama na 1. upisu, ali fora je u tome što sam u protekloj godini toliko lupao po aktivacijskim funkcijama i proučavao raznoraznu literaturu o analizi funkcija da sam dobio dobar osjećaj za to. I to zapravo tebi vjerojatno fali, taj osjećaj. Normalno da ni ja, ni Jakobović, nit taj asistent vidimo projekcije funkcija samo tako",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105486": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Ellie#105242 Ja nisam dobio do sad niti jedno takvo pitanje, uglavnom su to bila pitanja za osnovno poznavanje gradiva. \n\nIzgleda da jednostavno nisi imala sreće kod biranja asistenta koji će te ispitivati. Nadam se da ti barem nisu puno bodovi skidali zbog takvih pitanja?",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105505": {
+      "poster": "Ellie",
+      "content": "@PrisonMike#105486 nisu, uvijek dobijem dobre bodove",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,531 @@
+{
+  "title": "[TEHUMR] Gradivo",
+  "creator": "zeroth",
+  "slug": "tehumr-gradivo",
+  "tags": [
+    "FER",
+    "Tehnologije umrežavanja"
+  ],
+  "posts": {
+    "253670": {
+      "poster": "zeroth",
+      "content": "Razumije li netko kako funkcioniraju različita područja za OSPF, odnosno stub, totally stub, nssa i totally nssa. Što koji ruter iz pojedinog područja vidi. \n\n![](assets/2021-11-13/00020.png)\n\nRecimo da je Area 2 ono koje promatramo. Što vidi ruter 8 u svakom od tih slučajeva?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253898": {
+      "poster": "ArthasMenethil",
+      "content": "Stub - vidi sve 10ke, 20ke i 30ke\n\nTotally stub - vidi samo 30ke\n\nNssa - vidi sve 10ke, 20ke, 30ke i 40ku\n\nTotally nssa - vidi samo 30ke i 40ku\n\nUkratko:\n\nStub vidi sve routere iz svih ostalih područja osim onih vanjskih koji koriste drugi protokol;\n\nTotally stub vidi samo routere u svom području i nevidi vanjske;\n\nNssa vidi sve routere iz svih ostalih područja uključujući vanjske koji su direktno spojeni na njegovo područje;\n\nTotally nssa vidi samo routere koji su u njegovom području i vanjske koji su direktno spojeni na njegovo područje;",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro",
+          "Kuhar",
+          "branimir1999",
+          "verratti (Rom Jova (Željezo/bakar))",
+          "zeroth"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253900": {
+      "poster": "ArthasMenethil",
+      "content": "Btw jel ima neka skripta iz ovoga da je na hrvatskom?",
+      "votes": {
+        "upvoters": [
+          "branimir1999"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253913": {
+      "poster": "zeroth",
+      "content": "Kolegica i ja smo napravili skripticu za cijelo gradivo.\n\nhttps://docs.google.com/document/d/1_fj1yTujWNPgj9afPZF681gr6Qe3NCS4Y4V7MC8Fc3M/edit\n\nOdgovor @\"ArthasMenethil\"#p253898 nije unutra ali to se može vidjeti tu. Ako nešto fali ili nije kako treba napisano recite ili u inbox ili ovdje.",
+      "votes": {
+        "upvoters": [
+          "Andy",
+          "Apex",
+          "Bobinator",
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254381": {
+      "poster": "Reznox",
+      "content": "Moze li mi netko pojasniti zasto tu subnet mask nije 255.255.248.0 nego 255.255.240.0.\n\nUvijek mi ispadne krivo kad je broj subneta jednak 2^n ili 2^(n-1) jer sam pretpostavljao da kad izracunavamo da stavimo +2 zbog broadcast i 0. adrese.\n\n Npr u ovom slucaju sam pretpostavio da se gleda 15+2=17 subneta\n\n![](assets/2021-11-15/00027.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254402": {
+      "poster": "Diego",
+      "content": "@\"Reznox\"#p254381 jer te nije pitao da napravis podmrezu u kojoj moze biti 15 hostova nego ti je rekao da od mreze 184.184.0.0/24 napravis 15 podmreza",
+      "votes": {
+        "upvoters": [
+          "Reznox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254470": {
+      "poster": "Reznox",
+      "content": "@\"Diego\"#p254402 Yeah brain fart",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270811": {
+      "poster": "verratti (Rom Jova (Željezo/bakar))",
+      "content": "Ima netko ideju kako ovo spremiti za zavrsni? za meduispit je ilic napisao sve na ploci i to je bilo ok al ovo sad....",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro",
+          "Grdobina2000 (Grdobina)",
+          "jlo",
+          "zeroth"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271959": {
+      "poster": "Keeko",
+      "content": "@\"veratti\"#p270811 Triba bi neko prevesti sve prezentacije i napraviti neku skripticu.\n\nPo mogućnosti profesori XDDD",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro",
+          "DukeFiction",
+          "Grdobina2000 (Grdobina)",
+          "Upforpslone",
+          "verratti (Rom Jova (Željezo/bakar))",
+          "vidraKida (Ζ ε ύ ς)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Grdobina2000 (Grdobina)",
+          "jlo",
+          "zeroth"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273637": {
+      "poster": "Reznox",
+      "content": "Strategija ako tek sad krecemo? 😢",
+      "votes": {
+        "upvoters": [
+          "jlo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273645": {
+      "poster": "zeroth",
+      "content": "Pitanja koja sam izvukao iz prve dvije ppt.\n\nKoje su vrste topologija kod fieldbus sustava, skiciraj, objasni prednosti ili mane(idk nije uvijek oboje napisano)?\n\nKoju vrstu MAC protokola koristi fieldbus i koji su oblici implementacije te objasni svaki oblik ukratko?\n\nKoje vrste čvorova postoje kod bežićnih senzorskih mreža?\n\nObjasnite neke probleme kod korištenja bežičnih senzorskih mreža i kako se rješavaju.\n\nNapišite izraz za energiju koju koristi transmiter prilikom slanja podataka i receiver prilikom primitka podataka.\n\nObjasnite što multi-hopping, zašto se koristi i zašto je bolji od alternative.\n\nKoji su problemi kod korištenja MAC protokola kod WSN-a?\n\nNavedite prednosti i mane korištenja schedule-based i contention-based MAC protokola kod WSNa.\n\nObjasnite probleme korištenja CSMA.\n\nNavedite opcije routanja kod bežične senzorske mreže. (Alternativno, nađi put prema nekoj od tih metoda).\n\nŠto je to lokalizacija, koje su dvije osnovne vrste i koji zu izazovi kod implementacije lokalizacije?\n\nNavedite i objasnite različite metode za lokalizaciju čvorova (alternativno, riješi zadatak).\n\nKoja su dva osnovna tipa sinkronizacije čvorova?\n\nŠto sve uzrokuje kašnjenje između dva čvora?\n\nNavedite tri metode sinkronizacije i ukratko ih objasnite.\n\nAko imate još stvari koje mislite da su bitne pišite. Sada krećem na treću.",
+      "votes": {
+        "upvoters": [
+          "Bobinator",
+          "Daho_Cro",
+          "Drmolirius",
+          "DukeFiction",
+          "Kuhar",
+          "Reznox",
+          "Skiv",
+          "Upforpslone",
+          "jlo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273657": {
+      "poster": "zeroth",
+      "content": "Binary tree walking, da li kreće od least significant bit ili most significant bit. odnosno je li prvo dijeljenje s lijeve strane IDa ili s desne? (Početak na slajdu 29, treća bilasova ppt)",
+      "votes": {
+        "upvoters": [
+          "Bobinator",
+          "Daho_Cro",
+          "DukeFiction",
+          "Skiv"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273659": {
+      "poster": "zeroth",
+      "content": "Treća ppt.\n\nNavedite neke tehnologije za automatsku identifikaciju.\n\nSkicirajte shemu za inductive coupling i radiative coupling. Sa čime su proporcionalni gubici u oba slučaja?\n\nŠto je EPC (Electronic Product Code)?\n\nObjasnite vrste kolizija kod identifikacijskih tehnologija.\n\nŠto je tag starvation?\n\nObjasni protokole bazirane na stablu. Koje su njihove prednosti i nedostaci?\n\nZadatak za binary tree walking.\n\nObjasnite ALOHA based protokole i kako rješavaju problem kolizija. Koje su prednosti i nedostatci takvih protokola?",
+      "votes": {
+        "upvoters": [
+          "Bobinator",
+          "DukeFiction",
+          "Kuhar",
+          "Reznox",
+          "Skiv",
+          "Upforpslone",
+          "jlo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273697": {
+      "poster": "zeroth",
+      "content": "https://docs.google.com/document/d/137WTHZQ0qeJJX6hyxlfQuhbbAO8hlLIjXCqUdKA1QJ0/edit\n\nMalo ljepše, dodana četvrta ppt, sutra ću dovršiti do kraja. Ako želite dodati neko pitanje napravite to. Ako želite pisati odgovore, slobodno, ja ih neću tako brzo napisati pa ih zato ne pišem.",
+      "votes": {
+        "upvoters": [
+          "Bobinator",
+          "Drmolirius",
+          "DukeFiction",
+          "Skiv",
+          "jlo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273761": {
+      "poster": "Reznox",
+      "content": "@\"zeroth\"#p273657 Ako sam dobro shvatia ide uvijek sa lijeva na desno. Bar mi tako ima smisla po postupku kako oni rade",
+      "votes": {
+        "upvoters": [
+          "Bobinator",
+          "DukeFiction",
+          "zeroth"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273762": {
+      "poster": "DukeFiction",
+      "content": "@\"Reznox\"#p273637 Ne znam kako ostali kolege, ali ja samo prolazim kroz prezentacije i nadam se najboljem. U Bilasovom dijelu postoje one tri formule za određivanje udaljenosti odnosno sinkronizacijske tehnike, u Petrovićevom postoji par primjera i ovo s labosa. Mislim da je najbitnije savladati bežične senzorske mreže i CAN, ali, realno, dojma smo da će ovaj ispit biti jedna nepredvidiva avantura. Dva i pol sata samo za teoriju je previše (osim ako pitanja nisu esejistička), a nemam viziju koje bi zadatke mogli staviti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273857": {
+      "poster": "Reznox",
+      "content": "Oke out of context al el itko ovo primjetia\n\n![](assets/2022-01-26/00023.png)\n\n![](assets/2022-01-26/00024.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Upforpslone"
+        ],
+        "tuga": []
+      }
+    },
+    "273860": {
+      "poster": "zeroth",
+      "content": "@\"Reznox\"#p273857 hahahha ma to je dio od \"lorem ispum\". Jako puno prezentacija to ima iz nekog razloga.",
+      "votes": {
+        "upvoters": [
+          "Reznox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Reznox"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273861": {
+      "poster": "Reznox",
+      "content": "@\"zeroth\"#p273860 Dobra slucajnost hahahhha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "zeroth"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273868": {
+      "poster": "Reznox",
+      "content": "Zna netko mozda zasto pri racunanju energije receivera u formuli pise E(R] na kraju, shvacam da je E energija dekodiranja n bitova al sto oznacava ovaj R?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273870": {
+      "poster": "zeroth",
+      "content": "@\"Reznox\"#p273868 Energija dekodiranja u ovisnosti o brzini dolaska bitova. U smislu više je energije potrebno ako brzo dolaze bitovi nego ako sporo dolaze, tako bih bar pretpostavio.",
+      "votes": {
+        "upvoters": [
+          "Reznox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273872": {
+      "poster": "Reznox",
+      "content": "@\"zeroth\"#p273870  Aha toe znaci samo zapis takav, ima smisla, samo cudno je jer nisu zapisali ostale vrijednosti kao ovisnosti o nekim varijablama. tenks",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273887": {
+      "poster": "Reznox",
+      "content": "Hvala @\"zeroth\"#48 na pitanjima, fora nacin za vjezbat za ispit rjesavajuci pitanja, ali mislim da san izgoria sad",
+      "votes": {
+        "upvoters": [
+          "zeroth"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "zeroth"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273891": {
+      "poster": "zeroth",
+      "content": "@\"Reznox\"#p273887 Drago mi je da su ih ljudi išli odgovarati, ja sam na neka odgovorio isto. Nadam se da će bar nešto biti u ispitu, da nisam skroz fulao 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "jlo"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273910": {
+      "poster": "Keeko",
+      "content": "Što je to u Ilićevim predmetima, da me vuče na alkoholizam ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Bobinator",
+          "Daho_Cro",
+          "Grdobina2000 (Grdobina)",
+          "Kuhar",
+          "Reznox",
+          "jlo"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273942": {
+      "poster": "Reznox",
+      "content": "Eo formule od mene\n\n![](assets/2022-01-26/00033.jpg)",
+      "votes": {
+        "upvoters": [
+          "Kuhar",
+          "jlo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273949": {
+      "poster": "Reznox",
+      "content": "@\"zeroth\"#p273891 Da same, prvu, drugu i sestu sam koliko san zna",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274006": {
+      "poster": "zeroth",
+      "content": "Napisao sam objašnjenje za primjer iz labosa u skriptu",
+      "votes": {
+        "upvoters": [
+          "Bobinator",
+          "Daho_Cro",
+          "Reznox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274019": {
+      "poster": "Daho_Cro",
+      "content": "U čemu je razlika za 0+? Te što bi morali napraviti u primjeru kojeg si objasnio da je prvi bit 1?\n\n@\"zeroth\"#p274006",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274022": {
+      "poster": "Kuhar",
+      "content": "@\"zeroth\"#p274006 kolega je jedan spomenuo da mu je asistent rekao da zadnjeg labosa nece bit u ispitu, za ostale ne znam...",
+      "votes": {
+        "upvoters": [
+          "Reznox",
+          "bodNaUvidima",
+          "zeroth"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274029": {
+      "poster": "zeroth",
+      "content": "@\"Daho_Cro\"#p274019 0+ samo znači da je broj uvijek pozitivan. da je prvi bit 1 treba napraviti dvojni komplement, znači prvo sve jedinice pretvoriti u nule i onda dodat 1 i to je zadani broj samo dodaš minus ispred jer treba biti negativan",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "274102": {
+      "poster": "Keeko",
+      "content": "aaaDa ... Ima li netko da je prepisao pitanja koja su bila na međuispitima da se mogu polako pripremati za rok ? 😄",
+      "votes": {
+        "upvoters": [
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

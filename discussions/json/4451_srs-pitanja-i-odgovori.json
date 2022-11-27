@@ -1,0 +1,100 @@
+{
+  "title": "[SRS] Pitanja i odgovori",
+  "creator": "bodNaUvidima",
+  "slug": "srs-pitanja-i-odgovori",
+  "tags": [
+    "FER",
+    "Sigurnost računalnih sustava"
+  ],
+  "posts": {
+    "205921": {
+      "poster": "bodNaUvidima",
+      "content": "![](assets/2021-06-12/00024.png)\n\nMrežna sigurnost-drugi dio prezentacija, ne bi li prijenosni način trebao autentificirati samo payload, a ne i IP header? Također ako je slajd ispravan zna li netko koja je onda razlika u ova dva načina?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205933": {
+      "poster": "Artemis",
+      "content": "@bodNaUvidima#205921 \n\nKoliko sam ja shvatila u tunelirajućem načinu rada se dodaje novi IP datagram i AH štiti cijeli izvorni datagram (IP + Payload). Što se tiče prvog dijela pitanja za to nisam sigurna.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "205965": {
+      "poster": "viliml",
+      "content": "@bodNaUvidima#205921 Uvijek postoji google za drugo mišljenje.\n\n![](assets/2021-06-12/00027.svg)",
+      "votes": {
+        "upvoters": [
+          "bodNaUvidima"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206712": {
+      "poster": "Artemis",
+      "content": "Može netko podijeliti resurse pomoću kojih je najbolje shvatio iptables naredbe?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Lyras",
+          "Sulejman"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "206853": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Artemis#206712\n\n90% je bio _trial and error_ za 4. labos. Dosta toga sam zaključio iz postojećih pravila u _FW.sh_ i _FW_int.sh_ tamo.\n\nhttps://www.howtogeek.com/177621/the-beginners-guide-to-iptables-the-linux-firewall/\n\nKad je zapelo, Google, pa na Stack Exchange:\n\nhttps://serverfault.com/questions/429400/iptables-rule-to-allow-all-outbound-locally-originating-traffic\n\nhttps://serverfault.com/questions/371316/iptables-difference-between-new-established-and-related-packets\n\nitd...\n\nOvo predlagati mi se čini malo glupo, kao da ti govorim _RTFM_, ali kad mi neke stvari nisu bile jasne sam tražio u [man pageu](https://linux.die.net/man/8/iptables) i našao.",
+      "votes": {
+        "upvoters": [
+          "Artemis",
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "207357": {
+      "poster": "Gocc (***)",
+      "content": "Je li dozvoljen pristup s firewalla na mail.google.com korištenjem protokola http kroz SSL/TLS?\n\n![](assets/2021-06-15/00014.png)\n\na gdje je tu mail.google.com...\n\njoš se spominje i adresa 200.18.56.28. jesu oni to krivu sliku stavili?",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

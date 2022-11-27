@@ -1,0 +1,198 @@
+{
+  "title": "[DUBUCE] 1. laboratorijska vježba - 2019/2020",
+  "creator": "disho",
+  "slug": "dubuce-1-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Duboko učenje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "2486": {
+      "poster": "disho",
+      "content": "Evo da se nađe i ovaj thread.\n\nJa sam jučer krenuo rješavat i nisam još ni linije koda napisao hahah. Pa ako netko ima nekih savijeta, slobodno ih ovdje podijelite.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2510": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@disho#2486 Počni što ranije, labos nije trivijalan kao npr. strojno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2560": {
+      "poster": "[deleted]",
+      "content": "@disho  Zanemari \"2. Višeslojna klasifikacija u Pythonu\" , za 20% bodova ima dosta posla (prvo treba skužit sve te izvode za gradijente ... ) . Kreni s \"3. Linearna regresija u PyTorchu\" i riješi sve, pa se onda vrati na \"2. Višeslojna klasifikacija u Pythonu\". Obavezno prije nego li kreneš s \"2. Višeslojna klasifikacija u Pythonu\" pogledaj u nultoj vježbi računanje gradijenata za binarnu i višeklasnu logističku regresiju.\n\nKoristi PyTorch, zaboravi na TensorFlow.",
+      "votes": {
+        "upvoters": [
+          "disho"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2561": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@tolecnal#2560 Znam ja to sve, imao sam NENR prošli semestar pa sam implementirao većinu Kerasa (za 5. DZ), a PyTorch koristim samo da ga naučim (iako ne vjerujem da će me udaljiti od Kerasa jer je još uvijek izuzev brzine sranje što se tiče high level stvari).\n\nSamo kažem, nije kao da praktički možeš prepisati labos kao strojno npr. jer će biti prilično očito, rješenja ima puno, previše, a i bilo bi bolje da ovdje ipak mućnemo svojom glavom, nije braindead štreberaj.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2562": {
+      "poster": "[deleted]",
+      "content": "@micho#2561 Sry, krivu osobu sam označio. Popravljeno.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3071": {
+      "poster": "Jimothy",
+      "content": "U 3. zadatku, linearna regresija, može netko pojasniti detaljnije ovaj podzadatak: _Modificirajte program na način da se pravac može provući kroz proizvoljan broj točaka. Pripazite da iznosi gradijenata budu neovisni o broju podataka._",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3074": {
+      "poster": "[deleted]",
+      "content": "@Jimothy#3071 Ja sam napravio isto onako kako smo radili na strojnom. Definirao linearnu funkciju te izlazu dodao N(0, 1). Drugim riječima, generirao sam skup podataka od N parova (x, y).\n\nOvo za gradijente, podijeliš ukupan loss s veličinom batcha.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4228": {
+      "poster": "disho",
+      "content": "Kakve rezultate dobivate na datasetu MINST?\n\nMoji loši rezultati:\n\nmodel [784, 10], niter=3000, delta=0.5 -> loss=0.126, točnost na train skupu 92% (traniranje 1min)\n\nmodel [784, 100, 10] niter=10000, delta=4e-4 -> loss=0.69, točnost na train setu 60-ak% (treniranje 10min)\n\nZa dublje modele ne mogu uopće dobiti konvergenciju. Za bilo koju veličinu koraka spusta loss ostaje fiksiran kakav je bio i u nultoj iteraciji. Sve sam trenirao na grafičkoj, jer na procesoru predugo traje i za model bez skrivenog sloja.",
+      "votes": {
+        "upvoters": [
+          "Jimothy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4274": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@disho#4228 Za duboke modele je bitno\n\n- više trenirati\n- koristiti adekvatne aktivacije (ReLU ili varijante u međuslojevima, ne miješati sa sigmoidom, softmax na kraju)\n- koristiti moment (najbolje bi bilo koristiti Adam prvih recimo [imath] 1000 [/imath] iteracija, onda prebaciti na SGD s momentom)\n- koristiti decay (stopa učenja bi se trebala smanjivati kroz epohe)\n- koristiti L2 regularizaciju (ili dropout, ali to nije u vježbi)\n\nUkratko što ovo radi jest:\n- daješ više vremena većem broju parametara da konvergiraju\n- smanjuješ utjecaj vanishing gradients problema, nekorištenjem sigmoide eliminiraš pojavljivanje exploding gradientsa\n- momentom se olakšava put kroz komplicirane plohe gubitka, kao neka regularizacija, Adam ima najveći utjecaj na početku treninga, tj. dobar je za pronalaženje šireg područja minimuma, kasnije je njegov utjecaj gotovo nikakav\n- stopa učenja se kroz trening mora smanjivati iz nekoliko razloga, najbitniji je da možeš finije doći u minimum\n- sprječavaš prenaučenost mreže\n\nAko je moguće, bilo bi dobro koristiti i batch normalization u skrivenim slojevima, iako je to bonus zadatak, ali torch ionako ima batch normalization ugrađen. To bi trebalo ubrzati trening za duboke modele.\n\nInače za MNIST se ne mogu očekivati dobri rezultati jer MNIST zadatak nije primjeren za Dense slojeve, već se on riješava konvolucijama :)\n\nS obzirom na tvoje postavke za prvu mrežu, ja bih rekao da ti za drugu treba bar [imath] 30000 [/imath] iteracija, veći learning rate na početku (tipa [imath] 10^{-4} [/imath] za Adam, [imath] 10^{-3} [/imath] za SGD), L2 lambda od tipa [imath] 10^{-4} [/imath], a ostalo vidi sam. Isto tako, moglo bi ti pomoći kad bi skriveni sloj imao broj neurona koji je višekratnik broja [imath] 784 [/imath] (npr. [imath] 98 [/imath]), međutim obično ne radiš takve ogromne kompresije neurona ([imath] 8 [/imath] puta), već tipa pola (znači skriveni sloj bi u tom slučaju imao [imath] 392 [/imath] neurona).\n\nU prvom slučaju ti praktički kompresiraš ulazne značajke u neku značajku [imath] 8 [/imath] puta manjih dimenzija od ulazne u jednom koraku. S takvim postupcima jako lako dođe do uništavanja informacije, treba to raditi sporije. U praksi se smanjuje dimenzionalnost podataka [imath] 2 [/imath] puta, dakle da dođeš do skrivenog sloja od [imath] 98 [/imath] imao bi konfiguraciju neurona `[784, 392, 196, 98, 10]`.",
+      "votes": {
+        "upvoters": [
+          "disho"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4500": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Izgleda da jako pomaže ako se težine inicijaliziraju glorot inicijalizacijom, na sljedeći način:\n\n```python\n_weights_list.append(nn.Parameter(nn.init.xavier_normal_(weights_prototype), requires_grad=True))\n```\n\ngdje je weights_prototype tenzor koji ima shape koji odgovara nekoj matrici. Glorot inicijalizacija se radi samo na težinama, ne i na pomacima (biases).\n\nUz learning rate 1:\n\n![](assets/2020-03-29/00016.png)\n\nTreba napomenuti da koristim i scheduler:\n\n```python\n_sgd = torch.optim.SGD(params=_model.parameters(), lr=learning_rate)\n_scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(_sgd,\n                                                                factor=0.2,\n                                                                patience=20,\n                                                                cooldown=20,\n                                                                min_lr=1e-5,\n                                                                threshold=1e-4,\n                                                                verbose=True)\n```\n\nali mi specifično za `[784, 100, 10]` nikad ne djeluje (tek za ove nakon).\n\nTakođer dobro djeluje i CyclicLR (uz learning rate od [imath] \\left[ 10^{-5}, 1 \\right] [/imath] i 5 perioda kroz učenje (`step_size_up=int(n_epochs/10)`).\n\n![](assets/2020-03-29/00017.png)\n\nmeđutim, ovdje na 3000 epoha za `[784, 100, 10]` se mreža krene prenaučavati oko 2000. epohe, i postoji veliki rizik da mreža zapne u ravnici (gradijent 0).",
+      "votes": {
+        "upvoters": [
+          "disho"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5308": {
+      "poster": "NekocBraca",
+      "content": "Maknuli su sada iz kalendara laboratorijske vjezbe. Jel ima netko mozda zapisano u kojim su tocno tjednima trebali biti labosi? Znam da je 2. trebalo biti u tjednu 13.4.-19.4.\n\nZa 3. i 4. pise u uvodnoj prezentaciji da su pocetkom, odnosno sredinom lipnja, ali nisam siguran na koje se to tocno tjedne odnosilo.\n\nPretpostavljam da ako se izbace MI da ce se sve samo shiftati za 2 tjedna.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5387": {
+      "poster": "rija",
+      "content": "@NekocBraca#5308 Pošto nema odgovora, a koliko vidim 2. labos se preklapa, možda ti pomogne: \n\nProšle godine sam imao termine: 29.03., 16.04.,  31.05., 12.06.",
+      "votes": {
+        "upvoters": [
+          "NekocBraca",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5408": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Što se tiče toga, imam neka pitanja za Šegvića u vezi labosa koja ću mu danas poslati pa ću ga usput i to pitati\n\nEDIT: Dojavit će promjene u rasporedu",
+      "votes": {
+        "upvoters": [
+          "NekocBraca"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,704 @@
+{
+  "title": "[RGKIK] 1. laboratorijska vježba - 2020/2021",
+  "creator": "vykar (mango)",
+  "slug": "rgkik-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Raspodijeljene glavne knjige i kriptovalute",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "84153": {
+      "poster": "vykar (mango)",
+      "content": "Jel tko uspio u datotekama `password.spvchain` i `password.wallet` pronaći informacije o novčaniku? Izgleda da ni forma na linku u uputama još nije dostupna, jel im tko javio da to ne radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84176": {
+      "poster": "Ma97",
+      "content": "Kada pokrenes \"printAddress\" dobijes adresu novcanika i onda se sa time prijavljujes na https://bujica.zemris.fer.hr/faucet  (koji ocito sada ne radi, jucer je)",
+      "votes": {
+        "upvoters": [
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84686": {
+      "poster": "Toma (Tamel)",
+      "content": "Jel jos nekome faila printAddress? Izgenerirao mi je adresu novcanika, ali padne mi na walletKit.close",
+      "votes": {
+        "upvoters": [
+          "dozo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84727": {
+      "poster": "vykar (mango)",
+      "content": "Zna tko kako u Javi debuggirati stack? Možemo li ispisati stanje na stacku po koracima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84972": {
+      "poster": "Toma (Tamel)",
+      "content": "@Toma#84686 Verzija jave treba bit 1.8...",
+      "votes": {
+        "upvoters": [
+          "Satanael",
+          "setuid0"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85089": {
+      "poster": "france_is_bacon",
+      "content": "Gdje su pohranjeni CA i CB?\n\nNisam nigdje implementirao tu provjeru eksplicitno a svih 12 testova mi prolaze",
+      "votes": {
+        "upvoters": [
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85176": {
+      "poster": "jitser",
+      "content": "@france_is_bacon#85089 to i mene zanima. pada mi na pamet da možda trebamo izračunati Ca i Cb iz Ra i Rb kojeg dobijemo iz Unlocking skripte, i onda još jednom izračunati Ca i Cb ali iz podataka iz varijable bobNonce i aliceNonce i provjeriti jednakost, ali mi nema baš previše smisla.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85357": {
+      "poster": "Miki",
+      "content": "Za 2. zadatak trebamo li imati hardkodirane x i y koji su rjesenja sustava ovisnog o nasem JMBAG-u u unlocking skriptu ili?",
+      "votes": {
+        "upvoters": [
+          "obrascic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85487": {
+      "poster": "vykar (mango)",
+      "content": "@Miki#85357 Da. Ima li tko neki hint za 3.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85575": {
+      "poster": "france_is_bacon",
+      "content": "@Miki#85357 da, izracunas si to negdje na papiru i stavis kao atribut klase\n\n@vykar#85487 jako ti je koristan OP_SIZE da dobijes velicine ovih randomly generiranih bajtova na vrhu stacka\n\nI u zadatku je hardkodirano tko ima koju ulogu (mislim da je alice uvijek even, a bob uvijek odd ili obrnuto)",
+      "votes": {
+        "upvoters": [
+          "Miki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85969": {
+      "poster": "bebich",
+      "content": "u 3. zadatku, jel mi moramo kod stvaranja locking scripte zapravo izracunati C-ove iz noncea kojeg imamo u objektu i onda opet izracunati C-ove od nonceova iz unlocking scripte i usprediti ih s ovim prvim C-ovima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86472": {
+      "poster": "vykar (mango)",
+      "content": "@bebich#85969 Tako je. \n\n@jitser#85176 Ima smisla! U trenutku kad je generirana locking skripta znamo nonceove i možemo izračunati Ca i Cb i pohraniti ih u locking skriptu. Hashevi su javni i nema problema pohranjivati ih u locking skriptu jer se iz njih ne mogu isčitati potezi Boba i Alice. U sljedećoj transakciji pobjednik će u unlocking skripti predati svoj potpis transakcije i nonceove, a locking skripta će provjeriti odgovara li njihov public commitment onome što je predano u unlocking skripti. \n\nAko ne radimo provjeru pod 1. točkom bilo tko bi mogao preuzeti nagradu, dovoljno je da preda poteze (nonceove) koji su u njegovom interesu.\n\n@france_is_bacon eto odgovora koji smo tražili :)",
+      "votes": {
+        "upvoters": [
+          "ALovelace",
+          "france_is_bacon",
+          "jitser",
+          "prodanacro (oat)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87030": {
+      "poster": "Toma (Tamel)",
+      "content": "Kako bismo mi trebali dobiti Na i Nb iz Ra i Rb u 3. zadatku? I nije mi bas jasno cemu sluzi ova metoda of?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87277": {
+      "poster": "petar19",
+      "content": "@Toma#87030 Na/Nb možeš iz veličine Ra/Rb koristeći OP_SIZE (iako bitno je samo gledati da li su veličine Ra i Rb jednake/različite da saznaš tko je pobjednik).\n\nOf je kao neki pomoćni konstruktor koliko ja shvaćam.",
+      "votes": {
+        "upvoters": [
+          "Toma (Tamel)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87358": {
+      "poster": "InCogNiTo124",
+      "content": "@Toma#87030 of ne koristis ti, vec se oni koriste u testovima",
+      "votes": {
+        "upvoters": [
+          "Toma (Tamel)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87388": {
+      "poster": "biserka",
+      "content": "Jel se u locking skripti nonce stavlja direktno na stog ili ga prije moramo hashirat sa hash160?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87391": {
+      "poster": "Marquisio",
+      "content": "kako dobiti hash160 iz ovih noncea u objektu ?",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "biserka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87392": {
+      "poster": "biserka",
+      "content": "@Marquisio#87391 i mene zanima",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87395": {
+      "poster": "glava222",
+      "content": "jel nama dosta da se zadatak računa kao ispravan da prođe test?",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87418": {
+      "poster": "InCogNiTo124",
+      "content": "@glava222#87395 ja mislim da da, sumnjam da im se da gledat i implementaciju pa da pozovu nekog na razgovor ako implementacija ne valja ali testovi prolaze. Premalo ih je za to.\n\n@vykar#86472 super je da ste skuzili, ali moze li molim vas zdravoseljacko pojasnjenje sta treba radit u trecem zadatku haha\n\nE i btw, ako se poigrate sa `pom.xml` i verzijama libova, mozete dobit novu inacicu `ScriptBuilder` klase koja prvi zadatak rijesi u jednoj jedinoj liniji, pa ako vam se da igrat ko i meni...",
+      "votes": {
+        "upvoters": [
+          "Satanael"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87434": {
+      "poster": "Erinon",
+      "content": "Ne razumijem, u 3. zadatku kod provjeravanja Ca i Cb, zašto ne bismo samo usporedili Nonce-ve, ako su oni isti, i hash će im biti isti? Nije mi jasno gdje bi se u teoriji trebao koristiti taj C. Iz toga što su Nonce-vi javni, vidi se točno tko je izabrao koji broj, ovisno o njihovoj veličini? Tu bi po meni mogao dobro doći C, jer kad se napravi hash Nonce-a, ne vidi se više veličina.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87524": {
+      "poster": "vykar (mango)",
+      "content": "@biserka#87388 Treba prvo hashirat, želiš usporediti hasheve, a ne izravno nonceove. Nonceova ne smije biti u locking skripti jer je ona javna i protivnik bi znao koji smo potez odabrali.\n\n@Marquisio#87391 Utils.sha256hash160(<nonce>)\n\n@glava222#87395 Ne, može ti test proći ali locking skripta ne mora raditi kako je opisano u labosu. Npr. ako ne radiš provjeru odgovaraju li C(Ra) i C(Rb) redom Ca i Cb, nagradu će moći preuzeti bilo koji igrač, dovoljno je da preda Ra i Rb kombinaciju u kojoj on/ona pobjeđuje.\n\n@Erinon#87434 Nonceovi neće biti isti zato jer svaki igrač generira random 16 bajtova koji su dio noncea. To radimo zato da se iz hasheva ne bi moglo isčitati koji su njihovi potezi. Dakle nonceovi nisu javni, javni su samo njihovi hashevi, tj. Ca i Cb zapisani u locking skripti.\n\nEvo kako sam ja shvatio 3. zad:\n\nAlice i Bob igraju par-nepar i žele preko blockchaina riješiti problem varanja, tj. da igrači ne bi mijenjali izbor nakon što vide potez protivnika. Svaki će odabrati svoj potez (N) i izračunati nonce R tako da na N doda random 16 bajtova. Nakon toga, svoj R će kriptirati hash funkcijom tako da mogu svoj sakriveni odabir C objaviti javno, a da druga strana ne zna koji su potez povukli. Sada Alice i Bob mogu međusobno razmjeniti svoje Ca i Cb, i oni se dogovore da će napraviti skriptu na blockchainu koja će otključati neku nagradu pobjedniku nakon što otkriju koje su poteze zapravo povukli.\n\nU ovom trenutku kreira se locking skripta u koju se zapisuju svi uvjeti koje treba zadovoljiti da bi se skripta (tj. nagrada) otključala. Prvo treba provjeriti odgovaraju li C(Ra) i C(Rb) predani u unlocking skripti redom Ca i Cb. Ovdje provjeravamo odgovaraju li potezi kojima netko pokušava otključati skriptu potezima koje su Alice i Bob predali na početku igre. Nakon toga treba odrediti tko je pobjednik, a to možemo tako da izračunamo duljine nonceova Ra i Rb koji su predani u unlocking skripti. Recimo da su duljine jednake, zbroj je paran (0 + 0 ili 1 + 1 daju paran rezultat, sve ostale kombinacije neparan), i zaključujemo da bi pobjednica trebala biti Alice jer je u igri definirano da je ona uvijek par. \n\nKonačno, idemo provjeriti odgovara li potpis sig iz unlocking skripte javnom ključu koji je predan u unlocking skripti kako bi potvrdili da actual pobjednik želi otključati nagradu.\n\nSada kada je locking skripta na blockchainu, Alice i Bob mogu međusobno razmjeniti N-ove, tj. poteze koje su stvarno povukli. Ako je pobjedila Alice, napisat će unlocking skriptu kojom će otključati nagradu, a u njoj će predati nonceove Ra i Rb te potpis kojim autorizira da je to stvarno ona.",
+      "votes": {
+        "upvoters": [
+          "setuid0"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87529": {
+      "poster": "miccan",
+      "content": "Hoće nam u prvom zadatku priznati ako locking scriptu napravimo da radi na nacin : \n\n.op(OP_HASH160)       \n\n.data(key.getPubKey())\n\n.op(OP_HASH160)\n\n.op(OP_EQUALVERIFY)\n\nili moramo key.getPubKey() prebaciti u hash160 prije i izbaciti ovaj drugi OP_HASH160?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87531": {
+      "poster": "InCogNiTo124",
+      "content": "Zasto mi najednom testovi traju u beskonacno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87532": {
+      "poster": "Mr_Why",
+      "content": "@InCogNiTo124#87531 \n\nresetirali su nesto pa moras novi wallet napravit, pogledaj poruke na teamsu",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87533": {
+      "poster": "vykar (mango)",
+      "content": "@InCogNiTo124#87531 Pogledaj poruku u grupi na Teamsu. Imali su neke probleme s izdavanjem novčića pa su resetirali sve, trebaš napraviti novi wallet.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87538": {
+      "poster": "vykar (mango)",
+      "content": "@vykar#87524 Ispravak u predzadnjem paragrafu:\n\n> Konačno, idemo provjeriti odgovara li potpis sig iz unlocking skripte javnom ključu **pobjednika** kako bi potvrdili da actual pobjednik želi otključati nagradu.\n  \n  Možda nije najbolji video, ali meni je dosta pomoglo da skužim kak Script funkcionira: \n  \n\n  https://youtu.be/6Fa04MnURhw\n\n>",
+      "votes": {
+        "upvoters": [
+          "lara"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87542": {
+      "poster": "Marquisio",
+      "content": "Kako da postavim javni ključ pobjednika u locking skriptu ? Taj kljuc je od alice ili boba ovisno o rezultatu. Jel moram radit nesto kao if/else ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87544": {
+      "poster": "vykar (mango)",
+      "content": "@Marquisio#87542 Da, napraviš grananje ovisno o tome tko je pobjednik i onda provjeriš potpis iz unlocking skripte pomoću javnog ključa pobjednika.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87565": {
+      "poster": "Erinon",
+      "content": "@vykar#87524 Hvala na opsežnom odgovoru, slično sam i ja shvatio, ali nije mi i dalje jasno odakle nam onda Ca i Cb, s kojima uspoređujemo C(Ra) i C(Rb). A i recimo da je pobjednica Alice, i sad ona želi iskoristit novce, odakle njoj Bobov Nonce. Iako su oni razmjenili N-ove, ne može iz toga saznati Nonce. Bob joj može odlučiti ne dati svoj Nonce. Uglavnom ovdje u locking skripti od podataka na raspolaganju su nam atributi razreda, to su Nonce i key od Alice i Boba. Ali to znači onda da je Nonce javno poznat i iz njega u startu svatko može vidjeti tko je pobjednik.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87575": {
+      "poster": "InCogNiTo124",
+      "content": "@Erinon#87565 je, ali to je samo za testing purposes, trebali bi se praviti kao da to ne znamo, i onda prvo provjerit hasheve pa zatim stavit odgovarajuce javne kljuceve i onda biti iznenadeni kad nam test prode",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87578": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@miccan#87529 Zašto bi to radio, samo dohvati hashani key",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87582": {
+      "poster": "Erinon",
+      "content": "@InCogNiTo124#87575 Aha, ugl. ja sam napravio hash Nonce-ova iz atributa razreda, usporedio sa hash-evima Nonce-ova predanih preko unlocking skripte, vidio koji Nonce je duži i sa if odredio provjeravam li potpis sa javnim ključem Alice ili Boba, i prolaze svi testovi lijepo, ali nikako nisam mogao shvatiti zašto bi to bilo ispravno/sigurno pa sam mislio da postoji neki način.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87584": {
+      "poster": "InCogNiTo124",
+      "content": "@Erinon#87582 super, to je identicno kako sam ja napravio",
+      "votes": {
+        "upvoters": [
+          "Erinon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87591": {
+      "poster": "vykar (mango)",
+      "content": "@Erinon#87565 Bob ce Alice predati nonce, ali ne onaj N nego R. Ako ne zeli predati, to kao da je odlucio koji ce potez napraviti ali je odustao od igre i u tom slucaju nitko ne moze preuzeti nagradu. Ali zasto bi to radio? Mozda je on pobjedio pa mu je u interesu razmjeniti R-ove.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87606": {
+      "poster": "Erinon",
+      "content": "@vykar#87591 U mojoj glavi je najveći problem što su u atributima razreda Nonce-ovi, a ne njihovi hash-evi, jer ako locking skripta mora koristiti te Nonce-ove, znači da su ih i Alice i Bob mogli saznati i promijeniti svoj potez. Po meni bi jedino imalo smisla da locking skripta koristi hash-eve Nonce-ova, bez da ih sama računa. Nije problem to napraviti, ali nekako je za očekivati da se mijenja samo dio koda koji su rekli.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87609": {
+      "poster": "vykar (mango)",
+      "content": "@Erinon#87606 Pa da, locking skripta mora sadržavati hashove nonceova (Ca i Cb), a u atributima klase su pohranjeni Ra i Rb. Locking skripta ne smije sama računati hashove Ca i Cb jer bi tada u sebi imala i Ra i Rb koji moraju ostati tajni. \n\nTaj hashing obaviš unutar fje za kreiranje locking skripte i mijenjaš samo dio koda nakon TODO: :)",
+      "votes": {
+        "upvoters": [
+          "Erinon",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87731": {
+      "poster": "Erinon",
+      "content": "@vykar#87609 a kako si to hashao izvan funkcije, jel ima neka jednostavna naredba za koristit te script operatore izvan ScriptBuilder-a ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87764": {
+      "poster": "vykar (mango)",
+      "content": "@Erinon#87731 Odgovorih kolegi gore, Utils.sha256hash160(<nonce>). Script operatori se ne koriste izvan Script Buildera,to su samo konstante, koristiš Javinu funkciju.",
+      "votes": {
+        "upvoters": [
+          "Erinon",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87917": {
+      "poster": "biserka",
+      "content": "jel predajemo samo tri datoteke koje smo mijenjali ili cijeli src direktorij?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87989": {
+      "poster": "InCogNiTo124",
+      "content": "@biserka#87917 ja sam zippao citav projekt, skupa sa pom.xml haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88176": {
+      "poster": "Jim",
+      "content": "@biserka#87917 pise samo izvorne datoteke stoga sam predao samo 3 koje smo mjenjali",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Vamonos (Idemo)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88213": {
+      "poster": "SergeantPepper (Chet)",
+      "content": "@InCogNiTo124#87989 također",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88292": {
+      "poster": "Vamonos (Idemo)",
+      "content": "Ok, kako se ovi glupi brojevi enkodiraju u Script brojeve? Probao sam njihov utils funckiju, nece. Probao sam sam implementirati ponasanje kakvo je opisano ovdje https://en.bitcoin.it/wiki/Script, nece.\n\nUtil funkcija na koju mislim je Utils.encodeMPI",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88293": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Vamonos#88292 Isto kao `op` i `data` u script builderu imaš i `number`",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Vamonos (Idemo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Vamonos (Idemo)"
+        ],
+        "tuga": []
+      }
+    },
+    "88294": {
+      "poster": "Vamonos (Idemo)",
+      "content": "@micho#88293 hvala 🤦‍♂️",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93171": {
+      "poster": "Stimmar",
+      "content": "Tfw primijetiš da ovaj predmet ima labos skoro dva tjedna nakon roka za predaju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": [
+          "a_ko_si_ti"
+        ]
+      }
+    },
+    "93335": {
+      "poster": "InCogNiTo124",
+      "content": "@Stimmar#93171 \n\nhttps://youtu.be/_ghb2zYCbbM?t=12",
+      "votes": {
+        "upvoters": [
+          "Stimmar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

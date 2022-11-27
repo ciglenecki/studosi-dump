@@ -1,0 +1,3848 @@
+{
+  "title": "[AIPR] Gradivo",
+  "creator": "RogerRoger",
+  "slug": "aipr-gradivo",
+  "tags": [
+    "FER",
+    "Analiza i projektiranje računalom"
+  ],
+  "posts": {
+    "88708": {
+      "poster": "RogerRoger",
+      "content": "![](assets/2020-11-05/00035.png)\n\nSluzbeno rjesenje: ε = 0.0733.\n\nMeni se cini da su oni tu nesto pobrkali, jer koliko vidim prema algoritmu s ferweba, u svakoj iteraciji interval se smanji na 0.618 svoje originalne velicine, a (100 - (-100)) * 0.618^15 = 0.1465, sto je 2x njihovo rjesenje.\n\nRadim li ja nesto krivo ili je moguce da se tu netko zabunio i slucajno uzeo [0, 100] umjesto [-100, 100]?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88728": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@RogerRoger#88708 Interval se smanjio na 0.1465, što znači da je preciznost u najgorem slučaju pola toga - rješenje zlatnog reza je aritmetička sredina intervala.",
+      "votes": {
+        "upvoters": [
+          "RogerRoger",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91235": {
+      "poster": "member",
+      "content": "2.1. Meni y ispadne [4, 3, -2], a x [2, 1, 2].  Ako bi neko rješio pa mi rekao kako njemu ispada jer sam rješavala iste ovakve pa su mi točno ispadali.\n\n![](assets/2020-11-11/00021.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91248": {
+      "poster": "Vrba",
+      "content": "@member#91235 y mi je ispao kao i tebi, ali x [3, 2, 1]. Matrica LU mi je ispala [[1, 0, 1], [0, 1, 1], [1, 1, -2]]",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91254": {
+      "poster": "member",
+      "content": "@Vrba#91248 hvala ti, krivo sam taj zadnji na dijagonali u LU matrici... nisam znala da se i od njega u prvom koraku oduzima x31*x13 pa eto ako je neko isto to predvidia...",
+      "votes": {
+        "upvoters": [
+          "Vrba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96076": {
+      "poster": "gama",
+      "content": "Ako se dobro sjećam, ovo bi trebalo imati riješene i sve ZZV(za MI) između ostalog.\n\nDok ne ode na materijale, možete vidjeti na linku.\n\nhttps://u.pcloud.link/publink/show?code=kZYbtMkZGdYd92G0I8mtMaqnyGtMth3C3WPX&lang=en#folder=7705960577&tpl=publicfoldergrid",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Daorson",
+          "Ellie",
+          "Stark",
+          "Vrba",
+          "[deleted]",
+          "luba",
+          "member",
+          "moji_prsti_prsti_klize_po_njoj",
+          "renren",
+          "sane_insane"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96077": {
+      "poster": "Stark",
+      "content": "@gama#96076 Ima svašta korisno tu, malo sam preletio. Mislim da nisu baš svi, ali svaki materijal je dobrodošao. Hvala!",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96080": {
+      "poster": "gama",
+      "content": "@Stark#96077  \n\nOno što mi je u teci probably nisam opet rješavala, al ne da mi se i nju još skenirati, to je netko sigurno već skenirao. \n\nEDIT: ovo je teka samo za vježbu, gradivo je u drugoj",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96082": {
+      "poster": "Stark",
+      "content": "@gama#96080 Ma ni ne treba predavanja opet skenirati, na materijalima je bar jedna verzija. Ovo je puno korisnije.",
+      "votes": {
+        "upvoters": [
+          "gama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96478": {
+      "poster": "member",
+      "content": "![](assets/2020-11-20/00053.png)\n\n Kako bi došla do xn(2) = (0,0,1)? \n\n Ako se za svaku os posebno pomičemo za +/- x (obrađujući osi u zadanom poretku), prvo bi imala (-1,1,2) i (1,1,2), ali za njih je jednaka vrijednost F(x) pa bi odabrala (-1,1,2) i od te točke dalje  (-1,2,2) i (-1,0,2) itd. Zanima me kako da dođen do (0,0,1) tj kako uopće ne pomaknit x, nego samo y i z? Naravno da je za ovu fju minimum banalan pa jel se možda taj x samo zbog toga ostavi jednak 0?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96559": {
+      "poster": "Smolaa",
+      "content": "@member#96478  Ovdje nam je funkcija banalna pa mozes gledat za svaku koordinatu posebno jer ne ovise jedna o drugoj,  za x gledas -1,1 ali i 0 pa ti ostaje nula jer je za 0  najmanja vrijednost. Tako za y imas 0,1,2 i tu uzmes 0, te za z 1,2,3 i tu je 1. I onda je to xn(2) = 0,0,1.",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97158": {
+      "poster": "narval13068 (Dima)",
+      "content": "![](assets/2020-11-22/00032.png)\n\nJel zna netko razlog... meni se cini da ce pronaci najbrzi spust",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "97172": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@narval13068#97158 moguće zato što apsolutno nije deribavilno u 0 ali to nije tehnički problem pa nemam ni ja pojma zašto ne bi iskonvergiralo",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "99379": {
+      "poster": "MJ3",
+      "content": "jel rok za predaju labosa i dalje ponedjeljak u 7:00? na zadnjem predavanju je rekao da će vidjet još,a ne vidim obavijest neku",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "99461": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@MJ3#99379 Trebalo bi poslat mail, profesor voli \"zaboraviti\" na takve stvari\n\nIsto tako, rekao je da će se to napraviti samo ako su asistenti za, radi termina. Lako je moguće da ima termina u pon a ne mogu prebaciti i to ti je game over.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "MJ3"
+        ]
+      }
+    },
+    "99468": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "https://www.fer.unizg.hr/predmet/apr/obavijesti?@=2sxsi#news_2744 jel iz ovog filea sve za MI ili su tu i za ZI zadaci?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "99490": {
+      "poster": "megi7 (someone7)",
+      "content": "Koja gradiva ulaze u MI?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "99503": {
+      "poster": "Joji",
+      "content": "@johndoe12#99468 Samo iz 2. i 3. poglavlja zadatci ulaze u MI.",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "99526": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "postoje li negdje primjeri teorijskih pitanja s ispita? tj zna li netko jel se ispit sastoji samo od racunskih zadataka ili ima i na nadopunjavanje i opisnih zadataka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "99532": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@johndoe12#99526 Nemaš baš takvih puno, velika većina ispita su računski zadatci (ili teorijski koji zahtijevaju računanje)",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "99786": {
+      "poster": "Stark",
+      "content": "Da li cijela nova skripta ulazi u MI?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "99814": {
+      "poster": "[deleted]",
+      "content": "@Stark#99786 Ne. Ulazi samo gradivo koje smo obradili na predavanjima. Piše jasno u obavijesti za skriptu:\n\n\"Dio materijala iz skripte bit će obrađen i u budućem udžbeniku koji prati gradivo kolegija, no sama skripta obuhvaća i dodatne postupke optimizacije koji se ne prate na kolegiju.\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100540": {
+      "poster": "Stark",
+      "content": "Zašto je ovdje zadnji korak kad nam b-a != 1\n\n![](assets/2020-11-26/00014.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100586": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "help. kako pristupiti ovome da se nauci sto vise u dva dana 😩",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100595": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Noggenfogger#100586 pa ako si rjesuo 1. I 2. Lab onda nemas jos puno. Zadacu su svi otamo. A za gradivo 3.laba neznam. I ja idem sad gledat yt predavanja na x2",
+      "votes": {
+        "upvoters": [
+          "Njet",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100608": {
+      "poster": "Ellie",
+      "content": "@Stark#100540 Nisam sigurna jesam li dobro razumjela pitanje, ali ako pitas \"zasto smo stali bas na tom koraku?\" onda je odgovor da nam je zadana sirina intervala [imath]\\epsilon \\le 1[/imath], a u sljedecem koraku je b-a = 1, odnosno [imath]|b - a| \\le \\epsilon[/imath] sto nam je uvjet zaustavljanja. Mozes i napisati iduci korak, ali Jakobovic je rjesavao taj zadatak na predavanju i rekao je da nema potrebe.\n\nU slucaju da to nije ono sto te zanimalo, lemme know",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100623": {
+      "poster": "Ellie",
+      "content": "@Stark#100540 evo ovdje je rjesavao taj zadatak i objasnio zasto je bas tu stao:\n\nhttps://youtu.be/oktKmMIL15U?t=1403",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100645": {
+      "poster": "Hus",
+      "content": "![](assets/2020-11-26/00024.png)\n\nIskreno ne znam odgovore na ova dva pitanja. Može li mi netko pomoći?\n\n(također ako netko zna gdje ovo piše, ili na kojem videopredavanju je profesor ovo objasnio isto bi bio zahvalan)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100653": {
+      "poster": "Murin",
+      "content": "@Hus#100645 \n\nza pitanje 3.23 je na predavanju Jakobovic rekao da Powell postupak za kvadratnu fju daje rjesenje u n iteracija, gdje n broj dimenzija",
+      "votes": {
+        "upvoters": [
+          "Hus"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100655": {
+      "poster": "saitama",
+      "content": "@Hus#100645 jel znas onda mozda 3.24?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100659": {
+      "poster": "hi_doggy",
+      "content": "![](assets/2020-11-26/00025.jpeg)\n\nIma netko riješeno?",
+      "votes": {
+        "upvoters": [
+          "Cubii",
+          "Noggenfogger (dammitimmad)",
+          "Simpy",
+          "in1",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100675": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "@hi_doggy#100659 Jesmo obrađivali gradivo 3. zadatka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100677": {
+      "poster": "[deleted]",
+      "content": "@AromaticConfusion#100675 To je gradivo zadnjeg predavanja.",
+      "votes": {
+        "upvoters": [
+          "AromaticConfusion (VrloZbunjen)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100682": {
+      "poster": "sphera",
+      "content": "jel ima kakav šalabahter na ispitu dopušten?",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100729": {
+      "poster": "Bananaking",
+      "content": "Unimodalni interval funkcije jedne varijable je [0,10]. Koliko je iteracija\n\nFibonaccijevog postupka potrebno da bi se interval smanjio na manje od 0.01?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100740": {
+      "poster": "Hus",
+      "content": "@saitama#100655 \n\n![](assets/2020-11-26/00035.png)\n\nmozda je krivo... a mozda I nije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100747": {
+      "poster": "Hus",
+      "content": "@Bananaking#100729\n\n![](assets/2020-11-26/00036.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Ellie",
+          "sane_insane"
+        ],
+        "downvoters": [
+          "member"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100755": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "dal ulaze racunski zadaci iz 3. labosa na ispit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100758": {
+      "poster": "Murin",
+      "content": "@Hus#100747 \n\nZar ne bi trebalo koristiti log10?\n\nJa na taj nacin dobijem n>19.13, n=20",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100759": {
+      "poster": "Yasuke (Bono)",
+      "content": "@hi_doggy#100659  Jel za treći zadatak rješenje 1.684?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100762": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "kod LUP dekompozicije, kada u stupcu trebam izabrati stozer, a biram izmedu 4, 6, 6, je li bitno koji red cu uzet izmedu ove dvije sestice ili nije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100776": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@hi_doggy#100659 1. zad determinanta je -227.64 i lup rastav http://lampx.tugraz.at/~hadley/num/ch2/2.3a.php",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100777": {
+      "poster": "Hus",
+      "content": "@Murin#100758 \n\nhmm... mozda si upravu, no ja i za log10 dobivam n>14.3, n=15",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100783": {
+      "poster": "Amon",
+      "content": "@Hus#100777 Mislim da se na satu koristilo log10, ali će ti rješenje bit isto za svaku bazu jer je to omjer logaritama, a on je uvijek isti dokle god koristiš istu bazu za brojnik i nazivnik\n\nI btw, da, rješenje je n>14.3, dakle 15",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "Ellie",
+          "Hus"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100806": {
+      "poster": "Bravos (Supraman)",
+      "content": "Što ako kod Box optimizacije imam 2 točke s istom maksimalnom vrijednošću? Je li jedna od njih X[h], a druga X[h2]? Ako da, kako da izaberem h i h2?",
+      "votes": {
+        "upvoters": [
+          "Bravos (Supraman)",
+          "sphera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100821": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Yasuke#100759 ja dobila 1.49 (radila sam po onom JTJ *delta_x = - JT * G) kak si ti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100848": {
+      "poster": "jazzMassive",
+      "content": "Onaj google doc, tamo su sva pitanja iz svog gradiva kolegija, jel? do kud mi trebamo rjesiti za mi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100849": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@hi_doggy#100659 \n\n![](assets/2020-11-26/00045.jpeg)\n2. zad",
+      "votes": {
+        "upvoters": [
+          "Cubii"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100851": {
+      "poster": "Stark",
+      "content": "Kako kod Hooke Jeves postupka određujemo xp? Tj točku u kojoj počinjemo pretraživanje? \n\nZašto je baš ova u 3. redu?\n\n![](assets/2020-11-26/00046.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100852": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Ovo je krivo rješenje jelda? Trebalo bi biti duplo veće\n\n![](assets/2020-11-26/00047.png)",
+      "votes": {
+        "upvoters": [
+          "megi7 (someone7)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100853": {
+      "poster": "Stark",
+      "content": "@PrisonMike#100852 Gledaj ovaj doc\n\nhttps://docs.google.com/document/d/1848KLdvvd7JWT7m6Y_PwhniZ_yHePDasLLkbZ_CixbA/edit#\n\nTamo je baš objašnjeno za taj zadatak.",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100854": {
+      "poster": "antesha",
+      "content": "@PrisonMike#100852 \n\nNije, zlatni rez ti kao rješenje vraća aritmetičku sredinu intervala\n\nI u tom slučaju max greška je +-0.0733, a to ti je ustvari preciznost",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)",
+          "megi7 (someone7)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100857": {
+      "poster": "saitama",
+      "content": "@Stark#100851 Tocku pretrazivanja u iducoj iteraciji odredujes tako da Xn preslikas preko Xb odnosno Xp = 2*Xn - Xb \n\n@PrisonMike#100852 Ovdje se gleda preciznost tocke minimuma koji dobivas tako da nakon sto si odredio a i b pomocu zlatnog reza nakraju napravis (a+b)/2",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)",
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100858": {
+      "poster": "koBASA (hackerman)",
+      "content": "@johndoe12#100849 \n\nNije ti dobro trazenje unimodalnog intervala, korak h = 1, ali to ne znaci da se stalno pomices za jedan, pomices se za [imath]2^i*h[/imath]. Ti imas f(0), f(1), f(2), f(3), f(4)... Trebaš imati f(0), f(1), f(2), f(4),f(8)...",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "johndoe12 (enaiks)"
+        ]
+      }
+    },
+    "100865": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "hooke jeeves istrazivanje: imam fju 2 var. jel onda radim sve 4 kombinacije i biram najbolju kao novu tocku koja mi daje max/min ovisi koji optimum trebamo nac ( x1 - delta, x2 - delta; x1 - delta, x2 + delta; x1 + delta, x2 + delta; x1 + delta, x2 - delta) ?\n\nako da, sta ako imam 2 tocke u te 4 koje daju istu vrijednost funkcije cilja\n\nbtw je li rjesenje 4. iz MI 2019. (7.5 , 4.5 ili 5.5) ?",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100871": {
+      "poster": "Bananaking",
+      "content": "Kako u zadatku 3.12. Fibonacciju znam koji je omjer odnosno k s kojim množim (b-a) da dobijem c i d?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100875": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "![](assets/2020-11-26/00049.jpeg)\n\nhooke jeeves iz MI, cudan mi je...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100879": {
+      "poster": "Yasuke (Bono)",
+      "content": "@Noggenfogger#100821 Isto preko toga. Evo postupak. Nisam siguran jel se novi x racuna kao + delta x ili - jer kad radim sa + a tako smo na predavanju napisali rjesenje ide u krivom smjeru cini mi se.\n\n![](assets/2020-11-26/00051.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100881": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@koBASA#100858 gledah po onom fileu gdje je netko rjesavao, oni su bez 2 na i rjesili",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100882": {
+      "poster": "koBASA (hackerman)",
+      "content": "@Bananaking#100871 \n\nTrazis prvi clan u Fibonaccijevom nizu koji je veci ili jednak [imath] (b-a)/epsilon[/imath], recmo da si dobio 8, onda ti je k = 5/8, a za iduci korak ti je onda 3/5 itd.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100885": {
+      "poster": "koBASA (hackerman)",
+      "content": "@johndoe12#100881 \n\nA ovako je napisano na predavanju, ici po 1 stalno nema smisla ako dobijes pocetnu tocku koja je jako daleko od minimuma.\n\n![](assets/2020-11-26/00053.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100886": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@koBASA#100858 jel onda trebam racunat za lambda je -2, -1, 0, 1, 2, 4, 8... i dobijem unimodalno od 4 do 16",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100892": {
+      "poster": "Amon",
+      "content": "@Yasuke#100879 Jesi sig da je G=[1,1,1] jer ja mislim da bi jednadžbe trebale bit x^2-3=0, x^3-7=0 i x^4-10=0 pa onda u to uvrštavaš 1 da dobiješ G pa bi onda dobio G = [-2,-6,-9]\n\nNisam sig, ali mislim da bi tak trebalo ići",
+      "votes": {
+        "upvoters": [
+          "Arfit",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100896": {
+      "poster": "koBASA (hackerman)",
+      "content": "@johndoe12#100886 \n\nZa -2 ne, ako kreces od nula onda vidis da je 1 bolje od -1 pa ides samo u pozitivnom smjeru kao sto si i radio",
+      "votes": {
+        "upvoters": [
+          "Amon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100898": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Yasuke#100879 zar nije prvi na pocetku G = [ -2, -6, -9]",
+      "votes": {
+        "upvoters": [
+          "Arfit"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100901": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@johndoe12#100875 trazimo maksimum pa uvjet treba biti fn > fb\n\nako krivo govorim ispravite me. jer ja sam ovo intuitivno zakljucila :S",
+      "votes": {
+        "upvoters": [
+          "Simpy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100903": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Amon#100892 treba ove 3, 7, i 10 prvo prebacit da desno budu 0 i onda se racuna koliki je G koliko sam ja shvatila",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100905": {
+      "poster": "Amon",
+      "content": "@Noggenfogger#100903 E tak sam si i ja mislio (a i vidim da su predavanja takva), ružno je zadan zadatak pa se treba toga sjetit tho",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100906": {
+      "poster": "megi7 (someone7)",
+      "content": "@Bananaking#100729 ![](assets/2020-11-26/00054.jpeg)\n\n\nU onoj novoj knjizi uvjet zaustavljanja je ovaj i ispadne 16. k nije 0.618 i formula ne ide s logaritmom, to je formula za zlatni rez",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100909": {
+      "poster": "Yasuke (Bono)",
+      "content": "@Amon#100892 @Noggenfogger#100898 Da da imate pravo. Moja greška. Hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100914": {
+      "poster": "koBASA (hackerman)",
+      "content": "@megi7#100906 \n\nMislim da je ipak 15 tocno jer ti se 1/2 ne gleda zato sto ne daje novu informaciju.",
+      "votes": {
+        "upvoters": [
+          "megi7 (someone7)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100915": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Noggenfogger#100901 jesi rjesio jel mozes shareat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100918": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "Negooo.. kakav je rok iz ovoga?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "hi_doggy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon",
+          "MsBrightside"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100919": {
+      "poster": "Yasuke (Bono)",
+      "content": "@Noggenfogger#100821 Jel možeš molim te stavit postupak, nešto stalno krivo radim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100923": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@johndoe12#100915 \n\n@Yasuke#100919 \n\nnaravno, mogu shareati, ali stvarno neke dijelove postupka u hooke jeevesu sam se kockala jer sam dobila iste brojeve i birala sam random :/ sec da se na mob prebacim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100925": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Noggenfogger#100923 \n\nStvarno nisam sigurna kak se tocno ovo istrazivanje radi\n\ngauss-newton\n\n![](assets/2020-11-26/00057.jpeg)\n\nhooke-jeeves maximum\n\n![](assets/2020-11-26/00058.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100928": {
+      "poster": "Yasuke (Bono)",
+      "content": "@Noggenfogger#100925  Mislim da ti je JT i J krivo pomnozeno u dugoj iteraciji.\n\nOvako sam ja ovaj Hook Jeeves\n\n![](assets/2020-11-26/00059.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Noggenfogger (dammitimmad)",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100929": {
+      "poster": "Amon",
+      "content": "> @Yasuke#100928 Mislim da ti je JT i J krivo pomnozeno u dugoj iteraciji\n\nYup, 12429 treba bit pa je rješenje 2.33",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100932": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Yasuke#100928 jee, slucajno sam GtG ubacila u kalk\n\nhooke: zasto u 4.redu nisi promijenio x2 kod Xn ; i zelis li reci da se samo treba za 1 svaka varijabla povecati, ne ici u -1 i traziti max? taj dio me muci dosta, raditi 4kombinacije ili samo zbrajati?",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100934": {
+      "poster": "svemia (bearyn)",
+      "content": "@johndoe12#100918 navodno pakao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "johndoe12 (enaiks)",
+          "megi7 (someone7)"
+        ]
+      }
+    },
+    "100939": {
+      "poster": "Emma63194",
+      "content": "@megi7#100906 Ima li možda neki pametniji način kako to riješiti, bez da idemo raspisivati sve članove niza?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100957": {
+      "poster": "Amon",
+      "content": "@Yasuke#100928 čini mi se da je to točno rješenje\n\n@Noggenfogger#100925 pogriješila si u 4. liniji, točka je trebala bit (9,5)\n\nprotip: odredite minimum (odnosno maximum u ovom slučaju) od početne jednadžbe odmah kad dobijete zadatak (to će najčešće biti očito) i onda samo idite prema toj točki sa pretragom, nema baš potrebe za nekim pretraživanjem smjerova, također često ni ne treba evaluirati funkciju jer se često vidi koja točka (Xb ili Xn) je bliža minimumu\n\nPS mislim da nećete dobiti neki zadatak koji ima neki lokalni optimum gdje će funkcija možda zapeti tak da vjerujem da će ovo uvijek funkcionirati",
+      "votes": {
+        "upvoters": [
+          "Hus",
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100963": {
+      "poster": "Bananaking",
+      "content": "Jel mi može netko objasniti zadnji korak Fibonaccijevog postupka? Ono Jakobovićevo \"u zadnjem koraku algoritma ispitujemo vrijednost u točci \"blizu\" sredine intervala\". Recimo u zadatku 3.12. sam došao do točaka a=14, b=20, c=17, d=17. Sada bi za jednu od njih (d?) trebao uzeti 17.1 ili tako nešto? I kako onda znam koji je krajnji interval? Minimum je očigledno u 18",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100967": {
+      "poster": "InCogNiTo124",
+      "content": "@Emma63194#100939 postoji ti formula u zatvorenoj formi za n-ti clan reda\n\n![](https://wikimedia.org/api/rest_v1/media/math/render/svg/d5bcd8a3944bc1f31f87c9e363d3cdf45f3aedd3)\n\nA phi je 1.618 odnosno (sqrt(5)+1)/2",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100969": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Amon#100957  ali zasto se taj x2 u 4.liniji ne promijeni? primjetila sam po primjeru s predavanja da je prof mijenjao, znaci nije svaki puta samo dodao +1 nego ima slucajeva kada je npr x1 + 1, a x2 - 1. zbog toga sam zakljucila da treba sve 4 kombinacije pa izabrati najbolju, s tim da ima slucajeva gdje nije promijenio neki xj, ali ostale je i ne uvijek istim deltom \n\noke vidim sad da je i kolega mijenjao delte. i dalje bi voljela kad bi nekao napisao raspis tog istrazivanja\n\nuglavnom trebam onda jos uzeti u obzir kad se jedan promijeni a drugi ostane isti i to je dodatnih 4 kombinacije... pls koji je hack za to da se ne racuna bas svih 8 kombinacija?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100970": {
+      "poster": "Bananaking",
+      "content": "@Noggenfogger#100969 nemam pojma što išta od toga što si napisala znači haha, samo me zanima što kada Fibonacci dođe do c = d",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100972": {
+      "poster": "Vrba",
+      "content": "@Bananaking#100970 onda uzmes neku tocku koja je blizu tocke c, npr ako je c = 17 mozes uzeti 16.9 ili 17.1 i stavis ju ko drugu unutarnju tocku. Onda napravis usporedbu f(c) i f(d) ko i u svakom drugom koraku i dobijes interval",
+      "votes": {
+        "upvoters": [
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100973": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Bananaking#100970 krivi tag sori :S",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100976": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Noggenfogger#100969 shvatila.. htjela sam opcenito rjesenje gdje ne znamo za minimum, al oke mogu i ovako namjestat prema vec znanom minimumu. hvala puno na objasnjenu",
+      "votes": {
+        "upvoters": [
+          "Amon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100990": {
+      "poster": "sphera",
+      "content": "![](assets/2020-11-26/00061.png)\n\nkako ovo ide",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "100998": {
+      "poster": "member",
+      "content": "@sphera#100990 suma kvadrata, maksimalna apsolutna vrijednost, težinska suma kvadrata, težinska suna parnih potencija",
+      "votes": {
+        "upvoters": [
+          "Hus",
+          "Noggenfogger (dammitimmad)",
+          "RogerRoger",
+          "WhiteMamba",
+          "saitama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101011": {
+      "poster": "Stark",
+      "content": "Zna netko ovaj?\n\n![](assets/2020-11-27/00009.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101023": {
+      "poster": "WhiteMamba",
+      "content": "@Stark#101011 \n\nMislim da bi tu isla nadomjesna funkcija sa zadnjeg predavanja, iz Levenberg-Barquardt:[imath]F(x) = \\frac{1}{2} \\cdot \\sum(g_i(x))^2[/imath] pa bi rjesenje bilo:\n\n[imath]\\frac{1}{2} \\cdot ((x_1^2 + x_2^2 -5)^2 + ((x_1 + x_2) \\cdot x_2 + 2 \\cdot x_1)^2)[/imath]",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101028": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Kod Boxovog postupka, nakon provjere eksplicitnih i implicitnih ograničenja, treba se provjerit vrijednost funkcije za Xr i ta vrijednost se uspoređuje s kojom točkom? \n\nU skripti piše da se uspoređuje s Xh(najlošija) dok je na predavanju rečeno da se uspoređuje s Xh2(druga najlošija).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101030": {
+      "poster": "Murin",
+      "content": "Ima netko rijesen 8 zad iz MI 2019 (skice kako se ponasaju postupci optimizacije)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101032": {
+      "poster": "WhiteMamba",
+      "content": "@PrisonMike#101028 po pseudokodu sa stranica predmeta se usporeduje sa Xh2, drugom najlosijom:\n```\n ako F(Xr) > F(X[h2])  // ako je to i dalje najlosija tocka\n        Xr = ½ * (Xr + Xc);  // jos jednom pomakni prema Xc\n ```",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101035": {
+      "poster": "Stark",
+      "content": "Iz dokumenta. Zna netko?\n\n![](assets/2020-11-27/00013.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101041": {
+      "poster": "antesha",
+      "content": "@Stark#101035 \n\nMislim da su ciljali na ovo\n\n[imath]F(x_0 + \\Delta x) = G(x_0) + J(x_0)*\\Delta x [/imath]",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101043": {
+      "poster": "Emma63194",
+      "content": "3.18, je li možda netko riješio?\n\nMeni na papiru ispadne da nađe minimum, a kao ne bi trebao pa ne znam gdje sam fulala.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101051": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "Može netko slikat osmi iz MI 2019 ak zna?",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101090": {
+      "poster": "Hus",
+      "content": "![](assets/2020-11-27/00017.png)\n\nMože li mi netko objasnit što radim kad imam nejednakost \">0\" koja se pojavljuje u ovom zadatku? Kako to prebacim u mješovit oblik?\n\n(ja sam dobio tu da mi je \"13-1>0\" iz eksplicitnog i \"3x1-2x2-11>0\" iz ovog jednog implicitnog)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101132": {
+      "poster": "koBASA (hackerman)",
+      "content": "@Hus#101090 \n\nZa eksplicitni moras definirat novu varijablu, npr [imath]y \\in <-\\infin, +\\infin>[/imath] i onda ti je \n\n[imath]x_1 = x_d + (x_g - x_d) * f(y) [/imath], gdje ti f(y) oznacava funkciju koja ce ti taj y stisnut u interval [0, 1], npr sigmoida.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101144": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@koBASA#101132 jel mozes molim te slikat postupak tog zadatka, nemam primjer u biljeznici i nemam pojma sta bi se dalje trebalo raditi i kako",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101152": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Yasuke#100928 jel mozes opisati kako biras koordinatu po x osi, a kako po y osi? kako uopće znaš gdje je minimum f(x)? jel za svaku od tih kombinacija racunas vrijednost f(x) pa uzimas najbolju ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101153": {
+      "poster": "koBASA (hackerman)",
+      "content": "@Noggenfogger#101144 \n\nNisam ga rjesavao, ali konacan oblik bi trebao biti [imath]U(x) = f(x) - r * \\sum ln(g_i(x)) + t * \\sum(h_i(x))^2[/imath]",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101154": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@koBASA#101153 zapisem to, do tud sam stigla, i sta onda s tim trebam radit mi nije bas jasno. koji je algoritam, sta su r i t kak njih mijenjam \n\njel pretvorite u problem bez ogranicenja znaci samo zapisat tu funckiju bez da se provede trazenje optimuma ili? i treba li raditi postupak pronalazenja unutarnje tocke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101156": {
+      "poster": "koBASA (hackerman)",
+      "content": "@Noggenfogger#101154 \n\nr = 1/t, a t ti tezi u beskonacno,  mislim da je to dovoljno napisat samo uz ovu gore formulu",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101157": {
+      "poster": "koBASA (hackerman)",
+      "content": "> @Noggenfogger#101154 jel pretvorite u problem bez ogranicenja znaci samo zapisat tu funckiju bez da se provede trazenje optimuma ili\n\nDa",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101159": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@koBASA#101156 nice, vec sam mislila da cudesa treba izvodit tu. ako je samo zapis to je je jako lijep zadacic onda \n\n@Hus#101090 ja sam sve nejednadzbe svela da mi bude < 0, a jednadzbe = 0. znaci sve na jednu stranu prebacila. ne znam je li to ispravan nacin?",
+      "votes": {
+        "upvoters": [
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101161": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Murin#101030 jel se to treba bas po konkretnim vrijednostima ili onako otprilike nacrtati? malo mi je suludo da svaki od tih 6 algoritama trebamo provest za 3boda, al opet nez sta se tu ocekuje od nas",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101162": {
+      "poster": "Murin",
+      "content": "@Noggenfogger#101161 \n\nmislim da je bitan samo izgled da se vidi kako se otprilike algoritam ponasa, znaci gradijent npr cik cak",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101163": {
+      "poster": "Yasuke (Bono)",
+      "content": "@johndoe12#101152 Po svakoj koordinati u jednoj iteraciji se smiješ pomicati za + ili - dx koji trenutno imaš i onda gledaš za koju kombinaciju će nova točka imati najmanju vrijednost ili najveću ako se traži maksimum. Cijeli postupak bi bio da isprobaš sve kombinacije kad mijenjaš samo jednu koordinatu i kad mijenjaš obje, ali kako su nam zadane uglavnom jednostavne funkcije onda možeš vidjeti prije nego što kreneš rješavati gdje ti je minimum pa ideš samo prema njemu za dx. A kad ti ispadne da je svaka kombinacija lošija ili jednaka trenutnoj baznoj točki prepoloviš dx i tako do zadanog epsilona.",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101174": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Murin#101162 \n\nStvarno ne znam sta radim sve je nes otprilike izmisljeno. Eto za ideju pa neka netko tko zna nacrta kak bi trebalo izgledati pls.\n\n![](assets/2020-11-27/00019.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101175": {
+      "poster": "koBASA (hackerman)",
+      "content": "@Noggenfogger#101174 \n\nmislim da pretrazivanje u smjeru koordinatnih osi ide desno do 3 pa onda odma gore u minimum jer je poravnato s osima",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101176": {
+      "poster": "antesha",
+      "content": "@koBASA#101132 \n\nJel ubacujem onda taj cijeli izraz gdje god mi se pojavljuje x_1 ili?\n\nMalo mi je čudno da mi se neka varijabla pojavljuje samo u ograničenju i nigdje dalje\n\nTj. kada bi ostavili to samo kao ograničenje, za x_1 bi mogli dobiti i nešto izvan granica, a ako bi promijenili svuda x_1 u taj izraz on nebi mogao biti izvan eksplicitnih granica",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101179": {
+      "poster": "Lelek",
+      "content": "![](assets/2020-11-27/00020.png)\n\nJel zna netko ovaj zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101181": {
+      "poster": "koBASA (hackerman)",
+      "content": "@antesha#101176 \n\nMislim da samo stavis umjesto x1 y i onda optimiziras nekim postupkom (y moze biti bilo sta pa nece smetati) i onda na kraju samo izracunas u sta se preslikava taj y",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101183": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@koBASA#101175 istina tako treba, jedino sto me muci sto ta funkcija ne ide u minus, pocetna tocka je zapravo skroz van izohipsa funkcije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101188": {
+      "poster": "antesha",
+      "content": "@Noggenfogger#101174 \n\nGauss newton ide u jednom koraku u minimum, zato što su funkcije linearne i međusobno nezavisne",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101196": {
+      "poster": "koBASA (hackerman)",
+      "content": "@Noggenfogger#101183 \n\nNemoj da te zbuni to sto vrijednost funkcije ne  moze biti negativna, izohipse samo spajaju tocke koje daju istu vrijednost funkcije, tako da nasa pocetna tocka nije izvan iako je negativna.  Npr tocka (7, 6) ce dati istu vrijednost kao i (-1, -2).",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101221": {
+      "poster": "Stark",
+      "content": "Ima netko postupak? Buni me što je dvije točke imaju vrijednost -6 pa ne znam koju izbaciti. Trebalo bi biti svejedno ali dobijem različiti rezultat.\n\n![](assets/2020-11-27/00029.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101237": {
+      "poster": "Arfit",
+      "content": "@Stark#101221 izbacujes onu sa vrijednoscu nula\n\nnajgora se izbacuje .. -6 je bolje od 0 jer minimiziramo funkciju ..",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101256": {
+      "poster": "Stark",
+      "content": "Da li netko ima ovaj zadatak postupak? Nisam našao ni jedan takav riješen primjer.\n\n![](assets/2020-11-27/00035.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101267": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "MI19 2.zad moze li netko potvrditi da je ovo tocno rj\n\n![](assets/2020-11-27/00038.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101269": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@johndoe12#101267 Famoznih 13 koraka, rekao bih da je",
+      "votes": {
+        "upvoters": [
+          "hi_doggy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon",
+          "johndoe12 (enaiks)",
+          "luba"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101274": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "![](assets/2020-11-27/00040.png)\n\nNe jer imamo 3d fju, pa nam treba 4 tocke za simplex, i takoder ne jer te tri tocke leze na pravcu. Dakle kao prvo moramo jednu od te tri tocke pomaknuti po x ili y osi, i dodati jos cetvrtu tocku, koja ce imat z=2 npr?",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101275": {
+      "poster": "Murin",
+      "content": "Moze netko slikati postupak od 3.12? Nekako mi cudno ispada",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101279": {
+      "poster": "chuuya (temari)",
+      "content": "@johndoe12#101267 Zar nije da kod unimodalnog uzimamo lambda a ne f(lambda), odnosno interval bi trebao bit [4,16]? Meni uz to na kraju ispadne da je lambda [10.334, 11.002].",
+      "votes": {
+        "upvoters": [
+          "Cubii",
+          "Joji",
+          "Simpy",
+          "WhiteMamba",
+          "cajaznun",
+          "koBASA (hackerman)",
+          "saitama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101281": {
+      "poster": "chuuya (temari)",
+      "content": "Jel netko riješio ovaj? Šta tu uopće traže?\n\n![](assets/2020-11-27/00041.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101286": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@chuuya#101279 u pravu si",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101310": {
+      "poster": "Cvija",
+      "content": "![](assets/2020-11-27/00045.png)\n\nTraženje maksimuma je ekvivalentno traženju minimuma funkcije -f(x), je li tako?",
+      "votes": {
+        "upvoters": [
+          "Ledeni56 (Jusuf)",
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101315": {
+      "poster": "ReyKenobi",
+      "content": "@johndoe12#101267 Ne znam jel trazim na pravom mjestu, gdje se moze naci mi 2019?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101316": {
+      "poster": "Cvija",
+      "content": "@chuuya#101281 gradijentni spust = najbrži spust -> tako bar piše u trećoj domaćoj zadaći, a to možeš naći u videu 05 2 gdje je objašnjen sličan zadatak, a u videu 05 1 imaš za konjugirani smjer",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101317": {
+      "poster": "Cvija",
+      "content": "@hi_doggy#100659 \n\n@ReyKenobi#101315",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101326": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@ReyKenobi#101315 ![](assets/2020-11-27/00046.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101327": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "![](assets/2020-11-27/00047.jpeg)\n\novo eksplicitno ogranicenje pretvoreno je u implicitno kroz x(y) kako je durasevic objasnio na predavanjima.. i sta sad s tim ogranicenjem? jel njega isto stavljamo u U(x) ili??",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101328": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "![](assets/2020-11-27/00048.jpeg)\n\novo eksplicitno ogranicenje pretvoreno je u implicitno kroz x(y) kako je durasevic objasnio na predavanjima.. i sta sad s tim ogranicenjem? jel njega isto stavljamo u U(x) ili??",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101331": {
+      "poster": "Murin",
+      "content": "@johndoe12#101328 \n\nja sam napisao da je x1 funkcija od y, raspisao ju i naznacio da mi je \" * \" skracenica za to i onda sam svugdje umjesto x1 pisao \"*\", te je onda U fja od x2 i y.",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101361": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@chuuya#101281 Ima netko ovaj? Nije ni meni jasno kaj traže, početnu točku nisu ni zadali.\n\nJedino mi ima smisla možda da je za a) odgovor [0, 1] jer će u prvoj iteraciji doći usporedno s točkom minimuma.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101371": {
+      "poster": "Murin",
+      "content": "@PrisonMike#101361 \n\nJa sam pocetnu tocku \"reverse engineero\" tak da sam izracunao vektor gradijenta i rjesio jednadzbe s jednom nepoznanicom,  dalje  je samo klasican postupak pretrazivanja po pravcu (lambda)\n\nMeni nije jasno kako se radi pod b)",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101375": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Murin#101371 čini mi se dosta dugačak postupak za samo jedan bod\n\npod b) mislim da trebaš naći minimum s zadanim smjerom pretraživanja ali iz dvije različite početne točke, i onda vektor između te dvije točke minimuma ti je konjugirani smjer",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101376": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@PrisonMike#101375 Zapravo i nije tak puno\n\n2 parcijalne derivacije prilično jednostavnih funkcija, jedan sustav jednadžbi i to je to\n\nal da bi mogao bod više, mogao bi, samo skužit ćeš sutra da ti svi ti zadaci pojedinačno imaju malo bodova",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101377": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@micho#101376 mislio sam zapravo na ovaj drugi dio kad minimiziramo po lambdi jer ulazi pod kvadrate, al da uz kalkulator se i to brzo riješi",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101378": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Murin#101371 kolko ti ispadnu početna točka i lambda na kraju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101379": {
+      "poster": "Murin",
+      "content": "@PrisonMike#101378 \n\nMoguce da sam fulao jer sam nabrzaka racunao al ispadne mi X0=(3.5,3.2), a lambda ispadne -0.3095\n\ni onda bi samo bilo xi=xi-lambda*parc_der_xi,dobijes novu tocku i preko toga se opet racuna novi smjer",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101380": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "kod box algoritma, kad racunam centorid, a imam dvije tocke s jednako losom f(x).. koju izaberem kao xh? i dal onda pri racuannju centroida izuzmem obe ili samo onu koja je xh?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101385": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@johndoe12#101380 Isto kao i kod simpleksa se jedna od njih odredi kao gora\n\numjesto da gledaš na točke kao [imath]x_h[/imath] i [imath]x_l[/imath], gledaj na njih kao `x[-1]` i `x[0]` u sortiranom nizu (po vrijednosti).\n\nA zašto ne obje? Zato što si tako\n\n- stvaraš nekvalitetniji centroid\n- potencijalno ubiješ sve točke (zamisli da imaš samo 2: ukloniš obje i nemaš ništa)\n\nInače bi bilo sasvim logično maknuti obje, jer razlog zašto uopće mičemo te najlošije točke je samo zato da dobijemo malo bolju procjenu gdje se minimum nalazi pa bi onda htjeli da ni jedna ni druga ne utječe na centroid, ali to ne radimo da si ne sjebemo dalje algoritam. A koliko mi je poznato računanje centroida u Boxovom postupku je identično onome u Nelder Mead simpleksu.",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101387": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "![](assets/2020-11-27/00053.png)\n\nb) to je visemodalni problem, jer sad imamo dva minimuma? jedan u (1, 2) a drugi u (3, 1.5)?\n\nA konvergirat ce u tocku 4, 0.5 jer ima najmanju f(x)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101388": {
+      "poster": "koBASA (hackerman)",
+      "content": "@Murin#101371 \n\nMislim da cak nije bitna pocetna tocka, ionako je iduci smjer okomit",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101389": {
+      "poster": "Stark",
+      "content": "@johndoe12#101387 Kako odredim koliko lokalnih minimuma ima? A što se tiče konvergencije kod Boxa, pa valjda u jedan od tih minimuma?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101391": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @Stark#101389 Kako odredim koliko lokalnih minimuma ima?\n\nNajlakše ti je nacrtati\n\nu ovom slučaju su ti sva ograničenja il neki rangovi brojeva, ili nešto iznad/ispod krivulje, ili unutrašnjost/vanjština neke elipse, da se",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101393": {
+      "poster": "glider (toblerone)",
+      "content": "![](assets/2020-11-27/00054.png)\n\nkako bi izgledao postupak za ovaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101400": {
+      "poster": "koBASA (hackerman)",
+      "content": "@glider#101393 \n\nOdma na pocetku videa\n\nhttps://www.youtube.com/watch?v=seM-hQSMeyY",
+      "votes": {
+        "upvoters": [
+          "glider (toblerone)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101401": {
+      "poster": "member",
+      "content": "@Noggenfogger#100903 kako to? ja dobijem x2=2.337 (1.iter delta x = 2, x1=3, 2.iter delta x = -0.663",
+      "votes": {
+        "upvoters": [
+          "Arfit",
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101437": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "@chuuya#101281 jesi uspio rjesiti? moze postupak? jako me zbunjuje a)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101439": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@member#101401 u drugoj iteraciji sam slucajno GtG umjeto JtJ racunala. tocno ti je vjerojatno :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101442": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Cereal_Killer#101437 \n\nja sam ovako, nisam sigurna u tocnost\n\n![](assets/2020-11-27/00061.jpeg)\n\n![](assets/2020-11-27/00062.jpeg)",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101444": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "za v konjugirani nema jedinstvenog rjesenja jel?",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101454": {
+      "poster": "Joji",
+      "content": "6. a) Gradijent u sljedećoj iteraciji bi trebo samo bit okomit vektor na ovaj koji je zadan jer se radi o gradijentom spustu na kvadratnoj funkciji, znači npr. [imath]\\textbf v_{i+1} = [-2\\quad 1]^\\top[/imath]. source: predavanje 05 2. sat oko 27:30",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "PrisonMike (Števo)",
+          "ReyKenobi",
+          "luba",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101461": {
+      "poster": "Murin",
+      "content": "@Noggenfogger#101442 \n\nNije mi jasno kako si dobila pocetnu tocku, tj od kud ovaj sustav",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101462": {
+      "poster": "sphera",
+      "content": "jel ima itko rješenja ispita iz 2019. da se može iskontrolirat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101479": {
+      "poster": "member",
+      "content": "@Noggenfogger#101159 hmm, ograničenja fja gi(x) bi trebala bit zadana kao gi(x)>=0, a ograničenja fja hj kao hj(x)=0. i uz to šta si napisala, mislim da bi trebalo odstranjivanjem eksplicitnog ograničenja dobit i novo ograničenje h(y) (npr 1+12sin**2(y)",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102675": {
+      "poster": "Stark",
+      "content": "Sjeća li se netko zadataka s ispita možda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102824": {
+      "poster": "Bananaking",
+      "content": "@Stark#102675 Uploadao sam na materijale, čekamo da mićo stavi u repozitorij",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102933": {
+      "poster": "Emma63194",
+      "content": "Je li rekao profesor možda na predavanju, kada možemo očekivati rezultate ispita?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102941": {
+      "poster": "Stark",
+      "content": "@Emma63194#102933 Tijekom tjedna",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "ImJustAKid (lumity)",
+          "Svarog (Veles)",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105467": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "gdje mogu naci gradivo za 4.dz - genetski alg? (predavanje od ponedjeljka jos nije objavljeno, a nisam prisustvovala)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106803": {
+      "poster": "lucija (luc)",
+      "content": "Dosli su rezultati na ferko\n\nZna li itko maksimalan broj bodova po zadacima?",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "ImJustAKid (lumity)",
+          "Vrba",
+          "cajaznun",
+          "luba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106807": {
+      "poster": "Stark",
+      "content": "Ima tko zapisan sustav iz 1. zadatka?\n\nI zna li tko kako su izgledale izokonture funkcije u zadnjem zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106808": {
+      "poster": "Emma63194",
+      "content": "Sjeća li se možda tko što je bio koji zadatak?",
+      "votes": {
+        "upvoters": [
+          "cajaznun",
+          "miki123"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106976": {
+      "poster": "Bananaking",
+      "content": "@micho možeš ok-at  @Bananaking#102824 ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106980": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Bananaking#106976 u sastanku sam, stavim danas kasnije ili sutra rano ujutro, nisam stigao do sad",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106990": {
+      "poster": "Stark",
+      "content": "Do tada se može vidjeti tu:\n\nhttps://u.pcloud.link/publink/show?code=kZYbtMkZGdYd92G0I8mtMaqnyGtMth3C3WPX#folder=7779000770",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107185": {
+      "poster": "RogerRoger",
+      "content": "Zna li se što je s predavanjima? Zašto predavanje od prošlog ponedjeljka još nije uploadano?",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107187": {
+      "poster": "Stark",
+      "content": "@RogerRoger#107185 Rekao je da nije stigao ali da bude",
+      "votes": {
+        "upvoters": [
+          "RogerRoger",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107704": {
+      "poster": "Impa",
+      "content": "@RogerRoger#107185 mozes downloadat s teamsa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108377": {
+      "poster": "tre_besty (luk)",
+      "content": "Jel još itko ne može otvorit ppt \"Simulacija rada GA\" iz materijala predmeta, kaze mi da treba sifru lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108380": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@tre_besty#108377 Otvorio sam najnormalnije preko Office 365. Međutim, LibreOffice na Ubuntu kaže da je kriva verzija. Šteta, nadao sam se da je neka greška pa da malo mimujem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108445": {
+      "poster": "tre_besty (luk)",
+      "content": "@micho#108380 ok tenks, onda je valjda do LibreOfficea",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108630": {
+      "poster": "Bato (Morski Pas)",
+      "content": "@tre_besty#108377 moras odabrati read only kada ju skidas, sifra je potrebna ako zelis modificirati prezentaciju",
+      "votes": {
+        "upvoters": [
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113601": {
+      "poster": "[deleted]",
+      "content": "Ima li netko pdf skripte?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115754": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "Kolko je 5.dz zahtjevna u odnosu na prethodne zadaće?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "115758": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@ImJustAKid#115754 Jedna od lakših, jedini neelementarni dio je mješoviti postupak, ovo ostalo je pussy smoke i u težini i u količini",
+      "votes": {
+        "upvoters": [
+          "ImJustAKid (lumity)",
+          "Zogen",
+          "lucija (luc)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124254": {
+      "poster": "hi_doggy",
+      "content": "Ima li neki kolega da je pao na plagijatima da screena kako to izgleda na ferku? Jesu promijenili u 0 bodove već?\n\nNije da sam ja plagirao nego....pitam za prijatelja....",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Amon",
+          "Bananaking",
+          "Bato (Morski Pas)",
+          "Cubii",
+          "Emma63194",
+          "Smolaa",
+          "Stark",
+          "Svarog (Veles)",
+          "Trolololica",
+          "iamBAKA",
+          "jazzMassive",
+          "klukas",
+          "svemia (bearyn)"
+        ]
+      }
+    },
+    "124271": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@hi_doggy#124254 Dobiš ovakvu notifikacijicu\n\n![](assets/2021-01-19/00011.png)\n\n\nI ne samo da su promijenili, neki su već obavili i uvide 👽️",
+      "votes": {
+        "upvoters": [
+          "hi_doggy",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Stark",
+          "hi_doggy",
+          "iamBAKA"
+        ]
+      }
+    },
+    "124345": {
+      "poster": "Bananaking",
+      "content": "@micho#124271 lol nisi valjda ti? \n\nKako izgledaju uvidi? Ako imaš KAZBOD onda valjda imaš pravo izaći na ispit zar ne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124350": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Bananaking#124345 Nope, kolega od mene\n\nUvid je izgledao tako da mi je asistent pokazao side by side kodove, bilo očito da je prepisano, ja sam mu rekao da se vjerojatno netko pozabavio GitHubom na kojem su ti kodovi licencirani, tako da je i copyright infringement jer nema copyright noticea, on mi je rekao JMBAG i da probam kontaktirati kolegu, ja sam mu dao i link na repo da porazgovara s profesorom u slučaju da se kolega ne javi, malo sam rantao jer sam bio triggeran i pozdravili se.\n\nKolegu sam našao već klasičnim backdoorom preko maila, tako da nije asistent prekšio nikakve GDPRove hehehe\n\nZa ovo ostalo jesam imao pravo pisati ispit ne znam, ali znam da mi je Ferku pisalo da nisam zadovoljio prag iz labosa 👀",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124355": {
+      "poster": "Bananaking",
+      "content": "> @micho#124350 tako da je i copyright infringement jer nema copyright noticea\n\nLMAO\n\nJa sam fasovao zbog 5. labosa kojeg nisam imao pojma i na čijem mi je ispitivanju i rekao da ću biti pod povečalom. Neću ulaziti u to jesam li što negdje usporedio ili ne ali realno labos je prepisivanje formula iz skripte. Zato me zanima jel već to kao sumnjivo ili baš izvuku neki identičan labos jer ne bi se stavljao u tu poziciju (iako dosta je to bodova).\n\nAli opet, ako je KAZBOD=5 pretpostavljam da me nisu još kickali s faksa, nadam se, neka me netko ispravi ako sam u krivu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124356": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Bananaking#124355 Ne bruh lik je kopirao i moju indentaciju, ovo je bilo očito da ne može biti očitije, a kao 75% podudarnost. Asistent je napomenuo da ima i gorih slučajeva, sa 100% podudarnosti.\n\nI rekao je da nemaju problema da si ljudi međusobno pomognu, samo to ne znači da mogu prepisati.",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124360": {
+      "poster": "Bananaking",
+      "content": "@micho#124356 RIP kolega",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124687": {
+      "poster": "Bananaking",
+      "content": "Jel asistent Đurasević ili Fulir/Planinić?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124690": {
+      "poster": "Stark",
+      "content": "@Bananaking#124687 Đurasević, naravno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "129794": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "Oce staviti Jakobovic snimku 13.og predavanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "134306": {
+      "poster": "Stark",
+      "content": "Ima netko ideju kako se riješi ovaj zadatak?\n\n![](assets/2021-01-31/00013.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "134326": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Stark#134306 Napraviš funkciju gubitka, npr.\n\n[math]\n\\mathcal{L}(x) = x^2 - 3 + (x^3 - 7)^2 + x^4 - 10\n[/math]\n\ni izvrtiš bilo koji algoritam nelinearne optimizacije.\n\nEDIT: Ako se funkcija minimizira umjesto da ide u 0, onda treba biti\n\n[math]\n\\mathcal{L}(x) = (x^2 - 3)^2 + (x^3 - 7)^2 +(x^4 - 10)^2\n[/math]\n\njer bi u suprotnom trivijalno rješenje bilo [imath]x = 0[/imath]",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "134440": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "13. predavanje, 1.video:\n\n   prof je zapisao broj 4.875 kao 2na2 * 1.001110. Ne bi li trebalo biti 2na2 * 1.111000? 0.5+0.25+0.125?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "134468": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "sjeća li se netko koji zadaci su bili na MI? koje metode optimizacije? s obzirom da je prof rekao da će se sigurno na ZI pojaviti neki zadatak s time, ali da sig neće biti ono što je već bilo na MI",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Svarog (Veles)",
+          "gamigugi",
+          "member",
+          "orange"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "134488": {
+      "poster": "Emma63194",
+      "content": "@johndoe12#134468 Vidi @hi_doggy#112197",
+      "votes": {
+        "upvoters": [
+          "hi_doggy",
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "134541": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "2.9 Po uzoru na IEEE 754 zapis potrebno je definirati zapis za prikaz brojeva u području  domene [10,10]. Odredite najmanji potreban broj bitova za eksponent i frakciju ako najveća dopuštena apsolutna pogreška u području domene mora biti najviše 0.1 (bit za predznak se podrazumijeva). Predstavite brojeve -9.9 i 0.45 u tom zapisu, provedite operaciju zbrajanja i dekodirajte rezultat.\n\nrazlika izmedu 2 broja je 0.1*2 = 0.2, znaci imamo 10 i prvi manji od njega je 9.8 (a njega ne mozemo egzaktno prikazat). Kako se sad bira broj bitova frakcije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "134553": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "zasto se ovdje pisu pitanja za zi, a ne u temi za zi da bude preglednije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "134575": {
+      "poster": "Stark",
+      "content": "Kakvo točno zaokruživanje radi funkcija rd(x) koju koristimo u poglavlju \"Pogreške u postupcima analize\"? Vidim da npr. 0.5 ne zaokružuje na 1.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "134622": {
+      "poster": "Cvija",
+      "content": "@Stark#134575 Ako misliš na rd(x) koji se koristi kod apsolutne pogreške, onda ti je to ništa drugo, nego vrijednost koju dobiješ kad ju prikažeš u onom IEEE 754\n\nNa primjer, onaj zadatak s predavanja\n\nIEEE 1|4|5\n\nKad prikažeš -247 = -2^7 * 1.1110111\n\nSad zbog viška odrežeš zadnje dvije jedinice, tj. zaokružiš na veći broj, a kad u binarnom zapisu zaokružiš na veći broj, ako si izbacio 1, onaj prije njega uvećaš za 1 (to je isto kad u dekadskom zapisu zaokružuješ npr. 1.058 na 1.06) i dobiješ ovaj broj:\n\n-2^7 * 1.11110 -> što je kad izračunaš -248\n\nZnači, x = -247, a rd(x) = -248",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "134627": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@johndoe12#134553 Zato što nisu ovisna o ZI, nego generalno uz gradivo predmeta. Nema ničeg preglednog u tome da pitanja koja su iz skupa gradiva cijele godine budu razbacana po ispitnim temama.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "in1",
+          "johndoe12 (enaiks)",
+          "tre_besty (luk)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "134824": {
+      "poster": "member",
+      "content": "Jel zna netko zadnji iz našeg međuispita? Za f(x) = 2*x1^2 + 2*x2^2 - x1*x2, za početnu točku T(-1,2) skicirat grad.spust uz traženje opt. iznosa pomaka, newton-raphson, koord. traženje, Fletcher-Powell, Hooke-Jeeves (uz poč.pomak 1) i Powellow postupak. Znam da sam to polu random-bezveze na ispitu pa dobila 1.5 od 3. Al volila bi to znat skroz do kraja kako bi išlo. Pa evo ako se nekome da",
+      "votes": {
+        "upvoters": [
+          "Stark",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "134873": {
+      "poster": "Stark",
+      "content": "@micho#134326 Koji bi najbezbolniji algoritam bio ovdje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "135422": {
+      "poster": "Ziher",
+      "content": "Jel moze netko objasniti zasto je u 2.4 frakcija 6 bita?\n\nTo je ovaj:\n\n![](assets/2021-02-02/00000.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "135515": {
+      "poster": "Cvija",
+      "content": "@johndoe12#134541 Ako još nije riješeno, evo ovako je meni jedan kolega objasnio.\n\nPošto je interval između [-10, 10], za k uzimamo 3, kad imamo k, onda možemo izračunati a = 2^(k-1) - 1 = 3\n\nSad kad imamo a, uz pomoć formule koja je spomenuta na predavanjima, MAP = 2^(a - p) = 0.1 izvučemo p\n\n[math] p =3 -  log_2{0.1} = 6.321...[/math]\n\nŠto znači da nam za prikaz p treba više od 6 bitova, tj. 7\n\nIz toga izvučeš broj bitova frakcije kao p' = p - 1",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "135570": {
+      "poster": "Yasuke (Bono)",
+      "content": "Kad npr. oduzimamo i nakon pomaka na istu potenciju imamo kod broja višak znamenki s desne strane zbog ograničenja frakcije jel onda taj višak samo odrežemo ili zaokružujemo zadnju znamenku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "135606": {
+      "poster": "in1",
+      "content": "@Yasuke#135570 Odrežemo",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136013": {
+      "poster": "MJ3",
+      "content": "![](assets/2021-02-02/00057.png)\n\nkoji točno broj treba uvrstit u f(x) za računanje kazne kromosoma, zadani decimalni x (npr. 0.35) ili x koji dobijem ponovnom pretvorbom iz b u x?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136038": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@MJ3#136013 onaj koji dobiš iz binarnog zapisa, jer to jedino imaš kao \"jedinku\"",
+      "votes": {
+        "upvoters": [
+          "MJ3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136064": {
+      "poster": "Stark",
+      "content": "U zadacima s analizom prijelaznih pojava, ako imam\n\n[imath]f(x_k,t_k)[/imath] da li je to jednako kao da mi piše [imath]\\dot{x}_{k,k}[/imath] (k-ti x u k-tom trenutku) a zadano je [imath]\\dot{x} = -0.1x + 0.2t [/imath]?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136071": {
+      "poster": "chuuya (temari)",
+      "content": "@Stark#136064 [imath]f(x_k,t_k) = \\dot x(t_k)[/imath]\n\nU ovom slučaju bilo bi [imath]f(x_k,t_k)=-0.1x_k+0.2t_k[/imath]",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136126": {
+      "poster": "Stark",
+      "content": "Kod IEEE sličnih zapisa, imam npr 1/4/5 i želim prikazati neki broj. Ispostavi se da ga mogu zapisati kao [imath]2^4 * nešto[/imath]. Što mi ovdje znači a koji kaže za koliko je posmaknut eksponent => [-6...7]? Koje eksponente brojeva koje želim zapisati moram posmicati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136282": {
+      "poster": "Atem",
+      "content": "Hoće li \"Analiza algoritama\" i \"Faktor pojačanja pogreške\" doći kao neki oblik zadatka u ZI ili je to više gradivo za usmeni?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136375": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "Jao, tko je osoba s kojom se dopkam preko google docsa sa zadacima u ovo gluho doba noci?\n\n\"Anonimna vjeverico\", you da real mvp",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon",
+          "Arfit",
+          "Cubii",
+          "FICHEKK",
+          "Filemon",
+          "Ma97",
+          "Mioch",
+          "Murin",
+          "Svarog (Veles)",
+          "Zogen",
+          "cajaznun",
+          "gloripaxis",
+          "hi_doggy",
+          "in1",
+          "luba",
+          "member",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "mikimoj",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136405": {
+      "poster": "in1",
+      "content": "@Stark#136126 \n\n> @Stark#136126 Što mi ovdje znači a koji kaže za koliko je posmaknut eksponent => [-6…7]?\n\n[imath]a[/imath] označava pomak, budući da želimo imati negativne eksponente onda pomak koristimo tako da ne krenemo brojati od 0 do [imath]2^{k}-1[/imath] nego sada brojimo od [imath]0-a[/imath] do [imath]2^{k}-1-a[/imath].\n\n> @Stark#136126 Koje eksponente brojeva koje želim zapisati moram posmicati?\n\nsve\n__________________________________________________________\nIma poprilično dobar video koji to objašnjava:\n\nhttps://youtu.be/RuKkePyo9zk?t=248",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136409": {
+      "poster": "[deleted]",
+      "content": "moze mi netko pls poslat skriptu? oni materijali vise ne rade.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136428": {
+      "poster": "Svenchi",
+      "content": "Treba li se znati simulirano kaljenje za ispit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136451": {
+      "poster": "koBASA (hackerman)",
+      "content": "@maki#136409 https://docdro.id/LFeJPxY",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136764": {
+      "poster": "Yeltneb",
+      "content": "Je li uvijet stabilnosti za sve postupke uvijek isti? \n\nMislim na ovaj graf\n\n![](assets/2021-02-03/00033.png)",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "chuuya (temari)",
+          "hi_doggy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136782": {
+      "poster": "Karlovsky120",
+      "content": "@Yeltneb#136764 Taj graf je uvijek isti, ono što se mjenja je lambda, pa prema tome onda vidiš koliki smije biti T. Mislim da su ovo egzaktne granice kada je lambda=1, ali čekaj da još netko potvrdi taj dio, možda pričam gluposti.",
+      "votes": {
+        "upvoters": [
+          "Yeltneb"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136784": {
+      "poster": "megi7 (someone7)",
+      "content": "@Karlovsky120#136782 to je ravnina lambdaT \n\ngranice su za T = 1 \n\nkada se T promijeni, promijene se granice za lambde",
+      "votes": {
+        "upvoters": [
+          "Yeltneb"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136797": {
+      "poster": "Karlovsky120",
+      "content": "@megi7#136784 Što ne bi trebalo biti obratno?\n\nLambda definira sustav, i onda T mora biti takav da je rezultat unutar danih granica.\n\nTehnički, moglo bi se reći da je T fiksiran, pa da onda lambda mora biti takav da je unutar granica, mislim da to isto radi, ali nema toliko smisla s obzirom da se obično traži T za sustav, a ne sustav za T.\n\nTj. pretpostavljam da su granice takve ako je lambda=T=1.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136801": {
+      "poster": "Karlovsky120",
+      "content": "@Yeltneb#136764 Mislim da je najpametnije što sam ti rekao da me ne slušaš. Ali graf će uvijek biti isti, to stoji, samo se pozicije lambde mijenjaju, a time i T koji ti treba da ih strpaš u dozvoljeno područje, ako je to uopće izvedivo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Yeltneb"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136824": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "kako znamo kada broj raspisujemo kao 0.f, a kada 1.f?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136830": {
+      "poster": "Yeltneb",
+      "content": "@johndoe12#136824 Gledaš ako su svi bitovi eksponenta 0, onda je denormirani signifikand i onda je 0.f, inače je 1.f",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136834": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Yeltneb#136830 da ali ako imam zadano 0.1875, jel to znaci da automatski vidim aha ovaj broj je nula cijela nesto pa je zato raspisano kao 0.f tj. 0.1100*2na -2",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136847": {
+      "poster": "Yeltneb",
+      "content": "@johndoe12#136834  Koliko kužim, ovisi o zadatku. Ako bude napisano s minimalno bitova onda to želiš napisati s 0.f. Ali nisam ni ja iskreno siguran kako se treba to tretirati u tim situacijama.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136854": {
+      "poster": "Koalalica (zaba)",
+      "content": "@johndoe12#136834 mislim da pises taj denormirani kad vise ne mozes smanjiti potenciju u eksponentu.\n\nnpr ako ti je granica za eksp [-2, 3] a binarni broj ti je 0.0001, onda ne mozes napisati 2^-4 * 1, nego 2^-2 * 0.01",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136876": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "![](assets/2021-02-03/00040.png)\n\nmoze li netko objasniti ovaj zadtak? dobije se l1 = 1, l2=-1. \n\nMeni ispadne da ni za jedan postupak nije stabilno??",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136893": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@johndoe12 molim te da pitanja nevezana za ZI postavljaš ovdje, u Pitanja i odgovore, jer izgleda pomalo bezobrazno da ignoriraš ovoliko premještaja.\n\nAko nema direktne veze sa ZI, ne pripada u temu za ZI.",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": [
+          "johndoe12 (enaiks)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136908": {
+      "poster": "megi7 (someone7)",
+      "content": "@johndoe12#136876 ![](assets/2021-02-03/00044.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "136938": {
+      "poster": "Karlovsky120",
+      "content": "@johndoe12#136876 Jednom kada dobiješ lambde, vučeš pravce iz ishodišta kroz svaku lambdu. Ako onda možeš pronaći neki faktor skaliranja (tj. T) takav da obje lambde istovremeno po tom pravcu translatiraš u stabilno područje nekog algoritma, onda taj algoritam možeš koristiti s tim T-om.",
+      "votes": {
+        "upvoters": [
+          "megi7 (someone7)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "137240": {
+      "poster": "Ellie",
+      "content": "Last minute, jel bi znao netko objasniti kako izracunati ovu vjerojatnost prezivljavanja?\n\n![](assets/2021-02-04/00005.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "142213": {
+      "poster": "Stark",
+      "content": "Ako imamo dvije jedinke i križamo ih uniformno s proizvoljnim vektorom R, da li je moguće naći optimum? \n\nOvako na prvu bi rekao da je moguće pošto možemo \"namještati\" vektor R kako nam odgovora, no kako to dokazati i jesam li u pravu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "142223": {
+      "poster": "Joji",
+      "content": "@Stark#142213 Bitovi u slučajnom vektoru se prepisuju u dijete samo ako su roditeljski bitovi različiti. Npr. ako je optimalno rješenje 10000, a roditelji 10100 i 10101, na trećem bitu ne možeš dobiti 0 koji god vektor R da uzmeš za križanje, ali u slučaju kad su roditelji 10001 i 10100 (uz isti optimum) moglo bi se dobiti optimalno rješenje uz npr. R=00000. Dakle, da bi se odredilo je li moguće dobiti optimalno rješenje uz proizvoljan vektor R treba provjeriti na kojim su pozicijama bitovi roditelja jednaki i podudaraju li se s odgovarajućim bitovima kod optimalnog rješenja. Ako se svi zajednički bitovi podudaraju s odgovarajućim bitovima optimalnog rješenja, onda se optimalno rješenje može dobiti uz neki vektor R, inače ne.",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "142586": {
+      "poster": "Stark",
+      "content": "@Joji#142223 Puno hvala\n\nU ovom trenutku na videu \n\nhttps://youtu.be/f-loNArcX5E?t=1361\n\npiše točan rezultat koji je dobiven pomoću [imath]e^{-0.1T}[/imath]. Zanima me da li to uvijek vrijedi i da li (i kako) mi to može biti od pomoći kao kontrola pri rješavanju sustava? Što ako umjesto [imath\\]0.1[/imath] imam [imath]\\lambda[/imath], dakle matricu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "142913": {
+      "poster": "Stark",
+      "content": "Može netko objasniti ovaj zadatak? Zar nismo rekli da je Gauss-Newtonov postupak za rješavanje sustava nelinearnih jednadžbi? Kako bi se ovo riješilo? Zadatak je s ovogodišnjeg MI.\n\n![](assets/2021-02-15/00008.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "142947": {
+      "poster": "Murin",
+      "content": "@Stark#142913 \n\nPošto su ovdje zbrojevi kvadrata, najmanja vrijednost fje f je 0, to će bit kada su oba člana 0 a na njih možeš gledati ko one \"nadomjesne\" fje, i onda samo radiš taj postupak sa jakobijanom preko one formule",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "142973": {
+      "poster": "Murin",
+      "content": "U zadacima za vjezbu, 1.12, zar nije minimalni broj bitova za eksponent 4 a ne 5, jer nam za 504 treba  2^8, a 8 se moze dobiti sa k=4, jer je onda a=7 te je raspon eksponenta [15-a,-a] sto je [8,-7], a za drugi broj nam je potreban 2^4 sto isto ulazi u to rjesenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "142978": {
+      "poster": "Stark",
+      "content": "@Murin#142973 Nisam siguran, ali mislim da je tu problem rubni slučaj kad su u frakciji samo jedinice.\n\n![](assets/2021-02-15/00013.png)\n\nMislim da je baš nešto slično pričao na predavanju.",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "142994": {
+      "poster": "Murin",
+      "content": "@Stark#142978 \n\nAaa hvala, zaboravo sam na te slucajeve s beskonacnosti, znaci mi onda zapravo mozemo prikazati u tom slucaju [7,-7] (da predstavlja broj)",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "143038": {
+      "poster": "Stark",
+      "content": "Fali li u ovom zadatku drugi dio funkcije? Ako ne, ne znam kako bi bilo rješivo....\n\n![](assets/2021-02-15/00017.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "143043": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Stark#143038 Zašto ne bi bilo rješivo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "143045": {
+      "poster": "Stark",
+      "content": "@micho#143043 Jer se radi 2D smjer pretraživanja u 1D funkciji?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "143046": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Stark#143045 i? Ne vidim kakav bi to bio problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Stark"
+        ]
+      }
+    },
+    "143047": {
+      "poster": "Stark",
+      "content": "@micho#143046 Možeš li onda molim te napisati rješenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      }
+    },
+    "143816": {
+      "poster": "Bananaking",
+      "content": "Kako se dobiju ovi brojevi iz tablice?\n\n![](assets/2021-02-17/00000.png)",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "143830": {
+      "poster": "Bananaking",
+      "content": "@Bananaking#143816 Ok, skužio sam, frakcija 0001 = 0 * 2^(-1) + 0 * 2^(-2) + 0 * 2^(-3) + 1 * 2^(-4) = 2^(-4) = 0.0625 a u drugom dijelu tablice ide 1.0625 zbog 1 u e",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "144026": {
+      "poster": "Bananaking",
+      "content": "Ovdje je netko pitao ali nema odgovora: kako se dobije da je broj bitova za eksponent = 4? 24 = 11000 = 1,1 * 2^(4) , 25 = 11001 = 1,1001 * 2^(4). Frakcija jasno 4 bita zbog 1001, zašto nam za zapis eksponenta (4) treba 4 bita?\n\n![](assets/2021-02-17/00022.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "144028": {
+      "poster": "Murin",
+      "content": "@Bananaking#144026 \n\nTo sam i ja prvobitno zeznuo, znaci ako uzmes k=3, onda ti je a=3, i svi eksponenti ce ti biti oblika e-a. Najveci ce tada biti 111 (7 u dec) -3 =4, ali to nije dobar zapis jer sve jedinice (u eksponentu) su rezervirane za NaN i +-INF",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "216031": {
+      "poster": "Bananaking",
+      "content": "Tema za ekipicu koja se priprema za ljetni ili jesenski ispitni rok iz ovog predmeta, ako nisam jedini.\n\n![](assets/2021-06-29/00040.png)\n\nIz dokumenta za grupno rješavanje, netko je objasnio sa strane zašto + našao sam predavanje gdje profesor to rješava ali da potvrdim, ovdje -0.1875 = -0.0011 = -0.11 * 2^-2 a ne -1.11 * 2^-3 jer time štedimo jedan bit za eksponent i frakciju jer stane u denormirano i to moram provjeriti uvijek? Jer na prvu je obično zaokruživanje 1.nešto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "216354": {
+      "poster": "Bananaking",
+      "content": "Iz ovog ispita: https://fer.studosi.net/d/3057-aipr-o-predmetu/4\n\nIEEE zadatak: -0.875 i 0.8125 prikaži u 1|3|5 i zbroji ih a) denormirano b) normalno\n\nOvo pod a) znači za -0.875 = -0.111 trebam ga zapisati u denormiranom formatu što znači da u e ide \"000\" što zbog pomaka 3 ispadne Eks = 1 - a = 1 - 3 = -2.\n\nDakle -0.111 * 2^0 = -11.1 * 2^-2  i time izgubim ove jedinice prije točke jer je denormirano 0.f ? I onda od -0.875 mi je u memoriji ostalo samo -0.125 i time račnam dalje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "218053": {
+      "poster": "Bananaking",
+      "content": "https://fer.studosi.net/d/3057-aipr-o-predmetu/18\n\nIEEE zadatak\n\n> 1|4|8\n\n> a) Prikažite broj 8 u danom prikazu. Odredite broj koji, kada se oduzme od broja 8, uzrokuje rezultat s najvećom relativnom pogreškom. Oduzmite ta dva broja i izračunajte relativnu grešku.\n\n> b) Odredite najveću apsolutnu grešku koja se može dogoditi zbrajanjem dvije pozitivne vrijednosti u ovom zapisu te na primjeru zbrajanja proizvoljna dva broja pokažite zbog čega dolazi do te greške (rezultat operacije ne smije biti beskonačna vrijednost)\n\nZna li netko ovaj riješiti? Kolega u komentarima niže je dobro započeo pod a) teoremom MRP=baza-1 ali čini mi se nije dobro izveo jer  ja oduzimanjem 8 i 1 ne dobivam 3.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "218191": {
+      "poster": "Bananaking",
+      "content": "U nadi da netko ovo možda slučajno i pročita: kada moram paziti na zaokruživanje u zadanom prikazu, kada je najteži odsječeni bit = 1 očito ali mora li eksponent biti maksimalan?\n\nZZV 1.6 1|4|5: jel -25.25 = 1|1011|10010 (odrezan 1) ili 1|1011|10011 (zadnja 0 zaokružena na 1)? Na online kalkulatoru https://oletus.github.io/float16-simulator.js/ je prikazano sa odrezanom 1 ali me zanima računski razlog. Jel tu ULP = 0.5 ili se ULP računa samo kada je eksponent maksimalan (u ovom slučaju 1110)?\n\nEDIT: u tom slučaju je onda -25.25 sa odrezanim bitom zapisan -25 a sa zaokruženim na gore -25.5",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "259415": {
+      "poster": "Skaxen",
+      "content": "ima li netko ideju sto uopce napraviti s ovim zadatkom?\n\n![](assets/2021-11-28/00010.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276429": {
+      "poster": "Smolaa",
+      "content": "@\"Wololo\"#p276409  A jel ima nekih zadataka za CMA-ES igdje ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276433": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"Smolaa\"#p276429 \n\nNa jednom predavanju sam pita profesora i reka je da će objaviti zadatke za CMA-ES, ne znam što čeka tho",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276436": {
+      "poster": "Wololo",
+      "content": "@\"Smolaa\"#p276429\n\n@\"Yebem\"#p276433 \n\nRijesene nisam nasao, stavili su jedan u ovaj updated pdf sa zadacima, tamo na pocetku zadataka iz genetskih, al nazalost bez rjesenja...\n\nEDIT: Jesu otprilike rekli kaj bi mogli ocekivat iz kvadraticnog i sekvencijalnog kvadraticnog na ispitu? Izvrtit ovo s aktivnim ogranicenjima do kraja na papiru uzme vise od pol sata sigurno",
+      "votes": {
+        "upvoters": [
+          "Smolaa",
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276801": {
+      "poster": "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)",
+      "content": "![](assets/2022-02-03/00040.png)\n\nMože li netko objasnit kako zaključimo na ovom primjeru da su aktivna ograničenja 3 i 5 ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276830": {
+      "poster": "Smolaa",
+      "content": "@\"Zlatan Ibrahimovic\"#p276801 Uvrstiš ovu početnu točku u svako ograničenje i vidiš gdje se nejednakost pretvori u jednakost. (za 5 je trivijalno 0=0 odma vidiš)",
+      "votes": {
+        "upvoters": [
+          "Zlatan_Ibrahimovic (Zlatan Ibrahimovic)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "305897": {
+      "poster": "DorijanCirkveni",
+      "content": "Ima li netko primjere ispitnih rokova za predmet Analiza i projektiranje računalom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "305933": {
+      "poster": "Emma63194",
+      "content": "@\"DorijanCirkveni\"#p305897  Gledaj malo po threadovima. \n\nhttps://fer.studosi.net/d/3057-aipr-o-predmetu/19",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "305953": {
+      "poster": "DorijanCirkveni",
+      "content": "@\"Emma63194\"#p305933 hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,507 @@
+{
+  "title": "[STRUCE1] 5. laboratorijska vježba - 2021/2022",
+  "creator": "gad_gadski",
+  "slug": "struce1-5-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Strojno učenje 1",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "262234": {
+      "poster": "gad_gadski",
+      "content": "Imam problem kod dijela di predajemo svoji predict u funkciju plot_2d_clf_problem(). Predict mi prima primjer x i vraca oznaku klase, te ga predajem isto kao i ovaj ugrađeni predict (za koji funkcija za graf radi): \n\nplot_2d_clf_problem(X_art, y_art, lambda x: neigh.predict(x)) - njihov predict\n\nplot_2d_clf_problem(X_art, y_art, lambda x: knn.predict(x)) - moj predict.\n\nDobivam ovaj error ![](assets/2021-12-06/00010.png)\n\nNetko zna u cemu je problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262235": {
+      "poster": "tomekbeli420",
+      "content": "@\"gad_gadski\"#p262234 predict ti mora primati 2D polje/matricu primjera po retcima i vratiti 1D polje oznaka klasa\n\ntakođer quick tip, ne moraš pisati vlastitu lambdu, možeš kao 3. argument staviti samo npr ``knn.predict``",
+      "votes": {
+        "upvoters": [
+          "gad_gadski"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262329": {
+      "poster": "steker",
+      "content": "u 1b) kako radi ovaj KNeighborsClassifier u slucaju kada dode do izjednacenja glasova klasa kod predikcije? jel uzme samo klasu s najmanjim indeksom ili",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262374": {
+      "poster": "gad_gadski",
+      "content": "U 2b), jel normalno da svaki put kad run-am kod da mi daje drukcije najbolje k-ove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262495": {
+      "poster": "nikace (AeIoU)",
+      "content": "@\"gad_gadski\"#p262374 mislim da se generiraju različiti primjeri pa da su i izgledi grafova drugačiji, a tim i najbolji k-ovi",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262646": {
+      "poster": "teta_iz_menze",
+      "content": "jel trebamo splitat u train i test podskupove u prvom zadatku (pod a konkretno)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262650": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"teta_iz_menze\"#p262646 ne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262810": {
+      "poster": "BillIK",
+      "content": "![](assets/2021-12-08/00021.png)\n\nje li ovo u redu za 2.a ?",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Ollie",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262815": {
+      "poster": "teta_iz_menze",
+      "content": "@\"BillIK\"#p262810 nezz jel uredu, ali dobio sam isto",
+      "votes": {
+        "upvoters": [
+          "BillIK",
+          "Ollie",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262916": {
+      "poster": "Zero",
+      "content": "Što trebamo usporediti sa numpy.all u 1.b) ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262947": {
+      "poster": "SuperSaiyano",
+      "content": "@\"Zero\"#p262916 Treba usporediti one array-eve što dobiješ iz svoje i ugrađene implementacije primjenom funkcije predict(). Onda ih samo usporediš i primjeniš .all() na njima ( npr. (predict_custom == predict_implemented).all() ). Ako ti je True onda je tvoja implementacija dobra.",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262971": {
+      "poster": "Baksuz",
+      "content": "Kako ste fittali klasu KNN u prvom zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263002": {
+      "poster": "maraska",
+      "content": "Kako se točno koristi ova norm funkcija? Mislila sam da trebam usporediti svaki testni primjer sa svakim train primjerom, ali onda ponovo dobijem vektore pa nez što dalje s tim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263004": {
+      "poster": "tomekbeli420",
+      "content": "@\"Baksuz\"#p262971 nemaš nikakvih parametara za nafitati, ja sam samo sačuvao informacije o npr oznakama klasa, koliko ih ima, itd... Naravno moraš sačuvati (referencu) primjera za treniranje i njihovih oznaka da bi mogao kasnije ih koristiti u predictu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263007": {
+      "poster": "tomekbeli420",
+      "content": "@\"maraska\"#p263002 Najlakše ti je za ovaj labos, recimo da imaš 2D matricu vektora po retcima\n\nonda norm možeš koristiti ovako, u jednom pozivu:\n\n```py\nimport numpy as np\n\nvectors = np.array([[-1, 1], [-2.3, 0]])\nnorms = np.linalg.norm(vectors, axis=1)\nprint(norms) #ispisuje [1.41421356 2.3       ]\n```\n\ne a kako ovo iskoristiti za računanje euklidskih udaljenosti, pa od skupa primjera za treniranje oduzmeš primjer od kojeg racunas udaljenosti svakog primjera\n```py\n#neka je x primjer od kojeg racunas udaljenosti svakog primjera iz training seta X_train\nX_diff = X_train - x\nnorms = np.linalg.norm(X_diff, axis=1)\n```",
+      "votes": {
+        "upvoters": [
+          "maraska"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263101": {
+      "poster": "m21",
+      "content": "Kako bi trebali koristit numpy.all za usporedbu nizova u 1. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263104": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"m21\"#p263101 (a==b).all()\n\nipak ne to nije s numpy-em, ide numpy.all(a, b)",
+      "votes": {
+        "upvoters": [
+          "m21"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263112": {
+      "poster": "m21",
+      "content": "@\"Olive Oil\"#p263104 Radi mi ovako numpy.all(a==b)",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263118": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"m21\"#p263112 e to, == ide, krivo sam se prisjetio",
+      "votes": {
+        "upvoters": [
+          "m21"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263409": {
+      "poster": "Han",
+      "content": "Jel netko uspio u 4. zadatku dobiti kosinusne udaljenosti. Ja sam stavio metric='cosine' al vraca mi samo nule.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263477": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Han\"#p263409 Spizdio sam hrpu vremena na ovu glupost. Meni se to dogadalo kad sam koristio 2 vektora dimenzija (n, 1) u svakoj iteraciji. Kasnije sam skuzio da treba imati po 100 vektora u svakoj iteraciji tj. napraviti 2 matrice, ali sam ovaj put stavio dimenzije (50, n) za svaku od njih i to mi je riješilo problem.",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro",
+          "Han"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263588": {
+      "poster": "samo_vagabundo",
+      "content": "jel bi graf u 4. trebao izgledati ovako?\n\n![](assets/2021-12-11/00007.png)",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "sheriffHorsey",
+          "tomekbeli420"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263596": {
+      "poster": "tomekbeli420",
+      "content": "@\"samo_vagabundo\"#p263588 meni isto tak izgleda",
+      "votes": {
+        "upvoters": [
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263795": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "Kolko vam je trebalo da sve napravite  cca?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "263800": {
+      "poster": "Ducky",
+      "content": "@\"Precious Bodily Fluids\"#p263795 oko pol dana, al može se i brže",
+      "votes": {
+        "upvoters": [
+          "JogaBonito",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "samo_vagabundo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264011": {
+      "poster": "SuperSjajan3",
+      "content": "Jel ikome kad stavi svoj kNN.predict u plot2d samo zapne u beskonacnoj petlji negdje? Kad pokrenem moj kNN.predict bez ovog plot2d normalno radi.\n\n![](assets/2021-12-12/00017.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264022": {
+      "poster": "SuperSjajan3",
+      "content": "@\"SuperSjajan3\"#p264011 oke nista, izvrti se samo mu treba gro",
+      "votes": {
+        "upvoters": [
+          "Sulejman",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Uchenikowitz (Učečuču)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264183": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "Jel ima netko u 8 da napise sta su ga pitali",
+      "votes": {
+        "upvoters": [
+          "Ollie",
+          "Retard00",
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264209": {
+      "poster": "Me1 (Me)",
+      "content": "moze neko napisat odgovor na zadnja dva pitanja u labosu. kolko vidim po internetu kosinus udaljenost ne bi trebala biti nista puno bolja od euklidske, no kad nas ocito je.",
+      "votes": {
+        "upvoters": [
+          "Gulbash",
+          "MsBrightside",
+          "Ollie",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264211": {
+      "poster": "neksi (filip)",
+      "content": "![](assets/2021-12-13/00001.png)\n\nZašto k raste što je više primjera?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264419": {
+      "poster": "maraska",
+      "content": "@\"filip\"#p264211 Što je veći skup primjera N, potrebno je gledati više susjeda da ne bi težio prenaučenosti, dakle za N=750 bolje rezultate će davati nešto veći k nego kod N=250 jer mu treba više susjeda (veći k) da \"vidi širu sliku\" i tako nađe optimalan slučaj.\n\nNe znam jesam dobro sročila al tako otprilike. Možeš možda pogledat šnajderov video, objašnjava to baš na grafovima.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264420": {
+      "poster": "[deleted]",
+      "content": "ima netko odgovore na ova tri pitanja?\n\n![](assets/2021-12-13/00028.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "264438": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Todd Chavez\"#p264420 Redundantne značajke su ulazne varijable koje po definiciji ne utječu na zavisne varijable sustava (izlaza modela) koji smo modelirali. K-NN pri radu s takvim značajkama ulazi u probleme jer ih uzima u obzir prilikom izračuna najbližih susjeda, a ne bi smio jer tada utječu na izlaz modela. To stvara veliki šum u podacima i kvari predikciju. \n\nOsnovni k-NN nema mehanizam kojim bi zanemario redundantne značajke osim ako mu se ne zada jezgrena funkcija koja bi to napravila, pri tome bi unaprijed trebali znati koje značajke su redundantne, a to nije garantirano. \n\nLogistička regresija može zanemariti redundantne značajke tako da im pripadne težine pritegne na nulu.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Daho_Cro",
+          "Gulbash",
+          "[deleted]",
+          "cajaznun",
+          "maraska",
+          "neksi (filip)",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

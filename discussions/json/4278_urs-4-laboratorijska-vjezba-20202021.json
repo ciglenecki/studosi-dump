@@ -1,0 +1,174 @@
+{
+  "title": "[URS] 4. laboratorijska vježba - 2020/2021",
+  "creator": "Vitez-slavonske-ravni (Željko)",
+  "slug": "urs-4-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Ugradbeni računalni sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "201614": {
+      "poster": "Vitez-slavonske-ravni (Željko)",
+      "content": "Jel uspio tko riješiti ovo? Ako da, možete li dati neke hintove kako?",
+      "votes": {
+        "upvoters": [
+          "Ak08 (obama)",
+          "Upforpslone",
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "MrSebo67",
+          "Upforpslone"
+        ]
+      }
+    },
+    "201675": {
+      "poster": "jobi (azex)",
+      "content": "@Vitez-slavonske-ravni#201614 \n\najmo odgodit ovo nekako",
+      "votes": {
+        "upvoters": [
+          "Gino20"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201725": {
+      "poster": "Al_Pakino (Al Pakino)",
+      "content": "@Vitez-slavonske-ravni#201614 u arhitekturi definiraj cetiri signala od 8 bitova i jedan od 10 bitova, oni ti predstavljaju registre za spremanje brojeva. Napravi process koji reagira na promjene clocka i reseta, ovu protocnu strukturu registara mozes implementirati u jednoj for petlji.\n\nfor i in 0 to 7 loop\n\n                r3(i) <= r2(i);\n\n                r2(i) <= r1(i);\n\n                r1(i) <= r0(i);\n\n                r0(i) <= in_port(i);\n\n             end loop;\n\n             kasnije ih sve zbrojis u onaj veliki registar od 10 bitova, njega shiftas desno 2 puta jer to predstavlja dijeljenje s 4\n\n             Na kraju pazis kad u out_port spremas 0, a kada izracunatu aritmeticku sredinu",
+      "votes": {
+        "upvoters": [
+          "Drmolirius",
+          "MrSebo67"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201786": {
+      "poster": "MrSebo67",
+      "content": "Koja je ovo fora sa port_id, ja vidim da ima razlicita 3 porta, jel to onda znaci da mi moramo racunati  3 razlicite vrijednosti i onda za odgovarajuci port dati odgovarajucu vrijednost van?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "201856": {
+      "poster": "Vitez-slavonske-ravni (Željko)",
+      "content": "Meni na vektoru 7 pada simulacija, sad ne znam što je problem",
+      "votes": {
+        "upvoters": [
+          "Ak08 (obama)",
+          "MrSebo67"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202046": {
+      "poster": "Ak08 (obama)",
+      "content": "@Vitez-slavonske-ravni#201856 jesi skuzio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202048": {
+      "poster": "Vitez-slavonske-ravni (Željko)",
+      "content": "@Ak08#202046 Nažalost nisam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Ak08 (obama)"
+        ]
+      }
+    },
+    "202050": {
+      "poster": "BigZ1",
+      "content": "@Vitez-slavonske-ravni#201856 imam isti problem..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Ak08 (obama)"
+        ]
+      }
+    },
+    "202052": {
+      "poster": "BigZ1",
+      "content": "@BigZ1#202050 znaci iz nekog razloga mi vector 7 pada, sad kao mogu ja stavit izracun da mi je van procesa no opet... imam jedan ogromni process koji gleda clock i sve radi unutar njega i eto svejedno nece.. za shift u 2 polja sam rucno napravio jer nisam htio ukljucit biblioteku jer u uputama pise da nista ne stavljamo\n\nev i cijeli kod \n\n![](assets/2021-06-06/00035.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202065": {
+      "poster": "BigZ1",
+      "content": "znaci ovo mi je izracun koji je u jednom velikom processu kojeg potice clk i sad on nece iz nekog razloga ovo izracunati\n\npa ako netko vidi u cem je problem nek se javi\n\n![](assets/2021-06-06/00036.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "202075": {
+      "poster": "BigZ1",
+      "content": "@BigZ1#202065 rijesio sam problem, ovaj izracun sam maknuo iz procesa i sve varijable tj signale na pocetku incijalizirao na nulu (premda vhdl to napravi no opet ipak).. i tjt jedino sto mi bude out_port UU na pocetku no boli me tuki",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

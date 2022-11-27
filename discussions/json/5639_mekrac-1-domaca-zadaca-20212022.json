@@ -1,0 +1,481 @@
+{
+  "title": "[MEKRAC] 1. domaća zadaća - 2021/2022",
+  "creator": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+  "slug": "mekrac-1-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Meko računarstvo",
+    "Zadaće"
+  ],
+  "posts": {
+    "244631": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "Ste počeli rješavat projekt? Ima netko ideju kako napraviti metodu Domain combine(IDomain, IDomain) u razredu Domain?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "244685": {
+      "poster": "deleted",
+      "content": "@\"Precious Bodily Fluids\"#p244631 Spojis domene u array, stvoris new CompositeDomain od toga i vratis stvorenu instancu. A sad kak ces tocno stvorit taj array je na tebi.",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246315": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "Sam dobro shvatio zadatak? Mi za bilo koju domenu vrijednost pripadnosti neizrazitom skupu i relacije računamo na temelju rednog broja pojedinog elementa u domeni?\n\nNpr. imamo CompositeDomain koji se sastoji od 2 SimpleDomain-a. Ta domena je unutar CalculatedFuzzySet-a i kada od fuzzySeta tražimo vrijednost on će izračunat redni broj elementa, npr. (-2, 5), i nama dati pripadnost?\n\nNešto ovako, u razredu CalculatedFuzzySet.\n\n>! public double getValueAt(DomainElement domainElement) {\n\n        return function.valueAt(domain.indexOfElement(domainElement));\n\n    }",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247147": {
+      "poster": "Daeyarn",
+      "content": "koje od ona tri zadatka treba rijesiti za prvi labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247151": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Daeyarn\"#p247147 1. i 2.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247352": {
+      "poster": "steker",
+      "content": "Koje prezentacije tj gradivo ulazi u ta prva dva zadatka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247463": {
+      "poster": "Ducky",
+      "content": "jel nam trebaju SimpleDomain i CompositeDomain za izvršavanje koda u 1. dijelu 1. zadaće?\n\ngdje mogu pohraniti DomainElement u IDomain?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247482": {
+      "poster": "Ducky",
+      "content": "@\"Ducky\"#p247463 da. moš u SimpleDomain",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "angello2",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247545": {
+      "poster": "Daeyarn",
+      "content": "![](assets/2021-10-28/00023.png)\n\nkako ste napravili da se elementi domene mogu ispisivati for-each loopom? pokusavam napraviti da SimpleDomain i CompositeDomain vrate svaki svoju vrstu iteratora(koji je privatna klasa u svakom od njih) ali ne mogu dobit da to radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247555": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Ducky\"#p247463 mislim da nebi trebo pohranjivat domain elementw nego ih dinamicki generirat kad zatreba",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247560": {
+      "poster": "Ducky",
+      "content": "@\"Daeyarn\"#p247545 meni jednostavno radi taj kod (jer koristim isti iterator i klase nasljeđuju Domain)\n\n@\"Precious Bodily Fluids\"#p247555 pošto neznam kak se to radi, nadam se da jedan ArrayList neće naškodit...\n\nbtw jesi skužio šta traže tu  @\"Precious Bodily Fluids\"#p246315  od nas? Mislio sam napravit 3 klase za svaku funkciju...",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247564": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Precious Bodily Fluids\"#p246315 \n\n@\"Ducky\"#p247560 \n\nZapravo piše u projektnom zadatku, koristi se samo redni broj elementa u domeni. \n\n> Imamo dvije implementacije. Razred MutableFuzzySet vrijednosti funkcije pripadnosti čuva u\n\ninternom polju double -ova. Već smo rekli da svi elementi domene imaju svoj jedinstveni redni broj.\n\nU metodi MutableFuzzySet.getValueAt( e ) naprosto pitamo domenu koji je redni broj od\n\nelementa e i na to mjesto pogledamo u polju.",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247567": {
+      "poster": "Ducky",
+      "content": "@\"Precious Bodily Fluids\"#p247564 tenks, skužio!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247568": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Precious Bodily Fluids\"#p247555 \n\n@\"Ducky\"#p247560 \n\n> pošto neznam kak se to radi, nadam se da jedan ArrayList neće naškodit…\n\nzanemari ono što sam rekao, pomiješao sam spremanje DomainElementa  s vrijednostima CalculatedFuzzySeta, tamo se ne smiju spremati vrijednosti nego ih se mora izračunat.",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247688": {
+      "poster": "Daeyarn",
+      "content": "@\"Precious Bodily Fluids\"#p247568 jel se elementi domene spremaju u polje unutar SimpleDomain i CompositeDomain ili se tijekom iteracije i dohvacanja generira potrebni/sljedeci clan ?Mislim, tako je lakse ali na dijagramu klasa te klase nemaju te clanove",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247692": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Daeyarn\"#p247688 Ako nije eksplicitno zadano, možeš kako god. Ne moraš se strogo pridržavati dijagrama.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248534": {
+      "poster": "hellvetica",
+      "content": "Jeli u CompositeDomain konstruktoru trebam slozit tako da mogu dobit n SimpleDomain-ova i trebam napravit njihov kartezijev produkt?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248548": {
+      "poster": "hellvetica",
+      "content": "@\"hellvetica\"#p248534  nvm skuzio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248574": {
+      "poster": "branimir1999",
+      "content": "Kako da iteriram kroz kompozitnu domenu? Ta domena moze biti n-torka pa se patim s varijabilnim brojem nestiranih iteratora",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248581": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"branimir1999\"#p248574 Iskoristi metodu CompositeDomaina elementForIndex(int) u pozivu iteratorske metode next(). Onda iterator jedino treba pratiti koji mu je trenutni index i hasNext() provjerava jel index prešao kardinalitet kompozitne domene.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248594": {
+      "poster": "ana (anci)",
+      "content": "@\"Precious Bodily Fluids\"#p248581 sta se ne treba metoda elementForIndex implementirati koristenjem tog iteratora? zato sto ju se treba implementirati u razredu domain koja nema pojma o elementima (il sam ja nesto krivo shvatila)",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248648": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"anci\"#p248594 nisam elementForIndex implementirao u apstraktnom Domain razredu. Kako bi ju implementirala pomocu iteratora?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248654": {
+      "poster": "ana (anci)",
+      "content": "@\"Precious Bodily Fluids\"#p248648 \n\n![](assets/2021-11-01/00017.jpg)\n\novako sam ja, malo mi se cini kao neefikasan postupak ali jedini nacin da ta metoda bude implementirana u Domain razredu",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248659": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"anci\"#p248654 Auuuuu.... Mislim ok, možeš ovako. Jedna opcija je implementirati detaljnije iteratore, pa je zato elementForIndex jednostavan, a možeš i obrnuto. Makar, prvi način, tj. tvoje rješenje, me jako bode za oči po pitanju složenosti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248660": {
+      "poster": "branimir1999",
+      "content": "Kako oni zele da se izvede ova razdvojenost operacije i neizrazitog skupa u 1. zadaci, 3. podzadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248671": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"branimir1999\"#p248660 To ćeš izvesti ako ugrubo pratiš predložene dijagrame razreda. Poanta je da funkcionalnost neizrazitog skupa i izvođenje operacija nad njim odvojiš u zasebne razrede jer je to onda dobro strukturiran kod.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248680": {
+      "poster": "branimir1999",
+      "content": "@\"Precious Bodily Fluids\"#p248671 Pratim te dijagrame ali ne znam sto tocno moram napraviti u unaryOperation/binaryOperation. Probao sam dekorator ali onda nastane nered. Mutable i Calculated Fuzzy Setovi imaju drugacije metode pa bi morao raditi podklase ako zelim napraviti neku operaciju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248681": {
+      "poster": "Daeyarn",
+      "content": "jel se jos nekome dogodi ovo\n\n ![](assets/2021-11-01/00023.png)\n\nza ovaj odsjecak koda \n\n![](assets/2021-11-01/00024.png)\n\nzar ne bi trebalo postaviti alfa, beta i gamma na -4, 0 i 4 a ne gledati redni broj tih elemenata u domeni? (koji ispadnu 1, 5 i 9)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248683": {
+      "poster": "ana (anci)",
+      "content": "@\"Precious Bodily Fluids\"#p248659 I mene isto jako zivcira slozenost ali samo slijedim cupicev dijagram. Iako moguce da se i on sjebao dok ga je radio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248686": {
+      "poster": "Daeyarn",
+      "content": "@\"branimir1999\"#p248680 ja napravim 2 slucaja pomocu if:\n\nif(relation instanceof MutableFuzzySet) pomocu function postavim vrijednosti za membership listu\n\nelse napravim new CalculatedFuzzySet kojemu u konstruktor predam domenu i lambda funkciju u kojoj se koristi function",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248688": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"branimir1999\"#p248680 unaryOperation metoda  prima fuzzySet i IUnaryOperation. Ideja je da na sve mjere pripadnosti primijenis unarnu operraciju kako bi dobio nove mjere pripadnosti. Onda iz njih i domene pocetnog fuzzySeta konstruiras novi i return.\n\nSlično je sa binaryOperation samo šalješ membershipe dva fuzzyseta kako bi dobio novi membership.\n\nMetode zadehOr, not i and vračaju IUnaryOperaciju koji potom možeš koristit u prethodno opisane dvije metode. Ista stvra je s hamacher normama.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248690": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Daeyarn\"#p248681 Mislim da je zamišljeno da sve ide preko indexa, vjerojatno da jednostavnije možeš raditi sa složenim domenama.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248691": {
+      "poster": "ana (anci)",
+      "content": "@\"Daeyarn\"#p248681 Meni ispadne kao u pdfu, ugl alfa beta i gama trebaju u tom primjeru biti postavljeni na 1,5,9  (redne brojeve elemenata -4,0,4), ali to je ok zato sto ova IIntUnaryFunction koju dobijes kad napravis lambda funkciju (a i sve druge) prima int index, znaci ne prima stvarnu vrijednost elementa nego samo njegov redni broj u domeni. Tako da zapravo u lambda funkciji sa parametrima alfa, beta u gama usporedujes index elementa a ne njegovu vrijednost",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248698": {
+      "poster": "Daeyarn",
+      "content": "@\"Precious Bodily Fluids\"#p248690 \n\n@\"anci\"#p248691 \n\nyee bio sam postavio da racuna pomocu vrijednosti elementa, a ne indexa, sad ispada okej, hvala:D",
+      "votes": {
+        "upvoters": [
+          "ana (anci)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

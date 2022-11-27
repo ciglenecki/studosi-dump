@@ -1,0 +1,987 @@
+{
+  "title": "[EPE] 1. laboratorijska vježba - 2020/2021",
+  "creator": "DukeFiction",
+  "slug": "epe-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Elektromehaničke pretvorbe energije",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "112618": {
+      "poster": "DukeFiction",
+      "content": "Zbunjuju me ovo +četkice i bez četkica u tablici 2 u 1. zadatku izvještaja iz 1. laboratorijske vježbe. Je li formula za ovih pet točaka ista kao i ona u tablici 1 odnosno formula iznad sheme 2.1 za naponski spoj pa samo za bez četkica oduzmemo 1V od dobivenih vrijednosti? I kako da izračunam otpor armaturnog i pomoćnog namota i na 21°C i na 25°C kad mi treba ovaj na 25°C da bih izračunao na 21°C? Ili ovdje za T0 ne koristimo sobnu temperaturu već 0°C?",
+      "votes": {
+        "upvoters": [
+          "verratti (Rom Jova (Željezo/bakar))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112630": {
+      "poster": "Semofcanec",
+      "content": "@DukeFiction#112618 ovak sam ja shvatil - za tablicu 2 formula je ista i prek nje izračunas normalno otpor i ako vidiš imaš još jednu kučicu viška koja je rezervirana za srednju vrijednost otpora armature+pom. namot+četkice. Taj otpor treba oduzeti od srednje vrijednosti otpora četkica (njega bi trebal dobiti kao delta Uč / struja) i onda imas otpor armature+pom.namot pri 21°C,a otpor pri 25 racunas onda prek ove formule koja ti je sastrane napisana i koristis temperature 21 i 25. Samo prati indekse dolje kod otpora da znas koji je kaj.",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro",
+          "DukeFiction",
+          "Elle",
+          "Jezza (Clarkson)",
+          "Kum",
+          "Niksin_pramen",
+          "aCroEn",
+          "verratti (Rom Jova (Željezo/bakar))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112631": {
+      "poster": "verratti (Rom Jova (Željezo/bakar))",
+      "content": "Za krivulju magnetiziranja u 2. zad, jel treba samo staviti na graf one vrijednost iz tablice il?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112645": {
+      "poster": "Semofcanec",
+      "content": "@verratti#112631 Da. Prva dva stupca za uzlaznu, a druga dva za silaznu",
+      "votes": {
+        "upvoters": [
+          "Jezza (Clarkson)",
+          "verratti (Rom Jova (Željezo/bakar))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112646": {
+      "poster": "Kum",
+      "content": "Dobijate li i vi za krivulju užih gubitaka krivulju u excelu koja se ne spaja s ordinatom? Treba li se spojiti to nekako i ako da kako?",
+      "votes": {
+        "upvoters": [
+          "DukeFiction"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112701": {
+      "poster": "DukeFiction",
+      "content": "@Kum#112646 \n\nStipetić je u Teamsu napisao: \"kvadratnu aproximaciju P(U^2) mozete ekstrpolirati pravcem prema ordinati koristeći samo prve 4 tocke da odredite Ptrv\" iako mi iz tog nije jasno kako se ova uputa implementira u Excel budući da nisam neki ekspert u njemu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112709": {
+      "poster": "DukeFiction",
+      "content": "@Kum#112646 ak na grafu u Excelu stisneš desni klik pa \"Add trendline\" na dnu klikneš  \"Display equation on chart\" i gore treba odabrat između linearne i eksponencijalne ekstrapolacije. Ne znam kako odabrati samo prve četiri točke da iz njih dobijemo aproksimaciju pravcem iz kojeg se iščita Ptrven prema Stipetićevoj uputi jer mi se ovak odokativno bliže čini vrijednost koja se dobije eksponencijalnom ekstrapolacijom",
+      "votes": {
+        "upvoters": [
+          "Kuhar",
+          "Kum"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112725": {
+      "poster": "Niksin_pramen",
+      "content": "Za shemu namota stavljamo li sliku 1.2 iz uputa ili poprecni presjek stroja kak je u videu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112732": {
+      "poster": "DukeFiction",
+      "content": "@Niksin_pramen#112725 mislim da treba iz pripreme",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112747": {
+      "poster": "spenadla",
+      "content": "Kako da napravim ekstrapolaciju prema ordinati s (P'(U^2)) odnosno kako da izračunam taj P' kad je U^2?",
+      "votes": {
+        "upvoters": [
+          "DukeFiction",
+          "Kum"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112752": {
+      "poster": "Kum",
+      "content": "Jel za ekstrapolaciju prema ordinati s P’(U^2) treba koristiti iste vrijednosti y osi tj. prepisati P' ili treba nove racunati s U^2?\n\n@spenadla#112747",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112757": {
+      "poster": "Niksin_pramen",
+      "content": "@spenadla#112747 Nacrtas P0' i onda za okruglu vrijednost cm napona samo translatiras vrijednost snage za tu tocku na tocku di je x-koordinata jednaka kvadratu vrijednosti cm, al gledas tu vrijednost kao da su milimetri\n\nAk sam u krivu nek netko slobodno ispravi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112758": {
+      "poster": "DukeFiction",
+      "content": "@Niksin_pramen#112757 A kak da to u Excelu izvedemo? I kaj uopće znači \"okruglu vrijednost cm napona\" u pripremi kad imamo vrijednosti između 96,8 i 190 V?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112760": {
+      "poster": "Niksin_pramen",
+      "content": "@DukeFiction#112758 Ja sam to na papiru radio, za excel nezz. \n\nNa papiru sam stavio 1 cm = 10 V i onda ti to dode da je za 10 cm=100V to ista tocka, a za recimo 11 cm=110V i onda kad to prebacis u mm je 12.1cm i onda samo u tu tocku translatiras vijednost snage koja je bila za 110V",
+      "votes": {
+        "upvoters": [
+          "DukeFiction",
+          "spenadla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112761": {
+      "poster": "DukeFiction",
+      "content": "@Niksin_pramen#112760 Hvala puno! A kolko su ti ispali gubici trenja? Jesi iščitavao iz grafa ili funkcijom intercept u Excelu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112762": {
+      "poster": "spenadla",
+      "content": "@Niksin_pramen#112760 Koliko ti je otprilike dosla vrijednost snage gubitaka trenja? Da vidim dal dobro radim u excelu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112763": {
+      "poster": "Niksin_pramen",
+      "content": "@spenadla#112762 53 i nes sitno",
+      "votes": {
+        "upvoters": [
+          "Kum",
+          "spenadla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112766": {
+      "poster": "DukeFiction",
+      "content": "@Niksin_pramen#112763 Sad znam da ja radim krivo u Excelu, ali nemam pojma zašto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112772": {
+      "poster": "spenadla",
+      "content": "@DukeFiction#112766 ono sto je profesor napisao u teams da uzimas prve 4 točke uzimas zapravo zadnje 4 točke iz tablice (na grafu su to prve 4)",
+      "votes": {
+        "upvoters": [
+          "DukeFiction"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112773": {
+      "poster": "spenadla",
+      "content": "pa ti je to mozda krivo jer sam ja tu gresku napravila",
+      "votes": {
+        "upvoters": [
+          "Mioch"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112787": {
+      "poster": "Bobinator",
+      "content": "koji je pad napona na cetkicama? uzimamo samo da je 1V?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112790": {
+      "poster": "Upforpslone",
+      "content": "@Bobinator#112787 da",
+      "votes": {
+        "upvoters": [
+          "Bobinator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112791": {
+      "poster": "verratti (Rom Jova (Željezo/bakar))",
+      "content": "Kako iz grafa iscitati vrijednost snage gubitaka trenja ili kako to izracunati na papiru bez excela?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112792": {
+      "poster": "LUJXIV",
+      "content": "koliko treba vremena otprilike da se obavi ovaj labos?",
+      "votes": {
+        "upvoters": [
+          "Ak08 (obama)",
+          "General_Kenobi (Aborteur)",
+          "Viks",
+          "aCroEn",
+          "rolotex (brr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "aCroEn"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112802": {
+      "poster": "Bobinator",
+      "content": "@DukeFiction#112709 \n\n![](assets/2020-12-20/00010.png)\n\nja sam uspio preko ovog, oznacio zadnje 4 točke i dobio vrijednost u kojoj bi trebalo sjeci y, i to dodao kao vrijednos y, pridruzio x=0 i tako cu plotat, sad nez jel okej to, cini mi se da bi kvadratna isla malo vislje, ali ako je rekao da mozemo pravcem...\n\nedit: bolje mi izgleda sa zadnje 3 točke pa ću tako",
+      "votes": {
+        "upvoters": [
+          "DukeFiction"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112806": {
+      "poster": "Bobinator",
+      "content": "cek, koja je zapravo razlika izmedu zadnja dva grafa? sta crtam na predzadnjem, a sta ma zadnjem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112812": {
+      "poster": "Grumio",
+      "content": "@Bobinator#112802 Jel dobivas dobar rez? Ja sam skuzio da odmah desno od grafa imas oznako za filtar i mozes maknut sve tocke osim prvih 4 i nad njima onda raditi trendline, ali sa prvih 4 tocke dobivam 63 i nes sitno a sa 3 dobivam 60 i nes sitno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112828": {
+      "poster": "DukeFiction",
+      "content": "@LUJXIV#112792 ak već nisi, kreni sutra ujutro. Trebat će ti par sati ak nisi brz s Excelom",
+      "votes": {
+        "upvoters": [
+          "LUJXIV"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112829": {
+      "poster": "DukeFiction",
+      "content": "@Bobinator#112802 tak sam prvi put sa zadnje 4, a sa zadnje 3 mi ispada 49,32 kolege su spominjali 60ak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112830": {
+      "poster": "Jezza (Clarkson)",
+      "content": "jel možemo krivulje radit preko matlab i stavit u izvještaj",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112833": {
+      "poster": "DukeFiction",
+      "content": "@Grumio#112812 \n\n@Bobinator#112806 \n\nJe li y P0', a x Ua? Jer kad označim prve 3 točke iz tablice mi ispada negativna vrijednost",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112841": {
+      "poster": "maverick",
+      "content": "Zna netko jel potrebno mijenjat formatiranje u excelu kod generatorske metode jer u mjerenjima imamo negdje 2 decimale a excel zaokruzuje na 1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112842": {
+      "poster": "Bobinator",
+      "content": "@Grumio#112812 sa 4 mi je ispalo 44, sa 3 ispadne 48\n\n@DukeFiction#112833 da, ne vidim od kud negativna hah",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112846": {
+      "poster": "lugi",
+      "content": "Kod mjerenja otpora namota kako dobit pad napona na cetkicama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112849": {
+      "poster": "PeanutMaster1801 (caca)",
+      "content": "@lugi#112846 msm da je to iz drugog excela, piše 1V ako se ne varam",
+      "votes": {
+        "upvoters": [
+          "Kuhar",
+          "lugi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112887": {
+      "poster": "lugi",
+      "content": "@PeanutMaster1801#112849 A kako kod generatorske metode crtamo krivulju magnetiztiranja? Nisam uopce ucio ovaj kolegij jos... Sto tu trebam tocno napraviti?",
+      "votes": {
+        "upvoters": [
+          "verratti (Rom Jova (Željezo/bakar))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112914": {
+      "poster": "Niksin_pramen",
+      "content": "Jel zakljucak za cijelu vjezbu il samo za gubitke u praznom hodu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112915": {
+      "poster": "DukeFiction",
+      "content": "@lugi#112887 u excelu označiš stupac struje i napona --> insert --> pod charts odabereš scatter",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112930": {
+      "poster": "KR7 (Detective Schmosby)",
+      "content": "Pošto svi imamo iste vrijednosti da provjerim, jesu li vama ispali gubici trenja i ventilacije oko **52.585 W** kada radite linearnu ekstrapolaciju sa samo prve četiri točke u Excelu pomoću trendline-a?",
+      "votes": {
+        "upvoters": [
+          "Al_Pakino (Al Pakino)",
+          "EstebanVihaio"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112932": {
+      "poster": "Grumio",
+      "content": "@KR7#112930  Ja sam bio odustao od Excelovog trendline-a jer sam dobivao prevelike gubitke, pa sam isao radit rucno i dobio sam malo ispod 54 W.",
+      "votes": {
+        "upvoters": [
+          "KR7 (Detective Schmosby)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112934": {
+      "poster": "verratti (Rom Jova (Željezo/bakar))",
+      "content": "@Grumio#112932 Kako si to odredio rucno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112935": {
+      "poster": "Grumio",
+      "content": "@verratti#112934 Imas uputi ugrubo opisanu neku graficku metodu, ono kada uzmes nekoliko cm napona pa prenosis u milimetrima",
+      "votes": {
+        "upvoters": [
+          "verratti (Rom Jova (Željezo/bakar))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112936": {
+      "poster": "verratti (Rom Jova (Željezo/bakar))",
+      "content": "@Grumio#112935 uspio sam graf P0' = f(U0^2) dobiti tom aproksimacijom ali Ptr nezz izracunati, predpostavljam da bi neka vrijednost oko 55 trebala biti?",
+      "votes": {
+        "upvoters": [
+          "Grumio"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112938": {
+      "poster": "Grumio",
+      "content": "@verratti#112936 Tu negdje bi to valjda trebalo biti. Sigurno ne smije biti vece od niti jedne izracunate vrijednosti uzih gubitaka.",
+      "votes": {
+        "upvoters": [
+          "verratti (Rom Jova (Željezo/bakar))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112939": {
+      "poster": "verratti (Rom Jova (Željezo/bakar))",
+      "content": "@Grumio#112938 da, a jel postoji mozda neka formula il nes kako tocno dobiti taj broj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112942": {
+      "poster": "Grumio",
+      "content": "@verratti#112939 Ja pretpostavljam da se to moze dobit ovako:\n\nAko uvrstis (U_0)^2 u racun za uze gubitke i dobijes tocke\n\nOd dvije tocke napravis jednadzbu pravca (jer smo pretpostavili je je dosta linearan izmedu 30%-70%)\n\nSlobodni clan jednadzbe pravca bi trebao dati sjeciste s y-osi (snagom) i tako bi trebao moc dobiti Ptr",
+      "votes": {
+        "upvoters": [
+          "verratti (Rom Jova (Željezo/bakar))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112945": {
+      "poster": "DukeFiction",
+      "content": "Meni su gubici ispali oko 48W preko naredbe intercept.\n\nJel netko zna kaj treba u zaključak pisat?",
+      "votes": {
+        "upvoters": [
+          "Elle",
+          "Viks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112948": {
+      "poster": "Grumio",
+      "content": "@DukeFiction#112945 Ja sam komentirao eksponencijalni rast gubitaka i to povezao sa priblizavanjem podrucju zasicenja motora. Tbh nisam nista pametno reko",
+      "votes": {
+        "upvoters": [
+          "DukeFiction"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112975": {
+      "poster": "LUJXIV",
+      "content": "sta bi trebalo stavit za onu prvu shemu",
+      "votes": {
+        "upvoters": [
+          "Viks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113006": {
+      "poster": "Trava",
+      "content": "@spenadla#112772 Pomoću koje funkcije si to napravila",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113007": {
+      "poster": "EstebanVihaio",
+      "content": "@LUJXIV#112975 valjda slika 2.2 (nek netko strucniji potvrdi)\n\nSta se od nas ocekuje u zakljucku napisati?",
+      "votes": {
+        "upvoters": [
+          "Viks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113008": {
+      "poster": "LUJXIV",
+      "content": "@EstebanVihaio#113007 nebi li 2.2 trebala biti druga shema (mjerenje otpora namota) ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113009": {
+      "poster": "EstebanVihaio",
+      "content": "@LUJXIV#113008 ajme oprosti, totalno zaboravih da ima shema prije toga\n\nda, za tu prvu shemu ti treba 1.2 slika. Moja greska, isprike na zbunjozi",
+      "votes": {
+        "upvoters": [
+          "LUJXIV"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113014": {
+      "poster": "Kuhar",
+      "content": "Zaključak je za cijelu vježbu?",
+      "votes": {
+        "upvoters": [
+          "aCroEn",
+          "gslycan14"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113015": {
+      "poster": "Kuhar",
+      "content": "Zaključak je za cijelu vježbu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113019": {
+      "poster": "Viks",
+      "content": "@Kuhar#113015 je",
+      "votes": {
+        "upvoters": [
+          "Kuhar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113027": {
+      "poster": "aCroEn",
+      "content": "@DukeFiction#112701 Kako se to radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113028": {
+      "poster": "Viks",
+      "content": "jeste li na početku za \"tip\" pisali onaj broj ili je li istosmjerni/izmjenični?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113029": {
+      "poster": "Viks",
+      "content": "@aCroEn#113027 ja sam ručno računala te vrijednosti i upisala sa strane u excelu \n\nskiciras kao i ostale grafove",
+      "votes": {
+        "upvoters": [
+          "aCroEn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113031": {
+      "poster": "dolfy (Jenny Talia)",
+      "content": "@Viks#113028 DC motor",
+      "votes": {
+        "upvoters": [
+          "Viks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113032": {
+      "poster": "DukeFiction",
+      "content": "@Viks#113028 ja sam broj poslao",
+      "votes": {
+        "upvoters": [
+          "Viks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113041": {
+      "poster": "pepa",
+      "content": "Što se očekuje u blicu? odakle ponavljati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113042": {
+      "poster": "Kuhar",
+      "content": "@pepa#113041 \n\nProfesor je rekao da očekujemo slična pitanja kao iz probnog blica...",
+      "votes": {
+        "upvoters": [
+          "Mioch"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113043": {
+      "poster": "rolotex (brr)",
+      "content": "Kako se nacrta kvadratna eproksimacija u excelu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113045": {
+      "poster": "Ak08 (obama)",
+      "content": "jel ima neko sikrinana neka pitanja iz probnog blica 🙏",
+      "votes": {
+        "upvoters": [
+          "verratti (Rom Jova (Željezo/bakar))"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113046": {
+      "poster": "Kuhar",
+      "content": "@Kuhar#113042 \n\n![](assets/2020-12-21/00024.jpeg)\n\n![](assets/2020-12-21/00025.jpeg)\n\n![](assets/2020-12-21/00026.jpeg)\n\n![](assets/2020-12-21/00027.jpeg)\n\n![](assets/2020-12-21/00028.jpeg)\n\nEvo ak je od pomoci kome...",
+      "votes": {
+        "upvoters": [
+          "BedaTheNic",
+          "DukeFiction",
+          "Elle",
+          "EstebanVihaio",
+          "Gino20",
+          "Jezza (Clarkson)",
+          "Mioch",
+          "Niksin_pramen",
+          "aCroEn",
+          "gslycan14",
+          "rolotex (brr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "131324": {
+      "poster": "desilesi",
+      "content": "@Semofcanec#112630 jel možeš napisat kolko su tebi ispali ti otpori? kolko ti ispadne ta prosječna vrijednost s četkicama i kolko ti je otpor četkica ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Upforpslone"
+        ],
+        "tuga": []
+      }
+    }
+  }
+}

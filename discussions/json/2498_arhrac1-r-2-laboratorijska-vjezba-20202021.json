@@ -1,0 +1,566 @@
+{
+  "title": "[ARHRAC1-R] 2. laboratorijska vježba - 2020/2021",
+  "creator": "CubeSquare",
+  "slug": "arhrac1-r-2-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Arhitektura računala 1R",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "109239": {
+      "poster": "CubeSquare",
+      "content": "Poštovani kolege,\n\nsvima nam je poznato da je ove godine nastala velika strka oko slabog funkcioniranja xcompasa. Zbog tog nepredviđenog problema većina će morati 'na knap' morati riješiti svoje labose (a možda čak i neće jer zadatak jako težak). Ovim putem bih pitao, ne samo u svoje ime, nego i drugih kojima treba, da netko pošalje funkcionalno rješenje oba zadatka za ovogodišnje druge labose. Također bih zamolio sve koji bi primili rješenja da ne prepisuju direktno jer onda se ovakvo dobročinstvo više nikad neće moći zatražiti.\n\nJa bih se zahvalio bilo kome tko bi svoje rješenje poslao (čak je prepravljeno/polovično više nego što imam pravo tražiti).",
+      "votes": {
+        "upvoters": [
+          "BanankoKojiLebdi",
+          "CubeSquare"
+        ],
+        "downvoters": [
+          "Hrvoje (Hrvoje45)",
+          "SendFeet (Coomer - Ukrajinke dobrodošle)"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "DazedAndConfused",
+          "Filemon",
+          "Hrvoje (Hrvoje45)",
+          "SendFeet (Coomer - Ukrajinke dobrodošle)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109483": {
+      "poster": "jobi (azex)",
+      "content": "@CubeSquare#109239 kako san cua, imaju gotovo identicni zadatci vec tu na forumu/materijalima, tako da potrudi se barem potrazit",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "Filemon",
+          "Hrvoje (Hrvoje45)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109677": {
+      "poster": "miljac (LordStark)",
+      "content": "Jel netko zna zašto bi program nakon naredbe RETN odmah ponovo ušao u prekidni potprogram?\n\nVec 2 dana radim na kodu i nije mi jasno zašto se to događa. Traceo sam program i u trenutku kad bi se glavni program trebao nastaviti izvoditi program zapravo \"zaglavi\" u beskonačnoj petlji prekidnog potprograma. Meni je skroz čudno i neočekivano ponašanje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109694": {
+      "poster": "CubeSquare",
+      "content": "Provjeri jesi li poslao na početku potprograma neki podatak na drugu lokaciju prekidne jedinice (bistabil stanja - PVJ3BS) da ga resetiraš, pa da ne javlja da je konstantno spreman za prekid ili jesi li stavio pred kraj potprograma neki podatak na treću lokaciju prekidne jedinice (ja sam je nazvao PVJ3ACK) da bi javio da je podatak obrađen",
+      "votes": {
+        "upvoters": [
+          "miljac (LordStark)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109698": {
+      "poster": "miljac (LordStark)",
+      "content": "@CubeSquare#109694 hvala na odgovoru\n\npitanje se odnosilo na drugi zadatak\n\nzadatak 2 kaze da DMA dojavljujue prekid sa NMI, dakle INT1 odn nemaskirajući prekid",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110055": {
+      "poster": "bb8 (zaza)",
+      "content": "Za 1. zadatak mi u ispisu uvijek vj2 dvaput bude spremna i dvaput čita isti broj, i onda mi se na vj3 uvijek šalje 2 pa 4 pa 6 itd. Jel to tak normalno ili je problem u nečem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110145": {
+      "poster": "noobcamper",
+      "content": "@bb8#110055  Treba ti ispisati kao i ovaj z3? Ako ti tako ne ispisuje onda ne znam.  https://github.com/studosi-fer/ARHRAC1/blob/master/labosi/ARH1_2._laboratorijska_vjezba_-_objasnjenja_2016-17.zip",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110162": {
+      "poster": "miljac (LordStark)",
+      "content": "@bb8#110055 Meni isto tako ispisuje. Čini mi se da je to ok",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110181": {
+      "poster": "bb8 (zaza)",
+      "content": "@miljac#110162 da, čini se da i na ovom kodu s materijala tak ispisuje pa je valjda to ok\n\n@noobcamper#110145 Da, tu isto tako ispisuje, hvala za ovu provjeru, jedino mi se čini da ovdje kod ne radi za slučaj da vj1 šalje 0? Možda griješim, al ne mogu provjerit kad compas stalno baca iste brojeve...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110322": {
+      "poster": "DazedAndConfused",
+      "content": "Jel netko još imao problema sa skriptom koju si uploadali za popravak? Poreknuo sam i prvu i drugi, ali xconas mi i dalje daje \"Assembler is not ready\".",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110340": {
+      "poster": "noobcamper",
+      "content": "@bb8#110181 Mislim da zastavice P i N gledaju najviši bit u rezultatu naredbe prije jp ili jr koja je promjenila zastavice i po tom najvisem bitu znaju je li pozitivan ili negativan broj.",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110350": {
+      "poster": "noobcamper",
+      "content": "@bb8#110181 @bb8#110181  ako imas vremena mozes za provjeru napraviti na nekoj memorijskoj lokaciji blok podataka i ucitavati sa te lokacije, umjesto sa  vj1.",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110580": {
+      "poster": "MStojak (MSR)",
+      "content": "Bi li mi netko mogao reći kako da provjerim prvi zadatak, trace = 5, kako to postaviti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110584": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "@MStojak#110580 sim -> trace -> odaberes vj -> pritisnes 5 -> close -> ponovo init,load,run",
+      "votes": {
+        "upvoters": [
+          "13pedeset",
+          "MStojak (MSR)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110630": {
+      "poster": "Nimikod (Gremlin)",
+      "content": "ima netko rjesen drugi? nemam puno zivaca jos, a htio bi da mi ostane za blic ako je kako moguce",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110817": {
+      "poster": "yuniK",
+      "content": "![](assets/2020-12-15/00037.png)\n\ndogađa li se ovo još nekom jer stvarno neman pojma kako da popravin više",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110863": {
+      "poster": "bb8 (zaza)",
+      "content": "@yuniK#110817 Posalji dijelove koda koji se ticu vj2. Mozda ne resetiras bistabil ili nesto, al ne mogu ni pokusat predlozit rjesenje bez malo koda.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110875": {
+      "poster": "yuniK",
+      "content": "@bb8#110863 ![](assets/2020-12-15/00042.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110876": {
+      "poster": "yuniK",
+      "content": "@bb8#110863 ![](assets/2020-12-15/00043.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110938": {
+      "poster": "bb8 (zaza)",
+      "content": "@yuniK#110876 hm taj dio koda je identican kao kod mene, provjeri jesi stavio adrese kod vj2 i bs2 koje se traze u zadatku i jel koristis tocan naziv labele. Takoder je mozda do njih, odnosno jesi pokrenuo onu skriptu fix2?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110980": {
+      "poster": "wolfric73",
+      "content": "Ima li netko ili znate li nekoga tko bi mi mogao poslati rjesenja zadataka 2. Labosa PREUREDENA, placam 150 kn po zadatku jer mi je sinoc laptop riknuo pisuci (zaslon postane bijeli cim maknem pritisam sa zaslona i nista ne funkcionira), a ne zelim dobiti negativne bodove. Ako znate nekog zainteresiranog nek mi se javi na mvukovinski@gmail.com",
+      "votes": {
+        "upvoters": [
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "BigZ1"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111006": {
+      "poster": "MStojak (MSR)",
+      "content": "@yuniK#110876 ja imam identican taj dio, tako]er mi se javlja taj error i nemam pojma kako ga popraviti..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111010": {
+      "poster": "MStojak (MSR)",
+      "content": "@MStojak#111006 ![](assets/2020-12-16/00009.png)\n\n![](assets/2020-12-16/00010.png)\n\n![](assets/2020-12-16/00011.png)\n\nevo slika, pa ako netko vidi u cemu je problem pliz javite jer nevidim gresku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111037": {
+      "poster": "BreadCat",
+      "content": "@MStojak#111010 \n\n![](assets/2020-12-16/00014.png)",
+      "votes": {
+        "upvoters": [
+          "Tamburello (Picbangos)",
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111059": {
+      "poster": "bb8 (zaza)",
+      "content": "@MStojak#111010 mozda prva naredba poslije ORG 0 ovo, treba ic SP kao stack pointer a ne SR, to je inicijalizacija stoga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111085": {
+      "poster": "mkovac25",
+      "content": "Može li mi samo netko pojasnit u ovom drugom zadatku treba li DMA postavljati prekid ili ne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111087": {
+      "poster": "bb8 (zaza)",
+      "content": "@mkovac25#111085 da, pise da se kraj prijenosa dojavljuje prekidom NMI tako da ti treba prekidni potprogram",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111148": {
+      "poster": "mihamih",
+      "content": "@MStojak#111010 bistabil stanja resetiraj na samom kraju posluzivanja vj2, dakle odmah iznad JR PETLJA i trebalo bi radit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111174": {
+      "poster": "prpa",
+      "content": "Jel zna neko kaj je ova greska:![](assets/2020-12-16/00027.png)\n\nDogodi se kad ude u petlju za ispitivanje spremnosti vj2.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111176": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@prpa#111174 greška stoga, vjerojatno ne popaš sa vrha sve što je potrebno",
+      "votes": {
+        "upvoters": [
+          "prpa"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111254": {
+      "poster": "13pedeset",
+      "content": "kako trebamo nazvat file-ove dok ih predajemo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111271": {
+      "poster": "Archie54",
+      "content": "@13pedeset#111254 zadatak3.a i zadatak4.a",
+      "votes": {
+        "upvoters": [
+          "13pedeset"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111302": {
+      "poster": "Wolf7 (matrix)",
+      "content": "Zna li netko kako popraviti ovo: \"error in program, line 75: line is not terminated\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111370": {
+      "poster": "bb8 (zaza)",
+      "content": "@Wolf7#111302 Malo kasnim, ali vjerojatno ti fali jedan prazan redak na kraju datoteke. Mislim da ti ne bi to trebalo utjecat na to oce ti proc plagijat ili ne. Ako nije prazan redak u pitanju onda vjerojatno na krivi nacin koristis naredbu, tipa napises RO umjesto R0 ili MOV umjesto MOVE itd.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111546": {
+      "poster": "Wolf7 (matrix)",
+      "content": "@bb8#111370 imala sam probleme sa 1. labaratorijskom vježbom, nakon šta bi ugasila Atlas i ponovno ga upalila datoteke bi nestale i na Atlasu i na računalu iako je mapa bila dijeljena, pa sam zato ovaj put sve šta sam radila spremala u notepad za svaki slučaj da mi se ne dogodi kao prošli put brisanje svega. E, upravo se to događalo pa je bilo problema zbog kopiranja iz notepada u Atlas al na kraju sam popravila.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112032": {
+      "poster": "bb8 (zaza)",
+      "content": "@Wolf7#111546 tu bi trebala pazit na ono šta su rekli u u onoj pripremi, LAB0 se zove dokument\n\n![](assets/2020-12-18/00001.png)\n\nja isto imam shared folder i datoteke su mi vidljive na windowsima čim saveam programski kod, par puta mi se desilo da nisam mogao nać tu .a datoteku al onda samo ugasim i ponovno otvorim folder i pojavi se",
+      "votes": {
+        "upvoters": [
+          "Wolf7 (matrix)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113161": {
+      "poster": "DazedAndConfused",
+      "content": "Dobro jutro svima osim onom manijaku kojem je palo na pamet da na provjeri sve bude multiple choice iako je u svakom pitanju točan samo jedan odgovor.",
+      "votes": {
+        "upvoters": [
+          "Jaster111",
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113164": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "@DazedAndConfused#113161  \"Iako će biti moguće označiti više točnih odgovora u pitanjima na nadopunjavanje, svako pitanje ima isključivo jedan točan odgovor, a označavanje više odgovora povlačit će netočan odgovor.\"\n\nNe znam jesi li procito obavijest al ovo ti je pisalo u njoj",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "113166": {
+      "poster": "DazedAndConfused",
+      "content": "@Michael#113164 Pročitao sam prijatelju dragi, nebih imao hrabrosti tvrditi da je na svakom pitanju točan jedan odgovor bez izričite potvrde sa vrha.",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

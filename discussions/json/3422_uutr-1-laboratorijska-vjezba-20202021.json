@@ -1,0 +1,465 @@
+{
+  "title": "[UUTR] 1. laboratorijska vježba - 2020/2021",
+  "creator": "noobcamper",
+  "slug": "uutr-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Uvod u teoriju računarstva",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "156572": {
+      "poster": "noobcamper",
+      "content": "Što su i što će nam prihvatljiva stanja u 1. labosu i imaju li ikakav utjecaj na ispis?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156665": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@noobcamper#156572\n\nJe li zadatak isti kao lani? Nama je zadatak bio simulacija epsilon-NKA i ja ih u svom rješenju nisam nigdje koristio.",
+      "votes": {
+        "upvoters": [
+          "noobcamper"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156667": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "Isti je zadatak ko lani. Ni ja nisam nigdje koristio prihvatljiva stanja. A to su ti stanja u kojima ako se automat na kraju niza u njima nađe onda se taj niz prihvaca za zadani jezik.",
+      "votes": {
+        "upvoters": [
+          "noobcamper"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156988": {
+      "poster": "mkovac25",
+      "content": "![](assets/2021-03-23/00004.png)\n\nMože li mi netko objasniti što se ovdje događa?\n\nOvaj dio koda mi pregledava prijelaze, gleda ako se podudaraju i trenutno stanje i ulazni znak, ako se podudaraju uzima listu novih stanja i dodaje ju arraylisti posjecena stanja koju nakon završetka cijele petlje prebacujem u arraylistu trenutna stanja.\n\nMeni eclipse izbacuje concurrent modification exception, tj kaže da sam mijenjao na neki način listu trenutna stanja dok sam kroz nju iterirao, ali meni jedina naredba koja mijenja listu trenutna stanja se nalazi nakon petlje.\n\nKad uđem u debug i prođem komandu po komandu ovu petlju, iz nekog razloga na komandi posjecena_stanja.add(novo) doda novo stanje i arraylisti posjecena_stana i arraylisti trenutna stanja, premda nema nigdje naredbe da doda to stanje ovoj drugoj listi.\n\nNajviše od svega me živcira da se ovo događa na drugom ulaznom nizu, program mi obradi prvi ulazni niz bez greške.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157021": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@mkovac25#156988 \n\nU Javi su varijable zapravo reference na objekte, pa možeš imati dvije varijable koje zapravo pokazaju na isti objekt.\n\nZadnja linija je problematična: `trenutna_stanja = posjecena_stanja`.\n\nU njoj ne kopiraš sva stanja iz jedne liste u drugu, već činiš da se te dvije varijable odnose na jedan te isti objekt. Kad za sljedeći znak iteriraš po `trenutna_stanja`, u tijelu petlje mijenjaš `posjecena_stanja`, čime dodaješ nove elemente u ArrayListu po kojoj iteriraš.\n\nZa prvi znak te dvije varijable još pokazuju na različite objekte, ali već za drugi znak su one aliasane na isti objekt.\n\nEvo profesionalno izrađene skice (gore je stanje u prvoj iteraciji, dolje je u svima sljedećima):\n\n>!![](assets/2021-03-23/00006.png)\n\nZa popraviti to, mislim da bi bilo dovoljno tu zadnju liniju zamijeniti s `trenutna_stanja.addAll(posjecena_stanja)`.",
+      "votes": {
+        "upvoters": [
+          "BreadCat",
+          "gladiator",
+          "mkovac25",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157048": {
+      "poster": "mkovac25",
+      "content": "@__builtin_popcount#157021 \n\nHvala! Napokon sam uspio da mi sve točno obradi! Usput, kako si ispitao program sa svim ostalim ispitima? Ne pada mi trenutno na pamet kako to jednostavno izvesti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157059": {
+      "poster": "krampus",
+      "content": "ima negdje algoritam/pseudo kod koji bi mi pomogao napraviti labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157060": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@mkovac25#157048 \n\nKoristio sam [UTR_Evaluator_1.2.py](https://github.com/studosi-fer/UUTR/blob/master/razno/alati/evaluatori/utr-evaluator-1.2/UTR_Evaluator_1.2.py)\n\nProšle godine sam napisao kako sam ga koristio za 3. labos: @__builtin_popcount#27527 \n\nZa 1. labos u Javi bi najjednostavniji postupak za taj evaluator bio:\n1. Skini evaluator i stavi ga u direktorij gdje ti je source kod.\n2. Skini testove i stavi ih u poddirektorij _tests_.\n3. Kompajliraj sav source koji imaš s `javac *.java` ako već nisi.\n4. Pokreni evaluator s `python UTR_Evaluator_1.2.py --tests tests \"java SimEnka\"`\n\nEvaluirati će redom primjere, a za netočne će u direktoriju testa napraviti datoteku _test.u_ s tvojim netočnim ispisom.\n\nAko sve prolazi, u konzoli ćeš dobiti ispis sličan ovome:\n>! ```csharp\n[ tests\\test01 ] - 0.15s | pass\n[ tests\\test02 ] - 0.06s | pass\n[ tests\\test03 ] - 0.07s | pass\n[ tests\\test04 ] - 0.06s | pass\n[ tests\\test05 ] - 0.07s | pass\n[ tests\\test06 ] - 0.07s | pass\n[ tests\\test07 ] - 0.06s | pass\n[ tests\\test08 ] - 0.06s | pass\n[ tests\\test09 ] - 0.06s | pass\n[ tests\\test10 ] - 0.06s | pass\n[ tests\\test11 ] - 0.06s | pass\n[ tests\\test12 ] - 0.07s | pass\n[ tests\\test13 ] - 0.06s | pass\n[ tests\\test14 ] - 0.06s | pass\n[ tests\\test15 ] - 0.07s | pass\n[ tests\\test16 ] - 0.07s | pass\n[ tests\\test17 ] - 0.06s | pass\n[ tests\\test18 ] - 0.07s | pass\n[ tests\\test19 ] - 0.07s | pass\n[ tests\\test20 ] - 0.06s | pass\n[ tests\\test21 ] - 0.06s | pass\n[ tests\\test22 ] - 0.06s | pass\n[ tests\\test23 ] - 0.06s | pass\n[ tests\\test24 ] - 0.06s | pass\n[ tests\\test25 ] - 0.07s | pass\n[ tests\\test26 ] - 0.06s | pass\n[ tests\\test27 ] - 0.07s | pass\n[ tests\\test28 ] - 0.06s | pass\n[ tests\\test29 ] - 0.07s | pass\n[ tests\\test30 ] - 0.07s | pass\n[ tests\\test31 ] - 0.05s | pass\n[ tests\\test32 ] - 0.07s | pass\n[ tests\\test33 ] - 0.07s | pass\n\n>Stats : 33/33 | 100%\n```\n\nU ovom slučaju ne treba skripti dati `--input` i `--output` argumente jer su u imena datoteka za testove 1. labosu jednaka defaultnima u skripti (_test.a_ i _test.b_). Za druge labose će to biti potrebno, vidi linkani post.",
+      "votes": {
+        "upvoters": [
+          "Michael (Michael Scarn)",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157134": {
+      "poster": "markoFer",
+      "content": "Koje gradivo obuhvaća 1.labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157322": {
+      "poster": "mihamih",
+      "content": "@markoFer#157134 do epsilon-NKA ukljuceno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157335": {
+      "poster": "mihamih",
+      "content": "Jel ovo tu greška? Ako nije, otkud im st6 u tom drugom skupu stanja?\n\n(source: upute za 1. labos)\n\n![](assets/2021-03-23/00041.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157340": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@mihamih#157335 \n\n`stanje1` za ulaz `a` (red 10) prelazi u `stanje2`, iz kojeg onda možeš odmah epsilon-prijelazom prijeći i u `st6` (red 12).",
+      "votes": {
+        "upvoters": [
+          "BreadCat",
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157694": {
+      "poster": "milic (Ipče Ahmedovski)",
+      "content": "Jel postoji nesto specificno kod testa 33 sto provjeravaju?\n\nIspise mi prva dva niza nakon 10 sekundi i onda padne u beskonacnu petlju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157787": {
+      "poster": "Rampel",
+      "content": "@milic#157694 Kod mene isto ode u beskonačnu petlju iz nekog razloga...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157821": {
+      "poster": "Rampel",
+      "content": "EDIT: bila je greška u mojem kodu...\n\nUglavnom skužil sam da kak se ide dalje s testovima da provjeravaju više stvari.\n\nJa sam npr. zaboravio u svoj kod staviti da na početku doda u početni_set_stanja sva $-stanja od zadanog početnog stanja u testu, pa se zato zgubil cijeli program pretpostavljam...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158185": {
+      "poster": "dobro",
+      "content": "meni javlja na SPRUTU da ne može nać class SimEnka, \"Error: Could not find or load main class SimEnka\"\n\npročitao sam u uputama da se ne smiju koristiti package direktive, ne znam kako da to izbjegnem. Ima li netko kakav savjet?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158188": {
+      "poster": "dobro",
+      "content": "@dobro#158185 u slučaju da nekome zatreba, iskopirao sam sve osim prve linije \"package hr.fer\" u novu datoteku SimEnka.java i to predao i sad radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158235": {
+      "poster": "noobcamper",
+      "content": "@__builtin_popcount#157060 Da li to radi samo za učitavanje iz datoteke ili radi li i za čitanje svakog reda iz konzole, i gdje treba ispisati u datoteku ili u konzolu ispis od programa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158301": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@noobcamper#158235 \n\nKao i SPRUT, ovaj evaluator očekuje da sav I/O s tvojim programom ide preko standardnog ulaza i izlaza. Evaluator će sam pročitati datoteke s testovima.",
+      "votes": {
+        "upvoters": [
+          "noobcamper"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158567": {
+      "poster": "krampus",
+      "content": "kako on zna da je kraj inputu, da ništa više nemam namjere pisati? kako oni to provjeravaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158573": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@krampus#158567 end of file, nema tu neke provjere, to je kontrolni simbol/signal\n\nu nekim implementacijama su dva newlinea za redom newline, na linuxu je Ctrl + D EOF, i tako...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159014": {
+      "poster": "bb8 (zaza)",
+      "content": "Koji je baš rok za predaju, nedjelja 23:59 ili subota do kraja dana? Ili nešto treće?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159089": {
+      "poster": "krampus",
+      "content": "može netko objasniti kako radi ovo njihovo testiranje sa onim silnim testovima. Njihov program runtests.sh mi ne radi. ima li netko drugu tehniku. čudne su mi njihovi tipovi datoteka .a i .b",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159137": {
+      "poster": "Jotaro_kujo",
+      "content": "Želi li netko zaradit 200 kn za promijenjeni kod labosa...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "gladiator",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159143": {
+      "poster": "miljac (LordStark)",
+      "content": "@krampus#159089 ja sam samo te test.a dovodio na ulaz sa < ulaz.a i preusmjeravo izlaz u  > izlaz.b. Onda bi usporedio svoj izlaz.b sa njihovim test.b naredbom FC. I tjt. Moras svaki pojedinacno tak al ide dost brzo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159276": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "@krampus#159089 \n\nEv ti, objasnio kako\n\n@__builtin_popcount#157060",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159303": {
+      "poster": "krampus",
+      "content": "@Michael#159276 radili isto za javu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159375": {
+      "poster": "Nekvanlik",
+      "content": "@bb8#159014 Rok za predaju: 28. ožujka 2021. 23:59 piše na SPURTu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "159434": {
+      "poster": "bb8 (zaza)",
+      "content": "@Nekvanlik#159375 hvala, bio sam ošamućen dok sam pisao svoju glupost od objave",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161386": {
+      "poster": "Letov",
+      "content": "Ovo je vjerojatno poprilično glupo pitanje, ali nisam siguran ako sam prošao 1. vježbu ili ne, pa bi mi dobro došlo da netko potvrdi ili negira s obzirom na situaciju.\n\nDobio sam 7/7 bodova, međutim ona \"kućica\" za prolaz pokraj aktivnosti nema kvačice... čini mi se da je to slučaj koji su spomenuli u zadnjoj obavijesti, gdje je zastavica za prolaz maknuta radi \"plagijata\", pa se taj labos neće ubrajati u ukupne bodove.\n\nAko je to tako, čini mi se da me sustav krivo detektirao, jer sam radio sve sam... nego, evo, da dobijem barem neki second opinion o tome ako sam krivo protumačio ovo sa bodovima i zastavicama, prije nego šta idem slati mail.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161426": {
+      "poster": "cloudies",
+      "content": "@Letov#161386 Prošle godine bi svaki puta stavili obavijest nakon što su napravili provjeru plagijata tako da rekla bih da nemaš oko čega brinuti. Mislim da ta kvačica znači da nemaš onaj ukupni prag na labosima ako se ne varam.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161898": {
+      "poster": "JeleeII",
+      "content": "@Letov#161386 Meni ti je kućica zelena. Mislim da su ove godine rekli da će plagijate označiti s crvenom kućicom pa bi ti najbolje bilo mail im posla da provjeriš. Može biti da te sustav nije označio ko plagijat al kad su unosili bodove da su tebi slučajno stavili crvenu kućicu ugl. savjet je pošalji mail\n\n![](assets/2021-04-02/00017.png)",
+      "votes": {
+        "upvoters": [
+          "Letov"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "161913": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Letov#161386 keep in mind da uz ovo što su sve rekli, moguće da će ti gledati ručno labos, pa da samo još nisi \"clearan\"\n\nTi sustavi za detekciju, ovisno o sofisticiranosti imaju određen broj lažnih pozitiva. Konkretno, sustavi na npr. APR-u ili NOS-u su dovoljno primitivni da uz veliki prag sličnosti ni ne moraju gledati ručno stvari jer je velika vjerojatnost da je prepisano. Šnajderovski predmeti imaju sofisticiranije detektore koji jako često zahtijevaju i ručnu provjeru - konkretno na strojnom, koji je defacto najhardcore predmet na faksu što se tiče detekcije plagijata je većina labosa pregledana i ručno. I konkretno za strojno nisam baš čuo slučajeva gdje je administracija predmeta tvrdila da je netko prepisao a da stvarno nije - ako nije bila odbačena sumnja nakon ručne provjere, uvijek je nakon razgovora bila odbačena. Možda je to radi jupyter notebooka koji se koriste na tom predmetu i koji uvijek imaju veliku podudarnost, ali i bez toga se može dogoditi, kao npr. ovdje.\n\nSve u svemu, ako si stvarno sam pisao, ne moraš se ničega bojati, čak i u slučaju lažnog pozitiva. Na UUTR-u nisu baš sofisticirani detektori plagijata (plagijati često prolaze), a to sa zastavicama se i meni bilo dogodilo pa se kasnije samo ažuriralo.",
+      "votes": {
+        "upvoters": [
+          "Letov"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

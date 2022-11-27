@@ -1,0 +1,194 @@
+{
+  "title": "[MAT3-R] Pitanja i odgovori",
+  "creator": "Mike (Klaud Konzultanta)",
+  "slug": "mat3-r-pitanja-i-odgovori",
+  "tags": [
+    "FER",
+    "Matematika 3R"
+  ],
+  "posts": {
+    "64241": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "Jel probavao tko riješiti 1. iz prošlogodišnjeg zimskog roka?\n\n![](https://i.ibb.co/dmtvfG9/1zir19.png)\n\nPo rješenjima im ispada ovako:\n\n![](https://i.ibb.co/W6d4PqY/1zir19rj.png)\n\nNa stranu to što nisu koristili formulu za Fourierov red kad je funkcija neparna i kada je interval simetričan, opći član nam se dosta razlikuje. Meni ovako ispada red:\n\n[math]-\\frac{2}{3}\\sin x - \\frac{1}{4}\\sin 2x + 2\\sum_{n=3}^{\\infty}\\frac{n(-1)^{n+1}}{n^2-4}[/math]\n\nOpći članovi nam se dosta razlikuju u zapisu, ali kada sam uvrstio 3 i 4 u svoj i njihov, dobio sam isti rezultat. [Računanje preko wolfram alphe](https://www.wolframalpha.com/input/?i=integrate+xcos%282x%29sin%28nx%29+from+-pi+to+pi) (na -pi do pi) je također dao rezultat kao moj (samo ga treba malo urediti). \n\nOčito je oboje točno, ali me zanima na koju foru su došli do službenog rješenja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64268": {
+      "poster": "Avendo",
+      "content": "![](assets/2020-08-28/00009.png)\n\n Ako netko zna bio bih zahvalan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "64567": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@Avendo#64268 Ono što odmah na prvi pogled straši i zbunjuje je taj izraz pod integralom, ali situacija postaje puno pitomija kada primjetiš da je tim integralom definirana konvolucija funkcija y'(t) i sin(2t) te da će nam to olakšati rješavanje jer konvolucija u gornjem području odgovara umnošku slika u donjem.\n\n[math]\ny(t)-2\\int_{0}^{t}y'(x) sin(2(t-\\tau ))dx = 2e^{-2t}[/math]\n\nSad taj izraz pod integralom zapisujemo kao konvoluciju u gornjem području:\n\n[math]y(t)-2y'(t)*sin(2t) = 2e^{-2t}[/math]\n\nPrebacujemo sve u donje:\n\n[math]Y(s)-2\\cdot (sY(s)-y(0))\\cdot \\frac{2}{s^{2}+4}=\\frac{2}{s+2}[/math]\n\nZatim uvrštavamo početni uvjet i dalje uređujemo.\n\n [math]Y(s)-\\frac{2sY(s)}{s^{2}+4}+\\frac{8}{s^{2}+4}=\\frac{2}{s+2}[/math]\n \n  [math]Y(s)\\left[\\frac{s^{2}-2s+4}{s^{2}+4}\\right]=\\frac{2}{s+2}-\\frac{8}{s^{2}+4} \\text{ ; mnozimo cijeli izraz s } \\frac{s^{2}+4}{(s-2)^{2}}[/math][math]Y(s)=\\frac{2s^{2}+8}{(s+2)(s-2)^{2}}-\\frac{8}{(s-2)^{2}}[/math]\n\nSad [imath]\\frac{2s^{2}+8}{(s+2)(s-2)^{2}}[/imath] treba rastaviti na parcijalne razlomke:\n\n[math]\\frac{2s^{2}+8}{(s+2)(s-2)^{2}}=\\frac{A}{s+2}+\\frac{B}{s-2}+\\frac{C}{(s-2)^{2}}[/math]\n\n[math]2s^{2}+8=A(s^{2}-4s+4)+B(s^{2}+2s-2s-4)+C(s+2)[/math]\n\n[math]2s^{2}+8=As^{2}-4As+4A+Bs^{2}-4B+Cs+2C[/math]\n\nDobivamo jednadžbe [imath]A+B=2,\\text{ } -4A+C=0 \\text{ i } 4A-4B+2C=8[/imath], njihovim rješavanjem dobivamo koeficijente [imath]A=1,\\text{ } B=1 \\text{ i } C=4[/imath].\n\nSada se napokon vraćamo gornjem izrazu u donjem području i uvrštavamo koeficijente pa dobivamo:\n\n[math]Y(s)=\\frac{1}{s+2}+\\frac{1}{s-2}+\\frac{4}{(s-2)^{2}}-\\frac{8}{(s-2)^{2}}[/math]\n\n[math]Y(s)=\\frac{1}{s+2}+\\frac{1}{s-2}-\\frac{4}{(s-2)^{2}}[/math]\n\nKonačno vraćamo u gornje područje i dobivamo rješenje:\n\n[math]y(t)=e^{-2t}+e^{2t}-4te^{2t}[/math]",
+      "votes": {
+        "upvoters": [
+          "Avendo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "65636": {
+      "poster": "benac (caneb)",
+      "content": "Koji dio MAT3R je najlakse naucit za prolaz od 2. i 3. knjizice? (Prvu sam naucio)",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "65702": {
+      "poster": "deus_vult",
+      "content": "@benac#65636  2 jje po meni najteza..oni skupovi bože sačuuvaj..a i kombinatorika je po meni zeznuta ..tak da def treću",
+      "votes": {
+        "upvoters": [
+          "benac (caneb)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "65743": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@benac#65636 3. je definitivno lakša, oni klasični obilasci grafa su ful jednostavni i uvijek neki dođe. Za 2. si pogledaj 2. MI tutorial iz tipa 2010., pretpostavljam da ima na materijalima, tamo su objašnjeni neki klasični tipovi zadataka. Što se tiče lakših zadataka  iz kombinatorike vodi se ovom tablicom i bit će više manje okej. Također, rekurzije su jako jako jednostavne, dovoljno si je ispisati ona pravila kad je što zadano, kako izgleda homogeni/partikularni dio, prođeš par zadataka s ispita i vidiš da je uvijek sve na istu foru. Skupove i izvodnice bih preskočila ako nemaš baš vremena.\n\n![](assets/2020-09-01/00002.jpeg)",
+      "votes": {
+        "upvoters": [
+          "benac (caneb)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "65776": {
+      "poster": "alp (monte)",
+      "content": "Postoji li neki tutorial za grafove(3.knjizica)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "65916": {
+      "poster": "zplusplus (gasaf)",
+      "content": "@alp#65776 nema tutorial, ali ima jedna dobra skripta https://github.com/studosi-fer/MAT3R/blob/master/razno/sazetci/MAT3-R_2010-11_sazetak_uvod-u-teoriju-grafova.pdf koja lijepo sumira cijelu knjižicu, a za algortime optimizacije ovo: 1. Dijkstra https://www.youtube.com/watch?v=pVfj6mxhdMw\n2. Kineski poštar https://www.youtube.com/watch?v=JCSmxUO0v3k\n3. Pohlepni je dobro objašnjen u knjizi",
+      "votes": {
+        "upvoters": [
+          "alp (monte)",
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "67848": {
+      "poster": "Avendo",
+      "content": "Može netko objasniti inverznu laplace transformaciju od 2s/(s^2+1)^2 ... dobije se t*sint(t)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "68680": {
+      "poster": "benac (caneb)",
+      "content": "@Avendo#67848 2s/(s^2 + 1)^2 se dobije derivacijom 1/(s^2+1), a to je slika od sin(t), pa se onda po teoremo o derivaicji slike ( -t*f(t) --- F(s)' ) dobije t*sin(t)",
+      "votes": {
+        "upvoters": [
+          "Avendo",
+          "SonGoku (~~~~~~~~)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "69949": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Može li mi netko objasniti kako se ovo računa? \n\n![](assets/2020-09-12/00009.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "75956": {
+      "poster": "gana",
+      "content": "Koliko nas je opet upisalo ovaj predmet?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127943": {
+      "poster": "carrieb",
+      "content": "ima mozda netko skriptu iz grafova u digitalnom obliku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

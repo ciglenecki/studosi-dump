@@ -1,0 +1,239 @@
+{
+  "title": "[MEKRAC] 3. domaća zadaća - 2021/2022",
+  "creator": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+  "slug": "mekrac-3-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Meko računarstvo",
+    "Zadaće"
+  ],
+  "posts": {
+    "253195": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "Jel kuži netko kako napraviti cjelopkupni sustav zaključivanja. Malo sam zapeo...\n\nTrenutna ideja, stvoriti domene za potrebne neizrazite skupove (npr domena za udaljenost, brzinu, kut kormila itd)\n\nOd tih domena zatim napraviti neizrazite skupove, recimo skup koji gleda jel udaljenost od obale premala bi bio:\n\nvery_small_distance = FuzzySet(domena_za_udaljenost, L_fja_pripadnosti(10, 30));\n\nI sad imam brdo neizrazitih skupova poput ovog gore, što bi se sada trebalo napraviti?",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Ducky",
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253264": {
+      "poster": "Skenk",
+      "content": "@\"Precious Bodily Fluids\"#p253195 Ako sam dobro shvatio ideja je koristit te neizrazite skupove da napravis AKO  ONDA pravila, npr\n\nAKO je blizu D i blizu DK ONDA naglo skreni lijevo, ovisno koji stroj za zakljucivanje koristis gledas pripadnost ulaznog D i DK u neizrazitom skupu \"blizu\" i temeljem minimuma ili umnoska gradis zakljucak na neizrazitom skupu \"naglo lijevo\".\n\nTo radis za sva pravila koja imas i onda gledas max od svih zakljucaka tako stvorenih, na njemu vrsis COA defazifikaciju i dobijes output.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Ducky",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253339": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Skenk\"#p253264 E hvala, mislim da su mi stvari jasnije. Ipak, ne potpuno...\n\n\n> To radis za sva pravila koja imas i onda gledas max od svih zakljucaka tako stvorenih, na njemu vrsis COA defazifikaciju i dobijes output.\n\nNije mi ovo zadnje baš sjelo. Recimo imam zaključak \"naglo desno\", i za njega radim nekoliko ako onda pravila, al također imam blago lijevo, kut 0, naglo desno... I sad za svaki od ovih, kao i za naglo desno, mogu napraviti vise ako onda pravila? Ili svaki fuzzy set koji opisuje kut kormila ima samo jedno pravilo? Kako bi to sve pospajao?",
+      "votes": {
+        "upvoters": [
+          "Skenk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253342": {
+      "poster": "Skenk",
+      "content": "@\"Precious Bodily Fluids\"#p253339 Svako pravilo generira jedan zakljucak na domeni \"Akceleracija\" ili \"Kut\", trebalo bi spojiti tak da kad prodes kroz sva pravila da ti na kraju zajednicki zakljucak (max svih dosadasnjih) daje neki smisleni neizraziti skup. Npr. od jednog pravila dobijes zakljucak da se trebas malo zaokrenut desno a od drugog da se trebas zaokrenut malo lijevo, ako su ti dobro realizirani neizraziti skupovi konacni zakljucak bi trebal biti neki neizrazit skup ciji je COA negdje oko sredine te domene (ne zaokrece se brodic).\n\n(Ovo kaj sam napisal uzmi sa zrnom soli jer meni jos ne radi program kak spada, pls ispravite me ak mi logika ne valja )",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Ducky",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253467": {
+      "poster": "tonkec",
+      "content": "je li uvjet za neku buduću zadaću implementirana ova zadaća?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Han",
+          "Kniwy00 (DoktorZnanosti)"
+        ]
+      }
+    },
+    "253469": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"tonkec\"#p253467 mislim da ne",
+      "votes": {
+        "upvoters": [
+          "tonkec"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253707": {
+      "poster": "branimir1999",
+      "content": "Je li moze netko (npr. ako odustane od ove zadace) da se zamijeni za termin labosa u srijedu 14:00? Bio bih zahvalan jer mi se dva labosa preklapaju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253784": {
+      "poster": "Ducky",
+      "content": "Kada pokrenem Simulator, za izlazne varijable mi stalno vraća 0 (treba vratit 10 i 5 ko u početnom primjeru).\n\n(Windows, Java, Intellij, napravio i buildao jar i korektno stavio path u config, config reacta na promjenu ostalih varijabli pa nije do configa)\n\nJel zna neko kako popravit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253819": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"branimir1999\"#p253707 salji mail jednom od ta dva predmeta, izaci ce ti u susret",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253843": {
+      "poster": "Ducky",
+      "content": "@\"Ducky\"#p253784 \n\n[SOLVED]\n\nkad pokrenem na cmdu je bacalo error:\n\nError: LinkageError occurred while loading main class fer.hr.nenr.zad3.Main java.lang.UnsupportedClassVersionError: fer/hr/nenr/zad3/Main has been compiled by a more recent version of the Java Runtime (class file version 58.0), this version of the Java Runtime only recognizes class file versions up to 55.0\n\nimam osjećaj da to baca kad imate više jdka instaliranih. \n\nRj: prebaci se na raniji jdk (meni je sa 16 na 15)\n\nFile -> Project Structure -> Project -> Project SDK",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Skenk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254093": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Ducky\"#p253843 Kako ti se pokreće sve zajedno?\n\nNapravio sam jar file za upravljač broda i njegovu putanju sam stavio u config.txt. IDE mi sve fino kompajlira i generira jar, ali prilikom pokretanja simulatora dobivam.\n\n~/fer/7-semestar/mekrac/projekt/mekrac_lab.jar: Syntax error: \")\" unexpected\n\nKad pokrenem upravljač u terminala sve radi, mogu rucno upisivat brojke i dobivam output na standardnom izlazu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254128": {
+      "poster": "Ducky",
+      "content": "@\"Precious Bodily Fluids\"#p254093 ako imas linux probaj puni path upisat u config.txt, ak to ne radi ne znam...\n\nja na windowsu stisnem desni klik na Simulator.jar -> Open with -> OpenJDK Platform binary",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254174": {
+      "poster": "Ducky",
+      "content": "Za ekipu sa sljedeće godine: mislim da se brucošijada desila pa ovaj thread nije baš helpful...\n\nPreusmjeravam vas na prethodnu godinu:  @\"Cvija\"#p87033",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254485": {
+      "poster": "ghost (ksi)",
+      "content": "Dojmovi s labosa? Sto ispituju?",
+      "votes": {
+        "upvoters": [
+          "gamigugi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254568": {
+      "poster": "Ducky",
+      "content": "@\"turtle\"#p254485 standard... pokreni simulaciju, objasni kod, objasni teoriju iza koda (zašto si napiso to što si napisao)\n\neventualno još razliku između stroja za zaključivanje koji se temelji na minimumu vs produktu",
+      "votes": {
+        "upvoters": [
+          "gamigugi",
+          "ghost (ksi)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

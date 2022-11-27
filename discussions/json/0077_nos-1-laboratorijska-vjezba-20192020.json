@@ -1,0 +1,955 @@
+{
+  "title": "[NOS] 1. laboratorijska vježba - 2019/2020",
+  "creator": "Ledeni56 (Jusuf)",
+  "slug": "nos-1-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Napredni operacijski sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "1471": {
+      "poster": "Ledeni56 (Jusuf)",
+      "content": "Jel netko poceo rjesavati 1. vjezbu?\n\nhttp://www.zemris.fer.hr/predmeti/os2/komunikacija/z1_vrtuljak.html",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1748": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Ledeni56#1471 Da, riješio sam ovaj dio s porukama (a uskoro i s cjevovodima), što te zanima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1875": {
+      "poster": "Ledeni56 (Jusuf)",
+      "content": "Koji je pristup? Kako poslati npr poruku \"ustani\" tako da ju ne procitaju svi procesi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1877": {
+      "poster": "Stark",
+      "content": "Da li nove procese radimo s fork ili pthread_create? Ima netko neki koristan link za nadopunu materijalima s predavanja / službenom webu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1879": {
+      "poster": "Ledeni56 (Jusuf)",
+      "content": "@Stark#1877 Sa fork rekao bih, jer zelimo komunikaciju izmedu razlicitih procesa",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1892": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Ledeni56#1875 Ja sam to napravio u Pythonu ovako:\n\nDakle otvaraš procese i oni pristupaju istom redu. Svaki proces čita te poruke kako mu dođu.\n\nJedan od načina je da peekaš na početak reda i onda skineš poruku ako je ona koju tražiš. Međutim, ne sad specifično za ovaj labos, tu imaš problem kad bi ti došla neka korupcija u red, tipa da svi koji čekaju poruku traže onu koja nije na početku reda.\n\nStoga, ono što sam ja napravio je da svaki proces skine poruku iz reda, i onda ako nije ona koja valja, stavi ju natrag u red. Time imaš cirkulaciju, ali ne znam kako bi bez naprednije strukture podataka bilo osigurano da nema takve jalovosti.\n\nDakle, da rezimiramo, skica pseudokoda toga bi bila:\n\n```python\ndok poruka_nije_ona_koju_trebam(poruka := red.skini_poruku()):\n    red.stavi_poruku(poruka)\n\nradi_dalje()\n```\n\nKao strukturu reda koristim `multiprocessing.Queue()`, što je u principu thread-safe lista, a procese otvaram s omatanjem metode u `multiprocessing.Process` i `process.start()` kad sam spreman.\n\nKad završim sve mogu eventualno podijeliti jupyter notebook toga, ali pitanje je koliko će biti korisno ljudima koji rade u C-u jer je bespotrebno komplicirano (npr. u pythonu uopće nema file permissiona ili zezancije sa strukturama, doslovno je plug & play)",
+      "votes": {
+        "upvoters": [
+          "Ledeni56 (Jusuf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1893": {
+      "poster": "Ledeni56 (Jusuf)",
+      "content": "@micho#1892 jesi u prvom zadatku morao koristiti neki kriticni odsjecak ili nesto?\n\nmozda se i ja prebacim na python, C je uzas",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1894": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Ledeni56#1893 Nope, ovdje imaš neko pasivno radno čekanje zbog te cirkulacije, slično kao i u 2. zadatku i Lamportu kad čekaš da dretva radnik ima svoj zahtjev prvi u prioritetnom redu\n\nU Pythonu je prvi zadatak brat bratu bez propertyja i mojeg odvajanja svega praznom linijom max 50 linija, ali mi je trebalo neko vrijeme da malo proučim multiprocessing tak da nisu free bodovi 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1918": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Evo, ako nekom pomogne, stavio sam labos u Pythonu na git (koji će biti dodan u materijale kad se napiše 2. labos):\n\nhttps://github.com/Yalfoosh/NOS/blob/master/LAB1/\n\nU njemu je vidljiva logika koja nije nužno najtočnija, ali suboptimalne odluke komentiram kako u kodu, tako i u [ovoj Jupyter bilježnici](https://github.com/Yalfoosh/NOS/blob/master/LAB1/LAB1.ipynb). Bitno je da radi i da je zadržan duh labosa, ne :D ?",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)",
+          "Stark",
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2729": {
+      "poster": "termodinamika",
+      "content": "jel se moze labos pisati u javi ? pozz hvala",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "2743": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@termodinamika#2729 Trebalo bi se moći - Java ima i Process klasu za procese, i BlockingQueue klasu za redove poruka i cjevovode (mogu se implementirati na više načina).",
+      "votes": {
+        "upvoters": [
+          "termodinamika"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3840": {
+      "poster": "NekocBraca",
+      "content": "Cisto zbog organizacije vremena, jel moze netko tko je rijesio labos reci koliko mu je aproksimativno trebalo za rijesit? Ja krecem skroz iz nule (do sada sam se pravio kao da NOS niti nemam upisan), znaci trebam i naucit teoriju i rijesit labos.\n\nZnam da je nezahvalno pitanje, al ak moze netko reci kolko je njemu trebalo da imam za orijentaciju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3905": {
+      "poster": "adrian7000",
+      "content": "Za ovaj labos najbolje je ucit gradivo s interneta? Ovi objavljeni materijali nisu pretjerano korisni?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3937": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@NekocBraca#3840 Da nisam trebao proučavati multiprocessing i riješavati neke manje mušice vezane uz nedeterminizam, trebalo bi mi 3-4 sata max.\n\nZnači, ajmo reći da nemaš pojma o cjevovodima i redovima poruka, treba uzeti u obzir da će ti trebati sat-dva sveukupno da ti teorija bude čista, i onda ovisi u čemu ćeš raditi i koliko si sposoban u jeziku u kojem ćeš raditi - meni je Python praktički glavni jezik pa mi je svejedno trebalo 2-3 sata da pohvatam točno kako sve želim napraviti i što mogu. Opet, ako radiš u C-u pa pratiš upute će ti sigurno trebati sat-dva da pročitaš i shvatiš one njihove monstruozne upute.\n\nDakle sve u svemu, uzet će ti jedan cijeli dan posla da sve složiš da radi, više-manje.",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)",
+          "NekocBraca"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Amali (Amajli)"
+        ]
+      }
+    },
+    "3952": {
+      "poster": "adrian7000",
+      "content": "Treba li vrtuljak provjeravat jesu li posjetitelji sjeli nakon što im pošalje poruku \"sjedni\"? U pseudokodu zadatka za labos to nije navedeno, ali nekako mi je logicno da bi trebalo?",
+      "votes": {
+        "upvoters": [
+          "triespe"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "3957": {
+      "poster": "maPre",
+      "content": "@adrian7000#3952 ja sam tako napravio i napravio sam da dojave vrtuljku kad se ustanu nakon vožnje. To sam napravio da ispis izgleda kak treba, bez toga ti se moze desit da u ispisu izgleda ko da je vrtuljak pokrenut prije nego su svi sjeli  iako se po kodu vidi da to nije moguce. Ne znam da li je to nužno ili može ostat onak kak je u pseudokodu zadatka",
+      "votes": {
+        "upvoters": [
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4032": {
+      "poster": "Kristijan",
+      "content": "Je li i vama još uvijek onemogućen upload labosa ? Kao link na Ferku postoji ali se ne može uploadati.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4495": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "trebaju li labosi bit tocno rjeseni da bi mogli pristupiti ispitu? npr ak se preda polovicno rjesen labos, moze li se izaci na ispit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4568": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@johndoe12#4495 Sa stranice labosa:\n\n> Uvjet za izlazak na ispit: ostvareni su SVI zadaci obje vježbe, postavljeni su svi izvorni tekstovi programa u sustav ferko.\n\nTako da vjerojatno može nešto ne raditi, ali svaki zadatak mora biti riješavan. Moraš uzeti u obzir da ako je zadatak slabo riješen mogu proizvoljno uzeti da nije riješen, kako nema kolokviranja.\n\nZadaci su relativno lagani pa ih se potrudi što više riješiti ;)",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4647": {
+      "poster": "Nabas",
+      "content": "Može neko pojasniti kako uspostaviti komunikaciju između procesa sa cjevovodima. Išao sam pristupom da svaki proces ima svoj pipe i prvo šalje zahtjeve prema ostalima, onda u while petlji čita sa svog pipea i ovisno o poruci odluči dal treba slati odgovore i kome.  Radim u C-u i kad stvorim više procesa sa fork() svaki od njih poziva filozof(i) prvi zahtjevi se svi pošalju, pošalje se nekad i neki odgovor ali nakon toga zapne.",
+      "votes": {
+        "upvoters": [
+          "Stark"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4688": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Nabas#4647 A što imaš, Lamport? Jer za Lamporta ti treba [imath] n(n - 1) [/imath] cjevovoda sveukupno, tj. svaki proces treba [imath] n - 1 [/imath] cjevovoda (za [imath] n - 1 [/imath] drugih procesa, jel), a ne samo [imath] n [/imath] (ako sam dobro shvatio što si mislio pod svaki proces ima svoj cjevovod).",
+      "votes": {
+        "upvoters": [
+          "Amali (Amajli)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4707": {
+      "poster": "Nabas",
+      "content": "@micho#4688 Imam Ricarta i Agrawala. Da dobro si shvatio.. to bi onda značilo da između svakog para procesa mora postojati dva cjevovoda, to mi se činilo jako puno za npr 10 filozofa, al ok budem probao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4723": {
+      "poster": "maPre",
+      "content": "@Nabas#4707 Nije nuzno, ja sam napravio sa N cjevovoda, svaki proces ima svoj cjevovod sa kojeg cita sto su mu svi drugi procesi poslali, prvo sam mislio da nece raditi al ipak radi haha nisam istrazivao al ocito postoji neki interni mutex koji pazi da se ne potuku procesi ako pokusaju pisat u isto vrijeme na isti cjevovod.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4726": {
+      "poster": "adrian7000",
+      "content": "@maPre#4723 kolko sam ja procitao u pythonu ne postoji. Ako vise procesa pise ili cita s istog pipea u isto vrijeme nastane sranje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4731": {
+      "poster": "Nabas",
+      "content": "@maPre#4723 Probao sam sa N(N-1) i sa N cjevovoda i uvijek ista stvar. Mislim da svi zapnu na čitanju, evo kad ima N=3 cjevovoda dva procesa šalju odgovor trećem, ali ih on nikad ne pročita.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4748": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@maPre#4723 Mislim da imaš miskoncepciju kako cjevovodi rade. Cjevovod ti je ko kvantno stanje, čitanjem uništavaš informaciju. Dakle s N cjevovoda ti jednostavno ne možeš imati situaciju da 1 filozof šalje svima i da oni svi čitaju s istog opisnika datoteke, jer jednom kad nešto pročitaš sa cjevovoda to se briše.\n\nMoguće je imati N cjevovoda (postaviti ih u ciklus, pa ako neki filozof dobije poruku koja nije njegova proslijedi je dalje), no onda si dozvolio drugim procesima da čitaju tu poruku. To je u slučaju Lamporta okej jer ionako šalješ istu poruku koja u sebi sadrži primatelja, ali imat ćeš problem kad ti se filozofi isključe - tko će onda proslijeđivati poruku dalje? Jedina je dobra stvar što ako složiš da filozofi rade i nakon što pojedu nešto možeš imati puno manje putovanja poruke. Ako si to napravio svaka čast.\n\nSve u svemu okej, moguće je i s N cjevoboda ostvariti ono što želiš, ali kompliciraš jako zadatak i moraš imati posebnu strukturu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4749": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Nabas#4731 Kako čitaš? To zapinjanje na čitanju mi zvuči kad da čitaš s `fd.read()`, međutim to ti neće raditi jer `read` čeka do EOF (a to ti bude tek kad se zatvori pipe, ako i tada). Umjesto toga, kroz cjevovode šalji poruke koje završavaju s `\\n`, pa čitaj s `readline()`.",
+      "votes": {
+        "upvoters": [
+          "Njet"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4766": {
+      "poster": "maPre",
+      "content": "@micho#4748 ne citaju svi iz jednog opisnika datoteke i nemoguce je da filozof dobije poruku koja nije njegova za to sto svaki ima svoj cjevovod s kojeg cita, odnosno ima N cjevovoda za N procesa, svaki cita sa svoga. Kada filozof šalje zahtjev on šalje na sve ostale cjevovode osim na svoj. Tu sam mislio da će biti problema jer je moguće da u isto vrijeme više procesa pokuša poslati poruku kroz isti cjevovod, ali sve dobro radi. Napravio sam labos vec, ne pricam bezveze.\n\nZapravo uopce nije kompliciranje, isto je samo imas manje cjevovoda.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4767": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@maPre#4766 Koliko ja znam, to nije garantirano da će raditi iz razloga što nije garantirano da će samo 1 proces pisati u cjevovod u određenom trenutku, osim ako postoji neki mehanizam zaključavanja pa su cjevovodi thread-safe, ali pretragom po internetu sam došao do odgovora da to sami po sebi nisu, tj. da za više čitatelja i pisatelja u generalnom slučaju treba mehanizam zaključavanja.\n\nNo dobro, možda sam u krivu, nije kao da sam napravio tvoju konfiguraciju pa dokazao da ne radi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4768": {
+      "poster": "Nabas",
+      "content": "@micho#4749 Čitam sa read() jer radim u C, misliš na readline() iz pythona?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4770": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Nabas#4768 \n\nDa, ali i u C-u bi trebalo biti analogno - probaj s `fgets` I šalji poruke koje završavaju na `\\n`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4774": {
+      "poster": "maPre",
+      "content": "@micho#4767 https://unix.stackexchange.com/questions/68146/what-are-guarantees-for-concurrent-writes-into-a-named-pipe\n\nUkratko trebao bi imati vece poruke od ovih koje mi saljemo da dode do sranja, npr. na linuxu bi poruke trebale bit vece od 4096 bajtova i tek onda je moguce mijesanje poruka.\n\nPitanje vezano uz zadatak, nije mi bas jasno iz pseudokoda bilo. Da li svaki filozof samo jednom jede, nakon toga odspava između 100 i 2000 milisekundi i onda ode ili ostaje na konferenciji dok svi ne pojedu?",
+      "votes": {
+        "upvoters": [
+          "triespe"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4781": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @maPre#4774 Ukratko trebao bi imati vece poruke od ovih koje mi saljemo da dode do sranja, npr. na linuxu bi poruke trebale bit vece od 4096 bajtova i tek onda je moguce mijesanje poruka.\n\nOkej, ali sve je to ovisno o implementaciji cjevovoda, stoga to nije nešto što bi inženjer trebao samo pretpostaviti.\n\n> @maPre#4774 Pitanje vezano uz zadatak, nije mi bas jasno iz pseudokoda bilo. Da li svaki filozof samo jednom jede, nakon toga odspava između 100 i 2000 milisekundi i onda ode ili ostaje na konferenciji dok svi ne pojedu?\n\nNakon što odfilozofira 2. put bi trebao izaći iz procesa, taj kod nije u `while` petlji.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4782": {
+      "poster": "Nabas",
+      "content": "@maPre Kako ti čitaš dok čekaš n-1 odgovora. Dal je pogrešno ako read ništa ne pročita staviti continue tako da čeka dok ne stignu odgovori ili novi zahtjevi. \n```\nwhile(odgovori != n-1){\n        if (read(pfd[pi][0], buf, MAXREAD) == 0){\n            continue;\n        }\n        ...\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4791": {
+      "poster": "maPre",
+      "content": "@micho#4781 \n\n> @micho#4781 Okej, ali sve je to ovisno o implementaciji cjevovoda, stoga to nije nešto što bi inženjer trebao samo pretpostaviti.\n\nSad već filozofiraš, tako je definirano u POSIX standardu, uostalom čovjek je u odgovoru doslovno citirao i stavio link na opis implementacije u kojem piše ista stvar ko i u standardu.\n\n> @micho#4781 Nakon što odfilozofira 2. put bi trebao izaći iz procesa, taj kod nije u while petlji.\n\nAha, to znači da zapravo imamo manje ukupnih poruka, npr. kod lamporta nećemo imati 3*(N-1) poruka jer nema smisla slati poruku IZLAZAK filozofima koji su izašli?",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4797": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @maPre#4791 Sad već filozofiraš, tako je definirano u POSIX standardu, uostalom čovjek je u odgovoru doslovno citirao i stavio link na opis implementacije u kojem piše ista stvar ko i u standardu.\n\nOkej, ali nadam se da si svjestan da većina Linux distribucija ne poštuje POSIX standard u potpunosti, a Linux sustavi ionako sačinjavaju svega par % OS-ova u svijetu. Bolja praksa bi bilo oslanjanje na blokirajuće cjevovode, što je upravo ono što Python sa svojim `os.pipe` radi jer to, za razliku od POSIX standarda, garantira ponašanje na svim operacijskim sustavima na kojima je funkcija dostupna, a to su trenutno Unix i Windows sustavi.\n\n> @maPre#4791 Aha, to znači da zapravo imamo manje ukupnih poruka, npr. kod lamporta nećemo imati 3*(N-1) poruka jer nema smisla slati poruku IZLAZAK filozofima koji su izašli?\n\nTeoretski nije potrebna ta poruka, ali ona postoji jer se u realnim sustavima na primitku te poruke brišu resursi za taj proces. U realnom sustavu može biti 2-3 reda veličine više \"filozofa\", sa složenijim ponašanjem i većim zauzećem memorije, pa je onda bitno.\n\nIsta je stvar je i s 1. zadatkom, gdje je nebitno je li neki posjetitelj završio svoj posjet kad izostanak poruke \"Želim se voziti\" sam po sebi signalizira da se posjetitelj ne želi više voziti, ali može biti korisno za oslobađanje resursa koje troši taj posjetitelj.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "4837": {
+      "poster": "maPre",
+      "content": "@Nabas#4782 Šaljem poruke fiksne veličine, npr. MAXREAD, kada čitam provjeravam da li je read vratio -1 što bi značilo da je došlo do greške i da li je read procitao manje od MAXREAD znakova.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5031": {
+      "poster": "caffeine",
+      "content": "Jel treba zaključati labos na ferku ili je dovoljno samo uploadati? Nisam našla nigdje da treba zaključati pa pretpostavljam da ne treba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5336": {
+      "poster": "Amali (Amajli)",
+      "content": "@caffeine#5031 osim ako mislis da ces se do roka sjetit da ti je nesto krivo, nema razloga da ne zakljucas just in case? i uvijek mozes zakljucat direkt pred rok ako se sjetis i zelis, again - just in case",
+      "votes": {
+        "upvoters": [
+          "caffeine"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5350": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@caffeine#5031 Generalno uzmi u obzir da će ti samo Čupko, koji je vjerujem jedina osoba koja forsira zaključavanje na Ferku, uvijek jasno istaknuti da treba zaključati tu vježbu. Drugi ne koriste tu funkcionalnost jer je jedina motivacija toga da se onemoguće izmjene nakon roka.\n\nGolub je malo specifičan slučaj jer npr. Šnajder jasno kaže da se ne treba ništa zaključavati, dok Golub ne kaže ništa pa je na (N)OS-u uvijek pomutnja, ali čak i da zaključaš nešto zeznuto lagano se javiti mailom Golubu, pa ti on otključa.\n\nJelenković je na OS-u govorio da ne treba zaključavati, pa se vjerojatno ta filozofija može promijeniti i na NOS.\n\nEDIT: kako je kolega @data primijetio, došlo mi je na pamet da sad kako nema kolokvija bi vjerojatno **trebalo zaključati**, prije su se bodovi dali nakon odgovaranja, sad ne postoji nešto što bi označilo da je predan labos.",
+      "votes": {
+        "upvoters": [
+          "caffeine"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5402": {
+      "poster": "data",
+      "content": "@caffeine#5031 Ako su fleksibilni rokovi kao tu na NOS-u ili na APR-u recimo, onda TREBA zaključat samostalno jer se gleda vrijeme zaključavanja, a ako je kao na strojnom di imaš nefleksibilan rok (koji piše na predaji u Ferku) onda ne treba jer se istekom roka zaključa automatski.",
+      "votes": {
+        "upvoters": [
+          "caffeine"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5446": {
+      "poster": "p444k",
+      "content": "Sto ste koristili za Pipe u Javi? Koji Stream?",
+      "votes": {
+        "upvoters": [
+          "Jim"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5504": {
+      "poster": "Nabas",
+      "content": "Pokušavam razmjeniti poruke između dva procesa preko dva cjevovoda, no samo jedan proces pročita poruku dok drugi čeka na čitanju. Ako neko može ukazat na pogrešku koju radim bio bih jako zahvalan.\n\n>! ```\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <errno.h>\n#include <sys/types.h>\n#include <sys/wait.h>\n#include <sys/ipc.h>\n#include <unistd.h>\n#include <time.h>\n#define MAXREAD 30\n#define RD 0\n#define WR 1\nint pfd[2][2];\nvoid filozof(int i, int n){\n    char snd_message[MAXREAD];\n    char rcv_message[MAXREAD];\n    sprintf(snd_message, \"Šalje proces %d!\", i);\n    printf(\"%s procesu %d\\n\", snd_message, (i+1)%n);\n    close(pfd[i][WR]); //zatvara svoj kraj za pisanje\n    close(pfd[(i+1)%n][RD]);// zatvara kraj drugog procesa za čitanje\n    (void) write(pfd[(i+1)%n][WR], snd_message, MAXREAD);\n    sleep(1);\n    (void) read(pfd[i][RD], rcv_message, MAXREAD);\n    printf(\"Proces %d prima: %s\\n\", i, rcv_message);\n    exit(0);\n}\nint main(void){\n    int i, n=2;\n    for (i=0; i<n; i++){\n        if(pipe(pfd[i]) == -1)\n            exit(1);\n        switch(fork()){\n            case -1:\n                exit(1);\n            case 0:\n                filozof(i, n);\n        }\n    }\n    wait(NULL);/* roditelj čeka da dijete završi*/\n    wait(NULL);/* roditelj čeka da dijete završi*/\n    exit(0);/* zatvara sve deskriptore */\n}\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5520": {
+      "poster": "p444k",
+      "content": "Kod predaje zadaće imam. domaće zadaće i laboratorijske vježbe?\n\nŠto je ovih 12 laboratorijskih vježbi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5623": {
+      "poster": "WallStreetBets",
+      "content": "Jel se može u prvom zadatku koristiti više redova poruka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5626": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@WallStreetBets#5623 Nigdje ne piše da ne smiješ: 1 ti je dovoljan, al možeš i s 8 (tj. [imath] n [/imath]) haha",
+      "votes": {
+        "upvoters": [
+          "WallStreetBets"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5801": {
+      "poster": "Marenix",
+      "content": "@Nabas#5504 \n\nNe znam kako bi popravio, al ja sam radio s imenovanim cjevovodima i morao sam postaviti O_NDELAY zastavicu, jer inače zablokira ako nema što za pročitat. Sa ovom zastavicom vrati grešku. Sad, ne znam kak se to kod neimenovanih radi.",
+      "votes": {
+        "upvoters": [
+          "Nabas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5807": {
+      "poster": "Nabas",
+      "content": "@Marenix#5801 Stvarno ne znam, ali uspio sam napraviti tako da poruke šaljem preko procesa roditelj i njegovog cjevovoda. Tako sam riješio i labos.",
+      "votes": {
+        "upvoters": [
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5864": {
+      "poster": "adrian7000",
+      "content": "Prebacen rok za 10 bodova na ponedjeljak.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8319": {
+      "poster": "Bananaking",
+      "content": "Imam Lamporta za cjevovode. Ako sam dobro shvatio Lamportov nacin sinkronizacije trebao bi gledati time kada je poruka napisana da bi odredio tko ide u kriticni odsjecak. \n\nMoze li onda svaki proces imati svoj 0_RDRW cjevovod ili mora imati N-1 read i N-1 write cjevovoda, spojen sa svakim drugim? Poruka moze biti nekakav struct koji ce imati kljucnu rijec REQUEST, REPLY, RELEASE + timestamp (time(NULL))?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8355": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Bananaking#8319 Imaš nekoliko različitih implementacija - najmanje cjevovoda ćeš imati ako sve filozofe položiš u ciklus, a onda oni prosljeđuju u nekom smjeru poruku dok ne dođe do primatelja, a onda će primatelj u istom smjeru nastavit prosljeđivati svoj odgovor. Time ćeš  za jedan handshake (request-reply) uvijek trebati odašiljati n poruka: [imath] (n - x) [/imath] do filozofa, i onda [imath] x [/imath] od filozofa do originalnog pošiljatelja.\n\nNajjednostavniji način je s [imath] n(n-1) [/imath] cjevovoda gdje samo moraš imati priority queue po vremenima i moraš ili koristiti neblokirajuće cjevovode pa periodički provjeravati sve cjevovode za poruku izlaza , ili uz neku shemu kod svakog filozofa gledati specifičan cjevovod iz kojeg očekuješ odgovor procesa koji je trenutno u KO.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8749": {
+      "poster": "triespe",
+      "content": "@micho#8355 Čemu slaganje u ciklus, svaki filozof može imati svoj (imenovani) cjevovod s kojeg čita, a ostali u njega pišu, zar ne? To mi se čini najjednostavnije.\n\n@Nabas#5504 Ako te zanima greška bez obzira što si riješio labos, čini mi se da dvaput zoveš funkciju filozof u kojoj zatvaraš 2 opisnika, znači imaš ukupno 4 zatvaranja tj. zatvorio si sve opisnike. Mislim da ti zato hanga.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8751": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @triespe#8749 Čemu slaganje u ciklus, svaki filozof može imati svoj (imenovani) cjevovod s kojeg čita, a ostali u njega pišu, zar ne? To mi se čini najjednostavnije.\n\nI da i ne - imaš garanciju atomičnosti samo ako se poštuje POSIX standard, koji se jako malo poštuje. To nije nešto na što bi u praksi treba računati. Ciklus je neovisno o implementaciji cjevovoda thread-safe.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8784": {
+      "poster": "Nabas",
+      "content": "> @triespe#8749 Ako te zanima greška bez obzira što si riješio labos, čini mi se da dvaput zoveš funkciju filozof u kojoj zatvaraš 2 opisnika, znači imaš ukupno 4 zatvaranja tj. zatvorio si sve opisnike. Mislim da ti zato hanga.\n\nMislim da nije zbog toga. Zašto onda ovaj kod radi? Dva procesa, dva cjevovoda, svaki zatvara svoj kraj za pisanje tako da može čitati, i zatvara kraj za čitanje drugog tako da može pisati.\n\n>!```\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <errno.h>\n#include <sys/types.h>\n#include <sys/wait.h>\n#include <sys/ipc.h>\n#include <sys/msg.h>\n#include <unistd.h>\n#include <time.h>\n#define MAXREAD 30\n#define RD 0\n#define WR 1\nint main(void){\n    int pfd[2][2];\n    char buf[MAXREAD];\n    char message[MAXREAD];\n    if (pipe(pfd[0]) == -1)\n        exit(1);\n    if (pipe(pfd[1]) == -1)\n        exit(1);\n    switch (fork()) {\n        case -1: \n            exit(1);\n        case 0:\n            close(pfd[1][WR]);\n            close(pfd[0][RD]);\n            sprintf(message, \"Dijete\");\n            printf(\"Dijete salje: %s\\n\", message);\n            (void) write(pfd[0][WR], message, MAXREAD);\n            (void)read(pfd[1][RD], buf, MAXREAD);\n            printf(\"Dijete prima: %s\\n\", buf);\n            exit(0);\n        default:\n            close(pfd[0][WR]);\n            close(pfd[1][RD]);\n            sprintf(message, \"Roditelj\");\n            printf(\"Roditelj salje: %s\\n\", message);\n            (void) write(pfd[1][WR], message, MAXREAD);\n            (void) read(pfd[0][RD], buf, MAXREAD);\n            printf(\"Roditelj prima: %s\\n\", buf);\n            wait(NULL);\n    }\n    exit(0);\n}\n```\n>!<",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9839": {
+      "poster": "triespe",
+      "content": "@micho#8751 Garancija atomičnosti je ako pišeš poruke kraće od PIPE_BUF bajtova, a dosta je razumno očekivati da će se ispoštovati POSIX, kako misliš jako malo se poštuje? Skoro svaki alat koji u nekom manjem dijelu ne poštuje POSIX to prilično naglasi u svojim uputama. Ali neovisno o njegovom poštovanju, evo tablice za PIPE_BUF, teško da ćeš za ovu komunikaciju između filozofa koristiti dulje poruke: https://arto.s3.amazonaws.com/notes/posix#pipe-buf\n\n@Nabas#8784 U pravu si, išao sam ispisivati što vraćaju read i write u onom tvom prvom kodu i mislim da sam skužio grešku. Stvaraš opisnike unutar for petlje tako da će ti prvo dijete filozof nasljediti samo opisnike jednog cjevovoda, onog s kojeg čita, a neće imati ispravan opisnik ovoga gdje treba pisati, tako da će drugo dijete do sutra čekati da ovaj nešto napiše. Izdvojio sam stvaranje opisnika izvan for petlje i radi.",
+      "votes": {
+        "upvoters": [
+          "Nabas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9850": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @triespe#9839 a dosta je razumno očekivati da će se ispoštovati POSIX, kako misliš jako malo se poštuje?\n\nIznimno malo distribucija poštuje POSIX u potpunosti, prema tome, to nije nešto na što se može računati, POGOTOVO dok postoje Windowsi i Mac koji nemaju realni razlog poštovati ga.\n\nSve u svemu, implementacija labosa je ionako na vlastitu odgovornost, osobno sam se opekao već nekoliko puta na raznorazne standarde i ne preporučujem nikome da se oslanja na njih jer su iz iskustva više-manje lažna nada i nisu nužno fiksni. Al opet, to se svodi samo na moju tj. nečiju inženjersku religiju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9870": {
+      "poster": "Nabas",
+      "content": "> @triespe#9839 U pravu si, išao sam ispisivati što vraćaju read i write u onom tvom prvom kodu i mislim da sam skužio grešku. Stvaraš opisnike unutar for petlje tako da će ti prvo dijete filozof nasljediti samo opisnike jednog cjevovoda, onog s kojeg čita, a neće imati ispravan opisnik ovoga gdje treba pisati, tako da će drugo dijete do sutra čekati da ovaj nešto napiše. Izdvojio sam stvaranje opisnika izvan for petlje i radi.\n\nDa ovo je bio problem, trebalo je posebnoj for petlji stvoriti opisnike sad mi radi bez problema. Hvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11868": {
+      "poster": "Bananaking",
+      "content": "U glavnom programu nfilozofa stvaram i pokrecem filozofe pomocu fork/execl, u njima stvorim imenovane cjevovode, otvorim ih sa open gdje moram koristiti O_NDELAY inace zablokira (cekajuci otvaranje drugog kraja). Kada ispisem pfd dobiven sa pfd = open(ime_cjevi, O_RDONLY | O_NDELAY) u svakom filozofu dobijem isti pfd iako svatko ima drugacije ime_cjevi koje otvara. Zasto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11948": {
+      "poster": "triespe",
+      "content": "@Bananaking#11868 Zašto bi imali različiti pfd? Svaki proces ima svoj set opisnika, a nakon forkanja su sva djeca neovisni procesi i utječu na svoje strukture podataka, između ostalog i opisnike datoteka. Opisnike datoteka si stvorio pozivom open() nakon forkanja tako da nema razloga da ne koriste iste identifikatore za svoje različite opisnike. \n\nDrugim riječima, pošto su identifikatori 0, 1, 2 za opisnike standardnog ulaza, izlaza i pogrešaka zauzete za svaki proces, vjerojatno će svaki proces uzeti svoj prvi slobodni identifikator opisnika a to je 3. Ne bi se dakle čudio da ti svaki proces ispisuje 3, ali svaka ta trojka identificira drugi opisnik, u svakom procesu njegov opisnik. Je li jasnije ili sam samo zakomplicirao? :)\n\nPreporučam ti da stvoriš sve potrebne cjevovode prije forkanja tako da možeš bez problema otvarati tuđe cjevovode za čitanje bez riskiranja da ga pokušaš otvoriti a drugi proces-dijete ga nije još stvorio.",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "11999": {
+      "poster": "adrian7000",
+      "content": "Jesu nekome dosli bodovi iz ovog labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12060": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@adrian7000#11999 Čini se da ne, ali što nisu govorili da će biti neko kolokviranje? Ne nužno za sve studente, al možda to još nije završilo pa misle sve unijeti odjednom.",
+      "votes": {
+        "upvoters": [
+          "adrian7000"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12148": {
+      "poster": "BrankoBrancin",
+      "content": "Uneseni su sada bodovi\n\nPazite na ovaj dio obavijesti:\n\nU nastavku se nalazi tablica s popisom studenata koji obavezno moraju kontaktirati pridruženog asistenta te oni koji to mogu napraviti za potencijalno više bodova. Unutar tablice, zvjezdicom je označeno koji zadatak je potrebno\n\nusmeno ispitati preko MS Teamsa. Ispitivanja će se odvijati u četvrtak 23.4.2020. od 16h.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12210": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Bruh šta je ovo, nitko max bodovi i sve neke male količine bodova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12211": {
+      "poster": "Stark",
+      "content": "@micho#12210 Ja sam se isto iznenadio. Nije mi jasno kako.",
+      "votes": {
+        "upvoters": [
+          "NekocBraca"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12212": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Možda je to kao 9 plagijatora i neki kod kojih nije bilo sve jasno, a ostali imaju uvide hmm?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12214": {
+      "poster": "adrian7000",
+      "content": "@micho#12210 Cek sta, pa prosjek je 9,19? 105 ljudi ima max bodove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "12233": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@adrian7000#12214 Mah, nisam vidio da su unijeli bodove drugima. Mislio sam da je ekipa u tablici koja ima zvjedice dio vrha. My bad 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "153614": {
+      "poster": "Yeltneb",
+      "content": "Ovo je pseudokod procesa auto:\n```\nProces Auto(registarska_oznaka, smjer) {\n   // smjer = 0 ili 1\n   // registarska oznaka je redni broj automobila u sustavu\n   spavaj Z milisekundi; // Z je slučajan broj između 100 i 2000\n   pošalji zahtjev za prijelaz mosta i ispiši(\"Automobil registarska_oznaka čeka na prelazak preko mosta\");\n   po primitku poruke \"Prijeđi\" ispiši(\"Automobil registarska_oznaka se popeo na most\");\n   po primitku poruke \"Prešao\" ispiši(\"Automobil registarska_oznaka je prešao most.\");\n}\n```\n\nKod ove poruke \"Prijeđi\" i \"Prešao\" jel smijem ja slati \"Prijeđi 1\" i \"Prešao 2\" gdje su ovi brojevi registarska oznaka automobila?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

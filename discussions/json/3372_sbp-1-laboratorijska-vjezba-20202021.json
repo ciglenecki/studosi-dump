@@ -1,0 +1,187 @@
+{
+  "title": "[SBP] 1. laboratorijska vježba - 2020/2021",
+  "creator": "DudeUrNuts",
+  "slug": "sbp-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Sustavi baza podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "154837": {
+      "poster": "DudeUrNuts",
+      "content": "Ne znam kako je vama ostalima, ali ja sam potpuno zapeo na samoj instalaciji/dodavanju nove instance. Ne znam uopće kako se spojiti na bazu jednom kad je stvoren novi Database Engine nego samo dobijem da nije postavljen login, bez obzira što sam na SQL Server Setupu namjestio kako piše u uputama.\n\nAny help? Je li problem možda do verzije?\n\nRadim sa SQL Serverom 2019 i SSMS-om 18.",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154890": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@DudeUrNuts#154837 Ja radim sa istim alatom, nisam imala problema. Nisam točno skužila u kojem djelu dolazi do problema, kad upališ sql i dobiš connect prozor kaj god da upišeš ne možeš se spojit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154923": {
+      "poster": "adidas",
+      "content": "@DudeUrNuts#154837 \n\nJesi postavio **_Authentication mode: Mixed Mode_**?\n\nJa sam odaberem bazu i ne moram pisati ni user ni sifru samo se spoji.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154924": {
+      "poster": "adidas",
+      "content": "Zadatak 4.1. \n\nZadnji podzadatak: _Ako se dogodi bilo koja druga pogreška (npr. dijeljenje s nulom), procedura/funkcija treba dojaviti\n\noriginalnu pogrešku koju je producirao sustav za upravljanje bazama podataka (u ovdje spomenutom\n\nprimjeru: error_number=8134, message=\"Divide by zero error encountered\", state=1. Uputa: ovu\n\npogrešku možete testirati tako da kapacitet neke grupe postavite na nulu i zatim pokušate upisati nekog\n\npostojećeg studenta_\n\nNe znam što se mislilo pod ovim. Zar nije da je normalno ponašanje procedure da ako dođe do error-a, pukne i ispiše error. Probao sam kapacitet grupe staviti na 0 i pukne procedura i ispiše se error.  Jel se očekuje TRY CATCH, pa da u CATCH proslijedim Error?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155162": {
+      "poster": "burek",
+      "content": "@adidas#154924 Nije baš najjasnije određeno šta znači da funkcija dojavi tj jel mora biti formatirano na neki način, ja sam u 4.1. ostavila bez try catcha jer se treba u 4.2. dalje obraditi u odnosu na error kod",
+      "votes": {
+        "upvoters": [
+          "adidas"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155667": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "Za zadatke 5.4. i 5.5. je li ikome brzina slična za obje vrste, oko 100ms?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "155768": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@PiqueBlinders#155667 meni su rezultati jako slični (samo što su oko 500 ms)",
+      "votes": {
+        "upvoters": [
+          "PiqueBlinders (zisku)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157652": {
+      "poster": "hejhoj (vdvd)",
+      "content": "može li ko objasnit kako napisat jdbc url za uspostavljanje konekcije sa svojim sql serverom u 5.zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157654": {
+      "poster": "hejhoj (vdvd)",
+      "content": "zapravo kako popraviti pogrešku:\n\nnije uspjelo učitavanje JDBC driver-a \n\ncom.microsoft.sqlserver.jdbc.SQLServerDriver ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157655": {
+      "poster": "Ego",
+      "content": "![](assets/2021-03-24/00003.png)\n\nZna li netko kako riješiti ovu grešku?\n\nDogodi se prilikom kreiranja tablica s BULK-om u 2. vježbi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "157730": {
+      "poster": "whatTheHel",
+      "content": "@Ego#157655 probaj spremiti tu datoteku kao .txt i onda\n```sql\nBULK INSERT salesOrderItem\nFROM 'C:\\tmp\\salesOrderItem.txt'\nWITH (FIELDTERMINATOR = ';', KEEPNULLS);\n```\nmeni je tako radilo..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158086": {
+      "poster": "gagotron",
+      "content": "Pao moodle i ferWeb, da li će mi priznati ako sam mu poslao mail sad sa fileom u privitku uz fino objašnjenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "158097": {
+      "poster": "tera",
+      "content": "@gagotron#158086 koji mu je mail",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

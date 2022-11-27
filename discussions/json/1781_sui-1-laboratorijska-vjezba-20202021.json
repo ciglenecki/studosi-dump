@@ -1,0 +1,744 @@
+{
+  "title": "[SUI] 1. laboratorijska vježba - 2020/2021",
+  "creator": "boss15",
+  "slug": "sui-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Sigurnost u Internetu",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "78994": {
+      "poster": "boss15",
+      "content": "Jel napravio tko 1. labos? Kako ovaj zadnji dio 1. zadatka? Koja je sifra i kako dobiti ono sto traze od nas? Isto tako, kako 6. zadatak?",
+      "votes": {
+        "upvoters": [
+          "vykar (mango)"
+        ],
+        "downvoters": [
+          "loo"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79097": {
+      "poster": "SenorBurrito",
+      "content": "@boss15#78994 koliko sam ja shvatio trebaš dekriptirati secret.bin datoteku. U njoj nađeš neki random string i iz tog stringa ti nekako trebaš zaključiti koji je ključ za data.bin,",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79238": {
+      "poster": "SinanSuckich (Yelena)",
+      "content": "na koji nacin da iz ovoga saznam kljuc ![](assets/2020-10-11/00009.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79302": {
+      "poster": "rchbtrrs",
+      "content": "@SinanSuckich#79238 prvo slovo svake riječi",
+      "votes": {
+        "upvoters": [
+          "Abarth",
+          "SinanSuckich (Yelena)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79344": {
+      "poster": "boss15",
+      "content": "@rchbtrrs#79302 i sta nakon toga, koja naredba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79357": {
+      "poster": "Abarth",
+      "content": "@boss15#79344 \n\ndekriptiraš sa gpg tim ključem kojeg dobiješ od prvih slova i preusmjeriš izlaz u file.\n\nNa kraju ispadne da je to video.\n\n(edit) - zanimljiv video haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79371": {
+      "poster": "zuza (jose)",
+      "content": "Kada zapišem u file prvo slovo svake riječi i pozovem naredbu:\n\ngpg --passphrase-file password.txt --decrypt data.bin >> decripted.txt\n\npojavi mi se sljedeća slika ![](assets/2020-10-12/00012.png)\n\nMože neko pomoć?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79383": {
+      "poster": "maPre",
+      "content": "@zuza#79371 gpg -o output - d data.bin\n\nKad ti se pojavi ovaj pop-up za passphrase skopiras ovo kaj si dobio od prvog slova svake rijeci.",
+      "votes": {
+        "upvoters": [
+          "zuza (jose)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79396": {
+      "poster": "zuza (jose)",
+      "content": "Zasto su bas prva slova svake riječi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79428": {
+      "poster": "Marenix",
+      "content": "Stvorio sam svoj ključ koriteći gpg --gen-key, i eksportirao sam ga u datoteku sa gpg --export -a \"mail\" > public.gpg, i kad otvorim public.gpg nemam onu prvu liniju za koju piše u labosu da bi trebala biti (ona u kojoj je \"Version:...\" gdje bi trebala pisati verzija s kojom je ključ napravljen). Jel to normalno ili sam ja nešt zeznuo?",
+      "votes": {
+        "upvoters": [
+          "Vocko",
+          "keykey",
+          "maPre"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79435": {
+      "poster": "aperture",
+      "content": "@Marenix#79428 Imaš dvije vrste fajlova koje možeš eksportati, ascii verziju i binarnu verziju. Na ovaj način si exportao binarnu verziju koju možeš koristiti za provjeriti potpis (--verify), za slanje u mailovima je puno zgodniji asc file koji se generira tako da još na ovo svoje dodaš --armor flag[1].\n\n[1] - https://www.gnupg.org/gph/en/manual/x56.html",
+      "votes": {
+        "upvoters": [
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79443": {
+      "poster": "[deleted]",
+      "content": "U 4. zadatku na koji javni kljuc se misli, onaj key.gpg u folderu ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79452": {
+      "poster": "Marenix",
+      "content": "@aperture#79435 Ummmmmm, kolko vidim, ovaj moj -a bi trebao bit taj --armor. Ako izostavim taj -a dobijem nešt što se nemože ni čitati. Al eto, probao i sa --armor i bez, i u nijednom pokušaju nisam dobio ovaj red sa verzijom",
+      "votes": {
+        "upvoters": [
+          "Abarth",
+          "Vocko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79457": {
+      "poster": "Marenix",
+      "content": "@ElitePer#79443 Dap, možeš pozvat gpg --list-key i ispisat će ti listu svih ključeva koje imaš importane, a jedan od njih je i sui@fer.hr",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79459": {
+      "poster": "HotPotato",
+      "content": "Može li netko objasniti gdje se u šestom zadatku vide vjerodajnice u prometu?\n\nNisam školovala.",
+      "votes": {
+        "upvoters": [
+          "Trolololica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79524": {
+      "poster": "Marenix",
+      "content": "![](assets/2020-10-12/00031.png)\n\nJel dobiva ko ovaj error? Ne mogu ništa pokrenuti sa sudo, jer sui nije u grupi sudoers, a čini se da wireshark bez tog ne radi.\n\nAlso, kak prekopirat sui.db u home? Sa sshom se spojim na onaj poslužitelj, al kad upišem sui, kako piše u uputama, ništa se ne kopira.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79531": {
+      "poster": "HotPotato",
+      "content": "@Marenix#79524 \n\nNapisali su u zadnjem commitu da se wireshark treba vrtiti na hostu (as in ne u virtualki).\n\ndb se tamo, na drugoj strani, stvori (provjeri s ls).\n\nJa sam ga kopirao ovako (možda nije ispravan način, ali za dva boda - koga briga).\n\nscp {inicijali_i_brojke}@mrepro.tel.fer.hr:sui.db ~/{Lokacija}",
+      "votes": {
+        "upvoters": [
+          "Marenix",
+          "rchbtrrs"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79565": {
+      "poster": "Marenix",
+      "content": "@HotPotato#79531 \n\nŠta se u toj sui.db datoteci nalazi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79591": {
+      "poster": "HotPotato",
+      "content": "@Marenix#79565 \n\nDobro pitanje 😆",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Marenix"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79646": {
+      "poster": "aperture",
+      "content": "@Marenix#79565 Ako pogledaš koja je to naredba vidjet ćeš da zapravo zoveš `/usr/local/bin/sui` i kad ispišeš što tamo piše vidjet ćeš da je to ništa više nego: `echo \"$SSH_CLIENT $(date +%s%N)\" > ~/sui.db`. O tome što je zapisano u `SSH_CLIENT` env variabli možeš pročitati [ovdje](https://en.wikibooks.org/wiki/OpenSSH/Client_Applications#SSH_Client_Environment_Variables_--_Server_Side).",
+      "votes": {
+        "upvoters": [
+          "Marenix",
+          "Trolololica",
+          "rchbtrrs"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79663": {
+      "poster": "Arfit",
+      "content": "@HotPotato#79459 zar nije ideja SSH upravo to da su vjerodajnice kriptirane. Ja ih nisam uspio pronac, vidim da se kljucevi razmjenjuju pomocu Diffie-Hellman 😀 \n\nGrijesim li ?",
+      "votes": {
+        "upvoters": [
+          "aperture",
+          "rchbtrrs"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79684": {
+      "poster": "Trolololica",
+      "content": "@Arfit#79663 Slazem se kolega.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79703": {
+      "poster": "HotPotato",
+      "content": "@Arfit#79663 \n\nPa da, u tome je bit, ni ja ih nisam uspio vidjeti.\n\nAli po načinu na koji je sročen šesti zadatak, izgleda kao da žele reći da je to loše i da je bolje raditi s ključevima.\n\nOvaj dio pod 6.b) me muči:\n\n\"Objasnite zašto je bolje\n\nza prijavu na sustav koristiti ključeve umjesto umjesto vjerodajnica?\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79727": {
+      "poster": "[deleted]",
+      "content": "Gdje tocno se pojavljuje onaj db file u sestom zadatku kad se izvede naredba sui, meni se ne pojavljuje niti u current folderu niti u home dir linuxa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79751": {
+      "poster": "aperture",
+      "content": "@HotPotato#79703 Pa naravno da je bolje raditi s ključevima nego s passwordom. Password je hrpu puta više ranjiv nego što je ranjiv ključ. Zar se ne slažeš? :D\n\nČovjek ti može uzeti password bez da ima pristup tvom stroju. S druge strane tvoj privatni ključ može uzeti samo netko tko ima pristup tvoj stroju i prijavljen je kao ti (dozvole za `~/.ssh/id_rsa` su kod mene `600`). Isto tako praktično je puno zgodnije kad ne moraš upisivati šifru jer onda `scp` radi autocomplete i slične stvari koje ti puno olakšavaju korištenje udaljenih strojeva.\n\nTelnet je protokol koji je sličan SSH i koji ne koristi kriptiranje prometa, u takvom prometu je moguće pročitati koje naredbe si pokretao i s kojim passwordom si se ulogirao, ali skoro pa se više nigdje ne koristi. Više o tome: https://www.ssh.com/ssh/telnet",
+      "votes": {
+        "upvoters": [
+          "HotPotato",
+          "setuid0"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "79837": {
+      "poster": "rchbtrrs",
+      "content": "@ElitePer#79727 kad se logiraš prek SSH na mrepro.tel.fer.hr, pukneš **sui** -> pukneš **cd** (da ti ode u home dir) -> pukneš **ls** i trebo bi tam vidit taj file",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80031": {
+      "poster": "vykar (mango)",
+      "content": "Kod usporedbe performansi RSA i ECDSA - jel još kome ispada da u oba slučaja je brži postupak provjere digitalnog potpisa ili ja krivo interpretiram rezultate? (uspoređujem s onima na materijalima)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80071": {
+      "poster": "Marenix",
+      "content": "@vykar#80031 \n\nMeni je za RSA ispalo da je brža provjera od samog potpisa, no za ECDSA sam imao miješane rezultate. Negdje su mi bili skoro identični, negdje je provijera bila brža, a negdje je potpisivanje bilo brže",
+      "votes": {
+        "upvoters": [
+          "rchbtrrs",
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80248": {
+      "poster": "biserka",
+      "content": "@rchbtrrs#79302  kak znamo da su prva slova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80254": {
+      "poster": "rchbtrrs",
+      "content": "@biserka#80248 jer jedino tako radi.. bar meni.. \n\na i najviše smisla ima, jer idej je da je to neki kod , a nekako je najintuitivnije da onda budu prva slova ovakvih riječi (sjeti se koda Alpha, Bravo, Charlie... 😁)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80608": {
+      "poster": "laugreano",
+      "content": "@Abarth#79357 može li primjer te naredbe ako nije problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "80838": {
+      "poster": "DamageHigh (ExceptionHandler)",
+      "content": "Jel ja jedini dobivam ovo u prvom zadatku kod pokušaja simetrične dekripcije?\n\n`gpg: Fatal: zlib inflate problem: invalid code lengths set`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81054": {
+      "poster": "HerrOttoFlick1",
+      "content": "@Marenix#79452 \n\nJesi možda uspio dobit taj red s verzijom?",
+      "votes": {
+        "upvoters": [
+          "Huginn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81112": {
+      "poster": "disho",
+      "content": "@DamageHigh#80838 \n\nIsti taj problem, odnosno error, imam i ja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81143": {
+      "poster": "Huginn",
+      "content": "@HerrOttoFlick1#81054 --emit-version je flag koji ti treba",
+      "votes": {
+        "upvoters": [
+          "HerrOttoFlick1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81286": {
+      "poster": "koode7",
+      "content": "jeste uspjeli dobiti u 4a i 4b iste težine? ako da, kako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81432": {
+      "poster": "kolsdj",
+      "content": "može li netko uploadati onaj njihov virtualni stroj (.ova datoteka), iz nekog razloga ne mogu skinuti s ferweba",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81562": {
+      "poster": "prodanacro (oat)",
+      "content": "Kako snimiti promet korištenjem Wiresharka u primjeru 6.a?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81564": {
+      "poster": "prodanacro (oat)",
+      "content": "@prodanacro#81562 Pronašla...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81583": {
+      "poster": "DamageHigh (ExceptionHandler)",
+      "content": "@disho#81112 Ako nisi riješio - iz nekog razloga kad kopiram file lokalno i izvrtim identičnu naredbu sve radi.. nisam istraživao zašto.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81674": {
+      "poster": "hobbit",
+      "content": "U 1. zadatku mi sažetak nije jednak zadanom, a video sam normalno otvorio.\n\nJel tako treba biti ili nešto krivo radim? Ako treba, što mogu zaključiti iz toga?\n\nMislim... da sam krivo odredio password ne bih mogao otvoriti video pa pretpostavljam da sam dobro sve...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81675": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "@prodanacro#81564 Mozes reci kako si koristila wireshark, meni ne hvata nikakav promet sa virtual boxa.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81690": {
+      "poster": "Polifem",
+      "content": "Ima još netko da mu ne zeli kopirat fajl kad koristi scp xxbroj@host i onda bilo koji path i path za spremit, uopce mi se ne zeli spojit ( connection timed out kada koristim -v )",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81696": {
+      "poster": "prodanacro (oat)",
+      "content": "@PiqueBlinders#81675 \n\nUpalila sam wireshark, pokrenula onu naredbu za kopiranje file-a s poslužitelja (scp ....) i nakon toga u wiresharku stavila filter 'ssh' i tamo mi se prikazalo niz paketa (slika)\n\n![](assets/2020-10-19/00005.png)",
+      "votes": {
+        "upvoters": [
+          "PiqueBlinders (zisku)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81702": {
+      "poster": "Marenix",
+      "content": "@Polifem#81690 \n\nMoraš to radit sa svog virtualnog stroja, ne kad se spojiš na njihov server sa ssh",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81706": {
+      "poster": "Polifem",
+      "content": "@Marenix#81702 \n\nyeah, glup sam :D ty",
+      "votes": {
+        "upvoters": [
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81767": {
+      "poster": "hobbit",
+      "content": "@hobbit#81674 može netko odgovorit pliz?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81780": {
+      "poster": "Marenix",
+      "content": "@hobbit#81767 Meni je isti, i budući da svi koristimo sve isto u prvom zadatku, morao bi i tebi biti. Jedino što mi pada na pamet je da si možda stavio ekstenziju, ili drugačije nazvao datoteku (moja je output) pa to možda utječe na sažetak? Mislim, pretpostavljam da u samoj datoteci ništa nisi mijenjao",
+      "votes": {
+        "upvoters": [
+          "hobbit"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81820": {
+      "poster": "hobbit",
+      "content": "@Marenix#81780 hvala\n\nDo ekstenzije je bilo... stavio sam .txt prije provjere sa file *\n\nNe smije imati ekstzenziju, svejedno kako se zove.",
+      "votes": {
+        "upvoters": [
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "81954": {
+      "poster": "hobbit",
+      "content": "može neko malo objasnit 6.?\n\nisti problem imam: https://fer.studosi.net/d/1781-sui-1-laboratorijska-vjezba-20202021/18",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82036": {
+      "poster": "hobbit",
+      "content": "ništa mi se ne događa kod snimanja u wiresharku\n\nkako to da riješim? što uopće zaključujemo iz tog snimanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82065": {
+      "poster": "caffeine",
+      "content": "@hobbit#82036 Ja sam napisala da ne možemo pronaći vjerodajnice, nez jel to dovoljno.",
+      "votes": {
+        "upvoters": [
+          "hobbit"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

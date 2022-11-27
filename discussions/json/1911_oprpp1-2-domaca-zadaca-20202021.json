@@ -1,0 +1,531 @@
+{
+  "title": "[OPRPP1] 2. domaća zadaća - 2020/2021",
+  "creator": "AK10 (endyyyy)",
+  "slug": "oprpp1-2-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Odabrana poglavlja razvoja programske potpore 1",
+    "Zadaće"
+  ],
+  "posts": {
+    "82358": {
+      "poster": "AK10 (endyyyy)",
+      "content": "Ne znam jesam li krivo nešto skužila, ali u Problemu 1 podzadatku 2 piše da trebamo napraviti privatnu statičku klasu ElementsGetter U ArrayIndexedCollection i u LinkedListCollection, a u sucelju Collection apstraktnu metodu createElementsGetter. Kad pokusavam u Collection napraviti `public abstract  ElementsGetter createElementsGetter();` eclipse se buni iako imam privatnu staticku klasu ElementsGetter  u ArrayIndexedCollection i LinkedLIstCollection?\n\nTakodjer, u tekstu zadatka pise\n\n> Primijetite da će ovaj privatni statički razred imati pristup privatnim članskim varijablama konkretne kolekcije jer je on specificiran unutar tog razreda, pa se modifikator private kojim se kolekcija štiti ne odnosi na njega \n\n\nAli ja svejedno ne mogu pristupiti unutar svoje privatne staticke klase ElementsGetter privatnim clanskim varijablama kolekcije\n\nJe li zna netko u cemu je problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82401": {
+      "poster": "cloudies",
+      "content": "@AK10#82358 Imala sam isti problem dok nisam u zadatku kasnije pročitala da je ElementsGetter zapravo interface koji se nalazi u klasi Collection, a ovi ugnježđeni razredi zapravo implementiraju taj interface. Istotako, pošto su ti ugnježđeni razredi statički, ne možeš direktno pristupiti privatnim varijablama, već češ morati predati instancu ArrayIndexedCollection ili LinkedListIndexedCollection u kontruktor te ugnježđene klase te spremiti to kao člansku varijablu.\n\nNe znam postoji li bolje rješenje i je li je ovo moje razmišljanje krivo, ako jest, neka me slobodno netko ispravi.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82402": {
+      "poster": "tomekbeli420",
+      "content": "@AK10#82358 Ta privatna statička klasa mora biti implementacija ElementsGettera, dakle \n\n`private static class NekoIme implements ElementsGetter {...}`\n\njel mozes stavit tocno poruku errora iz Eclipsea?\n\n@cloudies#82401 otkud ti to da je ElementsGetter interface unutar interfacea Collection?\n\nKoliko sam ja skuzio to je interface sam za sebe, top level interface",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82407": {
+      "poster": "cloudies",
+      "content": "@tomekbeli420#82402 Huh... vrlo moguće da sam ja krivo shvatila jer je i meni bilo \"Wow, interface unutar interface-a\", ali mi je radilo pa sam mislila da je ok.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82949": {
+      "poster": "[deleted]",
+      "content": "@tomekbeli420#82402\n\n@cloudies#82407\n\nvise smisla mi ima da ElementsGetter bude sucelje unutar Collection sucelja jer ElementsGetter implementiraju samo privatne podklase u kontekstu svoje vrsne (top level) klase, a te njihove vrsne klase implementiraju upravo vrsno sucelje ElementsGettera (Collection)\n\nkad bi ElementsGetter bio sam po sebi vrsno sucelje to bi (po meni) povlacilo da bi trebale bit moguce i vrsne implementacije ElementsGettera, koje nisu u kontekstu nekog Collectiona",
+      "votes": {
+        "upvoters": [
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82967": {
+      "poster": "tomekbeli420",
+      "content": "@Itachi#82949 ja sam išao razmišljanjem povlačenja paralele ElementsGettera sa sučeljem java.util.Iterator (praktički ista stvar sa metodama hasNext i next).\n\njest da je prvi smisao iteratora bio da djeluje nad kolekcijom, ali postoje i njegove primjene/implementacije izvan konteksta kolekcije, primjer bi bio java.util.Scanner.\n\nProbably je svejedno, jer ugnježđeno sučelje u sučelju je isto kao i da se radi o top level sučelju (doslovno isto, za razliku od slučaja s statičkim ugnježđenim klasama čija je prednost pristup privatnim članovima top level klase, al u sučeljima je sve public tak da..)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "82971": {
+      "poster": "Artemis",
+      "content": "2.zadatak...dio gdje piše da se treba skinuti extra.zip , extra.txt i u tome extra.txt piše: U src/test/resources raspakirati extra.zip. Nije mi jasno gdje se nalazi taj src/test/resources?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83022": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@Artemis#82971 odes tamo gdje ti spremljena mapa src, udjes u  mapu test napravis mapu resources i tu raspakiras extra.zip",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83138": {
+      "poster": "krokodil",
+      "content": "2. zadatak\n\nZašto prilikom testiranja inputa \"   \\\\a    \" mora baciti exception, a s inputom \"  \\\\1st  \\r\\n\\t   \" mora normalno raditi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83139": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@krokodil#83138 zasto mora baciti exception? zar ne bi trebalo ispisati a? di si to nasao?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83141": {
+      "poster": "krokodil",
+      "content": "Krivo sam napisao, baca Exception kada je \"   \\\\a    \" input, a kada je \"  \\\\1st  \\r\\n\\t   \" onda ne baca.\n\nTest za \"   \\\\a    \" je testInvalidEscape a za \"  \\\\1st  \\r\\n\\t   \"  testWordStartingWithEscape.\n\nU prvom testu pise da mora baciti Exception:\n\n// will throw!\n\nassertThrows(LexerException.class, () -> lexer.nextToken());",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83159": {
+      "poster": "krokodil",
+      "content": "@krokodil#83141 ugl ima dva \\ prije a. Valjda se samo pretvori u 1 znak...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83259": {
+      "poster": "krokodil",
+      "content": "@krokodil#83138 Update: Riješeno\n\nKada prije nekog znaka koji nije slovo stoji \\\\\\, npr. \\\\\\1, onda se taj \"1\" smatra kao WORD ili dio WORD-a.\n\nAko stoji \\\\\\ pa neko slovo, onda se mora baciti exception jer se podrazumijeva da to slovo može biti samo WORD a ne nešto drugo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83531": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@krokodil#83259 Mislim da ne vrijedi za simbole nego samo za brojeve i kad se znak \\ nalazi ispred samog sebe. Inace baca iznimku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83590": {
+      "poster": "nikace (AeIoU)",
+      "content": "Ne znam koliko ovo detaljno mogu pitati, ali mi treba neki klik da shvatim uloge leksera i parsera u 3.zad (nisam sig ni kako da postavim pitanje haha) ako netko ima nekakv hint",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83620": {
+      "poster": "Kennedy",
+      "content": "@nikace#83590 Koliko sam skuzio cim se pozove konstruktor od parsera on treba odma sve parsirat...\n\nTo radi tako da napravi instancu lexera i uz njegovu pomoc parsira na nacin da poziva lexer.nextToken() i onda na temelju toga sta dobije odlucuje hoce li kreirati TextNode, ForLoopNode ili bacit exception. Kod kreiranja ForLoopNodea opet poziva nextToken dok ne zadovolji ona 3 ili 4 elementa (na nacina da dode do kraja tag-a), ako ih ima previse ili premalo baca exception, kod echo nodea je isto kao i ForLoop, ali moze bit bilo koji broj elem (nisam 100% jel treba bit barem 1).\n\nUgl mislim da lexer iz danog teksta kreira tokene koje onda parser consumea i stvara document model",
+      "votes": {
+        "upvoters": [
+          "krokodil",
+          "nikace (AeIoU)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83636": {
+      "poster": "krokodil",
+      "content": "@AK10#83531 Ja sam napravio da baca iznimku samo kada je slovo iza \\\\, prošli su mi svi testovi.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83676": {
+      "poster": "viliml",
+      "content": "@nikace#83590 analogno s PPJ, leksički i sintaksni parser",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83683": {
+      "poster": "Gocc (***)",
+      "content": "![](assets/2020-10-23/00017.png)\n\nZašto se ovo ruši?\n\nPiše da ako je izvan taga da je /{ dozvoljeno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83684": {
+      "poster": "viliml",
+      "content": "@Gocc#83683 to bi trebalo biti unutar taga\n\nzamjeni ${ s {$\n\nrekao je na Q&A sekciji ferka prof da se zbunio",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "Kennedy",
+          "WickyWinslow",
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83751": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@Kennedy#83620  Je li kada u konstruktoru Parsera pozivamo Lexer.nextToken() mozemo onda dobiti samo TextNode, ForLoopNode ili iznimku?\n\n Sto je onda s onim stvarima unutar npr for petlje, od njih pravimo isto tokene ali ne vracamo ih ili ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83771": {
+      "poster": "nikace (AeIoU)",
+      "content": "@AK10#83751 ja mislim da se u konstruktoru cijeli taj postupak delegira nekoj metodi unutar te klase (ako dobro kuzim upute)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83833": {
+      "poster": "flicka",
+      "content": "Koje sve tipove tokena trebamo u lexeru? u 3.zad",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83841": {
+      "poster": "viliml",
+      "content": "@flicka#83833 Slobodan odabir, koje god hoćeš tako da parser može raditi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83864": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@nikace#83771 \n\nNe kuzim sto zelis reci, konkretno kad vidimo da je FOR tag jel tad odma vracamo FOR token pa onda svaku varijablu unutar te zagrede(start, step, end..) ili prvo napravimo sve one start, end, step varijable i definiramo ForLoopNode pa onda samo vratimo ForLoopNode kao FOR tag token?\n\nKonkretno, ne kuzim sto se trazi u zadatku, ili je po nasem proizvoljnom izboru?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "83903": {
+      "poster": "Kennedy",
+      "content": "@AK10#83751 Kolega @nikace#83771 je dobro rekao, u konstruktoru samo pozivas metodu npr parse() i onda se svo parsiranje zapravo u njoj odvija\n\nOvo za tokene se valjda moze po volji, za unutar tagova sam stavio tokene tipa elemenata znaci var, string ,double itd\n\nU foru znaci ima 3 il 4 variable koje getas kao posebne tokene i onda provjeris da im je tip dobar",
+      "votes": {
+        "upvoters": [
+          "krokodil"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84248": {
+      "poster": "flicka",
+      "content": "Ne kužim kaj treba točno, \n\nDocumentNode document = parser.getDocumentNode();\n\nkaj ta linija treba raditi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84262": {
+      "poster": "tomekbeli420",
+      "content": "@flicka#84248 dohvatiti čvor DocumentNode, koji je zapravo korijen cijele stablaste strukture koju je parser izgradio prilikom parsiranja predanog stringa dokumenta.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84266": {
+      "poster": "flicka",
+      "content": "@tomekbeli420#84262 znaci da u document node moramo spremiti cijelu strukturu ili? nije mi bas jasno kaj treba sa strukturom i na koji nacin ju treba pohraniti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84268": {
+      "poster": "sheriffHorsey",
+      "content": "@flicka#84266 DocumentNode je samo specifičnija verzija obične Node klase, a primijeti da se od tebe traži da u node klasi imaš metodu void addChild(Node child) koja ubacuje dijete u internu ArrayIndexedKolekciju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84273": {
+      "poster": "flicka",
+      "content": "@sheriffHorsey#84268 da to mi je jasno ali, \n\n```java\nDocumentNode document = parser.getDocumentNode();\nString originalDocumentBody = document.toString();\nSystem.out.println(originalDocumentBody); // should write something like original\n // content of docBody\n ```\n\nznaci da u document moram spremiti strukturu i onda trebam tu strukturu metodom toString opet vrratiti u ono kaje ubiti ulazni zapis? ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84275": {
+      "poster": "sheriffHorsey",
+      "content": "@flicka#84273 Što ti točno znači spremiti strukturu u document? Što se metode toString tiče treba vratiti nešto kolko tolko slično ulaznom zapisu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84278": {
+      "poster": "flicka",
+      "content": "@sheriffHorsey#84275 ma ne kuzim kaj bi metoda parse.getDocumentNode morala pohraniti u document",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84279": {
+      "poster": "tomekbeli420",
+      "content": "@flicka#84273 ne mora biti identično ulaznom dokumentu, ali ga moraš rekonstruirati tako da njegovo ponovno parsiranje će vratiti istu strukturu.\n\nprimjerice, imaš ovo: {$=a\n\nb + \"nesto\"$}\n\nako ga parsiras i dohvatis stablastu strukturu i pozoves njegov tostring\n\ntrebas dobiti nesto poput {$= a b + \"nesto\" $}\n\ndakle nije isto kao ulazni string zbog ignoriranja whitespaceova unutar tagova, ali ova rekonstrukcija je jednako dobra i njeno parsiranje ce vratiti isti rezultat\n\n@flicka#84278 koliko sam ja shvatio, kad ti pozoves parserov konstruktor, on mora izparsirati cijeli dokument i kao clansku varijablu drzati taj DocumentNode. ovaj getDocumentNode sam ja shvatio kao obican getter. njegov posao nije parsiranje, nego dohvacanje. parsiranje radi konstruktor, odnosno ona odvojena metoda za koju je rečeno da joj delegiramo zadatak parsiranja koja se poziva u konstruktoru",
+      "votes": {
+        "upvoters": [
+          "Kennedy",
+          "flicka",
+          "iNavy (mornar Ica)",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84312": {
+      "poster": "Sulejman",
+      "content": "Kak bi trebali za echoNode znat kolko će nam bit interno polje, ak dohvaćamo jedan po jedan token i tek na kraju znamo kolko će ih bit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84347": {
+      "poster": "SuperSjajan3",
+      "content": "Kad pokusavam napravit testove za treci zadatak i ako koristim onu cupicevu metodu readExample, uvijek mi baca \"Datoteka extra/primjer n je nedostupna\". Ima neko isti problem ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84372": {
+      "poster": "indythedog",
+      "content": "@Sulejman#84312 Mislim da smijemo koristiti onu klasu za arrayeve iz prve dz (tehnički i iz druge), bar ja jesam\n\nA onda kad imaš array lako ga prebaciš u polje",
+      "votes": {
+        "upvoters": [
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "84799": {
+      "poster": "Sulejman",
+      "content": "@indythedog#84372 Da to sam na kraju i napravio al onak... u jednom dijelu piše \"copy in this homework all needed files (**but nothing more**) so that this code could compile\". Kužim da sam pre analiziro rečenicu al baš me zbunjuje kaj se smije, a kaj ne...\n\n@SuperSjajan3#84347 \n\nProvjeri da su ti primjeri smješteni u: \"...\\src\\test\\resources\\extra\\\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

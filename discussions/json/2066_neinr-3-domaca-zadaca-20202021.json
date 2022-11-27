@@ -1,0 +1,906 @@
+{
+  "title": "[NEINR] 3. domaća zadaća - 2020/2021",
+  "creator": "Cvija",
+  "slug": "neinr-3-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Neizrazito, evolucijsko i neuro računarstvo",
+    "Zadaće"
+  ],
+  "posts": {
+    "87033": {
+      "poster": "Cvija",
+      "content": "Ovako, prilikom pokretanja simulatora sam imao nekih problema što je za očekivati na ovom faksu haha, ali sam ih uspio riješiti, ako netko naiđe na slične probleme, možda mu nešto od sljedećeg bude od koristi. Korisitm OSX i pišem u javi (IntelliJ).\n\nAko koristite najnoviji sdk, prvo ga downgrade-ajte na 11 što je objašnjeno na kraju posta...\n\nKada upišete potrebnu putanju do svog jar file-a i pokrenete simulator za vrijednosti A i K treba pisati 10 i 5 ako koristite onaj predložak koji je dostupan kad skinete zad2-simulator.zip sa ferka\n\nNadalje, ako koristite linux, onda za path do jar datoteke treba upisati cijeli put, znači ne ~ nego /home/ime/itd/itd/primjer.jar\n\nTrebate u config datoteku poslati put do jar file-a, a kako napraviti jar file možete pronaći na sljedćem linku:\n\nhttps://stackoverflow.com/questions/1082580/how-to-build-jars-from-intellij-properly\n\ni svaki put kad promijenite main ili napišete dio programa i želite istestirati morate ponovno buildati:\n\nBuild | Build Artifact | Build\n\npa pokrenuti Simulator.jar\n\nNadalje, ako vam se javi pogreška:\n\n**Error: LinkageError occurred while loading main class fer.hr.nenr.zad3.Main java.lang.UnsupportedClassVersionError: fer/hr/nenr/zad3/Main has been compiled by a more recent version of the Java Runtime (class file version 58.0), this version of the Java Runtime only recognizes class file versions up to 55.0**\n\ntrebate downgradeati jdk koji koristite:\n\nFile | Project structure... | Project | Project SDK\n\ni iz padajućeg izbornika odaberete 11\n\nte nakon toga pobrisati već napravljen jar file i ponovno ga napraviti\n\nNadam se da sam bar nekome skratio vrijeme prije početka pisanja labosa haha",
+      "votes": {
+        "upvoters": [
+          "Cubii",
+          "Emma63194",
+          "FICHEKK",
+          "Njet",
+          "Satanael",
+          "carrieb",
+          "happysun",
+          "in1",
+          "member",
+          "sphera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87134": {
+      "poster": "[deleted]",
+      "content": "Javlja li se još kome kod pokretanja jara (s tocnim apsolutnom putanjom) ovo: \n\nCannot run program \"C:\\nenr\\zad3\\out\\artifacts\\zad3.jar\": CreateProcess error=193, %1 is not a valid Win32 application\n\nI zna li kako rijesiti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87152": {
+      "poster": "login",
+      "content": "Jel neko imao problem da mu normalno pokrene simulator al mu krene bacat exceptione? Prvo no such element pa nakon toga input missmatch, kao na slici.\n\n![](assets/2020-11-03/00001.png)\n\nKoristim onaj njihov predlozak prakticki pa mi nije jasno u cemu je tocno problem.\n\n![](assets/2020-11-03/00002.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87156": {
+      "poster": "login",
+      "content": "@login#87152 \n\nZanemarite, printalo mi je neke stvari iz drugih fileova, pripazite na to",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87233": {
+      "poster": "basmatibeetle",
+      "content": "@msus#87134 probaj dodati \"javaw -jar\" u konfiguracijsku datoteku prije putanje, dakle \"javaw -jar C:\\nenr\\zad3\\out\\artifacts\\zad3.jar\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87408": {
+      "poster": "[deleted]",
+      "content": "@msus#87134 *life hack* nemojte zaboravit java -jar ispred patha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87654": {
+      "poster": "neja_negoti",
+      "content": "![](assets/2020-11-04/00000.png)\n\njel netko možda zna kako koristiti vanjske razrede bez da mi simulator baca error cannot find symbol?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87802": {
+      "poster": "Marenix",
+      "content": "Može mi netko objasniti što bi bio model jednog pravila? AKO L je kritično blizu ONDA K je 80° bi bilo jedno pravilo, ne? Al u kom smislu su oni mislili da je potrebno izgraditi model jednog pravila? Uopće ne mogu skužiti šta su oni mislili pod tim",
+      "votes": {
+        "upvoters": [
+          "Ruleta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87852": {
+      "poster": "[deleted]",
+      "content": "@Marenix#87802 da ali antecedent u pravilu ti nije uvijek jednostavan, nego je konjukcija više zahtjeva koje ispitujes (ako L je ... I L je... itd), zato imaš model koji sadržava sve zahtjeve na temelju kojih racunas pripadnosti izlaza",
+      "votes": {
+        "upvoters": [
+          "Hus",
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87861": {
+      "poster": "Marenix",
+      "content": "@msus#87852 \n\nKužim, al kako su oni to zamislili, to mi nije jasno. Dal bi pravila implementirali kao posebnu klasu, ili što? Taj dio mi nije jasan, kako počet. Sorry ak neku jednostavnu glupost ne kužim haha",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Ruleta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87866": {
+      "poster": "damaHerc",
+      "content": "Kako treba izgledati prvi red u config.txt (naredba kojom se pokreće program) ako mi je program pisan u C#-u?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87892": {
+      "poster": "[deleted]",
+      "content": "@Marenix#87861 Pa rekla bih da je najjednostavnije napravit klasu koja predstavlja pravilo i sadrži antecedente i konzekvens i nekakvu metodu za primjenu",
+      "votes": {
+        "upvoters": [
+          "Hus",
+          "Marenix",
+          "Ruleta",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87933": {
+      "poster": "Marenix",
+      "content": "@msus#87892 \n\nA što se tiče samog pravila, znači ono bi za ulaz dobilo recimo L i kormilo, odnosno njihove domene, i kao izlaz bi dalo neizrazit skup izveden iz ulaza? I to onda može biti jedno općenito pravilo, di samo dajemo na ulaz drugačije stvari i dobijemo drugačiji izlaz, ne? Ili bi svako pravilo bila posebna metoda?",
+      "votes": {
+        "upvoters": [
+          "Ruleta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88054": {
+      "poster": "[deleted]",
+      "content": "@Marenix#87933 pravilo bi dobilo vrijednosti L, R, LK, DK, V i S, ili podskup toga koji ti treba, ovisi o tome kako ga modeliraš, a izlaz je neizrazit skup, da. Mislim da je ideja da napraviš pravilo što općenitije, možeš im svima na ulaz davati iste stvari i onda ovisno o konkretnom pravilu uzimati ili ne uzimati u obzir ulazne veličine",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Hus",
+          "Marenix",
+          "Ruleta",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88297": {
+      "poster": "MJ3",
+      "content": "jel se koriste igdje ulazne veličine S i V?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88305": {
+      "poster": "Yasuke (Bono)",
+      "content": "@MJ3#88297 V ti je brzina i treba kad zaključuješ o akceleraciji.\n\nS bi trebalo pokazivat jel se ide u dobrom smjeru, samo mi nije baš jasno šta napravit kad se dogodi da je neispravan. Pokušat se okrenut na jednu stranu ili kako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88317": {
+      "poster": "masha",
+      "content": "U kojem rasponu mogu biti vrijednosti akceleracije i brzine?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88319": {
+      "poster": "Marenix",
+      "content": "@masha#88317 \n\nZa kut ti piše u zadatku [-90, 90], a akceleracija, kolko sam ja uspio skužit ide do 35",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88323": {
+      "poster": "Hus",
+      "content": "@Yasuke#88305 Ja ga okrecem naglo u lijevo ako mu je smjer 0. Mislim da je jedina opcija okretati ga naglo u jednu stranu.",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88324": {
+      "poster": "Hus",
+      "content": "@masha#88317 Raspon brzine i akceleracije ovisi o tebi. Samo je važno ja mislim da ti akceleracija ide u negativnu i pozitivnu stranu za isti iznos (npr. od -20 do 20) i da ti brzina ide od 0 pa do neke maksimalne brzine koju ne smatras pre velikom (npr 100).",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "masha"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88400": {
+      "poster": "Yasuke (Bono)",
+      "content": "Trebamo implementirati i stroj za zaključivanje temeljen na produktu? Koja je razlika od zaključivanja na minimumu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88413": {
+      "poster": "Hus",
+      "content": "@Yasuke#88400 Koliko sam ja skužio, ako imaš tipa pravilo \" AKO L je \"blizu\" I D je \"daleko\" ONDA Akcel je \"velik\" \" onda ćeš radit kartezijev produkt između skupova \"blizu\" i \"daleko\" sa minimumom ili sa produktom ovisno o tome koje zaključivanje koristiš. Odnosno presjek pripadnosti dvaju elemenata je min između njih ili njihov umnožak.",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88491": {
+      "poster": "Dekan",
+      "content": "Zna li itko što se podešava u 3. i 4. liniji config.txt fajla? U uputama, koliko sam vidio, ništa na piše.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88510": {
+      "poster": "Hus",
+      "content": "@Dekan#88491 to ti je brzina vjetra (gornja i donja granica). I mislim da bi kao trebali to namjesititi da bude od 20 do 50 po uputama.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88524": {
+      "poster": "shade",
+      "content": "Kako rješit problem s memorijom kada radimo kartezijev produkt izmedu skupova za pojedino pravilo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88526": {
+      "poster": "Hus",
+      "content": "@shade#88524 Imaš dvije opcije. \n\nMožeš skalirati nezirazite skupove (npr za neizrazit skup koji ide od 0 do 1300 piksela možes ga smanjit da ide od 0 do 130 gdje svaki element predstavlja jedan piksel) \n\nili možes staviti skupovima gornju granicu (npr za neizrazit skup od 0 do 1300 staviš gornju granicu na 200 piksela, jer ti nema smisla razmatrat udaljenosti veće od 200 piksela)\n\nNo najbolje je neku kombinaciju tog dvoje po mom mišljenju.\n\nNa taj naćin će ti rezultirajući kartezijev produkt biti manji.",
+      "votes": {
+        "upvoters": [
+          "shade"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88527": {
+      "poster": "MJ3",
+      "content": "može li netko reć koja pravila otprilike ima a da rade uvijek i za svaku stazu, meni većinom ne radi druga staza kakvu god kombinaciju pravila stavim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88533": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@MJ3#88527 \n\nMeni je asistent komentirao prošle godine da su moja bila jedna od najboljih koja je vidio, a jako jednostavna.\n\nMoja pravila su bila sljedeća\n\n- ako ideš presporo, ubrzaj\n- ako ideš prebrzo, uspori\n- ako ti je zdesna zid, skreni lijevo oštro\n- ako ti je slijeva zid, skreni desno oštro\n- ako si u krivom smjeru, okreni se\n\nBrzina koju želiš je između 80 i 90.\n\nOštro skretanje znači nešto između 85 i 90 stupnjeva.\n\nViše o tome [ovdje](https://github.com/Yalfoosh/NENR/blob/master/DZ/DZ3/fuzzy_controller.py)",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Mirko_",
+          "MrHead (vandal)",
+          "Njet",
+          "Zogen",
+          "doki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88536": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Izračun relacije pri stvaranju svakog pravila mi traje jako dugo, pa je i sam početak simulacije dosta odgođen. Jel radim nešto krivo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88539": {
+      "poster": "MJ3",
+      "content": "@micho#88533 hvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88630": {
+      "poster": "Marenix",
+      "content": "> Međutim, morate poštivati opisanu ideju: sustav se gradi jednom, na početku programa. Inicijaliziraju se pravila.\n\n  Jel to znači da na početku moramo napraviti relacije za svako pravilo, i to moramo dalje koristiti? Odnosno, ne smijemo nikako drugačije implementirati?\n\n  Bonus pitanje: Jednom kad je zadaća dobro riješena, brod će u 100% slučajeva proći kroz mapu? Ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88653": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @Marenix#88630 Jednom kad je zadaća dobro riješena, brod će u 100% slučajeva proći kroz mapu? Ili?\n\nNije ti nužno da može proći kroz svaku stazu, mislim, na labosu je više bila poanta da znaš zašto radi ili ne. Konkretan problem nije toliko težak - dok god voziš više od 50 i doživljavaš zidove trebao bi proći sve mape. Ali naravno da možda postoje trenutci kad će brod zakazati ako se potrefi da ga vjetar istrola. To ne znači da je zadaća krivo rješena, ali moraš znati zašto je brod zakazao. Isto tako, ako ti se pruža nova mapa i brod uspije, moraš znati na osnovu pravila zašto je uspio. To je poanta zadaće, a ne da si ti sad napravio ne znam kakav agentski sustav.",
+      "votes": {
+        "upvoters": [
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88669": {
+      "poster": "[deleted]",
+      "content": "@Marenix#88630 Koliko sam čula prošle su godine dijelili sve bodove i ljudima kojima se na trećoj mapi stalno zabijalo, tak da mislim da je vaznije da ti je princip okej i da znaš što si radio",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88672": {
+      "poster": "Hus",
+      "content": "@PrisonMike#88536 Mislim da si samo moras smanjit relacije, da ti izračun kartezijevih produkata ne traje toliko dugo na pocetku.",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88688": {
+      "poster": "login",
+      "content": "![](assets/2020-11-05/00032.png)\n\nJel se ocekuje da napisemo ovo ubrzanje il? Posto je samo pitanje za to, reko bi da ne treba.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88916": {
+      "poster": "Mirko_",
+      "content": "Ako idete compileati preko cmd-a, dodajte \"--release 8\"(odgovara verziji 52) ili koji god vam treba da vam ne javlja error koji je spomenut u prvom postu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88961": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Nakon što smo napravili relaciju za svako pravilo, kako iz ulaznih vrijednosti L,D,... nešto zaključiti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88988": {
+      "poster": "Cvija",
+      "content": "@PrisonMike#88961 Jesi bio na predavanju prošli petak? Tamo je Čupić objasnio kako je to najlakše napraviti:\n\n- Od ulaznih vrijednosti L i D napravi singleton relacije (to ti je doslovno, ako ti je range brzine od npr. [0, 50] i ako kao ulaznu vrijednost dobiješ npr. 40 onda bi ta singleton relacija izgledala ovako:\n\n  {0/0, 0/1, 0/2, 0/3, ... , 0/39, 1/40, 0/41, ... 0/50}\n\n- nakon toga radiš kompoziciju tog singletona sa relacijom koju si dobio -> ali pazi, moraju ti se poklapati univerzalni skupovi singleton relacije i relacije koju si napravio (pokapa ti se Usingleton sa U0 tvoje relacije)\n\n- Pošto ti je relacija singleton, gledaš samo onaj redak relacije (matrice) gdje ti je vrijednost singletona jedan\n  \n\n  znači, ako imaš matrice npr. singleton: [0 1 0] i relaciju dobivenu od pravila:\n\n  [0.5 0.6\n\n  0.2 0.5\n\n  0.3 0.3]\n\n  gledaš samo 0.2 0.5 nad nekim univerzalnim skupom i to ti je konačna kompozicija\n\n- Nakon toga radiš defazifikaciju toga i dobiješ konkretan broj\n\nNapomenuo bih da ovi koraci ovise o tvojoj implementaciji",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88996": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Cvija#88988 \n\nDa... nisam bio na tom predavanju.\n\nHvala ti puno! 🙂",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89049": {
+      "poster": "addisonRae",
+      "content": "Jel bi znao netko mozda zasto kad pokrenem simulator.jar varijable K i A su cijelo vrijeme na 0, ali kada testiram zakljucke svakog fuzzy sistema s proizvoljnim vrijednostima inputa, daju smislene rezultate (koji nisu 0)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89050": {
+      "poster": "Erik",
+      "content": "@addisonRae#89049 Mislim da moraš napraviti .jar ako radiš u Javi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89052": {
+      "poster": "addisonRae",
+      "content": "@Erik#89050 Sry, nisam napisao. Stvorio sam .jar projekta dao mu putanju u config fajlu i sve ostalo potrebno.\n\n[SOLVED]\n\nPrilikom exporta sam kreirao jar, a ne runnable jar. 👍",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89053": {
+      "poster": "Cvija",
+      "content": "@addisonRae#89052 Vjerojatno nisi buildao ponovno?\n\nBuild | Build Artifact | Build",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89054": {
+      "poster": "Cvija",
+      "content": "Zna li netko koja je konkretna razlika između stroja za zaključivanje koji se temelji na minimumu i stroja za zaključivanje koji se temelji na produktu?\n\nAko koristimo singleton relacije, nije li to isto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89056": {
+      "poster": "Erik",
+      "content": "Ima li netko problema sa zadnjim segmentom 2. i 3. mape?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89058": {
+      "poster": "Cvija",
+      "content": "@Erik#89056 Ja imam, u otprilike 50% slučajeva prođe na drugoj mapi, ali na trećoj na zadnjem segmentu uvijek udari",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89062": {
+      "poster": "Hus",
+      "content": "@Cvija#89054 Razlika je kod stvaranja kartezijevog produkta. Manje više, kad god radiš \"min\" pripadnosti prilikom stvaranja pravila, ako je stroj baziran na produktu, umjesto tog \"min\" radiš množenje pripadnosti.",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89066": {
+      "poster": "Marenix",
+      "content": "@addisonRae#89052 Jesi buildao kao runnable jar?",
+      "votes": {
+        "upvoters": [
+          "addisonRae"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89094": {
+      "poster": "PudingIzMenze",
+      "content": "Je li imao još netko problem da mu se na trećoj mapi brodić zna ponekad okrenut(napravit krug i onda mi se zabije)...Na nekih pola slucajeva dobro prode trecu mapu, a na pola se tako zblesira i radi krug pa ne znam sto bi tocno trebao napravit(znam da je kasno za ispravit i predat, al da znam na labosu rec sta bi trebao popravit da ne bude tako mutav jer sam probao mijenjat petsto parametara vec i nemam vise ideje sta bi radio :D, cisto idejno ako netko moze rec posto nemate kod da vidite gdje bi tocno bilo, al teoretski zasto se to dogada odprilike)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89669": {
+      "poster": "MJ3",
+      "content": "@PudingIzMenze#89094 možda si već probao, ali mislim da bi za takve slučajeve onda trebalo iskoristit onaj ulazni parametar smjera S koji može bit 1(brod ide u pravom smjeru) ili 0(brod ide u kontra smjeru,prema početku kanala) . Npr ako je S==0, onda skreni oštro lijevo ili oštro desno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90302": {
+      "poster": "Ruleta",
+      "content": "što su pitali na labosu?",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90357": {
+      "poster": "PudingIzMenze",
+      "content": "Pliz ako netko može napisat što se većinom pitalo na labosu danas i kako ide proces ispitivanja sa ovim skidanjem itd",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90395": {
+      "poster": "Satanael",
+      "content": "@PudingIzMenze#90357 \n\nJa sam danas odgovarao. Demonstrator je izradio tim s petoricom nas koji smo bili raspoređeni njemu za ispitivanje. Dao je mogućnost da se _javimo_ za odgovaranje. Na početku je potrebno pokrenuti dijeljenje zaslona i preuzeti sve zadaće s Ferka. Prolazili smo labos po labos. Na svakom labosu sam pokrenuo primjer uporabe svakog zadatka (one iste primjere koji su dani u samim zadatcima). Pitao je nekoliko pitanja vezana uz samu implementaciju: pokazati gdje se nešto nalazi u kodu, koja metoda se za što koristi i sl.\n\nNeka pitanja kojih se sjećam:\n\nPrva domaća zadaća: \n\n- koja je razlika između MutableFuzzySet i CalculatedFuzzySet?\n- koja je razlika između unarne i binarne operacije (Operations.unaryFunction i binaryFunction)?\n\nDruga domaća zadaća:\n\n- objasniti svako svojstvo koje se provjerava (isUtimesU, refleksivnost, simetričnonst, max-min tranzitivnost) i ukratko to objasniti po kodu\n- što je neizrazita relacija ekvivalencije, tj. kada je neizrazita relacija neizrazita relacija ekvivalencije?\n- kako se dobiva neizrazita relacije ekvivalencije? (kompozicije relacije sa samom sobom)\n\nTreća domaća zadaća:\n\n- pokrenuti simulator na sve tri mape\n- pokazati kako su implementirana pravila i zaključivanje\n- koja je razlika u stroju za zaključivanje koji se temelji na minimumu i stroju za zaključivanje koji se temelji na produktu? \n- zašto se pojedini zaključci kombiniraju u uniju?\n- zašto je potreban _Defuzzifier_ i što je _CoA Defuzzifier_?\n\nSamo ispitivanje je trajalo oko pola sata.",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "Daorson",
+          "Emma63194",
+          "FICHEKK",
+          "Joji",
+          "Njet",
+          "PrisonMike (Števo)",
+          "Propalica",
+          "PudingIzMenze",
+          "Quentin",
+          "Ruleta",
+          "Watson (112)",
+          "WhiteMamba",
+          "Yeltneb",
+          "[deleted]",
+          "[deleted]",
+          "caffeine",
+          "carrieb",
+          "doki",
+          "in1",
+          "joc",
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90415": {
+      "poster": "[deleted]",
+      "content": "@Satanael#90395 Zašto se pojedini zaključci kombiniraju u uniju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90417": {
+      "poster": "Satanael",
+      "content": "@gentleman#90415 \n\nJer se koristi implikacija koja pravilu daje lokalnu semantiku (Mamdanijeva implikacija)",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91416": {
+      "poster": "addisonRae",
+      "content": "Koliko max bodova mozemo dobit na odgovaranju? i jel sva 3 labosa donose podjednako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91417": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@addisonRae#91416 10 bodova ukupno, svaki labos jedna trecina tih bodova",
+      "votes": {
+        "upvoters": [
+          "addisonRae"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91449": {
+      "poster": "in1",
+      "content": "@addisonRae#91416 \n\n@PrisonMike#91417 \n\nProšle godine je na ferku bilo 7 zadataka, a ukupno nose 20b pa mislim da je svaka zadaća 20/7b (osim ako neka kasnije nije bodovana)![](assets/2020-11-12/00005.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91507": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@in1#91449 Ne znam, ovako mi je demos na labosu rekao. Možda imamo dvije predaje labosa i svaka je 10 bodova.",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91527": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@in1#91449 Prošle godine je sustav ocjenjivanja bio 5 bodova svaka predaja, a predaje su išle\n\n- 1, 2\n- 3\n- 4, 5\n- 6, 7",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91743": {
+      "poster": "Emma63194",
+      "content": "@addisonRae#91416 Pitala sam Čupića bila nešto preko maila za te labose i rekao je da svaki labos nosi 20/7 bodova.",
+      "votes": {
+        "upvoters": [
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

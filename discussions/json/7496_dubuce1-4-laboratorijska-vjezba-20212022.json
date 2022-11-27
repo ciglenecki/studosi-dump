@@ -1,0 +1,1391 @@
+{
+  "title": "[DUBUCE1] 4. laboratorijska vježba - 2021/2022",
+  "creator": "[deleted]",
+  "slug": "dubuce1-4-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Duboko učenje 1",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "298382": {
+      "poster": "[deleted]",
+      "content": "![](assets/2022-05-25/00010.png)\n\nOvo mi izbacuje za conv2d unutar sekvencijalnog modela. Koliko znam, Parameter nasljeđuje Tensor, pa mi nema smisla + nisam sigurna kako bih popravila.\n\nIma netko sličan problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298421": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Aimée\"#p298382 `Parameter`je podklasa `Tensor`a, pa svejedno to trebaš eksplicitno prebaciti u tensor jer ponašanje nije isto (niti ima garancije da će stvari imati istu semantiku).\n\nOno što bi se dogodilo je da ako ima ijedno mjesto gdje se taj tensor može dodati u parametre sloja, oni će biti automatski zapamćeni (jer to je razlika između `Parameter` i `Tensor`). Ovo u najboljem slučaju može redundantno optimizirati te inpute, u najgorem slučaju može mijenjati gradijent ili izazvati Null Reference (nakon što se sporni tenzor makne iz memorije nekim bugom). U principu za očekivati je memory leak.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298522": {
+      "poster": "tre_besty (luk)",
+      "content": "Jel itko kuzi sto oni zele u 3. zadatku u implementaciji IdentityModel klase? Treba li get_features samo vracati samu sliku 28×28, ili trebamo tipa dodati jedan linearni sloj 28×28 pa da get_features vraca reprezentaciju slike 28×28. I trebamo li u toj funkciji implementirati opet i loss, jer mi nije bas jasno zele li oni da mi taj model treniramo il sto?\n\nAko je ovo prvo onda mi nije jasno kako bi trebali tu model uciti jer doslovno onda nema model.parameters() koji se pozivaju u optimizeru. Ako je ovo drugo s jednim linearnim slojem 28×28 onda mi ispadne precudno, jer kad tako implementiram svejedno dobijem dost dobar score na test podacima, oko 82%, a imam osjecaj kao je poanta tu da model ne bi trebao imati tako dobre performanse, nez.",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "298969": {
+      "poster": "Rene",
+      "content": "Može neko objasnit što bi get_features metoda trebala radit? Nije mi baš najjasnije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299021": {
+      "poster": "faboche (him)",
+      "content": "@\"Rene\"#p298969 Takoder, vezano uz to mi nije jasno kako bi trebalo povezati ove blokove za model metrickog ugradivanja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299112": {
+      "poster": "Emma63194",
+      "content": "@\"Rene\"#p298969 Ako misliš na metodu `get_features` iz drugog zadatka, ja sam shvatila da je ona umjesto `forward` metode koju bi inače imao razred koji nasljeđuje `nn.Module`. Na kraju prilagodiš samo da metoda vrati `Tensor` koji je dimenzija BATCH_SIZE x EMB_SIZE.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299114": {
+      "poster": "Rene",
+      "content": "@\"Emma63194\"#p299112 da to sam na kraju i napravio i radi dobro, ali ne kontam čemu izmišljanje novih imena funkcija\n\nbtw. ako može neko podijeliti grafove iz zadnjeg zadatka bio bih zahvalan",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299115": {
+      "poster": "Emma63194",
+      "content": "@\"faboche\"#p299021 Ne znam kako su oni mislili koristiti `append`, ali ja sam napravila nešto slično kao drugi odgovor [ovdje](https://discuss.pytorch.org/t/append-for-nn-sequential-or-directly-converting-nn-modulelist-to-nn-sequential/7104/2).\n\nSamo `self.add_module()` sam koristila.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299139": {
+      "poster": "Emma63194",
+      "content": "@\"luk\"#p298522 Ja sam uzela doslovno sliku i prepisala sam loss funckiju iz prijašnjeg modela. Isto mi ispadne oko 82%, dok mi prvi model daje točnost oko 70%. \n\nNe znam je li to dobro. Ako je, možda je odgovor taj što su vizualno slike (iz istog razreda) jako jako slične (crna pozadina, bijele brojke - uglavnom na sredini) pa onda ispadne s L2 normom da su vektori dosta blizu.\n\nMožda, ako bi se prvi model trenirao dulje od 3 epohe, možda bi onda davao bolje rezultate?",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299141": {
+      "poster": "Rene",
+      "content": "@\"Emma63194\"#p299139 meni prvi model ima cca 97% tocnost, a drugi cca 82%. IdentityModel mi samo u get_features reshapea ulaz, ne učim ga uopće",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Emma63194",
+          "cloudies",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299142": {
+      "poster": "Emma63194",
+      "content": "> @\"Rene\"#p299141 meni prvi model ima cca 97% tocnost\n\nUnutar 3 epohe?\n\nTo je brutalno. Jesi nešto posebno radio da dobiješ takav rezultat ili je samo radilo tako iz prve?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299148": {
+      "poster": "Rene",
+      "content": "@\"Emma63194\"#p299142 nista posebno, samo implementirao po uputama\n\nMislim da je to ocekivano jer je MNIST dosta lagan dataset, al mozda san i ja nesto gadno zajeba",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Emma63194"
+        ]
+      }
+    },
+    "299161": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "Ovaj lab nema na gitu? Mico ga nije rjesavo ? E moj mico pa nista neznas",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Ducky",
+          "Jaster111",
+          "matt (Matt)",
+          "oneTwo",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299162": {
+      "poster": "BillIK",
+      "content": "što bi bili parametri num_maps_in, num_maps_out u BNReluConv klasi?",
+      "votes": {
+        "upvoters": [
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299167": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Rene\"#p299114 Ima smisla jer `Module.__call__` koristi i hookove koje potencijalno ne želiš koristiti u ovom slučaju. Ako implementiraš `forward` onda će automatski `__call__` pozivati njega. Ovako praktički siliš korisnika da ili koristi `get_features` direktno i time izbjegne nuspojave, ili da shadowa defaultni `__call__` ako baš želi pozivati objekt kao funkciju, pa opet izbjegne nuspojave.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299191": {
+      "poster": "[deleted]",
+      "content": "Ima nekoga da ne planira doći na svoj termin u srijedu/četvrtak da se zamijeni za moj u utorak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299197": {
+      "poster": "indythedog",
+      "content": "@\"Aimée\"#p299191 Ja ti imam termin u srijedu u 9 ujutro, ako ti paše javi se u box",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299205": {
+      "poster": "Ducky",
+      "content": "@\"Emma63194\"#p299142 pfff, meni je 3136.00% nakon 0. epohe",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "boogie_woogie (nika_1999)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Emma63194",
+          "ErnestHemingway (Alfetta)",
+          "WickyWinslow",
+          "matt (Matt)",
+          "oneTwo",
+          "sheriffHorsey",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299209": {
+      "poster": "steker",
+      "content": "Jel moze neko napisat arhitekturu simplemetricembeddinga koja bi trebala bit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299226": {
+      "poster": "Emma63194",
+      "content": "@\"steker\"#p299209 \n\n- BNReluConv\n- max pool\n- BNReluConv\n- max pool\n- BNReluConv\n- global average pool",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299228": {
+      "poster": "Emma63194",
+      "content": "> @\"Rene\"#p299114 ako može neko podijeliti grafove iz zadnjeg zadatka bio bih zahvalan\n\nMeni je ovako ispalo:\n\n>! ![](assets/2022-05-29/00001.png)\n\n>! ![](assets/2022-05-29/00002.png)\n\n>! ![](assets/2022-05-29/00003.png)\n\n>! ![](assets/2022-05-29/00004.png)\n\n>! ![](assets/2022-05-29/00005.png)\n\n>! ![](assets/2022-05-29/00006.png)\n\n>! ![](assets/2022-05-29/00007.png)\n\n>! ![](assets/2022-05-29/00008.png)\n\nmodel_feat mi je model koji koristi vektore iz prostora značajki, dok model_id samo sliku uzima.\n\nJel nam išta slično izgledaju grafovi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299256": {
+      "poster": "steker",
+      "content": "@\"Emma63194\"#p299226 mislim koliko treba bit ulaz i izlaz za svaki layer",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299265": {
+      "poster": "Emma63194",
+      "content": "@\"steker\"#p299256 Aha, misliš kao, kolike su ulazne i izlazne dimenzije? Ja sam ovako, ali neka netko još provjeri, ne garantiram da je točno:\n\nBNReluConv\n\n- input dim: BATCH_SIZE x 1  x  28  x 28\n- output dim: BATCH_SIZE x EMB_SIZE x 26  x 26\n\nmax pool\n\n- input dim: BATCH_SIZE x EMB_SIZE x 26 x  26\n- output dim: BATCH_SIZE x EMB_SIZE x 12 x  12\n\nBNReluConv\n\n- input dim: BATCH_SIZE x EMB_SIZE x 12 x  12\n- output dim: BATCH_SIZE x EMB_SIZE x 10 x  10\n\nmax pool\n\n- input dim: BATCH_SIZE x EMB_SIZE x 10 x  10\n- output dim: BATCH_SIZE x EMB_SIZE x 4 x  4\n\nBNReluConv\n\n- input dim: BATCH_SIZE x EMB_SIZE x 4 x  4\n- output dim: BATCH_SIZE x EMB_SIZE x 2 x   2\n\nglobal average pool\n\n\n- input dim: BATCH_SIZE x EMB_SIZE x 2 x  2\n- output dim: BATCH_SIZE x EMB_SIZE x 1 x  1",
+      "votes": {
+        "upvoters": [
+          "djeno",
+          "indythedog",
+          "matt (Matt)",
+          "sheriffHorsey",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299273": {
+      "poster": "steker",
+      "content": "@\"Emma63194\"#p299265 e to hvala",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299286": {
+      "poster": "Emma63194",
+      "content": "@\"steker\"#p299273 Np. Mene samo muči jer sam stavila da je veličina feature mapi stalno EMB_SIZE.\n\nNisu nigdje rekli koliko mora biti, osim da bi na izlazu zadnjeg sloja trebalo biti tako.\n\nNe znam jesmo li između trebali uzimati veće feature mape ili je u redu ovako kako sam ja stavila.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299327": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@\"Emma63194\"#p299286 Sve sto nije strogo definirano je prostor za vlastitu interpretaciju",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299337": {
+      "poster": "ppooww (pp)",
+      "content": "@\"Rene\"#p299141 Kak ga reshapeas? `torch.reshape(img, (img.shape[0], 1))`? Nije mi bas najjasniji taj zadatak pa je bilo kakva pomoc dobrodosla",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299367": {
+      "poster": "Ducky",
+      "content": "@\"pp\"#p299337 ja reshapeam x na kraju funkcije\n\nx = x.reshape((img.size(dim=0), self.emb_size))",
+      "votes": {
+        "upvoters": [
+          "djeno",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299418": {
+      "poster": "Ducky",
+      "content": "@\"pp\"#p299337 nvm, mislio sam si pito za 2. zadatak.\n\nRadi mi `torch.reshape(img, (img.shape[0], img.shape[2]*img.shape[3]))` za 82.16% acc, al mislim da možeš bilo kako reshejpat dok god ti je 2. dimenzija za r i repr ista (u evaluate)",
+      "votes": {
+        "upvoters": [
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299448": {
+      "poster": "Daeyarn",
+      "content": "koliko dugo vam traje treniranje u 2. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299460": {
+      "poster": "tpulj",
+      "content": "@\"Daeyarn\"#p299448 cca 5 min po epohi, ako ti puno traje vjerojatno ti sampling metode pre dugo traju\n\nProbaj ovako:\n```\n\n    def _sample_negative(self, index):\n        anchor_target = self.targets[index].item()\n        indicies = list()\n        for tar in self.target2indices:\n          if (tar != anchor_target):\n            indicies += self.target2indices[tar]\n        return choice(indicies)\n\n\n    def _sample_positive(self, index):\n        anchor_target = self.targets[index].item()\n        return choice(self.target2indices[anchor_target])\n```",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "djeno"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299466": {
+      "poster": "Daeyarn",
+      "content": "@\"tpulj\"#p299460 wow, s ovim kodom se cak izvrte do kraja 😅 hvala puno!",
+      "votes": {
+        "upvoters": [
+          "tpulj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299468": {
+      "poster": "tpulj",
+      "content": "@\"Daeyarn\"#p299466 np, nemoj samo zaboravit izmjenit malo 😉",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299473": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Ducky\"#p299205 I meni je tako, si rijesio to ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299488": {
+      "poster": "Emma63194",
+      "content": "Ima li tko da je imao na početku slabiji performance i da je uspio skužiti u čemu je stvar i popraviti to?\n\nIgram se već jedno vrijeme s hiperparametrima, ali najbolje što uspjevam dobiti je 72% točnost. \n\nNe znam u čemu bi mogao biti problem.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299489": {
+      "poster": "Emma63194",
+      "content": "@\"tpulj\"#p299460 U drugom dijelu, nemaš garanciju da ti pozitivan primjer neće biti isti sidru. Znam da je mala vjerojatnost da se to desi, ali opet. \n\nU prvom, zašto ne samo nasumično odabrati razred (koji nije jednak razredu sidra) i onda samo nasumičan uzorak iz tog razreda?\n\nČini mi se da je to brže nego raditi listu i onda iz nje random birati.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299490": {
+      "poster": "tpulj",
+      "content": "@\"Emma63194\"#p299489 \n\n1) Zanemarivo 😄\n\n2) Je, u pravu si. Toga san se sitia nakon sta san vec napisa funkciju a nije mi se dalo vracat vise na to 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299533": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Ducky\"#p299205 Provjeri si output shape iz forwards treba ti biti , BATCH * EMB , a ne BATCH * EMB * 1 * 1",
+      "votes": {
+        "upvoters": [
+          "boogie_woogie (nika_1999)",
+          "ghost (ksi)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299541": {
+      "poster": "ppooww (pp)",
+      "content": "Koliki vam je test accuracy nakon izbacivanja razreda 0 iz skupa za ucenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299552": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "kak ste iz tensora izbacivali elemente ?  za 3 zad pod e)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299564": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"pp\"#p299541 97%",
+      "votes": {
+        "upvoters": [
+          "djeno",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299566": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "\"Drugi razred će čitati slike sa svim znamenkama, a iskoristit ćete ga za dobivanje prosječne reprezentacije\" sta ovaj dio znaci u zadataku ? Kako trebamo iskoristit taj drugi loader",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299574": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p299564 ispravak 95%",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299602": {
+      "poster": "ppooww (pp)",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p299564 Meni je oko 87%, nisam tocno skuzio sta misle u zadatku s ova dva loadera",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299608": {
+      "poster": "faboche (him)",
+      "content": "@\"Ducky\"#p299418 Vidim da vec nekoliko ljudi spominje 82% tocnost. Ja uporno dobivam 12%, koje izmjene ste morali napravit u utils.py?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299616": {
+      "poster": "faboche (him)",
+      "content": "@\"faboche\"#p299608 Nvm, krivo sam reshape radio u getFeatures",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299723": {
+      "poster": "hellvetica",
+      "content": "Ne kuzim sta se tocno koristi za global average pooling? AvgPool2d sa kernel sizeom cijelog featura?",
+      "votes": {
+        "upvoters": [
+          "matt (Matt)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299724": {
+      "poster": "hellvetica",
+      "content": "![](assets/2022-05-30/00000.png)\n\nwhat hahaha ovo mi se ne cini ok",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "miss_anthropocene (neunist.iva)",
+          "steker",
+          "wesley"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299730": {
+      "poster": "steker",
+      "content": "@\"hellvetica\"#p299724 reshapeaj vektor na kraju get features funkcije\n\n@\"Ducky\"#p299367",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299744": {
+      "poster": "Emma63194",
+      "content": "@\"▅ ▆ ▇ █ 👽 𝒟𝐸𝒱𝐼𝒯𝓞 👽 █ ▇ ▆ ▅\"#p299564 Ako te mogu samo pitati vezano za loss funckiju, koju vrijednost vratiš? Je li mean od cijelog batcha ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299781": {
+      "poster": "Dootz",
+      "content": "Jel ikome mean loss stalno samo 0? Accuracy mi je 77%, ali nista se ne trenira uopce.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299786": {
+      "poster": "BillIK",
+      "content": "kako izbaciti primjere iz skupa za učenje? ima li neka ugrađena torch funkcija?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299788": {
+      "poster": "ppooww (pp)",
+      "content": "Moze neko ko je uspio rijesit 3. e) objasnit sta se tocno treba napravit u zadatku? Istrenirao sam model bez primjera iz klase 0, ali mi nije skroz jasno sta se treba dalje napravit.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299858": {
+      "poster": "Tootha",
+      "content": "@\"Dootz\"#p299781 Ako koristis `torch.linalg.norm`, provjeri da ti je parametar `dim=1`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299885": {
+      "poster": "at5611",
+      "content": "@\"Dootz\"#p299781 Meni je takoder mean loss 0 al accuracy mi ne prelazi 15%...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299919": {
+      "poster": "neksi (filip)",
+      "content": "Kod torch.save, jel samo spremamo torch.save(model, \"datoteka.pt\") ?",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299972": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"filip\"#p299919 Vjerojatno želiš saveati samo state dict, dakle\n\n```\nmodel.eval()\nmodel = model.to(\"cpu\")\ntorch.save(model.state_dict(), \"datoteka.pt\")\n```\n\npa učitavati s\n\n```\nmodel = ModelClass(...)\nmodel.load_state_dict(\n    torch.load(\"datoteka.pt\")\n)\n```",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)",
+          "indythedog",
+          "neksi (filip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "299974": {
+      "poster": "Emma63194",
+      "content": "@\"Emma63194\"#p299488 Problem je bio u tome što sam miješala numpy i torch. Izbjegavajte numpy kod `loss` funkcije i koristite torcheve alternative funkcija koje bi vam mogle trebati.",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300181": {
+      "poster": "mrki",
+      "content": "Ekipa u 9h, kako je izgledao blic?",
+      "votes": {
+        "upvoters": [
+          "Retard00",
+          "tre_besty (luk)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300217": {
+      "poster": "grana2",
+      "content": "@\"mrki\"#p300181 \n\nReturn od torch.pca_low\n\nReturn od compute_repr\n\nReturn od get_features \n\nZadnji sloj u modelu\n\nVelicina vektora repr od identity\n\nKoju vrstu ucenja predstavlja nas model?\n\nSto radi torch.save(state dict)?\n\nKoliko slika vraca getitem za train?\n\nReturn od _get_positive\n\n Pomocu koje metode smo vizualizirali podatke?",
+      "votes": {
+        "upvoters": [
+          "Antuunn",
+          "Daeyarn",
+          "Ducky",
+          "Emma63194",
+          "SuperSaiyano",
+          "Upforpslone",
+          "fritula",
+          "indythedog",
+          "neksi (filip)",
+          "oneTwo",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300238": {
+      "poster": "yurnero",
+      "content": "Kolika vam je dužina liste parametara koje šaljete optimizeru, tj. `len(list(model.parameters()))`? \n\nZanima me jesam li dobro posložija modul.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300243": {
+      "poster": "Emma63194",
+      "content": "@\"yurnero\"#p300238 12",
+      "votes": {
+        "upvoters": [
+          "yurnero"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300262": {
+      "poster": "Antuunn",
+      "content": "@\"grana2\"#p300217 Jel zna netko odgovore na ova pitanja?",
+      "votes": {
+        "upvoters": [
+          "Tinx (pingvin)",
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300289": {
+      "poster": "yurnero",
+      "content": "Čemu služi funkcija compute_representations? Moramo li je mijenjati kad koristimo IdentityModel?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300317": {
+      "poster": "SuperSaiyano",
+      "content": "@\"pp\"#p299788 \n\n`self.images = self.images[self.targets != remove_class]`\n\n`self.targets = self.targets[self.targets != remove_class]`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300318": {
+      "poster": "SuperSaiyano",
+      "content": "@\"BillIK\"#p299786 \n\n`self.images = self.images[self.targets != remove_class]`\n\n`self.targets = self.targets[self.targets != remove_class]`",
+      "votes": {
+        "upvoters": [
+          "BillIK",
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300325": {
+      "poster": "Jokke",
+      "content": "@\"grana2\"#p300217 U 14 skoro isto ovo, jos samo formula za trojni gubitak (ona na pytorch dokumentaciji)",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300343": {
+      "poster": "wesley",
+      "content": "@\"Emma63194\"#p299974 ja sam koristila torch funkcije, al jos uvijek mi nejde iznad 75% :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Emma63194"
+        ]
+      }
+    },
+    "300357": {
+      "poster": "Upforpslone",
+      "content": "Jel imao neko ovaj problem da mu se mean loss smanjuje, ali Test Accuracy je stalno oko 40%?\n>! = Using device cpu\n\n> Loaded 60000 training images!\n\n> Loaded 10000 validation images!\n\nEpoch: 0\n\nIter: 0, Mean Loss: 28.289\n\nIter: 100, Mean Loss: 5.196\n\nIter: 200, Mean Loss: 3.158\n\nIter: 300, Mean Loss: 2.354\n\nIter: 400, Mean Loss: 1.916\n\nIter: 500, Mean Loss: 1.635\n\nIter: 600, Mean Loss: 1.439\n\nIter: 700, Mean Loss: 1.295\n\nIter: 800, Mean Loss: 1.184\n\nIter: 900, Mean Loss: 1.096\n\nMean Loss in Epoch 0: 1.067\n\nComputing mean representations for evaluation...\n\nEvaluating on test set...\n\nEpoch 0: Test Accuracy: 43.08%\n\nEpoch time (sec): 170.6\n\nEpoch: 1\n\nIter: 0, Mean Loss: 0.370\n\nIter: 100, Mean Loss: 0.354\n\nIter: 200, Mean Loss: 0.351\n\nIter: 300, Mean Loss: 0.345\n\nIter: 400, Mean Loss: 0.340\n\nIter: 500, Mean Loss: 0.335\n\nIter: 600, Mean Loss: 0.330\n\nIter: 700, Mean Loss: 0.325\n\nIter: 800, Mean Loss: 0.321\n\nIter: 900, Mean Loss: 0.317\n\nMean Loss in Epoch 1: 0.316\n\nEvaluating on test set...\n\nEpoch 1: Test Accuracy: 36.78%\n\nEpoch time (sec): 162.4\n\nEpoch: 2\n\nIter: 0, Mean Loss: 0.291\n\nIter: 100, Mean Loss: 0.279\n\nIter: 200, Mean Loss: 0.279\n\nIter: 300, Mean Loss: 0.276\n\nIter: 400, Mean Loss: 0.273\n\nIter: 500, Mean Loss: 0.271\n\nIter: 600, Mean Loss: 0.269\n\nIter: 700, Mean Loss: 0.267\n\nIter: 800, Mean Loss: 0.265\n\nIter: 900, Mean Loss: 0.263\n\nMean Loss in Epoch 2: 0.263\n\nComputing mean representations for evaluation...\n\nEvaluating on test set...\n\nEpoch 2: Test Accuracy: 43.37%\n\nEpoch time (sec): 157.8",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300385": {
+      "poster": "Emma63194",
+      "content": "@\"Upforpslone\"#p300357 Mean loss ti je jako velik. Meni u nultoj iteraciji bude oko 0.8 pa se smanjuje.",
+      "votes": {
+        "upvoters": [
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300389": {
+      "poster": "branimir1999",
+      "content": "Nije mi jasan `IdentityModel`. Pretpostavljam da on mora biti svoj zaseban model kao `SimpleMetricEmbedding`, stoga me zanima moramo li samo vektorizirat sliku ili moramo dodati sve slojeve koje ima `SimpleMetricEmbedding`? Ovo drugo mi nema smisla jer kaze u zadatku da ova klasa nema loss.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300461": {
+      "poster": "wesley",
+      "content": "Kolko treba stavit margin u nasoj implementaciji TripletMarginLoss? zadatak 2.a",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300462": {
+      "poster": "steker",
+      "content": "@\"wesley\"#p300461 1?",
+      "votes": {
+        "upvoters": [
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300503": {
+      "poster": "Vonj",
+      "content": "@\"branimir1999\"#p300389 \n\nPotrebno je samo vektorizirati sliku. Kad koristis IdentityModel, doslovno racunas l2 normu (koliko su vektori razliciti tj. slike) u originalnom prostoru (za MNIST slike su 28x28). U pozivu compute representations  mozes predati samo ovo:\n\ncompute_representations(IdentityModel(), train_loader, num_classes, emb_size, device)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300512": {
+      "poster": "branimir1999",
+      "content": "@\"Vonj\"#p300503 sigurno ne moram jos nesto dodati? Kod treniranja mi kaze da nema loss, a ako pokusam izignorirati treniranje i predem na evaluaciju, onda mi kaze da ne moze raditi predikcije. Moram li napraviti loss funkciju koja je ta L2 norma?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300514": {
+      "poster": "yurnero",
+      "content": "@\"Vonj\"#p300503 Što si napravio sa slikom u get_features metodi od IdentityModela? Nonstop dobijam ovaj error:\n\n `shape '[-1, 32]' is invalid for input of size 784`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300524": {
+      "poster": "Antuunn",
+      "content": "Jel moze netko pomoci s get_features metodom u 2. zadatku, nisam skuzio iz prethodnih objasnjenja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300547": {
+      "poster": "Emma63194",
+      "content": "@\"yurnero\"#p300514 Stavi da ti je `emb_size = 784`",
+      "votes": {
+        "upvoters": [
+          "samo_vagabundo",
+          "yurnero"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300548": {
+      "poster": "yurnero",
+      "content": "@\"yurnero\"#p300514 Usput, ovaj error mi se javlja kad za dataloader koristim traineval_loader ili test_loader (čiji su batch_size = 1). Kad iskoristim train_loader kao i ti, kod prođe uredno, al bili se trebao koristiti taj dataset kad su naveli: \n\n> Izmjerite točnost klasifikacije na **podskupu za validaciju.**",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300552": {
+      "poster": "Emma63194",
+      "content": "@\"Antuunn\"#p300524 To ti je kao `forward` metode koje smo pisali u drugim modelima. Samo trebaš propagirati unaprijed.",
+      "votes": {
+        "upvoters": [
+          "Antuunn",
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300604": {
+      "poster": "Vonj",
+      "content": "@\"yurnero\"#p300514 \n\n@\"branimir1999\"#p300512 \n\nEmma vam je odgovorila, treba jos emb size staviti na 784. Nije potrebno za ovo nikakvo treniranje, samo radis usporedbu (l2 normu) u originalnom prostoru slike",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300667": {
+      "poster": "Daeyarn",
+      "content": "ako zakasnimo na labos, jel nam dopuste da naknadno pisemo blic ili? asking for a friend",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300676": {
+      "poster": "Emma63194",
+      "content": "> @\"grana2\"#p300217 Koliko slika vraca getitem za train?\n\nGdje mi zovemo `getitem`?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300677": {
+      "poster": "Jaster111",
+      "content": "@\"Daeyarn\"#p300667 da\n\n@\"Emma63194\"#p300676 dataset loader to zove kad generira podatke za ucenje ili evaluaciju",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300710": {
+      "poster": "mariak (kaiak)",
+      "content": "Blic u 9 :\n\nSto se tocno sprema kod model.state_dict\n\nKoliko slika vraca getitem ako je split=train\n\nDimenzije tenzora koje vraca compute_representations\n\nFormula za triple margin loss\n\nBroj kanala prvog konvolucijskog sloja u SimpleMetricEmbedding\n\nSta se koristi za vizualizaciju - PCA\n\nSta vraca sample_negative - int",
+      "votes": {
+        "upvoters": [
+          "Upforpslone",
+          "fritula",
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300711": {
+      "poster": "Artemis",
+      "content": "@\"kaiak\"#p300710 \n\nKoliko slika vraca getitem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300716": {
+      "poster": "Emma63194",
+      "content": "@\"Artemis\"#p300711 3 slike",
+      "votes": {
+        "upvoters": [
+          "Artemis"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300780": {
+      "poster": "steker",
+      "content": "Nova pitanja s blica:\n\n-red tenzora koji vraca get features iz SimpleMetricEmbedding\n\n-ako imamo K klasa i u svakoj klasi M primjera, koliko je pozitivnih a koliko negativnih primjera za neko sidro (tu msm da moramo pazit da se za pozitivne ne smije uzet isto sidro tako da je to M-1)",
+      "votes": {
+        "upvoters": [
+          "fritula",
+          "indythedog",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300783": {
+      "poster": "ppooww (pp)",
+      "content": "@\"steker\"#p300780 \n1. Batch size x emb size?\n2. Pozitivnih: M-1, Negativnih: (K-1)*M ?",
+      "votes": {
+        "upvoters": [
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300789": {
+      "poster": "steker",
+      "content": "@\"pp\"#p300783 \n\nDa to je to (u prvom je zapravo odgovor 2 jer je to dvije dimenzije)",
+      "votes": {
+        "upvoters": [
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300892": {
+      "poster": "BillIK",
+      "content": "@\"grana2\"#p300217 što vraća compute_repr?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "300901": {
+      "poster": "Emma63194",
+      "content": "@\"BillIK\"#p300892 Vektorsku reprezentaciju za svaki razred. Ne sjećam se više točno kojeg je tipa, ali dimenzija (10, 32) je.",
+      "votes": {
+        "upvoters": [
+          "BillIK",
+          "Daeyarn",
+          "indythedog",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301237": {
+      "poster": "indythedog",
+      "content": "Kojim točno redoslijedom trebaju ići slojevi u BNReLUConv sloju? Je li konvolucija -> batch norm -> relu ok ili treba ići neki drugi redoslijed?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "301246": {
+      "poster": "garica",
+      "content": "@\"indythedog\"#p301237 ja sam imao kao sto ime kaze batch norm -> relu -> conv i na labosu smo to prokomentirali kao da batch norm u prvom BNReLUConvu u modelu sluzi za normaliziranje inputa, a da batch normovi u ostalima imaju uobicajenu svrhu u konvoluciji",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "indythedog",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

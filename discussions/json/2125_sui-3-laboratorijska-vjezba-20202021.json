@@ -1,0 +1,724 @@
+{
+  "title": "[SUI] 3. laboratorijska vježba - 2020/2021",
+  "creator": "HotPotato",
+  "slug": "sui-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Sigurnost u Internetu",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "89338": {
+      "poster": "HotPotato",
+      "content": "Evo, došao do 3. zadatka i odmah ugasio kada sam vidio o kakvom se shitstormu radi.\n\nVjerojatno nas ima još takvih, pa preventivno otvaram temu 😆",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89340": {
+      "poster": "caffeine",
+      "content": "Zar je tak komplicirano, prije međusipita. :/ Nisam još pogledala.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89825": {
+      "poster": "vykar (mango)",
+      "content": "2. zadatak, jel još kome nema razlike u rezultatima version scanninga pokrenutog s hosta i onog iz virtualnog stroja?",
+      "votes": {
+        "upvoters": [
+          "Abarth",
+          "BrankoBrancin",
+          "Vocko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89839": {
+      "poster": "Vocko",
+      "content": "@vykar#89825 Također, isto tako... Kod kojih opcija ti se dogodila promjena ispisa naredbe netstat? Meni samo kod -A. Kod -sV i -O samo na kratko, blic (vjerojatno zbog presporog osvježavanja).",
+      "votes": {
+        "upvoters": [
+          "Abarth",
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89846": {
+      "poster": "vykar (mango)",
+      "content": "@Vocko#89839 Same. Probao sam snimit promet Wiresharkom ali i tamo je sve prazno.",
+      "votes": {
+        "upvoters": [
+          "Vocko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90171": {
+      "poster": "Arfit",
+      "content": "Jesu vama upisani neki bodovi iz prva dva labosa ?\n\nMislim, radim te labose, a nemam nikakav bodovni feedback 😁",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90241": {
+      "poster": "caffeine",
+      "content": "@Arfit#90171 Nope, ništa. Imam neki osjećaj da će to tek na kraju semestra sve upisati ali tko zna...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90251": {
+      "poster": "vykar (mango)",
+      "content": "Na koji način bi mi trebali provjeriti jesu li vatrozidi ispravno podešeni? Koliko vidim ove nmap naredbe koje oni navode za testiranje samo ispišu `filtered` status ako je na routeru podešen vatrozid, ali to ne govori previše. Ima tko da je siguran u svoju konfigurafiju pa da podijeli rezultate testiranja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91099": {
+      "poster": "Sale",
+      "content": "@vykar#90251 Ako ne vjerujete `nmap`-u i njegovom ispisu, postoji alat `nc` s kojim se može testirati konekcija s nekog čvora na drugi čvor na razne portove, isto tako se jednostavna pravila mogu testirati alatom `ping`.\n\nPrimjer: ako za neko pravilo piše da \"treba blokirati sve osim odredišnih TCP vrata X s izvorišne IP adrese a.b.c.d\" znači da ako pokušate napraviti neku drugu konekciju alatom `nc`, primjerice na a.b.c.d vrata Y, to neće uspjeti (osim ako niste eksplicitno propustili to nekim prijašnjim pravilom) i dosta ste sigurni da je pravilo dobro upisano. Tako se prođu sva pravila i isprobaju se razne kombinacije izvorišnih/odredišnih čvorova i odredišnih portova.",
+      "votes": {
+        "upvoters": [
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91189": {
+      "poster": "biserka",
+      "content": "Jel netko uspio rijesit 3.zadatak? Moze neko objasnit detaljno sta se dogada tu..",
+      "votes": {
+        "upvoters": [
+          "BrankoBrancin",
+          "HotPotato",
+          "ardi (sprut)",
+          "boss15",
+          "caffeine"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "vykar (mango)"
+        ]
+      }
+    },
+    "91204": {
+      "poster": "vykar (mango)",
+      "content": "@Sale#91099 Pokrenuo sam experiment u Imunesu i zaustavio sve shell skripte za konfiguriranje vatrozida (da budem siguran da nisu pokrenute, tj. da nikakva pravila za vatrozid nisu postavljena). Sada bi npr. TCP konekcija s računala pc na čvor mail-relay trebala biti moguća, no kad pokrenem `himage pc nc -vz 192.168.2.10` kako bi skenirao portove na čvoru mail-relay, dobijem `no port[s] to connect to.` Zašto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91418": {
+      "poster": "Sale",
+      "content": "@vykar#91204 A lijepo je napisao `no port[s] to connect to`: ilitiga `nisi mi zadao na koje portove da se spojim`. :)\n\nPrimjer:\n```\nroot@pc:/# nc -nvz 192.168.2.10 1-25\n(UNKNOWN) [192.168.2.10] 25 (smtp) open\n(UNKNOWN) [192.168.2.10] 22 (ssh) open\n```",
+      "votes": {
+        "upvoters": [
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91693": {
+      "poster": "BarackObmana",
+      "content": "Da li je itko imao problema sa terminalom na cvorovima u imunesu?\n\nKonkretno, ne prepoznaje mi uopce naredbe `himage`, `sudo` i ostalo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91707": {
+      "poster": "maPre",
+      "content": "@BarackObmana#91693 moras prvo pokrenuti simulaciju. U imunesu klik na Experiment - > Execute",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91712": {
+      "poster": "BarackObmana",
+      "content": "@maPre#91707 Da, ovo se dogodi kad je pokrenuta simulacija. Znaci error je `sudo: command not found`. Isti error je i za `himage`. Kada pokrenem `apt-get update` javlja error `Temporary failure resolving 'security.debian.org'`.  Jel imao netko problema sa tim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92101": {
+      "poster": "Abarth",
+      "content": "Ja sam imao problema sa pokretanjem nodova pomoću himage. \n\nnaredba `$ sudo imunes NETWORK.imn ` očito nije pokrenila nikakve virtualne nodove pc, FW  itd, a kad bi u imunesu kliknuo na execute izbacio bi mi error da je vec pokrenut eksperiment.\n\nOnda sam odlučio ručno pokrenuti imunes `$ sudo imunes` i ručno otvorio NETWORK.imn i pokrenuo eksperiment. Sada funkcionira himage, tj mogu pozivati naredbe na virtualnim čvorovima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92544": {
+      "poster": "Process",
+      "content": "sui is not in the sudoers file.  This incident will be reported.\n\nJel imao ko ovaj problem? Prilikom pokretanja bilo ceg pomocu sudo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92557": {
+      "poster": "xeqte",
+      "content": "Nakon što sam unio iptables pravila za svaku natuknicu iz 3. i 4. zadatka (i naknadno provjerio ispravnost portova), samo mi ovaj dio u FW.sh ostaje nepopunjen ![](assets/2020-11-14/00008.png)\n\nNisam siguran na koji se ovo zadatak/natuknicu odnosi?",
+      "votes": {
+        "upvoters": [
+          "maPre"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92562": {
+      "poster": "Vocko",
+      "content": "@xeqte#92557 Pitao sam asistenta, rekao je da to nije objašnjeno i da svejedno popunimo kako bi bilo logično, recimo da se DNS nalazi u DMZ-u na nekom proizvoljnom računalu (web ili mail-relay).",
+      "votes": {
+        "upvoters": [
+          "maPre",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92592": {
+      "poster": "SinanSuckich (Yelena)",
+      "content": "kako ovo dodat u skriptu: pristup vatrozidima FW i FW_int dozvoljen je samo s računala int1 koje se nalazi u lokalnoj mreži i to korištenjem SSH (port 22),",
+      "votes": {
+        "upvoters": [
+          "ardi (sprut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92642": {
+      "poster": "prodanacro (oat)",
+      "content": "Jel negdje rečeno/napisano koje sve testove bi nam trebao prolaziti 3. zadatak? Ovi iz test.sh mi se ne čine baš dovoljni jer ne ispituju sva pravila",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92780": {
+      "poster": "TvojTata (1234567)",
+      "content": "sta ste radili u 4.?",
+      "votes": {
+        "upvoters": [
+          "Abarth",
+          "prodanacro (oat)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93031": {
+      "poster": "loo",
+      "content": "kako dođemo do privatnog ključa nakon stvaranja s ssh-keygen?\n\npiše da treba predati \"privatni ključ korisnika root čvora pc korišten za spajanje na ssh poslužitelje u zadatku 4\"",
+      "votes": {
+        "upvoters": [
+          "HotPotato"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93150": {
+      "poster": "caffeine",
+      "content": "Jel može netko objasniti kak se pišu ta pravila za 3., pogledala sam predavanja i dalje mi nije niš jasno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93170": {
+      "poster": "SinanSuckich (Yelena)",
+      "content": "@caffeine#93150 ja nisam uspio sve, al ovaj tutorial mi se cinio najjednostavniji https://www.hostinger.com/tutorials/iptables-tutorial",
+      "votes": {
+        "upvoters": [
+          "caffeine"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93212": {
+      "poster": "Tratarira",
+      "content": "Zna netko moze li se predat sam 3 zadatka? Briga me za bodove, samo da mogu polozit predmet hahaha",
+      "votes": {
+        "upvoters": [
+          "Abarth",
+          "HotPotato",
+          "kolsdj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93224": {
+      "poster": "zuza (jose)",
+      "content": "Zašto -sT ne promjeni stanje na pregledu dolaznih veza virtualnog stroja, ako se uspostavi konekcija..? \n\nKoje veze uopce prikazuje watch -n 0.5 netstat -ant?",
+      "votes": {
+        "upvoters": [
+          "maPre"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93254": {
+      "poster": "Marenix",
+      "content": "Može netko napisat koju naredbu je točno koristio u četvrtom zadatku za provjeru dal je sve dobro posloženo? I kada to napravimo, što bi točno trebali dobiti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93295": {
+      "poster": "xeqte",
+      "content": "@Marenix#93254 Mislim da bi se trebao moć spojiti iz čvora pc na čvor mail putem ssh naredbom koju su oni napisali u uputama (koristeći \"jump host\")",
+      "votes": {
+        "upvoters": [
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93302": {
+      "poster": "caffeine",
+      "content": "@Tratarira#93212 Ne vidim zašto ne, sigurno te neće rušiti zbog toga. Ako ništa, uvijek možeš probat napisati par random pravila i reći da nisi znao/la",
+      "votes": {
+        "upvoters": [
+          "Tratarira"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Tratarira",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93317": {
+      "poster": "Marenix",
+      "content": "Mislim da sam pravilno kopirao ključ na čvorove, stavio sam password za root korisnika Internet1, ali kad se pokušam spojit, zatraži me password za root korisnika, upišem Internet1 i piše mi permission denied. Zna možda netko što sam zeznuo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93325": {
+      "poster": "Vocko",
+      "content": "@Marenix#93317 Ima opcija u sshd_config \"PermitRootLogin\" koja je postavljena na \"prohibit-password\", stavi ju na \"yes\".",
+      "votes": {
+        "upvoters": [
+          "Marenix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93400": {
+      "poster": "TvojTata (1234567)",
+      "content": "@Marenix#93317 kak si kopiro u cvorove?tnx",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93504": {
+      "poster": "Marenix",
+      "content": "@TvojTata#93400 Nakon što sam generirao par ključeva na pc poslužitelju, koristio sam \"ssh-copy-id root@192.168.2.10\" i \"ssh-copy-id root@192.168.1.10\". Naravno, to sam sve radio na poslužitelju pc (\"himage pc\")",
+      "votes": {
+        "upvoters": [
+          "MaIv",
+          "TvojTata (1234567)",
+          "prodanacro (oat)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93508": {
+      "poster": "HerrOttoFlick1",
+      "content": "Što bismo sve trebali promijeniti u konfiguracijskim datotekama?\n\nKada se probam spojiti dobijem error: \n\nssh: connect to host 192.168.2.10 port 1111: Connection refused\n\nssh_exchange_identification: Connection closed by remote host",
+      "votes": {
+        "upvoters": [
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93866": {
+      "poster": "hobbit",
+      "content": "ja imam problem s Nmap-om u drugom zadatku.\n\nOvo mi izbacuje:\n\nNote: Host seems down. If it is really up, but blocking our ping probes, try -Pn\n\nNmap done: 1 IP address (0 hosts up) scanned in 2.18 seconds\n\nZna možda netko kako da to riješim?\n\nNa windowsu sam i koristim Zenmap.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93941": {
+      "poster": "raza",
+      "content": "@hobbit#93866 probaj koristit Host-only adresu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93980": {
+      "poster": "zuza (jose)",
+      "content": "Može netko objasniti anti-spoofing filtriranje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93991": {
+      "poster": "SinanSuckich (Yelena)",
+      "content": "@SinanSuckich#92592 Jel zna neko možda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94041": {
+      "poster": "jitser",
+      "content": "@SinanSuckich#92592 \n\niptables -A INPUT -p tcp -s 192.168.1.21 --dport 22 -j ACCEPT  # rule 7",
+      "votes": {
+        "upvoters": [
+          "SinanSuckich (Yelena)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94054": {
+      "poster": "meggy",
+      "content": "Može netko pomoći s 3. ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94141": {
+      "poster": "vykar (mango)",
+      "content": "Jel još tko dobiva ovo ograničenje kod učitavanja na Moodle? Gledam zip za 2. labos, imao je 126KB i prošlo je, ovaj put cca 600KB i ne prolazi..\n\n`Datoteka lab3.zip je prevelika. Najveća dopuštena veličina je 10KB.`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94146": {
+      "poster": "SinanSuckich (Yelena)",
+      "content": "kako izvadit ključ s pca za predaju na moodle?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94149": {
+      "poster": "Marquisio",
+      "content": "Da li je moguće predati parcijalno riješeni labos? Ili treba sve biti riješeno kad predajemo.",
+      "votes": {
+        "upvoters": [
+          "Tratarira"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94189": {
+      "poster": "Marenix",
+      "content": "@SinanSuckich#94146 možeš koristit onaj hcp koji je naveden u 4. zadatku, samo naredbu prilagodi da uzimaš s pc-a i filea u kojem je key",
+      "votes": {
+        "upvoters": [
+          "SinanSuckich (Yelena)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94223": {
+      "poster": "p444k",
+      "content": "Zna netko sto moram vidjet u wiresharku?\n\nDobio sam sifre, ali ne znam sto je promet :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125078": {
+      "poster": "jazavci",
+      "content": "Ima li netko rjesenje za 3 i 4 zadatak pliz? Nisu mi priznali bez ta dva i nikako mi ne ide",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125086": {
+      "poster": "SinanSuckich (Yelena)",
+      "content": "@jazavci#125078 kako znat jesu priznali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125088": {
+      "poster": "jazavci",
+      "content": "@SinanSuckich#125086 Meni pise u komentarima, nije mi ocijenjeno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125559": {
+      "poster": "Tk123",
+      "content": "@jazavci#125078 \n\nNisu priznali jer je krivo nekaj ili nisi napisao uopce?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

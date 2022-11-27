@@ -1,0 +1,205 @@
+{
+  "title": "[POSINT] 6. domaća zadaća - 2021/2022",
+  "creator": "MsBrightside",
+  "slug": "posint-6-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Poslovna inteligencija",
+    "Zadaće"
+  ],
+  "posts": {
+    "273486": {
+      "poster": "MsBrightside",
+      "content": "Za ovu zadaću treba li koristiti naše skladište iz druge zadaće ili onaj northwind što smo dobili za drugu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "273513": {
+      "poster": "Doktor0807",
+      "content": "@\"MsBrightside\"#p273486 Točan odgovor na ovo pitanje je DA :)\n\nKoristiš Northwind što smo dobili za drugu kao izvor podataka, a svoje skladište koristiš kao odredište. Za initial load pretpostavljaš da je tvoje skladište prazno, a za inkrementalni load, mislim logično smatraš da postoje podaci u skladištu i da ćeš dodatno upisati samo podatke koji su nanovo nastali u izvoru nakon tvog prošlog punjenja skladišta",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276580": {
+      "poster": "hejhoj (vdvd)",
+      "content": "je li trebaju skripte iz GenAuditTrailGenRecords za lakši dio zadaće tj. ako radimo samo inicijalno punjenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276582": {
+      "poster": "hejhoj (vdvd)",
+      "content": "i na koji način punimo činjenice u činjeničnoj tablici vezane uz order details tablicu (ukupni popust itd)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276624": {
+      "poster": "Doktor0807",
+      "content": "@\"hejhoj\"#p276580 ne trebaju\n\n@\"hejhoj\"#p276582 napravi si novi oleDB source i dohvati sve iz orderDetails i to dohvati pomoću sql-a u kojem odmah grupiraš po orderID i na taj način onda imaš po jedan zapis za svaki orderID iz orderDetails i sad to možeš joinat sa svim ostalim zapisima, pretpostavljam nešto takvog -> Orders left join OrderDetails",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276737": {
+      "poster": "Noname",
+      "content": "Na koji nacin spajate Employee sa City tablicom? on u predavanju koristi neki Employee koji vec ima Region dok nasa Northwind ima samo CityID",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276743": {
+      "poster": "Doktor0807",
+      "content": "@\"Noname\"#p276737 običan left join po cityID",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276761": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"Doktor0807\"#p276624 puno hvala, uspjela sam taj dio! Samo mi izbacuje upozorenje (i na kraju ne napuni uopce) odma na prvom lookup-u, a krenila sam sa vremenskim dimenzijama, i onda nastavi i na svakom sljedecem \"no rows will be sent to the no match output\", jel znas mozda u cemu je problem? i jesam li dobro svatila da moramo iz izvora za npr orderDate rastaviti na date i time sa funkcijama pa ih posebno spajat sa svakim lookupom na svoj id? jel mozda u tome greska?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276763": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"hejhoj\" aha to je samo u generalu lookup-a opcija redirect rows to no match output",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276764": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"hejhoj\"#p276761 aha to je samo u generalu lookup-a opcija redirect rows to no match output, ali mi sad pada na tom prvom derived columnu di sam odredila pomocne datumske atribute",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276767": {
+      "poster": "Doktor0807",
+      "content": "@\"hejhoj\"#p276764 na koji način ti pada, mislim ako ti u Expression unutar Derived columna ne baca error(expression crven) onda znači da ti vjv tipovi podataka ne štimaju\n\nmoraš provjerit koji su tipovi na odredištu i ovi koje imaš na ulazu\n\ndođi si ovak mišem iznad columna i provjeri koji sui tak isto za odredišni:\n\n![](assets/2022-02-03/00031.png)",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276778": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"Doktor0807\"#p276767 nazalost sve stima sa tipovima, slazu se😔 al mozda nisam dobre funkcije koristila...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276788": {
+      "poster": "Doktor0807",
+      "content": "@\"hejhoj\"#p276778 evo ako ti slučajno ovo pomogne što iz timestampa vadi datum(string(DT_STR duljine 16)):\n\n```\n(DT_STR,16,1252)((DT_WSTR,4)YEAR(OrderDate) + \"-\" + (MONTH(OrderDate) < 10 ? (DT_WSTR,2)(\"0\" + (DT_WSTR,1)MONTH(OrderDate)) : (DT_WSTR,2)MONTH(OrderDate)) + \"-\" + (DAY(OrderDate) < 10 ? ((DT_WSTR,2)(\"0\" + (DT_WSTR,1)DAY(OrderDate))) : ((DT_WSTR,2)DAY(OrderDate))))\n```\n\ni ovo što iz timestampa vadi time(string(DT_STR duljine 16):\n\n```\n(DT_STR,16,1252)(((DATEPART(\"HH\",OrderDate) < 10) ? ((DT_WSTR,2)(\"0\" + (DT_WSTR,1)DATEPART(\"HH\",OrderDate))) : ((DT_WSTR,2)DATEPART(\"HH\",OrderDate))) + \":\" + ((DATEPART(\"mi\",OrderDate) < 10) ? ((DT_WSTR,2)(\"0\" + (DT_WSTR,1)DATEPART(\"mi\",OrderDate))) : ((DT_WSTR,2)DATEPART(\"mi\",OrderDate))) + \":\" + ((DATEPART(\"ss\",OrderDate) < 10) ? ((DT_WSTR,2)(\"0\" + (DT_WSTR,1)DATEPART(\"ss\",OrderDate))) : ((DT_WSTR,2)DATEPART(\"ss\",OrderDate))))\n```",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "276798": {
+      "poster": "hejhoj (vdvd)",
+      "content": "@\"Doktor0807\"#p276788 spaaaaaasilooo me!!! ❤️ ja sam time isla preko (DT_DBTIMESTAMP) al to ocito ne vraca isti oblik.. HVALA!",
+      "votes": {
+        "upvoters": [
+          "Doktor0807"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

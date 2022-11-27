@@ -1,0 +1,595 @@
+{
+  "title": "[PARPRO] 1. laboratorijska vježba - 2020/2021",
+  "creator": "Cvija",
+  "slug": "parpro-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Paralelno programiranje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "154194": {
+      "poster": "Cvija",
+      "content": "Koja je preporuka za jezik i IDE?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "154208": {
+      "poster": "Cvija",
+      "content": "Ako netko slučajno koristi Ubuntu i VSCode, imao sam problema pa možda bude od pomoći...\n\nZnači, prvo instalirajte openMPI:\n[code]$ sudo apt install libopenmpi-dev[/code]\n\nU VSCode trebate imati instaliran dodatak:\n\nC/C++ IntelliSense, debugging, and code browsing.\n\nKada je to sve spremno, stvorite novu datoteku u nekom direktoriju i kopirate neki kod sa službene stranice predmeta (main.c npr.):\n[code]\n#include \"mpi.h\"\n#include <stdio.h>\n\nint main(int argc, char** argv) {\n    // Initialize the MPI environment\n    MPI_Init(NULL, NULL);\n\n    // Get the number of processes\n    int world_size;\n    MPI_Comm_size(MPI_COMM_WORLD, &world_size);\n\n    // Get the rank of the process\n    int world_rank;\n    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);\n\n    // Get the name of the processor\n    char processor_name[MPI_MAX_PROCESSOR_NAME];\n    int name_len;\n    MPI_Get_processor_name(processor_name, &name_len);\n\n    // Print off a hello world message\n    printf(\"Hello world from processor %s, rank %d\"\n    \" out of %d processors\\n\",\n    processor_name, world_rank, world_size);\n\n    // Finalize the MPI environment.\n    MPI_Finalize();\n}\n[/code]\n\nSada bi trebalo sve vezano za mpi biti podcrtano, iduće što bi trebalo napraviti je pokrenuti program (ja sam to napravio Run -> Start Debugging -> C++ GDB/LLDB -> gcc - Build and debug active files) -> to se napravi samo zato da bi se .vscode direktorij stvorio\n\nKad se on stvori, sve što je u njemu se izbriše i doda se datoteka imena c_cpp_properties.json koja izgleda ovako:\n[code]\n{\n    \"configurations\": [\n        {\n            \"name\": \"Linux\",\n            \"includePath\": [\n                \"${workspaceFolder}/**\",\n                \"/usr/lib/x86_64-linux-gnu/openmpi/include\"\n            ],\n            \"defines\": [],\n            \"compilerPath\": \"/usr/bin/mpicc\",\n            \"cStandard\": \"c11\",\n            \"cppStandard\": \"c++17\",\n            \"intelliSenseMode\": \"clang-x64\"\n        }\n    ],\n    \"version\": 4\n}\n[/code]\nNakon toga se ide na \"Run -> Start debugging -> C++ GDB/LLDB -> mpicc - Build and debug active files\"\n\nKad se završi debagiranje u terminalu se pokrene sljedeća naredba \n[code]\nmpirun -np 5 --oversubscribe ./main\n[/code]\nkoja bi trebala rezultirati sljedećim ispisom ili sličnom ovome\n[code]\nHello world from processor ime_racunala, rank 1 out of 5 processors\nHello world from processor ime_racunala, rank 3 out of 5 processors\nHello world from processor ime_racunala, rank 4 out of 5 processors\nHello world from processor ime_racunala, rank 0 out of 5 processors\nHello world from processor ime_racunala, rank 2 out of 5 processors\n[/code]\n\nNadam se da će nekome bit od pomoći",
+      "votes": {
+        "upvoters": [
+          "Belfort",
+          "Lujonlu (Gannicus)",
+          "Lusy (MGJ)",
+          "hejhoj (vdvd)",
+          "in1",
+          "matt (Matt)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156469": {
+      "poster": "moukie",
+      "content": "U cemu je lakse napravit ovaj labos, Pythonu ili C-u?\n\nPiton skoro da ne znam beknut, C znam onoliko koliko sam ga morao koristit za pipi,asp i nasp ali mi isto definitivno nije prvi izbor",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156595": {
+      "poster": "RogerRoger",
+      "content": "Ja sam ga krenuo raditi u C++-u i čini se ok zasad.\n\nPitanje vezano uz zadatak: kao argument mpiexecu predaje se broj filozofa, ali koliko je vilica? Onoliko koliko i filozofa ili dvije? EDIT: nvm opet sam pročitao, vilica je koliko i filozofa.",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "156641": {
+      "poster": "moukie",
+      "content": "Pisem ovo u Pythonu i pokusavam nesto ispisat, uspavat dretvu 10 sec i onda opet nesto ispisat s ovim odsječkom\n\nI to radi kako sam zamislio kada pokrenem program kao najobicniji Python program(tj runnam kod u samo jednom procesu), ali kada pokrenem preko mpiexec-a taj pogram na vise procesa dogada mi se da se prvo odradi cijeli 'sleep' i onda ispisuje citav ispis odjednom, ukljucuji i ono sto je trebalo biti prije sleep-a\n\nKada pokrecem na vise procesa to radim s `mpiexec -n 4 python -m mpi4py helloworld.py`\n\nZna li tko zasto se ovo ponasa tako cudno i sta treba napravit?\n\n![](assets/2021-03-22/00024.png)",
+      "votes": {
+        "upvoters": [
+          "de4d"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163119": {
+      "poster": "Ziher",
+      "content": "Kako ovo debuggirati (radim u C++)? Meni apsolutno nista ne ispisuje dok pokrenem sa mpiexec -n 4 Philosophers.exe, a dok pokrenem za 5 procesa onda mi izbaci debug assertion failure s apsolutno nikakvim traceom.\n\nStavio sam kontrolni ispis poslije MPI_Init, ali cak niti to ne ispisuje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163465": {
+      "poster": "Ziher",
+      "content": "@Ziher#163119 Solved: potrebno je flushat output 🤦‍♂️\n\nJel vam filozofi vjecno jedu ili samo jednom?",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163751": {
+      "poster": "a_ko_si_ti",
+      "content": "@Ziher#163465 Trebaju vjecno jest",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163774": {
+      "poster": "glider (toblerone)",
+      "content": "from mpi4py import MPI\n\nImportError: DLL load failed: The specified procedure could not be found.\n\n\nKako rijesiti ovaj error? Vi koji radite u Pythonu jeste samo preko pipa instalirali mpi4py ili treba još nešto?",
+      "votes": {
+        "upvoters": [
+          "sane_insane"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163815": {
+      "poster": "moukie",
+      "content": "@glider#163774 \n\nprobaj ponovno instalirat MPI preko one microsoftove stranice, meni je to rjesilo slican neki error cini mi se taj isti",
+      "votes": {
+        "upvoters": [
+          "glider (toblerone)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "163824": {
+      "poster": "glider (toblerone)",
+      "content": "@moukie#163815 upalilo je,hvala",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "165374": {
+      "poster": "Juren",
+      "content": "Napravio sam template i upute za izradu labosa u Javi... nadam se da ce pokoristit nekome :) \n\nhttps://github.com/JurenIvan/MPJ-Template",
+      "votes": {
+        "upvoters": [
+          "Elendur19 (Zagor)",
+          "Noggenfogger (dammitimmad)",
+          "ReyKenobi",
+          "TheCrimsonChin",
+          "Ziher",
+          "hejhoj (vdvd)",
+          "megi7 (someone7)",
+          "qwerty",
+          "whatTheHel"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166321": {
+      "poster": "Ziher",
+      "content": "Sljedeci tjedan ovo odgovaramo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166419": {
+      "poster": "Klokan",
+      "content": "@Ziher#166321 mislim da nikome to nije jasno",
+      "votes": {
+        "upvoters": [
+          "Ziher"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166428": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Klokan#166419 se to na faksu odgovara ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166433": {
+      "poster": "Smolaa",
+      "content": "A piše u onoj obavijesti za labos offline provjera pa oni to valjda sami provjeravaju bez odgovaranja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166437": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Smolaa#166433 scimalo me jer sam prije par min vidjela u kalendaru da mi je bio termin danas u pclab haha hvala :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166714": {
+      "poster": "Skaxen",
+      "content": "@Ziher#163465 mozes malo pojasniti sto znaci flushati output? isto sam u c++ i ne ispisuje mi nista na terminal sve dok svi procesi ne zavrse.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166727": {
+      "poster": "Smolaa",
+      "content": "@Skaxen#166714 samo dodaj << std::flush na svaki std::cout koji imaš",
+      "votes": {
+        "upvoters": [
+          "Skaxen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166780": {
+      "poster": "Ziher",
+      "content": "@Smolaa#166727 ili https://www.tutorialspoint.com/c_standard_library/c_function_fflush.htm",
+      "votes": {
+        "upvoters": [
+          "Skaxen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166814": {
+      "poster": "Ruleta",
+      "content": "jel imao netko problema u pythonu u smislu kada je beskonačna petlja da se ništa ne ispisuje doslovno nikad, a kada ograničim da svaki filozof jede npr. 5 puta, onda sve normalno radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166843": {
+      "poster": "Smolaa",
+      "content": "@Ruleta#166814 probaj dodat flush u ispis isti problem vjerojatno kao i kolega gore",
+      "votes": {
+        "upvoters": [
+          "Ruleta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166844": {
+      "poster": "Ruleta",
+      "content": "@Smolaa#166843 hvalaa!",
+      "votes": {
+        "upvoters": [
+          "Smolaa"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "166924": {
+      "poster": "Maglica",
+      "content": "![](assets/2021-04-10/00036.png)\n\nJel zna netko kako rješiti ovaj error?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167181": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Maglica#166924 ja u py3 koristim comm.recv() bez \" i \"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167375": {
+      "poster": "moukie",
+      "content": "koliko filozof/proces treba mislis odnosno jesti sekundi?\n\nmora li to biti random ili mozemo hardkodirat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167441": {
+      "poster": "moukie",
+      "content": "@moukie#167375 \n\nnvm 😆",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167448": {
+      "poster": "moukie",
+      "content": "@moukie#167375 \n\nnvm, treba bit nasumicno 🤦‍♂️",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167507": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "kako trebamo imenovati .zip koji predajemo na ferka?",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167801": {
+      "poster": "megi7 (someone7)",
+      "content": "@Smolaa#166727 imas ideju kako za c? fflush(stdout) nakon svakog printfa mi ne pomaze...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "167855": {
+      "poster": "Smolaa",
+      "content": "@megi7#167801 Ako ti flush ne pomaže onda valjda negdje kod zapinje. Ovaj flush samo natjera da se odma ispiše.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168137": {
+      "poster": "megi7 (someone7)",
+      "content": "@Smolaa#167855 u pravu si :)\n\nTrebamo zakljucati predaju ili?",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168149": {
+      "poster": "a_ko_si_ti",
+      "content": "@Noggenfogger#167507 nije nigdje definirano, al ja sam stavio `1-lab_ime-prezime_JMBAG`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "168866": {
+      "poster": "a_ko_si_ti",
+      "content": "Je li se zna kako ce se ovo bodovat, tj. oce li bit ikakav termin (online ili offline)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170362": {
+      "poster": "a_ko_si_ti",
+      "content": "@a_ko_si_ti#168866 bump",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "170569": {
+      "poster": "a_ko_si_ti",
+      "content": "@a_ko_si_ti#168866 pogleda sam zadnje predavanje do kraja, i čini se da će ocijeniti offline, a po potrebi se javit ekipi s kojom bi htjeli porazgovarat.",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288277": {
+      "poster": "MsBrightside",
+      "content": "@\"moukie\"#p156641 sjećaš se kako si popravio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288281": {
+      "poster": "SuperSaiyano",
+      "content": "@\"MsBrightside\"#p288277 Ja nakon printa-a pozovem sys.stdout.flush() i radi. Napravio sam pomoćnu print_mpi() wrapper funkciju gdje zovem print sa tekstom iz argumenta i pozivam sys.stdout.flush() kako ne bi morao svaki put pozivati u glavnom kodu.",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288335": {
+      "poster": "moukie",
+      "content": "@\"MsBrightside\"#p288277 \n\nmislim da sam napravio neki wrapper oko ispisa\n\nkoj mi je izgledao ovako\n```\nomotac:\n   ispis()\n   flush()\n```\ncini mi se da je u tome bila caka, da se nije flushao output, ali proslo je od toga hahah",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288370": {
+      "poster": "BigZ1",
+      "content": "![](assets/2022-03-31/00000.jpg)\n\nJel ovo znaci da unutar sljedeceg tjedna mozemo predat vjezbu ili do 4.4. Trebamo predat vjezbu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288372": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"BigZ1\"#p288370 do 4.4. u 12h, ima u zadnjoj obavijesti info",
+      "votes": {
+        "upvoters": [
+          "Kennedy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

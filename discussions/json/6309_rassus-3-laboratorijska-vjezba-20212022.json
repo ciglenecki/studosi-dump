@@ -1,0 +1,1342 @@
+{
+  "title": "[RASSUS] 3. laboratorijska vježba - 2021/2022",
+  "creator": "tata (NISAM ASISTENT)",
+  "slug": "rassus-3-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Raspodijeljeni sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "265520": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "kad pokusavam procitat s config servera property u application.yml mi javlja \n\nError creating bean with name 'aggregatorController': Injection of autowired dependencies failed; \n\n(mogao sam injectati bean kad se direktno citalo iz application.properties bez tog config servera)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266300": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "eureku i config server nema potrebe spajati u okviru ovog labosa? samo config<->aggregator, i eureka <-> 3 mikroservisa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268255": {
+      "poster": "RogerRoger",
+      "content": "Ako netko ne zna gdje bi krenuo (po mom mišljenju ovo je dosta loše obrađeno na predavanjima (kao i puno drugih stvari)) yt kanal javabrains ima odlične tutoriale:\n\n[https://www.youtube.com/watch?v=gb1i4WyWNK4](https://)\n\nPogledajte po kanalu, objašnjeno je apsolutno sve što je potrebno za ovaj labos kroz nekih desetak videa po 10min, a tip je stvarno fenomenalan predavač.",
+      "votes": {
+        "upvoters": [
+          "Conrad",
+          "MsBrightside",
+          "Zogen",
+          "doki",
+          "menace_master",
+          "mikimoj",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268285": {
+      "poster": "laranotreallycroft",
+      "content": "Kako se readings.csv čita iz dockera? Ovi volumes su mi užasno zbunjujući :(\n\nKako god napravim javlja mi NoSuchFileException: readings.csv",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268385": {
+      "poster": "djurag (dj)",
+      "content": "@\"laranotreallycroft\"#p268285 nije problem u dockerima nego u .jar datoteci. Ovisno o tome gdje se nalazi readings.csv unutar strukture projekta moguce je da uopce nije ukljucena u .jar datoteku. U svakom slucaju drugacije se pristupa .csv datoteci ako je zapakirana ju .jar datoteku. Ima vise mogucih nacina, ali najbolje na google naci nesto najjednostavnije....",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268473": {
+      "poster": "laranotreallycroft",
+      "content": "@\"dj\"#p268385 yeah, bila sam pokleknula pa sam slala mail\n\nevo odg ako ce kome trebat\n\n![](assets/2022-01-06/00009.jpg)",
+      "votes": {
+        "upvoters": [
+          "Mike (Klaud Konzultanta)",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268484": {
+      "poster": "RogerRoger",
+      "content": "Postavio sam config i eureka servere i sva tri mikroservisa, uspjesno su se registrirali, ali kako da ovo testiram?\n\nPokusavam poslati GET request agregacijskom mikroservisu preko Postmana, ali nikako ne mogu skuziti pravi url. Slanje GET requesta na `http://aggregator-microservice/ `iz Postmana ne radi, kao ni na `http://localhost:8761/aggregator-microservice/`. Stvarno vise nemam ideja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268521": {
+      "poster": "RogerRoger",
+      "content": "Rijesio sam ovaj problem - ispada da je u application.yml mikroservisa trebalo dodati i `server: port: <port>` pa se GET request iz Postmana salje na `localhost:<port>/`.\n\nSad, nazalost, imam dva druga problema. Jedan je da mi config server uporno daje konfiguracije iz main/resources u svom vlastitom folderu umjesto iz lokalnog git repozitorija na koji pokazuje application.yml, puta u `spring: cloud: config: server: git: uri: file:///<path>`.\n\nDrugi je problem sto nikako ne mogu postici da mi se vrijednosti konfiguracije osvjezavaju bez restartanja mikroservisa. Ubacio sam spring-boot-starter-actuator u dependencye klijenta (agregacijskog mikroservisa), dodao `@RefreshScope` iznad klase cija je clanska varijabla `tempUnit` s anotacijom `@Value(${\"tempunit\"})` i nakon promjene u aggregator-microservice.yml preko Postmana posaljem prazni POST request na `localhost:8888/actuator/refresh`, ali nista se ne dogodi i mjerna jedinica ostane ista.\n\nPrema uputama sa StackOverflowa dodao sam `management:\n\n  endpoints:\n\n    web:\n\n      exposure:\n\n        include: refresh` u application.yml agregacijskog mikroservisa tako da je refresh endpoint ukljucen i dobijem response na prazni POST, ali se jedinica ne updatea.\n\nMoze li netko pomoci plsssssssssssssssssssss",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268552": {
+      "poster": "djurag (dj)",
+      "content": "@\"RogerRoger\"#p268521 \n\nZa prvi problem probaj izbrisati taj .yml fajl tako da budes siguran da ne moze iz njega nista ucitati. U git repozitoriju nije dovoljno samo promijeniti vrijednost nego za svaku promjenu treba napraviti commit da bi se ona ucitala u config server. Ako nije to siguran sam da ima jos 100 mogucih razloga zasto ti ne ucitava 😁 \n\nDrugi problem:  gdje ti se nalazi taj aggregator-microservice.yml (u nekom mikroservisu ili u git repo)?",
+      "votes": {
+        "upvoters": [
+          "RogerRoger"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268553": {
+      "poster": "RogerRoger",
+      "content": "@\"dj\"#p268552 hej, riješio sam taj problem, u .yml sam prema nekom tutorialu dodao liniju koja mijenja profil u native. Otkad sam to izbrisao, vuče mi uredno iz lokalnog repozitorija.\n\nProblem s refreshanjem se i dalje nije riješio, svaku promjenu commitam :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268559": {
+      "poster": "Anonimity (BoJack)",
+      "content": "o boze, ja dosta toga ovdje ne kuzim, o kojem git repozitoriju se prica? trenutno radim na mikroservisima i radim ih onako kako je obradeno na spring predavanjima, kako da maknem ispisivanje id-a na html fileu? kako se to simulira?\n\nsto bi mikroservis koji agregira trebao iz html-a dobiti tu informaciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268627": {
+      "poster": "RogerRoger",
+      "content": "@\"BoJack\"#p268559 imaš 5 elemenata: config server, Eureka server (config klijent), agregacijski servis (config i Eureka klijent), humidity i temperature servise (oba Eureka klijenti).\n\nConfig server sprema konfiguracije u .yml ili .properties datoteke, svejedno je, samo je sintaksa malo drugačija. Po defaultu, te konfiguracije su ti u java/main/resources projekta, ali možeš u application.yml config servera postaviti put do lokalnog git repozitorija iz kojeg će vući .yml ili .properties konfiguracije za ostale servise (nazoveš ih ime-mikroservisa.yml ili ime-mikroservisa.properties i config server usluzi automatski da pravi config ovisno tko traži, po imenu).\n\nHumidity i temperature mikroservisi su REST serveri koji daju očitanja vlažnosti i temperature. Također su Eureka klijenti, registriraju se na Eureka registry da ih se može tražiti po imenu umjesto adresi.\n\nAgregacijski mikroservis je REST server koji daje kombinaciju očitanja vlažnosti i temperature. I on je Eureka klijent, pristupa mu se preko imena pod kojim je registriran, a on preko imena pristupa humidity i temperature mikroservisima šaljući GET requestove. Također, agregator je config klijent i u konfiguraciji sa servera mu se nalazi mjerna jedinica temperature: kelvin ili celzij. Pri obradi GET requesta pretvara mjernu jedinicu temperature ako je potrebno (tj. ako podatak već nije izražen tom mjernom jedinicom).\n\nZnači: korisnik šalje GET na agregator preko Eureke, agregator ima konfiguraciju mjerne jedinice s config servera, šalje GET requestove humidity i temperature servisima preko Eureke, pretvara mjernu jedinicu ako treba i vraća agregirana očitanja kao response.",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "Rasa",
+          "menace_master",
+          "mikimoj",
+          "mmmmDa (Ban Levačić)",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269449": {
+      "poster": "RogerRoger",
+      "content": "Koristim Eclipse i Maven, kako se ovo najlakše migrira na Docker?\n\nPogledao sam tutoriale, ali ne kužim, može li netko objasniti korak po korak pls?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269461": {
+      "poster": "RogerRoger",
+      "content": "Opet ja. Dockerizirao sam sranje. Sad se Eureka iz svoje kante neće spojit na config server koji je u svojoj.\n\nNormalno mogu do konfiguracija preko localhost:8888/<servis>/default u browseru, ali Eureka server ne može. Jedino je rješenje suicid.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "in1",
+          "narval13068 (Dima)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269489": {
+      "poster": "Klokan",
+      "content": "@\"RogerRoger\"#p269461 zasto uopce Eureka treba bit \"spojena\" na config server? Koliko vidim iz arhitekture, nije uopce ni potrebno, nek me netko ispravi ako grijesim?",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269508": {
+      "poster": "in1",
+      "content": "@\"Klokan\"#p269489 tako je\n\n![](assets/2022-01-11/00015.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269715": {
+      "poster": "Gussy (huba buba)",
+      "content": "moze neko da me uputi sta s ovim application.yml fajlom trebam u agregatoru za pocetak? kako citam ista iz njega itd",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269764": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"RogerRoger\"#p268627 jel onda config server mora imati application.yml fileove za sve mikroservise ili samo za agregatora?",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269786": {
+      "poster": "WickyWinslow",
+      "content": "@\"huba buba\"#p269764 Config server mora imati konfiguraciju za sve ukljucujuci i eureka server. Eureka i config server slucaj gdje se treba pricekati da se config pokrene kako bise eureka mogao na njega spojiti i sam zatim pokrenuti je eksplicitno spomenut na predavanjima.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269806": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"WickyWinslow\"#p269786 tu piše da se samo treba modificirati agregator da čita konfiguraciju sa konfiguracijskog poslužitelja, ne i ostali mikroservisi\n\n![](assets/2022-01-12/00011.png)",
+      "votes": {
+        "upvoters": [
+          "RogerRoger",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)",
+          "in1",
+          "laranotreallycroft",
+          "mikimoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269834": {
+      "poster": "RogerRoger",
+      "content": "@\"huba buba\"#p269806 ovo je točno. Agregator komunicira s konfiguracijskim serverom.\n\nTemperature i humidity mikroservisi šalju podatke kakvi su u fajlu, agregator radi pretvorbu mjerne jedinice ako je potrebno i zato jedino njemu treba konfiguracija.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270007": {
+      "poster": "WickyWinslow",
+      "content": "@\"RogerRoger\"#p269834 U ovome se kontekstu pise iskljucivo za funkcionalnost pretvordbe mjernih jedinica moja je interpretacija da to ne znaci ostali ne trebaju biti. Na predavanjima su kao sto sam rekao spomenuli slucaj da eureka cita konfiguraciju sa config servera i da je bilo puno problema i pitanja vezano za njihovo zajednicko pokretanje. Najbolje sluzbeno pitati za odgovor izgleda. Mozda nije potrebno ali better safe then sorry.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270048": {
+      "poster": "Cvija",
+      "content": "Zapeo sam na dijelu s mikroservisom za agregaciju, imam osjećaj da to ne bi trebalo biti jako teško, ali može li me netko uputiti na neku dokumentaciju kako to napraviti ili reći na koji način to napraviti?\n\nNapravio sam servise za temperaturu i vlažnost i oni na GET \"/temperature\" i GET\"/humidity\" daju jednu vrijednost za temperaturu, odnosno vlažnost\n\nJasno mi je da aggregate servis treba poslati GET na /temperature i GET na /humidity, ali ne znam kako to napraviti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270050": {
+      "poster": "WickyWinslow",
+      "content": "@\"Cvija\"#p270048 Ovo bi ti trebalo pomoci https://www.baeldung.com/rest-template",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270104": {
+      "poster": "RogerRoger",
+      "content": "@\"WickyWinslow\"#p270007 ideja je da je jedino agregacijski mikroservis \"vidljiv\" korisniku. Jedino se on konfigurira, čak ni Eureka ne bi trebala (ali može) imati veze s config serverom.\n\nOvo je službeni odgovor asistenta, ovako je labos zamišljen, samo su upute to nedovoljno definirale. Nije minus ako povežeš i ostale mikroservise, ali izvorna ideja je da je samo agregacijski servis config klijent.",
+      "votes": {
+        "upvoters": [
+          "WickyWinslow",
+          "mikimoj",
+          "mmmmDa (Ban Levačić)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270327": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "kak da untar aggregator controllera procitam ovaj unit?\n\nkad odem na http://localhost:8083/application/default ovo vidim:\n\n![](assets/2022-01-13/00014.png)\n\nOvo mi je radilo kad sam citao iz application.properties (onaj dio bez Config servera):\n\n@Value(\"${unit}\")\n\nprivate String unit;",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270343": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "tj radi mi, ali moram zaustavit mikroservis i ponovno pokrenut (iako imam onaj refreshScope)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270353": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"NISAM ASISTENT\"#p270327 ako ti je taj application file onaj sta treba biti na config serveru, onda ga moras nazvati aggregator.yml/aggregator.properties, ako si nazva application aggregator, onda ce ti on automatski citati config file sa njegovim imenom sa servera",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)",
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270612": {
+      "poster": "Gussy (huba buba)",
+      "content": "u onoj njihovoj strukturi direktorija, jel onaj config samo predstavlja onaj git repozitorij ili sto bi to trebalo biti?",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270639": {
+      "poster": "Erpeg",
+      "content": "@\"laranotreallycroft\"#p268473 \n\nmeni to ne radi, probao sam nacin pod 2 i 3\n\nza oboje mi baca ovaj eror\n\n`java.io.FileNotFoundException: class path resource [readings.csv] cannot be resolved to absolute file path because it does not reside in the file system: jar:file:/opt/app.jar!/BOOT-INF/classes!/readings.csv`\n\nhalp pls",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270646": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Erpeg\"#p270639 nez, moje izgleda ovak i radilo mi je iz prve\n\n`\tResource resource = resourceLoader.getResource(\"classpath:readings.csv\");\n\nFile file = resource.getFile();`",
+      "votes": {
+        "upvoters": [
+          "vidraKida (Ζ ε ύ ς)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270650": {
+      "poster": "Erpeg",
+      "content": "@\"laranotreallycroft\"#p270646 \n\nmeni identicno izgleda\n\ni readings.csv ti je u src/main/resources folderu ?",
+      "votes": {
+        "upvoters": [
+          "vidraKida (Ζ ε ύ ς)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270662": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Erpeg\"#p270650 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270667": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"Erpeg\"#p270650 meni ti je bio isti problem, morao sam umjesto File file = resource.getFile() koristiti inputstream. msm da ti nakon  ovog getresource(..) mozes pozvat metodu getinputstream()\n\nnakon toga u konstruktoru od onog csvtobeanbuilder moras staviti new InputStreamReader umjesto FileReader",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270676": {
+      "poster": "Erpeg",
+      "content": "uspio sam to rjesit sa inputstream\n\nnapomena - sve funkcionalnosti rade bez dockera\n\nsad imam problem da se niti jedan servis ne zeli registrirat sa eurekom - error\n```2022-01-14 13:38:43.043  INFO 1 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT r\nequest for \"http://localhost:8761/eureka/apps/CONFIG-SERVER-MICROSERVICE/f7120f88df17:config-server-microservice:8084\": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.\nconn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for \"http://localhost:8761/eureka/\napps/CONFIG-SERVER-MICROSERVICE/f7120f88df17:config-server-microservice:8084\": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to\n localhost:8761 [localhost/127.0.0.1] failed: Connection refused\n```\ni aggregator baca ovaj error\n```org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'readingController' defined in URL [jar:file:/opt/app.jar!/BOOT-INF/classes!/hr/fer/tel/rassus/aggregatormicroservice/controllers/Readin\ngController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'readingService': Injection of autowire\nd dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'unit' in value \"${unit}\"\n```\n\njel moguce da je ovo povezano sa git repo ?\n\nak da, di da njega stavim haha\n\nitko imao slicnih problema ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "PepGuardiola"
+        ]
+      }
+    },
+    "270687": {
+      "poster": "RogerRoger",
+      "content": "@\"NISAM ASISTENT\"#p270343 stavi @RefreshScope iznad headera klase koja vuče tu vrijednost. Ne bi trebalo praviti razliku, ali meni je proradilo kad sam ga stavio iznad imena, a ispod anotacije @Service.\n\nOsim toga, trebaš dodati Spring Boot Actuator u dependencye, a u application.yml servisa za koji želiš da se osvježava stavi i `\nmanagement:\n\n  endpoints:\n\n    web:\n\n      exposure:\n\n        include: refresh`. Ni nakon ovoga ti se neće samo osvježavati, nego nakon svake promjene vrijednosti u repozitoriju moraš poslati prazni POST request na `http://<adresa-mikroservisa>:<port>/actuator/refresh`, a kao odgovor bi trebao dobiti imena vrijednosti koje su se promijenile. Ovo napraviš npr. koristeći Postman.",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)",
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270688": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Savjeti za nekoga tko kreće sutra i treba sjajno odradit ovaj labos u 2 dana? :)",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270698": {
+      "poster": "PepGuardiola",
+      "content": "Pokušavam spremati \"očitanja\" u bazu nakon što dođe zahtjev na aggregator-microservice. Na postman dođe odgovor kakav očekujem, taj rezultat se spremi u bazu, ali u bazi uvijek imam samo to zadnje očitanje. \n\nIma netko ideju u čemu je problem?",
+      "votes": {
+        "upvoters": [
+          "vidraKida (Ζ ε ύ ς)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270700": {
+      "poster": "vidraKida (Ζ ε ύ ς)",
+      "content": "@\"PepGuardiola\"#p270698 trebao bi prilikom pokretanja servisa sve procitat i onda sve spremit u bazu odmah?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270701": {
+      "poster": "PepGuardiola",
+      "content": "Na teamsu su rekli da nije bitno hoćemo li odmah sve spremat ili pojedino očitanje nakon što dođe zahtjev. Ja sam odlučio radit na ovaj drugi način, ali mi uvijek ostane u bazi samo to zadnje spremleno makar ne restartam microservise.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270706": {
+      "poster": "Erpeg",
+      "content": "@\"Erpeg\"#p270676 \n\nok, naci niti jedan servis unutar dockera ne moze vidjet drugi microservis, a tako se onda nemoze niti povezat na njega\n\njel netko imao ovaj problem ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270770": {
+      "poster": "Pleomax",
+      "content": "@\"Erpeg\"#p270706 \n\nprouci docker network i kao uri eureke stavi ovako: http://[ime_eureka_kontejnera]:8761/eureka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270789": {
+      "poster": "Erpeg",
+      "content": "@\"Pleomax\"#p270770\n\nuspio sam tako rijesit\n\nal sad imam problem da mi se agregator registrira na eureku prije temp i humidity i onda ih nemoze nac.\n\na u docker-compose imam dependency temp i humidity, tako da mi se temp i humidity pokrenu prije aggr, al se ovaj konstantno kod svakog pokretanja registrira prvi na eureku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270790": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Erpeg\"#p270789 ja samo ne pokrecem dohvat IP s agregatora dok u eureki ne vidim da su se svi registrirali. Nez jel se to opce moze drukcije rjesit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270798": {
+      "poster": "Erpeg",
+      "content": "@\"laranotreallycroft\"#p270790\n\nja isto, samo sto mi iz nekog razloga i dalje ne zeli dohvatit...\n\npazio sam na to kako definiram ime u docker.yml fajlu, al i dalje ne radi, kaze `java.lang.IllegalStateException: No instances available for temperature-microservice` iako ga ja vidim na eureka serveru",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270812": {
+      "poster": "Erpeg",
+      "content": "@\"Erpeg\"#p270798 \n\nono kad 3 dana samo zbog dockera debugiras ono sto inace radi...\n\nproblem je bio u restTemplate koji iz nekog razloga ne radi na dockeru... normalan http request radi, pa evo ako se netko bude mucio da zna\n\neee sad je problem sto mi ne zeli ucitavat git repozitorij 🥳😍",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "PepGuardiola",
+          "narval13068 (Dima)"
+        ]
+      }
+    },
+    "270825": {
+      "poster": "narval13068 (Dima)",
+      "content": "Kako spojiti da u dockeru mikroservisi (temperatura, humidity, aggregator) vide eureka server... van dockera je ok al unutra nikako nemogu napravit da se otkriju...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270828": {
+      "poster": "saitama",
+      "content": "Jel ima detekcije plagijata na ovom predmetu i kolko su jaki?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270836": {
+      "poster": "RogerRoger",
+      "content": "@\"saitama\"#p270828 ima, ne znam koliko su jaki, ali valjda ti je osjećaj srama jači :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "menace_master",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270839": {
+      "poster": "RogerRoger",
+      "content": "@\"Dima\"#p270825 stvori bridge mrežu: https://docs.docker.com/network/bridge/ i pokreni kontejnere na njoj, znači kad ideš pokrenuti (već stvoreni) kontejner naredbi docker run dodaš argument --net <ime-mreže>. Prethodno moraš stvoriti bridge mrežu, a možeš provjeriti je li stvorena koristeći docker network ls. Da saznaš koji su ti sve kontejneri trenutno spojeni na bridge, koristiš docker network inspect <ime-mreže>.\n\nAko si ovo napravio i svejedno ti ne radi (baci ti ono \"no known servers\" ili tako nešto), u konfiguracijskim YAML fajlovima za te servise stavi `eureka:\n\n  client:\n\n    serviceUrl:\n\n      defaultZone: http://<eurekin-kontejner>:<port>/eureka`.",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270848": {
+      "poster": "narval13068 (Dima)",
+      "content": "@\"RogerRoger\"#p270839 Nesto san slicno tomu ako ne i isto napravia na kraju, doda sam u compose pri pokretanju novu mrezu argumentom networks s odredjenim rasponom ip adresa i samo za svaki container zada koja ce biti ip adresa i to harkodira u spring boot app.properties, koliko je to dobro neznam al bmk neman zivaca vise za ovaj labos tako da adio hahah",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270930": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "Kak ste zamijenili ip:port s nazivom iz eureke?\n\nU aggregatoru se spajam ovak na temperature mikroservis:\n\n![](assets/2022-01-15/00023.png)\n\nProbao sam naivno s ovim http://temperature-microservice/temperature \n\nmislio sam da ce se nekak to mapirat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270966": {
+      "poster": "Cvija",
+      "content": "@\"huba buba\"#p270667 Jesi to ovako napravio? S tim da je readings.csv u resources mapi\n\n![](assets/2022-01-15/00028.png)\n\n\nI kako vam docker compose datoteke izgledaju, što tu krivo radim? \n>!docker-compose-services.yml\n```\nversion: \"3.9\"\nservices:\n        temperature-microservice:\n                image: temperature_1.0\n                ports:\n                        - \"8090:8090\"\n        humidity-microservice:\n                image: humidity_1.0\n                ports:\n                        - \"8091:8091\"\n        aggregate-microservice:\n                image: aggregate_1.0\n                ports:\n                        - \"8080:8080\"\n                depends_on:\n                        - temperature-microservice\n                        - humidity-microservice\nnetworks:\n        default:\n                external:\n                        name: \"microservices\"\n```\n\n>!docker-compose-infrastructure.yml\n```\nversion: \"3.9\"\nservices:\n        config-server-microservice:\n                image: config_1.0\n                ports:\n                        - \"8888:8888\"\n        eureka-server:\n                image: eureka_1.0\n                ports:\n                        - \"8761:8761\"\nnetworks:\n        default:\n                external:\n                        name: \"microservices\"\n```\ns tim da je mreža microservies stvorena s `docker network create microservices`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270967": {
+      "poster": "Cvija",
+      "content": "@\"NISAM ASISTENT\"#p270930 \n\nTu sam koristio rest template i getForObject kao što je lik iz ovog videa \n\nhttps://www.youtube.com/watch?v=GxLjcOE35oA&t=183s\n\n\nMeni nije radilo jer nisam restTemplate stavio da mi je `@Autowired`\n\nMožda možeš napraviti i pomoću HttpRequest, ali stvarno ne znam kako, ovako sam ja riješio",
+      "votes": {
+        "upvoters": [
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270971": {
+      "poster": "milanista",
+      "content": "Jel itko ima problem da mu config server ne može pronaći lokalni repozitorij nakon što ga se pokrene preko dockera?\n\nOvako je definiran u application file-u: spring.cloud.config.server.git.uri: file:///C:/configrepo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270972": {
+      "poster": "Cvija",
+      "content": "@\"milanista\"#p270971 da i stavio sam ga da bude na gitlabu i otad mi radi",
+      "votes": {
+        "upvoters": [
+          "milanista"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270987": {
+      "poster": "vidraKida (Ζ ε ύ ς)",
+      "content": "@\"laranotreallycroft\"#p270790 Daj mi reci, sada se jebem s aggregatorom jos samo. Kako mogu dohvatit sve ip adrese, jer ja sam napravio kao u ovom videu dole od lika i ne funkcionira mi na dockeru.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270993": {
+      "poster": "PiqueBlinders (zisku)",
+      "content": "@\"Cvija\"#p270966 jel ti proradilo? jedina razlika mi je da imam i network parametar u svakom od servisa.\n\nnetworks:\n\n   -microservices",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271006": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Ζ ε ύ ς\"#p270987 \n\n```\n\t@Autowired\n\tDiscoveryClient discoveryClient;`\n\n\n> List<ServiceInstance> list = discoveryClient.getInstances(\"TEMPERATURE-MICROSERVICE\");\n> \t\tif (list != null && list.size() > 0) {\n> \t\t\tServiceInstance service1 = list.get(0);\n> \t\t\ttempUri = URI.create(service1.getUri() + \"/getTemperature\");\n> \t\t}\n\n`\nspring.application.name=HUMIDITY-MICROSERVICE\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271018": {
+      "poster": "Cvija",
+      "content": "@\"zisku\"#p270993 proradilo mi je ovako kako sam napisao, ali mi aggregate mikroservis ne očita config",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271022": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "@\"Cvija\"#p271018 jel ti baca ono da ne moze ucitat bean?\n\n`Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'unit' in value \"${unit}\"`\n\nOvak sam ucitavao prije dockera (i radilo je), sad mi s dockerom ne radi to\n\n![](assets/2022-01-16/00003.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271024": {
+      "poster": "Cvija",
+      "content": "@\"NISAM ASISTENT\"#p271022 Nope, baca mi ovo\n\n>![]\n```\norg.springframework.cloud.config.client.ConfigClientFailFastException: Could not locate PropertySource and the resource is not optional, failing\n        at org.springframework.cloud.config.client.ConfigServerConfigDataLoader.doLoad(ConfigServerConfigDataLoader.java:193)\n```\nOnda malo ispod mi baca ovo\n```\nCaused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for \"http://localhost:8888/application/default\": Connection refused (Conne\nction refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)\n        at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)\n```\n\nA stvar je da naravno, izvan kontejnera mogu učitati sve i ovo je dostupno http://localhost:8888/application/default\n\n\nA gdje ti se nalazi git repozitorij s kojeg čitaš konfiguraciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271025": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"Cvija\"#p271024 jel ti radi spajanje servisa na eureku?",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271026": {
+      "poster": "Cvija",
+      "content": "@\"huba buba\"#p271025 Temperature i Humidity se spoje da, eureka ih očita",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271027": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"Cvija\"#p271026 kad pokrenes taj config docker container, jel mozes dobiti taj .yml file kad upises http://localhost:8888/application/default",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271028": {
+      "poster": "Cvija",
+      "content": "@\"huba buba\"#p271027 Mogu. dobijem koji je unit i sve\n\nOvako izgleda\n```\n{\"name\":\"application\",\"profiles\":[\"default\"],\"label\":null,\"version\":\"3b6b307e8d18706bd216df2069b447cfdd710275\",\"state\":null,\"propertySources\":[{\"name\":\"https://gitlab.com/username/config.git/application.yml\",\"source\":{\"unit\":\"C\"}}]}\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271029": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"Cvija\"#p271028 mislio sam da je problem sto se spajas na localhost:8888 u docker containeru, a docker containeri dobiju vlastite ip adrese unutar te microservices mreze, ali ti radi spajanje na eureku pa mi nije nista vise jasno",
+      "votes": {
+        "upvoters": [
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271030": {
+      "poster": "Cvija",
+      "content": "@\"huba buba\"#p271029 Vidiš, kad pokrenem bilo što u kontejneru, to mogu otvoriti s localhost, valjda je to zato što sam exposao portove\n\nma ne znam ni ja više, samo da mi je završiti ovaj labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271031": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "@\"Cvija\"#p271024 \n\nna gitlabu\n\nti radis request na http://localhost:8888/application/default i onda parsiras unit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271032": {
+      "poster": "Cvija",
+      "content": "@\"NISAM ASISTENT\"#p271031 Kako misliš parsiraš unit?\n\nKoliko sam ja to sve shvatio, taj application.yml koji se nalazi na gitu se pročita i taj unit je automatski parsiran, to je ista fora kao da u lokalnom application.yml postoji unit varijabla",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271034": {
+      "poster": "Gussy (huba buba)",
+      "content": "@\"Cvija\"#p271030 mislim da ces morati namjestiti statičku ip adresu u docker-compose fileu za taj config server i onda izmijeniti u kodu od aggregatora da se umjesto na localhost:8888 spaja na tu staticku ip adresu\n\nhttps://docs.docker.com/compose/compose-file/compose-file-v2/#ipv4_address-ipv6_address\n\nonda neces morati stvarati network  zasebnom naredbom van docker-compose filea",
+      "votes": {
+        "upvoters": [
+          "Cvija",
+          "atp0lar (‮ 🏳️‍⚧️‍⃠ 🏳️‍🌈⃠ 🇮🇱⃠at⁭p⁩⁫0⁮lar)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271057": {
+      "poster": "Nocna_smjena",
+      "content": "Jel treba predat iako ne namjeravam rijesit labos? I dal trebam demonstrirat (iako neznam sto imam za demonstrirat)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271062": {
+      "poster": "Cvija",
+      "content": "@\"Nocna_smjena\"#p271057 Ne trebaš ni jedno ni drugo, tako sam napravio za drugi labos i samo dobio nula bodova",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271077": {
+      "poster": "vidraKida (Ζ ε ύ ς)",
+      "content": "@\"laranotreallycroft\"#p271006 di si to stavio u koji dio projeka?\n\nu kontroler ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271085": {
+      "poster": "Cvija",
+      "content": "@\"huba buba\"#p271034 znači li to da moram za svaki servis napraviti statičku ip adresu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271117": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Ζ ε ύ ς\"#p271077 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271141": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Koji su mi sve dependecyiji za senzore?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271165": {
+      "poster": "Cvija",
+      "content": "@\"StudenticaSaFera\"#p271141 Ovako mi izgleda `build.gradle` za Temperature-microservice, slično je i za humidity, ako to pitaš\n\n>![]\n```\nplugins {\n    id 'org.springframework.boot' version '2.5.5'\n    id 'io.spring.dependency-management' version '1.0.11.RELEASE'\n    id 'java'\n    id 'eclipse'\n    id 'idea'\n}\ngroup = 'ime_paketa'\nversion = '0.0.1-SNAPSHOT'\nsourceCompatibility = '11'\nconfigurations {\n    compileOnly {\n        extendsFrom annotationProcessor\n    }\n}\nrepositories {\n    mavenCentral()\n}\n// Za Eureku\next {\n    set('springCloudVersion', \"2021.0.0\")\n}\ndependencies {\n    implementation 'org.springframework.boot:spring-boot-starter-actuator'\n    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'\n    implementation 'org.springframework.boot:spring-boot-starter-web'\n    implementation 'com.opencsv:opencsv:5.5.2'\n    implementation 'org.springframework.boot:spring-boot-starter-hateoas'\n    developmentOnly 'org.springframework.boot:spring-boot-devtools'\n    runtimeOnly 'com.h2database:h2'\n    testImplementation 'org.springframework.boot:spring-boot-starter-test'\n    // Eureka client\n    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'\n    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'\n}\n// za Eureku\ndependencyManagement {\n    imports {\n        mavenBom \"org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}\"\n    }\n}\ntest {\n    useJUnitPlatform()\n}\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271167": {
+      "poster": "Cvija",
+      "content": "@\"Cvija\"#p271085 Odgovor je da treba, nakon što sam to napravio, proradilo je sve.. za referencu:\n\nhttps://stackoverflow.com/questions/39493490/provide-static-ip-to-docker-containers-via-docker-compose\n\nhvala kolegi @\"Dima\"#770",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271176": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "@\"Cvija\"#p271165 Hvala tii",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271180": {
+      "poster": "sphera",
+      "content": "van dockera, jel bih trebao moći iz recimo browsera dobiti http://microservis-aggregate/reading/ jer mi ne prolazi, ali s http://localhost:port/reading/ prolazi a resttemplate u aggreagate koristi eureka imena? jel onda mi radi jer aggregate interno u kontroleru koristi eureku ali na browseru ne prolazi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271181": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Koja mi točno funkcionalnost eureke treba na strani senzora?\n\nSamo da sazna IP adresu aggregatora ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271184": {
+      "poster": "vidraKida (Ζ ε ύ ς)",
+      "content": "imam jeben problem, a taj je da \n\n@\"laranotreallycroft\"#p271006 \n\novaj kôd prepozna adrese i sve i onda kada idem slat zahtjeve dobijem neke pizdarije preko dockera tipa \n\nhttp://172.23.0.4:8081\n\nto je na aggregatoru, ima li itko ideju u cemu je problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271218": {
+      "poster": "Cvija",
+      "content": "@\"sphera\"#p271180 tako je, na browseru ne bi trebalo proći",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271219": {
+      "poster": "Cvija",
+      "content": "@\"StudenticaSaFera\"#p271181 da agregator sazna adrese temperature i humidity, da ih nemaš hardkodirano u kodu\n\nZbog toga treba eureka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271226": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Znamo li kada usmeno odgovaramo ovaj labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271240": {
+      "poster": "RogerRoger",
+      "content": "@\"Cvija\"#p271167 možeš na svaki referirati preko imena docker kontejnera, kao `http://<ime-kontejnera>:<exposeani-port>`\n\nTako sam ja napravio povezivanje s konfiguracijskim i Eureka serverom, a agregator ostale mikroservise zove preko Eureke",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271305": {
+      "poster": "vidraKida (Ζ ε ύ ς)",
+      "content": "jel jos nekog muci predaja? meni je projekt tezak 600 MB nemrem predat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271311": {
+      "poster": "Cvija",
+      "content": "@\"Ζ ε ύ ς\"#p271305 jesi napravio gradle clean i izbrisao .gradle?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271313": {
+      "poster": "Cvija",
+      "content": "@\"RogerRoger\"#p271240 jesi povezao eureku i config?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271318": {
+      "poster": "vidraKida (Ζ ε ύ ς)",
+      "content": "@\"Cvija\"#p271311 ma skuzio sam da ne trebam i .jar datoteke slat i sve pa mi je bilo manje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271372": {
+      "poster": "RogerRoger",
+      "content": "@\"Cvija\"#p271313 kasnim, ali ja jesam - meni je Eureka server i config klijent. Pitao sam asistenta i rekao je da nisu tako zamislili labos, ali i da nije greška, samo onda treba srediti da se Eureka uvijek pokrene nakon config servera.",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272012": {
+      "poster": "PepGuardiola",
+      "content": "Može netko podijelit iskustvo sa današnjeg usmenog? 😄",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272042": {
+      "poster": "RogerRoger",
+      "content": "@\"PepGuardiola\"#p272012 nije strašno. Pokaži gdje ti humidity i temperature učitavaju mjerenja, kako agregator pristupa njihovim mjerenjima, pokaži dohvaćanje mjerenja s agregatora, promijeni mjernu jedinicu u configu i pokaži da se promijenila na mikroservisu.",
+      "votes": {
+        "upvoters": [
+          "PepGuardiola"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

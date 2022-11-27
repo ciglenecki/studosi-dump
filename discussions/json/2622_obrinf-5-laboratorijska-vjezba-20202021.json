@@ -1,0 +1,184 @@
+{
+  "title": "[OBRINF] 5. laboratorijska vježba - 2020/2021",
+  "creator": "bodNaUvidima",
+  "slug": "obrinf-5-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Obrada informacija",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "116491": {
+      "poster": "bodNaUvidima",
+      "content": "Kad istreniram mrežu i ubacim onaj nezavisni dataset znamenki od kojeg treba napravit .csv datoteku, zna netko kako da izvučem ovaj broj koji se pojavi iz ovog objekta?\n\ntensor([1], device='cuda:0')\n\ntensor([2], device='cuda:0')\n\ntensor([5], device='cuda:0')\n\nTaj 1, 2, 5 što se pojavljuju su zapravo te znamenke na slici.\n\nEdit: nvm našao doslovno odmah nakon postavljana ove teme :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120164": {
+      "poster": "mrkva",
+      "content": "Na koji nacin se nadjacavaju init i forward metode u 1.f zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120172": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@mrkva#120164 Samo ih napišeš isponova u novoj klasi\n\n```\nclass A(nn.Module):\n    def forward(x):\n        # nešto\n\nclass B(A):\n    def forward(x):\n        # nešto drugo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120418": {
+      "poster": "mrkva",
+      "content": "Ma mislim na to kako da implemetiram te metode za svaku od navedenih modela? Koje sve slojeve ima koji model? Postoji li negdje to objasnjeno jer mi nije bas jasno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120427": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@mrkva#120418 pa pod f) sve piše koliko vidim, u detalje kakva je arhitektura",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122504": {
+      "poster": "bodNaUvidima",
+      "content": "Ima netko prijedlog koje materijale proći za rješavanje drugog dijela labosa sa pronalaženjem bounding boxa? Prvi sam rješio uspješno, ovaj drugi nemam blage veze kako započeti uopće.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122506": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@bodNaUvidima#122504 Nemoj misliti da ti je to nešto posebno, bounding boxevi ti predstavljaju samo dodatni 4D izlaz na ovih 10 klasifikacija. U smislu arhitekture, to je obično samo još 4 channela (ili 4 neurona kod Linear sloja), iako se u praksi box regresor smatra odvojenom mrežom, ali to je samo da je malo lakše baratati komponentama.\n\nA za sve više od toga možda ti [ovo](https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html) pomogne, iako sumnjam da radite FRCNN ili segmentaciju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122987": {
+      "poster": "mrkva",
+      "content": "Moze li netko staviti svoj kod za nadjacavanje init i forward metoda za bilo koji od modela? To bi mi punoo pomoglo jer mi i dalje nije jasno na koji nacin treba posloziti slojeve u kodu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123085": {
+      "poster": "bodNaUvidima",
+      "content": "Netko imao problem sa velicinom tensora kod bounding boxa i da ga je rješio?\n\nU liniji gdje imam \"position[0] - x1\", \n\ngdje mi je x1 onaj x1.squeeze() iz return clsf, x1.squeeze(), y1.squeeze(), x2.squeeze(), y2.squeeze(),\n\njavlja se error: The size of tensor a (128) must match the size of tensor b (2097152) at non-singleton dimension 0\n\nshape tih tensora mi je ovo: \n\ntorch.Size([128])\n\ntorch.Size([2097152])",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123125": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@bodNaUvidima#123085 Riješiš ga tako da podesiš veličine tenzora :D\n\nČini mi se da imaš flattenan 128 x 128 x 128 tenzor pa vidi dalje što ćeš s tom informacijom, greška je svakako s korisničke strane, a ne u Pythonu/PyTorchu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123951": {
+      "poster": "at5611",
+      "content": "Je li se može predat ovaj lab ali samo sa 1. rješenin zadatkon, na stranici predmeta piše da je preduvjet uspješno napravljene sve laboratorijske vježbe ali da nema bodovnog praga, pa sad ne znan šta točno smatraju uspješno napravljen labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124080": {
+      "poster": "jlo",
+      "content": "@at5611#123951 Možeš predati i prazan. Profesor je potvrdio da će se dobiti 0 bodova, ali se na završni i ostale ispite može izaći normalno.",
+      "votes": {
+        "upvoters": [
+          "at5611",
+          "bodNaUvidima"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124352": {
+      "poster": "mrki",
+      "content": "Jel netko voljan podijeliti odgovore 1-8 s Moodlea?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

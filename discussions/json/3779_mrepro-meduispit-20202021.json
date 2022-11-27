@@ -1,0 +1,94 @@
+{
+  "title": "[MREPRO] Međuispit - 2020/2021",
+  "creator": "Mariox",
+  "slug": "mrepro-meduispit-20202021",
+  "tags": [
+    "FER",
+    "Mrežno programiranje",
+    "Ispiti"
+  ],
+  "posts": {
+    "175210": {
+      "poster": "Mariox",
+      "content": "jel zna netko kako dinamički napraviti port za ovu TCP konekciju kod servera?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175239": {
+      "poster": "Mariox",
+      "content": "@Mariox#175210 \n\nmeni radi s hardkodiranim TCP portom \"80\", ali se uvijek koristi taj isti. A koliko sam skuzio po uputama, treba za svaku novu tcp konekciju novi port. Moj zadatak je \"zamisli\" server, u slučaju da ima više grupa",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175287": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@Mariox#175239 ja sam stigao napraviti samo do toga, kad sam krenuo radit to s TCP dijelom skuzio sam da je 10:55 vec, pa sam samo pocistio sto sam krenuo pisat i predo 😆",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175296": {
+      "poster": "Mariox",
+      "content": "@ruza0001#175287 nisam ni ja stigao, ali me zanima riješenje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175339": {
+      "poster": "jobi (azex)",
+      "content": "@Mariox#175296 \n\n`getaddrinfo(NULL,\"0\",...);\n\n...\n\ngetsockname(..., sin, ...);\n\nport = sin.sin_port;`\n\novako sam ja nekako, getaddr dodijeli neki port, a s getsockname ga dohvatimo",
+      "votes": {
+        "upvoters": [
+          "Mariox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "175348": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@Mariox#175296 nadam se da ce nam dat neka rjesenja da vidimo kako je to trebalo izgledati, da nesto naucimo barem iz ispita hahaha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

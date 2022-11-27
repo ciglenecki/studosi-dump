@@ -1,0 +1,327 @@
+{
+  "title": "[KIK] 1. laboratorijska vježba - 2021/2022",
+  "creator": "Bucc (Olive Oil)",
+  "slug": "kik-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Kriptografija i kriptoanaliza",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "248711": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "što oni misle pod \"AES128...trebaju ostvariti uz ECB i način kriptiranja CTR\"? ECB je isto način kriptiranja (blok po blok se kriptiraju podaci), a CTR isto uzima blok kojeg kriptira (Nonce + Counter) i xora sa čistim tekstom (kriptiranim u dekripciji). Bi ja trebao prvo kriptirat čisti tekst (ECB) pa zatim xorat to s kriptiranim Nonce + Counterom (CTR)? To mi se ne čini da je stvar. Majka isusova, dobe sam CTR",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248729": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Olive Oil\"#p248711 Trebaš omogućiti oba moda enkripcije, ne nužno jedan za drugim",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248784": {
+      "poster": "BillIK",
+      "content": "Gdje se prijavljujemo za labos? Na Ferku ne vidim nigdje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250095": {
+      "poster": "BillIK",
+      "content": "smijemo li u labosu koristiti gotove pakete kao što su crypto.cipher koje imaju implementacije AES-a i potrebnih metoda ili moramo implementirati sve samostalno?",
+      "votes": {
+        "upvoters": [
+          "dinosaur1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250102": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"BillIK\"#p250095 sve samostalno, ovako bi imao deset linija koda",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250103": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"BillIK\"#p250095 Labos 1 moraš sam, labos 2 možeš i s knjižnicama, tako piše u uputama, tako je bilo i na NOS-u prije nego što je ovaj dio gradiva odvojen u ovaj predmet (2. zadatak je identičan). Čak su i prepisali grešku koju su prije godinu i pol rekli da će ispraviti: \n\n> najmanje načina kriptiranja (ECB, CBC, OFB, CFB, CTR, ...).\n\n(između najmanje i načina treba biti **2**)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250108": {
+      "poster": "BillIK",
+      "content": "@\"Olive Oil\"#p250102 \n\nu prezentaciji piše: _Programsko ostvarenje algoritma AES\n\n• NE preporuča se vlastita programska implementacija zbog mogućih i\n\nvrlo vjerojatnih propusta\n\n• koristiti raspoloživa i provjerena programska ostvarenja poput:\n\n– Openssl:\n\n• https://github.com/openssl/openssl/blob/master/crypto/aes/aes_x86core.c_\n\npa zbog toga pitam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Nocna_smjena"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250121": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"BDSMićo\"#p250103 kaj me grraš, ovo je tema za prvi labos gdje piše da se treba programski ostvarit AES. istu stvar smo rekli za prvi labos",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250124": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Olive Oil\"#p250121 Pardon krivi klik",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250180": {
+      "poster": "dinosaur1",
+      "content": "Jel ima ko preporuku kako najlakse implementirat funkciju MixColumns(), specificnije mnozenje u 'GF(28\n\n) (denoted by •)' ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250188": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"dinosaur1\"#p250180 najlakše ti je koristiti [lookup tables](https://en.wikipedia.org/wiki/Rijndael_MixColumns#Galois_Multiplication_lookup_tables). staviš svaki multiply by 2, 3, 9 itd svaki u zasebno polje pa za vrijednost gdje se množi staviš gf^na \\[vrijednost u matrici]. recimo vrijednost u i-tom stupcu i j-tom retku je gf^2[a] ^ gf^3 \\[b] \\^ c \\^ d i dalje za sljedeći se pomiću u desno za jedan a ^ gf^2 \\[b] ^ gf^3 \\[c] ^ d itd.",
+      "votes": {
+        "upvoters": [
+          "dinosaur1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250224": {
+      "poster": "dinosaur1",
+      "content": "@\"Olive Oil\"#p250188 ![](assets/2021-11-05/00018.png)\n\nznaci recimo za s'(0,c) sa slike, uzmem S(0,c) pretvorim ga u dekadski broj i vidim u polju (za mnozenje s 2) na indexu tog dobivenog broja vrijednost...i onda to sve skupa opet pretvorim u HEX i xor-am s ovom drugm zagradom itd..?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "250228": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@\"dinosaur1\"#p250224 da tako je samo nemoj pretvarat iz hex -> dec -> hex neg samo pogledaš taj hex u polju, 0x34 -> gf[0x34] -> 0x nešto\n\nradio sam u c-u\n\n![](assets/2021-11-05/00019.png)",
+      "votes": {
+        "upvoters": [
+          "dinosaur1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251731": {
+      "poster": "Fikalo",
+      "content": "Jeste vi gledali po onom dokumentu za dokumentaciju koja nam je dana ili ima negdi drugdi to sve objasnjeno u kracim crtama? I koliko otprilike treba za ovaj labos vremena",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251770": {
+      "poster": "cowboy",
+      "content": "Jeli trebamo ostvariti i kriptiranje i dekriptiranje ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "251914": {
+      "poster": "Nocna_smjena",
+      "content": "@\"Fikalo\"#p251731 ja sam iz sluzbenih dokumentacija NIST-a napravio kod. Dost tie i wikipedija ako razumijes kaj se tam zbiva.\n\n@\"cowboy\"#p251770 pa men nekako intuitivno da treba i enkripcija i dekripcija. Koja je uopce onda svrha kriptografije?",
+      "votes": {
+        "upvoters": [
+          "Fikalo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253421": {
+      "poster": "Fikalo",
+      "content": "Na stranicama labosa pise da moramo zakljucati kod na ferku 24 sata prije labosa. Da li se to odnosi na rok iz obavijesti za prijavu i odjavu grupa koji je 15. u 10h pa bi morali zakljucati kod do 14. do 10h, ili na sam dan koji u burzi grupa pise da je 17. pa bi rok bio 16.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253432": {
+      "poster": "tomekbeli420",
+      "content": "@\"Fikalo\"#p253421 \n\nOvo drugo. Ako ti je termin labosa npr 17.11. u 13:00 sati, to znači da moraš uploadati i zaključati kod do 16.11. u 13:00\n\nAli neće te penalizirati čak i ako prekršiš taj rok. Na termin se pojaviš sa kodom spremnim u IDE-u i sve 5.\n\nOn topic\n\nJa sam imao u četvrtak, evo kak je bilo\n\nPrvo me pitao da mu pokrenem (nije definirano al ja sam složio neki jednostavni main program koji od korisnika sa tipkovnice traži unos šta i kako hoće pa onda na ekran/standardni izlaz ispisuje rezultate) neki testni primjer kriptiranja u bilo kojem načinu rada pa da to što sam dobio dekriptiram. Pitao me kako sam riješio padding. Onda me za ECB pitao zašto je nesiguran te je tražio da kriptiram dva jasna teksta ali da se razlikuju negdje na početku, pa onda usporediš kriptate (trebaju se razlikovati samo u prvom 16-bajtnom bloku). Onda me je tražio da mu otvorim kod u AES-u: petlju sa rundama i pitao od onih funkcija (zamijeni znakove, posmakni retke, pomiješaj stupce) koje postižu difuziju a koje konfuziju te šta ta dva pojma znače. Kako sam imao za implementirati CFB način rada, pitao me kako se kriptira u tom načinu rada.\n\nOverall chill iskustvo, taj asistent koji me je pitao ne znam kak se zove, al to je onaj dečko što dolazi kad se pišu blicevi. Osim njega na tom terminu ispitivao je Paradžik.",
+      "votes": {
+        "upvoters": [
+          "Urmum (mamaRu)",
+          "dinosaur1",
+          "fraki",
+          "gladiator",
+          "lucylu",
+          "plavisnajper",
+          "wolfs_123 (wLkR-74159)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253748": {
+      "poster": "Heklijo (Geralt of Rivia)",
+      "content": "Koliko je vremenski za napisat ovaj labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253895": {
+      "poster": "Zk6dO73 (burw0r)",
+      "content": "@\"tomekbeli420\"#p253432 \n\ncek kak da onda \"prijavim\" termin za ovaj tjedan. Odnosno sto trebam napravit do ovog vremena navedenog u obavijesti na ferwebu ako planiram uploudati i zakljucati labos tek prije termina koji je npr u petak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253930": {
+      "poster": "Fikalo",
+      "content": "@\"burw0r\"#p253895 Ako se nevaram, u ferku u brzi grupa moras prijavit termin",
+      "votes": {
+        "upvoters": [
+          "Zk6dO73 (burw0r)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "253993": {
+      "poster": "tomekbeli420",
+      "content": "@\"burw0r\"#p253895\n\nOdi na ferko, navigiraj do\n\nPočetna stranica -> Kriptografija i kriptoanaliza -> BURZA GRUPA -> Lab 2\n\nI sad ovdje kod **\"Direktni ulazak u grupu\"** izaberi neki od dostupnih termina, stisni submit\n\nOnda bi ti se ova trakica sa žutom oznakom trebala ažurirati na primjerice \"Vaša grupa je **2021-11-17 14:45 15:30 A209**\" (prije je bilo Vaša grupa je Neraspoređeni)\n\nEvo za primjer ovog konkretnog termina, onda moraš uploadati i zaključati svoje rješenje (pod KOMPONENTE KOLEGIJA -> Domaće zadaće ->1. - Kriptografski algoritmi -> Predaja rješenja) do 16.11.2021. 14:45 (dakle 24 sata prije termina). Al kao što sam rekao prije, ako slučajno i prekršiš taj 24 satni rok, neće ti nitko ništa.",
+      "votes": {
+        "upvoters": [
+          "Fikalo",
+          "Zk6dO73 (burw0r)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

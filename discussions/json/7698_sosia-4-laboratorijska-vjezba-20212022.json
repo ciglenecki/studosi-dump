@@ -1,0 +1,330 @@
+{
+  "title": "[SOSIA] 4. laboratorijska vježba - 2021/2022",
+  "creator": "boogie_woogie (nika_1999)",
+  "slug": "sosia-4-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Sigurnost operacijskih sustava i aplikacija",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "304045": {
+      "poster": "boogie_woogie (nika_1999)",
+      "content": "S kojim URL-om pristupate OWASP mutillidae nakon što ju pokrenete s Dockerom i jeste li imali problem da vam localhost promet ne ide preko proxya pa se uopće ne vidi u OWASP ZAP konzoli?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304105": {
+      "poster": "Edrudo",
+      "content": "Trebalo bit biti 127.0.0.1:80\n\nTrebas podesiti Local proxies unutar OWASP ZAPa i proxy na pregledniku na iste parametre i tjt",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304219": {
+      "poster": "indythedog",
+      "content": "@\"nika_1999\"#p304045 Ja sam imao taj problem na Windowsu + Chromeu, ali kad sam se prebacio na Firefox i slijedio upute za Firefox [odavde](https://www.zaproxy.org/docs/desktop/start/proxies/), proradilo mi je\n\nPretpostavljam da Chrome ima neku internu zabranu da se proxya localhost koju Windows proxy server ne može zaobići",
+      "votes": {
+        "upvoters": [
+          "boogie_woogie (nika_1999)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304255": {
+      "poster": "VelikiMarko",
+      "content": "Jel zna na što se točno misli kad oni kažu na tri različite vrste zahtjeva? Jel se to odnosi na to jel je GET zahtjev, POST zahtjev ili neki treci, ili jel misle na tri različite stranice u Mutillidae?",
+      "votes": {
+        "upvoters": [
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304399": {
+      "poster": "Gocc (***)",
+      "content": "koliko ima posla za labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304411": {
+      "poster": "faboche (him)",
+      "content": "@\"***\"#p304399 Mislim da sam labos nema puno posla, veći problem je osposobit okolinu. Ja već pola dana gubim na virtualke i docker. Ako netko ima fool-proof tutorial za postavit sve, bio bih vrlo zahvalan.",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304415": {
+      "poster": "faboche (him)",
+      "content": "Ako netko još nije počeo ili ima problema kao što sam imao ja, evo upute kako je meni proradila okolina s Ubuntu virtualkom. Uvjet je da imate VirtualBox instaliran.\n\n1) Pratite ove [upute](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview) za stvaranje nove virtualke, memory sam stavio 2048MB, a storage sam stavio fixed 20GB (u settings/display u virtualki mozete postaviti rezoluciju)\n\n2) Kada pokrenete virtualku, u terminalu pokrenite `java` i pokrenite prvu naredbu koju vam ponudi\n\n3) Pratite ove [upute](https://www.baeldung.com/java-home-on-windows-7-8-10-mac-os-x-linux) za postaviti JAVA_HOME na ispravnu putanju\n\n4) Pokrenite `sudo apt install docker.io`\n\n5) Pokrenite `sudo apt install docker-compose`\n\n6) Pokrenite `sudo apt-get update && sudo apt-get dist-upgrade`\n\n7) Dohvatite Linux Installer za ZAP proxy s ovog [linka](https://www.zaproxy.org/download/)\n\n8) U Downloads imate dohvacenu shell skriptu, preimenujte je u zap.sh da vam je jednostavnije\n\n9) Pozicionirajte se u Downloads direktorij i pokrenite `chmod +x zap.sh`\n\n10) Pokrenite `sudo ./zap.sh`\n\n11) Pratite upute za instalaciju i otkrijte gdje vam je instalacijski folder, meni je `/opt/zaproxy`\n\n12) Pozicionirajte se u taj direktorij i pokrenite alat s `sudo ./zap.sh`\n\n13) Pratite ove [upute](https://www.youtube.com/watch?v=9RH4l8ff-yg) za dohvaćanje i pokretanje ranjive aplikacije\n\n14) App bi vam trebao biti dostupan na 127.0.0.1",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304424": {
+      "poster": "faboche (him)",
+      "content": "@\"indythedog\"#p304219 Ja imam problem da mi javi `Unable to listen on this address and port: 127.0.0.1:80` iako je pokrenut app. Kad u Quick start probam manual explore, u logovima mi bude error da selenium ne može pronaći bin od firefoxa u pathu, a dodao sam ga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304432": {
+      "poster": "indythedog",
+      "content": "@\"faboche\"#p304424 Hm čudno, ja nisam imao taj problem\n\nMožda je do dockera, ja sam ga imao instaliranog od prije pa mi nije pravio probleme, ne znam što bi drugo moglo biti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304433": {
+      "poster": "indythedog",
+      "content": "Jeste na kraju za ovo \"mora se koristiti najmanje 3 različite vrste zahtjeva\" koristili baš 1 GET, 1 POST 1 npr. DELTE zahtjev, ili ste samo koristili različite URL-ove Multidae aplikacije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304434": {
+      "poster": "indythedog",
+      "content": "@\"indythedog\"#p304433 odgovorio mi je asistent na mail, kaže da je OK testirati 3 različita URL-a",
+      "votes": {
+        "upvoters": [
+          "VelikiMarko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304435": {
+      "poster": "VelikiMarko",
+      "content": "@\"indythedog\"#p304433 Na kraju sam koristio samo različite URL-ove aplikacije. Čini mi se bedastim da koristimo baš različite metode.",
+      "votes": {
+        "upvoters": [
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304438": {
+      "poster": "Marko",
+      "content": "Kad kazete da ste koristili različite URL-ove dal mislite na to da imate sve isto samo različite query parametre? Meni sve ide na index.php samo mi je drugačiji \"page\" parametar.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304457": {
+      "poster": "gladiator",
+      "content": "@\"faboche\"#p304415 \n\n> Pokrenite sudo apt-get update && sudo apt-get dist-upgrade\n\nnemojte",
+      "votes": {
+        "upvoters": [
+          "faboche (him)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304466": {
+      "poster": "viliml",
+      "content": "Koje ste vi zahtjeve koristili? Meni ne pada na pamet što ima smisla fuzzati osim SQL injekcije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304480": {
+      "poster": "indythedog",
+      "content": "@\"Marko\"#p304438 Ma da, npr. https://localhost/index.php?page=user-info.php je jedan URL, a https://localhost/index.php?page=login.php drugi url itd.\n\n@\"viliml\"#p304466 Imaš još par tipova injectiona (log injection, command injection) u aplikaciji, buffer overflow za koji također postoji opcija u ZAP-u, XSS, CBC-bit flipping itd.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304481": {
+      "poster": "Gocc (***)",
+      "content": "@\"indythedog\"#p304480 a kako se detektiraju ti ostali u logovima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304482": {
+      "poster": "indythedog",
+      "content": "@\"***\"#p304481 Misliš na ostale ranjivosti ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304484": {
+      "poster": "Gocc (***)",
+      "content": "@\"indythedog\"#p304482 pa da, ove sql injection uspijem naći erorr vezan za sql, probala sam neka pretraživanja erorra kod ovih pa neuspješno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304487": {
+      "poster": "indythedog",
+      "content": "@\"***\"#p304484 Pogledaj na internetu kako exploitati ranjivosti unutar aplikacije, ovo je poznata aplikacija i za svaku od ranjivosti imaš primjer što trebaš napraviti da bi iskoristila ranjivost. Jednom kad znaš ručno iskoristiti ranjivost, onda ti nije problem složiti ručno par primjera i pokrenuti testiranje - npr. skužiš da je za command injection potrebno dodati ; nakon originalnog zahtjeva, pa složiš payload u kojem ti je par zahtjeva sa ; i par bez toga reda radi. Alternativno, za neke od ranjivosti imaš već predefinirane payloadove i samo pokreneš testiranje (npr. za XSS samo odabereš XSS 101 payload nad pravim poljem i tjt). Najbitnije ti je skužiti koji parametar moraš fuzzati da iskoristiš ranjivost, te da skužiš kako ručno iskoristiti ranjivost, jednom kad to imaš nije problem složiti test caseove u fuzzeru.",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304488": {
+      "poster": "Gocc (***)",
+      "content": "@\"indythedog\"#p304487 hvala ti na objašnjenju, ali recimo pokušala sam to s XSS, ali kako utvrditi u onim logovima od fuzzinga da se dogodio xss napad recimo. Po njihovim uputama to bi u searchu trebali naći, kao npr. kod sql injectiona u search upišem \"sql syntax\" i skuži se da je moguć sql napad i onda bi rekla da je to dovoljno za detekciju, ali što za xss\n\njer u 6.zadatku traži:\n\n\"Na temelju dobivenih logova je potrebno pronaći i protumačiti primjere nepoželjnog\n\nponašanja web aplikacije i predložiti moguće popravke tih ponašanja.\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304489": {
+      "poster": "indythedog",
+      "content": "@\"***\"#p304488 Da jako je naporno skužiti po tim logovima koji od parametara je uspio iskoristiti ranjivost, zato i kažem najlakše ti je prvo ručno skužiti što radi, i onda lako nađeš taj zahtjev u logovima i screenaš ga. Za XSS konkretno možeš iskoristiti onaj XSS 101 payload, i kad ga pokreneš fuzziranje, relodaj stranicu u browseru i vidjet ćeš da ti je napad uspio jer će ti početi prikazivati Javascript alertove kad se stranica učita (ako se radi o XSS-u na onoj stranici s blogovima). Onda lako po tome koji ti tekst alert prikazuje skužiš koij fuzz text je bio uspješan (npr. prikaže ti se alert sa tekstom 1, onda pronađeš fuzz zahtjev koji je imao <script>alert(1)</script> i to je taj.",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "304490": {
+      "poster": "faboche (him)",
+      "content": "@\"gladiator\"#p304457 Iskreno neznam sto ovo radi, nov sam s linuxom. Imao sam problem, stackoverflow je izbacio ovu naredbu kao rjesenje 🤷‍♂️",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

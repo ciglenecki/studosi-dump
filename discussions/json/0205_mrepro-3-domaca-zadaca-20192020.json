@@ -1,0 +1,200 @@
+{
+  "title": "[MREPRO] 3. domaća zadaća - 2019/2020",
+  "creator": "Gussy (huba buba)",
+  "slug": "mrepro-3-domaca-zadaca-20192020",
+  "tags": [
+    "FER",
+    "Mrežno programiranje",
+    "Zadaće"
+  ],
+  "posts": {
+    "6197": {
+      "poster": "Gussy (huba buba)",
+      "content": "Jel itko počeo raditi? Što mi znači onaj offset u poruci i kakvu ulogu radi taj network byte order? Jel to trebam provući kroz ntohs() prije korištenja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7188": {
+      "poster": "Cvija",
+      "content": "Kako znati da tcpserver nema prava za čitanje datoteke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7240": {
+      "poster": "Cvija",
+      "content": "@Gussy#6197 \n\nJa bih pretpostavio da je to pozicija u datoteci od koje želimo čitati (taj broj će uglavnom biti 0, osim u slučaju kad se dogodi da nije prenesena cijela datoteka pa se onda mora nastavljati prijenos, a to je ona -c opcija kod tcpklijenta) \n\nPošto je u Network byte order, da trebaš to pretvoriti\n\nNeka me netko ispravi ako je krivo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7260": {
+      "poster": "menace_master",
+      "content": "@Cvija#7188 postoji ovo https://linux.die.net/man/2/access , ali nisam jos rijesila tak da ne znam kak tocno  funkcionira",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7408": {
+      "poster": "Cvija",
+      "content": "Jel pomak tražene datoteke (offset) i ime datoteke šaljemo jednim send-om ili sa dva?\n\nJer ja šaljem sa dva send-a i primam podatke sa dva recv, prvi mi se prihvati, a drugi ne. Tj. offset mi se pošalje i učita u buffer, a ime datoteke ne (u drugi posebni buffer).\n\n[EDIT]\n\nKad pogledam u Wireshark-u, prva mi se poruka pošalje bez zastavice FIN, a druga je poslana (ime datoteke), ali sa zastavicom FIN",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7682": {
+      "poster": "angello2",
+      "content": "moze neko pojasnit kaj ste radili s tim offsetom ak ste uspjeli rjesit? ntohs nikako osposobit da radi na tom, opcenito ne kuzim kak nagurat int u 4 chara",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7761": {
+      "poster": "Cvija",
+      "content": "@angello2#7682 \n\nProbaj koristiti itoa():\n\nhttps://www.techiedelight.com/implement-itoa-function-in-c/\n\nMorat ćeš ju implementirati kao funkciju, jer inače ti neće raditi, a na ovom linku ti je implementacija",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7762": {
+      "poster": "Cvija",
+      "content": "Je li itko uspio poslati onu pxeboot datoteku bez problema?\n\nMeni u prvoj liniji promijeni | u }, a koristim getline kao čitanje iz datoteke",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7783": {
+      "poster": "angello2",
+      "content": "@Cvija#7761 okej al mislim općenitije kaj si radio, u klijentu saljem htons od velicine fajla koji je naveden, onda server to prima i radi na tom broju ntohs da bi dobio pravi offset, jel to dobro? ne kuzim uopce cemu to pretvaranje u network byte order kad ionak server to odma treba prebacit natrag da bi ista radio s tim brojem. i jos mi stvara problem  jer evo ja npr posaljem offset 15000 koji htons pretvori u 38970, server to primi i pretvori u 14607, wtf?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7790": {
+      "poster": "MrBerglas",
+      "content": "@angello2#7783 Budući da offset koristi 4 okteta, trebao bi koristiti ntohl i htonl funkciju (L predstavlja long, tj 4 okteta u ovom slučaju).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7813": {
+      "poster": "MrBerglas",
+      "content": "@angello2#7682 Ovako sam ja: _offset_ spremim u **int** kao veličinu već postojeće datoteke. Zatim taj offset konvertiram u network byte order, uz **htonl** i pošaljem na server sa kao `send(server, &offset, 4, 0);` (zatim šaljem _filename_, u zasebni _send()_)\n\nNa strani servera, učitam sa `recv(client, &offset, 4, 0);` i napravim **ntohl**",
+      "votes": {
+        "upvoters": [
+          "angello2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7828": {
+      "poster": "angello2",
+      "content": "@MrBerglas#7813 hvala, kad tak radim uspijem, al kolko sam skuzio iz upute to bi sve trebo bit jedan send al jbg",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7911": {
+      "poster": "MrBerglas",
+      "content": "Alternativa bi bila napraviti strukturu poput `struct MSG { int offset, char[MAX_FILENAME]};` i nju onda slati u jednom `send` pozivu. Naravno, prije toga napraviti `htonl` poziv i postaviti veličinu za slanje na `sizeof(struct MSG);`.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7969": {
+      "poster": "Gussy (huba buba)",
+      "content": "što ako nisam napravio ovaj domaći? imam te direktorije i fileove na gitu ali to ništa nije gotovo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

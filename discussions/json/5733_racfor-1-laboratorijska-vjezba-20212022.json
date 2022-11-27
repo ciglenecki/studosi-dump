@@ -1,0 +1,349 @@
+{
+  "title": "[RACFOR] 1. laboratorijska vježba - 2021/2022",
+  "creator": "chuuya (temari)",
+  "slug": "racfor-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Računalna forenzika",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "246784": {
+      "poster": "chuuya (temari)",
+      "content": "Ako je netko krenuo ovo radit, jel vam se možda desilo da nema .ssh nigdje na linuxu? Ne bi li trebao bit u home direktoriju, a meni ga tam (niti igdje drugdje) nema?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246795": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"temari\"#p246784 Jesi li iskoristila `ssh` ili `ssh-keygen`? Bez toga ti se neće stvoriti `.ssh` folder.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246800": {
+      "poster": "theimprobableone",
+      "content": "@\"temari\"#p246784 ako se ne varam, .ssh ti ne treba ni u kojem zadatku pa ga vjerojatno zato ni nema, ali inace se slazem s ovim sto je mico rekao",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246808": {
+      "poster": "chuuya (temari)",
+      "content": "@\"BDSMićo\"#p246795 To znam al mislila sam da budući da je scenarij u labosu da se netko spojio preko ssh, da bi već trebao postojati?\n\n@\"theimprobableone\"#p246800 Nije li da nam treba da bismo odgovorili na pitanje koja je bila IP adresa napadača koji se spojio preko ssh? Kolko sam skužila to bi trebali dobit sa `.shh/known_hosts`?",
+      "votes": {
+        "upvoters": [
+          "in1",
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246810": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"temari\"#p246808 Ne nužno, probaj `/var/log` folder, tamo bar ja i za studoše gledam ko se spajao preko ssh",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "246820": {
+      "poster": "theimprobableone",
+      "content": "@\"temari\"#p246808 ne ne, to vidis u /var/log/auth.log.1, najlakse napravis pipe ispisa te datoteke na grep tipa \"grep -i 'accepts'\" i tako nađes IP napadaca",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)",
+          "in1",
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247071": {
+      "poster": "karla_cd (ocd)",
+      "content": "Kako naći datoteku koja je napravljena sudo naredbom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247075": {
+      "poster": "wesley",
+      "content": "![](assets/2021-10-27/00014.png)\n\nne mogu pronaći korisne informacije na windows registry za ove zadatke, any help?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247078": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@\"wesley\"#p247075 39. slajd druge prezentacije za drugu točku zadatka\n\n@\"ocd\"#p247071  već su spomenuti fileovi ovdje po temi u kojima možeš nać više manje sve. bitno je da u tom fileu znaš što tražiš, ubiti CTRLF sudo i gledaš dok ne nađeš",
+      "votes": {
+        "upvoters": [
+          "theimprobableone",
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247188": {
+      "poster": "Process",
+      "content": "Gdje je zapis promjene sistemskog vremena? Ne vidim nigdje event u System logu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247192": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@\"Process\"#p247188 u zadatku ti je hintano  : \n\n> Napomena: korisnikove promjene vremena obrađuje Windows aplikacija DateTimeControlPanel.\n\ndakle samo staviš filter na source i msm da će bit samo jedan zapis u nekoj od kategorija",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247196": {
+      "poster": "Process",
+      "content": "@\"𝙎𝙖𝙧𝙖𝙝 𝘽𝙤𝙣𝙞𝙩𝙤\"#p247192 Jesam da, al uopce nema u cijelom System logu nijednog zapisa s izvorom DateTimeControlPanel",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247226": {
+      "poster": "wesley",
+      "content": "koliko treba mjesta na disku na uvezem linux vm? javlja mi stalno \n\nRezultat Kod: \n\nE_INVALIDARG (0x80070057)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247275": {
+      "poster": "ivona_075 (Adri)",
+      "content": "@\"Process\"#p247196 imas dolje ispod applications and services -> microsoft -> windows -> dateTimeControlPanel -> operational. i ja sam se na prvu mucila",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247293": {
+      "poster": "theimprobableone",
+      "content": "@\"Process\"#p247196 mozes probat direktno otvorit log na putanji \"C:\\Windows\\System32\\winevt\\logs\\Microsoft-Windows-DateTimeControlPanel%4Operational\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247297": {
+      "poster": "in1",
+      "content": "@\"Process\"#p247188 \n\n@\"Process\"#p247196 \n\nOdaberi ovaj put u Event Vieweru:\n\nApplications and Services Logs >​ Microsoft > Windows > DateTimeControlPanel > ​Operational",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247310": {
+      "poster": "ivona_075 (Adri)",
+      "content": "jel netko uspio nac prvi pod Windows Registry",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247319": {
+      "poster": "in1",
+      "content": "@\"Adri\"#p247310 Mislim da možeš ići na find, upisati vmtoolsd.exe i onda će ti drugi rezultat biti rješenje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247405": {
+      "poster": "chuuya (temari)",
+      "content": "Kak se nađe ovaj user agent (zadnji zadatak za linux)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247410": {
+      "poster": "theimprobableone",
+      "content": "@\"temari\"#p247405 ne znam koja je tocno putanja do filea, ali zove se auth.log.1 ako se ne varam, u njemu ces, između ostalog, nac user-agent usera koji je radio slowloris napad",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247472": {
+      "poster": "blablajar",
+      "content": "je li neko imao problema s importanjem slike za windows 7 u virtual box?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "247492": {
+      "poster": "renren",
+      "content": "@\"blablajar\"#p247472 Meni je par puta freezao, ali sam ga na kraju pustila i uspio se importat eventualno nakon čekanja. Ako ti baš ne htjedne možda možeš s VMWare Workstation probat.",
+      "votes": {
+        "upvoters": [
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248545": {
+      "poster": "blablajar",
+      "content": "nisam par zadataka uspio rijesit pa ako neko moze objasnit postupak:\n\nlinux - tajni broj u datoteci stvorenoj s naredbom sudo i user agent koji je napadacev alat slao u http zahtjevima\n\nwindows - korisnik je mijenjao sistemsko vrijeme i datum, pronadite datum koji je postavio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "248558": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@\"blablajar\"#p248545 \n\n> linux - tajni broj u datoteci stvorenoj s naredbom sudo \n\nU auth.log.1 pronalazim datoteku the_truth_must_be_known.txt i tajni broj je 9283 (naredbe touch i sudoedit).\n\n> user agent koji je napadacev alat slao u http zahtjevima\n\nu access.log.1 datoteci nalazim HTTP zahtjeve oblika  (tu je potrebno samo proučiti što je slowloris napad da možeš skužit kad ga vidiš): \n\n![](assets/2021-11-01/00001.png)\n\n\n> windows - korisnik je mijenjao sistemsko vrijeme i datum, pronadite datum koji je postavio\n\nU event vieweru otvaram Applications and Services -> Windows i postavljam filter na Source DateTimeControlPanel i pronalazim jedan zapis: Korisnik je postavio datum na 24.7.2013.",
+      "votes": {
+        "upvoters": [
+          "blablajar",
+          "theimprobableone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

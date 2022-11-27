@@ -1,0 +1,853 @@
+{
+  "title": "[OPRPP1] 7. domaća zadaća - 2020/2021",
+  "creator": "flicka",
+  "slug": "oprpp1-7-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Odabrana poglavlja razvoja programske potpore 1"
+  ],
+  "posts": {
+    "111049": {
+      "poster": "flicka",
+      "content": "moze neko objasnit kaj moramo vracat za prefered, min i max layoutsize, i takoder kako odrediti veličinu redaka i stupaca s onim double",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111061": {
+      "poster": "ana (anci)",
+      "content": "@flicka#111049 ako sam dobro skuzila, za sve vrijednosti vracas maksimume. Za minSize vracas max svih minimuma, maxSize max svih maximuma, prefSize max svih preferiranih vrijednosti komponenata. Samo pazi da ako neka komp vrati null, onda to ne uzimas u obzir",
+      "votes": {
+        "upvoters": [
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111137": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "Ima li netko prijevod uputa za dz na neki od ljudskih jezika?",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Gocc (***)",
+          "Kennedy",
+          "Lyras",
+          "MiqeloS",
+          "boki8 (kerovac)",
+          "krokodil",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111145": {
+      "poster": "flicka",
+      "content": "![](assets/2020-12-16/00023.png)\n\npo kojoj se tu dobi 152 za width?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111146": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@flicka#111145 ![](https://www.memesmonkey.com/images/memesmonkey/94/94745eb5d13997420e6089d6486d8334.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111158": {
+      "poster": "kolega_kolega",
+      "content": "@ErnestHemingway#111137 ovih 108 je veličina za onaj prvi koji se proteže kroz 5 elemenata zapravo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111199": {
+      "poster": "Vonj",
+      "content": "@ErnestHemingway#111137 \n\nNapravi ovrflje layout cisto da ti se prikaze. Onda idi na rjesavanje problema 2,3,4 i kasnije se vratis layout popravljat. Zivot ce ti bit ljepsi. Ovako ces se samo nazivcirati s namjestanjem tog vrazjeg cuda.",
+      "votes": {
+        "upvoters": [
+          "ErnestHemingway (Alfetta)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111256": {
+      "poster": "AK10 (endyyyy)",
+      "content": "moze netko prevest ovo:\n\nAko korisnik pokuša dodati dvije komponente pod istim ograničenjem, upravljač bi trebao izazvati iznimku. Ako se upravljač instalira u kontejner koji već sadrži druge komponente (za koje naš upravljač ne zna), slobodan ih je ignorirati.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111297": {
+      "poster": "Vonj",
+      "content": "@AK10#111256 \n\nNe trebas paziti u slucaju da si tipa  ranije dodao neke komponente u kontenjer nevezano o layoutu(jer ih layout nije svjestan). Ugl, da ne kompliciram, ne moze doci do addanja komponente sa istom RCPosition koordinatama.(treba bacit iznimku u tom slucaju)",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111328": {
+      "poster": "faboche (him)",
+      "content": "Kad debugganjem metode pack() napokon dodem do svoje implementacije metode getPreferedSize() u CalcLayout, mapa koja mi u layout manageru pamti constraintove za komponente je prazna, a provjerio sam da se pozivom add() nad containerom u initGui() uspjesno izvede addLayoutComponent(). Je li netko imao problema s ovim ili zna kako popraviti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111335": {
+      "poster": "Goliathus",
+      "content": "@faboche#111328 Jesi u metodi invalidateLayout ispraznio mapu? Ako da, pokušaj zakomentirati tu metodu i probati ponovno.",
+      "votes": {
+        "upvoters": [
+          "wesley"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111339": {
+      "poster": "faboche (him)",
+      "content": "@Goliathus#111335 Kapa dolje. Sto bi uopce trebali implementirati u invalidateLayout metodi?",
+      "votes": {
+        "upvoters": [
+          "Stoja_9 (Bije_san_u_autobusu)",
+          "Suki7",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111378": {
+      "poster": "tomekbeli420",
+      "content": "@AK10#111256 to znači da ne mogu dvije komponente imati isto ograničenje\n\nnpr. tamo u metodi initGUI kod primjera DemoFrame1.java, recimo da je dobiven Container cp = getContentPane(); i namjestili smo layout sa cp.setLayout(new CalcLayout(3));\n\nE i sad ne bi smjelo biti dozvoljeno ovo:\n\ncp.add(new JLabel(\"Labela1\"), new RCPosition(3,3);\n\ncp.add(new JLabel(\"Labela2\"), new RCPosition(3,3))\n\nJer pokušavamo dodati dvije komponente (dva JLabela) sa istim ograničenjem (ograničenje = pozicija di se nalazi), i tada treba baciti CalcLayoutException\n\nA što se tiče ovo postojanje komponenti u kontejneru za koji CalcLayout nema pojma, to ti se npr može desiti u metodi layoutContainer(Container parent)\n\nKako tvoj CalcLayout nekako sprema (npr neka mapa Map<Component, RCPosition>) sve komponente za koje on zna, sadržaj se može razlikovati od onog što ti, u metodi npr layoutContainer(Container parent), vrati poziv\n\nComponent[] komponente = parent.getComponents(); To polje moze sadrzavati komponente koje nisu spremljene u onoj mapi koju pamti tvoj CalcLayout (ne mora nužno bit mapa al to je najelegantnije). Recimo da ideš iterirati kroz sve komponente koje ti vrati poziv Component[] komponente = parent.getComponents():\n\nfor (Component c : komponente) {...}\n\nI da negdje u toj petlji zelis saznati koje ograničenje  (ograničenje = pozicija za ovaj zadatak) ima ta  komponenta, to ces, u slucaju mape, saznati tako da simply pozoveš\n\nmapa.get(c)\n\nI moguće je da ti to vrati null, ako te komponenta nema u mapi. I to je taj slučaj komponente \"za koje naš upravljač ne zna\", i tad ga jednostavno odjebeš.\n\nMetoda layoutContainer nije jedini slučaj di se to može desiti, to se može desiti i u onim trima metodama za vraćanje minimalnih, preferiranih i maksimalnih dimenzija, koje sve 3 u argumentu opet primaju Container parent.\n\nPa je ono što sam reko \"tad ga jednostavno odjebeš\", kod metode layoutContainer mu ne postaviš setBounds, kod izračuna dimenzija jednostavno ne uzmeš u obzir tu komponentu.\n\nSve se to riješi lako, u slučaju mape, sa provjerom je li vraćeni RCPosition null, ako jest onda komponenta nije registrirana u mapi i u onoj petlji koja ide kroz komponente samo opališ continue.\n\n@faboche#111339\n\nNišta lmao, nemam pojma ni kojem kurcu ta metoda služi ni nakon što sam pročitao dokumentaciju.\n\nOstavi ju praznom, sve radi normalno.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "BrownPerson (Bambi)",
+          "Cubi",
+          "JoKing",
+          "Suki7",
+          "blablajar",
+          "faboche (him)",
+          "iNavy (mornar Ica)",
+          "krokodil"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111421": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@tomekbeli420#111378 hvala legendo",
+      "votes": {
+        "upvoters": [
+          "tomekbeli420"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111524": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@ana#111061 mislis zbroj svih maximuma ako npr maximum u pitanju? ipak vracas velicinu containera koji ti je zadan? \n\nosim ako ja nisam dobro skuzila zadatak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111742": {
+      "poster": "nikace (AeIoU)",
+      "content": "\"Ekran (engl. display) kalkulatora modelirajte kao JLabel koji je promatrač nad modelom kalkulatora.\" \n\nZašto JLabel? Moguće je da ne vidim nešto očito trenutno idk",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111833": {
+      "poster": "ana (anci)",
+      "content": "@AK10#111524  ja sam racunala za maximum kao maximum maxsimuma puta broj komponenata(7 za sirinu, 5 za visinu) i plus jos dodatan razmak izmedu njih. odnosno taj maximum tretiras kao duljinu/visinu svake komponente",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112049": {
+      "poster": "faboche (him)",
+      "content": "Kako se uopce trigera valueChanged od CalcValueListener? Pretpostavio sam da modelu dodajemo jedan CalcValueListener koji na valueChanged refresha display labelu umjesto da saljemo labelu svim buttonima pa da oni na svaki svoj action event refreshaju label. Ima li netko savjet?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112082": {
+      "poster": "faboche (him)",
+      "content": "@faboche#112049 Potrebno je obavijestiti sve listenere u CalcModelImpl pri svakoj promjeni vrijednosti.",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112147": {
+      "poster": "nikace (AeIoU)",
+      "content": "Ima netko nekakav hint kako mijenjati sin u arcsin i ostale kad se oznaci checkbox? 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112251": {
+      "poster": "Gocc (***)",
+      "content": "je li CalcValueListener treba biti isto sto i actionListener haha 😒 ili bolje pitanje kako se calcValueListener koristi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112259": {
+      "poster": "Kennedy",
+      "content": "@nikace#112147 napravis si klasu koja extenda jbutton, i u nju dopises metodu invertFunc() ili kako vec pa svaki put kad checkbox promjeni stanje pozoves nad svakim gumbom invertFunc() i promjenis mu text sa setText() metodom\n\n@Gocc#112251 kad se promjeni vrijednost u CalcModelu treba se obavijestit sve listenere koji su u nasem slucaju samo jlabel (edit: u smislu da samo treba na jlabelu promjenit text)",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "nikace (AeIoU)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112275": {
+      "poster": "flicka",
+      "content": "na koji način povezujem calculator s calcmodelom? tj. gumbe i ekran s metodama tog modela kaj smo implementirali",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112282": {
+      "poster": "nikace (AeIoU)",
+      "content": "@flicka#112275 ja sam napravila da calculator ima svoju člansku var model",
+      "votes": {
+        "upvoters": [
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112283": {
+      "poster": "SuperSjajan3",
+      "content": "@flicka#112275 Calculatoru predas CalcModelImpl u konstruktoru",
+      "votes": {
+        "upvoters": [
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112298": {
+      "poster": "flicka",
+      "content": "na koji način se provjeri dal se value promjenil?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112315": {
+      "poster": "nikace (AeIoU)",
+      "content": "@flicka#112298  ako misliš kako da to javiš ekranu, onda možda možeš probat u addActionListener promijeniti taj value  u koji već želiš tog tvog CalcModela i tu svim promatračima tog modela dojaviti da je došlo do promjene (kod nas je to samo jedan listener) s onom valueChanged metodom",
+      "votes": {
+        "upvoters": [
+          "Kennedy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112427": {
+      "poster": "Rene",
+      "content": "Jel moze netko podijelit zadacu, zaboravio sam skinut prije nego je ferko ugasen",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112448": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Rene#112427 \n\nhttps://mega.nz/file/AKoHnQ4Y#ELoEUFFlEMxQ2MUvdr_Em6f93eWVnU611ICwgEXPFLk",
+      "votes": {
+        "upvoters": [
+          "Rene",
+          "bodNaUvidima"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112457": {
+      "poster": "Lyras",
+      "content": "![](assets/2020-12-19/00011.png)\n\nČupićev kod koji nam je dao kao prilog zadaći nema ove dvije metode... Kako bi one trebale funkcionirati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112458": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Lyras#112457 @viliml je to pitao na Ferku prije nego su ugasili struju, Čupić je rekao da ih dodamo u sučelje i implementiramo kako piše u uputi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112461": {
+      "poster": "Lyras",
+      "content": "@__builtin_popcount#112458 Kada bi se ona trebala zvati? Stvarno je šturo napisana uputa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112462": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Lyras#112461\n\n`hasFrozenValue` zoveš na početku handlera za gumbe koji rade operacije.\n> Ako kalkulator ima postavljenu zamrznutu vrijednost, klik na gumb koji odgovara unarnoj ili binarnoj operaciji treba baciti iznimku CalculatorInputException (primijetite da model kalkulatora ne zna za gumbe – ovo ćete implementirati izravno u kodu GUI-ja).\n\n`freezeValue` zoveš pri kraju handlera za gumbe koji rade binarne operacije. Nakon klika se unos resetira, pa kad ne bismo zamrznnuli vrijednost aktivnog operanda, korisniku bi se pokazala 0.\n\n> Ako naklikate 3, 2, *, 2, + 1, =, na ekranu će se prikazati redom, \"3\", \"32\", \"32\" (**jer ćete trenutno prikazani broj zamrznuti**, a sustav pamti operaciju *), \"2\" (jer je slanjem znamenke briše zamrznuti prikaz pa se prikazuje trenutni broj), \"64\" (**jer se rezultat zamrzava za prikaz** a interno se trenutni broj postavlja na 0 te sustav pamti operaciju +), \"1\" (jer se slanjem znamenke odmrzava prikaz), \"65\".\n  \nSukladno uputi, kad korisnik krene unositi novi broj, miče se zamrznuta vrijednost i on normalno vidi što upisuje. (Uklanjanje mogu raditi izravno metode `CalcModelImpl`a.)",
+      "votes": {
+        "upvoters": [
+          "Lyras",
+          "faboche (him)",
+          "indythedog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112473": {
+      "poster": "Lyras",
+      "content": "@nikace#112315 Gdje pozivamo te .valueChanged() metode za listenere. U CalcModelImpl u metodama koje mijenjaju varijable koje bi se trebale ispisivati na ekranu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112503": {
+      "poster": "DnaRam77 (son)",
+      "content": "Može netko poslat arhivu s kodom koja ide uz drugi zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112504": {
+      "poster": "JoKing",
+      "content": "@DnaRam77#112503 https://we.tl/t-5XqZCAYiX0",
+      "votes": {
+        "upvoters": [
+          "DnaRam77 (son)",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112515": {
+      "poster": "flicka",
+      "content": "na ekran trebamo ispisivati sve decimalno ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112529": {
+      "poster": "nikace (AeIoU)",
+      "content": "@Lyras#112473 \n\n@Lyras#112473 U svojim Button-ima imaš referencu na model kojeg koristiš i tu dohvatiš sve promatrače (u metodi addActionListener) i pozivaš valueChanged (a valueChanged je metoda tvog ekrana koji implementira calcValueListener)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112530": {
+      "poster": "nikace (AeIoU)",
+      "content": "mislim da je neko pitao prof je li okej ako kalkulator samo izbaci iznimku ili ju negdje treba hvatati pa ako netko zna je li možda odgovorio na to?",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112606": {
+      "poster": "Sulejman",
+      "content": "Može netko poslat arhivu s riješenim problemima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112633": {
+      "poster": "DariolaVremenskiPutnik",
+      "content": "Nakon obavljanja binarne operacije i stiskanja gumba '=', trebamo li omogućiti da nakon toga možemo obavljati birane operacije s tim rezultatom? Točnije recimo da napravimo 32 * 2 i onda '=', dobijemo rezultat 64, trebamo li onda moći samo stisnuti recimo operaciju '+' pa broj 6 i onda '=' i dobiti 70? U uputi kaže da se nakon '=' briše aktivni operand, pa ne znam treba li ovo i dalje biti podržano?",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112644": {
+      "poster": "Artemis",
+      "content": "Ima netko zadnje predavanje sve što je Čupić dopisao u kod?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112648": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@Artemis#112644 ima sve na teams",
+      "votes": {
+        "upvoters": [
+          "Artemis"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112704": {
+      "poster": "Gocc (***)",
+      "content": "@DariolaVremenskiPutnik#112633 ako se briše aktivan operand nema veze, jer iducim pristiskom na neki operator ce se postaviti upravo na taj rezultat. \n\nNa ferka je napisao da napravimo kako hocemo samo da ne pokvarimo ono sto je zadano u zadatku",
+      "votes": {
+        "upvoters": [
+          "DariolaVremenskiPutnik"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112705": {
+      "poster": "Gocc (***)",
+      "content": "ako ymax-ymin ne dijeli taj razmak, pri crtanju radite s prvim većim y-om koji je na cijelom broju razmaka od ymin\n\nKako ovo misle",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112719": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@Gocc#112705 ako je (ymax - ymin) % razmak != 0 onda povecavas razmak za 1 dok ne bude jednak 0\n\nTak sam ja shvatio, ak je krivo nek me neko ispravi",
+      "votes": {
+        "upvoters": [
+          "krokodil"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112742": {
+      "poster": "Rene",
+      "content": "Jel' se smije koristiti JList u 4. zadatku ili trebamo implementirati svoju verziju toga?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112749": {
+      "poster": "nikace (AeIoU)",
+      "content": "treba li u 3. zadatku praviti svog upravljača razmještajem ili se može koristiti neki već postojeći?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112756": {
+      "poster": "Lyras",
+      "content": "Je li netko skinuo prezu iz prošlog predavanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112767": {
+      "poster": "viliml",
+      "content": "@faboche#111339 Ako pamtiš neke spremne podatke koje jednom izračunaš i onda ponovo koristiš u layoutContainer(), to tamo trebaš izbrisati.\n\nNa primjer, u našem LayoutManageru bi mogao bi pamtiti minimalne, preferirane i maksimalne veličine za svaku komponentu. Kao što vidiš u našem slučaju to računanje koristi for petlju i rekurzivno pozivanje preko svih komponenata, koje u teoriji mogu biti drugi layouti koji isto rekurzivno računaju svoje vrijednosti, dakle to može biti dosta skupa operacija. A te vrijednosti se rijetko mijenjaju, pa je dobro zapamtiti ih jednom.\n\nAli to je samo optimizacija i za jednostavan primjer kalkulatora uopće nije bitno.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112770": {
+      "poster": "bodNaUvidima",
+      "content": "@swish41#112719 ja sam radio yMax++ jer mi to ima vise smisla",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112771": {
+      "poster": "viliml",
+      "content": "@nikace#112749 nijedno\n\n![](assets/2020-12-20/00007.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112776": {
+      "poster": "nikace (AeIoU)",
+      "content": "@viliml#112771 možda sam krivo shvatil da u jedan frame (na čiji razmještaj sam mislil) dodajemo labelu (koja prikazuje putanju) i komponentu koja je graf, ili nije tako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112777": {
+      "poster": "viliml",
+      "content": "@nikace#112776 Ispričavam se, i hvala, nisam to vidio 😰",
+      "votes": {
+        "upvoters": [
+          "nikace (AeIoU)"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112941": {
+      "poster": "BrownPerson (Bambi)",
+      "content": "to još uvijek nije otvoreno predavanje zadaće ili ja nešto krivo gledam?",
+      "votes": {
+        "upvoters": [
+          "Valentino",
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112967": {
+      "poster": "Sulejman",
+      "content": "@BrownPerson#112941 Otvorilo se 😪",
+      "votes": {
+        "upvoters": [
+          "BrownPerson (Bambi)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112973": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@Sulejman#112967 \n\n@BrownPerson#112941  i pise da je do ponoci",
+      "votes": {
+        "upvoters": [
+          "BrownPerson (Bambi)",
+          "JoKing",
+          "blablajar",
+          "indythedog",
+          "samurai (samuraj)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Sulejman"
+        ]
+      }
+    },
+    "113016": {
+      "poster": "Sulejman",
+      "content": "@AK10#112973 sad react za one koje nisu vidli, a zaključali su",
+      "votes": {
+        "upvoters": [
+          "Valentino",
+          "madoxx"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,2823 @@
+{
+  "title": "[NBP] 3. projekt - 2021/2022",
+  "creator": "Yasuke (Bono)",
+  "slug": "nbp-3-projekt-20212022",
+  "tags": [
+    "FER",
+    "Napredne baze podataka"
+  ],
+  "posts": {
+    "267198": {
+      "poster": "Yasuke (Bono)",
+      "content": "Nakon instalacije Dockera piše u uputama u tutorijalu naći docker-compose.yml file. Ako neko može reći gdje da ga nađem bio bi jako zahvalan jer ga stvarno nigdje ne vidim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267219": {
+      "poster": "mgd",
+      "content": "@\"Bono\"#p267198 nalazi ti se u onom zipu koji trebas skinuti. ako pratis upute s edgara, onda ti je pri dnu link.",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Rasa",
+          "Yasuke (Bono)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267341": {
+      "poster": "mgd",
+      "content": "jel netko ucitao podatke u bazu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267357": {
+      "poster": "mgd",
+      "content": "moze pomoc s ovim zadatkom?\n\n![](assets/2021-12-30/00006.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267402": {
+      "poster": "laranotreallycroft",
+      "content": "@\"mgd\"#p267357 \n\nja sam napravila mapreduce jer nez jel se smije radit s aggregate.\n\nemit(id,[prices]) i onda sam od prices u finalize napravila set tako da su sve unique unutra.\n\nsad nisam sigurna kako bi se to kroz jednu naredbu, vjerojatno ima bolji nacin, ali ja sam output m/r spremila u novu kolekciju i onda samo pogledala sa find jel postoji koji array sa length>1",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267429": {
+      "poster": "mgd",
+      "content": "@\"laranotreallycroft\"#p267402 hvala, i ja sam mislila preko mapreduce, no trebamo obrisati proizvode koji imaju različitu cijenu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267495": {
+      "poster": "laranotreallycroft",
+      "content": "@\"mgd\"#p267429 odg su mi na ticket da se moze i aggregate koristiti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267893": {
+      "poster": "Cubi",
+      "content": "Koliko ce vremena trebat za ovaj projekt otprilike?",
+      "votes": {
+        "upvoters": [
+          "HARAmara (decko_sa_balkana)",
+          "Kennedy",
+          "Lusy (MGJ)",
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268103": {
+      "poster": "Yasuke (Bono)",
+      "content": "@\"Cubi\"#p267893 Meni se čini par dana jer ima dosta posla i puno zadataka.\n\nJel može neko pls stavit aggregate upit za provjeru ima li proizvoda koji imaju više od jedne cijene u 5. zadatku?",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268310": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Bono\"#p268103 \n\n```\n`db.dbName.aggregate([\n{ $group: { _id: \"$product.product_id\", prices: { $addToSet: \"$product.price\" } } },\n{$match: { \n     'prices.1': {$exists: true}\n         }\n}\n])`\n```\n\nIstu stvar mozes i sa mapReduce napravit, grupiras po Id i u Set spremas price (Set je pa su distinct).\n\nOnda samo gledas jel negdje array size > 1",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Yasuke (Bono)",
+          "Ziher"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268311": {
+      "poster": "laranotreallycroft",
+      "content": "Jel netko skuzio 9,10,11?\n\nNez jel to do toga sta sam uzela manji dataset, al vrijeme izvodenja mi se skoro nis ne mijenja nakon indexa, tipa cca 0.015s je svaki.\n\nAlso koje su razlike za regex/text search? Jednako mi se dugo izvode, ali vracaju drukcije podatke. Cini mi se da text search normalizira rijeci pa ih je uglavnom vise, ali mi ih svejedno regex nekad vrati vise.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268412": {
+      "poster": "Harweyy",
+      "content": "@\"laranotreallycroft\"#p268311 meni tipa indexi ubrzaju do 8 puta brzinu, te nisam imao problema s regexom",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268483": {
+      "poster": "Gocc (***)",
+      "content": "jel ovaj projekt nema ništa materijala od prijašnjih godina?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268516": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Harweyy\"#p268412 \n\njel vidis di gresku?\n\n```\ndb.beauty.createIndex({'review.user_id\"' : 1}) \ndb.beauty.find({'review.user_id':'A2C8V1EHUSL5ZO'})\n```\n\nne znam zasto, ali indexi mi se uopce ne primjenjuju (a postoje) i .explain() vraca COLLSCAN a ne IXSCAN",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268563": {
+      "poster": "Harweyy",
+      "content": "@\"laranotreallycroft\"#p268516 ne znam je li moje tocno, ali ja sam u tom zadatku kreirao index nad count varijablom. Te sam sam opet pretrazio po countu u descending orderu s limitom 1",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268565": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Harweyy\"#p268563 \n\nprethodno si modificirao kolekciju da ima count? jer u zadatku treba korisnika s najvise reviewova, a ne product s najvise reviewova koji nakon onih agregacija/mr ima count\n\nzato i mislim da se treba fetchat po user id, al ocito nes krivo radim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268568": {
+      "poster": "Harweyy",
+      "content": "@\"laranotreallycroft\"#p268565 ja sam tokom projekta napravio sebi 5-6 modificiranih baza podataka nad pocetnom, count mi predstavlja broj recenzija koje mi se nalaze u polju koji sadrzi objekte recenzije",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268571": {
+      "poster": "Harweyy",
+      "content": "Iskreno ne znam ni je li moje tocno, ja sam ovako shvatio zadatak a do sada sam fakat ispilao ove na predmetu s obzirom da se kurca ne moze shvatit iz njihovoh opisa zadataka i ne da mi se vise zajebavat. Trebalo mi je 3 dana da rijesim ovu glupost, covjek je potrosio 15 min u video predavanju na map reduce a aggregata se nije ni dohvatio, a da ne spominjem da sam morao “ucit” javascript i googlat doslovno svaku sitnicu posto se nisam nikad prije susreo s njim.",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Juren",
+          "Yasuke (Bono)",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Ducky",
+          "Juren",
+          "laranotreallycroft"
+        ]
+      }
+    },
+    "268595": {
+      "poster": "laranotreallycroft",
+      "content": "@\"laranotreallycroft\"#p268516 corava sam i nisam skuzila da imam jos jedan navodnik gore",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268610": {
+      "poster": "Vrba",
+      "content": "Jel smijemo za sve zadatke koristit aggregate?",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Mike (Klaud Konzultanta)",
+          "MrPeanutButter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268832": {
+      "poster": "Gocc (***)",
+      "content": "može netko nešto reći o tome kako popuniti inicijalno kolekcijom, već dosta zapinjem na tom prvom zadatku tako da bi bilo kakva pomoć dobro došla",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268954": {
+      "poster": "reygrep",
+      "content": "do kad je rok za ovo? Vidim da na edgaru pise jos 5 dana, ali vec su jednom stavili veci duration nego kaj je zapravo bio ako se dobro sjecam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "268984": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@\"reygrep\"#p268954 u uvodnoj prezi piše da je do 14.1. u 8 sati, tak da mi se čini da na edgaru ok piše.\n\ntak je bilo i za drugi, rok do 8 ujutro i onda taj dan obrana",
+      "votes": {
+        "upvoters": [
+          "reygrep"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269044": {
+      "poster": "FERonja",
+      "content": "@\"anaa\"#p268832 python skripta (https://www.w3schools.com/python/python_mongodb_insert.asp)",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "anon00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269257": {
+      "poster": "laranotreallycroft",
+      "content": "Za sharding tutorial iz edgara, kako se spaja na rs0 server?\n\n\"docker exec -it xxxxxxxxx bash\" se izvede ok, ali sto dalje?\n\nako stavim samo \"mongo\", baca mi socketexception",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269261": {
+      "poster": "MrPeanutButter",
+      "content": "Kako za ovaj zadatak ![](assets/2022-01-10/00014.png) napraviti upit ? \n\nsa ovim upitom : db.reviews.find({score:\"1.0\"},{price:1,title:1,time:1}).sort({$natural:-1}).limit(10)\n\ndobivam zadnjih 10 no ne kuzim kako da ih jos poredam po _id i po time jer kad probam to dodati u sort dobijem error da se nemože sa $natural dodati još _id i time",
+      "votes": {
+        "upvoters": [
+          "Urmum (mamaRu)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269266": {
+      "poster": "laranotreallycroft",
+      "content": "@\"MrPeanutButter\"#p269261 probaj sort bez natural i onda .skip() prije .limit()",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269292": {
+      "poster": "sekiro",
+      "content": "@\"FERonja\"#p269044 postoji li neki način da se .txt odma ubaci il se treba citat bas pa jedan po jedan zapis i ubacivat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269295": {
+      "poster": "laranotreallycroft",
+      "content": "Koji su parametri za connect na replica set?\n\n`MongoClient mongo = new MongoClient(Arrays.asList(new ServerAddress(\"rs0\", 27017),\n\n\t\t\t              new ServerAddress(\"rs1\", 27017),\n\n\t\t\t              new ServerAddress(\"rs2\", 27017),\n\n\t\t\t              new ServerAddress(\"rs3\", 27017),\n\n\t\t\t              new ServerAddress(\"rs4\", 27017)));`\n\nOvo mi se cini logicno po https://mongodb.github.io/mongo-java-driver/3.4/driver/tutorials/connect-to-mongodb/\n\nali mi baca unknownHostException",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269333": {
+      "poster": "FERonja",
+      "content": "@\"sekiro\"#p269292 nema",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269415": {
+      "poster": "Cubi",
+      "content": "Je li netko uspio ucitati one kolekcije sto su nam dali (cards...). Izbacuje mi gresku da ne valja JSON file pa me zanima kako je rijesio to\n\nEdit: Uspio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269446": {
+      "poster": "WickyWinslow",
+      "content": "@\"laranotreallycroft\"#p269295 S obzirom da moras koristis te aliase za ip adrese (jer tako mongo radi iz mojeg iskustva) na host uredaju (tvojem pc) moras nadodati ispravno rutanje (rutanje na loopback, samog sebe) u /etc/hosts ili win ekvivalent. Samim time ako se spajas iz svoje mreze racunala na docker mrezu mora biti expozan port što dalje znači da svaki servis mora imati razlicit port inače bi se oni konfliktali.",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269464": {
+      "poster": "sekiro",
+      "content": "5. zadatak, nemam različite cijene ako groupam po productId-u, ali ako groupam po titleu onda imam. Jel ima netko sličnu situaciju ili savjet po čemu da grupiram? Koristio sam Arts.txt.",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "KingGeedorah (King Geedorah)",
+          "Urmum (mamaRu)",
+          "mmmmDa (Ban Levačić)",
+          "reygrep"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269507": {
+      "poster": "Mc2",
+      "content": "Jel se netko uspio spojiti sa nekim programom na ovaj replicaSet ?\n\nDodao sam rs0,rs1,rs2,rs3 i rs4 u /etc/hosts na Windows-ima\n\n`127.0.0.1 rs0\n\n127.0.0.1 rs1\n\n127.0.0.1 rs2\n\n127.0.0.1 rs3\n\n127.0.0.1 rs4`\n\nProbao sam iz node.js sa Mongo clientom  ili  mongoose-om\n\n\n`MongoClient.connect(\"mongodb://rs0:27018,rs1:27019,rs2:27020,rs3:27021,rs4:27022/\", function(err, db) {\n\n    test.equal(null, err);\n\n    test.ok(db != null);\n\n})`\n\nili\n\n`const DB_URI = 'mongodb://rs0:27018,rs1:27019,rs2:27020,rs3:27021,rs4:27022/admin?replicaSet=rsnmbp\n\n mongoose.connect(DB_URI, {\n\n    serverSelectionTimeoutMS: 5000\n\n}).then((result) =>console.log (\"connected to database\"))\n\n    .catch((err) =>console.log (err.reason))`\n\nno dobijem ovaj error\n\n`MongoServerSelectionError:  ECONNREFUSED 127.0.0.1:27018` \n\nu oba slučaja.\n\nProbao sam sa pymongo ali isto ne dobijem nista, c.nodes je prazan.\n\n`c = pymongo.MongoClient('mongodb://rs0:27018,rs1:27019,rs2:27020,rs3:27021,rs4:27022/?replicaSet=rsnmbp')\n\ntime.sleep(5)\n\nprint(c.nodes);`\n\nJel ima tko neku ideju u čemu je problem ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269509": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@\"FERonja\"#p269044 Jesi imao problem \"pymongo.errors.OperationFailure: command insert requires authentication\"? Izgleda da mi treba neki username i password a ne sjećam se da smo ih postavljali u onom tutorialu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269516": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"King Geedorah\"#p269509\n\n ma u docker folderu  u jednoj datoteci\n\nmislim da je nesto tipa\n\nusername root\n\npassword  rootnmbp\n\nnisam pri laptopu pa ne mogu tocno rec",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269541": {
+      "poster": "plavisnajper",
+      "content": "jel koristite neki gui? kako ste ga spojili s mongom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269546": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"plavisnajper\"#p269541\n\nja koristim robo 3t\n\njednostavno je, mislim da on čak sam ponudi localhost i port\n\nsamo treba usrname i pass upisat",
+      "votes": {
+        "upvoters": [
+          "plavisnajper"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269555": {
+      "poster": "plavisnajper",
+      "content": "@\"Pleteni miš\"#p269546 koji username i pass treba? probala sam admin, root, ali ne prolazi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269561": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"plavisnajper\"#p269555\n\nu onom zipu s weba ima foler docker\n\ni u jednoj od onih datoteka se nalazi",
+      "votes": {
+        "upvoters": [
+          "plavisnajper"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269568": {
+      "poster": "huhu",
+      "content": "Jel mi moze netko otkriti gdje se nalaze te upute/tutorijali za postavljanje?",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269579": {
+      "poster": "plavisnajper",
+      "content": "@\"huhu\"#p269568 kad otvoris edgar ispod Public exams su Tutorials i tamo su tutorijali",
+      "votes": {
+        "upvoters": [
+          "huhu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269580": {
+      "poster": "WickyWinslow",
+      "content": "@\"Mc2\"#p269507 Portovi takoder trebaju odgovarati onima koji exposani kroz docker i onima koji su u configu kojim kreiras replicaset. Dakle trebas svakom servisu u docker-composeu zadati kao parametar na kojem da se portu pokrene.",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269582": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "Treba li više vremena za 1. dio ili za 2.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269585": {
+      "poster": "Mc2",
+      "content": "@\"WickyWinslow\"#p269580 \n\nMislim da su portovi dobri, to su ovi portovi u docker compose file-u\n\n```\nversion: '3'\n\nservices:\n  rs0:\n    image: mongo:4.4\n    ports:\n      - \"27018:27017\"\n    command: mongod --replSet rsnmbp\n    volumes:\n      - rs0_data:/data/db\n      - ./nmbprsdata0:/nmbpdata\n\n  rs1:\n    image: mongo:4.4\n    ports:\n      - \"27019:27017\"\n    command: mongod --replSet rsnmbp\n    volumes:\n      - rs1_data:/data/db\n      - ./nmbprsdata1:/nmbpdata\n\n  rs2:\n    image: mongo:4.4\n    ports:\n      - \"27020:27017\"\n    command: mongod --replSet rsnmbp\n    volumes:\n      - rs2_data:/data/db\n      - ./nmbprsdata2:/nmbpdata\n      \n  rs3:\n    image: mongo:4.4\n    ports:\n      - \"27021:27017\"\n    command: mongod --replSet rsnmbp\n    volumes:\n      - rs3_data:/data/db\n      - ./nmbprsdata3:/nmbpdata\n      \n  rs4:\n    image: mongo:4.4\n    ports:\n      - \"27022:27017\"\n    command: mongod --replSet rsnmbp\n    volumes:\n      - rs4_data:/data/db\n      - ./nmbprsdata4:/nmbpdata\n      \n   \n\nvolumes:\n  rs0_data:\n  rs1_data:\n  rs2_data:\n  rs3_data:\n  rs4_data:\n```\n\nVide se i u docker Desktopu\n\n![](assets/2022-01-11/00020.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269621": {
+      "poster": "Process",
+      "content": "![](assets/2022-01-11/00027.png)\n\nNa sta se točno misli pod c/p sifre proizvoda? Id?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269622": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Process\"#p269621 copy/paste i guess",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269668": {
+      "poster": "Gocc (***)",
+      "content": "u drugom tutorijalu doslovno isto ovo radi ne kuzim sta je razlicito da nece \n\n![](assets/2022-01-11/00034.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269673": {
+      "poster": "WickyWinslow",
+      "content": "@\"Mc2\"#p269585 “27022:27017” znaci da je servis na portu 27017, a tebi je expozan 27022. Trebas to promijeniti da je kompletno sve na portu 27022. I servis lokalno i port expozan kroz docker i u konfiguraciji. Sve se mora poklapati.",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Mc2",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269679": {
+      "poster": "Lusy (MGJ)",
+      "content": "Koji dio projekta je \"lakši\" za napravit? Treba mi samo 5 bodova za prag",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269693": {
+      "poster": "boki8 (kerovac)",
+      "content": "Zna li netko zasto mi index nad `review.text` ne vraca ocekivane rezultate? Definirao sam ga kao `db.collection.createIndex({\"review.text\": \"text\"})`, ali kada provedem find upit dobijem puno review-a koji u text field-u ne sadrze trazenu rijec \"mindful\"?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269724": {
+      "poster": "ZalutaliStudent",
+      "content": "Savjet kako krenut, što je sve potrebno da se riješi labos?\n\nPredavanja, tutoriali u Edgaru, youtube... Što od toga da koristim i kojim redoslijedom?",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)",
+          "anon00",
+          "reygrep"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269729": {
+      "poster": "Lelek",
+      "content": "jel se svi zadaci nakon 5. odnose na kolekciju koju kreiramo u 5 i 6 zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269762": {
+      "poster": "I3loodHound",
+      "content": "Ovaj termin koji je u kalendaru, meni pise fizicka ucionica, dal bude onda to na Teamsu kao u obavijesti ili trebamo doci?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269763": {
+      "poster": "weedovnjak",
+      "content": "Kako funkcionira dobivanje distribucije ocjena u 8. zadatku?",
+      "votes": {
+        "upvoters": [
+          "MrPeanutButter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269767": {
+      "poster": "boki8 (kerovac)",
+      "content": "Sto znace maksimalni/minimalni write concern? Kako to definirati i o cemu ovisi?",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269774": {
+      "poster": "MrPeanutButter",
+      "content": "Jel može netko pojasniti kako 6. zadatak riješiti gledam njihov tutorial ali mi nije jasno...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269775": {
+      "poster": "boki8 (kerovac)",
+      "content": "@\"Mc2\"#p269507 jesi nasao rjesenje?",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269778": {
+      "poster": "Mc2",
+      "content": "@\"WickyWinslow\"#p269673 \n\nZar ne bi on trebao znato da ono što dolazi na 27022 translatira na 27017 ?\n\nProbao sam da sve budu isti portovi.\n\nOvo je novi docker compose\n\n```\nversion: '3'\n\nservices:\n  rs10:\n    image: mongo:4.4\n    ports:\n      - \"27018:27018\"\n    command: mongod --replSet rsnmbp\n    volumes:\n      - rs10_data:/data/db\n      - ./nmbprsdata10:/nmbpdata\n\n  rs11:\n    image: mongo:4.4\n    ports:\n      - \"27019:27019\"\n    command: mongod --replSet rsnmbp\n    volumes:\n      - rs11_data:/data/db\n      - ./nmbprsdata11:/nmbpdata\n\n  rs12:\n    image: mongo:4.4\n    ports:\n      - \"27020:27020\"\n    command: mongod --replSet rsnmbp\n    volumes:\n      - rs12_data:/data/db\n      - ./nmbprsdata12:/nmbpdata\n      \n  rs13:\n    image: mongo:4.4\n    ports:\n      - \"27021:27021\"\n    command: mongod --replSet rsnmbp\n    volumes:\n      - rs13_data:/data/db\n      - ./nmbprsdata13:/nmbpdata\n      \n  rs14:\n    image: mongo:4.4\n    ports:\n      - \"27022:27022\"\n    command: mongod --replSet rsnmbp\n    volumes:\n      - rs14_data:/data/db\n      - ./nmbprsdata14:/nmbpdata\n      \n   \n\nvolumes:\n  rs10_data:\n  rs11_data:\n  rs12_data:\n  rs13_data:\n  rs14_data:\n```\n\nKada napravim docker ps -a dobijem ovo, opet se pojavljuje ova port 27017 (vidi pod ports)\n\n![](assets/2022-01-12/00008.png)\n\n\nNo sada ne mogi inicijalizirati replica set sa\n\n```\nrsconf = { \n  _id: \"rsnmbp\", \n  members: [ \n    { \n      _id: 0, \n      host: \"rs10:27018\" \n    }, \n    { \n      _id: 1, \n      host: \"rs11:27019\" \n    }, \n    { \n      _id: 2, \n      host: \"rs12:27020\" \n    },\n\t{ \n      _id: 3, \n      host: \"rs13:27021\" \n    },\n\t{ \n      _id: 4, \n      host: \"rs14:27022\" \n    },\n  ] \n} \nrs.initiate(rsconf)\n```\n\njavlja mi \n\n\"errmsg\" : \"No host described in new configuration with {version: 1, term: 0} for replica set rsnmbp maps to this node\",\n\nPretpostavljam da moram promjeniti port ovih hostova gore na 27017, no onda mi to nema opet nema smisla.\n\nŠto treba stavit za rs.conf ?\n\nJel tebi radi, ako da kako ti izgleda compose file i što si napisao za rs.conf ?",
+      "votes": {
+        "upvoters": [
+          "Juren"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269779": {
+      "poster": "Mc2",
+      "content": "@\"kerovac\"#p269775 \n\nNe.",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269789": {
+      "poster": "WickyWinslow",
+      "content": "@\"Mc2\"#p269778 Još samo nadodaj u docker-compose uz mongod naredbu parametar `--port XXXX` dakle da ti bude za rs13 `command: mongod --replSet rsnmbp --port 27021` i tako za ostale. Tako je meni za sve i radi. Spajao sam se s urijem `mongodb://localhost:27018,localhost:27019,localhost:27020,localhost:27021,localhost:27022/?replicaSet=rsnmbp` ali to bi trebalo biti jednako kao tvoje gdje koristis aliase za 127.0.0.1 koje si dodao u hosts.",
+      "votes": {
+        "upvoters": [
+          "Mc2"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269798": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Mc2\"#p269778 kak si opce uspio otvoriti mongo shell sa ovime? probala sam i kopirati tvoje i svejedno mi kad upisem \"mongo\" baca error",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269799": {
+      "poster": "Mc2",
+      "content": "@\"WickyWinslow\"#p269789 \n\nProbao sam ali mi onda ne radi konfiguracije za rs.conf\n\n`rsconf = { \n\n  _id: \"rsnmbp\", \n\n  members: [ \n\n    { \n\n      _id: 0, \n\n      host: \"rs10:27018\" \n\n    }, \n\n    { \n\n      _id: 1, \n\n      host: \"rs11:27019\" \n\n    }, \n\n    { \n\n      _id: 2, \n\n      host: \"rs12:27020\" \n\n    },\n\n\t{ \n\n      _id: 3, \n\n      host: \"rs13:27021\" \n\n    },\n\n\t{ \n\n      _id: 4, \n\n      host: \"rs14:27022\" \n\n    },\n\n  ] \n\n} \n\nrs.initiate(rsconf)`\n\nDobijem\n\n“errmsg” : “Quorum check failed because not enough voting nodes responded;\n\nTu sam našao da ako mongo ne sluša na istoj porti mora se konfigurirati autentikacija što mi se čini prekomplicirano.\n\n[https://www.mongodb.com/community/forums/t/cannot-ad-members-to-replica-set/79923]\n\nWhen running on different hosts mongod processes needs to authenticate between them selves. That’s another level of complexity that, I think, made the mongo staff to write the course using different ports on the same machine. In this case, cluster membership does not need to be authenticated.\n\nKako izgleda tvoj rs.conf s kojim si konfigurirao replicaSet ?\n\nJesi morao složiti autentikaciju ?",
+      "votes": {
+        "upvoters": [
+          "Juren",
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269801": {
+      "poster": "Mc2",
+      "content": "@\"laranotreallycroft\"#p269798 \n\nmongo -- port 27018  (mongo pa dva minusa)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Rope (Rops)",
+          "laranotreallycroft",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269815": {
+      "poster": "Gocc (***)",
+      "content": "```\nraise ServerSelectionTimeoutError(\npymongo.errors.ServerSelectionTimeoutError: No replica set members available for replica set name \"rsnmbp\", Timeout: 30s, Topology Description: <TopologyDescription id: 61dec8b054bab502d28d0cc9, topology_type: ReplicaSetNoPrimary, servers: []>\n```\npri pokušaju na spajanje na replica set, ima netko rješenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269825": {
+      "poster": "boki8 (kerovac)",
+      "content": "@\"WickyWinslow\"#p269789 \n\nProbao sam na ovaj nacin kako si rekao, ali i dalje kao rezultat sljedeceg isjecka koda dobijem prazni `frozenset()`\n\n> c=pymongo.MongoClient('mongodb://localhost:27018,localhost:27019,localhost:27020,localhost:27021,localhost:27022/?replicaSet=rsnmbp')\n\ntime.sleep(5)\n\nprint(c.nodes)\n\nTebi ovo vrati smisleni rezultat?",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269842": {
+      "poster": "Mc2",
+      "content": "Jesi konfigurirao replicaSet ?\n\nŠto ti vrati rs.status() iz mongo shell-a ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269843": {
+      "poster": "Mc2",
+      "content": "@\"kerovac\"#p269825 \n\nJesi si konfigurirao replica set ?\n\nŠto ti vrati rs.status() iz mongo shella ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269845": {
+      "poster": "laranotreallycroft",
+      "content": "Meni uspio connect napokon, fkt hvala @\"WickyWinslow\"#309 premda ne kuzim zkj ne funkcionira kak su oni napravili\n\nyml format\n\n>   rs0:\n\n    image: mongo:4.4\n\n    ports:\n\n      - \"27018:27018\"\n\n    command: mongod --replSet rsnmbp --port 27018\n\n    volumes:\n\n      - rs0_data:/data/db\n\n      - ./nmbprsdata0:/nmbpdata\n\nrsconf formata\n\n>    _id: 0, \n\n      host: \"rs0:27018\" \n\njava kod\n\n> mongodb://rs0:27018,rs1:27019,rs2:27020,rs3:27021,rs4:27022/?replicaSet=rsnmbp\"\n\n+imam u etc\\hosts rs0 i ostale",
+      "votes": {
+        "upvoters": [
+          "Juren",
+          "Rope (Rops)",
+          "WickyWinslow"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269846": {
+      "poster": "laranotreallycroft",
+      "content": "Sad na zapravo rjesavanje zadatka... Kaj oni opce zele da racunamo tu?\n\n> Svako učitavanje (a i b scenarij) ponovite 10 puta i izračunajte prosječnu vrijednost i standardnu devijaciju.\n\nCega prosjecnu vrijednost? Vrijeme ucitavanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269847": {
+      "poster": "Mc2",
+      "content": "@\"laranotreallycroft\"#p269845 \n\nKako si inicijalizirala replica set ?\n\nKao ti izgleda onaj rsconfig ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269849": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Mc2\"#p269847 isto kao i ti\n\n`rsconf = { \n\n  _id: \"rsnmbp\", \n\n  members: [ \n\n    { \n\n      _id: 0, \n\n      host: \"rs0:27018\" \n\n    }, \n\n    { \n\n      _id: 1, \n\n      host: \"rs1:27019\" \n\n    }, \n\n    { \n\n      _id: 2, \n\n      host: \"rs2:27020\" \n\n    } , \n\n    { \n\n      _id: 3, \n\n      host: \"rs3:27021\" \n\n    } , \n\n    { \n\n      _id: 4, \n\n      host: \"rs4:27022\" \n\n    } \n\n  ] \n\n}`",
+      "votes": {
+        "upvoters": [
+          "Juren",
+          "Lusy (MGJ)",
+          "Mc2",
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269850": {
+      "poster": "Mc2",
+      "content": "@\"laranotreallycroft\"#p269849 \n\nRadi, hvala WickyWinslow i laranotreallycroft\"",
+      "votes": {
+        "upvoters": [
+          "Juren",
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269851": {
+      "poster": "Mc2",
+      "content": "@\"laranotreallycroft\"#p269846 \n\nMislim da da, jedino treba postaviti ovja write concern.\n\nKoliko vidim to bi bila ?w opcija u URI-ju.\n\nKoliko bi bio minimalni a koliko maksimalani ?\n\nPretpostavljam 1 za min, a 5 za max.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269864": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Mc2\"#p269851 rekla bi 0 min, odnosno unacknowledged",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269890": {
+      "poster": "MsBrightside",
+      "content": "@\"MGJ\"#p269679 prvih 5 zadataka u prvom se daju napravit u sat i po, i manje ako se ne igras s tim previse",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269895": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@\"MsBrightside\"#p269890 I ne nabodeš neki data set koji ima price null skoro za sve dokumente pa moraš drugi tražiti (tip: izbjegavajte Kindle_Store.txt).",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "huhu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269902": {
+      "poster": "huhu",
+      "content": "Jel imao netko problem da mu baca _SyntaxError: unexpected token: identifier :_ prilikom importa kolekcija?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269903": {
+      "poster": "sekiro",
+      "content": "![](assets/2022-01-12/00021.png)\n\njel ovo okej za 6. zad? grupirao sam po id-u i onda ostala polja addToSet.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269915": {
+      "poster": "Mc2",
+      "content": "@\"laranotreallycroft\"#p269864 \n\nZa write concern, jel treba što configurirati u mongo shell-u ili je dovoljno samo staviti ?w=0 i ?w=5 u URI za konekciju ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269917": {
+      "poster": "laranotreallycroft",
+      "content": "@\"Mc2\"#p269915 nemam pojma, mozda je\n\nja sam koristila collection.withWriteConcern();",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269920": {
+      "poster": "Mc2",
+      "content": "Kako se predaje ovaj drugi dio  ?\n\n Piše da rješenje treba predati u obliku skripti\n\nc/p sa Edgara \n\n•\tRješenje treba predati u obliku skripti, nalik uputama iz ovog dijela gradiva\n\no\tza razliku od uputa, u rješenje tj. skriptu stavite i c/p i sadržaja yml datoteka\n\n•\tSvaku naredbu koju obavite je potrebno staviti u „skriptu“\n\n•\tKada vas se traži da nešto komentirate, onda taj komentar upišite na pravo mjesto u skripti\n\nNa kakve skripte se misli ?\n\nŠto znači ovo  \"nalik uputama\"  - na koje upute se misli ?\n\nŠto znači ovo \" pravo mjesto u skripti\" ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269921": {
+      "poster": "MrPeanutButter",
+      "content": "@\"sekiro\"#p269903 ![](assets/2022-01-12/00022.png)\n\nja sam ovako",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269924": {
+      "poster": "mmmmDa (Ban Levačić)",
+      "content": "@\"sekiro\"#p269903 dodaj $first za title i price da ne budu array",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269930": {
+      "poster": "huhu",
+      "content": "@\"huhu\"#p269902 Nitko?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269931": {
+      "poster": "sekiro",
+      "content": "@\"mmmDa\"#p269924 hvala 😀  A kako odradit da se price ne postavlja ako je unknown?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269941": {
+      "poster": "Gocc (***)",
+      "content": "jel ovako treba izgledati yml?\n```\nversion: '3'\n\nservices:\n\n  rs0:\n    image: mongo:4.4\n    ports:\n      - \"27018:27018\"\n    command: mongod --replSet rsnmbp --port 27018\n    volumes:\n      - rs0_data:/data/db\n      - ./nmbprsdata0:/nmbpdata\n\n  rs1:\n    image: mongo:4.4\n    ports:\n      - \"27019:27019\"\n    command: mongod --replSet rsnmbp --port 27019\n    volumes:\n      - rs1_data:/data/db\n      - ./nmbprsdata1:/nmbpdata\n\n  rs2:\n    image: mongo:4.4\n    ports:\n      - \"27020:27020\"\n    command: mongod --replSet rsnmbp --port 27020\n    volumes:\n      - rs2_data:/data/db\n      - ./nmbprsdata2:/nmbpdata\n\n  rs3:\n    image: mongo:4.4\n    ports:\n      - \"27021:27021\"\n    command: mongod --replSet rsnmbp --port 27021\n    volumes:\n      - rs3_data:/data/db\n      - ./nmbprsdata3:/nmbpdata\n\n  rs4:\n    image: mongo:4.4\n    ports:\n      - \"27022:27022\"\n    command: mongod --replSet rsnmbp --port 27022\n    volumes:\n      - rs4_data:/data/db\n      - ./nmbprsdata4:/nmbpdata\n     \n\nvolumes:\n  rs0_data:\n  rs1_data:\n  rs2_data:\n  rs3_data:\n  rs4_data:\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269945": {
+      "poster": "boki8 (kerovac)",
+      "content": "@\"laranotreallycroft\"#p269846 Kako dobiti to vrijeme ucitavanja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269946": {
+      "poster": "MickeyMouse",
+      "content": "@\"laranotreallycroft\"#p269845 \n\nMožeš li objasniti šta znači imam u etc\\hosts rs0 i ostale?\n\nyml i rsconf formati su mi u istom obliku ali ne mogu se povezati.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269947": {
+      "poster": "boki8 (kerovac)",
+      "content": "@\"anaa\"#p269941 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269951": {
+      "poster": "Gocc (***)",
+      "content": "@\"kerovac\"#p269947 i onda uđeš u neki od čvorova i probaš pokrenuti mongo? \n\nMOžeš možda reći na koji način jer mi na niti jedan neće \n\nonaj njihov primjer sam radila tako da sam ušla u rs0 i pokrenula mongo i onda conf, a ovjde ne mogu pokrenuti ni mongo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269952": {
+      "poster": "mmmmDa (Ban Levačić)",
+      "content": "@\"sekiro\"#p269931 ja sam preko aggregatea i onda u projekciji $ifNull uz $$remove\n\nBtw kak ste rjesavali od 5. do 8.? Ja sam pomocu aggregatea posto su rekli da mozemo, al mi nije jasno zasto uopce koristimo mapreduce kad je deprecated od 5. verzije monga 😅",
+      "votes": {
+        "upvoters": [
+          "sekiro",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269953": {
+      "poster": "boki8 (kerovac)",
+      "content": "@\"anaa\"#p269951 najprije docker-compose, onda udes u rs0 (naredba `mongo - -port 27018`) i napravis sljedece: definiras `rsconf` i pokrenes naredbu `rs.initiate(rsconf)` i sada bi se trebala moci spojiti preko nekog programskog jezika.\n\nI jedino u datoteci c:\\Windows\\System32\\Drivers\\etc\\hosts mozda moras za svaki cvor dodati par oblika: `127.0.0.1 rs0`",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269954": {
+      "poster": "Gocc (***)",
+      "content": "![](assets/2022-01-12/00027.png)\n\n![](assets/2022-01-12/00028.png)\n\nmislim da mi ne otvori dobro mongo shell da bi trebalo pisat PRIMARY?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269955": {
+      "poster": "boki8 (kerovac)",
+      "content": "@\"anaa\"#p269954 e sad, ne znam kako najbezbolnije rijesiti ovaj problem sa vec postojecom inicijalizacijom, ali ako probas sve iznova napraviti trebalo bi raditi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269959": {
+      "poster": "Harweyy",
+      "content": "@\"mmmDa\"#p269952 kolega da ste proucili mongo demo 1, procitali bi tamo da je Mekterovic tamo napiso makar je mapreduce zasterjela inacica puno siru mogucnost upotrebe i vecu generalnost nego same aggregatne. A kako smo mi na feru moramo na 5. Godine neke stvari obavezno pisat u c-u tako je i mekterovic odlucio mapreduce prezentaciju koristit do kraja svog radnog vijeka.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "mmmmDa (Ban Levačić)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269961": {
+      "poster": "Gocc (***)",
+      "content": "@\"kerovac\"#p269955 izgleda da je jedino rješenje bilo deinstalacija pa opet 😃 hvala svima 💗",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269965": {
+      "poster": "boki8 (kerovac)",
+      "content": "Moze netko objasniti kako npr koristeci pymongo mjeriti vrijeme unosa u 1. zadatku 2. dijela?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269982": {
+      "poster": "kd240",
+      "content": "Hvala @\"WickyWinslow\"#309  i @\"laranotreallycroft\"#344  i @\"Mc2\"#1175 na uputama <3",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)",
+          "WickyWinslow"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269997": {
+      "poster": "Rope (Rops)",
+      "content": "U zadnjem koraku drugog mongo tutoriala pokusavam dovuci podatke iz cards.json sa `mongoimport --legacy -d shtest -c cards --type json --file /nmbpdata/cards.json `, ali javlja gresku 'no such file or directory' makar cards.json postoji u tom folderu. Zna li netko u cemu je problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270008": {
+      "poster": "laranotreallycroft",
+      "content": "@\"kerovac\"#p269945 ja radim u javi pa sam samo prije insertall vidla current time i nakon insertall vidla current time pa ispisala razliku",
+      "votes": {
+        "upvoters": [
+          "Juren",
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270010": {
+      "poster": "laranotreallycroft",
+      "content": "@\"MickeyMouse\"#p269946 \n\nNa ovo mislim\n\n@\"Mc2\"#p269507",
+      "votes": {
+        "upvoters": [
+          "MickeyMouse"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270014": {
+      "poster": "laranotreallycroft",
+      "content": "@\"anaa\"#p269954 \n\nMozes obrisati one podatke kak ti pisu naredbe iznad prvog zadatka. Nez sad tocno jer nisam pri kompu ali jedna je ona za containers kaj ima |, a druga je ona kaj brise volumes. Tak sam ja resetala sve",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270026": {
+      "poster": "Lelek",
+      "content": "kako usporediti u 10. zadatku tekst search prije i poslije stvaranje indeksa, ako je preduvjet za\n\ntext search stvaranje indeksa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270027": {
+      "poster": "sekiro",
+      "content": "@\"Lelek\"#p270026 searchaj bez indeksa, traži zapise koji imaju rijec u review.text",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270031": {
+      "poster": "Kaladonter",
+      "content": "@\"Rops\"#p269997 trebas iskopirat JSON datoteke u folder routerdata, izgubio sam valjda sat vremena na tom....",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270049": {
+      "poster": "magla",
+      "content": "@\"weedovnjak\"#p269763 Si mozda uspio to u 8?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270052": {
+      "poster": "reygrep",
+      "content": "@\"MrPeanutButter\"#p269774 jesi skuzio mozda 6.?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270054": {
+      "poster": "Ducky",
+      "content": "@\"magla\"#p270049 ja sam napravio mapReduce da mi ispiše ovo šta piše u zadatku i spremio ju u drugu kolekciju, pa onda sa agregate pomoću **$lookup** spojio prvu kolekciju sa ovom drugom mapReduce kolekcijom.",
+      "votes": {
+        "upvoters": [
+          "magla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270059": {
+      "poster": "Ducky",
+      "content": "U 9. zadatku, jel trebam tražiti usera sa najviše recenzija pomoću find kako bi index radio ili mogu koristiti agregate?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270066": {
+      "poster": "Ducky",
+      "content": "@\"Ducky\"#p270059 još dulje draje sa indexom... Može li se ovo uopće riješiti pomoću jednog find-a ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270068": {
+      "poster": "niknik",
+      "content": "5. zadatak: \"U ovom zadatku prvo pogledajmo (napišite upite) ima li proizvoda koji imaju više od jedne cijene? Ako nađete takve, obrišite ih (napišite upit).\" Znači ako nemamo takvih proizvoda ne trebamo pisati upit za brisanje?",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "MrPeanutButter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270074": {
+      "poster": "reygrep",
+      "content": "@\"niknik\"#p270068 yup",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270075": {
+      "poster": "Kaladonter",
+      "content": "Jel ja krivo kuzim ili mi za prvi zadatak u drugom dijelu moramo 10 puta ispocetka ubacivat kolekciju i onda jos 10 sa max write concern? Ili misle kao da 10 puta ubacimo po 100 podataka? Jer nema mi smisla 10 puta ubacivat cijelu kolekciju to dosta dugo traje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270076": {
+      "poster": "reygrep",
+      "content": "jel jos nekom nestanu fileovi nakon sto ude/izade iz projekta na edgaru",
+      "votes": {
+        "upvoters": [
+          "FortunaRegem",
+          "kd240"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270077": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"reygrep\"#p270076 \n\nMislim da su jednom rekli da je to spremljeno kod njih u bazi, samo mi ne vidimo ako izađemo.",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "plavisnajper",
+          "reygrep",
+          "sekiro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270096": {
+      "poster": "weedovnjak",
+      "content": "@\"magla\"#p270049 \n\nvar t = db.products.find();\n\nt.forEach(function( aRow ) {\n\n    var counter = 0;\n\n    aRow.reviews.forEach( function( aReview ){\n\n        if (aReview.score == 5.0){\t\t// promijeni '== 5.0' ovisno o ocjeni \n\n            counter = counter + 1;\n\n        }\n\n    } )\n\n    db.products.update(\n\n        { _id: aRow._id }, \n\n        { \"$set\": { \"reviewStats.reviewScoreDistrib.5\": counter } }\t// promijeni 'reviewScoreDistrib.5' ovisno o ocjeni \n\n    );\n\n});\n\novo je radilo, ali nije nesto prelijepo haha",
+      "votes": {
+        "upvoters": [
+          "magla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270147": {
+      "poster": "Rasa",
+      "content": "Kakvu skriptu koristite za predaju ovog rješenja drugog dijela projekta?\n\n@\"Kaladonter\"#p270075 \n\nja sam ubacivala cijelu kolekciju 10 puta, nije predugo trajalo cak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270155": {
+      "poster": "lucija (luc)",
+      "content": "Koliko vremena treba za drugi dio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270169": {
+      "poster": "MrPeanutButter",
+      "content": "Jel netko može malo pojasniti ovaj drugi dio nznm od kuda da počnem uopće",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270171": {
+      "poster": "Yasuke (Bono)",
+      "content": "Koliku otprilike razliku dobijete za write concern sa max i min?\n\nVjerojatno ovisi i o broju zapisa, imam ih oko 200 000 i dobijem 10 do 15 sekundi razliku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270211": {
+      "poster": "Stubla",
+      "content": "@\"weedovnjak\"#p270096 \n\njesi možda kak uspio sa updateMany() napraviti? Jer ovak puno dulje traje izvođenje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270224": {
+      "poster": "magla",
+      "content": "Jel nekome u 10. zadatku kad stavi text index skoro pa identično vrijeme pretrage?\n\nOsim ako mozda krivo radim regex pretragu pa neka me netko ispravi:\n\ndb.jewelry.find( { reviewText: { $regex: /great/ } } )",
+      "votes": {
+        "upvoters": [
+          "Djani"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270230": {
+      "poster": "Ducky",
+      "content": "@\"magla\"#p270224 ja mislim da su regex mislili prije indexa, a $text poslije (imaš na linku u zadatku)",
+      "votes": {
+        "upvoters": [
+          "sekiro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270233": {
+      "poster": "Lusy (MGJ)",
+      "content": "1. zadatak 2.dio projekta\n\nStalno mi baca gresku \n\n```\npymongo.errors.ServerSelectionTimeoutError: rs2:27020: [Errno 11001] getaddrinfo failed,rs1:27019: [Errno 11001] getaddrinfo failed,rs0:27018: [Errno 11001] getaddrinfo failed,rs4:27022: [Errno 11001] getaddrinfo failed,rs3:27021: [Errno 11001] getaddrinfo failed, Timeout: 30s, Topology Description: <TopologyDescription id: 61e05b5fdbb9effe73359370, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('rs0', 27018) server_type: Unknown, rtt: None, error=AutoReconnect('rs0:27018: [Errno 11001] getaddrinfo failed')>, <ServerDescription ('rs1', 27019) server_type: Unknown, rtt: None, error=AutoReconnect('rs1:27019: [Errno 11001] getaddrinfo failed')>, <ServerDescription ('rs2', 27020) server_type: Unknown, rtt: None, error=AutoReconnect('rs2:27020: [Errno 11001] getaddrinfo failed')>, <ServerDescription ('rs3', 27021) server_type: Unknown, rtt: None, error=AutoReconnect('rs3:27021: [Errno 11001] getaddrinfo failed')>, <ServerDescription ('rs4', 27022) server_type: Unknown, rtt: None, error=AutoReconnect('rs4:27022: [Errno 11001] getaddrinfo failed')>]>\n```\n\nkada pokusam izvrsit python skriptu.\n\nOvako mi izgleda spajanje \n\n```\nmyclient = pymongo.MongoClient(\"mongodb://rs0:27018,rs1:27019,rs2:27020,rs3:27021,rs4:27022/?replicaSet=rsnmbp\")\n```\n\ni dalje stvaranje kolekcije, insertMany()...\n\nImam rs0...rs4 u \\etc\\hosts\n\nImam docker-compose-rs.yml datoteku definiranu ko sto su kolege gore vec navele.\n\nPokrenem je s `docker compose -f docker-compose-rs.yml up`, udem u CLI od rs0, napisem mongo - -port 27018, napravim rsconf i rs.initiate isto ko sto je vec gore napisano.\n\nAl stalno javlja onu gore gresku. \n\nJe li mi nesto fali?",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270236": {
+      "poster": "magla",
+      "content": "@\"Ducky\"#p270230 \n\nMa da jasno mi je, ali nakon svega ovog\n\n`db.jewelry.find( { reviewText: { $regex: \"great\" } } )\n   \n\ndb.jewelry.createIndex({reviewText: \"text\"})\n   \n\ndb.jewelry.find({$text:{$search: \"great\"}})`\n\nOpet mi oboje vracaju zapise u istom vremenu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270237": {
+      "poster": "Mihael",
+      "content": "zna li neto kako u petom zadatku pronaći proizvode koji imaju više od jedne cijene?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270251": {
+      "poster": "Rope (Rops)",
+      "content": "@\"MGJ\"#p270233 Ja imam nesto ovako, probaj mozda uspije \n\n`client = MongoClient([\n\n        'rs0:27018', \n\n        'rs1:27019', \n\n        'rs2:27020',\n\n        'rs3:27021', \n\n        'rs4:27022'\n\n        ], \n\n        replicaSet='rsnmbp',\n\n        w=0)`",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270276": {
+      "poster": "laranotreallycroft",
+      "content": "jel netko imao problem da mu je za 2. dio 2. zadatak sve spremalo u jedan chunk? Probala sam podesiti chunk size po nekim uputama, ali preko 300mb uporno sprema u isti chunk",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270294": {
+      "poster": "laranotreallycroft",
+      "content": "@\"laranotreallycroft\"#p270276 \n\nupdate: nez zasto al zbog range sharding mi se to desava? ima netko range koji radi?\n\novaj dio konkretno mi stvara probleme\n\n`sh.shardCollection(\"lab3.beauty\", { \"price\": 1 } ) `",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270295": {
+      "poster": "Rasa",
+      "content": "@\"MGJ\"#p270233 Probaj resetirat sve s docker prune naredbom, meni nije radilo dok nisam to napravila i sve ponovno pokrenula",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270301": {
+      "poster": "MrDREDD",
+      "content": "Jel onda u svim zadacima možemo koristit aggregate ?",
+      "votes": {
+        "upvoters": [
+          "MrPeanutButter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270306": {
+      "poster": "MrPeanutButter",
+      "content": "Jel može netko pojasniti kako sada importati da koristimo kod od 1.djela projekta i spojimo se na mongodb://rs0:27018,rs1:27019,rs2:27020,rs3:27021,rs4:27022/?replicaSet=rsnmbp\n\nte kako koristiti ovaj write concern koji spominju u zadatku ?",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270308": {
+      "poster": "Gocc (***)",
+      "content": "@\"laranotreallycroft\"#p270294 jel se preko mongodb://localhost:27017/ spajaš da uneses podatke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270309": {
+      "poster": "Gocc (***)",
+      "content": "@\"laranotreallycroft\"#p270294 na sta se spajas kada unosis podatke?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270311": {
+      "poster": "laranotreallycroft",
+      "content": "@\"anaa\"#p270309 kolko sam skuzila spaja se normalno na bazu jer je router na 27017, znaci samo new MongoClient() u Javi bi trebalo funkcionirat",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270312": {
+      "poster": "Gocc (***)",
+      "content": "@\"laranotreallycroft\"#p270311 tako sam i ja, mislim da je ovo ekvivaletno u pythonu \n\nmyclient = pymongo.MongoClient(\"mongodb://localhost:27017/\") ali mi ne uspije spremiti u fragmentirano, u router shellu ne vidim ništa kao da nista nije spremio. Kada se spojim na taj port u robo3T jedino vidim ali tamo uopće kao da nema fragmentacije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270313": {
+      "poster": "laranotreallycroft",
+      "content": "@\"anaa\"#p270312 mozda da probas staviti i router_server u etc/hosts? ja sam to stavila za svaki slucaj pa accessam new MongoClient(\"router_server\", 27017);\n\nmislim da bi i bez tog trebalo, al probaj",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270314": {
+      "poster": "Gocc (***)",
+      "content": "@\"laranotreallycroft\"#p270313 \n\n![](assets/2022-01-13/00013.png)\n\n to je na 0.0.0.0 po ovome?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270317": {
+      "poster": "laranotreallycroft",
+      "content": "@\"anaa\"#p270314 ja sam na 127.0.0.1 kao i ove prije",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Gocc (***)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270325": {
+      "poster": "Gocc (***)",
+      "content": "@\"laranotreallycroft\"#p270317  Access control is not enabled for the database. Read and write access to data and configuration is unrestricted \n\ndo ovoga je ipak, to ti se nije pojavilo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270326": {
+      "poster": "Lusy (MGJ)",
+      "content": "Kako 4. zadatak riješiti?\n\nOvaj mi upit nista ne vraca:\n\n   ` db.kolekcija.find({score: 1.0}, {price:1, title:1, time:1, _id:0}).sort({time: -1, _id: 1}).skip(brZapisa - 20).limit(10)`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270329": {
+      "poster": "Ducky",
+      "content": "@\"MGJ\"#p270326 probaj sa \"review.score\":1.0, \"review.score\":1, \"product.price\":1...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270330": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "Ako me ovaj projekt u išta uvjerio, to je da je MongoDB gola kurčina za analitičke upite naspram SQL-a.",
+      "votes": {
+        "upvoters": [
+          "Djani",
+          "Kennedy",
+          "magla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Simke"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270331": {
+      "poster": "Lusy (MGJ)",
+      "content": "@\"Ducky\"#p270329 jesam vec i opet nista :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270332": {
+      "poster": "Ducky",
+      "content": "@\"MGJ\"#p270331 ja imam  `.sort({\"review.time\": 1, _id: -1}).limit(10)` umjesto skip, nez oce pomoc\n\nbtw si uspio ovo \n\n@\"MGJ\"#p270233",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270336": {
+      "poster": "Lusy (MGJ)",
+      "content": "@\"Ducky\"#p270332 napokon proradilo, hvala punoo 💙 \n\nJos sam skuzila da mi se score spremio kao integer, a ne float, je l znas mozda kako to popravit?\n\nA sta se tice tog zadatka iz 2. dijela, u \\etc\\hosts mi bilo sve zakomentirno (# ispred svakog retka).\n\nSad mi je ovako i radi:\n\n127.0.0.1 \t\trs0 \n\n\t127.0.0.1 \t\trs1 \n\n\t127.0.0.1 \t\trs2 \n\n\t127.0.0.1 \t\trs3 \n\n\t127.0.0.1 \t\trs4",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270339": {
+      "poster": "reygrep",
+      "content": "@\"Ducky\"#p270332 imam isto samo sto sam sad skuzila da treba predzadnjih 10, a ne zadnjih 10, pa mislim da i dalje treba skip(10)?",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270340": {
+      "poster": "Ducky",
+      "content": "@\"MGJ\"#p270336 isuseee hvlaaaa\n\nstvarno neznam, možda si jednostavno unijela score u bazu kao integer?\n\n@\"reygrep\"#p270339 shit... nisam čito zadatak :(",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)",
+          "reygrep"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270341": {
+      "poster": "reygrep",
+      "content": "@\"MGJ\"#p270336 iskombiniraj ovo \n```\n db.foo.find( { 'bad' : { $type : 1 } } ).forEach( function (x) {   \n  x.bad = new String(x.bad); // convert field to string\n  db.foo.save(x);\n});\n```\ni to da se int u float pretvara ovako \n\n``` (4).toFixed(2) ``` -> 4.00",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270344": {
+      "poster": "reygrep",
+      "content": "@\"Ducky\"#p270340 meni pricas tri put sam ga prepravljala 😂 \n\nprvi put sam izlistala prvih 10 jer nisam vidla 'predzadnji'\n\ndrugi put sam izlistala zadnjih 10 jer je moj mozak odlucio 'predzadnji' shvatit kao 'zadnji'\n\ni sad treca sreca should be right 😅 \n\na svaku izmjenu je trigeralo pitanje ovdje za taj zadatak tako da ekipa koji ste spitavali u vezi 4. zadatka you da best",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270347": {
+      "poster": "Ducky",
+      "content": "@\"reygrep\"#p270344 ja sam zapeo na drugom putu. Još sam im stavio u rješenje prvih i zadnjih 10, 2 slike iz basha i robo 3T-a i napiso da je zadatak dvosmislen. 😆",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "reygrep"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270348": {
+      "poster": "Lusy (MGJ)",
+      "content": "@\"reygrep\"#p270341 \n\n@\"Ducky\"#p270340 \n\nNe kuzim zasto mi se price spremilo kao float, a score nije, a istu stvar sam radila 😂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "reygrep"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270349": {
+      "poster": "toty",
+      "content": "Koliko vremena otprilike treba za drugi dio projekta, može li se odraditi u par sati?",
+      "votes": {
+        "upvoters": [
+          "Djani"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270382": {
+      "poster": "reygrep",
+      "content": "@\"MGJ\"#p270348 mozda je i do ovoga ![](assets/2022-01-13/00028.png)\n\nnemre ti garantirat kak ce ga spremat",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270392": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Koristim automotive (al nije pre bitno)\n\nKoliko vam se razlikuje broj dokumenata u kolekciji za prva 4. i u kolekciji koju stvarate u 5. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270396": {
+      "poster": "reygrep",
+      "content": "@\"StudenticaSaFera\"#p270392 prvi dio 27980  - drugi dio 4221",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270397": {
+      "poster": "reygrep",
+      "content": "nad kojim atributom treba napravit indeks u 9. zad?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270399": {
+      "poster": "Ducky",
+      "content": "@\"reygrep\"#p270397 ja sam nad userId",
+      "votes": {
+        "upvoters": [
+          "reygrep"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270424": {
+      "poster": "kivu",
+      "content": "@\"reygrep\"#p270396 \n\nUspijem sve prebaciti u novu kolekciju(bez tih duplikata), ali kako to napraviti nad postojecom kolekcijom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270426": {
+      "poster": "reygrep",
+      "content": "@\"kivu\"#p270424 i ja sam prebacivala u novu kolekciju pa dalje upite nad tim radila",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270438": {
+      "poster": "ZalutaliStudent",
+      "content": "Kako u zadnja tri zadatka prvog dijela dohvaćati podatke poput userId, on se nalazi u polju reviews, u svakom od objekata tog polja... A ja npr. trebam \"Pronaći korisnika s najviše i najmanje recenzija i zapisati njihove identifikatore\".\n\nNe mogu koristiti \"$reviews.userId\", jer reviews sadrži više objekata, a svaki od tih objekata sadrži userId...\n\n ![](assets/2022-01-13/00031.jpg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270441": {
+      "poster": "reygrep",
+      "content": "@\"ZalutaliStudent\"#p270438 ja se pravim mutava i radim te querije nad prvom originalnom kolekcijom",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)",
+          "MrPeanutButter",
+          "ZalutaliStudent",
+          "sekiro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ducky",
+          "Lusy (MGJ)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270443": {
+      "poster": "ZalutaliStudent",
+      "content": "@\"reygrep\"#p270441 ajme pa da, hvala ti",
+      "votes": {
+        "upvoters": [
+          "reygrep"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270447": {
+      "poster": "ZalutaliStudent",
+      "content": "@\"reygrep\"#p270441 a jel imaš možda problem da za npr. sljedeći upit:\n\ndb.arts.aggregate([\n\n{$group: {_id: \"$userId\", numOfReviews: {$count: {}}\n\n}},\n\n{$sort: {\"numOfReviews\": -1}\n\n},\n\n{$out: \"arts3\"}\n\n])\n\ndobivaš \"errmsg\" : \"unknown group operator '$count'\"?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270450": {
+      "poster": "Lusy (MGJ)",
+      "content": "Bi li ovako islo za 10. zadatak pomocu regexa:\n\n`db.kolekcija.find({text: {$regex: 'mindful'}})`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270464": {
+      "poster": "itsdend",
+      "content": "kako ste u 8. zadatku napravili onu distribuciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270466": {
+      "poster": "reygrep",
+      "content": "@\"itsdend\"#p270464 \n\ngore je negdje kolega napisao kod za popunjivanje distribucije",
+      "votes": {
+        "upvoters": [
+          "itsdend"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270469": {
+      "poster": "Lusy (MGJ)",
+      "content": "Zna li netko zasto mi index nad `review.text` vraca vise rezultata nego s regexom? Dobijem rezultate koji uopce ne sadrze \"mindful\". Recimo, pronade mi zapis koji sadrzi \"mind\".\n\nOvako sam definirala index:\n\n`db.kolekcija.createIndex({\"review.text\": \"text\"})`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270473": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@\"MGJ\"#p270469 \n\nMislim da je netko spomenuo već da se s indeksom vjerojatno normalizira ulaz\n\nTako da prihvaća sve koji imaju \"mind\" u sebi\n\nJa sam u odgovoru napisao da je tako i da ih zbog toga ima više",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270474": {
+      "poster": "Lusy (MGJ)",
+      "content": "@\"Pleteni miš\"#p270473 Ahaaa, onda cu i ja tako, hvalaaa!",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270523": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Ima li još budnih? :D",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)",
+          "MrDREDD",
+          "TheManFromEarth",
+          "mp99"
+        ],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Ducky",
+          "FortunaRegem",
+          "TheManFromEarth",
+          "itsdend"
+        ]
+      }
+    },
+    "270526": {
+      "poster": "Ducky",
+      "content": "ak netko do 8 ujutro skuži kak se spojit na bazu u 2. 2. dijelu, pliz share.\n\nprobao sam:\n\nclient = MongoClient('localhost:27017')\n\nclient = MongoClient('router_server:27017')",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270533": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Moze netko mala pomoc sa 9. zadatkom. :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270544": {
+      "poster": "Ducky",
+      "content": "@\"Ducky\"#p270526 nvm, runno sam krivu skriptu 😅\n\n2 sata potrošena",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "reygrep"
+        ]
+      }
+    },
+    "270569": {
+      "poster": "itsdend",
+      "content": "Kako se spojit u drugom dijelu preko pythona, baca mi error kao i kolegi gore",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270570": {
+      "poster": "Ducky",
+      "content": "@\"itsdend\"#p270569 koji error?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270574": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Kako izgleda bas ovo sto ste predali u drugom dijelu, prvi zadatak npr?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270582": {
+      "poster": "Ruleta",
+      "content": "što pitanju na usmenom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270586": {
+      "poster": "sekiro",
+      "content": "@\"Ruleta\"#p270582 za sad ti mogu samo reć da opet puno kasne, bio sam 9-9:30, sad je 9:40 i još me nisu zvali\n\nEDIT: prebacili me sad na termin u 11",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "MrPeanutButter",
+          "Rope (Rops)",
+          "WickyWinslow"
+        ]
+      }
+    },
+    "270590": {
+      "poster": "WickyWinslow",
+      "content": "@\"sekiro\"#p270586 Gdje vidiš da su te prebacili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270592": {
+      "poster": "Ruleta",
+      "content": "@\"WickyWinslow\"#p270590 meni je došao mail od Ljiljane Brkić da sam u 10 kako sam i bila.. znam ljude koji su trebali imati u pola 12 pa imaju u 9:30 tak da ne znam zašto su mijenjali",
+      "votes": {
+        "upvoters": [
+          "WickyWinslow"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270593": {
+      "poster": "Gocc (***)",
+      "content": "Melita\n\nPitaju samo drugi dio projekt. Prvi zadatak me pitala da pokrenem, čak mi iz prve nije radilo i svi bodovi. \n\nI objasnit što smo radili, htjeli postić u 1.zadatku",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "WickyWinslow"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270597": {
+      "poster": "sekiro",
+      "content": "@\"WickyWinslow\"#p270590 intranet, pisalo je 9-9:30, i onda stave obavijest da krece u 9:30, a u kalendaru vidim da sam ja u 11",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270598": {
+      "poster": "sekiro",
+      "content": "@\"anaa\"#p270593 šta smo točno htjeli postić 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270600": {
+      "poster": "Gocc (***)",
+      "content": "@\"sekiro\"#p270598 a ja sam pričala kao o tim potvrdama za write concern i kako se vidi razlika kada je 0, odnosno nema potvrde i kada je maksimalan da je dosta sporije upravo zbog toga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270601": {
+      "poster": "Vrba",
+      "content": "Ako smo predali samo prvi dio projekta jel se trebamo pojavit u ovom terminu odgovaranja?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270603": {
+      "poster": "Lusy (MGJ)",
+      "content": "Je l bila kome Ljiljana Brkić? Šta vas je pitala?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270604": {
+      "poster": "sekiro",
+      "content": "@\"Vrba\"#p270601 vjerojatno te neće nista pitat, al se pojavi pro forma",
+      "votes": {
+        "upvoters": [
+          "Vrba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270606": {
+      "poster": "Ruleta",
+      "content": "meni je isto bila prof. Melita i ista stvar kao i kod @\"anaa\"#220 \n\nza drugi zadatak sam morala objasniti onaj dio kod unosa podataka, kako su se chunkovi pojavljivali, ugl. nešto malo prokomentirati iz ispisa (imala sam u edgaru i taj zadatak nisam morala pokretati)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270614": {
+      "poster": "Lusy (MGJ)",
+      "content": "@\"MGJ\"#p270603 Bila meni, nista posebno, pitala da komentiram rezultate s w=0 i w=5 i sta je taj write concern. Tribala sam prid njom pokrenit docker-compose, pokazat docker-compose-rs.yml datoteku i program za upisivanje podataka. Sve u svemu, nije bilo nista tesko, 4/4 boda.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270616": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@\"Vrba\"#p270601 ne, iz obavijesti: Oba dijela se provode putem testa u Edgaru i ocjenjivati će se ručno od strane nastavnika, ali drugi dio (za one koji ga naprave) će se dodatno prezentirati nastavniku putem MS Teams aplikacije",
+      "votes": {
+        "upvoters": [
+          "sekiro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271779": {
+      "poster": "magla",
+      "content": "Jesu oni ovo dali bodove za samo dio zadataka pa ce za druge kasnije ili? Jer ispada ko da mi je skoro sve krivo 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272184": {
+      "poster": "sekiro",
+      "content": "Jesu samo meni bili brutalno strogi na ocjenjivanju? dobio sam 2.75 na prva tri zadatka ostalo su mi sve spičili 0?",
+      "votes": {
+        "upvoters": [
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272193": {
+      "poster": "niknik",
+      "content": "@\"sekiro\"#p272184 Ovo je samo dio bodova.",
+      "votes": {
+        "upvoters": [
+          "sekiro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272201": {
+      "poster": "MrPeanutButter",
+      "content": "meni je još sve 0",
+      "votes": {
+        "upvoters": [
+          "sekiro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

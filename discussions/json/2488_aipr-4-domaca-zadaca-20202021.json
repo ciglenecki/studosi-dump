@@ -1,0 +1,2400 @@
+{
+  "title": "[AIPR] 4. domaća zadaća - 2020/2021",
+  "creator": "Bananaking",
+  "slug": "aipr-4-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Analiza i projektiranje računalom",
+    "Zadaće"
+  ],
+  "posts": {
+    "108515": {
+      "poster": "Bananaking",
+      "content": "Tema za 4. domaću zadaću, rok za upload 14.12.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Ellie",
+          "Emma63194",
+          "Hus",
+          "cajaznun",
+          "cotfuse",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "narval13068 (Dima)"
+        ]
+      }
+    },
+    "108564": {
+      "poster": "tre_besty (luk)",
+      "content": "Jel još ikome genetski algoritam loš u pronalaženju minimuma f3 ako ima više od 2-3 dimenzije u 1. zadataku? Pogotovo ako koristim binarni prikaz. Uzmem da mi je populacija 100, br iteracija 10 000 i vjerojatnost mutacije 0.5",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108785": {
+      "poster": "Hus",
+      "content": "@tre_besty#108564 \n\n0.5 je malo prevelika vjerojatnost mutacije. Mislim da bi ti trebala biti između 0.01 i 0.1.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108801": {
+      "poster": "Bravos (Supraman)",
+      "content": "Jel mi može netko objasnit koje brojeve (dobrote, medijane?) stavljamo u onaj njihov box plot i koliko tih box plotova treba biti?",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108833": {
+      "poster": "member",
+      "content": "@Hus#108785 Kad provjeravaš oćeš li mutirat jedinku, u kojim granicama geneririaš random broj za kojeg gledaš je li vjerojatnost mutacije veća od njega?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108848": {
+      "poster": "Hus",
+      "content": "@member#108833 \n\nGeneriram slučajno vrijednost u intervalu [0, 1] i onda gledam ako je generirana vrijednost manja od pm (vjerojatnosti mutacije) \n\nKako radim u python-u to mi je samo \"random.random() < pm\"",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108878": {
+      "poster": "Hus",
+      "content": "@Bravos#108801 \n\nU box-plotu na x-osi bi ti trebao biti parametar koji mijenjaš, a na y-osi ti je dobrota najbolje jedinke nakon izvođenja GA za tu vrijednost parametra. \n\nIspod je slika primjera gdje je x-os vrijednost vjerojatnosti mutacije (pm), a na y osi su rezultati GA (GA je pokušao naći minimum od f(x) = x^2 i to je funckija dobrote). Za svaki pm se GA pokretao 10 puta.\n\n![](assets/2020-12-11/00005.png)\n\nNisu sad važne točne brojke, ovo samo služi za vizualizaciju. No možete vidjet da npr za pm = 0.01 je GA davao najbolje jedinke sa prilicno dobrom dobrotom (nije previše raštrkano i blizu nuli) pa bi ste si fiksirali pm na tu vrijednost.",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108880": {
+      "poster": "Hus",
+      "content": "@Bravos#108801 \n\nMislim da treba biti box-plot za svaki parametar GA (vjerojatnost mutacije, vjerojatnost križanja, veličina populacije i broj iteracija).",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108966": {
+      "poster": "gamigugi",
+      "content": "Jel to neka sprdnja il stvarno treba nacrtat sve te boxplotove? Jel zna netko jesu prije trazili da ih se pokaze na ispitivanju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108970": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@gamigugi#108966 Ja sam svojevremeno dobio 1 od 4 bodova za vježbu bez box plotova \\:))))\n\nSome men like curves, Đurasević likes them bitches boxy",
+      "votes": {
+        "upvoters": [
+          "gamigugi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Ellie",
+          "Emma63194",
+          "Hus",
+          "Yeltneb",
+          "gamigugi",
+          "in1"
+        ]
+      }
+    },
+    "109080": {
+      "poster": "MJ3",
+      "content": "jel se kod gaussolike mutacije mutira samo 1 nasumično odabrani kromosom ili svi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109169": {
+      "poster": "mankiboss",
+      "content": "![](assets/2020-12-12/00002.png)\n\nJe li potrebno omogućiti definiranje i ovoga bez prevođenja programa? Što se od toga može hardcodirati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "109190": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "koja je formula za krizanje jedinke vise varijabli za floating point rjesenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109193": {
+      "poster": "mankiboss",
+      "content": "@johndoe12#109190 Možeš koristiti BLX-alpha:\n\n![](assets/2020-12-12/00005.png)",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109196": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "Kako ce izgledati demonstracija ovog labosa? Hocemo li morati pokretati sve zadatke ili cak i po 10 puta svaki zadatak da generiramo plot ili samo pokazujemo od prije generirane box plotove il nesto trece? Pitam jer da generiram boxplotove za svaki zadatak potrajalo bi > 10 min",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109197": {
+      "poster": "post",
+      "content": "Na boxplotu ćemo prikazati dobrotu najbolje jedinke za svako izvođenje genetskog algoritma.\n\nS obzirom da je dobrota definirana u odnosu na populaciju, zar ne bi svaka najbolja jedinka u svojoj populaciji imala maksimalnu dobrotu što znači da nema smisla više raditi boxplotove?",
+      "votes": {
+        "upvoters": [
+          "Hus"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109201": {
+      "poster": "korisnickoime",
+      "content": "\"Za svaki od prikaza potrebno je definirati barem po dva operatora križanja\"\n\nJel ovo znači da prilikom križanja križanje obavljamo 2 puta ili da moramo imati dva različita načina na koja križamo pa ovisno o parametru koji je predan algoritmu koristimo jedan ili drugi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109210": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "u videopredavanju jakobovic je objasnio da se mutacija za floating point rjesenje treba odvijati tako da uzmemo cijelu populaciju i na temelju vjerojatnosti mutacije jedinke, izracunamo novu vrijednost unutar intervala za tu jedinku.\n\nali u pseudokodu mi krizanjem dobijemo novu jedinku, i kaze da tu jedinku mutiramo s vjerojatnoscu pM. dakle onda za tu jedinku izracunam novu vrijednost s formulom dg+rand.double *(gg-dg) ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109227": {
+      "poster": "member",
+      "content": "@johndoe12#109210 \n\nJa za floating point izračunam pM (vjerojatnost mutacije kromosoma) iz pm (vjerojatnost mutacije bita) \n\n-> pM = 1 - (1 - pm)**n , a  onda za dobiveno dijete gledam jel mi pM veca od vrijednosti dobivene random u intervalu [0,1] i ako jest, random izaberem koju varijablu mutiram i onda obavim mutaciju samo za tu varijablu (random.uniform(dg, gg). To je jednolika mutacija.  Ne znam bi li bilo bolje da za svaku varijablu djeteta provjeravam jel mi random generiran broj manji od pM pa evo ako probaš oba načina, javi.",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109234": {
+      "poster": "BigD",
+      "content": "Jel itko tko dobiva prihvatljiv broj pogodaka može napisati veličinu populacije i vjerojatnost mutacije koju koristi. Meni redovito broj pogodaka ispada 0 za funkcije dimenzije veće od 2",
+      "votes": {
+        "upvoters": [
+          "Hus",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109236": {
+      "poster": "Murin",
+      "content": "Mogu li i dalje dobiti sve bodove ako sam napravio minimalnu funckionalnost ?(sve sto se kaze \"mozete i ovo\" ne napravim)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109240": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "kolko minimalno toga treba imat implementrano pa da sam mogu pitat da mi da nula bodova?",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109243": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "koliko stavite da vam je maksimalan broj evaluacija funkcije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109253": {
+      "poster": "Hus",
+      "content": "@korisnickoime#109201 \n\nMoraš imat dva različita načina križanja pa onda biraš koji ćeš koristit u GA (odnosno ovo drugo što si napisao)",
+      "votes": {
+        "upvoters": [
+          "happysun",
+          "korisnickoime"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109254": {
+      "poster": "Hus",
+      "content": "@johndoe12#109243 \n\nKoliko sam skužio, to moraš pomoću box-plotova sam odredit, odnosno eksperimentirat sa različitim maksimalnim iteracijama (1000, 5000, 10 000, 50 0000) i odabrat onaj koji ti daje najbolje rješenje no da nemaš previše iteracija gdje nema napretka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109285": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "kako se pretvara polje bitova u realan broj da mogu odrediti vrijednost fx?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109292": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "> Ako ste implementirali selekciju roulette wheel, isprobajte više vrijednosti omjera odabira najbolje i najlošije jedinke \n\nJel kuži netko na što misle ovdje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109294": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@johndoe12#109285 Napraviš reverz pretvorbe u bitove lol\n\nnačin na koji ja računam vrijednosti u takvom zapisu je da modificiram funkciju gubitka:\n\n```\nf' = f(binary_decoder(x))\n```\n\njer pretvorbe prikaza ostvarujem komponentama koje ih preslikavaju, pa je struktura slična Pytorchu. Primjer preslikavanja u binarni zapis i reverz toga se može vidjeti [ovdje](https://github.com/Yalfoosh/AIPR/blob/main/dz/dz-04/demo/demo-01_encoding.ipynb)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109295": {
+      "poster": "in1",
+      "content": "@AromaticConfusion#109292 Možda da ti preslikavanje dobrote u vjerojatnost odabira jedinke ne bude linearno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109300": {
+      "poster": "Zabe",
+      "content": "jel potrebno imati funkciju dobrote i ako je koja bi to bila ili možemo samo gledati vrijednost funkcije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109306": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Zabe#109300 S obzirom na to da u vježbi radiš minimizaciju funkcije, onda ti funkcija dobrote nije sama funkcija nego nešto obrnuto. Dovoljno je samo nakačiti minus na tu funkciju. Evolucijski algoritmi maksimiziraju dobrotu, što je minimizacija funkcije ako maksimiziraju njenu negativnu vrijednost. Može se i napraviti recipročna vrijednost ali si time upravo smanjio domenu za točke gdje je vrijednost funkcije 0 (tamo će ti funkcija dobrote biti `NaN`), dok minusom ne mijenjaš domenu.",
+      "votes": {
+        "upvoters": [
+          "Zabe",
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109310": {
+      "poster": "sara (Gragas)",
+      "content": "u zadnjem zadatku traže da probamo sa vecom velicinom turnira, ako uzmem npr 5 jedinki u turnir, jel izbacujem 3 jedinke a ostavljam 2 (kako cu onda stvoriti nove 3 jedinke od preostale 2)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109311": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@sara#109310 Križaš 3 puta\n\nAli poanta je da je selekcija odvojeni mehanizam od očuvanja populacije pa zapravo kako ćeš ti puniti populaciju i održavati njen broj nema veze sa selekcijom. Isto tako, kako ubijaš jedinke nije stvar turnirske selekcije i ubijanje manje dobrih jedinki je samo ukras ekipe s predmeta.\n\nJedan od načina kako se te stvari mogu rješavati je da se selektira što se selektira, množiš, mutiraš i onda na kraju nekom drugom selekcijom odabereš višak jedinki koje ćeš ubiti. Obično ta druga selekcija selektira samo najgore jedinke iz populacije ili tog turnira, ali nitko ti ne kaže da možeš poubijati jedinke i totalno nasumično  ¯\\\\\\_(ツ)_/¯ (što bi vjerojatno bilo bolje nego mutacija)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109316": {
+      "poster": "sara (Gragas)",
+      "content": "@micho#109311  citala sam malo po internetu i mislim da se ipak uvijek izbacuje samo jedna, a od svih ostalih u turniru biraju dvije (najbolje rekla bih) koje ce se krizat",
+      "votes": {
+        "upvoters": [
+          "Atem",
+          "ReyKenobi",
+          "chuuya (temari)",
+          "luba",
+          "member",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109318": {
+      "poster": "in1",
+      "content": "@sara#109316 Tako je, odabereš k jedinki, dvije najbolje jednike križaš i njihovo dijete vraćaš u populaciju umjesto najlošije jedinke (najlošije od ovih k odabranih)",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi",
+          "sara (Gragas)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109340": {
+      "poster": "korisnickoime",
+      "content": "Može neko napisati za koje vrijednosti N, p_m i broj poziva funkcije dobiva točan minimum za funkciju 3 s 5 varijabli",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109341": {
+      "poster": "Emma63194",
+      "content": "Jel se od nas očekuje da svaki put GA nađe minimum ili je u redu ako nekad ne nađe, ali ide u tom smjeru?",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109344": {
+      "poster": "ReyKenobi",
+      "content": "Može li netko ako zna opisati što se od nas točno očekuje u prvom zadatku? Da prikažemo za svaku funkciju pokretanje uz optimalne parametre ili bilo kakve parametre? Dal za svaku funkciju moramo u tom prvom zadatku pokrenuti postupak više puta (10+)? \n\nNije mi baš jasno kako će ići to pokretanje na labosu s obzirom na to da mi recimo za funkciju f1 treba jako velik broj evaluacija funkcije da bi došlo do rješenja pa bi to moglo potrajati.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109347": {
+      "poster": "InCogNiTo124",
+      "content": "@Emma63194#109341 vecinom ti u biti nece LOL genetski su meme, treba dosta provest na tjunanju hiperparametara, a pogotovo teskim funkcijama minimum moze nac jedino slucajno\n\nS tim da genetski s realnim brojevima opcenito bolje konvergira od genetskog sa binarnim.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "MrHead (vandal)",
+          "Zogen",
+          "[deleted]",
+          "korisnickoime",
+          "member",
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109351": {
+      "poster": "Murin",
+      "content": "@InCogNiTo124#109347 \n\nJa trenutno imam bas suprotno i nisam siguran zasto, pretpostavljam da krivo radim crossover na floating point vrijednostima, nisam siguran moram li raditi aritmetciko/heuristicko nad svakom dimenzijom (ko sada) ili na samo jednom/odredenom broju dimenzija.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109353": {
+      "poster": "Emma63194",
+      "content": "@InCogNiTo124#109347 Oke, dobro onda. Jer meni tipa krene smanjivanje funkcije, dobro to izgleda, ali onda se ili prekine jer je premašio određen broj iteracija ili zadovolji ovaj njihov glupi uvjet (da vrijednost ciljne funkcije mora biti manja od 10 ^ -6), što meni puno prerano terminira proces onda (as in, ni blizu optimalnim vrijednostima).\n\nHvala!",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109356": {
+      "poster": "svemia (bearyn)",
+      "content": "Ako se kod binarnog prikaza za preciznost uzme 3 dec mjesta, kolko bi onda trebala bit velicina tog binarnog zapisa, tj. n?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109357": {
+      "poster": "InCogNiTo124",
+      "content": "@Murin#109351 na svim dimenzijama se radi obicno.\n\nMozda si bas dobro piknuo populaciju i stopu mutiranja.\n\nNez, ti genetski, to je bas na case-by-case basis. Ja sam prosle godine imao bolje rezultate sa malom snagom a velikom vjerojatnoscu mutiranja, dok su kolege imale tocno obrnuto. Al nikom nije bas predobro radilo xD ili bar nikom iz mog kruga",
+      "votes": {
+        "upvoters": [
+          "Murin"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109365": {
+      "poster": "MsBrightside",
+      "content": "@ImJustAKid#109240 a ono da ti bar jedan zadatak radi",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109367": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "jel postoji negdje u skripti ili predavanj gdje je objasnjena ova preciznost za binarni zapis i pretvorbe iz binarne jedinke? ja nigdje ne vidim, u rukom pisanoj skripti ne posotji nista, a na videopredanju isto nema",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109372": {
+      "poster": "mankiboss",
+      "content": "@johndoe12#109367 http://www.zemris.fer.hr/~golub/ga/ga_skripta1.pdf, kraj 9. stranice pa nadalje",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109379": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "![](assets/2020-12-12/00015.png)\n\nI dalje mi nije bas jasno. Kada generiram jedinke populacije, to mi bude array od 21 bita, na slici oznacen s b. i kako se sada dobije x? -50+b/2097151 *(150+50).. sta da radim s ovim b, jel taj 21-znamenkasti binarni broj treba u nesto pretvoriti prvo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109380": {
+      "poster": "Murin",
+      "content": "@InCogNiTo124#109357 \n\nPokusat cu se izvuci na to, iako se moze vidjeti da poksava doci do nule (za neke fje jako neuspjesno). jedino nikako da dobijem one 10E-6 hitove",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109382": {
+      "poster": "InCogNiTo124",
+      "content": "@johndoe12#109379 array pretvoris u binarni broj, zatim taj broj podijelis ga sa `2^21-1`, taj rezultat pomnozis sa sirinom intervala trazenja `gg-dg` i na to sve dodas `dg`",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109383": {
+      "poster": "in1",
+      "content": "@Murin#109380 Probaj s drugim operatorima mutacije/križanja. Meni u svim slučajevima osim 6. funkcije sa puno parametara (za realni prikaz rješenja) nađe gotovo egzaktno rješenje uz dovoljno iteracija. Koristim BLXAlpha križanje i ScrambleMutation.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109389": {
+      "poster": "Murin",
+      "content": "@in1#109383 \n\nNesto cu morati...promijeniti, ja za sad imam binarno-single/uniform i mutacija mi je random invertiranje, a za double-aritmeticko za sve dimenzije i isto tako heuristicko i mutacija je ono random broj u intervalu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109391": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Murin#109389 Probaj schedulati mutacije. Meni je sinusoidna rata mutacije prošle godine riješila sve uz najelementarnija križanja i gauss/single flip mutaciju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109395": {
+      "poster": "ReyKenobi",
+      "content": "> @micho#109391 Probaj schedulati mutacije\n\nMožeš prevest šta ovo znači?",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109402": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@ReyKenobi#109395 Da mutacija nije konstanta, nego nešto promjenjivo\n\nNpr. meni je mutacija bila funkcija u ovisnosti u epohama, sinusoida između 0 i 50% ak se ne varam. I onda se cijeli algoritam zapravo svodi na adversarial search, gdje križanje nalazi lokalne minimume, a mutacija ih napucava van u nadi da pogodiš neki drugi lokalni minimum. Kod gaussove mutacije raspršenje određuje koliko daleko nešto možeš napucati, dok kod n-flipa n određuje koliko ga daleko po bitovima možeš napucati.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109405": {
+      "poster": "Atem",
+      "content": "Treba li na ferko predavati i slike box plotova? Jeste li ih predavali prošle godine?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109410": {
+      "poster": "Murin",
+      "content": "Iz nekog razloga mi algoritmi nikako ne mogu probiti minimum od cca 0.5 +-0.03 i to ako se uopce uspiju pribliziti nuli, je li jos netko imao takvih problema?\n\n\nI kad radite mutaciju, dal gledate za svaku dimenziju if(math.random<mutationProb)-mutate ili gledate opcenito za kromosom hoce li mutirati i onda zovete neku verziju mutacije?",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109423": {
+      "poster": "Ziher",
+      "content": "@Murin#109410 Ja zavrtim kod realnih za svaku varijablu, kod binarnih za svaki bit\n\nNaravno, za razlicite pm, gdje je pm kod binarnih valjda 0.01 ako sam ga dobro odabrao, sto mi se cini razumno s obzirom na broj bitova za velike preciznosti\n\nNego, mene zanima ova smijesna stvar: u pythonu mi nekad, ne uvijek ispise krivu najbolju jedinku, like so:\n\n![](assets/2020-12-12/00017.png)\n\nNe kuzim zasto, logika je dobra i najcesce mi je ispis padajuc (ispisujem svaki put dok je nova najbolja jedinka) i rjesenje je ocito dobro (na kraju nije ispisalo onu suboptimalniju). Moze li mi ovo netko objasniti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109429": {
+      "poster": "BigD",
+      "content": "Kako bi veličina turnira trebala utjecat na algoritam? Meni veći turnir daje lošije rezultate, al nekako mi to nema smisla.",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109446": {
+      "poster": "in1",
+      "content": "@BigD#109429 Sa većim turnirom imaš veći selekcijski pritisak pa će ti algoritam brže konvergirati rješenju, ali može zaglaviti u lokalnom minimumu.",
+      "votes": {
+        "upvoters": [
+          "happysun",
+          "koBASA (hackerman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109448": {
+      "poster": "Harweyy",
+      "content": "Ako me fkt nije briga za bodove iz labosa, jel mi smijemo dosovno predat nista te i dalje proc predmet ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109451": {
+      "poster": "dante_zu",
+      "content": "Jesam li nesto krivo napravio ili u binarnom nacinu rada algoritam radi puuuno puuuno losije nego u ovom \"normalnom\" nacinu?\n\n(Vidi se da ide u dobrom smjeru i binarni, ali ne uspije u konacnici)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109455": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Harweyy#109448 Nope, ovo ti je jedan od onih predmeta gdje i 0 trebaš zaradit",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109459": {
+      "poster": "Harweyy",
+      "content": "Pa dobro ali za 0, jel mogu ja teoretski “pokusat “ rijesit labos ali jooooj bas mi nije uspjelo osim napisat 50 linija koda, msm kao fkt mi se neda pisat ovo sranje kad sam vec prosao predmet",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109461": {
+      "poster": "InCogNiTo124",
+      "content": "@dante_zu#109451 meni je radio puuuno losije i nisam ga mogao natjerat da radi dobro\n\n@Harweyy#109459 u teoriji mozes to napravit, ali onda ne mozes ocekivat nist drugo osim \"sve je u redu kolega, bute nagodinu\"",
+      "votes": {
+        "upvoters": [
+          "in1",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109463": {
+      "poster": "Atem",
+      "content": "Treba li za sve zadatke raditi box-plotove ili samo za 3. i 4.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109471": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Harweyy#109459 je probao s 50 linija koda najlakši labos na predmetu top kek\n\nmislim probaj ak te sruši imat ćeš jebenu priču, ako ne: imaš još jedan labos za scammat. Ovisi tko ti je na labosu, tipa kod one ženske bi prošlo, a Đurasević bi nanjušio da nešto smrdi haha",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109498": {
+      "poster": "happysun",
+      "content": "@BigD#109429 Što je k veći to je veća mogućnost da se u tom podskupu od k jedinki nalaze jedinke sa većom dobrotom. Kako za roditelje iz podskupa od k jedinki biramo jedinke sa najvećom dobrotom tako će to utjecati na bržu konvergenciju algoritma u neki lokalni optimum, ako on postoji. Tako da lošiji rezultati koje dobiješ su možda rezultat zaglavljivanja algoritma u nekom lokalnom optimumu.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109555": {
+      "poster": "Arfit",
+      "content": "@Harweyy#109459 Prema mom iskustvu iz ova prethodna 3 labosa, uopce mi asistent nije gledao implementaciju, rekao je samo da pokrenem neki odredeni zadatak koji kaze, a cak se ne trudi procitati rezultate mog ispisa, valjda da vidi samo da imam nesto\n\nSve bodove koje mi je dodjeljivao su bili na osnovu teoretskog znanja, kao da sam na usmenom. Meni nije jasno vise isplati li se ulagat puno truda u detalje implementacije ?\n\nTakav sam ja dojam dobio, ovisi o asistentu valjda ...",
+      "votes": {
+        "upvoters": [
+          "hi_doggy",
+          "in1",
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109559": {
+      "poster": "MJ3",
+      "content": "@Arfit#109555 ovisi ko te pita, jer meni prošli put za neke algoritme nije došlo do dobrog rješenja i smanjio mi je broj bodova razmjerno tome koliko ih je radilo dobro, a koliko ne",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109579": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "kada pokrecete algoritam za jedan zadatak vise puta, jel svaki put radite novu populaciju ili ne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109582": {
+      "poster": "member",
+      "content": "Kako ste generirali početnu populaciju u danom intervalu? U pythonu sam. Ako generiram float vrijednosti, nezgodno ih je  prebacit u binarne. A ako generiram binarne, ne znam kako bi ih u danom intervalu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109587": {
+      "poster": "member",
+      "content": "@member#109582` bin(x)[2:].zfill(n)` ili ` format(x, 'b').zfill(n)` za pretvorit iz floata u binarne",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109606": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Atem#109463 mislim da samo za 3. i 4.",
+      "votes": {
+        "upvoters": [
+          "Atem"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109611": {
+      "poster": "chuuya (temari)",
+      "content": "@Noggenfogger#109606 Treba za 3.? Vidim da samo u 4. baš spominju boxplotove a u 3. samo kažu usporedi (mainly mi se ne da radit boxplotove pa se ponadah)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109612": {
+      "poster": "InCogNiTo124",
+      "content": "@johndoe12#109579 da, trebalo bi svaki put novu populaciju",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109620": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@chuuya#109611 ''Inačice algoritma usporedite po uputama u sljedećem odjeljku''\n\nsljedeci odjeljak: ''Konačno, rezultate je korisno i prikazati. Rezultati se često prikazuju u obliku box-plot dijagrama''\n\niskreno ne znam sta da mislim, nisu specificirali, ali ak budu pitali zas nismo napravili za 3.boxplot stvarno ne znam koji bi im odgovor dala kao razlog hahahha",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109647": {
+      "poster": "saitama",
+      "content": "@Noggenfogger#109620 kolko ja vidim pise da je korisno,a ne obavezno",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109651": {
+      "poster": "Ziher",
+      "content": "Sto znace ovi kruzici kod boxplota?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109653": {
+      "poster": "ReyKenobi",
+      "content": "U četvrtom zadatku gdje optimiramo parametre za f6, koju dimenzionalnost bismo trebali uzeti? \n\nJa trenutno uzimam da mi je dimenzija 3, a onda mi veća vjerojatnost mutacije i veličina populacije ne daju skoro nikakve razlike u rezultatima. \n\nDal netko zna za koju bismo dimenziju trebali tražiti optimalne parametre i dal bismo trebali vidjeti veće razlike u rezultatima ovisno o trenutnom parametru?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109661": {
+      "poster": "svemia (bearyn)",
+      "content": "@Harweyy#109459 Prosli labos sam pokusala na taj nacin - napravila sam pola toga i nije radilo bas dobro, ali sam se nadala da ce bit za 0. Durasevic mi je rekao da mi ne radi dovoljno dobro i da me ne moze pitat za 0 bodova. Popravila sam u sat vremena, pa me pitao na kraju. Point of the story, moras napravit bar jedan dio i taj dio ti mora radit dobro.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109662": {
+      "poster": "ReyKenobi",
+      "content": "> @ReyKenobi#109653 a onda mi veća vjerojatnost mutacije i veličina populacije ne daju skoro nikakve razlike u rezultatima.\n\nJa sam se zeznula za ovo, slučajno sam ograničila previše broj iteracija pa se algoritam prerano zaustavljao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109669": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "3.zadatak mi se vrti divnih 10-15 minuta. itko ima slicnu situaciju? ili da je imao i uspio ubrzati, kako?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109670": {
+      "poster": "Harweyy",
+      "content": "@Noggenfogger#109669 ti si jos dobar, meni je 21 min",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Emma63194",
+          "Noggenfogger (dammitimmad)"
+        ]
+      }
+    },
+    "109671": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Harweyy#109670 ja nemam zivaca za to, jebemti ovaj labos \n\nbtw moze netko stavit rezultat boxplota da otprilike dobijem dojam je li mi ispravno ili ne (bar za 4.zad)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109678": {
+      "poster": "ReyKenobi",
+      "content": "> @Noggenfogger#109669 3.zadatak mi se vrti divnih 10-15 minuta.\n\nPrije 15 minuta sam otišla pogledat video dok mi se vrti 4. zadatak, evo i dalje se vrti :)",
+      "votes": {
+        "upvoters": [
+          "Harweyy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "in1"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Noggenfogger (dammitimmad)"
+        ]
+      }
+    },
+    "109681": {
+      "poster": "chuuya (temari)",
+      "content": "@svemia#109661 Ne kužim šta je onda za 0 bodova? Fuk dis",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109684": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "Jel vam uvijek nade fx koji je manji od 10^-6 ? Meni ne nade za svakiu fju, ali nade priblizne minimume, pogotovo za f6 i f7. I dobijem fx koji je npr 0.009 ili reda 10^-4..",
+      "votes": {
+        "upvoters": [
+          "Cvija"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109685": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Noggenfogger#109669 to ti je previse, ja imam milijun itèracija pa se izvrti u par sekundi. koristi debugger da vidis jel ti dobro bira jedinke u tournamentu, i dal uzmes onu s najgorim fx, maknes ju i stavis na njeno mjesto child nakon krizanja i mutacije. I trebas updejtati trenutni najbolji fx i jrdinku da ju mozes ispisati na kraju kad ti zavrsi max_fx_eval",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": [
+          "Emma63194"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109699": {
+      "poster": "InCogNiTo124",
+      "content": "@Ziher#109651 Box plot djelovi od sredine van: \n\n\\- srednja vrijednost (ili median)\n\n\\- 0.25 i 0.75 percentil (kutija)\n\n\\- rubovi distribucije, 1.5 IQR (brkovi)\n\n\\- outlieri\n\nIQR je u biti sirina kutije",
+      "votes": {
+        "upvoters": [
+          "Ziher"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109702": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@johndoe12#109685 to sam provjerila cim sam napisala tu funkciju i radi dobro, pazim na index takoder. uopce ne razumijem. u kojem jeziku ti pises?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109704": {
+      "poster": "ReyKenobi",
+      "content": "@johndoe12#109685 da... to je algoritam i ja i vjerujem @Noggenfogger primjenjuje, ali to nema baš veze s brzinom izvođenja, prije je problem u korištenim strukturama podataka ili jednostavno jako velikoj populaciji i broju evaluacija funkcija (kad se tipa 40 puta treba izvrtit algoritam, a veličina populacije raste do 200, jednostavno je jako puno računanja).",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Noggenfogger (dammitimmad)"
+        ]
+      }
+    },
+    "109706": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "moze neko rec sta plota u 3 i u 4 zadatku. koje datasetove saljete?",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109708": {
+      "poster": "svemia (bearyn)",
+      "content": "@chuuya#109681 A nemam pojma, ne kuzim sta bi trebalo bit za 0 i kak ju je moguce dobit. Ja sam mislila da ce to bit 0 (jer je jedva radilo lol), ali mi je na kraju dao 1.5 boda ( 2 bod za implementaciju - 0.5 za teoriju ).  Mozda je 0 ako mu pokazes da ti radi dio, ali kazes da ti se ne da odgovarat, to mi jedino ima smisla. 🤷‍♀️",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109714": {
+      "poster": "Emma63194",
+      "content": "@Noggenfogger#109706 Ovo bi i mene zanimalo. Može možda netko staviti kako im ispadaju ti plotovi?",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109716": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "sto se tice boxplota, dovoljno je napraviti samo jedan bowplot prikaz npr zavelicinu populacije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109721": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Jel još nekom vrijednosti funkcije u 4. ispadaju skoro uvijek jednako neovisno o različitim parametrima?\n\nI da, jel u 4. koristimo binarni ili decimalni prikaz?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109723": {
+      "poster": "ReyKenobi",
+      "content": "> @PrisonMike#109721 Jel još nekom vrijednosti funkcije u 4. ispadaju skoro uvijek jednako neovisno o različitim parametrima?\n\n\n> @ReyKenobi#109662 Ja sam se zeznula za ovo, slučajno sam ograničila previše broj iteracija pa se algoritam prerano zaustavljao\n\nStavila sam da mi se zaustavi nakon određenog broja iteracija bez promjena, kad sam maknula to bi došao do 100k evaluacija funkcije i onda bi se ponašao drugačije, pogotovo dok sam mutaciju mijenjala (naravno da ovisi i o sreći nekad)\n\n> @PrisonMike#109721 I da, jel u 4. koristimo binarni ili decimalni prikaz?\n\nJa sam stavljala decimalni gdje god nije bilo specificirano jer mi je taj bolje konvergirao",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109725": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@johndoe12#109716 pretpostavljam da govoris za 4.zad. jel ti onda dataset jedna lista u kojoj su vrijednosti optimuma za n = [30, 50, 100, 200] pa onda imas 4 elementa ili vrtis vise puta za jednu dimenziju pa imas 4 liste koje saljes u dataset?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109727": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Noggenfogger#109725 sad tek krecem s tim zadatkom pa javim",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109729": {
+      "poster": "ReyKenobi",
+      "content": "> @Noggenfogger#109706 moze neko rec sta plota u 3 i u 4 zadatku. koje datasetove saljete?\n\nJa sam ovako, vodila sam se onim box plotovima koje je Jakobović pokazivao na predavanjima.\n\n3. zadatak \n\n   Po jedan graf za f6 i  f7, svaki od njih ima vrijednosti mjerenja za floating point s dimenzijom 3, floating point s dimenzijom 6, binarni prikaz s dimenzijom 3 i binarni prikaz s dimenzijom 6 (dakle ukupno 40 rezultata). \n\n   Ovako mi izgleda datoteka koju sam generirala za funkciju f6 (isto tako treba i za f7):\n \n   `FP_3,FP_6,BIN_3,BIN_6\n\n0.009,0.010,0.000,0.010\n\n0.010,0.010,0.000,0.010\n\n0.010,0.010,0.010,0.016\n\n0.010,0.010,0.010,0.037\n\n0.010,0.010,0.010,0.037\n\n0.010,0.010,0.010,0.037\n\n0.010,0.010,0.010,0.043\n\n0.010,0.010,0.010,0.079\n\n0.010,0.010,0.010,0.086\n\n0.010,0.010,0.010,0.103`\n\n Prvi stupac označava rezultate za prolaze algoritma s floating point prikazom i dimenzijom 3, drugi stupac za floating point i dimenzijom 6 i tako dalje.\n\n4. zadatak\n\nNa istu foru, samo sam sad generirala jednu ovakvu datoteku za promijenu vjerojatnosti mutacije (stupci su vrijednosti mutacije 0.1, 0.3, 0.6, 0.9), a jednu za promjenu veličine populacije (stupci 30, 50, 100, 200).",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109730": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@ReyKenobi#109729 zad3: gornja f6 donja f7. jel ovo oke?\n\n![](assets/2020-12-13/00011.png)\n\n\nza 4. jesi onda vrtila vise puta za istu vrijednost npr velicine?",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109731": {
+      "poster": "Emma63194",
+      "content": "@ReyKenobi#109729 Mjerimo koliko puta algoritam nađe vrijednost manju od 10^-6? Sorry na gnjavaži, ne sjeda mi baš što bismo trebali prikazati tim grafovima.",
+      "votes": {
+        "upvoters": [
+          "ReyKenobi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109732": {
+      "poster": "happysun",
+      "content": "treba li učitati slike box-plotova na ferko?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109734": {
+      "poster": "ReyKenobi",
+      "content": "@Noggenfogger#109730 \n\nČini mi se okej, odnosno tako je i meni nešto ispadalo. \n\nBinarni prikaz mi je dosta slabije radio, makar je Jakobović na predavanju rekao nešto da bi binarni prikaz mogao bolje raditi na više dimenzija... meni se to nije pokazalo tako, a vidim da ni tebi nije, valjda su to neka ograničenja jednostavnih operatora križanja i mutacije. \n\nIsto je očekivano da lošije radi na više dimenzija tako da mi se sve čini okej na tim grafovima.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109736": {
+      "poster": "ReyKenobi",
+      "content": "> @Emma63194#109731 Mjerimo koliko puta algoritam nađe vrijednost manju od 10^-6? Sorry na gnjavaži, ne sjeda mi baš što bismo trebali prikazati tim grafovima.\n\nMislim da je ideja da se zapiše za svako mjerenje vrijednost funkcije u toj nađenoj najboljoj točki (to su ti brojevi u tablici koju sam napisala).",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109738": {
+      "poster": "ReyKenobi",
+      "content": "> @Noggenfogger#109730 za 4. jesi onda vrtila vise puta za istu vrijednost npr velicine?\n\nVrtila sam isto po deset puta za svaki parametar. Dakle u onom slučaju mutacije po 10 puta za 0.1, 10 puta za 0.3, itd.",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109739": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@ReyKenobi#109729 te vrijednosti su ti vrijednosti fje fx kad evaluiras najbolju jedinku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109740": {
+      "poster": "Bananaking",
+      "content": "Kad generiramo random točke između donje i gornje granice, one mogu (trebaju) biti floatovi? Kako ih pretvorite u binarne?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109744": {
+      "poster": "Carmichael (Charm)",
+      "content": "kako vam ispadaju idealni parametri u 4. zad? i jesu vam uvijek isti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109747": {
+      "poster": "Cvija",
+      "content": "@Carmichael#109744 Meni su najčešće 0.1 i 30\n\nNekad umjesto 30 bude 50",
+      "votes": {
+        "upvoters": [
+          "Carmichael (Charm)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109749": {
+      "poster": "Cvija",
+      "content": "@Bananaking#109740 Ja sam to obrnuto radio.. Prvo izračunam koliko bitova mi treba svaka jedinka sadržavati, nakon toga taj binarni broj pretvorim u cijeli broj i onda uvrstim u formulu:\n\n[math] x = dg + \\frac{b}{2^n - 1} * (gg - dg) [/math]\n\ngdje je dg donja granica, gg gornja granica, b je integer binarnog broja, n je velicina binarnog broja\n\njoš jedna stvar, ako imaš funkciju dvije varijable i na primjer izračunaš da ti broj bitova za prikaz jedne varijable mora biti 15, za dvije ti onda mora biti 30\n\nto znači da ti imaš 30-bitni binarni broj od kojeg su ti prvih 15 bitova x varijabla, a drugih 15 y\n\ntako da ovu gornju formulu koristiš za svaku varijablu posebno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109753": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@ReyKenobi#109738 jel ovo onda okej za 4zad. gornje je velicina populacija a donje vjerojatnost. znam da su cudno ispali optimalni parametri, nekad ispadnu smisleniji, al me samo graf zanima jel ovo sto se ocekuje od nas?\n\n![](assets/2020-12-13/00012.png)",
+      "votes": {
+        "upvoters": [
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109755": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@chuuya#109681 Kod Đurasevića ti je nula kombinacija da ti ne radi tipa 50% stvari i da ne znaš 75% stvari. Kod drugih asistenata je malo lakše, ne znam jel toliko lagano da možeš doći ili da ništa ne znaš ili da ništa ne radi, jer očito ovo prvo sugerira da se dogodila prepisivačina, a ovo drugo sugerira da nisi ni probao.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109774": {
+      "poster": "login",
+      "content": "Jel jos nekome vrijednost fje za f6 konvergira u 0.0971.... i iz toga se ne moze pomaknut?",
+      "votes": {
+        "upvoters": [
+          "Arfit",
+          "Cvija",
+          "MsBrightside",
+          "ReyKenobi",
+          "[deleted]",
+          "johndoe12 (enaiks)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109777": {
+      "poster": "chuuya (temari)",
+      "content": "@micho#109755 Znači ak znamo teoriju dobro bit će ok iako je implementacija loša tj. ne radi dobro? Pokušavam se utješit lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "MJ3"
+        ]
+      }
+    },
+    "109778": {
+      "poster": "sara (Gragas)",
+      "content": "@login#109774 da u mene, ne znam što je s tim",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109781": {
+      "poster": "ReyKenobi",
+      "content": "@Noggenfogger#109753 \n\nDa, čini se dobro",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109784": {
+      "poster": "ssbb",
+      "content": "Sta oni tocno zele sa ovim \"medijanima\" kada radimo Box plotove? Konkretno, ova recenica: \n\n  *Koristite medijan kao mjeru usporedbe.*\n\n  Medijan cega? Box plotovi po defaultu uzimaju medijan, ali ne znam jel ocekuju jos nekakvo dodatno pretprocesiranje od strane nas ili sta.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109789": {
+      "poster": "in1",
+      "content": "@ssbb#109784  \n>Medijan cega?\n\nDobivenih rezultata, ako pokreneš X puta algoritam za populaciju 100 i populaciju 200 imati ćeš X rezultata za oba pokretanja i onda uspoređuješ medijan vrijednosti oba pokretanja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109790": {
+      "poster": "ssbb",
+      "content": "@in1#109789 aaa, kuzim. Hvala. To u nacelu znaci da mogu samo nacrtati box plotove za populacije 100 i 200, i direktno iz njih iscitati medijane, yes?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109792": {
+      "poster": "in1",
+      "content": "@ssbb#109790 Ako alat u kojem radis boxplot oznaci medijan, da.",
+      "votes": {
+        "upvoters": [
+          "ssbb"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109793": {
+      "poster": "ssbb",
+      "content": "Kul. Btw ako netko moze pokazati svoje box plotove za 3. zadatak funkciju f6, bio bi jako zahvalan. Ispada mi da su mi za D=3 floating point i binarni prikaz jednako dobri, a za D=6 je floating point marginalno losiji.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109795": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@chuuya#109777 Ma ne, to sam ja dao procjenu šta bi njemu bilo za 0 bodova. Stvar je što te dvije stvari vjerojatno predstavljaju drukčiju metriku. Implementacija govori o tome koliko si radio labos, dok znanje govori o tome koliko ga razumiješ. Ako ti ne radi puno labosa onda očito ili ne znaš programirati (na 4.+ godini FER-a LOL) ili nemaš pojma generalno. Dok tipa može ti se dogoditi da riješiš cijeli labos implementacijski ali da nemaš pojma predmet.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109805": {
+      "poster": "Bananaking",
+      "content": "Mutacije pretpostavljam radim na binarnom prikazu novodobivene jedinke. Ako želim implementirati jednostavnu mutaciju to je onda vjerojatnost mutacije p_M za nasumični bit novodobivene jedinke, što je sa dimenzijom jedinke? Mutira li se svaka od njih ili jedna?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109807": {
+      "poster": "Emma63194",
+      "content": "Kako vama 5. izgleda?\n\nMeni budu ful random brojke, opće se iz njih ne može reći je li bolje uzeti veći k za turnir ili manji.",
+      "votes": {
+        "upvoters": [
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "InCogNiTo124"
+        ]
+      }
+    },
+    "109814": {
+      "poster": "Yasuke (Bono)",
+      "content": "@sara#109778 @login#109774\n\nJeste skužili možda u čemu je problem?",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109816": {
+      "poster": "sphera",
+      "content": "jel treba i 2, 3 i 4 vrtit za sve moguće varijante binarnih i realnih algoritama ili ja po želji uzmem neki",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109849": {
+      "poster": "ReyKenobi",
+      "content": "@Yasuke#109814 \n\nVjerujem da nije problem u implementaciji, nego u obliku funkcije (https://www.fer.unizg.hr/_download/repository/lab_3_slike.pdf). Teško se iskopat iz tih lokalnih minimuma i to ne ide dobro genetskim algoritmima.",
+      "votes": {
+        "upvoters": [
+          "Yasuke (Bono)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109851": {
+      "poster": "Bananaking",
+      "content": "Kako ste implementirali uvjet zaustavljanja osim maxiter? Mozda najveci f(x) - najmanji f(x) < epsilon?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109852": {
+      "poster": "mankiboss",
+      "content": "@Bananaking#109851 samo najmanji f(x) < epsilon. Ne znam zašto bi te zanimalo išta osim najboljeg rješenja. Al možda sam u krivu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109853": {
+      "poster": "Yasuke (Bono)",
+      "content": "@ReyKenobi#109849 \n\nDa istina.\n\nOvako mi ispadne box plot za 4. zadatak za veličinu populacije:\n\n![](assets/2020-12-13/00021.png)\n\nJel to ok?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109854": {
+      "poster": "Bananaking",
+      "content": "@mankiboss#109852 ali najmanji f(x) ne mora biti manji od epsilon? Ako je minimum funkcije u 5 a epsilon ti je 1e-6? Ili sam ja glup",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109855": {
+      "poster": "Svarog (Veles)",
+      "content": "@Bananaking#109854 tako su nam složili da su minimumi svih funkcija jednaki 0, pa stoga možeš samo gledati je li vrijednost trenutno najbolje jedinke dovoljno blizu 0",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109859": {
+      "poster": "mankiboss",
+      "content": "@Bananaking#109854 U pravu si, al nama sve funcije sasvim zgodno imaju minimum u 0. Tak da sam ja to malo pojednostavio",
+      "votes": {
+        "upvoters": [
+          "Bananaking",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109861": {
+      "poster": "InCogNiTo124",
+      "content": "@Bananaking#109851 osim globalnog kriterija na broj iteracija, mozes napravit i kriterij ako ti je najbolje rjesenje isto zadnjih ajmorec 1000 epoha",
+      "votes": {
+        "upvoters": [
+          "Bananaking"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109869": {
+      "poster": "Bananaking",
+      "content": "Ako netko ima živaca može baciti oko na moje funkcije za binarni/izbinarnog, tu negdje radim grešku jer iskreno ne razumijem taj dio o prikazima zbog čega mi populacija brzo teži gigantskim brojevima pa pukne math error na izračunu funkcije. Nemojte prepisati ne zbog plagijatora nego zato što ne valja 😁 \n\nFunkcija za x[] > binarni zapis, dim su dimenzije recimo **x** = [x1, x2]\n```\ndef binarize(x, dg, gg, binlen, dim):\n    binary = []\n    for d in range(dim):\n        value = ((math.pow(2, binlen) - 1) * (x[d] - dg)) / (gg - dg)\n        valueInt = int(value)\n        stringed = \"{0:b}\".format(valueInt)\n        while(len(stringed) < binlen):\n            stringed = \"0\" + stringed\n        binary.append(stringed)\n    return binary\n```\n\nFunkcija za binarni zapis > x[]\n```\ndef unbinarize(x, dg, gg, binlen, dim):\n    unbinary = []\n    for d in range(dim):\n        result = dg + (int(x[d]) * (gg - dg)) / (math.pow(2, binlen) - 1)\n        unbinary.append(result)\n    return unbinary\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109875": {
+      "poster": "InCogNiTo124",
+      "content": "@Bananaking#109869 ironicno ipak sam ti naso bugove lol\n\n unbinarize ti ne valja, treba ti `int(x[d], 2)`\n\ntakoder, varijabla `dim` ti ne treba, koristi `len(x)` ili jos bolje `for genome in x:`\n\nne treba ti while petlja, dosta ti je `stringed.rjust(binlen, '0')`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109876": {
+      "poster": "Ziher",
+      "content": "@Bananaking#109805 Bolje da ispitujes za neki mali p_m svaki bit\n\nZa veliku preciznost ce biti dosta bitova i velika je sansa da ti se bar jedan promijeni\n\nA nije dobro da ti se bas skoro nikad ne promijeni bit nakon mutacije, isto kako nije dobro da ako dobijes random broj manji od pm da ides mutirati svaki bit\n\nMutiranje se moze ali i ne mora dogoditi, a i dok se dogodi ne mora promijeniti vrijednost bita\n\nA sto se tice dimenzija, mislim da ti se to gleda kao jedan veliki niz bitova pa je svejedno gdje mutiras i kako, mozda ti se u jednoj dimenziji 2 bita promijene, u drugoj nijedan i tako",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109880": {
+      "poster": "Bananaking",
+      "content": "@Ziher#109876 Znaci ti za svaki bit vrtis if(rand <= p_M): flip_bit ? \n\n> @InCogNiTo124#109875 unbinarize ti ne valja, treba ti int(x[d], 2)\n\novo je dosta pomoglo, ne puca više algoritam, hvala 😄",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109890": {
+      "poster": "Ziher",
+      "content": "@Bananaking#109880 da, za p_m=0.01 ili manji\n\nOvisi o preciznosti\n\nI mozes flip_bit ili opet random pa imas 50% sanse da se promijeni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109920": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Bananaking#109869 To je brutalna komplikacija, dovoljno je napraviti ovo:\n\n```python\nbin2dec_vector = np.vectorize(\n    lambda x: x.dot(1 << np.arange(x.size)[::-1]), signature=\"(n)->()\"\n)\n\ndec2bin_vector = np.vectorize(\n    lambda x, y: np.array(list(np.binary_repr(x).zfill(y))).astype(np.int32),\n    signature=\"(),()->(n)\",\n)\n```\n\n`dec2bin` prima konkretan cijeli broj i broj binarnih znamenaka.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "InCogNiTo124"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109924": {
+      "poster": "Bananaking",
+      "content": "Implementirao sam ovaj pseudokod 3-turnirski eliminacijski odabir iz vjezbe, naravno, ali primjetim da jedini nacin da dobijem bolji best f(x) je u slucaju mutacije u bolju jedinku sto se dosta sporo dogadja za populaciju=150, maxiter=10000. Ok trebam provjeriti drugi nacin mutacije za svaki bit sto je kolega gore spomenuo ali upada mi u oci da selekcijom nikad ne dobijem bolju jedinku, pretpostavljam zato sto ju radim nad 2 roditelja nasumicno odabrana (osim 3. najgoreg) pa nikada ne dobijem bas najboljeg. Jel to ok ili bi se unatoc njihovom pseudokodu trebalo implementirati izbor najboljih roditelja a ne nasumicnih?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "109936": {
+      "poster": "mankiboss",
+      "content": "Ima li netko kakvu ideju zašto mi se povremeno smanjuje dobrota najbolje jedinke u populaciji? Što da provjerim? Sve sam pregledao i ne kužim. Selekcija je 3-turnirska. Križanje je BLX. Mutacija je Gauss.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110002": {
+      "poster": "chuuya (temari)",
+      "content": "9h Đurasević prije nego što mi pitanja ispare iz glave\n- U kojem dijelu GA se najviše koristi dobrota? Selekcija\n- Pokaži svoju implementaciju za neko križanje i mutaciju, objasni šta si radio -- ovdje sam samo išla po kodu i pričala šta se dešava\n- Koje su prednosti eliminacijskog u odnosu na generacijski odabir kod turnirskog? Dobrota ne mora bit pozitivna, ne moramo ju skalirat, ne dolazi do zagušenja, elitizam (bitno za spomenut! I pita zašto elitizam).\n- Koje su prednosti generalno? Ovo sve s fjom dobrote i zagušenjem \n- Koje sve stohastičke dijelove imamo u GA? Selekcija, odabir roditelja kod turnirskog, vjerojatnost mutacije itd. Zaključak je kao \"sve\".\n- Kako se zovu ne-stohastički algoritmi, tj. oni koje smo koristili ranije? Deterministički\n- Šta koristimo kao mjeru kvalitete rješenja? Fju dobrote\n- Zašto ne možemo samo jednom pokrenut GA and call it a day? Jer je stohastički algoritam, neće davat uvijek isto rješenje za iste parametre\n\nDodam još ako se sjetim ali runnam na 2h sna i nez ni kako se zovem\n\nUgl nemojte se brinut ako tipa imate 0 pogodaka i ako su vam optimumi neprecizni, meni nijedan zadatak nije radio 100% kak treba i svejedno dobih sve bodove",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Arfit",
+          "Bananaking",
+          "BigD",
+          "Broono (Burućuh)",
+          "Cereal_Killer (vagab0nd0)",
+          "Conrad",
+          "Cvija",
+          "Daorson",
+          "Emma63194",
+          "FICHEKK",
+          "InCogNiTo124",
+          "MrHead (vandal)",
+          "MsBrightside",
+          "Njet",
+          "PrisonMike (Števo)",
+          "Sanjaaa",
+          "[deleted]",
+          "[deleted]",
+          "[deleted]",
+          "cajaznun",
+          "doki",
+          "in1",
+          "joc",
+          "koBASA (hackerman)",
+          "luba",
+          "member",
+          "moji_prsti_prsti_klize_po_njoj",
+          "neja_negoti",
+          "pushPop",
+          "renren"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110051": {
+      "poster": "BigD",
+      "content": "12 h Đurasević\n\nPokazao samo prvi zadatak i boxplot za 4.\n\nO čemu ovisi broj bitova kromosoma? (decimalna preciznost, dimenzionalnost, raspon vrijednosti)\n\nMoramo li paziti na eksplicitna ograničenja kod mutacije? (kod bin su ugrađena u kromosom, a kod float su ugrađena u samu mutaciju tako da ne)\n\nŠto je elitizam? Je li dobar? (jest)\n\nNabrojati krosovere i mutacije koje smo implementirali.\n\nŠto je loše kod uniformne mutacije? (može uništiti dobru jedinku tako da je udalji od globalnog optimuma)\n\nOstale zadatke nije ni gledao ni pitao. Dobio sve bodove. Ukupno trajalo 6 min.",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Bananaking",
+          "Broono (Burućuh)",
+          "Conrad",
+          "Daorson",
+          "Emma63194",
+          "FICHEKK",
+          "MsBrightside",
+          "Njet",
+          "PrisonMike (Števo)",
+          "[deleted]",
+          "[deleted]",
+          "cajaznun",
+          "in1",
+          "koBASA (hackerman)",
+          "luba",
+          "member",
+          "moji_prsti_prsti_klize_po_njoj",
+          "neja_negoti",
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110460": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Neka pitanja koja nisu bila\n\n- može li turnirska selekcija obrisati najbolju jedinku? (može ako je turnir veličine 1 ili ako su sve jedinke u turniru iste)\n- treba li turnirskoj selekciji elitizam? (izvan posebnog slučaja turnira veličine 1 ne)",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Emma63194",
+          "MsBrightside",
+          "Svarog (Veles)",
+          "[deleted]",
+          "in1",
+          "member",
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110489": {
+      "poster": "Lujonlu (Gannicus)",
+      "content": "Danas u 11h:\n   - koje funkcije ima smisla optimirati genetskim: trecu i cetvrtu, prve dvije se mogu i onim starijim algoritmima\n   - cemu sluze krizanja i mutacije\n   - za binarni prikaz o cemu ovisi velicina vektora, to je gore vec netko odgovorio\n   - jel trebamo pazit na eksplicitna ogranicenja kod binarnog, ne treba\n   - onda nesto tipa kako se odrazava promjena jednog bita kada dekodiramo u decimalnu vriiednost, s natural dekoderom moze bit znacajna greska, zato se koristi gray\n   - ako se populacija povecava, sta bi trebalo raditi s vjerojanotsti mutacije, smanjivati jer vec imamo siroku rasporostanjenost pa ne zelimo velike promjene, dok za manju populaciju s vecom vjerojatnosti mutacije sire zelimo istraziti sire podrucje\n\npokrenuo sam prvi zadatak, ostalo nista. dobio sve bodove iako sam petljao dosta na nekim pitanjima.",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Conrad",
+          "Daorson",
+          "Emma63194",
+          "Svarog (Veles)",
+          "[deleted]",
+          "in1",
+          "koBASA (hackerman)",
+          "luba",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110664": {
+      "poster": "glider (toblerone)",
+      "content": "Još pitanje koje nije bilo : Kako bi izgledao GA bez krizanja i GA bez mutacije?\n\nTo sam malo promrljala ali mislim da je bit da bez mutacije mozemo izgubiti određena svojstva krizanjem koja onda ne mozemo vratiti.\n\n Dok bez krizanja je dosta slicno prethodnim algoritmima koje smo koristili, samo s mutacijom mi bi se iz trenutnog minimuma mutacijom gibali ka globalnom i tjt.",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Broono (Burućuh)",
+          "Ellie",
+          "Emma63194",
+          "[deleted]",
+          "in1",
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110955": {
+      "poster": "Bananaking",
+      "content": "Od dosad nespomenutih: ako imamo veliki k turnira, recimo 10, koliko njih nikada neće biti odabrani za roditelje? (8 najgorih). \n\nŠto je selekcijski pritisak i kako ga računamo?",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Ellie",
+          "Emma63194",
+          "MsBrightside",
+          "Svarog (Veles)",
+          "[deleted]",
+          "in1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110960": {
+      "poster": "megi7 (someone7)",
+      "content": "Jedno novo, ne teško. Koliko se poveća broj mogućih kromosoma ako se binarni prikaz poveća za jedan bit? 2 puta se poveća.",
+      "votes": {
+        "upvoters": [
+          "Ellie",
+          "Emma63194",
+          "Svarog (Veles)",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110970": {
+      "poster": "Broono (Burućuh)",
+      "content": "pitao me što u box plotu predstavlja \"pravokutnik\" i što crta u njemu? Koliko sam shvatio (ispravite me slobodno ako sam u krivu) crta u pravokutniku je medijan a čitav pravokutnik obuhvaća samo 50% vrijednosti (oko medijana) koje smo stavili u njega. Crtkane linije što se pružaju iz pravokutnika označavaju raspon ostalih vrijednosti.",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110973": {
+      "poster": "Ellie",
+      "content": "> @Bananaking#110955 Što je selekcijski pritisak i kako ga računamo?\n\nkoji je odgovor na ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110974": {
+      "poster": "Broono (Burućuh)",
+      "content": "@Ellie#110973  Selekcijski pritisak je omjer vjerojatnosti preživljavanja dobrih i loših jedinki.\n\nU turnirskom odabiru veličina turnira utječe na selekcijski pritisak, a za roulette-wheel imaš u skripti \"Uvod u genetske algoritme\" na ferwebu formulu na stranici 4.",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "Ellie",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110977": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Broono#110974 to je formula za fju dobrote uz zadani selekcijski pritisak. tvoja prva recenica govori kak se racuna pritisak",
+      "votes": {
+        "upvoters": [
+          "Ellie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110978": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@Broono#110970 mislim da si u pravu. evo vizualni prikaz toga sto si rekao.\n\n![](assets/2020-12-16/00005.png)\n\n![](assets/2020-12-16/00006.gif)",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Ellie",
+          "Emma63194",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110991": {
+      "poster": "MsBrightside",
+      "content": "Današnja pitanja:\n\nparametri kod binarnog prikaza, kako utječe preciznost i dimenzija na rad algoritma, selekcijski pritisak što je i čemu služi, kada je veći kada manji, kako funkcionira eliminacijski",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111012": {
+      "poster": "Amon",
+      "content": "Nova pitanja: \n\nkako ostvariti generacijsko eleminiacijski odabir (ne eliminiramo najgoru u turniru nego ju ostavimo, ali ona ostaje u staroj populaciji, a u novu populaciju idu kopija nove sa svojim roditeljima i tako radimo dok ne popunimo novu populaciju)\n\nšto kad nam je veličina turnira jednaka veličini populacije (odmah se eliminiraju najgore)",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111080": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "sto mora vrijediti kod heuristickog krizanja? prvo da je roditelj2 bolji, a drugo da dijete zadovoljava eksplicitna ogranicenja\n\nkoja je posljedica postavljanja mutacije na ekstreme 0% i 100%? 0...zapinjanje u lokalni optimum, tocke su sve \"blizu jedna drugoj\",  100...moguce unistavanje dobre jedinke i opcenito rasprsenost tocaka u prostoru(ne tezi nikud nego random ide okolo svuda i stvara se svaki put tako rasprsena populacija) \n\nimamo binarni zapis(prikaz kako god) sto trebamo napraviti da bismo mogli evaluirat populaciju? pretvorit svaku jedinku u decimalni zapis\n\nsto se dogodi kad mutiramo binarni prikaz? mozemo znatno promijeniti vrijednost jedinke i time iskociti iz lokalnih optimuma ili prebrisati jako dobru jedinku (ovisi xD)\n\nmoze li se prekrsiti eksplicitno ogranicenje ako promijenimo najtezi bit u kromosomu? ne moze jer dekodiranjem u binarni zapis se uzima u obzir interval ogranicenja kod racunanja broja bitova\n\n\nostalo vec videno",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Vrba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

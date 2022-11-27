@@ -1,0 +1,346 @@
+{
+  "title": "[OBJOBL] 1. domaća zadaća - 2020/2021",
+  "creator": "vykar (mango)",
+  "slug": "objobl-1-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Objektno oblikovanje",
+    "Zadaće"
+  ],
+  "posts": {
+    "87596": {
+      "poster": "vykar (mango)",
+      "content": "Otvaram raspravu oko 1. DZ i odmah pitanje: jel kome jasno kako bi trebali dobiti rezultat -23 u ovom testu? Ja ne vidim...\n\n![](assets/2020-11-03/00024.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88262": {
+      "poster": "petar19",
+      "content": "to je i mene mučilo, rješenje koliko ja shvaćam:\n\n2+3-2\\^2\\^2\\*2-1=5-16\\*2-1=-11\\*2-1=-22-1=-23",
+      "votes": {
+        "upvoters": [
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88264": {
+      "poster": "petar19",
+      "content": "još jedna stvar, u 2 testa je decimalna točka umjesto zareza (kao što piše u zadatku da treba biti). \n\n![](assets/2020-11-04/00041.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88276": {
+      "poster": "Mars (mars_)",
+      "content": "@petar19#88264 \n\nPise u uputama da se pripazi na Culture. Najjednostavnije ti je ovo staviti u konstruktor kalkulatora.\n\n`Thread.CurrentThread.CurrentCulture = new CultureInfo(\"hr-HR\");`",
+      "votes": {
+        "upvoters": [
+          "Patak007",
+          "petar19",
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88278": {
+      "poster": "[deleted]",
+      "content": "Pretpostavljam da radite na ovom templateu koji je  zadan, koji Visual studio koristite, nesto mi javlja neku migraciju kad ga ja otvaram(imam 2019), ne kuzim se uopce u ovaj dot net svijet",
+      "votes": {
+        "upvoters": [
+          "Nabas",
+          "keykey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88333": {
+      "poster": "petar19",
+      "content": "@Mars#88276 Iskreno nisam ni znao za taj izraz ni mogućnost, u programu sam cijelo vrijeme pretvarao u decimalnu točku prilikom računanja, i vraćao natrag na zarez kod ispisa lol. Svejedno, hvala na savjetu, budem to prepravio ako stignem..",
+      "votes": {
+        "upvoters": [
+          "Mars (mars_)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89064": {
+      "poster": "AN5A",
+      "content": "@ElitePer#88278 Jesi uspio na kraju? Imam isti problem, a čak i kad nekako uspijem otvoriti ne pronalazi mi uopće namespace za testove.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89299": {
+      "poster": "[deleted]",
+      "content": "@AN5A#89064 \n\nNa kraju sam skinuo .NET 3.5 pa unutar VS 2019 napravio obican projekt u toj verziji pa sam napravio sam klase predlozka, a oko testova sam unutar tog tog solutiona/projekta sto god ne kuzim se bas uzeo opciju add new project pa sam dodao MSTest novije verzije, koliko sam skuzio ti testovi su lokalni pa ih kasnije mos i izbrisat dok predajes cijeli projekt. Nisam siguran jel ovo tocno i ako neko ima bolje rjesenje slobodno recite.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89598": {
+      "poster": "zuza (jose)",
+      "content": "zna li netko kako spustit verziju na 3.5 i je li svejedno koristimo li .net core ili framework?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89615": {
+      "poster": "vykar (mango)",
+      "content": "U zahtjevima piše _Decimalni zarez ispisuje se odmah na ekranu (znači, '2' ',' prikazuje „2,“)_, a u testu se radi suprotno:\n\n![](assets/2020-11-07/00028.png)\n\nNe bi li tu trebalo biti `Assert.AreEqual(\"2,\", displayState);`?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89872": {
+      "poster": "Yu-Suf-Oh (Nia)",
+      "content": "@vykar#89615 kao što je napisano ('2' ',' prikazuje '2,'), a u ovom testu je samo '2' pa se i prikazuje samo '2'\n\nmislim da se ovdje više mislilo da čim na input dođe zarez (',') da ga se odmah na display treba prikazati (meni je to služilo kao orijentir koliko je brojeva dosad uneseno prije decimalne točke)\n\ntakođer mi je logično da piše samo \"2\" jer kad god se primjeni neka operacija (ili pritiskom na \"=\") ako je broj u prikazu \"2,0\" on se ispisuje kao \"2\"",
+      "votes": {
+        "upvoters": [
+          "vykar (mango)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89972": {
+      "poster": "Yu-Suf-Oh (Nia)",
+      "content": "Evo neki dodatni testovi za koje me pls ispravite ak je što krivo \n\nbtw bilo bi super ako netko također napiše svoje pa ih podijeli ovdje\n\n`\n\n        /// <summary>\n        /// Provjera greške zaokruživanja kod unarnih operacija.\n        /// </summary>\n        [TestMethod]\n        public void CheckDisplay_UnaryOperation_TooLargeResult()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('2');\n            calculator.Press('5');\n            calculator.Press('4');\n            calculator.Press('6');\n            calculator.Press('5');\n            calculator.Press('5');\n            calculator.Press('Q');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"-E-\", displayState);\n            // Dobiveni rezultat ima više od 10 znamenki prije decimalnog znaka\n        }\n\n        /// <summary>\n        /// Divlja provjera.\n        /// </summary>\n        [TestMethod]\n        public void CheckDisplay_CrazyOperation()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('2');\n            calculator.Press('+');\n            calculator.Press('I');\n            // Ovaj slučaj je već pokriven (ispisuje se 0.5, ali pri izračunu se pamti 2)\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0,5\", displayState);\n\n            calculator.Press('5');\n            calculator.Press('6');\n            calculator.Press('Q');\n            calculator.Press('P');\n            // Kvadriranje broja 56, spremanje rezultata u memoriju te potom čišćenje display-a\n            calculator.Press('C');\n            calculator.Press('3');\n\n            calculator.Press('-');\n            calculator.Press('2');\n            // Uzastopno mijenjanje predznaka\n            calculator.Press('M');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"-2\", displayState);\n            calculator.Press('M');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"2\", displayState);\n            calculator.Press('Q');\n\n            calculator.Press('*');\n            calculator.Press('2');\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"2\", displayState);\n            // Primjer iz docx-a: 2 + 3 - 2^2 * 2 = 2\n\n            // Dohvat memorije (gornji 'C' je obrisao samo ekran, nije dirao memoriju)\n            calculator.Press('G');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"3136\", displayState);\n\n            // Kvadriranje dohvaćenog broja\n            calculator.Press('Q');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"9834496\", displayState);\n\n            // Operacija s dobivenim rezultatom\n            calculator.Press('*');\n            // Unos decimalne točke odmah nakon binarnog operatora\n            calculator.Press(',');\n            calculator.Press('7');\n            calculator.Press('S');\n            calculator.Press('=');\n            // Decimalni broj rezultata je '266', nije '268'\n            // '268' bi bilo da se sinus ne zaokružuje na 10 decimala\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"6335556,266\", displayState);\n        }\n\n        /// <summary>\n        /// NAPOMENA: Ovo nije definirano u danom docx-u tako da se MOŽDA uopće ni ne treba izvoditi\n        /// NAPOMENA: Ovo mi je bilo čisto logično da radi\n        /// Provjera operacija s istim brojem (2*= --> 2*2)\n        /// Provjera operacija s istim brojem (2-= --> 2-2)\n        /// Provjera operacija s istim brojem (2/= --> 2/2)\n        /// </summary>\n        [TestMethod]\n        public void CheckDisplay_PressEqualAfterAny()\n        {\n            // Naravno, ovo nema uopće smisla (zašto bi itko itko oduzimao broj sa samim sobom? al ajde).\n            calculator = Factory.CreateCalculator();\n            calculator.Press('2');\n            calculator.Press('-');\n            calculator.Press('=');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n\n            // Također nema smisla dijelit broj sa samim sobom, al et.\n            calculator = Factory.CreateCalculator();\n            calculator.Press('2');\n            calculator.Press('/');\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"1\", displayState);\n\n            // Ovo je jedino što mi zapravo ima smisla (mada će netko reći da ovo dođe kao Q).\n            calculator = Factory.CreateCalculator();\n            calculator.Press('2');\n            calculator.Press('*');\n            calculator.Press('=');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"4\", displayState);\n        }\n\n        /// <summary>\n        /// Provjera promjena predznaka\n        /// </summary>\n        [TestMethod]\n        public void CheckDisplay_SignChange_Stationary()\n        {\n            // Ako nema unesenog broja tipka promjene predznaka ne radi ništa\n            calculator = Factory.CreateCalculator();\n            calculator.Press('M');\n            calculator.Press('M');\n            calculator.Press('M');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0\", displayState);\n\n            // Tehnički pisanje samo zareza nije još nikakav broj - jelda? Ispravite me ako sam u krivu\n            calculator.Press(',');\n            calculator.Press('M');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"0,\", displayState);\n            // Tek kad se unese neki broj onda ima smisla stavit minus? eh?\n            calculator.Press('2');\n            calculator.Press('M');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"-0,2\", displayState);\n        }\n\n        /// <summary>\n        /// Provjera rada memorije\n        /// </summary>\n        [TestMethod]\n        public void CheckDisplay_MemoryCheck()\n        {\n            // Vodeći se prethodnom dilemom u vezi postojanja broja ovo bi trebalo bacit grešku jer još nema \n            // unesenog broja.\n            calculator = Factory.CreateCalculator();\n            calculator.Press(',');\n            calculator.Press('P');\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"-E-\", displayState);\n            // Provjera rada memorije s decimalnim brojevima\n            calculator.Press('2');\n            calculator.Press(',');\n            calculator.Press('2');\n            calculator.Press('P');\n            calculator.Press('2');\n            calculator.Press('P');\n            calculator.Press('G');\n            displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"2,22\", displayState);\n        }\n\n`\n\np.s. sry na dugačkom komentaru, al ne vidim di mogu ovaj kod strpat pod 'detalji' ili tako nešto 😅",
+      "votes": {
+        "upvoters": [
+          "BrankoBrancin",
+          "Elendur19 (Zagor)",
+          "Mars (mars_)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90451": {
+      "poster": "Maglica",
+      "content": "Na materijalima ima onaj zip sam rješenjima 1DZ i 2DZ, što se tiče ovih sa klakulatorom, zna li netko jesu li to isti zadatci ko ovaj naš ili je prijašnjih godina bilo drugačije definiranih kalkulatora?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91108": {
+      "poster": "[deleted]",
+      "content": "dz se ocjenjuje samo na temelju izlaza testova ili se gleda i dizajn",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92414": {
+      "poster": "Patak007",
+      "content": "![](assets/2020-11-13/00067.png)\n\njel jos itko imao problem sa prepoznavanjem testClass i testMethod oznaka kod primjera testiranja? Kada pokušam instalirati neki od frameworka za to mi javlja error da verzije nisu kompatibilne... Jel se može nekako zaobici taj problem bez da se vracam na 3.5 verziju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92539": {
+      "poster": "Kiflica",
+      "content": "@Patak007#92414 Moras dodat NuGet paket VS.QualityTools.UnitTestFramework\n\ndesni klik na projekt-> maange NuGet package i searchas VS.QualityTools",
+      "votes": {
+        "upvoters": [
+          "Maglica",
+          "Patak007"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92582": {
+      "poster": "pina_be",
+      "content": "@Patak007#92414 Ja sam imala isti problem. U references mi nije prepoznavalo Microsoft.VisualStudio.TestTools.UnitTesting te sam ga izbrisala, zatim dodala opet i proradilo je.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94539": {
+      "poster": "Audaces",
+      "content": "Kad upisujemo \"1*3+2S-4Q\" moramo li cijeli taj izraz moći isprintati (bez stiskanja =) ili sve redom računamo i onda pri printanju samo rezultat? Nisam baš shvatio taj dio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94840": {
+      "poster": "Audaces",
+      "content": "Skužio sam sam, ako zapnete u domenskoj problematici, najbolji orijentir je windows kalkulator po meni..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "96706": {
+      "poster": "fmst",
+      "content": "@Audaces#94539 mislim da pri printanju ide samo rezultat. Imas ovaj njihov primjer testa gdje se upise \"2,5+\", ali ipak u ispisu je samo \"2,5\":\n\n        /// <summary>\n        /// Provjera sadržaja na ekranu nakon pritiska binarnog operatora (binarni operator se ne ispisuje na ekranu)\n        /// </summary>\n        [TestMethod]\n        public void CheckDisplay_PressBinaryOperatorAfterNumber_Number()\n        {\n            calculator = Factory.CreateCalculator();\n            calculator.Press('2');\n            calculator.Press(',');\n            calculator.Press('5');\n            calculator.Press('+');\n\n            string displayState = calculator.GetCurrentDisplayState();\n            Assert.AreEqual(\"2,5\", displayState);\n        }",
+      "votes": {
+        "upvoters": [
+          "Audaces"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125533": {
+      "poster": "Yolonak",
+      "content": "ima li još ljudi da im ne prolazi niti jedan test a da imaju vecinu bodova na kvaliteti koda?\n\nkolko sam skuzio u mom slucaju to je zbog toga sto sam zaboravio prilagoditi namespace\n\nsad moje pitanje je jel ikom od vas odgovorio na mail?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125534": {
+      "poster": "Yolonak",
+      "content": "ako ste slali ista vezano za to pitanje naravno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127430": {
+      "poster": "fmst",
+      "content": "@Yolonak#125533 \n\nNe znam jesi li imao kakav napredak, ja sam slao nesto vezano za 2. DZ i isto mi nije odgovorio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "128010": {
+      "poster": "BrankoBrancin",
+      "content": "@fmst#127430 ja sam slao pitanje vezano za seminar i na njegov gmail mail i ovaj od fera i nisam dobio nikakav odgovor\n\nhtio sam samo pitat jel oke predat zip file da se posalje preko sharepointa i da vidim jel on ima pristup tome jer mi je odbijen mail kada priložim zip datoteku:\n\nPoruka nije isporučena jer ju je odbio primateljev davatelj usluge e-pošte.\n\njel je imao tko taj problem kada je slao seminar?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

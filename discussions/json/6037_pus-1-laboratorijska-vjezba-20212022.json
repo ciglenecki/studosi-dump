@@ -1,0 +1,828 @@
+{
+  "title": "[PUS] 1. laboratorijska vježba - 2021/2022",
+  "creator": "Amon",
+  "slug": "pus-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Posrednici umreženih sustava",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "254992": {
+      "poster": "Amon",
+      "content": "**Hadoop instalacija za Windows**\n\nby Amon\n\nUvod:\n\nOvaj guide pišem kako bih olakšao živote svih koji se struggleaju sa instalacijom ovog labosa. Ja sam osobno izgubio par dana da skužim kako se settupa ovaj cijeli clusterfuck od labosa.\n\nPrvo sam ga probao instalirati na Linux virtualci (jer Hadoop kao podržava Linux), ali je bilo problema s podešavanjem portova (što vjerujem da problem zbog toga što sam koristio virtualku a ne pravi Linux) tako da ne preporučujem takav pristup i držite se Windowsa (kako pri ovom labosu tako i u životu \\:)\n\nInače, ovaj guide je napravljen prema uputama s ove stranice: \n\nhttps://kontext.tech/column/hadoop/377/latest-hadoop-321-installation-on-windows-10-step-by-step-guide\n\nSamo što ovdje imam određene izmjene i poboljšanja (i stvari koje tamo ne pišu, a potrebne su za ovaj labos)\n\n0.1. Prije same instalacije potrebno je poduzeti određene mjere. Prva i osnovna jest provjeriti ima li vaš user folder dijakritike. Dakle ići na C:\\users i provjeriti ima li user folder dijakritike. Ako nema prijeđite na sljedeći korak. Ako ima... Well tough luck, ali morat ćete ih se riješiti jer će Hadoop raditi neke foldere u user folderu, a nije sposoban pročitati dijakritike (UTF-8 je ipak malo prenapredan za ovaj program).\n\nZa to imate 2 opcije. Opcija br. 1 je ručni rename user foldera, samo pratite korake sljedećeg videa: \n>! https://www.youtube.com/watch?v=w5N2aaiToiQ\n\n\nAli tu ima problem a to je da neki programi imaju hardkodiranu vrijednost user foldera pa ćete ih morati opet namještati kada ih budete pokretali, npr. tako je bilo meni sa Visual studiom (and yeah, ja sam bio jedan od tih s dijakriticima u user folderu).\n\nDruga opcija (koja je u teoriji puno bolja) je stvaranje novog user accounta bez dijakritika jer će se onda za njega stvoriti njegov vlastiti user folder i dalje tamo radite sve kao u ostatku ovog guidea. Zašto ja nisam to napravio? Jer sam se tek sad sjetio da bi to moglo funkcionirati. Naravno, ova opcija je puno bolja, ali je nisam testirao (pa ako ju netko testira neka slobodno javi), dok opcija br. 1 sigurno radi.\n\n0.2. Za pokretanje ovog programa trebate imati javu. Aku ju kojim slučajem nemate (and shame on you if you don't), onda pogledajte ovaj guide https://www.guru99.com/install-java.html. U cmd upišite java -version i morate dobiti nešto ovakvo:\n\n![](assets/2021-11-17/00015.png)\n\n \nAli i ako to piše, još niste oslobođeni ovog dijela s javom. Naime, morate provjeriti imate li u system varijablama zapisanu JAVA_HOME varijablu. Da to vidite odite na search > edit the system environment variables > u otvorenom prozoru imate enviroment variables pri dnu. Tu sad gledajte pod user variables i vidite imate li varijablu JAVA_HOME. Ako ju nemate, dodajte ju tako da napišete path do java filea na vašem kompu. Na kraju dobijete nešto ovakvo:\n\n![](assets/2021-11-17/00016.png)\n\n\nOvo je bilo samo zagrijavanje, sad kreče Hadoop dio…\n\n1. Prvo morate skinuti Hadoop. Gore navedeni guide kaže da skinite verziju 3.2.1., ali problem je što ta verzija ima neki bug koji ima gomilu posla da se razriješi, a verzija 3.2.2. ga više nema tako da skinite tu verziju. Link za tu verziju nalazi se ovdje:\n\nhttps://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz\n\nNakon toga morate skinuti bin datoteku s ovog linka: https://github.com/cdarlint/winutils/tree/master/hadoop-3.2.2/bin i onda službeni bin datoteku zamijenite s tom.\n\n2. Sada morate napraviti HADOOP_HOME environment varijablu. Dakle treba pratiti sve kao što je bilo i sa JAVA_HOME varijablom i trebate ju dodati da pokazuje u vaš Hadoop folder, kod mene je to ovako:\n\n\n![](assets/2021-11-17/00017.png)\n\n\n3. At this point, trebali biste moći pogledati prepoznaje li komp Hadoop u cmd-u s naredbom: \n\nhadoop -version i trebate dobiti ovako nešto:\n \n![](assets/2021-11-17/00018.png)\n\n\nVAŽNO: Svaki put kada napišem da se koristi cmd, morate ga pokrenuti kao administrator. Neke naredbe se neće htjeti pokrenuti inače.\n\n4. Pronaći core-site.xml file u \\etc\\hadoop folderu (kod mene je to C:\\Programiranje\\Hadoop\\etc\\hadoop) i tamo na dno umjesto onog\n```\n<configuration> <\\configuration> stavite \n<configuration>\n   <property>\n     <name>fs.default.name</name>\n     <value>hdfs://0.0.0.0:19000</value>\n   </property>\n</configuration>\n```\n\n5. Pronaći marped-site.xml file u istom folderu i opet umjesto configuration elemenata trebate staviti ovo:\n```\n<configuration>\n    <property>\n        <name>mapreduce.framework.name</name>\n        <value>yarn</value>\n    </property>\n    <property> \n        <name>mapreduce.application.classpath</name>\n        <value>%HADOOP_HOME%/share/hadoop/mapreduce/*,%HADOOP_HOME%/share/hadoop/mapreduce/lib/*,%HADOOP_HOME%/share/hadoop/common/*,%HADOOP_HOME%/share/hadoop/common/lib/*,%HADOOP_HOME%/share/hadoop/yarn/*,%HADOOP_HOME%/share/hadoop/yarn/lib/*,%HADOOP_HOME%/share/hadoop/hdfs/*,%HADOOP_HOME%/share/hadoop/hdfs/lib/*</value>\n    </property>\n</configuration>\n```\n\n6. Sada nađite yarn-site.xml u istom folderu i opet zamijenite configuration dio s ovim dijelom:\n```\n<configuration>\n    <property>\n        <name>yarn.nodemanager.aux-services</name>\n        <value>mapreduce_shuffle</value>\n    </property>\n    <property>\n        <name>yarn.nodemanager.env-whitelist</name>\n        <value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME</value>\n    </property>\n</configuration>\n```\n\n7. Napravite folder data u root nodeu (dakle kod mene je to C:\\Programiranje\\Hadoop). U taj folder stavite novi folder dfs. I na kraju u taj dfs stavite 2 foldera: name i data. Ta 2 foldera će se kasnije koristiti.\n\nSada odite do \\etc\\hadoop foldera i nađite hdfs-site.xml file i tamo umjesto configuration dijela upišite:\n\n```\n<configuration>\n   <property>\n     <name>dfs.replication</name>\n     <value>1</value>\n   </property>\n   <property>\n     <name>dfs.namenode.name.dir</name>\n     <value>file:///C:/Programiranje/Hadoop/data/dfs/name</value>\n   </property>\n   <property>\n     <name>dfs.datanode.data.dir</name>\n     <value>file:///C:/Programiranje/Hadoop/data/dfs/data</value>\n   </property>\n</configuration>\n```\n\nDakle ove pathove fileova koje ste dodali sada morate staviti gore, tamo gdje imamo ove <value> propertyje.\n\n8. Sada idite u cmd (admin mode) i pozicionirajte se u bin folder. Tamo upišite naredbu: hdfs namenode -format\n\nNakon toga biste trebali dobiti dugi zapis u cmd-u koji završava ovako:\n\n![](assets/2021-11-17/00019.png)\n\n\nKonfiguracija je gotova (basically), ostalo je još samo pokrenuti sve.\n\n9. Pozicionirajte se u sbin folder i upišite naredbu start-dfs.cmd i trebala bi iskočiti 2 cmd-a. Pričekajte malo i idite na sljedeće linkove i pogledajte ima li na njima nešto: \n\nhttp://localhost:9870/dfshealth.html#tab-overview\n\nhttp://localhost:9864/datanode.html\n\nTrebalo bi biti neki preglednik na njima. Nećete ga koristiti ni ništa, ali ako je tamo onda sve valja (za sada).\n\n10. Sada idite u sbin i upišite start-yarn.cmd i trebala bi iskočiti još 2 prozora gdje će se nešto vrtjeti. Ako se ne pokrenu to je možda do toga što imate yarn instaliran na kompu. Ako je tako onda će se yarn na kompu poklat sa yarnom iz hadoopa i to morate riješiti tako da upišete sljedeće naredbe:\n\n```\n@rem start resourceManager\nstart \"Apache Hadoop Distribution\" C:\\Programiranje\\Hadoop\\bin\\yarn resourcemanager\n@rem start nodeManager\nstart \"Apache Hadoop Distribution\" C:\\Programiranje\\Hadoop\\bin\\yarn nodemanager\n@rem start proxyserver\n@rem start \"Apache Hadoop Distribution\" yarn proxyserver\n```\n\nna kraj start-yarn.cmd datoteke (otvorite ju s nodepadom).\n\nPogledajte imate li na sljedećem linku nešto pokrenuto:\n\nhttp://localhost:8088/cluster\n\nAko imate nešto onda ste GOTOVI.\n\nBarem s instalacijom…\n\nZavršna riječ (čitaj rant) autora:\n\nOčito je da ekipa sa predmeta već par godina ima instaliran Hadoop na kompovima i da ne žele nikako dati neke upute za setup (jer je očito da će izgubiti vrijeme na pisanje takvih uputa, a svi znamo da je value(vrijeme_2_ljudi_na_zavodu) >> value(vrijeme_70 studenata_na_predmetu)) nego su samo otišli na službene stranice od Hadoopa i samo su nam dali link nek se snalazimo (a instalacija je daleko od trivijalne i ako bilo gdje slightly pogriješite basically morate sve ispočetka raditi)",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)",
+          "Broono (Burućuh)",
+          "Emma63194",
+          "ImJustAKid (lumity)",
+          "InCogNiTo124",
+          "MJ3",
+          "Murin",
+          "Noggenfogger (dammitimmad)",
+          "Noname",
+          "Simke",
+          "Simpy",
+          "Smolaa",
+          "Svarog (Veles)",
+          "Systematic (Firecracker)",
+          "Zabe",
+          "_xXx_Matej_xXx_ (Mateejj)",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "cajaznun",
+          "chuuya (temari)",
+          "duckyy",
+          "gamigugi",
+          "harry_pointer",
+          "korisnickoime",
+          "moukie",
+          "pepelko",
+          "pushPop",
+          "renren",
+          "saltybitch",
+          "tera"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254996": {
+      "poster": "Amon",
+      "content": "**Kako raditi labos**\n\nLabos se može raditi u eclipseu (ili nekoj drugoj java razvojnoj okolini) gdje će vam javljati import errore jer ne prepoznaje importe koje imamo u primjeru. Te greške morate riješiti prije eksportanja fajlova, a to radite tako da importate jar fileove s tim klasama. Sve importove imate u share\\common, share\\mapreduce i share\\hdfs datotekama (jako puno je jar fileova u poddirektorijima i sve ih morate importati kroz razvojnu okolinu, u mom slučaju eclipse)\n\nZa kraj imam redom naredbe koje morate koristiti za pokretanje labosa. Za izradu labosa pozicionirajte cmd u bin folder i od tamo ćete sve raditi.\n1. hdfs namenode -format\n2. obrisati data folder ako javi grešku pri pokretanju\n3. sbin/start-dfs.cmd\n4. sbin/start-yarn.cmd\n5. napraviti projekt u eclipseu\n6. export u jar i staviti u neku mapu (može i u bin mapu)\n7. izbrisati input i output datoteku hadoop fs -rm -r output i tako za input (ako postoje)\n8. napraviti input datoteku hadoop fs -mkdir input\n9. staviti txt datoteku (npr log.txt) u bin mapu (to je naš input)\n10. staviti datoteku u input hadoop fs -put log.txt input/log.txt\n11. pokrenuti sve s naredbom: hadoop jar putanjaDoJarDatoteke.jar imeKlase input/ output/\n12. hadoop fs -ls output za vidjeti izlaz\n13. hadoop fs -cat output/part-00000 da vidimo rezultat\n14. u 3. zadatku trebate napraviti temp dir (dakle  hadoop fs -mkdir temp) kojeg ćete koristiti za kao međukorak za izradu 3. (ali i 4. zadatka) kojega treba obrisati kao i input i output dir prije ponovnog pokretanja svega\n15. Primjer korištenja temp dir-a da output jednog joba ida na input drugog:\n\n![](assets/2021-11-17/00020.png)\n\n \npart-00000 datoteka se sama stvara, temp file mora biti prazan kada se uključi program. To je jedan od razloga zašto ga morate obrisati i ponovno napraviti pri svakom pokretanju.",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Emma63194",
+          "ImJustAKid (lumity)",
+          "Murin",
+          "Noggenfogger (dammitimmad)",
+          "Noname",
+          "Simpy",
+          "Smolaa",
+          "Svarog (Veles)",
+          "Zabe",
+          "_xXx_Matej_xXx_ (Mateejj)",
+          "cajaznun",
+          "chuuya (temari)",
+          "duckyy",
+          "gamigugi",
+          "harry_pointer",
+          "megi7 (someone7)",
+          "moukie",
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255022": {
+      "poster": "renren",
+      "content": "@\"Amon\"#p254992 Čovječe, kudos za pomoć oko ovog djela sotone. Kad sam prvi put probala instalirat prije par dana išla sam po drugim random guide-ovima i nije uspjelo. Sad evo iz prve proradilo.",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "chuuya (temari)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255223": {
+      "poster": "duckyy",
+      "content": "Labos nije potrebno nigjde predati prije termina vec samo tamo pokazemo kako radi?",
+      "votes": {
+        "upvoters": [
+          "Watson (112)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255255": {
+      "poster": "Amon",
+      "content": "@\"Amon\"#p254992 \n\n@\"Amon\"#p254996 \n\nMoram ovdje napisati par nadoupuna što se tiče ovog svega, par addenduma as one would say jer sam neke stvari krivo napisao/propustio napisati:\n\n1\\. marped-site.xml file je u forumu bio loše napisan, tj. trebalo je imati \\* na kraju svake naredbe, a forum je progutao te znakove i onda ne piše kako spada (mićo je kriv za ovo, ne ja)\n\nDakle pravi marped-site.xml file treba izgledati ovako:\n\n```\n<configuration>\n    <property>\n        <name>mapreduce.framework.name</name>\n        <value>yarn</value>\n    </property>\n    <property> \n        <name>mapreduce.application.classpath</name>\n        <value>%HADOOP_HOME%/share/hadoop/mapreduce/\\*,%HADOOP_HOME%/share/hadoop/mapreduce/lib/\\*,%HADOOP_HOME%/share/hadoop/common/\\*,%HADOOP_HOME%/share/hadoop/common/lib/\\*,%HADOOP_HOME%/share/hadoop/yarn/*,%HADOOP_HOME%/share/hadoop/yarn/lib/\\*,%HADOOP_HOME%/share/hadoop/hdfs/\\*,%HADOOP_HOME%/share/hadoop/hdfs/lib/\\*</value>\n    </property>\n</configuration>\n```\n\n2\\. Labose ipak ne možete raditi \"samo tako\" pišući kod bez importanja klasa nego ćete ipak morati importati .jar fileove u IDE.  Fajlovi koje morate dodati nalaze se u poddirektorijima: common, mapreduce i hdfs. Importajte sve dok se ne riješiti import pogrešaka and then you are set to export into .jar kako treba\n\n3\\. u 2. koraku piše da obrišete data folder ako ne valja. Time sam mislio da obrišete sadržaj data\\dfs\\data foldera, a greška na koju se referiram je ako piše incompatible cluster ids\n\n4\\. između koraka 4. i 5. teba dodati još jedan korak, a to je dodati root folder u kojem ćete sve raditi jer one mkdir input i slične komande ne rade bez toga\n\nDakle trebate dodati još 2 naredbe at that point:\n\n```\nhadoop fs -mkdir user\nhadoop fs -mkdir imeUseraNaVašemUserFolderu\n```\n\nŽao mi je za moje propuste pri ovom svemu i nadam se da ovim postom mogu ispraviti ove greške",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "ImJustAKid (lumity)",
+          "Simpy",
+          "Zabe",
+          "cajaznun",
+          "chuuya (temari)",
+          "gamigugi",
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255256": {
+      "poster": "Murin",
+      "content": "@\"Amon\"#p254992 \n\nSvaka cast frende, i ja sam mislio napisati neki guide ali nakon par dana jebanja s ovim nisam vise to mogao gledati. \n\nSamo cu nadodati neke probleme i linkove koji su mi pomogli ako netko zapne\n\n[Zaostali simlinkovi zbog kojih ne radi java -version](https://stackoverflow.com/questions/60909327/path-not-found-the-system-cannot-find-the-file-c-programdata-oracle-java-javap)\n\n[Pathovi u sys variablama ne rade jer sadrže razmake](https://stackoverflow.com/questions/31621032/hadoop-on-windows-error-java-home-is-incorrectly-set)\n\n[Falili su neki propertiyi u hdf.site-xml](https://stackoverflow.com/questions/34871814/failed-to-start-namenode-in-hadoop)\n\n[Problemi s resource managerom](https://stackoverflow.com/questions/51118358/noclassdeffounderror-org-apache-hadoop-yarn-server-timelineservice-collector-tim)\n\n[treba napraviti hadoop fs -mkdir (direktorij za spremanje)](https://stackoverflow.com/questions/32179761/hadoop-mapreduce-error-input-path-does-not-exist-hdfs-localhost54310-user-hd)\n\n[NoClassDefFoundError](https://stackoverflow.com/questions/51118358/noclassdeffounderror-org-apache-hadoop-yarn-server-timelineservice-collector-tim)\n\n[NameNode in safe mode](https://stackoverflow.com/questions/15803266/name-node-is-in-safe-mode-not-able-to-leave)\n\n[Ako se builda jar sa Intellj-om zip -d <ime>.jar META-INF/LICENSE](https://stackoverflow.com/questions/10522835/hadoop-java-io-ioexception-mkdirs-failed-to-create-some-path)\n\n\n-Ako koristite intellj nemojte raditi nikakav poseban package, negos ve src/main/java (ili kako vec ide)\n\n-cmd se pokrece kao administrator\n\n-kod onih winutilsa najbolje sve prekopirat u bin\n\n\nKoristio sam savjete od kolega iz proslih grupa + ovaj [site](https://cwiki.apache.org/confluence/display/HADOOP2/Hadoop2OnWindows)",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "ImJustAKid (lumity)",
+          "megi7 (someone7)",
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255448": {
+      "poster": "MJ3",
+      "content": "![](assets/2021-11-19/00013.png)\n\nZbog nekih errora sam downgradeala na javu 1.8, promijenila JAVA_HOME u user variables (u path promijenila i lokaciju bin foldera jave). Nakon ovoga java -version ispisuje verziju 1.8, dok javac -version i dalje izbaci 12.0.2\n\nJel zna netko u čemu može biti problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "255457": {
+      "poster": "Amon",
+      "content": "@\"MJ3\"#p255448 My guess je da ti je ostala varijabla od prijašnje instalacije na Path varijabli (ona ti se nalazi među system variables, dakle ispod onih user varijabli). Nađi si tamo putanju koja ti je vodila na ovu prošlu verziju jave i promijeni ju na istu putanju koju imaš za JAVA_HOME",
+      "votes": {
+        "upvoters": [
+          "MJ3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258062": {
+      "poster": "harry_pointer",
+      "content": "Ima neko možda iskustva s java.lang.UnsatisfiedLinkError kod start-dfs naredbe? Sve radim po uputama i jednostavno ne znam u čemu je problem😥",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "258536": {
+      "poster": "Ducius",
+      "content": "jel ima netko da kod pokretanja jar file dobije ovakav error?![](assets/2021-11-26/00079.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261501": {
+      "poster": "pepelko",
+      "content": "@\"harry_pointer\"#p258062 Ja imam isti problem, DataNode se ruši s tom porukom i nemam pojma u čemu je problem :( jel ti možda proradilo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261512": {
+      "poster": "pepelko",
+      "content": "@\"pepelko\"#p261501 \n\nEDIT: \n\nUpravo proradilo.. problem je bio u krivo definiranom pathu do data foldera u hdfs-site.xml file-u. Tocan path (u mom slucaju) je:\n```\n<property>\n\t\t<name>dfs.datanode.data.dir</name>\n\t\t<value>file:/User/hadoop/data/dfs/data</value>\n</property>\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261551": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "![](assets/2021-12-03/00012.png)\n\njel imao netko ovakav error ili ga zna popraviti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261663": {
+      "poster": "421blazeitfgt",
+      "content": "Pazite kad radite install da imate bas tocno javu 8 ja sam imao neku drugu i nis nije radilo\n\nhttps://stackoverflow.com/questions/44427653/hadoop-error-starting-resourcemanager-and-nodemanager",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261744": {
+      "poster": "harry_pointer",
+      "content": "@\"pepelko\"#p261512 Mislim da nije u tome problem kod mene, path je okej. Možda je do permissiona, ali mi se čini da i to imam dobro postavljeno. Trenutni workaround mi je da radim na sestrinom laptopu - malo glupo, ali radi haha",
+      "votes": {
+        "upvoters": [
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261764": {
+      "poster": "pepelko",
+      "content": "![](assets/2021-12-04/00011.jpg)\n\n![](assets/2021-12-04/00012.jpg)\n\nJel netko zna mozda kako rijesit ovo?\n\n\"Application application_1638623642790_0001 failed 2 times due to AM Container for appattempt_1638623642790_0001_000002 exited with exitCode: -1000\n\nFailing this attempt.Diagnostics: [2021-12-04 14:15:40.216]No space available in any of the local directories...\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261768": {
+      "poster": "carantena",
+      "content": "@\"Amon\"#p255255 jel možeš molim te objasnit ovo zadnje, između koraka 4. i 5. , gdje napravit taj root folder i što u njemu sve trebamo imat? ove naredbe zovemo kad se pozicioniramo u tom novom folderu? \n\nHvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261777": {
+      "poster": "Amon",
+      "content": "@\"carantena\"#p261768 Samo moraš napraviti taj user folder i subfolder unutra koji ima ime usernamea tvog kompa\n\nPS sad sam skužio da naredbe pišu ko 2 foldera, a trebali bi biti folder i subfolder, dakle odi u cmd, pozicioniraj se u bin folder i samo upišeš sljedeće naredbe i gotovo je s tim korakom, više se ne moraš obazirati na njega:\n\n```\nhadoop fs -mkdir user\n\nhadoop fs -mkdir user/imeUseraNaVašemUserFolderu\n\n```",
+      "votes": {
+        "upvoters": [
+          "carantena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261780": {
+      "poster": "renren",
+      "content": "@\"carantena\"#p261768 \n\nEvo mojih naredbi koje su uspjele na kraju za pokretanje primjera iz lab-a. Znači nakon što pokreneš sve one naredbe od 1. do 4. koraka uradiš sljedeće: \n\n(unutar bin foldera)\n\n```\nhadoop fs -mkdir /user\nhadoop fs -mkdir /user/User\nhadoop fs -mkdir input\nhdfs dfs -put log.txt input/log.txt\nhadoop jar lab.jar VideoCount input/ output/\nhadoop fs -ls output\nhadoop fs -cat output/part-00000\n```\n\n*ovo sve s tim da su je u bin folderu log i jar datoteke\n\n**ime usera može bit šta god, ja sam stavila User onako\n\n***nisam još krenula pokretat sljedeće zadatke, ali kad se rade oni onda se krene od 5. kroaka iz Amonove objave (znači izbrišeš valjda postojeći input i output i staviš log od trenutnog zadatka pa napraviš nove itd)",
+      "votes": {
+        "upvoters": [
+          "carantena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261784": {
+      "poster": "Svarog (Veles)",
+      "content": "je li tko pokušao dići hadoop preko dockera? naletio sam na ove convenience builds https://hub.docker.com/r/apache/hadoop, pa da ne izgubim previše vremena ako nisu primjenjive za labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261787": {
+      "poster": "Simke",
+      "content": "Jel netko mozda imao problem da mu se program pokrene (running job), u clusteru pise state accepted, ali ne nista ne izvrti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261788": {
+      "poster": "pepelko",
+      "content": "@\"Simke\"#p261787 Mislim da je meni bio slican problem. Moguce da ti je do kolicine slobodnog prostora na disku. Trebas imati barem 10 % free space-a da bi ti se job izvrtio do kraja.",
+      "votes": {
+        "upvoters": [
+          "Simke"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261790": {
+      "poster": "Simke",
+      "content": "@\"pepelko\"#p261788 Izgleda da je do toga bilo, radi sada.. Hvala!",
+      "votes": {
+        "upvoters": [
+          "pepelko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261799": {
+      "poster": "Ellie",
+      "content": "Jel netko dobio ovakav error?\n\n```\nC:\\hadoop-3.2.2\\bin>hadoop jar VideoCount.jar VideoCount input/ output/\nUsage: VideoCount <input path> <output path>\n2021-12-04 18:47:11,622 WARN util.ShutdownHookManager: ShutdownHook '' timeout, java.util.concurrent.TimeoutException\njava.util.concurrent.TimeoutException\n        at java.util.concurrent.FutureTask.get(FutureTask.java:205)\n        at org.apache.hadoop.util.ShutdownHookManager.executeShutdown(ShutdownHookManager.java:124)\n        at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:95)\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261807": {
+      "poster": "Ducius",
+      "content": "Treba li labos negdje predat ili se samo moramo pojavit sa kodom na predaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261812": {
+      "poster": "Ellie",
+      "content": "@\"Ellie\"#p261799 \n\nEvo, u slucaju da to bude jos nekom ovakav error. \n\nNa kraju sam uspjela pokrenuti sve tako da sam koristila korake is ovog posta: \n\nhttps://fer.studosi.net/d/2207-pus-1-laboratorijska-vjezba-20202021/26 \n\n(btw koristila sam Intellij i Windows)",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261822": {
+      "poster": "Simke",
+      "content": "Kakvo sortiranje se traži u 3.zadatku, tj. kakav bi trebao biti ispis ako je input isti kao za 2.zadatak?",
+      "votes": {
+        "upvoters": [
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261916": {
+      "poster": "svemia (bearyn)",
+      "content": "@\"renren\"#p261780  Ako nakon koraka 4 pokrenem naredbu hadoop fs -mkdir /user,  javi mi gresku \"mkdir: Your endpoint configuration is wrong; For more details see:  http://wiki.apache.org/hadoop/UnsetHostnameOrPort\". Cmd mi je u admin nacinu rada. Jel treba nes pokrenut prije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261918": {
+      "poster": "svemia (bearyn)",
+      "content": "@\"Amon\"#p261777 Jel treba prije tih naredbi pokrenut start-dfs i start-yarn? Dobivam samo \"mkdir: Your endpoint configuration is wrong; For more details see:  http://wiki.apache.org/hadoop/UnsetHostnameOrPort\". Cmd mi je u admin nacinu rada.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261920": {
+      "poster": "Ellie",
+      "content": "@\"bearyn\"#p261918 \n\ntrebas pokrenut start-dfs.cmd i start-yarn.cmd\n\nmeni je izbacivalo tu gresku, ali sve je ok kad stavim \"-p\", odnosno\n\n> hadoop fs -mkdir -p /user/[current login user]\n\nto je po accepted answeru odavde:\n\nhttps://stackoverflow.com/questions/20821584/hadoop-2-2-installation-no-such-file-or-directory",
+      "votes": {
+        "upvoters": [
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261933": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@\"Simke\"#p261822 citala sam u proslogodisnjoj temi da su rekli da input u 3.zad je output 2.zad, ali to meni nema smisla, ja bi input za 3.zad stavila isti kao input za 2.zad pa da provjerim kak ste vi shvatili 3.zadatak: mi trebamo izbrojati koliko je posjeta, znaci nebitno koliko % videa se pogledalo bitno je da se otvorio link(posjetio), sto znaci da bi threshold bio 0 (ako je vise od 0% pogledan video je posjecen)? I onda samo sortirati silazno po value I guess kao i sto je u 2.zadatku output value-a od najveceg prema najmanjem? (Samo sto je u 2.zad sortirano uzlazno po kljucu pa se potrefilo da je value silazno sortiran)",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Simke"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "261949": {
+      "poster": "Luka14 (Kekec)",
+      "content": "@\"dammitimmad\"#p261933 \n\nI ja sam to shvatio da treba gledat samo posjete, a ne i prag taj\n\nAli kako mozemo uopce ista sortirat ako se reduce poziva za svaki (key,value) i zapisuje svaki rezultat zasebno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262054": {
+      "poster": "lkm",
+      "content": "@\"Ducius\"#p261807 zna netko odg na ovo? Jesu rekli nesto na predavanjima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262071": {
+      "poster": "frle10 (Frle)",
+      "content": "@\"Veles\"#p261784 \n\nJa sam probao, i upravo sam uspio. Koristim Dockefile i docker-compose od ovog autora:\n\nhttps://github.com/cupgit/docker-hadoop\n\nMalo sam promijenio Dockerfile da mi umjesto verzije 3.0.3 skine zadnju, 3.3.1 i radi savrseno. Lijepo se digne Docker container i mogu pristupit nodeovima preko web sucelja...\n\nNisam jos pokusao napravit labos do kraja s ovim, ali mucio sam se cijeli dan bzvz ako ovo funkcionira. Ova metoda je bolesno lagana i radi na apsolutno svim sustavima koji god da imate (Windows, Linux, Mac OS X).\n\nTaj image je napravljen da radi u pseudo-distributed modu isto kako u labosu pise da treba apparently tako da eto, preporucam svakome tko vec nije da to proba jer je masno lakse i gotovo u 20 minuta (ako vec imate instaliran Docker i docker-compose).",
+      "votes": {
+        "upvoters": [
+          "Svarog (Veles)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262074": {
+      "poster": "frle10 (Frle)",
+      "content": "Ok, da ponudim ipak svima ovu alternativu za koju mi se stvarno cini da maksimalno olaksava stvari.\n\nRepozitorij koji sam gore linkao je outdated i zahtijeva promjene, fixove. Ja sam to forkao na svoj profil i napravio potrebne promjene pa mozete cloneati moj repo:\n\nhttps://github.com/frle10/docker-hadoop\n\nSvakako, postupak je sljedeci:\n\n1. Instalirajte Docker (https://docs.docker.com/desktop/windows/install/). Ako ste na Windowsima, instalacija automatski obuhvaca i Docker Engine i docker compose, oboje vam treba. Ako ste na Linuxu, docker-compose se zasebno instalira, pretpostavit cu da ako koristite Linux vjv znate otic na net i kopirat par naredbi u terminal.\n\n2. Pokrenite Docker na racunalu (na Windowsima trebate imati tray icon dolje di se vidi da je pokrenut, na Linuxu treba bit startan dockerd service).\n\n3. Klonirajte ovaj moj repozitorij koji sam linkao\n\n4. Pozicionirajte se u direktorij repozitorija u vasem najdrazem terminalu/command promptu\n\n5. Pokrenite naredbu docker-compose up -d (ako ste slucajno setupali docker-compose V2, naredba je slicna, samo bez crtice --> \"docker compose up -d\")\n\n6. Gledajte kako se magija odvija pred vasim ocima :) Ovo radi neovisno o vasem host OS-u\n\nNOTE: Ovo samo digne hadoop u pseudo-distributed modu.. nedostatak ove metode je sto vjerojatno necete moc koristit iste naredbe za pokretanje Java programa kao sto je u uputama, jer je Hadoop u docker containeru i onda treba kopirat program u njega i iz containera pokrenut te naredbe. To se sve moze, npr. naredba docker exec -it ime_containera vas ubacuje u shell od hadoopa nakon sto ga dignete.",
+      "votes": {
+        "upvoters": [
+          "Svarog (Veles)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262081": {
+      "poster": "frle10 (Frle)",
+      "content": "@\"Frle\"#p262074 \n\nZivcira me sto ne mogu edit objave napravit iz nekog razloga nakon 5 minuta od objavljivanja... Jos jedan update da ipak objasnim detaljno kako mozete doc do svega sto treba s ovom metodom:\n\n1. Instalirajte Docker (https://docs.docker.com/desktop/windows/install/). Ako ste na Windowsima, instalacija automatski obuhvaca i Docker Engine i docker compose, oboje vam treba. Ako ste na Linuxu, docker-compose se zasebno instalira, pretpostavit cu da ako koristite Linux vjv znate otic na net i kopirat par naredbi u terminal.\n\n2. Pokrenite Docker na racunalu (na Windowsima trebate imati tray icon dolje di se vidi da je pokrenut, na Linuxu treba bit startan dockerd service).\n\n3. Klonirajte ovaj moj repozitorij koji sam linkao (https://github.com/frle10/docker-hadoop)\n\n4. Pozicionirajte se u direktorij repozitorija u vasem najdrazem terminalu/command promptu\n\n5. Pokrenite naredbu docker-compose up -d (ako ste slucajno setupali docker-compose V2, naredba je slicna, samo bez crtice --> \"docker compose up -d\")\n\n6. Gledajte kako se magija odvija pred vasim ocima :) Ovo radi neovisno o vasem host OS-u\n\n7. Kad napravite svoj Java program i kompajlirate ga, taj .jar file treba kopirati u hadoop container. To radite s naredbom \"docker cp put/do/java/programa/program.jar <container_id>:/program.jar\". Dakle, prvi argument naredbe cp je put do .jar filea vaseg programa na vasem racunalu, a drugi argument je put gdje ce se kopirat u containeru. container_id nadete tako da upisete \"docker container list\" i nadete hadoop (bit ce samo on ako ne koristite inace docker) i kopirate mu container id.\n\n8. Hadoop je u docker containeru, pa sad ne mozete koristit naredbe iz uputa samo tako za pokretanje vasih programa. Iduci korak je moci uci u shell od containera, da mozete koristiti hadoop naredbe. To se radi sa \"docker-compose exec hadoop bash\". Kad ste u tome, mozete pokretati naredbe kao u uputi (ako ste uspjesno kopirali svoj file u container u koraku prije). Iz tog shella mozete izac sa \"exit 0\".\n\nTo bi trebalo bit to, nisam jos niti sam probao sve od ovog ali tako planiram radit. Ak neko uspije prije mene nek javi :D",
+      "votes": {
+        "upvoters": [
+          "Svarog (Veles)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262083": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@\"Kekec\"#p261949 nisam htjela predlagati ideju dok mi nije proradilo, da ne bi jos na krivi put navela. Uglavnom ovo su korisni linkovi (zivot sam pretrazila, ovo bi trebalo biti dovoljno).\n\nhttps://stackoverflow.com/questions/42886864/how-to-sort-data-in-descending-order-in-map-reduce\n\nhttps://stackoverflow.com/questions/13557007/how-to-emit-in-the-close-method-of-reducer",
+      "votes": {
+        "upvoters": [
+          "Luka14 (Kekec)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262084": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "@\"lkm\"#p262054 pise u obavijesti da ce se predaja odrzati u terminima i prostorijama blalba... tako da ne vjerujem da treba negdje uploadati, napisali bi obavijest da treba. koliko znam nitko od profesora na faksu nije samo na predavanjima rekao da treba uploadati nesto, a da za to nije bilo obavijesti/uputa na ferwebu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262173": {
+      "poster": "Murin",
+      "content": "Ima netko prijedlog kako da se povezem na svoj kompjuter preko laptopa i tako predam labos, jer fakat mi se ne da ponovo to raditi, radije bi se propucao\n\nJe li teamviewer okej ili ima neko bolje rjesenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262224": {
+      "poster": "Zabe",
+      "content": "Kolko je vremenski zahtjevan labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262286": {
+      "poster": "tera",
+      "content": "Nakon potrošena 2 dana na desetke razlicitih java errora totalno slučajno sam naišao na mogućnost pozivanja bilo kakvih executable/binary/script fajlova kao mappera i reducera - Streaming, čime je moguće koristiti bilo koji jezik.\n\nU dokumentaciji stoji primjer koji koristi `/bin/cat` kao mapper i `/usr/bin/wc` kao reducer:\n\nhttps://hadoop.apache.org/docs/current3/hadoop-streaming/HadoopStreaming.html\n\nKolko vidim u uputama nigdje eksplicitno ne piše da mora bit java pa ću ja probat ovako, kaj bu bu.\n\nAko neko želi koristit C# ko ja, microsoft ima neki basic tut kako napisat mapper i reducer program (ostatak tutoriala nije primjenjiv jer koriste HDInsight): https://docs.microsoft.com/en-us/azure/hdinsight/hadoop/apache-hadoop-dotnet-csharp-mapreduce-streaming\n\nInače, u bilo kojem jeziku da se radi, program samo treba čitati sa STDIN i output na STDOUT\n\nNapisao bi detaljnije upute, ali radim još jedan labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262292": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "@\"Amon\"#p254996 Je li možeš molim te print screenat sve jarove koje si importao jer ja nemrem nikako kompajlirat ovo u eclipsu da bi mogao exportat (sve do tog normalno dela)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262298": {
+      "poster": "renren",
+      "content": "@\"Ivančica\"#p262292 Ja ti ne mogu screenat jer nisam za laptopom (a ima dosta tog za screenanje), ali mogu ti dat postupak jer je i mene zezao eclipse. Ugl ideš desni klik na projekt -> build path -> configure build path -> Java Build Path u izborniku -> Libraries -> Add external JARs. I onda tu odeš u tvoj_hadoop_folder\\share\\hadoop i dodaš sve iz common, hdfs i mapreduce foldera (i podfoldera koji se nalaze u njima ako ima šta). Ali ako si već ovako radio onda ne znam do čega je.",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262302": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "@\"renren\"#p262298 eee hvala ti, znači nisam dodavo jarove iz podfoldera neg samo koji su bili direktno u folderu\n\nsad više nema errora",
+      "votes": {
+        "upvoters": [
+          "renren"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262318": {
+      "poster": "Dekan",
+      "content": "@\"Frle\"#p262081 Kako si napravio ovu mrezu \"xapp\" koju koristis u docker-compose.yml?",
+      "votes": {
+        "upvoters": [
+          "frle10 (Frle)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262326": {
+      "poster": "Noggenfogger (dammitimmad)",
+      "content": "ako je itko radio mnozenje matrica s dva map-reduce-a (kao sto je u prezentacijama objasnjeno) i ako ste naisli na ovakvu situaciju u prvom reduce-u pls halp. \n\npostavila sam i map-ove tipove outputa i tipove outputa cijelog prvog job-a... ne zapisujem nigdje ni key-eve ni value sa razmacima, postavila sam za prvi job 8 mapworkera i 2 reduceworkera (cisto da prode za ovaj primjer iz pdfa). za taj prvi reducer su mi redom ovako tipovi: IntWritable, Text, Text, IntWritable... nemam pojma vise do ceg moze biti da prvi reducer bas nista ne ispise u output.\n\n![](assets/2021-12-06/00015.jpg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262333": {
+      "poster": "-Ivan- (Ivančica)",
+      "content": "Par stvarčica koje vam se mogu dogodit (meni su se dogodile i izgubio sam par sati na njima). \n\nPrva stvar:\n\nNažalost morate imati barem 10% diska na kojem vam se vrti hadoop slobodno. To su već ljudi spomenuli ovdje, ali ja sam malo kasno primjetil. Znači ako nakon što pokrenete naredbu hadoop jar VideoCount.jar VideoCount input/ output/ vam se pojavi sljedeće:\n\n![](assets/2021-12-07/00000.png)\n\nA nikako vam se nakon toga (trebalo bi unutar 10-20 sekundi) ne pojavi ovo (tj. program cijelo vrijeme stoji na istom, ne završava):\n\n![](assets/2021-12-07/00001.png)\n\nOnda krenite s brisanjem bloatwera kojeg ste skupili tijekom svog školovanja na feru (sve dok ne dođete do barem 10% slobodne ukupne memorije diska na kojem vam se vrti hadoop).\n\nDruga stvar:\n\nPazite što vam se događa s datanode prozorčićem koji vam iskoči kada pokrenete start-dfs.cmd! Meni bi se pokrenulo, i ond bi se nakon nekih 20ak sekundi dogodio shutdown nodea. To nisam ni primjetio dok nisam otišao malo gore i vidio da imam java.io.IOException: Incompatible clusterIDs error. Znači izgleda vam otprilike ovak:\n\njava.io.IOException: Incompatible clusterIDs in /Users/.../hadoop/yarn_data/hdfs/datanode: namenode clusterID = CID-XXX; datanode clusterID = CID-YYY\n\n(umjesto XXX-a i YYY-a će te imati dugačke id-jeve)\n\nonda samo umjesto funkcije\n\nhadoop namenode -format\n\nkoristite funkciju\n\nhadoop namenode -format -clusterID CID-YYY\n\n(znači id ovog drugog navedenog u erroru)",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262393": {
+      "poster": "Smolaa",
+      "content": "Ima neko problem da kad po drugi puta pokušava pokrenuti zadatak mi uporno izbacuje nakon što pokušam pokrenuti\n\n start-dfs.cmd :\n\n''The system cannot find the file hadoop.'' \n\n(Znači pri puta je sve ok radilo, a sada nakon hdfs namenode -format ne mogu ništa)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262421": {
+      "poster": "Smolaa",
+      "content": "@\"Smolaa\"#p262393 Sve one prozore gasite sa crtl+c inače će vam stalno štekati na sljedećim runovima...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262521": {
+      "poster": "frle10 (Frle)",
+      "content": "@\"Dekan\"#p262318 E sorry, to sam zaboravio napomenut, ugl treba pokrenut jos naredbu \"docker network create xapp\", tako se napravi mreza",
+      "votes": {
+        "upvoters": [
+          "Dekan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262532": {
+      "poster": "Audaces",
+      "content": "![](assets/2021-12-08/00000.png)\n\nJe li itko naletio na ovo nakon što mu je sve uspješno instalirano? Doslovno mi ne zeli te argumente procitat iz nekog razloga. Intellijem sam kreirao JAR i kopirao ga u /bin od hadoopa,  te izvrsio sve naredbe i tu je stalo... Itko?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262533": {
+      "poster": "tera",
+      "content": "@\"Audaces\"#p262532 probaj bez VideoCount argumenta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Audaces"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262561": {
+      "poster": "chuuya (temari)",
+      "content": "Odgovaranje: morate promijenit komparator da u 3. ide uzlazno a ne silazno, pokrenut 2. i 3. i onda vas pita šta ste promijenili, kako funkcionira VideoCount i dosta ljudi (uključujući i mene) pita da promijenimo matricu (elemente) i da pokrenemo to i onda da objasnimo kako funkcionira mapreduce za matrice. Mislim da su svi dobili 100% lol\n\nAlso bit će 2 labosa :^)",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Murin",
+          "renren"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "262628": {
+      "poster": "Amon",
+      "content": "Fresh batch of questions:\n- ako bi samo brojali koliko slova ima u dokumentu, koliko nam je reducera potrebno (1 jer je dosta 1 ključ kojeg će mapper emitati i sve će duljine riječi emitati kao value i imamo 1 key što znači da je dosta 1 reducer i on će samo pozbrojati sve što imamo kao value)\n- kako funkcionira prvi mapper i reducer kad množimo matrice\n- pokazati da množenje matrica funkcionira na 2x3 i 3x2 matricama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "title": "[AIPR] 4. domaća zadaća - 2021/2022",
+  "creator": "feel_d_boot (iNut)",
+  "slug": "aipr-4-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Analiza i projektiranje računalom",
+    "Zadaće"
+  ],
+  "posts": {
+    "266743": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Što bi se trebalo događati po svakom zadatku? \n\nPitam čisto da bih znao funkcionira li moja implementacija metoda.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266755": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Ovo je 2. dio 3. DZ prošlih godina, specifično zadatci 3., 4. i 5., komentirao sam sve bitne stvari, ništa izvan toga me nije pitala asistentica.\n\nhttps://github.com/Yalfoosh/AIPR/blob/main/dz/dz-03/demo/demo-01_hw-03.ipynb",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "266810": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Iz skirpte za postupak po Box-u:\n\n\"Postupak se zaustavlja kada simpleks uzastopnim kontrakcijama postane dovoljno malen.\"\n\nŠto se ovdje misli pod simpleks postane dovoljno malen? Iša sam gledati da mi postupak se zaustavi ako je udaljenost dviju pronađenih točaka manja od preciznosti, no gledamo li ovdje ako je vrijednost funkcije u točki centroida manja od zadane preciznosti e?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267334": {
+      "poster": "dora (AE)",
+      "content": "Kod Boxa, da li pridruzim pocetnu tocku ovom novo generiranom skupu od 2n tocaka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267342": {
+      "poster": "Skaxen",
+      "content": "iz zadatka\n\n> **napomena**: prilikom računanja logaritma, ako ograničenje nije zadovoljeno vratite beskonačno ili neku veliku vrijednost\n\nJel bi to trebala biti neka velika **negativna** vrijednost ili ima razlgo zas profesor nije napomenuo negativna?\n\nIsprobao sam oboje i cini mi se da u drugom zadatku dobivam smislenija rjesenja ako stavim neki veliki negativni broj.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "267362": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Skaxen\"#p267342 Mislim da se htjelo reći da odmah možeš za to ograničenje vratiti +inf ili veliki broj, dakle da ih ne moraš ni računati dalje. Nije specificirao da je negativna vrijednost jer se vjv referencirao na vrijednost funkcije gubitka za >= ograničenja koja će zbog toga što taj -inf iz logaritma množi s negativnim brojem biti +inf.\n\nNezz hoće ti bit jasnije iz mojeg snippeta:\n\n```\ngeq_part = -r * np.sum(np.log(geq_constraint_values))\n```\n\nkako sam ja limitirao ove `geq_constraint_values` da budu 0 naviše, onda ću za te vrijednosti koje ne zadovoljavaju ograničenja dobiti -inf. I suma će biti -inf. Kako je r strogo pozitivan broj, onda je -r strogo negativan broj, i množenje negativnog broja s beskonačnosti će joj obrnuti predznak. Umjesto da računaš sume, kad izračunaš da ti jedna vrijednost ne zadovoljava ograničenja, odmah možeš reći `geq_part = inf`",
+      "votes": {
+        "upvoters": [
+          "Skaxen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,3617 @@
+{
+  "title": "[OPESUS] 3. laboratorijska vježba - 2019/2020",
+  "creator": "[deleted]",
+  "slug": "opesus-3-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Operacijski sustavi",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "13792": {
+      "poster": "[deleted]",
+      "content": "jel se jos kome ponekad dogada \"desync\" u zadatku s pusacima ako pusti program da se izvrsava normalnom brzinom? ako dodam sleep() poziv na pocetak funkcije trgovca sve se izvrsava slijedno i ispravno\n\n![](assets/2020-04-23/00052.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13806": {
+      "poster": "WickyWinslow",
+      "content": "@Itachi#13792 Jep, i meni se to događalo bez sleep.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "13867": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Jbg to je problem s bufferima\n\nNajlakše je samo staviti neki manji sleep i zaboraviti na to, ali ne uzima se kao greška ni ovakvo.",
+      "votes": {
+        "upvoters": [
+          "WickyWinslow",
+          "[deleted]",
+          "ink",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15113": {
+      "poster": "dinosaur1",
+      "content": "Je li ocekivani ishod da se u terminalu zablokira program (potpuni zastoj)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15117": {
+      "poster": "[deleted]",
+      "content": "@dinosaur1#15113 u kojem zadatku? prvi se treba izvrsavati zauvijek a drugi prestaje jer studenti obavljaju po tri iteracije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15140": {
+      "poster": "dinosaur1",
+      "content": "@Itachi#15117 u 1. zadatku nakon 6/7 ispisa mi se zablokira program i moram slat SIGINT za prekid rada.\n\nOvo mi je odsjecak koda u while petlji iz funkcije koju poziva pusac1...mozda je ovdje problem?\n```c\nsem_wait(p1);\n sem_wait(KO);\n\t\tif(r1 == *s1 && r2 == *s2) {\n\t\t\tsem_post(KO);\n\t\t\t//sem_post(stp);\n\t\t\tprintf(\"Pusac 1: uzima sastojke i ...\\n\");\n\t\t\tsem_post(stp);\n\t\t}\n\t\telse {\n\t\t\tsem_post(KO);\n\t\t}\n```",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15160": {
+      "poster": "Mariox",
+      "content": "@Itachi#13792 jel taj desync mozda ono na sto su profesori mislili kad su rekli \"problemi s semaforima\" u uputama?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15197": {
+      "poster": "[deleted]",
+      "content": "@Mariox#15160 ![](assets/2020-04-27/00035.png)",
+      "votes": {
+        "upvoters": [
+          "Wayk"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15250": {
+      "poster": "AK10 (endyyyy)",
+      "content": "koje gradivo treba naucit za ovaj labos?",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15283": {
+      "poster": "Mariox",
+      "content": "@AK10#15250 do ukljucujuci monitora",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15367": {
+      "poster": "[deleted]",
+      "content": "@AK10#15250 sve kaj trebas znat ti je objasnjeno na stranici za labos",
+      "votes": {
+        "upvoters": [
+          "Wayk"
+        ],
+        "downvoters": [
+          "HARAmara (decko_sa_balkana)",
+          "bb8 (zaza)",
+          "bjunolulz",
+          "brol (Mason Mount me)",
+          "ink"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15411": {
+      "poster": "Urmum (mamaRu)",
+      "content": "Koje su pocetne vrijednosti za ovih 5 semafora?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15413": {
+      "poster": "[deleted]",
+      "content": "@Urmum#15411 one koje ti trebaju bit kako bi tvoje rjesenje zadatka ispravno funkcioniralo",
+      "votes": {
+        "upvoters": [
+          "LucidDreamer",
+          "Mariox",
+          "Wayk"
+        ],
+        "downvoters": [
+          "AK10 (endyyyy)",
+          "Bioxed",
+          "Exelero",
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "Lyras",
+          "MiqeloS",
+          "MrPeanutButter",
+          "Suki7",
+          "SuperSjajan3",
+          "ZliDule",
+          "at5611",
+          "bb8 (zaza)",
+          "bjunolulz",
+          "brol (Mason Mount me)",
+          "dinosaur1",
+          "in1",
+          "jobi (azex)",
+          "joj (poni)",
+          "mp99",
+          "pohanyx (2Đman)",
+          "ruza0001 (rozy)",
+          "setuid0",
+          "steve (Mr_mr)",
+          "tata (NISAM ASISTENT)",
+          "tetak",
+          "wesley"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "BigZ1"
+        ],
+        "wtf": [
+          "LucidDreamer",
+          "snowman"
+        ],
+        "tuga": []
+      }
+    },
+    "15551": {
+      "poster": "MrPeanutButter",
+      "content": "Mi smo smijeli i sa OSEMom ovo rijesit isto?\n\nRekli su da je BSem samo jedno od mogucih rjesenja",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15598": {
+      "poster": "bb8 (zaza)",
+      "content": "@Urmum#15411 Ja mislim da semafor(KO) treba jedini bit prolazan (1) na početku, a ostali neprolazni (0).\n\n@MrPeanutButter#15551 Kolko ja znam ove funkcije koje koristimo rade s općim semaforima, tak da mislim da je očekivano da koristimo OSEM.",
+      "votes": {
+        "upvoters": [
+          "MrPeanutButter",
+          "Urmum (mamaRu)"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15619": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "samo prepišete s interneta. izi",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": [
+          "setuid0"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Bioxed",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15628": {
+      "poster": "Urmum (mamaRu)",
+      "content": "@bb8#15598 postavila sam KO i stol_prazan u 1, a ostale u 0 i radi :)",
+      "votes": {
+        "upvoters": [
+          "bb8 (zaza)",
+          "ruza0001 (rozy)",
+          "setuid0"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15994": {
+      "poster": "Suki7",
+      "content": "> @dinosaur1#15140 u 1. zadatku nakon 6/7 ispisa mi se zablokira program i moram slat SIGINT za prekid rada.\n\n> Ovo mi je odsjecak koda u while petlji iz funkcije koju poziva pusac1…mozda je ovdje problem?\n\nJesi mozda rijesio ovaj problem? Ako jesi kako?",
+      "votes": {
+        "upvoters": [
+          "Aloko (Ardeo)",
+          "boki8 (kerovac)",
+          "mariak (kaiak)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15997": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "kako u mainu inicijalizirat semafore , meni se beskonacno vrti trgovac , vjeroavtno stol_prazan krivo inicjaliziram",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16050": {
+      "poster": "dinosaur1",
+      "content": "@Suki7#15994 kad uspijem posaljem",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16063": {
+      "poster": "Suki7",
+      "content": "> @Urmum#15628 postavila sam KO i stol_prazan u 1, a ostale u 0 i radi\n\n> @Tompa007#15997 kako u mainu inicijalizirat semafore , meni se beskonacno vrti trgovac , vjeroavtno stol_prazan krivo inicjaliziram\n\njesi ovo probao?",
+      "votes": {
+        "upvoters": [
+          "Aloko (Ardeo)",
+          "mariak (kaiak)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16153": {
+      "poster": "dinosaur1",
+      "content": "@Suki7#15994 meni je problem bio to sto nisam provjeravao obe mogucnosti kod uvjeta u funkciji pusac..\n\ntj, za isti par materijala koje odabere trgovac postoje dvije mogucnosti - 1. materijal se pohrani u prvu varijablu a 2. materijal u drugu varijablu ili 1. materijal u drugu varijablu a 2. materijal u 1. varijablu...nakon nekog vremena dogodio bi se slucaj da nijedan uvjet od 3 razlicita pusaca nije istinit i zablokiralo bi se",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16182": {
+      "poster": "Suki7",
+      "content": "@dinosaur1#16153 hahahha blago ti se meni nije to, nmvz hvala svejedno",
+      "votes": {
+        "upvoters": [
+          "Aloko (Ardeo)",
+          "dinosaur1",
+          "mariak (kaiak)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16192": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "kako bi trebao izgledati ispis na zadatku partibrejker ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16273": {
+      "poster": "[deleted]",
+      "content": "@Tompa007#16192 ![](assets/2020-04-29/00042.png)",
+      "votes": {
+        "upvoters": [
+          "Bioxed",
+          "ink",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16396": {
+      "poster": "Rope (Rops)",
+      "content": "Imam slucaj da mi trgovac na pocetku dva puta za redom nudi sastojke i onda tek pusac uzme i dalje sve radi normalno, ima li neko nesto slicno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16410": {
+      "poster": "Cubi",
+      "content": "@Rope#16396 Ja sam to imao kad sam stavio da je semafor za stol prolazan na početku. Ako ti trgovac provjerava je li stol prazan na kraju petlje, onda ti taj semafor inicijalno postavi da je neprolazan. Trgovac prvi put postavi sve sastojke ne prolazeći kroz taj semafor i kad dođe na taj semafor vidi da je postavljen i prođe i opet postavlja sastojke. Ali sada taj semafor više nije prolazan jer je trgovac prošao i bit će prolazan tek kad ga pušači otvore i onda ti normalno dalje radi. Dakle samo taj semafor učini neprolaznim na početku.",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)",
+          "Suki7",
+          "idontwannabemyself"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16415": {
+      "poster": "Rope (Rops)",
+      "content": "@Cubi#16410 puno hvala, rjeseno",
+      "votes": {
+        "upvoters": [
+          "Cubi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16416": {
+      "poster": "ppooww (pp)",
+      "content": "Rok predaje: 06.05.2020. do 15 sati.\n\n1. zadatak: Riješiti [problem pušača](http://www.zemris.fer.hr/predmeti/os/pripreme/z3_semafori-pusaci.html) koristeći procese i sinkronizirati ih semaforima\n2. zadatak: Riješiti [problem partibrejkera](http://www.zemris.fer.hr/predmeti/os/pripreme/z3_partibrejker.html) koristeći dretve i sinkronizirati ih monitorom",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Suki7",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16418": {
+      "poster": "ppooww (pp)",
+      "content": "Jel može netko kome radi 1. zadatak pokazati svoj kod u main-u ili barem onaj dio gdje se zauzima zajednička memorija i poziva fork()?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16419": {
+      "poster": "Cubi",
+      "content": "@ppooww#16416 Već postoji thread za ovaj labos, nema potrebe za još jednim @micho \n\n@ppooww#16418 Imaš na yt što je leonardo objašnjavao labos [ovdje](https://www.youtube.com/watch?v=yJEO8o25FZk&feature=youtu.be) i njegove [primjere](http://www.zemris.fer.hr/~leonardo/os/fer/primjeri-koda/03-semafori-i-monitori/) kako se sve koristi, pa i to s memorijom i forkom u semafori -> semafori_procesi",
+      "votes": {
+        "upvoters": [
+          "kavastoplim (kavustoplim)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16420": {
+      "poster": "[deleted]",
+      "content": "@Cubi#16419 \n>Već postoji thread za ovaj labos, nema potrebe za još jednim @Mićo\n>\ndruker",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16425": {
+      "poster": "ppooww (pp)",
+      "content": "@Cubi#16419 \n\n@Itachi#16420 \n\nNisam ga mogao pronaći, isprike 😅.\n\nI vidio sam te primjere i pogledao video, ali ne vidim i dalje gdje sam nesto krivo napravio, ali hvala.",
+      "votes": {
+        "upvoters": [
+          "Cubi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16436": {
+      "poster": "Sicsile",
+      "content": "Trebamo li negdje u prvom zadatku dodati sleep ili se samo treba vrtit ko ludo u petljama?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16437": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Sicsile#16436\n\nTamo gdje u pseudokodu piše smotaj, zapali, puši sam ja dodao sleep, nekako mi se činilo kao da su na to ciljali.",
+      "votes": {
+        "upvoters": [
+          "Sicsile",
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16453": {
+      "poster": "[deleted]",
+      "content": "[zadatak pusaci] Je li netko imao problem  s Segmentation fault (core dumped)?\n\nimam 5 semafora koje sve spremim u zajednicki spremnik, ali neznam je li to radim na ispravan nacin...",
+      "votes": {
+        "upvoters": [
+          "awi (đusi)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16461": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@FERella#16453\n### Kako ti izgleda poziv `shmget`-a?\n\nMožda ne zauzimaš dovoljno memorije.\n\nJa imam nešto tipa `id = shmget (IPC_PRIVATE, sizeof (struct Dijeljeno), 0600);`, gdje sam definirao tip strukture Dijeljeno koji sadrži sve semafore, brojače i ostale varijable koji mi trebaju.\n\nVidio sam da ljudi rade stvari tipa `id = shmget (IPC_PRIVATE, 5 * sizeof (sem_t) + 3 * sizeof(int), 0600);` gdje miješaju veličine više tipova, što mi je glupo jer C ima strukture kakve ima baš zato da bi se na takvim mjestima koristile.\n\nNešto kao `5 * sizeof (sem_t)` za polje je OK, ali ako trebaš alocirati memorije za više različitih tipova svakako predlažem korištenje strukture.\n\nOpcija je i korištenje više segmenata dijeljene memorije, po jedan za svaku varijablu, ili jedan za semafore, jedan za brojeve, ali u uputi za 2. labos su rekli da to ne radimo:\n> Ako se program rješava s procesima tada treba zajedničke varijable tako organizirati da se prostor za njih zauzme odjednom i podijeli među njima. Ovo je nužno zbog ograničenog broja segmenata i velikog broja korisnika.\n\n### Kako ti izgleda poziv `shmat`-a?\n\nMožda ti pointeri pokazuju na krive dijelove memorije (van alociranog područja, ili je više pointera aliasano na isti semafor).\n\nKako koristim strukturu, imam samo jedan poziv `dijeljeno = (struct Dijeljeno *) shmat (id, NULL, 0);`.\n\nTko ne koristi strukturu mora pravilno odraditi aritmetiku pokazivačima da dobije ispravne pointere, što je malo složenije kada imaš različite tipove podataka. Opet predlažem korištenje strukure da se to izbjegne.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "ink",
+          "setuid0"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16479": {
+      "poster": "niknik",
+      "content": "2. zadatak, nakon sto se svi studenti odu na tri zabave i na kraju partibrejker sve zatvori, program mi se nastavlja vrtjeti i nista se ne dogada. Ima tko slican problem i rjesenje?",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "puufi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16489": {
+      "poster": "Cubi",
+      "content": "@niknik#16479 Ja imam taj problem, ali nažalost nemam rješenje. Skužio sam da partibrejker ostane na jednom semaforu kad studenti svi izađu i nema tko postaviti njegov semafor i zablokira tu sve. Isto tako ne znam kako provjeravaš koliko je studenata u sustavu, ali to je zajednička varijabla pa je to kritični odsječak i moraš onemogućiti da ti više studenata u isto vrijeme mijenja tu varijablu. Ja sam smanjivanje te varijable stavio u zadnji mutex kad su studenti 3. put u petlji jer nakon toga izlaze iz sustava.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16490": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@niknik#16479\n\nOstane čekati da uđu 3 studenta, a svi su već otišli.\n\n![](assets/2020-04-30/00024.png)\n\nPopravio sam tako da sam još i provjeravao jesu li svi otišli, ako jesu sam dopustio partibrejkeru da izađe iz monitorske petlje, ali sam stavio da onda ne ulazi u sobu.\n\nDa bi to radilo, morao sam na kraju funkcije studenta dodati `pthread_cond_signal` ili `pthread_cond_broadcast` za red u kojem čeka partibrejker (isti onaj kojem se signalizira da student ulazi u sobu).",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "16608": {
+      "poster": "awi (đusi)",
+      "content": "@FERella#16453  dap evo bas mi javlja, ne znam sta mi je krivo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17073": {
+      "poster": "JeleeII",
+      "content": "![](assets/2020-04-30/00090.png)\n\nMogu li umjesto ovog podvucenog reda pseudokoda u 1. zadatku samo na tom dijelu u svom kodu napisati switch i ne praviti tu dodatnu funkciju koju su oni nazvali sastojci_koje_pušač_nema(p). Profesor ništa u vezi toga ne spominje u videu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17176": {
+      "poster": "tomekbeli420",
+      "content": "Jel moramo koristiti jedan ili možemo više monitora u drugom zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17177": {
+      "poster": "AcoSofronijevic",
+      "content": "@JeleeII#17073 ne moras se slijepo drzati njihovih uputa, ako mislis da se nesto moze jednostavnije rijesiti slobodno\n\nni ja ne koristim tu funkciju kao ni neke druge",
+      "votes": {
+        "upvoters": [
+          "JeleeII",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17194": {
+      "poster": "Sicsile",
+      "content": "što točno mi moramo napraviti kad je napisano \"uđi u sobu za zabavu ako u sobi nema partibrejkera;\"? trebamo samo povećati brojač koliko ljudi je u sobi ili još nešto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17202": {
+      "poster": "DnaRam77 (son)",
+      "content": "@Itachi#13792 \n\nPostoji mogućnost i da je više puta postavljen semafor i-tog pušača (bez da je spušten), a kako radimo s općim semaforima, može se dogoditi da taj pušač kad\n\ntrgovac stavi njegove sastojke više puta dođe do stola i pokupi ih (jer na temelju dva semafora koja ga sprječavaju to može), a trebao bi samo jednom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17212": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@tomekbeli420#17176\n\nMisliš jedan monitor s više redova (jedan mutex, više condova), ili baš više monitora (više mutexa)?\n\nJa koristim jedan monitor, ali on ima 2 reda.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17227": {
+      "poster": "tomekbeli420",
+      "content": "@__builtin_popcount#17212\n\n2 mutexa\n\nRazmisljao sam da nakon sto odrade svoja 3 ulaska u sobu, studenti odu doma (\"izađu iz sustava\") i to rade paralelno kad drugi ulaze i izlaze, pa sam zato dodao još jedan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17238": {
+      "poster": "[deleted]",
+      "content": "@DnaRam77#17202 mislim da nije u tome problem buduci da sleep poziv popravlja stvar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17239": {
+      "poster": "[deleted]",
+      "content": "@Sicsile#17194 pa da, taj brojac se koristi kao znak kad partibrejker ulazi i izlazi iz sobe, poanta zadataka je ispravno ih sinkronizirat",
+      "votes": {
+        "upvoters": [
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17507": {
+      "poster": "Lyras",
+      "content": "Normalno je ponašanje da studenti masovno u komadu uđu kad izađe partibrejker, jel? Pošto šaljem broadcast signal. Treba li se to nekako modulirati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17511": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@Itachi#16273 kako si postigao da ti se dretva partibrejker ugasi nakon izvodenjea svih dretvi student?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17531": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "u drugom zadatku nekad mi se normalno zaustavi program kako i treba a nekad ne , odnosno moram ga \"ubiti\" s ctrl +c , jel imao neko slican problem ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17538": {
+      "poster": "gladiator",
+      "content": "@Tompa007#17531 Vjerojatno ti partibrejker čeka da mu 3 studenta otvore vrata od sobe, a ne zna da su se svi pokupili doma",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17553": {
+      "poster": "Lusy (MGJ)",
+      "content": "![](assets/2020-05-01/00044.png)\n\nImam problem da mi se u drugom zadatku samo jednom dogodi da studenti uđu i izađu, a pritom se uopće ne ispiše da je partibrejker izašao te moram prekidat program s  ^ C.  Ima tko ideju u čemu je riječ i kako popraviti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17555": {
+      "poster": "neksi (filip)",
+      "content": "U prvom zadatku (problem pušača cigareta) kada radim nove procese, fork() mi ne vraća 0 već neki drugi broj. Zna li neko kako razriješiti ovaj problem?",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17556": {
+      "poster": "[deleted]",
+      "content": "@Lusy#17553 pogledaj @viliml#10461",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": [
+          "ZliDule"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17564": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@gladiator#17538 gledajuči po kodu čini mi  se da je to problem , ali neznam kako da mu dojavim da su svi otišli pošto u prvim prolazima on mora čekati tu da bi znao kad može ući u sobu",
+      "votes": {
+        "upvoters": [
+          "ZliDule"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17580": {
+      "poster": "Deks",
+      "content": "Je zna netko ako u drugom zadatku studenti mogu izaći bez obzira na partibrejkera ili moraju čekati da on uđe u sobu pa tek onda izaći?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17586": {
+      "poster": "[deleted]",
+      "content": "@Deks#17580 smiju izaci",
+      "votes": {
+        "upvoters": [
+          "Deks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17621": {
+      "poster": "tovar",
+      "content": "@Lusy#17553 Moguce da imas negdje krivo stavljeno oslobadanje iz reda cekanja, odnosno ne/krivo oslobadas partibrejkera iz reda kada postane prazna soba pa on nikada ne dobije znak da moze nastaviti dalje, tj nikad ne izade iz sobe i studenti ne mogu opet uci",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17648": {
+      "poster": "Lusy (MGJ)",
+      "content": "@tovar#17621 Tenks, al' skuzila san vec u cemu je bila stvar. Na jednon mjestu if petlja umjesto while.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17658": {
+      "poster": "gladiator",
+      "content": "@Tompa007#17564 Ja sam to napravio tako da kad partibrejker čeka na vrata za ulaz i kad zadnji student ode doma, student mu cond_signal napravi da partibrejker konačno uđe u sobu i zatim pri izlasku iz sobe partibrejker provjerava ima li studenata u sustavu i tak to. Igraj se, stavljaj printove i traži za koji seed imaš neispravno rješenje",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17682": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "@Tompa007#15997 \n\n@Suki7 \n\njeste uspjeli rijesit?  i meni se isto beskonacno vrti trgovac... ://",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17715": {
+      "poster": "Suki7",
+      "content": "@tata#17682 Koliko ja znam prvi zad se i triba vrtiti beskonacno. Znaci ako ti uvijek kada trgovac nesto stavi na stol to uzme neki pusac i tako se vrti cijelo vrijeme onda je to dobro",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17717": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "@Suki7#17715 \n\nMa u smislu da mi se vrti trgovac beskonacno, ali procesi od pusaca se uopce ne pojavljuju.",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17721": {
+      "poster": "Suki7",
+      "content": "@tata#17717 \n\nTesko je ovako rec bez koda onda, jesi postavio sve semafore na pocetku u 0, a jedino KO da je na pocetku u 1.\n\nAko nije do toga onda je nesto u funkciji trgovac ili pusac krivo",
+      "votes": {
+        "upvoters": [
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17745": {
+      "poster": "nnn (dinoo)",
+      "content": "Zadatak s pušačima, je problem ako nakon što netko uzme sastojke, ostali nekad pogledaju šta je na stolu, a stol je prazan?\n\nOznačeni su redovi u kojima je stol prazan (odnosno `stol == 0`, ostale vrijednosti označavaju sastojke)\n\n![](assets/2020-05-02/00007.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17769": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "jel na drugom zadatku broj ovih ispisa \"Student x je usao u sobu\" mora biti jednak unesen N * 3 ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17774": {
+      "poster": "[deleted]",
+      "content": "@Tompa007#17769 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17782": {
+      "poster": "AcoSofronijevic",
+      "content": "@tata#17717 ako si slijedio pseudokod koji su dali, samo semafor KO postavljas u 1, a ostale u 0 i oni se dalje u f-ja postavljaju po potrebi.\n\nAl i meni se prvi put dogodio da je samo trgovac beskonacno radio, zato jer sam krivo vezao segment koji dobijes sa shmget. Ako ne koristis strukturu kao sto je netko vec predlozio, nakon sto sa shmat povezes segment na KO, svaki iduci dobijas tako da se pomices od prethodnog npr. p1=KO + nekibroj, p2=p1+... -> nekibroj je koliko adresnih prostora se pomices\n\nAko si to sve ispravno napravio, greška može bit i u funkcijama za pusace, tesko je rec. Iako su male sanse jer pseudokod koji su dali je doslovno 90% zadatka.",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17785": {
+      "poster": "AcoSofronijevic",
+      "content": "@nnn#17745 cilj im je ukazat na probleme sa semaforom tako da je to mozda dobro, ne mogu rec sa sigurnoscu\n\nali dodavanjem par sleep(1) f-ja u trgovca i pusace bi trebao uklonit taj problem.",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17796": {
+      "poster": "Ducky",
+      "content": "@AcoSofronijevic#17782 imam isti problem. U kodu mi je nekibroj uvijek 1.  Dali ne smije biti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17798": {
+      "poster": "[deleted]",
+      "content": "@Ducky#17796 pa ovisi, ako cijelo vrijeme offsetas od prve vrijednosti onda povecavas nekibroj svaki put, ako svaki put offsetas od onog neposredno proslog onda +1. a naravno ako ti je nesto zauzima vise memorije(polje, struktura itd) onda treba povecat za vise od 1",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17801": {
+      "poster": "niknik",
+      "content": "Napravio sam drugi zadatak sa 2 monitora i 2 reda uvjeta, 1 monitor sam koristio u dretvi student, a drugi u dretvi partibrejker i sve radi. Je li to tehnicki ispravno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17802": {
+      "poster": "[deleted]",
+      "content": "@niknik#17801 kaj ocekujes, da ce neki profesor ovdje uletit i rec ti \"je li to tehnicki ispravno\"?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "HARAmara (decko_sa_balkana)"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17804": {
+      "poster": "AcoSofronijevic",
+      "content": "@Ducky#17796 ne smije jer KO i p ekipa zauzimaju vise od 1\n\nza njih promijeni u 2 i trebalo bi bit ok sve (inace kolko sam uspio vidit sem_t zauzima 32byta ali za nase implementacije je 8 bytova dovoljno), u shmget memoriju mozes zauzet kao sizeof(sem_t)*2 tako da ces imat dovoljno prostora.(ne znam jel ce kaznjavat zauzece vise memorije od potrebne, ne bi trebali)",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17808": {
+      "poster": "[deleted]",
+      "content": "@AcoSofronijevic#17804 nisam bas siguran je li tocno to sto kazes, meni zauzimaju po 1 i sve radi, takoder sam zauzeo tocan iznos memorije u shmget",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17811": {
+      "poster": "AcoSofronijevic",
+      "content": "@Itachi#17808 ne znam nisam rekao da sam strucnjak za ovo, ovo su informacije koje sam iskopavao po stackoverflowu dok sam sebi trazio gresku u memoriji (nema bas puno inf). s 1 meni nije radilo. takoder sam zauzeo tocan iznos memorije u ovom slucaju.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17814": {
+      "poster": "[deleted]",
+      "content": "@AcoSofronijevic#17811 jesi siguran da mozda nemas neke nizove(u pointer obliku ili normalnom) za koje treba zauzet veci blok memorije? ja bi ipak probo popravit to da ne ukradu bodove na tome bezveze",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17818": {
+      "poster": "AcoSofronijevic",
+      "content": "@Itachi#17814 nema nikakvih nizova samo sem_t, iskomentirao sam kod tak da ce asistent kad bude pregledavao imat dost informacija o razmisljanju prilikom pisanja(materijal za zalbe lol). Al provjerit cu jos svakako prije predaje, mozd nadem jos nest o tim velicinama pa ce mi lakse bit promijenit nest u kodu.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17828": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "jel neko imao problem da mu se na drugom zadatku znalo u nekim slucajevima  prijevremeno skrashat program i zaustavit ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17844": {
+      "poster": "at5611",
+      "content": "U prvom zadatku jel mozemo napravit da trgovac kad stavi sastojke na stol postavi semafor samo od onoga pusaca koji moze uzet sastojke, ili bas mora postavit sva 3 semafora?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17846": {
+      "poster": "niknik",
+      "content": "@Itachi#17802 Ne profesore nego samo nekog ko dovoljno razumije monitore da mi moze odgovoriti da pitanje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17848": {
+      "poster": "[deleted]",
+      "content": "@niknik#17846 pa ako ti sve radi onda je po definiciji \"tehnicki ispravno\"",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17849": {
+      "poster": "AcoSofronijevic",
+      "content": "@at5611#17844 msm da ti nitko nece moc dat tocan odgovor na to pitanje\n\nali istaknut cu da su u prvom napisali da je JEDNO od mogucih rjesenja prikazano ispod(uz napomenu da se koriste sem_post i sem_wait), a u drugom zadatku da SVE STO NIJE ZADANO se moze rijesit proizvoljno",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "at5611"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17850": {
+      "poster": "[deleted]",
+      "content": "stvarno mi nije jasno zasto svi ovdje postavljaju pitanja na koja samo profesori mogu dat odgovor. pa ovdje smo svi studenti, imate lijepo mail za pitanja profesorima",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic",
+          "Wayk"
+        ],
+        "downvoters": [
+          "HARAmara (decko_sa_balkana)",
+          "Michael (Michael Scarn)"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17851": {
+      "poster": "AcoSofronijevic",
+      "content": "@Itachi#17850 ne treba nam jos slucajeva Bazant XD",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17858": {
+      "poster": "[deleted]",
+      "content": "@AcoSofronijevic#17851 znam da je ovo sala ali on je fakat izolirani specijalac, vecina profesora ce ti rado izaci u susret i pomoci s bilo kakvim pitanjima, cak i na stranici za labos iz OS je napisan mail te stoji da se slobodno javimo s bilo kakvim pitanjima, slao sam i ja neko pitanje za prosli labos i odgovorili su s najvecom ljubaznoscu i jasnocom",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic",
+          "BigZ1",
+          "Ducky",
+          "Fortius",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17863": {
+      "poster": "Fortius",
+      "content": "@Itachi#17858 Pogotovo profesor Jelenković, imam samo riječi hvale za njega. Sve lijepo pogleda i objasni što je krivo",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "[deleted]",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "nnn (dinoo)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17866": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "cek saljete kodove i onda oni provjere i odgovore ili samo ovako konceptualno objasnite?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17867": {
+      "poster": "[deleted]",
+      "content": "@tata#17866 ja posaljem prazan fajl pa mi oni nadopune kod i posalju natrag",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic",
+          "Ducky",
+          "MiqeloS",
+          "Valentino",
+          "__builtin_popcount (std::popcount)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "BlackMamba",
+          "Fortius",
+          "SonGoku (~~~~~~~~)",
+          "Wayk",
+          "__builtin_popcount (std::popcount)",
+          "lup",
+          "netbitan11 (netbitan)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17868": {
+      "poster": "Ducky",
+      "content": "@tata#17717 nez jesi uspio debuggirat i vjv ovo nece pomoc, al meni je bio problem to što nisam stavio globalno polje (koje pohranjuje sastojke) u zajedničku memoriju, pa nikad nije pamtio šta stavim u njega",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17878": {
+      "poster": "Cubi",
+      "content": "@at5611#17844 Mislim da je poanta da trgovac javi svima da su sastojci na stolu, a da pušači uzimaju ako im trebaju ti sastojci. Dakle, trgovac javi pušačima tako što postavi sve semafore, a oni uzimaju sastojke ako su to ti što im trebaju. A zašto je problem i ako prođu? Samo ispitaj uvjet jesu li njihovi sastojci, ako nisu vratit će se na početak i čekati kao da ih i nisi pustio.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17891": {
+      "poster": "AnamarijaM (MA)",
+      "content": "Je li itko mozda imao ovakav problem da mu konstantno prva 2 fork-a vracaju brojeve razlicite od 0?\n\n![](assets/2020-05-02/00024.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17892": {
+      "poster": "[deleted]",
+      "content": "@AnamarijaM#17891 cini mi se da fundementalno ne razumijes kako ta funkcija funkcionira i sto vraca. predlazem da procitas dokumentaciju npr. https://www.geeksforgeeks.org/fork-system-call/",
+      "votes": {
+        "upvoters": [
+          "AnamarijaM (MA)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17900": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@Itachi#17892 U nekom prepravljanju koda sam ocito pid =-1 zamijenila samo s else i onda trazila gresku u drugim dijelovima koda, hvala! :)",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17927": {
+      "poster": "Suki7",
+      "content": "@at5611#17844 \n\n![](assets/2020-05-02/00026.png)",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "__builtin_popcount (std::popcount)",
+          "at5611",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "17950": {
+      "poster": "Bioxed",
+      "content": "![](assets/2020-05-02/00028.png)\n\nTko može ovo troubleshoot-at?\n\nKad pokrenem program Ispisu se tri linije i onda kao da se prekine program ali zapravo nastavi s radom ?\n\nCTRL + C ga kao prekine ali on samo nastavi, CTRL + Ž ne radi ništa.\n\nImam funkciju brisi \n\nvoid brisi(int sig)\n\n{\n\n\t/* oslobađanje zajedničke memorije */\n\n\t(void) shmdt(stol);\n\n\t(void) shmctl(segment, IPC_RMID, NULL);\n\n\t(void) shmctl(semID, IPC_RMID, NULL);\n\n\texit(0);\n\n}\n\na u mainu ovo \n\nsigset(SIGINT, brisi);\n\nNa prošlom labosu je takvo prekidanje radilo, no više me muči ovaj čudan početak.\n\nPošaljem kod u privatni ko ima nekakvu ideju, hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "brol (Mason Mount me)"
+        ]
+      }
+    },
+    "17954": {
+      "poster": "Bioxed",
+      "content": "@Bioxed#17950 \n\n**Popravljeno**\n\nRješenje oba problema: wait(NULL); za sve procese",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18016": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "@AcoSofronijevic#17782 \n\nVec me sramota kolko sam sati potrosio na ovaj zadatak, a nije jos ni gotov lol\n\nZnaci imam ove globalne varijable (semafori i 2 sastojka)\n\n```\nsem_t *stol_prazan;\nsem_t *duhan_sibice;\nsem_t *papir_sibice;\nsem_t *papir_duhan;\nsem_t *KO;\nint *s1;\nint *s2;\n```\n\n\nOvako sam dodijelio memoriju:\n```\nID = shmget (IPC_PRIVATE, 5*sizeof(sem_t) + 2* sizeof(int), 0600);\n\t\nKO = (sem_t*)shmat(ID, NULL, 0);\nstol_prazan = (sem_t*)(KO + 1);\nduhan_sibice = (sem_t*)(stol_prazan+1);\npapir_sibice = (sem_t*)(duhan_sibice+1);\npapir_duhan = (sem_t*) (papir_sibice+1);\ns1 = (int*)(papir_duhan+1);\ns2 = (int*)(s1+1);\n```\n\nSemafori KO i stol_prazan su mi u jedinici, ostali u 0.  Ovo je dobra dodjela memorije?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18048": {
+      "poster": "tomekbeli420",
+      "content": "Daj si olakšajte život i definirajte svoj vlastiti struct\n\nPrilikom definicije te strukture unutra potrpajte šta vam treba, semafori, intovi, može bilo što\n\nDeklarirajte globalni pointer na tu strukturu\n\nZauzmite prostora sizeof od te strukture koristeći shmat shmget\n\nKoristeći globalni pointer na vašu strukturu lijepo elegantno pristupate članovima strukture\n\nTako ćete izbjeći zajebanciju s aritmetikom pointera i brojanjem bajtova u memoriji",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Bioxed",
+          "Retard00",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "ink",
+          "jobi (azex)",
+          "snowman",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18053": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@tata#18016 U dodjeli memorije ti ne treba ovaj sem_t*, znaci KO = shmat(ID, NULL, 0); stol_prazan = KO +1;. itd. Ako si se drzao pseudokoda, samo bi KO trebao biti inicijaliziran na 1, a ostali na 0.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18061": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "nije mi najjasnije, ako je prazan_stol vrijednosti 1, je li onda stol prazan ili nije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18063": {
+      "poster": "Retard00",
+      "content": "Jel u 2. zadatku postoji samo jedna ili više soba?",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18066": {
+      "poster": "Suki7",
+      "content": "> @iNavy#18061 nije mi najjasnije, ako je prazan_stol vrijednosti 1, je li onda stol prazan ili nije\n\nTrebas ga stavit u 0 na pocetku (to ti znaci da je stol pun) jer po tom njihovom pseudokodu prvo trgovac odmah automatski postavi neke sastojke na stol i onda se ceka da neki pusac uzme te sastojke sa stola i postavi prazan_stol u 1 (sto ce znaciti da je stol prazan)\n\n@Retard00#18063 samo jedna soba",
+      "votes": {
+        "upvoters": [
+          "Retard00",
+          "iNavy (mornar Ica)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18085": {
+      "poster": "Bioxed",
+      "content": "@tomekbeli420#18048 \n\n![](assets/2020-05-03/00013.png)\n\nJel ja dobro ovo radim? Dobivam segmentation fault :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18086": {
+      "poster": "Retard00",
+      "content": "@Bioxed#18085 msm da semafori nebi trebali biti pointeri",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18123": {
+      "poster": "[deleted]",
+      "content": "@Retard00#18063 ime i slika checks out. samo jedna soba kolega",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Hrvoje (Hrvoje45)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18144": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "nakon druge ili treće iteracije u prvom zadatku (pusaci.c) mi program izbacuje grešku `The futex facility returned an unexpected error code.`, je li se nekome pojavilo isto to i kako je riješio problem",
+      "votes": {
+        "upvoters": [
+          "JBQ"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18146": {
+      "poster": "JBQ",
+      "content": "@iNavy#18144 \n\nisti problem, ne mogu nikako popravit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18350": {
+      "poster": "[deleted]",
+      "content": "@iNavy#18144 \n\n@JBQ#18146 \n\nYou're passing the address of your main() loop variable i to each thread\n\npthread_create(&phlosopher[i],NULL, Philospoher_behaviour ,&i)\n\nBy the time your thread executes\n\nint id  = *(int *)param;\n\nthe value in i may have changed.\n\n\n\n\n\nprvi rezultat na stackoverflowu, kolege moji nece vama hljeba bit ako ne znate pretrazivat internet",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic",
+          "SonGoku (~~~~~~~~)",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "SonGoku (~~~~~~~~)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18380": {
+      "poster": "AcoSofronijevic",
+      "content": "@tata#18016 potvrdujem da je dodjela memorije dobra(kao sto si vidio kolega itachi je potvrdio da radi i offset 1, mada sam ja koristio 2)\n\nako u semaforima postavis stol prazan na 1, onda kad dode u funkciju trgovac na onom zadnjem dijelu gdje treba cekat da funkcije pusaca postave stol_prazan nece cekat  jer ce vidjet da je spreman, takoder buduci da su ovo funkcije za opci semafor to bi trebalo povecat vrijednost prazan_stol na vise od 1 i to bi dalje moglo zbrkat program(mozda ti je to problem)\n\nak jos ne radi program probaj nam opisat kak radi il screenaj ispis(ak program radi solidno npr. sve je tocno ali nekad dretva trgovac da vise ispisa od jednog ili dretve pusaca, to bi trebalo bit u redu -> iznad je netko napisao vec da se to rjesava dodavanjem sleep(1) na pocetak svake funkcije i naravno kad funkcije uzmu sastojke reda radi isto usporis kao da simuliras pusenje)\n\ndruga stvar sto mi pada na pamet je da mozda nisi uzeo u obzir da kad u globalne varijable stavljas sastojke npr. dobijes 1 i 3, postoji mogucnost da dobijes i 3 1 nekad -> dakle ak nisi drukcije osmislio provjeru u funkcijama pusaca moras provjerit oba ova slucaja",
+      "votes": {
+        "upvoters": [
+          "pez (ip)",
+          "tata (NISAM ASISTENT)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18441": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@Itachi#18350 na svu sreću probao sam sav taj stack overflow i ništa ne rješava problem",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18444": {
+      "poster": "[deleted]",
+      "content": "@iNavy#18441 ne saljes dretvi kao argument adresu varijable iz glavnog loopa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "18460": {
+      "poster": "Retard00",
+      "content": "Rješio sam sad 2. zadatak da radi mada nemam pojma šta se tu uopće dešava, tipa da li je sljedeće uopće ispavna uporaba mutex-a?\n\n    //...kod pri kraju dretve student\n    //KO\n    pthread_mutex_lock (&mc);\n\n    studentcount--;\n\n    //kraj KO\n    pthread_cond_signal(&red);\n    pthread_mutex_unlock(&mc);\n    return NULL;\n\nZnači prvi mutex_lock će osigurat da se `studentcount--;` izvršava samo na jednoj dretvi u istom trenutku, onda ovaj cond_signal je da se dretva partibrejkera kada čeka da se soba ponovo popuni nastavi s izvođenjem (na kraju kad svi studenti odu se to neće dogoditi pa se onda to treba prekinuti iz cond_wait) i nakon toga mutex_unlock omogućava da neka druga dretva odradi isto (ili negdje drugdje nastavi sa svojim poslom).\n\nNisam siguran dal sam ovo dobro protumačio i ne kužim smisao monitora kad mislim da bi sve lakše mogao rješit sa poljima semafora.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19024": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "watafak je cekajBSEM(p) u pusacima, jel nije p samo oznaka koji je pusac, ili i p treba semafor bit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19109": {
+      "poster": "[deleted]",
+      "content": "@SonGoku#19024 semafor tog pusaca",
+      "votes": {
+        "upvoters": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19214": {
+      "poster": "Bioxed",
+      "content": "Može primjer točnog ispisa drugog?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19215": {
+      "poster": "[deleted]",
+      "content": "@Bioxed#19214 moze. procitaj konac",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19484": {
+      "poster": "AcoSofronijevic",
+      "content": "Drugi zadatak, prepravljao sam neke stvari, sad mi se dogada da na pocetku(90% puta) se uvijek izvede n dretvi studenata(Student je usao u sobu), a zatim se tek propusti dretva partibrejkera, iako postoji uvjet da cim broj ljudi u sobi postane 3+ propusta se blokirana dretva partibr ako postoji.\n\nOsim tog, dalje program savrseno funkcionira. \n\nJel cond_signal() ne propusta odmah blokiranu dretvu ili sam ja nekaj zeznio u kodu pa tak radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19485": {
+      "poster": "AcoSofronijevic",
+      "content": "@AcoSofronijevic#19484 sve radi kak treba",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19557": {
+      "poster": "pez (ip)",
+      "content": "@AcoSofronijevic#19485 popravio si ili je to sto si opisao ono sto se trazi?",
+      "votes": {
+        "upvoters": [
+          "Galke"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19609": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "jel moze netko postavit samo kako mu forkanje i wait(null) izgleda u mainu za trgovaca i pusace",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19625": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@SonGoku#19609 ne treba iapk",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19632": {
+      "poster": "toty",
+      "content": "Ja sam u main-u pozvao Trgovca, a trgovac mi poziva pušače i svaki pušač trgovca ako se ispune uvjeti, jel to tako treba ili nekom drugom logikom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19653": {
+      "poster": "steker",
+      "content": "ima ko problem da mu se u prvom zadatku neki slucaj ispise vise puta dok prede na drugi [spoiler]![](assets/2020-05-05/00016.jpeg)[/spoiler]",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19666": {
+      "poster": "[deleted]",
+      "content": "@toty#19632 ne, trebas iz maina napravit jednu dretvu za trgovca i tri za pusace i one rade nezavisno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19671": {
+      "poster": "toty",
+      "content": "@Itachi#19666 zar ne treba koristit procese?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19676": {
+      "poster": "[deleted]",
+      "content": "@toty#19671 da istina, procese, ali ovo kj sam reko vrijedi, oni ne pozivaju jedni druge nego se odvojeno izvrsavaju, mozes samo liniju-po-liniju implementirat onaj njihov pseudokod",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19691": {
+      "poster": "AcoSofronijevic",
+      "content": "@pez#19557 ispalo je da u tih par slucajeva dretva partibrejker nije ni bila blokirana u redu uvjeta , u daljim testiranjima mi se nije to vise dogadalo. Imas iznad primjer ispisa koji je ostavio Itachi, uglavnom msm da su jako male sanse da ti ispis bude uvijek tih n dretvi pa tek onda partibrejker tak da pregledaj kod ako ti se to dogada.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19692": {
+      "poster": "Mettastic (Jetapa)",
+      "content": "Jel jos netko ima problem da mu u 2. zad studenti redom izlaze, a da partibrejker uopce ne udje u sobu tj. ovo\n\n![](assets/2020-05-05/00021.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19693": {
+      "poster": "[deleted]",
+      "content": "@Mettastic#19692 jesi siguran da si dodao u student dretvu \"zabavi se\" tj. sleep poziv?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19694": {
+      "poster": "Mettastic (Jetapa)",
+      "content": "@Itachi#19693 \n\nDa, spava mi izmedju 1000 i 2000ms",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19695": {
+      "poster": "AcoSofronijevic",
+      "content": "@Mettastic#19692 Jesi siguran da saljes cond_signal redu u kojem je blokiran partibrejker(ako ga koristis) nakon sto se ispuni odredeni uvjet?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19696": {
+      "poster": "[deleted]",
+      "content": "@AcoSofronijevic#19691 mislim da se na pocetku pokusa cesto dogodi da svi studenti udu i izadu bez da patribrejker stigne uci zato sto partibrejker na pocetku spava dulje od studenata, ali u sljedecim iteracijama ce stic ulazit ako ceka na signal da je ulazak dozvoljen\n\n@Mettastic#19694 jesi pomnozio sa 1000? usleep prima argument u mikrosekundama",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19697": {
+      "poster": "toty",
+      "content": "@Itachi#19676 ne znam, kad radim po njihovom pseudokodu ne radi mi haha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19702": {
+      "poster": "[deleted]",
+      "content": "@toty#19697 sumnjam da ces dobit ista bodova ako predas tako, ne bi oni smijeli pozivat jedni druge",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19703": {
+      "poster": "Mettastic (Jetapa)",
+      "content": "@AcoSofronijevic#19695  Mislim da saljem\n\n@Itachi#19696  Jesam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19705": {
+      "poster": "[deleted]",
+      "content": "@Mettastic#19703 pa debugaj malo partibrejkera, dodaj neke printf pozive na raznim djelovima, pokusaj skuzit kj se dogada i gdje zapinje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19721": {
+      "poster": "toty",
+      "content": "@Itachi#19702 jel tebi radilo po njihovom pseudokodu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19722": {
+      "poster": "[deleted]",
+      "content": "@toty#19721 da",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19723": {
+      "poster": "AcoSofronijevic",
+      "content": "@Mettastic#19703 kao sto je predlozeno stavi printf u partibrejkera i provjeri kad ti se on poziva, ako on ispise svoju poruku, a u nijednom trenutku nije pozvan imas problem\n\nFrend je imo takav problem s ispisom, al kad smo mu promijenili postavljanje mutex_lock i unlock nestao je, provjeri i to.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19727": {
+      "poster": "Mettastic (Jetapa)",
+      "content": "@Itachi#19705 \n\n@AcoSofronijevic#19723 \n\nPartibrejker se uspjesno poziva ali nikad ne ulazi u sobu zato sto nikad nije ispunjen uvjet da su 3 ili vise studenata u sobi. Nije mi jasno zasto studenti redom ulaze i izlaze",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19730": {
+      "poster": "AcoSofronijevic",
+      "content": "@Mettastic#19727 99% sam siguran da je u pitanju mutex lock i unlock\n\nFrend je imo takav ispis jer je zakljucavo na pocetku funkcije ,a otkljucavo na kraju.",
+      "votes": {
+        "upvoters": [
+          "Mettastic (Jetapa)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19732": {
+      "poster": "AcoSofronijevic",
+      "content": "@toty#19632 jel mozes objasnit ovo pozivanje jer ne razumijem kako mislis. imas jedan fork() u mainu a ostali u funkcijama il kaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19734": {
+      "poster": "Mettastic (Jetapa)",
+      "content": "@AcoSofronijevic#19730  Kad maknem lock i unlock radi. Hvala puno!",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19739": {
+      "poster": "mrkva",
+      "content": "@SonGoku#19609 jel mozes objasniti kako si to napravio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19743": {
+      "poster": "AcoSofronijevic",
+      "content": "@mrkva#19739 isto ko u drugoj vjezbi. imas 4 procesa dakle 4 if-a sa fork() gdje pozivas funkcije trgovca i pusaca, a wait zalijepis ispod tog svega u petlju 4x. Pogledaj si upute od druge vjezbe visezadacni rad gdje imas primjer programa sa 2 procesa.\n\nI ne zaboravi dodat funkciju za brisanje svega u slucaju SIGINTA, ovaj put ce vjerojatno skidat bodove.",
+      "votes": {
+        "upvoters": [
+          "mrkva"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19749": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "evo forkanje za pusace\n\n![](assets/2020-05-05/00027.png)",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "Njet",
+          "mrkva"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19781": {
+      "poster": "ana (anci)",
+      "content": "jel se treba u 2. zad stavljati onaj atribut setdetachstate sta je objasnjavao prof u uputama za lab3? Kada ga nemam sve radi kako treba, a kad ga dodam onda odmah zavrsi program bez da se ista ispisuje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19796": {
+      "poster": "flicka",
+      "content": "zna neko zasto mi se dogada da kad mi ude partibrejker, svi izadu ali partibrejker ne izlazi i tu sve stane",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19797": {
+      "poster": "Suki7",
+      "content": "> @__builtin_popcount#16490 Ostane čekati da uđu 3 studenta, a svi su već otišli.\n\n> ![](https://forum.studosi.net/assets/files/2020-04-30/1588241346-637699-image.png)\n\n> Popravio sam tako da sam još i provjeravao jesu li svi otišli, ako jesu sam dopustio partibrejkeru da izađe iz monitorske petlje, ali sam stavio da onda ne ulazi u sobu.\n\n> Da bi to radilo, morao sam na kraju funkcije studenta dodati pthread_cond_signal ili pthread_cond_broadcast za red u kojem čeka partibrejker (isti onaj kojem se signalizira da student ulazi u sobu).\n\n@flicka#19796 ovo triba, ako nema studenata u sustavu vise trebas oslobodit jos partibrejkera iz reda jer ih ostane cekati\n\nNe sori nije to ipak to sto ti treba hahahah\n\nJel ti fali mozda da kad partibrejker ude u sobu da ga stavis opet u red cekanja i onda kada svi studenti izadu iz sobe oslobodis ga iz tog reda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19800": {
+      "poster": "[deleted]",
+      "content": "@flicka#19796 kriv ti je kod.",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic",
+          "Ducky"
+        ],
+        "downvoters": [
+          "Suki7",
+          "steker"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "iNavy (mornar Ica)",
+          "steker"
+        ]
+      }
+    },
+    "19801": {
+      "poster": "flicka",
+      "content": "@Suki7#19797 ne, imam to",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Suki7"
+        ]
+      }
+    },
+    "19802": {
+      "poster": "AcoSofronijevic",
+      "content": "@flicka#19796 tesko je rec bez gledanja koda i jer ne znamo kak si organizirao funkcije student i partibrejker.\n\nMozda si zaboravio dodat uvjet da kad broj studenata u sobi postane 0 i partibrejker je unutra(ako koristis globalnu varijablu  za njeg naravno), da promijenis tu globalnu varijablu u partib nije u sobi i onda cond_broadcastas sve iz reda studenata koji su htjeli uc u sobu, a nisu mogli jer je partib unutra.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19803": {
+      "poster": "flicka",
+      "content": "@AcoSofronijevic#19802 ![](assets/2020-05-05/00041.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19804": {
+      "poster": "AcoSofronijevic",
+      "content": "@flicka#19803 kad pristupas globalnim varijablama trebas ih zastiti mutex_lockom(), ne vidim nijedan ovdje.\n\nNe mozes koristit cond_wait bez mutex_locka, pise ti u dokumentima za labos da se koriste samo unutar locka\n\nhttp://www.zemris.fer.hr/~leonardo/os/fer/LAB3-semafori-i-monitori.pdf",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19805": {
+      "poster": "flicka",
+      "content": "@AcoSofronijevic#19804 kriva slika, mada je ispis isti![](assets/2020-05-05/00042.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19808": {
+      "poster": "SuperSjajan3",
+      "content": "Za prvi zadatak, jel uvijek pusac 1 ima papir, pusac 2 duhan, pusac 3 sibice ili je i to random?",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19812": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@SuperSjajan3#19808 mislim da je fiksno, ali čak i nije problem ako se napravi da je svaki put nasumično I think",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic",
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19813": {
+      "poster": "AcoSofronijevic",
+      "content": "@flicka#19805 i dalje koristis ukstd bez mutex\n\ntakoder iznad vidim da(funkcija student) da nemas mutex_unlock sto vjerojatno znaci da ni gore nisi zastitio pristup varijabli studsoba\n\nMoguce da te promjene zato nisu vidljive partibrejkeru.\n\nSvaki lock mora imat unlock, i svaka varijabla mora bit zasticena",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19815": {
+      "poster": "AcoSofronijevic",
+      "content": "@SuperSjajan3#19808 fiksno je, nemojte randomizirat uvijek se drzite uputa, naletit cete na asistenta koji nece cijenit pokazivanje znanja i fasovat cete lol",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3",
+          "[deleted]",
+          "ink",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "ink"
+        ]
+      }
+    },
+    "19821": {
+      "poster": "nikace (AeIoU)",
+      "content": "@Mettastic#19692 kako si uspio rijesiti ovaj problem, tocnije gdje ti se nalazio problem?\n\n :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19831": {
+      "poster": "Mettastic (Jetapa)",
+      "content": "@nikace#19821  Imao sam mutex_lock na pocetku dretve student, stavio sam usleep(1) prije njega i sad je ok",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19839": {
+      "poster": "steker",
+      "content": "![](assets/2020-05-05/00053.jpeg)\n\n Gdje da ubacim sve te mutex lockove dali da stavim na pocetku student i na kraju student ili ovako odvojeno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19844": {
+      "poster": "nikace (AeIoU)",
+      "content": "@Mettastic#19831 imam mutex_lock nakon ulaska u while petlju jel to okej? (isti mi je problem ali ne mogu skuziti uzrok)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19845": {
+      "poster": "Mettastic (Jetapa)",
+      "content": "@nikace#19844 Nisam siguran, ja sam taj problem prvotno rijesio tako da sam maknuo sve lockove i unlockove, ali nisam siguran jel to ispravno",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19849": {
+      "poster": "steker",
+      "content": "Jel imo ko problem da mu ulaze svi studenti u sobu odjednom (a ne samo njih par)pa tek onda partibrejker",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19852": {
+      "poster": "SuperSjajan3",
+      "content": "@FERella#16453 \n\n@awi#16608  jeste uspjeli rijesit. Cini se da kod mene bude problem negdje prilikom inicijalizacije semafora",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19855": {
+      "poster": "AcoSofronijevic",
+      "content": "@steker#19849 unlockaj mutex prije neg sto iskoristis usleep kod studenata kad udju u sobu, poslije tog ga lockaj opet\n\na moze bit i da si uvjet pustanja partibrejkera namjestio tak da se ne moze odblokirat dok svi studenti ne udju.",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19858": {
+      "poster": "AcoSofronijevic",
+      "content": "@SuperSjajan3#19852 prckas po memoriji koja ti ne pripada\n\nmoguce da ne zauzimas dovoljno memorije za zajednicki spremnik\n\nili buduci da se radi s pointerima provjeri u kodu maina koristis li negdje *(pointer) za nesto (tamo ti to ne bi trebalo)\n\ntakoder ako koristis polje negdje provjeri da ne izlazis van granica zauzete memorije npr. zauzmes polje[n] a saljes n+1",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19859": {
+      "poster": "JBQ",
+      "content": "![](assets/2020-05-05/00057.jpeg)\n\nDogodi mi se da zabloka u jednom trenutku, iako prije tog po meni radi dobro. Ima netko da zna u cemu je problem, isprobao sam svasta, al ne mogu otkrit problem.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19860": {
+      "poster": "[deleted]",
+      "content": "@SuperSjajan3#19852 provjeri jesi si li dobro napisa shmget i shmat i da si dobro rezervira memoriju za svaki semafor i varijablu(meni su sve globalne varijable bile pointeri)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19868": {
+      "poster": "Njet",
+      "content": "Trebaju li novoizabrani sastojci biti drukciji od prethodno izabranih kod pusaca?\n\nZna mi se dogoditi da se nekoliko puta zareda duhan i sibice i sl.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19869": {
+      "poster": "SuperSjajan3",
+      "content": "Evo ako se nekom da bacit oko. Najvjerojatnije je nesto banalno al eto. Seg fault se nakon \"tu sam 2\" desi.\n\nZakomentiranje ovoga *(semafori->sastojak1) = 0 i sastojak2 nista ne mijenja.\n\n![](assets/2020-05-05/00058.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19873": {
+      "poster": "Njet",
+      "content": "@SuperSjajan3#19869 Mislim da je problem sto koristis pointere u samoj strukturi djeljeno",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19874": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "partibrejker mora završiti s exit(0), odnosno bez prekida iz terminala?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19877": {
+      "poster": "steker",
+      "content": "![](assets/2020-05-05/00060.jpeg)\n\nJel smije bit ovako da neki izidu i prije partybreakera ili moram to nekako namjestit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19878": {
+      "poster": "JBQ",
+      "content": "@steker#19877 \n\nsmije",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19879": {
+      "poster": "SuperSjajan3",
+      "content": "@Njet#19873 To je rjesenje, zahvaljujem",
+      "votes": {
+        "upvoters": [
+          "Njet"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19880": {
+      "poster": "[deleted]",
+      "content": "@iNavy#19874 da",
+      "votes": {
+        "upvoters": [
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19881": {
+      "poster": "[deleted]",
+      "content": "@steker#19877 smije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19885": {
+      "poster": "toty",
+      "content": "@steker#19849 moze bit da nisi sleep koristio",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19886": {
+      "poster": "toty",
+      "content": "jel u drugom treba broj dretvi sa naredbenog retka ili obicnim scanom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19887": {
+      "poster": "[deleted]",
+      "content": "@toty#19886 \n\n![](assets/2020-05-05/00061.png)",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic"
+        ],
+        "downvoters": [
+          "setuid0"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19888": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@toty#19886 mislim da je sasvim svejedno, no budući da smo dosad podatke unosili preko naredbenog retka možeš i sada",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19890": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "je li moguće da mi se program sruši na samom kraju kad zatvaram dretve, i to kad zatvaram dretvu partibrejkera",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19891": {
+      "poster": "boki8 (kerovac)",
+      "content": "Je li potrebno u funkciji partibrejker (otprilike tu negdje gdje oko retka koji sam oznacio u pseudokodu) dopisati sljedeci dio koda: \n\nIzadi_iz_monitora();\n\nSleep(1); \n\nUdi_u_monitor();\n\nIli mogu i bez toga?![](assets/2020-05-05/00063.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19893": {
+      "poster": "tomekbeli420",
+      "content": "Jel postoji ikoji način da otključam i ispravim već zaključanu predaju? Shvatio sam da imam undefined behaviour u kodu (konkretno: dodjela brojeva studentima od 1 do N, odnosno predavanje parametra funkciji dretve, mi nije dobra).\n\nZnam da na stranici od OS labosa piše crvenim slovima da to nije moguće, jel možda tko imao slično iskustvo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Hrvoje (Hrvoje45)",
+          "__builtin_popcount (std::popcount)"
+        ]
+      }
+    },
+    "19900": {
+      "poster": "Vasili (Fasili)",
+      "content": "@boki8#19891 Ja imam  Izadi_iz_monitora(); i onda ponovo nakon njega  Udi_u_monitor(); , a nemam sleep i sve mi radi dobro osim što mi se program na samom kraju smrzne umjesto da se ugasi ko neki normalan kod.",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19914": {
+      "poster": "AcoSofronijevic",
+      "content": "@iNavy#19890 na koji nacin ih zatvaras",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19921": {
+      "poster": "boki8 (kerovac)",
+      "content": "@Vasili#19900 Tesko je reci ovako bez koda, ali ja sam imao taj problem i rjesio sam ga tako da sam unutar funkcije partibrejker, kada ispitujes nalazi li se u sobi 3 ili vise studenata dodao i uvjet: ukupanBrojStudenata != 0",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19922": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@AcoSofronijevic#19914 mislio sam na pthread_join, no našao sam grešku u međuvremenu",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19923": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@tomekbeli420#19893 S obzirom da je za zadnji labos prof Golub na predavanju rekao da posaljemo mail ako smo zaboravili zavrsiti sve sa sigint pa ce nam otkljucati predaju, mislim da mozes poslati mail i da ce ti otkljucati (u ovom slucaju su na kraju samo odlucili to ne bodovati jer je bilo previse ljudi kojima je trebalo otkljucati).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19955": {
+      "poster": "ink",
+      "content": "@AnamarijaM#19923 jel može netko pojasnit na šta se tu misli?\n\nu primjerima kodova, pseudokodova i auditornim vježbama ne vidim nikakva završavanja sa sigint",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19956": {
+      "poster": "[deleted]",
+      "content": "@ink#19955 vjerojatno misli na ono da kad posaljes sigint da se pozove funkcija koja oslobada zauzetu memoriju i tek onda exit(0)",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19957": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@ink#19955 takoder kad ti programi rade na pola kurca i sami na kraju nemogu zavrsit jer je kod za kurac, da se mozes ogradit sa ali ja zavrsavam sa ctrl c....",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19960": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@ink#19955 Iz uputa za proslu laboratorijsku vjezbu: Normalni završetak višedretvenog programa zbiva se kada sve dretve završe s radom, odnosno, kada prva, početna dretva izađe iz prve funkcije (main). Prijevremeni završetak zbiva se pozivom funkcije exit od strane bilo koje dretve, ili pak nekim vanjskim signalom (SIGKILL, SIGSEGV, SIGINT, SIGTERM, ...). \n\nsigset(SIGINT, brisi);//u slučaju prekida briši memoriju\n\nvoid brisi(int sig) {\n\n   /* oslobađanje zajedničke memorije */\n\n   (void) shmdt((char *) ZajednickaVarijabla);\n\n   (void) shmctl(Id, IPC_RMID, NULL);\n\n   exit(0);\n\n}\n\nNa primjer, u zadatku s pusacima zelis u funkciji brisi imati oslobadanje memorije i unistavanje semafora.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "[deleted]",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19963": {
+      "poster": "zplusplus (gasaf)",
+      "content": "@AnamarijaM#19960 je li ovo obavezno implementirati u 3.labosu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19966": {
+      "poster": "[deleted]",
+      "content": "@AnamarijaM#19960 treba bas specificno i unistit semafore ili samo ocistit memoriju u kojoj su pohranjeni sa shmdt i shmctl?\n\n@zplusplus#19963 bilo je i u proslom pa su poslali mail i rekli da ce se smilovat jer je puno ljudi zaboravilo, ovaj put vjerojatno nece oprostit",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19968": {
+      "poster": "ink",
+      "content": "@Itachi#19966 treba sigurno uništit i semafore, oni isto u sebi sadrže dinamički alociranu memoriju, koja ak ne pozoveš semafor_destroy ostane zauzeta (memory leak)",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19970": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@Itachi#19966 Treba unistiti semafor i onda osloboditi njegovu memoriju kao u uputama za labos.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19971": {
+      "poster": "[deleted]",
+      "content": "@ink#19968 fak",
+      "votes": {
+        "upvoters": [
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "20012": {
+      "poster": "ink",
+      "content": "ja imam problem da u prvom zadatku, ako uključim ispis \"Pusac X se probudio\", vidim da se uvijek bude u istom redoslijedu. \n\nOčekivao sam da će se budit u random redoslijedu jer svi čekaju na isti resurs (semafor KO)\n\nZapravo nisam siguran je li to problem, jel je tako i ostalima? Čini mi se da je to poslijedica njihovog pseudokoda.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "20017": {
+      "poster": "lup",
+      "content": "@ink#20012 pretpostavljam da ti se prvi budi onaj koji se prvi inicijalizirao, brijem da je meni isto, nije da je bas vazan redosljed s obzirom da se ne natjecu za resurse",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "20039": {
+      "poster": "ink",
+      "content": "@Itachi#17850 u tom slučaju pitanje ne ostaje dostpuno nama ostalima, kao ni odgovor na njega.. npr meni je ovaj thread puno pomogo da napišem labos i izbjegnem neke česte greške",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic",
+          "HARAmara (decko_sa_balkana)",
+          "Hrvoje (Hrvoje45)",
+          "Michael (Michael Scarn)",
+          "SuperSjajan3",
+          "steker",
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "20044": {
+      "poster": "ink",
+      "content": "@niknik#17801 \"Tehnički\" je bolje imat što više nezavisnih monitora/semafora, jer je onda kod rijeđe blokiran i radi efikasnije. S druge strane, potrpat sve u isti monitor/semafor i zaštit na taj način je najčešće najjednostavnije (ako je moguće). \n\nU vrlo kompliciranim slučajevima čak i moraš imat nekoliko monitora da izbjegneš deadlock.\n\nAli šta se tiče bodovanja, možda oni inzistiraju da ovaj zadatak rješiš pomoću točno jednog monitora. Nemam pojma",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "20048": {
+      "poster": "AcoSofronijevic",
+      "content": "@ink#20012 osim ako nisi modificirao njihov pseudokod, trgovac uvijek u istom redoslijedu postavlja semafore za p1 p2 i p3, a svaki pusac prvo provjeri svoj semafor p pa tek onda KO, zbog tog bi redoslijed uvijek trebao bit isti.",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "20076": {
+      "poster": "niknik",
+      "content": "@ink#20044 Pitao sam prof. Jelenkovica i rekao je da se mora rijesiti s jednim monitorom.",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "20111": {
+      "poster": "[deleted]",
+      "content": "@niknik#20076 cisto sumnjam da ce imat pravo to zahtjevati, buduci da nigdje u zadatku ne pise da se treba rjesit s jednim monitorom a eksplicitno pise \"sve sto nije zadano rjesiti na proizvoljan nacin\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "20227": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@Itachi#20111 I prove you wrong \n\n![](assets/2020-05-06/00044.png)",
+      "votes": {
+        "upvoters": [
+          "AcoSofronijevic",
+          "ink",
+          "niknik",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AcoSofronijevic",
+          "Michael (Michael Scarn)",
+          "Suki7",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "jobi (azex)"
+        ]
+      }
+    },
+    "25016": {
+      "poster": "mihamih",
+      "content": "ako predajem labos nakon termina zadace, dal onda isto predajem pod dz ili  moram predat pod labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25072": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@mihamih#25016 mislim da se predaje pod dz bez obzira na vrijeme predaje, no provjeri još",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25076": {
+      "poster": "ink",
+      "content": "@mihamih#25016 ja sam kasno predao prvu pod DZ i dobio bod",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25300": {
+      "poster": "laranotreallycroft",
+      "content": "Ima netko ideju zasto neki labosi nisu prihvaceni? Jos nisam dobila nikakav mail",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26179": {
+      "poster": "blablajar",
+      "content": "@Njet#19873 na sto tocno mislis? imam isti problem i nikako ne mogu popravit to",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26203": {
+      "poster": "Njet",
+      "content": "@blablajar#26179 Pri definiciji strukture semafori su definirani preko pointera kao sem_t *s, a trebalo bi biti samo sem_t s.",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26226": {
+      "poster": "blablajar",
+      "content": "@Njet#26203 kako onda napraviti inicijalizaciju? probao sam to ali mi javlja gresku, npr. za semafor KO napisem sem_init(struktura->KO, 1, 1) i javlja gresku za neispravan argument funkcije sem_init",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "26227": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@blablajar#26226\n\nNapraviš pointer od njega, `sem_init(&struktura->KO, 1, 1);`.\n\nSlično radiš u svim funkcijama koje primaju semafor kao argument (`sem_wait`, `sem_post`, `sem_destroy`), jer sve očekuju pointer na `sem_t`.",
+      "votes": {
+        "upvoters": [
+          "Njet",
+          "blablajar"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "27047": {
+      "poster": "blablajar",
+      "content": "@__builtin_popcount#26227 napokon radi sve, hvala ti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28202": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "Jel mozemo predat samo jedan od zadataka tj polovicno napravljen labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28203": {
+      "poster": "turunturu (Cement)",
+      "content": "@Dlaid#28202 Ne preporucam, pobrat ces negativne bodove\n\nSource: predao polovicni labos",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28206": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "@turunturu#28203 A ako predamo netocan kod",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28209": {
+      "poster": "turunturu (Cement)",
+      "content": "@Dlaid#28206 Jedan od asistenata mi je poslao ovo nakon sto sam pobrao keca\n\n![](assets/2020-05-21/00026.png)",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "AntonioB25 (Pleteni miš)",
+          "Bucc (Olive Oil)",
+          "HARAmara (decko_sa_balkana)",
+          "Hrvoje (Hrvoje45)",
+          "JoKing",
+          "Lyras",
+          "MiqeloS",
+          "Pranjo (Pranjo_Suđman)",
+          "__builtin_popcount (std::popcount)",
+          "gladiator",
+          "laranotreallycroft",
+          "lup",
+          "steker"
+        ]
+      }
+    },
+    "28220": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@Dlaid#28206 \n\nJa sam predao pusace i djelomicnog partibrejkera.\n\nPusaci su bili tocni, a partibrejkera nisam uspio do kraja, nego sam samo implementirao onaj pseudokod koliko sam mogao i main (stvaranje dretvi, inicijalizacija varijabli i sl.) \n\nDobio sam 3 boda.",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28304": {
+      "poster": "Pranjo (Pranjo_Suđman)",
+      "content": "Jel se treba i za partibrejkera napravit sigset() ili racunamo da se on ne vrti beskonacno kao pusaci pa nam to ne treba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33020": {
+      "poster": "buyer",
+      "content": "Ako ima netko zainteresiran platim da mi pomogne rjesiti zadatak Partibrejker jer mi fakat ne ide",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33028": {
+      "poster": "[deleted]",
+      "content": "@buyer#33020 jesi započeo išta ili? kakvi ti se problemi javljaju u kodu? što ti točno nije jasno?",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33057": {
+      "poster": "H3llR4bbit",
+      "content": "ajde vidim da je netko još aktivan ovdje pa vas molim pomoć. Program partybreaker radi, ali mi dretve ne joinaju na kraju i ne završava mi se program. Kombinirao sam neke stvari kod thread_join i nekad mi dretve završe ali dobijem segmentation fault ili mi se sve dretve završe osim jedne itd. Koristio sam neke printf umjesto debuggera jer nisam mogao naći nikakav debugger u atomu. ![](assets/2020-05-31/00007.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33059": {
+      "poster": "H3llR4bbit",
+      "content": "i ovo je taj zadnji dio programa, izgledao je ljepše prije ali sam doslovce sve pokušavao kj mi je palo na pamet pa je ostalo dosta smeća nabacano. ![](assets/2020-05-31/00008.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33065": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@H3llR4bbit#33059\n\nČini mi se da ne postoji dretva studenta s ID-jem 0, a kad iteriraš krećeš od 0, pa `pthread_join` pozivaš nad smećem koje ti je u arrayu na indeksu 0.\n\nP.S. Samo da provjerim, jesi li ovo handleao:\n>! >@__builtin_popcount#16490 Ostane čekati da uđu 3 studenta, a svi su već otišli.\n\n> ![](https://forum.studosi.net/assets/files/2020-04-30/1588241346-637699-image.png)\n\n> Popravio sam tako da sam još i provjeravao jesu li svi otišli, ako jesu sam dopustio partibrejkeru da izađe iz monitorske petlje, ali sam stavio da onda ne ulazi u sobu.\n\n> Da bi to radilo, morao sam na kraju funkcije studenta dodati pthread_cond_signal ili pthread_cond_broadcast za red u kojem čeka partibrejker (isti onaj kojem se signalizira da student ulazi u sobu).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33102": {
+      "poster": "H3llR4bbit",
+      "content": "@__builtin_popcount#33065 jesam, partybreaker ima uvjet da mora biti >3 studenta, a studenti imaju uvjet da partybreaker zastavica ne smije biti 1; U pravu si za ovo sa ID jem al to nije glavni problem jer sam to sad slucajno napravio. Glavni problem trenutno je što dretve uopće ne dolaze do tread_join, a to se vidi jer sam postavio kontrolne printf \"dosao thread\". Samo jedan thread dode do toga i ja uopće ne znam koji je to thread jer dode prije nego što \"student\" i \"partybreaker\" threadovi uopće završe ![](assets/2020-05-31/00010.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33104": {
+      "poster": "buyer",
+      "content": "@FERella#33028 slabo...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33108": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@H3llR4bbit#33102\n\nJel nije to ovaj ispis prije prvog joina?\n\n![](assets/2020-05-31/00012.png)\n\nAko ne prolazi taj prvi join, onda je problem u tome što partybreaker ne završava.\n\n----\n\nNisam shvatio ovaj dio:\n>  jesam, partybreaker ima uvjet da mora biti >3 studenta\n\nTo znači da ako ima manje od 3 studenta u sustavu, partybreaker niti ne ostane čekati, nego odmah ode doma, ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33116": {
+      "poster": "H3llR4bbit",
+      "content": "@__builtin_popcount#33108 da, sad sam provjerio i u pravu si. partybreaker je cijelo vrijeme provjeravao koliko ima studenata u sustavu i ako bi ih bio više od 0 nastavio bi sa radom i otišao u red čekanja u monitoru dok ne dode 3+ studenata u sobu. Problem je bio kj bi studenti otišli dok on čeka u monitoru i zapeo bi tamo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33134": {
+      "poster": "buyer",
+      "content": "### Evo main, izbacuje segmentation fault ( core dumped) ..welp..\n\nint main(){\n\n\tpthread_t t[10];\n\n\tpthread_t p;\n\n\tint i;\n\tpthread_mutex_init (&m, NULL);\n\tpthread_cond_init( &red[0], NULL);\n\tpthread_cond_init( &red[1], NULL);\n\n\tpartibrejker_u_sobi=0;\n\tbroj_studenata=0;\n\n\tsrand((unsigned int) time(NULL));\n\n\twhile(i = 0, i < 10, i++)\n\t{\n\t\tbroj_studenata++;\t\t\n\t\tpthread_create(&t[i], NULL, student,&broj_studenata);\n\t\tsleep(2);\n\t}\n\tpthread_create(&p, NULL, partibrejker, NULL);\n\t\n\tfor (i = 1; i < 10; i++)\n\t\tpthread_join (t[i], NULL);\n\n\tpthread_mutex_destroy (&m);\n\tpthread_cond_destroy (&red[0]);\n\tpthread_cond_destroy (&red[1]);\n\n\treturn 0;\n}",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33136": {
+      "poster": "DvonogaStonoga",
+      "content": "![](assets/2020-05-31/00015.png)\n\n![](assets/2020-05-31/00016.png)\n\n![](assets/2020-05-31/00017.png)\n\n![](assets/2020-05-31/00018.png)\n\nSegmentation fault(core dumped) baca stalno. Imam neki dojam da sam usrao nesto s pointerima, ako ima netko kakvu ideju sto je krivo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33160": {
+      "poster": "Njet",
+      "content": "@DvonogaStonoga#33136 Nemoj koristiti pointere u strukturi (tj. neka ti semafori ne budu pointeri) te u svakoj funkciji za semafore (sem_init, sem_wait,itd.) salji adresu semafora npr. sem_init(&(struktura->s1),1,1)",
+      "votes": {
+        "upvoters": [
+          "DvonogaStonoga",
+          "Fortius",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33166": {
+      "poster": "DvonogaStonoga",
+      "content": "@Njet#33160 Radi, hvala puno",
+      "votes": {
+        "upvoters": [
+          "Njet"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33213": {
+      "poster": "buyer",
+      "content": "E kako uploadat labos za nadoknadu na ferko?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "33325": {
+      "poster": "Maja (promaja)",
+      "content": "@Itachi#13792 \n\ndi tocno staviti sleep?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

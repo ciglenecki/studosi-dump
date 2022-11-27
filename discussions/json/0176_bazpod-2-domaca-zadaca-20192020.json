@@ -1,0 +1,2152 @@
+{
+  "title": "[BAZPOD] 2. domaća zadaća - 2019/2020",
+  "creator": "SBolsec (Marko218)",
+  "slug": "bazpod-2-domaca-zadaca-20192020",
+  "tags": [
+    "FER",
+    "Baze podataka",
+    "Zadaće"
+  ],
+  "posts": {
+    "5564": {
+      "poster": "SBolsec (Marko218)",
+      "content": "Rok za predaju je četvrtak, 9. travnja u 23:59 sati.",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5565": {
+      "poster": "SBolsec (Marko218)",
+      "content": "Evo mojih rješenja\n\n>!![](assets/2020-04-02/00024.png)\n\n\n>!![](assets/2020-04-02/00025.png)\n\n\n>!![](assets/2020-04-02/00026.png)\n\n\n>!![](assets/2020-04-02/00027.png)\n\n\n>!![](assets/2020-04-02/00028.png)",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)",
+          "Galke",
+          "Goliathus",
+          "Marko",
+          "Retard00",
+          "Suki7",
+          "VelikiMarko",
+          "__builtin_popcount (std::popcount)",
+          "gladiator",
+          "iNavy (mornar Ica)",
+          "steve (Mr_mr)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5566": {
+      "poster": "WickyWinslow",
+      "content": "Can someone explain zašto ovo nije dobro?\n\nJa ne vidim što ne valja.\n\n![](assets/2020-04-02/00029.png)\n\n\nOvo je iz materijala sa neke prijašnje godine.\n\n![](assets/2020-04-02/00030.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5814": {
+      "poster": "DonStoleone",
+      "content": "@WickyWinslow#5566 \n\nevo rjesenja gazda\n\n```sql\nSELECT jmbag,count(sifpredmet) as polozio_predmeta, avg(ocjena) AS prosjek_ocjena\n\nFROM upisanpredmet\nWHERE extract(year from (datumocjena))=2018\nGROUP BY jmbag\nHAVING min(ocjena) >= 4\n```",
+      "votes": {
+        "upvoters": [
+          "Pranjo (Pranjo_Suđman)",
+          "WickyWinslow",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "5834": {
+      "poster": "WickyWinslow",
+      "content": "@DonStoleone#5814 Hvala puno!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6001": {
+      "poster": "viliml",
+      "content": "@DonStoleone#5814 Po čemu se to razlikuje od njegovog rješenja?\n\nJedino što vidim je da ovdje nema JOINa, ali ne vidim kako bi to moglo utjecati na rezultat osim ako je neki mbag NULL što ne bi smjeo biti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6129": {
+      "poster": "Krpa1 (Janez)",
+      "content": "![](assets/2020-04-04/00004.png)\n\nMoze netko pomoci? \n\n```\nselect predmetgrupa.ozngrupa, predmetgrupa.akgodina, predmet.nazpredmet, count(jmbag) broj_studenata_u_grupi\n\n\tfrom predmetgrupa left outer join predmet on predmetgrupa.sifpredmet = predmet.sifpredmet and predmetgrupa.akgodina = 2018\n\n    left outer join upisanpredmet on predmetgrupa.sifpredmet = upisanpredmet.sifpredmet\n\n    where nazpredmet is not null\n\n    group by predmetgrupa.ozngrupa, predmetgrupa.akgodina, predmet.nazpredmet\n\n    having count(jmbag) > 10```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6153": {
+      "poster": "tetak",
+      "content": "![](assets/2020-04-04/00007.png)\n\n![](assets/2020-04-04/00008.png)\n\n![](assets/2020-04-04/00009.png)\n\n![](assets/2020-04-04/00010.png)\n\nZna li netko?",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "misternoubodi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6180": {
+      "poster": "Vonj",
+      "content": "Evo i mojih rjesenja\n\n>!![](assets/2020-04-04/00024.jpeg)\n\n\n>!![](assets/2020-04-04/00025.jpeg)\n\n\n>!![](assets/2020-04-04/00026.jpeg)\n\n\n>!![](assets/2020-04-04/00027.jpeg)\n\n\n>!![](assets/2020-04-04/00028.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)",
+          "Galke"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6262": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "Moji zadaci i rješenja:\n\n>! Ispisati podatke o **praznim** predmetnim grupama iz akademske godine 2016./2017. ( ispisivati: naziv predmeta, oznaku grupe, akademsku godinu i šifru nastavnika). Prazne predmetne grupe su one predmetne grupe kojima (te akademske godine) **nije bio pridijeljen niti jedan** student. U obzir uzeti samo one predmete kojima te akademske godine nije bio pridijeljen niti jedan drugi nastavnik.\n\n> Primjer rezultata:\n<TABLE><THEAD><TR>|<TH>nazPredmet</TH>|<TH>ozngrupa</TH>|<TH>akgodina</TH>|<TH>sifnastavnik</TH>|</TR></THEAD>\n|--|--|--|--|\n<TBODY><TR>|<TD>Logička algebra</TD>|<TD>D-B2</TD>|<TD>2016</TD>|<TD>570</TD>|</TR>\n<TR>|<TD>Logička algebra</TD>|<TD>D-B3</TD>|<TD>2016</TD>|<TD>570</TD>|</TR>\n<TR>|<TD>Vještine komuniciranja</TD>|<TD>D-A5</TD>|<TD>2016</TD>|<TD>480</TD>|</TR>\n<TR>|<TD>...</TD>|<TD>...</TD>|<TD>...</TD>|<TD>...</TD>|</TR></TBODY></TABLE>\n> *Tumačenje prvog retka rezultata: akademske godine 2016./2017. je definirano da grupi \"D-B2\" nastavnik sa šifrom 570 predaje predmet \"Logička algebra\", ali niti jedan student nije bio raspoređen u tu grupu. Također, Logičku algebru je te akademske godine predavao samo nastavnik sa šifrom 570.*\n\n> ----\n> ```SQL\nSELECT nazpredmet, ozngrupa, akgodina, sifnastavnik\n    FROM predmetgrupa AS prgr JOIN predmet ON prgr.sifpredmet = predmet.sifpredmet\n    WHERE akgodina = 2016\n        AND NOT EXISTS (\n            SELECT * FROM upisanpredmet\n                WHERE sifpredmet = prgr.sifpredmet\n                    AND ozngrupa = prgr.ozngrupa\n                    AND akgodina = prgr.akgodina\n        ) AND (\n            SELECT COUNT(DISTINCT sifnastavnik) FROM predmetgrupa\n                WHERE sifpredmet = prgr.sifpredmet\n                    AND akgodina = prgr.akgodina\n        ) = 1;\n```\n\n\n>! Ispisati nazive onih predmeta za koje je broj studenata koji su predmet položili ocjenom 4 ili 5 **veći** od broja studenata koji su taj isti predmet položili ocjenom 2 ili 3. Pored naziva predmeta ispisati i broj studenata koji su uspješno položili taj predmet.\n\n> Zapise poredati po broju studenata koji su položili predmet tako da se na vrhu popisa nalaze predmeti s najvećim brojem, a nazive predmeta s jednakim brojem poredati abecedno.\n\n> ----\n> ```SQL\nSELECT nazpredmet, COUNT(*)\n    FROM predmet AS pred JOIN upisanpredmet ON pred.sifpredmet = upisanpredmet.sifpredmet\n       WHERE ocjena > 1\n        AND (\n            SELECT COUNT(*) FROM upisanpredmet\n                 WHERE sifpredmet = pred.sifpredmet\n                     AND ocjena >= 4\n        ) > (\n            SELECT COUNT(*) FROM upisanpredmet\n                 WHERE sifpredmet = pred.sifpredmet\n                    AND ocjena > 1\n                    AND ocjena < 4\n        )\n    GROUP BY nazpredmet\n       ORDER BY COUNT(DISTINCT jmbag) DESC, nazpredmet ASC;\n```\n\n\n>! Ispisati JMBAG, prezime i ime studenata koji **ne stanuju** u istoj županiji u kojoj su i rođeni, a na dan koji pripada prošloj kalendarskoj godini su iz bilo kojeg predmeta dobili ocjenu 4. Pored JMBAG-a, imena i prezimena studenta ispisati naziv županije rođenja i naziv županije stanovanja. Upit mora biti neovisan o trenutku izvođenja. U rezultatu se ne smiju pojavljivati jednake n-torke (duplikati) a njihov poredak nije bitan.\n\n> ----\n> ```SQL\nSELECT DISTINCT student.jmbag, imestudent, prezimestudent, zupanijaRod.nazzupanija, zupanijaStan.nazzupanija\n    FROM student JOIN upisanpredmet ON student.jmbag = upisanpredmet.jmbag\n        JOIN mjesto AS mjestoStan ON mjestoStan.pbr = pbrstanstudent\n        JOIN zupanija AS zupanijaStan ON zupanijaStan.sifzupanija = mjestoStan.sifzupanija\n        JOIN mjesto AS mjestoRod ON mjestoRod.pbr = pbrrodstudent\n        JOIN zupanija AS zupanijaRod ON zupanijaRod.sifzupanija = mjestoRod.sifzupanija\n    WHERE zupanijaRod.sifzupanija <> zupanijaStan.sifzupanija\n        AND EXTRACT(YEAR FROM CURRENT_DATE) - 1 = EXTRACT(YEAR FROM datumocjena)\n        AND upisanpredmet.ocjena = 4;\n```\n\n\n>! Ispisati različite datume na koje su studenti osvojili prolaznu ocjenu iz predmeta (stupac nazvati `datum_ocjene`), broj studenata koji su tog dana osvojili prolaznu ocjenu (stupac nazvati `broj_kandidata`) te prosječnu prolaznu ocjenu koju su kandidati tog datuma dobili (stupac nazvati `prosjek_ocjena`). Prosječnu ocjenu zaokružiti na 2 decimalne znamenke. Ispisati podatke samo za one datume na kojima nitko nije dobio ocjenu manju od 4, a ostale zanemariti.\n\n> *Napomena*: Ako je jedan student na isti datum polagao više ispita, u `broj_kandidata` treba ga uračunati više puta.\n\n> ----\n> ```SQL\nSELECT datumocjena AS datum_ocjene, COUNT(*) AS broj_kandidata, ROUND(AVG(ocjena), 2) AS prosjek_ocjena\n    FROM upisanpredmet LEFT JOIN student ON upisanpredmet.jmbag = student.jmbag\n    WHERE ocjena > 1\n    GROUP BY datum_ocjene\n    HAVING MIN(ocjena) >= 4\n```\n\n\n>! Za zadanu relacijsku shemu `STUDSTIP={ime, prezime, jmbag, prosjekOcjena}` napisati naredbu kojom će se napraviti relacija `studStip(STUDSTIP)`. Tipovi podataka neka budu sljedeći:\n\n> - `ime`, `prezime `- `VARCHAR(25)`\n- `jmbag `- `VARCHAR(10)`\n- `prosjekOcjena `- `NUMERIC(5, 2)`\n\n> U relaciju `studStip` upisati studente koji imaju prosjek ocjena veći ili jednak 4 (u prosjek ocjena ulaze samo pozitivne ocjene).\n\n> ----\n> ```SQL\nCREATE TABLE studStip(\n    ime VARCHAR(25),\n    prezime VARCHAR(25),\n    jmbag VARCHAR(10),\n    prosjekOcjena NUMERIC(5, 2)\n); \n\n> INSERT INTO studStip(ime, prezime, jmbag, prosjekOcjena)\n    SELECT imestudent, prezimestudent, student.jmbag, AVG(ocjena)\n        FROM student LEFT JOIN upisanpredmet ON student.jmbag = upisanpredmet.jmbag\n        WHERE ocjena > 1\n        GROUP BY imestudent, prezimestudent, student.jmbag\n        HAVING AVG(ocjena) >= 4;\n```",
+      "votes": {
+        "upvoters": [
+          "Krisle",
+          "pingvinka",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6275": {
+      "poster": "prpa",
+      "content": "![](assets/2020-04-04/00038.png)\n\nzna neko ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6527": {
+      "poster": "Krpa1 (Janez)",
+      "content": "Evo i mojih riješenja\n\n>! ![](assets/2020-04-05/00015.png)\n\n![](assets/2020-04-05/00016.png)\n\n![](assets/2020-04-05/00017.png)\n\n![](assets/2020-04-05/00018.png)\n\n![](assets/2020-04-05/00019.png)",
+      "votes": {
+        "upvoters": [
+          "Retard00",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6566": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "![](assets/2020-04-05/00028.png)\n\n![](assets/2020-04-05/00029.png)\n\nIma li itko slučajno rješenja za ova 2 zadatka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6567": {
+      "poster": "ppooww (pp)",
+      "content": "![](assets/2020-04-05/00030.png)\n\n Zna netko možda ovaj? Zanima me kako ovaj dio da **niti jedan drugi** student nije dobio istu ocjenu iz istog predmeta.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6569": {
+      "poster": "Tone",
+      "content": "@ppooww#6567 \n\nEvo, ja imam slicni, mislim da bi to trebalo bit ok...\n>!```sql\nSELECT student.jmbag, imeStudent, prezimeStudent, sifPredmet, ocjena, akGodina\nFROM student NATURAL JOIN upisanPredmet\nWHERE akGodina = 2018 AND ocjena > 1 AND (SELECT AVG(upisanPredmet.ocjena)\n                        FROM upisanpredmet\n                        WHERE student.jmbag = upisanpredmet.jmbag and upisanpredmet.ocjena >1) > 3.5\n \t\t\t\t\t\tAND NOT EXISTS\n                           (SELECT *\n                                   FROM upisanpredmet as upi_pred\n                                   WHERE student.jmbag <> jmbag and ocjena = upisanpredmet.ocjena\n                                         and upisanpredmet.sifpredmet = sifpredmet AND ocjena > 1\n                           \t\t\t\tAND akGodina = 2018); \n```",
+      "votes": {
+        "upvoters": [
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6570": {
+      "poster": "ppooww (pp)",
+      "content": "@Tone#6569 Hvala sad radi, nisam bio promijenio naziv 'upisanpredmet' u zadnjem podupitu.",
+      "votes": {
+        "upvoters": [
+          "Tone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6615": {
+      "poster": "miss_anthropocene (neunist.iva)",
+      "content": "moja rjesenja:\n\n>! **Ispisati imena studenata (svako ime samo jednom) koja sadrže malo slovo \"i\" i dugačka su 8 znakova (npr. Krešimir). Uzeti u obzir samo studente rođene radnim danom (pon-pet).**\n```sql\nSELECT DISTINCT imestudent\nFROM student\nWHERE CHAR_LENGTH(imestudent) = 8 AND TRIM(imestudent) LIKE '%i%'AND (EXTRACT(DOW FROM datumrod)) NOT IN (6,0);\n```\n **Ispisati oznaku i kapacitet svih dvorana kojima oznaka počinje slovom \"A\". Za one dvorane u kojima se izvodila nastava za grupe kojima oznaka grupe počinje slovom \"C\", ispisati uz podatke o dvorani i akademsku godinu kada se ta nastava odvijala, u suprotnom ispisati NULL vrijednost. Dodatno, ispisati i naziv predmeta iz kojeg se odvijala takva nastava, ako je predmet nosio 5 ECTS bodova, inače ispisati NULL vrijednost. Iz ispisa izbaciti duplikate.**\n\nPrimjer rezultata:\n\n ![](assets/2020-04-05/00033.png)\n```sql\nSELECT DISTINCT dvorana.*, pom.akgodina, pom.nazpredmet\nFROM dvorana LEFT JOIN \n(SELECT * \n FROM predmetgrupa LEFT JOIN predmet\n ON predmetgrupa.sifpredmet = predmet.sifpredmet AND predmet.ectsbod = 5) AS pom\n ON dvorana.ozndvorana = pom.ozndvorana AND dvorana.ozndvorana LIKE 'A%' AND pom.ozngrupa LIKE 'C%'\n WHERE dvorana.ozndvorana LIKE 'A%'\n ```\n**Ispisati JMBAG, ime i prezime studenta, te dodatno prosječnu vrijednost ECTS bodova (nazovite stupac prosjek_ects) predmeta koje je student položio. Ispisati samo one studente koji su položili više od 15 predmeta.**\n```sql\nSELECT student.jmbag, imestudent, prezimestudent, \n(SELECT AVG(predmet.ectsbod) \n FROM predmet JOIN upisanpredmet\n ON upisanpredmet.sifpredmet = predmet.sifpredmet AND upisanpredmet.jmbag = student.jmbag\n WHERE ocjena > 1) AS prosjek_ects\nFROM student JOIN upisanpredmet\nON student.jmbag = upisanpredmet.jmbag AND\n(SELECT COUNT(upisanpredmet.sifpredmet)\n FROM upisanpredmet\n WHERE jmbag = student.jmbag AND ocjena > 1) > 15\n JOIN predmet\n ON predmet.sifpredmet = upisanpredmet.sifpredmet\n GROUP BY student.jmbag, imestudent, prezimestudent\n```\n**Potrebno je dodati novu organizacijsku jedinicu \"Republika Hrvatska\" sa šifrom 1 (nema nadređenu organizacijsku jedinicu). Zatim postaviti Republiku Hrvatsku kao nadređenu svim organizacijskim jedinicama koje dosad nisu imale nadređenu organizacijsku jedinicu (osim same Republike Hrvatske).**\n```sql\nINSERT INTO orgjed VALUES(1, 'Republika Hrvatska', NULL);\nUPDATE orgjed SET sifnadorgjed = 1\nWHERE sifnadorgjed IS NULL and siforgjed <> 1;\n```\n**Za zadanu relacijsku shemu STUDSTIP={ime, prezime, jmbag, ukEcts} napisati naredbu kojom će se napraviti relacija studStip(STUDSTIP). Tipovi podataka neka budu sljedeći:\n\n    ime, prezime - VARCHAR(25)\n\n    jmbag - VARCHAR(10)\n\n    ukEcts (ukupan broj ECTS bodova koji je student ostvario polaganjem predmeta) - NUMERIC(4, 1)\n\nU relaciju studStip upisati studente čiji je ukupan broj ECTS bodova ostvaren polaganjem ispita bio veći ili jednak od 80 (u sumu ulaze, naravno, samo položeni ispiti).**\n```sql\nCREATE TABLE studStip(\n    ime\t\tVARCHAR(25),\n    prezime\tVARCHAR(25),\n    jmbag\tVARCHAR(10),\n    ukEcts\tNUMERIC(4,1)\n);\nINSERT INTO studStip\n\tSELECT student.imestudent, student.prezimestudent, student.jmbag, SUM(predmet.ectsbod)\n    FROM student NATURAL JOIN upisanpredmet NATURAL JOIN predmet\n    WHERE ocjena > 1\n    GROUP BY student.imestudent, student.prezimestudent, student.jmbag\n    HAVING SUM(predmet.ectsbod) >= 80;```",
+      "votes": {
+        "upvoters": [
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6628": {
+      "poster": "snowman",
+      "content": "Moja rjesenja:\n>!![](assets/2020-04-05/00034.png)\n\n![](assets/2020-04-05/00035.png)\n\n![](assets/2020-04-05/00036.jpeg)\n\n![](assets/2020-04-05/00037.png)\n\n!<",
+      "votes": {
+        "upvoters": [
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6633": {
+      "poster": "Bucc (Olive Oil)",
+      "content": ">!![](assets/2020-04-05/00038.png)\n\n![](assets/2020-04-05/00039.png)\n\n![](assets/2020-04-05/00040.png)\n\n![](assets/2020-04-05/00041.png)\n\n![](assets/2020-04-05/00042.png)",
+      "votes": {
+        "upvoters": [
+          "Mario1",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6834": {
+      "poster": "BlackMamba",
+      "content": "Jel netko zna ovaj? nikako ga ne mogu riješiti\n\n![](assets/2020-04-06/00021.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6887": {
+      "poster": "Stubla",
+      "content": "![](assets/2020-04-06/00026.jpeg)\n\nZna li netko ovaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6902": {
+      "poster": "Artemis",
+      "content": "![](assets/2020-04-06/00028.png)\n\ncolumn \"today\" does not exist\n\nZna netko mozda kako ispravit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6905": {
+      "poster": "helenic",
+      "content": "@BlackMamba#6834 ![](assets/2020-04-06/00029.png)\n\nMozes pokusati :)",
+      "votes": {
+        "upvoters": [
+          "BlackMamba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6908": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@Artemis#6902 možda da staviš CURDATE() umjesto TODAY",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6912": {
+      "poster": "helenic",
+      "content": "@Stubla#6887 ![](assets/2020-04-06/00031.png)\n\nNisam siguran",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6918": {
+      "poster": "BlackMamba",
+      "content": "@helenic#6905 \n\nProbao evo i radi, hvala puno ☺",
+      "votes": {
+        "upvoters": [
+          "helenic"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6921": {
+      "poster": "helenic",
+      "content": "@Artemis#6902 ![](assets/2020-04-06/00032.png)\n\nMozda?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6932": {
+      "poster": "Artemis",
+      "content": "@helenic#6921 \n\nOvo radi, ali mi izbacuje uneven row count...bude se to rijesilo, hvala ti na pomoci 😃",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6942": {
+      "poster": "helenic",
+      "content": "@Artemis#6932 Joj samo promijeni u podupitu umjesto orgjed.siforgjed --> o1.siforgjed... Pardon",
+      "votes": {
+        "upvoters": [
+          "Artemis"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6956": {
+      "poster": "Fortius",
+      "content": "@helenic#6912 to ne radi nazalost. i pojma nemam kak rijesit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6958": {
+      "poster": "Rene",
+      "content": "Zna netko ovaj?\n\nZa studente koji su dvije godine zaredom upisali predmet pod nazivom Seminar, ispisati jmbag, prezime i ime studenta te vrijeme trajanja svakog njegovog boravka u dvorani A204 (za svaki studentov ulazak u dvoranu). Ispisati samo ona vremena boravaka u dvorani A204 koja su trajala dulje od 2 sata. U rezultatu se ne smiju pojaviti jednake n-torke",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7018": {
+      "poster": "Stubla",
+      "content": "@helenic#6912  Na žalost ne radi, stavljanjem svih uvjeta u WHERE dio mi bar omogući kakav takav ispis, ali i dalje nije dobro rješenje",
+      "votes": {
+        "upvoters": [
+          "Fortius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7025": {
+      "poster": "Stubla",
+      "content": "Moja rješenja\n\n>! ![](assets/2020-04-07/00003.png)\n\n![](assets/2020-04-07/00004.png)\n\n![](assets/2020-04-07/00005.png)\n\n![](assets/2020-04-07/00006.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7036": {
+      "poster": "puufi",
+      "content": "Moja rješenja\n\n>! ![](assets/2020-04-07/00011.png)\n\n![](assets/2020-04-07/00012.png)\n\n![](assets/2020-04-07/00013.png)\n\n![](assets/2020-04-07/00014.png)\n\n![](assets/2020-04-07/00015.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7038": {
+      "poster": "iNavy (mornar Ica)",
+      "content": ">! ![](assets/2020-04-07/00016.png)\n\nvidi li netko gdje sam pogriješio u ovom zadatku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7048": {
+      "poster": "Banananjeros",
+      "content": "Može li netko pomoći s ova dva zadatka?\n\n![](assets/2020-04-07/00020.png)\n\n![](assets/2020-04-07/00021.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7050": {
+      "poster": "BigZ1",
+      "content": "jel mi moze tko pomoc gdje je ovdje greska jer je ja ne vidim/razumijem.\n\n![](assets/2020-04-07/00022.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7052": {
+      "poster": "Maja (promaja)",
+      "content": "![](assets/2020-04-07/00023.png)\n\n\nmoze pomoc?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7055": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@Banananjeros#7048 Probaj za prvi zadataka promijeniti poredak stupaca jer pise da jmbag treba biti prvi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7057": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@Maja#7052 zadatak jako sličan mojemu, samo što se radi o drugoj dvorani i dodanom uvjetu za veljaču @iNavy#7038 \n\nsamo ne znam zbog čega nije točan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7059": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "![](assets/2020-04-07/00025.png)\n\nMoze li pomoc, zna li netko zasto ovo ne radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7060": {
+      "poster": "Banananjeros",
+      "content": "@AnamarijaM#7055 Dobra ideja, ali ni to ne radi.![](assets/2020-04-07/00026.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7061": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "Cini mi se da ova dva jos nisu bila\n>! Ispisati naziv predmeta i oznaku grupa kojima je taj predmet bio predavan akademske godine 2018./2019. Ako je nekoj grupi taj predmet predavao nastavnik koji više nije u radnom odnosu, dodatno ispisati njegovo ime i prezime. U suprotnom, za ime i prezime nastavnika ispisati NULL vrijednosti. Smatra se da je nastavnik u radnom odnosu ako mu nije evidentiran datum prestanka zaposlenja. Uzeti u obzir samo grupe kojima oznaka počinje slovom \"A\".\n\n>![](assets/2020-04-07/00027.png)\n\nIspisati nazive predmeta (samo jednom) koji imaju neparan broj znakova u nazivu i koje je barem jedan student upisao akademske godine 2019./2020.\n\n![](assets/2020-04-07/00028.png)\n\nZna li netko mozda ovaj?\n>! ![](assets/2020-04-07/00029.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7064": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "Ova tri rješenja još nisu bila\n>!![](assets/2020-04-07/00031.png)\n\n![](assets/2020-04-07/00032.png)\n\n![](assets/2020-04-07/00033.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7065": {
+      "poster": "stjepanm (stjepan)",
+      "content": "![](assets/2020-04-07/00034.png)\n\nJe li imao netko ovaj, ili mozda zna u cemu je problem?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7068": {
+      "poster": "laranotreallycroft",
+      "content": "@KingGeedorah#7061 Imam slicni ali mi problem radi ovaj neocjenjeno stupac kada nema studenata ali on svejedno to racuna kao jedan neocjenjen/jedna null vrijednost\n\n![](assets/2020-04-07/00035.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7069": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@laranotreallycroft#7068 \n\nMeni to nije problem, mislim da je meni problem sto mi COUNT vraca NULL umjesto da mi vrati 0. Usporedjivao sam ovaj ispis s bazom i funkcije tocno prebroje ocjene, osim tog NULL koji se pojavi (a ne znam kako je uopce moguce da COUNT vrati NULL).\n>!![](assets/2020-04-07/00036.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7078": {
+      "poster": "boki8 (kerovac)",
+      "content": "@KingGeedorah#7069 agregatna funkcija COUNT(*) vraća i NULL elemente (ukoliko ti to pomaže)",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7079": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@boki8#7078 Da kuzim to, ali meni COUNT kao broj vrijednosti koje je prebrojao u relaciji vrati NULL vrijednost\n\n@KingGeedorah#7069 \n\nKao npr ovdje za osnove elektrotehnike",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7086": {
+      "poster": "spartanac555",
+      "content": "![](assets/2020-04-07/00037.png)\n\nJel zna netko ovaj, ja sam vec probao ovo ali nije tocno\n\n![](assets/2020-04-07/00038.png)\n\nI ako netko ima rjesenje na ovaj drugi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7090": {
+      "poster": "stjepanm (stjepan)",
+      "content": "@stjepanm#7065 ako nekog jos muci ovaj zadatak, potrebno je ime staviti prije prezimena iako je u zadataku receno prezime pa ime, ostalo sve u ovom rijesenju je dobro",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Rene"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7091": {
+      "poster": "Rene",
+      "content": "@Rene#6958 \n\n@stjepanm#7065 \n\nU zadatku traze jmbag, prezime i ime ali rješenje bude tocno kada ispises jmbag, ime pa prezime. RIP 2 sata sinoc",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7096": {
+      "poster": "Ollie",
+      "content": "![![](assets/2020-04-07/00039.jpeg)\n![](assets/2020-04-07/00040.jpeg)\n![](assets/2020-04-07/00041.jpeg)\n![](assets/2020-04-07/00042.jpeg)\n![](assets/2020-04-07/00043.jpeg)\n](src)\n\n@Maja#7052 Ja sam imala isti kao i tvoj\n\n@iNavy#7057 Cini mi se jedino da ti je kriv poredak atributa u selectu, trebao bi biti isti kao u create table",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7097": {
+      "poster": "Ollie",
+      "content": "Za zadanu relacijsku shemu studbor    \n\n@Maja#7052 Evo ja sam riješila!\n\n@iNavy#7057 Mislim da moraš imati isti poredak atributa u select kao i u create table\n\n![](assets/2020-04-07/00044.jpeg)\n\n>! Potrebno je dodati novu organizacijsku jedinicu \"Republika \n\n![](assets/2020-04-07/00045.jpeg)\n\nIspisati nazive predmeta (samo jednom)\n\n![](assets/2020-04-07/00046.jpeg)\n\nIspisati šifru, prezime i ime nastavnika\n\n![](assets/2020-04-07/00047.jpeg)\n\nIspisati jmbag, ime i prezime svih studenata rođenih\n\n![](assets/2020-04-07/00048.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7108": {
+      "poster": "Giovanni",
+      "content": "Zna li netko ova dva?\n\n1.![](assets/2020-04-07/00050.png)\n\n2.![](assets/2020-04-07/00051.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7136": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@Ollie#7097 ne znam, prepravio sam to no i dalje je nešto krivo\n\n![](assets/2020-04-07/00056.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7145": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "evo mojih ostalih odgovora\n\n>! ![](assets/2020-04-07/00057.png)\n\n\n>! ![](assets/2020-04-07/00058.png)\n\n\n>! ![](assets/2020-04-07/00059.png)\n\n\n>! ![](assets/2020-04-07/00060.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7148": {
+      "poster": "Urmum (mamaRu)",
+      "content": "Moze pomoc?\n\n![](assets/2020-04-07/00062.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7156": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@iNavy#7136 nevermind, našao sam banalnu grešku (napisao drugi put B1 umjesto B4 😐)\n\n>! ![](assets/2020-04-07/00064.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7182": {
+      "poster": "boki8 (kerovac)",
+      "content": "![](assets/2020-04-07/00067.png)\n\nIma tko...?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7200": {
+      "poster": "Jale (čakijale)",
+      "content": "@Urmum#7148 ![](assets/2020-04-07/00071.png)\n\nMoje rjesenje, u tvom zadatku treba promjeniti MAX u MIN,  COUNT(ozngrupa) AS brojgrupa u COUNT(DISTINCT ozngrupa) AS brojgrupa, i staviti ORDER BY brojgrupa DESC, sifnastavnik ASC ako se ne varam",
+      "votes": {
+        "upvoters": [
+          "Urmum (mamaRu)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7207": {
+      "poster": "misternoubodi",
+      "content": "Može pomoć gdje griješim?\n\n![](assets/2020-04-07/00074.png)\n\nI ideju za ovo..![](assets/2020-04-07/00075.png)",
+      "votes": {
+        "upvoters": [
+          "Galke"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7226": {
+      "poster": "mini (Earthling)",
+      "content": "@misternoubodi#7207 ideja za ovaj drugi je:\n```sql\n ozndvorana NOT IN ( SELECT ozndvorana\n\t\t\tFROM evidencijaboravka\n\t\t\t\t\tWHERE EXTRACT(year FROM datumvrijemepoc) BETWEEN 2016 and 2017\n\t\t\t\t \t\tAND student.jmbag=jmbag)\n```",
+      "votes": {
+        "upvoters": [
+          "misternoubodi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7227": {
+      "poster": "ivan",
+      "content": "@KingGeedorah#7061 \n\n@laranotreallycroft#7068 \n\nja sam ovak rijesio taj\n\n![](assets/2020-04-07/00080.png)",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7287": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Ovoga nisam vidio da je netko stavio\n>!  ![](assets/2020-04-08/00001.jpeg)",
+      "votes": {
+        "upvoters": [
+          "LucidDreamer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7288": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Zna li netko ovaj?\n>!  ![](assets/2020-04-08/00002.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7289": {
+      "poster": "lup",
+      "content": "evo moji zadatci\n\nTOPPREDMET\n>!![](assets/2020-04-08/00003.png) \n\nstudentu prosao rodendan, nepoznati mjesto stanovanja i/ili rodenja\n>!![](assets/2020-04-08/00004.png)\n\nrepublika hrvatska nadredena sveucilistima\n>!![](assets/2020-04-08/00005.png)\n\nsvaka nastavna grupa i akademska godina, ects > 7\n>!![](assets/2020-04-08/00006.png)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "spartanac555"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7290": {
+      "poster": "lup",
+      "content": "@BrkMateaBeusana#7288 imam isti zadatak, isto ne radi, evo sto imam za sad\n\n![](assets/2020-04-08/00007.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7295": {
+      "poster": "PepGuardiola",
+      "content": "@lup @BrkMateaBeusana \n\nEvo mislim da bi vam ovo trebalo radit! \n\nEdit: tu gdje je COUNT() bi trebalo u zagradi bit * ne znam zasto makne\n\n```sql\nSELECT pred.nazpredmet, (SELECT COUNT(DISTINCT jmbag)\n\t\t\t\t\t\t\t\t\tFROM upisanpredmet up1 NATURAL JOIN\n\t\t\t\t\t\t\t\t\tpredmet p1\n\t\t\t\t\t\t\t\t\tWHERE p1.sifpredmet = pred.sifpredmet\n                                    AND ocjena > 1) as brSt\nFROM upisanpredmet NATURAL JOIN predmet pred\nWHERE (SELECT COUNT(*) FROM upisanpredmet\n       WHERE sifpredmet = pred.sifpredmet\n       AND ocjena >= 4) > (SELECT COUNT(*) FROM upisanpredmet\n                           WHERE sifpredmet = pred.sifpredmet\n                           AND ocjena IS NULL)\nGROUP BY nazpredmet, pred.sifpredmet\nORDER BY brSt DESC, nazpredmet;\n```",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "lup"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7297": {
+      "poster": "lup",
+      "content": "@PepGuardiola#7295 radi, hvala 😁",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7298": {
+      "poster": "aaa8 (Gerti)",
+      "content": "zna netko ? plz , nisu jos bili postani u ovoj temi\n\n![](assets/2020-04-08/00009.png)\n\n![](assets/2020-04-08/00010.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7306": {
+      "poster": "Urmum (mamaRu)",
+      "content": "@aaa8#7298  Evo drugi, imala sam sličan samo im zamijeni imena : )\n\n![](assets/2020-04-08/00011.png)",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "aaa8 (Gerti)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7307": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "Zna netko zasto ovo ne radi?\n>!![](assets/2020-04-08/00012.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7309": {
+      "poster": "Mulder",
+      "content": ">! ![](assets/2020-04-08/00013.jpeg)\n\n![](assets/2020-04-08/00014.jpeg)\n\n![](assets/2020-04-08/00015.jpeg)\n\n![](assets/2020-04-08/00016.jpeg)\n\n![](assets/2020-04-08/00017.jpeg)\n\nu zadnjem zadatku je row count = 0",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)",
+          "Pranjo (Pranjo_Suđman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7313": {
+      "poster": "spartanac555",
+      "content": "@lup#7289 jel mozes pls slikat ovaj desni dio cetvrtog zadatka(ovaj dio koji je prekriven gumbom Run)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7314": {
+      "poster": "lup",
+      "content": "@spartanac555#7313 ![](assets/2020-04-08/00019.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7317": {
+      "poster": "spartanac555",
+      "content": "@lup#7314 Sad sam upisao to isto rjesenje kod sebe i ne radi mi xd\n\n![](assets/2020-04-08/00020.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7319": {
+      "poster": "lup",
+      "content": "@spartanac555#7317 cek, brijem da mi je to od krivog rjesenja, trebas maknut predmet.nazpredmet iz GROUP BY dijela",
+      "votes": {
+        "upvoters": [
+          "spartanac555"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7322": {
+      "poster": "Maja (promaja)",
+      "content": "@misternoubodi#7207 jesi uspio ovaj prvi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7328": {
+      "poster": "helenic",
+      "content": "```sql\nSELECT jmbag, SUM(ECTSbod) AS ukupnoBodova, COUNT(upisanpredmet.sifpredmet) AS ukupnoPredmeta\nFROM upisanpredmet JOIN predmet\nON upisanpredmet.sifpredmet = predmet.sifpredmet \nAND upisanpredmet.akgodina = 2018\nGROUP BY jmbag\nHAVING COUNT(upisanpredmet.sifpredmet) >= 6\n```\n\n\nMozda ovako, ako sam dobro shvatio koji zdk je problem",
+      "votes": {
+        "upvoters": [
+          "Maja (promaja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7330": {
+      "poster": "misternoubodi",
+      "content": "@Maja#7322 jesam, rješenje je ovo:\n```sql\nselect jmbag,sum(ectsbod) as upisao_ects, count(upisanpredmet.sifpredmet) as upisao_predmeta\nfrom upisanpredmet, predmet\nwhere upisanpredmet.sifpredmet = predmet.sifpredmet and akgodina=2018\ngroup by jmbag, akgodina\nhaving count(upisanpredmet.sifpredmet) >= 6\n```",
+      "votes": {
+        "upvoters": [
+          "Maja (promaja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7352": {
+      "poster": "misternoubodi",
+      "content": "@tetak#6153 jesi uspio drugi zadatak riješiti? kao da je @Tone#6569 imao slični zadatak...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7361": {
+      "poster": "abc",
+      "content": "![](assets/2020-04-08/00040.png)\n\n![](assets/2020-04-08/00041.png)\n\nmože pomoć",
+      "votes": {
+        "upvoters": [
+          "Fortius"
+        ],
+        "downvoters": [
+          "General_Kenobi (Aborteur)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7365": {
+      "poster": "tetak",
+      "content": "@misternoubodi#7352 rjesio, hvala",
+      "votes": {
+        "upvoters": [
+          "Galke"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7367": {
+      "poster": "aerius",
+      "content": "evo mislim da ovaj još nije bio, inače hvala svima na pomoći 😁 \n\n![](assets/2020-04-08/00042.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7369": {
+      "poster": "JeleeII",
+      "content": "Ima li netko ideju kako napisat zadnji dio select-a (ovo s predmetima koji imaju isti ukupni broj sati tjedno)?\n\n![](assets/2020-04-08/00043.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7370": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@helenic#6921 \n\nSELECT nazpredmet, COUNT(jmbag) as broj\n\nFROM upisanpredmet, predmet\n\nWHERE upisanpredmet.sifpredmet = predmet.sifpredmet AND\n\n\t\tocjena > 1 AND ocjena is not null\n\nGROUP BY nazpredmet, upisanpredmet.sifpredmet\n\nHAVING COUNT(jmbag) > (SELECT COUNT(jmbag)\n\n\t\t\t\t\t  FROM upisanpredmet p2\n\n\t\t\t\t\t  WHERE p2.sifpredmet = upisanpredmet.sifpredmet\n\n\t\t\t\t\t  AND ocjena = 1 AND ocjena is not null)\n\nORDER BY broj DESC, nazpredmet",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7371": {
+      "poster": "ErnestHemingway (Alfetta)",
+      "content": "@Stubla#6887 \n```sql\nSELECT nazpredmet, COUNT(jmbag) as broj\nFROM upisanpredmet, predmet\nWHERE upisanpredmet.sifpredmet = predmet.sifpredmet AND\n\t\tocjena > 1 AND ocjena is not null\nGROUP BY nazpredmet, upisanpredmet.sifpredmet\nHAVING COUNT(jmbag) > (SELECT COUNT(jmbag)\n\t\t\t\t\t  FROM upisanpredmet p2\n\t\t\t\t\t  WHERE p2.sifpredmet = upisanpredmet.sifpredmet\n\t\t\t\t\t  AND ocjena = 1 AND ocjena is not null)\nORDER BY broj DESC, nazpredmet\n```",
+      "votes": {
+        "upvoters": [
+          "Stubla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7379": {
+      "poster": "Tinx (pingvin)",
+      "content": "Zna li itko ovaj 😢\n\nIspišite JMBAG, ime i prezime studenata te prosječno trajanje njihovog boravka u bilo kojoj od dvorana za one evidentirane boravke prilikom kojih je student ušao u dvoranu tijekom vikenda.\n\nTražene podatke ispišite samo za one studente koji nisu rođeni u Zagrebu i koji su u prosjeku tijekom vikenda provodili više od 4 sata u nekoj od dvorana. Razmatrajte samo one evidencije boravka za koje su registrirana vremena i ulaska i izlaska iz dvorane.\n\nZapise sortirati silazno prema prosječnom trajanju boravka.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7384": {
+      "poster": "Tinx (pingvin)",
+      "content": "@Tinx#7379 rjesenje ako nekom treba\n```sql\nSELECT student.jmbag,imestudent,prezimestudent,AVG( evidencijaboravka.datumvrijemekraj-evidencijaboravka.datumvrijemepoc)as vrijeme\nFROM student JOIN evidencijaboravka\n\tON student.jmbag = evidencijaboravka.jmbag\n    AND (evidencijaboravka.datumvrijemepoc IS NOT NULL AND evidencijaboravka.datumvrijemekraj IS NOT NULL)\n    JOIN mjesto ON student.pbrrodstudent = mjesto.pbr\nWHERE mjesto.nazmjesto <> 'Zagreb'\n\tAND (EXTRACT(DOW  FROM  evidencijaboravka.datumvrijemepoc) = 0 \n\tOR EXTRACT(DOW  FROM  evidencijaboravka.datumvrijemepoc) = 6)\nGROUP BY student.jmbag,imestudent,prezimestudent\nHAVING AVG( evidencijaboravka.datumvrijemekraj-evidencijaboravka.datumvrijemepoc) > '4 hours'::INTERVAL(0)\nORDER BY vrijeme DESC\n```",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7388": {
+      "poster": "misternoubodi",
+      "content": "@tetak#7365 možeš poslati rješenje?",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7401": {
+      "poster": "SpekuraDebela (Šćap)",
+      "content": "Moze help ? \n\n![](assets/2020-04-08/00049.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7405": {
+      "poster": "JeleeII",
+      "content": "@JeleeII#7369 odgovor:\n```sql\nselect predmet.sifpredmet,predmet.nazpredmet,predmet.ukbrsatitjedno,\ncount(predmet.nazpredmet)-1 as brojpredemta\nfrom predmet left outer join predmet predmet2\n\ton predmet.ukbrsatitjedno = predmet2.ukbrsatitjedno\nwhere predmet.ectsbod >=(select avg(ectsbod) from predmet)\ngroup by predmet.sifpredmet,predmet.nazpredmet,predmet.ukbrsatitjedno\norder by predmet.nazpredmet,predmet.sifpredmet;\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7440": {
+      "poster": "Galke",
+      "content": "Moja rješenja\n\n![](assets/2020-04-08/00054.png)\n\n![](assets/2020-04-08/00055.png)",
+      "votes": {
+        "upvoters": [
+          "JoKing"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7446": {
+      "poster": "misternoubodi",
+      "content": "Evo mojih rješenja\n>! ![](assets/2020-04-08/00056.png)\n\n![](assets/2020-04-08/00057.png)\n\n![](assets/2020-04-08/00058.png)\n\n![](assets/2020-04-08/00059.png)\n\n![](assets/2020-04-08/00060.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7452": {
+      "poster": "SuperSjajan3",
+      "content": "@boki8#7182 jesi uspio rijesit? Imam isti taj i nemam pojma kak",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7463": {
+      "poster": "awi (đusi)",
+      "content": "@SpekuraDebela#7401 \n\naj probaj\n\n```sql\nSELECT distinct student.jmbag,imestudent,prezimestudent,nazpredmet\nfrom upisanpredmet  right join student on upisanpredmet.jmbag=student.jmbag and ocjena is not null \n  left join predmet on predmet.sifpredmet=upisanpredmet.sifpredmet and ocjena=5\nwhere prezimestudent like 'R%'\n```",
+      "votes": {
+        "upvoters": [
+          "SpekuraDebela (Šćap)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7473": {
+      "poster": "awi (đusi)",
+      "content": "@SuperSjajan3#7452 \n\nmozda ovo \n\n```\nselect student.jmbag,imestudent,prezimestudent,sifpredmet,ocjena,akgodina\nfrom upisanpredmet as up natural join student\nwhere akgodina=2016 and\n\t\tocjena is not null and ocjena >1 and\n\t\tocjena >= all(select ocjena\n\t\t\t\t from upisanpredmet\n\t\t\t\t where sifpredmet=up.sifpredmet and ocjena is not null and up.jmbag <>jmbag)\n\t\tand (select avg(ocjena)\n\t\t\tfrom upisanpredmet\n\t\t\twhere up.jmbag=jmbag and ocjena is not null) <4\n```",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7480": {
+      "poster": "SuperSjajan3",
+      "content": "@awi#7473 Nije nazalost, iako mi je ful logicno. Ne znam sta je krivo, borim se s tim zadatkom vec jako dugo",
+      "votes": {
+        "upvoters": [
+          "awi (đusi)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7487": {
+      "poster": "awi (đusi)",
+      "content": "@SuperSjajan3#7480 \n\na sad \n\n```\nselect student.jmbag,imestudent,prezimestudent,sifpredmet,ocjena,akgodina\nfrom upisanpredmet as up natural join student\nwhere akgodina=2016 and\n\t\tocjena is not null and ocjena >1 and\n\t\tocjena >= all(select ocjena\n\t\t\t\t from upisanpredmet\n\t\t\t\t where sifpredmet=up.sifpredmet and ocjena is not null and up.jmbag <>jmbag and akgodina=2016)\n\t\tand (select avg(ocjena)\n\t\t\tfrom upisanpredmet\n\t\t\twhere up.jmbag=jmbag and ocjena is not null) <4\n```",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7496": {
+      "poster": "SuperSjajan3",
+      "content": "@awi#7487 To je to, hvala puno kolega",
+      "votes": {
+        "upvoters": [
+          "awi (đusi)",
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7527": {
+      "poster": "Ljepilo",
+      "content": "help pls![](assets/2020-04-08/00065.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7533": {
+      "poster": "toty",
+      "content": "![](assets/2020-04-08/00067.png)\n\njel mozda zna tko sta ovdje ne valja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7544": {
+      "poster": "SuperSjajan3",
+      "content": "@Artemis#6902 Imas rjesenje ovoga mozda?\n\nedit: uspio, trebalo dodat jos samo: and datumzaposlendo is null",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7550": {
+      "poster": "Artemis",
+      "content": "@SuperSjajan3#7544 \n\n![](assets/2020-04-08/00068.png)\n\nOvo u prvom retku kod ROUND (koef * 2019.00, 2) AS placa pa nakon toga ide FROM",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7551": {
+      "poster": "Aquaman",
+      "content": "@Giovanni#7108 jesi uspija rijesit drugi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7553": {
+      "poster": "gladiator",
+      "content": "@toty#7533 \n```sql\nSELECT DISTINCT tabla.jmbag, tabla.imestudent, tabla.prezimestudent\nFROM student as tabla NATURAL JOIN upisanpredmet\nWHERE tabla.imestudent NOT IN (SELECT imestudent\n\t\t\t\t\t\t\t\tFROM student\n\t\t\t\t\t\t\t\tWHERE imestudent IS NOT NULL AND jmbag <> tabla.jmbag)\n\tAND 5 = ALL (SELECT ocjena\n\t\tFROM upisanpredmet\n\t\tWHERE tabla.jmbag = jmbag AND ocjena IS NOT NULL);\n```\nProbaj ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7559": {
+      "poster": "gladiator",
+      "content": "@Ljepilo#7527  Lol, vidi ovo\n\n`SELECT * FROM nastavnik WHERE imenastavnik = 'Mirko';`\n\nDaje sljedeću ntorku <843\t\"Mirko\"\t**\"Kasun\"**\t33000\t100002\t5.30\t\"1998-12-01\">",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7560": {
+      "poster": "toty",
+      "content": "@gladiator#7553 ne radi :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7562": {
+      "poster": "Ljepilo",
+      "content": "@gladiator#7559  tenks buraz, bice da sam izgorio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7567": {
+      "poster": "helenic",
+      "content": "@toty#7560 \n```\nSELECT DISTINCT jmbag, imestudent, prezimestudent\nFROM student \nWHERE NOT EXISTS(SELECT *\n                FROM upisanpredmet\n               \tJOIN student s1\n                ON upisanpredmet.jmbag = s1.jmbag\n                WHERE s1.jmbag <> student.jmbag\n                AND s1.imestudent = student.imestudent)\n                AND NOT EXISTS (SELECT *\n                FROM upisanpredmet\n                WHERE upisanpredmet.jmbag = student.jmbag\n                AND ocjena <> 5)\n                AND (SELECT COUNT(*)\n                FROM upisanpredmet\n                WHERE upisanpredmet.jmbag = student.jmbag\n                AND ocjena IS NOT NULL) > 0\n\n```\n\nPokusaj, mozda prodje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7571": {
+      "poster": "toty",
+      "content": "@helenic#7567 nisam probao jer sam uspio popravit, ali hvala :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7578": {
+      "poster": "gladiator",
+      "content": "@toty#7571  Znaš li u čemu je bila caka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7591": {
+      "poster": "toty",
+      "content": "@gladiator#7578 trebalo bi se dobiti 5 studenata, iz nekog razloga mi je izbacivao 7, na kraju sam otisao u definiciju baze podataka i skuzio da mi ispisuje i studente koji su imali petice samo u jednoj akademskoj godini a ne samo one koji imaju sve petice, al nije mi se dalo razbijati glavu zasto mi to tako izbacuje jer nisam nigdje koristio akGodinu samo sam dodao uvjet da to dvoje studenata ne ispisuje i prihvatilo je lol 😂😂",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "ink"
+        ],
+        "tuga": []
+      }
+    },
+    "7594": {
+      "poster": "MrDREDD",
+      "content": "@Ljepilo#7527 ![](assets/2020-04-09/00000.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7599": {
+      "poster": "Spookbuster",
+      "content": "jel zna netko kak ovoga?\n\n![](assets/2020-04-09/00002.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7639": {
+      "poster": "gladiator",
+      "content": "@Spookbuster#7599 \n```sql\nSELECT ozndvorana, student.jmbag, imestudent, prezimestudent, SUM(datumvrijemekraj - datumvrijemepoc) AS suma\nFROM dvorana NATURAL JOIN evidencijaboravka NATURAL JOIN student\nWHERE EXTRACT(MONTH FROM datumvrijemepoc) = 2\n\tAND EXTRACT(MONTH FROM datumvrijemekraj) = 2\n\tAND datumvrijemepoc IS NOT NULL\n\tAND datumvrijemekraj IS NOT NULL\nGROUP BY ozndvorana, student.jmbag, imestudent, prezimestudent\nHAVING AVG(datumvrijemekraj - datumvrijemepoc) > '2 HOURS 55 MINUTES'::interval;\n```\n\nProbaj ovo?",
+      "votes": {
+        "upvoters": [
+          "Spookbuster"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7702": {
+      "poster": "SpekuraDebela (Šćap)",
+      "content": "@awi#7463 Sorry tek sada vidim odg, ali hvala ti !!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7716": {
+      "poster": "Spookbuster",
+      "content": "@gladiator#7639 tenks",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7738": {
+      "poster": "mkovac25",
+      "content": "Zna li netko zašto mi ovo ne funkcionira?\n\n![](assets/2020-04-09/00026.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7767": {
+      "poster": "fairlyamusing",
+      "content": "Ima li netko mozda rjesenje ovoga?![](assets/2020-04-09/00027.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7773": {
+      "poster": "bjunolulz",
+      "content": "![](assets/2020-04-09/00028.png)\n\nmoze neko pomoc, mislim da je problem kod prosjeka al ne znam  : (",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Gussy (huba buba)"
+        ]
+      }
+    },
+    "7796": {
+      "poster": "mteah3h3",
+      "content": "Zna li se hoće li i kada će točno biti MI? :$",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7802": {
+      "poster": "mkovac25",
+      "content": "@mteah3h3#7796 Ja sam vidio da na stranici iz OE piše da je Fakultetsko vijeće donijelo odluku da neće biti MI već da će bodovi za to biti prebačeni na ZI ali sam također iz UTR-a dobio obavijest da će biti online međuispit pa ne znam sigurno.",
+      "votes": {
+        "upvoters": [
+          "mteah3h3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7814": {
+      "poster": "steker",
+      "content": "zna itko ovo ![](assets/2020-04-09/00032.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7825": {
+      "poster": "gladiator",
+      "content": "@mkovac25#7738 Probaj ovo\n```sql\nSELECT nazpredmet, ozngrupa, akgodina, sifnastavnik\nFROM predmetgrupa AS tabla LEFT OUTER JOIN predmet ON tabla.sifpredmet = predmet.sifpredmet\nWHERE akgodina = 2018 \n\t\tAND ozngrupa NOT IN (SELECT ozngrupa\n\t\t\tFROM upisanpredmet\n\t\t\tWHERE akgodina = 2018 AND sifpredmet = tabla.sifpredmet)\n\t\tAND (SELECT COUNT(sifnastavnik)\n\t\t\tFROM predmetgrupa\n\t\t\tWHERE akgodina = 2018 AND tabla.sifpredmet = sifpredmet) > 1;\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7829": {
+      "poster": "gladiator",
+      "content": "@fairlyamusing#7767 \n```sql\nSELECT imestudent, prezimestudent, SUBSTRING(nazmjesto FROM 1 FOR 3) || pbrrodstudent\nFROM student JOIN mjesto ON student.pbrrodstudent = mjesto.pbr\nWHERE student.datumrod BETWEEN '1985-01-01'::date AND '1990-12-31'::date;\n```",
+      "votes": {
+        "upvoters": [
+          "fairlyamusing"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7830": {
+      "poster": "mkovac25",
+      "content": "@gladiator#7825 Još uvijek mi ne valja, izbacuje uneven row count :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7832": {
+      "poster": "gladiator",
+      "content": "@bjunolulz#7773  \"prosječnu ocjenu svih predmeta koje je student upisao **te akademske godine**\"\n\nHAVING dio se čini dobrim ali SELECT dio ne. Fali ti akgodina",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7835": {
+      "poster": "gladiator",
+      "content": "@mkovac25#7830 Pogledao sam kod i stvarno ne znam. Budem nekog od kolega pitao.\n\nEDIT: Kolega kaže da pogledaš ranije objave jer se navodno takav zadatak već našao u dretvi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7839": {
+      "poster": "LucidDreamer",
+      "content": "Jel moze netko pliz pomoci u vezi ovog zadatka,stvarno vise nemam ideja sto bi moglo bit krivo..![](assets/2020-04-09/00034.png)",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7843": {
+      "poster": "PepGuardiola",
+      "content": "@mkovac25 pogledaj moj raniji post gore, objavio sam rjesenje tog zadatka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7853": {
+      "poster": "mkovac25",
+      "content": "@PepGuardiola#7843 Ne želim biti nepristojan ali jedini tvoj raniji post koji sam našao se tiče zadatka sa studentima koji su imali ocjenu 4 ili 5 i studenata kojima se ne zna ocjena. Zadatak koji meni ne radi je zadatak sa praznim predmetima u 2018. godini.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7861": {
+      "poster": "fairlyamusing",
+      "content": "@gladiator#7829 Hvala ti najljepsa!\n\nAli nazalost edgar jos uvijek zajebava iako se sve cini u redu 😥![](assets/2020-04-09/00037.png)\n\n.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7875": {
+      "poster": "gladiator",
+      "content": "@fairlyamusing#7861 \"prva tri slova **velikim** slovima\", jebiga disleksija",
+      "votes": {
+        "upvoters": [
+          "fairlyamusing"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7881": {
+      "poster": "fairlyamusing",
+      "content": "@gladiator#7875  Istina, hvala😀",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7882": {
+      "poster": "Jomi",
+      "content": "![](assets/2020-04-09/00039.png)\n\nZna li netko?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7884": {
+      "poster": "lea",
+      "content": "Ispisati oznaku dvorane i ukupan broj registriranih izlazaka (datum i vrijeme izlaska iz dvorane su poznati) iz te dvorane tijekom veljače za sve dvorane u kojima su studenti tijekom veljače prosječno boravili dulje od prosječnog vremena boravka tijekom veljače u svim dvoranama općenito.\n\nZapise poredati uzlazno prema nazivu dvorane.\n\njel zna itko ? dolje kod ne prolazi\n\n```sql\nSELECT  DISTINCT (evidencijaBoravka.oznDvorana), count(evidencijaBoravka.datumVrijemeKraj)\nFROM evidencijaBoravka\nWHERE extract(month from(datumVrijemePoc))=2\n                         \nGroup by evidencijaBoravka.oznDvorana,evidencijaBoravka.datumVrijemeKraj,datumVrijemePoc\n                         having (datumVrijemeKraj-datumVrijemePoc)>avg(datumVrijemeKraj-datumVrijemePoc)\nORDER BY evidencijaBoravka.oznDvorana ASC \n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7885": {
+      "poster": "5arm (Miroljub Petrovic)",
+      "content": "Zna li tko ova dva?\n\n![](assets/2020-04-09/00040.png)\n\n![](assets/2020-04-09/00041.png)",
+      "votes": {
+        "upvoters": [
+          "Fortius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7892": {
+      "poster": "El_Beast (Pleteći medvjedić)",
+      "content": "Netko ovaj?\n\nZa svaki predmet ispisati naziv predmeta, ukupan broj pozitivno ocijenjenih upisa predmeta te ukupan broj neocijenjenih upisa tog predmeta.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7893": {
+      "poster": "gladiator",
+      "content": "@El_Beast#7892 neko je vec sliko rjesenje toga u prethodnim postovima pa potrazi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7894": {
+      "poster": "Pranjo (Pranjo_Suđman)",
+      "content": "![](assets/2020-04-09/00043.png)\n\n![](assets/2020-04-09/00044.png)\n\nZa zadatak gore gornji kod mi izbacuje redak manje odnosno 19 redaka te je kriv. Donji kod funkcionira super. Moze li mi netko objasnit zasto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7908": {
+      "poster": "PepGuardiola",
+      "content": "@mkovac25#7853  Uff ispricavam se. Gledao sam @steker ov post i mislio da si ti pitao 😬",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7910": {
+      "poster": "El_Beast (Pleteći medvjedić)",
+      "content": "@gladiator#7893 nije tocno rjesenje :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7917": {
+      "poster": "PepGuardiola",
+      "content": "@mkovac25 Probaj ovo, ne znam je li dobro bas\n\n```sql\nSELECT nazpredmet, predmetgrupa.ozngrupa, akgodina, sifnastavnik from\npredmet NATURAL JOIN predmetgrupa\nWHERE akgodina = 2018\nAND predmetgrupa.ozngrupa NOT IN (SELECT ozngrupa\n\t\t\t\t\t\t\tFROM upisanpredmet\n\t\t\t\t\t\t\tWHERE sifpredmet = upisanpredmet.sifpredmet\n\t\t\t\t\t\t  AND akgodina = 2018)\nAND EXISTS (SELECT sifpredmet\n\t\t\tFROM predmetgrupa\n\t\t\tWHERE akgodina = 2018\n\t\t   GROUP BY sifpredmet\n\t\t   HAVING COUNT(sifnastavnik)>1)\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7919": {
+      "poster": "dinosaur (Ruasonid)",
+      "content": "@KingGeedorah#7307 jesi uspio/-la rijesiti taj na kraju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7921": {
+      "poster": "gladiator",
+      "content": "@El_Beast#7892 Probaj ovo\n```sql\nSELECT nazpredmet, ozngrupa, akgodina, sifnastavnik\n\tFROM predmetgrupa AS tabla JOIN predmet ON tabla.sifpredmet = predmet.sifpredmet\nWHERE akgodina = 2018\nAND NOT EXISTS (\n\tSELECT * FROM upisanpredmet\n\tWHERE tabla.sifpredmet = sifpredmet\n\tAND tabla.ozngrupa = ozngrupa\n\tAND akgodina = 2018\n) AND (\n\tSELECT COUNT(DISTINCT sifnastavnik)\n\tFROM predmetgrupa\n\tWHERE akgodina = 2018 AND sifpredmet = tabla.sifpredmet\n\t) > 1;\n```",
+      "votes": {
+        "upvoters": [
+          "El_Beast (Pleteći medvjedić)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7922": {
+      "poster": "El_Beast (Pleteći medvjedić)",
+      "content": "@gladiator#7921 nije to taj zad 😀",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7929": {
+      "poster": "gladiator",
+      "content": "@El_Beast#7922 Sagorio sam maksimalno\n\nProbaj ovo:\n```sql\nSELECT nazpredmet, (SELECT COUNT(*)\n\t\t\t\t   FROM upisanpredmet\n\t\t\t\t   WHERE predmet.sifpredmet = sifpredmet\n\t\t\t\t   \t   AND ocjena > 1),\n\t\t\t\t(SELECT COUNT(*)\n\t\t\t\t   FROM upisanpredmet\n\t\t\t\t   WHERE predmet.sifpredmet = sifpredmet\n\t\t\t\t   \t   AND ocjena IS NULL)\nFROM predmet;\n```",
+      "votes": {
+        "upvoters": [
+          "El_Beast (Pleteći medvjedić)",
+          "Josipa (Zelda)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7932": {
+      "poster": "anon00",
+      "content": "Jesi li uspjela riješiti ili netko možda zna? \n\nProblem nastane kod GroupBy jer ih ne grupira dobro i za svaki count bude =1, ali se nista ne moze maknuti iz tog groupby, niti ista sto se doda ima utjecaja \n\nEDIT: Evo rj:\n\n```sql\nSELECT evidencijaBoravka.oznDvorana, COUNT(evidencijaBoravka.datumVrijemeKraj)\n    FROM evidencijaBoravka\n    WHERE EXTRACT(MONTH FROM datumVrijemePoc)=2\n    GROUP BY evidencijaBoravka.oznDvorana\n    HAVING avg(datumVrijemeKraj-datumVrijemePoc) > (select avg(datumvrijemekraj-datumvrijemepoc)\n                                                    from evidencijaboravka where extract(month from datumvrijemepoc)=2)\n    ORDER BY evidencijaBoravka.oznDvorana ASC\n    ```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7933": {
+      "poster": "Krisle",
+      "content": "![](assets/2020-04-09/00052.png)\n\nSlican ko  @steker i @mkovac25 al ne kapiram",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7934": {
+      "poster": "5arm (Miroljub Petrovic)",
+      "content": "@5arm#7885 \n\n1. \n\n   SELECT nazOrgJed, imeNastavnik, prezimeNastavnik\n\nFROM nastavnik JOIN mjesto\n\nON mjesto.pBr = pBrStanNastavnik AND mjesto.nazMjesto LIKE 'Z%'\n\nRIGHT JOIN orgJed\n\nON nastavnik.sifOrgJed = orgJed.sifOrgJed\n\nWHERE sifNadOrgJed = 36",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7935": {
+      "poster": "5arm (Miroljub Petrovic)",
+      "content": "@5arm#7885 \n\n```sql\n   SELECT nazOrgJed, imeNastavnik, prezimeNastavnik\nFROM nastavnik JOIN mjesto\nON mjesto.pBr = pBrStanNastavnik AND mjesto.nazMjesto LIKE 'Z%'\nRIGHT JOIN orgJed\nON nastavnik.sifOrgJed = orgJed.sifOrgJed\nWHERE sifNadOrgJed = 36\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "7953": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@dinosaur#7919 Par postova nakon rjesenje je objavio kolega @Mulder#7309",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

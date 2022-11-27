@@ -1,0 +1,383 @@
+{
+  "title": "[NMIBP] 3. domaća zadaća - 2020/2021",
+  "creator": "DuckItUp",
+  "slug": "nmibp-3-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Napredni modeli i baze podataka",
+    "Zadaće"
+  ],
+  "posts": {
+    "85247": {
+      "poster": "DuckItUp",
+      "content": ">! ![](assets/2020-10-29/00014.png)\n\n>```\nselect railways.gid,round(sum( st_length(st_intersection( railways.geom, landuse.geom))) )\nfrom railways,landuse\nwhere  st_intersects(railways.geom, landuse.geom)\n and landuse.fclass = 'forest'\ngroup by railways.gid\n```\n \n\n>!![](assets/2020-10-29/00015.png)\n\n > ```\nselect p1.gid,p1.name,count(p2.gid) as cnt\nfrom pois p1, pois p2\nwhere p1.fclass='hotel'\nand p2.fclass='restaurant'\nand ST_DWithin(p1.geom,p2.geom,100)\ngroup by p1.gid\nhaving count(p2.gid) >9\norder by cnt desc, p1.gid asc\n```\n\n\n>!![](assets/2020-10-29/00016.png)\n\n>```\nselect p1.gid,p1.name,\n(select min(st_distance(p1.geom,p2.geom)) d from places p2 where p1.gid <> p2.gid) dist\nfrom places p1\norder by dist desc\nlimit 5\n```\n\n\n>! Ovaj zadatak ne znam\n\n >![](assets/2020-10-29/00017.png)\n\n >a ovaj sam dobio točno rješenje ali očito na krivi način\n\n  >![](assets/2020-10-29/00018.png)\n\n>```\nselect buildings.gid, round(st_distance(water.geom,buildings.geom)) distance,round(st_area(buildings.geom)) as area\nfrom buildings,water\nwhere water.name= 'Crveno jezero'\nand ST_DFullyWithin(water.geom,buildings.geom,1200)\norder by area desc\nlimit 5\n```",
+      "votes": {
+        "upvoters": [
+          "keykey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85665": {
+      "poster": "jazavci",
+      "content": "![](assets/2020-10-30/00005.png)\n\nZna li netko mozda sto je krivo tu? ne radi ni s intersection u selectu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85670": {
+      "poster": "jazavci",
+      "content": "@jazavci#85665 \n\ntrebalo je sumu...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85687": {
+      "poster": "jazavci",
+      "content": "![](assets/2020-10-30/00010.png)\n\n![](assets/2020-10-30/00011.png)\n\nje li itko mozda kuzi sto je ovdje krivo, poludjet cuuuuuu :)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85711": {
+      "poster": "korisnik1",
+      "content": "@jazavci#85665 ![](assets/2020-10-30/00014.png)",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85717": {
+      "poster": "korisnik1",
+      "content": "@jazavci#85687 kakvu gresku ti javlja? ja sam probao ovako  ![](assets/2020-10-30/00015.png) pa dobivam uneven row count, a taj screenshot njihov se poklapa s mojim rezultatima (hint: ima neki Hotel Baska Voda koji ima 2 iste udaljenosti, ali to se makne ako koristis row_count(), ali ne pomaze, i dalje bude uneven row count)",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "85956": {
+      "poster": "jazavci",
+      "content": "@korisnik1#85717 tako je i meni, uneven row count, a isto mi se poklapa s njihovim, ne kuzim nikako :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86369": {
+      "poster": "keykey",
+      "content": "@DuckItUp#85247 jel itko zna ovaj koji kolega ne zna?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86816": {
+      "poster": "jazavci",
+      "content": "@korisnik1#85717 ![](assets/2020-11-02/00012.png)\n\n\nNAPOKOOOOOON",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86824": {
+      "poster": "moukie",
+      "content": "ima neki ER dijagram za ovo?\n\nja nemam pojma koje su sve tablice i sta predstavlja koja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86915": {
+      "poster": "moukie",
+      "content": "![](assets/2020-11-02/00015.png)\n```sql\nselect buildings.gid, round(st_distance(buildings.geom,water.geom)), round(st_area(buildings.geom))\nfrom buildings, water\nwhere water.name like '%Crveno jezero%' and ST_CoveredBy(buildings.geom,ST_Buffer(water.geom,1000))\norder by st_area(buildings.geom) desc\nlimit 5\n```\n![](assets/2020-11-02/00016.png)\n```sql\nselect nature.name, round(min(st_distance(nature.geom,pois.geom)))\nfrom nature, pois\nwhere nature.fclass like 'beach' and pois.fclass like 'bar' \ngroup by nature.name\norder by nature.name asc\n```\n![](assets/2020-11-02/00017.png)\n```sql\nselect  round(sum(st_area(landuse.geom)))\nfrom landuse \nwhere (fclass like 'forest' or fclass like 'geom') and landuse.name like '%gaj%'\n```\n![](assets/2020-11-02/00018.png)\n```sql\nwith ajmo as(\nselect buildings.name, water.name, round(st_distance(buildings.geom,water.geom)), \nrank() over (partition by buildings.name order by round(st_distance(buildings.geom,water.geom))) as rank1\nfrom buildings, water\nwhere (lower(buildings.name) like '%dvd%' or lower(buildings.name) like '%vatrog%') and water.fclass like 'river'\n)\nselect * from ajmo \nwhere rank1 in (1,2)\n```\n![](assets/2020-11-02/00019.png)\n```sql\nselect roads.name, round(sum(st_length(roads.geom))), round(sum(st_length(ST_Intersection(roads.geom,landuse.geom))))\n, round((sum(st_length(ST_Intersection(roads.geom,landuse.geom)))/sum(st_length(roads.geom)))*100) ||'%' as percentage\nfrom roads, landuse \nwhere lower(roads.name) like '%šetalište%' and landuse.fclass like 'forest' and ST_Intersects(roads.geom,landuse.geom)\ngroup by roads.name\norder by sum(st_length(ST_Intersection(roads.geom,landuse.geom)))/sum(st_length(roads.geom)) desc\n```",
+      "votes": {
+        "upvoters": [
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "86955": {
+      "poster": "korisnik1",
+      "content": "![](assets/2020-11-02/00020.png)\n\novo nije rjesenje nego timeout:\n\n```\ncreate view green as select * from landuse where fclass = 'forest' or fclass = 'grass' or fclass = 'park';\ncreate view not_green as select * from landuse where fclass != 'forest' and fclass != 'grass' and fclass !='park';\n\nselect res.gid, st_area(res.geom)\nfrom landuse res, not_green, green, muny m\nwhere res.fclass = 'residential'\nand m.name_2 = 'Vis'\nand st_within(res.geom, m.geom)\nand st_touches(res.geom, green.geom)\nand not st_touches(res.geom, not_green.geom);\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "laugreano"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87006": {
+      "poster": "Arfit",
+      "content": "> @DuckItUp#85247 Ovaj zadatak ne znam\n\n> [![](https://fer.studosi.net/assets/files/2020-10-29/1603976603-226445-image.png)]()\n\nJa sam ovako došao do rješenja ..\n\nDakle zadatak:\n\nPretpostavite da želite za sve šume i vatrogasne postaje pronaći njihovu međusobnu udaljenost i udaljenost pojedine vatrogasne postaje do najbližih zaliha vode.\n\nZa svaku šumu (landuse, \"forest\") kojoj je definirano ime i zgradu koja u nazivu sadrži niz znakova \"vatrog\" ili \"dvd\" (bez obzira na velika ili mala slova) ispisati:\n\nime šume, udaljenost do zgrade, ime zgrade, udaljenost zgrade do najbližeg vodenog objekta ili rijeke (water, 'water' ili 'river') te ime tog vodenog objekta (mora biti definirano).\n\nZapise poredati uzlazno prema imenu šume, a zatim prema udaljenosti.\n\nUdaljenosti zaokružite na cijeli broj.\n\n`select landuse.name as forest, round(st_distance(landuse.geom, b1.geom)) as d1, b1.name as firedpt,\n\nMIN(round(st_distance(w1.geom, b1.geom))) over (partition by landuse.name, b1.name) as d2,\n\nw1.name as water\n\nfrom landuse, buildings as b1, water as w1 \n\nwhere (UPPER(b1.name) LIKE UPPER('%vatrog%') or UPPER(b1.name) LIKE UPPER('%dvd%')) and landuse.fclass = 'forest' and \n\nlanduse.name is not null and w1.name is not null and (w1.fclass = 'water' or w1.fclass = 'river') and\n\nst_distance(w1.geom, b1.geom) = (select distinct MIN(st_distance(w2.geom, b2.geom)) over (partition by b2.name) from buildings as b2, water as w2 where b1.gid = b2.gid and (UPPER(b2.name) LIKE UPPER('%vatrog%') or UPPER(b2.name) LIKE UPPER('%dvd%')) and w2.name is not null and (w2.fclass = 'water' or w2.fclass = 'river'))                                                                                       \n\norder by landuse.name asc, d1 asc`",
+      "votes": {
+        "upvoters": [
+          "DuckItUp"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87076": {
+      "poster": "Amon",
+      "content": "Sličan zadatak ko kolega iznad, ali riješeno bez podupita, i zadana udaljenost je fiksan broj\n>! ![](assets/2020-11-02/00028.png)\n\n```sql\nWITH t AS (SELECT landuse.name l, ROUND(MIN(ST_Distance(landuse.geom, buildings.geom))) dist, buildings.name b,\n    ROW_NUMBER() OVER (PARTITION BY landuse.name ORDER BY ROUND(MIN(ST_Distance(landuse.geom, buildings.geom)))) r\nFROM buildings, landuse\nWHERE (LOWER(buildings.name) LIKE '%dvd%' OR LOWER(buildings.name) LIKE '%vatrog%' )\nAND landuse.fclass = 'forest'\nAND ST_Distance(landuse.geom, buildings.geom) < 5000 \nAND landuse.name IS NOT NULL\nGROUP BY landuse.name, buildings.name\nORDER BY buildings.name)\nSELECT l, dist, b FROM t\nWHERE r = 1\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89410": {
+      "poster": "AN5A",
+      "content": "1. Za svaki hotel (pois.fclass, \"hotel\") koji ima definirano ime pronađite tri najbliža planinska vrha (nature.fclass, \"peak\"). Ime vrhunca može biti nepoznato.\n\nIspišite gid i naziv hotela, gid i naziv vrhunca, te udaljenost od hotela do vrhunca (zaokruženo na cijeli broj) i redni broj. Rezultate poredajte po nazivu hotela i rednom broju vrhunca.\n\n![](assets/2020-11-07/00005.png)\n\n2. Pretpostavimo da želimo naći stambene parcele koje graniče samo sa zelenim površinama.\n\nIspišite gid i površinu stambenih parcela (landuse, \"residential\") u općini Vis koje graniče samo sa zelenim parcelama (jedno od: \"forest\", \"grass\", \"park\").\n\nPazite: te susjedne zelene parcele ne moraju nužno biti u općini Vis.\n\n![](assets/2020-11-07/00006.png)\n\n3. Kolika je ukupna površina zelenih površina (jedno od \"forest\" ili \"grass\") koje u nazivu sadrže riječ 'gaj'? Zaokružite rezultat na cijeli broj.\n\n![](assets/2020-11-07/00007.png)\n\n4. Za plaže (nature, \"beach\") koje u krugu od 300 metara imaju barem 3 kafića ili restorana (pois, \"bar\" i \"restaurant\") ispišite gid, ime plaže i ukupan broj kafića/restorana u krugu od 300 metara.\n\n![](assets/2020-11-07/00008.png)\n\n5. Potrebno je pronaći pet najvećih zgrade koje se nalaze u krugu od jednog kilometra od Crvenog jezera, te za njih ispisati gid, udaljenost od jezera i površinu.\n\nZa zgradu vrijedi da je \"u krugu od...\" samo ako je cijela zgrada sadržana u toj površini.\n\nSve vrijednosti zaokružiti na cijeli broj.\n\n![](assets/2020-11-07/00009.png)",
+      "votes": {
+        "upvoters": [
+          "hotpanties"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90522": {
+      "poster": "narval13068 (Dima)",
+      "content": "![](assets/2020-11-10/00006.png)\n\nZadatak je lagan cini mi se al nez zasto me zeza, sto mu fali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90537": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@narval13068#90522 readk 6 i 8 su ti ista cesta, u rezultatu moraš imat svaku cestu po jednom, pa negdje krivo biraš retke. također ovaj sum over() ti zbraja sumu svih cesta, zato ti svaka ima isti broj. znaci taj over() zamijeni sa group by ime ceste",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90552": {
+      "poster": "narval13068 (Dima)",
+      "content": "![](assets/2020-11-10/00013.png)\n\nPokusa sam varijantu s group by vec bia i onda sam promijenia na over jer kaze ukupnu duljinu cesta a ne duljinu cesta (not sure) i prova sam distinct na gornjom isto ne zeli ...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90561": {
+      "poster": "janeromero (Serial Number Q5U4EX7YY2E9N)",
+      "content": "@narval13068#90552  msm da je dobro bez over() jer su ti tu prvih 6 redaka tocnih, pa to nije upitno. s obzirom da tek 7 nije dobar, probaj prvo sumirat a onda zaokruzit gore u prvom redu? lol ne znam sta bi moglo jos bit ovo izgleda ok",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90590": {
+      "poster": "narval13068 (Dima)",
+      "content": "@janeromero#90561 Najs ovo za round uopce nisam primjetia da san ga unutar sume stavia, ali jos nista, stavit cu screen pa ako neko mozda je ima slicno pa ima neku zadnju primjedbu\n\n![](assets/2020-11-10/00016.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "90610": {
+      "poster": "narval13068 (Dima)",
+      "content": "![](assets/2020-11-10/00019.png)\n\nEo ovo radi, a zasto ono gori ne neman pojma",
+      "votes": {
+        "upvoters": [
+          "janeromero (Serial Number Q5U4EX7YY2E9N)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91007": {
+      "poster": "macan",
+      "content": "Pronaći općine (muny) u Splitsko-dalmatinskoj županiji (muny, name_1) kroz koje prolazi pruga.\n\nPotrebno je ispisati naziv općine (muny, name_2) i duljinu pruge (railways) koja prolazi kroz tu općinu.\n\nZapise poredati uzlazno s obzirom na duljinu pruge koja prolazi općinom.\n\n```\nSELECT \n\topcina.name_2,\n    SUM(ST_LENGTH(ST_INTERSECTION(pruga.geom,opcina.geom)))as duljinaPruge\nFROM \n\tmuny as opcina,\n    railways as pruga\nWHERE \n\topcina.name_1='Splitsko-Dalmatinska'\n\tAND ST_INTERSECTS(pruga.geom,opcina.geom)\nGROUP BY opcina.name_2\nORDER BY duljinaPruge ASC\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91328": {
+      "poster": "ton6 (toto6)",
+      "content": "Imao netko ovaj možda?\n\n![](assets/2020-11-11/00035.png)\n\n![](assets/2020-11-11/00036.png)\n\n![](assets/2020-11-11/00037.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91333": {
+      "poster": "cavlic",
+      "content": "Ispišite gid pruga kraćih od 20000m koje prolaze pokraj vinograda (landuse, \"vineyard\") na udaljenosti od 100m ili manje i broj vinograda.\n\n![](assets/2020-11-11/00038.png)\n\nima netko ideju gdje je greška?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91348": {
+      "poster": "cavlic",
+      "content": "@cavlic#91333 distinct railways 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "91353": {
+      "poster": "saki23",
+      "content": "![](assets/2020-11-11/00041.png)\n\nIma li netko možda ovaj ili ako zna netko kako napisati ovaj dio za rank 🙈",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "254576": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "@\"cavlic\"#p91333 Što je krivo?\n```\nselect distinct railways.gid,count(*) over() cnt\nfrom railways, landuse\nwhere landuse.fclass = 'vineyard'\nand st_length(railways.geom) < 20000\nand st_disjoint(railways.geom,landuse.geom)\nand st_distance(railways.geom,landuse.geom) <= 100\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

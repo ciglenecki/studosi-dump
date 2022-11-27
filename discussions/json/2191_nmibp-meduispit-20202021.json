@@ -1,0 +1,668 @@
+{
+  "title": "[NMIBP] Međuispit - 2020/2021",
+  "creator": "moukie",
+  "slug": "nmibp-meduispit-20202021",
+  "tags": [
+    "FER",
+    "Napredni modeli i baze podataka",
+    "Ispiti"
+  ],
+  "posts": {
+    "92097": {
+      "poster": "moukie",
+      "content": "Evo teme za MI\n\nPisemo li ovo online ili uzivo?\n\nNije nista eksplicitno receno koliko sam vidio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92122": {
+      "poster": "keykey",
+      "content": "@moukie#92097 evo upravo dosla obavijest da ce se pisat na faksu, ali na racunalima",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92130": {
+      "poster": "Amon",
+      "content": "Sad kad znamo koja će se baza koristiti možemo napravit primjere zadataka kakvi bi mogli bit, tipa kako rekurzija treba izgledati i takve stvari\n\nSlobodno stavljajte neke probne select upite ak ih napravite, sig sam da će pomoći nekome",
+      "votes": {
+        "upvoters": [
+          "BrankoBrancin",
+          "keykey",
+          "moukie",
+          "saki23"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92151": {
+      "poster": "moukie",
+      "content": "Ima li negdje opis ili kakav relacijski dijagram ove baze?\n\nHocemo li smjet pisati na vlastitim laptopima?\n\n![](assets/2020-11-13/00023.png)",
+      "votes": {
+        "upvoters": [
+          "Huginn",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92152": {
+      "poster": "Huginn",
+      "content": "@moukie#92151 Nisam ni ja nasao, nadam se da ce dozvolit ovako neki exportani dijagram te baze  ![](assets/2020-11-13/00024.png)",
+      "votes": {
+        "upvoters": [
+          "moukie",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92218": {
+      "poster": "moukie",
+      "content": "Kako navigirati ove težine u ovim zadacim za vježbu?\n\nZasto ne mogu skipati pitanje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92291": {
+      "poster": "jazavci",
+      "content": "Zna li netko jel pisemo NOSQL?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92295": {
+      "poster": "macan",
+      "content": "![](assets/2020-11-13/00049.png)\n> @jazavci#92291 Zna li netko jel pisemo NOSQL?",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92382": {
+      "poster": "moukie",
+      "content": "Vidi li tko što je krivo ovdje?\n\n![](assets/2020-11-13/00063.png)\n\n![](assets/2020-11-13/00064.png)",
+      "votes": {
+        "upvoters": [
+          "laugreano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92560": {
+      "poster": "moukie",
+      "content": "Help\n\n![](assets/2020-11-14/00010.png)\n\n![](assets/2020-11-14/00011.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92600": {
+      "poster": "Huginn",
+      "content": "@moukie#92560 \n```\nWITH recursive f AS (\n    (SELECT staff.staff_id, sup_staff_id, store_id, last_name, first_name, p.rental_id, amount\n     FROM staff\n              NATURAL JOIN rental\n              JOIN payment p on rental.rental_id = p.rental_id)\n    UNION ALL\n    (SELECT staff.staff_id, staff.sup_staff_id, f.store_id, staff.last_name, staff.first_name, rental_id, f.amount\n     FROM staff,\n          f\n     WHERE staff.staff_id = f.sup_staff_id)\n)\nSELECT\n       rank() OVER (ORDER BY  SUM(f.amount) DESC) as rankCompany,\n       rank() OVER (PARTITION BY c.name ORDER BY  SUM(f.amount) DESC) as categoryRank,\n       c.name,\n       f.staff_id,\n       last_name lname,\n       first_name fName,\n       SUM(amount)\nFROM f\n         JOIN store s ON f.store_id = s.store_id\n         JOIN rental on f.rental_id = rental.rental_id\n         JOIN inventory i on rental.inventory_id = i.inventory_id\n         JOIN film f2 on i.film_id = f2.film_id\n         JOIN film_category fc on f2.film_id = fc.film_id\n         JOIN category c on fc.category_id = c.category_id\nGROUP BY f.staff_id, c.name, last_name, first_name\nORDER BY rankCompany, categoryRank\n```",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92607": {
+      "poster": "Huginn",
+      "content": "@moukie#92382 ![](assets/2020-11-14/00020.png)",
+      "votes": {
+        "upvoters": [
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92650": {
+      "poster": "421blazeitfgt",
+      "content": "![](assets/2020-11-14/00023.png)\n\nJesam ja nešto krivo shvatio? Doslovno nemogu u bazi ni naći film koji se zove Spiderman Videotape",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92663": {
+      "poster": "moukie",
+      "content": "@moukie#92560 \n\nOd kud ovdje treba zaklučiti da na kraju treba napraviti \"order by rankCompany,rankCategory\"?\n\nDoslovno to je samo krivo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92664": {
+      "poster": "moukie",
+      "content": "@421blazeitfgt#92650 \n\n`select title, array( select distinct country.country\n\n                    from inventory \n\n                    join store on inventory.store_id=store.store_id\n\n                    join address on address.address_id=store.address_id\n\n                    join city on address.city_id=city.city_id\n\n                    join country on city.country_id=country.country_id\n                    \n\n                    where inventory.film_id=film.film_id\n                    ) as cities\n                    \nfrom film, unnest(string_to_array(title, ' ')) as ime(rjec)\n\nwhere lower(rjec)%'videotejp'\n\n`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92667": {
+      "poster": "moukie",
+      "content": "@421blazeitfgt#92650 \n\nselect title, array( select distinct country.country\n\n                    from inventory \n\n                    join store on inventory.store_id=store.store_id\n\n                    join address on address.address_id=store.address_id\n\n                    join city on address.city_id=city.city_id\n\n                    join country on city.country_id=country.country_id\n                    \n\n                    where inventory.film_id=film.film_id\n                    ) as cities\n                    \nfrom film, unnest(string_to_array(title, ' ')) as ime(rjec)\n\nwhere lower(rjec)%'videotejp'",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92672": {
+      "poster": "moukie",
+      "content": "@421blazeitfgt#92650 \n\n![](assets/2020-11-14/00025.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92753": {
+      "poster": "gunaman",
+      "content": "Ja ću postat kako što riješim od zzv-ova, pa evo redom... (1) - crosstab - cred za ovaj ide prijatelju shoutout LG\n\n![](assets/2020-11-14/00034.png)\n\n```\ncreate temp table quarters(quarter int);\ninsert into quarters values(1);\ninsert into quarters values(2);\ninsert into quarters values(3);\ninsert into quarters values(4);\n\nselect * from crosstab(\n\t$$\n    \tselect title, extract(quarter from payment_date) q, sum(amount)\n\t\tfrom payment join rental on payment.rental_id = rental.rental_id\n\t\t\tjoin inventory on rental.inventory_id = inventory.inventory_id\n    \t\tjoin film on inventory.film_id = film.film_id\n\t\twhere to_tsvector('english', film.title | | \" \" | | film.description) @@ to_tsquery('english', 'fanci | amus')\n\t\tgroup by title, q\n    \torder by title, q\n    $$,\n    $$\n    \tselect * from quarters order by quarter\n    $$\n) as pivotTable(filmTitle varchar(255), q1 numeric(10,2), q2 numeric(10,2), q3 numeric(10,2), q4 numeric(10,2))\n```",
+      "votes": {
+        "upvoters": [
+          "balvan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92787": {
+      "poster": "moukie",
+      "content": "jeli tko rješio ovaj da posta tocno rjesenje?\n\nnezz zasto mi dolazi krivo ovdje\n\n![](assets/2020-11-14/00041.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92850": {
+      "poster": "421blazeitfgt",
+      "content": "![](assets/2020-11-14/00049.png)\n\nnapokon sam skuzio ove rekurzije ali ovaj moj upit valjda broji jedno te iste filmove dvaput pa me zanima jel ima neko ideju gdje da to ogranicim na jedinstvene filmove?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92852": {
+      "poster": "Huginn",
+      "content": "@421blazeitfgt#92850 ![](assets/2020-11-14/00051.png)\n\nili u svom rjesenju mozes u zagradu dodat count(distinct title). mislim da bi i to trebalo radit",
+      "votes": {
+        "upvoters": [
+          "421blazeitfgt"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92855": {
+      "poster": "421blazeitfgt",
+      "content": "@Huginn#92852 hahaha da imas pravo *facepalm*",
+      "votes": {
+        "upvoters": [
+          "balvan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Huginn"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92893": {
+      "poster": "balvan",
+      "content": "![](assets/2020-11-14/00055.png)\n\n zna netko objasnit zasto mi baca praznu tablicu? \n\n edit: dole je group by, ista stvar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92894": {
+      "poster": "balvan",
+      "content": "@balvan#92893 dole je group by* al ista stvar",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92895": {
+      "poster": "Huginn",
+      "content": "![](assets/2020-11-14/00056.png)",
+      "votes": {
+        "upvoters": [
+          "balvan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92911": {
+      "poster": "balvan",
+      "content": "@Huginn#92895 ![](assets/2020-11-14/00060.jpeg)\n\ntnx, al di su particije?\n\nbrijem da je zadatak predvidjen za particije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "92914": {
+      "poster": "Huginn",
+      "content": "@balvan#92911 idk, ovo mi je prvo palo na pamet.",
+      "votes": {
+        "upvoters": [
+          "balvan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93109": {
+      "poster": "laugreano",
+      "content": "@balvan#92893 ![](assets/2020-11-15/00000.png)",
+      "votes": {
+        "upvoters": [
+          "balvan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93214": {
+      "poster": "moukie",
+      "content": "jeli rjestio tko ovaj mozda?\n\nnezz kako filtrirat ove tablice tako da ne dobijem statement timeout\n\n![](assets/2020-11-15/00009.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93280": {
+      "poster": "stoper5",
+      "content": "Zna li netko koju grešku radim u pivotiranju? Evo ovdije 2 primjera gdje nemogu nikako shvatiti što radim krivo.\n\n![](assets/2020-11-15/00024.png)\n\n![](assets/2020-11-15/00025.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93298": {
+      "poster": "emrys (Scofield)",
+      "content": "@moukie#93214 meni ovo radi:\n\nWITH r AS (\n\n\tSELECT muny.name_2, ST_Intersection(roads.geom, railways.geom) intrsctn, MIN(ST_Distance(ST_Intersection(roads.geom, railways.geom), pois.geom)) distance \n\n\tFROM muny, roads, railways, pois\n\n\tWHERE pois.fclass = 'hospital' AND muny.name_1 = 'Splitsko-Dalmatinska' AND\n\n          ST_Intersects(roads.geom, railways.geom) AND ST_Intersects(ST_Intersection(roads.geom, railways.geom), muny.geom)                                                                  \n\n\tGROUP BY muny.name_2, ST_Intersection(roads.geom, railways.geom)\n\n)\n\nSELECT name_2, ROUND(MAX(distance))                                                                           \n\nFROM r\n\nGROUP BY name_2\n\n\n@stoper5#93280 na prvoj slici ti u WHERE dijelu fale zagrade kod provjere uvjeta s ts_vectorom: (x OR y) AND...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93301": {
+      "poster": "stoper5",
+      "content": "@emrys#93298 Hvala al nije u tom porblem. Skuzio sam da je problem u FROM dijelu. Kad sam kopirao od frendice samo FROM onda je radilo. Nije mi i dalje jasno što ne valja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93324": {
+      "poster": "AN5A",
+      "content": "Ako nekom zatreba, ovdje su sva moja rješenja za zadatke za vježbu iz GIS-a. https://we.tl/t-wnWV2MV9nt",
+      "votes": {
+        "upvoters": [
+          "BrankoBrancin",
+          "balvan",
+          "mini_batman",
+          "moukie"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93360": {
+      "poster": "balvan",
+      "content": "@moukie#92218 si skuzio kako tezine navigirati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93367": {
+      "poster": "moukie",
+      "content": "@emrys#93298 \n\nOzbiljno?\n\nJa dobivam error\n\n![](assets/2020-11-15/00041.png)\n\nEDIT:\n\nnvm navodnici su bili drugaciji, rjesio sam\n\ntnx",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93368": {
+      "poster": "moukie",
+      "content": "@balvan#93360 \n\nkad rjesis zadatak samo kliknse na neku tezinu i onda ces dobit sljedeci zadatak te tezine",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93384": {
+      "poster": "NoName3",
+      "content": "Imam problem, na edgaru se run vrti beskonacno za bilo koji select (i one najednostavnije select * from tablica). Zna neko kako to rješit? Tnx",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93389": {
+      "poster": "moukie",
+      "content": "@NoName3#93384 \n\nSamo izadi i ponovno udi\n\nTaj Edgar je shit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93397": {
+      "poster": "moukie",
+      "content": "@AN5A#93324 \n\nCemu ti sluzi ovaj order by ovdje?\n\n![](assets/2020-11-15/00048.png)\n\nEDIT:\n\nTo je onaj zadatak sa krizanjima i bolnicama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93410": {
+      "poster": "AN5A",
+      "content": "@moukie#93397 Može i bez toga (provjerila sam sad). Ostalo od neuspjelog pokušaja. 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "moukie"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93614": {
+      "poster": "AN5A",
+      "content": "![](assets/2020-11-15/00073.png)\n\nMože li netko objasniti kako napraviti ovaj dio za 'videotejp', a da nije improvizacija tipa LIKE '%videotape%' ili random napisan broj za similarity.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93625": {
+      "poster": "DostDobroIme",
+      "content": "@AN5A#93614 moras prvo negdje napraviti UNNEST(string_to_array(title, ' ')) AS titleWord \n\ni onda mozes similarity(lower(titleWord), 'videotejp') >= similarity('videotape', 'videotejp')\n\nto je najbolje do ceg sam ja doso ako netko ima bolje neka predlozi 😃",
+      "votes": {
+        "upvoters": [
+          "BrankoBrancin",
+          "balvan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93798": {
+      "poster": "BrankoBrancin",
+      "content": "@Amon#92130 jel ima tko možda neke primjere upita za bazu koju cemo koristiti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93800": {
+      "poster": "moukie",
+      "content": "Zna li tko je li mozemo pisati na vlastitim laptopima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93812": {
+      "poster": "balvan",
+      "content": "kako postic rangiranje rank() funkcijom a da se u GROUP BY dijelu ne navede ono po čemu se rangira (npr SUM(bod))? dal se moze uopce",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94021": {
+      "poster": "am50723",
+      "content": "Koliko bodova je nosila 3. dz?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "94293": {
+      "poster": "keykey",
+      "content": "@am50723#94021 3 boda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

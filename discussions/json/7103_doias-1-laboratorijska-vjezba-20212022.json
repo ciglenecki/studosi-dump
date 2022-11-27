@@ -1,0 +1,411 @@
+{
+  "title": "[DOIAS] 1. laboratorijska vježba - 2021/2022",
+  "creator": "MOXY",
+  "slug": "doias-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Digitalna obrada i analiza slike",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "286044": {
+      "poster": "MOXY",
+      "content": "`ModuleNotFoundError: No module named 'termios'`\n\nbaca li nekome ovo na Windowsu kod linija `from google.colab import drive\n\ndrive.mount('/content/drive')`?",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286054": {
+      "poster": "miss_anthropocene (neunist.iva)",
+      "content": "@\"MOXY\"#p286044\n\ngdje pokrećeš taj kod? Ako u IDE-u, slobodno obriši taj dio, on služi da možeš manipulirati podatcima koji se nalaze na tvom Google Driveu ako koristiš Google Colab.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286059": {
+      "poster": "MOXY",
+      "content": "ok, ali kako cu onda znati radi li mi kod ako ne mogu koristiti cv2_imshow(img) f-ju iz google colaba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286060": {
+      "poster": "Emma63194",
+      "content": "@\"MOXY\"#p286059 Lokalno spremiš slike i onda samo učitaš one koje trebaš.",
+      "votes": {
+        "upvoters": [
+          "miss_anthropocene (neunist.iva)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286130": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Jesam ja jedini kojem ne želi importati uopće drive module u prvoj ćeliji kad otvorim notebook u browseru? wtf\n\nAko je to nerješivo, kako da prikažem slike s opencv-om u vs codeu jer mi ne želi lijepo prikazati sliku, izbaci mi prozor s crnom pozdainom\n\nOvi labosi su jebeno cursed",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Emma63194"
+        ]
+      }
+    },
+    "286178": {
+      "poster": "miss_anthropocene (neunist.iva)",
+      "content": "@\"not Mrshave Zhene\"#p286130 \n\nja sam otvorila notebook u Google Colabu i radi dobro, pokusaj tako",
+      "votes": {
+        "upvoters": [
+          "MOXY",
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286181": {
+      "poster": "nekoIme",
+      "content": "Itko zna ovo?\n\n![](assets/2022-03-18/00006.png)",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286186": {
+      "poster": "dora (AE)",
+      "content": "Zna li netko objasniti quantize() funkciju, kako je treba koristiti u zadacima i da li negdje trebamo upotrijebiti onu funkciju za računanje kvanta?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286192": {
+      "poster": "nekoIme",
+      "content": "@\"AE\"#p286186 treba se koristiti Image.open(path), s time otvaras sliku kao Image. Ona mozes koristiti Image.quantize(n) di je n broj A, tj broj razina koje zelis stvoriti. slike se na kraju prikazuju sa display(img) ne sa cv2_imshow",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "dora (AE)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286296": {
+      "poster": "hellvetica",
+      "content": "Zna neko objasnit sta bi trebo napisat za 2. knjizicu u 2.4.1 u 8. i 9. podzadatku? Jer meni se cini kao da nema pretprocesiranja sa cv2.resize a 9. pita kako se rijesit pretprocesiranja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286351": {
+      "poster": "Artemis",
+      "content": "Kako množite dvije slike? Kao img1 * img2 ili cv2.multiply(img1, img2)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286414": {
+      "poster": "nimble",
+      "content": "@\"Artemis\"#p286351 Nijedno mi ne radi (baca neki white noise) ali radi 1.0 * img1 * img2\n\nSlicno za zbrajanje i oduzimanje. Mozda se bez 1.0 dogodi nekakav overflow.",
+      "votes": {
+        "upvoters": [
+          "Artemis"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286468": {
+      "poster": "Emma63194",
+      "content": "Desi li se ikome da u prvoj vježbi kod logaritmiranja dobije skroz crnu sliku?",
+      "votes": {
+        "upvoters": [
+          "fooFighter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286471": {
+      "poster": "--- ( 🤡 )",
+      "content": "4. Display the shape of the transfer function for each of the given unary operations.\n\nmože hint kako ovaj dio riješiti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286474": {
+      "poster": "fooFighter",
+      "content": "@\"---\"#p286471 ja sam samo plotao funkcije kao takve na rasponu [0, 255]. Nesto tipa plt.plot(np.arange(256), np.log(np.arange(256))) 🤷‍♂️",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "oneTwo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286475": {
+      "poster": "sssr",
+      "content": "Jel itko zna gdje se nalazi teorija za drugu jupiter biljeznicu ne mogu je nac po prezentacijama",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "swish41 (PlavušaSFilozofskog)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286476": {
+      "poster": "fooFighter",
+      "content": "@\"Emma63194\"#p286468 da, no stavio sam i minmax skaliranu sliku pored tih za svaki slucaj",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286575": {
+      "poster": "bjunolulz",
+      "content": "Sto treba napravit u ovom zadatku s 4x4 maskom na kraju 1. biljeznice?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286583": {
+      "poster": "MOXY",
+      "content": "Koji su vam materijali najvise pomogli za rjesavanje ove dvi lab vjezbe? Ne mogu nigdje naci odgovor na pitanje zasto ona slika majmuna nije plava.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286589": {
+      "poster": "bjunolulz",
+      "content": "@\"MOXY\"#p286583 Google, nista iz materijala mi nije pomoglo",
+      "votes": {
+        "upvoters": [
+          "MOXY",
+          "miss_anthropocene (neunist.iva)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286606": {
+      "poster": "Emma63194",
+      "content": "U 2.1.1 , 2. zadatak, jel N predstavlja broj bitova ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286607": {
+      "poster": "Emma63194",
+      "content": "@\"bjunolulz\"#p286575  Isto ko i s prijašnjim maskama, koristiti ih nad nekom slikom i samo nacrtati, barem sam ja tako shvatila. \n\nAko pitaš za izgled maske: https://homepages.inf.ed.ac.uk/rbf/HIPR2/mean.htm\n\n> @\"MOXY\"#p286583 Ne mogu nigdje naci odgovor na pitanje zasto ona slika majmuna nije plava.\n\nJa pretpostavljam da je zato jer gledamo samo jednu matricu od one tri koje čine RGB. Sa samo jednom matricom ne možemo imati boje. Nema veze što je to sad predstavljalo plavu boju u nekoj slici, kad zasebno gledaš tu matricu, to je ko da gledaš neku grayscale sliku.",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286608": {
+      "poster": "Daeyarn",
+      "content": "@\"Emma63194\"#p286606 jedan kolega i ja smo stavili da je N=2^(broj bitova)",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286614": {
+      "poster": "bjunolulz",
+      "content": "Sto ste koristili za napisati funkciju za kvantizaciju u 2.1.1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286620": {
+      "poster": "Emma63194",
+      "content": "@\"bjunolulz\"#p286614 Onu formulu za kvantizaciju i onu funckiju, Image.quantize()",
+      "votes": {
+        "upvoters": [
+          "bjunolulz"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286710": {
+      "poster": "Emma63194",
+      "content": "Ako je netko već, kako izgleda labos?\n\nPitaju li po bilježnicama ili treba i teoriju s predavanja znati?",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "286726": {
+      "poster": "--- ( 🤡 )",
+      "content": "@\"Emma63194\"#p286710 opušten labos, ima listu pitanja i odabere ih random i trazi te da odes na to i to pitanje u biljeznici i objasnis mu sta si tamo radio i zasto su rezultati takvi kakvi jesu. iskljucivo po biljeznici + jako blago ocjenjuje (bio je franko sikic)",
+      "votes": {
+        "upvoters": [
+          "Artemis",
+          "Daeyarn",
+          "Emma63194",
+          "Nina1712 (pocahontas)",
+          "SuperSjajan3",
+          "blablajar",
+          "dora (AE)",
+          "feel_d_boot (iNut)",
+          "miss_anthropocene (neunist.iva)",
+          "nekoIme"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

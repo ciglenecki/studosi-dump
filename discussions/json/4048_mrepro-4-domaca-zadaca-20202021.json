@@ -1,0 +1,83 @@
+{
+  "title": "[MREPRO] 4. domaća zadaća - 2020/2021",
+  "creator": "ruza0001 (rozy)",
+  "slug": "mrepro-4-domaca-zadaca-20202021",
+  "tags": [
+    "FER",
+    "Mrežno programiranje",
+    "Zadaće"
+  ],
+  "posts": {
+    "191628": {
+      "poster": "ruza0001 (rozy)",
+      "content": "zna li netko mozda zasto printf nekada ne ispise nista, vec samo ako ispisujem na stderr onda ispise?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191631": {
+      "poster": "Bisenberg (DonaldPump)",
+      "content": "@ruza0001#191628 Probaj staviti na kraj \\n, zna se poremetiti printf ako to nema na kraju",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "191642": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@Bisenberg#191631 hvala, to je pomoglo",
+      "votes": {
+        "upvoters": [
+          "Bisenberg (DonaldPump)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193580": {
+      "poster": "Mariox",
+      "content": "jeli najbolje koristiti `daemon()`, `daemon_init()` ili inetd za demonizaciju u ovoj zadaci?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "193600": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Mariox#193580\n\nSavršeno mi radi s `daemon`om. Jako je lagan za koristiti.\n\nKoristio sam ga jer radi sve što mi treba, a standardna je funkcija pa ne moram kopirati nikakav kod, samo #includeam stdlib.h i mogu ga zvati. Koliko vidim, `daemon_init` pruža više-manje istu, ako ne identičnu funkcionalnost.\n\nMislim da ovdje uopće ne možeš koristiti inetd jer bi to zahtijevalo da profesor kod sebe konfigurira inetd za svaku evaluaciju kako bi tvoj poslužitelj mogao dobiti socket u nekom od prva tri descriptora. Čini mi se da se pri ocjenjivanju poslužitelji normalno pokreću i da se očekuje da se sami demoniziraju.",
+      "votes": {
+        "upvoters": [
+          "Mariox"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

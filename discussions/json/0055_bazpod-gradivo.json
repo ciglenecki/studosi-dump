@@ -1,0 +1,3397 @@
+{
+  "title": "[BAZPOD] Gradivo",
+  "creator": "KingGeedorah (King Geedorah)",
+  "slug": "bazpod-gradivo",
+  "tags": [
+    "FER",
+    "Baze podataka"
+  ],
+  "posts": {
+    "855": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "Krenuo sam instalirati postgreSQL prema sluzbenim uputama i pri kraju instalacije pojavi mi se ova poruka. Mogu otvoriti pgadmin4 ali kad idem otvorit listu \"Servers\" nista se ne prikaze. Jel netko mozda imao slican problem? Gledao sam neka rjesenja s interneta i nista nije pomoglo.\n\n![](assets/2020-03-19/00003.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "871": {
+      "poster": "helenic",
+      "content": "Isti problem, nisam rijesio, podigao na VMware-u linux, tu instalirao bez problema",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "873": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@helenic#871 Meni je to zadnja opcija, ali evo ako se ne javi nitko tko je sredio stvar ocito cu biti prisiljen na to",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "880": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@KingGeedorah#873 Možeš li priložiti neke logove? Na Windowsu bi trebali biti u `%TEMP%` folderu, i zove se `install-postgresql.log`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1083": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@micho#880 Evo kopirao sam file od mjesta gdje valjda nastaje problem pa do kraja da ne gledas sve one unpackinge itd. Ako treba mogu postati i cijeli file. Cini mi se da nema spoiler opcije, a ne mogu uplodati .txt file pa se ispricavam sto cu ga samo ovako zalijepiti. Btw digao sam linux na VMware-u, i tamo imam isti problem nakon sto instaliram. Ocito me nece lol.\n\n```\n----------------------------------------------------\n[20:32:02] Running the post-installation/upgrade actions:\n[20:32:02] Write the base directory to the ini file...\n[20:32:02] Write the version number to the ini file...\nInitialising the database cluster (this may take a few minutes)...\nExecuting cscript //NoLogo \"C:\\Program Files\\PostgreSQL\\12/installer/server/initcluster.vbs\" \"NT AUTHORITY\\NetworkService\" \"postgres\" \"****\" \"C:\\Users\\KG\\AppData\\Local\\Temp/postgresql_installer_dd1d6ffcc0\" \"C:\\Program Files\\PostgreSQL\\12\" \"C:\\Program Files\\PostgreSQL\\12\\data\" 5432 \"Croatian,Croatia\" 0\nScript exit code: 1\n\nScript output:\n WScript.Shell Initialized...\nScripting.FileSystemObject initialized...\n\nCalled CreateDirectory(C:\\Program Files\\PostgreSQL\\12\\data)...\nCalled CreateDirectory(C:\\Program Files\\PostgreSQL\\12)...\nCalled ClearAcl (C:\\Program Files\\PostgreSQL\\12\\data)...\n    Executing batch file 'rad43FFE.bat'...\nCalled Die(Failed to reset the ACL (C:\\Program Files\\PostgreSQL\\12\\data))...\nFailed to reset the ACL (C:\\Program Files\\PostgreSQL\\12\\data)\n\nScript stderr:\n Program ended with an error exit code\n\nError running cscript //NoLogo \"C:\\Program Files\\PostgreSQL\\12/installer/server/initcluster.vbs\" \"NT AUTHORITY\\NetworkService\" \"postgres\" \"****\" \"C:\\Users\\KG\\AppData\\Local\\Temp/postgresql_installer_dd1d6ffcc0\" \"C:\\Program Files\\PostgreSQL\\12\" \"C:\\Program Files\\PostgreSQL\\12\\data\" 5432 \"Croatian,Croatia\" 0: Program ended with an error exit code\nProblem running post-install step. Installation may not complete correctly\n The database cluster initialisation failed.\nExecuting icacls \"C:\\Users\\KG\\AppData\\Local\\Temp/postgresql_installer_e7217fbe50\" /inheritance:r\nScript exit code: 0\n\nScript output:\n processed file: C:\\Users\\KG\\AppData\\Local\\Temp/postgresql_installer_e7217fbe50\nSuccessfully processed 1 files; Failed processing 0 files\n\nScript stderr:\n \n\nExecuting icacls \"C:\\Users\\KG\\AppData\\Local\\Temp/postgresql_installer_e7217fbe50\" /T /Q /grant \"WINDOWS-5Q83JL1\\KG:(OI)(CI)F\"\nScript exit code: 0\n\nScript output:\n Successfully processed 1 files; Failed processing 0 files\n\nScript stderr:\n \n\n[20:32:07] Delete the temporary scripts directory...\nExecuting icacls \"C:\\Users\\KG\\AppData\\Local\\Temp/postgresql_installer_286becd6df\" /inheritance:r\nScript exit code: 0\n\nScript output:\n processed file: C:\\Users\\KG\\AppData\\Local\\Temp/postgresql_installer_286becd6df\nSuccessfully processed 1 files; Failed processing 0 files\n\nScript stderr:\n \n\nExecuting icacls \"C:\\Users\\KG\\AppData\\Local\\Temp/postgresql_installer_286becd6df\" /T /Q /grant \"WINDOWS-5Q83JL1\\KG:(OI)(CI)F\"\nScript exit code: 0\n\nScript output:\n Successfully processed 1 files; Failed processing 0 files\n\nScript stderr:\n \n\nExecuting icacls \"C:\\Users\\KG\\AppData\\Local\\Temp/postgresql_installer_951608378f\" /inheritance:r\nScript exit code: 0\n\nScript output:\n processed file: C:\\Users\\KG\\AppData\\Local\\Temp/postgresql_installer_951608378f\nSuccessfully processed 1 files; Failed processing 0 files\n\nScript stderr:\n \n\nExecuting icacls \"C:\\Users\\KG\\AppData\\Local\\Temp/postgresql_installer_951608378f\" /T /Q /grant \"WINDOWS-5Q83JL1\\KG:(OI)(CI)F\"\nScript exit code: 0\n\nScript output:\n Successfully processed 1 files; Failed processing 0 files\n\nScript stderr:\n \n\nCreating menu shortcuts...\nExecuting cscript //NoLogo \"C:\\Program Files\\PostgreSQL\\12\\installer\\server\\createshortcuts_clt.vbs\" \"PostgreSQL 12\" \"C:\\Program Files\\PostgreSQL\\12\"\nScript exit code: 0\n\nScript output:\n Start FixupFile(C:\\Program Files\\PostgreSQL\\12\\scripts\\runpsql.bat)...\n   Opening file for reading...\n   Closing file (reading)...\n   Replacing placeholders...\n   Opening file for writing...\n   Closing file...\n  End FixupFile()...\ncreateshortcuts_clt.vbs ran to completion\n\nScript stderr:\n \n\n[20:32:10] Write the server description to the ini file...\n[20:32:10] Write the server branding to the ini file...\nCreating Uninstaller\nCreating uninstaller 25%\nCreating uninstaller 50%\nCreating uninstaller 75%\nCreating uninstaller 100%\nInstallation completed\nLog finished 03/19/2020 at 20:32:19\nExiting with code 1\n----------------------------------------------------\n```",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1084": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@KingGeedorah#1083 Ma ništa, ubuduće za blokove teksta možeš koristiti Markdown prečac za blokove koda  (` ``` nešto ``` `) , ili ovaj gumbić Unesi kod u uređivaču.\n\n[Čini se da je problem s Windowsovim UAC-om](https://dba.stackexchange.com/questions/255891/problem-installing-postgresql-12-1-win8-1-the-database-cluster-initialisation), pa ga isključi ili daj puna dopuštenja instalacijskom programu (Pokreni kao Administrator). Ako ti to ne pomogne, pronašao sam i [ovo](https://postgresrocks.enterprisedb.com/t5/PostgreSQL/Installing-PostgreSQL-12-on-Windows-fails-when-initialising-the/td-p/4511), pa vidi ako ti to što može pomoći.\n\nOsobno sam isto instalirao postgre na Windowsima 10, ali se sjećam da sam ga odmah pokrenuo kao administrator, i nije bilo nikakvih problema, tako da će ti ova prva metoda vjerojatno pomoći.",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1089": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@micho#1084 Mislim da sam sve ovo vec isprobao ali nisam siguran. U svakom slucaju sutra pokusam ponovo pa napisem ako uspije. Hvala🙂",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "1295": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@KingGeedorah#855\n\nKod mene je uzrok tom erroru bio što je bila uključena ova opcija:\n\n![](assets/2020-03-20/00012.png)\n\nDa budemo jasni, ja sam to sam uključio nakon što sam instalirao Windowse, ne vidim da bi ikome to po defaultu bilo uključeno.\n\nOpcija se nalazi u Control Panel > (Clock and Region) > Region > Administrative > Change system locale...",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6177": {
+      "poster": "Urmum (mamaRu)",
+      "content": "Zna netko kojeg datuma bi se trebao odrzati MI?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "6187": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@Urmum#6177 Meduispiti ce se odrzavati samo jedan tjedan posto ih iz vecine predmeta nece biti, od 20.4.-24.4., a tocnog rasporeda po danima jos nema.",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "Mike (Klaud Konzultanta)",
+          "Urmum (mamaRu)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8574": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Isplati li se učiti ovu normalizaciju? Nijedan zadatak ne uspijem privest kraju jer uvijek zaboravim neki k....",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8599": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@AnamarijaM#6187 \n\nod kud ta info da se medjuispit mora odrzat u tom tjednu? \n\nzar nije sluzbena obavijest da nema medjuispita a da se ta \"online provjera\" može održati kad god?😰",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8602": {
+      "poster": "Fortius",
+      "content": "@AK10#8599 iskreno me nebi cudilo da tri dana prije meduisita kazu da je tad i tad i ujutro taj dan kazu pravila. Tak da ono sve je moguce",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "Ardura (Maddy)",
+          "BlackMamba",
+          "Gulbash",
+          "JeleeII",
+          "JoKing",
+          "__builtin_popcount (std::popcount)",
+          "gladiator",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8776": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@AK10#8599 Ovo je bila rekla prof iz sisa prije ove službene obavijesti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8786": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@AnamarijaM#8776 Ja se sjećam da je rekla da do 20. ili 24., jer nije znala napamet, profesori moraju objaviti korekciju komponenti bodovanja predmeta, a ne da se u to vrijeme pišu online provjere.\n\nDanas je za Višemedijske usluge najavljena provjera 30.4., mislim da je to prva službena najava online provjere iz nekog predmeta, tako da će vjerojatno biti raspoređene u ova 2 tjedna kad bi imali međuispite.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8979": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "> @Mike#8786 mislim da je to prva službena najava online provjere iz nekog predmeta\n\nJoš je 3. 4. došla obavijest da će MI iz UTR-a biti na Moodleu 24. 4.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9414": {
+      "poster": "Fortius",
+      "content": "ako niste vidjeli stavljeno je u kalendar da je 27.4. MI",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Galke",
+          "Gulbash"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14050": {
+      "poster": "koode7",
+      "content": "jel ulazi u ovaj međuispit gradivo iz 10. predavanja integritet baze podataka?",
+      "votes": {
+        "upvoters": [
+          "Fortius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14055": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@koode7#14050 S teams-a: obuhvaćat će teme do uključivo fizičke organizacije podataka (predavanja 1-9 i svi prateći materijali).",
+      "votes": {
+        "upvoters": [
+          "Rope (Rops)",
+          "[deleted]",
+          "koode7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14525": {
+      "poster": "kavastoplim (kavustoplim)",
+      "content": "Jel ima jos netko da od labosa do neki dan nije mogao pisati u timu baze podataka na MSTeamsu, nit reagirat na objave i sl. ? Jel postoji neki razlog za to ili je u pitanju 'opterećenje' teamsa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14539": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@kavastoplim#14525 \n\njesu te unmutali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14582": {
+      "poster": "kavastoplim (kavustoplim)",
+      "content": "@AK10#14539 \n\nda, al nije mi jasno zas bi me muteali uopce kad nikad nisam nis pisala, cak ni za vrijeme labosa, dok su neki drugi mogli pisati prakticki cijelo vrijeme. U biti me zanima jesu li me stvarno profesori muteali il je moguce da je to bila greska unutar teamsa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14595": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Zašto se ne može koristiti za ovaj [code=sql]SELECT * FROM stud\n  WHERE ime = 'Ivan'[/code]\n>!![](assets/2020-04-26/00019.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "14598": {
+      "poster": "Lenobius",
+      "content": "@BrkMateaBeusana#14595 Jer si B-stablo izgradio nad atributima (prez, ime). To znači da kad će se uspoređivati vrijednosti, prvo će se poredati po prezimenu, tek unutar toga po imenu, dakle prvenstveno možeš tražiti po prezimenu, tek unutar svakog prezimena po imenu, kao kod ORDER BY kad jedan atribut staviš poslije drugog.",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19008": {
+      "poster": "Fortius",
+      "content": "Zna li itko kad kažu ER modeliranje za labos sljedeći tjedan, jel to cijelo ER modeliranje od prošlog tjedna i ovog? A što je onda ocjenjivanje ER modela?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19052": {
+      "poster": "zplusplus (gasaf)",
+      "content": "@Fortius#19008  kad je najavljen taj labos? i gdje? ja ništa ne vidim",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Galke",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "19066": {
+      "poster": "Fortius",
+      "content": "@zplusplus#19052 Imaš u kalendaru i imaš na onom njihovom novom planu nastave. U biti sljedeći ponedjeljak",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "20135": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Jesu li kome upisani bodovi iz 1. labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "20144": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Fortius#19066\n\nUpdate: U obavijesti o 3. zadaći piše i da je labos pomaknut na srijedu, 13. svibnja.",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "20164": {
+      "poster": "Fortius",
+      "content": "@BrkMateaBeusana#20135 meni nisu ni iz cega upisani",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "steker",
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21047": {
+      "poster": "markoFer",
+      "content": "Ostavio ovaj predmet za rok i tek sad vidim da je uvjet 2 boda iz dza, naravno da prve dvije nisam predao😂\n\nDa li je nemoguća misija sad uzet 2/2 iz zadnje dvije\n\nIma li nekog da je voljan zaradit , teška su vremena",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Goliathus"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Gulbash",
+          "Mioch",
+          "Sans"
+        ]
+      }
+    },
+    "21103": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "Stigli su rezultati na intranet.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "BrkMateaBeusana (Umarell)",
+          "Gulbash"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21106": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "40% gang....moram priznat bolje nego sto sam ocekivo",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "Pranjo (Pranjo_Suđman)",
+          "ThiccDicc (Impostor)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Pranjo (Pranjo_Suđman)"
+        ]
+      }
+    },
+    "21111": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "@SonGoku#21106 Također, ja sam 50%, a očekivo sam max 30.\n\nPS. Koliko su nosili pojedini zadatci?",
+      "votes": {
+        "upvoters": [
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21112": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "@BrkMateaBeusana#21111 \n\nuploadan je MI na ferweb, tamo su i bodovi\n\njesu one zadatke s 0 bodova baš napisali eksplicitno 0 ili je prazno polje? u 4. zadatku imam prazno polje",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21118": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "@tata#21112 Meni je prazno polje u 6. to je bio onaj zadatak s opisivanjem relacijske algebre gdje je bio except",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21129": {
+      "poster": "[deleted]",
+      "content": "jel ima neko da mu je ispravlja hlupic?",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "mesojed (sofronijevicevPrst)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21140": {
+      "poster": "Cubi",
+      "content": "@FERella#21129 Imam ja. I skidao mi je bodove na zadatke koje je edgar označio kao točne, a ni na drugima nije štedio čini mi se pa me ne bi čudilo da zato pitaš.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "mesojed (sofronijevicevPrst)",
+          "potemkin (meriMerino)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21145": {
+      "poster": "[deleted]",
+      "content": "@Cubi#21140 i meni se cini da san malo bodova dobila, postoji neki prof. Nikica Hlupic koji ne predaje baze. Ne postoji niti neki asistent prezimena Hlupic koji bi nam moga ispravit. Nekuzim.",
+      "votes": {
+        "upvoters": [
+          "Cubi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21146": {
+      "poster": "Cubi",
+      "content": "@FERella#21145 A valjda će biti pošteni i omogućiti nam uvide i žalbe. Baš nema smisla ovako.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21148": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "> @FERella#21145 Ne postoji niti neki asistent prezimena Hlupic koji bi nam moga ispravit.\n\nNe bi bio prvi put da postoje asistenti koji nisu navedeni na stranici predmeta, koji djeluju iz sjena.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21151": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@FERella#21145 \n\n![](assets/2020-05-08/00040.jpeg)\n\nBit će da je ovaj",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21162": {
+      "poster": "[deleted]",
+      "content": "jel jos ima ko da mu je ispravlja hlupic a da se osjeca zakinut?",
+      "votes": {
+        "upvoters": [
+          "Darla",
+          "alp (monte)",
+          "mesojed (sofronijevicevPrst)",
+          "potemkin (meriMerino)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21166": {
+      "poster": "Rene",
+      "content": "Gdje mogu vidit bodove po zadatcima? Vidim samo koliko sam ukupno imao",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21168": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@Rene#21166 Nastavne aktivnosti -> Provjera znanja -> Prvi ispit (Međuispit), tab bodovi",
+      "votes": {
+        "upvoters": [
+          "Rene",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21187": {
+      "poster": "alp (monte)",
+      "content": "@FERella#21162  takoder",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21208": {
+      "poster": "Suki7",
+      "content": "@Cubi#21140 +1",
+      "votes": {
+        "upvoters": [
+          "Cubi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21216": {
+      "poster": "Suki7",
+      "content": "@FERella#21162 Poslat svi mail da nam neko drugi pogleda ispit?\n\nPa im mozda bude jasno da je covik sve sjeba hahahahaha\n\nJer na uvidima ce nam dat bodove da...",
+      "votes": {
+        "upvoters": [
+          "Darla",
+          "Stoja_9 (Bije_san_u_autobusu)",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21217": {
+      "poster": "gladiator",
+      "content": "@Rene#21166 https://www.fer.unizg.hr/_download/repository/MI2019_20_objava.pdf ima tu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21224": {
+      "poster": "Mulder",
+      "content": "@Suki7#21216 a valjalo bi pitat da svim studentima kojima je on ispravljao ispit opet pogleda netko drugo s predmeta jel ima prevelikog odstupnja, osobno mislim da sam mogao dobit koji bod ali opet nez koliko je drukčiji kod tog čovjeka kriterij ako je vanjski suradnik ili ne. sumnjam da će nam pretjerano izać u susret doduše, al dalo bi se probat",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "Darla",
+          "Suki7",
+          "[deleted]",
+          "mesojed (sofronijevicevPrst)",
+          "potemkin (meriMerino)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21229": {
+      "poster": "Suki7",
+      "content": "@Mulder#21224 Ma ne ocekujem nista puno, al da nas toliko guze svaki put i onda me jos taj lik nade zajebavat... Ne hvala",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Mulder",
+          "Stoja_9 (Bije_san_u_autobusu)",
+          "[deleted]",
+          "mesojed (sofronijevicevPrst)",
+          "potemkin (meriMerino)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21234": {
+      "poster": "potemkin (meriMerino)",
+      "content": "@FERella#21162 same here",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21236": {
+      "poster": "Sicsile",
+      "content": "Je li ovaj redoslijed bodovanja zadataka odgovara redoslijedu na edgaru ili\n\n![](assets/2020-05-08/00048.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21238": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@Sicsile#21236 Koliko sam shvatila iz obavijesit, ako ti je ispravljala Baranović onda odgovara ispitu na fer webu, a za sve ostale odgovara redoslijedu na edgaru.",
+      "votes": {
+        "upvoters": [
+          "Sicsile",
+          "Suki7",
+          "potemkin (meriMerino)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21378": {
+      "poster": "lup",
+      "content": "kakvo je bodovanje za rok? uopce ne pise ni na prezi ni na stranici predmeta",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21380": {
+      "poster": "alp (monte)",
+      "content": "@Mulder#21224  Je li netko vec poslao mail?",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21415": {
+      "poster": "Vonj",
+      "content": "@lup#21378 Rekao bih 50 ispit / 20 usmeni, ako je suditi po ispitima od proslih godina.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21416": {
+      "poster": "lup",
+      "content": "@Vonj#21415 znaci uvazavaju se bodovi iz labosa i zadaca? pise da postoji prag ali ne pise jel se priznaju bodovi lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21417": {
+      "poster": "Vonj",
+      "content": "@lup#21416 Nagađam, al rekao bih da da.\n\nEdit: posto labosi + zadace nose 35 bodova, mozd bude drugi raspored bodova na zavrsnom, al sumnjam da ce iskljuciti labose iz bodovanja.",
+      "votes": {
+        "upvoters": [
+          "lup"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21436": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "tfw ni ne znas da na roku postoji usmeni dok ne procitas na forumu, lijepo :)",
+      "votes": {
+        "upvoters": [
+          "JoKing",
+          "__builtin_popcount (std::popcount)",
+          "jobi (azex)",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "gladiator"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Gulbash",
+          "JoKing",
+          "MiqeloS",
+          "Pranjo (Pranjo_Suđman)",
+          "SonGoku (~~~~~~~~)",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "boban_rajovic (ravindrababu ravula)",
+          "djeno",
+          "jobi (azex)",
+          "lup",
+          "mini (Earthling)",
+          "snowman"
+        ]
+      }
+    },
+    "21465": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "@KingGeedorah#21436  Što je najjače, nisu ga uopće spomenuli na uvodnom predavanju, barem Pintar nije",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)",
+          "MiqeloS",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21572": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "Ne računajte da vam se broje zadaće i labosi u rok jer do sad je bilo:\n- 50 bodova pismeni (50% prag)\n- 50 bodova usmeni (nema praga)\n\nPredmet je izmijenjen da ima više labosa ali sama struktura labosa se nije promijenila, kao ni sadržaj, tako da nema opravdanja zašto bi se mijenjala struktura bodovanja na roku, koji nema veze s kontinuiranim načinom polaganja.",
+      "votes": {
+        "upvoters": [
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "KingGeedorah (King Geedorah)",
+          "lup",
+          "swish41 (PlavušaSFilozofskog)"
+        ]
+      }
+    },
+    "21827": {
+      "poster": "Gocc (***)",
+      "content": "je li netko riješio ovaj zadatak na način kako je i u spitu 2012. jer ispada drugačije \n\n![](assets/2020-05-10/00007.png)\n\novo je iz 2012:\n\n![](assets/2020-05-10/00008.png)\n\nako mi netko moze objasniti zasto se dubina racuna drugacije u ova dva slucaja?",
+      "votes": {
+        "upvoters": [
+          "MT09 (mt09)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21833": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@Gocc#21827 na prvu bih rekao da je ovo iz 2012. krivo rješenje\n\nno nisam siguran",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21836": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "@Gocc#21827 \n\nImas na prezentacijama s predmeta urađene takve zadatke, msm da je prez iz fiz organizacija podataka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21851": {
+      "poster": "Gocc (***)",
+      "content": "@Michael#21836 ma znam to sve i razumijem kako se takvi zadaci rade nego po deficiniji dubine bi trebalo biti tocno iz 2012. pa me zanima kako ostali tu dubinu racunaju \n\n@iNavy#21833",
+      "votes": {
+        "upvoters": [
+          "MT09 (mt09)",
+          "Mikki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21882": {
+      "poster": "Michael (Michael Scarn)",
+      "content": "@Gocc#21851 \n\nJa racunam kao na onoj prvoj slici s dubinom 6",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "iNavy (mornar Ica)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21933": {
+      "poster": "Mikki",
+      "content": "@Gocc#21851 Isti problem imam, mozes se na uvidima žaliti na to i pozvati se na to da su u vlastitoj prezentaciji definirali dubinu tako kako se koristilo u 2012. i na sam ispit iz 2012. Dodatno, možeš za potkrijepljenje svoga i zašto je više u skladu s definicijom od njihovog uzeti primjer kada imaš samo jedan čvor, tada je on ujedno i root i leaf, a ne mogu tvrditi da je duljina puta između tog roota i leafa bilo što drugo osim nule i po definiciji koju su oni uveli je to onda stablo dubine nula. Također, koliko vidim od breaf pregleda na internetu, većinom se uzima dubina kao max put, znači broj razina = dubina + 1",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "Gulbash",
+          "MT09 (mt09)",
+          "Suki7",
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "21987": {
+      "poster": "Vonj",
+      "content": "Gledao sam sada i zadatke koji su na prezi iz predavanja i ZZV, nema uopce zadataka zadanih s dubinom, a mislim da se jednostavno mozemo pozvati na to da su u prezi stavili da je dubina stabla najveća duljina puta od korijena do stabla.\n\n@Gocc",
+      "votes": {
+        "upvoters": [
+          "Gocc (***)",
+          "MT09 (mt09)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22101": {
+      "poster": "Gocc (***)",
+      "content": "@Mikki#21933 \n\n@Vonj#21987 \n\nDoslovno svugdje gdje sam gledala se tako računa dubina i odma sam poslala mail kad su stigla rješenja jer me pobunilo njihovo rješenje i dobila ovaj odgovor:\n\nne znam gdje ste našli taj zadatak kojeg spominjete. Pregledala sam sve ispite koje smo objavili na stranicama predmeta i nisam ga našla.\n\nTaj zadatak ima krivo rješenje.\n\nU predavanju 9. Fizička organizacija podataka, na stranicama 27. i 28. (zadatci 3. i 4.) i da ste njih proučili, znali biste ispravno riješiti zadatak.\n\nNa ispitu ste mogli imati sve materijale, uključujući i materijale s predavanja.",
+      "votes": {
+        "upvoters": [
+          "MT09 (mt09)",
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22104": {
+      "poster": "MT09 (mt09)",
+      "content": "@Gocc#22101 Na tom slajdu piše \"stablo s ukupno 5 razina\". To uopće nije isto što i dubina stabla. Tko ti je to odgovorio? Ja sam isto tako riješio i dobio sam 0.5/2 bodova. Mislim da su nam bodovi stvarno neutemeljeno uzeti... 🙄",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22106": {
+      "poster": "Fortius",
+      "content": "tbh malo je to gradivo oko stabla i ti tipovi zadataka loše objašnjeno. Ja još uvijek ne kužim to baš previše. Mislim da su trebali više primjera staviti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22111": {
+      "poster": "Gocc (***)",
+      "content": "@MT09#22104 pa ispadne ko da nikad vidila prezentaciju i te zadatke... Baranović",
+      "votes": {
+        "upvoters": [
+          "MT09 (mt09)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "MT09 (mt09)",
+          "Suki7"
+        ]
+      }
+    },
+    "22167": {
+      "poster": "koode7",
+      "content": "koje gradivo obuhvaca naredni labos?",
+      "votes": {
+        "upvoters": [
+          "mesojed (sofronijevicevPrst)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22214": {
+      "poster": "Vonj",
+      "content": "@Gocc#22111 Zalosno je to sto je upravo prof Baranovic odrzala to predavanje i ni u jednom dijelu predavanja se nije pokazala veza dubina-broj razina, a dobili smo ovaj predivan odgovor.",
+      "votes": {
+        "upvoters": [
+          "MT09 (mt09)",
+          "Suki7",
+          "bb8 (zaza)",
+          "mesojed (sofronijevicevPrst)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "MT09 (mt09)"
+        ]
+      }
+    },
+    "22224": {
+      "poster": "Vonj",
+      "content": "@Vonj#22214 EDIT: nasao sam jedan ispit iz ASP-a i tamo je razina = dubina, ali razlika je u tome sto je dubina na ASP-u definirina kao max razina cvora, a vamo je na prezentaciji stavljeno da je dubina duljina najveceg puta od korijena do cvora.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22314": {
+      "poster": "Bica",
+      "content": "Moze pomoc oko ovog primjera? Zasto u ovom slucaju za alternativni kljuc nije potreban unique? Hvala 😀 \n\n![](assets/2020-05-10/00047.jpeg)",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22350": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@Bica#22314 rekao bih da je zato što je strani ključ, a u drugoj relaciji je on PRIMARY KEY čime mora biti unikatan",
+      "votes": {
+        "upvoters": [
+          "Bica",
+          "Suki7",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22366": {
+      "poster": "AK10 (endyyyy)",
+      "content": "Upravo mi je na uvidu profesorica rekla da će završni ispit bez obzira na epidemiološku situaciju **vjerojatno** biti online.  8.6.2020.\n\n Kao dok se pisalo na papiru svi su se žalili zašto se piše na papiru pa su to promijenili i misle da ja ovako najbolje. Vraćanja po pitanjima neće biti i dalje.",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "Fortius",
+          "Gulbash",
+          "[deleted]",
+          "gladiator",
+          "iNavy (mornar Ica)",
+          "indythedog",
+          "laranotreallycroft",
+          "moose (sugar BoOo!!)",
+          "steve (Mr_mr)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Filemon",
+          "__builtin_popcount (std::popcount)",
+          "gladiator",
+          "lup",
+          "moose (sugar BoOo!!)",
+          "seni (ina)",
+          "turunturu (Cement)"
+        ],
+        "tuga": [
+          "Gulbash",
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "Lusy (MGJ)",
+          "MiqeloS",
+          "Sans",
+          "Tinx (pingvin)",
+          "dora (AE)",
+          "iNavy (mornar Ica)",
+          "potemkin (meriMerino)"
+        ]
+      }
+    },
+    "22371": {
+      "poster": "gladiator",
+      "content": "@AK10#22366\n\n ![](assets/2020-05-11/00012.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22373": {
+      "poster": "Sulejman",
+      "content": "Jel se isplati ić na uvide kod Hlupića?\n\nMsm ak neće dat bodove onda mi se neda trošit vrijeme",
+      "votes": {
+        "upvoters": [
+          "Darla"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22377": {
+      "poster": "niknik",
+      "content": "@AK10#22366 Znaci nece bit 2 tjedna bez icega nakon sto 1.6. zavrse predavanja kako je u kalendaru akademske godine?",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "JoKing",
+          "MiqeloS"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "JoKing",
+          "SonGoku (~~~~~~~~)"
+        ]
+      }
+    },
+    "22378": {
+      "poster": "Suki7",
+      "content": "@Sulejman#22373 Znam za jednu da je dobila bod i rekla je da je bio jako drag i da se isrpicao sto je bio prestrog\n\nSo why not",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "Stoja_9 (Bije_san_u_autobusu)",
+          "Sulejman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22389": {
+      "poster": "mesojed (sofronijevicevPrst)",
+      "content": "@Suki7#22378 ja vjerujem da sam zakinut za najmanje 6 bodova tako da se stvarno nadam da je drag i susretljiv haha",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22394": {
+      "poster": "Suki7",
+      "content": "@Gocc#22101 \n\n![](assets/2020-05-11/00015.png)\n\n\nI ovo pise na prvoj prezentaciji iz ER modela",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22396": {
+      "poster": "Sicsile",
+      "content": "Jel dobio netko bodove na dubini stabla?",
+      "votes": {
+        "upvoters": [
+          "MT09 (mt09)",
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22398": {
+      "poster": "Cubi",
+      "content": "@Sulejman#22373 Isplati. Rekao je da je prestrogo ocjenjivao jer radi inače s bazama pa vidi edge caseve i sve, al kako su ostali profesori ocjenjivali ne tako strogo, da će biti susretljiv. Neće oduzimati bodove ako je edgar označio da je točno npr. A i može mu se previd omaknuti. Skroz je drag lik i može se s njim pričati. Tako da, def pričekaj.",
+      "votes": {
+        "upvoters": [
+          "Sulejman",
+          "haworthia (bulrog)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22400": {
+      "poster": "Mikki",
+      "content": "@Sicsile#22396 Ja, napisala sam ovo gore @Mikki#21933  ali joj se onda nije svidjelo sta nisam napisala da je 0. razina korijen stabla  pa mi je jos pola boda skinula lol, tako da previse zivaca za minimalni ucinak",
+      "votes": {
+        "upvoters": [
+          "Sicsile",
+          "Suki7",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22402": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@niknik#22377 \n\nnece izgleda. rekla je jedino ako bude moglo se u ucionice onda ce bit vracanja po pitanjima jer ce asistenti kontrolirati sve to.. \n\nmislim po meni nema smisla ako je 2 tjedna za pripremu za zavrsne ne znam zasto ubacuju taj zavrsni i ako se mogne pisati u ucionicama (koliko znam stozer je omogucio skupljanje do 40 ljudi) ne znam sto ne. \n\nMislim mene ovo ne-vracanje ubija mozda nekom pase 😅tako da sam zato da poduzmemo nesto ako se moze ista poduzeti.",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "JeleeII",
+          "JoKing",
+          "Lusy (MGJ)",
+          "Njet",
+          "__builtin_popcount (std::popcount)",
+          "haworthia (bulrog)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22404": {
+      "poster": "niknik",
+      "content": "Definitivno se moramo nekako izborit za ova 2 tjedna nakon što završe predavanja jer je to jedini način da stignemo naučiti za završne ispite sve kaj smo zamislili i da si svatko organizira to vrijeme da mu ispiti prođu najbolje kaj mogu. Stvarno ne vidim gdje je problem u ta 2 tjedna koja nismo imali jer su se predavanja nastavila, a na isto bi došlo i da je bila pauza s predavanjima tad i da sad imamo 2 tjedna bez kolokvija.",
+      "votes": {
+        "upvoters": [
+          "5ani (5af)",
+          "AK10 (endyyyy)",
+          "Darla",
+          "Gulbash",
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "JoKing",
+          "MiqeloS",
+          "Suki7",
+          "Tinx (pingvin)",
+          "bb8 (zaza)",
+          "haworthia (bulrog)",
+          "indythedog",
+          "mesojed (sofronijevicevPrst)",
+          "seni (ina)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22407": {
+      "poster": "Suki7",
+      "content": "> @mesojed#22389 ja vjerujem da sam zakinut za najmanje 6 bodova tako da se stvarno nadam da je drag i susretljiv hah\n\ntakoder, pa ce mi dati max 3 boda hahahhaah \n\nzuria je jer ih 20 ceka na uvide pa ne znamo na kraju bice ni on ni ja koliko bodova cu dobiti hahahaa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22411": {
+      "poster": "Cubi",
+      "content": "Šta mislite da im predložimo da umjesto onog kanala s obavijestima, svi se priključimo na isti poziv i samo profesori mogu pričati. I kad bude obavijest da fino samo kažu u mikrofon i svi će čuti. Valjda svi imaju slušalice ili zvučnik. Ali da bude u njima tišina za vrijeme ispita osim ako imaju neku obavijest. Može biti i više poziva jer nas je puno npr jedan profesor na sto ljudi ili tako nešto. Čak nam mogu reći i neke ispravke ako budu kao što bi ulazili u učionice inače. Naravno, ako nisu implementirali u edgar neki sustav obavijesti.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Rogue (Fidel Catto)"
+        ],
+        "tuga": []
+      }
+    },
+    "22414": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@niknik#22404 \n\nMislim ako je u sluzbenom kalendaru upisano da ta 2 tjedna nema završnih ispita nit ičega bilo bi lijepo da bude tako. I ako se može u učionicu isto bi bilo lijepo da se ide u učionicu pa na čemu god se pisalo. Naravno ako se ostali studenti slažu s tim.. :)",
+      "votes": {
+        "upvoters": [
+          "AnamarijaM (MA)",
+          "[deleted]",
+          "bb8 (zaza)",
+          "haworthia (bulrog)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22418": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "@Cubi#22411 \n\nU teams poziv ne stane toliko studenta, a i da stane, opet ne bi bilo dobro jer bi samo jos vise internet se preopteretio.",
+      "votes": {
+        "upvoters": [
+          "Gulbash"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "AK10 (endyyyy)"
+        ]
+      }
+    },
+    "22425": {
+      "poster": "MT09 (mt09)",
+      "content": "@Sicsile#22396 meni je na uvidima rečeno da su shvatili da je pogreška njihova, tj. da nije dobro objašnjeno i da će mi dati bodove. Mislim da onda to vrijedi za svih...",
+      "votes": {
+        "upvoters": [
+          "Mikki",
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22481": {
+      "poster": "JoKing",
+      "content": "> @AK10#22402  Mislim mene ovo ne-vracanje ubija mozda nekom pase 😅tako da sam zato da poduzmemo nesto ako se moze ista poduzeti.\n \nOdUsTaNiTe KoNaČnO oD pRiGoVaRaNjA nA nEmOgUćNoSt VrAćAnJa Na PrEtHoDnE zAdAtKe. KaD sE s TiM pOmIrItE bIt Će VaM lAkŠe.",
+      "votes": {
+        "upvoters": [
+          "SonGoku (~~~~~~~~)",
+          "potemkin (meriMerino)"
+        ],
+        "downvoters": [
+          "steve (Mr_mr)"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "Filemon",
+          "JeleeII",
+          "MiqeloS",
+          "Suki7",
+          "iNavy (mornar Ica)",
+          "kavastoplim (kavustoplim)",
+          "neksi (filip)",
+          "tata (NISAM ASISTENT)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22483": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Nije valjda labos u 8 ujutro?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "mesojed (sofronijevicevPrst)"
+        ]
+      }
+    },
+    "22485": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@BrkMateaBeusana#22483 Je, srijeda 8-10 ujutro.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "BrkMateaBeusana (Umarell)",
+          "HARAmara (decko_sa_balkana)",
+          "MT09 (mt09)",
+          "Suki7",
+          "iNavy (mornar Ica)",
+          "snowman"
+        ]
+      }
+    },
+    "22489": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "A u k****. Ajme meni, ko će se dizat u 8 pravit ER model",
+      "votes": {
+        "upvoters": [
+          "AnamarijaM (MA)",
+          "Cls2211",
+          "MiqeloS",
+          "SonGoku (~~~~~~~~)",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "gladiator",
+          "kavastoplim (kavustoplim)",
+          "moose (sugar BoOo!!)",
+          "neksi (filip)",
+          "ppooww (pp)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22496": {
+      "poster": "Sicsile",
+      "content": "što je autorefleksivna veza?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22511": {
+      "poster": "Cubi",
+      "content": "@tata#22418 Kako ne stane? Iz OS-a imamo konzultacije s videom gdje 250 ljudi sluša. A napraviti 5 poziva sa 100 ljudi valjda ne bi trebalo biti zahtjevno uopće za internet. Ali okay. Bolje ovako da gledamo obavijesti svako malo",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22557": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "Jel nije možda bolje da taj završni bude 8.6. da se rasterete ona dva tjedna službenih završnih? Ne bih imao ništa protiv razvlačenja završnih na 4 tjedna da nije tako stisnuto, ali onda se moraju iskoordinirati među predmetima da nebi opet bilo sve u jedan-dva tjedna ako i drugi nositelji dobiju takvu ideju, pogotovo odmah nakon završetka nastave.",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "JeleeII",
+          "aaa8 (Gerti)",
+          "laranotreallycroft",
+          "seni (ina)",
+          "snowman",
+          "steker"
+        ],
+        "downvoters": [
+          "MiqeloS"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22560": {
+      "poster": "koode7",
+      "content": "nego, koje gradivo da učim za srijedu? jesu rekli sta na konzultacijama/predavanjima/uvidima/vorever?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22566": {
+      "poster": "ppooww (pp)",
+      "content": "@koode7#22560 [Predavanja 10.1, 11.1, 11.2, 12.1, 13.1](https://www.youtube.com/playlist?list=PLRFTXn5ZdqaPNWiuNLdMW44b2e5szpePr)",
+      "votes": {
+        "upvoters": [
+          "koode7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22567": {
+      "poster": "Sicsile",
+      "content": "zna netko zasto mi se ovo dogada\n\n![](assets/2020-05-11/00028.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22570": {
+      "poster": "gladiator",
+      "content": "@Sicsile#22567 Ovo sam i ja dobijao. Problem mi je bio u tome što jedan od entiteta nije imao postavljen primarni ključ.",
+      "votes": {
+        "upvoters": [
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22577": {
+      "poster": "aaa8 (Gerti)",
+      "content": "Smatram isto da bi bilo dobro da zavrsni bude 8.6.  al da tipa kazu ovaj tjedan da je SIGURNO tad. Realno bolje je, kao sto kolega Mike je rekao, vise nam se rasterete zavrsni, a i ako sad ga najave i ne naucis do 8.6. velika vjerojatnost je da neces naucit ni da je u tjednu zavrsnih ispita.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Cubi",
+          "JeleeII",
+          "Mike (Klaud Konzultanta)",
+          "niknik",
+          "ppooww (pp)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": [
+          "Rope (Rops)",
+          "boban_rajovic (ravindrababu ravula)",
+          "in1",
+          "mesojed (sofronijevicevPrst)",
+          "sheriffHorsey"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22585": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@aaa8#22577 \n\nmeni je više manje okej i taj datum ako bi se radilo u učionicama :)  :) :) :)",
+      "votes": {
+        "upvoters": [
+          "aaa8 (Gerti)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22586": {
+      "poster": "niknik",
+      "content": "@aaa8#22577 Da, mozda je ipak tako bolje. Samo da se ostali pisu u ona dva tjedna, jer bi se onda mogli dosta posvetit bazama.",
+      "votes": {
+        "upvoters": [
+          "aaa8 (Gerti)",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22587": {
+      "poster": "aaa8 (Gerti)",
+      "content": "@niknik#22586 \n\nOstalo bi trebalo bit u ona dva tjedna koliko sam shvatio",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22588": {
+      "poster": "sheriffHorsey",
+      "content": "@aaa8#22577 pretpostavljam da ne znas da su baze labos 1.6. i web labos 5.6., jos ak imas inzeko 1.6. ti je predaja eseja od 2000 rijeci, a poznavajuc organiziranost predmeta medusobno mogli bi ubacit jos neku komre zadacu/labos/samostalni rad jer zasto ne",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "JoKing",
+          "Kennedy",
+          "Lusy (MGJ)",
+          "MiqeloS",
+          "Rope (Rops)",
+          "Zk6dO73 (burw0r)",
+          "__builtin_popcount (std::popcount)",
+          "aaa8 (Gerti)",
+          "boban_rajovic (ravindrababu ravula)",
+          "boki8 (kerovac)",
+          "gladiator",
+          "in1",
+          "neksi (filip)",
+          "ppooww (pp)",
+          "ruza0001 (rozy)",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22600": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "koliko bi se naljutili profesori kad bi im predao kao zadaću njihov primjer na kojem podučavaju kako koristiti ERDPlus",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "HARAmara (decko_sa_balkana)",
+          "Rene",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "idontwannabemyself",
+          "laranotreallycroft",
+          "mariak (kaiak)",
+          "mesojed (sofronijevicevPrst)",
+          "steker",
+          "steve (Mr_mr)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon",
+          "Filemon",
+          "Jale (čakijale)",
+          "JeleeII",
+          "Mikki",
+          "__builtin_popcount (std::popcount)",
+          "dora (AE)",
+          "jobi (azex)",
+          "mesojed (sofronijevicevPrst)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "snowman",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22784": {
+      "poster": "Vasili (Fasili)",
+      "content": "Jel slao tko mail da provjeri \"službeno\" kakvo je bodovanje na roku, jer ne piše u uvodnoj prezentaciji ni u obavijestima  (ili ako nitko nije možete li barem napisati na koji mail to pitati, pa ja napišem šta odgovore)?",
+      "votes": {
+        "upvoters": [
+          "Gulbash",
+          "MiqeloS",
+          "jobi (azex)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22785": {
+      "poster": "Suki7",
+      "content": "@Vasili#22784 Prije ce ti odgovorit u teams u nekoj temi nego na bazpod.online@fer.hr",
+      "votes": {
+        "upvoters": [
+          "Vasili (Fasili)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22912": {
+      "poster": "Mikki",
+      "content": "Jedno pitanje vezano za integritetsko ogranicenje NOT NULL ako imamo spojnost 1 (1..1) na nekoj strani veze. Ima mi smisla da ukoliko za neki A mora postojati tocno 1 B, da onda bi foreign key u A koji referencira B ne moze biti NULL, ali koliko sam vidjela po nekim primjerima da se tog bas i ne drzi. Netko better insight?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23245": {
+      "poster": "Pranjo (Pranjo_Suđman)",
+      "content": "Jel ima prag iz labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23249": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "@Pranjo#23245 za kontinuirano ne, za ispit je min. 6 bodova",
+      "votes": {
+        "upvoters": [
+          "Pranjo (Pranjo_Suđman)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23250": {
+      "poster": "steker",
+      "content": "Jel na kraju ulaze bodovi iz labosa i zadaca kad idemo na rok ili samo usmeni i pismeni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23251": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@steker#23250 samo pismeni i usmeni",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23908": {
+      "poster": "[deleted]",
+      "content": "@Vasili#22784 slala sam ja prije 5 dana, nisam dobila odgovor..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23916": {
+      "poster": "Vasili (Fasili)",
+      "content": "@FERella#23908 \n\n![](assets/2020-05-13/00045.png)\n\nMoraš samo ostvariti prag od 6 bodova na labosu i 2 boda iz dz da možeš pristupiti ispitu, ali onda ti ništa od prije ne ulazi u ocijenu",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "lup"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24102": {
+      "poster": "psiho",
+      "content": "![](assets/2020-05-13/00065.png)\n\ndragi kolege, znamo sto nam je ciniti, bodovi iz baza resurrected",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24113": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Je li obvezna ova 3. DZ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24114": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@BrkMateaBeusana#24113 nije koliko znam, samo treba skupiti 50% (2 boda) da bi mogao pristupiti roku",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24153": {
+      "poster": "mihamih",
+      "content": "@psiho#24102 sigurno je ista shema kao na VjeKomu, ako sjebes ocjenjivanje i ne nades sve greske (odnosno stavis sve tocno) gubis bodove, its a trap",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "JeleeII"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24159": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@mihamih#24153 Naravno da je, ocjenjivat će tvoje ocjenjivanje s 5 bodova. Ovo je neki socijalni eksperiment.",
+      "votes": {
+        "upvoters": [
+          "Darla",
+          "Filemon",
+          "Fortius",
+          "JeleeII",
+          "Mioch",
+          "Njet",
+          "__builtin_popcount (std::popcount)",
+          "mariak (kaiak)",
+          "mesojed (sofronijevicevPrst)",
+          "mihamih",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24211": {
+      "poster": "MiqeloS",
+      "content": "Ne znam ima li istomišljenika, no dojma sam da ovo bodovanje na roku nije baš najprikladnije u novonastaloj situaciji.\n\nOsobno sam podosta zeznuo MI, jednostavno mi takav format pisanja u takvim uvjetima nije odgovarao, dosta vremena sam izgubio na to da se nisam znao vremenski organizirati i koje zadatke brže riješiti, koje sporije, uz sav taj stres se puno grešaka usput potkralo i jednostavno nisam postigao rezultate kojima sam se nadao.\n\nRazumijem zbog čega su napravili takvo bodovanje na roku, vjerojatno da bi kaznili one kampanjce te one koji su odlučili kao ostaviti predmet za rok i ne trude se proći ga kontinuirano, no u ovoj situaciji kad imamo sve online (predavanja, labosi, ispiti) mislim da se postiže baš kontra efekt.\n\nIako zasad imam gotovo sve bodove iz labosa i zadaća, to mi apsolutno ništa ne znači jer bih na završnom trebao imati +70% ispita za prolaz što s obzirom kako je protekao MI stvarno sumnjam da ću uspjeti, a to mi se uopće ne gleda za rok.\n\nSmatram da bi barem u ovoj situaciji mogli promjeniti način bodovanja te uzimati bodove iz labosa/zadaća na roku jer ako rok bude koncipiran na sličan način sumnjam da će za veliku većinu dobro proći.\n\nJel' možda netko sličnog mišljenja? Isplati li se slati mail?",
+      "votes": {
+        "upvoters": [
+          "steve (Mr_mr)"
+        ],
+        "downvoters": [
+          "jobi (azex)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24244": {
+      "poster": "[deleted]",
+      "content": "@MiqeloS#24211 nazalost ne isplati se slat nikakav mail jer bi ih to samo razbjesnilo, oni ce ti rec da su osigurali sve uvjete za kontinuirani prolaz, a i sam vidis da nema neke empatije u odnosu studenata i profesora.",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "AntonioB25 (Pleteni miš)",
+          "BigZ1",
+          "Gulbash",
+          "Hrvoje (Hrvoje45)",
+          "JoKing",
+          "Mioch",
+          "MiqeloS",
+          "Mulder",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "mesojed (sofronijevicevPrst)",
+          "ppooww (pp)",
+          "snowman",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24265": {
+      "poster": "Mulder",
+      "content": "@MiqeloS#24211 a mislim moš probat pristojno pitat na Teamsu oće li bit kakvog mijenjanja bodovanja ali sumnjam da će se išta po tom dogodit.\n\nzpr nam ga je odlučio metnuti online nastavom i metnuli su nam ga, možemo samo bit dobri da brže završe ili kmečat i puštat da nam ga i dalje meću\n\nLP",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "DankJakov (DnkCkv)",
+          "SonGoku (~~~~~~~~)",
+          "Vasili (Fasili)",
+          "[deleted]",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24336": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@MiqeloS#24211 Mislim da ti je samo benefit da ti je na roku bodovanje kakvo je. Razlog tome je što ti dođe na isto što se tiče pismenog (prag će ti biti kakav je), samo imaš šansu na usmenom dignuti ocjenu. Zapamti, na usmenom ne dobivaš bodove po nekoj statičkoj shemi, nego ih određuje profesor (čak i kod onih gdje imaš konkretne zadatke na papiriću) - samim time ti omjer bodova ne pomaže ništa ako ne prođeš predmet direkt na pismenom (za što bi ti u najgorem slučaju trebalo 100% s trenutnim sustavom ili 20/35 ako uzmemo da imaš svih 30 bodova iz labosa i priznaju ih 1:1) jer su bodovi jako subjektivni.\n\nDa ne govorim da ste se već toliko puta opekli slanjem tih mejlova, valjda ni ne shvaćate kako odašiljete vibru kao da mislite da profesori ne znaju što rade. U jednu ruku je to i opravdano s obzirom na viđeno, ali gotovo nitko ne voli konstante kritike na vlastiti rad, a nositelji ovog predmeta su to i dokazali svojim akcijama.\n\nWord of advice - ne šaljite mejlove žicajući nešto što nije za očekivati od profesora (kao promjena bodovanja). Ne radi se o tome da će vam se netko osvetiti, samo stvarate neugodnu Karen atmosferu.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Darla",
+          "Filemon",
+          "Galke",
+          "Hrvoje (Hrvoje45)",
+          "JeleeII",
+          "JoKing",
+          "Mikki",
+          "Rene",
+          "ThiccDicc (Impostor)",
+          "bb8 (zaza)",
+          "ink",
+          "jobi (azex)",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "24491": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "@MiqeloS#24211 S druge strane ima ljudi koji se jednostavno ne trude na konti i ne zele da im na roku masu bodova dodje iz konti, zato i jest rok rok jer nije konti pa bi dobra solucija bila uzeti opciju koja studentu ide u korist, ali sada vec mastamo",
+      "votes": {
+        "upvoters": [
+          "Darla",
+          "ThiccDicc (Impostor)",
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28654": {
+      "poster": "[deleted]",
+      "content": "završni ispit 8.6., danas dolazi obavijest\n\nispravak: obavijest upravo došla",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28664": {
+      "poster": "awi (đusi)",
+      "content": "Edgar all over again..... 🤢🤮",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28665": {
+      "poster": "steker",
+      "content": "jel to sad znaci da svi zavrsni pocinju od  8.6  a ne od 15 kako je predvideno u kalendaru za ak godinu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28667": {
+      "poster": "Rope (Rops)",
+      "content": "Di su ona dva tjedna koja smo trebali imat prije zavrsnih, ovo je bas lud zbunjen",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Daorson",
+          "HARAmara (decko_sa_balkana)",
+          "MiqeloS",
+          "awi (đusi)",
+          "ink",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28668": {
+      "poster": "[deleted]",
+      "content": "@steker#28665 ma brijem da su to samo baze posebne, kao da rasterete ZI",
+      "votes": {
+        "upvoters": [
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28673": {
+      "poster": "steker",
+      "content": "@miho#28668  nadam se da jesu, jer ostali predmeti naravno ispituju GRADIVO CIJELOG SEMESTRA na mrtvom kolokviju pa bi bilo bas fino da nam daju 2 dana izmedu svakog kolokvija da ponovimo hihi",
+      "votes": {
+        "upvoters": [
+          "awi (đusi)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28676": {
+      "poster": "awi (đusi)",
+      "content": "@miho#28668 bas su rasteretili... petak wim labos, pon baze, utorak utr rok za labos i naravno da ce nam utrpati jos neku glupost tipa inzeko",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Lusy (MGJ)",
+          "MiqeloS",
+          "ink",
+          "steker",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28681": {
+      "poster": "[deleted]",
+      "content": "@awi#28676 vjeruj mi nije ni meni svejedno... ali mislim da bi ipak bolje bilo ne imati 5 cijelosemestralnih ispita u 2 tjedna",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Filemon",
+          "Goliathus",
+          "Gulbash",
+          "WickyWinslow",
+          "bb8 (zaza)",
+          "ppooww (pp)",
+          "snowman",
+          "steve (Mr_mr)",
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28683": {
+      "poster": "[deleted]",
+      "content": "@miho#28681 situacija nikako nije dobra, ali je najbolja moguća (u realnosti)",
+      "votes": {
+        "upvoters": [
+          "WickyWinslow",
+          "bb8 (zaza)",
+          "gladiator",
+          "snowman",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28686": {
+      "poster": "awi (đusi)",
+      "content": "@miho#28681 pa da su nam dali 2 tjedna bez ikakvih labosa i rokova za predaju bilo bi donekle izvedivo. Ne znam zasto im je cilj sto prije zavrsiti sa svime, a nas tko pita. U zabludi da nam faks zavrsava 29.5. jer nismo imali međispita (a imali smo iz svega skoro). Bolje mi je da se lijepo dogovore kad pisemo i u kojem tjednu, a ne ovako da nam svako moze lupit ispit iz cijelog semestra kad njima odgovara.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "BrkMateaBeusana (Umarell)",
+          "Goliathus",
+          "HARAmara (decko_sa_balkana)",
+          "JoKing",
+          "Njet",
+          "Suki7",
+          "[deleted]",
+          "[deleted]",
+          "dinosaur (Ruasonid)",
+          "feudalac",
+          "maraska",
+          "mesojed (sofronijevicevPrst)",
+          "ppooww (pp)",
+          "steker",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "28729": {
+      "poster": "TamTam (foobar)",
+      "content": "@awi#28686 stavili su datum i prije nego su trebali. Imas i previse vremena za spremit ispit, a sve sto je taj tjedan osim WEBa mozes prije napravit",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "WickyWinslow"
+        ],
+        "downvoters": [
+          "Suki7"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29254": {
+      "poster": "nnn (dinoo)",
+      "content": "Gdje se mogu vidjeti bodovi iz prošlih labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29257": {
+      "poster": "Mulder",
+      "content": "@nnn#29254 edgar",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29258": {
+      "poster": "swish41 (PlavušaSFilozofskog)",
+      "content": "@nnn#29254 na edgaru možeš vidjeti 1., a drugi tek nakon peer reviewa dolaze bodovi",
+      "votes": {
+        "upvoters": [
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29307": {
+      "poster": "BrkMateaBeusana (Umarell)",
+      "content": "Je li za ovaj peer review treba ovih 5 uradaka od kolega usporedit s njihovim rješenjem ili kako?\n\nDakle vidjeti jesu li svi strani ključevi na mjestu itd.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29800": {
+      "poster": "Ardura (Maddy)",
+      "content": "Kad jednom otvorimo neciji labos na edgaru moramo li ga odmah pregledati do kraja ili mozemo ulaziti u njega vise puta?",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)",
+          "mesojed (sofronijevicevPrst)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29886": {
+      "poster": "Suki7",
+      "content": "@Ardura#29800 mozes vise puta",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "29930": {
+      "poster": "krle",
+      "content": "Je li ikome izbacilo \"Error finding attachement? See server logs...\" ili nesto slicno? \n\nPrva 4 su bila ok, na petom se ovo pojavilo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30218": {
+      "poster": "Dlaid (Peter Jordanson)",
+      "content": "Jel bi trebao biti jos jedan labos za 10 bodova?",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30254": {
+      "poster": "Suki7",
+      "content": "@Dlaid#30218 to je valjda u ponediljak ou jes\n\n ![](assets/2020-05-26/00025.png)",
+      "votes": {
+        "upvoters": [
+          "Dlaid (Peter Jordanson)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "AK10 (endyyyy)"
+        ],
+        "tuga": []
+      }
+    },
+    "30262": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@Suki7#30254  stvarno se nadam da će odgoditi kao i prošli put.  više nemam pojma kako stići sve 😬",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "[deleted]",
+          "ink",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Suki7"
+        ]
+      }
+    },
+    "30399": {
+      "poster": "snowman",
+      "content": "@AK10#30262 mislim da su procitali tvoj post i odlucili se za ponedjeljak",
+      "votes": {
+        "upvoters": [
+          "BrkMateaBeusana (Umarell)",
+          "Dlaid (Peter Jordanson)",
+          "MiqeloS",
+          "Suki7",
+          "WickyWinslow",
+          "mesojed (sofronijevicevPrst)",
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "BrkMateaBeusana (Umarell)",
+          "Filemon",
+          "RS7",
+          "Suki7",
+          "awi (đusi)",
+          "dora (AE)",
+          "iNavy (mornar Ica)",
+          "ruza0001 (rozy)",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30661": {
+      "poster": "zplusplus (gasaf)",
+      "content": "koje prezentacije ulaze u drugi ciklus?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "30676": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@zplusplus#30661 rekao bih integritet baze podataka (10. prezentacija)",
+      "votes": {
+        "upvoters": [
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31243": {
+      "poster": "Sicsile",
+      "content": "ulazi li optimiranje upita u labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31286": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@Sicsile#31243 ovime da 18. ne ulazi su mislili na to da je gradivo labosa sve do 18. (nadam se)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31287": {
+      "poster": "steve (Mr_mr)",
+      "content": "@Sicsile#31243 Ulazi",
+      "votes": {
+        "upvoters": [
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "31288": {
+      "poster": "JoKing",
+      "content": "@iNavy#31286 ![](assets/2020-05-28/00005.png)\n\nKolega imate kriva nadanja",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "AK10 (endyyyy)",
+          "Anonimity (BoJack)",
+          "RS7",
+          "Sicsile",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "iNavy (mornar Ica)",
+          "lucylu",
+          "steker"
+        ]
+      }
+    },
+    "32803": {
+      "poster": "Sicsile",
+      "content": "kako da se prebacim na korisnika bpadmin ako mi je trenutni korisnik postgres?\n\n![](assets/2020-05-30/00017.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "32835": {
+      "poster": "helenic",
+      "content": "@Sicsile#32803  Unutar pgadmin klikneš na \"PostgreSQL 12\", ili koju verziju imaš to bi trebalo biti ispod servera, klikneš na Object -> Disconnect server, disconnect, i onda ti se otvori polje u koje možes unijeti podatke za novog usera, u tvom slučaju bpadmin, i onda ponovno kliknes na servers, upises njegovu lozinku i eto te",
+      "votes": {
+        "upvoters": [
+          "Sicsile"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "34941": {
+      "poster": "Maja (promaja)",
+      "content": "Jel zna neko dal su ispravljene zadace, odnosno oni bodovi sto pisu na edgaru, jel to to? Zanima me radi praga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "35041": {
+      "poster": "MiqeloS",
+      "content": "> @Maja#34941 dal su ispravljene zadace\n\nHmm, ispravljene? Pa kak ti pišu bodovi tak bi i trebali biti, Edgar sam evaluira točnost rješenja, nemaju oni što ručno ispavljat.",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "35092": {
+      "poster": "Maja (promaja)",
+      "content": "@MiqeloS#35041 \n\npa 3. zadaca je bila upload rjesenja...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "35099": {
+      "poster": "lup",
+      "content": "@Maja#35092 svi su dobili bod za to",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Maja (promaja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "35840": {
+      "poster": "branimir1999",
+      "content": "Itko ima iskustva sa knjigom Roberta Mangera 'Baze Podataka'? Čini mi se da prati program koji mi imamo (vjerojatno jer je FERov udžbenik) te preferiram udžbenike preko prezentacija, ali ne želim gubiti vrijeme ako je totalni promašaj. Bilo kakve informacije su dobrodošle",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "35844": {
+      "poster": "nnn (dinoo)",
+      "content": "@branimir1999#35840 Mislim da ti se isplati pogledati prezentacije i shvatiti relativno gradivo o čemu se radi. Onda uzmeš završne od zadnjih 3-4 godine i nađeš sve zadatke istog tipa (npr uvijek ima x zadataka koji obuhvaćaju \"Optimiranje upita\"/\"Sigurnost baze podataka\" itd.). Gledaš prezentacije i uz pomoć riješenja pokušavaš shvatiti kako se to riješi. Riješiš sve zadatke koje obuhvaćaju gradivo istog tipa u tim ispitima. \n\nNakon tog pređeš na neku drugu skupinu zadataka. Većina tipova zadatka se ponavlja. Tako mi se čini najefikasnije učiti ovaj predmet.",
+      "votes": {
+        "upvoters": [
+          "Njet",
+          "branimir1999",
+          "lup",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "35847": {
+      "poster": "lup",
+      "content": "@branimir1999#35840 \n\nsto kaze @nnn#35844 , takoder sam ja prolazio ove zadatke za vjezbu jer idu od laksih prema tezim zadatcima i relativno su stvari dobro objasnjene",
+      "votes": {
+        "upvoters": [
+          "Gulbash",
+          "Njet",
+          "branimir1999",
+          "nnn (dinoo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36076": {
+      "poster": "spartanac555",
+      "content": "Ima li itko iskustva sa rokom, kakav je usmeni?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36077": {
+      "poster": "Anonimity (BoJack)",
+      "content": "@spartanac555#36076 probaj ne ici na rok, samo cu ti to rec.",
+      "votes": {
+        "upvoters": [
+          "Mike (Klaud Konzultanta)",
+          "mesojed (sofronijevicevPrst)",
+          "spartanac555"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "JoKing"
+        ]
+      }
+    },
+    "36078": {
+      "poster": "Anonimity (BoJack)",
+      "content": "jesu li svima upisani bodovi iz labosa na ferweb? meni pise na edgaru da sam dobila 100% bodova za 2. labos, a sumnjam da je to istina, pa me zato zanima",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36083": {
+      "poster": "zplusplus (gasaf)",
+      "content": "@Anonimity#36078 meni nije ništa upisano na ferweb osim bodova iz meduispita",
+      "votes": {
+        "upvoters": [
+          "AnamarijaM (MA)",
+          "Anonimity (BoJack)",
+          "JoKing",
+          "__builtin_popcount (std::popcount)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36248": {
+      "poster": "Jomi",
+      "content": "@Anonimity#36077 nije li onako pola ekipe sta polazu predmet ove godine dobila 0 bodova na meduispitu? nije bas neki koristan savjet.\n\nimas li ti actual iskustva sa rokom ili samo pricas pricu koju si cua od profesora?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36251": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@spartanac555#36076 Ovisi kog dobiješ. Bio sam na roku i pismeni je zapravo gatekeeper. Bilo je jednostavno previše toga, ako nisi naučio za 3 jednostavno nisi stigao napisati to što znaš za 50%. Usmeni ti može biti opušten, kao npr. meni kod Vrdoljaka, ali čuo sam od nekih drugih kolega da je napet, samo nisu baš elaborirali dalje od toga.\n\nOno što sam primijetio je ovo: trebalo mi je 19/50. Normalno da nisam znao sve - zato sam na roku, jer se ne trudim kad mi predmet za ono čime se želim baviti ne služi i jer mi ni ne ide, i ja sam ga inicijalno napisao tako da je otprilike 60-70% bilo točno (to što me se pitalo), ali mi se činilo kao da je profesor tražio više (donekle s nekim pravom, pitanja su bila puno lakša nego na ispitu). Al ono, lik, vidiš me na jesenskom roku, vidiš da sam spaljen. Ako već nisi održao normalni usmeni, gdje se razgovara, već takav da napišeš zadatke na papir pa ih ti samo pregledaš, onda ga tako i ocjenjuj.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "JeleeII",
+          "JoKing",
+          "Jomi",
+          "MiqeloS",
+          "Njet",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "spartanac555"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36329": {
+      "poster": "Kaladonter",
+      "content": "![](assets/2020-06-06/00053.png)\n\nZašto u ovom zadatku ova funkcija vraca NULL? Jel to zato što se događa nakon deletea pa ionako nema buduce naredbe na koje moze utjecati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36422": {
+      "poster": "[deleted]",
+      "content": "@Kaladonter#36329 upravo tako",
+      "votes": {
+        "upvoters": [
+          "Kaladonter"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36580": {
+      "poster": "tata (NISAM ASISTENT)",
+      "content": "wow edgar ima novo fancy sučelje za statistiku bodova",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "36768": {
+      "poster": "Anonimity (BoJack)",
+      "content": "@Jomi#36248 decko i par prijatelja su bili na roku, decko se ubio da dobije 50 % na ispitu jer nema vremena, od svih koje znam 2 su dosli do usmenog, na kraju su mog decka pitali doslovno zadatak koji se pojavio na jednom slajdu prezentacije i nikad vise. Ja osobno nisam izasla na taj rok, ali to su price iz druge ruke. Savjet: ako ides na rok uzmi dva tjedna, nauci sve, ni jedan slajd nije beskoristan, izdrilaj te sql-ove dok ne mozes savrseno simulirati studAdmin u glavi i tjt. Edit: najbolji je imao 70% na ispitu, i nisu mu dali da odgovara za 4.",
+      "votes": {
+        "upvoters": [
+          "Kasperinac"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "steker"
+        ]
+      }
+    },
+    "36897": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Anonimity#36768 Moraš naglasiti koji ispitivač, jer kod Vrdoljaka je bilo dosta ljudi koji su dobili sve bodove i stoga imali 4.",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37040": {
+      "poster": "Nocna_smjena",
+      "content": "@Anonimity#36768 mislim SQL ko jezik je veoma jednostavan i nema tu previše filozofije. Problem je u vremenu. Ja ponekad dobivam dojam kad vidim samu veličinu ispita da profesori koji se bave time 30-40 godina očekuju da ih nadmašimo u 3 mjeseca od prvog predavanja.",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "Cls2211",
+          "Hrvoje (Hrvoje45)",
+          "Lusy (MGJ)",
+          "MiqeloS",
+          "[deleted]",
+          "dinosaur (Ruasonid)",
+          "steker",
+          "zplusplus (gasaf)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37060": {
+      "poster": "AnamarijaM (MA)",
+      "content": "@Nocna_smjena#37040 Ja se nisam pretrgla od učenja, povadila sam zadatke sa starih ispita i vježbala po tome i riješila sam sve osim SQLa, s tim da mislim da sam sa sigurnošću bila sporija od očekivanog, tak da ne znam, mislim da je bila okej količina vremena.",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "BigZ1",
+          "JeleeII",
+          "Lyras",
+          "lup",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37062": {
+      "poster": "Nocna_smjena",
+      "content": "@AnamarijaM#37060 Ja nisam stigao napisat na onom ER zadatku sheme entiteta i veza (crtanje svega sam napravio ali b dio zadatka nisam). SQL jedva zagrebo iako sam radio do limita tokom cijelog ispita. Ostatak sam napravio. Neznam, možda je do mene ali ja volim još jedanput kad sve napišem proć kroz to. Ovako samo napiši i vozi dalje mi nema smisla.",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "HARAmara (decko_sa_balkana)",
+          "Lusy (MGJ)",
+          "Mike (Klaud Konzultanta)",
+          "MiqeloS",
+          "viliml"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37088": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@Nocna_smjena#37062 Isto kod mene, to provjeravanje je ovdje još potenciranije jer znaš da se ne možeš vraćati pa želiš biti siguran da ti je točno koliko točno može biti. Inače bih probao sve riješit, pa onda preletit i provjerit.",
+      "votes": {
+        "upvoters": [
+          "Anonimity (BoJack)",
+          "Gulbash",
+          "Lusy (MGJ)",
+          "Njet",
+          "Nocna_smjena",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37250": {
+      "poster": "Anonimity (BoJack)",
+      "content": "Da se mogu vratit na zadatak, znam da bi definitivno imala jos jedan zadatak rjesen (znaci sve osim jednog sql upita) jer sam se mucila s tim sql upitom kao kreten, na kraju mi je isteklo vrijeme.",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "37252": {
+      "poster": "Anonimity (BoJack)",
+      "content": "@Nocna_smjena#37040 definitivno istina. Ne, rokovi su nenormalni",
+      "votes": {
+        "upvoters": [
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38206": {
+      "poster": "Jomi",
+      "content": "@micho sicas li se kako je bia rasporeden usmeni, u smislu koliko je vremena proslo od pismenog kad te je poslalo na usmeni?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "38220": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Jomi#38206 Xexexexexe to je mim bio\n\nJednu grupu su sjebali tako da su im objavili rezultate i rekli usmeni je za sat vremena. Naravno većina nije ni stigla doć na to.\n\nU mojem slučaju je bilo 2 dana razmaka između rezultata i usmenog, nekima je bio sljedeći dan. Ne sjećam se koliko im je trebalo da isprave.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41742": {
+      "poster": "DankJakov (DnkCkv)",
+      "content": "Moze li netko preporucit neku solidnu knjigu, da nije preopsirna ali da sadrzi sve sto predmet trazi? Nisam fan prezentacija,a trebalo bi pocet za rok skoro ucit..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41877": {
+      "poster": "viliml",
+      "content": "@DankJakov#41742 ![](assets/2020-06-19/00013.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41894": {
+      "poster": "helenic",
+      "content": "@DankJakov#41742 \n\nPrezentacije su ti sasvim dovoljne za više nego dobro naučiti baze, a još imaš i online predavanja ako negdje zapneš, tako da ako ti je cilj samo proći predmet mislim da iako nisi fan prezentacija, one su ti najbolji izbor 😁\n\nIza većine predavanja imaš zadatke za vježbu s rješenjima, a nakon toga imaš hrpu ispita, a zadaci su više manje uvijek slični, čak ako uradiš dosta ispita se i fore u SQLu i upitima počnu ponavljati",
+      "votes": {
+        "upvoters": [
+          "DankJakov (DnkCkv)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "41939": {
+      "poster": "grga_it_is (it_is_what_it_is)",
+      "content": "Jeste vidjeli obavijest... svi mogu ići na rok, bez obzira na sve ostalo.\n\nNa početku su nas bili malo zeznuli s labosima (ne namjerno), ali vidi se da se trude u tome što rade i da im  je potrebno vremena da se naviknu i vide kako sve to ide, na kraju krajeva u istoj smo situaciji i mi i oni.\n\nStoga GG za njih, ispali su fer i sad mi je zao sto sam neko vrijeme bio odvise kritican.\n\nBRAVO za baze👏👏👏👏👏👏👏",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "47265": {
+      "poster": "Jomi",
+      "content": "Zna li iko oce li test bit online ili na faksu? Sta ce bit s usmenim?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "48606": {
+      "poster": "5arm (Miroljub Petrovic)",
+      "content": "ako prođemo pismeni a padnemo usmeni, moramo li na jesen ponovno pisat pismeni ili samo usmeni?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "48616": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@5arm#48606 Oboje",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "48751": {
+      "poster": "dinosaur1",
+      "content": "Zna li itko hoće li zadatci opet biti sekvencijskog tipa s obzirom da pišemo na faksu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "48755": {
+      "poster": "iNavy (mornar Ica)",
+      "content": "@dinosaur1#48751 mislim da ako nisu istaknuli da nema vraćanja na prethodna pitanja, poredak zadataka može biti nasumičan",
+      "votes": {
+        "upvoters": [
+          "dinosaur1"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "48802": {
+      "poster": "dinosaur1",
+      "content": "@iNavy#48755 Misliš može se \"šetat\" po ispitu, poredak mi nije bitan u tom slučaju..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "51096": {
+      "poster": "spampers (majmunska boginja)",
+      "content": "kad bi mogao usmeni bit šta mislite? ima li šanse da bude u ponedjeljak?",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "58974": {
+      "poster": "dinosaur (Ruasonid)",
+      "content": "može li netko napisati dojmove sa ovog online usmenog?",
+      "votes": {
+        "upvoters": [
+          "seni (ina)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "59424": {
+      "poster": "seni (ina)",
+      "content": "sta nikog nema ko moze napisat kak je bilo na usmenom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "60577": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "Jel možda illegal ako spojim sve prijašnje ispite u jedan pdf i searcham na roku?",
+      "votes": {
+        "upvoters": [
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "60618": {
+      "poster": "Spuk",
+      "content": "@Bucc#60577 Ako to napravis mos postavit tu ili na git? Pitam za prijatelja...",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "jobi (azex)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "66747": {
+      "poster": "H3llR4bbit",
+      "content": "@Spuk#60618 neznam kome je još ostao rok iz baza ali ja sam pretraživao po starim ispitima dokom ljetnog roka. Bio sam prvo pitao asistenta jel to smijem i on je samo okrenuo očima na tu ideju i rekao: \"Ako ti to pomaže...\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Hrvoje (Hrvoje45)",
+          "Mike (Klaud Konzultanta)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "290057": {
+      "poster": "CrazyFreak",
+      "content": "Evo ostavit cu ovdje sta sam ja sakupio (kombinacija sortiranog i filtriranog blica sa studosi githuba + nekoliko zadataka)\n\n![](assets/2022-04-09/00010.jpg)\n\n![](assets/2022-04-09/00011.jpg)\n\n![](assets/2022-04-09/00012.jpg)\n\n![](assets/2022-04-09/00013.jpg)\n\n![](assets/2022-04-09/00014.jpg)\n\n![](assets/2022-04-09/00015.jpg)\n\n![](assets/2022-04-09/00016.jpg)\n\n![](assets/2022-04-09/00017.jpg)\n\n![](assets/2022-04-09/00018.jpg)\n\n![](assets/2022-04-09/00019.jpg)\n\n![](assets/2022-04-09/00020.jpg)\n\n![](assets/2022-04-09/00021.jpg)\n\n![](assets/2022-04-09/00022.jpg)\n\n![](assets/2022-04-09/00023.jpg)\n\n![](assets/2022-04-09/00024.jpg)\n\n![](assets/2022-04-09/00025.jpg)\n\n![](assets/2022-04-09/00026.jpg)\n\n![](assets/2022-04-09/00027.jpg)\n\n![](assets/2022-04-09/00028.jpg)\n\n![](assets/2022-04-09/00029.jpg)\n\n![](assets/2022-04-09/00030.jpg)\n\n![](assets/2022-04-09/00031.jpg)\n\n![](assets/2022-04-09/00032.jpg)\n\n![](assets/2022-04-09/00033.jpg)\n\n![](assets/2022-04-09/00034.jpg)\n\n![](assets/2022-04-09/00035.jpg)\n\n![](assets/2022-04-09/00036.jpg)\n\n![](assets/2022-04-09/00037.jpg)\n\n![](assets/2022-04-09/00038.jpg)\n\n![](assets/2022-04-09/00039.jpg)\n\n![](assets/2022-04-09/00040.jpg)\n\n![](assets/2022-04-09/00041.jpg)\n\n![](assets/2022-04-09/00042.jpg)\n\n![](assets/2022-04-09/00043.jpg)\n\n![](assets/2022-04-09/00044.jpg)\n\n![](assets/2022-04-09/00045.jpg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

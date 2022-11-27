@@ -1,0 +1,5940 @@
+{
+  "title": "[RPPZWIPU] 2. laboratorijska vježba - 2019/2020",
+  "creator": "Erpeg",
+  "slug": "rppzwipu-2-laboratorijska-vjezba-20192020",
+  "tags": [
+    "FER",
+    "Razvoj programske potpore za web i pokretne uređaje",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "8968": {
+      "poster": "Erpeg",
+      "content": "Neki hint kako dodati ove slike ?",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "8974": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Erpeg#8968\n\n_order.html_ sadržava sljedeći `template`:\n```HTML\n<template id=\"product-template\">\n    <div class=\"photo-box\" data-id=\"\">\n        <img class=\"photo-box-image\" src=\"\"></img>\n        <div class=\"photo-box-title font-secondary main-color-emphasized\">Product name</div>\n        <div class=\"cart-btn\" onclick=\"\"></div>\n    </div>\n</template>\n```\n\nKao što vidiš, postoji `img` s klasom `photo-box-image`.\n\nTom elementu treba samo [JavaScriptom postaviti src atribut](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src).\n\nPostupak je analogan onome koji činiš za dohvaćanje elementa za naziv proizvoda i upisivanje naziva u njega.",
+      "votes": {
+        "upvoters": [
+          "Erpeg",
+          "Filemon",
+          "Suki7",
+          "lucylu",
+          "luka6 (ugrijaniRadijator)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9005": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "Zna li netko zbog čega se postavljaju jedan ispod drugoga?  I postoji li način da _Flowers Inventory_ piše iznad slika, bez da premještam  ` main.appendChild(category);`?\n\n   ![](assets/2020-04-14/00000.jpeg)",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9006": {
+      "poster": "Fortius",
+      "content": "@AntonioB25#9005 nemoj appendat u main taj json od slika. nego pogledaj strukturu kategorije category-template. \n\nsto se ovog drugog pitanja tice, ne znam bas odgovorit jer i ja nisam stavila to skroz dolje kak je bilo na njihovom kodu",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "__builtin_popcount (std::popcount)",
+          "nikace (AeIoU)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9089": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@Fortius#9006 \n\n        Ja sam uspio bez da mijenjam. U petlji gdje dodajem _produkte_, bi stavio da se stavljaju u _categoryGallery_ i onda izvan petlje, točno iznad `main.appendChild(category);` , bi stavio `category.appendChild(categoryGallery)`. \n\n        Znači stavljao bi produkte u galeriju, pa onda galeriju u kategoriju, pa na kraju kategoriju u main.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9128": {
+      "poster": "Erpeg",
+      "content": "Jel treba updateat broj itema kad se ode na Home dio stranice ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9242": {
+      "poster": "BigZ1",
+      "content": "@Erpeg#9128 napisali su da je to kao jedan od mogucih zadataka na labosu tako da ne.. prosli labos je bio bar sa drustvenim mrezama a to nam nije trebalo.",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9276": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@BigZ1#9242 \n\nPiše da je potrebno implementirati u sklopu pripreme.\n\n![](assets/2020-04-14/00020.jpeg)\n\nNetko je i na Teamsu pitao da nije možda greška, ali nije. Treba to napraviti u skolu pripreme",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "__builtin_popcount (std::popcount)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9551": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@Erpeg#9128  Na home dijelu stranice treba ostati isti broj itema koji je i na Order",
+      "votes": {
+        "upvoters": [
+          "Erpeg",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9590": {
+      "poster": "Erpeg",
+      "content": "@ruza0001#9551 hint kako to napravit bez mijenjanja njihovog koda ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9637": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@Erpeg#9590 \n```js\nfunction addToCart() {\n            if (typeof (Storage) !== \"undefined\") {\n                if (localStorage.clickcount) {\n                    localStorage.clickcount = Number(localStorage.clickcount) + 1;\n                } else {\n                    localStorage.clickcount = 1;\n                }\n                cartItems.innerHTML = localStorage.clickcount;\n            } else {\n                cartItems.innerHTML = \"Error: No storage support\";\n            }\n        }\n```\novo je ona funkcija onclick\n\n```js\n<script src=\"scripts/main.js\"></script>\n```\novo staviš ispod onog glavnog scripta i u home također\n\na main.js imam ovo \n```js\nlet cartItems = document.getElementById(\"cart-items\");\ncartItems.innerHTML = localStorage.clickcount;  //display cart-items number\n```",
+      "votes": {
+        "upvoters": [
+          "Erpeg",
+          "[deleted]",
+          "boki8 (kerovac)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9654": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Erpeg#9590\n\nPod mijenjanje njihovog koda, misliš li na izmjenu datoteke _index.html_?\n\nNe vidim zašto to ne bi bilo dopušteno.\n\n> Vaš je zadatak je izmijeniti datoteku _order.html_ odnosno dodati JavaScript kôd koji nedostaje označen s INSERT CODE HERE.\n\nMislim da se ovo odnosi samo na prvi zadatak.\n\nA i na Teamsu su odgovorili smijemo dodavati kod izvan ovog dijela označenog s \"INSERT CODE HERE\".\n\n> Oba predloška iz primjera 3 su sadržana unutar datoteke _order.html_. Nije potrebno pisati dodatan HTML kôd niti definirati nove stilove.\n\nMislim da se i ovo odnosi samo na prvi zadatak, ali niti za drugi zadatak s košaricom nije potrebno mijenjati njihov HTML, samo dodati JS.",
+      "votes": {
+        "upvoters": [
+          "Erpeg"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9685": {
+      "poster": "Rene",
+      "content": "Jel netko zna što znači error \"Failed to load resource: the server responded with a status of 403 ()\"? \n\nPrikazalo mi je ispravan raspored slika produkta, ali slike nisu ispravno dohvacene. Kada sam kliknuo jedan po jedan link u konzoli onda su se pocele ispravno prikazivati?\n>!![](assets/2020-04-14/00061.png)\n\n![](assets/2020-04-14/00062.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9694": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Rene#9685 403 je kod za forbidden\n\nne znam zašto su slike linkane preko imgura a ne lokalno, ali izgleda da imgur onemogućava dohvaćanje slika.",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9702": {
+      "poster": "Extended_mix",
+      "content": "@Rene#9685 imao sam isti problem, riješio sam ga tako da sam linkove slika ispisao na konzolu, otvorio slike i kad sam sljedeći put pokrenuo stranicu učitale su se slike 🤷",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9704": {
+      "poster": "Rene",
+      "content": "@Extended_mix#9702 Da, to sam i ja napisao, ali me zanimalo moze li se zaobici taj problem drugacije",
+      "votes": {
+        "upvoters": [
+          "Extended_mix"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9712": {
+      "poster": "Fortius",
+      "content": "@Rene#9704 trebas samo otvorit u browseru te slike, valjda da zapamti ? idk no  u biti mozes ih zatvorit onda i nece biti problema",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9778": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Rene#9685\n\nKako se lokalno spajaš na server?\n\nMeni Imgur daje 403 ako otvaram na 127.0.0.1, ali sve uredno radi kada idem preko localhost.",
+      "votes": {
+        "upvoters": [
+          "Rene"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "9781": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "> @micho#9694 ne znam zašto su slike linkane preko imgura a ne lokalno, ali izgleda da imgur onemogućava dohvaćanje slika.\n\nURL-ovi slika su dio responsea koji dohvaćamo s njihovog API-ja na Azureu, pa valjda zato nisu lokalno.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      }
+    },
+    "10039": {
+      "poster": "neksi (filip)",
+      "content": "@__builtin_popcount#9778 Kako da idemo preko localhost, ,a ne preko 127.0.0.1?",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10043": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@neksi#10039 upišeš localhost umjesto 127.0.0.1\n\nU principu je pametnije koristiti localhost jer neke aplikacije rade više od samog spajanja na neku adresu u 127.0.0.0/8, i zato što se localhost može resolveati u IPv6 adresu, dok 127.0.0.1 očito ne može",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "neksi (filip)",
+          "pez (ip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10044": {
+      "poster": "neksi (filip)",
+      "content": "@micho#10043 Fala !",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10124": {
+      "poster": "ppooww (pp)",
+      "content": "Vjerojatno glupo pitanje, ali što s ovim tools inventory, pots inventory i seed inventory. Da to samo izbacim, ili i za to treba nešto napravit?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10126": {
+      "poster": "gladiator",
+      "content": "@ppooww#10124 To ćeš dobiti na labosu",
+      "votes": {
+        "upvoters": [
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10137": {
+      "poster": "Tinx (pingvin)",
+      "content": "kako pristupim ovoj stranici https://wimlab2.azurewebsites.net/products?categoryId=1 ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10154": {
+      "poster": "Extended_mix",
+      "content": "@ppooww#10124 jesi postavio slike za njih?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10156": {
+      "poster": "ppooww (pp)",
+      "content": "@Extended_mix#10154 Bio sam postavio za Tools inventory čisto da isprobam(ali nisam ih ostavio), a za ostale ne mogu naći slike pa nisam ni pokušavao.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10158": {
+      "poster": "Extended_mix",
+      "content": "@ppooww#10156 primijeti link https://wimlab2.azurewebsites.net/products?categoryId=1 zavrsava s \"categoryId=1\" zato dobivas samo podatke za cvijece jer je njihov categoryId 1,  postoje objekti i na linkovima s caregoryd=2 i categoryId=4",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10162": {
+      "poster": "ppooww (pp)",
+      "content": "@Extended_mix#10158 Znam, ali nisam bio siguran jel treba postaviti sve slike s obzirom da su oni stavili samo screenshot od Flowers Inventory.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10165": {
+      "poster": "Extended_mix",
+      "content": "![](assets/2020-04-15/00047.jpeg)\n\nPise svaku kategoriju",
+      "votes": {
+        "upvoters": [
+          "gladiator",
+          "ppooww (pp)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10167": {
+      "poster": "ppooww (pp)",
+      "content": "@Extended_mix#10165 Nisam vidio, hvala!",
+      "votes": {
+        "upvoters": [
+          "Extended_mix",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10255": {
+      "poster": "Lusy (MGJ)",
+      "content": "Kako napraviti da mi se slike pojavljuju jedna do druge za svaku kategoriju, a ne jedna ispod druge?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10257": {
+      "poster": "Extended_mix",
+      "content": "@Lusy#10255 slike će ti se same rasporediti kad ih dodaš u div iz klase \"gallery\" jer mu je u main.css zadan izgled grida podjeljen u tećine, pogledaj si u dev tools-ima kako ti izgleda dokument i gdje su ti zapravo dodane slike",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10258": {
+      "poster": "Fortius",
+      "content": "> \n\n> @Fortius#9712 trebas samo otvorit u browseru te slike, valjda da zapamti ? idk no  u biti mozes ih zatvorit onda i nece biti problema\n\n\n@Lusy#10255",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10259": {
+      "poster": "Fortius",
+      "content": "> @Fortius#9006 [AntonioB25](https://forum.studosi.net/d/267/3) nemoj appendat u main taj json od slika. nego pogledaj strukturu kategorije category-template. \n\n@Lusy#10255",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10268": {
+      "poster": "Lusy (MGJ)",
+      "content": "@Extended_mix#10257 \n\n@Fortius#10259 \n\naa tenks, radi sad 😄",
+      "votes": {
+        "upvoters": [
+          "Extended_mix",
+          "Fortius"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10291": {
+      "poster": "laranotreallycroft",
+      "content": "Je li netko imao problem da vam kod koji bi trebao dodati slike izbriše sve vezano za tu kategoriju za koju je zadan i sve kategorije nakon? Doslovno nemam više ideja kaj mi je krivo...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10308": {
+      "poster": "AK10 (endyyyy)",
+      "content": "@Bucc#9637 sta radi to localStorage.**clickcount** ? mislim to clickcount mi nije bas jasan sta predstavlja?",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10318": {
+      "poster": "Vasili (Fasili)",
+      "content": "@laranotreallycroft#10291 Isti problem i nisam našo odgovor",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "laranotreallycroft"
+        ]
+      }
+    },
+    "10327": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@AK10#10308 [https://stackoverflow.com/questions/40603019/how-do-we-find-the-various-properties-of-localstorage-in-html5](url)\n\nNazvao sam ga po tome što mu je funkcija, ali može se nazvati i localStorage.nešto. Imaš ovdje u linku bolje objašnjeno.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10329": {
+      "poster": "Suki7",
+      "content": "@Tinx#10137  nesto ovako\n\n`                let response = await fetch(\"https://wimlab2.azurewebsites.net/products?categoryId=\" + categories[index].id);\n`",
+      "votes": {
+        "upvoters": [
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10331": {
+      "poster": "Suki7",
+      "content": "@laranotreallycroft#10291 Mozda dodajes u krivi dio html-a? Trebalo bi ih appendati u gallery.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10358": {
+      "poster": "Vasili (Fasili)",
+      "content": "@Suki7#10331 Možeš li mi molim te reći kako appendaš direktno na gallery a da ti ne nestane sve?",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10362": {
+      "poster": "Lusy (MGJ)",
+      "content": "![](assets/2020-04-16/00028.png)\n\nZna netko zašto mi javlja ovu grešku u main.js?\n\nPiše _Cannot set property innerHTML of null_, a riječ je o funkciji onClick.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10367": {
+      "poster": "Vasili (Fasili)",
+      "content": "@Vasili#10358 Ignore my problem. Ljudi pazite da napišete \"imageUrl\" ,a ne \"imageURL\" ko ja i izgubite 3 sata života.",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Suki7"
+        ]
+      }
+    },
+    "10371": {
+      "poster": "Suki7",
+      "content": "@Lusy#10362 meni je bio isti problem kada sam naredbu  `<script src=\"scripts/main.js\"></script>`  stavio u <head>\n\nNez why, ali treba se staviti iza ili ispred <scripta> kojeg vec imamo dolje i onda radi.\n\nVidim da si sve stavio u main.js pa nez oce li to i tebi pomoci",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10374": {
+      "poster": "Lusy (MGJ)",
+      "content": "@Suki7#10371  Daa, pomoglo je, sad sve radi. Samo sam zasebno dodala u order.html `<script src=\"scripts/main.js\"></script>` ispod templatea.",
+      "votes": {
+        "upvoters": [
+          "Suki7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10397": {
+      "poster": "Urmum (mamaRu)",
+      "content": "Jel mozemo u njihovom html kodu samo dodat da se onclick poziva funkcija addToCart() ili ne smijemo nista mijenjat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "samurai (samuraj)"
+        ]
+      }
+    },
+    "10401": {
+      "poster": "laranotreallycroft",
+      "content": "@Urmum#10397 to komotno mozes i u script\n\n `              \n      let btn = product.querySelector('.cart-btn');\n\n                    btn.onclick = addToCart;`",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Urmum (mamaRu)",
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10412": {
+      "poster": "Retard00",
+      "content": "![](assets/2020-04-16/00033.png)\n\nZna netko zašto se slike ne žele prikazivat?\n\nLijepo promjenim src na ispravan url koji se može učitat u browseru al slike ne želi prikazat.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10418": {
+      "poster": "ghost (ksi)",
+      "content": "Ponekad kada html otvorim u browseru mi prikazuje sve tocno, ali se ponekad dogada ovo\n\n![](assets/2020-04-16/00036.png)\n\nZna li netko zasto se to dogada?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10420": {
+      "poster": "laranotreallycroft",
+      "content": "@Retard00#10412 \n\n[teams](https://teams.microsoft.com/l/message/19:f0163c825457450182f11663b17dbe1a@thread.tacv2/1586953035089?tenantId=ca71eddc-cc7b-4e5b-95bd-55b658e696be&groupId=df509696-c623-4228-8c11-0bef9cd55062&parentMessageId=1586953035089&teamName=WiM&channelName=2.%20laboratorijska%20vje%C5%BEba&createdTime=1586953035089)\n\nonclick mi normalno radi u chromeu, ali u firefoxu ne. zna netko kako to rjesiti?",
+      "votes": {
+        "upvoters": [
+          "Retard00"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10421": {
+      "poster": "MrDREDD",
+      "content": "![](assets/2020-04-16/00037.png)\n\nJel ima tko ideju zašto mi se sve slike stavljaju pod prvu kategoriju, a ostale su prazne ??",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3",
+          "mihamih",
+          "pohanyx (2Đman)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10435": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "[https://pastebin.com/JBeGw1eH](url)\n\nEvo moj order.html kod pa vam možda pomogne.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "mihamih",
+          "pohanyx (2Đman)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10443": {
+      "poster": "gladiator",
+      "content": "@MrDREDD#10421 na stranici azureweb (ili kako već) uz link za sliku imaš vrijednost koja pokazuje u kojoj kategoriji se slika nalazi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10461": {
+      "poster": "viliml",
+      "content": "@MrDREDD#10421 Kriv ti je kod.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "ink",
+          "viliml"
+        ],
+        "downvoters": [
+          "AK10 (endyyyy)",
+          "HARAmara (decko_sa_balkana)",
+          "Hrvoje (Hrvoje45)",
+          "Jale (čakijale)",
+          "Krisle",
+          "MiqeloS",
+          "MrDREDD",
+          "SuperSjajan3",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "in1",
+          "kameni (Isusek)",
+          "pohanyx (2Đman)"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Filemon"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10465": {
+      "poster": "boki8 (kerovac)",
+      "content": "@micho#10043 moze li se to napraviti tako da mi prilikom svakog pokretanja umjesto 127.0.0.1 pise localhost? ili se to svaki put mora podesavati rucno?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10469": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@boki8#10465 Samo napravi shortcut na localhost? Ne znam s čime pokrećeš, nisam na predmetu",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10475": {
+      "poster": "WickyWinslow",
+      "content": "@boki8#10465 Umjesto Live servera ili previewa koristi doubleklik na bla.html",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10477": {
+      "poster": "boki8 (kerovac)",
+      "content": "@WickyWinslow#10475 ne funkcionira?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10489": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "> @laranotreallycroft#10420 onclick mi normalno radi u chromeu, ali u firefoxu ne. zna netko kako to rjesiti?\n\nNe znam zašto ne radi i kako natjerati da radi, ali ja uopće nisam koristio `onclick`, koristio sam [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener).\n\nUmjesto nečega tipa `btn.onclick = addToCart;` sam napisao `btn.addEventListener(\"click\", addToCart);`.\n\n([StackOverflow odgovor koji uspoređuje ta dva načina](https://stackoverflow.com/a/6348597))\n\nZa ovako manje stvari nema neke velike razlike koji koristiš, ali mislim da u profesionalnim stranicama nigdje nećeš naći `onclick`.",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10496": {
+      "poster": "laranotreallycroft",
+      "content": "@__builtin_popcount#10489 \n\nHej,hvala na odgovoru 🙂 \n\nVec mi je netko odgovorio i na teamsu pa eto ako jos netko ima taj problem, moze se rijesiti i tako da se btn.onclick=   zamijeni sa  btn.setAttribute()",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10527": {
+      "poster": "viliml",
+      "content": "@MrDREDD#10421 @viliml#10461\n\nNe, ozbiljno.\n\nKako misliš da ti netko pomogne s kodom ako ne daš svoj kod?\n\nPostoji tisuću načina na koji možeš dobiti istu grešku.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "ink"
+        ],
+        "downvoters": [
+          "Fortius",
+          "Josipa (Zelda)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10529": {
+      "poster": "Fortius",
+      "content": "@viliml#10527 kolega, ne moraš biti neuljudan. Lijepo zamoli drugog kolegu da slika kod ako mu želiš pomoć a ne ovako.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Galke",
+          "Hrvoje (Hrvoje45)",
+          "KingGeedorah (King Geedorah)",
+          "MiqeloS",
+          "SuperSjajan3",
+          "WickyWinslow",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Hesoyam (Lepi Dario)",
+          "ink"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10531": {
+      "poster": "ana (anci)",
+      "content": "bi li se onaj brojac kosarice trebao postaviti na 0 kada ugasim stranicu i ponovno upalim, ili bi trebao ostati jednak? ne mislim kada reloadam ili idem na home, nego bas kad se zatvori stranica",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10532": {
+      "poster": "[deleted]",
+      "content": "@ana#10531 ostaje (u mojoj implementaciji)",
+      "votes": {
+        "upvoters": [
+          "ana (anci)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10536": {
+      "poster": "[deleted]",
+      "content": "prvi i drugi zadatak su dan i noc razlika. seems fair",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10542": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "```css\n.loader {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  margin-top: 20px; }\n  .loader-text {\n    display: flex;\n    justify-content: center;\n    font-size: 2em;\n    margin-bottom: 1em; }\n  .loader-pulsar {\n    display: block;\n    background-position-x: center;\n    margin-left: auto;\n    margin-right: auto;\n    border: 10px solid #e0aacd;\n    background-color: #e0aacd;\n    height: 50px;\n    width: 50px;\n    border-radius: 100%;\n    opacity: 1;\n    animation-name: spinner-opaque;\n    animation-duration: 1s;\n    animation-iteration-count: infinite; }\n    ```\n\nako nekome treba za centrirati onaj prvi",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Lusy (MGJ)",
+          "SuperSjajan3",
+          "[deleted]",
+          "mini (Earthling)",
+          "psiho"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10544": {
+      "poster": "JBear",
+      "content": "Kako napraviti da u onclick funkciju buttona staviš funkciju sa argumentom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10545": {
+      "poster": "DazedAndConfused",
+      "content": "@Bucc#10542 Kako to implementiram?",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "Jaster111"
+        ],
+        "downvoters": [
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10547": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@DazedAndConfused#10545 onaj njihov sad novi main.css skineš, zamijeniš sa starim i skrolaš dolje gdje je i zamijeniš loader, loader text i loader pulsar\n\ni onaj njihov html koji su dali za pulsar staviš unutar class=\"main\"",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10548": {
+      "poster": "Urmum (mamaRu)",
+      "content": "Kako da centriram cart?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10549": {
+      "poster": "Ardura (Maddy)",
+      "content": "Može li netko poslati script od zajedničkog dijela za cart?",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Erpeg",
+          "JBQ",
+          "JoKing",
+          "Josipa (Zelda)",
+          "Lusy (MGJ)",
+          "Mario1",
+          "Urmum (mamaRu)",
+          "Venki",
+          "at5611",
+          "itsdend",
+          "lucylu",
+          "nikace (AeIoU)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10550": {
+      "poster": "JBQ",
+      "content": "![](assets/2020-04-17/00003.jpeg)\n\nOdakle ovo dohvatit uopce?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10551": {
+      "poster": "AntonioB25 (Pleteni miš)",
+      "content": "@JBQ#10550 \n```html\n<div class=\"centered-container\">\n        <h1 class=\"decorated-title font-secondary main-color\">\n            <span class=\"main-color-emphasized\">Shopping cart</span> items</h1>\n            <div class=\"separator\"></div>\n    </div>\n    ```\nJa sam uzeo iz prvog labosa taj dio i samo dodao.",
+      "votes": {
+        "upvoters": [
+          "JBQ",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10552": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "```js\nsetTimeout(function(){     \n                    document.querySelector('.loader').classList.replace('loader', 'hidden');\n                    getData();}, 3000);\n```\n\nImam sad ovo za nestajanje loadera(sam ga stavite na početak skripte, može bilo gdje, ali samo da je prije poziva fetcha), čini mi se da ne žele tako, ali šta bi im ja. Sad još moram dilejat sve ostalo dok to ne nestane.\n\nNapravio sam i to. Samo unutar ove setTimeout stavite onu njihovu funkciju getData();",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Lusy (MGJ)",
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10559": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "https://pastebin.com/fNJAT0B5\n\nzna netko zasto ova skripta za cartItems ne radi...ispisuje mi u for petlji sve elemente ali u browseru se nis ne pojavljuje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10562": {
+      "poster": "Lusy (MGJ)",
+      "content": "![](assets/2020-04-17/00004.png)\n\nKako da centriram ovu košaricu?",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10563": {
+      "poster": "Kniwy00 (DoktorZnanosti)",
+      "content": "moze kod?",
+      "votes": {
+        "upvoters": [
+          "Bioxed",
+          "Ducky",
+          "Erpeg",
+          "SonGoku (~~~~~~~~)",
+          "gladiator",
+          "ice",
+          "itsdend",
+          "pez (ip)",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10564": {
+      "poster": "flicka",
+      "content": "neka dusa nek objavi kod od kosarice da mozemo bar probat implementirat svoj zadatak :(",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)",
+          "Bioxed",
+          "Ducky",
+          "JoKing",
+          "Josipa (Zelda)",
+          "ink",
+          "mihamih",
+          "ruza0001 (rozy)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "5arm (Miroljub Petrovic)",
+          "Filemon",
+          "Goliathus",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Hans"
+        ]
+      }
+    },
+    "10565": {
+      "poster": "kolega_kolega",
+      "content": "@Lusy#10562 Ja sam zaključio da se može mjenjati css headera jer tako u ms teams napisa profesor. pa sam onda dodao samo ovo dvije linije koda.![](assets/2020-04-17/00005.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10566": {
+      "poster": "MiqeloS",
+      "content": "@SonGoku#10559 Javi ako nađeš grešku, imamo 95% isti kod, ista stvar...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10567": {
+      "poster": "Lusy (MGJ)",
+      "content": "@kolega_kolega#10565 Ne radi mi to bas, samo je cijela kosarica sad otisla udesno. \n\n![](assets/2020-04-17/00006.png)\n\nOvo je template, možda tu nešto ne valja.\n\nEDIT: ipak je dobro, ja sam u main.css stavila na krivo mjesto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10568": {
+      "poster": "boki8 (kerovac)",
+      "content": "jel tko rijesio prvi zadatak... dajte išta.... hahaha",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Lusy (MGJ)",
+          "bush (Salut)",
+          "itsdend"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": [
+          "AK10 (endyyyy)",
+          "Hans",
+          "JeleeII",
+          "Kniwy00 (DoktorZnanosti)",
+          "bush (Salut)",
+          "nikace (AeIoU)"
+        ]
+      }
+    },
+    "10569": {
+      "poster": "ana (anci)",
+      "content": "jel itko skuzio kako u prvom treba sakriti loader kada se cijela stranica loada? probala sam s onload ali ne funkc",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10570": {
+      "poster": "kolega_kolega",
+      "content": "@Lusy#10567 znaci nisi nista pisala u main? jesi skinula njihov main.css ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10571": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@ana#10569 document.querySelector('.loader').classList.replace('loader', 'hidden');\n\nmožeš nešto ovak staviti kada se zadnja kategorija pojavi, sad ne znam kako imaš ostalo pa ne mogu biti precizan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10572": {
+      "poster": "Lusy (MGJ)",
+      "content": "@kolega_kolega#10570 Ma nadopisala sam u njihov novi main ovo što i ti i sad je centrirano.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10573": {
+      "poster": "Zero",
+      "content": "![](assets/2020-04-17/00007.png)\n\nmeni ovo radi\n\nEDIT: zaboravio ;",
+      "votes": {
+        "upvoters": [
+          "WickyWinslow"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "WickyWinslow"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10577": {
+      "poster": "ana (anci)",
+      "content": "@Bucc#10571 ako dodam to nakon main.appendChild onda mi nestane loader odmah, a ne nakon loada",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10578": {
+      "poster": "kix7 (Fish99)",
+      "content": "ima netko 2. zadatak da može podijelit HTML/CSS dio?",
+      "votes": {
+        "upvoters": [
+          "Hans",
+          "Lusy (MGJ)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10580": {
+      "poster": "Fortius",
+      "content": "zasto mi nista nece appendat u main kao u proslom zadatku? sto god stavila za taj cart nece",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10581": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "```js\n<script>\n\n         let getData = async function() {\n             let response = await fetch(\"https://wimlab2.azurewebsites.net/products\");\n             let data = await response.json();\n             addCartItems(data);\n         }\n\n         let addCartItems = async function(cartItems) {\n            let main = document.querySelector('main');\n            let cartItemTemplate = document.querySelector('#cart-template-item');\n\n            for(let i = 0; i < cartItems.length; i++) {\n                let cartItem = cartItemTemplate.content.cloneNode(true); \n                let cartItemTitle = cartItem.querySelector('.cart-item-title');\n                let cartItemPrice = cartItem.querySelector('.cart-item-price');\n                let cartItemQuantity = cartItem.querySelector('.cart-item-quantity');\n\n                cartItemTitle.textContent= cartItems[i].name;\n                cartItemPrice.textContent = cartItems[i].price;\n\n                console.log(cartItemTitle);\n                main.appendChild(cartItem);\n            }\n            \n            \n         };\n         getData();\n        \n\n        \n    </script>\n    ```\nevo ova skripta ispise sve fino product type quantity, ali nije spojena sa brojem u kosarici tako da ne radi kurca zapravo....bar ispise sve i to su bodovi",
+      "votes": {
+        "upvoters": [
+          "laranotreallycroft",
+          "mihamih",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Lusy (MGJ)",
+          "Tone"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10582": {
+      "poster": "Venki",
+      "content": "@SonGoku#10581 Meni i dalje izbacuje grešku kod kloniranja",
+      "votes": {
+        "upvoters": [
+          "pez (ip)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10584": {
+      "poster": "Fortius",
+      "content": "@Venki#10582 meni isto",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10585": {
+      "poster": "boki8 (kerovac)",
+      "content": "@SonGoku#10581 sto si dodao u body?",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10586": {
+      "poster": "[deleted]",
+      "content": "@Bucc#10552 kad to dodam vise se nista ne vidi, znas mozda u cemu je problem?\n\nedit:nmvz, krivo sam dodala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10587": {
+      "poster": "Krisle",
+      "content": "@SonGoku#10581 \n\nDi stavljas tu skriptu, kak se kaj poveže?",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10588": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "evo cijeli cart.html https://pastebin.com/3X7BymVS\n\nu css sam jedino dodo ovo:  position: relative;\n\n    flex-grow: 1;\n\n    width: 400px;\n\n    margin: auto;\n\nu cart header i cart item\n\nI to je to xd",
+      "votes": {
+        "upvoters": [
+          "Ardura (Maddy)",
+          "DazedAndConfused",
+          "JeleeII",
+          "Josipa (Zelda)",
+          "Kniwy00 (DoktorZnanosti)",
+          "Krisle",
+          "LucidDreamer",
+          "ice",
+          "lucylu",
+          "pez (ip)",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10589": {
+      "poster": "WP_Deva (IdeGas)",
+      "content": "Može netko za prvi zadatak napisati samo liniju u kojoj određuje nakon koliko mu nestaje loader?\n\nKako getam vrijeme za delay... Kao najveci od svih delayeva ili da loader nestane cim se prvi ucita?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10590": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@SonGoku#10588 2,3 boda osigurana 😂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10592": {
+      "poster": "flicka",
+      "content": "moze neko poslat kako da u orderu zapamtim id predmeta kojeg dodajem u kosaricu pa da onda mogu povezat to",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "DazedAndConfused",
+          "Lusy (MGJ)",
+          "SonGoku (~~~~~~~~)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Uchenikowitz (Učečuču)",
+          "steker"
+        ]
+      }
+    },
+    "10595": {
+      "poster": "DazedAndConfused",
+      "content": "Netko rješio 3. zadatak?",
+      "votes": {
+        "upvoters": [
+          "Jaster111"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10596": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@FERella#10586 sad sam vidio da treba za svaku kategoriju pričekat 3 sekunde.\n\n```js\nfunction sleep(ms) {\n            return new Promise(resolve => setTimeout(resolve, ms));\n        }\n```\npozovemo ovu nakon što se učita sve za jednu kategoriju sa await sleep(3000);\n\na kada se sve učita tek onda zamijenimo onaj loader s hidden, tak da onaj dio koda koji sam poslao treba samo prebaciti onaj dio documen...nešto nešto. replace\n\nmalo promijenite imena varijabli da ne bude potpuno isto",
+      "votes": {
+        "upvoters": [
+          "SuperSjajan3"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10599": {
+      "poster": "JBQ",
+      "content": "Moze neko poslat jos 2.1 zadatak?",
+      "votes": {
+        "upvoters": [
+          "Lusy (MGJ)",
+          "SonGoku (~~~~~~~~)",
+          "luka6 (ugrijaniRadijator)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10600": {
+      "poster": "[deleted]",
+      "content": "treba li nam quantity textbox izgledati kao njima na slici(bez strelica za manualni unos) ili kao u njihovom kodu koji su nam dali i koji kao ne treba mijenjat(sa strelicama za unos)?? krajnji neprofesionalizam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10601": {
+      "poster": "Rene",
+      "content": "Jel itko uspio 5. ? Moze pomoc bilo kakva",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10606": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "nema milosti za 2.1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10609": {
+      "poster": "Erpeg",
+      "content": "Neko 5 zad napravio ? help",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10610": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@SonGoku#10606  cini se da bi nam prije Trump dao kodove za lansiranje nuklearki, nego nasi kolege kod za 2.1",
+      "votes": {
+        "upvoters": [
+          "Bioxed",
+          "Ducky",
+          "Lusy (MGJ)",
+          "SonGoku (~~~~~~~~)",
+          "Suki7",
+          "mihamih",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Bioxed",
+          "Hans",
+          "JeleeII",
+          "LongArmedJohhny (LongArmedJohnny)",
+          "SonGoku (~~~~~~~~)",
+          "lucylu",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Tinx (pingvin)"
+        ]
+      }
+    },
+    "10611": {
+      "poster": "Krisle",
+      "content": "@SonGoku#10588 buraz imaš kavu za ovo",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Jale (čakijale)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10612": {
+      "poster": "[deleted]",
+      "content": "jel itko uopce rjesio ista osim \"\"\"\"\"uvodnog zadatka\"\"\"\"\"?",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "flicka"
+        ],
+        "wtf": [],
+        "tuga": [
+          "JeleeII",
+          "laranotreallycroft"
+        ]
+      }
+    },
+    "10613": {
+      "poster": "mihamih",
+      "content": "@Krisle#10611  @SonGoku#10588  jos jednu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10614": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "2.2 u đepu, ez dub son",
+      "votes": {
+        "upvoters": [
+          "JBQ"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "JeleeII"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10615": {
+      "poster": "tomekbeli420",
+      "content": "jebote pas za ovo bi mi trebalo cijeli dan a kamoli 2 i pol sata\n\n@Itachi#10612 samo priprema lol, cak ni \"uvodni zadatak\"",
+      "votes": {
+        "upvoters": [
+          "JoKing",
+          "[deleted]",
+          "ink",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Filemon",
+          "JeleeII",
+          "SonGoku (~~~~~~~~)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10617": {
+      "poster": "MiqeloS",
+      "content": "![](assets/2020-04-17/00009.jpeg)\n\n Hah...",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Ducky",
+          "Uchenikowitz (Učečuču)",
+          "[deleted]",
+          "mihamih"
+        ],
+        "downvoters": [
+          "ink"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "ink",
+          "mihamih"
+        ]
+      }
+    },
+    "10619": {
+      "poster": "steker",
+      "content": "https://www.youtube.com/watch?v=T__H6bxK5n8&t=10s :)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Ducky",
+          "Filemon",
+          "KingGeedorah (King Geedorah)",
+          "LucidDreamer",
+          "Lusy (MGJ)",
+          "Mioch",
+          "Uchenikowitz (Učečuču)",
+          "Urmum (mamaRu)",
+          "ink",
+          "psiho",
+          "snowman",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "Mioch",
+          "Uchenikowitz (Učečuču)",
+          "markoo321 (Grinch)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Tone",
+          "ink"
+        ]
+      }
+    },
+    "10620": {
+      "poster": "[deleted]",
+      "content": "web design nije programiranje.",
+      "votes": {
+        "upvoters": [
+          "Dodica",
+          "Filemon",
+          "JeleeII",
+          "MiqeloS",
+          "SonGoku (~~~~~~~~)",
+          "bjunolulz",
+          "ink",
+          "steker",
+          "turunturu (Cement)"
+        ],
+        "downvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      }
+    },
+    "10621": {
+      "poster": "bjunolulz",
+      "content": "ok znaci u zadnjih 5 jebenih minuta sam ubrao da jebeni glupi clone daje null zato jer kad kopiras template s pripreme stavlja jebene razmake u onaj dio id=\" template bla bla \" i zbog tog jebeno nije htjelo",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "Uchenikowitz (Učečuču)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10622": {
+      "poster": "JBQ",
+      "content": "@Itachi#10612 \n\nNe znam ni koji zadatak sam imao",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)",
+          "LongArmedJohhny (LongArmedJohnny)",
+          "[deleted]",
+          "bjunolulz",
+          "ink",
+          "laranotreallycroft",
+          "snowman",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "5arm (Miroljub Petrovic)",
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "Tone",
+          "ice",
+          "snowman"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10623": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "trebali smo svi ovu košaricu? hjao i moje čitanje, well then, i'm gonna hang myself.",
+      "votes": {
+        "upvoters": [
+          "MiqeloS",
+          "Rene",
+          "SuperSjajan3",
+          "Uchenikowitz (Učečuču)",
+          "[deleted]",
+          "ink",
+          "mihamih"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "SonGoku (~~~~~~~~)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10624": {
+      "poster": "[deleted]",
+      "content": "jel se samo meni čini ili je 1. zadatak po težini opet bia teži od ostalih?",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": [
+          "MiqeloS"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10625": {
+      "poster": "[deleted]",
+      "content": "@Bucc#10623 ja sam isto na pocetku mislio da su prvi i drugi uvodni zadataci obicni(pravi) zadatci.\n\nne znam tko je mislio da je ovakav labos dobra ideja. ovo sve sa kosaricom je trebao biti dio prave pripreme ako su htjeli da imamo ikakve sanse",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "JeleeII"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10626": {
+      "poster": "ink",
+      "content": "@Itachi#10612 ja ne. Bio sam presretan kad mi je brojač proradio, kao \"ha ha razjebo sam labos\", kad ono drugi pdf \"slične težine\" ima stoput više posla",
+      "votes": {
+        "upvoters": [
+          "JeleeII",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10627": {
+      "poster": "JoKing",
+      "content": "![](assets/2020-04-17/00010.png)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "BigZ1",
+          "Bucc (Olive Oil)",
+          "Exelero",
+          "Fica (Prof)",
+          "Filemon",
+          "Galke",
+          "HARAmara (decko_sa_balkana)",
+          "Hrvoje (Hrvoje45)",
+          "JBQ",
+          "Jale (čakijale)",
+          "Mario1",
+          "Mioch",
+          "Suki7",
+          "SuperSjajan3",
+          "Uchenikowitz (Učečuču)",
+          "indythedog",
+          "ink",
+          "mihamih",
+          "mini (Earthling)",
+          "snowman",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "BigZ1",
+          "Filemon",
+          "Galke",
+          "Goliathus",
+          "JeleeII",
+          "Lusy (MGJ)",
+          "Mioch",
+          "Tinx (pingvin)",
+          "Uchenikowitz (Učečuču)",
+          "markoo321 (Grinch)",
+          "snowman",
+          "tomekbeli420",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "ink",
+          "laranotreallycroft",
+          "steker"
+        ]
+      }
+    },
+    "10630": {
+      "poster": "[deleted]",
+      "content": "@ink#10626 \n\n![](assets/2020-04-17/00011.png)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Bucc (Olive Oil)",
+          "Galke",
+          "Lusy (MGJ)",
+          "Suki7",
+          "Uchenikowitz (Učečuču)",
+          "ink",
+          "snowman"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Galke",
+          "JeleeII",
+          "Suki7",
+          "Tinx (pingvin)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10631": {
+      "poster": "tomekbeli420",
+      "content": "koliko bodova nosi priprema?",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Ducky",
+          "HARAmara (decko_sa_balkana)",
+          "Uchenikowitz (Učečuču)",
+          "[deleted]",
+          "boki8 (kerovac)",
+          "ink",
+          "laranotreallycroft",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "JeleeII",
+          "iNavy (mornar Ica)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10633": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@Itachi#10625 mogli su pretpostavit da smo nesposobni i da ćemo ići gledat \"a dobro ja sam 1. zadatak, sam to treba\", dalje ne čitaš jer nisu ni oni nešto napisali \"e imate jedan zajednički i jedan vaš\". I zašto taj zajednički nije mogao biti boldan, nego piše 2 zadatak",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10634": {
+      "poster": "boki8 (kerovac)",
+      "content": "@tomekbeli420#10631 bilo bi pametnije da nisam nista pisao i predao samo pripremu... Ovako mi vise ne radi ni priprema, kosaricu nisam rijesio, a dodatni zadatak ni zapoceo",
+      "votes": {
+        "upvoters": [
+          "Extended_mix",
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "JoKing",
+          "KingGeedorah (King Geedorah)",
+          "Suki7",
+          "SuperSjajan3",
+          "Uchenikowitz (Učečuču)",
+          "Valentino",
+          "Vasili (Fasili)",
+          "ink",
+          "laranotreallycroft",
+          "lucylu",
+          "puufi",
+          "snowman",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Lusy (MGJ)",
+          "SonGoku (~~~~~~~~)",
+          "Suki7",
+          "Tone",
+          "neksi (filip)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10635": {
+      "poster": "MiqeloS",
+      "content": "@FERella#10624 Bio je tezi jer si actually mogla nešto napraviti bez košarice koju smo svi imali? Razmisli o tome da su ostali zadatci bili ovisni o implementaciji košarice i ako ti košarica nije radila nisi mogao niti dalje LOL",
+      "votes": {
+        "upvoters": [
+          "HARAmara (decko_sa_balkana)",
+          "SuperSjajan3",
+          "[deleted]",
+          "[deleted]",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10636": {
+      "poster": "ink",
+      "content": "Ma ne brinite hahah, sigurno će naredni labosi bit lakši hahah :) :) 🔫",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "SuperSjajan3",
+          "Vasili (Fasili)",
+          "[deleted]",
+          "bjunolulz"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amariska",
+          "Bucc (Olive Oil)",
+          "Goliathus",
+          "HARAmara (decko_sa_balkana)",
+          "Hrvoje (Hrvoje45)",
+          "Suki7",
+          "Tinx (pingvin)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "JeleeII",
+          "laranotreallycroft"
+        ]
+      }
+    },
+    "10638": {
+      "poster": "bjunolulz",
+      "content": "mene najvise od svega ljuti sto su oni nama dali 2 pisljive prezentacije i ovu pripremu i ono jebite se, na labosu 10 zadataka od kojih je i uvodni tezak bez da su nam dali ista za vjezbu il stogod",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Amariska",
+          "AntonioB25 (Pleteni miš)",
+          "BigZ1",
+          "Fica (Prof)",
+          "Fortius",
+          "Galke",
+          "Gussy (huba buba)",
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "JoKing",
+          "LucidDreamer",
+          "Mioch",
+          "Suki7",
+          "SuperSjajan3",
+          "Tinx (pingvin)",
+          "Uchenikowitz (Učečuču)",
+          "Valentino",
+          "Vasili (Fasili)",
+          "[deleted]",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10640": {
+      "poster": "[deleted]",
+      "content": "@bjunolulz#10638 \n>mene najvise od svega ljuti sto su oni nama dali 2 pisljive prezentacije\n\npa to je najmanji problem. imas pod prstima cijeli world wide web \n\nsve bi bilo ok da su dali ili vise vremena ili manje zadataka",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "HARAmara (decko_sa_balkana)",
+          "Vasili (Fasili)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10641": {
+      "poster": "Krisle",
+      "content": "@bjunolulz#10638 a moraju nekak dobit gaussa, sve živo iz ovog predmeta će bit bez kontrole ko kak kome rješava pa su to kompenzirali težinom. Kaj ćeš..",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10642": {
+      "poster": "tomekbeli420",
+      "content": "još samo sad da padnemo kommre i dan će biti potpun",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Ducky",
+          "Fica (Prof)",
+          "Galke",
+          "Goliathus",
+          "HARAmara (decko_sa_balkana)",
+          "Jale (čakijale)",
+          "JeleeII",
+          "JoKing",
+          "Sans",
+          "Suki7",
+          "SuperSjajan3",
+          "Tone",
+          "[deleted]",
+          "[deleted]",
+          "bjunolulz",
+          "howe892 (dado)",
+          "iNavy (mornar Ica)",
+          "ink",
+          "laranotreallycroft",
+          "neksi (filip)",
+          "snowman",
+          "steker",
+          "steve (Mr_mr)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10643": {
+      "poster": "bjunolulz",
+      "content": "@Itachi#10640 da al ono jesam ja na faksu il ucim sam?",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Filemon",
+          "Galke",
+          "JoKing",
+          "Mario1",
+          "SuperSjajan3",
+          "[deleted]",
+          "lucylu",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10644": {
+      "poster": "ink",
+      "content": "@tomekbeli420#10642 I odmah nakon nadoknada iz baza. I (jedan od) rokova za oba labosa iz OS-a. Dan je vrlo, vrlo potpun",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "JeleeII",
+          "lucylu",
+          "steker",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10645": {
+      "poster": "[deleted]",
+      "content": "@bjunolulz#10643 a gle, meni osobno je puno lakse potrazit nesto sto mi treba na internetu i pronac na stackoverflowu ili slicnoj stranici tocno sto mi treba nego gledat te njihove pisljive \"prezentacije\" i trazit iglu u plastu sijena\n\nna faksu sam jer moram dobit potvrdu da znam pretrazivat internet",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "Vasili (Fasili)",
+          "bjunolulz",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Filemon",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": [
+          "AK10 (endyyyy)"
+        ]
+      }
+    },
+    "10647": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@boki8#10634 lmao +1, samo se nadam da ce asistenti barem preletjeti kod pa na osnovu toga zakljucit znamo li nesto, a ne kad vide da mi stranica svira kurcu odmah opalit nulu",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)",
+          "laranotreallycroft"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Goliathus",
+          "__builtin_popcount (std::popcount)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10648": {
+      "poster": "bjunolulz",
+      "content": "@Itachi#10645 sve to stoji, al mislim da su oni dužni stavit bilokakve materijale za vježbu",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Amariska",
+          "BigZ1",
+          "Filemon",
+          "Galke",
+          "Goliathus",
+          "Gussy (huba buba)",
+          "JeleeII",
+          "MT09 (mt09)",
+          "MiqeloS",
+          "Suki7",
+          "SuperSjajan3",
+          "[deleted]",
+          "[deleted]",
+          "snowman",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10649": {
+      "poster": "[deleted]",
+      "content": "@KingGeedorah#10647 \n\n![](assets/2020-04-17/00012.png)",
+      "votes": {
+        "upvoters": [
+          "Goliathus",
+          "Kaladonter",
+          "Uchenikowitz (Učečuču)",
+          "__builtin_popcount (std::popcount)",
+          "laranotreallycroft",
+          "snowman",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10652": {
+      "poster": "LucidDreamer",
+      "content": "Mislim da je najveci problem opseg gradiva,mi smo \"prosli\" html,css i javascript u nesto vise od mjesec dana,a da ne spominjem sve predmete koje imamo uz ovo sve,stvarno se izivljavaju malo",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)",
+          "Amariska",
+          "Goliathus",
+          "JoKing",
+          "Lusy (MGJ)",
+          "Mario1",
+          "Suki7",
+          "SuperSjajan3",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "bjunolulz",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10653": {
+      "poster": "Kaladonter",
+      "content": "jesan se ja za ovo mora u 8 ipo ujutro probudit? Strašno",
+      "votes": {
+        "upvoters": [
+          "Amariska",
+          "AntonioB25 (Pleteni miš)",
+          "Ardura (Maddy)",
+          "Fortius",
+          "HARAmara (decko_sa_balkana)",
+          "JoKing",
+          "MT09 (mt09)",
+          "Vasili (Fasili)",
+          "[deleted]",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "bjunolulz",
+          "ink",
+          "mihamih",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "Amariska",
+          "Filemon",
+          "Goliathus",
+          "JBQ",
+          "JeleeII",
+          "JoKing",
+          "Lusy (MGJ)",
+          "Tone",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "iNavy (mornar Ica)",
+          "laranotreallycroft",
+          "neksi (filip)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Suki7"
+        ]
+      }
+    },
+    "10655": {
+      "poster": "Fortius",
+      "content": "ja ne znam jel oni  iz raznih predmeta se natjecu tko ce nas vise sjebat ili je ovo puka slucajnost da su svi odlucili biti pa znate vec kakvi",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)",
+          "Amariska",
+          "Ardura (Maddy)",
+          "Bucc (Olive Oil)",
+          "Fica (Prof)",
+          "Lusy (MGJ)",
+          "Lyras",
+          "Mioch",
+          "MiqeloS",
+          "Suki7",
+          "SuperSjajan3",
+          "Tinx (pingvin)",
+          "[deleted]",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "bjunolulz",
+          "boki8 (kerovac)",
+          "steker",
+          "steve (Mr_mr)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "5arm (Miroljub Petrovic)",
+          "AK10 (endyyyy)",
+          "Amariska",
+          "Filemon",
+          "JeleeII",
+          "Lyras",
+          "__builtin_popcount (std::popcount)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10656": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@Fortius#10655 hahahha, za sada baze pobjeđuju",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "KingGeedorah (King Geedorah)",
+          "Lusy (MGJ)",
+          "MiqeloS",
+          "SuperSjajan3",
+          "[deleted]",
+          "indythedog",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10657": {
+      "poster": "Vasili (Fasili)",
+      "content": "@Fortius#10655 Ja računo da ću popraviti prosjek jer je sve online, boy was i wrong.",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "HARAmara (decko_sa_balkana)",
+          "Jale (čakijale)",
+          "JoKing",
+          "Mioch",
+          "MiqeloS",
+          "SuperSjajan3",
+          "Tinx (pingvin)",
+          "[deleted]",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "bjunolulz",
+          "indythedog",
+          "ink",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "Extended_mix",
+          "JeleeII",
+          "JoKing",
+          "Lusy (MGJ)",
+          "Mioch",
+          "__builtin_popcount (std::popcount)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10659": {
+      "poster": "Uchenikowitz (Učečuču)",
+      "content": "Ovaj Pederico baš neki šaljivdžija na Teamsu",
+      "votes": {
+        "upvoters": [
+          "JoKing",
+          "Lusy (MGJ)",
+          "MiqeloS",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "Goliathus",
+          "JeleeII",
+          "iNavy (mornar Ica)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "tuga": []
+      }
+    },
+    "10660": {
+      "poster": "Fortius",
+      "content": "@Fortius#10655 \n\n@Bucc#10656 \n\ne sto posto stavljaju u neku kvazi tablicu neki ranking iz labosa koji je vise bio autistican",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)",
+          "Bucc (Olive Oil)",
+          "MiqeloS",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10661": {
+      "poster": "[deleted]",
+      "content": "@Uchenikowitz#10659 daj screenshot",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10663": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Itachi#10661\n\n![](assets/2020-04-17/00013.png)",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amariska",
+          "in1",
+          "spampers (majmunska boginja)"
+        ],
+        "wtf": [
+          "Bucc (Olive Oil)"
+        ],
+        "tuga": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      }
+    },
+    "10664": {
+      "poster": "Vonj",
+      "content": "https://vimeo.com/407525607\n\nKad nakon dva sata labosa rijesis tek prvi zadatak",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Ducky",
+          "SuperSjajan3",
+          "Uchenikowitz (Učečuču)",
+          "[deleted]",
+          "ink",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "Amariska",
+          "AntonioB25 (Pleteni miš)",
+          "Fica (Prof)",
+          "Filemon",
+          "Goliathus",
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "Kaladonter",
+          "LucidDreamer",
+          "Lusy (MGJ)",
+          "Lyras",
+          "Mioch",
+          "MiqeloS",
+          "SonGoku (~~~~~~~~)",
+          "Tinx (pingvin)",
+          "Tone",
+          "Uchenikowitz (Učečuču)",
+          "ink",
+          "laranotreallycroft",
+          "lucylu",
+          "rija",
+          "tomekbeli420"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10665": {
+      "poster": "Fortius",
+      "content": "@Vasili#10657 ja sam racunala da cu sad napokon mozda i proci bez problema, i cak sam i pocela raditi za faks minimalno 5h dnevno(najcesce vise od 7sati dnevno). Ocito sam mutava i ne zasluzujem biti na FERu kao sto kolega Vilim kaze za nas takve koji ne stignemo sve",
+      "votes": {
+        "upvoters": [
+          "Amariska",
+          "HARAmara (decko_sa_balkana)",
+          "Hrvoje (Hrvoje45)",
+          "Jale (čakijale)",
+          "Lyras",
+          "Mioch",
+          "MiqeloS",
+          "SonGoku (~~~~~~~~)",
+          "Tinx (pingvin)",
+          "Uchenikowitz (Učečuču)",
+          "Valentino",
+          "Vasili (Fasili)",
+          "Vonj",
+          "__builtin_popcount (std::popcount)",
+          "gladiator",
+          "neksi (filip)",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "Amariska",
+          "JeleeII",
+          "Lyras",
+          "SonGoku (~~~~~~~~)",
+          "Uchenikowitz (Učečuču)",
+          "__builtin_popcount (std::popcount)",
+          "iNavy (mornar Ica)"
+        ],
+        "wtf": [
+          "Exelero"
+        ],
+        "tuga": [
+          "Hrvoje (Hrvoje45)",
+          "Mioch"
+        ]
+      }
+    },
+    "10667": {
+      "poster": "[deleted]",
+      "content": "@Vonj#10664 barem si ga rijesio 😢",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Amariska",
+          "JoKing",
+          "Mioch",
+          "MiqeloS",
+          "Suki7",
+          "Sveti_Ilija (Sveti Ilija)",
+          "Vasili (Fasili)",
+          "Vonj",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "SuperSjajan3",
+          "Sveti_Ilija (Sveti Ilija)",
+          "Vasili (Fasili)",
+          "Vonj"
+        ]
+      }
+    },
+    "10668": {
+      "poster": "boki8 (kerovac)",
+      "content": "Ma dobro, mogu li se ja igdje je*eno pozalit da nesto ne valja, a da me u roku 3 sekunde ne mute-aju i izignoriraju sve kao da se nista nije dogodilo?",
+      "votes": {
+        "upvoters": [
+          "Amariska",
+          "Fortius",
+          "JoKing",
+          "Mioch",
+          "MiqeloS",
+          "Suki7",
+          "Vasili (Fasili)",
+          "ink",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amariska",
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "Mioch",
+          "SonGoku (~~~~~~~~)",
+          "ink",
+          "kolega_kolega",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10669": {
+      "poster": "Rene",
+      "content": "Mislio sam da sam brainlet jer nisam skužio da je ova košarica zajednička\n\nhvala za ego boost",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Vasili (Fasili)",
+          "ink",
+          "joj (poni)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Mioch",
+          "Urmum (mamaRu)",
+          "Vasili (Fasili)",
+          "iNavy (mornar Ica)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10672": {
+      "poster": "gladiator",
+      "content": "Kad sam zipao, zipao sam folder a ne datoteke\n\najoj",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      }
+    },
+    "10673": {
+      "poster": "tomekbeli420",
+      "content": "@boki8#10668 nece te mjutat nego ce ti replyat sa \"F\"",
+      "votes": {
+        "upvoters": [
+          "Goliathus",
+          "HARAmara (decko_sa_balkana)",
+          "MiqeloS",
+          "Sveti_Ilija (Sveti Ilija)",
+          "boki8 (kerovac)",
+          "steker",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10674": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "> @Fortius#10665 Ocito sam mutava i ne zasluzujem biti na FERu kao sto kolega Vilim kaze za nas takve koji ne stignemo sve\n\nFER je najnapredniji fakultet za web development u Hrvatskoj, od studenata se očekuje da pokažu urođenu sposobnost za web dev. Nešto kao Hogwarts, samo za JS.",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)",
+          "Filemon",
+          "Fortius",
+          "Jale (čakijale)",
+          "Lyras",
+          "Mioch",
+          "Rene",
+          "Tinx (pingvin)",
+          "Uchenikowitz (Učečuču)",
+          "[deleted]",
+          "[deleted]",
+          "bjunolulz",
+          "indythedog",
+          "ink",
+          "laranotreallycroft",
+          "rija",
+          "snowman",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Filemon",
+          "JeleeII",
+          "Lyras",
+          "Mario1",
+          "Mioch",
+          "Sans",
+          "Tinx (pingvin)",
+          "Uchenikowitz (Učečuču)",
+          "lucylu",
+          "rija",
+          "swish41 (PlavušaSFilozofskog)",
+          "tomekbeli420",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10675": {
+      "poster": "[deleted]",
+      "content": "@boki8#10668 pa kolega ovakva vam je ovo drzava, ne znam sto se cudite.\n\nhttps://www.index.hr/vijesti/clanak/troje-lijecnika-progovorilo-o-nedostatku-zastitne-opreme-dobili-opomene-pred-otkaz/2175259.aspx",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10676": {
+      "poster": "boki8 (kerovac)",
+      "content": "@tomekbeli420#10673 pogledaj Teams, mjutali su nas (barem mene)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10678": {
+      "poster": "SuperSjajan3",
+      "content": "Ma ovaj predmet je ocajno koncipiran. Html, css i javascript se rade po cijeli semestar na drugim fakultetima, a mi smo imali 5. predavanja bez ikakvih vjezbi ili icega slicnog. \n\nI kolega je prije reko da imamo na raspolaganju cijeli internet, ali se ne slazem s njim, kaj ce mi faks onda ako cu opet morat sve sam googlat.",
+      "votes": {
+        "upvoters": [
+          "JoKing",
+          "MiqeloS",
+          "bjunolulz",
+          "neksi (filip)",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10681": {
+      "poster": "Vasili (Fasili)",
+      "content": "@boki8#10676 mjutali su glavni kanal, ali mislim da im možeš početi spamat po ostalim kanalima (ne znam koliko je preporucljivo)",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "boki8 (kerovac)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)",
+          "boki8 (kerovac)",
+          "laranotreallycroft"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10682": {
+      "poster": "puufi",
+      "content": "@gladiator#10672 jel se na tome samo gube neki bodovi ili ne priznaju uopce?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10683": {
+      "poster": "[deleted]",
+      "content": "ocito drzavi umjesto pravih racunarnih inzinjera, embedded developera itd treba sto vise html/css/js majmuncica sto moze bilo tko naucit u par mjeseci koristeci besplatne resurce na internetu",
+      "votes": {
+        "upvoters": [
+          "boki8 (kerovac)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": [
+          "turunturu (Cement)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10686": {
+      "poster": "gladiator",
+      "content": "@puufi#10682 Nadam se da se gube bodovi. Takva greška nije navedena kao diskvalificirajuća",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10687": {
+      "poster": "Vasili (Fasili)",
+      "content": "Ajde ljudi još uvijek imamo kommre danas, možda na kraju ispadne da nam je labos ujutro i dobro prošo",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Fica (Prof)",
+          "Galke",
+          "JeleeII",
+          "Uchenikowitz (Učečuču)",
+          "gladiator",
+          "jobi (azex)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": [
+          "Hrvoje (Hrvoje45)"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Extended_mix",
+          "Filemon",
+          "Galke",
+          "Hrvoje (Hrvoje45)",
+          "Mioch",
+          "Tone",
+          "Uchenikowitz (Učečuču)",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [
+          "ink"
+        ],
+        "tuga": [
+          "laranotreallycroft"
+        ]
+      }
+    },
+    "10688": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "mene se neda pisat vise labosa danas...",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Galke",
+          "JeleeII",
+          "Mioch",
+          "Tinx (pingvin)",
+          "Vasili (Fasili)",
+          "[deleted]",
+          "[deleted]",
+          "boki8 (kerovac)",
+          "ink",
+          "laranotreallycroft",
+          "steker",
+          "steve (Mr_mr)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10689": {
+      "poster": "LongArmedJohhny (LongArmedJohnny)",
+      "content": "Evo, ja sam sad shvatio da se ovo u moodlu treba i zakljucati. Al vjerujem da su dobri ljudi i da mi neće skinut bodove.",
+      "votes": {
+        "upvoters": [
+          "MiqeloS",
+          "Tinx (pingvin)",
+          "Uchenikowitz (Učečuču)",
+          "[deleted]",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Filemon",
+          "JeleeII",
+          "Mioch",
+          "MiqeloS",
+          "SonGoku (~~~~~~~~)",
+          "Suki7",
+          "Uchenikowitz (Učečuču)",
+          "Vasili (Fasili)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "ink"
+        ]
+      }
+    },
+    "10690": {
+      "poster": "viliml",
+      "content": "@Itachi#10683 ne znam baš, po rezultatima labosa se ne bi reklo da to bilo tko može naučiti...",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)",
+          "markoo321 (Grinch)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": [
+          "5arm (Miroljub Petrovic)",
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "Ardura (Maddy)",
+          "DariolaVremenskiPutnik",
+          "ErnestHemingway (Alfetta)",
+          "Fica (Prof)",
+          "Filemon",
+          "Fortius",
+          "Goliathus",
+          "HARAmara (decko_sa_balkana)",
+          "HeHe (Direktor života)",
+          "Hrvoje (Hrvoje45)",
+          "Jale (čakijale)",
+          "JeleeII",
+          "JoKing",
+          "KingGeedorah (King Geedorah)",
+          "LongArmedJohhny (LongArmedJohnny)",
+          "Lyras",
+          "MM_",
+          "Mioch",
+          "MiqeloS",
+          "Rene",
+          "SonGoku (~~~~~~~~)",
+          "SuperSjajan3",
+          "Sveti_Ilija (Sveti Ilija)",
+          "Tinx (pingvin)",
+          "Uchenikowitz (Učečuču)",
+          "VelikiMarko",
+          "Vonj",
+          "WickyWinslow",
+          "[deleted]",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "benac (caneb)",
+          "bjunolulz",
+          "boki8 (kerovac)",
+          "iNavy (mornar Ica)",
+          "imbriish",
+          "in1",
+          "iva7740 (Mica Trofrtaljka)",
+          "jobi (azex)",
+          "mrki",
+          "neksi (filip)",
+          "netflix (seximan)",
+          "potemkin (meriMerino)",
+          "steker",
+          "steve (Mr_mr)",
+          "tomekbeli420",
+          "xeqte"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "LongArmedJohhny (LongArmedJohnny)"
+        ]
+      }
+    },
+    "10691": {
+      "poster": "[deleted]",
+      "content": "@viliml#10690 jer ti inace poslodavac da strikno 2.5h za stvorit web stranicu, vrijeme pocinje odbrojavat od kad dobijes zadatak",
+      "votes": {
+        "upvoters": [
+          "DariolaVremenskiPutnik",
+          "Ducky",
+          "Fica (Prof)",
+          "Filemon",
+          "Fortius",
+          "JoKing",
+          "Mioch",
+          "MiqeloS",
+          "Uchenikowitz (Učečuču)",
+          "Vasili (Fasili)",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "in1",
+          "neksi (filip)",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Filemon",
+          "JeleeII",
+          "Rene",
+          "Uchenikowitz (Učečuču)",
+          "Vasili (Fasili)",
+          "laranotreallycroft",
+          "markoo321 (Grinch)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10695": {
+      "poster": "Fortius",
+      "content": "@Itachi#10691 pa zar nisi znao da se to podrazumijeva",
+      "votes": {
+        "upvoters": [
+          "Vasili (Fasili)",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Vasili (Fasili)",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10697": {
+      "poster": "Sveti_Ilija (Sveti Ilija)",
+      "content": "@viliml#10690  admirale jel stereotip prosjecnog ferovca nastao po tebi ili se ti samo jako trudis da se u njega uklopis",
+      "votes": {
+        "upvoters": [
+          "5ani (5af)",
+          "5arm (Miroljub Petrovic)",
+          "AntonioB25 (Pleteni miš)",
+          "Ardura (Maddy)",
+          "DariolaVremenskiPutnik",
+          "DazedAndConfused",
+          "Ducky",
+          "Fica (Prof)",
+          "Filemon",
+          "Fortius",
+          "Galke",
+          "Goliathus",
+          "HARAmara (decko_sa_balkana)",
+          "HeHe (Direktor života)",
+          "Hesoyam (Lepi Dario)",
+          "Hrvoje (Hrvoje45)",
+          "JBear",
+          "Jale (čakijale)",
+          "JoKing",
+          "KingGeedorah (King Geedorah)",
+          "Lyras",
+          "Mioch",
+          "Rene",
+          "SonGoku (~~~~~~~~)",
+          "Suki7",
+          "SuperSjajan3",
+          "Uchenikowitz (Učečuču)",
+          "Vasili (Fasili)",
+          "Vonj",
+          "__builtin_popcount (std::popcount)",
+          "bjunolulz",
+          "howe892 (dado)",
+          "iNavy (mornar Ica)",
+          "in1",
+          "jobi (azex)",
+          "laranotreallycroft",
+          "mrki",
+          "neksi (filip)",
+          "nnn (dinoo)",
+          "snowman",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "5arm (Miroljub Petrovic)",
+          "Bica",
+          "Filemon",
+          "Galke",
+          "Goliathus",
+          "JBear",
+          "JoKing",
+          "Lyras",
+          "Mioch",
+          "Suki7",
+          "Tone",
+          "Uchenikowitz (Učečuču)",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "bjunolulz",
+          "iNavy (mornar Ica)",
+          "jobi (azex)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10698": {
+      "poster": "Mikki",
+      "content": "Ima li netko efektivan prijedlog kako pristupiti ucenju ovog predmeta, ima uzasno puno funkcionalnosti i dodatno se trazi jaka on spot snalazljivost u labosu, how does one master that osim da provede iducih mjesec dana isprobavajuci svaku zivu funkcionalnost js-a? jer ocito ono do sad sta sam radila je bilo kontraproduktivno...",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)",
+          "Uchenikowitz (Učečuču)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10700": {
+      "poster": "[deleted]",
+      "content": "@Mikki#10698 moj prijedlog/pristup je @Itachi#10645",
+      "votes": {
+        "upvoters": [
+          "Mikki",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10701": {
+      "poster": "potemkin (meriMerino)",
+      "content": "@viliml#10690  Aj legendo ko je tebi da za pravo da prosuđuješ rezultate labosa i po tome zaključuješ da je neko \"bilo tko\". Mater i ćaća te nisu tukli kad je tribalo.",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)",
+          "DazedAndConfused",
+          "Fica (Prof)",
+          "Goliathus",
+          "HARAmara (decko_sa_balkana)",
+          "HeHe (Direktor života)",
+          "Hrvoje (Hrvoje45)",
+          "Jale (čakijale)",
+          "JoKing",
+          "Lusy (MGJ)",
+          "Mioch",
+          "MiqeloS",
+          "SonGoku (~~~~~~~~)",
+          "Uchenikowitz (Učečuču)",
+          "in1",
+          "tomekbeli420"
+        ],
+        "downvoters": [
+          "turunturu (Cement)"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Bica",
+          "Goliathus",
+          "Hrvoje (Hrvoje45)",
+          "brol (Mason Mount me)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10702": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@Mikki#10698  a realno ono labos je gotov, na ispite ce nam dolazit neki mini zadaci koji se mogu rijesit ako znas preze (ja se iskreno nadam) tako da js ako te ne zanima nemoras ni taknit vise, jebo mu pas mater.....mene od ovog predmeta samo backend zanima da si krenem sam pisat api-je za ios appove, a ovaj fronted dio weba necu taknit vise NIKAD",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10703": {
+      "poster": "[deleted]",
+      "content": "@potemkin#10701 \n\n![](assets/2020-04-17/00016.png)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Ducky",
+          "Hrvoje (Hrvoje45)",
+          "SuperSjajan3",
+          "Uchenikowitz (Učečuču)",
+          "viliml"
+        ],
+        "downvoters": [
+          "turunturu (Cement)"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "Goliathus",
+          "jobi (azex)",
+          "markoo321 (Grinch)",
+          "potemkin (meriMerino)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10706": {
+      "poster": "Mikki",
+      "content": "@SonGoku#10702 Kuzim, al su na predavanjima 3 i pol sata potrosili na razliku izmedu null i undefined, a sve ovo sta se ispitivalo je bilo obradeno na primjerima tolko jednostavnim da ni ne mozes properly shvatit funkcionalnost i to u nesto vise od pola sata, tako da me bas ne tjesi to moze se rjesit ako znas preze :(",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Fortius",
+          "Goliathus",
+          "HARAmara (decko_sa_balkana)",
+          "Hrvoje (Hrvoje45)",
+          "JoKing",
+          "Mioch",
+          "MiqeloS",
+          "Suki7",
+          "Uchenikowitz (Učečuču)",
+          "[deleted]",
+          "mariak (kaiak)",
+          "neksi (filip)",
+          "potemkin (meriMerino)",
+          "steker",
+          "steve (Mr_mr)",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Suki7"
+        ]
+      }
+    },
+    "10707": {
+      "poster": "JoKing",
+      "content": "@Itachi#10703 Da je bar troll",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "Goliathus",
+          "Hrvoje (Hrvoje45)",
+          "Jale (čakijale)",
+          "SuperSjajan3",
+          "Sveti_Ilija (Sveti Ilija)",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "potemkin (meriMerino)",
+          "steker",
+          "tomekbeli420",
+          "viliml"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10708": {
+      "poster": "Joskica",
+      "content": "@Mikki#10698 \n\nOvo mozda nece pomoci svima, ali ja cu napisat svoje iskustvo.\n\n>!Ja sam JS prvi put vidjela u 3. srednje na naprednoj informatici (nije MIOC), profesor nam je na satu pokazao ovako se radi login, bez ikakvog sredjivanja ili neceg doslovno samo najobicniji login i registracija usera i onda je rekao imate 2 tjedna da napravite projekt.\n\n>Od nas se ocekivalo da napravimo web aplikaciju za inventar koja ima bazu, izgleda pristojno i ima neke funkcionalnosti tipa dodavanja, brisanja, filtriranja, sortiranja itd.\n\nNa svakom satu smo mogli pitat ako nam nesto nije jasno. \n\n>Nakon ta 2 tjedna vecina projekata se nije maknula od logina, odnosno vecina ljudi nije nista napravilo i naucilo.\n\n>Nas par je napravilo posten projekt. Zasto? Sjedili smo i patili smo se, proguglali smo sve sto nam nije bilo jasno, sto nije valjalo... Sada kad mi izbaci neki error otprilike znam o cemu je rijec jer sam ih toliko vec guglala i naucila. To je bio jedan stresan projekt, a bilo je jos i stresnijih i vecih u koje nas se ubacilo bez ikakvog predznanja. \n\nTldr. Morate jednostavno raditi i isprobavati, ovi primjeri sto daju nikako nisu dovoljni, ali ne mogu ni oni dati primjer svake potencijalne greske ili zadatka. \n\nZnam da sada nitko nema dodatnog vremena, ali ovakve stvari se najbolje uce pomocu malih projektica, samo nadjite nesto jednostavno ili pratite yt tutorial. Drugacije ne moze. Ne moze se naucit programirat iz citanja ili gledanja videa.\n\nOsobno ne volim JS i kompletan frontend me odbija poprilicno, moc cete jednog dana rec da ste full-stack developer ako nista drugo.\n\nSretno :)",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Goliathus",
+          "HARAmara (decko_sa_balkana)",
+          "Mikki",
+          "Mioch",
+          "Sans",
+          "SuperSjajan3",
+          "Uchenikowitz (Učečuču)",
+          "WickyWinslow",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "djeno",
+          "iNavy (mornar Ica)",
+          "indythedog",
+          "soplagaitas (sopla)",
+          "steve (Mr_mr)",
+          "turunturu (Cement)",
+          "viliml",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10709": {
+      "poster": "Banananjeros",
+      "content": "@LongArmedJohhny#10689 Pa ja sam isto zaboravio zaključat. Ništa, kolega, u istom smo škripcu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10710": {
+      "poster": "ink",
+      "content": "@Mikki#10698 pomoli se i upali misu na HRT3. možda dobiješ laki zadatak",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Hrvoje (Hrvoje45)",
+          "JoKing",
+          "Lusy (MGJ)",
+          "Mikki",
+          "Uchenikowitz (Učečuču)",
+          "ghost (ksi)",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Mikki"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10711": {
+      "poster": "Vasili (Fasili)",
+      "content": "@Mikki#10698 Realno ovo ti svodi na to koliko je netko iskusan u programiranju i ne možeš sve naučiti, nego naučiš osnove i dalje gledaš po internetu (dual screen jako pomaže). Ja nisam u životu tako javascript do jučer popodne i stigo sam napraviti cijeli prvi dio s time da sam imo neke glupe probleme u startu.",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "Mikki",
+          "__builtin_popcount (std::popcount)",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Suki7"
+        ]
+      }
+    },
+    "10712": {
+      "poster": "krampus",
+      "content": "@Joskica#10708  ha gay",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10714": {
+      "poster": "[deleted]",
+      "content": "javascript je bio pogreska - ovo je priznao cak i sami tvorac javascripta. ne znam kako je ikome palo na pamet da dopusti web stranicama izvrsavanje programskog koda na racunalima gostiju. originalno je web bio zamisljen kao STATICNE povezane stranice razlicitih medija. ali danas zato dobivamo ovakve krasote:\n\n![](assets/2020-04-17/00017.png)\n\novo je jos i blagi primjer naspram kolicine raka koje neke ostale stranice pokusavaju(i u vecini slucajeva uspiju) ucitat i izvrsavat na vasem racunalu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10716": {
+      "poster": "djeno",
+      "content": "@ink#10710 \n\nimportant note: bozje sile ti nece debuggirat code",
+      "votes": {
+        "upvoters": [
+          "Joskica",
+          "__builtin_popcount (std::popcount)",
+          "ghost (ksi)",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "ink"
+        ]
+      }
+    },
+    "10720": {
+      "poster": "Joskica",
+      "content": "@krampus#10712  ;)",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "soplagaitas (sopla)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10722": {
+      "poster": "netflix (seximan)",
+      "content": "@viliml#10690 lol post je downvotan skoro ko Bieberovi spotovi na yt",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)",
+          "MiqeloS",
+          "Vasili (Fasili)",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "5arm (Miroljub Petrovic)",
+          "Goliathus",
+          "Mioch",
+          "Tinx (pingvin)",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "jobi (azex)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10723": {
+      "poster": "MiqeloS",
+      "content": "@viliml#10690 Na dobrom si putu, samo tako nastavi kolega 🙃\n\n![](assets/2020-04-17/00018.png)",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)",
+          "HARAmara (decko_sa_balkana)",
+          "Suki7",
+          "viliml"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Lyras",
+          "__builtin_popcount (std::popcount)",
+          "netflix (seximan)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10726": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Itachi#10714\n\nSvakako se slažem da danas ima previše JS bloata na stranicama. Koristi se za stvari koje se bez problema mogu riješiti statičnim stranicama. To što je 10 različitih vendora istovremeno izmišljalo svoje stvari i implementiralo na međusobno nekompatibilne načine koje sada sve moraš podržavati ne pomaže. O Electronu da ne pričam.\n\nAli ne slažem se da je JS sam po sebi loš. Postoji masa web appova koji bez JS-a nikako ne bi mogli funkcionirati. Dobar dio njih ne bih koristio da moram skidati desktop aplikaciju. Među njima su i neke stvari koje kad mi trebaju su jako korisne, a ne koristim ih dovoljno često da trošim vrijeme na instaliranje lokalno.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10730": {
+      "poster": "[deleted]",
+      "content": "@__builtin_popcount#10726 problem je u tome da ne mozes ti sad reci: aha, vi 95% stranica ne smijete koristit javascript, ne treba vam, a ovi web appovi koji su mi korisni smiju koristit. ide se na sve ili nista, ja bih radije imao nista nego trenutnu situaciju\n\ntj. ovo mozes radit lokalnim blokiranjem skripti, sto i radim, ali ce pokvariti dosta stranica koje racunaju na to da ce se sav njihov JS izvrsit",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10732": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Itachi#10730\n\nEh, da je od starta bio opt-in model gdje browser kaže da nema vrćenja skripti dok korisnik ne dopusti za stranicu/host/domenu...\n\nAli ajde, barem smo se riješili Flasha i Java appleta.",
+      "votes": {
+        "upvoters": [
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10736": {
+      "poster": "[deleted]",
+      "content": "@__builtin_popcount#10732 rjesili smo se flasha?\n\n![](assets/2020-04-17/00020.png)\n\nali da, znam na kaj mislis. volio bih kad bi se na isti nacin mogli rjesit JS ali to se cini kao daleki san",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10874": {
+      "poster": "Aloko (Ardeo)",
+      "content": "Jel bi mogao netko kome sve radi objavit svoje rjesenje?",
+      "votes": {
+        "upvoters": [
+          "Suki7",
+          "ink",
+          "mariak (kaiak)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10937": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Aloko#10874\n\nEvo kako bih ja to riješio:\n\n[WiM Labos 2 svi zadaci.zip](https://mega.nz/file/oSoVCSxb#6NYDFm0AdpSTtfocLR9HEQEnL6UMjDeEYnzb6RYvvHs)\n\nMOD EDIT: Zamijenjen pokvaren link (ali i na materijalima je)",
+      "votes": {
+        "upvoters": [
+          "Aloko (Ardeo)",
+          "Hrvoje (Hrvoje45)",
+          "MiqeloS",
+          "Suki7",
+          "SuperSjajan3",
+          "[deleted]",
+          "howe892 (dado)",
+          "indythedog",
+          "ink",
+          "puufi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10952": {
+      "poster": "Fortius",
+      "content": "@__builtin_popcount#10937 koliko ti je sveukupno vremena trebalo za to? jesi li uspio u 2.5h?\n\nedit: mislim na samo jedan zadatak ne sve",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10957": {
+      "poster": "__builtin_popcount (std::popcount)",
+      "content": "@Fortius#10952\n\nTrebalo mi je od 8 do 10 večeras da to sve ispočetka napravim - znači zadatak iz pripreme, zajedničke zadatke i ovih 5 različitih.\n\nAli valja uzeti u obzir da se web devom bavim u slobodno vrijeme više od 5 godina, da sam te zadatke jutros već vidio i dio njih riješio za vrijeme labosa.\n  \n\n  \n> @Fortius#10952 edit: mislim na samo jedan zadatak ne sve\n\nŠto se toga tiče, jutros sam labos predao par minuta poslije 10 sati - znači radio sam 1.5 sat.",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "SuperSjajan3",
+          "[deleted]",
+          "idontwannabemyself",
+          "ink",
+          "tomekbeli420"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10960": {
+      "poster": "tomekbeli420",
+      "content": "@__builtin_popcount#10957 nemoj baš tako jako fleksat među nama sirotinjom koja, po rezultatima labosa, nE MoŽe NAuČiTi tO",
+      "votes": {
+        "upvoters": [
+          "BaboTrojka",
+          "Galke",
+          "Lyras",
+          "SuperSjajan3",
+          "Vasili (Fasili)",
+          "iva7740 (Mica Trofrtaljka)",
+          "ruza0001 (rozy)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "5arm (Miroljub Petrovic)",
+          "AK10 (endyyyy)",
+          "Galke",
+          "Goliathus",
+          "JeleeII",
+          "Lyras",
+          "MiqeloS",
+          "Suki7",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "iNavy (mornar Ica)",
+          "jobi (azex)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10976": {
+      "poster": "Fortius",
+      "content": "@__builtin_popcount#10957 problem je u tome sto ako ljudi koji su se prvi put susreli sa javascriptom i nisu imali nikakvih saznanja o tome, a da ne pricam o videima gdje nije bas objasnjeno ono najbitnije, znaci ti ljudi nema teoretske sanse da to stignu sve u 2.5h. da razume sto trebaju napraviti, dodaju dodatan css, nadograde templateove itd.  i da predaju na vrijeme, kao sto oni kazu da treba 10min  ranije.\n\nZato sam te i pitala koliko ti je trebalo. Jer mi se cini da se razumijes jako u to.",
+      "votes": {
+        "upvoters": [
+          "5arm (Miroljub Petrovic)",
+          "Galke",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "idontwannabemyself",
+          "ink",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "10991": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Ja ne znam sto vi pisete, labos je bija i vise nego ok i realan za napisat i stovise koristan.\n\nBudite realni i posteni...",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "bjunolulz",
+          "iva7740 (Mica Trofrtaljka)",
+          "moose (sugar BoOo!!)"
+        ],
+        "downvoters": [
+          "5arm (Miroljub Petrovic)",
+          "HARAmara (decko_sa_balkana)",
+          "JBQ",
+          "Mario1",
+          "MiqeloS",
+          "[deleted]",
+          "lucylu"
+        ]
+      },
+      "reactions": {
+        "haha": [
+          "AK10 (endyyyy)",
+          "Hrvoje (Hrvoje45)",
+          "iNavy (mornar Ica)",
+          "jobi (azex)"
+        ],
+        "wtf": [
+          "ink"
+        ],
+        "tuga": [
+          "MiqeloS",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "soplagaitas (sopla)"
+        ]
+      }
+    },
+    "11009": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@feel_d_boot#10991 aj nemoj trolat djecu btj",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "iva7740 (Mica Trofrtaljka)",
+          "tomekbeli420"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Lyras",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "feel_d_boot (iNut)"
+        ]
+      }
+    },
+    "11037": {
+      "poster": "MiqeloS",
+      "content": "@__builtin_popcount#10937 \n\nHvala na ovome, pošto si tolko u tome, možeš li možda istu stvar napraviti i za 1. labos kad nađeš vremena?",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "howe892 (dado)",
+          "lucylu",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ink"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15083": {
+      "poster": "[deleted]",
+      "content": "unijeli su dosta pogodne bodove. ko prizna pola mu se prasta",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Fortius",
+          "HARAmara (decko_sa_balkana)",
+          "Lenobius",
+          "ink",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15087": {
+      "poster": "Fortius",
+      "content": "@Itachi#15083 molim te obrazloži ovaj dio \"pogodne\"",
+      "votes": {
+        "upvoters": [
+          "LucidDreamer"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15089": {
+      "poster": "[deleted]",
+      "content": "@Fortius#15087 meni su dali 8 bodova rjesio sam samo \"\"\"\"uvodni zadatak\"\"\"\", skroz tocno koliko znam",
+      "votes": {
+        "upvoters": [
+          "Sveti_Ilija (Sveti Ilija)",
+          "__builtin_popcount (std::popcount)",
+          "ink",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15112": {
+      "poster": "AK10 (endyyyy)",
+      "content": "Koliko ste bodova dobili ako ste rijesili samo pripremu i onaj drugi dio uvodnog zadatka(ona stranica za kosaricu)?",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15116": {
+      "poster": "tomekbeli420",
+      "content": "@AK10#15112 predao sam samo pripremu i dobio 5 bodova",
+      "votes": {
+        "upvoters": [
+          "HARAmara (decko_sa_balkana)",
+          "[deleted]",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "HARAmara (decko_sa_balkana)",
+          "JeleeII",
+          "__builtin_popcount (std::popcount)",
+          "lucylu",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15120": {
+      "poster": "boki8 (kerovac)",
+      "content": "@tomekbeli420#15116 Ozbiljno ili? hahaha",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ink",
+          "mariak (kaiak)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15126": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "4 boda priprema i stranica za kosaricu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15127": {
+      "poster": "[deleted]",
+      "content": "dakle jedan koji je predao samo pripremu je dobio vise bodova od ovog s pripremom i dijelom \"uvodnog\". cini se da asistenti opet nekontrolirano divljaju pri ocjenjivanju",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "Jale (čakijale)",
+          "JoKing",
+          "SonGoku (~~~~~~~~)",
+          "__builtin_popcount (std::popcount)",
+          "laranotreallycroft",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15131": {
+      "poster": "tomekbeli420",
+      "content": "@boki8#15120 a tbh ne sjecam se\n\nmoguce cak da sam u krivu, mozda sam jos unutra stavio i cart.html i tamo stavio header footer, al ništa javascripta nisam tamo stavljao\n\nne sjecam se vise tocno",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15132": {
+      "poster": "ruza0001 (rozy)",
+      "content": "ja sam imo cijelu pripremu i dio html-a za kosaricu, i jos ju povezo s ovim od prije, i dobio sam 3.5, tako da \n\nocjenjivanje na slijepo cini se haahahah\n\n@Itachi#15127",
+      "votes": {
+        "upvoters": [
+          "JoKing",
+          "SonGoku (~~~~~~~~)",
+          "Suki7",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)"
+        ]
+      }
+    },
+    "15255": {
+      "poster": "at5611",
+      "content": "Jel jos nekome nisu uneseni bodovi iz labosa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15279": {
+      "poster": "laranotreallycroft",
+      "content": "@at5611#15255 \n\nMozda si krivo jmbag napisao u predaji, tak sam ja bila pa mi nisu upisali",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15299": {
+      "poster": "ink",
+      "content": "@__builtin_popcount#10937 hvala!!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15302": {
+      "poster": "ink",
+      "content": "@ruza0001#15132 ne mora bit da su nepošteni, možda su skidali bodove za isti (prepisani) kod, nekakve greške, nekvalitetan kod itd. (al da, vjerojatno su bodovi dosta random. Nisam ni ja dobio puno. To je uvijek tak na labosima, jedino si siguran ak napraviš 100% točno hahaha)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "[deleted]",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "15354": {
+      "poster": "Vonj",
+      "content": "![](assets/2020-04-28/00012.png)\n\nIma netko jaci ?",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)",
+          "JeleeII",
+          "MiqeloS",
+          "SonGoku (~~~~~~~~)",
+          "markoo321 (Grinch)",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "JeleeII",
+          "in1",
+          "markoo321 (Grinch)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "Bioxed",
+          "SonGoku (~~~~~~~~)",
+          "ruza0001 (rozy)"
+        ]
+      }
+    },
+    "22387": {
+      "poster": "mihamih",
+      "content": "![](assets/2020-05-11/00013.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "AntonioB25 (Pleteni miš)",
+          "Lyras",
+          "jobi (azex)",
+          "laranotreallycroft",
+          "lucylu",
+          "steker"
+        ]
+      }
+    },
+    "22465": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "Nebi bilo lose da netko ko se zna izrazavat sibne mail prodekanu za nastavu za taj web kako labose oni copy pastaju, a sad kad mi pisemo jebeni html css js dobijemo opomenu jer smo svi sa istog stackaoverflova copy pastali....dost licemjerno",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "DazedAndConfused",
+          "Fica (Prof)",
+          "Filemon",
+          "JeleeII",
+          "LucidDreamer",
+          "Lusy (MGJ)",
+          "Mario1",
+          "Mioch",
+          "MiqeloS",
+          "SuperSjajan3",
+          "Urmum (mamaRu)",
+          "[deleted]",
+          "bb8 (zaza)",
+          "ink",
+          "jobi (azex)",
+          "lucylu",
+          "steve (Mr_mr)",
+          "swish41 (PlavušaSFilozofskog)",
+          "turunturu (Cement)",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22474": {
+      "poster": "Fortius",
+      "content": "može li netko reći kada počnu slat mailove? Meni još uvijek ništa za sad. A realno svi bi ga mogli dobiti sa bilo kojom namjenom jer su nam najvjerojatnije svima bili dosta slični kodovi.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "DazedAndConfused",
+          "Mioch",
+          "MiqeloS",
+          "[deleted]",
+          "at5611",
+          "jobi (azex)",
+          "laranotreallycroft",
+          "lucylu"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22498": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@SonGoku#22465 fora je u tome da oni smiju copy pasteati stvari jer nisu pod restriktivnom licencom, vi ne smijete radi kodeksa",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "lup"
+        ],
+        "downvoters": [
+          "DazedAndConfused",
+          "[deleted]"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Filemon",
+          "LucidDreamer",
+          "MiqeloS",
+          "Sveti_Ilija (Sveti Ilija)",
+          "jobi (azex)",
+          "lucylu",
+          "turunturu (Cement)"
+        ]
+      }
+    },
+    "22504": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@micho#22498 \n\na gle fora je u tome da nas jebu na meme predmetu sa meme labosima, gdje su oni bacili pdfove o recimo sad javascriptu i onda sam ja (vjerujem i vecina) 2 dana prije prvi put ih stigo procitat a na labos dode implementacija nekog kurca za koji ti trebas dobro znat jezik da bi stigo napravit sve...i u 2h guglanja rijesim pola labosa i sad bi mi ta jadna 4 boda isli oduzimat jer n ljudi jos ima isti dio tog jadnog koda....jadno",
+      "votes": {
+        "upvoters": [
+          "Fica (Prof)",
+          "Filemon",
+          "Galke",
+          "JBQ",
+          "JeleeII",
+          "JoKing",
+          "LucidDreamer",
+          "Lusy (MGJ)",
+          "Mario1",
+          "Mioch",
+          "MiqeloS",
+          "SuperSjajan3",
+          "Tinx (pingvin)",
+          "[deleted]",
+          "bb8 (zaza)",
+          "gladiator",
+          "howe892 (dado)",
+          "indythedog",
+          "jobi (azex)",
+          "neksi (filip)",
+          "ppooww (pp)",
+          "snowman",
+          "steker",
+          "steve (Mr_mr)",
+          "swish41 (PlavušaSFilozofskog)",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22568": {
+      "poster": "mihamih",
+      "content": "Jel postoji mogucnost da izdaju javnu opomenu za kopiranje koda na labosu? Jer vidio sam da su neke opomene izdane zbog prepisivanja na labosima iz arh1e i strojnog ucenja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22573": {
+      "poster": "ppooww (pp)",
+      "content": "@mihamih#22568 Realno mogu napraviti što hoće. Ista se situacija dogodila u prošlom semestru s labosima iz UPRO-a, pa su objavili sve stegovne mjere i ime studenata(čak i za one koji su se uspjeli opravdati i nisu bili kažnjeni s opomenom).\n\nOpćenito mislim da to nije u redu za ovakav predmet u kojem je pola gradiva neobjašnjeno i potiče se guglanje, ali mislim da to njima ne predstavlja neki značaj.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Josipa (Zelda)",
+          "MiqeloS",
+          "mihamih",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22599": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@SonGoku#22504 Ne znam jel mim predmet konceptualno (npr. meni bi dobro došao, pogle na što forum liči lmao), ali tbh trebali bi prestati očekivati da će vas neki predmet naučiti neki jezik. Ne kažem ovo jer podržavam predmet, nego jer nakon OOP-a više nemate privilegiju učiti jezik na predmetu, samo tehnologiju.\n\nDakle, knjigu u ruke, učiti JS i tjt. Isto kao što će ljudi morati sami naučiti Python za Umjetnu inteligenciju ili Strojno učenje (ako Umjetnu kojim slučajem izbjegnu na preddipl), C# za onaj PIISovski predmet projekt itd.",
+      "votes": {
+        "upvoters": [
+          "DazedAndConfused",
+          "MalaPumpa",
+          "SonGoku (~~~~~~~~)",
+          "mentally_disturbed_llama",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22662": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@micho#22599 \n\nsve je to meni jasno, al nemamo mi vremena uzet knjigu o jsu i posvetit mu se sad tjedan dana, svaki tjedan imamo barem 5 bliceva/labosa drkancija na faxu, tako da ni ne mozemo nes pretjerano unaprijed radit...a labosi idu jebiga eo iduci tjedan prvi backend labos u utorak, mogu u petak popodne krenit radit za to, za os lab koji je u pon, i utr koji je u sri hahaha brijem da je u pon i jos jedan labos iz baza...nista uzet peticu koksa i programirat 40h 3 labosa u 3 razlicita jezika",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "AntonioB25 (Pleteni miš)",
+          "Fica (Prof)",
+          "Filemon",
+          "Galke",
+          "JeleeII",
+          "JoKing",
+          "LucidDreamer",
+          "Mario1",
+          "Mioch",
+          "MiqeloS",
+          "SuperSjajan3",
+          "Sveti_Ilija (Sveti Ilija)",
+          "Urmum (mamaRu)",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "benac (caneb)",
+          "boki8 (kerovac)",
+          "iNavy (mornar Ica)",
+          "indythedog",
+          "ink",
+          "lucylu",
+          "markoo321 (Grinch)",
+          "neksi (filip)",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Urmum (mamaRu)",
+          "in1",
+          "markoo321 (Grinch)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22672": {
+      "poster": "[deleted]",
+      "content": "sve bi to bilo ok da su oni za pravo smislili neke zadatke, umjesto toga koristili su prvi link sa web pretrazivanja @viliml#6000 . I onda se valjda cude da su ljudi to shvatili? pa nije nitko glup.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Galke",
+          "SonGoku (~~~~~~~~)",
+          "__builtin_popcount (std::popcount)",
+          "steve (Mr_mr)",
+          "turunturu (Cement)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22691": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@SonGoku#22662 Jbg ne znam šta da ti kažem. Meni je trebalo jedno 5 uzastopnih semestralnih burnout-ova da shvatim da se ne isplati truditi iz petnih žila za faks i da je najbolja strategija naučiti sve tek dovoljno da prođeš, a baviti se IRL praksom... Najviše uspjeha sam imao kad sam na predmet došao s predznanjem (npr. OOP, UTR, Duboko), a najmanje kad sam stvarno htio naučiti što bolje mogu predmet (Strojno, IRG, PPJ).\n\nPrije bolonje se studiralo svojim tempom, i profesori kao npr. Ilko su se žalili da je bolonja upropastila cijeli smisao studiranja i sve svela na ganjanje ocjene i 3+2 studije, bez fleksibilnosti. Najbitnije se opustiti i tražiti najjednostavnija rješenja, produlji godinu ako treba, samo se ne živciraj i radi što hoćeš. Ako misliš da ne stigneš obaviti neki predmet, ne sili se da ga kontinuirano (ili ove godine) prođeš jer ako nemaš kapaciteta za takav stres jednostavno ćeš puknuti. Riješiti predmet na 2. upisu je sigurno bolje nego naštrebati ga ili još gore, varati. Sigurno ti je bolje riješiti 5/8 predmeta kvalitetno bez muke nego 8/8 jedva zadovoljavajući uvjete uz 8 živčanih slomova.\n\n[I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it](https://www.goodreads.com/quotes/568877-i-choose-a-lazy-person-to-do-a-hard-job)",
+      "votes": {
+        "upvoters": [
+          "5ani (5af)",
+          "DazedAndConfused",
+          "Ducky",
+          "JBQ"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22976": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "loool stigli mailovi za stegovno",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Fortius",
+          "MiqeloS",
+          "Urmum (mamaRu)",
+          "__builtin_popcount (std::popcount)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "jobi (azex)"
+        ]
+      }
+    },
+    "22979": {
+      "poster": "Fortius",
+      "content": "@SonGoku#22976 jel i tebi piše da će tek to biti za par mjeseci?",
+      "votes": {
+        "upvoters": [
+          "MiqeloS",
+          "SonGoku (~~~~~~~~)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22982": {
+      "poster": "[deleted]",
+      "content": "@SonGoku#22976 \n\n@Fortius#22979 \n\nkaj su vam napisali ako nije tajna",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22984": {
+      "poster": "[deleted]",
+      "content": "kasljite pri ulasku na stegovno",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "__builtin_popcount (std::popcount)",
+          "ink",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Bucc (Olive Oil)",
+          "Ducky",
+          "Filemon",
+          "Galke",
+          "Mioch",
+          "Pineo",
+          "RS7",
+          "SonGoku (~~~~~~~~)",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "in1",
+          "ink",
+          "rija",
+          "ruza0001 (rozy)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22988": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@Fortius#22979 \n\nma da, al ja cu se zalit odma \n\n@Itachi#22982  \n\n![](assets/2020-05-12/00040.png)",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "Galke",
+          "ink",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Bucc (Olive Oil)",
+          "Suki7",
+          "snowman"
+        ]
+      }
+    },
+    "22991": {
+      "poster": "Fortius",
+      "content": "@SonGoku#22988 ja doslovno mogu tad završiti na operaciji, nemru mi to radit. Ja fakat ne znam kad ću morati imati tu operaciju koja se odgodila a oni to tak kažu za par mjeseci. :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22994": {
+      "poster": "[deleted]",
+      "content": "@SonGoku#22988 a kaj, vi ste svi samo bez promjene iskoristili one neke kodove koje su tu ljudi stavljali?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "22996": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@Itachi#22994 \n\nja sam stavio cijeli svoj kod xd",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "MiqeloS",
+          "Suki7",
+          "[deleted]",
+          "gladiator",
+          "ink",
+          "mAcaLukas (mAca Lukas)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Lyras",
+          "Mioch",
+          "mAcaLukas (mAca Lukas)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "RS7",
+          "benac (caneb)"
+        ]
+      }
+    },
+    "22998": {
+      "poster": "Fortius",
+      "content": "@Itachi#22994 ma da, evo baš sam to napravila. Doslovno sam kao kolega slično napisala a  nisam prepisala. Tbh mogu me sve ispitat sad i znala bi im odgovoriti. A tko će se sjećati za par mjeseci?",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23000": {
+      "poster": "[deleted]",
+      "content": "@SonGoku#22996 F za zrtvu kolega sjebali su vas ocito copy pasteri",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23009": {
+      "poster": "mAcaLukas (mAca Lukas)",
+      "content": "Ne znam ko od vas, al nekom je cijeli kod javno dostupan na Pastebin-u 😂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Ducky",
+          "Filemon",
+          "Mioch",
+          "__builtin_popcount (std::popcount)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23011": {
+      "poster": "MiqeloS",
+      "content": "Naravno, isfrustiran cijelom situacijom odmah sam slao mail pa evo odgovora:\n\n![](assets/2020-05-12/00042.png)",
+      "votes": {
+        "upvoters": [
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23013": {
+      "poster": "[deleted]",
+      "content": "@mAcaLukas#23009 vjerojatno polovici njih\n\nusput jesu maknuli search sa pastebina? ne vidim ga vise",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23015": {
+      "poster": "[deleted]",
+      "content": "@MiqeloS#23011 told",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23020": {
+      "poster": "mAcaLukas (mAca Lukas)",
+      "content": "@Itachi#23013 Mislim da nisu, @Amariska je sad našla na google-u",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23026": {
+      "poster": "[deleted]",
+      "content": "@mAcaLukas#23020 onda ih pretrazivaci jos indeksiraju, ali prije je i na samom pastebinu postojala pretraga svih objava",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23032": {
+      "poster": "mAcaLukas (mAca Lukas)",
+      "content": "@Itachi#23026 Moguće, nemam pojma\n\nBTW, ne želim kontaktirane deprimirati, ali najverovatnije vas se neće saslušati, šta god kažete će se ignorirati i svi prijavljeni će dobiti istu kaznu. Išta više bi zahtjevalo da nekoliko ljudi odjednom radi svoj posao, a to je previše na ovom faksu",
+      "votes": {
+        "upvoters": [
+          "Mioch",
+          "__builtin_popcount (std::popcount)",
+          "ink",
+          "ppooww (pp)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "snowman"
+        ]
+      }
+    },
+    "23033": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@SonGoku#22465 \n\naj nek neko sastavi nes profesionalno, ja sam nesposobana seljacina koja im moze samo jebat mater...ja bi defitivno poslo tako nesta, al nebi bilo lose da jos ljudi salje i da se zale na ovo",
+      "votes": {
+        "upvoters": [
+          "Mioch",
+          "Suki7",
+          "ink",
+          "mAcaLukas (mAca Lukas)",
+          "snowman",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23048": {
+      "poster": "mihamih",
+      "content": "koja je najbolja strategija za taj razgovor, jel ima netko iskustva lol",
+      "votes": {
+        "upvoters": [
+          "Jale (čakijale)",
+          "LucidDreamer",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23052": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@mAcaLukas#23009 se možda zvao yournemajeff?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "mAcaLukas (mAca Lukas)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23054": {
+      "poster": "ink",
+      "content": "@mihamih#23048 čuo sam da ide po principu klimaj glavom, priznaj, ispričaj se. tak dobiješ minimalnu kaznu. Ko se inati dobije po glavi, čak i ak si u pravu\n\nopet, nije nikad prije bilo nešto ovolko suludo, da prijavljuju ljude koji su solo napisali ali pomognuto s interneta (jer materijali na predmetu ne postoje). Držim fige da nešto uspijete iskemijat/dogovorit. (naravno, neki su i samo copy-pastali s foruma, ti se neće izvuć)",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "LucidDreamer",
+          "Mioch",
+          "MiqeloS",
+          "Vasili (Fasili)",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "mihamih",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23055": {
+      "poster": "mAcaLukas (mAca Lukas)",
+      "content": "@Bucc#23052 his name is jeff, yes",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Mioch"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23060": {
+      "poster": "Bucc (Olive Oil)",
+      "content": "@ink#23054 za neko čudo nisam dobio mail, mislio sam da budem jer nisam nešto mnogo mijenjao od onog što sam stavio sudeći po tome da je bilo 360 (tako nešto) unique visitora. Što me vodi do zaključka da koji su uzeli nisu ništa promjenili ili nisu ljudi našli moj kod od velike pomoći, šmrc\n\nedit: krivome sam odgovorio, zapravo nitko me nije ništa pitao, plaky",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Filemon",
+          "HARAmara (decko_sa_balkana)",
+          "Hrvoje (Hrvoje45)",
+          "InCogNiTo124",
+          "Mioch",
+          "Suki7",
+          "__builtin_popcount (std::popcount)",
+          "laranotreallycroft",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "rija",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23061": {
+      "poster": "[deleted]",
+      "content": "> @ink#23054 čuo sam da ide po principu klimaj glavom, priznaj, ispričaj se. tak dobiješ minimalnu kaznu. Ko se inati dobije po glavi, čak i ak si u pravu\n\nzvuce ko neke upute za prezivjet ako te 1943. zarobe ustase a ne stegovno na feru",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "Filemon",
+          "Galke",
+          "InCogNiTo124",
+          "LucidDreamer",
+          "Mioch",
+          "Tinx (pingvin)",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "gladiator",
+          "indythedog",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amariska",
+          "Filemon",
+          "InCogNiTo124",
+          "JoKing",
+          "Mioch",
+          "RS7",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "indythedog",
+          "kolega_kolega",
+          "paradizot (debeli gmaz)",
+          "rija",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": [
+          "ink"
+        ]
+      }
+    },
+    "23071": {
+      "poster": "Fortius",
+      "content": "@Itachi#23061 možda i nema razlike",
+      "votes": {
+        "upvoters": [
+          "Hrvoje (Hrvoje45)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23078": {
+      "poster": "LucidDreamer",
+      "content": "Najjace mi je kad ekipa stigne detektirat sve te plagijate , ali ne stigne smislit svoje zadatke za labose",
+      "votes": {
+        "upvoters": [
+          "Josipa (Zelda)",
+          "Kasperinac",
+          "[deleted]",
+          "__builtin_popcount (std::popcount)",
+          "jobi (azex)",
+          "mentally_disturbed_llama"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AntonioB25 (Pleteni miš)",
+          "Bucc (Olive Oil)",
+          "Fica (Prof)",
+          "Filemon",
+          "Galke",
+          "GranAutismo",
+          "InCogNiTo124",
+          "JeleeII",
+          "Kasperinac",
+          "Mioch",
+          "MiqeloS",
+          "Sans",
+          "Tone",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "cajaznun",
+          "gladiator",
+          "iNavy (mornar Ica)",
+          "indythedog",
+          "ink",
+          "jobi (azex)",
+          "mAcaLukas (mAca Lukas)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "snowman"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23088": {
+      "poster": "kix7 (Fish99)",
+      "content": "jel zna itko uopce sta je najgore sta se moze dogodit, jel uopće moguće ikakvo izbacivanje s faksa ili budu samo novčane kazne ili nešto treće?",
+      "votes": {
+        "upvoters": [
+          "krle"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23103": {
+      "poster": "Fortius",
+      "content": "@Pineo je li ikako moguće da se organizira neka provjera ili nešto za ovih 60+ prijavljeno? Ja bih prva bila za to. Ne znam koliko i kako ćemo se uopće moći obraniti i to u jesenskome semestru. Ne znam ni što znači jesenski semestar samo znam da je za par mjeseci. Ljudi će uključujući mene zaboraviti što je bilo i kako da išta pametno kažem za par mjeseci? Preostaje mi samo da kažem da sam kriva iako nisam, jer ne želim snosit veće posljedice. Ovo se ne radi o jednoj osobi zato i pitam za savjet.",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Josipa (Zelda)",
+          "Mioch",
+          "MiqeloS"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23108": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "also moze netko ko je naso ove njihove labose online ih linkat tu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23109": {
+      "poster": "Nocna_smjena",
+      "content": "@Itachi#22994 U obavijesti na FERWeb-u su rekli da su našli iste kodove i sa sitnim izmjenama.  Tbh i ne čudi me da ima 60+ ljudi kad su zadali UMOBOLNI uvodni zadatak. Pribijanje na kriz bilo bogtenedo.",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Mioch",
+          "[deleted]",
+          "ink",
+          "ppooww (pp)",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23115": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@kix7#23088 Nema novčane kazne, najgore kaj ti se može dogodit je da izletiš s faksa ili ako si već završio faks da ti uzmu diplomu.",
+      "votes": {
+        "upvoters": [
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23118": {
+      "poster": "Nocna_smjena",
+      "content": "@micho#23115 sad me baš zanima. Piše u tom pravilniku o stegovnoj odgovornosti da je teži prekršaj ponavljanje lakšeg prekršaja (prepisivanje je lakši prekršaj). Što se desi na drugoj prijavi? Opomena pred isključenje? 🤔",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23120": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Nocna_smjena#23118 Koliko znam ovisi o ponašanju tijekom postupka. Fakultetske regulacije su, kao i mnoge koje nisu zakonske, subjektivna sprdačina\n\nNpr. ako te uhvate da prepisuješ na nekom [s]Šnajder gang ZEMRIS[/s] ZPR predmetu (UPRO, OOP npr.) stegovno ti ne gine, čini mi se i ZPM. Ako te uhvate na Fizici, postoji priča ženske koja nije izletila faksa nakon što su je na 3. upisu fizike po 3. put uhvatili.\n\nOnda opet ako i dođeš do stegovnog, ovisi tko ti \"sudi\" i čini mi se da je netko rekao da ovisi o raspoloženju (ali don't quote me on this, ne mogu naći izvor). Po meni je cijeli taj postupak dokaz da ljude ne smiješ staviti blizu pravilnika jer nikad nemaš garantirano fer suđenje. Pogotovo zato što se prepisivanje i sl. smatra isključivo zlom studenta, ali ne i nositelja predmeta, tj. ne radi se na tome da se ne da povod studentu da prepiše, nego se na sve fakultetsko po defaultu gleda kao savršeno, a na profesorima je da priznaju nedostatke.",
+      "votes": {
+        "upvoters": [
+          "5ani (5af)",
+          "Mioch",
+          "MiqeloS",
+          "__builtin_popcount (std::popcount)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Nocna_smjena",
+          "jobi (azex)"
+        ]
+      }
+    },
+    "23138": {
+      "poster": "Nocna_smjena",
+      "content": "@micho#23120 zar nisu Mekterović, Burić i Nakićka već neko vrijeme u tom povjerenstvu? Tbh, prvo dvoje mi se ne čine nešto raspoloženi za sankcioniranje studenata dok bi se za treću dalo diskutirat 😂\n\nMislim neznam ni kak to povjerenstvo točno funkcionira (da li i profesori sa predmeta kojeg se varalo glasaju?) tak da vjv lupetam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23140": {
+      "poster": "puufi",
+      "content": "Jel se onda kazne odreduju tek kad bude to u jesenskom semestru? Kao do tad necemo znati jel ce nam samo skidat bodove ili ne mozemo polozit predmet, ili jos nesto gore",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23142": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Nocna_smjena#23138 Najbolje da to objasni @MarokMarsci ako ga ne vežu neki lihvarski stegovni NDA-ovi",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "MarokMarsci (Collapse Enjoyer)",
+          "Mioch",
+          "__builtin_popcount (std::popcount)",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Filemon",
+          "InCogNiTo124",
+          "Mioch",
+          "Nocna_smjena",
+          "Sans",
+          "__builtin_popcount (std::popcount)",
+          "gladiator",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23144": {
+      "poster": "benac (caneb)",
+      "content": "@boki8#23091 ja iskreno mislim da bi ovaj tekst trebao poslati prodekanici za nastavu. I svi koji imate slicne primjedbe da isto pošaljete. Nikad nisam imao iskustva s takvim necim al mozda bi ona mogla malo smirit vodstvo tog predmeta, kad bi dobila dovoljno primjedbi.",
+      "votes": {
+        "upvoters": [
+          "AK10 (endyyyy)",
+          "Gussy (huba buba)",
+          "Krisle",
+          "Mioch",
+          "MiqeloS",
+          "SonGoku (~~~~~~~~)",
+          "ruza0001 (rozy)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23150": {
+      "poster": "Nocna_smjena",
+      "content": "@benac#23144 sumnjam. Ja sam joj pisao još početkom godine 2 molbe (i jednu prošle akademske godine). Obećala mi odgovorit s pozitivnim ili negativnim rješenjem. Ni dan danas nisam dobio ni jedan odgovor.",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "AntonioB25 (Pleteni miš)",
+          "Kasperinac",
+          "Mioch",
+          "MiqeloS",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      }
+    },
+    "23163": {
+      "poster": "[deleted]",
+      "content": "https://www.youtube.com/watch?v=MfIDXuCHOfc",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23166": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@puufi#23140 Tako je\n\nAl mislim ti nastavi raditi ako nisi kriv/a, dođe ti na isto ko da su to izmislili u jesenskom semestru (ili 2 godine nakon položenog predmeta), jer to mogu tako",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23167": {
+      "poster": "gladiator",
+      "content": "jbt led postgresql",
+      "votes": {
+        "upvoters": [
+          "JeleeII",
+          "[deleted]",
+          "snowman",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Bucc (Olive Oil)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23168": {
+      "poster": "gladiator",
+      "content": "postupno razvijam alergiju na pelud",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23169": {
+      "poster": "gladiator",
+      "content": "ček, ovo nije spam",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "BigZ1",
+          "Filemon",
+          "InCogNiTo124",
+          "Jale (čakijale)",
+          "Kasperinac",
+          "MarokMarsci (Collapse Enjoyer)",
+          "Mioch",
+          "Nocna_smjena",
+          "RS7",
+          "Sans",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "iNavy (mornar Ica)",
+          "indythedog",
+          "mAcaLukas (mAca Lukas)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "rija",
+          "ruza0001 (rozy)",
+          "snowman",
+          "steker"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23174": {
+      "poster": "MarokMarsci (Collapse Enjoyer)",
+      "content": "@micho#23142 ne vezu me NDA sva sreca, al u moje vrijeme nije bilo toliko krsenja pravilnika pa imam manje iskustva 🤷‍♂️ \n\n@Nocna_smjena#23138 povjerentstvo je uglavnom zadnja karika u stegovnom lancu. uglavnom se stvari rjesavaju unutar predmeta prvo (oduzimanje bodova, rusenje studenta), a stegovno je trljanje soli na ranu.\n\nono sto mogu rec je budete sretni sto su buric i mekterovic glavni u odboru jer su chill, nedo vam bog da dodju njihovi zamjenici (nakic i zakosek) jer skupljali bi studente u rinfuzi nakon povjerenstva.\n\nugl povjerenstvo radi tako da te pozove na raspravu gdje te suoce sa cinjenicama i onda ti iznosis svoju obranu tj. svoju verziju istine. nakon sto se svi ucenici povezani za incident ispitaju donosi se odluka o sankciji koja je uglavnom sukladna stegovnom pravilniku. ako je ucenika previse onda se valjda donose nakon svake osobe.\n\ne sad, kolega buric mi je rekao da bi se trebao mijenjati pravilnik uskoro, i da ce kraj novog pravilnika treblinka izgledat kao wellness, a ausvic kao osnovna skola. za tu promjenu mozete zahvaliti mentalnim teroristima sa svojih godina koji su ocito odlucili postaviti rekord za broj stegnutih na jednoj godini.\n\ntako vam bog pomogao\n\nsrdacan pozdrav,\n\nex-stegovnik",
+      "votes": {
+        "upvoters": [
+          "Cubi",
+          "Filemon",
+          "InCogNiTo124",
+          "Mioch",
+          "Rene",
+          "Tinx (pingvin)",
+          "Vasili (Fasili)",
+          "WickyWinslow",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "gladiator",
+          "indythedog",
+          "slip",
+          "spampers (majmunska boginja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Filemon",
+          "Gulbash",
+          "InCogNiTo124",
+          "Kasperinac",
+          "Mioch",
+          "Nocna_smjena",
+          "PikachuOnAcid (Kaneki kun)",
+          "Pineo",
+          "RS7",
+          "Sans",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "cajaznun",
+          "iNavy (mornar Ica)",
+          "jobi (azex)",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "slip"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23177": {
+      "poster": "Fortius",
+      "content": "> @MarokMarsci#23174 povjerentstvo je uglavnom zadnja karika u stegovnom lancu. uglavnom se stvari rjesavaju unutar predmeta prvo (oduzimanje bodova, rusenje studenta), a stegovno je trljanje soli na ranu.\n\nMeni nije jasno onda na čemu smo mi sada? Meni nisu oduzeti nikoji bodovi. Ništa mi nije rečeno za pad predmeta nego sam samo taj mail od stegovnog dobila. Znači ja pojma nemam u kojoj sam sad gabuli ako uopće jesam? Normalno da jesam ali nije mi jasno ako kažeš da se to sve unutar predmeta rješava prvo kak to da su mi rekli da sam prijavljena i da se postupak sad pokrenut?",
+      "votes": {
+        "upvoters": [
+          "InCogNiTo124",
+          "Kasperinac",
+          "ink",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23178": {
+      "poster": "kix7 (Fish99)",
+      "content": "i sta onda kad me stegnu, jel bi se trebali samo sramit kao ili imaju neke ozbiljnije posljedice?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23181": {
+      "poster": "Fortius",
+      "content": "@Fortius#23177 možda ja povjerenstvo smatram nečime drugim. Ovo je tako confusing",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23188": {
+      "poster": "MarokMarsci (Collapse Enjoyer)",
+      "content": "@Fortius#23177 naglasak na **uglavnom**, neki zavodi/predmeti vole samo yeetat to na stegovno i boli ih djon.\n\nako si dobila poziv na raspravu stegovnog povjerenstva, onda si u gabuli. pripremi se. \n\nza tvoje dobro nadam se da je stari pravilnik jos u igri.",
+      "votes": {
+        "upvoters": [
+          "Fortius",
+          "Johnny_Bravo (a beautiful and unique snowflake)",
+          "Nocna_smjena"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23190": {
+      "poster": "MarokMarsci (Collapse Enjoyer)",
+      "content": "@kix7#23178 \n\nu trenutačnom (starom) pravilniku imaš propisane 4 kazne:\n\n1. Opomena\n2. Opomena pred isključenje\n3. Isključenje sa fakulteta na godinu dana\n4. Trajno isključenje sa fakulteta",
+      "votes": {
+        "upvoters": [
+          "BigZ1",
+          "Filemon",
+          "Fortius",
+          "Mioch",
+          "__builtin_popcount (std::popcount)",
+          "kix7 (Fish99)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23194": {
+      "poster": "MarokMarsci (Collapse Enjoyer)",
+      "content": "Za sve koji žele znati više o onome što ih čeka i koja su im prava:\n\nhttps://www.fer.unizg.hr/_download/repository/Pravilnik_o_stegovnoj_odgovornosti_studenata[2].pdf",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Fortius",
+          "InCogNiTo124"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23200": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@MarokMarsci#23174 stegni me, Maroče uWu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23202": {
+      "poster": "MarokMarsci (Collapse Enjoyer)",
+      "content": "@feel_d_boot#23200 samo utroje sa @HeHe u havani",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23222": {
+      "poster": "Pineo",
+      "content": "@Fortius#23177 stegovno povjerenstvo nije nadležno za bodovanje i ocijenjivanje, o tome odlučuju nositelji predmeta, a stegovno samo donosi neku od trenutno važeće 4 stegovne mjere po gore navedenom pravilniku (nakon rasprave i saslušanja studenta), a moguće je i odbaciti prijavu ako se ustanovi njena neutemeljenost (imate toga na ferwebu među starim slučajevima). \n\no ovim prijavama koje su u postupku ne mogu ništa komentirati.\n\np.s. novi pravilnik nije još izglasan.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Fortius",
+          "KingGeedorah (King Geedorah)",
+          "MarokMarsci (Collapse Enjoyer)",
+          "Mioch",
+          "SonGoku (~~~~~~~~)",
+          "Tinx (pingvin)",
+          "[deleted]",
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23225": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@Pineo#23222 Smije li se znat kakav je taj novi pravilnik? Pretpostavljam da ne smije ali vrijedi pokusati lol",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23226": {
+      "poster": "SonGoku (~~~~~~~~)",
+      "content": "@Pineo#23222 \n\n@KingGeedorah#23225 \n\nmozda bitnije pitanje, ako se izglasa novi pravlnik sa vecim sankcijama npr smrtnom kaznom, hoce li se nama u \"jesenskom semestru\" suditi po starom ili novom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23227": {
+      "poster": "MarokMarsci (Collapse Enjoyer)",
+      "content": "@KingGeedorah#23225 ignorance is bliss my friend",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)",
+          "Mioch",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23237": {
+      "poster": "Aloko (Ardeo)",
+      "content": "![](assets/2020-05-12/00060.jpeg)\n\nbit ce to zanimljivo gledat",
+      "votes": {
+        "upvoters": [
+          "Bucc (Olive Oil)",
+          "Fica (Prof)",
+          "Mioch",
+          "MiqeloS",
+          "Vasili (Fasili)",
+          "gladiator",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Galke",
+          "Josipa (Zelda)",
+          "Mioch",
+          "Stoja_9 (Bije_san_u_autobusu)",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "cajaznun",
+          "mariak (kaiak)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23239": {
+      "poster": "JoKing",
+      "content": "@KingGeedorah#23225 Ne znam za sve, ali na naslovnici pravilnika, ispod PRAVILNIK O STEGOVNOJ ODGOVORNOSTI STUDENATA a iznad I.     OPĆE ODREDBE će pisati: \"Ostavite svaku nadu svi vi koji dođete na stegovno\"",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "Lyras",
+          "gladiator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Mioch",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "gladiator",
+          "iNavy (mornar Ica)",
+          "indythedog"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23240": {
+      "poster": "MarokMarsci (Collapse Enjoyer)",
+      "content": "@JoKing#23239 prije da ce pisat \"arbeit macht frei\" al ok",
+      "votes": {
+        "upvoters": [
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Galke",
+          "Mioch",
+          "Tinx (pingvin)",
+          "Vasili (Fasili)",
+          "bb8 (zaza)",
+          "iNavy (mornar Ica)",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23243": {
+      "poster": "Lyras",
+      "content": "@JoKing#23239 lasciate ogni sperantza voi chi entrate FER.",
+      "votes": {
+        "upvoters": [
+          "Galke",
+          "JeleeII",
+          "JoKing"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23246": {
+      "poster": "Mike (Klaud Konzultanta)",
+      "content": "@KingGeedorah#23225 Morat ćeš \"volonterski\" radit na razvoju Edgara.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "[deleted]",
+          "gladiator",
+          "ink"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "JeleeII",
+          "Mario1",
+          "Mioch",
+          "RS7",
+          "SonGoku (~~~~~~~~)",
+          "Tinx (pingvin)",
+          "Vasili (Fasili)",
+          "__builtin_popcount (std::popcount)",
+          "bb8 (zaza)",
+          "indythedog",
+          "ink",
+          "rija",
+          "snowman",
+          "turunturu (Cement)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23267": {
+      "poster": "Pineo",
+      "content": "@KingGeedorah#23225 svi pravilnici na FERu prolaze javnu raspravu i dostupni su studentskim predstavnicima koji mogu iznjeti svoje primjedbe, komentare i sl., izabrali ste preko 30 studenata koji sjede u fakultetskom vijeću i imaju pristup materijalima koji se izglasavaju pa vam mogu oni prenjet informacije kad ovo dodje na red.",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)",
+          "Sveti_Ilija (Sveti Ilija)",
+          "[deleted]",
+          "bb8 (zaza)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23325": {
+      "poster": "Nocna_smjena",
+      "content": "@Pineo#23267 Koliko je izgleda da pravilnik prođe?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "23346": {
+      "poster": "Nocna_smjena",
+      "content": "@Nocna_smjena#23325 izgledno*",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25240": {
+      "poster": "steker",
+      "content": "![](assets/2020-05-15/00046.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Lyras",
+          "Mioch",
+          "__builtin_popcount (std::popcount)",
+          "boki8 (kerovac)",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25252": {
+      "poster": "steve (Mr_mr)",
+      "content": "@steker#25240 Sto znaci da ce se uzeti u obzir i ovaj dogadaj? Jel to samo na predmetu WIP ili automatski imamo nekakvu opomenu od stegovnog?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25253": {
+      "poster": "steve (Mr_mr)",
+      "content": "@steker#25240 Sto znaci da ce se uzeti u obzir i ovaj dogadaj? Jel to samo na predmetu WIP ili automatski imamo nekakvu opomenu od stegovnog?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "25256": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@steve#25252 Nemaš ništa od Stegovnog, ali ako te prijave opet, makar na nekom drugom predmetu,  uzet će ti ovo u obzir (tj vjv ćeš dobiti strožu kaznu)",
+      "votes": {
+        "upvoters": [
+          "AntonioB25 (Pleteni miš)",
+          "Mioch",
+          "__builtin_popcount (std::popcount)",
+          "steker",
+          "steve (Mr_mr)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

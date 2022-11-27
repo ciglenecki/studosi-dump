@@ -1,0 +1,3049 @@
+{
+  "title": "[NAISP] 3. laboratorijska vježba - 2020/2021",
+  "creator": "Amon",
+  "slug": "naisp-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Napredni algoritmi i strukture podataka",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "119750": {
+      "poster": "Amon",
+      "content": "Zadnji labos je otvoren, za one koji žele easy mode, uvjerljivo najlakši zadatak mi se čini 1., tu samo treba naći najkraće puteve da se dođe od početka do nekog vrha  (i tako za sve vrhove). 2. i 3. mi se čine dosta slični, ali čini mi se da tamo ima i nekih negativnih vrijednosti (tj težina), a ovdje su samo pozitivne tako da je to lakše",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119755": {
+      "poster": "korisnik1",
+      "content": "@Amon#119750 nemaju svi isti poredak zadataka",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119757": {
+      "poster": "post",
+      "content": "Kod zadataka za 11 bodova, je li bolje riješiti simpleks ili sudoku?",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "MrHead (vandal)",
+          "hejhoj (vdvd)",
+          "lucija (luc)",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119759": {
+      "poster": "Amon",
+      "content": "@korisnik1#119755 Aha, da. Ugl kod mene je 1. Primov algoritam, a 2. i 3. su Bellmanov i Warshallov",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119766": {
+      "poster": "[deleted]",
+      "content": "krleza dok sastavlja zadatke za 11 bodova\n\n![](assets/2021-01-11/00010.jpeg)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119819": {
+      "poster": "Skaxen",
+      "content": "Ima neki C++ master koji moze pomoci oko ovoga.\n\nRadim Primov algoritam gdje su nam dali sljedecu strukturu\n```c++\nstruct Edge {      //13. linija\n    char from;\n    char to;\n    int weight;\n    Edge(char f, char t, int w) : from{ f }, to{ t }, weight{ w } {}\n    Edge() {}\n};\n\nusing edges_t = vector<Edge>;\nusing vertices_t = set<char>;\nusing graph_t = pair<vertices_t, edges_t>;\n```\n\ni kad ja pokusam deklarirati neku varijablu sa\n```c++\nEdge minWeightEdge;        //31. linija\n```\n\nedgar kompajler mi vraca sljedeci error\n```c++\nmain.cpp:31:8: error: redefinition of ‘struct Edge’\n   31 | struct Edge {\n      |        ^~~~\nmain.cpp:13:8: note: previous definition of ‘struct Edge’\n   13 | struct Edge {\n      |        ^~~~\n     ```\n      Pa ako se netko kuzi u ovo bio bi jako zahvalan.",
+      "votes": {
+        "upvoters": [
+          "laugreano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119820": {
+      "poster": "[deleted]",
+      "content": "@Skaxen#119819 ne trebas prepisivati te njihove definicije",
+      "votes": {
+        "upvoters": [
+          "Skaxen",
+          "pina_be"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119839": {
+      "poster": "AN5A",
+      "content": "Radi li tko sudoku?",
+      "votes": {
+        "upvoters": [
+          "Cubii"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119877": {
+      "poster": "Frootek",
+      "content": "@AN5A#119839 Radim ja, lokalno mi prolaze testovi ali edgaru nešto na paše. 😏",
+      "votes": {
+        "upvoters": [
+          "laugreano"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120092": {
+      "poster": "laugreano",
+      "content": "@Skaxen#119819 Ista stvar. Jesi li našao rješenje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120104": {
+      "poster": "pina_be",
+      "content": "@laugreano#120092 Meni isto...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120114": {
+      "poster": "koode7",
+      "content": "Jel zna netko koji je format nodeova koji su nam dali? napisali su da se radi o charovima, a radi li se o intovima ili slovima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120151": {
+      "poster": "pina_be",
+      "content": "Je li tko uspio da mu bude točno rješenje na Edgaru za primov algoritam?",
+      "votes": {
+        "upvoters": [
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120154": {
+      "poster": "Amon",
+      "content": "@pina_be#120151 Taj sam\n\nEvo par napomena za stvari koje su mene zezale: \n1. to i from basically ništa ne znače jer se može ići u oba smjera, dakle možeš gledati i from to kao i to from\n2. primov algoritam funkcionira tako da tražiš bridove najmanje težine, a da je neki od obrađenih vrhova na nekom kraju tog brida, to je basically sve što trebaš znati o tom algoritmu\n3. jednom kada obradiš neki vrh staviš ga u npr set obrađenih vrhova i pazi na to da taj vrh više ne može biti \"cilj\", samo izvor\n\nFun fact kutak: na početku sam išao provjeravati što mi algoritam daje na ulaz pa sam iz zezancije na izlaz stavio onu strukturu koju dobijemo na početku (dakle graf bez ikakvog postupka) i edgar mi je priznao. U međuvremenu je bug razriješen",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120169": {
+      "poster": "Noname",
+      "content": "Oni koji imaju termin za 3. Labaratorijsku vježbu rješavaju bilo koji zadatak ili moraju onaj za 17 bodova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120170": {
+      "poster": "basketbaler (Burek sa sirom)",
+      "content": "@Noname#120169 Rješavaju bilo koji zadatak",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120186": {
+      "poster": "pina_be",
+      "content": "@Amon#120154 E hvala ti puno. Nisam uzela u obzir da ovo from-to može i obratno i onda nije prolazilo..",
+      "votes": {
+        "upvoters": [
+          "Amon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120212": {
+      "poster": "peaceko",
+      "content": "Kolege koji su imali odgovaranje u 1. ili 2. ciklusu... Je li se ispituje tema samo ovog jednog zadatka koji smo odabrali za riješiti, ili općenito sve cjeline koje su obrađene? U prijevodu, ako se odlučim riješiti zadatak s Dijkstrom, je li mi dovoljno znati grafove, ili me može pitati i nešto iz simpleksa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120216": {
+      "poster": "keykey",
+      "content": "@peaceko#120212 samo onaj zadatak koji rijesis",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Noggenfogger (dammitimmad)",
+          "glider (toblerone)",
+          "in1",
+          "peaceko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120218": {
+      "poster": "narval13068 (Dima)",
+      "content": "Jel netko riješio možda simpleks ili sudoku? Ima li netko savjet koji riješiti i možda koji hint",
+      "votes": {
+        "upvoters": [
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120227": {
+      "poster": "Koalalica (zaba)",
+      "content": "@narval13068#120218 ja se mucim sa simpleksom. nije mi iskreno jasno sto nam oni daju u tom tableau parametru.\n\nZa test 1 dobjem ovaj input:\n\n`  vvd tableau = {\n\n    {1, 5, 0, 0, 0},\n\n    {5, 6, 1, 0, 30},\n\n    {3, 2, 0, 1, 12}\n\n    };\n`\n\nNo onda vec imamo rjesenje i ono glasi: `[0, 0, 30, 12]`? krivo.\n\nOK, mozda jer radimo maksimizaciju oni nisu prvi redak obrnuli, pa pomnozim prvi redak s -1 i probam ponovno. rjesenje: `[0, 5, 0, 2]`. opet krivo.\n\ntbh na brzaka sam prosla kroz tu prezentaciju, pa mozda ne radim neki kljucan korak prije postupka simpleksa?\n\njel netko zna koje rjesenje trebamo dobiti s ovakvom tablicom?",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120231": {
+      "poster": "Emma63194",
+      "content": "@Koalalica#120227 Malo sam proučavala gradivo, ali nisam još stigla daleko s time pa ne mogu odgovoriti. Imala bih pitanje doduše. \n\nJe li prvi redak ona jednadžba u kojoj je varijabla čiji maksimum tražimo, a druga dva ograničenja? (Pretposavljam da je tako zbog ove mini jedinične matrice u ta dva reda).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120233": {
+      "poster": "Koalalica (zaba)",
+      "content": "@Emma63194#120231 da, rekla bih da je, iako u opisu zadatka nista ne pise o tome :/",
+      "votes": {
+        "upvoters": [
+          "Emma63194"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120242": {
+      "poster": "pushPop",
+      "content": "@Koalalica#120227 \n\nZa ovaj primjer i ja dobivam rjesenje: [0, 5, 0, 2]\n\nRekao bih da je to tocno jer su x1=0 i x2=5 sto je ok:\n\nZasto ti mislis da je krivo?\n\nBtw, jel je ovo test sa edgara ili si prepisao s prezentacije primjer? Ja nigdje ne mogu vidjet na edgaru inpute sto bi bilo super da ima?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120244": {
+      "poster": "Koalalica (zaba)",
+      "content": "@pushPop#120242 to je s edgara. mislim da je krivo zato sto mi edgar kaze da je krivo :P\n\nmozes si throwati error s njihovim inputom kao messageaom pa ces vidjeti sto ti daju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120245": {
+      "poster": "pushPop",
+      "content": "@Koalalica#120244 \n\ne mozes mi molim ti dat isjecak koda za tu foru ako ti nije problem? Vec sam pokusao smislit kako bi, ali nisam dobio nikakvu ideju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120248": {
+      "poster": "Koalalica (zaba)",
+      "content": "@Koalalica#120227 ipak je `[0, 5, 0, 2]` tocno lol. kao object sam vracala `-tableau[0].back()` umjesto `tableau[0].back()`. mistery solved.",
+      "votes": {
+        "upvoters": [
+          "post",
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120250": {
+      "poster": "Koalalica (zaba)",
+      "content": "@pushPop#120245 \n\n`string b = \"\";\n\n   for (int j = 0; j < tableau.size(); j++) \n\n   {\n\n      for (int i = 0; i < tableau[0].size(); i++) \n\n      {\n\n         b+= to_string(tableau[j][i]) + \", \";\n\n      }\n\n      b += \"\\n\";\n\n   }\n\n  throw runtime_error(b);`\n\ninace google: c++ how to print 2d vector, google: c++ how to throw error with message bi ti isto rekli kako, ali i guess da je lakse samo cekat da ti netko da gotovo rjesenje :)",
+      "votes": {
+        "upvoters": [
+          "pushPop"
+        ],
+        "downvoters": [
+          "Daorson",
+          "toni98"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120259": {
+      "poster": "AN5A",
+      "content": "@narval13068#120218 Radim ja sudoku ako trebaš",
+      "votes": {
+        "upvoters": [
+          "Vrba"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120263": {
+      "poster": "pushPop",
+      "content": "@Koalalica#120250 \n\nMeni je bas na ovom primjeru i dalje -100% - mozes molim te pogledat moja rjesenja (ovo sam throw error na kraju (prije return 0):\n\n![](assets/2021-01-12/00017.png)\n\nHvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120266": {
+      "poster": "Koalalica (zaba)",
+      "content": "@pushPop#120263 zanimljivo, vracam isto sto i ti, ali meni prolazi...",
+      "votes": {
+        "upvoters": [
+          "pushPop"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120267": {
+      "poster": "pushPop",
+      "content": "@Koalalica#120266 \n\nok, budem jos debuggirao, hvala na feedbacku",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120271": {
+      "poster": "Cubii",
+      "content": "@narval13068#120218 \n\nja sam sudoku rjesio\n\nideja je rekurzivno isprobat sve mogucnosti postavljanja brojeva.\n\nnades prvo prazno polje, upises neki broj na to mjesto i rekurzivno pozoves funkciju.\n\nako neki uvjet nije zadovoljen (2 ista broja u retku/stupcu/boxu) vracas se nazad.\n\nali s obzirom da ne zelimo imat previse rekurzivnih poziva, onda za svako polje pamtit constraintove(samo brojevi koji mogu doc na to polje, dakle ne pojavljuju se u tom redu/stupcu/boxu)\n\nna pocetku te constaintove izracunam i onda prije svakog rekurzivnog poziva updateam sve constrainte s obzirom na broj koj upisujem\n\nto mi je i dalje vracalo previse backtrace poziva da prode evaluaciju\n\npa sam stavio da se polja ne upisuju po redu (s lijeva na desno, gore dolje), nego se prvo pokusavaju polja koja imaju najmanje constraintova (npr. neko polje na koje moze doc samo jedan broj)",
+      "votes": {
+        "upvoters": [
+          "Broono (Burućuh)",
+          "Elendur19 (Zagor)",
+          "Emma63194",
+          "Filemon",
+          "MrHead (vandal)",
+          "Simpy",
+          "Yeltneb",
+          "[deleted]",
+          "luba",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120300": {
+      "poster": "AN5A",
+      "content": "@Cubii#120271 Prolazi li ti sve testove? Meni u pravilu prolazi, rijetko kad se dogodi da padne prvi zbog premalog broja iteracija, ali jednom dvaput mi se dogodilo da padne zadnji test pa kao dobijem nula. Sad ne znam da li da predam i riskiram (većinu vremena mi je 100%) ili što. 😣\n\nIsto sam napravila rekurzivno, za domenu uzima samo vrijednosti za koje vrijede ograničenja i kao iduće polje za popuniti uzima se prvo s najmanjim brojem mogućnosti za umetnuti.",
+      "votes": {
+        "upvoters": [
+          "[deleted]",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120310": {
+      "poster": "pushPop",
+      "content": "@Koalalica#120266 \n\nSad je taj ok, jedino mi ostali nekad prolaze, a nekad ne (koliko sam skuzio, jedini je taj primjer svaki puta prisutan, a ostale random odabiru).\n\nJesi mozda rijesio da ti svi prolaze pa imas neke savjete?\n\nHvala!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120332": {
+      "poster": "peaceko",
+      "content": "@AN5A#120300 Kako izgleda kad padne sudoku test? Meni lokalno prolaze (nade se rjesenje, nikakvi exceptioni), kada pokrenem na edgaru, svugdje dobivam:\n```\nstatus: Runtime Error (NZEC) ; Stderr: double free or corruption (out)\nrun: line 1:     3 Aborted                 (core dumped) LD_LIBRARY_PATH=/usr/local/gcc-9.2.0/lib64 ./a.out\n ; \n```\nAko je itko imao slican problem, bio bih zahvalan.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120346": {
+      "poster": "Koalalica (zaba)",
+      "content": "@pushPop#120310 ne, i meni je ista stvar s ostalima :( sutra cu proci detaljnije kroz prezentaciju pa mozda skuzim sto jos treba dodat kod implementacije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120361": {
+      "poster": "AN5A",
+      "content": "@peaceko#120332 To je bio jedan od problema na koji sam naišla (svaki put kad sam sredila jedan se pojavio drugi) i mislim da je bila stvar u ovome da sam ja ovako imala u funkciji solve (solveSudoku je moja interna funkcija)\n```\nfor (int i = 0; i < N; i++) \n                for (int j = 0; j < N; j++) \n                    sudokuField.field[i][j] = init_values[i][j];\nbool result = solveSudoku();\nreturn &sudokuField;\n```\npa sam promijenila u \n\nSudokuField *sudokuField = new SudokuField();\n            \n\n            for (int i = 0; i < N; i++) \n                for (int j = 0; j < N; j++) \n                    sudokuField -> field[i][j] = init_values[i][j];\n            bool result = solveSudoku(sudokuField);\n            if (result) \n               return sudokuField;\n            else\n            \treturn NULL;",
+      "votes": {
+        "upvoters": [
+          "PudingIzMenze",
+          "peaceko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120363": {
+      "poster": "AN5A",
+      "content": "@peaceko#120332 Probam printscreenati kada se dogodi, kao što sam rekla dogodi se rijetko, ali dovoljno da me strah predati. 😖",
+      "votes": {
+        "upvoters": [
+          "peaceko"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120365": {
+      "poster": "Cubii",
+      "content": "@AN5A#120300 \n\nSlicno se i meni ponasalo dok nisam dodo da uzima prvo polja s najmanjim brojem mogucnosti. Tu i tamo je neki test pado s prevelikim brojem iteracija.\n\nNa kraju sam pokrenuo jedno 10 puta i svaki put su svi testovi prosli.\n\nZadnji test (bar meni) je nemoguc za rjesit, pa ti mozda detekcija toga ne radi dobro, osim toga ne znam sta bi ti jos moglo bit krivo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120368": {
+      "poster": "AN5A",
+      "content": "@Cubii#120365 Ja sad pokrenula par puta i svi mi prolaze (čak i kad sama probam), ali strah me što ako se dogodi kad predam baš taj jedan usrani test kada mi palo. Premda ne shvaćam kako. Eventualno ako je Sudoku s više rješenja pa da njima padne, a meni prolazi. Morat ću kasnije ispitati tu situaciju da vidim kako se meni ponaša.\n\nInače ako smo koristili ovo s najmanjim brojem mogućnosti, a dogodi se baš taj jedan test gdje ispadne i dalje preveliki broj iteracija, možemo li i dalje dobiti sve bodove? Jer mi glupo izgubiti zbog jednog testa.",
+      "votes": {
+        "upvoters": [
+          "Cubii",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120439": {
+      "poster": "Just_some_name",
+      "content": "može netko stavit svoj main za dijakstru?\n\nJesu ih slučajno negdje objavili?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside",
+          "lucija (luc)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120492": {
+      "poster": "neZnamNista",
+      "content": "![](assets/2021-01-12/00038.png)\n\nJe li netko tko je rješio sudoku zadatak zna objasniti zbog čega bi mogao doći ovaj error? Na vlastitim primjerima radi ali faila na edgaru.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120502": {
+      "poster": "AN5A",
+      "content": "@neZnamNista#120492 Pogledaj par postova iznad kako meni u zadatku izgleda, inače ne znam u čemu bi mogla biti greška.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120504": {
+      "poster": "AN5A",
+      "content": "![](assets/2021-01-13/00000.png)\n\nOpet uspjela dobiti, ali samo jednom u 60 pokušaja.",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Anonimity (BoJack)",
+          "Filemon",
+          "doki",
+          "narval13068 (Dima)"
+        ]
+      }
+    },
+    "120535": {
+      "poster": "koode7",
+      "content": "@pina_be#120186 @Amon  kako mislite i obratno? sta ste u edgeve potrpali duplice rjesenja, tj jos jednom dodali sve edgeve samo obrnutim redoslijedom?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120556": {
+      "poster": "Amon",
+      "content": "@koode7#120535 Ma to i from implicira kao da su to vektori (tj da se ne može ići u oba smjera), ali to nije tako. I onda su nas zbog te notacije zbunili\n\nSamo ignoriraj to i from i čitaj to kao vrh 1 i vrh 2",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "koode7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120721": {
+      "poster": "Frootek",
+      "content": "@neZnamNista#120492  Kada stvaraš sudoku field moraš ga stvorit s malloc jer prije nego što se test završi edgar napravi free(sudoku) . Npr ovako : \n\nstruct CP_sudoku::SudokuField* ptr = (struct CP_sudoku::SudokuField*) malloc (sizeof(struct CP_sudoku::SudokuField));",
+      "votes": {
+        "upvoters": [
+          "neZnamNista"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120733": {
+      "poster": "jazavci",
+      "content": "ima li ikakva fora s memorijom u ovom s primovim algoritmom? javlja mi neki error s tim na edgaru",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120749": {
+      "poster": "RogerRoger",
+      "content": "Zašto je u sudoku zadatku definiran template? Gledam i ne razumijem čemu služi u ovom konkretnom slučaju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120751": {
+      "poster": "adidas",
+      "content": "Zadatak sa Primovim algoritom. \n\nMogu li težine biti negativne?\n\nMogu li težine biti nula?\n\nRješavam zadatak preko matrica pa nezz na što da inicijalno stavim vrijednosti elemenata...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120753": {
+      "poster": "Amon",
+      "content": "> @adidas#120751 Mogu li težine biti negativne?\n\n> Mogu li težine biti nula?\n\nNe i ne\n\nUvijek ti je isti zadatak tak da možeš na početku isprintati sve težine i možeš vidjet da nema nula niti negativnih",
+      "votes": {
+        "upvoters": [
+          "adidas",
+          "jazavci",
+          "koode7",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120783": {
+      "poster": "jazavci",
+      "content": "moze netko postat kako ide redoslijed vrhova u tocnom rjesenju za primov?",
+      "votes": {
+        "upvoters": [
+          "koode7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120793": {
+      "poster": "koode7",
+      "content": "@jazavci#120783 sad će @Amon :D (pls :') ) redoslijed rubova il vrhova, svejedno\n\nedit: evo testne funkcije za prima za primjer iz edgara: https://pastebin.com/Ay4uR48B",
+      "votes": {
+        "upvoters": [
+          "Daorson",
+          "hejhoj (vdvd)",
+          "jazavci",
+          "ls_123 (KimuraKong)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120813": {
+      "poster": "koode7",
+      "content": "evo i slike grafa iz edgara za prima\n\n![](assets/2021-01-13/00022.png)",
+      "votes": {
+        "upvoters": [
+          "Jakic007",
+          "hejhoj (vdvd)",
+          "jazavci"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120824": {
+      "poster": "korisnik1",
+      "content": "Ne znam kako je bilo u ostalim zadacima, ali u simpleksu nije bilo ispisa stdout i stderr, sad ga ima, kolege profesori zaboravili ukljuciti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "jazavci"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120829": {
+      "poster": "Amon",
+      "content": "@koode7#120793 Ovo bi trebalo biti to:\n\nA B 2 , B D 2 , C D 1 , D H 2 , E H 1 , H M 2 , I M 2 , M R 2 , N R 1 , F N 1 , F J 2 , G H 4 , G L 3 , M S 4 , S V 2 , O V 3 , R T 4 , V W 4 , R U 6 , U X 5 , G K 7 , L P 7 , V Y 8",
+      "votes": {
+        "upvoters": [
+          "Jakic007",
+          "jazavci",
+          "koode7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120830": {
+      "poster": "toni98",
+      "content": "simpleks će me u grob otjerati",
+      "votes": {
+        "upvoters": [
+          "Koalalica (zaba)",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Emma63194",
+          "Filemon",
+          "Noggenfogger (dammitimmad)",
+          "weedovnjak"
+        ]
+      }
+    },
+    "120836": {
+      "poster": "koode7",
+      "content": "@Amon#120829 po kojoj logici dobivas C D 1? po grafu bi trebalo biti D C 1, pretty god damn sure",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120842": {
+      "poster": "Jakic007",
+      "content": "@koode7#120836 A to je taj isti brid jer nije smjer bitan ali Edgar ocekuje u originalnom obliku da bude i u rjesenju zapisan.",
+      "votes": {
+        "upvoters": [
+          "Amon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120843": {
+      "poster": "Zuzu (Coffe123)",
+      "content": "@pushPop#120263 možeš reć molim te kako si uspio to popravit, ista greška mi se javlja, a dobro je rješenje",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120845": {
+      "poster": "koode7",
+      "content": "@Jakic007#120842 i kak ste to rijesili? ja sam dodao jednostavno sve bridove u graf obrnutim smjerom, tj poduplao ih, ali nakon tog duplanja (pocetni error je bas za taj C D 1, D C 1, duplanje to ukloni) mi javlja da u grafu nemam R U 6, a imam i R U 6 i U R 6 (i sve vrhove grafa prisutne). poslat ću mail sada.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120846": {
+      "poster": "korisnik1",
+      "content": "@Zuzu#120843 ja sam imao zaostali ispis od nekad prije pa moj ispis \"nesto nesto OK\" nije bio jednak \"OK\"",
+      "votes": {
+        "upvoters": [
+          "Zuzu (Coffe123)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120848": {
+      "poster": "Koalalica (zaba)",
+      "content": "Koliko iteracija trebamo napraviti za simpleks postupak? sad sam skuzila da mi nekad svi testovi budu tocni, a nekad samo 1. a svaki put kad mi bude krivo rjesenje, to je zato jer sam dosla do maksimalnog broja iteracija i onda defaultno vratim 1.\n\nstavila sam da mi je maksimalni broj iteracija n*n (gdje je n broj redaka tableau) (isla sam po logici da ce trebat proci najvise sve bridove potupnog grafa, a njih ima n*(n-1)/2 gdje je n broj jednadzbi ogranicenja).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120858": {
+      "poster": "happysun",
+      "content": "@Koalalica#120848 nakon što odabereš redak q moraš provjeriti jesu li u tom stupcu svi brojevi manji ili jednaki od 0, ako su manji ili jednaki od 0 onda kao rezultat nemaš optimalno rješenje... Zato mislim da ne treba staviti ograničeni broj iteracija nego beskonačnu petlju koja iskoči kada je gore navedeni uvjet zadovoljen ili u slučaju kada su ti svi brojevi iz nultog retka veći ili jednaki od 0-> tada imaš optimalno rješenje... Bar mislim da tako treba napraviti, ako sam u krivu neka me netko ispravi..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120859": {
+      "poster": "Emma63194",
+      "content": "@toni98#120830 Što je tolko težak taj zadatak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120860": {
+      "poster": "in1",
+      "content": "@AN5A#120504 Provjeri prije pokretanja algoritma je li dani sudoku legalan odnosno jesu li zadovoljena sva pravila sudoka, a tek onda pokreni algoritam pretraživanja. Nekada njihov input bude ilegalan, npr. daju da je neki broj 2x u istom stupcu.",
+      "votes": {
+        "upvoters": [
+          "AN5A",
+          "FICHEKK",
+          "Filemon",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120868": {
+      "poster": "Koalalica (zaba)",
+      "content": "@happysun#120858 imam obje te provjere, ali ako stavim while(true) dobivam time limit exceeded :(\n\nJel itko uspio rjesiti taj simpleks da mu svi testovi svaki put produ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120875": {
+      "poster": "happysun",
+      "content": "@Koalalica#120868 stavi da ti je uvjet za while provjera nultog retka, onda na taj način kada su ti svi pozitivni u nultom retku izaći ćeš iz while...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120890": {
+      "poster": "Koalalica (zaba)",
+      "content": "@happysun#120875 ma mislim da nije do toga, jer unutar while petlje odmah radim tu provjeru i onda returnam ako sam nasla rjesenje.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120895": {
+      "poster": "rs50113",
+      "content": "Simpleks\n\n1. Množenje prvog reda tablaeu sa -1\n2. Provjera je li cijeli redak >=0 ako je ispisi rjesenje\n3. Pronalaženje najnegativnijeg broja u prvo redu za odabir pivot stupca (provjeravate li i zadnji stupac?)\n4. Provjera postoji li barem jedan element u pivot stupcu veći od 0 i izračun omjera pivot stupca od retka 1... i zadnjeg stupca za odabir pivot retka. Za pivot redak odabire se najmanji omjer. Ako su svi elementi manji od nule vrati 1\n5. Djeljenje pivot retka sa pivot elementom.\n6. Gauss-Jordan (tableau[i][j]-=tableau[i][pivotStupac]*tableau[pivotRed][j])\n\n\n\nKoraci 2-6 vrte se u petlji dok nije zadovoljen uvjet iz 2.\n\nobj=tableau[0].back()\n\n\n\nTestovi mi u nekim slućajevima vraćaju 100%, prvi primjer je uvijek točan, a nekad incorrect objective value ili incorrect solution value.\n\nVidi li itko gdje mi se nalazi greška zbog koje mi se te vrijednosti povremeno krivo računaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120896": {
+      "poster": "happysun",
+      "content": "@Koalalica#120890 sad i ja imam taj problem, do sada sam imao višak ispisa za prvi test pa sam mislio da mi je općenito nešto krivo. Sada se i meni svi testovi osim prvoga vrte beskonačno... proučiti ću još gradivo pa ako nađem u čemu je stvar objavim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120898": {
+      "poster": "Koalalica (zaba)",
+      "content": "@rs50113#120895 sve isto kao i ti imam. (u 3. ne provjeravam zadnji stupac). meni nikad ne vraca krive solution ili objective value, ali mi vraca krivi status (1 umjesto 0).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120905": {
+      "poster": "rs50113",
+      "content": "@Koalalica#120898 Kad vracaš 1? Odmah nakon odabira pivot retka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120907": {
+      "poster": "Koalalica (zaba)",
+      "content": "@rs50113#120905 Vracam ga ako ustanovim da nema broja >0 kod odabira pivot retka, ili ako prekoracim maksimalan broj iteracija (stavila sam ga na n^2 gdje je n broj redaka tablice).",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120908": {
+      "poster": "rs50113",
+      "content": "Ja nemam uvjet za maksimalan broj iteracija i nikad mi ne vraća time exceeded\n\n@Koalalica#120907",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120913": {
+      "poster": "Koalalica (zaba)",
+      "content": "@rs50113#120908 Kod provjere je li redak >= 0, provjeravas li i fju cilja ili ne? Jer ne bi trebao nju gledati.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120928": {
+      "poster": "rs50113",
+      "content": "@Koalalica#120913 ne provjeravam za fju cilja",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120929": {
+      "poster": "post",
+      "content": "Kako se isčita rješenje iz tablice u simpleks algoritmu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120932": {
+      "poster": "rs50113",
+      "content": "@post#120929 tableau[0].back()",
+      "votes": {
+        "upvoters": [
+          "post"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120947": {
+      "poster": "ElonDusk (💀  )",
+      "content": "jel itko prolazi testove na simplexu?\n\novo je primjer testa s edgara koji mi ne prolazi: https://pastebin.com/MwtzfQuG\n\nmoze netko postat svoje rezultate pa da usporedimo?\n\novako mozete ucitati input:\n ```\n   int m, n;\n   cin >> m >> n;\n   vector<vector<double>> t(m, vector<double>(n));\n   for (auto &el : t)\n       for (auto &ell : el) cin >> ell;\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120968": {
+      "poster": "Koalalica (zaba)",
+      "content": "@ElonDusk#120947 zaglavi mi izmedu dva vrha i alternira izmedu njih. Pivoti mi idu: (1, 8), (1, 29), (1, 8), (1, 29), ...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120970": {
+      "poster": "toni98",
+      "content": "@Koalalica#120968 kad sam dodao provjeru je li zadnji stupac pozitivan, nemam više istek vremena. Probaj to. Međutim i dalje neki testovi padaju, neki prođu ahhah :(",
+      "votes": {
+        "upvoters": [
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120979": {
+      "poster": "post",
+      "content": "Ako imate primjere za simpleks svakako pošaljite 🙂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120980": {
+      "poster": "toni98",
+      "content": "@post#120979 jedan mali imaš negdje gore\n\nevo jedan njihov veliki:\n>!```\n{\n\t\t{51.000000, -81.000000, -20.000000, -79.000000, 35.000000, -36.000000, -7.000000, -38.000000, 48.000000, 46.000000, 85.000000, 79.000000, -25.000000, -13.000000, 32.000000, 15.000000, -50.000000, 74.000000, -57.000000, 4.000000, -38.000000, -72.000000, 86.000000, -26.000000, 69.000000, -47.000000, -29.000000, 62.000000, -87.000000, 46.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000},\n\t{-12.000000, 68.000000, 72.000000, -24.000000, -44.000000, -89.000000, -2.000000, -77.000000, 84.000000, -19.000000, -85.000000, 30.000000, 35.000000, -60.000000, 81.000000, 66.000000, 35.000000, -82.000000, 4.000000, 88.000000, -63.000000, -72.000000, -16.000000, -87.000000, -7.000000, -28.000000, 10.000000, 54.000000, 41.000000, 5.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 3.000000\n},\n\t{56.000000, 24.000000, 19.000000, -79.000000, -22.000000, 42.000000, -82.000000, -96.000000, -95.000000, -70.000000, 8.000000, -47.000000, -12.000000, -21.000000, 97.000000, 88.000000, -44.000000, -22.000000, -45.000000, -53.000000, 59.000000, 36.000000, -28.000000, 75.000000, -10.000000, -76.000000, -27.000000, 65.000000, 38.000000, -6.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 8.000000\n},\n\t{-63.000000, 52.000000, -40.000000, -31.000000, 80.000000, 27.000000, 74.000000, 61.000000, 51.000000, -96.000000, 41.000000, 36.000000, -9.000000, -67.000000, -41.000000, 23.000000, 25.000000, 43.000000, 60.000000, 95.000000, 63.000000, 92.000000, -32.000000, -41.000000, 88.000000, -60.000000, 90.000000, 60.000000, 71.000000, 33.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 2.000000},\n\t{96.000000, 62.000000, -43.000000, -19.000000, -83.000000, 88.000000, 59.000000, 28.000000, -30.000000, -27.000000, 55.000000, -8.000000, -25.000000, 44.000000, -27.000000, 49.000000, 92.000000, -52.000000, -13.000000, -55.000000, 29.000000, -34.000000, 60.000000, -30.000000, -35.000000, -63.000000, 64.000000, -17.000000, -88.000000, 96.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 5.000000},\n\t{-86.000000, -42.000000, -29.000000, 79.000000, 81.000000, -61.000000, 40.000000, -12.000000, -49.000000, -73.000000, -33.000000, -72.000000, 36.000000, -37.000000, 91.000000, 16.000000, 79.000000, 11.000000, 29.000000, 21.000000, 78.000000, 94.000000, -92.000000, -14.000000, -97.000000, 57.000000, 24.000000, -54.000000, 70.000000, -50.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000},\n\t{-34.000000, 85.000000, 71.000000, -50.000000, -25.000000, 70.000000, -57.000000, 98.000000, -32.000000, 68.000000, 86.000000, 15.000000, -19.000000, 12.000000, 5.000000, 86.000000, -63.000000, 11.000000, -62.000000, -26.000000, -48.000000, 7.000000, -77.000000, 53.000000, -69.000000, -5.000000, -8.000000, -13.000000, 11.000000, -23.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 8.000000},\n\t{-34.000000, -80.000000, -10.000000, -44.000000, -51.000000, 6.000000, 28.000000, 18.000000, -35.000000, 49.000000, 29.000000, 62.000000, -14.000000, -44.000000, 20.000000, 50.000000, 21.000000, -38.000000, -7.000000, 6.000000, -85.000000, -44.000000, -48.000000, 41.000000, 2.000000, 93.000000, 68.000000, 50.000000, -64.000000, 3.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 4.000000},\n\t{2.000000, 20.000000, -27.000000, -17.000000, 43.000000, 71.000000, 68.000000, -99.000000, -85.000000, -56.000000, -6.000000, -19.000000, -69.000000, -46.000000, -32.000000, 14.000000, -45.000000, 96.000000, 40.000000, 52.000000, 65.000000, 81.000000, 3.000000, 32.000000, 20.000000, 81.000000, 50.000000, -2.000000, -25.000000, 3.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 8.000000},\n\t{-56.000000, 15.000000, 17.000000, 73.000000, 20.000000, 40.000000, -16.000000, -85.000000, -64.000000, -51.000000, -83.000000, 59.000000, -97.000000, 42.000000, -97.000000, 81.000000, 79.000000, 81.000000, 76.000000, -80.000000, -48.000000, 6.000000, 20.000000, 74.000000, 4.000000, -32.000000, -85.000000, -81.000000, 84.000000, -4.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 3.000000},\n\t{58.000000, -64.000000, 37.000000, 32.000000, 65.000000, 48.000000, 91.000000, -88.000000, 98.000000, -20.000000, 97.000000, -48.000000, -91.000000, -84.000000, -68.000000, -37.000000, -20.000000, -58.000000, 76.000000, -83.000000, 71.000000, -92.000000, 79.000000, -50.000000, 6.000000, 30.000000, 72.000000, 18.000000, 17.000000, 86.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 6.000000},\n\t{-51.000000, -12.000000, -13.000000, 3.000000, -5.000000, 69.000000, 73.000000, 96.000000, -84.000000, -32.000000, -1.000000, -68.000000, 44.000000, -90.000000, 49.000000, -51.000000, -91.000000, -44.000000, -85.000000, -36.000000, 41.000000, -31.000000, 41.000000, 62.000000, 0.000000, 59.000000, 23.000000, 72.000000, -60.000000, 42.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 7.000000},\n\t{-56.000000, -78.000000, 49.000000, 82.000000, 43.000000, -16.000000, 25.000000, -55.000000, -80.000000, 30.000000, -89.000000, -46.000000, 3.000000, -7.000000, -44.000000, 12.000000, -35.000000, 58.000000, 43.000000, -82.000000, -31.000000, 52.000000, -38.000000, -43.000000, 38.000000, 14.000000, 20.000000, 39.000000, 63.000000, -76.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 2.000000},\n\t{60.000000, 95.000000, -83.000000, 41.000000, -18.000000, -49.000000, -79.000000, 55.000000, -81.000000, 3.000000, 6.000000, -15.000000, 69.000000, -27.000000, -89.000000, -40.000000, -3.000000, 98.000000, 45.000000, -85.000000, -78.000000, 77.000000, 61.000000, -20.000000, -91.000000, 3.000000, 66.000000, 8.000000, 80.000000, -19.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.000000, 4.000000},\n\t{-47.000000, -95.000000, 54.000000, -45.000000, -50.000000, 69.000000, -86.000000, -5.000000, -34.000000, -58.000000, 11.000000, 91.000000, 36.000000, -2.000000, 45.000000, 83.000000, 33.000000, -88.000000, -7.000000, 4.000000, -26.000000, 52.000000, -20.000000, 99.000000, 80.000000, 59.000000, 8.000000, -99.000000, 16.000000, -60.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 8.000000},\n\t{73.000000, -95.000000, -77.000000, 19.000000, -40.000000, -31.000000, -58.000000, -35.000000, -13.000000, 78.000000, -14.000000, -54.000000, -87.000000, 98.000000, -3.000000, -34.000000, -67.000000, 19.000000, 28.000000, -88.000000, 58.000000, -27.000000, -40.000000, 44.000000, 36.000000, -82.000000, -47.000000, 18.000000, 32.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 9.000000},\n\t{98.000000, -24.000000, 16.000000, -31.000000, 50.000000, -48.000000, -57.000000, -74.000000, -17.000000, -22.000000, 54.000000, 59.000000, -62.000000, 52.000000, -0.000000, -8.000000, 55.000000, -12.000000, 42.000000, 81.000000, 49.000000, 69.000000, -86.000000, -20.000000, 46.000000, 30.000000, -84.000000, 1.000000, 24.000000, -95.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 4.000000},\n\t{11.000000, -21.000000, -14.000000, -36.000000, -59.000000, -41.000000, 81.000000, 4.000000, 60.000000, 58.000000, 59.000000, 94.000000, -80.000000, 95.000000, -72.000000, 38.000000, 75.000000, -16.000000, 81.000000, -49.000000, -72.000000, -40.000000, 91.000000, 9.000000, -29.000000, -20.000000, 48.000000, 80.000000, 6.000000, 72.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 4.000000},\n\t};\n```",
+      "votes": {
+        "upvoters": [
+          "post",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120994": {
+      "poster": "happysun",
+      "content": "@toni98#120980  jel ti ovaj test prolazi točno... ja sam malo obratio pažnju na te testove što ne prolaze i primijetio sam da u slučaju kada zadana matrica ima oko 50 ili više redaka tada mi test ne bude riješen dobro... nekako mi to nema smisla, ali je tako haha 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120996": {
+      "poster": "toni98",
+      "content": "@happysun#120994 dobijem da nema konačni broj rješenja, nez jel tocno",
+      "votes": {
+        "upvoters": [
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "120999": {
+      "poster": "happysun",
+      "content": "@toni98#120996 meni isto ispadne da nema optimuma..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121001": {
+      "poster": "toni98",
+      "content": "@Koalalica#120968 šta cemo s cikliranjem? :(",
+      "votes": {
+        "upvoters": [
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121002": {
+      "poster": "ElonDusk (💀  )",
+      "content": "@happysun#120994 Prolaze mi uvijek kad nema rjesenja, kad ima onda pada za velike testove. Jel ima itko da mu svi testovi prolaze svaki put? Meni se sve vise cini da su oni nesto sjebali...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121006": {
+      "poster": "happysun",
+      "content": "@ElonDusk#121002 tako je i meni, ako nismo zaboravili niti jednu iznimku onda je do njih.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121010": {
+      "poster": "ElonDusk (💀  )",
+      "content": "evo jedan test koji ima optimalno rjesenje i ne prolazi mi na edgaru pa ako netko moze isprobat da usporedimo. dobivam vrijednost\n\n `12.4959`  u tocki  `0.00725923 0.0239467 0 0.00814094 0.0193332 0.0317625 0.0423125 0 0.0429032 0.00703167 0 0.0164764 0 0 0.0192887 0.0489486 0 0 0 0 0 0 0 0.0280788 0 0 0 0 0 0.00784373 13.3755 6.99487 0 0 0 11.8339 1.04644 0 17.4891 5.54338 17.06 1.20061 0 9.46391 10.2535 16.542 0.99458 8.16322 0 5.83306 12.4331 3.58889 7.79154 1.81231 4.64056 10.0505 8.54231 12.6226 3.24668 0 9.97372 0 18.7833 2.27448 0.777631 12.0346 10.0552 0 2.81318 8.22773 2.17138 1.5805 0 3.21482 2.72201 0 10.9406 0 0 10.1476 5.29024 4.96556 6.13664 0.551297 10.9395 11.3737 2.27313 `\n\n\n>!```\n{{74, 75, 20, 93, 84, 33, 50, 44, -21, 56, 53, -61, 69, -82, 5, 70, -81, -34, -77, -82, -4, -45, -88, 99, 57, -63, -65, -32, -24, -22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},\n             {27, 41, 72, 79, -28, -24, 18, -65, -70, -99, 72, -87, -46, -19, -56, -81, -18, 78, -73, 20, 59, 84, 65, -41, 47, 0, 50, -63, -71, 86, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4},\n             {96, -94, 35, 62, -61, -45, 45, 94, -25, -25, -95, 3, 68, 83, 45, -28, -41, -50, -89, -58, 28, -67, 30, 84, -63, -48, -23, -19, -50, 13, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6},\n             {-46, 28, 3, 70, -68, 56, 85, -83, -76, 71, -13, -52, -99, 51, 92, 19, -71, 55, 75, 22, 36, 33, -71, 71, -3, 70, 56, 10, -16, -6, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6},\n             {60, -53, 52, -73, 64, -39, 4, -74, 96, -32, 60, -90, -51, 33, -84, 44, 26, 74, 50, -21, 87, 55, 66, 97, 36, -84, 21, 49, -32, -52, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4},\n             {-50, 90, -33, 78, -25, -2, 81, -21, 36, -93, -96, -75, 81, 1, -32, 27, -21, 63, 63, 2, 9, -29, 75, -69, 76, 9, -13, -27, 98, -93, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},\n             {50, 35, -20, 14, -69, -17, -82, 58, 63, 55, 22, 79, 60, -5, -16, -51, 22, 68, 51, 62, 29, 23, 42, 32, -64, 92, -74, -3, -0, -37, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10},\n             {16, 1, 80, -11, 84, -90, 21, -12, 59, -2, -61, 53, 63, 91, -84, -26, -28, 25, 91, -80, -45, 25, 59, 29, 8, -73, 52, 80, -69, -8, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},\n             {10, -28, -97, -53, 45, 99, 45, 6, -39, -9, -80, 19, 84, -26, 38, -37, 88, 48, 26, -30, 8, 17, -9, 51, 22, -85, -86, 35, 29, 23, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4},\n             {-82, 13, -25, 1, 8, -77, -37, 36, -85, 83, 29, -80, 22, -74, -72, -41, 92, 90, -6, 47, -23, -41, -74, 76, 39, 33, -50, 91, 31, -91, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7},\n             {69, 82, -81, -39, 71, -55, -16, 64, -11, 85, -23, -49, 35, -47, -92, 71, -97, -31, 74, -25, -69, -23, 27, 82, 31, -42, 30, 81, 19, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10},\n             {-30, -24, -87, -17, 46, 57, -33, -20, -10, 35, 12, -40, 82, 24, -96, -47, 33, 64, -1, 12, -12, -97, 14, -86, -74, -43, 5, 77, 60, -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10},\n             {90, -22, 38, 1, 63, 28, -20, 44, -11, -95, -59, 83, -95, 15, -32, 4, 6, 49, -39, -50, -65, 54, 9, 21, 9, -91, -89, -78, -77, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},\n             {57, -20, 52, 74, 83, -8, -68, 85, 55, 18, -25, -49, 65, -37, -49, 56, 37, -89, -61, 23, 50, 19, 20, -80, 73, 4, 82, 86, 2, 97, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},\n             {52, 81, 73, 38, 29, -28, 56, 5, -76, -90, 10, -81, -16, -41, -16, -4, -78, 25, 29, -43, -0, -61, -51, 27, -70, -71, -36, 92, 26, -20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9},\n             {82, 42, 73, -52, -60, -16, -52, -4, -43, -70, 63, -89, -12, -75, -44, 31, -14, 23, -25, 7, 53, -22, 85, 74, 25, -42, 45, 69, 57, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7},\n             {83, -55, 55, -61, -62, -99, -21, -84, -94, 64, -48, 88, -19, -64, 85, -96, 93, -59, 52, -96, -52, 15, -62, -20, 22, -36, 11, -46, -39, -44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4},\n             {-18, 78, -67, -26, -17, 78, -16, 38, -14, -85, -73, 44, -50, 16, -78, 56, -54, 74, 26, -0, 46, -1, 35, 9, 22, 3, -65, -76, -52, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5},\n             {-38, 46, -58, -95, -32, 56, 14, 47, -92, 1, 26, -9, 14, -64, -17, -46, 89, -27, 3, 28, 60, -59, -49, 53, 92, -21, -48, -72, -85, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5},\n             {79, -61, 52, 31, -37, 64, 78, -17, 57, 71, 65, 27, 76, 28, 31, -80, 46, 46, 34, 23, -99, 56, -39, 88, 29, 71, 36, -87, 46, -67, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6},\n             {-60, 96, 35, 29, -92, -63, 19, 86, -78, 43, -56, -23, 61, 25, 9, 68, -58, -52, 1, -59, -29, -35, -66, -82, 18, 60, -87, 61, -71, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},\n             {-49, -52, 74, 17, 51, -98, 33, 6, -67, -37, -40, -22, -93, -37, 20, 1, 68, -56, 94, 16, 34, -48, -72, 48, 63, -53, 75, -65, 43, -67, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8},\n             {64, 41, 59, 76, -3, -55, 34, 6, -36, -41, 34, 21, -82, -50, 75, -28, 73, -66, 81, 7, -38, 6, -13, 21, 51, 52, -5, 81, -52, 68, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5},\n             {99, -16, -42, 8, -85, -71, 28, -37, 26, -86, 41, 89, -66, 97, 63, -34, 27, -83, -12, 79, 23, 54, 72, 27, 38, 45, -25, -82, -78, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8},\n             {58, -33, -2, 96, 26, -24, 59, 29, -72, 52, -51, -52, -99, -45, -90, 78, 88, -61, 11, -7, -76, 37, -3, -4, 73, 17, 70, -63, -5, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},\n             {-60, -87, -30, -25, -89, 42, 2, -4, 86, -83, -75, 3, 96, 82, -74, 37, 58, -35, 21, 37, -73, 16, 87, -35, 12, -21, 34, -59, 0, -22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4},\n             {79, -7, 28, 53, -64, 71, -42, -44, -76, -92, 26, 79, 11, -3, -76, 11, -77, -15, 37, 6, -16, -20, 16, -11, -47, -14, -49, -65, -0, 91, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7},\n             {-35, -51, -7, 82, 87, -91, -58, 53, -1, -27, -19, -15, -10, -45, -53, 80, -72, 7, -99, -35, -64, -89, 71, -49, 37, -61, -71, 50, -90, -14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5},\n             {-40, -38, -20, 75, -4, 98, -76, 44, -35, 20, -35, -18, -71, -15, -55, -61, -62, -69, -32, 29, 88, -32, -22, 45, -96, -98, 41, 20, 80, 75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8},\n             {-94, 66, -58, 12, 49, -0, 15, -36, -83, -75, 18, 24, 30, -26, 83, 77, -95, -49, -96, 14, -89, -95, -15, 38, 75, -41, 43, -98, -21, 55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9},\n             {-4, 72, -94, 11, -80, 8, -52, -61, -34, 51, -19, 52, -80, 13, 86, 72, -73, 94, 87, 2, 43, 86, -64, -13, 10, 83, 95, 65, 44, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},\n             {15, 68, 51, 43, -24, -38, -90, -9, -20, -7, 26, -19, 24, 50, 54, 11, 41, 22, -34, -47, -25, -2, -70, 43, 14, 65, -69, 22, 65, -19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8},\n             {72, 76, 3, -79, 48, 32, 0, -51, -91, -44, 92, 42, 93, 88, -13, -8, -9, -21, 91, 11, -81, -37, -14, 85, 82, 76, -56, 0, -11, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},\n             {-94, -77, -19, -74, 6, -62, 2, -4, -63, -8, 88, 59, -28, 0, -90, -76, -77, 73, -15, 25, -34, -99, 15, 13, -38, -81, 98, -67, 32, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7},\n             {-23, -42, 74, 5, -98, 81, 72, 36, -33, -92, 6, 3, -40, 47, 51, -37, 21, 49, -17, 37, 69, -71, -92, -17, 52, -25, 32, -47, 96, -70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},\n             {72, 89, 3, 11, -85, -82, 75, 4, -85, -9, -96, 54, -70, 16, 25, 67, 34, -18, 72, 55, 31, 80, 78, -31, -82, -51, -42, -23, -98, -66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},\n             {-6, -64, 21, 88, -53, -16, -50, 37, -89, 78, -41, -67, 75, -7, -66, -48, 56, 57, 87, 26, 19, -60, 49, 99, 69, 27, -30, 70, 27, 88, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},\n             {-54, -36, -4, 42, 15, -95, 7, -87, -56, -17, -43, 65, -78, 1, -6, -45, 15, -41, 10, -20, -95, 49, 34, -14, -20, -85, 24, -61, -18, -70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},\n             {-24, 95, 10, -84, 77, -59, 55, -32, 83, 42, -58, -57, 63, -74, -14, 61, -68, 17, -85, 2, 30, -9, -77, 7, -54, 19, -82, 86, 35, -24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9},\n             {-51, 49, -0, 39, 35, 62, 20, 15, -65, -5, 51, -75, -50, 17, 80, -65, 66, -87, 31, 10, -6, 33, -63, -10, -67, 25, 10, -60, -85, -57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},\n             {-98, 35, 99, 31, -99, -68, -47, -91, 6, -20, 25, -96, -69, -39, 65, 69, 82, -29, 21, 28, 84, 69, 68, 5, 9, -48, -78, -8, -12, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6},\n             {70, 13, 55, 6, 46, 50, -51, -84, -93, 82, 58, 72, 36, -23, 64, 36, 14, 10, -9, -57, 81, -81, 75, 51, 32, -78, 1, -3, 88, 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6},\n             {34, -48, -47, -53, -33, 41, -47, 96, -13, 68, -39, 86, 51, -32, 11, 77, -26, 91, -38, -22, 63, 37, -55, 54, -25, 1, -86, 92, -51, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6},\n             {-10, 46, -17, -94, 34, 97, 69, -1, -14, -67, 92, -67, 24, 56, -79, 25, 95, 73, 41, 74, -50, -83, -64, -73, -12, -0, -21, 88, -0, 77, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},\n             {-56, 46, 40, -30, 56, 6, -72, 34, 64, -26, 80, -4, -75, 83, 90, 7, 59, 92, 92, 93, 25, 44, -3, -71, -84, -72, -36, 60, 27, 67, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5},\n             {82, 51, 77, -31, 92, -26, -82, 80, 57, -42, -64, -81, 46, 33, 78, 79, -11, -61, -53, -91, 45, -6, 82, -68, 41, 97, 55, -89, 46, -6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6},\n             {87, 62, 47, 23, 43, 18, -49, 69, 46, -78, -58, -74, -71, 3, 50, 23, 92, -11, 96, 0, 77, 80, -20, -6, -17, 22, 54, -91, -41, -97, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},\n             {-43, -3, -85, 35, -11, -98, -77, 55, -96, 82, -13, 18, -4, 43, 59, 89, 85, 96, -52, -81, -96, 28, -17, 17, -18, -30, 70, -17, 49, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7},\n             {-78, 78, 95, 58, 70, -44, 79, 29, -62, 38, 90, -40, 69, 0, -73, 11, -30, -51, 0, 65, 62, -43, 27, 91, 60, -57, 5, 13, -97, -90, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3},\n             {63, -87, -8, 27, 48, -39, -32, 91, -15, -31, 92, -1, 96, 75, 77, 43, 90, 61, 66, 48, -95, 82, 73, 72, -83, 10, -81, 85, 48, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2},\n             {56, -72, 9, -94, -3, -32, -69, 3, 13, 59, 14, -17, 57, 14, 52, 82, 73, 86, 94, -48, -73, -72, -85, -62, -24, -87, -88, -16, 95, -5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 8},\n             {-43, -57, 48, -83, -82, 45, 39, 49, -14, -48, 1, 42, 34, -9, -70, -38, -16, 57, 47, -40, 46, -99, 92, 27, -24, 89, 57, -25, 85, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 2},\n             {10, -49, 50, 31, -21, -83, 18, 90, 1, 50, 78, 77, 19, -1, -68, -16, -80, 79, 92, -36, 70, -41, 38, -39, 46, 46, 53, -61, -77, 88, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1},\n             {49, 40, -37, -88, 80, 2, -15, -89, 38, 72, -53, 80, 39, -13, -57, -4, -12, -52, 31, -81, 0, 9, 95, -47, -27, -53, 40, -97, -73, -70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 8},\n             {-90, 98, -64, 5, -58, 44, 22, 62, -63, -10, 80, 36, 70, -48, -1, 27, -19, -45, 13, 57, -34, 66, 2, -36, 32, 94, 8, -96, 55, -77, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1},\n             {-11, -40, -29, 4, -29, -51, -87, -48, -9, 29, 5, 40, -51, 1, 94, -26, 68, -38, 50, -72, 73, -53, -63, -87, -17, -82, 16, -50, -62, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 3},\n             {-96, 12, 17, 49, 96, 30, -99, -62, -37, -56, -28, 84, -48, 81, -99, 31, -25, -29, -48, 79, -81, -61, 4, 35, 18, 47, 93, 16, 32, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 10},\n             {-50, 35, -82, -32, 10, -82, -46, 66, -74, -96, -68, 10, -45, -20, 85, 95, -8, -85, -3, 26, -66, -71, -45, 29, -55, -45, -6, 69, 21, -70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1},\n            };\n```",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121028": {
+      "poster": "Koalalica (zaba)",
+      "content": "@toni98#121001 skuzila sam bug... defaultno sam p (pivot redak) postavila na 1 i onda gledala dalje koji mi je najmanji. i onda je problem bio ako p = 1 nije zadovoljavao uvjet da je veci od 0. znaci bio je negativan, pa djeljenje pozitivnog s negativnim uvijek daje manji broj nego djeljenje pozitivnog s pozitivnim 🙈",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121030": {
+      "poster": "Koalalica (zaba)",
+      "content": "@ElonDusk#121010 \n\n`0.00725641, 0.0239467, 0, 0.00814094, 0.0193307, 0.0317625, 0.0423125, 0, 0.0429032, 0.00703167, 0, 0.0164764, 0, 0, 0.0192887, 0.0489486, 0, 0, 0, 0, 0, 0, 0, 0.0280788, 0, 0, 0, 0, 0, 0.00784373, 13.3755, 6.99487, 0, 0, 0, 11.8339, 1.04644, 0, 17.4891, 5.54338, 17.06, 1.20061, 0, 9.46391, 10.2535, 16.542, 0.99458, 8.16322, 0, 5.83306, 12.4331, 3.58889, 7.79154, 1.81231, 4.64056, 10.0505, 8.54231, 12.6226, 3.24668, 0, 9.97372, 0, 18.7833, 2.27448, 0.777631, 12.0346, 10.0552, 0, 2.81318, 8.22773, 2.17138, 1.5805, 0, 3.21482, 2.72201, 0, 10.9406, 0, 0, 10.1476, 5.29024, 4.96556, 6.13664, 0.551297, 10.9395, 11.3737, 2.27313,\n\n12.4959\n`\n\ncini mi se kao da trebaju smanjiti preciznost...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121089": {
+      "poster": "Emma63194",
+      "content": "Imam nesreću odgovarati ovaj labos. Čisto pitanje, ako slučajno dobijem 0b iz ovoga, padam li predmet ili mogu ono pokazati kod, da sam tu nešto napravila pa da priznaju to?",
+      "votes": {
+        "upvoters": [
+          "Carmichael (Charm)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121094": {
+      "poster": "sphera",
+      "content": "@ElonDusk#121010 \n\nimam identičan output, al mi kod ne prolazi testove osim osnovnog na edgaru",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121100": {
+      "poster": "koode7",
+      "content": "@Emma63194#121089 dat ce ti neke bodove sigurno.\n\nsto se tice smotanog test casea za primov algoritam, dopisujem se s daliborom, valjda ce do sutra sloziti.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121134": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "@koode7#121100 što je problem sa primovim? Jer meni prolazi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121149": {
+      "poster": "rs50113",
+      "content": "@ElonDusk#121010 Imam identican ispis",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121157": {
+      "poster": "Emma63194",
+      "content": "@koode7#121100 Ma ne pitam za bodove. Imam dovoljno. Samo me zanima postoji li neki uvjet da lab koji odovaramo moramo imati na Edgaru više od 0b?",
+      "votes": {
+        "upvoters": [
+          "Carmichael (Charm)",
+          "Noggenfogger (dammitimmad)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121183": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@ElonDusk#121010 Kako na kraju dobiti solution iz tablice? Dobivam dobru vrijednost funkcije, al nisam siguran jel dobro biram solution.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121196": {
+      "poster": "happysun",
+      "content": "@ElonDusk#121010 i meni je takav rezultat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121202": {
+      "poster": "ElonDusk (💀  )",
+      "content": "Krleza je rekao da posaljemo mail Brcicu jer je on radio zadatak sa simplexom.\n\n@PrisonMike#121183 \n\ngledas u kojim stupcima su ti sve nule i jedna jedinica kao na ovom primjeru\n\n![](assets/2021-01-14/00011.png)",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121211": {
+      "poster": "Yeltneb",
+      "content": "Ima netko main funkciju za sudoku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121217": {
+      "poster": "AN5A",
+      "content": "@Yeltneb#121211 \n```\nint main() {\n    int field[9][9] = { { 9, 1, 0, 3, 0, 0, 7, 0, 0 },\n                        { 7, 0, 8, 0, 0, 0, 0, 0, 9 },\n                        { 0, 3, 2, 7, 0, 0, 0, 0, 1 },\n                        { 0, 0, 0, 8, 0, 0, 2, 5, 0 },\n                        { 0, 0, 0, 0, 2, 0, 0, 0, 0 },\n                        { 0, 5, 4, 0, 0, 6, 0, 0, 0 },\n                        { 4, 0, 0, 0, 0, 1, 8, 2, 0 },\n                        { 1, 0, 0, 0, 0, 0, 6, 0, 5 },\n                        { 0, 0, 6, 0, 0, 8, 0, 1, 7 } };\n    CP_sudoku *solver = new CP_sudoku();\n    if (solver -> solve(field) != NULL) {\n        cout << \"\\nBacktrace calls: \" << solver -> getBacktraceCalls() << \"\\n\";\n    }\n    return 0;\n}\n```\nSamo pazi kod tablice jer je meni ovdje s 0 umjesto -1.",
+      "votes": {
+        "upvoters": [
+          "Ruleta",
+          "Yeltneb",
+          "Zogen"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121222": {
+      "poster": "Yeltneb",
+      "content": "@AN5A#121217 Hvala! 😃",
+      "votes": {
+        "upvoters": [
+          "AN5A"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121289": {
+      "poster": "toni98",
+      "content": "je li ikome simpleks uvijek točan? :(",
+      "votes": {
+        "upvoters": [
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Filemon",
+          "Koalalica (zaba)",
+          "Svarog (Veles)",
+          "happysun",
+          "weedovnjak"
+        ]
+      }
+    },
+    "121291": {
+      "poster": "rs50113",
+      "content": "@toni98#121289 Nope",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Koalalica (zaba)"
+        ]
+      }
+    },
+    "121319": {
+      "poster": "[deleted]",
+      "content": "Poslao sam brcicu mail u vezi simplexa i ovo mi je odgovorio:\n>Naš kod simplexa proizvede rješenje i uspoređuje se sa Vašim. Ljudima je prolazilo, pa je vjerojatno kod vas greška.\n \n Bruh, prolazi i meni kad se potrefi sva 3 testa da su neomedena... Nek netko jos posalje mail, mozda nas dozivi.",
+      "votes": {
+        "upvoters": [
+          "toni98"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon",
+          "Filemon",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121382": {
+      "poster": "[deleted]",
+      "content": "Uzeo sam test s Edgara koji mi ne prolazi i ubacio u Scipy i dobio isto rjesenje lmao, sad sam mu opet poslao mail pa cemo vidit sto odgovori.",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Filemon",
+          "PrisonMike (Števo)",
+          "Svarog (Veles)",
+          "sphera",
+          "toni98",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121419": {
+      "poster": "[deleted]",
+      "content": "@maki#121382 \n>Ne znam što da kažem, ne namjeravam debuggirati Vaš kod. Imam naš kod, kao i nekolicina studenata svoj, koji posve dobro rade. Dok se ne pojavi veći broj sličnih problema na tom zadatku(što bi impliciralo inherentni problem sa zadatkom),smatrat ću da ste Vi ti koji se više samostalno trebate potruditi.\n \n tko ce reci scipy-u da im je simplex kriv?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon",
+          "FICHEKK",
+          "Filemon",
+          "cotfuse",
+          "in1",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "sane_insane"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121433": {
+      "poster": "toni98",
+      "content": "@maki#121419 nemam rijeci za tog lika više",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "Filemon",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121434": {
+      "poster": "toni98",
+      "content": "@maki#121382 možeš poslati test da probamo i mi?",
+      "votes": {
+        "upvoters": [
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121447": {
+      "poster": "Koalalica (zaba)",
+      "content": "@maki#121419 evo i ja sam mu se javila. javim kad odgovori",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "[deleted]"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121455": {
+      "poster": "basketbaler (Burek sa sirom)",
+      "content": "U zadatku s Dijkstrom imamo li mi zadan početni i završni vrh te ukoliko ih nemamo, kako ih možemo odrediti?",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121458": {
+      "poster": "[deleted]",
+      "content": "@toni98#121434 imas gore jedan test, dobivam isto rjesenje kao kolega\n\n@ElonDusk#121010",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121460": {
+      "poster": "toni98",
+      "content": "@maki#121458 i ja isto dobijem",
+      "votes": {
+        "upvoters": [
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121469": {
+      "poster": "MsBrightside",
+      "content": "@Just_some_name#120439 imas neki main za dijkstru?",
+      "votes": {
+        "upvoters": [
+          "lucija (luc)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121506": {
+      "poster": "happysun",
+      "content": "jel vam kod simpleksa u testovima na edgaru na stdout vraća 'incorrect solution point' ili 'incorrect objective value' ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121509": {
+      "poster": "rs50113",
+      "content": "@happysun#121506 nekad jedno nekad drugo",
+      "votes": {
+        "upvoters": [
+          "PrisonMike (Števo)",
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121510": {
+      "poster": "lucija (luc)",
+      "content": "@MsBrightside#121469 \n\nEvo za onaj primjer s preze\n```\nint main()\n{\n    edges_t bridovi;\n    vertices_t vrhovi;\n\n    vrhovi.insert('a');\n    vrhovi.insert('b');\n    vrhovi.insert('c');\n    vrhovi.insert('d');\n    vrhovi.insert('e');\n    vrhovi.insert('f');\n    vrhovi.insert('g');\n\n    bridovi.push_back(Edge('a', 'b', 6));\n    bridovi.push_back(Edge('a', 'c', 5));\n    bridovi.push_back(Edge('b', 'c', 9));\n    bridovi.push_back(Edge('b', 'e', 13));\n    bridovi.push_back(Edge('c', 'd', 16));\n    bridovi.push_back(Edge('c', 'f', 12));\n    bridovi.push_back(Edge('d', 'e', 15));\n    bridovi.push_back(Edge('d', 'f', 7));\n    bridovi.push_back(Edge('f', 'g', 3));\n    bridovi.push_back(Edge('e', 'g', 8));\n\n    graph_t graf = pair<vertices_t, edges_t>(vrhovi, bridovi);\n    graph_t novi = dijkstra(graf);\n\n    for (auto i = novi.second.begin(); i != novi.second.end(); ++i) {\n        cout << (*i).from << \" \" << (*i).to << \" \" << (*i).weight << \"\\n\";\n    }\n}\n```",
+      "votes": {
+        "upvoters": [
+          "MsBrightside"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121522": {
+      "poster": "Smolaa",
+      "content": "Jel za Primov algoritam moramo pazit na vrijeme izvodenja ili mozemo bruteforce stavit samo for petlje ?",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121578": {
+      "poster": "Joji",
+      "content": "Čini se da tolerancija na simpleks zadatku ipak nije [imath]10^{-5}[/imath] kao što piše u zadatku. Probao sam hardkodirati `obj` i na prvom testu prolaze `24.999999999999999` i `25.000000000000001`, ali ne i  `25.000000000000002` i `24.999999999999998`.",
+      "votes": {
+        "upvoters": [
+          "Koalalica (zaba)",
+          "PrisonMike (Števo)",
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "Amon",
+          "Broono (Burućuh)",
+          "Filemon",
+          "Koalalica (zaba)",
+          "Svarog (Veles)",
+          "in1",
+          "menace_master",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "sphera",
+          "weedovnjak"
+        ],
+        "tuga": []
+      }
+    },
+    "121588": {
+      "poster": "[deleted]",
+      "content": "@Joji#121578 Zelim bonus bodove za utrosene sate na debuggiranje njegove greske",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Filemon",
+          "Fran_- (random_trooper)",
+          "Joji",
+          "Koalalica (zaba)",
+          "Svarog (Veles)",
+          "happysun"
+        ],
+        "downvoters": [
+          "Svarog (Veles)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121605": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@Joji#121578 Samo budite precizniji /s",
+      "votes": {
+        "upvoters": [
+          "Joji"
+        ],
+        "downvoters": [
+          "toni98"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121684": {
+      "poster": "svemia (bearyn)",
+      "content": "@Cubii#120271 Na koji nacin si pamtio i editao te constraintove (tj. koju \"strukturu\" si koristio za to)? Ja sam krenula s idejom da klasa ima privatni atribut ima array list (std::list), ali kako radim rekurzivne pozive, iteracija nad tim listama ne funkcionira (pointer iteratora se skrsi)... Algoritam u osnovi funkcionira samo moram dodat to pracenje domena, a nemam se snage borit s pointerima vise.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121687": {
+      "poster": "[deleted]",
+      "content": "@Joji#121578 odgovorio je da je to samo na prvom testu, da se na ostalima primjenjuje tocna tolerancija... daj svi koji rjesavate simplex posaljite mu mail\n\n@Koalalica#121447 je li ti odgovorio ista?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121770": {
+      "poster": "Koalalica (zaba)",
+      "content": "@maki#121687 nije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121772": {
+      "poster": "Koalalica (zaba)",
+      "content": "@Koalalica#121770 evo sad je\n\n> Da, gledam, razlikuju se u par decimala...mislim da ću promijeniti provjeru na malo robusniju na numeričke pogreške.\n\nBude oko 15h implementirana - neću Vam pričati detalje.\n\nUglavnom, blizu ste sa rješenjima i trebalo bi raditi na novoj provjeri.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Joji",
+          "PrisonMike (Števo)",
+          "Svarog (Veles)",
+          "[deleted]",
+          "happysun",
+          "rs50113",
+          "toni98"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121848": {
+      "poster": "Cubii",
+      "content": "@svemia#121684 Ne znam je li optilalno, ali ja sam koristio mapu koja mapira parove (\"koordinate\" polja) na sve moguce vrijednosti za to polje, dakle: \n\n`std::map<std::pair<int, int>, std::set<int>>`\n\nTak sam na pocetku krenuo, ali mi je poslije trebalo i sortiranje pa sam to pretvarao u set s custom komparatorom (po duljini seta primarno)\n\n`std::set<std::pair<std::pair<int, int>, std::set<int>>`",
+      "votes": {
+        "upvoters": [
+          "svemia (bearyn)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121860": {
+      "poster": "toni98",
+      "content": "@Koalalica#121772 je li ovo njegovim riječima \"ispričavam se, moja je greška\" 😒",
+      "votes": {
+        "upvoters": [
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Amon",
+          "Emma63194",
+          "Fico35",
+          "Filemon",
+          "Koalalica (zaba)",
+          "Svarog (Veles)",
+          "hejhoj (vdvd)",
+          "in1",
+          "member",
+          "rs50113",
+          "sphera"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121865": {
+      "poster": "Amon",
+      "content": "@Smolaa#121522 Ma ne treba paziti na vrijeme, imaš 30 bridova, to se obradi bez problema",
+      "votes": {
+        "upvoters": [
+          "Smolaa"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121893": {
+      "poster": "Daorson",
+      "content": "@Skaxen#119819 jesi uspio ovo rijesiti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121921": {
+      "poster": "rs50113",
+      "content": "@Koalalica#121772 Jel ti radi sada?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121933": {
+      "poster": "Koalalica (zaba)",
+      "content": "@rs50113#121921 Ne, ali po tekstu zadatka (Numerička tolerancija je 10^-5. ) rekla bih da jos nisu updateali to.",
+      "votes": {
+        "upvoters": [
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "121938": {
+      "poster": "[deleted]",
+      "content": "rekao je oko 15h, ali ne i kojeg dana hehehe",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Emma63194",
+          "Fico35",
+          "Filemon",
+          "Koalalica (zaba)",
+          "Svarog (Veles)",
+          "in1",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "toni98"
+        ],
+        "wtf": [
+          "sphera"
+        ],
+        "tuga": []
+      }
+    },
+    "122098": {
+      "poster": "Koalalica (zaba)",
+      "content": "@maki#121938 pogledala sam sada i promijenio je tekst zadatka (dodao je primjer inputa) ali jos uvijek nije u tekstu promijenio dio s preciznoscu, niti mi prolaze svi testovi... ne kuzim sto se dogada :D",
+      "votes": {
+        "upvoters": [
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122133": {
+      "poster": "Karlovsky120",
+      "content": "Ovo je jedino objašnjenje.\n\n![](assets/2021-01-15/00041.jpeg)\n\n![](assets/2021-01-15/00042.jpeg)\n\n![](assets/2021-01-15/00043.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Conrad",
+          "Svarog (Veles)",
+          "Watson (112)",
+          "[deleted]",
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Daorson",
+          "El_Beast (Pleteći medvjedić)",
+          "Filemon"
+        ],
+        "wtf": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "tuga": []
+      }
+    },
+    "122139": {
+      "poster": "[deleted]",
+      "content": "![](assets/2021-01-15/00045.jpeg)",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Emma63194",
+          "Filemon",
+          "PrisonMike (Števo)",
+          "doki",
+          "happysun",
+          "post",
+          "weedovnjak"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Anonimity (BoJack)",
+          "Audaces",
+          "Broono (Burućuh)",
+          "Daorson",
+          "Emma63194",
+          "Fico35",
+          "Filemon",
+          "Joji",
+          "Koalalica (zaba)",
+          "in1",
+          "kivu",
+          "post"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122140": {
+      "poster": "[deleted]",
+      "content": "PROLAZE TESTOVI!!!",
+      "votes": {
+        "upvoters": [
+          "Koalalica (zaba)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "post",
+          "rs50113"
+        ],
+        "wtf": [
+          "Joji"
+        ],
+        "tuga": []
+      }
+    },
+    "122147": {
+      "poster": "post",
+      "content": "@maki#122139 \n\nŠto si morala promijeniti da ti radi rješenje? Moglo bi pomoći drugima da pripaze na to",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122148": {
+      "poster": "Karlovsky120",
+      "content": "Valjda su se ovi sjetili da vode predmet i actually poduzeli nešto.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122152": {
+      "poster": "[deleted]",
+      "content": "@post#122147 nista, prije nisu prolazili testovi jer su oni krivo implementirali provjeru rjesenja pa ako si dobro implementirao, ali ti nisu prolazili testovi, sad bi trebali",
+      "votes": {
+        "upvoters": [
+          "post"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122192": {
+      "poster": "happysun",
+      "content": "@maki#122140 jesi probavao više puta pokretati testove? Ja sam pokretao više puta i jako rijetko se javlja, ali se javlja da mi zadnji test bude netočan dok su svi ostali testovi uvijek točni.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122193": {
+      "poster": "korisnik1",
+      "content": "Meni svejedno ponekad dođe incorrect status 1 ili da nije bazicno rjesenje tako da i dalje postoji mogućnost da nije apsolutno točno kad 3 za redom budu 100%, čini se da je opet potrebna metoda puno isprobavanja, kao i inace",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122230": {
+      "poster": "MsBrightside",
+      "content": "ima netko da je zadatak sa dijkstrom rješavao, jer mislim da oni dobiju krivo razapinjuće stablo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122239": {
+      "poster": "MsBrightside",
+      "content": "@MsBrightside#122230 lol, zanemarite",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122255": {
+      "poster": "rs50113",
+      "content": "@happysun#122192 Ja sam submitao svoje rješenje i dobio 100%, tak da ak ti je postupak implementiran po mojem opisu iznad trebali bi ti radit.",
+      "votes": {
+        "upvoters": [
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122258": {
+      "poster": "happysun",
+      "content": "@rs50113#122255 samo jedna stvar. Kad odabereš pivot stupac i nakon toga ideš na provjeru postoji li u tom stupcu element veći od 0. Provjeravaš li onda nulti redak toga stupca ili ne? Ja mislim da ga ne treba provjeravati, ali možda mi je baš tu problem.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122262": {
+      "poster": "Koalalica (zaba)",
+      "content": "@happysun#122258 ne trebas.\n\nkod updateanja tablice, probaj eksplicitno staviti novom pivot stupcu 0 (i 1) umjesto da radis operacije mnozenja, djeljenja i oduzimanja. mozda ti se dogada da dobjes broj jako blizu 0, pa ga onda ne  tretiras kao 0 kod drugih provjera.",
+      "votes": {
+        "upvoters": [
+          "happysun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122278": {
+      "poster": "happysun",
+      "content": "@Koalalica#122262 hvala puno, nisam uopće obraćao pažnju na to... sada konačno sve radi 😃",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122290": {
+      "poster": "member",
+      "content": "@koode7#120793 ako mi je: `graph_t prim(graph_t graph, vertices_t start)`, baca mi error: _‘graph_t’ does not name a type_.   Šta radim krivo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122302": {
+      "poster": "post",
+      "content": "Kako mogu provjeriti sa strane je li moje rješenje simpleksa točno? Želim ubaciti njihovu tablicu negdje i provjeriti rješenja.\n\nPokušao sam scipy ali nemam pojma trebam li tamo pod a_ub uključiti i onaj dio tablice koji odgovara matrici identiteta (dijagonalu s jedinicama)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122346": {
+      "poster": "Skaxen",
+      "content": "@Daorson#121893 @laugreano#120092 da samo sam trebao maknuti struct Edge definiciju (i ovo ispod toga ja mislim )iz svog koda jer cini se da je to vec ugradeno",
+      "votes": {
+        "upvoters": [
+          "Daorson"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122356": {
+      "poster": "someone",
+      "content": "![](assets/2021-01-16/00019.png)\n\nJe li itko dobio ovakav error na sudoku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122361": {
+      "poster": "Karlovsky120",
+      "content": "@someone#122356 Izgleda kao da radiš nešto zločesto s memorijom.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122371": {
+      "poster": "in1",
+      "content": "@someone#122356 Ne znam koji zadatak rješavaš, ali ovo ti se može pojaviti ako ti vratiš null (a ne bi trebao za taj test), a oni pokušaju dereferencirati tu varijablu.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122380": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "HELP C++ \n\nimam zadano\n\n      map<char,pair<int,vector<char>>> *mapica = new map<char,pair<int,vector<char>>>;\n\nkako da u ovu mapu dodam zapise koji imaju isti key?\n\nnpr. imam key 'A' i trebam dodati dva zapisa\n\n(2,('A', 'B')) i (5, ('A', 'C') ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122382": {
+      "poster": "Svarog (Veles)",
+      "content": "@johndoe12#122380 `map<char, vector<pair<int, vector<char>>>>`?\n\nEDIT: uzgredno, ako koristiš taj `pair<int, vector<char>>` često, typedefaj ga da kod bude pregledniji",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122383": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Svarog#122382 ne kuzim sta hoces reci?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122384": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Svarog#122382 @johndoe12#122380 imam problem jer kad napisem ovo\n\n      \t(*mapica)[edge] = pair<int,vector<char>> (val_in_vertex[i], {edges[i].from, edges[i].to});\n\nonda mi ne zapise drugi zapis za isti key.\n\nA mapica.insert mi ne radi valjda jer je mapica pointer, *mapica",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122385": {
+      "poster": "Svarog (Veles)",
+      "content": "@johndoe12#122384 da, map preslikava ključ u jednu vrijednost, pa umjesto da preslika u jedan pair, neka preslika u vektor parova",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122387": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "@Svarog#122385 ali zadano mi je da moram vratiti mapu bas ovog tipa map<char,pair<int,vector<char>>> *res",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122389": {
+      "poster": "Svarog (Veles)",
+      "content": "@johndoe12#122387 koliko znam, map može imati samo jednu vrijednost za zadani ključ",
+      "votes": {
+        "upvoters": [
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122390": {
+      "poster": "johndoe12 (enaiks)",
+      "content": "Moze li netko ko je rjesavao belman forda reci kakav ispis treba biti?\n\nJa dobijem redom ovo\n\nval 2\n\n val 5\n\n val 12\n\n val 8\n\n val 6\n\n val 9\n\n val 10\n\n val 11\n\n val 10\n\n val 11\n\n val 7\n\n val 8\n\n val 15\n\n val 2\n\n val 14\n\n val 10\n\n val 6\n \n al nez kako da zapisem u mapu niti dal treba biti 18 zapisa ili manje?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122421": {
+      "poster": "saitama",
+      "content": "Jel itko rijesavao mozda sudoku za 11 bodova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122441": {
+      "poster": "member",
+      "content": "```\nfor (auto it = open_multimap.begin(); it != open_multimap.end(); ++it){\n               const bool is_in = inTree.find(it -> second.second) != inTree.end();\n               if(is_in){\n        \topen_multimap.erase(it); \n               }\n }\n```\nS ovim mi baca runtime error, a bez toga ne. Radim primov alg i multimap nije prevelik, al kužim da treba vremena da se sve ovo izvrti. Zna li netko jel se može nekako brže provjeravat?\n\nJer ja brid v1v2 pohranim u multimap  dok mi v2 nije još obrađen, a onda ga u međuvremenu obradim. Pa sam ovako mislila provjeravat nakon svake obrade jel mi negdje u multimapu pohranjen kao ciljni vrh pa onda izbacit. Jer bez toga mi naravno ne radi...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122465": {
+      "poster": "post",
+      "content": "Simpleks: bi li se primjeri 3 i 4 trebali moći izvršiti za 11 bodova?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122471": {
+      "poster": "member",
+      "content": "@member#122441 a ma sad radi... Provjerim jel mi u inTree čim uzmem iz multimapa pa ako je uzimam idući i tako dok nije zadovoljen uvjet da vrh nije posjecen. Tako nema bespotrebnog provjeravanja cijelog multimapa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122478": {
+      "poster": "PudingIzMenze",
+      "content": "Jel imao netko ovu grešku u Sudoku solveru za 3. lab\t\n\nStatus: Runtime Error (NZEC) ; Stderr: double free or corruption (out)\n\nIl ako zna o čemu bi se radilo na netu piše ako prišem nešto da se to pojavi, a nemam nigdje brisanje u kodu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122575": {
+      "poster": "post",
+      "content": "Uspio sam da mi na kraju simpleks radi za sve primjere nakon što sam dodao provjeru je li nula pozitivna ili negativna (za omjere), nadam se da će to pomoći ljudima koji randomly dobiju netočan zadatak svakih 5-10 pokretanja.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122580": {
+      "poster": "Watson (112)",
+      "content": "Koji je najlakši zadatak od navedenih (onaj za koji mi treba najmanje vremena)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122581": {
+      "poster": "Amon",
+      "content": "@Watson#122580 Primov\n\nJa nisam imao pojma o čemu se radi i bio gotov za par sati",
+      "votes": {
+        "upvoters": [
+          "Watson (112)",
+          "chuuya (temari)",
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122582": {
+      "poster": "chuuya (temari)",
+      "content": "@Watson#122580 WFI 100%, bijah gotova za sat vremena",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122741": {
+      "poster": "peaceko",
+      "content": "@MsBrightside#122239 Je li ti rjesenje za dijkstru radi sa usmjerenim ili neusmjerenim grafovima? Vidim da edge ima to i from, ali ovaj testni primjer mi izgleda cudno jer nema nijedan dupli brid",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122838": {
+      "poster": "yurnero",
+      "content": "Pitanje za ljude sa simplexom, odnosno bilo koga tko razumi edgar...\n\nLokalno sam provjerio kod za malu tablicu i iznos funkcije bude točan,\n\nali kad isti kod pokrenem na edgaru dobijem segmentation fault, točnije:\n\n`Status: Runtime Error (NZEC) ; Stderr: run: line 1:     3 Segmentation fault      (core dumped) LD_LIBRARY_PATH=/usr/local/gcc-9.2.0/lib64 ./a.out\n\n ; `\n\nC++ mi nije jača strana pa pls ako neko ima ideju nek me spasi od padanja na uvjetu 😅",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122841": {
+      "poster": "post",
+      "content": "@yurnero#122838 Provjeri je li ispravno vraćaš vrijednosti (tableau, solution i obj).",
+      "votes": {
+        "upvoters": [
+          "yurnero"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122844": {
+      "poster": "yurnero",
+      "content": "@post#122841 Fala ti! Problem je bia u solution vektoru. Prolaze mi prva 2 testa, nekad i treći, al zadnji uvik pada, imaš li možda neki pro-tip za ubrzat ga? Kako najbolje izlučit solution vektor iz tablice? Još jednon fala :D",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122854": {
+      "poster": "yurnero",
+      "content": "@yurnero#122844 Nekim čudom su se uspila izvrtit sva 4 točno, mogu li to uploadat sad?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122858": {
+      "poster": "supernatural",
+      "content": "Prime, kako pratiti bridove koji su vec ukljuceni, da ih ne gleda opet kad trazi najmanji susjedni brid",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122873": {
+      "poster": "Smolaa",
+      "content": "@supernatural#122858  Provjeris ako su ti oba vrha brida vec posjecena, onda ne gledas taj brid.",
+      "votes": {
+        "upvoters": [
+          "hejhoj (vdvd)",
+          "supernatural"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122912": {
+      "poster": "Process",
+      "content": "Jel ima tko da je rijesio sudoku? Htio bi usporedit backtracking, moj je buggan",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122914": {
+      "poster": "post",
+      "content": "@yurnero#122854 nooooooooo\n\nIzvrti više puta da si siguran, a što se tiče zadnjeg primjera najvjerojatnije si upa u beskonačnu petlju. Meni je razlog za to bio ono s negativnom nulom (uzeo bi je kao najmanji omjer dok se to samo smije s pozitivnom).\n\np.s. za buduće generacije ako hoćete svih 11 bodova sudoku je vjerojatno lakše riješiti nego simpleks",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122985": {
+      "poster": "Daorson",
+      "content": "jel primov algoritam ima samo jedan primjer ili da ga izvrtim vise puta za svaki slucaj?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122991": {
+      "poster": "Smolaa",
+      "content": "Zna netko kako izgleda odgovaranje labosa ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "122994": {
+      "poster": "yurnero",
+      "content": "@post#122914 da da, sjeba sam bodove za prag, osim ako ne udijele malo milosti :/",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "post"
+        ]
+      }
+    },
+    "123020": {
+      "poster": "MarinR",
+      "content": "Pitanje za ljude koji su rješavali sudoku: gdje ste povecavali broj iteracija?\n\nJa sam rjesavao backtrackingom kojeg sam poboljsa sa \"fill by rejecetion\" metodama izmedu svakog poszivanja i sad mi daje error na edgaru da imam premalo iteracija i da varam, pa me zanima kako brojit to.\n\n![](assets/2021-01-17/00026.png)\n\nKod ide ovako za solver - backtracking (izrezani dijelovi koji ne smatram bitnima za brojanje iteracija): \n\n```\nsolver(field sudoku){\n        iters++;\n        int row = 0, col = 0;\n        // nadi praznu lokaciju ili prekini jer vise nema praznih\n        // na praznoj lokaciji probaj umetnit brojeve od 1 do 9\n        for (int num = 1; num <= 9; num++) {\n            if (isValid(sudoku, row, col, num)) {\n                // ako mozes ubacit broj na prazno polje, prvo kopiraj stanje polja za cuvanje\n                // ubaci broj\n                sudoku[row][col] = num;\n                // sad pokusaj popunit ostatak odbacivanjem\n                FBR(sudoku);\n                if (solver(sudoku))\n                    return true;                    \n                // ako ne uspije, vrati polje na pocetno\n            }\n        }\n        return false;\n}\n```\n\nKod za fill by rejection metodu\n\n```\nvoid FBR(int sudoku[][9]) {\n        bool changed;\n        do {\n            iters++;          \n            changed = false;\n            // probaj svako polje popunit odbacivanjem\n            for (int i = 0; i < 9; i++) {\n                for (int j = 0; j < 9; j++) {\n                    if (sudoku[i][j] == -1) {\n                        // ako je uspjesno popunjeno bar jedno polje,\n                        //  probaj ispocetka kad zavrsis s ovim popunjavanjem\n                        if (fillByRejection(sudoku, i, j)) {\n                            changed = true;\n                        }\n                    }\n                }\n            }\n        } while (changed);\n    }\n```\n\nPrema njihovoj definiciji `int getBacktraceCalls();` : \n- vraća broj iteracija potrebnih za rješavanje križaljke. Ukoliko koristite algoritam na praćenje unatrag (backtracing), ovo je broj svih rekurzivnih poziva. Ukoliko koristite obične iteracije, ovo je ukupni broj iteracija.\n\nmislim da su mjesa na kojima brojim ok? Da im saljem mail?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123102": {
+      "poster": "zavrskina",
+      "content": "@MarinR#123020 \n\nJesi riješio možda ovaj problem? Meni se isto to dešava i ne znam kako da popravim.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123106": {
+      "poster": "saitama",
+      "content": "@MarinR#123020 ja sam imao isti problem i iskreno mi se nije dalo slati mail pa sam samo maknuo tu metodu. Znam da to nije rijesenje koje bi zelio al jbg. Mislim da su oni stavili dovoljno ogroman broj iteracija da ti moze past jedino ako nes krivo radis",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123108": {
+      "poster": "MarinR",
+      "content": "@zavrskina#123102 \n\nPrebacio sam mjesto na kojem brojim u FIll by rejection metodi i sad vraca ok rezultate:\n\n```\nvoid FBR(int sudoku[][9]) {\n        bool changed;\n        do {   \n            changed = false;\n            // probaj svako polje popunit odbacivanjem\n            for (int i = 0; i < 9; i++) {\n                for (int j = 0; j < 9; j++) {\n                    if (sudoku[i][j] == -1) {\n                        // ako je uspjesno popunjeno bar jedno polje,\n                        //  probaj ispocetka kad zavrsis s ovim popunjavanjem\n                        if (fillByRejection(sudoku, i, j)) {\n                            iters++;\n                            changed = true;\n                        }\n                    }\n                }\n            }\n        } while (changed);\n    }\n```\n\nUgl sad ta metoda broji svaki put kad ubaci broj, a prije bi brojila jednom po obilasku ploce.\n\nMislim da bi do problema doslo jer ta metoda u jednom obilasku ploce moze ubacit vise brojeva, a broji se kao jedna iteracija, pa im je to mozda smetalo, ali stvarno nisam siguran.",
+      "votes": {
+        "upvoters": [
+          "zavrskina"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123120": {
+      "poster": "PrisonMike (Števo)",
+      "content": "Jel ima neka stranica ili nešto da mogu provjeriti rješenje simpleksa? \n\nSvakih 10-15 pokretanja mi se pojavi jedan testni primjer za koji navodno imam krivu vrijednost obj",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123135": {
+      "poster": "Svarog (Veles)",
+      "content": "Za sve koji rade simpleks, evo par sitnica koje su mi pomogle da to konačno riješim:\n\n- kod Gauss-Jordana, pazite da ne pregazite vrijednosti u matrici koje vam još trebaju (ja sam držao kopiju inicijalne matrice za izračun)\n- dok smo još kod Gauss-Jordana, hardkodirajte vrijednost 1.0 za pivot i 0.0 za sve ostale\n- nisu svi stupci u kojima je prvi element jednak 0 ujedno i jedinični stupac za određivanje rješenja",
+      "votes": {
+        "upvoters": [
+          "Emma63194",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123153": {
+      "poster": "zavrskina",
+      "content": "@MarinR#123108 \n\nE tenksss! Uspjela sam i ja tako modificirat 😄",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123163": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@PrisonMike#123120 Mislim da je bilo to kaj sam gledao da zadnji stupac kod onog računanja omjera treba bit >0 umjesto >= 0",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123181": {
+      "poster": "Ziher",
+      "content": "Jel zna netko reverse engineerat ulaz? Na dijkstrinom algoritmu mi izbacuje ovo:\n\n![](assets/2021-01-17/00039.png)\n\nNemam pojma ali cini mi se da mi algoritam dobro radi. Konacno rjesenje je dobro za onaj primjer s prezentacije, i pratio sam logiku debuggiranjem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123321": {
+      "poster": "Karlovsky120",
+      "content": "@Ziher#123181 Znam da kasnim, ali sve što ispišeš na cerr će se prikazati na primjeru. Tako da možeš jednostavno ispisati input.",
+      "votes": {
+        "upvoters": [
+          "Ziher"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123350": {
+      "poster": "Ziher",
+      "content": "@Karlovsky120#123321 Nasao sam vec, hvala",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "123711": {
+      "poster": "in1",
+      "content": "![](assets/2021-01-18/00016.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "AN5A",
+          "Carmichael (Charm)",
+          "Filemon",
+          "Frootek",
+          "Ziher",
+          "hejhoj (vdvd)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124166": {
+      "poster": "Noname",
+      "content": "Gdje se odgovaraju labosi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124168": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Noname#124166 Na MS Teams te nazovu",
+      "votes": {
+        "upvoters": [
+          "Noname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124172": {
+      "poster": "Noname",
+      "content": "@PrisonMike#124168 ne trebam se ukljuciti nekoj grupi? Samo me ovako nazovu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124173": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Noname#124172 ja se nisam trebao nigdje uključivat, samo sam bio na onom glavnom kanalu NASP jer tam izgleda nekad napišu kad kreću s ispitivanjem neke grupe, barem Krleža to radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124176": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "Jel odgovarao neko primov algoritam?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124180": {
+      "poster": "Noname",
+      "content": "@PrisonMike#124173 A gdje se nalazi link za kanal?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124181": {
+      "poster": "Amon",
+      "content": "@Noname#124180 https://www.fer.unizg.hr/predmet/kvarac_a/obavijesti?@=2sohb#news_121386",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "124192": {
+      "poster": "PrisonMike (Števo)",
+      "content": "@Noname#124180 https://www.fer.unizg.hr/predmet/nasp/obavijesti?_v1=bGlOrQZlF7ff0EiVEu5-ua73i-Qg2XIc0IJIxIziN6YPPOKXDX9tT6mr6pHf8jRMxV0ZJaqUifJS_XuudNLVOZghPvBKiI0mV4t0XLNpVnWdPj6GGugXGImTMk7TwMru83H9RMNeykip3ZYPhKwDZv_iiWR83SzcMeau2nQqLAwaZgxqJYu_Ps5rtVdIHu2dakPGbwitz1DYy1w222hMg_W6T6N14fyBJXsA6bRimPW_YzIl&_lid=62308#news_62308",
+      "votes": {
+        "upvoters": [
+          "Noname"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

@@ -1,0 +1,1434 @@
+{
+  "title": "[MAIS] 3. i 4. domaća zadaća - 2021/2022",
+  "creator": "Cereal_Killer (vagab0nd0)",
+  "slug": "mais-3-i-4-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Multimedijske arhitekture i sustavi",
+    "Zadaće"
+  ],
+  "posts": {
+    "269500": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "Za 3. DZ radimo profiling prve zadaće\n\na 4. DZ se odnosi na dva zadatka iz druge zadaće ili je u uputama neka beskonacna rekurzija?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "moji_prsti_prsti_klize_po_njoj"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269722": {
+      "poster": "Filemon",
+      "content": "@\"vagab0nd0\"#p269500 da, moraš poboljšat drugu dz",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269723": {
+      "poster": "Murin",
+      "content": "Jel netko imao problema sa kompajliranjem ovih ipp libova, viual studio mi zna gdje se nalazi ali kaze da im ne moze pristupiti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269748": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "pitala sam asistenta, kaze da se obje zadace nadovezuju na prvu\n\nnaming zadaca im je 10/10",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "alfajastog",
+          "brbrbr",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+          "sane_insane"
+        ],
+        "tuga": []
+      }
+    },
+    "269914": {
+      "poster": "alfajastog",
+      "content": "Editirao sam kod prvog zadatka da sam izvrti racunanje za sve blokove i ne ispisuje nista na kraju, i u ovom Intel VTune profileru mi funkcije s najvecim udiom ispadaju neke tamo u asembleru (func@0x403b50 i takva imena). Sta bi to samo trebao bacit u onu txt datoteku, il treba nekak drukcije to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269944": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"alfajastog\"#p269914 Ne, nego ovo https://community.intel.com/t5/Analyzers/Getting-Symbols-in-VTune-Amplifier-2018/td-p/1129907",
+      "votes": {
+        "upvoters": [
+          "alfajastog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "269949": {
+      "poster": "FICHEKK",
+      "content": "Svima savjetujem da koristite _gprof_ jer je jako lagano, doslovno se u 3 komande dobije izlaz, nema kriptičkih naziva funkcija i ne treba ništa dodatno instaliravati (bar ja nisam trebao, navodno je to dio _gcc_-a). Postupak je sljedeći (samo možete copy-paste i trebalo bi radit):\n\n1. Kompajlanje programa:\n\n`gcc -pg -no-pie -fno-builtin dct.c -o dct`\n\n2. Pokretanje programa pri čemu bi se trebala generirati datoteka `gmon.out`:\n\n`dct.exe lenna.ppm 6 out.txt`\n\n3. Generiranje datoteke u kojoj pišu rezultati _profile_-anja:\n\n`gprof dct.exe > profile.txt`\n\nI to je to. Sada još samo trebate formatirati datoteku koju predajete kako oni traže u uputama i gotov zadatak. :)",
+      "votes": {
+        "upvoters": [
+          "-Ivan- (Ivančica)",
+          "Amon",
+          "BakardiKola",
+          "Broono (Burućuh)",
+          "Cereal_Killer (vagab0nd0)",
+          "Cvija",
+          "Daorson",
+          "Emma63194",
+          "Filemon",
+          "ImJustAKid (lumity)",
+          "Maci",
+          "MrHead (vandal)",
+          "Njet",
+          "Ruleta",
+          "Sanjaaa",
+          "Simpy",
+          "alfajastog",
+          "bestik",
+          "cajaznun",
+          "cotfuse",
+          "gamigugi",
+          "login",
+          "member",
+          "moji_prsti_prsti_klize_po_njoj",
+          "sane_insane"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270231": {
+      "poster": "Just_some_name",
+      "content": "Dal je netko dobio ovu grešku?\n\n`gprof dct.exe > profile.txt` \n\ngreška -> `BFD: Dwarf Error: Could not find abbrev number 84.`",
+      "votes": {
+        "upvoters": [
+          "Simpy"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270252": {
+      "poster": "Amon",
+      "content": "@\"Just_some_name\"#p270231 I ja sam imao tu grešku\n\nAli profile datoteka ti se i dalje generira (barem meni) i dalje imaš rezultat u njoj tak da ne mislim da bi to trebalo biti neki problem",
+      "votes": {
+        "upvoters": [
+          "Simpy",
+          "brbrbr"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270322": {
+      "poster": "tito",
+      "content": "kada otvorite link https://software.intel.com/en-us/intel-parallel-studio-xe na linuxu je li vam se otvara stranica https://www.intel.com/content/www/us/en/developer/tools/oneapi/commercial-base-hpc.html#gs.lr7e9i",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270354": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "sto ako nam je .zip veci od 20mb?\n\nprobah maknut sve sto mogu, ali svejedno je hidden .vs file 104MB",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270379": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"vagab0nd0\"#p270354 Ne bi smjela predavati to, doslovno samo kod i txt fajlove, i to onda ne bi smjelo biti veće od MB. Najlakše je prikazati skrivene fajlove (počinju s `.`) i pobrisati ih sve. Ili ako hoćeš da to rekurzivno radi s najmanje zajebancije, stavi u `.gitignore`:\n\n```\n.*\n!.gitignore\n```\n\npushaj, kloniraj taj repo, zapakiraj sve osim git fajlova i to predaj.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270678": {
+      "poster": "Cereal_Killer (vagab0nd0)",
+      "content": "@\"Mićo Ketchum\"#p270379 hvala na mansplainingu, nisam znala kako da pogledam velicinu txt datoteke do sad\n\nmy eyes are open",
+      "votes": {
+        "upvoters": [
+          "toni98"
+        ],
+        "downvoters": [
+          "Cvija",
+          "ElonDusk (💀  )",
+          "Ena43",
+          "Filemon",
+          "JedvaUpo",
+          "Juren",
+          "KimVersonRemaster",
+          "Lelek",
+          "Murin",
+          "RogerRoger",
+          "Rudee",
+          "Simpy",
+          "Skaxen",
+          "danko (nerim)",
+          "eleven",
+          "future",
+          "gamigugi",
+          "member",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [
+          "danko (nerim)"
+        ],
+        "tuga": [
+          "JedvaUpo",
+          "Juren",
+          "eleven",
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ]
+      }
+    },
+    "270679": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"vagab0nd0\"#p270678 Nezz jel te triggerala detaljnost odgovora, ali takav je jer nije prvi put da je netko imao problema s ovime i ne pretpostavljam da svi znaju kako to riješiti i što očekivati, a meni je 30 sekundi posla natipkati rješenje.",
+      "votes": {
+        "upvoters": [
+          "JedvaUpo",
+          "Juren",
+          "future",
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "JedvaUpo"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270720": {
+      "poster": "eleven",
+      "content": "Za sve koji ne znaju kako skinuti potreban software:\n\nhttps://community.intel.com/t5/Intel-oneAPI-Registration/Trial-license-of-intel-parallel-studio-xe/td-p/1255946",
+      "votes": {
+        "upvoters": [
+          "Juren",
+          "brbrbr",
+          "orange"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270787": {
+      "poster": "Just_some_name",
+      "content": "dal se nekome javlja ova graska kad pokusa koristiti ove IPP biblioteke? ![](assets/2022-01-15/00001.png)",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "a_ko_si_ti",
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270788": {
+      "poster": "netko_tamo",
+      "content": "@\"Just_some_name\"#p270787 bas sam htio postat o tome, meni se isto desi, probao sam u linker postavke visual studia dodat i include i env direktorije iz ipp-a, ali nije pomoglo",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270799": {
+      "poster": "Murin",
+      "content": "@\"netko_tamo\"#p270788 \n\nJa sam mislio da je možda do nekih permissiona ali ni \"run as admin\" nije pomoglo\n\nIzgleda da se traži neki kolega da nam kompajlira kodove 🤣",
+      "votes": {
+        "upvoters": [
+          "narval13068 (Dima)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "narval13068 (Dima)",
+          "netko_tamo"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270805": {
+      "poster": "a_ko_si_ti",
+      "content": "@\"FICHEKK\"#p269949 Kad napravim ovako, dobijem u `profile.txt`: ` no time accumulated`, i sva `seconds` polja su mi 0. Napravio sam sve isto, jedino sam kod kompaljiranja trebao dodati `-lm` na kraj, inače se žalio na korištenje funkcija iz `math.h`.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270807": {
+      "poster": "a_ko_si_ti",
+      "content": "@\"a_ko_si_ti\"#p270805 Prekratko mi je trajalo izvodenje. Koliko dobijete u `cumulative seconds`?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270813": {
+      "poster": "login",
+      "content": "@\"a_ko_si_ti\"#p270805 Ja sam pokretao za 1 blok samo i isto bi mi bile sve nule. Sad sam pokrenuo da prodje kroz sve blokove i onda dobijem za kvantizaciju i dct da traju nekih pola sekunde za ovaj self seconds\n\nEDIT: Odnosno dct traje nekih pola sekunde dok je kvantizacija 0.01",
+      "votes": {
+        "upvoters": [
+          "MrHead (vandal)",
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270816": {
+      "poster": "netko_tamo",
+      "content": "@\"a_ko_si_ti\"#p270807 za jedan blok bude oko 0.15 - 0.20 s",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270817": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"Just_some_name\"#p270787 Vjv ti je zato što imaš razmake u nazivu fajla, znači probaj ovo https://social.msdn.microsoft.com/Forums/en-US/d0ceca96-d310-4952-a4d8-2b69c60054cc/visual-studio-error-lnk1104-can-not-open-file?forum=visualstudiogeneral",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270843": {
+      "poster": "netko_tamo",
+      "content": "@\"Mićo poslednji klovn\"#p270817 nemam nikakve razmake u nazivu fajla tak da nije to",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270845": {
+      "poster": "Audaces",
+      "content": "Šta ako nemamo 5 funkcija za izdvojiti, tipa ja sve u mainu i jos jednoj f-ji radim?",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270847": {
+      "poster": "Amon",
+      "content": "@\"Audaces\"#p270845 Ja sam imao isto tako, samo sam stavio varijable kao globalne i dijelove koda koji se odnose na neki dio zadatka sam copy-pasteao u pripadne void funkcije i samo sam globalne varijable mijenjao. 5 min posla sveukupno",
+      "votes": {
+        "upvoters": [
+          "Audaces"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270851": {
+      "poster": "Klokan",
+      "content": "Je li potrebno taj oneAPI base toolkit instalirati od 26.7 GB??",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270853": {
+      "poster": "Bravos (Supraman)",
+      "content": "@\"Just_some_name\"#p270787 imao sam isti error. Rijesio sam tako da sam u properties od projekta podesio platform na x64 i default linking method za IPP. I za debug isto pripazi da je x64.\n\n ![](assets/2022-01-15/00008.png)\n\n![](assets/2022-01-15/00009.png)",
+      "votes": {
+        "upvoters": [
+          "Amon",
+          "Njet",
+          "Patak007",
+          "ReyKenobi",
+          "a_ko_si_ti",
+          "alfajastog"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270858": {
+      "poster": "tonkec",
+      "content": "@\"Klokan\"#p270851 samo vtune profiler i ipp library, ostalo ne treba",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Klokan",
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270860": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"netko_tamo\"#p270843 Nije ti isto u program filesu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270863": {
+      "poster": "Audaces",
+      "content": "![](assets/2022-01-15/00010.png)\n\nJel itko drugi dobio ovako da mu main uzima 100% iz nekog razloga?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270868": {
+      "poster": "tonkec",
+      "content": "@\"Audaces\"#p270863 da za slučaj kada ne prođeš preko cijele slike nego samo za jedan blok",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270871": {
+      "poster": "a_ko_si_ti",
+      "content": "Je li iko uspio instalirat IPP lib na Linuxu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270896": {
+      "poster": "Harweyy",
+      "content": "@\"tonkec\"#p270868 ![](assets/2022-01-15/00012.jpg)\n\nJe li bi mi mogao objasniti je li ovo zadovoljavajuci izlaz koji oni ocekuju zad 3.dz, naravno ovo jos nije formatirano. Vidim da si spominjao \" da za slučaj kada ne prođeš preko cijele slike nego samo za jedan blok\", ali što nije prva zadaća bila da se i radi samo o jednom bloku. Je li mi moramo promijenit da radi na svim blokovima ? Vidim da spominju 5 funkcija dok meni program sam po sebi ima 8 funkcija. Ili sam ja nesto jednostavno krivo shvatio iz prethodnih postova ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270897": {
+      "poster": "Klokan",
+      "content": "1. kolko sam ja skuzio moras uredit program iz dz1 da radi na cijeloj slici (neovisno o tome da sto se radilo samo na 1 bloku u dz1)\n2. to ti je ok jer pise \"prvih 5 funkcija koji imaju najveći udio u cjelokupnom izvođenju programa\" - odaberi samo top 5",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270898": {
+      "poster": "Klokan",
+      "content": "@\"Harweyy\"#p270896 \n1. kolko sam ja skuzio moras uredit program iz dz1 da radi na cijeloj slici (neovisno o tome da sto se radilo samo na 1 bloku u dz1)\n2. to ti je ok jer pise “prvih 5 funkcija koji imaju najveći udio u cjelokupnom izvođenju programa” - odaberi samo top 5",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270900": {
+      "poster": "El_Beast (Pleteći medvjedić)",
+      "content": "@\"a_ko_si_ti\"#p270871 ja se mučim i na Windowsu :'(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "a_ko_si_ti"
+        ]
+      }
+    },
+    "270903": {
+      "poster": "Harweyy",
+      "content": "@\"Klokan\"#p270898 ![](assets/2022-01-15/00013.jpg)\n\nPrepravio sam da radi nad svim blokovima, ali i dalje pozivam kao kolega samo 6. blok u cmd-u, je li ovo sad \"prihvatljiva\" statistika kakvu oni očekuju? Naravno još formatirat po njihovim zeljama",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270906": {
+      "poster": "Klokan",
+      "content": "@\"Harweyy\"#p270903 ako se ne varam, nije nam vise niti potreban taj drugi parametar jer iteriramo po svih 64*64=4096 blokova. meni je ispalo ovako ![](assets/2022-01-15/00014.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270907": {
+      "poster": "Harweyy",
+      "content": "@\"Klokan\"#p270906 Out.txt datoteka mi ima svih 4096 blokova i za svaki po 3 matrice. Vrijeme izvodenja je dovoljno izmjeriti sa clock_t ? To za onu zadnju liniju koju moramo nadodat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270911": {
+      "poster": "Klokan",
+      "content": "@\"Harweyy\"#p270907 evo pogledaj ovdje na [linku](https://www.tutorialspoint.com/c_standard_library/c_function_clock.htm) EDIT: mozda bolji [link](https://stackoverflow.com/questions/17167949/how-to-use-timer-in-c)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270918": {
+      "poster": "netko_tamo",
+      "content": "@\"Klokan\"#p270906 kolko ti je ispalo da traje program?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270919": {
+      "poster": "Klokan",
+      "content": "@\"netko_tamo\"#p270918 cca 29 sekundi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270932": {
+      "poster": "Harweyy",
+      "content": "@\"Klokan\"#p270919 Ja dobivam : Execution time: 19.270000 seconds \n\nkoristim : clock_t start, end;\n\nend = clock();\n\n    double exec_time = (double)(end - start) / CLOCKS_PER_SEC;\n\n    printf(\"Execution time: %f seconds\", exec_time);\n\nJe li moguce da mi je program brzi za cak 10 sekundi, prakticki bi svi isto trebali imat, jedino kaj mi pada na pamet ak koristis 2-d, a ne 1-d zapis matrice",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270935": {
+      "poster": "El_Beast (Pleteći medvjedić)",
+      "content": "Je li nekome u cmd-u kada pokrene gprof izbacuje ovako nesto ![](assets/2022-01-15/00025.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270945": {
+      "poster": "netko_tamo",
+      "content": "@\"Harweyy\"#p270932 ja isto dobijem oko 19 sec",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270998": {
+      "poster": "Klokan",
+      "content": "@\"Harweyy\"#p270932 ne nuzno samo o tome, nego i o brzini CPU-a kojeg imas i kolicini otvorenih prozora, itd. tako da je irelevantna brojka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271015": {
+      "poster": "Murin",
+      "content": "@\"Harweyy\"#p270932 \n\nja mora da nes krivo radim, ali meni se program odvije u 3.6 sekundi, jedino sto sam promijenio s obzirom na prvu zadacu je da radi obradu za i=0 do i<broj_svih_blokovi umjesto samo odredenog bloka i zakomentirao sam pisanje u file",
+      "votes": {
+        "upvoters": [
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271017": {
+      "poster": "DuckItUp",
+      "content": "@\"Murin\"#p271015 \n\nsame, meni je za sve blokove ispalo 2.5 s prije optimizacije i 0.02 s nakon",
+      "votes": {
+        "upvoters": [
+          "Cereal_Killer (vagab0nd0)",
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271053": {
+      "poster": "a_ko_si_ti",
+      "content": "Ja sam samo koristio onaj cummulative time iz `gprof` rezultata. Ispada mi 0.95s, prije optimizacije, nisam jos krenuo na 4. zadatak.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271076": {
+      "poster": "Ducius",
+      "content": "@\"Murin\"#p271015 ja radim isto tako sa for kroz sve blokove i izbacia sam pisanje u file i traje mi 1s",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271125": {
+      "poster": "Klokan",
+      "content": "@\"a_ko_si_ti\"#1411 @\"DuckItUp\"#76 @\"Murin\"#103  jeste vi svih 4096 puta ucitavali sliku ili ste ju samo jednom za sve iteracije, jer mislim da vam to cini razliku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271129": {
+      "poster": "Murin",
+      "content": "@\"Klokan\"#p271125 \n\nSamo jednom",
+      "votes": {
+        "upvoters": [
+          "Filemon"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271131": {
+      "poster": "DuckItUp",
+      "content": "@\"Klokan\"#p271125 \n\npa jednom, nema razloga da više put učitavam sliku",
+      "votes": {
+        "upvoters": [
+          "Klokan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271139": {
+      "poster": "Klokan",
+      "content": "@\"Murin\"#p271129 a sta treba i ispis u file maknuti?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271149": {
+      "poster": "ReyKenobi",
+      "content": "Jel ima netko da mu ne prikazuje sve funkcije (ni brojeve poziva) kad koristite gprof? I jeste li uspjeli to kako riješiti?\n\n![](assets/2022-01-16/00023.png)",
+      "votes": {
+        "upvoters": [
+          "Doktor0807"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271201": {
+      "poster": "Klokan",
+      "content": "Kak se koristi ovaj IPP?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271221": {
+      "poster": "Klokan",
+      "content": "jel poanta da sve funkcije zamijenimo cak i malloc i npr RGB u YCbCr?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271233": {
+      "poster": "ReyKenobi",
+      "content": "@\"ReyKenobi\"#p271149 ako nekome bude ista stvar, ne prepoznaje statičke metode, sve je ok ak se makne static",
+      "votes": {
+        "upvoters": [
+          "gamigugi"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271239": {
+      "poster": "Karlovsky120",
+      "content": "Jel zna netko kako se formatira druga datoteka?\n\nMajstori su napisali da je ovo format:\n\nDZ4 Vrijeme izvođenja (s)\n\nDZ5 Vrijeme izvođenja (s)\n\nAli ja sad ne znam jesu li mislili:\n\nDZ4 Vrijeme izvođenja (0.738s)\n\nDZ5 Vrijeme izvođenja (0.357s)\n\nili\n\nDZ4 0.738 (s)\n\nDZ5 0.357 (s)\n\nili\n\nDZ4 Vrijeme izvođenja (0.738)\n\nDZ5 Vrijeme izvođenja (0.357)\n\nili nešto treće?\n\nBTW, to su moja vremena, s time da trošim ~30% (stari kod) i ~90% (optimizirani kod) vremena u fprintf-u jer svaki blok zapisujem zasebno, stvarno mi se nije dalo to ići mijenjati da se zapisuje u memoriju pa odjednom sve u file.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271241": {
+      "poster": "Karlovsky120",
+      "content": "@\"Klokan\"#p271221 Ja sam samo koristio DCT iz IPP-a, sve ostalo mi je bilo isto.\n\nA ovaj malloc koji imaš bi se vjerojatno dao iščupati negdje van pa da reusaš tu memoriju, jer ako imaš samo jedan malloc za čitav program, onda ti je tako i tako svejedno je li optimiziran ili ne, bar za ovo što mi radimo.",
+      "votes": {
+        "upvoters": [
+          "Filemon",
+          "Klokan"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271325": {
+      "poster": "Patak007",
+      "content": "@\"FICHEKK\"#p269949 jel itko uporno dobiva error tipa BFD: Dwarf Error: Could not find abbrev number 84... kako je to rijesio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271365": {
+      "poster": "Klokan",
+      "content": "@\"Karlovsky120\"#p271239 mislim da ovako:\n\nDZ3 0.738\n\nDZ4 0.0738",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271366": {
+      "poster": "Klokan",
+      "content": "@\"Patak007\"#p271325 zanemari ga ako ti ispise sve u file",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271428": {
+      "poster": "BakardiKola",
+      "content": "Jel ima netko primjer formatiranja profile.txt, tj. treba li pisati sekunde ili samo postotak?\n\nKako da vidimo ukupno vrijeme izvođenja, unutar onog output file-a ili da ručno izračunamo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271435": {
+      "poster": "BakardiKola",
+      "content": "Je li okej ako nemamo 5 funkcija kojima je postotak veći od 0? npr. nesto ovako![](assets/2022-01-17/00026.png)",
+      "votes": {
+        "upvoters": [
+          "Maci",
+          "orange"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271445": {
+      "poster": "Murin",
+      "content": "Ima netko da je uspio srediti ove func@ funckije ? \n\n![](assets/2022-01-17/00036.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271498": {
+      "poster": "orange",
+      "content": "Kako osposobiti IPP u Visual Studiu, instalirao sam Intel OneAPI, odabrao sam da se integrira s VS, ali `#include \"ipp.h\"` ne radi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271508": {
+      "poster": "tonkec",
+      "content": "@\"orange\"#p271498 najlakše je ako prvo instaliraš visual studio pa onda vtune profiler s ipp libraryjem jer ti onda automatski sve napravi sam",
+      "votes": {
+        "upvoters": [
+          "orange"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271516": {
+      "poster": "Klokan",
+      "content": "jel treba pisat u file na kraju? i ima li jos nesto da treba zakomentirat",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271531": {
+      "poster": "Filemon",
+      "content": "@\"Murin\"#p271015 možda kolege uvijek pišu u file ili na stdout, I/O je najsporiji dio koda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271533": {
+      "poster": "Klokan",
+      "content": "@\"vagab0nd0\"#p270354 na windowsu neki bash terminal i ovo: `rm -r .vs/` kad je VS zatvoren",
+      "votes": {
+        "upvoters": [
+          "Cereal_Killer (vagab0nd0)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271557": {
+      "poster": "Doktor0807",
+      "content": "@\"Klokan\"#p271533 što ne mogu samo označit sve ostalo u folderu gdje je .vs i zipat?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271615": {
+      "poster": "member",
+      "content": "@\"FICHEKK\"#p269949 jel znaš možda zašto mi za drugi korak izbaci error: `dct.exe: command not found`",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271650": {
+      "poster": "YenOfVen",
+      "content": "Ima li netko problem sa installerom, da mu ne zeli pokrenut instalaciju? Pokrene se, pokaze logo i samo se crasha, nikakvog errora nit ista",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271701": {
+      "poster": "alfajastog",
+      "content": "@\"Murin\"#p271445 Meni se to riješilo kad sam odradio ovo sta je mico stavio\n\n> @\"Mićo poslednji klovn\"#p269944 Ne, nego ovo [https://community.intel.com/t5/Analyzers/Getting-Symbols-in-VTune-Amplifier-2018/td-p/1129907](https://community.intel.com/t5/Analyzers/Getting-Symbols-in-VTune-Amplifier-2018/td-p/1129907)\n\nStavis generate full program database file (build->build full program database file for solution) i stavis debug:full (properties->configuration->linker->debugging)\n\nNakon tog sam pokrenuo vtune opet i opet izbacuje probleme, to mozes vidjet onaj narancasti tekst dok se obavlja ta analiza, kaze da fale neke tamo debug info za microsoft librarije.\n\nhttps://www.intel.com/content/www/us/en/develop/documentation/vtune-help/top/set-up-analysis-target/windows-targets/debug-information-for-windows-system-libraries.html#debug-information-for-windows-system-libraries_GUID-54DFCC8D-AB71-4D7F-B7F3-600D74B14670\n\nTo sam prek ovog nekak poklikao i onda mi je proradilo.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271821": {
+      "poster": "tito",
+      "content": "Malo sam se izmučio sa postavljanjem ipp na linuxu i nisam dospio nigdje. Pa nudim da ću platit nekome(preko revoluta ili bankovnog računa) za razumnu cijenu pokretanje 4.labosa s ipp librariyem.",
+      "votes": {
+        "upvoters": [
+          "member"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271850": {
+      "poster": "orange",
+      "content": "@\"tito\"#p271821 Pokrenem ti beplatno ako imas spreman kod",
+      "votes": {
+        "upvoters": [
+          "BakardiKola",
+          "Cvija",
+          "Filemon",
+          "Ruleta",
+          "a_ko_si_ti",
+          "gamigugi",
+          "keykey",
+          "netko_tamo",
+          "sane_insane",
+          "tito"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271876": {
+      "poster": "AromaticConfusion (VrloZbunjen)",
+      "content": "Kak treba izgledati struktura .zip-a?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271915": {
+      "poster": "Doktor0807",
+      "content": "@\"VrloZbunjen\"#p271876 mislim da ti je gore Mićo već napisao, ja predao doslovno 4 file-a (2 file koda i 2 tekstualna file-a)",
+      "votes": {
+        "upvoters": [
+          "Murin",
+          "a_ko_si_ti"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271972": {
+      "poster": "Harweyy",
+      "content": "Ako predajem samo 3. DZ u .zip pohranjujem samo profile.txt ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272222": {
+      "poster": "BakardiKola",
+      "content": "Jel u profile.txt pišemo početno od main funkcije ili pišemo i onaj \"dct\" prvi redak?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272274": {
+      "poster": "a_ko_si_ti",
+      "content": "@\"BakardiKola\"#p272222 E to i mene zanima. Koliko duboko treba ići u onom top-down stablu? Pretpostavljam dok ne dodemo do zadnje funkcije koju smo mi pisali. Znaci u tvom slučaju `main` ne bi ulazio, jer se preklapa sa izvođenjem `dct`-a",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272276": {
+      "poster": "a_ko_si_ti",
+      "content": "Ja ni nemam 5. funkcija (nakon sto izbacim `print_to_file`). je li ok da stavim 4? ili zapisem podfunkcije (u tom slučaju bi mi suma isla preko 100%)?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272342": {
+      "poster": "brbrbr",
+      "content": "@\"a_ko_si_ti\"#p272276 Ista stvar me zanima, nemam vise sto za podijeliti na funkcije",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272344": {
+      "poster": "brbrbr",
+      "content": "@\"tito\"#p270322 Da, jel znas gdje se onda skine taj program?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272346": {
+      "poster": "brbrbr",
+      "content": "@\"brbrbr\"#p272344 I onaj Intel oneAPI zauzima 30GB, jel zna netko sta je potrebno od svih tih stvari u tom packageu jer nema nigdje ovog sto je navedeno u labosu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272355": {
+      "poster": "ImJustAKid (lumity)",
+      "content": "@\"brbrbr\"#p272346 Mislim da je samo Integrated Performance Primitives za dz4 i ak vec nisi dz3 s gprof onda i VTune",
+      "votes": {
+        "upvoters": [
+          "brbrbr"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272359": {
+      "poster": "brbrbr",
+      "content": "Jel zna netko kako poceti s 4. zadacom? Mogu u VS stvoriti jedino cpp projekt u kojemu mi ne radi zadaca (oba libraryja su mi se integrirala, al ne znam sto s njima). Jel ima negdje neki tutorial kako se koriste ti libraryji",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272369": {
+      "poster": "keykey",
+      "content": "@\"brbrbr\"#p272359 https://youtu.be/xU2-MOKuOZg",
+      "votes": {
+        "upvoters": [
+          "brbrbr",
+          "cajaznun"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272385": {
+      "poster": "brbrbr",
+      "content": "@\"keykey\"#p272369 Meni ne radi to sto je on pokazao, ne mogu napravit exe file jer dobivam cannot open ippcoremt.lib, a profiler se ne moze pokrenut bez exe-a. koraci su mi isti kao i njemu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272403": {
+      "poster": "Ruleta",
+      "content": "ima netko da mu DCT traje 100% izvođenja programa? 🙈",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272421": {
+      "poster": "Harweyy",
+      "content": "Ako sam napravio samo 3. dio, predajem samo profile.txt ? Nisam radio s visual studiom vec gprof, a ne mogu namjestit 4. zadatak da radi.",
+      "votes": {
+        "upvoters": [
+          "behappy98"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272456": {
+      "poster": "behappy98",
+      "content": "kaki integrirati app u visual studiu? prvo sam instalirala vs pa onda app, ali ga nema",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272458": {
+      "poster": "post",
+      "content": "@\"Klokan\"#p271516\n\nJesi li ovo saznao?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "272470": {
+      "poster": "a_ko_si_ti",
+      "content": "@\"brbrbr\"#p272342 Ja sam na kraju vidio da mi se jedna funkcija nije ispisivala, pa sam stavia da traje 0.1%. funckije su mi: read_file, DCT, quantisize, shift, i RGB_to_YUV. mozda ti to pomogne u daljnjem dijeljenju.\n\n@\"post\"#p272458 ja mislim da ne treba. u zadatku pise da prodemo kroz cijeli file, pa nez koji bi blok onda ni ispisao, a IPP ne pomaze u optimazaciji IO, pa nez kako bi se to primjenjivalo na ovaj DZ. ja sam svakako ostavio to kao zakomentiranu liniju.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "277874": {
+      "poster": "a_ko_si_ti",
+      "content": "Znam da je gotov predmet, al ostalo mi je u drafts jer mi se nije dalo zajebavat oko ovoga prije predaje, a sad me malo zanima.\n\n![](assets/2022-01-20/00012.gif)\n\nJel zna itko kako je moguće da se više koda, kraće izvodi? Kad pokrenem zajedno DCT i DCT_ipp, traje krace nego kada pokrenem samo DCT. Ne vidi se isprintano koliko traje program, ali se moze primjetit po narančastoj crti na dnu i mom ludom vrtenju misa.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

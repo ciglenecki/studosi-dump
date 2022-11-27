@@ -1,0 +1,407 @@
+{
+  "title": "[MAP] 1. laboratorijska vježba - 2021/2022",
+  "creator": "Ryder (Pepper)",
+  "slug": "map-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Multivarijatna analiza podataka",
+    "Ispiti"
+  ],
+  "posts": {
+    "288405": {
+      "poster": "Ryder (Pepper)",
+      "content": "Što ste napravili sa nedostajućim vrijednostima u prvom zadatku i sa onom jednom vrijednosti 18 u stupcu MI_2?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288412": {
+      "poster": "Ducky",
+      "content": "@\"Pepper\"#p288405 izbriso sam tog studenta sa 18, imaš još jednog šta je ispod 0 na ZI_1",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288414": {
+      "poster": "Ducky",
+      "content": "Što je upareni graf?\n\n\"Na dijagonalama prikažite empirijsku distribuciju podataka, a na elementima izvan dijagonala prikažite grafove raspršenja za parove varijabli\"\n\nJel tu opisuju taj upareni graf ili moramo i jedno i drugo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288417": {
+      "poster": "Ryder (Pepper)",
+      "content": "@\"Ducky\"#p288414 Imaš ggpairs naredbu sa kojojom se postavljaju posebno grafovi na dijagonali i posebno sa gornje i donje strane dijagonale, slično su koristili u 1. auditornoj vježbi.\n\nJedino ne znam kako da dobijemo empirijsku distribuciju na dijagonali.",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288437": {
+      "poster": "Ryder (Pepper)",
+      "content": "Jesu li rekli možda na predavanju kako će labos izgledati ili neke detalje vezano za to?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288614": {
+      "poster": "Ducky",
+      "content": "\"Ispitajte postoje li stršeće vrijednosti koje su statistički značajne.\"\n\nKako znamo jesu li statistički značajne?\n\nMisle li značajne za pojedinačne zadatke ili za sve zadatke zajedno (za vektor tipa [IR_1 IR_2 IR_3 IR_4 IR_5] )?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288636": {
+      "poster": "sheriffHorsey",
+      "content": "Što je ovdje pjesnik htio reći:\n\n* Provjerite zadovoljavaju li bodovi gore opisane uvjete predmeta,\n* Za nedostajuće podatke ispitajte jesu li opravdani te odaberite i primijenite tehniku upravljanja nedostajućim podatcima. \n\nČini mi se da sam ovo prvo pitanje već riješio s provjerom raspona vrijednosti, a za ovo drugo ne kužim jel bi ih trebao micati pošto ima smisla da su NA.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288643": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"sheriffHorsey\"#p288636 \n\nnpr jel bodovi pojedinog zadatka imaju vrijednost van raspona, jesu li spremljeni ko numercka vrijednost itd.\n\nopravdane su NA vrijednosti u IR stupcima ali moras ih se rjesit kako bi mogao vrsit statisticku analizu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288645": {
+      "poster": "sheriffHorsey",
+      "content": "@\"Precious Bodily Fluids\"#p288643 \n\n> npr jel bodovi pojedinog zadatka imaju vrijednost van raspona, jesu li spremljeni ko numercka vrijednost itd.\n\njesam li ja lud ili se doslovno to radi u prva dva podzadatka?\n* Provjerite jesu li sve varijable očekivanog tipa,\n* Provjerite jesu li vrijednosti unutar zadanog raspona (s obzirom na gore opisano bodovanje),\n\n> opravdane su NA vrijednosti u IR stupcima ali moras ih se rjesit kako bi mogao vrsit statisticku analizu\n\nkako bi ja onda trebao micat NA podatke na razini cijelog dataseta? vise mi smisla ima filtrirat u kasnijim podzadacima kad me se pita da radim samo na podacima s roka/kontinuirano",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288647": {
+      "poster": "wesley",
+      "content": "Mogu vrijednost van raspona postavit na NA? ili moram zamijenit s nekim brojem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288650": {
+      "poster": "wesley",
+      "content": "možda pod \"zadovoljeni uvjeti predmeta\" misle da se ne može desit da netko ima bodove iz ispitnog roka ako nije bio na jednom od labosa  -> zato što je uvjet za polaganje roka izlazak na oba labosa",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288651": {
+      "poster": "wesley",
+      "content": "@\"wesley\"#p288650 ali ne piše eksplicitno da ne možeš zbog toga ići pisat ispit tako da nisam sigurna",
+      "votes": {
+        "upvoters": [
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288661": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"sheriffHorsey\"#p288645 \n\n>jesam li ja lud ili se doslovno to radi u prva dva podzadatka?\n\nasistenti su pisali vjezbu, dont think about it, whatever\n\nNA vrijednosti u IR stupcima sam se rjesio tako da sam dodao novi stupac indikatorskih varijabli koji oznacava je li student izasao na rok, nakon toga sam IR_n NA vrijednosti zamjenio s nulama.\n\nI nakon toga tek rjesavam ostale na vrijednosti, ak ih ima\n\nDisclaimer nisam imao sap, mozes ovo sve shvatit kao schizo ramblings",
+      "votes": {
+        "upvoters": [
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "sheriffHorsey",
+          "wesley"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288666": {
+      "poster": "matt (Matt)",
+      "content": "@\"Pepper\"#p288405 \n\nSettao sam mu `18` -> `8` (max broj bodova) jer se vjerojatno radi o grešci prilikom upisa. `-3` sam settao na `3` vodeći se istom logikom (plus ne postoje negativni bodovi). Overkill: napraviti multivarijatnu imputaciju za ta 2 podatka\n\n@\"Ducky\"#p288614 \n\nPronađi neku od statističkih udaljenosti (mahalanobis-ovu) za sve primjere. S tim udaljenostima provedi chi kvadrat test i pronađi primjere čija je udaljenost od drugih primjera statistički značajna (npr. za alpha = 0.01)\n\n@\"sheriffHorsey\"#p288645 \n>kako bi ja onda trebao micat NA podatke na razini cijelog dataseta? vise mi smisla ima filtrirat u kasnijim podzadacima kad me se pita da radim samo na podacima s roka/kontinuirano\n\nkomentar na ovo što je @\"Precious Bodily Fluids\"#p288661 rekao; nije bitno s kojom vrijednošću zamjeniš NA-ove za `IR_{1,2,3,4,5}` dokle god kasnije filtiriraš studente koji su uistinu išli na IR (npr. sa varijablom `otisao_na_ir` 0/1) kad radiš analizu koje sadrže varijable `IR_{1,2,3,4,5}`. NA-ovi kod `IR_{1,2,3,4,5}` mogu se zamjeniti sa `0`, `mean`, multivarijatnom imputacijom (ovo je možda fora ako želiš brzo vidjeti kakve bi bodove dobili studenti na IR-u a da  nisu išli na IR)",
+      "votes": {
+        "upvoters": [
+          "Ducky",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288782": {
+      "poster": "Rene",
+      "content": "\"Prikažite upareni graf za zadatke s ispitnog roka. Na dijagonalama prikažite empirijsku distribuciju podataka, a na elementima izvan dijagonala prikažite grafove raspršenja za parove varijabli. Razmislite o karakteristikama grafova i razmislite postoje li primjeri koji odskaču od ostalih.\"\n\nJel' dobijate ista korisno u ovom zadatku? Koliko vidim sve je isti kurac, tj. nisu povezani zadatci medusobno\n\nEventualno su 1 i 2 malo bolje rješeni?\n\n![](assets/2022-04-02/00021.png)",
+      "votes": {
+        "upvoters": [
+          "sheriffHorsey"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288800": {
+      "poster": "garica",
+      "content": "@\"Rene\"#p288782 Jel plottas samo studente koji su izasli na rok? Meni ovako izgleda:\n\n![](assets/2022-04-02/00025.png)",
+      "votes": {
+        "upvoters": [
+          "2more (Shooshur)",
+          "dh333"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288802": {
+      "poster": "Rene",
+      "content": "@\"garica\"#p288800 Da, ako nisam nesto sjebao sa selectanjem redaka. Probam ispocetka, hvala\n\nEDIT: ove rezultate kao ti dobijem kad graf crtam za sve studente, sto mi nije bas jasno jer ostali imaju NA za sve bodove s roka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288831": {
+      "poster": "garica",
+      "content": "@\"Rene\"#p288802 Mozda ggpairs zanemari te NA rokove ovih koji nisu izasli pa se dobije isti rezultat, ja crtam samo za one koji jesu izasli.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288838": {
+      "poster": "Rene",
+      "content": "@\"garica\"#p288831 nisi me skuzio/la, kad izdvojim ove s roka dobijem svoju sliku, kad pustim ggpairs da ih zanemari dobijem tvoju\n\nNije mi bas jasno u cemu je razlika ali nema veze",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288841": {
+      "poster": "ppooww (pp)",
+      "content": "@\"Rene\"#p288838 Probaj izdvojit studente koji su izasli na rok (~ 100 redaka) u poseban dataframe (samo stupci IR_1, ..., IR_5). I onda samo napravi ggpairs(df). Vidi kako ce ti ispast onda.",
+      "votes": {
+        "upvoters": [
+          "Ducky"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288927": {
+      "poster": "garica",
+      "content": "sto se u zadnjem zadatku misli pod provjeriti adekvatnost modela?",
+      "votes": {
+        "upvoters": [
+          "Ryder (Pepper)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "288940": {
+      "poster": "Rene",
+      "content": "@\"garica\"#p288927 Provjera reziduala i kriterij kvalitete modela možda?",
+      "votes": {
+        "upvoters": [
+          "garica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289262": {
+      "poster": "Rene",
+      "content": "Jel bio netko na labosu da podijeli iskustva?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289294": {
+      "poster": "Ryder (Pepper)",
+      "content": "@\"Rene\"#p289262 prvih par ljudi su asistenti pitali po 20-30min i onda kad su skuzili da su ispitali 4 ljudi u prvih sat vremena a ostalo je jos 15  za drugih sat vremena su malo ubrzali🤦‍♂️\n\nInace ovako prolazis kroz kod i kazes sto si radio i onda te on zaustavi i pita neko pitanje, obicno to bude neko teorijsko, interpretacija grafova (npr. pitali su kod cega smo primjetili negativnu a kod cega pozitivnu korelaciju, koja od te dvije nas je vise iznenadila i kako bi to mogli objasniti, pa recimo negativnu korelaciju imamo sa zadatcima iz mi i sa zi, gdje su se ocigledno studenti koji su losije napisali mi vise potrudili oko zi i obrnuto, i pozitivne korelacije recimo sa onim zadatcima iz mi i zi i lab1 i lab2.)\n\nOvak od teorijskih pitanja je jos pitao sto je kovarijanca, varijanca, korelacija i kako se racunaju, kako se racuna z score.\n\nJa sam koristio anovu u jednom dijelu pa me nesto o tome pitao, koja je razlika izmedu toga i t testa, zasto smo izbacili koje retke, sa kojim vrijednostima smo zamijenili nedostajuce vrijednosti i zasto.\n\nOnaj zadnji dio sa regresijom mene nije stigao bas pitat kako je zurio ali sam cuo da je neke isto pitao vezano za adekvatnost modela.",
+      "votes": {
+        "upvoters": [
+          "Rene",
+          "garica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289353": {
+      "poster": "matt (Matt)",
+      "content": "Pitanja:\n1. osnovne stvari vezane za filtriranje podataka\n2. normalna distribucija, kad je ona bitna a kad ne -> bitna je kod testova koji pretpostavljaju normalnost, pogotovo koji su osjetljivi na nju, a nije bitno kod lin. reg. (tj. i dalje možemo provesti lin. reg. iako podaci nisu normalni)\n3. korelacijska matrica, u kojem slučaju ne bi bila invertibilna? -> koje varijable bi morali maknuti ? -> one koje su međusobno zavisne (npr. ir_5 i ir_sum, mičemo ir_sum)\n- kad je matrica ne/stabilna?\n- kako nestabilnost matrice utječe na promjene? -> male promjene na ulazu velike promjene na izlazu. Recimo kod `summary(lm ... )` onaj `Std.` bi postao ogroman\n- stat. udaljenost koju ste koristili se ravna po nekoj distribuciji, navesti ime distribucije i test kojim se provjerava je li stat. signif... Konkretno, mahalanobisa se ravna po Chi squared distrib. pa radimo `pchisq` test\n- za anovu me nije pitao ali može pitati koje su pretpostavke anove\n- što je generalizirana varijanca? -> determinanta kovarijacijske matrice. Probajte skužiti interpretabilnost i kako bi to grafički izgledalo (volumen koji razapinju vektori...)\n- znati objasniti svaku oznaku koju daje `summary(lm ... )`,  Multiple R-squared, Estimate, Std, Error, t value, Pr(>|t|) ...\n- kako bi provjerili je li varijable zi_1 zi_2 statistički značajno opisuju lin. reg. model? napraviš lin. reg. sa svim varijablama (1), napraviš lin. reg. sa svim varijablama osim zi_1 zi_2 (1). Sad svaka lin. reg (1, 2)  ima svoju `F-statistic` -> napraviš f-test za te dvije (1, 2) `F-statistic` i provjeriš je li stat. signif.",
+      "votes": {
+        "upvoters": [
+          "Rene",
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289404": {
+      "poster": "Lyras",
+      "content": "Ah yes, pitati 4/15 studenata u sat vremena od 2h dodijeljenog termina. Predivno.",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)",
+          "cloudies"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "289405": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Lyras\"#p289404 sad ce nad nama provest 0% speedrun",
+      "votes": {
+        "upvoters": [
+          "Lyras"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Lyras"
+        ],
+        "wtf": [],
+        "tuga": [
+          "ErnestHemingway (Alfetta)"
+        ]
+      }
+    }
+  }
+}

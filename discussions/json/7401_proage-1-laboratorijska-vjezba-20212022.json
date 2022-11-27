@@ -1,0 +1,570 @@
+{
+  "title": "[PROAGE] 1. laboratorijska vježba - 2021/2022",
+  "creator": "reygrep",
+  "slug": "proage-1-laboratorijska-vjezba-20212022",
+  "tags": [
+    "FER",
+    "Programski agenti",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "295600": {
+      "poster": "reygrep",
+      "content": "Jel netko krenuo ovo raditi? mozda nasao kakve korisne materijale 😬",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295672": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"reygrep\"#p295600 pokusao instalirat jadex i jos uvijek sam na tom pokusavanju 😂",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295888": {
+      "poster": "maraska",
+      "content": "i ja isto imam probleme s jadexom - taj bas njihov projekt radi ali kad ga pokusam dodati u novi projekt (Exercise A3 u onim installation uputama), ne mogu nikako, a pokusala sam s 4 razlicite verzije jadexa i rucnim namjestanjem klasa, uvijek ide greska _Error occurred during initialization of boot layer\n\njava.lang.module.FindException:_\n\nAko je netko uspio pls otkrijte mi tajnu 😢",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295906": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "@\"maraska\"#p295888 znaci ovako, nemoj napraviti običan projekt, napravi gradle projekt. u biuld.gradle dodaj ovaj dependancy:\n```\nimplementation 'org.activecomponents.jadex:jadex-util-commons:4.0.265'\n```\ni onda će ti proraditi",
+      "votes": {
+        "upvoters": [
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295907": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "@\"rozy\"#p295672 moguce da i ti imas isti taj problem",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295983": {
+      "poster": "paradajz",
+      "content": "Sta se instalacije tice, mene je isto Gradle zezo, ali Maven verzija radi uredno. Znaci samo New Maven Project i dodati ovo u pom.xml:\n\n```\n<dependency>\n    <groupId>org.activecomponents.jadex</groupId>\n    <artifactId>jadex-distribution-minimal</artifactId>\n    <version>4.0.265</version>\n</dependency>\n\n<dependency>\n    <groupId>net.sourceforge.jadex</groupId>\n    <artifactId>jadex-distribution-standard</artifactId>\n    <version>2.4</version>\n</dependency>\n```",
+      "votes": {
+        "upvoters": [
+          "maraska"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "295985": {
+      "poster": "paradajz",
+      "content": "I da, ja uopce nezz od kud krenut tako da je svaka pomoc dobrodosla",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296000": {
+      "poster": "Nocna_smjena",
+      "content": "@\"paradajz\"#p295983 ovaj drugi ti je superset prvog. Incrementaj verziju na 4.0.265 jer je 2.4 izasao valjda prije 10 godina :p. \n\nZa ostale koji se muce s importom, ovdje je najazurnija verzija tog paketa: https://mvnrepository.com/artifact/org.activecomponents.jadex/jadex-distribution-standard/4.0.265.\n\n**Upute za Eclipse**\n\nAko imate maven project kopirajte u pom.xml to sto pise pod _Maven_ jezickom a ako imate gradle project kopirajte u build.gradle sto pise pod _Gradle (Short)_ jezickom. Da maven skine taj paket i instalira u lokalni repozitorij idete desni klik na projekt -> maven -> update project... -> oznacite vas projekt i stisnete ok. Za gradle desni klik na projekt -> gradle -> refresh gradle project. Morat ce te pricekat neko vrijeme da se paket skine.",
+      "votes": {
+        "upvoters": [
+          "paradajz"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296012": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "Ako itko ima neke korisne materijale ili je vidio neki koristan primjer, neka nas uputi",
+      "votes": {
+        "upvoters": [
+          "krle",
+          "paradajz",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296024": {
+      "poster": "krle",
+      "content": "Netko uspio napraviti nesto vise od instalacije Jadex-a? 😅",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "domagojj (VolimStopala🇻🇦🇭🇷)",
+          "maraska",
+          "paradajz",
+          "ruza0001 (rozy)"
+        ]
+      }
+    },
+    "296354": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"null\"#p296024 samo instalacija je vec dovoljno sranja da bude cijeli labos jbt 😆",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296375": {
+      "poster": "DariolaVremenskiPutnik",
+      "content": "Jel imao tko problema s `No such feature: interface jadex.bdiv3.features.IBDIAgentFeature` greškom? Pratim upute [odavde](https://download.actoron.com/docs/releases/latest/jadex-mkdocs/tutorials/bdiv3/03%20Using%20Plans/) skroz i dalje mi se neće niti pokrenuti. Preimenovo sam klasu da završava na BDI i dalje isti problem.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296376": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "@\"DariolaVremenskiPutnik\"#p296375 kolega vi ste napredni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "ruza0001 (rozy)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296377": {
+      "poster": "DariolaVremenskiPutnik",
+      "content": "@\"VolimStopala🇻🇦🇭🇷\"#p296376 Nažalost, ovo je valjda prvi korak nakon Hello World-a.... Smeće od labosa.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296378": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "@\"DariolaVremenskiPutnik\"#p296377 cijeli labos je depracted imho",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296379": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "@\"DariolaVremenskiPutnik\"#p296377 ne relevantne tehnologije...",
+      "votes": {
+        "upvoters": [
+          "DariolaVremenskiPutnik"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296401": {
+      "poster": "szp",
+      "content": "![](assets/2022-05-15/00005.jpg)\n\n![](assets/2022-05-15/00006.jpg)\n\nOke, cini mi se da sam uspio nesto pronaci pa da podijelim ovdje. Uglavnom na prvoj slici mislim da je dobro pogledati ove EAInitirator i Receiver klase i capability koji se nalazi uz njih cisto da se zna sta se dogadja uopce tu.\n\nA na drugoj slici ima primjer (nalazi se u jaru \"jadex-applications-bdi-4.0.265\") implementacije ove aukcije pa to mozete pogledati i modifikovati da radi za primjer labosa.\n\nNadam se da ce pomoci ovo barem malo :)",
+      "votes": {
+        "upvoters": [
+          "DariolaVremenskiPutnik",
+          "domagojj (VolimStopala🇻🇦🇭🇷)",
+          "paradajz"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296402": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "@\"szp\"#p296401 Profil star pol sata, jeste li vi asistent ili profesor?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "DariolaVremenskiPutnik",
+          "Mioch",
+          "Nocna_smjena",
+          "itsdend",
+          "maraska",
+          "paradajz",
+          "reygrep",
+          "ruza0001 (rozy)",
+          "szp"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296418": {
+      "poster": "ruza0001 (rozy)",
+      "content": "@\"VolimStopala🇻🇦🇭🇷\"#p296378 yep, cak i upute za instalirat jadex su jako zastarjele pa ni one ne rade bas najbolje hahahaa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296428": {
+      "poster": "fer999",
+      "content": "Ovo mi se zasad čini kao najbolji tutorial, objašnjava fino neke stvari koje trebamo koristiti u labosu. \n\nhttps://github.com/actoron/jadex/blob/master/docs/tutorials/quickstart-bdi/01%20Introduction.md",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296434": {
+      "poster": "DariolaVremenskiPutnik",
+      "content": "Je li itko uspio pokrenuti išta da koristi ovaj `IBDIAgentFeature` u nekom Agentu? Meni cijelo vrijeme baca `No such feature: interface jadex.bdiv3.features.IBDIAgentFeature`.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296435": {
+      "poster": "fer999",
+      "content": "@\"DariolaVremenskiPutnik\"#p296434 \n\nZamijeni ovo:\n\n@Agent(type = \"bdi\")",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296436": {
+      "poster": "fer999",
+      "content": "@\"fer999\"#p296435 Tj. to napiši umjesto anotacije @Agent",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296440": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "![](assets/2022-05-15/00012.png)\n\novako mi izgleda struktura projekta? zna li itko gdje trebaju doci xml fajlovi? projekt mi je gradle, trebam li u mavenu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296441": {
+      "poster": "DariolaVremenskiPutnik",
+      "content": "@\"fer999\"#p296436 Hvala! Trebalo je ovo plus namjestit JDK na verziju 11.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296447": {
+      "poster": "mattchampion",
+      "content": "@\"szp\"#p296401 kako si pokrenuo ovo, meni se samo stvaraju xml datoteke nema mi komuniciranja izmedju agenata",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296449": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "@\"mattchampion\"#p296447 mene isto zanima, gdje je uopce main metoda??",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296468": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "jel itko napreduje? imam osjecaj ko da se vrtim u krug...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296471": {
+      "poster": "szp",
+      "content": "@\"VolimStopala🇻🇦🇭🇷\"#p296449 ![](assets/2022-05-15/00017.png)\n\n![](assets/2022-05-15/00018.png)\n\n![](assets/2022-05-15/00019.png)\n\nOvakva je struktura mog projekta. Napravio sam po direktorij za kupca i prodavaca svakog kojeg sam koristio, a aplikaciju sam pokrenuo tako sto u Seller agentu dodam kao inicijalni plan ovaj AuctionPlan (koji je zapravo modifikovani EATestPlan) i onda sa onog Jadex control centra samo pokrenem Seller.agent.xml. Koliko sam shvatio, otprilike taj AuctionPlan se moze gledati kao neka vrsta Main metode jer u njemu se kreiraju kupci i zapocinje ovaj EAInitiatorPlan i to.",
+      "votes": {
+        "upvoters": [
+          "DariolaVremenskiPutnik",
+          "domagojj (VolimStopala🇻🇦🇭🇷)",
+          "fer999",
+          "mattchampion"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296474": {
+      "poster": "fer999",
+      "content": "@\"szp\"#p296471 otkud ove dvije .xml datoteke za buyera i sellera?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296475": {
+      "poster": "fer999",
+      "content": "@\"szp\"#p296471 Jel onda za agente buyere jednako treba podesiti njegov .xml file? Kako ih povezati?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296479": {
+      "poster": "Nocna_smjena",
+      "content": "Koliko vas planira predat prazan labos ili labos di se vrlo malo napravilo? Upvoteajte za prakticki ne rijesen labos a downvoteajte za rijesen ili skoro rijesen labos",
+      "votes": {
+        "upvoters": [
+          "Cmerko",
+          "itsdend",
+          "paradajz",
+          "ruza0001 (rozy)"
+        ],
+        "downvoters": [
+          "szp"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296481": {
+      "poster": "szp",
+      "content": "@\"fer999\"#p296475 \n\n![](assets/2022-05-15/00020.png)\n\n\nDa, za Buyera (zapravo modifikovan EAReceiver.agent.xml) isto treba podesiti tako par stvari al sta sam u tom XMLu podesavao je cisto naziv packagea u kojem se nalazi i eventualno za neki <plan> u njegovom <body> elementu koja se klasa koristi.\n\nZa njega nema nikakvog inital plana ili tako nesto jer se on kreira u ovom EATestPlan planu i nakon toga se pokrece aukcija, a za to se sve brine Seller agent.",
+      "votes": {
+        "upvoters": [
+          "fer999"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296488": {
+      "poster": "paradajz",
+      "content": "@\"szp\"#p296471 \n\nIdeja zašto se možda ovo događa?\n\n![](assets/2022-05-15/00021.png)",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296493": {
+      "poster": "domagojj (VolimStopala🇻🇦🇭🇷)",
+      "content": "@\"Nocna_smjena\"#p296479 gle ne mogu rec da cu predat prazan labos, ali definitivno nije to to",
+      "votes": {
+        "upvoters": [
+          "fer999"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Nocna_smjena"
+        ]
+      }
+    },
+    "296524": {
+      "poster": "itsdend",
+      "content": "jel imao itko error\n\n\"No local component found for component identifier: buyer1@seller1:..\"",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296532": {
+      "poster": "DariolaVremenskiPutnik",
+      "content": "@\"itsdend\"#p296524 Možda ti neka od tih klasa nije označena anotacijom Plan ili Agent? Mislim da se meni ta greška u tim slučajevima desila.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "296537": {
+      "poster": "itsdend",
+      "content": "@\"DariolaVremenskiPutnik\"#p296532 \n\nAgente sam definirao samo u onim.agent.xml datotekama jer sam pratio njihove testcaseove, pa ne znam gdje trebam staviti anotaciju",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "297711": {
+      "poster": "DariolaVremenskiPutnik",
+      "content": "Oće se održavati išta uživo za ovaj labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

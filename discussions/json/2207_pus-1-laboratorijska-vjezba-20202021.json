@@ -1,0 +1,807 @@
+{
+  "title": "[PUS] 1. laboratorijska vježba - 2020/2021",
+  "creator": "WriteOnlyMemory",
+  "slug": "pus-1-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Posrednici umreženih sustava",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "92752": {
+      "poster": "WriteOnlyMemory",
+      "content": "Instaliram sve uredno kao što je prikazano u https://exitcondition.com/install-hadoop-windows/, dodam resource manager kao što je opisano u https://stackoverflow.com/questions/51118358/noclassdeffounderror-org-apache-hadoop-yarn-server-timelineservice-collector-tim i dobijem \"No space available in any of the local directories.\" grešku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93239": {
+      "poster": "WriteOnlyMemory",
+      "content": "Riješio, treba imati barem 10% HDD slobodno.",
+      "votes": {
+        "upvoters": [
+          "Miki",
+          "obrascic",
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "Jimothy"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101449": {
+      "poster": "xeqte",
+      "content": "@WriteOnlyMemory#93239 Možeš malo objasniti kako se pokreće ovaj prvi primjer na hdfs, tj. što točno iz labosa mi moramo napraviti sami vezano za ovaj primjer VideoCount? Nisam baš shvatio iz uputa što se od nas traži... Ovo dobijem nakon pokretanja prve naredbe ![](assets/2020-11-27/00063.png)",
+      "votes": {
+        "upvoters": [
+          "WriteOnlyMemory"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101619": {
+      "poster": "WriteOnlyMemory",
+      "content": "@xeqte#101449 Nemam trenutno cijeli postupak, odgovorim ti navečer u potpunosti, ali ukratko: treba formatirat namenode, prenijeti tekst datoteku i onda pokrenuti JAR.",
+      "votes": {
+        "upvoters": [
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "101622": {
+      "poster": "WriteOnlyMemory",
+      "content": "@xeqte#101449 \n\nSad sam se sjetio da imam kopiju na laptopu, uglavnom ja ti prevodim ovom naredbom:\n\n`javac -classpath D:\\Progi\\Hadoop\\etc\\hadoop;D:\\Progi\\Hadoop\\share\\hadoop\\common\\lib\\*;D:\\Progi\\Hadoop\\share\\hadoop\\common\\*;D:\\Progi\\Hadoop\\share\\hadoop\\hdfs;D:\\Progi\\Hadoop\\share\\hadoop\\hdfs\\lib\\*;D:\\Progi\\Hadoop\\share\\hadoop\\hdfs\\*;D:\\Progi\\Hadoop\\share\\hadoop\\yarn;D:\\Progi\\Hadoop\\share\\hadoop\\yarn\\lib\\*;D:\\Progi\\Hadoop\\share\\hadoop\\yarn\\*;D:\\Progi\\Hadoop\\share\\hadoop\\mapreduce\\lib\\*;D:\\Progi\\Hadoop\\share\\hadoop\\mapreduce\\*;D:\\Z_FER\\PUS\\had\\classes -d classes VideoCount.java`\n\nSad kod tebe je naravno Hadoop instaliran negdje drugdje, pa si modificiraj naredbu. Ovaj zadnji direktorij ti je tamo gdje su ti classovi i treba ti za generiranje VideoCount.class. Probaj naredbu prvo za VideoCountMap, VideoCountReduce i onda za VideoCount. Pa onda strpaj sve to u JAR `jar -cvf VideoCount.jar VideoCount.class VideoCountMap.class VideoCountReduce.class`. Zatim `hadoop namenode -format` (pod pretpostavkom da si dodao hadoop u PATH sustava); `start-all`; `hdfs dfs -put input.txt /`; `hadoop jar VideoCount.jar VideoCount /input.txt /output.txt`. Probaj, mislim da bi to trebalo raditi.",
+      "votes": {
+        "upvoters": [
+          "xeqte"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102617": {
+      "poster": "juraa14 (Arnold Schwarzenigger)",
+      "content": "Moze li netko objasniti ovaj njihov primjer mnozenja matrica?",
+      "votes": {
+        "upvoters": [
+          "WriteOnlyMemory"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102797": {
+      "poster": "boss15",
+      "content": "@WriteOnlyMemory#101622 jel treba prvo pokrenut hadoop? meni baca greske i dalje",
+      "votes": {
+        "upvoters": [
+          "WriteOnlyMemory"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102798": {
+      "poster": "juraa14 (Arnold Schwarzenigger)",
+      "content": "@boss15#102797 Za kompajliranje i pakiranje u jar ne treba",
+      "votes": {
+        "upvoters": [
+          "WriteOnlyMemory"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102832": {
+      "poster": "WriteOnlyMemory",
+      "content": "@boss15#102797\n\nKad pokreneš `start-all` trebao bi imati četiri procesa: hadoop namenode, hadoop datanode, yarn resource manager i yarn nodemanager. Ako jedan od njih javi grešku znači da nešto nije dobro iskonfigurirano ili da nije namenode formatiran.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102840": {
+      "poster": "leo (tajler)",
+      "content": "@WriteOnlyMemory#102832 jel možeš molim te napisati svoje confige za .xml datoteke?",
+      "votes": {
+        "upvoters": [
+          "WriteOnlyMemory"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102845": {
+      "poster": "WriteOnlyMemory",
+      "content": "Hadoop/etc/hadoop\n\nhadoop-env.cmd\n\n`set JAVA_HOME=C:\\PROGRA~1\\Java\\jdk1.8.0_144`\n\n`set HADOOP_PREFIX=%HADOOP_HOME%\n\nset HADOOP_CONF_DIR=%HADOOP_PREFIX%\\etc\\hadoop\n\nset YARN_CONF_DIR=%HADOOP_CONF_DIR%\n\nset PATH=%PATH%;%HADOOP_PREFIX%\\bin`\n\ncore-site.xml\n\n`<configuration>\n\n   <property>\n\n     <name>fs.default.name</name>\n\n     <value>hdfs://0.0.0.0:19000</value>\n\n   </property> \n\n   <property>\n\n       <name>fs.defaultFS</name>\n\n       <value>hdfs://localhost:9000</value>\n\n   </property>\n\n</configuration>`\n\nhdfs-site.xml\n\n`<configuration>\n\n   <property>\n\n      <name>dfs.replication</name>\n\n      <value>1</value>\n\n   </property>\n\n   <property>\n\n      <name>dfs.namenode.name.dir</name>\n\n      <value>file:///D:/Progi/Hadoop/data/namenode</value>\n\n   </property>\n\n   <property>\n\n      <name>dfs.datanode.data.dir</name>\n\n      <value>file:///D:/Progi/Hadoop/data/datanode</value>\n\n   </property>\n\n</configuration>`\n\nmapred-site.xml\n\n`<configuration>\n\n   <property>\n\n      <name>mapreduce.job.user.name</name>\n\n      <value>%USERNAME%</value>\n\n   </property>\n\n   <property>\n\n      <name>mapreduce.framework.name</name>\n\n      <value>yarn</value>\n\n   </property>\n\n   <property>\n\n      <name>yarn.apps.stagingDir</name>\n\n      <value>/user/%USERNAME%/staging</value>\n\n   </property>\n\n   <property>\n\n      <name>mapreduce.jobtracker.address</name>\n\n      <value>local</value>\n\n   </property>\n\n</configuration>`\n\nIma u prvom postu link kako postavit ako ovo ne funkcionira.",
+      "votes": {
+        "upvoters": [
+          "DeA11 (princezA)",
+          "boss15",
+          "leo (tajler)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "102895": {
+      "poster": "leo (tajler)",
+      "content": "ako još nekoga muči instalacija ovog čuda na windows ovako mi je uspjelo:\n\nskinuti hadoop-3.0.0 (tar.gz, 292M):\n\nhttps://archive.apache.org/dist/hadoop/core/hadoop-3.0.0/\n\npratiti ovaj tutorial:\n\nhttps://kontext.tech/column/hadoop/246/install-hadoop-300-in-windows-single-node\n\nzamijeniti bin folder s ovim s githuba (hadoop-3.0.0/bin), najbolje sve skinuti kao zip, pa onda uzeti ono što treba:\n\nhttps://github.com/steveloughran/winutils",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "DeA11 (princezA)",
+          "Murin",
+          "WriteOnlyMemory",
+          "cavcija_stina",
+          "damaHerc"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103034": {
+      "poster": "Kristijan",
+      "content": "@juraa14#102617 Koliko sam ja skuzio, radi se vanjski produkt stupaca prve matrice sa retcima druge matrice.\n\n Za prvu se matricu kao ključ svake pojedine vrijednosti emit-a STUPAC , a za svaku vrijednost druge matrice se emit-a REDAK. \n\n    To se GRUPIRA po tim vrijednostima kljuceva, pa ce se kod istoga reducer-a naci sve vrijednosti prve matrice u \"j\"-tom stupcu te vrijednosti druge matrice u \"j\"-tom retku. Iterira se po dobivenim vrijednostima. Zatim se ide po svakoj vrijednosti koja je dobivena iz matrice M te se mnozi sa svakom vrijednoscu koja je dobivena iz matrice N. Za svaki se umnozak tvori ključ (i,k) koji oznacava redak i stupac pojedinog umnoska te se emit-a ((i,k), umnozak_dviju_vrijednosti).\n\n    Drugi map prolaz samo PROSLJEDUJE sto dobije na ulaz, a drugi reduce samo ZBRAJA sve vrijednosti na istom kljucu.\n\n Neko moje objasnjenje: Samo si zamisli vanjski umnozak 2 vektora. Ovo je samo prosirenje toga, di se uzima svaki stupac prva matrice i svaki redak druge matrice (dakle 1.stupac od M i 1.redak od N ; 2.stupac od M i 2. redak od N itd. ). S njima se radi vanjski umnozak (za svaki se umnozak dobije 4x4 matrica), a zatim se samo zbrajaju vrijednosti koje se nalaze na određenom (i,k) tj. retuku i stupcu.",
+      "votes": {
+        "upvoters": [
+          "WriteOnlyMemory",
+          "juraa14 (Arnold Schwarzenigger)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103074": {
+      "poster": "leo (tajler)",
+      "content": "zna netko kako se moze dobiti ovo u 3. zadatku da se ispise po vrijednosti silazno? ima neka naredba u hadoopu ili se mora nesto u kodu raditi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103085": {
+      "poster": "juraa14 (Arnold Schwarzenigger)",
+      "content": "@leo#103074 Ja sam napravio novi MapReduce job, nadovezan na prijasnji, u kojem samo zamijenim u Mapu  mjesta kljuca i vrijednosti, te onda ponovno vratim na stara mjesta u Reduce-u",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "WriteOnlyMemory",
+          "leo (tajler)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103325": {
+      "poster": "france_is_bacon",
+      "content": "Jesu objavili negdje neki rok za ovo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103632": {
+      "poster": "ton6 (toto6)",
+      "content": "Dal netko zna nešto o roku 1.12 koje je spomenut sada na predavanju?\n\nJesmo već trebali predati labos?",
+      "votes": {
+        "upvoters": [
+          "RIsta"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103640": {
+      "poster": "dd14",
+      "content": "@ton6#103632 nisu se još uspjeli dogovoriti kad će biti predaja, navodno će biti obavijest na vrijeme",
+      "votes": {
+        "upvoters": [
+          "Bobicki",
+          "Red_Baron",
+          "ton6 (toto6)",
+          "vanna_li"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "103866": {
+      "poster": "Bobicki",
+      "content": "Kako kreiram JAR ovim njihovim načinom za VideoCount zadatak? Napravio sam projekt u IntelliJ-u, dodao njihove klase i dodao potrebne maven dependency za hadoop. Probao sam se pozicionirati u src/main/java folder gdje su java fajlovi i pozvati **javac -classpath hadoop-common-3.0.0.jar:hadoop-mapreduce-client-core-3.0.0.jar *.java**, ali dobivam hrpu errora \"package does not exist\" za ove hadoop pakete koje sam importao.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104169": {
+      "poster": "juraa14 (Arnold Schwarzenigger)",
+      "content": "@Bobicki#103866 Bilo je i meni tako, nije bilo dovoljno da sam importo samo 2 hadoop jara. U cmd-u stisni \"hadoop classpath\" i iskoristi to u komandi gore, meni je tako proslo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104220": {
+      "poster": "Bobicki",
+      "content": "@juraa14#104169 Uspio sam kreirati JAR tako, hvala. Sad imam novi problem. Start-dfs.sh mi javlja connection refused za port 22 (na Win 10 sam), ali sam uspio pokrenuti NameNode, DataNode, NodeManager i ResourceManager preko one dvije komande iz uputa koje je @leo linkao (start-dfs.cmd i start-yarn.cmd), tako da se nadam da je to isto kao da sam ih sve pokrenuo iz start-dfs.sh. No ne razumijem ostatak ovih njihovih komandi iz uputa nakon start-dfs.sh, pa ako bi netko mogao objasniti što sad tu treba napraviti. Što je log, log1, out1 i kako se izvodi ostatak komandi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104265": {
+      "poster": "juraa14 (Arnold Schwarzenigger)",
+      "content": "@Bobicki#104220 Da, koristis cmd za windowse, ak ti se normalno pokrene sva 4 procesa, onda je sve u redu sa konfiguracijom hadoopa.\n\n\"hdfs dfs -put log log1\" - prebacuje file log u log1. Konkretno za svoj slucaj sam ja imao \"hdfs dfs -put C:\\User\\log.txt /log1\", čime prebacim log.txt sa kompjutera na HDFS u putanju /log1. Ili nesto slicno tako.\n\n\"Haddop jar VideoCount.jar VideoCount log1 out1\" s ovime pokreces program, log1 ti je file u HDFS-u gdje si ga stavio sa prethodnom naredbom. Kod mene je ovako bilo \"hadoop jar src/VideoCount.jar VideoCount /log1 /out1\", gdje mi je src/VideoCount.jar relativna putanja od sbin, a /log1 i /out1 su mi putanje u HDFS-u. Ovaj /out1 je putanja gdje ce se rezultat programa zapisati.\n\nZadnje ti je samo -cat naredba za ispis rezultata programa. Kod mene je \"hdfs dfs -cat /out1/part-00000\". Hadoop rezultat stavlja u file part-00000 unutar putanje koju si zadao zadnjim argumentom.",
+      "votes": {
+        "upvoters": [
+          "Bobicki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104484": {
+      "poster": "Bobicki",
+      "content": "@juraa14#104265 Uspio sam, hvala ti puno na objašnjenju. Dolje ću napisati svoj cijeli postupak ako će nekome trebati. Ovo što sam boldao su naredbe koje sam pisao u cmd-u.\n\nPostupak za pokretanje VideoCount primjera (Windows 10):\n>!1. Kreirao sam projekt u IntelliJ-u i ubacio njihove klase (VideoCountMap, VideoCountReduce, VideoCount).\n2. Stavio sam potrebne Maven dependency za one importove (ne znam je li ovo potrebno, ali nek bude).\n3. Otvorio sam cmd kao admin i pozicionirao se u /src/main/java folder gdje mi se nalaze .java klase projekta.\n4. **hadoop classpath** => Kopirao sam output te naredbe. Konkretno moj otput se vidi u idućoj točki između _-javac classpath_ i _*.java_. \n5. **javac -classpath C:\\DataAnalytics\\hadoop-3.0.0\\etc\\hadoop;C:\\DataAnalytics\\hadoop-3.0.0\\share\\hadoop\\common;C:\\DataAnalytics\\hadoop-3.0.0\\share\\hadoop\\common\\lib\\*;C:\\DataAnalytics\\hadoop-3.0.0\\share\\hadoop\\common\\*;C:\\DataAnalytics\\hadoop-3.0.0\\share\\hadoop\\hdfs;C:\\DataAnalytics\\hadoop-3.0.0\\share\\hadoop\\hdfs\\lib\\*;C:\\DataAnalytics\\hadoop-3.0.0\\share\\hadoop\\hdfs\\*;C:\\DataAnalytics\\hadoop-3.0.0\\share\\hadoop\\yarn;C:\\DataAnalytics\\hadoop-3.0.0\\share\\hadoop\\yarn\\lib\\*;C:\\DataAnalytics\\hadoop-3.0.0\\share\\hadoop\\yarn\\*;C:\\DataAnalytics\\hadoop-3.0.0\\share\\hadoop\\mapreduce\\* *.java** => Stvara .class fajlove za svaki .java fajl.\n6. **jar -cvf VideoCount.jar .** => Stvara VideoCount.jar fajl.\n7. **C:\\DataAnalytics\\hadoop-3.0.0\\sbin\\start-dfs.cmd** => Otvara dva cmd prozora za hadoop namenode i hadoop datanode.\n8. **C:\\DataAnalytics\\hadoop-3.0.0\\sbin\\start-yarn.cmd** => Otvara dva cmd prozora za yarn resourcemanager i yarn nodemanager.\n9. Nakon što se svi prozori izvrte, ako budu i dalje aktivni (odnosno program ne izađe), znači da je sve ok. Sve daljnje cmd komande u idućim točkama se i dalje pišu u istom admin cmd-u s početka.\n10. Kreirao sam log.txt fajl u /src/main/java folderu i stavio u njega vrijednosti zadane u uputama:\n\n00001 100\n\n00001 95\n\n00002 100\n\n00001 2\n\n00002 100\n\n00003 100\n\n00001 100\n11. **hdfs dfs -put log.txt /log1**\n12. **hadoop jar VideoCount.jar VideoCount /log1 /out1**\n13. **hdfs dfs -cat /out1/part-00000** => Ako je sve ok, program treba ispisati:\n\n00001   3\n\n00002   2\n\n00003   1\n14. **hdfs dfs -get /out1/part-00000** => Kreira out fajl sa sadržajem jednakim prethodnom ispisu.\n\nPro tips:\n>!- Ako želite ponovno pokrenuti program s istim parametrima, prvo trebate obrisati log1 i out1 iz HDFS-a, a to se radi naredbama: hdfs dfs -rm -R /log1 i hdfs dfs -rm -R /out1\n- Naredba za provjeravanje što imate u HDFS-u je hadoop fs -ls /\n- Kada gasite ova 4 pozadinska cmd prozora, ugasite ih pomoću Ctrl+C pa onda potvrdno unesite Y, jer inače se može desiti da pri idućem pokretanju nešto ne bude u redu pa ih onda morate formatirati.",
+      "votes": {
+        "upvoters": [
+          "DeA11 (princezA)",
+          "Noggenfogger (dammitimmad)",
+          "Red_Baron",
+          "joza_oo7"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104684": {
+      "poster": "WriteOnlyMemory",
+      "content": "@juraa14#103085 Kako si postigao da je silazno sortirana, meni je nakon provođenja onog što si opisao lista uzlazno sortirana.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104700": {
+      "poster": "juraa14 (Arnold Schwarzenigger)",
+      "content": "@WriteOnlyMemory#104684 https://stackoverflow.com/questions/49271858/sort-mapreduce-wordcount-output-by-value\n\nPardon, zaboravio sam napomenuti. Izlaskom iz Map dijela, program sortira parove po ključu(uzlazno). Napises/prepises ovaj comparator, i stavis za job2 da mu je sort class taj comparator. Sve je na linku napisano.\n\nI morat ces prepravit tipove mozda, i koristiti context, a ne collector",
+      "votes": {
+        "upvoters": [
+          "Red_Baron",
+          "WriteOnlyMemory"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104734": {
+      "poster": "WriteOnlyMemory",
+      "content": "@juraa14#104700 Jesi li job stvorio iz conf-a ili si pisao novi job od početka?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104745": {
+      "poster": "WriteOnlyMemory",
+      "content": "@juraa14#104700 Kojom metodom postavljaš komparator class? Jesi li pisao ponovno cijeli class kao job umjesto conf?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104755": {
+      "poster": "juraa14 (Arnold Schwarzenigger)",
+      "content": "@WriteOnlyMemory#104745 job2.setSortComparatorClass(ValueSortExp.IntComparator.class); -> jer mi je IntComparator staticna klasa unutar ValueSortExp klase\n\nImao sam 2 joba. Drugi job se nadovezao na prvi, tj. izlaz prvog joba je ulaz drugog",
+      "votes": {
+        "upvoters": [
+          "WriteOnlyMemory"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104757": {
+      "poster": "WriteOnlyMemory",
+      "content": "@juraa14#104755 OK, thx",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104959": {
+      "poster": "WriteOnlyMemory",
+      "content": "Ako dobivate expected X recieved Y dodajte si:\n\n`job.setMapOutputKeyClass(*ovdje output class key mapa*);\n\njob.setMapOutputValueClass(*ovdje output class value mapa*);`\n\nkao što je opisano ovdje: https://stackoverflow.com/questions/17262188/type-mismatch-in-key-from-map-expected-org-apache-hadoop-io-text-recieved-org",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104983": {
+      "poster": "Bobicki",
+      "content": "@WriteOnlyMemory#104959 @juraa14#104755 Ja na context.write() metodi dobivam error, jer mu predajem IntWriteable i Text kao u tom kodu s linka, a metoda traži oba argumenta IntWriteable. Kako ste to riješili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "104986": {
+      "poster": "WriteOnlyMemory",
+      "content": "@Bobicki#104983 Kod extend mapper/reducer parametriziranja ide ti <keyin, valuein, keyout, valueout>, osiguraj da ti se te vrijednosti poklapaju. Kod postavljanja joba isto postavi odgovarajuće classove. I naravno osiguraj da pišeš odgovarajuće vrijednosti. Nadam se da ovo odgovara na tvoje pitanje, ako ne napiši koje točno tipove gdje koristiš.",
+      "votes": {
+        "upvoters": [
+          "Bobicki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105084": {
+      "poster": "caffeine",
+      "content": "Jel bi ulaz u trećem zadatku trebala biti ona početna datoteka ili ona koja se dobije u 2. zadatku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105100": {
+      "poster": "Bobicki",
+      "content": "@caffeine#105084 Daješ ono što dobiješ u 2. zadatku. Ja sam za 2. zadatak ostavio mapper i reducer za count u svom projektu, a za 3. zadatak sam ih samo kopirao u novi projekt i uz njih dodao još mapper i reducer za sort. Tu onda prvo započnem job za count, a njegov izlaz /out1/part-00000 samo proslijedim na ulaz joba za sort.",
+      "votes": {
+        "upvoters": [
+          "bebich",
+          "caffeine"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105763": {
+      "poster": "bebich",
+      "content": "Jel mi moze netko molim vas reci za drugi zadatak, ste napravili tak da ste kreirali novi projekt s novim Map i Reduce podacima, ali za input ste uzeli rezultate od prvog zadatka odnosno iz out1?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105765": {
+      "poster": "Bobicki",
+      "content": "@bebich#105763 Napisao sam u postu iznad tvog kako sam ja napravio.",
+      "votes": {
+        "upvoters": [
+          "bebich"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105767": {
+      "poster": "bebich",
+      "content": "@Bobicki#105765 aha, da...ja racunal sortiranje ko 2. zadatak, a matricu ko 3. zad pa nisam skuzil....",
+      "votes": {
+        "upvoters": [
+          "Bobicki"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105908": {
+      "poster": "bebich",
+      "content": "kak da se napravi prvi reduce u 4. zadatku? Ne znam na koji nacin da pomnozim vrijednosti iz A i B matrice, pokusal sam koristiti neku pomocnu listu al ako prebacujem u listu, uvek mi je u listi samo posljednji Text.\n\nnpr.\n\n[a1, a2, b1, b2] se nalazi u iteratoru i sad dok lupim for petlju da se prebace podaci u listu taj postupak ide ovak \n\nsadrzaj liste:\n\nnakon prve iteracije : a1\n\nnakon druge iteracije: a2, a2\n\nnakon trece iteracije: b1, b1, b1\n\nnakon cetvrte iteracije: b2, b2, b2, b2",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105914": {
+      "poster": "bebich",
+      "content": "@bebich#105908 uspel resit, al ne znam u cemu je bil problem....",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105928": {
+      "poster": "apexpredator",
+      "content": "Je li tko naletio na ovaj error:\n\n```java\nException in thread \"main\" java.lang.UnsupportedClassVersionError: VideoCount has been compiled by a more recent version of the Java Runtime (class file version 59.0), this version of the Java Runtime only recognizes class file versions up to 52.0\n        at java.lang.ClassLoader.defineClass1(Native Method)\n        at java.lang.ClassLoader.defineClass(ClassLoader.java:756)\n        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)\n        at java.net.URLClassLoader.defineClass(URLClassLoader.java:468)\n        at java.net.URLClassLoader.access$100(URLClassLoader.java:74)\n        at java.net.URLClassLoader$1.run(URLClassLoader.java:369)\n        at java.net.URLClassLoader$1.run(URLClassLoader.java:363)\n        at java.security.AccessController.doPrivileged(Native Method)\n        at java.net.URLClassLoader.findClass(URLClassLoader.java:362)\n        at java.lang.ClassLoader.loadClass(ClassLoader.java:418)\n        at java.lang.ClassLoader.loadClass(ClassLoader.java:351)\n        at java.lang.Class.forName0(Native Method)\n        at java.lang.Class.forName(Class.java:348)\n        at org.apache.hadoop.util.RunJar.run(RunJar.java:301)\n        at org.apache.hadoop.util.RunJar.main(RunJar.java:222)\n```\n\ni da li ga zna kako rjesiti?\n\nP.S. Na stacku sam našao \"kao\" rješenje promjenom compilera u eclipsu, ali mi ne radi.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105930": {
+      "poster": "DeA11 (princezA)",
+      "content": "![](assets/2020-12-05/00010.jpeg)\n\nje li nekome bio ovaj error?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105932": {
+      "poster": "DeA11 (princezA)",
+      "content": "@apexpredator#105928 meni se isto to javlja a nez kako tocno rijesiti",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105933": {
+      "poster": "apexpredator",
+      "content": "@DeA11#105932 probaj staviti compiler (ako si na Eclipsu) na manji ili jednak:\n\nWindow > Preferences > Compiler > compiler level\n\nmožda ti uspije ako meni nije.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105935": {
+      "poster": "DeA11 (princezA)",
+      "content": "@apexpredator#105933 \n\nhvala, ali u intelliju mi je.. vidjela sam na netu da se u pathu na pocetak stavi najveca verzija jave, ali ne kuzim ima li to smisla jer nam je hadoop u javi 8",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "105985": {
+      "poster": "DeA11 (princezA)",
+      "content": "@apexpredator#105928 ako ti treba jos, uspjela sam rijesiti tako sto sam u terminalu upisala javac -version i ispisalo mi je da koristim javu 10 za kompajliranje.. izbrisala sam javu 10 s laptopa i iz patha i na pocetak patha stavila javu 8 i radi mi sad",
+      "votes": {
+        "upvoters": [
+          "apexpredator"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106340": {
+      "poster": "apexpredator",
+      "content": "Jel itko ima problem sa username-om na Windowsima 10, da mu zbog toga ne radi? Ili sam ja jedini :(",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106341": {
+      "poster": "RIsta",
+      "content": "@apexpredator#106340 Problem je ako imaš razmak u username-u, umjesto tog property-a stavi samo svoj username bez razmaka",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106400": {
+      "poster": "ton6 (toto6)",
+      "content": "Ima li netko ovaj problem?\n\n![](assets/2020-12-06/00035.png)",
+      "votes": {
+        "upvoters": [
+          "WriteOnlyMemory"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106423": {
+      "poster": "jitser",
+      "content": "u zadnjem zadatku (MatrixMultiplication), na koji način određujete o kojoj se matrici radi, tj. kako određujete treba li uzeti indeks stupca ili indeks retka kod prvog Map joba?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106573": {
+      "poster": "WriteOnlyMemory",
+      "content": "@ton6#106400 Izgleda da kod pakiranja u JAR nisi uključio sve potrebne classove.",
+      "votes": {
+        "upvoters": [
+          "ton6 (toto6)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106590": {
+      "poster": "ton6 (toto6)",
+      "content": "@WriteOnlyMemory#106573 Ahh problem je ipak što mi javac -classpath ne generira .class fileove \n\nNa izbacuje nikakvu grešku\n\nhadoop procesi se pokreću i rade normalno\n\nMožda netko zna zašto?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106632": {
+      "poster": "ton6 (toto6)",
+      "content": "@apexpredator#106340 Jesi uspio riješiti? Da napišeš gdje si sve mijenjao jer meni još uvijek negdje hvata taj property s razmakom",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106741": {
+      "poster": "Bobicki",
+      "content": "Izgleda da labos nosi svih 35 bodova, tako da se potrudite dobiti što više :D.",
+      "votes": {
+        "upvoters": [
+          "boss15"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106745": {
+      "poster": "juraa14 (Arnold Schwarzenigger)",
+      "content": "@Bobicki#106741 Jesi imao vec labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "106749": {
+      "poster": "Bobicki",
+      "content": "@juraa14#106745 Jesam, imao sam kod Petra Afrića. Imao sam već pokrenut HDFS i buildane JAR-ove. Pitao me da li mi sve radi, rekao sam da. Za 2. zadatak me tražio da ga pokrenem i nakon toga objasnim u kodu kako radi, a za 3. i 4. zadatak sam samo morao u kodu objasniti kako radi, nije ih trebalo pokretati. Za svaki zadatak me pitao par podpitanja kako bih nešto izmijenio (za 2. zadatak da se ispisuju prosjeci gledanosti umjesto broja gledanosti, a za 4. zadatak zbrajanje umjesto množenja matrica) i to je to. Trajalo je sve skupa manje od 10 minuta. Jedino je nezgodno što je vas više u istom terminu, a zove vas jednog po jednog, tako da ćete se možda malo načekati.",
+      "votes": {
+        "upvoters": [
+          "Miki",
+          "WriteOnlyMemory",
+          "juraa14 (Arnold Schwarzenigger)",
+          "leff",
+          "vanna_li"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

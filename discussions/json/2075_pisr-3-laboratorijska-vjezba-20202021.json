@@ -1,0 +1,1122 @@
+{
+  "title": "[PISR] 3. laboratorijska vježba - 2020/2021",
+  "creator": "Upforpslone",
+  "slug": "pisr-3-laboratorijska-vjezba-20202021",
+  "tags": [
+    "FER",
+    "Programiranje i simuliranje robota",
+    "Laboratorijske vježbe"
+  ],
+  "posts": {
+    "87398": {
+      "poster": "Upforpslone",
+      "content": "Jel neko uspio napraviti node koji spawna turtlebot po onom tutorialu koji imamo?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87464": {
+      "poster": "steker",
+      "content": "Jesi uspio?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87615": {
+      "poster": "Upforpslone",
+      "content": "Ne",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "87781": {
+      "poster": "steker",
+      "content": "Jel uspio itko da objasni",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88462": {
+      "poster": "PeanutMaster1801 (caca)",
+      "content": "jel netko razumije ovo da mi malo asistira oko ovog zadatka?",
+      "votes": {
+        "upvoters": [
+          "Daho_Cro"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88549": {
+      "poster": "PeanutMaster1801 (caca)",
+      "content": "jel znate je li postojao slican predmet ovom sada?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88628": {
+      "poster": "Viks",
+      "content": "jel uspio tko ovo rijesit",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88639": {
+      "poster": "zeroth",
+      "content": "@PeanutMaster1801#88549 Ovo je prije bila vještina",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88644": {
+      "poster": "steker",
+      "content": "Jel zna itko za sta nam zapravo znace te dvije funkcije koje su nam predlozili tj na koji x y z ili sta vec bi ih trebalo postavit... da li se uopce treba publishat na cmd_vel ili na sta??",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88682": {
+      "poster": "nairobi (light_grandma)",
+      "content": "Može netko pomoć s b)",
+      "votes": {
+        "upvoters": [
+          "snoot_booper (snoot_boopator)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88687": {
+      "poster": "Daeyarn",
+      "content": "@nairobi#88682 \n\nmoraš, uz import rospy, napraviti from turtlesim.srv import Spawn\n\nonda ces napisati funkciju imena npr. spawnajKornjacu(), koju pozivas u dijelu koda \n\n`if __name__ = '__main__': \n\nspawnajKornjacu() #pazi na tabulator ovdje, ofc\n`\n\nfunckija spawnajKornjacu() ima linije\n\nrospy.wait_for_service('spawn') (čekamo da servis bude dostupan)\n\nspawnaj = rospy.ServiceProxy('spawn', Spawn)  (sada u spawnaj varijabli imamo zapravo servis 'spawn' kojeg pozovemo kao funkciju u liniji ispod)\n\nspawnaj(0, 0, 0, \"Kornjaca dva\") (pozovemo servis i damo mu potrebne parametre, to su oni parametri koje mozes vidjeti kad u terminalu runnaš rosservice type spawn | rossrv show)\n\nhope this helps:)\n\nEDIT: Mislim da bi ovo trebalo biti točno, tek sam sad prije kojih 2h počeo catch uppati zadnja 2 predavanja",
+      "votes": {
+        "upvoters": [
+          "Viks",
+          "nairobi (light_grandma)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88693": {
+      "poster": "nairobi (light_grandma)",
+      "content": "@Daeyarn#88687 Hvala puno! 🙏",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88706": {
+      "poster": "flicka",
+      "content": "kak natjerati kornjaču koja nas prati da skrene u desno, moja konkretno ide samo u lijevo pa napravi cijeli krug kad ja odem u desno...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88742": {
+      "poster": "lugi",
+      "content": "Bilo kakva pomoc dobrodosla, od a do f...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88779": {
+      "poster": "Daeyarn",
+      "content": "@flicka#88706 \n\nkoje topice i message koristis u c)? Ja pokusavam publishati preko Pose ali nejde iz nekog razloga",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88783": {
+      "poster": "steker",
+      "content": "@Daeyarn#88779 pose za subscribere a cmd vel za publisher",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "iv2 (bubbles)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88784": {
+      "poster": "Daeyarn",
+      "content": "@steker#88783 zadnjih sat vremena pokusavam publishanje sa Pose i cudno mi je kak nece, hvala!!",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88786": {
+      "poster": "steker",
+      "content": "Al kako sad tj na sta treba postavit te angular distance i distance to ne razumijem",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88789": {
+      "poster": "Astronaut",
+      "content": "Zna li netko kako pokrenuti turtle_teleop_key na ovu novu spawnanu kornjacu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88790": {
+      "poster": "steker",
+      "content": "@Astronaut#88789  rosrun turtlesim turtle_teleop_key /turtle1/cmd_vel:=/turtle2/cmd_vel  \n\n Turtle 2 zamjeni s imenom od druge kornjace",
+      "votes": {
+        "upvoters": [
+          "Astronaut"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88791": {
+      "poster": "iv2 (bubbles)",
+      "content": "@Astronaut#88789 \n\nrosrun turtlesim turtle_teleop_key /turtle1/cmd_vel:=/turtle2/cmd_vel\n\nturtle2 zamjeni imenom druge kornjače",
+      "votes": {
+        "upvoters": [
+          "Astronaut"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88793": {
+      "poster": "iv2 (bubbles)",
+      "content": "@steker#88786 ne razumijem tvoje pitanje? to su funkcije s kojima računaš distancu i kut",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88794": {
+      "poster": "steker",
+      "content": "@iv2#88793 da ali na ne kuzim na sta moram postavit cmd vel varijable",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88796": {
+      "poster": "steker",
+      "content": "@steker#88794 isporbala sam sto kombinacija i nista mi ne radi fino stalno mi se u nekom trenutku zakucava u zid i pravi veliki krug",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88797": {
+      "poster": "iv2 (bubbles)",
+      "content": "@steker#88796 same",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "steker"
+        ]
+      }
+    },
+    "88798": {
+      "poster": "flicka",
+      "content": "ako neko zna kak normalno ostvarit pracenje bez krugova i zabijanja, lijepo molim da podijeli  rjesenje, dosta mi je vise tih kornjaca",
+      "votes": {
+        "upvoters": [
+          "Bica",
+          "Daeyarn",
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88799": {
+      "poster": "lugi",
+      "content": "Može li mi netko u private poslat bar pod b) čisto da ne predam prazno jer ništa ne razumijem nakon cijelog dana gledanja u predavanja 🆘️",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88833": {
+      "poster": "Joskica",
+      "content": "cmd_vel.linear.x postavite na rezultat od get_distance, a cmd_vel.angular.z na rezultat get_ang_distance\n\nprobajte rezultat od get_ang_distance pomnozit nekim prirodnim brojem tipa (2,3,4,5,6...) meni je to rijesilo problem krugova i zabijanja",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "KingGeedorah (King Geedorah)",
+          "iv2 (bubbles)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88850": {
+      "poster": "Daeyarn",
+      "content": "@Joskica#88833 you're a life saver",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88859": {
+      "poster": "steker",
+      "content": "Jel se treba nes s ovim rqt plot ili je to da sam malo pogledamo",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88860": {
+      "poster": "nairobi (light_grandma)",
+      "content": "Moze li molim vas malo detaljnija pomoc s c).. 😪",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88862": {
+      "poster": "Diego",
+      "content": "@steker#88859 s rqt plot čitaš podatke koje si objavio u d) zadatku i trebaš to napraviti jer moraš kasnije uključiti u launch file",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88863": {
+      "poster": "steker",
+      "content": "@Diego#88862 sta onda s tim rqt plotom treba kad se pokrene i nacrta mi to... jel se treba pokretat u launch fileu i jel treba jos nes?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88871": {
+      "poster": "Stoke (coolcoolcool)",
+      "content": "@nairobi#88860 ovo ti je dobar tutorial [http://wiki.ros.org/turtlesim/Tutorials/Go%20to%20Goal](url) samo još tu trebaš dodat još jedan subscriber iz kojeg citas poziciju druge kornjace i to ti je onda \"goal\"",
+      "votes": {
+        "upvoters": [
+          "nairobi (light_grandma)",
+          "snoot_booper (snoot_boopator)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88876": {
+      "poster": "flicka",
+      "content": "moze neko objasnit kaj se u zadnjem zadatku u launch fileu iz tutorijala mora promjenit da radi?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88881": {
+      "poster": "siri",
+      "content": "jel nekom jos baca unsupported operand type(s) for -: 'method' and 'float' za get_distance funkciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88882": {
+      "poster": "Daeyarn",
+      "content": "@steker#88863 ja sam stavio da se u launch pokrene turtlesim_node, ovaj koji spawna drugu kornjacu, turtle_teleop_key, ovaj koji pokrene da prva lovi drugu i rqt_plot\n\n![](assets/2020-11-05/00049.png)\n\nEDIT: ime nodea name mozemo staviti bilo koje jel da? pa sam ja stavio ovak imena samo",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88883": {
+      "poster": "Daeyarn",
+      "content": "@siri#88881 bilo mi je tako, pomnozi self.get_distance()*1.0 da ga pretvori u float,  tako ce\n\n raditi",
+      "votes": {
+        "upvoters": [
+          "siri"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88887": {
+      "poster": "steker",
+      "content": "msm da da imena nebitna... hvala ti brate popizdila bi dok bi jos i to skontala",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88890": {
+      "poster": "Daeyarn",
+      "content": "@steker#88887 ma nista 😄 znas li mozda jos samo koji dependency treba dodati u package.xml pod \n\nd)? Ja nisam nista dodavao i cini se da radi",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "88894": {
+      "poster": "steker",
+      "content": "@Daeyarn#88890 da nisam ni ja i meni isto radi...pa ne znam",
+      "votes": {
+        "upvoters": [
+          "Daeyarn"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89113": {
+      "poster": "Daeyarn",
+      "content": "jesu li vama dosli bodovi za 2. labos?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "89119": {
+      "poster": "zeroth",
+      "content": "@Daeyarn#89113 meni nisu još",
+      "votes": {
+        "upvoters": [
+          "Daeyarn",
+          "iv2 (bubbles)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93808": {
+      "poster": "flicka",
+      "content": "jel zna neko kakvi su ovo mailovi za sastanke u isto vrijeme kad je ispit? zašto je jedna grupa danas, i kako da znam koja sam grupa?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93846": {
+      "poster": "zeroth",
+      "content": "@flicka#93808 ![](assets/2020-11-16/00009.png)\n\nu nastavnim aktivnostima bi trebala pisati grupa",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93851": {
+      "poster": "PeanutMaster1801 (caca)",
+      "content": "@zeroth#93846 ![](assets/2020-11-16/00010.png)\n\nsamo mi ovo pise, kako cu vidjet svoju grupu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "93853": {
+      "poster": "zeroth",
+      "content": "@PeanutMaster1801#93851 imaš opciju prikaži grupe ![](assets/2020-11-16/00011.png)",
+      "votes": {
+        "upvoters": [
+          "PeanutMaster1801 (caca)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107394": {
+      "poster": "steker",
+      "content": "Kako se u 4 labu u 2. f) dobiju x i y iz scan msgs",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107409": {
+      "poster": "Daeyarn",
+      "content": "u callback funkciji od skenirane poruke procitas angle_min i angle_increment, i onda pomocu formule  angle = angle min + i ∗ angle increment izracunas trenutni kut, ovdje je \"i\" koje mjerenje po redu čitaš\n\nnakon toga u petlji iteriras po ranges i za svaki range trebas appendati u marker.points novu tocku cije x i y izracunas pomocu sinusa i kosinusa\n\nx = cos(trenutniKut) *  trenutni range kojeg citas\n\ny = sin(trenutniKut) * trenutni range kojeg citas",
+      "votes": {
+        "upvoters": [
+          "Al_Pakino (Al Pakino)",
+          "ecco"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107528": {
+      "poster": "Viks",
+      "content": "![](assets/2020-12-08/00036.png)\n\nkako bi ovo trebalo izgledat? tocnije, kako to uspijemo promijeniti, msm meni jedino pada na pamet da nodove od 3. vjezbe izmjenimo, ili ima neki nacin unutar ovog process_chase.py",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107548": {
+      "poster": "zeroth",
+      "content": "@Viks#107528 if topic==\"turtle1/pose\":\n\noutbag.write(\"/chaser/pose/\", msg, t)\n\ntako nekako",
+      "votes": {
+        "upvoters": [
+          "Viks"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107684": {
+      "poster": "flicka",
+      "content": "@Daeyarn#107409 mozes molim te objasniti za taj trenutni kut, koji i se koriste, dobivam nacrtano nesto al to nisu elipse, pa pretpostavljam da je kut krivi",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107695": {
+      "poster": "Joskica",
+      "content": "@flicka#107684 ja sam stavila for i in range(len(self.ranges)), znaci od 0 do duljine range liste, ne trebaju se dobit nikakve elipse vec robot koji ide b zgradom, znaci kao zidovi\n\nkad otvoris rviz, ako tvoj Marker izgleda kao njihov LaserScan, trebalo bi bit dobro, bar mislim",
+      "votes": {
+        "upvoters": [
+          "Al_Pakino (Al Pakino)",
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107752": {
+      "poster": "flicka",
+      "content": "@Joskica#107695 Znas mozda zakaj mi baca error u rvizu unknown header.frame_id",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107807": {
+      "poster": "Viks",
+      "content": "ima li nekog voljnog koji ce mi pomoc u vezi prvog zadatka u privatnoj temi? imam dosta errora, no kako sam malo izgubljena u ovom, ne ide popravljanje koda",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "107874": {
+      "poster": "Viks",
+      "content": "@Viks#107807 ne treba, upalile su se lampice napokon :)",
+      "votes": {
+        "upvoters": [
+          "Upforpslone"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "108472": {
+      "poster": "Daeyarn",
+      "content": "@flicka#107684  hej sorry, zaboravio sam na ovaj komentar kojeg sam ostavio, nadam se da si uspio rijesiti",
+      "votes": {
+        "upvoters": [
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110909": {
+      "poster": "steker",
+      "content": "Sta se treba dobit u 1. u rvizu kao rjesenje u ovom 5. Labu",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "110927": {
+      "poster": "Joskica",
+      "content": "@steker#110909 putanju robota, kao nepravilni pravokutnik otp",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111119": {
+      "poster": "flicka",
+      "content": "kak se provjeri dal transform nije stariji od prethodnog, probala sam sa marker.header.stamp ali dobivam time nema atribut  stamp...",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111172": {
+      "poster": "Joskica",
+      "content": "@flicka#111119 marker bi trebao bit atribut klase tako da imas self.marker.header.stamp i transform.header.stamp za svaki transform iz data.transforms koji dobijes u callback",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111178": {
+      "poster": "flicka",
+      "content": "@Joskica#111172 a kako inicijaliziras onaj prvi tj početni stamp s rospy.Time(0) kao u uputi ili?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111194": {
+      "poster": "Joskica",
+      "content": "@flicka#111178 self.marker.header.stamp = rospy.Time(0), u konstruktoru",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111208": {
+      "poster": "flicka",
+      "content": "@Joskica#111194 mozes mozda slikat kaj u rvizu dobijes?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111211": {
+      "poster": "Joskica",
+      "content": "@flicka#111208 \n>!![](assets/2020-12-16/00030.png)\n\nza 1. ovo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111589": {
+      "poster": "steker",
+      "content": "Sta se dobije u 2 u rviz?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "111782": {
+      "poster": "steker",
+      "content": "Kako da se zna koji je scan po redu u callbacku?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112345": {
+      "poster": "lugi",
+      "content": "Jesu za ovaj lab potrebna samo predavanja 4 ili i 5? I zna li netko sto bude ako ne predamo lab/predamo prazan mozemo li polozit predmet",
+      "votes": {
+        "upvoters": [
+          "XkLo"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "112600": {
+      "poster": "BedaTheNic",
+      "content": "Ima neka dobra dusa koja bi podjelila lasescan_to_points.py sa proslog labosa jer nisam napravio taj dio vjezbe do kraja, pa izgleda da ne mogu sada ni 2. zadatak ove vjezbe\n\nENG: Is there a good soul which would share its laserscan_to_point.py from the last lab because i was unable to complete that part of the assignment , so it looks like that i can't do a 2. task from this assignment",
+      "votes": {
+        "upvoters": [
+          "KingGeedorah (King Geedorah)",
+          "Viks",
+          "kameni (Isusek)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [
+          "KingGeedorah (King Geedorah)"
+        ],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119767": {
+      "poster": "flicka",
+      "content": "kako se preko toga ublasa moze izracunati inverz i determinanta?",
+      "votes": {
+        "upvoters": [
+          "steker"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "119772": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@flicka#119767 ne moze, al imas naci funkcije negdje na netu. Mislim da sam ja za determinantu koristio odavde [CalcDeterminant](http://www.richelbilderbeek.nl/CppUblasMatrixExample7.htm), a za inverz odavde [InvertMatrix](https://gist.github.com/lilac/2464434)",
+      "votes": {
+        "upvoters": [
+          "Al_Pakino (Al Pakino)",
+          "Upforpslone",
+          "Zivot_nije_FER",
+          "flicka"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125247": {
+      "poster": "Joskica",
+      "content": "Ako je netko skuzio kako da ta kornjaca ide potpuno ravno kad skrene u zadnjem labosu neka baci neki hint pls",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "125366": {
+      "poster": "BedaTheNic",
+      "content": "@Joskica#125247 trebas pogodit dobar linear.x i angular.z, ja sam ih trial i errorom dobio haha\n\nENG: you need to guess good linear.x and angular.z, I got them with trial.and error haha",
+      "votes": {
+        "upvoters": [
+          "Joskica"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127067": {
+      "poster": "zeroth",
+      "content": "Zna netko što treba napisati u one dvije kućice u pdfu?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127150": {
+      "poster": "Dream_Koala",
+      "content": "Kako da spawnamo turtlesim na odredenoj poziciji ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127369": {
+      "poster": "Diego",
+      "content": "@Dream_Koala#127150 rosservice call /turtle1/teleport_absolute 1 1 0",
+      "votes": {
+        "upvoters": [
+          "Dream_Koala"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127480": {
+      "poster": "fifi",
+      "content": "@Diego#127369 zna netko kako ovo i rosservice call /clear uključiti u launch file?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "127526": {
+      "poster": "KingGeedorah (King Geedorah)",
+      "content": "@fifi#127480 nisam siguran za to, ali te pozive mozes [ubaciti u kod](http://wiki.ros.org/action/fullsearch/ROS/Tutorials/WritingServiceClient%28c%2B%2B%29#roscpp_tutorials.2BAC8-Tutorials.2BAC8-WritingServiceClient.Writing_the_Client_Node).",
+      "votes": {
+        "upvoters": [
+          "Al_Pakino (Al Pakino)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "128399": {
+      "poster": "flicka",
+      "content": "kaj se od nas ocekuje za prvu kucicu? kojim naredbama smo to sve pokrenuli ili kak smo tu krivulju postavljali u kodu? nije mi jasno..",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}

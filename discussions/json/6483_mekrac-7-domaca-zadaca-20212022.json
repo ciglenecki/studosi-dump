@@ -1,0 +1,230 @@
+{
+  "title": "[MEKRAC] 7. domaća zadaća - 2021/2022",
+  "creator": "feel_d_boot (iNut)",
+  "slug": "mekrac-7-domaca-zadaca-20212022",
+  "tags": [
+    "FER",
+    "Meko računarstvo",
+    "Zadaće"
+  ],
+  "posts": {
+    "270170": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "Okej, ovo mi je posljednji pokušaj prije nego odustanem od ove zadaće jer sam previše vrimena potratija na nju, ko odgovori da odgovori, pomoć će uvelike. Da počnem, za primjer uzmimamo da imam mrežu arhitekture 2x8x3\n\nDakle ovih 8 neurona je neuron tipa 1. Mene sad zanima, ima li svaki neuron po 2 težine i 2 s-a pošto ima 2 ulaza? \n\nNadalje, kad treniram model, ja izvučem sve težine iz svih neurona u stavim ih u jedan flat vektor, dakle to je numpy array oblika (num_of_params, ) te je to jedna jedinka populacije koju ću izgenerirati.\n\nKako koristim eliminacijsku selekciju, koraci su mi sljedeći:\n\nEliminiraj M posto jedinki iz populacije koristeći 3-turnirsku selekciju tako da gledaš MSE za svaki generiranu mrežu u populaciji te će np.random.choice() odabrati 3 najvjerojatnije jedinke. Od te 3 jedinke, argmax-om se odabere ona s najvećom greškom te se izbaci iz populacije. Postupak se ponavlja dok god nije ukoonjeno M posto jedinki iz početne populacije. \n\nNadalje kad se to izvrši, obnavljam populaciju na način da skroz nasumično iz populacije odaberem 2 roditelja te obavim operaciju križanja i mutacije nad njihovim djetetom. To dijete onda dodam u populaciju (roditelje ne uklanjam) te se to ponavlja dok mi se broj jedinki u populaciji ne vrati na zadani pop_size nakon čega ide ponovno uklanjanje jedinki kao što je opisano gore. \n\nMoj problem je što mi je početna greška najbolje jedinke u populaciji uvijek oko 0.65 te se nakon 10, 100 ili 1000 iteracija, greška najbolje jedinke neće spustiti ispod 0.62 ili 0.61, uglavnom ispod 0.6 ne ide, ne virujem da mi svaki put zapinje u lokalnom minimumu ili da trebam pustiti da se duže vrti jer već nakon 10ak iteracija se greška najbolje jedinke mijenja u 5 ili 6 decimali, dakle nezamjetno. \n\nEto moj problem, ja sumnjam na to da je problem možda u mom evolucijskom postupku, no ne znam, otvoren sam za sve prijedloge. \n\nJel itko imao ovakav problem čisto da mogu ovaj labos skiniti s kurca.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": [
+          "Ducky",
+          "steker"
+        ]
+      }
+    },
+    "270387": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "> @\"forum.rs\"#p270170 Mene sad zanima, ima li svaki neuron po 2 težine i 2 s-a pošto ima 2 ulaza?\n\nda\n\n> @\"forum.rs\"#p270170 Eto moj problem, ja sumnjam na to da je problem možda u mom evolucijskom postupku, no ne znam, otvoren sam za sve prijedloge.\n\nTrebao bi križati roditelje kad pobjede u troturnirskoj, a ne ih samo baciti natrag. Potencijalno ima više faktora zašto ti ne radi, treba se igrati s hiperparametrima, napravi grid ili random search nad njima",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270393": {
+      "poster": "feel_d_boot (iNut)",
+      "content": "@\"Mićo Ketchum\"#p270387 \n\nKrižati roditelje pa ih natrag s djetetom vratiti u populaciju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270394": {
+      "poster": "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)",
+      "content": "@\"forum.rs\"#p270393 To je implementacijski detalj, ali ne, obično se djeca stavljaju u međuspremnik pa se na kraju eliminacije dodaju u populaciju ili se roditelji samo označavaju za križanje/eliminaciju, izvršiš the sex, makneš sve one eliminirane i dodaš djecu.\n\nJa bih to osobno izveo kao:\n\n```\ndok nisi gotov s eliminacijom:\n    za_otpis, za_crossover = turnirska_selekcija(populacija - otpisani)\n    otpisani <- za_otpis\n    odabrani <- za_crossover\n\nza roditelji u odabrani:\n    djeca <- crossover(roditelji...)\n\nmutacije, bla bla bla...\n\nza otpisan u otpisani:\n    populacija -= otpisan\n\nza dijete u djeca:\n    populacija <- dijete\n```",
+      "votes": {
+        "upvoters": [
+          "feel_d_boot (iNut)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270668": {
+      "poster": "yurnero",
+      "content": "Jel ikome omogućen upload 6. i 7. zadaće? U obavijesti je rok 17.01. al ništa o tome ne mogu nać na ferku.",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "270684": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"yurnero\"#p270668 Čupić to stavi kad se sjeti, bit će kad tad",
+      "votes": {
+        "upvoters": [
+          "micho (M̵̧̩͑̀͝î̶͍̉ć̴̝̾́̀o̶̺̟̣͂̽)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271801": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "Kolko vam treba do konvergencije? meni se relativno uniformno smanjuje error, ali jaaako sporo",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271853": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Precious Bodily Fluids\"#p271801 sejm",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271883": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "![](assets/2022-01-19/00001.png)\n\nkaj znaci ovo, help pls",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271889": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Tompa007\"#p271883 neuroni tipa jedan svojim težinama predstavljaju primjer, poput onog koji uvodis u mrezu. Pogledaj tezine wi svakog od neurona  i skiciraj gdje se nalaze u prostoru. Težina w1 odgovara \"dimenziji\" x1, a w2 je kao x2. To je kao nekakva kernel fja sto usporeduje ulazni primjer s nekim zadanim, i onda ta usporedba dalje ide u mrezu. Tih kernela imas onoliko koliko neurona tipa 1.",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271899": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Precious Bodily Fluids\"#p271889 Jesam, jel znas mozda kaj mi tocno predstavlja to na slici i jel bi to trebalo biti mozda unutar onih elipsa kod primjera ili ?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271901": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Tompa007\"#p271899 e to ti ne mogu reci, jer moras sam prokopati svoju mrezu nakon sto je naucena i vidjeti koji uzorci se nalaze u neuronima. Pretpostavljam da bi za idealno naucenu mrezu uzorci bi bili u sredistima elipsa.",
+      "votes": {
+        "upvoters": [
+          "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)"
+        ],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271983": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "Kak vam je prošlo ispitivanje? što pitaju?",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271987": {
+      "poster": "Tompa007 (𝐓𝐇𝐄 𝐒𝐄𝐂𝐑𝐄𝐓 - 𝐂𝐋𝐔𝐁)",
+      "content": "@\"Precious Bodily Fluids\"#p271983 nemre bit lakse, proso po kodu i po izvjestaju, ispricas sta si sve radio, malo po mutaciji i crossingu i to je to",
+      "votes": {
+        "upvoters": [
+          "bodilyfluids (Dragi prijatelj strojnog učenja)"
+        ],
+        "downvoters": [
+          "WP_Deva (IdeGas)"
+        ]
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    },
+    "271988": {
+      "poster": "bodilyfluids (Dragi prijatelj strojnog učenja)",
+      "content": "@\"Tompa007\"#p271987 a kolko su im rezultati bitni? Imam sve implementirano, ali ne uspjevam bas dobiti dobre rezultate",
+      "votes": {
+        "upvoters": [],
+        "downvoters": []
+      },
+      "reactions": {
+        "haha": [],
+        "wtf": [],
+        "tuga": []
+      }
+    }
+  }
+}
