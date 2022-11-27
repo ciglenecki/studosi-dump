@@ -43,7 +43,7 @@ PRIMARY_TAGS = [
     "FER",
     "Oglasi",
     "Opušteno",
-    "Slubeno",
+    "Službeno",
     "Studentska politika",
     "Sudnica",
 ]
