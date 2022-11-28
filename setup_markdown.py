@@ -171,15 +171,15 @@ def discussion_to_posts(discussion_dict) -> List[Post]:
     return normalized_posts
 
 
-def post_to_markdown(post: Post) -> str:
+def post_to_markdown(post: Post, i: int, n: int) -> str:
     content_lines = post.content.split("\n")
     content_lines = [HEADING_REGEX.sub("#\1", x) for x in content_lines]
     content = "\n".join(content_lines)
 
     return (
-        f"# {post.author}:\n\n"
-        f"{content}\n\n" + LINES + "\n\n"
-        f"👍 {post.votes} 👎\n\n"
+        f'[{post.author} ({i}/{n}):](#{i}){{id="{i}"}}\n\n'
+        f"{content}\n\n"
+        f"👍 {post.votes} 👎, "
         f"😆: {post.reactions.haha} "
         f"😶: {post.reactions.wtf} "
         f"😢: {post.reactions.tuga}\n\n" + LINES
@@ -230,18 +230,16 @@ def main():
 
         # Create posts destination path
         discussion_slugs = get_discussion_slugs(discussion_dict=json_dict)
-        dest_folder = (
-            discussions_markdown_folder
-            / "/".join(discussion_slugs[:-1])
-            / f"{discussion_slugs[-1]}"
-        )
+        last_slug = discussion_slugs[-1]
+
+        dest_folder = discussions_markdown_folder / "/".join(discussion_slugs[:-1])
 
         # Process posts
         posts = discussion_to_posts(discussion_dict=json_dict)
         markdown = list()
         assets = set()
-        for post in posts:
-            markdown.append(post_to_markdown(post=post))
+        for i, post in enumerate(posts, 1):
+            markdown.append(post_to_markdown(post=post, i=i, n=len(posts)))
             assets.update(get_assets_from_content(content=post.content))
 
         # Create pages
@@ -254,7 +252,7 @@ def main():
         os.makedirs(dest_folder, exist_ok=True)
         for j, m in enumerate(markdowns, 1):
             with open(
-                dest_folder / f"page-{j:05}.md",
+                dest_folder / f"{last_slug}.md",
                 mode="w+",
                 encoding="utf8",
                 errors="replace",
