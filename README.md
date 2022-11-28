@@ -1,5 +1,18 @@
 # Studoši dump
 
+## Notes:
+
+
+recursive find *.md and convert to .html, todo: use basename
+```bash
+find . -iname "*.md" -type f -exec pandoc {} -o {}.html \;
+```
+rename *.md.html to *.html
+
+```bash
+find . -depth -exec rename 's/.md.html/.html/' {} +
+```
+
 ## Sadržaj repozitorija
 
 - [resursi](./assets): ovdje se ne nalazi ništa, ali se mogu raspakirati slike kako bi
